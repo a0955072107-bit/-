@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aurora Auto Care | Car Maintenance, Ceramic Coating and Detailing in Long Beach</title>
+<meta name="description" content="Aurora Auto Care in Long Beach, CA offers scheduled maintenance, ceramic coating, interior detailing, tires, A/C service and collision repair. OEM parts, written quotes up front and a 12-month warranty. Book online.">
+<meta property="og:title" content="Aurora Auto Care | Maintenance and Detailing in Long Beach">
+<meta property="og:description" content="Maintenance, ceramic coating, detailing, tires, A/C and body work. OEM parts, clear pricing, 12-month warranty.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#eceef1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Aurora Auto Care",
+  "telephone": "+1-555-012-3456",
+  "url": "https://example.com/",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2150 Harbor Avenue",
+    "addressLocality": "Long Beach",
+    "addressRegion": "CA",
+    "postalCode": "90810",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
+  ]
+}
+</script>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ============================================================
+   THEME SETTINGS: change these values to restyle colors and fonts site-wide
+   ============================================================ */
+:root {
+  --brand: #c41f2a;            /* Brand color (signal red): buttons, prices, key lines */
+  --brand-deep: #9e1720;       /* Darker brand: button hover */
+  --brand-bright: #ff5c62;     /* Bright red: accent text on the dark band (AA contrast) */
+  --brand-ink: #f6f7f9;        /* Text color on the brand color (cool-tinted white) */
+  --bg: #eceef1;               /* Page background (light steel grey) */
+  --surface: #f7f8fa;          /* Cards, forms, alternating sections */
+  --surface-2: #e1e4e8;        /* Secondary surface (table heads, footer) */
+  --text: #1a1e23;             /* Main text (graphite) */
+  --muted: #5a626c;            /* Secondary text (steel grey) */
+  --line: #c9ced5;             /* Hairlines and borders */
+  --line-strong: #9aa2ac;      /* Measurement ticks, stronger borders */
+  --steel-1: #f2f4f6;          /* Metal reflection: highlight */
+  --steel-2: #b4bbc4;          /* Metal reflection: midtone */
+  --steel-3: #5f6873;          /* Metal reflection: shadow */
+  --cabin: #8c8072;            /* Placeholder art: upholstery */
+  --dust: #6d5b48;             /* Placeholder art: brake dust and grime */
+  --dark-bg: #15181c;          /* Dark band background (mileage reminder) */
+  --dark-surface: #1f2328;     /* Panels inside the dark band */
+  --dark-text: #eef0f3;        /* Dark band text */
+  --dark-muted: #a3abb5;       /* Dark band secondary text */
+  --dark-line: #343a42;        /* Dark band lines */
+  --ok: #5fd38d;               /* Mileage status: good (on dark) */
+  --warn: #f2b33d;             /* Mileage status: due soon (on dark) */
+  --shade: #0b0d10;            /* Base shadow color */
+  --radius: 3px;               /* Corner radius (keep small for a technical look) */
+  --font-heading: "Barlow Condensed", "Arial Narrow", sans-serif; /* Heading font (condensed sans) */
+  --font-num: "Rajdhani", "Barlow Condensed", sans-serif;          /* Numbers and gauge font */
+  --font-body: "Barlow", system-ui, "Segoe UI", sans-serif; /* Body font */
+  --pad: clamp(1rem, 5vw, 4rem); /* Page side padding */
+  --max: 1200px;               /* Max content width */
+  --ease: cubic-bezier(.2, .7, .1, 1); /* Animation easing */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; -webkit-text-size-adjust: 100%; scroll-padding-top: 4.5rem; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.7 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 2px; }
+.wrap { max-width: var(--max); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: .5rem; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 99; }
+.skip:focus { left: .5rem; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+h1, h2, h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  padding: .85rem 1.5rem; font: 700 1rem/1.2 var(--font-body);
+  border: 1px solid var(--brand); border-radius: var(--radius); cursor: pointer;
+  background: var(--brand); color: var(--brand-ink);
+  box-shadow: 0 10px 24px -14px color-mix(in srgb, var(--brand) 80%, transparent);
+  transition: transform .2s var(--ease), background-color .2s, color .2s, border-color .2s;
+}
+.btn:hover { background: var(--brand-deep); border-color: var(--brand-deep); transform: translateY(-2px); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled, .form :disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.btn.ghost { background: transparent; color: var(--text); border-color: var(--line-strong); box-shadow: none; }
+.btn.ghost:hover { background: var(--text); color: var(--surface); border-color: var(--text); }
+a:not(.btn):hover { color: var(--brand); }
+a:not(.btn):active { opacity: .7; }
+
+/* ---------- Sections and headings (measurement ruler under headings) ---------- */
+section { padding: clamp(4rem, 10vw, 7rem) var(--pad); position: relative; }
+.alt { background: var(--surface); }
+.sec-head { display: grid; gap: 1rem; margin-bottom: clamp(2.25rem, 5vw, 3.5rem); padding-bottom: 1.25rem; position: relative; }
+.sec-head::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 9px;
+  background:
+    linear-gradient(var(--line-strong), var(--line-strong)) left bottom / 100% 1px no-repeat,
+    repeating-linear-gradient(90deg, var(--line-strong) 0 1px, transparent 1px 10px) left bottom / 100% 5px no-repeat,
+    repeating-linear-gradient(90deg, var(--text) 0 1px, transparent 1px 100px) left bottom / 100% 9px no-repeat;
+}
+.sec-head::before { content: ""; position: absolute; left: 0; bottom: 0; width: 4.5rem; height: 3px; background: var(--brand); z-index: 1; }
+@media (min-width: 860px) { .sec-head { grid-template-columns: minmax(0, 1fr) minmax(0, 26rem); align-items: end; column-gap: 3rem; } }
+.sec-head h2 { font: 700 clamp(2.1rem, 5.5vw, 3.4rem)/1.05 var(--font-heading); }
+.sec-head p { color: var(--muted); }
+
+/* ==================== Placeholder art ====================
+   Photo-free CSS gradient art (metal reflections, wheels, upholstery).
+   Replace with a photo: .img-hero { background: url(images/hero.jpg) center/cover; }
+   Replace with a photo: .img-paint-a { background: url(images/paint-before.jpg) center/cover; } (same for paint-b, cabin-a, cabin-b, rim-a, rim-b)
+   Replace with a photo: .img-tech1 { background: url(images/tech1.jpg) center/cover; } (same for tech2 to tech4)
+   Replace with a photo: .img-map { background: url(images/shop.jpg) center/cover; }
+   ===================================================== */
+.img { position: relative; overflow: hidden; background-color: var(--surface-2); isolation: isolate; }
+/* Reflective metal panel behind the hero car */
+.img-hero {
+  background:
+    linear-gradient(104deg, transparent 0 22%, color-mix(in srgb, var(--steel-1) 90%, transparent) 22.4% 27%, transparent 27.4%),
+    linear-gradient(104deg, transparent 0 31%, color-mix(in srgb, var(--steel-1) 55%, transparent) 31.2% 32.4%, transparent 32.6%),
+    linear-gradient(104deg, transparent 0 68%, color-mix(in srgb, var(--steel-1) 70%, transparent) 68.3% 71%, transparent 71.3%),
+    linear-gradient(180deg, var(--steel-1) 0%, var(--steel-2) 58%, var(--steel-3) 58.2%, var(--steel-2) 62%, var(--surface-2) 100%);
+}
+.img-hero::after { /* Fine grid, like drafting paper */
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background:
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--text) 6%, transparent) 0 1px, transparent 1px 32px),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--text) 6%, transparent) 0 1px, transparent 1px 32px);
+}
+/* Before and after: paint */
+.img-paint-a {
+  background:
+    repeating-radial-gradient(circle at 30% 40%, color-mix(in srgb, var(--steel-1) 22%, transparent) 0 1px, transparent 1px 7px),
+    repeating-radial-gradient(circle at 75% 70%, color-mix(in srgb, var(--steel-1) 18%, transparent) 0 1px, transparent 1px 9px),
+    radial-gradient(ellipse at 60% 20%, color-mix(in srgb, var(--dust) 35%, transparent), transparent 70%),
+    linear-gradient(170deg, var(--steel-2), var(--steel-3));
+}
+.img-paint-b {
+  background:
+    linear-gradient(118deg, transparent 0 34%, color-mix(in srgb, var(--steel-1) 85%, transparent) 34.5% 37%, transparent 37.5%),
+    linear-gradient(118deg, transparent 0 41%, color-mix(in srgb, var(--steel-1) 45%, transparent) 41.3% 42.2%, transparent 42.5%),
+    radial-gradient(ellipse 70% 40% at 50% 0%, color-mix(in srgb, var(--steel-1) 35%, transparent), transparent 70%),
+    linear-gradient(170deg, var(--steel-3), var(--dark-bg));
+}
+/* Before and after: seats */
+.img-cabin-a {
+  background:
+    radial-gradient(circle at 28% 62%, color-mix(in srgb, var(--dust) 70%, transparent) 0 8%, transparent 14%),
+    radial-gradient(circle at 70% 38%, color-mix(in srgb, var(--dust) 55%, transparent) 0 6%, transparent 11%),
+    repeating-linear-gradient(90deg, transparent 0 46px, color-mix(in srgb, var(--shade) 25%, transparent) 46px 48px),
+    linear-gradient(180deg, color-mix(in srgb, var(--cabin) 70%, var(--steel-3)), var(--cabin));
+}
+.img-cabin-b {
+  background:
+    linear-gradient(100deg, transparent 0 55%, color-mix(in srgb, var(--steel-1) 30%, transparent) 55.5% 60%, transparent 60.5%),
+    repeating-linear-gradient(90deg, transparent 0 46px, color-mix(in srgb, var(--steel-1) 40%, transparent) 46px 47px, color-mix(in srgb, var(--shade) 30%, transparent) 47px 48px),
+    linear-gradient(180deg, var(--cabin), color-mix(in srgb, var(--cabin) 75%, var(--shade)));
+}
+/* Before and after: wheels (spokes drawn with conic gradients) */
+.img-rim-a, .img-rim-b { --rim: var(--steel-1); --bed: var(--steel-2); }
+.img-rim-a { --rim: color-mix(in srgb, var(--steel-2) 60%, var(--dust)); --bed: color-mix(in srgb, var(--steel-3) 70%, var(--dust)); }
+.img-rim-a, .img-rim-b {
+  background:
+    radial-gradient(circle at 50% 50%, var(--brand) 0 3%, var(--steel-3) 3.5% 8%, var(--rim) 8.5% 11%, transparent 11.5%),
+    radial-gradient(circle at 50% 50%, transparent 0 33%, var(--rim) 33.5% 36%, var(--shade) 36.5% 47%, var(--steel-3) 47.5% 48.5%, transparent 49%),
+    radial-gradient(circle at 50% 50%, transparent 0 49%, var(--bed) 49.5%),
+    repeating-conic-gradient(from 0deg at 50% 50%, color-mix(in srgb, var(--shade) 70%, transparent) 0 1deg, transparent 1deg 3deg),
+    repeating-conic-gradient(from 10deg at 50% 50%, var(--rim) 0 9deg, color-mix(in srgb, var(--shade) 85%, var(--steel-3)) 9deg 36deg),
+    linear-gradient(160deg, var(--bed), var(--steel-3));
+}
+.img-rim-a::after, .img-rim-b::after { content: ""; position: absolute; inset: 0; }
+.img-rim-a::after { background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--dust) 45%, transparent) 0 34%, transparent 35%); }
+.img-rim-b::after { background: linear-gradient(130deg, transparent 30%, color-mix(in srgb, var(--steel-1) 40%, transparent) 46%, transparent 60%); }
+/* Technician portraits: silhouette under a work light */
+.img-tech1, .img-tech2, .img-tech3, .img-tech4 { aspect-ratio: 4 / 3; }
+.img-tech1 { --spot: 30% 30%; } .img-tech2 { --spot: 70% 25%; } .img-tech3 { --spot: 40% 70%; } .img-tech4 { --spot: 65% 60%; }
+.img-tech1, .img-tech2, .img-tech3, .img-tech4 {
+  background:
+    radial-gradient(circle at 50% 44%, var(--text) 0 14%, transparent 14.5%),
+    radial-gradient(ellipse 36% 30% at 50% 100%, var(--text) 0 99%, transparent 100%),
+    radial-gradient(circle at 51.5% 43.5%, var(--brand) 0 14.6%, transparent 15.1%),
+    radial-gradient(ellipse 36.6% 30.6% at 51% 99.4%, var(--brand) 0 99%, transparent 100%),
+    radial-gradient(ellipse at var(--spot), color-mix(in srgb, var(--steel-1) 55%, transparent), transparent 60%),
+    linear-gradient(104deg, transparent 0 60%, color-mix(in srgb, var(--steel-1) 30%, transparent) 60.5% 64%, transparent 64.5%),
+    linear-gradient(170deg, var(--steel-2), var(--steel-3));
+}
+/* Map */
+.img-map {
+  min-height: 300px;
+  background:
+    radial-gradient(circle at 56% 46%, var(--brand) 0 8px, color-mix(in srgb, var(--brand) 25%, transparent) 9px 24px, transparent 25px),
+    linear-gradient(32deg, transparent 47%, var(--surface) 47.4% 50.6%, transparent 51%),
+    linear-gradient(-58deg, transparent 62%, var(--surface) 62.3% 64%, transparent 64.3%),
+    linear-gradient(90deg, transparent 28%, var(--surface) 28.3% 29.6%, transparent 29.9%),
+    linear-gradient(0deg, transparent 70%, var(--surface) 70.3% 71.6%, transparent 71.9%),
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--text) 5%, transparent) 0 1px, transparent 1px 40px),
+    var(--surface-2);
+}
+
+/* ---------- Tire tread divider ---------- */
+.tread { height: 28px; background:
+  linear-gradient(135deg, var(--text) 25%, transparent 25%) -14px 0 / 28px 28px,
+  linear-gradient(225deg, var(--text) 25%, transparent 25%) -14px 0 / 28px 28px,
+  linear-gradient(315deg, var(--text) 25%, transparent 25%) 0 0 / 28px 28px,
+  linear-gradient(45deg, var(--text) 25%, transparent 25%) 0 0 / 28px 28px,
+  var(--steel-3); }
+
+/* ==================== Header ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .3s, border-color .3s; border-bottom: 1px solid transparent; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 90%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-color: var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .85rem var(--pad); max-width: calc(var(--max) + 2 * var(--pad)); margin-inline: auto; }
+.logo { display: flex; align-items: center; gap: .6rem; color: var(--text); }
+.logo svg { width: 38px; height: 38px; flex: none; }
+.logo .mk-ring { fill: none; stroke: var(--text); stroke-width: 2; }
+.logo .mk-arc { fill: none; stroke: var(--brand); stroke-width: 3; stroke-linecap: round; }
+.logo strong { display: block; font: 700 1.15rem/1.1 var(--font-body); }
+.logo small { display: block; font: 600 .85rem/1.1 var(--font-heading); color: var(--muted); }
+.nav-links { display: flex; align-items: center; gap: clamp(.9rem, 2vw, 1.8rem); font-weight: 500; font-size: .95rem; }
+.nav-links a:not(.btn) { position: relative; padding-block: .3rem; }
+.nav-links a:not(.btn)::after { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 100%; background: var(--brand); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease); }
+.nav-links a:not(.btn):hover::after, .nav-links a:not(.btn):focus-visible::after { transform: scaleX(1); }
+.nav-links .btn { padding: .6rem 1.1rem; font-size: .92rem; }
+.menu-btn { display: none; width: 44px; height: 44px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--text); cursor: pointer; }
+.menu-btn:hover { border-color: var(--text); }
+.menu-btn:active { transform: scale(.94); }
+.menu-btn span { display: block; width: 20px; height: 2px; background: currentColor; margin: 4px auto; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* Without JavaScript the menu wraps below the logo; with JS it collapses into the hamburger */
+  html:not(.js) .nav { flex-wrap: wrap; }
+  html:not(.js) .site-header { position: sticky; background: var(--surface); border-color: var(--line); }
+  html:not(.js) .nav-links { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: 3rem; }
+  .js .menu-btn { display: block; }
+  .js .nav-links {
+    position: fixed; inset: 4.4rem 0 auto; flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--surface); border-bottom: 1px solid var(--line); padding: .5rem var(--pad) 1.5rem;
+    box-shadow: 0 20px 40px -20px color-mix(in srgb, var(--shade) 40%, transparent);
+    transform: translateY(-120%); visibility: hidden; transition: transform .35s var(--ease), visibility .35s; z-index: -1;
+  }
+  .js .nav-links.open { transform: none; visibility: visible; }
+  .js .nav-links a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+  .js .nav-links .btn { margin-top: 1rem; padding: .9rem; }
+}
+
+/* ==================== Hero ==================== */
+.hero { padding-top: clamp(6rem, 12vw, 7.5rem); padding-bottom: clamp(3rem, 7vw, 5rem); overflow: clip; }
+.hero-grid { display: grid; gap: 2.5rem; grid-template-columns: minmax(0, 1fr); align-items: center; }
+@media (min-width: 960px) { .hero-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 3rem; } }
+.hero h1 { font: 700 clamp(2.6rem, 7vw, 4.6rem)/1.06 var(--font-heading); margin-bottom: 1.1rem; }
+.hero-lead { max-width: 32rem; font-size: clamp(1rem, 2vw, 1.12rem); color: var(--muted); }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.75rem; }
+.hero-specs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 2.25rem; border-top: 1px solid var(--line-strong); }
+.hero-specs div { padding: .9rem .75rem 0 0; }
+.hero-specs div + div { padding-left: .75rem; border-left: 1px solid var(--line); }
+.hero-specs strong { display: block; font: 700 clamp(1.6rem, 4vw, 2.2rem)/1 var(--font-num); }
+.hero-specs span { font-size: .85rem; color: var(--muted); }
+.car-fig { position: relative; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 30px 60px -40px color-mix(in srgb, var(--shade) 60%, transparent); }
+.car-fig .img-hero { position: absolute; inset: 0; z-index: -1; }
+.car { display: block; width: 100%; height: auto; padding: 1rem .5rem .5rem; }
+.car .body { fill: url(#paint); stroke: var(--text); stroke-width: 1.5; stroke-linejoin: round; }
+.car .s1 { stop-color: var(--steel-1); } .car .s2 { stop-color: var(--steel-2); } .car .s3 { stop-color: var(--steel-3); }
+.car .glass { fill: var(--text); opacity: .82; }
+.car .glare { fill: none; stroke: var(--steel-1); stroke-width: 3; stroke-linecap: round; opacity: .9; }
+.car .stripe { fill: none; stroke: var(--brand); stroke-width: 3; }
+.car .tire { fill: var(--text); }
+.car .tread-ring { fill: none; stroke: var(--steel-3); stroke-width: 4; stroke-dasharray: 3 4; }
+.car .rim { fill: var(--steel-2); stroke: var(--steel-1); stroke-width: 1.5; }
+.car .spokes { stroke: var(--steel-3); stroke-width: 4; stroke-linecap: round; }
+.car .hub { fill: var(--brand); }
+.car .ground { stroke: var(--text); stroke-width: 1; }
+.car .dim { stroke: var(--muted); stroke-width: 1; fill: none; }
+.car .dim-txt { fill: var(--muted); font: 700 13px var(--font-num); }
+.car .call { stroke: var(--brand); stroke-width: 1; fill: none; }
+.car .call-dot { fill: var(--brand); }
+.car .call-txt { fill: var(--text); font: 500 13px var(--font-body); }
+@media (max-width: 600px) { .car .call-txt, .car .dim-txt { font-size: 19px; } }
+
+/* ==================== Services ==================== */
+.svc-grid, .team, .reviews, .why-grid, .ba-grid { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .svc-grid, .team { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .svc-grid, .reviews, .why-grid, .ba-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1080px) { .team { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.svc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; position: relative; transition: border-color .25s, transform .25s var(--ease); }
+.svc:hover { border-color: var(--text); transform: translateY(-3px); }
+.svc::before { content: ""; position: absolute; left: -1px; top: -1px; width: 2.5rem; height: 3px; background: var(--brand); }
+.svc svg { width: 44px; height: 44px; margin-bottom: 1rem; fill: none; stroke: var(--text); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.svc svg .hl { stroke: var(--brand); }
+.svc h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: .45rem; }
+.svc p { color: var(--muted); font-size: .95rem; }
+.spec { margin-top: 1.1rem; border-top: 1px solid var(--line); font-size: .88rem; }
+.spec div { display: flex; justify-content: space-between; gap: 1rem; padding: .5rem 0; border-bottom: 1px dashed var(--line); }
+.spec dt { color: var(--muted); }
+.spec dd { font-weight: 700; text-align: right; }
+
+/* ==================== Pricing ==================== */
+.tabs { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--bg); margin-bottom: 1.25rem; }
+.tabs button { border: 0; background: transparent; color: var(--muted); font: 700 .98rem/1 var(--font-body); padding: .75rem 1.2rem; border-radius: 2px; cursor: pointer; transition: background-color .2s, color .2s; }
+.tabs button:hover { color: var(--text); background: var(--surface-2); }
+.tabs button:active { transform: scale(.97); }
+.tabs button[aria-selected="true"] { background: var(--text); color: var(--surface); }
+.table-scroll { overflow-x: auto; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--surface); -webkit-overflow-scrolling: touch; }
+.price-panel + .price-panel { margin-top: 1.5rem; }
+.js .price-panel:not(.on) { display: none; }
+.js .price-panel + .price-panel { margin-top: 0; }
+.price-panel h3 { font: 600 1.3rem/1.2 var(--font-heading); margin-bottom: .6rem; }
+.js .price-panel h3 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.sheet { width: 100%; min-width: 600px; border-collapse: collapse; font-size: .95rem; }
+.sheet th, .sheet td { padding: .9rem 1rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.sheet thead th { background: var(--surface-2); font-weight: 700; font-size: .88rem; color: var(--muted); border-bottom: 1px solid var(--line-strong); }
+.sheet tbody th { font-weight: 700; white-space: nowrap; }
+.sheet td.t { font: 600 1.05rem/1.4 var(--font-num); white-space: nowrap; color: var(--muted); }
+.sheet td.p { font: 700 1.25rem/1.3 var(--font-num); color: var(--brand); white-space: nowrap; text-align: right; }
+.sheet thead th:last-child { text-align: right; }
+.sheet tbody tr:last-child > * { border-bottom: 0; }
+.sheet tbody tr:hover { background: color-mix(in srgb, var(--brand) 4%, transparent); }
+.note { color: var(--muted); font-size: .85rem; margin-top: .9rem; }
+.hint { color: var(--muted); font-size: .85rem; margin-top: .6rem; }
+@media (min-width: 680px) { .hint { display: none; } }
+
+/* ==================== Mileage reminder (dark band) ==================== */
+.dark { background: var(--dark-bg); color: var(--dark-text); }
+.dark .sec-head p, .dark .muted { color: var(--dark-muted); }
+.dark .sec-head::after { background:
+    linear-gradient(var(--dark-line), var(--dark-line)) left bottom / 100% 1px no-repeat,
+    repeating-linear-gradient(90deg, var(--dark-line) 0 1px, transparent 1px 10px) left bottom / 100% 5px no-repeat,
+    repeating-linear-gradient(90deg, var(--dark-muted) 0 1px, transparent 1px 100px) left bottom / 100% 9px no-repeat; }
+.dark :focus-visible { outline-color: var(--brand-bright); }
+.gauge-grid { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .gauge-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; } }
+.gauge-copy ul { display: grid; gap: .8rem; margin-top: 1.5rem; }
+.gauge-copy li { padding-left: 1.4rem; position: relative; color: var(--dark-muted); }
+.gauge-copy li::before { content: ""; position: absolute; left: 0; top: .75em; width: .8rem; height: 1px; background: var(--brand-bright); }
+.gauge-copy li strong { color: var(--dark-text); }
+.gauge { background: var(--dark-surface); border: 1px solid var(--dark-line); border-radius: var(--radius); padding: clamp(1.25rem, 4vw, 2rem); display: grid; gap: 1.25rem; }
+.gauge .row { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 520px) { .gauge .row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.gauge label { display: grid; gap: .4rem; font-weight: 500; font-size: .92rem; color: var(--dark-muted); }
+.gauge input { width: 100%; font: 700 1.5rem/1.2 var(--font-num); color: var(--dark-text); background: var(--dark-bg); border: 1px solid var(--dark-line); border-radius: var(--radius); padding: .7rem .9rem; }
+.gauge input:hover { border-color: var(--dark-muted); }
+.gauge input:focus-visible { outline: 2px solid var(--brand-bright); outline-offset: 1px; }
+.readout { border-top: 1px solid var(--dark-line); padding-top: 1.25rem; }
+.readout .lbl { font-size: .9rem; color: var(--dark-muted); }
+.readout .big { font: 700 clamp(2.8rem, 10vw, 4.4rem)/1 var(--font-num); margin: .3rem 0 .9rem; font-variant-numeric: tabular-nums; }
+.readout .big small { font-size: .4em; color: var(--dark-muted); margin-left: .35rem; }
+.bar { height: 10px; background: repeating-linear-gradient(90deg, var(--dark-line) 0 2px, transparent 2px 10%), var(--dark-bg); border: 1px solid var(--dark-line); border-radius: 2px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--st, var(--dark-muted)); transform-origin: left; transform: scaleX(var(--fill, 0)); transition: transform .5s var(--ease), background-color .3s; }
+.status { margin-top: .9rem; font-weight: 700; color: var(--st, var(--dark-muted)); }
+.status.ok { --st: var(--ok); } .status.warn { --st: var(--warn); } .status.over { --st: var(--brand-bright); }
+.gauge .btn { justify-self: start; }
+
+/* ==================== Before and after ==================== */
+.ba { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.ba-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--text); }
+.ba-pair > div { position: relative; }
+.ba-pair .img { aspect-ratio: 1 / 1; }
+.ba-pair span { position: absolute; left: .6rem; bottom: .6rem; z-index: 1; font-size: .8rem; font-weight: 700; background: var(--surface); color: var(--text); padding: .2rem .55rem; border-radius: 2px; }
+.ba-pair div + div span { background: var(--brand); color: var(--brand-ink); }
+.ba-body { padding: 1.25rem 1.4rem 1.5rem; }
+.ba-body h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: .35rem; }
+.ba-body p { color: var(--muted); font-size: .92rem; }
+
+/* ==================== Why us ==================== */
+.why { border-top: 3px solid var(--text); padding-top: 1.4rem; }
+.why .num { font: 700 3rem/1 var(--font-num); color: var(--brand); }
+.why h3 { font: 700 1.6rem/1.2 var(--font-heading); margin: .5rem 0 .5rem; }
+.why p { color: var(--muted); }
+
+/* ==================== Technicians ==================== */
+.tech { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.tech .img { border-bottom: 3px solid var(--brand); }
+.tech-body { padding: 1.2rem 1.25rem 1.4rem; }
+.tech h3 { font-size: 1.2rem; font-weight: 700; }
+.tech .role { color: var(--brand); font-weight: 700; font-size: .9rem; margin-bottom: .5rem; }
+.tech p { color: var(--muted); font-size: .92rem; }
+.certs { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
+.certs li { font-size: .78rem; font-weight: 500; padding: .2rem .55rem; background: var(--bg); border: 1px solid var(--line); border-radius: 2px; }
+
+/* ==================== Reviews ==================== */
+.review { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; display: flex; flex-direction: column; gap: 1rem; }
+.score { display: flex; align-items: baseline; gap: .5rem; }
+.score b { font: 700 2.2rem/1 var(--font-num); color: var(--brand); }
+.score span { color: var(--muted); font-size: .88rem; }
+.review blockquote { flex: 1; }
+.review footer { color: var(--muted); font-size: .88rem; border-top: 1px solid var(--line); padding-top: .8rem; }
+.review footer strong { color: var(--text); }
+
+/* ==================== FAQ ==================== */
+.faq { max-width: 860px; border-top: 1px solid var(--line-strong); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.15rem 0; font-weight: 700; font-size: 1.05rem; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:hover { color: var(--brand); }
+.faq summary::after { content: ""; flex: none; width: 14px; height: 14px; background: linear-gradient(currentColor, currentColor) center / 100% 2px no-repeat, linear-gradient(currentColor, currentColor) center / 2px 100% no-repeat; transition: transform .25s var(--ease); }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { color: var(--muted); padding: 0 2rem 1.25rem 0; }
+
+/* ==================== Booking form ==================== */
+.book-grid, .loc { display: grid; gap: 2.5rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 920px) { .book-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); } .loc { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.book-copy h2 { font: 700 clamp(2.1rem, 5.5vw, 3.4rem)/1.05 var(--font-heading); margin-bottom: 1rem; }
+.book-copy > p { color: var(--muted); max-width: 28rem; }
+.steps { margin-top: 1.75rem; display: grid; gap: 1rem; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 2.6rem minmax(0, 1fr); gap: .75rem; align-items: baseline; counter-increment: s; }
+.steps li::before { content: "0" counter(s); font: 700 1.5rem/1 var(--font-num); color: var(--brand); }
+.contact-btns { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+.form { background: var(--bg); padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--line-strong); border-radius: var(--radius); display: grid; gap: 1rem; }
+.form label { display: grid; gap: .35rem; font-weight: 500; font-size: .92rem; }
+.form input, .form select { width: 100%; font: 400 1rem/1.4 var(--font-body); color: var(--text); background: var(--surface); border: 1px solid var(--line-strong); border-radius: var(--radius); padding: .75rem .85rem; min-height: 48px; }
+.form input:hover, .form select:hover { border-color: var(--text); }
+.form input:focus-visible, .form select:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.form .row { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 500px) { .form .row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.form .small { color: var(--muted); font-size: .8rem; }
+
+/* ==================== Hours and map ==================== */
+.loc .img-map { border-radius: var(--radius); border: 1px solid var(--line-strong); }
+.hours { width: 100%; border-collapse: collapse; margin-top: 1.25rem; font-size: .98rem; }
+.hours th, .hours td { padding: .75rem 0; border-bottom: 1px solid var(--line); text-align: left; }
+.hours td { text-align: right; font: 700 1.1rem/1.3 var(--font-num); }
+.hours tr.off td { color: var(--muted); font: 500 .95rem/1.3 var(--font-body); }
+.addr { margin-top: 1.25rem; display: grid; gap: .3rem; }
+.addr a { font-weight: 700; }
+
+/* ==================== Footer ==================== */
+.site-footer { background: var(--surface-2); border-top: 3px solid var(--text); padding: 3.5rem var(--pad) 2rem; color: var(--muted); font-size: .92rem; }
+.foot-grid { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .foot-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.site-footer h2 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: .7rem; }
+.site-footer li + li { margin-top: .3rem; }
+.social { display: flex; gap: .5rem; }
+.social a { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid var(--line-strong); border-radius: var(--radius); font: 700 .85rem/1 var(--font-heading); color: var(--text); transition: background-color .2s, color .2s; }
+.social a:hover { background: var(--text); color: var(--surface); }
+.social a:active { transform: scale(.95); }
+.copy { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line-strong); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .85rem; }
+
+/* ---------- Mobile sticky action bar ---------- */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  .sticky-cta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .6rem var(--pad) calc(.6rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--line-strong); }
+  body { padding-bottom: 4.6rem; }
+}
+
+/* ---------- Scroll reveal ---------- */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- ==================== Section: Header ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav" aria-label="Main menu">
+    <a href="#top" class="logo" aria-label="Aurora Auto Care, back to top">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle class="mk-ring" cx="20" cy="20" r="17"/><path class="mk-arc" d="M8 25 Q20 6 32 25"/><circle class="mk-ring" cx="20" cy="25" r="3"/></svg>
+      <span><strong>Aurora</strong><small>Auto Care</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#reminder">Mileage</a>
+      <a href="#gallery">Results</a>
+      <a href="#faq">FAQ</a>
+      <a href="#location">Visit</a>
+      <a href="#booking" class="btn">Book a service</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Factory-spec care for every mile</h1>
+      <p class="hero-lead">A neighborhood service shop and detailing studio in Long Beach. Oil changes to ceramic coating, with a written quote before we start and an inspection report when we finish.</p>
+      <div class="hero-cta">
+        <a href="#booking" class="btn">Book a service</a>
+        <a href="#pricing" class="btn ghost">See pricing</a>
+      </div>
+      <!-- Sample content: replace with real data before going live -->
+      <div class="hero-specs">
+        <div><strong>12</strong><span>month warranty</span></div>
+        <div><strong>4.9</strong><span>average rating</span></div>
+        <div><strong>3,800+</strong><span>cars serviced</span></div>
+      </div>
+    </div>
+    <figure class="car-fig">
+      <div class="img img-hero" role="img" aria-label="Reflective metal panel background"></div>
+      <svg class="car" viewBox="0 0 660 300" role="img" aria-label="Side profile drawing of a sedan with length, wheelbase and service points marked">
+        <defs><linearGradient id="paint" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="s1"/><stop offset=".45" class="s2"/><stop offset=".46" class="s3"/><stop offset="1" class="s2"/></linearGradient></defs>
+        <path class="body" d="M52 196 L52 172 Q54 152 84 146 L188 130 Q222 96 276 82 L404 78 Q452 80 494 118 L582 134 Q620 142 624 170 L624 194 Q624 202 616 202 L566 202 A50 50 0 0 0 466 202 L216 202 A50 50 0 0 0 116 202 L60 202 Q52 202 52 196 Z"/>
+        <path class="glass" d="M212 130 Q240 100 280 92 L350 90 L354 130 Z"/>
+        <path class="glass" d="M368 90 L404 90 Q440 94 470 126 L372 130 Z"/>
+        <path class="glare" d="M96 156 Q300 136 600 150"/>
+        <path class="stripe" d="M60 180 L616 180"/>
+        <g><circle class="tire" cx="166" cy="202" r="42"/><circle class="tread-ring" cx="166" cy="202" r="38"/><circle class="rim" cx="166" cy="202" r="27"/>
+          <path class="spokes" d="M166 180 V224 M144 202 H188 M150 186 L182 218 M182 186 L150 218"/><circle class="hub" cx="166" cy="202" r="6"/></g>
+        <g><circle class="tire" cx="516" cy="202" r="42"/><circle class="tread-ring" cx="516" cy="202" r="38"/><circle class="rim" cx="516" cy="202" r="27"/>
+          <path class="spokes" d="M516 180 V224 M494 202 H538 M500 186 L532 218 M532 186 L500 218"/><circle class="hub" cx="516" cy="202" r="6"/></g>
+        <line class="ground" x1="20" y1="244" x2="640" y2="244"/>
+        <path class="dim" d="M52 258 V282 M624 258 V282 M52 272 H624 M166 252 V262 M516 252 V262 M166 256 H516"/>
+        <text class="dim-txt" x="338" y="292" text-anchor="middle">184.6 in</text>
+        <text class="dim-txt" x="341" y="251" text-anchor="middle">106.3 in</text>
+        <path class="dim" d="M644 78 H654 M644 244 H654 M649 78 V244"/>
+        <text class="dim-txt" x="0" y="0" text-anchor="middle" transform="translate(638 161) rotate(-90)">56.9 in</text>
+        <path class="call" d="M560 140 L590 60 H640"/><circle class="call-dot" cx="560" cy="140" r="4"/><text class="call-txt" x="640" y="52" text-anchor="end">9H ceramic</text>
+        <path class="call" d="M300 84 L270 34 H200"/><circle class="call-dot" cx="300" cy="84" r="4"/><text class="call-txt" x="200" y="26">Cabin filter</text>
+        <path class="call" d="M140 176 L96 104 H40"/><circle class="call-dot" cx="140" cy="176" r="4"/><text class="call-txt" x="40" y="96">36 psi</text>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<div class="tread" aria-hidden="true"></div>
+
+<!-- ==================== Section: Services ==================== -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Services</h2>
+      <p>Maintenance and detailing under one roof, so one drop-off covers everything your car needs.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 18h20l4 6v14H10V24z"/><path class="hl" d="M24 6v8M20 10h8"/><path d="M16 30h16"/></svg>
+        <h3>Scheduled maintenance</h3>
+        <p>Oil, oil filter, air filter and brake fluid changed on the factory schedule, with a 40-point inspection sheet.</p>
+        <dl class="spec"><div><dt>Interval</dt><dd>Every 5,000 mi</dd></div><div><dt>Time</dt><dd>About 60 min</dd></div></dl>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 32c6-10 30-10 36 0"/><path class="hl" d="M12 22l4-6M24 18V10M36 22l-4-6"/><path d="M6 38h36"/></svg>
+        <h3>Polish and ceramic coating</h3>
+        <p>A three-stage polish removes swirls and water spots, then a ceramic coat locks in gloss and water beading for a year or more.</p>
+        <dl class="spec"><div><dt>Hardness</dt><dd>9H ceramic</dd></div><div><dt>Time</dt><dd>1 to 2 days</dd></div></dl>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 40V20a6 6 0 0 1 6-6h6a6 6 0 0 1 6 6v8H18"/><path d="M12 40h24"/><path class="hl" d="M34 8l4 4M40 6v4"/></svg>
+        <h3>Interior detailing</h3>
+        <p>Deep cleaning for seats, carpets and headliner, plus steam sanitizing and vent deodorizing. Your cabin smells new again.</p>
+        <dl class="spec"><div><dt>Covers</dt><dd>Cloth, leather, carpet</dd></div><div><dt>Time</dt><dd>About 4 hours</dd></div></dl>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="8"/><path class="hl" d="M24 7v6M24 35v6M7 24h6M35 24h6"/></svg>
+        <h3>Tires and alignment</h3>
+        <p>Mounting, balancing and four-wheel alignment in one visit, with tread depth and pressure on record. Smoother at highway speed.</p>
+        <dl class="spec"><div><dt>Precision</dt><dd>±0.05°</dd></div><div><dt>Time</dt><dd>About 90 min</dd></div></dl>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6v36M8 15l32 18M8 33l32-18"/><path class="hl" d="M20 8l4 4 4-4M20 40l4-4 4 4"/></svg>
+        <h3>A/C service</h3>
+        <p>Pressure test, refrigerant recovery and recharge, evaporator cleaning and a fresh cabin filter. Cold air, fast.</p>
+        <dl class="spec"><div><dt>Refrigerant</dt><dd>R134a or R1234yf</dd></div><div><dt>Time</dt><dd>About 2 hours</dd></div></dl>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 34l10-10 6 6 16-16"/><path class="hl" d="M32 14h8v8"/><path d="M8 40h32"/></svg>
+        <h3>Body and paint</h3>
+        <p>Dent repair plus panel or full respray. Computer color matching to your paint code makes repairs hard to spot.</p>
+        <dl class="spec"><div><dt>Matching</dt><dd>Computer matched</dd></div><div><dt>Time</dt><dd>2 to 5 days</dd></div></dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Pricing ==================== -->
+<section id="pricing" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Pricing</h2>
+      <p>Priced by vehicle size, parts and labor included. Your written quote before work begins is the final word.</p>
+    </div>
+    <!-- Edit prices directly in the three tables below. Each tab's data-tab must match its panel id -->
+    <div class="tabs reveal" role="tablist" aria-label="Choose vehicle size">
+      <button type="button" role="tab" id="tab-sedan" aria-controls="p-sedan" aria-selected="true" data-tab="p-sedan">Sedan</button>
+      <button type="button" role="tab" id="tab-suv" aria-controls="p-suv" aria-selected="false" tabindex="-1" data-tab="p-suv">SUV</button>
+      <button type="button" role="tab" id="tab-large" aria-controls="p-large" aria-selected="false" tabindex="-1" data-tab="p-large">Truck and van</button>
+    </div>
+    <div class="reveal">
+    <div class="price-panel on" id="p-sedan" role="tabpanel" aria-labelledby="tab-sedan">
+      <h3>Sedan</h3>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Sedan pricing (scrolls sideways)">
+        <table class="sheet">
+          <thead><tr><th scope="col">Service</th><th scope="col">What's included</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Oil service</th><td>Full synthetic, 5 qt, filter, 40-point check</td><td class="t">1 hr</td><td class="p">$89</td></tr>
+            <tr><th scope="row">Ceramic coating</th><td>Three-stage polish, 9H coat, 1-year warranty</td><td class="t">1.5 days</td><td class="p">$899</td></tr>
+            <tr><th scope="row">Interior detail</th><td>Seats, carpet, headliner, steam sanitize</td><td class="t">4 hr</td><td class="p">$249</td></tr>
+            <tr><th scope="row">Balance and alignment</th><td>Four-wheel balance and alignment, pressure set</td><td class="t">1.5 hr</td><td class="p">$129</td></tr>
+            <tr><th scope="row">A/C service</th><td>Recharge, evaporator clean, cabin filter</td><td class="t">2 hr</td><td class="p">$179</td></tr>
+            <tr><th scope="row">Body and paint</th><td>Single panel dent repair and paint</td><td class="t">2 days</td><td class="p">From $450</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="price-panel" id="p-suv" role="tabpanel" aria-labelledby="tab-suv">
+      <h3>SUV</h3>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="SUV pricing (scrolls sideways)">
+        <table class="sheet">
+          <thead><tr><th scope="col">Service</th><th scope="col">What's included</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Oil service</th><td>Full synthetic, 6 qt, filter, 40-point check</td><td class="t">1 hr</td><td class="p">$109</td></tr>
+            <tr><th scope="row">Ceramic coating</th><td>Three-stage polish, 9H coat, 1-year warranty</td><td class="t">2 days</td><td class="p">$1,099</td></tr>
+            <tr><th scope="row">Interior detail</th><td>Three rows, carpet, headliner, steam sanitize</td><td class="t">5 hr</td><td class="p">$299</td></tr>
+            <tr><th scope="row">Balance and alignment</th><td>Four-wheel balance and alignment, pressure set</td><td class="t">1.5 hr</td><td class="p">$149</td></tr>
+            <tr><th scope="row">A/C service</th><td>Recharge, front and rear evaporators, filter</td><td class="t">2.5 hr</td><td class="p">$219</td></tr>
+            <tr><th scope="row">Body and paint</th><td>Single panel dent repair and paint</td><td class="t">2 days</td><td class="p">From $550</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="price-panel" id="p-large" role="tabpanel" aria-labelledby="tab-large">
+      <h3>Truck and van</h3>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Truck and van pricing (scrolls sideways)">
+        <table class="sheet">
+          <thead><tr><th scope="col">Service</th><th scope="col">What's included</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Oil service</th><td>Full synthetic, 8 qt, filter, 40-point check</td><td class="t">1.5 hr</td><td class="p">$139</td></tr>
+            <tr><th scope="row">Ceramic coating</th><td>Three-stage polish, 9H coat, 1-year warranty</td><td class="t">2.5 days</td><td class="p">$1,299</td></tr>
+            <tr><th scope="row">Interior detail</th><td>All rows, carpet, headliner, steam sanitize</td><td class="t">6 hr</td><td class="p">$349</td></tr>
+            <tr><th scope="row">Balance and alignment</th><td>Four-wheel balance and alignment, pressure set</td><td class="t">2 hr</td><td class="p">$179</td></tr>
+            <tr><th scope="row">A/C service</th><td>Recharge, front and rear evaporators, filter</td><td class="t">3 hr</td><td class="p">$259</td></tr>
+            <tr><th scope="row">Body and paint</th><td>Single panel dent repair and paint</td><td class="t">3 days</td><td class="p">From $650</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+    <p class="hint">On a phone, swipe the table sideways to see time and price.</p>
+    <p class="note">Sedan covers cars and hatchbacks. SUV covers crossovers and midsize SUVs. Truck and van covers three-row SUVs, minivans and pickups.</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Mileage reminder (dark band) ==================== -->
+<section id="reminder" class="dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Service mileage check</h2>
+      <p>Enter your current odometer reading and the mileage at your last service to see how far you are from the next one.</p>
+    </div>
+    <div class="gauge-grid">
+      <div class="gauge-copy reveal">
+        <p class="muted">Most cars need a basic service every 5,000 miles or six months, whichever comes first. Lots of short trips, towing or hot weather? Come in a little sooner.</p>
+        <ul>
+          <li><strong>Every 5,000 mi</strong> oil and oil filter</li>
+          <li><strong>Every 10,000 mi</strong> engine and cabin air filters</li>
+          <li><strong>Every 40,000 mi</strong> brake fluid and transmission fluid</li>
+        </ul>
+      </div>
+      <!-- Service interval: change the data-interval number (in miles) -->
+      <form class="gauge reveal" id="gauge" data-interval="5000" data-unit="mi" novalidate>
+        <div class="row">
+          <label>Current mileage (mi)<input type="number" id="now" inputmode="numeric" min="0" step="1" placeholder="e.g. 48200"></label>
+          <label>Mileage at last service (mi)<input type="number" id="last" inputmode="numeric" min="0" step="1" placeholder="e.g. 45000"></label>
+        </div>
+        <button type="submit" class="btn">Check my next service</button>
+        <div class="readout" aria-live="polite">
+          <p class="lbl">Miles until next service</p>
+          <p class="big"><span id="left">0</span><small>mi</small></p>
+          <div class="bar" aria-hidden="true"><i id="fill"></i></div>
+          <p class="status" id="status">Enter both readings to see your result.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Before and after ==================== -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Before and after</h2>
+      <p>Every car is photographed under the same lights before and after, and you get the photos at pickup.</p>
+    </div>
+    <div class="ba-grid">
+      <article class="ba reveal">
+        <div class="ba-pair">
+          <div><div class="img img-paint-a" role="img" aria-label="Before: paint covered in swirl marks and water spots"></div><span>Before</span></div>
+          <div><div class="img img-paint-b" role="img" aria-label="After: deep, mirror-like paint"></div><span>After</span></div>
+        </div>
+        <div class="ba-body"><h3>Paint correction and coating</h3><p>A six-year-old charcoal sedan, swirl marks removed and sealed with a 9H coat.</p></div>
+      </article>
+      <article class="ba reveal">
+        <div class="ba-pair">
+          <div><div class="img img-cabin-a" role="img" aria-label="Before: visible stains on the seats"></div><span>Before</span></div>
+          <div><div class="img img-cabin-b" role="img" aria-label="After: clean seats with crisp stitching"></div><span>After</span></div>
+        </div>
+        <div class="ba-body"><h3>Interior deep clean</h3><p>A family SUV with kids and a dog. Stains and odors handled in one visit.</p></div>
+      </article>
+      <article class="ba reveal">
+        <div class="ba-pair">
+          <div><div class="img img-rim-a" role="img" aria-label="Before: wheel caked in brake dust"></div><span>Before</span></div>
+          <div><div class="img img-rim-b" role="img" aria-label="After: wheel back to a bright metal finish"></div><span>After</span></div>
+        </div>
+        <div class="ba-body"><h3>Wheel decontamination</h3><p>Iron remover dissolves baked-on brake dust, then a wheel-specific coating goes on.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Why us ==================== -->
+<section id="why" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Why drivers choose us</h2>
+      <p>The worst part of car service is not knowing what was done or why it cost that much. We write down every step.</p>
+    </div>
+    <div class="why-grid">
+      <article class="why reveal">
+        <p class="num">01</p>
+        <h3>OEM parts</h3>
+        <p>Oil, filters and brake parts are factory or OEM-certified equivalents, and you can inspect the old parts before we toss them.</p>
+      </article>
+      <article class="why reveal">
+        <p class="num">02</p>
+        <h3>Clear pricing</h3>
+        <p>You get a written estimate up front. If we find anything else, we send photos and wait for your OK.</p>
+      </article>
+      <article class="why reveal">
+        <p class="num">03</p>
+        <h3>Warranty</h3>
+        <p>Service and repairs carry a 12-month or 12,000-mile warranty, and coatings include a free one-year checkup.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Technicians ==================== -->
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Our technicians</h2>
+      <p>Four certified technicians with more than ten years of experience on average.</p>
+    </div>
+    <div class="team">
+      <article class="tech reveal">
+        <div class="img img-tech1" role="img" aria-label="Portrait of shop manager Marcus Reed"></div>
+        <div class="tech-body"><h3>Marcus Reed</h3><p class="role">Shop manager, engine and chassis</p><p>Former dealership shop foreman who loves a tricky diagnosis.</p><ul class="certs"><li>ASE Master</li><li>18 years</li></ul></div>
+      </article>
+      <article class="tech reveal">
+        <div class="img img-tech2" role="img" aria-label="Portrait of detailing lead Elena Park"></div>
+        <div class="tech-body"><h3>Elena Park</h3><p class="role">Detailing lead, coatings</p><p>Obsessive about paint and signs off on every coating job.</p><ul class="certs"><li>Certified coating trainer</li><li>11 years</li></ul></div>
+      </article>
+      <article class="tech reveal">
+        <div class="img img-tech3" role="img" aria-label="Portrait of technician Dev Patel"></div>
+        <div class="tech-body"><h3>Dev Patel</h3><p class="role">Technician, A/C and electrical</p><p>Handles A/C and electrical, including hybrid high-voltage systems.</p><ul class="certs"><li>EPA 609</li><li>9 years</li></ul></div>
+      </article>
+      <article class="tech reveal">
+        <div class="img img-tech4" role="img" aria-label="Portrait of technician Sam Ortiz"></div>
+        <div class="tech-body"><h3>Sam Ortiz</h3><p class="role">Technician, body and paint</p><p>Runs dent repair and color matching, always checked in daylight.</p><ul class="certs"><li>I-CAR Gold</li><li>12 years</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Reviews ==================== -->
+<section id="reviews" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>What customers say</h2>
+      <p>Most new customers come from a friend's referral. That is the rating we care about most.</p>
+    </div>
+    <!-- Sample content: replace with real data before going live -->
+    <div class="reviews">
+      <figure class="review reveal">
+        <div class="score"><b>5.0</b><span>Oil service, sedan</span></div>
+        <blockquote>First shop that handed me a quote before touching the car, and they showed me the old filter. Dealer-level pricing with a much shorter wait.</blockquote>
+        <footer><strong>James L.</strong>, Long Beach, customer for three years</footer>
+      </figure>
+      <figure class="review reveal">
+        <div class="score"><b>5.0</b><span>Ceramic coating, SUV</span></div>
+        <blockquote>First rainy drive after the coating and the water just rolled off. The six-month checkup was thorough, and they buffed out a small scratch too.</blockquote>
+        <footer><strong>Vivian R.</strong>, Lakewood, coating customer</footer>
+      </figure>
+      <figure class="review reveal">
+        <div class="score"><b>4.8</b><span>A/C service, minivan</span></div>
+        <blockquote>The rear A/C in our minivan never got cold and two shops said compressor. Aurora found a bad expansion valve and saved us a bundle.</blockquote>
+        <footer><strong>Maria H.</strong>, Signal Hill, A/C repair</footer>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: FAQ ==================== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Questions, answered</h2>
+      <p>Not seeing your question? Call or message us on WhatsApp.</p>
+    </div>
+    <div class="faq reveal">
+      <details><summary>Will servicing here affect my factory warranty?</summary><p>No. Federal law protects your warranty as long as parts meet factory spec and the work is documented. We give you a dated record every visit.</p></details>
+      <details><summary>How long does it take? Can I wait?</summary><p>An oil service takes about an hour, and our lounge has Wi-Fi and coffee. Coatings and body work need the car overnight; we text you an hour before it is ready.</p></details>
+      <details><summary>Can I bring my own oil or parts?</summary><p>Yes. We warranty the labor but not customer-supplied parts. Send us a photo or part number first so we can confirm the spec.</p></details>
+      <details><summary>When can I wash my car after a coating?</summary><p>Skip washes and rain for the first week. After that, hand wash with a pH-neutral soap and avoid automatic car washes.</p></details>
+      <details><summary>What payment do you accept?</summary><p>Cash, all major cards, Apple Pay and Google Pay. Financing is available for coating and body work.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Booking ==================== -->
+<section id="booking" class="alt">
+  <div class="wrap book-grid">
+    <div class="book-copy reveal">
+      <h2>Book a service</h2>
+      <p>Send the form and we will call to confirm within an hour during business hours. In a hurry? Just call.</p>
+      <ol class="steps">
+        <li><span>Pick a date and time window and send the form.</span></li>
+        <li><span>A technician calls to talk through the car and give you an estimate.</span></li>
+        <li><span>Drop off, and pick up with an inspection report and photos.</span></li>
+      </ol>
+      <div class="contact-btns">
+        <!-- Contact buttons: you can swap the WhatsApp link for LINE (https://line.me/R/ti/p/@yourlineid), Messenger (https://m.me/yourpage) or Instagram (https://ig.me/m/yourhandle) -->
+        <a class="btn ghost" href="tel:+15550123456">Call (555) 012-3456</a>
+        <a class="btn ghost" href="https://wa.me/15550123456" target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+    </div>
+    <!--
+      Form setup (Formspree, free plan includes 50 submissions a month):
+      1. Sign up for a free account at https://formspree.io with your email
+      2. Create a new form and copy its form ID (a short string like xyzabcd)
+      3. Replace your-form-id in the action below with that ID, and bookings will arrive in your inbox
+    -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="row">
+        <label>Name<input type="text" name="name" autocomplete="name" required></label>
+        <label>Phone<input type="tel" name="phone" autocomplete="tel" inputmode="tel" required></label>
+      </div>
+      <div class="row">
+        <label>License plate<input type="text" name="plate" placeholder="e.g. 8ABC123" required></label>
+        <label>Vehicle size
+          <select name="car_size" required>
+            <option value="">Select</option><option>Sedan</option><option>SUV</option><option>Truck or van</option>
+          </select>
+        </label>
+      </div>
+      <label>Service
+        <select name="service" required>
+          <option value="">Select</option><option>Scheduled maintenance</option><option>Polish and ceramic coating</option><option>Interior detailing</option><option>Tires and alignment</option><option>A/C service</option><option>Body and paint</option><option>Other or not sure</option>
+        </select>
+      </label>
+      <div class="row">
+        <label>Date<input type="date" name="date" required></label>
+        <label>Time window
+          <select name="time" required>
+            <option value="">Select</option><option>9–11 AM</option><option>11 AM–1 PM</option><option>1–3 PM</option><option>3–5 PM</option><option>5–7 PM</option>
+          </select>
+        </label>
+      </div>
+      <button type="submit" class="btn">Send booking request</button>
+      <p class="small">By sending, you agree we may contact you by phone or WhatsApp. Your details are used only to confirm your booking.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== Section: Hours and map ==================== -->
+<section id="location">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Hours and location</h2>
+      <p>On Harbor Avenue near the 710, with eight customer spots right out front.</p>
+    </div>
+    <div class="loc">
+      <div class="reveal">
+        <table class="hours">
+          <caption class="sr">Opening hours</caption>
+          <tbody>
+            <tr><th scope="row">Monday to Friday</th><td>9 AM–7 PM</td></tr>
+            <tr><th scope="row">Saturday</th><td>9 AM–5 PM</td></tr>
+            <tr class="off"><th scope="row">Sunday and holidays</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <div class="addr">
+          <p>2150 Harbor Avenue, Long Beach, CA 90810</p>
+          <p><a href="tel:+15550123456">(555) 012-3456</a></p>
+        </div>
+        <div class="contact-btns">
+          <a class="btn" href="https://maps.google.com/?q=2150+Harbor+Avenue,+Long+Beach,+CA+90810" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn ghost" href="tel:+15550123456">Call us</a>
+        </div>
+      </div>
+      <div class="img img-map reveal" role="img" aria-label="Map showing the Aurora Auto Care location"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h2>Aurora Auto Care</h2><p>Long Beach car maintenance and detailing with OEM parts and clear pricing.</p></div>
+      <div><h2>Contact</h2><ul><li>2150 Harbor Avenue, Long Beach, CA 90810</li><li><a href="tel:+15550123456">(555) 012-3456</a></li><li><a href="https://wa.me/15550123456" target="_blank" rel="noopener">WhatsApp</a></li></ul></div>
+      <div><h2>Hours</h2><ul><li>Monday to Friday 9 AM–7 PM</li><li>Saturday 9 AM–5 PM</li><li>Closed Sundays and holidays</li></ul></div>
+      <div><h2>Follow us</h2><div class="social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="YouTube">YT</a></div></div>
+    </div>
+    <div class="copy"><span>© <span id="y"></span> Aurora Auto Care</span><span>Long Beach, California</span></div>
+  </div>
+</footer>
+
+<!-- Mobile sticky action bar -->
+<div class="sticky-cta">
+  <a href="tel:+15550123456" class="btn ghost">Call now</a>
+  <a href="#booking" class="btn">Book a service</a>
+</div>
+
+<script>
+// Year
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// Header background after scrolling
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+onScroll();
+addEventListener('scroll', onScroll, { passive: true });
+
+// Hamburger menu
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  links.classList.toggle('open', open);
+};
+menuBtn.addEventListener('click', () => setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+// Pricing tabs (arrow keys supported)
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+const selectTab = tab => tabs.forEach(t => {
+  const on = t === tab;
+  t.setAttribute('aria-selected', on);
+  t.tabIndex = on ? 0 : -1;
+  document.getElementById(t.dataset.tab).classList.toggle('on', on);
+});
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => selectTab(t));
+  t.addEventListener('keydown', e => {
+    const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+    if (d) { const n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); selectTab(n); }
+  });
+});
+
+// Service mileage check
+const gauge = document.getElementById('gauge');
+const fmt = n => n.toLocaleString('en-US');
+const calc = () => {
+  const now = parseFloat(gauge.now.value), last = parseFloat(gauge.last.value);
+  const step = +gauge.dataset.interval, unit = gauge.dataset.unit;
+  const status = document.getElementById('status'), left = document.getElementById('left'), fill = document.getElementById('fill');
+  let msg = 'Enter both readings to see your result.', cls = '', rest = 0, ratio = 0;
+  if (!isNaN(now) && !isNaN(last)) {
+    if (now < last) { msg = 'Current mileage can\'t be lower than your last service. Please check both numbers.'; cls = 'over'; }
+    else {
+      rest = last + step - now; ratio = Math.min((now - last) / step, 1);
+      if (rest > 1000) { msg = `Looking good. Your next service is due at ${fmt(last + step)} ${unit}.`; cls = 'ok'; }
+      else if (rest > 0) { msg = `Almost due. We recommend booking within the next two weeks.`; cls = 'warn'; }
+      else { msg = `Overdue by ${fmt(-rest)} ${unit}. Please book a service soon.`; cls = 'over'; }
+    }
+  }
+  left.textContent = fmt(Math.max(rest, 0));
+  fill.style.setProperty('--fill', ratio);
+  status.textContent = msg; status.className = 'status ' + cls;
+  fill.parentElement.style.setProperty('--st', cls ? `var(--${cls === 'over' ? 'brand-bright' : cls})` : '');
+};
+gauge.addEventListener('input', calc);
+gauge.addEventListener('submit', e => { e.preventDefault(); calc(); });
+
+// Scroll reveal
+const items = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  items.forEach(el => io.observe(el));
+} else {
+  items.forEach(el => el.classList.add('in'));
+}
+</script>
+</body>
+</html>

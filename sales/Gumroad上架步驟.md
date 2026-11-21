@@ -152,8 +152,8 @@ Thanks! We'll email you within 1 business day with a short form to collect your 
 
 | 欄位 | 填入 |
 |---|---|
-| Price | `24` |
-| Versions | `Standard license — 1 website`（$24）、`Extended license — up to 10 websites`（$79） |
+| Price | `39`（上市前 2 週用折扣碼降到 $29） |
+| Versions | `Standard license — 1 website`（$39）、`Extended license — up to 10 websites`（$119） |
 | Content | 上傳 `dist/` 裡對應的 zip |
 | Thumbnail | 正方形 600×600 以上，可以在 Canva 用「調整尺寸」從封面另存 |
 | Additional details | `Format: HTML/CSS/JS` · `Languages: English, 繁體中文` · `Pages: 1 (one-page)` · `Builder needed: None` |
@@ -869,7 +869,7 @@ Gumroad 可以建立 **Bundle**，把已上架的商品組合起來賣。如果�
 
 - **Name**：`All 22 Business Website Templates Bundle (English + 繁體中文)`
 - **URL**：`website-templates-bundle`
-- **Price**：`129`（單買合計 $528，約打 2.5 折）
+- **Price**：`199`（單買合計 $858，約打 2.3 折；上市優惠 $149）
 - **Cover**：用 Canva 把多張封面拼成一張
 - **Description**：
 ```

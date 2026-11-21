@@ -253,7 +253,7 @@ a:not(.btn):active { opacity: .7; }
 .slot time { grid-area: time; font: 400 1.3rem/1 var(--font-heading); align-self: start; padding-top: .2rem; }
 .slot time small { font: 400 .78rem/1 var(--font-body); color: var(--muted); margin-left: .2rem; }
 .slot-main { grid-area: main; font-weight: 500; }
-.slot-main small { font-weight: 400; color: var(--muted); font-size: .88rem; margin-left: .4rem; }
+.slot-main small { font-weight: 400; color: var(--muted); font-size: .88rem; margin-left: .4rem; white-space: nowrap; display: inline-block; }
 .slot-info { grid-area: info; display: flex; flex-wrap: wrap; gap: .2rem 1.1rem; font-size: .9rem; color: var(--muted); }
 .slot-left.low { color: var(--brand); font-weight: 500; }
 .slot-left.full { color: var(--muted); text-decoration: line-through; }
@@ -415,7 +415,7 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
   <div class="wrap hero-grid">
     <div>
       <h1>Slow down.<br>Breathe deeply.</h1>
-      <p class="lead">Small-group yoga and reformer Pilates on a quiet South Austin street. Twelve people per class at most, so your teacher sees every move you make.</p>
+      <p class="lead">Small-group yoga and reformer Pilates in South Austin. Twelve people per class at most, so your teacher sees every move.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#book">Book an intro class</a>
         <a class="btn btn-ghost" href="#schedule">See the schedule</a>
@@ -437,7 +437,7 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
   <div class="wrap">
     <div class="sec-head reveal">
       <h2 class="sec-title">Find the practice that fits you</h2>
-      <p class="sec-lead">Whether it's your first time on a mat or you're ready to go deeper into core work, our five class styles meet your body where it is.</p>
+      <p class="sec-lead">Whether it’s your first time on a mat or you’re ready to go deeper into core work, our five class styles meet your body where it is.</p>
     </div>
     <div class="class-grid">
       <article class="class-card reveal">
@@ -460,7 +460,7 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
         <div class="img img-class img-c3" role="img" aria-label="A crescent moon in the night sky, for the stillness of Yin"></div>
         <div class="body">
           <h3>Yin Yoga</h3>
-          <p>Fully supported by bolsters and blocks, you'll rest in each shape for three to five minutes and let a long day melt away.</p>
+          <p>Fully supported by bolsters and blocks, you’ll rest in each shape for three to five minutes and let a long day melt away.</p>
           <div class="meta"><span>All levels</span><span>75 min</span></div>
         </div>
       </article>
@@ -476,13 +476,13 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
         <div class="img img-class img-c5" role="img" aria-label="Two nestled circles, for Prenatal Yoga"></div>
         <div class="body">
           <h3>Prenatal Yoga</h3>
-          <p>Led by a certified prenatal teacher to ease back tension and practice birth breathing. Join from week 14, with your doctor's okay.</p>
+          <p>Led by a certified prenatal teacher to ease back tension and practice birth breathing. Join from week 14, with your doctor’s okay.</p>
           <div class="meta"><span>Week 14 and up</span><span>60 min</span></div>
         </div>
       </article>
       <article class="class-card help reveal d3">
         <h3>Not sure where to start?</h3>
-        <p>Tell us a little about how you move and how your body feels in the booking form. We'll pick the right first class for you.</p>
+        <p>Tell us a little about how you move and how your body feels in the booking form. We’ll pick the right first class for you.</p>
         <a class="btn btn-primary" href="#book" data-class="Not sure, please recommend">Get a recommendation</a>
       </article>
     </div>
@@ -496,7 +496,7 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
   <div class="wrap">
     <div class="sec-head reveal">
       <h2 class="sec-title">Weekly schedule</h2>
-      <p class="sec-lead">Pick a day to see its classes and open spots. Tap Book on any class and we'll fill it into the form for you.</p>
+      <p class="sec-lead">Pick a day to see its classes and open spots. Tap Book on any class and we’ll fill it into the form for you.</p>
     </div>
     <div class="reveal">
       <div class="tabs js-only" role="tablist" aria-label="Choose a day">
@@ -645,7 +645,7 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
         <div class="img img-teacher img-t2 arch" role="img" aria-label="Photo placeholder for Theo"></div>
         <h3>Theo Alvarez</h3>
         <p class="role">Vinyasa Flow</p>
-        <p>A college track athlete who loves blending strength with softness. Great playlists, a brisk pace, and you'll leave sweaty but completely relaxed.</p>
+        <p>A college track athlete who loves blending strength with softness. Great playlists, a brisk pace, and you’ll leave sweaty but completely relaxed.</p>
         <p class="certs">RYT 500, certified athletic trainer</p>
       </article>
       <article class="teacher reveal d3">
@@ -693,12 +693,12 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
     <div>
       <div class="sec-head reveal">
         <h2 class="sec-title">Your first class</h2>
-        <p class="sec-lead">You don't need to be flexible or experienced. Keep these few things in mind and your first class will feel easy.</p>
+        <p class="sec-lead">You don’t need to be flexible or experienced. Keep these few things in mind and your first class will feel easy.</p>
       </div>
       <ol class="steps">
         <li class="reveal"><div><h3>Arrive 15 minutes early</h3><p>Fill out a short health form, change, and tell your teacher about any tight spots or old injuries.</p></div></li>
-        <li class="reveal d2"><div><h3>Skip big meals 2 hours before</h3><p>Practice feels better on an empty stomach. If you're hungry, a banana or a little soy milk is fine.</p></div></li>
-        <li class="reveal d3"><div><h3>Follow your own breath</h3><p>If a pose doesn't work today, stop where it feels good. Your teacher will offer a variation, and there's no need to compare.</p></div></li>
+        <li class="reveal d2"><div><h3>Skip big meals 2 hours before</h3><p>Practice feels better on an empty stomach. If you’re hungry, a banana or a little soy milk is fine.</p></div></li>
+        <li class="reveal d3"><div><h3>Follow your own breath</h3><p>If a pose doesn’t work today, stop where it feels good. Your teacher will offer a variation, and there’s no need to compare.</p></div></li>
         <li class="reveal"><div><h3>Drink warm water afterward</h3><p>Your body keeps adjusting after practice. Rest early that night and your shoulders will thank you tomorrow.</p></div></li>
       </ol>
     </div>
@@ -706,7 +706,7 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
       <h3>What to bring</h3>
       <ul>
         <li><b>Comfortable clothes</b><span>Fitted is best, so your teacher can see your alignment</span></li>
-        <li><b>A water bottle</b><span>There's a filtered water station to refill anytime</span></li>
+        <li><b>A water bottle</b><span>There’s a filtered water station to refill anytime</span></li>
         <li><b>Grip socks</b><span>Required for reformer classes, also sold here for $12</span></li>
         <li><b>No mat needed</b><span>Mats, towels and props are all provided</span></li>
       </ul>
@@ -745,12 +745,12 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
       <h2 class="sec-title">Questions, answered</h2>
     </div>
     <div class="faq reveal">
-      <details><summary>I don't exercise at all. Can I still come?</summary><p>Absolutely. Start with Hatha or Yin, where your teacher will offer props and easier options. Mention it in the booking form and we'll place you in the right class.</p></details>
-      <details><summary>What's the difference between yoga and reformer Pilates?</summary><p>Yoga focuses on breath, flexibility and calming the mind. Reformer Pilates uses spring resistance to build deep core strength, which is especially helpful for posture and low back pain. They pair beautifully.</p></details>
+      <details><summary>I don’t exercise at all. Can I still come?</summary><p>Absolutely. Start with Hatha or Yin, where your teacher will offer props and easier options. Mention it in the booking form and we’ll place you in the right class.</p></details>
+      <details><summary>What’s the difference between yoga and reformer Pilates?</summary><p>Yoga focuses on breath, flexibility and calming the mind. Reformer Pilates uses spring resistance to build deep core strength, which is especially helpful for posture and low back pain. They pair beautifully.</p></details>
       <details><summary>Are classes open to men?</summary><p>Of course. We have separate changing rooms and showers, and plenty of men take our Vinyasa and reformer classes.</p></details>
-      <details><summary>I have an injury or I'm pregnant. What should I know?</summary><p>Please share the details in the booking form and tell your teacher before class. During pregnancy we recommend Prenatal Yoga, with your doctor's approval.</p></details>
+      <details><summary>I have an injury or I’m pregnant. What should I know?</summary><p>Please share the details in the booking form and tell your teacher before class. During pregnancy we recommend Prenatal Yoga, with your doctor’s approval.</p></details>
       <details><summary>Can I share or extend my class pack?</summary><p>A 10-class pack can be transferred once to a friend or family member, and extended by one month before it expires. Unlimited memberships can be paused once for up to 30 days.</p></details>
-      <details><summary>Where do I park?</summary><p>There's a free lot behind the building, plus street parking on Juniper Lane. Bus routes 3 and 10 stop two blocks away.</p></details>
+      <details><summary>Where do I park?</summary><p>There’s a free lot behind the building, plus street parking on Juniper Lane. Bus routes 3 and 10 stop two blocks away.</p></details>
     </div>
   </div>
 </section>
@@ -760,7 +760,7 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
   <div class="wrap book-grid">
     <div class="reveal">
       <h2 class="sec-title">Book your first class</h2>
-      <p class="sec-lead">Fill out the form and we'll call or message you within one business day to confirm your spot. In a hurry? Just send us a message.</p>
+      <p class="sec-lead">Fill out the form and we’ll call or message you within one business day to confirm your spot. In a hurry? Just send us a message.</p>
       <ul class="contact-list">
         <li><b>Address</b><span>86 Juniper Lane, Suite 300, Austin, TX 78704</span></li>
         <li><b>Phone</b><a href="tel:+15550123456">(555) 012-3456</a></li>
