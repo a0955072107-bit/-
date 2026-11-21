@@ -248,9 +248,10 @@ a:not(.btn):active { opacity: .7; }
 .day:focus-visible { border-radius: var(--radius); }
 .day-title { font-size: 1.4rem; margin: 2rem 0 .6rem; }
 .slots { list-style: none; background: var(--surface); border-radius: var(--radius); padding: .4rem clamp(1rem, 3vw, 2rem); box-shadow: 0 1px 0 var(--line); }
-.slot { display: grid; grid-template-columns: 4.2rem minmax(0, 1fr) auto; grid-template-areas: "time main book" "time info book"; column-gap: 1rem; align-items: center; padding: 1.05rem 0; border-bottom: 1px solid var(--line); }
+.slot { display: grid; grid-template-columns: 4.6rem minmax(0, 1fr) auto; grid-template-areas: "time main book" "time info book"; column-gap: 1rem; align-items: center; padding: 1.05rem 0; border-bottom: 1px solid var(--line); }
 .slot:last-child { border-bottom: 0; }
 .slot time { grid-area: time; font: 400 1.3rem/1 var(--font-heading); align-self: start; padding-top: .2rem; }
+.slot time small { font: 400 .78rem/1 var(--font-body); color: var(--muted); margin-left: .2rem; }
 .slot-main { grid-area: main; font-weight: 500; }
 .slot-main small { font-weight: 400; color: var(--muted); font-size: .88rem; margin-left: .4rem; }
 .slot-info { grid-area: info; display: flex; flex-wrap: wrap; gap: .2rem 1.1rem; font-size: .9rem; color: var(--muted); }
@@ -258,7 +259,7 @@ a:not(.btn):active { opacity: .7; }
 .slot-left.full { color: var(--muted); text-decoration: line-through; }
 .slot-book { grid-area: book; font-size: .92rem; padding: .5rem 1rem; }
 @media (min-width: 760px) {
-  .slot { grid-template-columns: 5rem minmax(0, 1.4fr) minmax(0, 1fr) auto; grid-template-areas: "time main info book"; }
+  .slot { grid-template-columns: 5.6rem minmax(0, 1.4fr) minmax(0, 1fr) auto; grid-template-areas: "time main info book"; }
   .slot time { align-self: center; padding-top: 0; }
 }
 .sched-note { margin-top: 1.2rem; font-size: .9rem; color: var(--muted); }
