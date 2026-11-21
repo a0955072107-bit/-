@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>毛日子 Furday 寵物美容｜新竹東區寵物美容、安親與住宿</title>
+<meta name="description" content="毛日子 Furday 寵物美容位於新竹市東區，提供狗狗與貓咪洗澡、美容造型、SPA、日間安親與寵物住宿。即時監視器、貓咪獨立空間、證照美容師，LINE 線上預約。">
+<meta property="og:title" content="毛日子 Furday 寵物美容｜新竹東區寵物美容、安親與住宿">
+<meta property="og:description" content="洗澡、美容造型、SPA、安親、住宿。即時監視器與貓咪獨立空間，LINE 線上預約。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#fdf6e7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #f2b33d;          /* 品牌主色（暖陽芥末黃），用於按鈕、色塊 */
+  --brand-2: #f8d27a;        /* 品牌淺色，用於大色塊與裝飾 */
+  --brand-ink: #1c2541;      /* 在品牌色上的文字顏色（深海軍藍） */
+  --bg: #fdf6e7;             /* 整站背景（奶油色） */
+  --surface: #fffbf2;        /* 卡片、表單表面色 */
+  --surface-2: #f9ecd0;      /* 次要區塊背景（深一階的奶油色） */
+  --text: #1c2541;           /* 主要文字（深海軍藍） */
+  --muted: #4d5672;          /* 次要文字、說明文字 */
+  --line: #eadab4;           /* 分隔線、邊框 */
+  --fur: #e8a25c;            /* 佔位圖用：狗狗毛色（焦糖） */
+  --fur-dark: #b9733a;       /* 佔位圖用：耳朵、深色毛 */
+  --cream-hi: #fffaf0;       /* 佔位圖用：嘴邊與高光 */
+  --coral: #ee8a73;          /* 佔位圖用：舌頭、腮紅、蝴蝶結 */
+  --sky: #a9d3e3;            /* 佔位圖用：天空藍、泡泡 */
+  --mint: #bfe0bf;           /* 佔位圖用：薄荷綠 */
+  --slate: #8592b5;          /* 佔位圖用：灰藍色貓咪 */
+  --skin: #f3caa2;           /* 佔位圖用：美容師膚色 */
+  --shadow: color-mix(in srgb, var(--text) 12%, transparent);         /* 一般陰影色 */
+  --paw-tint: color-mix(in srgb, var(--brand) 32%, transparent);      /* 腳印花紋顏色 */
+  --radius: 28px;            /* 卡片圓角大小 */
+  --radius-sm: 16px;         /* 輸入框、小元件圓角 */
+  --blob: 62% 38% 54% 46% / 48% 56% 44% 52%; /* 圖框的「軟糖」不規則圓角 */
+  --font-heading: "Fredoka", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; /* 標題字型（圓潤粗體） */
+  --font-body: "Nunito", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; /* 內文字型 */
+  --pad: clamp(1.25rem, 5vw, 5rem); /* 區塊左右留白 */
+  --max: 1180px;             /* 內容最大寬度 */
+  --ease: cubic-bezier(.16, 1, .3, 1); /* 動畫曲線（快起慢停） */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+[hidden] { display: none !important; }
+a { color: inherit; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; border-radius: 8px; }
+.wrap { max-width: var(--max); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 99; }
+.skip:focus { left: 1rem; top: 1rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; fill: var(--paw-tint); }
+
+/* ---------- 按鈕 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 3.1rem; padding: .7rem 1.6rem; border-radius: 999px; font: 800 1rem/1 var(--font-body); text-decoration: none; border: 2px solid var(--text); cursor: pointer; transition: transform .3s var(--ease), box-shadow .3s var(--ease), background-color .2s; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); box-shadow: 0 4px 0 var(--text); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 0 var(--text); background: var(--brand-2); }
+.btn-primary:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--text); }
+.btn-ghost { background: transparent; color: var(--text); }
+.btn-ghost:hover { background: var(--surface-2); transform: translateY(-2px); }
+.btn-ghost:active { transform: translateY(1px); }
+button:disabled, .btn[aria-disabled="true"] { opacity: .5; cursor: not-allowed; transform: none; }
+.btn svg { width: 1.2em; height: 1.2em; fill: currentColor; }
+.text-link { font-weight: 700; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 3px; text-underline-offset: 4px; transition: text-decoration-color .2s, color .2s; }
+.text-link:hover { text-decoration-color: var(--text); }
+.text-link:active { color: var(--muted); }
+
+/* ---------- 區塊：頁首 ---------- */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; padding: 1rem var(--pad); border-bottom: 2px solid transparent; transition: background-color .3s, border-color .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-color: var(--line); padding-block: .6rem; }
+.nav { max-width: var(--max); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .5rem; font: 700 1.35rem/1 var(--font-heading); text-decoration: none; white-space: nowrap; }
+.logo svg { width: 2.2rem; height: 2.2rem; fill: var(--text); background: var(--brand); border-radius: var(--blob); padding: .35rem; }
+.logo small { font: 600 .95rem/1 var(--font-heading); color: var(--muted); }
+.menu { display: flex; align-items: center; gap: clamp(.8rem, 1.8vw, 1.6rem); font-size: .95rem; font-weight: 700; }
+.menu a:not(.btn) { text-decoration: none; padding: .3rem .1rem; border-radius: 6px; background: linear-gradient(var(--brand), var(--brand)) 0 100% / 100% 0 no-repeat; transition: background-size .25s; }
+.menu a:not(.btn):hover { background-size: 100% 40%; }
+.menu a:not(.btn):active { background-size: 100% 100%; }
+.menu .btn { min-height: 2.6rem; padding: .5rem 1.15rem; font-size: .92rem; box-shadow: 0 3px 0 var(--text); }
+.burger { display: none; width: 2.9rem; height: 2.9rem; border: 2px solid var(--text); background: var(--brand); cursor: pointer; position: relative; border-radius: 50%; }
+.burger span, .burger::before, .burger::after { content: ""; position: absolute; left: 28%; right: 28%; height: 2.5px; border-radius: 2px; background: var(--text); transition: transform .3s var(--ease), opacity .2s; }
+.burger::before { top: 33%; } .burger span { top: calc(50% - 1px); } .burger::after { top: 63%; }
+.burger[aria-expanded="true"]::before { transform: translateY(.4rem) rotate(45deg); }
+.burger[aria-expanded="true"] span { opacity: 0; }
+.burger[aria-expanded="true"]::after { transform: translateY(-.4rem) rotate(-45deg); }
+@media (max-width: 960px) and (min-width: 761px) { .menu .opt { display: none; } }
+@media (max-width: 760px) {
+  /* 沒有 JavaScript 時，選單直接換行顯示；有 JS 才收進漢堡選單 */
+  html:not(.js) *:has(> .menu) { flex-wrap: wrap; }
+  html:not(.js) header:has(.menu) { position: sticky; top: 0; background: var(--bg); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .3rem 1rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: 0 0 auto; padding: 5.5rem var(--pad) 2rem; flex-direction: column; align-items: stretch; gap: 0; background: var(--surface); border-bottom: 2px solid var(--line); border-radius: 0 0 var(--radius) var(--radius); box-shadow: 0 20px 40px var(--shadow); transform: translateY(-105%); visibility: hidden; transition: transform .4s var(--ease), visibility 0s .4s; z-index: -1; font-size: 1.1rem; }
+  .js .menu.open { transform: none; visibility: visible; transition: transform .4s var(--ease); }
+  .js .menu a:not(.btn) { padding: .85rem .2rem; border-bottom: 2px dashed var(--line); border-radius: 0; }
+  .js .menu .btn { margin-top: 1.25rem; min-height: 3.1rem; }
+}
+
+/* ---------- 通用區塊 ---------- */
+section { position: relative; padding: clamp(4.5rem, 11vh, 7.5rem) var(--pad); }
+.sec-head { text-align: center; max-width: 40rem; margin: 0 auto clamp(2.5rem, 6vh, 3.5rem); }
+.sec-head h2 { font-size: clamp(1.9rem, 4.6vw, 2.9rem); font-weight: 700; line-height: 1.25; }
+.sec-head p { color: var(--muted); margin-top: .8rem; font-size: 1.05rem; }
+.alt { background: var(--surface-2); }
+.card { background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); }
+.paw-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+
+/* ---------- 藝術佔位圖 ----------
+   每個 .img-xx 都是用 CSS 漸層或內嵌 SVG 畫出的佔位圖。
+   換成照片時，把 div 裡的 <svg> 刪掉，再設定背景圖即可。 */
+.img { position: relative; overflow: hidden; isolation: isolate; background-color: var(--surface-2); }
+.img > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.blobby { border-radius: var(--blob); }
+/* SVG 動物的配色：在 <svg style="--c-fur:..."> 上覆寫即可換毛色 */
+.p-fur { fill: var(--c-fur, var(--fur)); }
+.p-ear { fill: var(--c-ear, var(--fur-dark)); }
+.p-light { fill: var(--c-light, var(--cream-hi)); }
+.p-ink { fill: var(--text); }
+.p-hi { fill: var(--cream-hi); }
+.p-pink { fill: var(--coral); }
+.p-cheek { fill: var(--coral); opacity: .4; }
+.p-line { fill: none; stroke: var(--text); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.p-thin { stroke-width: 2.5; }
+.p-round { stroke: var(--c-fur, var(--fur)); stroke-width: 12; stroke-linejoin: round; }
+.p-stripe { fill: none; stroke: var(--c-ear, var(--fur-dark)); stroke-width: 5; stroke-linecap: round; }
+.f-bubble { fill: var(--cream-hi); stroke: var(--sky); stroke-width: 3; }
+.f-coral { fill: var(--coral); }
+.f-ink { fill: var(--text); }
+.f-cream { fill: var(--cream-hi); }
+.f-sky { fill: var(--sky); }
+.f-brand { fill: var(--brand); }
+.g-skin { fill: var(--skin); }
+.g-hair { fill: var(--c-hair, var(--text)); }
+.g-shirt { fill: var(--c-shirt, var(--sky)); }
+.g-apron { fill: var(--c-apron, var(--brand)); }
+/* 換成照片：.img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero { background: radial-gradient(60% 50% at 30% 25%, var(--brand-2), transparent 70%), linear-gradient(160deg, var(--brand), var(--brand-2)); }
+/* 換成照片：.img-size-s { background: url(images/size-small.jpg) center/cover; }（.img-size-m／l／c 同理） */
+.img-size-s { background: radial-gradient(circle at 50% 110%, var(--mint) 0 45%, transparent 46%), var(--surface-2); }
+.img-size-m { background: radial-gradient(circle at 50% 110%, var(--sky) 0 45%, transparent 46%), var(--surface-2); }
+.img-size-l { background: radial-gradient(circle at 50% 110%, var(--brand-2) 0 45%, transparent 46%), var(--surface-2); }
+.img-size-c { background: radial-gradient(circle at 50% 110%, var(--coral) 0 45%, transparent 46%), var(--surface-2); }
+/* 換成照片：.img-room { background: url(images/grooming-room.jpg) center/cover; } */
+.img-room { background:
+  radial-gradient(18% 16% at 78% 26%, var(--cream-hi) 0 60%, transparent 62%),
+  linear-gradient(90deg, transparent 49%, var(--cream-hi) 49% 51%, transparent 51%) 60% 8% / 46% 40% no-repeat,
+  radial-gradient(34% 14% at 40% 70%, var(--cream-hi) 0 96%, transparent 100%),
+  linear-gradient(var(--sky) 0 46%, transparent 46%) 60% 8% / 46% 40% no-repeat,
+  repeating-linear-gradient(90deg, var(--brand-2) 0 38px, color-mix(in srgb, var(--brand-2) 70%, var(--cream-hi)) 38px 76px) 0 100% / 100% 30% no-repeat,
+  linear-gradient(var(--mint), color-mix(in srgb, var(--mint) 60%, var(--cream-hi))); }
+/* 換成照片：.img-catroom { background: url(images/cat-room.jpg) center/cover; } */
+.img-catroom { background:
+  linear-gradient(var(--fur-dark), var(--fur-dark)) 18% 30% / 40% 6% no-repeat,
+  linear-gradient(var(--fur-dark), var(--fur-dark)) 82% 55% / 42% 6% no-repeat,
+  linear-gradient(var(--fur-dark), var(--fur-dark)) 22% 80% / 38% 6% no-repeat,
+  radial-gradient(14% 12% at 28% 24%, var(--slate) 0 92%, transparent 100%),
+  radial-gradient(12% 10% at 74% 50%, var(--fur) 0 92%, transparent 100%),
+  linear-gradient(var(--brand-2), color-mix(in srgb, var(--brand-2) 55%, var(--cream-hi))); }
+/* 換成照片：.img-g1 { background: url(images/groomer-1.jpg) center/cover; }（.img-g2、.img-g3 同理） */
+.img-g1 { background: radial-gradient(70% 60% at 30% 20%, var(--cream-hi), transparent 70%), var(--brand-2); }
+.img-g2 { background: radial-gradient(70% 60% at 70% 20%, var(--cream-hi), transparent 70%), var(--coral); }
+.img-g3 { background: radial-gradient(70% 60% at 40% 20%, var(--cream-hi), transparent 70%), var(--mint); }
+/* 換成照片：.img-before { background: url(images/before-1.jpg) center/cover; }，.img-after 同理 */
+.img-before { background: repeating-linear-gradient(45deg, var(--surface-2) 0 12px, color-mix(in srgb, var(--line) 70%, var(--surface-2)) 12px 24px); }
+.img-after { background: radial-gradient(circle at 50% 55%, var(--cream-hi) 0 30%, transparent 62%), var(--sky); }
+
+/* ---------- 區塊：主視覺 ---------- */
+.hero { min-height: 100svh; display: grid; align-items: center; padding-top: 7rem; overflow: clip; isolation: isolate; }
+.hero .wrap { display: grid; gap: clamp(2.5rem, 5vw, 4.5rem); align-items: center; width: 100%; }
+.hero h1 { font-size: clamp(2.5rem, 6.4vw, 4.5rem); font-weight: 700; line-height: 1.15; margin-bottom: 1.2rem; }
+.hero .lead { color: var(--muted); max-width: 30rem; font-size: 1.12rem; }
+.hero .ctas { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 2rem; }
+.hero .meta { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2rem; font-size: .9rem; font-weight: 700; }
+.hero .meta li { background: var(--surface); border: 2px solid var(--line); border-radius: 999px; padding: .35rem .9rem; }
+.hero .meta b { font: 700 1.05rem/1 var(--font-heading); margin-right: .25rem; }
+.hero-art { position: relative; justify-self: center; width: min(100%, 31rem); }
+.hero-art .img-hero { aspect-ratio: 1; border: 3px solid var(--text); box-shadow: 10px 12px 0 var(--text); }
+.float { position: absolute; display: flex; align-items: center; gap: .55rem; background: var(--surface); border: 2px solid var(--text); border-radius: 999px; padding: .5rem 1rem .5rem .55rem; font-size: .85rem; font-weight: 800; box-shadow: 0 4px 0 var(--text); animation: bob 4s ease-in-out infinite alternate; }
+.float svg { width: 1.9rem; height: 1.9rem; padding: .35rem; border-radius: 50%; background: var(--brand); fill: none; stroke: var(--text); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.float-a { left: -4%; bottom: 10%; }
+.float-b { right: -2%; top: 6%; animation-delay: -2s; }
+@keyframes bob { to { transform: translateY(-10px) rotate(-2deg); } }
+@media (min-width: 900px) { .hero .wrap { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); } }
+@media (max-width: 899px) { .hero-art { width: min(86%, 24rem); } }
+
+/* ---------- 區塊：服務項目 ---------- */
+.services { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
+.service { padding: 1.7rem 1.4rem 1.5rem; transition: transform .3s var(--ease), border-color .2s; }
+.service:hover { transform: translateY(-6px) rotate(-1deg); border-color: var(--brand); }
+.icon { width: 3.6rem; height: 3.6rem; display: grid; place-items: center; background: var(--brand); border: 2px solid var(--text); border-radius: var(--blob); margin-bottom: 1.1rem; }
+.icon svg { width: 1.7rem; height: 1.7rem; fill: none; stroke: var(--text); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.service:nth-child(2) .icon { background: var(--sky); }
+.service:nth-child(3) .icon { background: var(--mint); }
+.service:nth-child(4) .icon { background: var(--coral); }
+.service:nth-child(5) .icon { background: var(--brand-2); }
+.service h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: .35rem; }
+.service p { color: var(--muted); font-size: .94rem; }
+.service .from { display: inline-block; margin-top: .9rem; font-weight: 800; font-size: .9rem; background: var(--surface-2); border-radius: 999px; padding: .2rem .8rem; }
+
+/* ---------- 區塊：價目表 ---------- */
+.tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin-bottom: 1.8rem; }
+.tabs button { font: 800 1rem/1 var(--font-body); padding: .8rem 1.4rem; border-radius: 999px; border: 2px solid var(--text); background: var(--surface); color: var(--text); cursor: pointer; transition: background-color .2s, transform .3s var(--ease); }
+.tabs button:hover { background: var(--surface-2); transform: translateY(-2px); }
+.tabs button:active { transform: translateY(1px); }
+.tabs button[aria-selected="true"] { background: var(--brand); box-shadow: 0 3px 0 var(--text); }
+html:not(.js) .tabs { display: none; }
+.panel { display: grid; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; padding: clamp(1.25rem, 4vw, 2.5rem); margin-bottom: 1.25rem; }
+.panel-title { font-size: 1.4rem; font-weight: 700; }
+.js .panel-title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.size-art { aspect-ratio: 1; width: min(100%, 15rem); justify-self: center; }
+.size-note { text-align: center; color: var(--muted); font-weight: 700; margin-top: .8rem; }
+@media (min-width: 760px) { .panel { grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); } }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { width: 100%; border-collapse: collapse; min-width: 19rem; }
+th, td { text-align: left; padding: .9rem .4rem; border-bottom: 2px dashed var(--line); vertical-align: middle; }
+thead th { font-size: .88rem; color: var(--muted); font-weight: 700; border-bottom: 2px solid var(--line); }
+tbody th { font-weight: 800; font-size: 1.02rem; }
+tbody th small { display: block; font-weight: 400; color: var(--muted); font-size: .84rem; line-height: 1.5; }
+td.price { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; font: 600 1.25rem/1 var(--font-heading); }
+td.price small { font: 400 .8rem/1 var(--font-body); color: var(--muted); margin-left: .15rem; }
+thead th:last-child { text-align: right; }
+.price-note { font-variant-numeric: tabular-nums; text-align: center; color: var(--muted); font-size: .9rem; margin-top: 1rem; }
+
+/* ---------- 區塊：環境與安心措施 ---------- */
+.care { display: grid; gap: clamp(2.5rem, 6vw, 4.5rem); align-items: center; }
+@media (min-width: 900px) { .care { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.care-art { position: relative; padding: 0 12% 14% 0; }
+.care-art .img-room { aspect-ratio: 4 / 3; border-radius: var(--radius); border: 3px solid var(--text); }
+.care-art .img-catroom { position: absolute; right: 0; bottom: 0; width: 46%; aspect-ratio: 1; border-radius: var(--blob); border: 3px solid var(--text); box-shadow: 6px 8px 0 var(--text); }
+.features { display: grid; gap: 1rem; }
+.feature { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem; padding: 1.3rem 1.4rem; }
+.feature .icon { width: 3.1rem; height: 3.1rem; margin: 0; }
+.feature h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: .2rem; }
+.feature p { color: var(--muted); font-size: .94rem; }
+
+/* ---------- 區塊：美容師介紹 ---------- */
+.team { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.groomer { padding: 1.5rem 1.5rem 1.8rem; text-align: center; }
+.groomer .img { aspect-ratio: 1; width: min(100%, 13rem); margin: 0 auto 1.2rem; border-radius: var(--blob); border: 3px solid var(--text); transition: border-radius .6s var(--ease); }
+.groomer:hover .img { border-radius: 46% 54% 40% 60% / 58% 44% 56% 42%; }
+.groomer h3 { font-size: 1.35rem; font-weight: 700; }
+.groomer .role { color: var(--muted); font-size: .92rem; font-weight: 700; }
+.groomer p.bio { color: var(--muted); font-size: .93rem; margin-top: .7rem; }
+.tags { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem; margin-top: 1rem; }
+.tags li { font-size: .82rem; font-weight: 700; padding: .2rem .75rem; border-radius: 999px; background: var(--surface-2); border: 2px solid var(--line); }
+
+/* ---------- 區塊：美容前後 ---------- */
+.gallery { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.ba { padding: .8rem .8rem 1.1rem; }
+.ba-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+.ba-pair .img { aspect-ratio: 1; border-radius: calc(var(--radius) - 8px); }
+.ba-pair span { position: absolute; left: .5rem; top: .5rem; font-size: .78rem; font-weight: 800; background: var(--surface); border: 2px solid var(--text); border-radius: 999px; padding: .05rem .6rem; }
+.ba-pair .img-after span { background: var(--brand); }
+.ba figcaption { padding: .9rem .4rem 0; }
+.ba figcaption b { display: block; font: 700 1.1rem/1.4 var(--font-heading); }
+.ba figcaption small { color: var(--muted); font-size: .9rem; }
+
+/* ---------- 區塊：預約須知 ---------- */
+.notice { max-width: 48rem; margin-inline: auto; display: grid; gap: .8rem; }
+.notice details { background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius-sm); transition: border-color .2s; }
+.notice details[open] { border-color: var(--text); }
+.notice summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.1rem 1.3rem; font-weight: 800; font-size: 1.05rem; border-radius: var(--radius-sm); }
+.notice summary:hover { background: var(--surface-2); }
+.notice summary::-webkit-details-marker { display: none; }
+.notice summary::after { content: "+"; flex: none; width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center; background: var(--brand); border: 2px solid var(--text); font: 700 1.2rem/1 var(--font-heading); transition: transform .3s var(--ease); }
+.notice details[open] summary::after { transform: rotate(45deg); }
+.notice details p { color: var(--muted); padding: 0 1.3rem 1.2rem; }
+
+/* ---------- 區塊：顧客評價 ---------- */
+.reviews { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.review { position: relative; padding: 1.8rem 1.6rem 1.6rem; border-radius: var(--radius) var(--radius) var(--radius) 6px; }
+.review:nth-child(2) { background: color-mix(in srgb, var(--sky) 30%, var(--surface)); }
+.review:nth-child(3) { background: color-mix(in srgb, var(--mint) 35%, var(--surface)); }
+.stars { display: flex; gap: .15rem; margin-bottom: .8rem; }
+.stars svg { width: 1.2rem; height: 1.2rem; fill: var(--brand); stroke: var(--text); stroke-width: 1.4; stroke-linejoin: round; }
+.review blockquote { font-size: 1rem; }
+.review footer { margin-top: 1.1rem; font-weight: 800; font-size: .92rem; }
+.review footer span { display: block; color: var(--muted); font-weight: 400; }
+
+/* ---------- 區塊：預約表單 ---------- */
+.booking { display: grid; gap: clamp(2rem, 5vw, 3.5rem); align-items: start; }
+@media (min-width: 960px) { .booking { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); } }
+.form { padding: clamp(1.25rem, 4vw, 2.4rem); display: grid; gap: 1.1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .form { grid-template-columns: repeat(2, minmax(0, 1fr)); } .form .full { grid-column: 1 / -1; } }
+.field { display: grid; gap: .35rem; min-width: 0; }
+.field label { font-weight: 800; font-size: .93rem; }
+.field label small { font-weight: 400; color: var(--muted); }
+input, select, textarea { font: 400 1rem/1.4 var(--font-body); color: var(--text); background: var(--bg); border: 2px solid var(--line); border-radius: var(--radius-sm); padding: .75rem .9rem; width: 100%; min-width: 0; min-height: 3rem; transition: border-color .2s, background-color .2s; }
+input:hover, select:hover, textarea:hover { border-color: var(--muted); }
+input:focus-visible, select:focus-visible, textarea:focus-visible { border-color: var(--text); background: var(--surface); outline-offset: 1px; }
+textarea { resize: vertical; min-height: 6rem; }
+.form .btn { justify-self: start; }
+.form .hint { color: var(--muted); font-size: .86rem; }
+.side { padding: clamp(1.5rem, 4vw, 2.2rem); background: var(--brand); border-color: var(--text); }
+.side h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: .6rem; }
+.side p { margin-bottom: 1.2rem; }
+.side .btn-ghost { margin-top: .7rem; }
+.side ul { margin-top: 1.4rem; display: grid; gap: .5rem; font-weight: 700; font-size: .93rem; }
+.side li { display: flex; gap: .6rem; align-items: flex-start; }
+.side li svg { flex: none; width: 1.2rem; height: 1.2rem; margin-top: .25rem; fill: var(--text); }
+
+/* ---------- 區塊：交通與營業時間 ---------- */
+.visit { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.info { padding: clamp(1.5rem, 4vw, 2.2rem); }
+.info h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; }
+.info dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .6rem 1.4rem; }
+.info dt { color: var(--muted); font-weight: 700; font-size: .93rem; }
+.info > .text-link { display: inline-block; margin-top: 1.3rem; }
+.info + .info { background: var(--surface-2); }
+.map-art { display: block; min-height: 16rem; border-radius: var(--radius); border: 3px solid var(--text); transition: transform .3s var(--ease); background:
+  radial-gradient(circle at 56% 46%, var(--text) 0 .55rem, var(--brand) .6rem 1.3rem, color-mix(in srgb, var(--brand) 30%, transparent) 1.35rem 2.2rem, transparent 2.25rem),
+  linear-gradient(24deg, transparent 46%, var(--cream-hi) 46% 50%, transparent 50%),
+  linear-gradient(-64deg, transparent 58%, var(--cream-hi) 58% 61%, transparent 61%),
+  radial-gradient(22% 18% at 20% 78%, var(--mint) 0 95%, transparent 100%),
+  repeating-linear-gradient(0deg, transparent 0 44px, color-mix(in srgb, var(--cream-hi) 70%, transparent) 44px 47px),
+  repeating-linear-gradient(90deg, transparent 0 44px, color-mix(in srgb, var(--cream-hi) 70%, transparent) 44px 47px),
+  var(--brand-2); }
+.map-art:hover { transform: rotate(-1deg) scale(1.01); }
+.map-art:active { transform: scale(.99); }
+
+/* ---------- 區塊：頁尾 ---------- */
+.site-footer { background: var(--text); color: var(--bg); padding: clamp(3rem, 8vh, 4.5rem) var(--pad) 7rem; border-radius: calc(var(--radius) * 1.5) calc(var(--radius) * 1.5) 0 0; }
+.site-footer .wrap { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); }
+.site-footer .logo small { color: var(--brand-2); }
+.site-footer .logo svg { fill: var(--brand-ink); }
+.site-footer p, .site-footer li { font-size: .93rem; color: color-mix(in srgb, var(--bg) 85%, transparent); }
+.site-footer li + li { margin-top: .3rem; }
+.site-footer .f-h { font: 700 1.05rem/1 var(--font-heading); margin-bottom: 1rem; color: var(--brand); }
+.site-footer a { text-decoration: none; transition: color .2s; }
+.site-footer a:hover { color: var(--brand); }
+.site-footer a:active { opacity: .75; }
+.site-footer :focus-visible { outline-color: var(--brand); }
+.social { display: flex; flex-wrap: wrap; gap: .4rem 1rem; }
+.social li + li { margin-top: 0; }
+.copy { max-width: var(--max); margin: 2.5rem auto 0; padding-top: 1.5rem; border-top: 2px dashed color-mix(in srgb, var(--bg) 22%, transparent); font-size: .85rem; color: color-mix(in srgb, var(--bg) 78%, transparent); }
+@media (min-width: 761px) { .site-footer { padding-bottom: 3rem; } }
+
+/* ---------- 手機底部固定按鈕 ---------- */
+.sticky-cta { position: fixed; left: 1rem; right: 1rem; bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 40; }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- 捲動漸入動畫（只在有 JS 時先隱藏） ---------- */
+.js .reveal { opacity: 0; transform: translateY(26px) scale(.98); transition: opacity .7s ease, transform .8s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "毛日子 Furday 寵物美容",
+  "description": "寵物美容與寵物旅館：狗狗與貓咪洗澡、美容造型、SPA、日間安親與住宿。",
+  "telephone": "03-123-4567",
+  "priceRange": "NT$500–NT$2400",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "關新路 88 號 1 樓",
+    "addressLocality": "東區",
+    "addressRegion": "新竹市",
+    "postalCode": "300",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:30", "closes": "19:30" }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<!-- SVG 圖庫：狗、貓、腳印等形狀，頁面各處用 <use href="#dog"> 重複使用 -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="dog" viewBox="0 0 200 200">
+    <ellipse class="p-ear" cx="46" cy="94" rx="24" ry="46" transform="rotate(18 46 94)"/>
+    <ellipse class="p-ear" cx="154" cy="94" rx="24" ry="46" transform="rotate(-18 154 94)"/>
+    <circle class="p-fur" cx="100" cy="104" r="62"/>
+    <ellipse class="p-light" cx="100" cy="136" rx="35" ry="27"/>
+    <circle class="p-cheek" cx="64" cy="126" r="9"/><circle class="p-cheek" cx="136" cy="126" r="9"/>
+    <circle class="p-ink" cx="78" cy="100" r="7.5"/><circle class="p-ink" cx="122" cy="100" r="7.5"/>
+    <circle class="p-hi" cx="80.5" cy="97.5" r="2.4"/><circle class="p-hi" cx="124.5" cy="97.5" r="2.4"/>
+    <path class="p-pink" d="M93 141q7 18 14 0z"/>
+    <path class="p-line" d="M100 129v9M86 139q14 10 28 0"/>
+    <ellipse class="p-ink" cx="100" cy="123" rx="12" ry="8.5"/>
+  </symbol>
+  <symbol id="cat" viewBox="0 0 200 200">
+    <path class="p-fur p-round" d="M44 92 54 32 96 64Z"/>
+    <path class="p-fur p-round" d="M156 92 146 32 104 64Z"/>
+    <path class="p-cheek" d="M58 76 62 46 84 64Z"/><path class="p-cheek" d="M142 76 138 46 116 64Z"/>
+    <ellipse class="p-fur" cx="100" cy="118" rx="66" ry="57"/>
+    <path class="p-stripe" d="M90 68v14M100 65v18M110 68v14"/>
+    <ellipse class="p-light" cx="100" cy="142" rx="28" ry="20"/>
+    <ellipse class="p-ink" cx="74" cy="112" rx="7.5" ry="9.5"/><ellipse class="p-ink" cx="126" cy="112" rx="7.5" ry="9.5"/>
+    <circle class="p-hi" cx="76.5" cy="108.5" r="2.4"/><circle class="p-hi" cx="128.5" cy="108.5" r="2.4"/>
+    <path class="p-pink" d="M92 130h16l-8 9z"/>
+    <path class="p-line" d="M100 139v5M100 144q-8 8-14 2M100 144q8 8 14 2"/>
+    <path class="p-line p-thin" d="M62 136H26M64 146l-34 8M138 136h36M136 146l34 8"/>
+  </symbol>
+  <symbol id="tufts" viewBox="0 0 200 200">
+    <g class="p-fur">
+      <circle cx="164" cy="104" r="16"/><circle cx="155" cy="138" r="18"/><circle cx="130" cy="160" r="15"/><circle cx="100" cy="170" r="17"/>
+      <circle cx="68" cy="160" r="16"/><circle cx="44" cy="136" r="18"/><circle cx="36" cy="102" r="15"/><circle cx="46" cy="70" r="17"/>
+      <circle cx="70" cy="46" r="16"/><circle cx="100" cy="38" r="18"/><circle cx="132" cy="47" r="15"/><circle cx="156" cy="72" r="17"/>
+    </g>
+  </symbol>
+  <symbol id="paw" viewBox="0 0 100 100">
+    <ellipse cx="50" cy="66" rx="22" ry="19"/>
+    <ellipse cx="22" cy="42" rx="9" ry="12" transform="rotate(-20 22 42)"/>
+    <ellipse cx="40" cy="25" rx="9" ry="12"/><ellipse cx="60" cy="25" rx="9" ry="12"/>
+    <ellipse cx="78" cy="42" rx="9" ry="12" transform="rotate(20 78 42)"/>
+  </symbol>
+  <symbol id="bow" viewBox="0 0 60 40"><path d="M30 20 6 6Q0 20 6 34ZM30 20 54 6Q60 20 54 34Z"/><circle cx="30" cy="20" r="7"/></symbol>
+  <symbol id="spark" viewBox="0 0 20 20"><path d="M10 0Q11.5 8.5 20 10 11.5 11.5 10 20 8.5 11.5 0 10 8.5 8.5 10 0Z"/></symbol>
+  <symbol id="star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></symbol>
+  <symbol id="person" viewBox="0 0 200 200">
+    <path class="g-shirt" d="M34 210Q36 132 100 130 164 132 166 210Z"/>
+    <path class="g-apron" d="M70 140h60v70H70Z"/>
+    <circle class="g-hair" cx="100" cy="80" r="44"/>
+    <circle class="g-skin" cx="100" cy="90" r="34"/>
+    <path class="g-hair" d="M64 82Q70 46 104 50 132 54 136 82 112 64 64 82Z"/>
+    <circle class="p-ink" cx="88" cy="92" r="4"/><circle class="p-ink" cx="112" cy="92" r="4"/>
+    <circle class="p-cheek" cx="80" cy="104" r="6"/><circle class="p-cheek" cx="120" cy="104" r="6"/>
+    <path class="p-line p-thin" d="M92 106q8 7 16 0"/>
+  </symbol>
+  <pattern id="pawpat" width="120" height="120" patternUnits="userSpaceOnUse" patternTransform="rotate(-16)">
+    <use href="#paw" x="8" y="10" width="30" height="30"/>
+    <use href="#paw" x="68" y="68" width="24" height="24"/>
+  </pattern>
+</svg>
+
+<!-- ==================== 區塊：頁首導覽 ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav" aria-label="主選單">
+    <a class="logo" href="#top"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg>毛日子<small>Furday</small></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="開啟選單"><span></span></button>
+    <div class="menu" id="menu">
+      <a href="#services">服務項目</a>
+      <a href="#prices">價目表</a>
+      <a href="#care">環境</a>
+      <a class="opt" href="#team">美容師</a>
+      <a class="opt" href="#notice">預約須知</a>
+      <a href="#visit">交通</a>
+      <a class="btn btn-primary" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 預約</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ==================== 區塊：主視覺 Hero ==================== -->
+<section class="hero" id="home">
+  <svg class="paw-bg" aria-hidden="true"><rect width="100%" height="100%" fill="url(#pawpat)"/></svg>
+  <div class="wrap">
+    <div class="reveal">
+      <h1>洗香香、剪可愛，<br>今天也是毛日子</h1>
+      <p class="lead">新竹東區的寵物美容與安親旅館。一次只照顧一位毛孩，接回家的是香噴噴又放鬆的牠。</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.5s5.9-3.5 8-6C21.4 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8Z"/></svg>
+          LINE 預約
+        </a>
+        <a class="btn btn-ghost" href="#prices">價目表</a>
+      </div>
+      <!-- 範例內容：上線前請換成真實資料 -->
+      <ul class="meta">
+        <li><b>4.9</b>顧客好評</li>
+        <li><b>3</b>位證照美容師</li>
+        <li><b>24h</b>監視器直播</li>
+      </ul>
+    </div>
+    <div class="hero-art reveal">
+      <div class="img img-hero blobby" role="img" aria-label="洗完澡的焦糖色狗狗與灰藍色貓咪插畫">
+        <svg viewBox="0 0 400 400" aria-hidden="true">
+          <circle class="f-bubble" cx="72" cy="88" r="22"/><circle class="f-bubble" cx="110" cy="52" r="12"/><circle class="f-bubble" cx="330" cy="300" r="16"/><circle class="f-bubble" cx="306" cy="76" r="9"/>
+          <use href="#cat" x="196" y="120" width="190" height="190" style="--c-fur:var(--slate);--c-ear:var(--text)"/>
+          <use href="#dog" x="30" y="110" width="250" height="250"/>
+          <use class="f-coral" href="#bow" x="122" y="118" width="64" height="44"/>
+          <use class="f-cream" href="#spark" x="44" y="290" width="26" height="26"/><use class="f-cream" href="#spark" x="340" y="200" width="20" height="20"/>
+        </svg>
+      </div>
+      <p class="float float-a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h3l2-3h8l2 3h3v13H3z"/><circle cx="12" cy="13" r="4"/></svg>美容過程照片回報</p>
+      <p class="float float-b"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V9L4 4l4 3h8l4-3-1 5v11z"/><path d="M9.5 13v.5M14.5 13v.5"/></svg>貓咪獨立空間</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：服務項目 ==================== -->
+<section class="alt" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>服務項目</h2>
+      <p>從基本洗澡到過夜住宿，依毛孩的個性安排步調，不趕時間、不硬來。</p>
+    </div>
+    <ul class="services">
+      <li class="service card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18v2a6 6 0 0 1-6 6H9a6 6 0 0 1-6-6zM6 12V6.5a2.5 2.5 0 0 1 5 0"/><circle cx="15" cy="7" r="1.6"/><circle cx="19" cy="4.5" r="1"/></svg></div>
+        <h3>洗澡</h3>
+        <p>低敏洗劑分段清潔，含剪指甲、清耳朵、擠肛門腺與修腳底毛。</p>
+        <span class="from">NT$600 起</span>
+      </li>
+      <li class="service card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M8.4 7.6 20 18M8.4 16.4 20 6"/></svg></div>
+        <h3>美容造型</h3>
+        <p>泰迪熊頭、日系圓臉、夏季短剪，先討論再修剪，拍照給你確認。</p>
+        <span class="from">NT$1,200 起</span>
+      </li>
+      <li class="service card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/><path d="M9 14a3 3 0 0 0 3 3"/></svg></div>
+        <h3>SPA 護理</h3>
+        <p>礦泥深層清潔與微氣泡浴，舒緩皮膚乾癢，毛髮更蓬鬆好梳。</p>
+        <span class="from">加購 NT$300 起</span>
+      </li>
+      <li class="service card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg></div>
+        <h3>日間安親</h3>
+        <p>上班時間送來，有陪玩、散步與午睡時間，傍晚接回不寂寞。</p>
+        <span class="from">NT$500 起／天</span>
+      </li>
+      <li class="service card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7v9H3z"/><path d="M14.5 14a3 3 0 1 1-3.6-3.4 2.4 2.4 0 0 0 3.6 3.4z"/></svg></div>
+        <h3>寵物住宿</h3>
+        <p>獨立房間與夜間巡房，每天傳照片給你，出遠門也放心。</p>
+        <span class="from">NT$800 起／晚</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== 區塊：價目表（依體型分頁） ==================== -->
+<section id="prices">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>價目表</h2>
+      <p>依體型與毛量計價，長毛、打結嚴重或特殊造型會在現場先報價，確認後才開始。</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="選擇寵物體型">
+      <button type="button" role="tab" id="tab-s" aria-controls="panel-s" aria-selected="true">小型犬</button>
+      <button type="button" role="tab" id="tab-m" aria-controls="panel-m" aria-selected="false" tabindex="-1">中型犬</button>
+      <button type="button" role="tab" id="tab-l" aria-controls="panel-l" aria-selected="false" tabindex="-1">大型犬</button>
+      <button type="button" role="tab" id="tab-c" aria-controls="panel-c" aria-selected="false" tabindex="-1">貓</button>
+    </div>
+
+    <div class="panel card" role="tabpanel" id="panel-s" aria-labelledby="tab-s" tabindex="0">
+      <div>
+        <div class="img img-size-s size-art blobby" role="img" aria-label="小型犬插畫"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#dog" x="45" y="60" width="110" height="110" style="--c-fur:var(--cream-hi);--c-ear:var(--fur);--c-light:var(--surface-2)"/></svg></div>
+        <p class="size-note">10 公斤以下，例如貴賓、博美、吉娃娃</p>
+      </div>
+      <div>
+        <h3 class="panel-title">小型犬</h3>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th scope="col">服務</th><th scope="col">價格</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">洗澡<small>含指甲、耳朵、肛門腺、腳底毛</small></th><td class="price">NT$600<small>起</small></td></tr>
+              <tr><th scope="row">美容造型<small>含洗澡與全身修剪</small></th><td class="price">NT$1,200<small>起</small></td></tr>
+              <tr><th scope="row">SPA 護理<small>可加購於洗澡或美容</small></th><td class="price">+NT$300</td></tr>
+              <tr><th scope="row">日間安親<small>09:30 至 19:00</small></th><td class="price">NT$500<small>／天</small></td></tr>
+              <tr><th scope="row">寵物住宿<small>含兩次散步與照片回報</small></th><td class="price">NT$900<small>／晚</small></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel card" role="tabpanel" id="panel-m" aria-labelledby="tab-m" tabindex="0">
+      <div>
+        <div class="img img-size-m size-art blobby" role="img" aria-label="中型犬插畫"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#dog" x="30" y="40" width="140" height="140" style="--c-fur:var(--fur);--c-ear:var(--text)"/></svg></div>
+        <p class="size-note">10～20 公斤，例如柴犬、柯基、米克斯</p>
+      </div>
+      <div>
+        <h3 class="panel-title">中型犬</h3>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th scope="col">服務</th><th scope="col">價格</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">洗澡<small>含指甲、耳朵、肛門腺、腳底毛</small></th><td class="price">NT$900<small>起</small></td></tr>
+              <tr><th scope="row">美容造型<small>含洗澡與全身修剪</small></th><td class="price">NT$1,700<small>起</small></td></tr>
+              <tr><th scope="row">SPA 護理<small>可加購於洗澡或美容</small></th><td class="price">+NT$450</td></tr>
+              <tr><th scope="row">日間安親<small>09:30 至 19:00</small></th><td class="price">NT$700<small>／天</small></td></tr>
+              <tr><th scope="row">寵物住宿<small>含兩次散步與照片回報</small></th><td class="price">NT$1,200<small>／晚</small></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel card" role="tabpanel" id="panel-l" aria-labelledby="tab-l" tabindex="0">
+      <div>
+        <div class="img img-size-l size-art blobby" role="img" aria-label="大型犬插畫"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#dog" x="12" y="22" width="176" height="176" style="--c-fur:var(--brand);--c-ear:var(--fur-dark)"/></svg></div>
+        <p class="size-note">20 公斤以上，例如黃金獵犬、哈士奇</p>
+      </div>
+      <div>
+        <h3 class="panel-title">大型犬</h3>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th scope="col">服務</th><th scope="col">價格</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">洗澡<small>含指甲、耳朵、肛門腺、腳底毛</small></th><td class="price">NT$1,300<small>起</small></td></tr>
+              <tr><th scope="row">美容造型<small>含洗澡與全身修剪</small></th><td class="price">NT$2,400<small>起</small></td></tr>
+              <tr><th scope="row">SPA 護理<small>可加購於洗澡或美容</small></th><td class="price">+NT$600</td></tr>
+              <tr><th scope="row">日間安親<small>09:30 至 19:00</small></th><td class="price">NT$900<small>／天</small></td></tr>
+              <tr><th scope="row">寵物住宿<small>大坪數房間與三次散步</small></th><td class="price">NT$1,500<small>／晚</small></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel card" role="tabpanel" id="panel-c" aria-labelledby="tab-c" tabindex="0">
+      <div>
+        <div class="img img-size-c size-art blobby" role="img" aria-label="貓咪插畫"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#cat" x="30" y="40" width="140" height="140" style="--c-fur:var(--slate);--c-ear:var(--text)"/></svg></div>
+        <p class="size-note">不分體型，長毛貓另依毛量報價</p>
+      </div>
+      <div>
+        <h3 class="panel-title">貓</h3>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th scope="col">服務</th><th scope="col">價格</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">洗澡<small>低噪音吹風，含指甲與耳朵</small></th><td class="price">NT$1,000<small>起</small></td></tr>
+              <tr><th scope="row">美容造型<small>獅子剪、腹部剃毛、除廢毛</small></th><td class="price">NT$1,800<small>起</small></td></tr>
+              <tr><th scope="row">SPA 護理<small>可加購於洗澡或美容</small></th><td class="price">+NT$400</td></tr>
+              <tr><th scope="row">日間安親<small>貓咪專區，與狗狗分開</small></th><td class="price">NT$500<small>／天</small></td></tr>
+              <tr><th scope="row">寵物住宿<small>獨立貓房與跳台</small></th><td class="price">NT$800<small>／晚</small></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <p class="price-note">價格以新台幣計，「起」表示依毛量與狀況調整。連續假期住宿需事先預約。</p>
+  </div>
+</section>
+
+<!-- ==================== 區塊：環境與安心措施 ==================== -->
+<section class="alt" id="care">
+  <div class="wrap care">
+    <div class="care-art reveal">
+      <div class="img img-room" role="img" aria-label="明亮的美容室，有大窗與低台浴缸"></div>
+      <div class="img img-catroom" role="img" aria-label="貓咪專區的層架與跳台"></div>
+    </div>
+    <div>
+      <div class="sec-head reveal" style="text-align:left;margin-inline:0">
+        <h2>環境與安心措施</h2>
+        <p>把毛孩交給別人，最在意的就是看不到。所以我們把每一步都攤開給你看。</p>
+      </div>
+      <ul class="features">
+        <li class="feature card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h3l2-3h8l2 3h3v13H3z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div><h3>即時監視器</h3><p>美容區、安親區與住宿房全天錄影，用手機就能隨時看直播。</p></div>
+        </li>
+        <li class="feature card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V9L4 4l4 3h8l4-3-1 5v11z"/><path d="M9.5 13v.5M14.5 13v.5"/></svg></div>
+          <div><h3>貓咪獨立空間</h3><p>貓咪有自己的入口、洗護室與住宿房，聽不到狗叫，壓力小很多。</p></div>
+        </li>
+        <li class="feature card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg></div>
+          <div><h3>證照美容師</h3><p>所有美容師皆持有寵物美容證照，並完成寵物急救訓練。</p></div>
+        </li>
+        <li class="feature card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c.8 5 4 8.2 9 9-5 .8-8.2 4-9 9-.8-5-4-8.2-9-9 5-.8 8.2-4 9-9z"/></svg></div>
+          <div><h3>一寵一消毒</h3><p>每位毛孩離開後，美容台、浴缸與工具都會重新清潔消毒。</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：美容師介紹 ==================== -->
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>美容師介紹</h2>
+      <p>每位美容師都有自己的拿手項目，預約時可以直接指定。</p>
+    </div>
+    <div class="team">
+      <article class="groomer card reveal">
+        <div class="img img-g1" role="img" aria-label="店長阿寶的形象照"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#person" width="200" height="200"/><use href="#dog" x="122" y="118" width="74" height="74" style="--c-fur:var(--cream-hi);--c-ear:var(--fur)"/></svg></div>
+        <h3>阿寶 Bao</h3>
+        <p class="role">店長、首席美容師｜10 年資歷</p>
+        <p class="bio">擅長泰迪熊頭與日系圓臉造型，對怕剪指甲的毛孩特別有耐心。</p>
+        <ul class="tags"><li>貴賓造型</li><li>甲級美容證照</li></ul>
+      </article>
+      <article class="groomer card reveal">
+        <div class="img img-g2" role="img" aria-label="貓咪美容師小葵的形象照"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#person" width="200" height="200" style="--c-hair:var(--fur-dark);--c-shirt:var(--mint);--c-apron:var(--cream-hi)"/><use href="#cat" x="4" y="120" width="72" height="72" style="--c-fur:var(--slate);--c-ear:var(--text)"/></svg></div>
+        <h3>小葵 Aoi</h3>
+        <p class="role">貓咪美容師｜6 年資歷</p>
+        <p class="bio">專門照顧貓咪，用低噪音吹風與毛巾包裹法，讓緊張的貓也能慢慢放鬆。</p>
+        <ul class="tags"><li>貓咪洗護</li><li>獅子剪</li></ul>
+      </article>
+      <article class="groomer card reveal">
+        <div class="img img-g3" role="img" aria-label="大型犬美容師阿哲的形象照"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#person" width="200" height="200" style="--c-shirt:var(--brand);--c-apron:var(--sky)"/><use href="#dog" x="116" y="108" width="86" height="86" style="--c-fur:var(--brand);--c-ear:var(--fur-dark)"/></svg></div>
+        <h3>阿哲 Jay</h3>
+        <p class="role">大型犬美容師｜8 年資歷</p>
+        <p class="bio">黃金、哈士奇換毛季的救星，除廢毛又快又乾淨，也負責住宿區夜間巡房。</p>
+        <ul class="tags"><li>大型犬</li><li>寵物急救證書</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：美容前後 ==================== -->
+<section class="alt" id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>美容前後</h2>
+      <p>每次美容完都會幫毛孩拍一張帥照，經飼主同意後分享在這裡。</p>
+    </div>
+    <div class="gallery">
+      <figure class="ba card reveal">
+        <div class="ba-pair">
+          <div class="img img-before" role="img" aria-label="美容前：毛髮蓬亂的貴賓犬"><svg viewBox="0 0 200 200" aria-hidden="true" style="--c-fur:var(--line);--c-ear:var(--fur)"><use href="#tufts"/><use href="#dog"/></svg><span>美容前</span></div>
+          <div class="img img-after" role="img" aria-label="美容後：修成泰迪熊頭的貴賓犬"><svg viewBox="0 0 200 200" aria-hidden="true" style="--c-fur:var(--cream-hi);--c-ear:var(--fur)"><use href="#dog"/><use class="f-coral" href="#bow" x="122" y="40" width="44" height="30"/><use class="f-cream" href="#spark" x="20" y="30" width="22" height="22"/></svg><span>美容後</span></div>
+        </div>
+        <figcaption><b>貴賓 Mochi</b><small>泰迪熊頭造型，含 SPA</small></figcaption>
+      </figure>
+      <figure class="ba card reveal">
+        <div class="ba-pair">
+          <div class="img img-before" role="img" aria-label="美容前：換毛季掉毛的柴犬"><svg viewBox="0 0 200 200" aria-hidden="true" style="--c-fur:var(--fur-dark);--c-ear:var(--text)"><use href="#tufts"/><use href="#dog"/></svg><span>美容前</span></div>
+          <div class="img img-after" role="img" aria-label="美容後：除完廢毛的柴犬"><svg viewBox="0 0 200 200" aria-hidden="true" style="--c-fur:var(--fur);--c-ear:var(--text)"><use href="#dog"/><use class="f-cream" href="#spark" x="160" y="30" width="22" height="22"/><use class="f-cream" href="#spark" x="18" y="150" width="16" height="16"/></svg><span>美容後</span></div>
+        </div>
+        <figcaption><b>柴犬 豆豆</b><small>換毛季除廢毛洗澡</small></figcaption>
+      </figure>
+      <figure class="ba card reveal">
+        <div class="ba-pair">
+          <div class="img img-before" role="img" aria-label="美容前：毛髮打結的長毛貓"><svg viewBox="0 0 200 200" aria-hidden="true" style="--c-fur:var(--muted);--c-ear:var(--text)"><use href="#tufts"/><use href="#cat"/></svg><span>美容前</span></div>
+          <div class="img img-after" role="img" aria-label="美容後：修成獅子剪的長毛貓"><svg viewBox="0 0 200 200" aria-hidden="true" style="--c-fur:var(--slate);--c-ear:var(--text)"><use href="#cat"/><use class="f-coral" href="#bow" x="78" y="160" width="44" height="30"/></svg><span>美容後</span></div>
+        </div>
+        <figcaption><b>波斯貓 咪咪</b><small>打結處理與獅子剪</small></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：預約須知 ==================== -->
+<section id="notice">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>預約須知</h2>
+      <p>為了每位毛孩的健康與安全，第一次來之前請花一分鐘看一下。</p>
+    </div>
+    <div class="notice reveal">
+      <details>
+        <summary>需要打疫苗嗎？</summary>
+        <p>需要。請攜帶一年內的狂犬病疫苗與綜合疫苗紀錄（狗狗八合一、貓咪三合一），第一次到店拍照存檔即可。幼犬幼貓請完成第二劑後再預約。</p>
+      </details>
+      <details>
+        <summary>如果身上有跳蚤或壁蝨怎麼辦？</summary>
+        <p>美容師洗澡前會先檢查。若發現跳蚤或壁蝨，會先通知你並改用除蚤洗劑（加收 NT$300），當天環境也會加強消毒。建議到店前一週先完成體外驅蟲。</p>
+      </details>
+      <details>
+        <summary>遲到會怎麼處理？</summary>
+        <p>預約時段保留 15 分鐘。超過 15 分鐘可能需要縮減造型內容或改約，以免下一位毛孩等太久。路上塞車的話，請先用 LINE 告訴我們。</p>
+      </details>
+      <details>
+        <summary>取消或改期要多久前通知？</summary>
+        <p>洗澡、美容與安親請在前一天 18:00 前通知；住宿請在入住前 3 天通知。連續假期住宿需預付訂金，取消時依通知時間退還。</p>
+      </details>
+      <details>
+        <summary>年長、生病或比較緊張的毛孩可以預約嗎？</summary>
+        <p>可以，請在預約時先告訴我們身體狀況。美容師會安排休息時間、縮短吹整，必要時建議分兩次完成，安全永遠排第一。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：顧客評價 ==================== -->
+<section class="alt" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>毛爸媽怎麼說</h2>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="reviews">
+      <figure class="review card reveal">
+        <div class="stars" role="img" aria-label="5 顆星"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg></div>
+        <blockquote>豆豆很怕吹風機，美容師會一邊安撫一邊分段吹，還傳影片給我看。接回家心情很好，完全沒有發抖。</blockquote>
+        <footer>豆豆媽<span>柴犬，固定每月洗澡</span></footer>
+      </figure>
+      <figure class="review card reveal">
+        <div class="stars" role="img" aria-label="5 顆星"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg></div>
+        <blockquote>出國五天讓咪咪住在這裡，貓房和狗狗完全分開，每天都有照片回報。回家後一樣黏人，真的安心很多。</blockquote>
+        <footer>咪咪的主人<span>米克斯貓，住宿 5 晚</span></footer>
+      </figure>
+      <figure class="review card reveal">
+        <div class="stars" role="img" aria-label="5 顆星"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg></div>
+        <blockquote>大型犬很難找到願意接的店，這裡的大浴缸和升降美容台真的有差。換毛季除一次廢毛，家裡地板乾淨好多。</blockquote>
+        <footer>Lucky 爸<span>黃金獵犬，美容加 SPA</span></footer>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：預約表單 ==================== -->
+<section id="booking">
+  <svg class="paw-bg" aria-hidden="true"><rect width="100%" height="100%" fill="url(#pawpat)"/></svg>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>線上預約</h2>
+      <p>填好表單後，我們會在營業時間內用電話或 LINE 和你確認時段。</p>
+    </div>
+    <div class="booking">
+      <!-- 表單：到 https://formspree.io 免費註冊，建立表單後把下面 action 裡的 your-form-id 換成你的表單 ID，送出的資料就會寄到你的信箱。 -->
+      <form class="form card reveal" action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="field"><label for="f-name">飼主姓名</label><input id="f-name" name="飼主姓名" autocomplete="name" required></div>
+        <div class="field"><label for="f-tel">聯絡電話</label><input id="f-tel" name="電話" type="tel" autocomplete="tel" inputmode="tel" placeholder="0912-345-678" required></div>
+        <div class="field"><label for="f-pet">寵物名字</label><input id="f-pet" name="寵物名字" required></div>
+        <div class="field"><label for="f-kind">種類</label>
+          <select id="f-kind" name="種類" required><option value="">請選擇</option><option>狗狗</option><option>貓咪</option><option>其他</option></select></div>
+        <div class="field"><label for="f-size">體型</label>
+          <select id="f-size" name="體型" required><option value="">請選擇</option><option>小型犬（10 公斤以下）</option><option>中型犬（10～20 公斤）</option><option>大型犬（20 公斤以上）</option><option>貓</option></select></div>
+        <div class="field"><label for="f-service">服務</label>
+          <select id="f-service" name="服務" required><option value="">請選擇</option><option>洗澡</option><option>美容造型</option><option>洗澡＋SPA</option><option>日間安親</option><option>寵物住宿</option></select></div>
+        <div class="field"><label for="f-date">希望日期</label><input id="f-date" name="日期" type="date" required></div>
+        <div class="field"><label for="f-time">時段</label>
+          <select id="f-time" name="時段" required><option value="">請選擇</option><option>上午 10:00–12:00</option><option>下午 13:00–16:00</option><option>傍晚 16:00–19:00</option></select></div>
+        <div class="field full"><label for="f-note">備註 <small>（選填，例如個性、皮膚狀況、想要的造型）</small></label><textarea id="f-note" name="備註"></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit">送出預約</button></div>
+        <p class="hint full">送出後並不代表預約完成，收到我們的確認訊息才算成功喔。</p>
+      </form>
+      <aside class="side card reveal">
+        <h3>想快一點？</h3>
+        <p>直接傳 LINE 給我們，附上毛孩照片，美容師會幫你估價並安排時段。</p>
+        <a class="btn btn-ghost" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 預約</a>
+        <a class="btn btn-ghost" href="tel:03-123-4567">撥打 03-123-4567</a>
+        <ul>
+          <li><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg>第一次來店，洗澡享九折</li>
+          <li><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg>住宿滿 5 晚，送一次洗澡</li>
+          <li><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg>請攜帶疫苗紀錄</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：交通與營業時間 ==================== -->
+<section class="alt" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>交通與營業時間</h2>
+    </div>
+    <div class="visit">
+      <div class="info card reveal">
+        <h3>怎麼來</h3>
+        <dl>
+          <dt>地址</dt><dd>新竹市東區關新路 88 號 1 樓</dd>
+          <dt>電話</dt><dd><a class="text-link" href="tel:03-123-4567">03-123-4567</a></dd>
+          <dt>開車</dt><dd>店門口有 2 個臨停接送車位，也可停隔壁收費停車場</dd>
+          <dt>公車</dt><dd>「關新路口」站下車，步行約 3 分鐘</dd>
+        </dl>
+        <a class="text-link" href="https://maps.google.com/?q=新竹市東區關新路88號" target="_blank" rel="noopener">在 Google 地圖開啟</a>
+      </div>
+      <div class="info card reveal">
+        <h3>營業時間</h3>
+        <dl>
+          <dt>週二～週五</dt><dd>10:00–19:00</dd>
+          <dt>週六、週日</dt><dd>09:30–19:30</dd>
+          <dt>週一</dt><dd>美容公休，住宿毛孩照常照顧</dd>
+          <dt>住宿接送</dt><dd>入住與接回請在營業時間內</dd>
+        </dl>
+      </div>
+      <a class="map-art reveal" href="https://maps.google.com/?q=新竹市東區關新路88號" target="_blank" rel="noopener" aria-label="在 Google 地圖查看毛日子位置"></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#top"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg>毛日子<small>Furday</small></a>
+      <p style="margin-top:1rem">新竹東區的寵物美容與安親旅館，<br>讓每一天都是好毛日子。</p>
+    </div>
+    <div>
+      <h2 class="f-h">聯絡</h2>
+      <ul>
+        <li>新竹市東區關新路 88 號 1 樓</li>
+        <li><a href="tel:03-123-4567">03-123-4567</a></li>
+        <li><a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE：@yourlineid</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="f-h">營業時間</h2>
+      <ul>
+        <li>週二～週五 10:00–19:00</li>
+        <li>週六、週日 09:30–19:30</li>
+        <li>週一美容公休</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="f-h">追蹤我們</h2>
+      <ul class="social">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="copy">© <span id="y"></span> 毛日子 Furday 寵物美容</p>
+</footer>
+
+<!-- ==================== 區塊：手機底部固定按鈕 ==================== -->
+<a class="btn btn-primary sticky-cta" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 預約</a>
+
+<script>
+(() => {
+  // 頁首：捲動後出現背景
+  const header = document.querySelector('.site-header');
+  const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // 漢堡選單
+  const burger = document.querySelector('.burger');
+  const menu = document.getElementById('menu');
+  const setMenu = open => {
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? '關閉選單' : '開啟選單');
+    menu.classList.toggle('open', open);
+  };
+  burger.addEventListener('click', () => setMenu(burger.getAttribute('aria-expanded') !== 'true'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+  // 價目表分頁：點擊或用方向鍵切換
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const select = (tab, focus) => {
+    tabs.forEach(t => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) tab.focus();
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(t));
+    t.addEventListener('keydown', e => {
+      const k = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+      if (k === undefined) return;
+      e.preventDefault();
+      select(tabs[(k + tabs.length) % tabs.length], true);
+    });
+  });
+  if (tabs.length) select(tabs[0]);
+
+  // 捲動漸入動畫
+  const items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(el => io.observe(el));
+  } else {
+    items.forEach(el => el.classList.add('in'));
+  }
+
+  // 頁尾年份
+  document.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
