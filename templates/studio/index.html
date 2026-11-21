@@ -149,6 +149,7 @@ h1, h2, h3, .big-link { overflow-wrap: break-word; min-width: 0; text-wrap: bala
   opacity: 0; animation: fade 1.2s .8s var(--ease) forwards;
 }
 .hero-foot p { max-width: 34rem; font: 300 1.05rem/1.85 var(--font-heading-tc); color: var(--muted); }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 1rem 1.75rem; }
 .scroll-cue { font-size: .85rem; color: var(--muted); display: flex; align-items: center; gap: .75rem; }
 .scroll-cue i { display: block; width: 1px; height: 3rem; background: var(--line); position: relative; overflow: hidden; }
 .scroll-cue i::after { content: ""; position: absolute; inset: 0; background: var(--text); animation: drip 2.2s var(--ease) infinite; }
@@ -161,7 +162,7 @@ h1, h2, h3, .big-link { overflow-wrap: break-word; min-width: 0; text-wrap: bala
   filter: blur(40px); animation: float 14s ease-in-out infinite alternate;
 }
 @keyframes float { to { transform: translate(-4vw, 6vh) scale(1.08); } }
-@media (max-width: 560px) { .hero-foot { grid-template-columns: minmax(0, 1fr); } .scroll-cue { display: none; } }
+@media (max-width: 560px) { .hero-foot { grid-template-columns: minmax(0, 1fr); } .hero-actions { justify-content: flex-start; } .scroll-cue { display: none; } }
 
 /* ==================== 通用區塊 ==================== */
 main { counter-reset: sec; }
@@ -343,7 +344,10 @@ section { padding: clamp(5rem, 14vh, 10rem) var(--pad); }
   </h1>
   <div class="hero-foot">
     <p>Lumen Studio 是位於台北的獨立設計工作室。我們為重視細節的品牌，打造安靜卻有力量的視覺語言：從識別系統到數位體驗，每一處留白都經過思考。</p>
-    <a href="#about" class="scroll-cue"><i aria-hidden="true"></i>往下看</a>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-brand">開始合作</a>
+      <a href="#about" class="scroll-cue"><i aria-hidden="true"></i>往下看</a>
+    </div>
   </div>
 </section>
 
