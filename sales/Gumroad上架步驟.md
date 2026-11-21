@@ -22,6 +22,14 @@
 | 診所 | `…/templates/en/clinic/` | `…/templates/clinic/` |
 | 事務所 | `…/templates/en/consulting/` | `…/templates/consulting/` |
 | 工作室 | `…/templates/en/studio/` | `…/templates/studio/` |
+| 民宿 | `…/templates/en/bnb/` | `…/templates/bnb/` |
+| 房仲 | `…/templates/en/realestate/` | `…/templates/realestate/` |
+| 婚禮 | `…/templates/en/wedding/` | `…/templates/wedding/` |
+| 攝影師 | `…/templates/en/photographer/` | `…/templates/photographer/` |
+| 寵物 | `…/templates/en/pet/` | `…/templates/pet/` |
+| 補習班 | `…/templates/en/education/` | `…/templates/education/` |
+| 室內設計 | `…/templates/en/interior/` | `…/templates/interior/` |
+| 烘焙 | `…/templates/en/bakery/` | `…/templates/bakery/` |
 
 上架前每個連結都打開確認一次。
 
@@ -39,14 +47,14 @@
 ```bash
 bash scripts/package.sh
 ```
-`dist/` 會產生 6 個單款 zip 和 1 個全套 zip，每包都附英文版和繁體中文版。
+`dist/` 會產生 14 個單款 zip 和 1 個全套 zip，每包都附英文版和繁體中文版。
 
 ---
 
 ## 1. 上架順序
 
 1. 先上 **網站客製服務**。其他商品的說明會連到它，所以先上才拿得到網址。
-2. 再上 6 款單一模板。
+2. 再上 14 款單一模板（建議先上最有把握的 6 款，其他陸續上，讓商店持續有新品）。
 3. 最後上 **全套組合包**（Bundle）。
 
 ---
@@ -89,7 +97,7 @@ Don't have time to edit it yourself? We'll customise this template with your tex
 Love one of our templates but don't have time to set it up? We'll do it for you.
 
 How it works
-1. Buy the service and pick a template (Restaurant, Salon, Fitness, Clinic, Consulting or Studio).
+1. Buy the service and pick any of our templates.
 2. We email you a short form: business name, text, photos, colours, links.
 3. We build and publish your site, usually within 5 business days after we receive your content.
 4. You review it and request changes (1 round on Basic, 2 on Plus).
@@ -109,7 +117,7 @@ Questions before buying? Message us through Gumroad.
 網站客製服務：喜歡我們的模板，但沒時間自己改？交給我們。
 
 流程
-1. 購買服務，並選擇模板（餐廳、美業、健身、診所、事務所、工作室）。
+1. 購買服務，並選擇任一款模板。
 2. 我們會寄一份簡短表單給你，請你填寫店名、文字、照片、品牌色、連結。
 3. 收到資料後，通常 5 個工作天內完成並上線。
 4. 你確認後可以提出修改（Basic 1 次、Plus 2 次）。
@@ -130,7 +138,7 @@ Thanks! We'll email you within 1 business day with a short form to collect your 
 
 ---
 
-## 4. 六款單一模板
+## 4. 單一模板（14 款）
 
 每款的共用設定：
 
@@ -349,24 +357,272 @@ What you get
 [貼上「共用文字」]
 ```
 
+### 4-7. 民宿／B&B
+
+- **Name**：`B&B & Guesthouse Website Template (English + 繁體中文) — One-Page HTML`
+- **URL**：`bnb-guesthouse-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`bnb website`, `guesthouse website`, `hotel website`, `html template`, `website template`
+- **Description**：
+```
+A calm, slow-travel one-page website for B&Bs, guesthouses and small inns. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Room cards with capacity, size, weekday and weekend rates
+- Booking form that counts nights from your dates
+- Amenities, nearby attractions with travel times
+- House rules and cancellation policy accordion
+- Sticky mobile "Book your stay" button
+- SEO-ready with schema.org LodgingBusiness data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+民宿／B&B 一頁式網站模板。功能：房型與平假日價格、自動計算住宿晚數的訂房表單、住宿特色、周邊景點、入住須知、住客評價、手機版底部訂房按鈕、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-8. 房仲／不動產
+
+- **Name**：`Real Estate Agent Website Template (English + 繁體中文) — One-Page HTML`
+- **URL**：`real-estate-website-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`real estate website`, `realtor website`, `property listings`, `html template`, `website template`
+- **Description**：
+```
+A crisp, confident one-page website for independent agents and small agencies. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Property search bar that filters listings instantly
+- Listing cards with price, size, rooms and tags
+- Services, track record and agent profile
+- 5-step buying process and client reviews
+- Viewing / listing request form
+- SEO-ready with schema.org RealEstateAgent data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+房仲／不動產一頁式網站模板。功能：可即時篩選的物件搜尋、物件卡片、服務項目、成交實績、經紀人介紹、買房流程、預約看屋表單、手機版底部預約按鈕、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-9. 婚禮／活動
+
+- **Name**：`Wedding Website Template with RSVP & Countdown (English + 繁體中文)`
+- **URL**：`wedding-website-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`wedding website`, `rsvp website`, `event website`, `wedding invitation`, `html template`
+- **Description**：
+```
+An elegant, editorial one-page wedding website, also great for parties and events. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Live countdown to the big day
+- Our story timeline, ceremony and reception details with maps
+- Day-of schedule, travel and accommodation
+- Photo gallery
+- RSVP form with meal choice and guest count
+- SEO-ready with schema.org Event data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+婚禮網站模板（也適合活動）。功能：倒數計時、我們的故事、典禮與宴客資訊、當天流程、交通住宿、相簿、RSVP 出席回覆表單、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-10. 攝影師
+
+- **Name**：`Photographer Portfolio Website Template (English + 繁體中文) — One-Page HTML`
+- **URL**：`photographer-portfolio-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`photography website`, `photographer portfolio`, `portfolio template`, `html template`, `website template`
+- **Description**：
+```
+A dark, gallery-first one-page website for portrait, wedding and commercial photographers. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Filterable portfolio grid with a keyboard-friendly lightbox
+- Session packages with pricing and delivery times
+- 4-step booking process and about section
+- Client reviews
+- Session enquiry form
+- Sticky mobile "Book a session" button
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+攝影師作品集網站模板。功能：可篩選的作品集與燈箱看大圖、拍攝方案與價格、拍攝流程、關於我、客戶評價、預約表單、手機版底部預約按鈕。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-11. 寵物美容／旅館
+
+- **Name**：`Pet Grooming & Daycare Website Template (English + 繁體中文)`
+- **URL**：`pet-grooming-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`pet grooming website`, `dog grooming`, `pet daycare`, `html template`, `website template`
+- **Description**：
+```
+A cheerful, friendly one-page website for pet groomers, daycare and boarding. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Price list by pet size (small, medium, large, cats) in tabs
+- Services, safety measures and groomer profiles
+- Before and after gallery
+- Booking notes accordion (vaccines, fleas, cancellations)
+- Booking form with pet details
+- SEO-ready with schema.org LocalBusiness data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+寵物美容／旅館網站模板。功能：依體型分頁的價目表、服務項目、安心措施、美容師介紹、美容前後對比、預約須知、預約表單、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-12. 補習班／才藝教室
+
+- **Name**：`Tutoring Center & Classes Website Template (English + 繁體中文)`
+- **URL**：`tutoring-school-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`tutoring website`, `school website`, `education template`, `html template`, `website template`
+- **Description**：
+```
+A bright, trustworthy one-page website for tutoring centres, language schools and kids classes. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Courses grouped by grade in tabs, with class size and fees
+- Teaching approach and teacher profiles
+- Weekly timetable (scrolls neatly on mobile)
+- Student results and parent reviews
+- Free trial class booking form
+- SEO-ready with schema.org EducationalOrganization data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+補習班／才藝教室網站模板。功能：依年級分頁的課程、教學特色、師資介紹、每週課表、學生成果、家長評價、免費試聽預約表單、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-13. 室內設計
+
+- **Name**：`Interior Design Studio Website Template (English + 繁體中文)`
+- **URL**：`interior-design-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`interior design website`, `renovation website`, `architect portfolio`, `html template`, `website template`
+- **Description**：
+```
+A warm, minimal one-page website for interior designers and renovation firms. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Filterable project gallery with size, style and budget
+- Before and after comparison slider
+- 6-step process from consultation to handover
+- Fee structure and team profiles
+- Consultation booking form
+- SEO-ready with schema.org data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+室內設計網站模板。功能：可篩選的案例、裝修前後對比滑桿、服務流程、收費方式、設計團隊、客戶評價、預約丈量表單、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-14. 烘焙／甜點店
+
+- **Name**：`Bakery & Dessert Shop Website Template with Pre-orders (English + 繁體中文)`
+- **URL**：`bakery-website-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`bakery website`, `cake shop website`, `pre-order form`, `html template`, `website template`
+- **Description**：
+```
+A fresh, sweet one-page website for bakeries, patisseries and cake shops. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- This week's bake schedule with today highlighted
+- Product tabs for bread, cakes and gift boxes
+- Pre-order builder that totals your order
+- Custom cake options and lead times
+- Pickup order form
+- SEO-ready with schema.org Bakery data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+烘焙／甜點店網站模板。功能：本週出爐表、麵包／蛋糕／禮盒分頁、自動計算金額的預訂、客製蛋糕說明、取貨預訂表單、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
 ---
 
 ## 5. 全套組合包（最後上）
 
 Gumroad 可以建立 **Bundle**，把已上架的商品組合起來賣。如果後台沒有 Bundle，就另外上一個商品，上傳 `all-templates-bundle.zip`。
 
-- **Name**：`All 6 Business Website Templates Bundle (English + 繁體中文)`
+- **Name**：`All 14 Business Website Templates Bundle (English + 繁體中文)`
 - **URL**：`website-templates-bundle`
-- **Price**：`69`（單買合計 $144，等於打 5 折）
-- **Cover**：用 Canva 把 5～6 張封面拼成一張
+- **Price**：`99`（單買合計 $336，等於打 3 折）
+- **Cover**：用 Canva 把多張封面拼成一張
 - **Description**：
 ```
-Every template in one bundle: Restaurant, Salon, Gym, Clinic, Consulting Firm and Design Studio. Save over 50% versus buying separately.
+Every template in one bundle: Restaurant, Salon, Gym, Clinic, Consulting Firm, Design Studio, B&B, Real Estate, Wedding, Photographer, Pet Grooming, Tutoring, Interior Design and Bakery. Save over 70% versus buying separately.
 
 Perfect for freelancers who build sites for local businesses: one licence per template per website (see LICENSE.md).
 
 ──────────
-六款模板一次帶走：餐廳、美業、健身、診所、事務所、工作室，比單買省超過一半。適合幫在地店家接案的人。
+十四款模板一次帶走：餐廳、美業、健身、診所、事務所、工作室、民宿、房仲、婚禮、攝影、寵物、補習班、室內設計、烘焙，比單買省超過七成。適合幫在地店家接案的人。
 
 [貼上「共用文字」]
 ```
