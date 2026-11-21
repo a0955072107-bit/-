@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Clara Reyes, Counseling &amp; Coaching | Therapy and Career Coaching in Millbrook Harbor</title>
+<meta name="description" content="Dr. Clara Reyes offers individual counseling, couples counseling, career coaching and online sessions in Millbrook Harbor, Oregon. Start with a free 15-minute call.">
+<meta name="theme-color" content="#f3eee4">
+<meta property="og:title" content="Dr. Clara Reyes, Counseling &amp; Coaching | Say it out loud, at your own pace">
+<meta property="og:description" content="A small private practice in Millbrook Harbor, with online sessions too. A steady place to sort through feelings, relationships and work.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<!--
+  IMPORTANT NOTES FOR BUYERS (check before going live):
+  1. Advertising for therapists, counselors and health services is regulated (for example by your state licensing board
+     and professional codes of ethics). Edit the copy to match your license and local advertising rules. Do not promise
+     outcomes or cure rates, do not make medical claims, and do not use client testimonials.
+  2. Keep crisis-line information for your region in the footer and booking section
+     (US: 988 Suicide & Crisis Lifeline, call or text 988; emergencies: 911). Update it if you practice elsewhere.
+  3. License numbers, credentials, education and supervision details must be real. Anything in [brackets] is a placeholder.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://example.com/#practice",
+      "name": "Dr. Clara Reyes, Counseling & Coaching",
+      "description": "Individual counseling, couples counseling, career coaching and online sessions in Millbrook Harbor, Oregon",
+      "telephone": "(555) 012-3456",
+      "url": "https://example.com/",
+      "priceRange": "$150–$210",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "418 Alder Lane, Suite 5",
+        "addressLocality": "Millbrook Harbor",
+        "addressRegion": "OR",
+        "postalCode": "97210",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "21:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
+      ],
+      "founder": { "@id": "https://example.com/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://example.com/#person",
+      "name": "Clara Reyes",
+      "honorificPrefix": "Dr.",
+      "jobTitle": "Licensed Professional Counselor and Career Coach",
+      "worksFor": { "@id": "https://example.com/#practice" }
+    }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   THEME SETTINGS: edit these to restyle the whole site
+   ============================================================ */
+:root {
+  --brand: #3f5a73;          /* Brand color (misty slate blue): buttons, accents */
+  --brand-ink: #f7f4ee;      /* Text color on top of the brand color (oat white) */
+  --bg: #f3eee4;             /* Page background (oat paper) */
+  --surface: #faf7f1;        /* Cards, forms and raised surfaces (warm-tinted white) */
+  --text: #24313d;           /* Main text (deep ink blue) */
+  --muted: #56626d;          /* Secondary and helper text */
+  --line: #ddd3c2;           /* Dividers and borders */
+  --deep: #263848;           /* Dark section background (footer) */
+  --paper: #ebe3d5;          /* Support color (kraft paper): alternate section background */
+  --mist: #dde4e8;           /* Support color (morning mist): illustration and tag backgrounds */
+  --ochre: #c58b2e;          /* Accent (warm ochre): sunlight and decorative lines in illustrations, not for text */
+  --ochre-ink: #85570f;      /* Ochre text color: use for ochre text on light backgrounds (AA contrast) */
+  --ochre-soft: #efd9ae;     /* Pale ochre: rug and pattern fills */
+  --leaf: #a7b494;           /* Illustration: plant leaves */
+  --shadow-soft: color-mix(in srgb, var(--text) 8%, transparent);   /* Soft shadow: cards, menu */
+  --shadow-deep: color-mix(in srgb, var(--text) 16%, transparent);  /* Deeper shadow: form, floating note */
+  --radius: 18px;            /* Corner radius */
+  --font-heading: "Lora", Georgia, serif;  /* Heading font (gentle serif) */
+  --font-body: "Alegreya Sans", system-ui, sans-serif; /* Body font (humanist sans) */
+  --max: 1160px;             /* Max content width */
+  --pad: clamp(1rem, 5vw, 3rem); /* Side padding */
+  --gap: clamp(1.25rem, 3vw, 2rem); /* Column gap in grids */
+  --ease: cubic-bezier(.25, .7, .3, 1); /* Easing curve (steady, unhurried) */
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1.0625rem/1.85 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; font-variant-numeric: lining-nums; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; line-height: 1.35; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+::selection { background: var(--ochre-soft); color: var(--text); }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: clamp(4.5rem, 9vw, 7.5rem); position: relative; }
+.sec-head { max-width: 38rem; margin-bottom: clamp(2.2rem, 5vw, 3.4rem); }
+.sec-head.center { margin-inline: auto; text-align: center; }
+.sec-title { font-size: clamp(1.8rem, 3.8vw, 2.6rem); margin-bottom: .8rem; }
+.sec-lead { color: var(--muted); }
+.tint { background: var(--paper); }
+.cool { background: color-mix(in srgb, var(--mist) 60%, var(--bg)); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .85rem 1.6rem; border-radius: 12px; font: 500 1.02rem/1.2 var(--font-body); text-decoration: none; border: 1.5px solid var(--brand); cursor: pointer; transition: transform .2s var(--ease), background-color .25s, color .25s, border-color .25s, box-shadow .25s; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: color-mix(in srgb, var(--brand) 80%, var(--text)); border-color: color-mix(in srgb, var(--brand) 80%, var(--text)); box-shadow: 0 10px 22px var(--shadow-soft); }
+.btn-ghost { background: transparent; color: var(--brand); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--brand) 9%, transparent); }
+.btn:active { transform: translateY(1px) scale(.98); }
+.btn:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+a:not(.btn):hover { color: var(--brand); }
+a:not(.btn):active { opacity: .7; }
+
+/* Scroll reveal: content is only hidden when JS is on */
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+.js .reveal.d2 { transition-delay: .12s; } .js .reveal.d3 { transition-delay: .24s; } .js .reveal.d4 { transition-delay: .36s; }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes steam { 0%, 100% { opacity: .25; transform: translateY(2px); } 50% { opacity: .9; transform: translateY(-3px); } }
+@keyframes sway { 0%, 100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ==================== Header ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .4s, box-shadow .4s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
+.logo svg { width: 42px; height: 42px; flex: none; }
+.logo b { display: block; font: 500 1.15rem/1.2 var(--font-heading); }
+.logo small { display: block; font-size: .85rem; line-height: 1.3; color: var(--muted); }
+.nav-menu { display: flex; align-items: center; gap: 1.4rem; list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; font-size: 1rem; padding-block: .3rem; background: linear-gradient(var(--ochre), var(--ochre)) left bottom / 0 2px no-repeat; transition: background-size .4s var(--ease), color .25s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 2px; }
+.nav-menu .btn { padding: .6rem 1.2rem; }
+.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: 10px; }
+.nav-toggle:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.nav-toggle:active { transform: scale(.95); }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 2px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; border-radius: 2px; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (min-width: 761px) and (max-width: 1040px) { .nav-menu .nav-extra { display: none; } }
+@media (max-width: 760px) {
+  /* Without JavaScript the menu wraps below the logo; with JS it collapses into the burger */
+  html:not(.js) .nav { flex-wrap: wrap; padding-block: .6rem; }
+  html:not(.js) .site-header { position: sticky; background: var(--bg); }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; gap: .3rem 1.1rem; }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: 76px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); box-shadow: 0 14px 28px var(--shadow-soft); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: .85rem 0; border-bottom: 1px solid var(--line); }
+  .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+  .js .site-header:has(.nav-menu.open) { background: var(--bg); }
+}
+
+/* ==================== Hand-drawn line illustrations (inline SVG) ====================
+   Colors come from the classes below, so the drawings follow your theme.
+   Replace with a photo: swap <svg class="art"> for <div class="img img-hero" role="img" aria-label="..."></div>
+   and add .img-hero { background: url(images/hero.jpg) center/cover; aspect-ratio: 6 / 5; } */
+.art { display: block; width: 100%; height: auto; overflow: visible; }
+.ln { fill: none; stroke: var(--brand); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.ln-o { fill: none; stroke: var(--ochre); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.ln-thin { stroke-width: 1.5; }
+.f-surface { fill: var(--surface); }
+.f-mist { fill: var(--mist); }
+.f-sky { fill: color-mix(in srgb, var(--mist) 55%, var(--surface)); }
+.f-ochre { fill: var(--ochre-soft); }
+.f-sun { fill: color-mix(in srgb, var(--ochre) 55%, var(--ochre-soft)); }
+.f-leaf { fill: var(--leaf); }
+.f-chair { fill: color-mix(in srgb, var(--mist) 40%, var(--surface)); }
+.f-chair2 { fill: color-mix(in srgb, var(--ochre-soft) 55%, var(--surface)); }
+.steam { animation: steam 4s ease-in-out infinite; }
+.steam + .steam { animation-delay: 1.3s; }
+.plant { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 7s ease-in-out infinite; }
+
+/* ==================== Art placeholders ====================
+   Each .img-xx is a mood image drawn with CSS gradients.
+   Replace with a photo: .img-xx { background: url(images/xxx.jpg) center/cover; }
+   (after switching to a photo you can delete that class's ::before / ::after rules) */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; background-color: var(--paper); }
+.img::before, .img::after { content: ""; position: absolute; pointer-events: none; }
+
+/* Replace with a photo: .img-portrait { background: url(images/portrait.jpg) center/cover; } */
+.img-portrait { aspect-ratio: 4 / 5; border-radius: 200px 200px var(--radius) var(--radius);
+  background:
+    radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--ochre-soft) 80%, var(--surface)) 0 13%, transparent 13.4%),
+    radial-gradient(ellipse 46% 30% at 50% 100%, var(--brand) 98%, transparent 100%),
+    linear-gradient(180deg, var(--mist), color-mix(in srgb, var(--mist) 50%, var(--paper))); }
+.img-portrait::before { left: 50%; top: 40%; width: 64%; aspect-ratio: 1; border-radius: 50%; transform: translate(-50%, -50%); border: 1.5px dashed color-mix(in srgb, var(--brand) 35%, transparent); }
+.img-portrait::after { left: 0; right: 0; bottom: 0; height: 30%; background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--deep) 18%, transparent)); }
+
+/* Article card images */
+/* Replace with a photo: .img-a1 ~ .img-a3 { background: url(images/post-1.jpg) center/cover; } */
+.img-post { aspect-ratio: 16 / 10; }
+.img-a1 { background: repeating-radial-gradient(circle at 30% 120%, transparent 0 14px, color-mix(in srgb, var(--brand) 22%, transparent) 14px 15.5px), linear-gradient(180deg, var(--mist), var(--surface)); }
+.img-a1::before { width: 22%; aspect-ratio: 1; right: 16%; top: 18%; border-radius: 50%; background: var(--ochre-soft); }
+.img-a2 { background: radial-gradient(circle at 40% 55%, color-mix(in srgb, var(--brand) 30%, var(--mist)) 0 22%, transparent 22.4%), radial-gradient(circle at 60% 50%, color-mix(in srgb, var(--ochre) 45%, var(--ochre-soft)) 0 22%, transparent 22.4%), var(--paper); }
+.img-a2::before { left: 30%; right: 30%; top: 54%; height: 1.5px; background: var(--brand); opacity: .4; }
+.img-a3 { background: radial-gradient(circle at 74% 34%, var(--ochre) 0 9%, transparent 9.4%), radial-gradient(ellipse 80% 40% at 20% 100%, color-mix(in srgb, var(--leaf) 70%, var(--paper)) 98%, transparent 100%), radial-gradient(ellipse 90% 50% at 90% 100%, color-mix(in srgb, var(--brand) 35%, var(--mist)) 98%, transparent 100%), linear-gradient(180deg, var(--ochre-soft), var(--surface)); }
+.img-a3::before { left: 12%; bottom: 14%; width: 60%; height: 40%; border-top: 2px dashed color-mix(in srgb, var(--text) 35%, transparent); border-radius: 50% 50% 0 0; }
+
+/* ==================== Hero ==================== */
+.hero { padding-top: calc(76px + clamp(1.5rem, 5vw, 3.5rem)); padding-bottom: clamp(3rem, 7vw, 5.5rem); overflow: hidden; }
+.hero-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.hero h1 { font-size: clamp(2.3rem, 5.2vw, 3.9rem); line-height: 1.25; margin-bottom: 1.1rem; animation: rise 1.1s var(--ease) both; }
+.hero .lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--muted); max-width: 31rem; margin-bottom: 1.9rem; animation: rise 1.1s .15s var(--ease) both; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; animation: rise 1.1s .3s var(--ease) both; }
+.hero-meta { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; margin-top: 2rem; font-size: .95rem; color: var(--muted); animation: rise 1.1s .45s var(--ease) both; }
+.hero-meta li { display: flex; align-items: center; gap: .45rem; }
+.hero-meta svg { width: 18px; height: 18px; flex: none; }
+.hero-art { position: relative; width: 100%; max-width: 560px; justify-self: center; animation: rise 1.4s .15s var(--ease) both; }
+.hero-art .frame { background: var(--surface); border-radius: 28px; padding: clamp(1rem, 3vw, 1.8rem) clamp(.8rem, 2.5vw, 1.6rem) .6rem; box-shadow: 0 1px 0 var(--line), 0 30px 60px var(--shadow-soft); }
+.hero-note { position: absolute; left: -4%; bottom: -1.2rem; background: var(--brand); color: var(--brand-ink); border-radius: 14px; padding: .8rem 1.1rem; font-size: .95rem; line-height: 1.5; max-width: 14rem; box-shadow: 0 16px 30px var(--shadow-deep); }
+.hero-note b { display: block; font: 500 1.15rem/1.3 var(--font-heading); }
+@media (min-width: 900px) { .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .hero-art { justify-self: end; } }
+@media (max-width: 899px) { .hero-art { max-width: 460px; } .hero-note { left: 0; } }
+
+/* ==================== Common concerns ==================== */
+.concern-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 900px) { .concern-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); } .concern-grid .sec-head { position: sticky; top: 110px; } }
+.concerns { list-style: none; display: grid; gap: 0 var(--gap); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 620px) { .concerns { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.concerns li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: .8rem; padding: 1.15rem 0; border-bottom: 1px solid var(--line); }
+.concerns svg { width: 26px; height: 26px; margin-top: .15rem; }
+.concerns b { display: block; font-weight: 500; font-size: 1.08rem; line-height: 1.5; }
+.concerns span { color: var(--muted); font-size: .98rem; }
+.reassure { margin-top: 2rem; padding: 1.2rem 1.4rem; border-radius: var(--radius); background: var(--surface); border: 1px solid color-mix(in srgb, var(--ochre) 55%, var(--line)); color: var(--text); }
+
+/* ==================== Services ==================== */
+.svc-grid { display: grid; gap: var(--gap); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .svc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1040px) { .svc-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.svc { background: var(--surface); border-radius: var(--radius); padding: clamp(1.5rem, 3vw, 1.9rem); display: flex; flex-direction: column; box-shadow: 0 1px 0 var(--line); transition: transform .5s var(--ease), box-shadow .5s var(--ease); }
+.svc:hover { transform: translateY(-3px); box-shadow: 0 20px 40px var(--shadow-soft); }
+.svc .icon { margin-bottom: 1rem; }
+.svc .icon svg { width: 52px; height: 52px; display: block; }
+.svc h3 { font-size: 1.35rem; margin-bottom: .4rem; }
+.svc p { color: var(--muted); font-size: .98rem; flex: 1; }
+.fee { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .3rem 1rem; margin-top: 1.3rem; padding-top: 1.1rem; border-top: 1px dashed var(--line); font-size: .95rem; }
+.fee dt { color: var(--muted); }
+.fee dd { text-align: right; font-weight: 500; }
+.fee dd.price { font: 500 1.2rem/1.4 var(--font-heading); color: var(--brand); }
+.svc-note { margin-top: 1.6rem; font-size: .95rem; color: var(--muted); }
+
+/* ==================== Approach ==================== */
+.approach-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); grid-template-columns: minmax(0, 1fr); align-items: center; }
+@media (min-width: 900px) { .approach-grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); } }
+.approach-art { max-width: 380px; width: 100%; justify-self: center; border-radius: 50%; background: var(--surface); padding: 2rem; box-shadow: 0 1px 0 var(--line); }
+.principles { list-style: none; display: grid; gap: 1.4rem; margin-top: 1.8rem; }
+.principles li { padding-left: 1.4rem; border-left: 2px solid color-mix(in srgb, var(--brand) 30%, transparent); }
+.principles h3 { font-size: 1.2rem; margin-bottom: .2rem; }
+.principles p { color: var(--muted); }
+.modest { margin-top: 1.8rem; font-size: .95rem; color: var(--muted); }
+
+/* ==================== About ==================== */
+.about-grid { display: grid; gap: clamp(2rem, 5vw, 4.5rem); grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 880px) { .about-grid { grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); } }
+.about-grid .img-portrait { max-width: 380px; width: 100%; }
+.about-text p + p { margin-top: 1rem; }
+.about-text > p { color: var(--muted); }
+.creds { display: grid; grid-template-columns: minmax(0, 1fr); margin-top: 2rem; border-top: 1px solid var(--line); }
+.creds div { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 1rem; padding: .9rem 0; border-bottom: 1px solid var(--line); font-size: .98rem; }
+.creds dt { color: var(--muted); }
+.signature { margin-top: 1.6rem; font: 500 1.3rem/1.4 var(--font-heading); color: var(--brand); }
+
+/* ==================== First session steps ==================== */
+.steps { list-style: none; counter-reset: step; display: grid; gap: 1.6rem; grid-template-columns: minmax(0, 1fr); position: relative; }
+@media (min-width: 900px) {
+  .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap); }
+  .steps::before { content: ""; position: absolute; top: 28px; left: 8%; right: 8%; border-top: 2px dashed color-mix(in srgb, var(--ochre) 60%, transparent); z-index: 0; }
+}
+.steps li { counter-increment: step; position: relative; z-index: 1; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 1rem; }
+@media (min-width: 900px) { .steps li { grid-template-columns: minmax(0, 1fr); gap: 1.1rem; } }
+.steps li::before { content: counter(step); width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; font: 500 1.35rem/1 var(--font-heading); color: var(--brand); background: var(--bg); border: 2px solid var(--brand); }
+.steps h3 { font-size: 1.2rem; margin-bottom: .3rem; }
+.steps p { color: var(--muted); font-size: .98rem; }
+.steps .when { display: inline-block; margin-top: .6rem; font-size: .88rem; padding: .15rem .7rem; border-radius: 999px; background: var(--mist); color: var(--text); }
+
+/* ==================== Fees and FAQ ==================== */
+.faq { max-width: 50rem; margin-inline: auto; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-child { border-top: 1px solid var(--line); }
+.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.2rem .25rem; font-size: 1.08rem; font-weight: 500; border-radius: 8px; transition: color .25s; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; flex: none; width: 12px; height: 12px; margin-right: .5rem; border-right: 2px solid var(--brand); border-bottom: 2px solid var(--brand); transform: rotate(45deg) translateY(-3px); transition: transform .35s var(--ease); }
+.faq details[open] summary::after { transform: rotate(-135deg) translateY(-3px); }
+.faq summary:hover { color: var(--brand); }
+.faq summary:active { opacity: .75; }
+.faq details > div { padding: 0 .25rem 1.4rem; color: var(--muted); max-width: 44rem; }
+.faq details > div p + p { margin-top: .6rem; }
+
+/* ==================== Articles and resources ==================== */
+.post-grid { display: grid; gap: var(--gap); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .post-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.post { background: var(--surface); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 0 var(--line); transition: transform .5s var(--ease), box-shadow .5s var(--ease); }
+.post:hover { transform: translateY(-3px); box-shadow: 0 20px 40px var(--shadow-soft); }
+.post .img { border-radius: 0; }
+.post .body { padding: 1.3rem 1.4rem 1.6rem; display: flex; flex-direction: column; flex: 1; }
+.post .kind { font-size: .9rem; color: var(--ochre-ink); margin-bottom: .35rem; }
+.post h3 { font-size: 1.2rem; margin-bottom: .5rem; }
+.post h3 a { text-decoration: none; }
+.post h3 a::after { content: ""; position: absolute; inset: 0; }
+.post { position: relative; }
+.post p { color: var(--muted); font-size: .97rem; flex: 1; }
+.post .read { margin-top: 1rem; font-size: .9rem; color: var(--muted); }
+
+/* ==================== Booking ==================== */
+.book-grid { display: grid; gap: clamp(2.5rem, 5vw, 4rem); grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 940px) { .book-grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); } }
+.contact-list { list-style: none; display: grid; gap: .9rem; margin: 2rem 0; }
+.contact-list li { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: .8rem; font-size: .98rem; padding-bottom: .9rem; border-bottom: 1px solid color-mix(in srgb, var(--text) 12%, transparent); }
+.contact-list b { font-weight: 500; }
+.contact-cta { display: flex; flex-wrap: wrap; gap: .7rem; }
+.form { background: var(--surface); border-radius: var(--radius); padding: clamp(1.4rem, 4vw, 2.5rem); box-shadow: 0 24px 50px var(--shadow-soft); display: grid; gap: 1.15rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 600px) { .form { grid-template-columns: repeat(2, minmax(0, 1fr)); } .form .full { grid-column: 1 / -1; } }
+.field { display: grid; gap: .4rem; min-width: 0; border: 0; }
+.field > label, .field legend { font-size: .95rem; font-weight: 500; }
+.field legend { margin-bottom: .4rem; }
+.req { color: var(--brand); }
+.opt { color: var(--muted); font-weight: 400; }
+.field input:not([type="radio"]):not([type="checkbox"]), .field textarea { width: 100%; font: 400 1rem/1.5 var(--font-body); color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: .75rem .95rem; transition: border-color .25s, box-shadow .25s; }
+.field textarea { min-height: 6.5rem; resize: vertical; }
+.field input:hover, .field textarea:hover { border-color: color-mix(in srgb, var(--brand) 45%, var(--line)); }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 18%, transparent); }
+.choices { display: flex; flex-wrap: wrap; gap: .5rem; }
+.choice { position: relative; }
+.choice input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.choice span { display: inline-block; padding: .5rem 1rem; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); font-size: .97rem; transition: background-color .25s, border-color .25s, color .25s; }
+.choice:hover span { border-color: var(--brand); }
+.choice input:checked + span { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.choice input:focus-visible + span { outline: 2px solid var(--brand); outline-offset: 2px; }
+.choice:active span { transform: scale(.97); }
+.form .btn { grid-column: 1 / -1; width: 100%; }
+.privacy { grid-column: 1 / -1; color: var(--muted); font-size: .9rem; line-height: 1.7; padding: .9rem 1rem; border-radius: 12px; background: color-mix(in srgb, var(--mist) 50%, var(--surface)); }
+.privacy b { color: var(--text); font-weight: 500; }
+
+/* ==================== Footer ==================== */
+.site-footer { background: var(--deep); color: var(--brand-ink); padding: clamp(3.5rem, 7vw, 5rem) 0 2rem; }
+.crisis { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; padding: 1rem 1.2rem; margin-bottom: 2.8rem; border-radius: 14px; border: 1px solid color-mix(in srgb, var(--ochre) 60%, transparent); background: color-mix(in srgb, var(--ochre) 12%, transparent); font-size: .98rem; }
+.crisis b { font-weight: 700; }
+.crisis a { font-weight: 700; color: var(--ochre-soft); }
+.foot-grid { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); } }
+.site-footer h2 { font-size: 1.25rem; margin-bottom: .8rem; }
+.site-footer p { color: color-mix(in srgb, var(--brand-ink) 80%, var(--deep)); font-size: .97rem; }
+.site-footer a:hover { color: var(--ochre-soft); }
+.social { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1rem; font-size: .97rem; }
+.copy { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid color-mix(in srgb, var(--brand-ink) 16%, transparent); font-size: .9rem; }
+.site-footer :focus-visible { outline-color: var(--ochre-soft); }
+
+/* ==================== Mobile sticky button ==================== */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 80px; }
+  .sticky-cta { display: flex; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 -1px 0 var(--line); }
+  .sticky-cta .btn-primary { flex: 1; }
+  .sticky-cta .btn-ghost { padding-inline: 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== Section: Header ==================== -->
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main menu">
+    <a class="logo" href="#top" aria-label="Dr. Clara Reyes, back to top">
+      <svg viewBox="0 0 42 42" aria-hidden="true"><circle class="f-mist" cx="21" cy="21" r="20"/><path class="ln" d="M21 31 C21 24 21 19 21 14"/><path class="ln f-leaf" d="M21 20 C15 19 12 15 13 10 C18 10 21 14 21 20 Z"/><path class="ln f-leaf" d="M21 24 C27 23 30 19 29 14 C24 14 21 18 21 24 Z"/><path class="ln-o" d="M13 31 H29"/></svg>
+      <span><b>Clara Reyes, PhD</b><small>Counseling &amp; Coaching</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-links" aria-label="Open menu"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#about">About</a></li>
+      <li class="nav-extra"><a href="#process">First session</a></li>
+      <li><a href="#faq">Fees &amp; FAQ</a></li>
+      <li class="nav-extra"><a href="#resources">Articles</a></li>
+      <li><a class="btn btn-primary" href="#book">Book a free call</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Say it out loud,<br>at your pace.</h1>
+      <p class="lead">Counseling and career coaching in Millbrook Harbor or online, for feelings, relationships and work.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#book">Book a free 15-min call</a>
+        <a class="btn btn-ghost" href="#services">Explore services</a>
+      </div>
+      <ul class="hero-meta">
+        <li><svg viewBox="0 0 18 18" aria-hidden="true"><circle class="ln ln-thin" cx="9" cy="9" r="7"/><path class="ln ln-thin" d="M9 5 V9 L12 11"/></svg>Free 15-minute intro call</li>
+        <li><svg viewBox="0 0 18 18" aria-hidden="true"><rect class="ln ln-thin" x="2" y="4" width="14" height="9" rx="2"/><path class="ln ln-thin" d="M6 16 H12"/></svg>Online or in person</li>
+        <li><svg viewBox="0 0 18 18" aria-hidden="true"><path class="ln ln-thin" d="M9 16 C5 11 4 9 4 7 A5 5 0 0 1 14 7 C14 9 13 11 9 16 Z"/><circle class="ln ln-thin" cx="9" cy="7" r="1.6"/></svg>Near the Alder Lane streetcar stop</li>
+      </ul>
+    </div>
+    <div class="hero-art">
+      <div class="frame">
+        <!-- Hand-drawn illustration: two facing chairs by a window, tea and a plant on a side table -->
+        <svg class="art" viewBox="0 0 520 420" role="img" aria-labelledby="hero-art-t">
+          <title id="hero-art-t">Two armchairs facing each other by a window, with a cup of tea and a small plant on the table between them</title>
+          <path class="f-mist" d="M40 380 C20 300 30 190 90 120 C150 50 270 20 360 50 C450 80 505 170 495 270 C488 330 470 365 450 380 Z" opacity=".55"/>
+          <path class="ln f-sky" d="M172 214 V122 C172 76 207 42 251 42 C295 42 330 76 330 122 V214 Z"/>
+          <circle class="f-sun" cx="290" cy="92" r="17"/>
+          <path class="ln ln-thin" d="M251 44 V212 M174 132 H328"/>
+          <path class="ln-o ln-thin" d="M196 170 C210 162 222 166 234 160 M268 186 C282 178 296 182 310 176"/>
+          <path class="ln" d="M160 216 C210 213 290 213 342 216"/>
+          <ellipse class="f-ochre" cx="260" cy="386" rx="190" ry="20"/>
+          <path class="ln" d="M28 383 C140 379 380 379 494 383"/>
+          <g transform="translate(36 196) rotate(3 75 92)">
+            <path class="ln f-chair" d="M24 96 V26 Q24 6 46 6 H104 Q126 6 126 26 V96 Z"/>
+            <path class="ln f-chair" d="M8 142 V86 Q8 72 22 72 Q36 72 36 86 V142 Z"/>
+            <path class="ln f-chair" d="M114 142 V86 Q114 72 128 72 Q142 72 142 86 V142 Z"/>
+            <path class="ln f-surface" d="M34 110 Q75 99 116 110 V142 H34 Z"/>
+            <path class="ln f-chair" d="M6 142 H144 V156 Q144 163 137 163 H13 Q6 163 6 156 Z"/>
+            <path class="ln" d="M20 163 L15 186 M130 163 L135 186"/>
+            <path class="ln-o ln-thin" d="M50 40 C64 46 86 46 100 40"/>
+          </g>
+          <g transform="translate(334 196) rotate(-3 75 92)">
+            <path class="ln f-chair2" d="M24 96 V26 Q24 6 46 6 H104 Q126 6 126 26 V96 Z"/>
+            <path class="ln f-chair2" d="M8 142 V86 Q8 72 22 72 Q36 72 36 86 V142 Z"/>
+            <path class="ln f-chair2" d="M114 142 V86 Q114 72 128 72 Q142 72 142 86 V142 Z"/>
+            <path class="ln f-surface" d="M34 110 Q75 99 116 110 V142 H34 Z"/>
+            <path class="ln f-chair2" d="M6 142 H144 V156 Q144 163 137 163 H13 Q6 163 6 156 Z"/>
+            <path class="ln" d="M20 163 L15 186 M130 163 L135 186"/>
+            <path class="ln ln-thin" d="M44 78 C52 70 62 74 66 66 M84 66 C90 74 100 70 106 78" opacity=".55"/>
+          </g>
+          <path class="ln" d="M216 302 H304 M226 302 L220 382 M294 302 L300 382 M232 342 H288"/>
+          <path class="ln f-surface" d="M232 282 H252 V296 Q252 301 247 301 H237 Q232 301 232 296 Z"/>
+          <path class="ln ln-thin" d="M252 286 Q260 286 260 291 Q260 296 252 296"/>
+          <path class="ln-o ln-thin steam" d="M238 274 C234 268 242 264 238 256"/>
+          <path class="ln-o ln-thin steam" d="M246 274 C242 268 250 264 246 256"/>
+          <g class="plant">
+            <path class="ln" d="M279 278 C278 258 272 244 262 232 M280 278 C282 254 290 238 302 228 M279 270 C276 262 268 258 260 258"/>
+            <path class="ln ln-thin f-leaf" d="M262 232 C252 230 248 220 252 212 C262 214 266 222 262 232 Z"/>
+            <path class="ln ln-thin f-leaf" d="M302 228 C304 218 312 214 320 216 C318 226 310 230 302 228 Z"/>
+            <path class="ln ln-thin f-leaf" d="M260 258 C252 262 244 258 242 250 C250 246 258 250 260 258 Z"/>
+            <path class="ln ln-thin f-leaf" d="M286 246 C292 240 300 242 302 248 C296 254 290 252 286 246 Z"/>
+          </g>
+          <path class="ln f-ochre" d="M266 278 H294 L289 301 H271 Z"/>
+        </svg>
+      </div>
+      <p class="hero-note"><b>Start with 15 minutes</b>See if we&#8217;re a good fit before deciding anything</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Common concerns ==================== -->
+<section id="concerns" class="tint">
+  <div class="wrap concern-grid">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">You might be dealing with</h2>
+      <p class="sec-lead">These are more common than they feel. You don&#8217;t have to wait until things fall apart to deserve a good listener.</p>
+      <p class="reassure">Not sure counseling is the right fit? We can talk it through on the intro call, and if another resource suits you better, I&#8217;ll help you find it.</p>
+    </div>
+    <ul class="concerns">
+      <li class="reveal"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ln-o" d="M5 14 C9 9 13 19 17 13 C19 10 21 11 22 12"/></svg><div><b>Anxiety and a mind that won&#8217;t switch off</b><span>Racing thoughts at night, a body that rarely unclenches.</span></div></li>
+      <li class="reveal d2"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ln-o" d="M5 14 C9 9 13 19 17 13 C19 10 21 11 22 12"/></svg><div><b>Low mood, low energy</b><span>Things you used to enjoy feel flat.</span></div></li>
+      <li class="reveal"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ln-o" d="M5 14 C9 9 13 19 17 13 C19 10 21 11 22 12"/></svg><div><b>The same fight, or growing distance</b><span>With a partner, family or friends, you talk but don&#8217;t feel heard.</span></div></li>
+      <li class="reveal d2"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ln-o" d="M5 14 C9 9 13 19 17 13 C19 10 21 11 22 12"/></svg><div><b>Burnout and feeling stuck at work</b><span>Unsure of the next step and afraid of choosing wrong.</span></div></li>
+      <li class="reveal"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ln-o" d="M5 14 C9 9 13 19 17 13 C19 10 21 11 22 12"/></svg><div><b>Grief and loss</b><span>Of a person, a relationship or a chapter of life.</span></div></li>
+      <li class="reveal d2"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ln-o" d="M5 14 C9 9 13 19 17 13 C19 10 21 11 22 12"/></svg><div><b>Never feeling good enough</b><span>Hard on yourself, and rest never quite comes.</span></div></li>
+      <li class="reveal"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ln-o" d="M5 14 C9 9 13 19 17 13 C19 10 21 11 22 12"/></svg><div><b>Family patterns that keep repeating</b><span>You&#8217;re grown up, yet old roles still show up.</span></div></li>
+      <li class="reveal d2"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ln-o" d="M5 14 C9 9 13 19 17 13 C19 10 21 11 22 12"/></svg><div><b>Big life transitions</b><span>A move, new parenthood or leaving a career.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== Section: Services ==================== -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">Services</h2>
+      <p class="sec-lead">All sessions are by appointment. Before your first session, you can book a free 15-minute call.</p>
+    </div>
+    <!-- Sample content: replace before going live -->
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <div class="icon"><svg viewBox="0 0 44 44" aria-hidden="true"><path class="ln" d="M12 30 V16 Q12 11 17 11 H27 Q32 11 32 16 V30"/><path class="ln" d="M9 30 H35 V34 H9 Z M12 34 V38 M32 34 V38"/><path class="ln-o ln-thin" d="M17 20 C20 22 24 22 27 20"/></svg></div>
+        <h3>Individual counseling</h3>
+        <p>Regular one-on-one sessions for stress, emotions, relationships or self-worth, at a pace you set.</p>
+        <dl class="fee"><dt>Length</dt><dd>50 min</dd><dt>Fee</dt><dd class="price">$150</dd></dl>
+      </article>
+      <article class="svc reveal d2">
+        <div class="icon"><svg viewBox="0 0 44 44" aria-hidden="true"><circle class="ln" cx="16" cy="17" r="5"/><circle class="ln" cx="28" cy="17" r="5"/><path class="ln" d="M7 36 C7 29 11 26 16 26 C19 26 21 27 22 29 C23 27 25 26 28 26 C33 26 37 29 37 36"/></svg></div>
+        <h3>Couples counseling</h3>
+        <p>Practice saying what you need and hearing each other. For dating, married or separating couples.</p>
+        <dl class="fee"><dt>Length</dt><dd>80 min</dd><dt>Fee</dt><dd class="price">$210</dd></dl>
+      </article>
+      <article class="svc reveal d3">
+        <div class="icon"><svg viewBox="0 0 44 44" aria-hidden="true"><path class="ln" d="M8 36 C14 34 16 26 22 24 C28 22 30 14 36 10"/><circle class="ln-o" cx="36" cy="10" r="3"/><path class="ln ln-thin" d="M8 36 H36"/></svg></div>
+        <h3>Career coaching</h3>
+        <p>For career changes, promotions, starting out on your own or burnout. Clarify priorities and plan a doable next step.</p>
+        <dl class="fee"><dt>Length</dt><dd>60 min</dd><dt>Fee</dt><dd class="price">$165</dd></dl>
+      </article>
+      <article class="svc reveal d4">
+        <div class="icon"><svg viewBox="0 0 44 44" aria-hidden="true"><rect class="ln" x="8" y="11" width="28" height="18" rx="3"/><path class="ln" d="M5 33 H39"/><circle class="ln-o ln-thin" cx="22" cy="18" r="3"/><path class="ln-o ln-thin" d="M17 26 C18 23 26 23 27 26"/></svg></div>
+        <h3>Online sessions</h3>
+        <p>Secure video sessions for clients across the state or with busy schedules. Same care as in person.</p>
+        <dl class="fee"><dt>Length</dt><dd>50 min</dd><dt>Fee</dt><dd class="price">$150</dd></dl>
+      </article>
+    </div>
+    <p class="svc-note reveal">A few sliding-scale spots are held each month for students and anyone facing financial strain. Just ask on the intro call.</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Approach ==================== -->
+<section id="approach" class="cool">
+  <div class="wrap approach-grid">
+    <div class="approach-art reveal">
+      <svg class="art" viewBox="0 0 300 300" role="img" aria-labelledby="plant-t">
+        <title id="plant-t">A potted plant slowly putting out new leaves</title>
+        <circle class="f-ochre" cx="150" cy="150" r="118" opacity=".5"/>
+        <g class="plant">
+          <path class="ln" d="M150 222 C148 186 150 150 160 110 M150 200 C140 182 120 172 100 170 M152 176 C166 160 188 154 206 156 M156 138 C146 122 130 116 116 116"/>
+          <path class="ln f-leaf" d="M160 110 C150 96 154 76 170 68 C180 84 176 102 160 110 Z"/>
+          <path class="ln f-leaf" d="M100 170 C86 162 80 146 86 134 C102 138 108 156 100 170 Z"/>
+          <path class="ln f-leaf" d="M206 156 C218 146 236 146 244 156 C234 168 216 168 206 156 Z"/>
+          <path class="ln f-leaf" d="M116 116 C104 106 102 92 108 82 C122 88 126 104 116 116 Z"/>
+        </g>
+        <path class="ln f-surface" d="M112 222 H188 L180 262 Q179 268 172 268 H128 Q121 268 120 262 Z"/>
+        <path class="ln-o" d="M118 236 H182"/>
+      </svg>
+    </div>
+    <div>
+      <div class="reveal">
+        <h2 class="sec-title">My approach</h2>
+        <p class="sec-lead">In my experience, change rarely comes from being talked into it. It tends to grow after you feel understood. In our sessions I follow your pace, and we look together at the feelings and patterns that keep coming back.</p>
+      </div>
+      <ul class="principles">
+        <li class="reveal"><h3>Person-centered</h3><p>You are the expert on your own life. My role is to listen and ask good questions, not hand out answers.</p></li>
+        <li class="reveal d2"><h3>Emotion-focused and narrative</h3><p>We look at the needs beneath your feelings, and at the story you tell about yourself.</p></li>
+        <li class="reveal d3"><h3>Practical next steps</h3><p>Coaching sessions are more goal-focused, and each one ends with a small step you can try.</p></li>
+      </ul>
+      <p class="modest reveal">Everyone&#8217;s situation and pace are different, and I can&#8217;t promise specific results. If we find that another professional or resource would serve you better, I&#8217;ll tell you honestly and help with a referral.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: About ==================== -->
+<!-- License numbers, education and practice details must be real. Text in [brackets] is a placeholder -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="img img-portrait reveal" role="img" aria-label="Portrait of Dr. Clara Reyes"></div>
+    <div class="about-text reveal d2">
+      <h2 class="sec-title">About me</h2>
+      <p>I&#8217;m Clara Reyes, a licensed professional counselor and certified career coach. I spent years in a university counseling center and an employee assistance program, working with people in transition: new graduates, mid-career professionals at a crossroads, and couples getting to know each other again.</p>
+      <p>There is no right or wrong thing to say in my office. You can start anywhere, even with &#8220;I don&#8217;t really know what&#8217;s wrong.&#8221;</p>
+      <dl class="creds">
+        <div><dt>License</dt><dd>Licensed Professional Counselor, [State] License #[000000]</dd></div>
+        <div><dt>Practice</dt><dd>[Practice name], NPI #[0000000000]</dd></div>
+        <div><dt>Education</dt><dd>PhD, Counseling Psychology, [University name]</dd></div>
+        <div><dt>Training</dt><dd>[Emotion-focused therapy training], [Couples therapy level 2], [Career coach certification]</dd></div>
+        <div><dt>Experience</dt><dd>[University counseling center staff counselor], [EAP contract counselor]</dd></div>
+      </dl>
+      <p class="signature">Clara Reyes</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: First session steps ==================== -->
+<section id="process" class="tint">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">How the first session works</h2>
+      <p class="sec-lead">Reaching out to a therapist for the first time can feel nerve-racking. Here is what happens. You don&#8217;t need to prepare anything.</p>
+    </div>
+    <ol class="steps">
+      <li class="reveal"><div><h3>Book a call</h3><p>Fill in the form below. I&#8217;ll reply within two business days to set up a phone or video chat.</p><span class="when">15 minutes, free</span></div></li>
+      <li class="reveal d2"><div><h3>Check the fit</h3><p>We talk briefly about what brings you here, and you get a feel for talking with me.</p><span class="when">No pressure either way</span></div></li>
+      <li class="reveal d3"><div><h3>Your first session</h3><p>Online or in person. We start by going over confidentiality and the informed consent form.</p><span class="when">50 to 80 minutes</span></div></li>
+      <li class="reveal d4"><div><h3>Set the rhythm together</h3><p>We agree on frequency and focus, often weekly or every other week. You can adjust or stop at any time.</p><span class="when">Your call</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== Section: Fees and FAQ ==================== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">Fees, insurance and FAQ</h2>
+      <p class="sec-lead">Anything else on your mind? Bring it to the intro call.</p>
+    </div>
+    <div class="faq reveal">
+      <details><summary>How do I pay?</summary><div><p>Payment is due at each session by card, HSA/FSA card or bank transfer. For online sessions, your card on file is charged the same day.</p></div></details>
+      <details><summary>Do you take insurance? Can I get a receipt?</summary><div><p>I&#8217;m an out-of-network provider. I&#8217;ll give you a monthly superbill you can submit to your insurer for possible reimbursement. Coverage depends on your plan, so check your out-of-network benefits first. Career coaching is not a health service and is not billable to insurance.</p></div></details>
+      <details><summary>What is your cancellation policy?</summary><div><p>Cancel or reschedule at least 24 hours ahead at no charge. Late cancellations are charged half the fee, and missed sessions the full fee.</p><p>If you get sick or something urgent comes up, just let me know and we&#8217;ll work it out.</p></div></details>
+      <details><summary>Is what I say confidential?</summary><div><p>Yes. Sessions are kept confidential under professional ethics and privacy law, including HIPAA. I won&#8217;t share anything with your family, employer or anyone else. The limits are when someone&#8217;s safety is at immediate risk or when the law requires disclosure, and I&#8217;ll explain these in our first session.</p></div></details>
+      <details><summary>Online or in person: what&#8217;s the difference?</summary><div><p>Same care, same fee. Online sessions use a HIPAA-compliant video platform; find a quiet, private spot and use headphones. In-person sessions happen in my soundproofed office, with tea on hand.</p><p>Online counseling is available to clients located in states where I&#8217;m licensed. If you&#8217;re going through a more serious crisis, in-person sessions are usually a better fit.</p></div></details>
+      <details><summary>How long will I need to come?</summary><div><p>It varies. Some people find direction in a handful of sessions, others stay longer. We check in regularly, and you can change the frequency or stop whenever you like.</p></div></details>
+      <details><summary>How is counseling different from coaching?</summary><div><p>Counseling focuses on emotions, relationships and inner struggles. Coaching focuses on goals, choices and action. We can decide together on the intro call which fits you, or combine the two.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Articles and resources ==================== -->
+<section id="resources" class="cool">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">Articles and resources</h2>
+      <p class="sec-lead">A few things to keep you company between sessions.</p>
+    </div>
+    <!-- Sample content: replace before going live -->
+    <div class="post-grid">
+      <article class="post reveal">
+        <div class="img img-post img-a1" role="img" aria-label="Ripples spreading outward, a symbol of breathing"></div>
+        <div class="body">
+          <p class="kind">Emotional care</p>
+          <h3><a href="#">Three small things to try when anxiety shows up</a></h3>
+          <p>Not to chase the anxiety away, but to let your body know it&#8217;s safe right now.</p>
+          <p class="read">5 min read</p>
+        </div>
+      </article>
+      <article class="post reveal d2">
+        <div class="img img-post img-a2" role="img" aria-label="Two overlapping circles, a symbol of the counseling relationship"></div>
+        <div class="body">
+          <p class="kind">Starting therapy</p>
+          <h3><a href="#">What to know before your first therapy session</a></h3>
+          <p>What to say, whether you&#8217;ll be judged, how long it takes. The usual worries, answered.</p>
+          <p class="read">7 min read</p>
+        </div>
+      </article>
+      <article class="post reveal d3">
+        <div class="img img-post img-a3" role="img" aria-label="A path over the hills toward the sun, a symbol of career direction"></div>
+        <div class="body">
+          <p class="kind">Career</p>
+          <h3><a href="#">Want to quit but scared to? Three questions to get unstuck</a></h3>
+          <p>Unpack &#8220;I don&#8217;t know&#8221; and you&#8217;ll often find you know more than you think.</p>
+          <p class="read">6 min read</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Book a call ==================== -->
+<section id="book" class="tint">
+  <div class="wrap book-grid">
+    <div class="reveal">
+      <h2 class="sec-title">Book a free 15-minute call</h2>
+      <p class="sec-lead">Leave your details and a few times that suit you, and I&#8217;ll reply personally within two business days. You&#8217;re also welcome to call or message me.</p>
+      <ul class="contact-list">
+        <li><b>Address</b><span>418 Alder Lane, Suite 5, Millbrook Harbor, OR 97210</span></li>
+        <li><b>Phone</b><a href="tel:+15550123456">(555) 012-3456</a></li>
+        <li><b>Tue to Fri</b><span>10 am–9 pm</span></li>
+        <li><b>Saturday</b><span>9 am–5 pm</span></li>
+      </ul>
+      <div class="contact-cta">
+        <!-- WhatsApp button: swap the link for LINE, Messenger or Instagram if you prefer -->
+        <a class="btn btn-ghost" href="https://wa.me/15550123456" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+15550123456">Call</a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?q=418+Alder+Lane,+Millbrook+Harbor,+OR+97210" target="_blank" rel="noopener">Google Maps</a>
+      </div>
+    </div>
+    <!-- This form uses Formspree (free): sign up at https://formspree.io, create a form,
+         and replace your-form-id in the action URL below. Submissions will arrive in your inbox.
+         Client inquiries are sensitive: turn on reCAPTCHA in Formspree and delete handled submissions regularly.
+         Formspree is not a HIPAA-compliant service, so ask only for scheduling details here. -->
+    <form class="form reveal d2" action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="hidden" name="_subject" value="New intro call request">
+      <div class="field"><label for="f-name">Name or nickname <span class="req">*</span></label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="f-email">Email <span class="req">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <fieldset class="field full"><legend>Preferred format <span class="req">*</span></legend>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="format" value="Online" required checked><span>Online</span></label>
+          <label class="choice"><input type="radio" name="format" value="In person"><span>In person</span></label>
+          <label class="choice"><input type="radio" name="format" value="Either"><span>Either</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="field full"><legend>Times that work <span class="opt">(choose any)</span></legend>
+        <div class="choices">
+          <label class="choice"><input type="checkbox" name="times" value="Weekday daytime"><span>Weekday daytime</span></label>
+          <label class="choice"><input type="checkbox" name="times" value="Weekday evening"><span>Weekday evening</span></label>
+          <label class="choice"><input type="checkbox" name="times" value="Saturday"><span>Saturday</span></label>
+        </div>
+      </fieldset>
+      <div class="field full"><label for="f-topic">What you&#8217;d like to talk about <span class="opt">(optional)</span></label><textarea id="f-topic" name="topic" placeholder="A sentence or two is plenty, like: work stress lately, or communication with my partner."></textarea></div>
+      <p class="privacy"><b>Privacy:</b> Your details are used only to schedule our call and are never shared. Please don&#8217;t include personal history here; we can talk on the call. This form is not monitored for emergencies. If you are in crisis, call or text 988, or call 911.</p>
+      <button class="btn btn-primary" type="submit">Request a call</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <!-- Crisis information: keep this, and update the numbers for your region -->
+    <p class="crisis" role="note"><b>If you are in crisis, call or text <a href="tel:988">988</a> (US)</b><span>Free and confidential, 24/7. In an emergency, call <a href="tel:911">911</a>.</span></p>
+    <div class="foot-grid">
+      <div>
+        <h2>Dr. Clara Reyes, Counseling &amp; Coaching</h2>
+        <p>418 Alder Lane, Suite 5<br>Millbrook Harbor, OR 97210<br>Phone <a href="tel:+15550123456">(555) 012-3456</a></p>
+        <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">LinkedIn</a></div>
+      </div>
+      <div>
+        <h2>Hours</h2>
+        <p>Tue to Fri 10 am–9 pm<br>Saturday 9 am–5 pm<br>By appointment only</p>
+      </div>
+      <div>
+        <h2>Quick links</h2>
+        <p><a href="#services">Services</a><br><a href="#process">Your first session</a><br><a href="#faq">Fees and insurance</a></p>
+      </div>
+    </div>
+    <p class="copy">© <span id="y"></span> Dr. Clara Reyes, Counseling &amp; Coaching</p>
+  </div>
+</footer>
+
+<!-- ==================== Section: Mobile sticky button ==================== -->
+<div class="sticky-cta">
+  <a href="#book" class="btn btn-primary">Book a free call</a>
+  <!-- Swap WhatsApp for LINE, Messenger or Instagram if you prefer -->
+  <a href="https://wa.me/15550123456" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+$('y').textContent = new Date().getFullYear();
+
+// Header background on scroll
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// Burger menu
+const toggle = document.querySelector('.nav-toggle'), menu = $('menu-links');
+const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); };
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('open')) { setMenu(false); toggle.focus(); } });
+
+// Scroll reveal
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

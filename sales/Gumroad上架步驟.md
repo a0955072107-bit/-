@@ -59,6 +59,12 @@ bash scripts/package.sh
 
 ---
 
+## 封面
+
+- 英文封面和正方形縮圖：`sales/covers/en/`，每款各有 `<slug>-cover.png`（1920×1080）與 `<slug>-thumb.png`（1000×1000）。
+- 新增模板後重新產生封面：先在 `scripts/covers/data.json` 加一筆資料，再執行 `node scripts/covers/make.js <slug>`。
+- 中文封面（Canva 製作，前 5 款）：`sales/covers/*.png`。
+
 ## 1. 上架順序
 
 1. 先上 **網站客製服務**。其他商品的說明會連到它，所以先上才拿得到網址。
@@ -155,7 +161,7 @@ Thanks! We'll email you within 1 business day with a short form to collect your 
 | Price | `39`（上市前 2 週用折扣碼降到 $29） |
 | Versions | `Standard license — 1 website`（$39）、`Extended license — up to 10 websites`（$119） |
 | Content | 上傳 `dist/` 裡對應的 zip |
-| Thumbnail | 正方形 600×600 以上，可以在 Canva 用「調整尺寸」從封面另存 |
+| Thumbnail | `sales/covers/en/<slug>-thumb.png`（1000×1000） |
 | Additional details | `Format: HTML/CSS/JS` · `Languages: English, 繁體中文` · `Pages: 1 (one-page)` · `Builder needed: None` |
 | Receipt | 見下方共用 Receipt |
 | Tags | 見各商品 |
@@ -176,7 +182,7 @@ A one-page HTML website template in English + 繁體中文, a step-by-step setup
 
 - **Name**：`Restaurant & Café Website Template (English + 繁體中文) — One-Page HTML`
 - **URL**：`restaurant-website-template`
-- **Cover**：`sales/covers/restaurant-cover.png`，另外加上 `sales/screenshots/restaurant-desktop.jpg`、`restaurant-mobile.jpg`
+- **Cover**：`sales/covers/en/restaurant-cover.png`（英文）；台灣平台可用 `sales/covers/restaurant-cover.png`（中文）
 - **Tags**：`restaurant website`, `cafe website`, `html template`, `small business`, `website template`
 - **Description**：
 ```
@@ -212,7 +218,7 @@ What you get
 
 - **Name**：`Hair & Nail Salon Website Template (English + 繁體中文) — One-Page HTML`
 - **URL**：`salon-website-template`
-- **Cover**：`beauty-cover.png` + `beauty-desktop.jpg` + `beauty-mobile.jpg`
+- **Cover**：`sales/covers/en/beauty-cover.png`（英文）；台灣平台可用 `sales/covers/beauty-cover.png`（中文）
 - **Tags**：`salon website`, `beauty website`, `nail salon`, `html template`, `website template`
 - **Description**：
 ```
@@ -244,7 +250,7 @@ What you get
 
 - **Name**：`Gym & Personal Training Website Template (English + 繁體中文) — One-Page HTML`
 - **URL**：`gym-website-template`
-- **Cover**：`fitness-cover.png` + `fitness-desktop.jpg` + `fitness-mobile.jpg`
+- **Cover**：`sales/covers/en/fitness-cover.png`（英文）；台灣平台可用 `sales/covers/fitness-cover.png`（中文）
 - **Tags**：`gym website`, `fitness website`, `personal trainer`, `html template`, `website template`
 - **Description**：
 ```
@@ -276,7 +282,7 @@ What you get
 
 - **Name**：`Dental & Medical Clinic Website Template (English + 繁體中文) — One-Page HTML`
 - **URL**：`clinic-website-template`
-- **Cover**：`clinic-cover.png` + `clinic-desktop.jpg` + `clinic-mobile.jpg`
+- **Cover**：`sales/covers/en/clinic-cover.png`（英文）；台灣平台可用 `sales/covers/clinic-cover.png`（中文）
 - **Tags**：`dental website`, `clinic website`, `medical website`, `html template`, `website template`
 - **Description**：
 ```
@@ -308,7 +314,7 @@ What you get
 
 - **Name**：`Law, Accounting & Consulting Firm Website Template (English + 繁體中文)`
 - **URL**：`consulting-firm-website-template`
-- **Cover**：`consulting-cover.png` + `consulting-desktop.jpg` + `consulting-mobile.jpg`
+- **Cover**：`sales/covers/en/consulting-cover.png`（英文）；台灣平台可用 `sales/covers/consulting-cover.png`（中文）
 - **Tags**：`law firm website`, `accounting website`, `consulting website`, `html template`, `website template`
 - **Description**：
 ```
@@ -339,7 +345,7 @@ What you get
 
 - **Name**：`Design Studio & Portfolio Website Template (English + 繁體中文)`
 - **URL**：`studio-portfolio-template`
-- **Cover**：還沒有封面，需要用 Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/studio-cover.png`
 - **Tags**：`portfolio website`, `design studio`, `agency website`, `html template`, `website template`
 - **Description**：
 ```
@@ -369,7 +375,7 @@ What you get
 
 - **Name**：`B&B & Guesthouse Website Template (English + 繁體中文) — One-Page HTML`
 - **URL**：`bnb-guesthouse-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`bnb website`, `guesthouse website`, `hotel website`, `html template`, `website template`
 - **Description**：
 ```
@@ -400,7 +406,7 @@ What you get
 
 - **Name**：`Real Estate Agent Website Template (English + 繁體中文) — One-Page HTML`
 - **URL**：`real-estate-website-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`real estate website`, `realtor website`, `property listings`, `html template`, `website template`
 - **Description**：
 ```
@@ -431,7 +437,7 @@ What you get
 
 - **Name**：`Wedding Website Template with RSVP & Countdown (English + 繁體中文)`
 - **URL**：`wedding-website-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`wedding website`, `rsvp website`, `event website`, `wedding invitation`, `html template`
 - **Description**：
 ```
@@ -462,7 +468,7 @@ What you get
 
 - **Name**：`Photographer Portfolio Website Template (English + 繁體中文) — One-Page HTML`
 - **URL**：`photographer-portfolio-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`photography website`, `photographer portfolio`, `portfolio template`, `html template`, `website template`
 - **Description**：
 ```
@@ -493,7 +499,7 @@ What you get
 
 - **Name**：`Pet Grooming & Daycare Website Template (English + 繁體中文)`
 - **URL**：`pet-grooming-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`pet grooming website`, `dog grooming`, `pet daycare`, `html template`, `website template`
 - **Description**：
 ```
@@ -524,7 +530,7 @@ What you get
 
 - **Name**：`Tutoring Center & Classes Website Template (English + 繁體中文)`
 - **URL**：`tutoring-school-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`tutoring website`, `school website`, `education template`, `html template`, `website template`
 - **Description**：
 ```
@@ -555,7 +561,7 @@ What you get
 
 - **Name**：`Interior Design Studio Website Template (English + 繁體中文)`
 - **URL**：`interior-design-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`interior design website`, `renovation website`, `architect portfolio`, `html template`, `website template`
 - **Description**：
 ```
@@ -586,7 +592,7 @@ What you get
 
 - **Name**：`Bakery & Dessert Shop Website Template with Pre-orders (English + 繁體中文)`
 - **URL**：`bakery-website-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`bakery website`, `cake shop website`, `pre-order form`, `html template`, `website template`
 - **Description**：
 ```
@@ -617,7 +623,7 @@ What you get
 
 - **Name**：`Bubble Tea Shop Website Template (English + 繁體中文) — One-Page HTML`
 - **URL**：`bubble-tea-shop-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`bubble tea website`, `cafe website`, `drink menu`, `html template`, `website template`
 - **Description**：
 ```
@@ -648,7 +654,7 @@ What you get
 
 - **Name**：`Car Detailing & Auto Repair Website Template (English + 繁體中文)`
 - **URL**：`auto-care-garage-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`auto repair website`, `car detailing`, `garage website`, `html template`, `website template`
 - **Description**：
 ```
@@ -679,7 +685,7 @@ What you get
 
 - **Name**：`Home Cleaning Service Website Template with Instant Quote (English + 繁體中文)`
 - **URL**：`home-cleaning-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`cleaning website`, `maid service`, `home services`, `html template`, `website template`
 - **Description**：
 ```
@@ -710,7 +716,7 @@ What you get
 
 - **Name**：`Florist Website Template (English + 繁體中文) — One-Page HTML`
 - **URL**：`florist-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`florist website`, `flower shop`, `flower delivery`, `html template`, `website template`
 - **Description**：
 ```
@@ -741,7 +747,7 @@ What you get
 
 - **Name**：`Yoga & Pilates Studio Website Template (English + 繁體中文)`
 - **URL**：`yoga-pilates-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`yoga website`, `pilates studio`, `wellness website`, `html template`, `website template`
 - **Description**：
 ```
@@ -772,7 +778,7 @@ What you get
 
 - **Name**：`Campsite & Glamping Website Template (English + 繁體中文)`
 - **URL**：`campsite-glamping-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`campground website`, `glamping website`, `outdoor website`, `html template`, `website template`
 - **Description**：
 ```
@@ -803,7 +809,7 @@ What you get
 
 - **Name**：`Freelancer Portfolio & Résumé Website Template (English + 繁體中文)`
 - **URL**：`freelancer-portfolio-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`portfolio website`, `resume website`, `freelancer`, `personal website`, `html template`
 - **Description**：
 ```
@@ -834,7 +840,7 @@ What you get
 
 - **Name**：`SaaS & App Landing Page Template (English + 繁體中文) — One-Page HTML`
 - **URL**：`app-saas-landing-template`
-- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`saas landing page`, `app landing page`, `startup website`, `html template`, `landing page`
 - **Description**：
 ```

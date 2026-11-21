@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>老派 Oldboy Barbershop｜台北東區男士理髮廳</title>
+<meta name="description" content="老派 Oldboy Barbershop 位於台北東區，提供經典油頭、漸層推剪、修鬍與熱毛巾刮臉。四位資深理髮師，可線上預約或現場候位。">
+<meta property="og:title" content="老派 Oldboy Barbershop｜台北東區男士理髮廳">
+<meta property="og:description" content="經典油頭、漸層推剪、熱毛巾刮臉。線上預約一張椅子，或直接走進來候位。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#6b1d26">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Oswald:wght@400;500&family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #6b1d26;          /* 品牌主色（牛血紅），用於按鈕、主視覺背景 */
+  --brand-deep: #4a1219;     /* 深一階的品牌色，用於漸層與皮革陰影 */
+  --brand-ink: #f5ecdc;      /* 在品牌色上的文字顏色（奶油白） */
+  --bg: #f2e9d8;             /* 整站背景（舊紙奶油色） */
+  --surface: #f9f3e7;        /* 卡片、表單表面色 */
+  --surface-2: #e8dbc2;      /* 次要區塊背景（深一點的奶油色） */
+  --night: #17130f;          /* 深色區塊背景（近黑） */
+  --night-2: #2a221b;        /* 深色區塊上的卡片色 */
+  --on-night: #efe5d2;       /* 深色背景上的文字顏色 */
+  --text: #1c1814;           /* 主要文字（近黑） */
+  --muted: #5d5047;          /* 次要文字、說明文字 */
+  --line: #cdb994;           /* 分隔線、邊框（淡黃銅） */
+  --brass: #a8803a;          /* 黃銅色，只用於裝飾線條 */
+  --brass-lt: #d6b268;       /* 亮黃銅色，用於深色背景上的重點文字 */
+  --chrome: #c4beb1;         /* 佔位圖用：椅子、剃刀的鍍鉻金屬色 */
+  --shadow: color-mix(in srgb, var(--night) 22%, transparent); /* 陰影色 */
+  --radius: 3px;             /* 圓角大小（老招牌風格，幾乎是直角） */
+  --font-heading: "Noto Serif TC", "Abril Fatface", "Songti TC", serif; /* 標題字型（粗襯線） */
+  --heading-weight: 900;     /* 標題字重 */
+  --font-display: "Abril Fatface", "Noto Serif TC", Georgia, serif;     /* 招牌字型：店名、價格、數字 */
+  --font-num: "Oswald", "Noto Sans TC", sans-serif;                     /* 時長、時段等小數字 */
+  --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; /* 內文字型 */
+  --pad: clamp(1rem, 5vw, 5rem); /* 區塊左右留白 */
+  --max: 1160px;             /* 內容最大寬度 */
+  --ease: cubic-bezier(.2, .7, .1, 1); /* 動畫曲線 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.8 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: var(--heading-weight); font-synthesis: none; overflow-wrap: break-word; min-width: 0; text-wrap: balance; line-height: 1.25; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.wrap { max-width: var(--max); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 99; }
+.skip:focus { left: 1rem; top: 1rem; }
+
+/* ---------- 按鈕 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 3rem; padding: .7rem 1.5rem; border-radius: var(--radius); font: 700 .98rem/1 var(--font-body); border: 1.5px solid var(--brand); transition: transform .3s var(--ease), background-color .3s, color .3s, border-color .3s; cursor: pointer; }
+.btn:active { transform: translateY(1px) scale(.98); }
+.btn-primary { background: var(--brand); color: var(--brand-ink); box-shadow: inset 0 0 0 3px var(--brand), inset 0 0 0 4px color-mix(in srgb, var(--brand-ink) 45%, transparent); }
+.btn-primary:hover { background: var(--brand-deep); border-color: var(--brand-deep); }
+.btn-ghost { background: transparent; color: var(--brand); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--brand) 9%, transparent); }
+.btn-cream { background: var(--brand-ink); color: var(--brand); border-color: var(--brand-ink); }
+.btn-cream:hover { background: var(--surface-2); border-color: var(--surface-2); }
+.btn-line { background: transparent; color: var(--brand-ink); border-color: color-mix(in srgb, var(--brand-ink) 60%, transparent); }
+.btn-line:hover { background: color-mix(in srgb, var(--brand-ink) 12%, transparent); border-color: var(--brand-ink); }
+.btn svg { width: 1.1em; height: 1.1em; fill: currentColor; }
+.text-link { color: var(--brand); font-weight: 700; border-bottom: 1.5px solid color-mix(in srgb, var(--brand) 40%, transparent); padding-bottom: .1rem; transition: border-color .3s, color .3s; }
+.text-link:hover { border-color: var(--brand); }
+.text-link:active { color: var(--brand-deep); }
+
+/* ---------- 區塊：頁首 ---------- */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; color: var(--on-night); padding: 1rem var(--pad); border-bottom: 1px solid transparent; transition: background-color .4s, border-color .4s, padding .4s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--night) 94%, transparent); border-color: color-mix(in srgb, var(--brass-lt) 35%, transparent); padding-block: .6rem; }
+html:not(.js) .site-header { background: var(--night); }
+.nav { max-width: var(--max); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.logo { display: flex; align-items: baseline; gap: .5rem; font: 900 1.3rem/1 var(--font-heading); }
+.logo small { font: 400 1.15rem/1 var(--font-display); color: var(--brass-lt); }
+.menu { display: flex; align-items: center; gap: clamp(.9rem, 2vw, 1.8rem); font-size: .92rem; }
+.menu a:not(.btn) { padding-block: .3rem; border-bottom: 1px solid transparent; transition: border-color .3s, color .3s; }
+.menu a:not(.btn):hover { border-color: var(--brass-lt); color: var(--brass-lt); }
+.menu a:not(.btn):active { opacity: .7; }
+.menu .btn { min-height: 2.5rem; padding: .5rem 1.1rem; font-size: .88rem; }
+.burger { display: none; width: 2.75rem; height: 2.75rem; border: 1px solid color-mix(in srgb, var(--on-night) 35%, transparent); border-radius: var(--radius); background: transparent; cursor: pointer; position: relative; color: var(--on-night); }
+.burger:hover { border-color: var(--brass-lt); }
+.burger:active { opacity: .7; }
+.burger span, .burger::before, .burger::after { content: ""; position: absolute; left: 25%; right: 25%; height: 2px; background: currentColor; transition: transform .35s var(--ease), opacity .3s; }
+.burger::before { top: 33%; } .burger span { top: calc(50% - 1px); } .burger::after { bottom: 33%; }
+.burger[aria-expanded="true"]::before { transform: translateY(.36rem) rotate(45deg); }
+.burger[aria-expanded="true"] span { opacity: 0; }
+.burger[aria-expanded="true"]::after { transform: translateY(-.36rem) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* 沒有 JavaScript 時，選單直接換行顯示在 logo 下方；有 JS 才收進漢堡選單 */
+  html:not(.js) .nav { flex-wrap: wrap; }
+  html:not(.js) .site-header { position: sticky; }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .3rem 1rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: 0 0 auto; padding: 5rem var(--pad) 2rem; flex-direction: column; align-items: stretch; gap: 0; background: var(--night); border-bottom: 1px solid var(--brass); box-shadow: 0 20px 40px var(--shadow); transform: translateY(-105%); visibility: hidden; transition: transform .45s var(--ease), visibility 0s .45s; z-index: -1; font-size: 1.05rem; }
+  .js .menu.open { transform: none; visibility: visible; transition: transform .45s var(--ease); }
+  .js .menu a:not(.btn) { padding: .85rem 0; border-bottom: 1px solid color-mix(in srgb, var(--on-night) 15%, transparent); }
+  .js .menu .btn { margin-top: 1.2rem; min-height: 3rem; }
+}
+
+/* ---------- 通用區塊 ---------- */
+section { padding: clamp(4rem, 11vh, 7rem) var(--pad); }
+.sec-head { text-align: center; max-width: 42rem; margin: 0 auto clamp(2.2rem, 5vh, 3.5rem); }
+/* 標題左右兩條細線，像老招牌的框線 */
+.sec-head h2 { display: flex; align-items: center; justify-content: center; gap: 1rem; font-size: clamp(1.8rem, 4.4vw, 2.7rem); }
+.sec-head h2::before, .sec-head h2::after { content: ""; flex: 0 1 3.5rem; height: 5px; border-block: 1px solid var(--brass); }
+.sec-head p { color: var(--muted); margin-top: .8rem; }
+.dark { background: var(--night); color: var(--on-night); }
+.dark .sec-head p { color: color-mix(in srgb, var(--on-night) 78%, transparent); }
+.alt { background: var(--surface-2); }
+/* 雙線框：老招牌的細框效果 */
+.frame { border: 1px solid var(--line); box-shadow: inset 0 0 0 5px var(--surface), inset 0 0 0 6px var(--line); background: var(--surface); }
+
+/* ---------- 藝術佔位圖 ----------
+   每個 .img-xx 都是用 CSS 畫的佔位圖，之後可以直接換成照片（記得把裡面的 <span> 裝飾刪掉）。 */
+.img { position: relative; overflow: hidden; isolation: isolate; background-color: var(--night-2); }
+.chrome { background: linear-gradient(90deg, color-mix(in srgb, var(--chrome) 45%, var(--night)), var(--chrome) 30%, var(--on-night) 48%, var(--chrome) 62%, color-mix(in srgb, var(--chrome) 40%, var(--night))); }
+.leather { background: linear-gradient(90deg, var(--brand-deep), var(--brand) 28%, color-mix(in srgb, var(--brand) 78%, var(--brand-ink)) 48%, var(--brand) 70%, var(--brand-deep)); }
+/* 換成照片：.img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero {
+  background:
+    radial-gradient(48% 34% at 50% 34%, color-mix(in srgb, var(--brass-lt) 26%, transparent), transparent 72%),
+    repeating-linear-gradient(90deg, transparent 0 38px, color-mix(in srgb, var(--on-night) 5%, transparent) 38px 40px),
+    linear-gradient(var(--night-2), var(--night));
+}
+.img-hero::before { content: ""; position: absolute; left: -30%; right: -30%; bottom: 0; height: 30%; z-index: -1; background: repeating-conic-gradient(color-mix(in srgb, var(--on-night) 70%, transparent) 0 25%, var(--night) 0 50%) 0 0 / 46px 46px; transform: perspective(260px) rotateX(52deg); transform-origin: bottom; opacity: .45; }
+.chair { position: absolute; left: 50%; bottom: 6%; width: 64%; aspect-ratio: 1 / 1.2; transform: translateX(-50%); filter: drop-shadow(0 18px 18px var(--shadow)); }
+.chair span { position: absolute; display: block; }
+.c-head { left: 35%; top: 0; width: 30%; height: 9%; border-radius: 40% 40% 28% 28%; }
+.c-neck { left: 47.5%; top: 8.5%; width: 5%; height: 5%; }
+.c-back { left: 25%; top: 13%; width: 50%; height: 38%; border-radius: 16% 16% 5% 5%; }
+.c-back::after { content: ""; position: absolute; inset: 12% 14%; background: repeating-linear-gradient(90deg, transparent 0 18%, color-mix(in srgb, var(--brand-deep) 70%, transparent) 18% 20%); border-radius: 10%; }
+.c-arm { top: 41%; width: 20%; height: 7%; border-radius: 999px; }
+.c-arm.l { left: 6%; } .c-arm.r { right: 6%; }
+.c-arm::after { content: ""; position: absolute; left: 42%; width: 16%; top: 100%; height: 110%; background: inherit; }
+.c-seat { left: 15%; top: 49%; width: 70%; height: 11%; border-radius: 22% 22% 34% 34% / 50%; }
+.c-trim { left: 22%; top: 59%; width: 56%; height: 5%; border-radius: 0 0 8px 8px; }
+.c-pole { left: 44%; top: 63%; width: 12%; height: 27%; }
+.c-foot { left: 28%; top: 72%; width: 44%; height: 4%; border-radius: 999px; }
+.c-base { left: 12%; top: 88%; width: 76%; height: 11%; border-radius: 50%; }
+/* 換成照片：.img-razor { background: url(images/razor.jpg) center/cover; } */
+.img-razor { background: radial-gradient(60% 50% at 50% 50%, color-mix(in srgb, var(--brass-lt) 18%, transparent), transparent 70%), repeating-linear-gradient(135deg, var(--night-2) 0 12px, var(--night) 12px 24px); }
+.razor { position: absolute; left: 50%; top: 50%; width: 82%; aspect-ratio: 5 / 1; transform: translate(-50%, -50%) rotate(-16deg); filter: drop-shadow(0 10px 10px var(--shadow)); }
+.razor span { position: absolute; display: block; }
+.r-handle { left: 0; top: 34%; width: 60%; height: 34%; border-radius: 999px; background: radial-gradient(circle at 7% 50%, var(--brass-lt) 0 4px, transparent 5px), radial-gradient(circle at 93% 50%, var(--brass-lt) 0 4px, transparent 5px), linear-gradient(var(--brand), var(--brand-deep)); }
+.r-blade { left: 55%; top: 14%; width: 45%; height: 58%; clip-path: polygon(0 34%, 70% 0, 92% 4%, 100% 30%, 97% 100%, 0 70%); background: linear-gradient(172deg, var(--on-night), var(--chrome) 45%, color-mix(in srgb, var(--chrome) 50%, var(--night))); }
+.r-blade::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 22%; background: color-mix(in srgb, var(--night) 55%, transparent); }
+/* 換成照片：.img-tin { background: url(images/pomade.jpg) center/cover; } */
+.img-tin { background: repeating-linear-gradient(100deg, var(--brand-deep) 0 6px, color-mix(in srgb, var(--brand-deep) 80%, var(--night)) 6px 9px, var(--brand-deep) 9px 22px), var(--brand-deep); }
+.tin { position: absolute; left: 50%; top: 50%; width: 62%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; display: grid; place-items: center; text-align: center; color: var(--brand-ink); font: 400 clamp(1rem, 3vw, 1.6rem)/1 var(--font-display); box-shadow: 0 16px 26px var(--shadow);
+  background:
+    radial-gradient(circle at 34% 28%, color-mix(in srgb, var(--on-night) 30%, transparent), transparent 38%),
+    radial-gradient(circle, transparent 0 58%, var(--brass-lt) 58.5% 60.5%, transparent 61%),
+    radial-gradient(circle, var(--brand) 0 70%, transparent 70.5%),
+    conic-gradient(var(--chrome), var(--on-night), var(--chrome), color-mix(in srgb, var(--chrome) 50%, var(--night)), var(--chrome)); }
+/* 換成照片：.img-shop { background: url(images/shop.jpg) center/cover; } */
+.img-shop {
+  background:
+    repeating-conic-gradient(var(--on-night) 0 25%, var(--night) 0 50%) left bottom / 44px 44px repeat-x,
+    linear-gradient(transparent 62%, var(--brass) 62% 63%, var(--brand-deep) 63%),
+    radial-gradient(ellipse 34% 40% at 50% 45%, color-mix(in srgb, var(--chrome) 45%, var(--night-2)) 0 70%, var(--brass-lt) 71% 75%, transparent 76%) 0 0 / 25% 100% repeat-x,
+    linear-gradient(var(--night-2), var(--night));
+}
+/* 人像佔位圖：用 --bd（背景）與 --hair（髮型）兩個變數組合 */
+.bust { background:
+    var(--hair, linear-gradient(transparent, transparent)),
+    radial-gradient(circle at 50% 42%, var(--night) 0 17%, transparent 17.5%),
+    radial-gradient(ellipse 44% 30% at 50% 100%, var(--night) 0 98%, transparent 100%),
+    var(--bd); }
+/* 換成照片：.img-b1 { background: url(images/barber-1.jpg) center/cover; }（.img-b2～b4 同理） */
+.img-b1 { --bd: radial-gradient(60% 50% at 50% 35%, color-mix(in srgb, var(--brand-ink) 30%, transparent), transparent 70%), var(--brand); --hair: radial-gradient(ellipse 22% 11% at 54% 25%, var(--night) 0 98%, transparent 100%); }
+.img-b2 { --bd: repeating-linear-gradient(90deg, var(--surface-2) 0 22px, var(--line) 22px 24px); --hair: radial-gradient(ellipse 16% 12% at 50% 56%, var(--night) 0 98%, transparent 100%); }
+.img-b3 { --bd: radial-gradient(70% 60% at 50% 30%, var(--brass-lt), var(--brass)); --hair: linear-gradient(transparent, transparent); }
+.img-b4 { --bd: radial-gradient(60% 50% at 50% 35%, color-mix(in srgb, var(--chrome) 70%, var(--on-night)), var(--chrome)); --hair: radial-gradient(ellipse 20% 9% at 46% 27%, var(--night) 0 98%, transparent 100%); }
+/* 換成照片：.img-w1 { background: url(images/work-1.jpg) center/cover; }（.img-w2～w8 同理） */
+.img-w1 { --bd: linear-gradient(160deg, var(--brand), var(--brand-deep)); --hair: radial-gradient(ellipse 24% 12% at 56% 24%, var(--night) 0 98%, transparent 100%); }
+.img-w2 { --bd: linear-gradient(var(--surface-2) 0 50%, var(--line) 50%); --hair: linear-gradient(transparent, transparent); }
+.img-w3 { --bd: repeating-linear-gradient(45deg, var(--night-2) 0 14px, var(--night) 14px 28px); --hair: radial-gradient(circle at 50% 42%, transparent 0 17%, var(--brass-lt) 17.5% 18.5%, transparent 19%); }
+.img-w4 { --bd: radial-gradient(70% 60% at 50% 30%, var(--brass-lt), var(--brass)); --hair: radial-gradient(ellipse 15% 13% at 50% 56%, var(--night) 0 98%, transparent 100%); }
+.img-w5 { --bd: repeating-linear-gradient(0deg, var(--surface) 0 10px, var(--surface-2) 10px 20px); --hair: radial-gradient(ellipse 20% 9% at 44% 27%, var(--night) 0 98%, transparent 100%); }
+.img-w6 { --bd: conic-gradient(from 210deg at 50% 120%, var(--brand-deep), var(--brand), var(--brand-deep)); --hair: radial-gradient(ellipse 13% 8% at 50% 25%, var(--night) 0 98%, transparent 100%); }
+.img-w7 { --bd: linear-gradient(var(--chrome), color-mix(in srgb, var(--chrome) 60%, var(--night))); --hair: radial-gradient(ellipse 22% 10% at 50% 26%, var(--brand-deep) 0 98%, transparent 100%); }
+.img-w8 { --bd: radial-gradient(60% 50% at 50% 40%, color-mix(in srgb, var(--brass-lt) 35%, transparent), transparent 70%), var(--night-2); --hair: radial-gradient(ellipse 18% 14% at 50% 55%, var(--brass) 0 98%, transparent 100%); }
+
+/* ---------- 區塊：主視覺 ---------- */
+.hero { position: relative; min-height: 100svh; display: grid; align-items: center; padding-top: 6.5rem; padding-bottom: 3.5rem; background: radial-gradient(90% 80% at 20% 30%, var(--brand), var(--brand-deep)); color: var(--brand-ink); overflow: clip; }
+.hero .wrap { display: grid; gap: clamp(2.5rem, 5vw, 4.5rem); align-items: center; width: 100%; }
+.sign { padding: clamp(1.4rem, 4vw, 2.8rem); border: 1px solid color-mix(in srgb, var(--brass-lt) 70%, transparent); box-shadow: inset 0 0 0 6px var(--brand), inset 0 0 0 7px color-mix(in srgb, var(--brass-lt) 45%, transparent); }
+.hero h1 { font-size: clamp(2.6rem, 7.4vw, 5.2rem); line-height: 1.12; }
+.hero .lead { margin-top: 1.2rem; max-width: 29rem; font-size: 1.06rem; color: color-mix(in srgb, var(--brand-ink) 88%, transparent); }
+.hero .ctas { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.8rem; }
+.hero .now-line { margin-top: 1.4rem; font-size: .9rem; color: color-mix(in srgb, var(--brand-ink) 85%, transparent); }
+.hero .now-line b { color: var(--brass-lt); font-weight: 700; }
+.hero-art { position: relative; justify-self: center; width: min(100%, 25rem); }
+.hero-art .img { aspect-ratio: 4 / 5; border-radius: 999px 999px var(--radius) var(--radius); border: 1px solid var(--brass-lt); box-shadow: 0 0 0 6px var(--brand-deep), 0 0 0 7px color-mix(in srgb, var(--brass-lt) 55%, transparent), 0 30px 60px var(--shadow); }
+.hero-art .badge { position: absolute; right: -4%; top: 10%; width: 6.4rem; aspect-ratio: 1; border-radius: 50%; display: grid; place-content: center; text-align: center; background: var(--brand-ink); color: var(--brand); font: 400 1.35rem/1 var(--font-display); box-shadow: inset 0 0 0 4px var(--brand-ink), inset 0 0 0 5px var(--brand); }
+.hero-art .badge small { display: block; font: 500 .75rem/1.5 var(--font-body); color: var(--muted); }
+@media (min-width: 900px) { .hero .wrap { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); } }
+@media (max-width: 899px) { .hero-art { width: min(80%, 21rem); } }
+
+/* 理髮廳旋轉燈條紋：全站只用這一次 */
+.pole { height: 18px; border-block: 2px solid var(--brass); background: repeating-linear-gradient(-45deg, var(--brand) 0 14px, var(--surface) 14px 28px, var(--night) 28px 34px, var(--surface) 34px 48px); background-size: 68px 100%; animation: spin 6s linear infinite; }
+@keyframes spin { to { background-position: 68px 0; } }
+
+/* ---------- 區塊：價目表 ---------- */
+.board { max-width: 62rem; margin-inline: auto; padding: clamp(1.4rem, 4vw, 3rem); border: 1px solid var(--brass); box-shadow: inset 0 0 0 6px var(--night), inset 0 0 0 7px color-mix(in srgb, var(--brass-lt) 50%, transparent); display: grid; gap: 2.2rem clamp(2rem, 5vw, 4rem); }
+@media (min-width: 860px) { .board { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.board h3 { font-size: 1.3rem; color: var(--brass-lt); padding-bottom: .6rem; margin-bottom: .4rem; border-bottom: 1px solid color-mix(in srgb, var(--brass-lt) 40%, transparent); }
+.row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 .5rem; padding-block: .6rem; }
+.row .name { flex: 0 1 auto; min-width: 0; font-weight: 700; }
+.row small { flex: 1 1 100%; font-size: .82rem; line-height: 1.5; margin-top: .3rem; color: color-mix(in srgb, var(--on-night) 75%, transparent); }
+.row .dots { flex: 1 1 1rem; min-width: .8rem; align-self: flex-end; margin-bottom: .45rem; border-bottom: 2px dotted color-mix(in srgb, var(--brass-lt) 55%, transparent); }
+.row .dur { font: 400 .85rem/1 var(--font-num); color: color-mix(in srgb, var(--on-night) 78%, transparent); white-space: nowrap; }
+.row .price { font: 400 1.3rem/1 var(--font-display); color: var(--brass-lt); white-space: nowrap; min-width: 4.6rem; text-align: right; }
+.board .combo { grid-column: 1 / -1; }
+.price-note { text-align: center; margin-top: 1.8rem; font-size: .88rem; color: color-mix(in srgb, var(--on-night) 75%, transparent); }
+
+/* ---------- 區塊：理髮師 ---------- */
+.team { display: grid; gap: 1.5rem 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 900px) { .team { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.6rem; } }
+.barber { padding: .6rem .6rem 1.3rem; text-align: center; }
+.barber .img { aspect-ratio: 4 / 5; margin-bottom: 1rem; border-radius: 999px 999px 0 0; }
+.barber h3 { font-size: 1.2rem; }
+.barber h3 small { display: block; font: 400 1rem/1.4 var(--font-display); color: var(--brand); }
+.barber p { color: var(--muted); font-size: .88rem; margin: .4rem .3rem .9rem; line-height: 1.6; }
+
+/* ---------- 區塊：作品 ---------- */
+.gallery { display: grid; gap: clamp(.75rem, 1.6vw, 1.2rem); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 760px) { .gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.work .img { aspect-ratio: 1; border: 1px solid var(--line); }
+.work figcaption { margin-top: .55rem; font-size: .9rem; font-weight: 700; }
+.tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .3rem; }
+.tags li { font-size: .75rem; font-weight: 500; padding: .1rem .5rem; border: 1px solid color-mix(in srgb, var(--brand) 45%, transparent); color: var(--brand); border-radius: var(--radius); }
+
+/* ---------- 區塊：現場候位 ---------- */
+.walkin { display: grid; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+@media (min-width: 860px) { .walkin { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); } }
+.status { padding: clamp(1.6rem, 4vw, 2.6rem); text-align: center; }
+.badge-open { display: inline-block; padding: .35rem 1rem; border: 1.5px solid var(--muted); color: var(--muted); font-weight: 700; border-radius: var(--radius); }
+.badge-open.open { border-color: var(--brand); background: var(--brand); color: var(--brand-ink); }
+.status .wait { font: 400 clamp(1.5rem, 4vw, 2.1rem)/1.3 var(--font-heading); font-weight: var(--heading-weight); margin: 1rem 0 .4rem; }
+.status .sub { color: var(--muted); }
+.status .text-link { display: inline-block; margin-top: 1.2rem; }
+.table-wrap { overflow-x: auto; }
+.wait-table { width: 100%; min-width: 300px; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); }
+.wait-table caption { text-align: left; font-weight: 700; padding-bottom: .6rem; }
+.wait-table th, .wait-table td { padding: .7rem 1rem; text-align: left; border-bottom: 1px solid var(--line); }
+.wait-table th { font-size: .88rem; font-weight: 700; color: var(--muted); background: var(--surface-2); }
+.wait-table td { font-family: var(--font-num), var(--font-body); }
+.wait-table tr.now td { background: color-mix(in srgb, var(--brand) 12%, var(--surface)); font-weight: 500; }
+.wait-note { font-size: .85rem; color: var(--muted); margin-top: .7rem; }
+
+/* ---------- 區塊：店內環境 ---------- */
+.space { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 860px) { .space { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); } }
+.space figure { margin: 0; }
+.space .img { aspect-ratio: 1; border: 1px solid color-mix(in srgb, var(--brass-lt) 45%, transparent); }
+.space .wide { grid-column: 1 / -1; }
+.space .wide .img { aspect-ratio: 2 / 1; }
+@media (min-width: 860px) { .space .wide { grid-column: auto; } .space .wide .img { aspect-ratio: auto; height: 100%; min-height: 100%; } .space .wide { display: grid; grid-template-rows: minmax(0, 1fr) auto; } }
+.space figcaption { font-size: .88rem; margin-top: .5rem; color: color-mix(in srgb, var(--on-night) 80%, transparent); }
+
+/* ---------- 區塊：評價 ---------- */
+.reviews { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.review { padding: 1.8rem 1.6rem; display: flex; flex-direction: column; gap: .8rem; }
+.review .score { font: 400 2rem/1 var(--font-display); color: var(--brand); }
+.review .score small { font: 500 .8rem/1 var(--font-body); color: var(--muted); margin-left: .3rem; }
+.review blockquote { flex: 1; }
+.review cite { font-style: normal; font-size: .88rem; color: var(--muted); }
+
+/* ---------- 區塊：常見問題 ---------- */
+.faq { max-width: 46rem; margin-inline: auto; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-child { border-top: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.2rem .2rem; font: 700 1.05rem/1.6 var(--font-heading); transition: color .3s; }
+.faq summary:hover { color: var(--brand); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; width: 1.9rem; height: 1.9rem; display: grid; place-items: center; border: 1px solid var(--brand); color: var(--brand); font: 400 1.2rem/1 var(--font-body); border-radius: var(--radius); transition: transform .3s var(--ease); }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { color: var(--muted); padding: 0 2.8rem 1.3rem .2rem; }
+
+/* ---------- 區塊：預約表單 ---------- */
+.book { background: radial-gradient(90% 90% at 80% 20%, var(--brand), var(--brand-deep)); color: var(--brand-ink); }
+.book .wrap { display: grid; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+@media (min-width: 900px) { .book .wrap { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); } }
+.book h2 { font-size: clamp(1.9rem, 4.6vw, 2.8rem); }
+.book .intro p { margin-top: .9rem; color: color-mix(in srgb, var(--brand-ink) 88%, transparent); }
+.book .intro .ctas { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.6rem; }
+.form { padding: clamp(1.4rem, 4vw, 2.4rem); color: var(--text); display: grid; gap: 1rem; }
+@media (min-width: 600px) { .form { grid-template-columns: repeat(2, minmax(0, 1fr)); } .form .full { grid-column: 1 / -1; } }
+.field { display: grid; gap: .35rem; min-width: 0; }
+.field label { font-size: .88rem; font-weight: 700; }
+.field input, .field select { width: 100%; min-width: 0; min-height: 3rem; padding: .6rem .8rem; font: 400 1rem/1.4 var(--font-body); color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); transition: border-color .3s, box-shadow .3s; }
+.field input:hover, .field select:hover { border-color: var(--muted); }
+.field input:focus-visible, .field select:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.field select.flash { box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 35%, transparent); border-color: var(--brand); }
+.pick-note { font-size: .88rem; color: var(--brand); font-weight: 700; min-height: 1.4em; }
+.form .btn { width: 100%; }
+
+/* ---------- 區塊：營業時間與地圖 ---------- */
+.visit { display: grid; gap: clamp(1.5rem, 4vw, 3rem); grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.visit-card { padding: clamp(1.5rem, 3vw, 2.2rem); }
+.visit-card h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+.visit-card dl { display: grid; grid-template-columns: auto 1fr; gap: .5rem 1.4rem; }
+.visit-card dt { color: var(--muted); }
+.visit-card dd { font-family: var(--font-num), var(--font-body); }
+.visit-card address { font-style: normal; margin-top: 1.4rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+.visit-card .ctas { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.2rem; }
+.visit-card .btn { min-height: 2.75rem; padding-inline: 1.1rem; font-size: .92rem; }
+.map-art { min-height: 18rem; border: 1px solid var(--line); background:
+  radial-gradient(circle at 54% 46%, var(--brand) 0 .55rem, color-mix(in srgb, var(--brand) 22%, transparent) .6rem 1.8rem, transparent 1.85rem),
+  linear-gradient(90deg, transparent 52%, var(--surface) 52% 55%, transparent 55%),
+  linear-gradient(0deg, transparent 44%, var(--surface) 44% 47.5%, transparent 47.5%),
+  repeating-linear-gradient(0deg, transparent 0 52px, color-mix(in srgb, var(--surface) 70%, transparent) 52px 55px),
+  repeating-linear-gradient(90deg, transparent 0 52px, color-mix(in srgb, var(--surface) 70%, transparent) 52px 55px),
+  var(--surface-2); }
+
+/* ---------- 區塊：頁尾 ---------- */
+.site-footer { background: var(--night); color: var(--on-night); padding: clamp(3rem, 8vh, 4.5rem) var(--pad) 6.5rem; border-top: 3px double var(--brass); }
+.site-footer .wrap { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.site-footer p, .site-footer li { font-size: .9rem; color: color-mix(in srgb, var(--on-night) 80%, transparent); }
+.site-footer .f-h { font-weight: 700; font-size: .9rem; margin-bottom: .8rem; color: var(--brass-lt); }
+.site-footer a { transition: color .3s; }
+.site-footer a:hover { color: var(--brass-lt); }
+.site-footer a:active { opacity: .7; }
+.social { display: flex; gap: 1rem; }
+.copy { max-width: var(--max); margin: 2.4rem auto 0; padding-top: 1.4rem; border-top: 1px solid color-mix(in srgb, var(--on-night) 18%, transparent); font-size: .8rem; color: color-mix(in srgb, var(--on-night) 72%, transparent); }
+@media (min-width: 761px) { .site-footer { padding-bottom: 3rem; } }
+
+/* ---------- 手機底部固定按鈕 ---------- */
+.sticky-cta { position: fixed; left: 1rem; right: 1rem; bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 40; box-shadow: inset 0 0 0 3px var(--brand), inset 0 0 0 4px color-mix(in srgb, var(--brand-ink) 45%, transparent), 0 12px 30px var(--shadow); }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- 捲動漸入動畫（只在有 JS 時先隱藏） ---------- */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "老派 Oldboy Barbershop",
+  "description": "台北東區男士理髮廳，經典油頭、漸層推剪、修鬍與熱毛巾刮臉。",
+  "telephone": "02-1234-5678",
+  "priceRange": "NT$300–NT$1700",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "忠孝東路四段 216 巷 8 號 1 樓",
+    "addressLocality": "大安區",
+    "addressRegion": "台北市",
+    "postalCode": "106",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "11:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "20:00" }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<!-- ==================== 區塊：頁首導覽 ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav" aria-label="主選單">
+    <a class="logo" href="#top">老派<small>Oldboy</small></a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="開啟選單"><span></span></button>
+    <div class="menu" id="menu">
+      <a href="#prices">價目表</a>
+      <a href="#barbers">理髮師</a>
+      <a href="#works">作品</a>
+      <a href="#walkin">現場候位</a>
+      <a href="#faq">常見問題</a>
+      <a href="#visit">交通</a>
+      <a class="btn btn-cream" href="#book">線上預約</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ==================== 區塊：主視覺 Hero ==================== -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="sign reveal">
+      <h1>好好剪一顆<br>像樣的頭</h1>
+      <p class="lead">東區巷子裡的老派理髮廳。熱毛巾、直刀修鬍、俐落推剪，坐上椅子就交給我們。</p>
+      <div class="ctas">
+        <a class="btn btn-cream" href="#book">線上預約</a>
+        <a class="btn btn-line" href="#prices">看價目</a>
+      </div>
+      <p class="now-line"><b class="js-state">週二至週日營業</b>，現場也可以候位。</p>
+    </div>
+    <div class="hero-art reveal">
+      <div class="img img-hero" role="img" aria-label="復古皮革理髮椅示意">
+        <div class="chair" aria-hidden="true">
+          <span class="c-head leather"></span><span class="c-neck chrome"></span><span class="c-back leather"></span>
+          <span class="c-arm l leather"></span><span class="c-arm r leather"></span><span class="c-seat leather"></span>
+          <span class="c-trim chrome"></span><span class="c-pole chrome"></span><span class="c-foot chrome"></span><span class="c-base chrome"></span>
+        </div>
+      </div>
+      <div class="badge">2012<small>台北東區</small></div>
+    </div>
+  </div>
+</section>
+<div class="pole" aria-hidden="true"></div>
+
+<!-- ==================== 區塊：價目表 ==================== -->
+<section class="dark" id="prices">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>價目表</h2>
+      <p>所有剪髮都包含洗髮與造型。價格公開透明，不會臨時加價。</p>
+    </div>
+    <div class="board reveal">
+      <div>
+        <h3>剪髮</h3>
+        <div class="row"><span class="name">經典油頭</span><span class="dots"></span><span class="dur">60 分</span><span class="price">NT$900</span><small>側分或後梳，附髮油造型</small></div>
+        <div class="row"><span class="name">漸層推剪</span><span class="dots"></span><span class="dur">50 分</span><span class="price">NT$800</span><small>低、中、高漸層或 Skin Fade</small></div>
+        <div class="row"><span class="name">洗髮</span><span class="dots"></span><span class="dur">20 分</span><span class="price">NT$300</span><small>頭皮按摩與吹整</small></div>
+      </div>
+      <div>
+        <h3>鬍子與刮臉</h3>
+        <div class="row"><span class="name">修鬍</span><span class="dots"></span><span class="dur">30 分</span><span class="price">NT$450</span><small>修型、修邊、上鬍油</small></div>
+        <div class="row"><span class="name">熱毛巾刮臉</span><span class="dots"></span><span class="dur">45 分</span><span class="price">NT$700</span><small>兩道熱毛巾，直刀全臉修</small></div>
+        <div class="row"><span class="name">鬢角與頸線</span><span class="dots"></span><span class="dur">15 分</span><span class="price">NT$300</span><small>兩次剪髮之間的小整理</small></div>
+      </div>
+      <div class="combo">
+        <h3>套餐</h3>
+        <div class="row"><span class="name">老派全套</span><span class="dots"></span><span class="dur">100 分</span><span class="price">NT$1,700</span><small>剪髮、洗髮、熱毛巾刮臉，一次到位</small></div>
+        <div class="row"><span class="name">剪髮加修鬍</span><span class="dots"></span><span class="dur">80 分</span><span class="price">NT$1,250</span><small>任選剪髮項目，加上修鬍</small></div>
+      </div>
+    </div>
+    <p class="price-note">學生憑證剪髮 NT$650，週二至週四適用。</p>
+  </div>
+</section>
+
+<!-- ==================== 區塊：理髮師 ==================== -->
+<section id="barbers">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>理髮師</h2>
+      <p>四張椅子、四種手路。想找固定的師傅，點「預約他」就會幫你帶進預約表單。</p>
+    </div>
+    <div class="team">
+      <article class="barber frame reveal">
+        <div class="img img-b1 bust" role="img" aria-label="理髮師阿吉照片示意"></div>
+        <h3>阿吉<small>Kichi</small></h3>
+        <p>經典油頭、側分。資歷 14 年，店裡的老闆。</p>
+        <a class="text-link" href="#book" data-barber="阿吉">預約他</a>
+      </article>
+      <article class="barber frame reveal">
+        <div class="img img-b2 bust" role="img" aria-label="理髮師老陳照片示意"></div>
+        <h3>老陳<small>Chen</small></h3>
+        <p>直刀修鬍、熱毛巾刮臉。從師傅手上學了 30 年。</p>
+        <a class="text-link" href="#book" data-barber="老陳">預約他</a>
+      </article>
+      <article class="barber frame reveal">
+        <div class="img img-b3 bust" role="img" aria-label="理髮師小K照片示意"></div>
+        <h3>小 K<small>Kai</small></h3>
+        <p>漸層推剪、Skin Fade、線條雕刻。</p>
+        <a class="text-link" href="#book" data-barber="小K">預約他</a>
+      </article>
+      <article class="barber frame reveal">
+        <div class="img img-b4 bust" role="img" aria-label="理髮師阿倫照片示意"></div>
+        <h3>阿倫<small>Allen</small></h3>
+        <p>紋理短髮、French Crop，擅長細軟髮。</p>
+        <a class="text-link" href="#book" data-barber="阿倫">預約他</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：作品 ==================== -->
+<section class="alt" id="works">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>作品</h2>
+      <p>最近從椅子上走下去的幾顆頭。拍給理髮師看，比形容容易得多。</p>
+    </div>
+    <div class="gallery">
+      <figure class="work reveal"><div class="img img-w1 bust" role="img" aria-label="經典後梳油頭作品示意"></div><figcaption>後梳油頭<ul class="tags"><li>油頭</li><li>高光澤</li></ul></figcaption></figure>
+      <figure class="work reveal"><div class="img img-w2 bust" role="img" aria-label="中漸層推剪作品示意"></div><figcaption>中漸層<ul class="tags"><li>漸層</li><li>推剪</li></ul></figcaption></figure>
+      <figure class="work reveal"><div class="img img-w3 bust" role="img" aria-label="寸頭作品示意"></div><figcaption>俐落寸頭<ul class="tags"><li>寸頭</li><li>好整理</li></ul></figcaption></figure>
+      <figure class="work reveal"><div class="img img-w4 bust" role="img" aria-label="落腮鬍修型作品示意"></div><figcaption>落腮鬍修型<ul class="tags"><li>鬍型</li><li>直刀</li></ul></figcaption></figure>
+      <figure class="work reveal"><div class="img img-w5 bust" role="img" aria-label="側分油頭作品示意"></div><figcaption>紳士側分<ul class="tags"><li>油頭</li><li>霧面</li></ul></figcaption></figure>
+      <figure class="work reveal"><div class="img img-w6 bust" role="img" aria-label="French Crop 作品示意"></div><figcaption>French Crop<ul class="tags"><li>紋理</li><li>短髮</li></ul></figcaption></figure>
+      <figure class="work reveal"><div class="img img-w7 bust" role="img" aria-label="Skin Fade 作品示意"></div><figcaption>Skin Fade<ul class="tags"><li>漸層</li><li>貼頭皮</li></ul></figcaption></figure>
+      <figure class="work reveal"><div class="img img-w8 bust" role="img" aria-label="山羊鬍修型作品示意"></div><figcaption>山羊鬍<ul class="tags"><li>鬍型</li><li>修邊</li></ul></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：現場候位 ==================== -->
+<section id="walkin">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>現場候位</h2>
+      <p>沒預約也歡迎直接走進來。下面是平常的候位時間，可以挑人少的時段來。</p>
+    </div>
+    <div class="walkin">
+      <div class="status frame reveal" aria-live="polite">
+        <span class="badge-open js-state" id="state">週二至週日營業</span>
+        <p class="wait" id="wait">現場候位約 10–40 分鐘</p>
+        <p class="sub" id="sub">依時段不同，週末晚上最滿。</p>
+        <a class="text-link" href="#book">不想等，先線上預約</a>
+      </div>
+      <div class="reveal">
+        <!-- 範例內容：上線前請換成真實資料（JS 會讀取每一列的 data-from／data-to／data-wd／data-we） -->
+        <div class="table-wrap">
+          <table class="wait-table" id="waitTable">
+            <caption>平常的候位時間</caption>
+            <thead><tr><th scope="col">時段</th><th scope="col">平日</th><th scope="col">週末</th></tr></thead>
+            <tbody>
+              <tr data-from="10" data-to="13" data-wd="10" data-we="20"><td>10:00–13:00</td><td>約 10 分</td><td>約 20 分</td></tr>
+              <tr data-from="13" data-to="17" data-wd="15" data-we="35"><td>13:00–17:00</td><td>約 15 分</td><td>約 35 分</td></tr>
+              <tr data-from="17" data-to="20" data-wd="30" data-we="40"><td>17:00–20:00</td><td>約 30 分</td><td>約 40 分</td></tr>
+              <tr data-from="20" data-to="22" data-wd="20" data-we="25"><td>20:00–22:00</td><td>約 20 分</td><td>約 25 分</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="wait-note">週一公休。候位時間只是估計，實際以現場為準。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：店內環境 ==================== -->
+<section class="dark" id="space">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>店內環境</h2>
+      <p>四張老皮椅、黑白磁磚地板、一整面鏡子。等待時有咖啡和黑膠唱片。</p>
+    </div>
+    <div class="space">
+      <figure class="wide reveal"><div class="img img-shop" role="img" aria-label="店內鏡台與黑白磁磚地板示意"></div><figcaption>四個座位的鏡台</figcaption></figure>
+      <figure class="reveal"><div class="img img-razor" role="img" aria-label="直刀剃刀示意"><div class="razor" aria-hidden="true"><span class="r-handle"></span><span class="r-blade"></span></div></div><figcaption>每位客人都換新刀片</figcaption></figure>
+      <figure class="reveal"><div class="img img-tin" role="img" aria-label="髮油鐵罐示意"><div class="tin" aria-hidden="true">Oldboy</div></div><figcaption>店裡自己調的髮油</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：評價 ==================== -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>客人怎麼說</h2>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="reviews">
+      <figure class="review frame reveal">
+        <p class="score">5.0<small>Google 評論</small></p>
+        <blockquote>剪完油頭隔天上班，同事問我是不是換了個人。阿吉會先問你平常怎麼整理，不會剪完就不管。</blockquote>
+        <cite>陳先生，上班族</cite>
+      </figure>
+      <figure class="review frame reveal">
+        <p class="score">5.0<small>Google 評論</small></p>
+        <blockquote>第一次體驗熱毛巾刮臉，老陳的手很穩，整個過程差點睡著。鬍子乾淨到摸起來像剛出生。</blockquote>
+        <cite>林先生，設計師</cite>
+      </figure>
+      <figure class="review frame reveal">
+        <p class="score">4.9<small>Google 評論</small></p>
+        <blockquote>小 K 的漸層非常細，三週後長出來還是很好看。週末晚上要等，平日下午幾乎直接坐。</blockquote>
+        <cite>王同學，大學生</cite>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：常見問題 ==================== -->
+<section class="alt" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>常見問題</h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>一定要預約嗎？</summary>
+        <p>不一定。現場候位隨時歡迎，但想指定理髮師或在週末晚上來，建議先線上預約，比較不用等。</p>
+      </details>
+      <details>
+        <summary>遲到了怎麼辦？</summary>
+        <p>我們會保留座位 10 分鐘。超過的話會先服務下一位客人，再幫你排進最近的空檔，晚到請先打電話告訴我們。</p>
+      </details>
+      <details>
+        <summary>可以用什麼方式付款？</summary>
+        <p>現金、信用卡、LINE Pay、街口支付都可以。套餐與髮油也能開立電子發票。</p>
+      </details>
+      <details>
+        <summary>小朋友可以剪嗎？</summary>
+        <p>可以，6 歲以上的男生都歡迎，價格與一般剪髮相同。第一次來可以先坐在旁邊看爸爸剪。</p>
+      </details>
+      <details>
+        <summary>附近好停車嗎？</summary>
+        <p>巷口步行 2 分鐘有收費停車場，也可以搭捷運到忠孝敦化站，走路約 5 分鐘。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：線上預約 ==================== -->
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="intro reveal">
+      <h2>預約一張椅子</h2>
+      <p>填好表單後，我們會在營業時間內用電話或 LINE 跟你確認。急的話直接打給我們最快。</p>
+      <div class="ctas">
+        <a class="btn btn-cream" href="tel:0212345678">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>
+          02-1234-5678
+        </a>
+        <a class="btn btn-line" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 預約</a>
+      </div>
+    </div>
+    <!-- 表單使用 Formspree（免費）：到 formspree.io 註冊、建立表單，把下面 action 裡的 your-form-id 換成你的表單 ID，預約資料就會寄到你的信箱。 -->
+    <form class="form frame reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="field"><label for="f-name">姓名</label><input id="f-name" name="姓名" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">電話</label><input id="f-tel" name="電話" type="tel" autocomplete="tel" inputmode="tel" required></div>
+      <div class="field">
+        <label for="f-barber">理髮師</label>
+        <select id="f-barber" name="理髮師">
+          <option value="不指定">不指定，誰有空都可以</option>
+          <option value="阿吉">阿吉（油頭、側分）</option>
+          <option value="老陳">老陳（修鬍、刮臉）</option>
+          <option value="小K">小 K（漸層推剪）</option>
+          <option value="阿倫">阿倫（紋理短髮）</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-service">服務</label>
+        <select id="f-service" name="服務" required>
+          <option>經典油頭</option><option>漸層推剪</option><option>修鬍</option><option>熱毛巾刮臉</option>
+          <option>洗髮</option><option>老派全套</option><option>剪髮加修鬍</option>
+        </select>
+      </div>
+      <div class="field"><label for="f-date">日期</label><input id="f-date" name="日期" type="date" required></div>
+      <div class="field">
+        <label for="f-time">時段</label>
+        <select id="f-time" name="時段" required>
+          <option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option>
+          <option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option><option>20:00</option>
+        </select>
+      </div>
+      <p class="pick-note full" id="pickNote" aria-live="polite"></p>
+      <button class="btn btn-primary full" type="submit">送出預約</button>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== 區塊：營業時間與地圖 ==================== -->
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>營業時間與交通</h2>
+    </div>
+    <div class="visit">
+      <div class="visit-card frame reveal">
+        <h3>營業時間</h3>
+        <dl>
+          <dt>週二至週四</dt><dd>11:00–21:00</dd>
+          <dt>週五</dt><dd>11:00–22:00</dd>
+          <dt>週六</dt><dd>10:00–22:00</dd>
+          <dt>週日</dt><dd>10:00–20:00</dd>
+          <dt>週一</dt><dd>公休</dd>
+        </dl>
+        <address>台北市大安區忠孝東路四段 216 巷 8 號 1 樓<br>捷運忠孝敦化站 3 號出口步行 5 分鐘</address>
+        <div class="ctas">
+          <a class="btn btn-primary" href="https://maps.google.com/?q=台北市大安區忠孝東路四段216巷8號" target="_blank" rel="noopener">Google 地圖</a>
+          <a class="btn btn-ghost" href="tel:0212345678">撥打電話</a>
+          <a class="btn btn-ghost" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE</a>
+        </div>
+      </div>
+      <a class="map-art reveal" href="https://maps.google.com/?q=台北市大安區忠孝東路四段216巷8號" target="_blank" rel="noopener" aria-label="在 Google 地圖開啟店家位置"></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p class="logo">老派<small>Oldboy</small></p>
+      <p style="margin-top:.8rem">台北東區的男士理髮廳，從 2012 年開始。</p>
+    </div>
+    <div>
+      <p class="f-h">聯絡我們</p>
+      <ul>
+        <li>台北市大安區忠孝東路四段 216 巷 8 號 1 樓</li>
+        <li><a href="tel:0212345678">02-1234-5678</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-h">營業時間</p>
+      <ul>
+        <li>週二至週五 11:00 開門</li>
+        <li>週六、週日 10:00 開門</li>
+        <li>週一公休</li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-h">追蹤我們</p>
+      <ul class="social">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="copy">© <span id="y"></span> 老派 Oldboy Barbershop</p>
+</footer>
+
+<!-- 手機版底部固定按鈕 -->
+<a class="btn btn-primary sticky-cta" href="#book">線上預約</a>
+
+<script>
+(() => {
+  // 頁首：捲動後出現背景
+  const header = document.querySelector('.site-header');
+  const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // 漢堡選單
+  const burger = document.querySelector('.burger');
+  const menu = document.getElementById('menu');
+  const setMenu = open => {
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? '關閉選單' : '開啟選單');
+    menu.classList.toggle('open', open);
+  };
+  burger.addEventListener('click', () => setMenu(burger.getAttribute('aria-expanded') !== 'true'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+  // 點「預約他」：自動在表單選好理髮師
+  const pick = document.getElementById('f-barber');
+  const note = document.getElementById('pickNote');
+  document.querySelectorAll('[data-barber]').forEach(a => a.addEventListener('click', () => {
+    pick.value = a.dataset.barber;
+    note.textContent = '已幫你選好理髮師：' + pick.options[pick.selectedIndex].text;
+    pick.classList.add('flash');
+    setTimeout(() => pick.classList.remove('flash'), 1800);
+  }));
+
+  // 日期不能選過去
+  const now = new Date();
+  const local = new Date(now - now.getTimezoneOffset() * 6e4);
+  document.getElementById('f-date').min = local.toISOString().slice(0, 10);
+
+  // 營業狀態與候位估計：營業時間改這裡（週日到週六，null 代表公休）
+  const HOURS = [[10, 20], null, [11, 21], [11, 21], [11, 21], [11, 22], [10, 22]];
+  const DAYS = ['週日', '週一', '週二', '週三', '週四', '週五', '週六'];
+  const d = now.getDay(), h = now.getHours() + now.getMinutes() / 60, today = HOURS[d];
+  const fmt = n => String(n).padStart(2, '0') + ':00';
+  const states = document.querySelectorAll('.js-state');
+  const wait = document.getElementById('wait'), sub = document.getElementById('sub');
+  if (today && h >= today[0] && h < today[1]) {
+    states.forEach(s => { s.textContent = '現在營業中'; s.classList.add('open'); });
+    const row = [...document.querySelectorAll('#waitTable tbody tr')].find(r => h >= +r.dataset.from && h < +r.dataset.to);
+    if (row) { row.classList.add('now'); wait.textContent = '現場候位約 ' + row.dataset[d === 0 || d === 6 ? 'we' : 'wd'] + ' 分鐘'; }
+    sub.textContent = '今天營業到 ' + fmt(today[1]);
+  } else {
+    let i = today && h < today[0] ? 0 : 1;
+    while (!HOURS[(d + i) % 7]) i++;
+    const when = (i === 0 ? '今天' : i === 1 ? '明天' : DAYS[(d + i) % 7]) + ' ' + fmt(HOURS[(d + i) % 7][0]) + ' 開門';
+    states.forEach(s => { s.textContent = '目前休息中'; });
+    wait.textContent = when;
+    sub.textContent = '先線上預約，到店就能直接坐。';
+  }
+
+  // 捲動漸入動畫
+  const items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(el => io.observe(el));
+  } else {
+    items.forEach(el => el.classList.add('in'));
+  }
+
+  // 頁尾年份
+  document.getElementById('y').textContent = now.getFullYear();
+})();
+</script>
+</body>
+</html>
