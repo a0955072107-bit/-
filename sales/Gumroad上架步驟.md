@@ -92,7 +92,12 @@ Don't have time to edit it yourself? We'll customise this template with your tex
 ✨ 想要直接幫你改好？
 沒時間自己改嗎？我們可以把這個模板改成你店家專屬的網站：換上你的文字、照片、品牌色、預約連結，並設定好網域，直接上線。
 👉 網站客製服務：[貼上客製服務商品網址]
+
+Questions or custom work? / 有問題或想客製：[你的品牌 Email]
 ```
+
+> **聯絡方式的原則**：只放品牌 Email，不放個人 LINE 或電話。請另外申請一個品牌專用信箱。
+> Etsy 禁止放站外聯絡方式，所以在 Etsy 上架時，要把上面這行 Email 拿掉。
 
 ---
 
