@@ -11,7 +11,7 @@
 <meta name="theme-color" content="#6b1d26">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Oswald:wght@400;500&family=Libre+Franklin:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Franklin:wght@400;500;700&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js');</script>
 <style>
 /* ============================================================
@@ -38,7 +38,7 @@
   --font-heading: "Abril Fatface", Georgia, serif; /* Heading font (display serif) */
   --heading-weight: 400;     /* Heading weight */
   --font-display: "Abril Fatface", Georgia, serif;     /* Sign font: logo, prices, numbers */
-  --font-num: "Oswald", "Arial Narrow", sans-serif;                     /* Small numbers such as durations and time slots */
+  --font-num: var(--font-body);  /* Small numbers such as durations and time slots (same as body by default) */
   --font-body: "Libre Franklin", "Helvetica Neue", Arial, system-ui, sans-serif; /* Body font */
   --pad: clamp(1rem, 5vw, 5rem); /* Section side padding */
   --max: 1160px;             /* Max content width */
@@ -47,7 +47,7 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; overflow-x: clip; -webkit-text-size-adjust: 100%; }
-body { background: var(--bg); color: var(--text); font: 400 1rem/1.8 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.8 var(--font-body); font-variant-numeric: tabular-nums; overflow-x: clip; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 h1, h2, h3 { font-family: var(--font-heading); font-weight: var(--heading-weight); font-synthesis: none; overflow-wrap: break-word; min-width: 0; text-wrap: balance; line-height: 1.25; }
@@ -68,14 +68,15 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: var(--heading-weight
 .btn-cream:hover { background: var(--surface-2); border-color: var(--surface-2); }
 .btn-line { background: transparent; color: var(--brand-ink); border-color: color-mix(in srgb, var(--brand-ink) 60%, transparent); }
 .btn-line:hover { background: color-mix(in srgb, var(--brand-ink) 12%, transparent); border-color: var(--brand-ink); }
+.btn:disabled, .field input:disabled, .field select:disabled { opacity: .5; cursor: not-allowed; }
 .btn svg { width: 1.1em; height: 1.1em; fill: currentColor; }
 .text-link { color: var(--brand); font-weight: 700; border-bottom: 1.5px solid color-mix(in srgb, var(--brand) 40%, transparent); padding-bottom: .1rem; transition: border-color .3s, color .3s; }
 .text-link:hover { border-color: var(--brand); }
 .text-link:active { color: var(--brand-deep); }
 
 /* ---------- Section: Header ---------- */
-.site-header { position: fixed; inset: 0 0 auto; z-index: 50; color: var(--on-night); padding: 1rem var(--pad); border-bottom: 1px solid transparent; transition: background-color .4s, border-color .4s, padding .4s; }
-.site-header.scrolled { background: color-mix(in srgb, var(--night) 94%, transparent); border-color: color-mix(in srgb, var(--brass-lt) 35%, transparent); padding-block: .6rem; }
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; color: var(--on-night); padding: 1rem var(--pad); border-bottom: 1px solid transparent; transition: background-color .4s, border-color .4s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--night) 94%, transparent); border-color: color-mix(in srgb, var(--brass-lt) 35%, transparent); }
 html:not(.js) .site-header { background: var(--night); }
 .nav { max-width: var(--max); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .logo { display: flex; align-items: baseline; gap: .5rem; font: var(--heading-weight) 1.3rem/1 var(--font-heading); font-synthesis: none; }
@@ -99,7 +100,7 @@ html:not(.js) .site-header { background: var(--night); }
   html:not(.js) .site-header { position: sticky; }
   html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .3rem 1rem; }
   .js .burger { display: block; }
-  .js .menu { position: fixed; inset: 0 0 auto; padding: 5rem var(--pad) 2rem; flex-direction: column; align-items: stretch; gap: 0; background: var(--night); border-bottom: 1px solid var(--brass); box-shadow: 0 20px 40px var(--shadow); transform: translateY(-105%); visibility: hidden; transition: transform .45s var(--ease), visibility 0s .45s; z-index: -1; font-size: 1.05rem; }
+  .js .menu { position: fixed; inset: 0 0 auto; padding: 5rem var(--pad) 2rem; flex-direction: column; align-items: stretch; gap: 0; background: var(--night); border-bottom: 1px solid var(--brass); transform: translateY(-105%); visibility: hidden; transition: transform .45s var(--ease), visibility 0s .45s; z-index: -1; font-size: 1.05rem; }
   .js .menu.open { transform: none; visibility: visible; transition: transform .45s var(--ease); }
   .js .menu a:not(.btn) { padding: .85rem 0; border-bottom: 1px solid color-mix(in srgb, var(--on-night) 15%, transparent); }
   .js .menu .btn { margin-top: 1.2rem; min-height: 3rem; }
@@ -398,7 +399,7 @@ section { padding: clamp(4rem, 11vh, 7rem) var(--pad); }
   <div class="wrap">
     <div class="sign reveal">
       <h1>A proper haircut, the old way</h1>
-      <p class="lead">Hot towels, straight razors and sharp clippers. Sit down, settle in and leave the rest to us.</p>
+      <p class="lead">Hot towels, straight razors, sharp clippers. Sit down and leave the rest to us.</p>
       <div class="ctas">
         <a class="btn btn-cream" href="#book">Book a chair</a>
         <a class="btn btn-line" href="#prices">See prices</a>
@@ -454,7 +455,7 @@ section { padding: clamp(4rem, 11vh, 7rem) var(--pad); }
   <div class="wrap">
     <div class="sec-head reveal">
       <h2>The barbers</h2>
-      <p>Four chairs, four sets of hands. Got a favorite? Tap "Book with him" and we'll drop his name into the booking form.</p>
+      <p>Four chairs, four sets of hands. Got a favorite? Tap “Book with him” and we’ll drop his name into the booking form.</p>
     </div>
     <div class="team">
       <article class="barber frame reveal">
@@ -497,7 +498,7 @@ section { padding: clamp(4rem, 11vh, 7rem) var(--pad); }
       <figure class="work reveal"><div class="img img-w2 bust" role="img" aria-label="Mid fade example"></div><figcaption>Mid fade<ul class="tags"><li>Fade</li><li>Clipper</li></ul></figcaption></figure>
       <figure class="work reveal"><div class="img img-w3 bust" role="img" aria-label="Buzz cut example"></div><figcaption>Buzz cut<ul class="tags"><li>Buzz</li><li>Low upkeep</li></ul></figcaption></figure>
       <figure class="work reveal"><div class="img img-w4 bust" role="img" aria-label="Full beard shaping example"></div><figcaption>Full beard shape<ul class="tags"><li>Beard</li><li>Razor</li></ul></figcaption></figure>
-      <figure class="work reveal"><div class="img img-w5 bust" role="img" aria-label="Gentleman's side part example"></div><figcaption>Side part<ul class="tags"><li>Pompadour</li><li>Matte</li></ul></figcaption></figure>
+      <figure class="work reveal"><div class="img img-w5 bust" role="img" aria-label="Gentleman’s side part example"></div><figcaption>Side part<ul class="tags"><li>Pompadour</li><li>Matte</li></ul></figcaption></figure>
       <figure class="work reveal"><div class="img img-w6 bust" role="img" aria-label="French crop example"></div><figcaption>French crop<ul class="tags"><li>Texture</li><li>Short</li></ul></figcaption></figure>
       <figure class="work reveal"><div class="img img-w7 bust" role="img" aria-label="Skin fade example"></div><figcaption>Skin fade<ul class="tags"><li>Fade</li><li>Bald taper</li></ul></figcaption></figure>
       <figure class="work reveal"><div class="img img-w8 bust" role="img" aria-label="Goatee shaping example"></div><figcaption>Goatee<ul class="tags"><li>Beard</li><li>Line up</li></ul></figcaption></figure>
@@ -564,12 +565,12 @@ section { padding: clamp(4rem, 11vh, 7rem) var(--pad); }
     <div class="reviews">
       <figure class="review frame reveal">
         <p class="score">5.0<small>Google review</small></p>
-        <blockquote>Walked into work the next day and three people asked if I'd done something different. Sal asks how you actually style it at home before he picks up the scissors.</blockquote>
+        <blockquote>Walked into work the next day and three people asked if I’d done something different. Sal asks how you actually style it at home before he picks up the scissors.</blockquote>
         <cite>Daniel R., accountant</cite>
       </figure>
       <figure class="review frame reveal">
         <p class="score">5.0<small>Google review</small></p>
-        <blockquote>My first hot towel shave. Walt has the steadiest hands I've ever seen and I nearly fell asleep. Smoothest my face has been in years.</blockquote>
+        <blockquote>My first hot towel shave. Walt has the steadiest hands I’ve ever seen and I nearly fell asleep. Smoothest my face has been in years.</blockquote>
         <cite>Chris M., designer</cite>
       </figure>
       <figure class="review frame reveal">
@@ -590,11 +591,11 @@ section { padding: clamp(4rem, 11vh, 7rem) var(--pad); }
     <div class="faq reveal">
       <details>
         <summary>Do I need an appointment?</summary>
-        <p>Nope. Walk-ins are welcome any time we're open. If you want a specific barber or you're coming on a weekend evening, booking ahead saves you the wait.</p>
+        <p>Nope. Walk-ins are welcome any time we’re open. If you want a specific barber or you’re coming on a weekend evening, booking ahead saves you the wait.</p>
       </details>
       <details>
-        <summary>What if I'm running late?</summary>
-        <p>We hold your chair for 10 minutes. After that we'll take the next client and fit you into the next open slot. Give us a call if you're running behind.</p>
+        <summary>What if I’m running late?</summary>
+        <p>We hold your chair for 10 minutes. After that we’ll take the next client and fit you into the next open slot. Give us a call if you’re running behind.</p>
       </details>
       <details>
         <summary>How can I pay?</summary>
@@ -606,7 +607,7 @@ section { padding: clamp(4rem, 11vh, 7rem) var(--pad); }
       </details>
       <details>
         <summary>Where do I park?</summary>
-        <p>There's metered street parking on Maple and a public garage two minutes away on foot. The Line 15 bus stops right at the corner.</p>
+        <p>There’s metered street parking on Maple and a public garage two minutes away on foot. The Line 15 bus stops right at the corner.</p>
       </details>
     </div>
   </div>
@@ -617,7 +618,7 @@ section { padding: clamp(4rem, 11vh, 7rem) var(--pad); }
   <div class="wrap">
     <div class="intro reveal">
       <h2>Book a chair</h2>
-      <p>Send the form and we'll confirm by phone or text during shop hours. In a hurry? Calling is fastest.</p>
+      <p>Send the form and we’ll confirm by phone or text during shop hours. In a hurry? Calling is fastest.</p>
       <div class="ctas">
         <a class="btn btn-cream" href="tel:+15550123456">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>

@@ -11,7 +11,7 @@
 <meta name="theme-color" content="#6b1d26">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Oswald:wght@400;500&family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js');</script>
 <style>
 /* ============================================================
@@ -38,7 +38,7 @@
   --font-heading: "Noto Serif TC", "Abril Fatface", "Songti TC", serif; /* 標題字型（粗襯線） */
   --heading-weight: 900;     /* 標題字重 */
   --font-display: "Abril Fatface", "Noto Serif TC", Georgia, serif;     /* 招牌字型：店名、價格、數字 */
-  --font-num: "Oswald", "Noto Sans TC", sans-serif;                     /* 時長、時段等小數字 */
+  --font-num: var(--font-body);  /* 時長、時段等小數字（預設與內文相同，可另外指定） */
   --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; /* 內文字型 */
   --pad: clamp(1rem, 5vw, 5rem); /* 區塊左右留白 */
   --max: 1160px;             /* 內容最大寬度 */
@@ -47,7 +47,7 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; overflow-x: clip; -webkit-text-size-adjust: 100%; }
-body { background: var(--bg); color: var(--text); font: 400 1rem/1.8 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.8 var(--font-body); font-variant-numeric: tabular-nums; overflow-x: clip; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 h1, h2, h3 { font-family: var(--font-heading); font-weight: var(--heading-weight); font-synthesis: none; overflow-wrap: break-word; min-width: 0; text-wrap: balance; line-height: 1.25; }
@@ -68,14 +68,15 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: var(--heading-weight
 .btn-cream:hover { background: var(--surface-2); border-color: var(--surface-2); }
 .btn-line { background: transparent; color: var(--brand-ink); border-color: color-mix(in srgb, var(--brand-ink) 60%, transparent); }
 .btn-line:hover { background: color-mix(in srgb, var(--brand-ink) 12%, transparent); border-color: var(--brand-ink); }
+.btn:disabled, .field input:disabled, .field select:disabled { opacity: .5; cursor: not-allowed; }
 .btn svg { width: 1.1em; height: 1.1em; fill: currentColor; }
 .text-link { color: var(--brand); font-weight: 700; border-bottom: 1.5px solid color-mix(in srgb, var(--brand) 40%, transparent); padding-bottom: .1rem; transition: border-color .3s, color .3s; }
 .text-link:hover { border-color: var(--brand); }
 .text-link:active { color: var(--brand-deep); }
 
 /* ---------- 區塊：頁首 ---------- */
-.site-header { position: fixed; inset: 0 0 auto; z-index: 50; color: var(--on-night); padding: 1rem var(--pad); border-bottom: 1px solid transparent; transition: background-color .4s, border-color .4s, padding .4s; }
-.site-header.scrolled { background: color-mix(in srgb, var(--night) 94%, transparent); border-color: color-mix(in srgb, var(--brass-lt) 35%, transparent); padding-block: .6rem; }
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; color: var(--on-night); padding: 1rem var(--pad); border-bottom: 1px solid transparent; transition: background-color .4s, border-color .4s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--night) 94%, transparent); border-color: color-mix(in srgb, var(--brass-lt) 35%, transparent); }
 html:not(.js) .site-header { background: var(--night); }
 .nav { max-width: var(--max); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .logo { display: flex; align-items: baseline; gap: .5rem; font: var(--heading-weight) 1.3rem/1 var(--font-heading); font-synthesis: none; }
@@ -99,7 +100,7 @@ html:not(.js) .site-header { background: var(--night); }
   html:not(.js) .site-header { position: sticky; }
   html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .3rem 1rem; }
   .js .burger { display: block; }
-  .js .menu { position: fixed; inset: 0 0 auto; padding: 5rem var(--pad) 2rem; flex-direction: column; align-items: stretch; gap: 0; background: var(--night); border-bottom: 1px solid var(--brass); box-shadow: 0 20px 40px var(--shadow); transform: translateY(-105%); visibility: hidden; transition: transform .45s var(--ease), visibility 0s .45s; z-index: -1; font-size: 1.05rem; }
+  .js .menu { position: fixed; inset: 0 0 auto; padding: 5rem var(--pad) 2rem; flex-direction: column; align-items: stretch; gap: 0; background: var(--night); border-bottom: 1px solid var(--brass); transform: translateY(-105%); visibility: hidden; transition: transform .45s var(--ease), visibility 0s .45s; z-index: -1; font-size: 1.05rem; }
   .js .menu.open { transform: none; visibility: visible; transition: transform .45s var(--ease); }
   .js .menu a:not(.btn) { padding: .85rem 0; border-bottom: 1px solid color-mix(in srgb, var(--on-night) 15%, transparent); }
   .js .menu .btn { margin-top: 1.2rem; min-height: 3rem; }
