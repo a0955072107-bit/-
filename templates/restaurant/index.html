@@ -119,12 +119,16 @@ a:not(.btn):active { opacity: .7; }
 .nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
 @media (max-width: 760px) {
-  .nav-toggle { display: block; }
-  .nav-menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); box-shadow: 0 12px 24px var(--shadow-soft); display: none; }
-  .nav-menu.open { display: flex; }
-  .nav-menu li a:not(.btn) { display: block; padding: .85rem 0; border-bottom: 1px solid var(--line); }
-  .nav-menu .btn { margin-top: 1rem; width: 100%; }
-  .site-header:has(.nav-menu.open) { background: var(--bg); }
+  /* 沒有 JavaScript 時，選單直接換行顯示；有 JS 才收進漢堡選單 */
+  html:not(.js) *:has(> .nav-menu) { flex-wrap: wrap; }
+  html:not(.js) header:has(.nav-menu) { position: sticky; }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; justify-content: flex-start; gap: .4rem 1rem; }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); box-shadow: 0 12px 24px var(--shadow-soft); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: .85rem 0; border-bottom: 1px solid var(--line); }
+  .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+  .js .site-header:has(.nav-menu.open) { background: var(--bg); }
 }
 
 /* ==================== 藝術佔位圖 ====================

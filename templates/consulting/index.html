@@ -138,11 +138,15 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
 .burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
 .burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
 @media (max-width: 760px) {
-  .burger { display: block; }
-  .menu { position: fixed; inset: 4.5rem 0 auto; flex-direction: column; align-items: stretch; gap: 0; background: var(--navy); padding: .5rem var(--pad) 1.5rem; border-top: 1px solid color-mix(in srgb, var(--brand) 35%, transparent); transform: translateY(-120%); visibility: hidden; transition: transform .35s, visibility .35s; }
-  .menu.open { transform: none; visibility: visible; }
-  .menu a:not(.btn) { padding: .95rem 0; border-bottom: 1px solid color-mix(in srgb, var(--on-navy) 12%, transparent); }
-  .menu .btn { margin-top: 1rem; min-height: 48px; }
+  /* 沒有 JavaScript 時，選單直接換行顯示；有 JS 才收進漢堡選單 */
+  html:not(.js) *:has(> .menu) { flex-wrap: wrap; }
+  html:not(.js) header:has(.menu) { position: sticky; background: var(--navy); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; justify-content: flex-start; gap: .4rem 1rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: 4.5rem 0 auto; flex-direction: column; align-items: stretch; gap: 0; background: var(--navy); padding: .5rem var(--pad) 1.5rem; border-top: 1px solid color-mix(in srgb, var(--brand) 35%, transparent); transform: translateY(-120%); visibility: hidden; transition: transform .35s, visibility .35s; }
+  .js .menu.open { transform: none; visibility: visible; }
+  .js .menu a:not(.btn) { padding: .95rem 0; border-bottom: 1px solid color-mix(in srgb, var(--on-navy) 12%, transparent); }
+  .js .menu .btn { margin-top: 1rem; min-height: 48px; }
 }
 
 /* ==================== Hero ==================== */

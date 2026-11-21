@@ -121,7 +121,8 @@ h1, h2 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
     radial-gradient(ellipse at 20% 100%, color-mix(in srgb, var(--c-hiit) 14%, transparent), transparent 60%),
     linear-gradient(180deg, var(--surface), var(--bg));
 }
-.img-coach1, .img-coach2, .img-coach3, .img-coach4 { aspect-ratio: 4 / 5; }
+.img-coach1, .img-coach2, .img-coach3, .img-coach4 { aspect-ratio: 4 / 3; }
+@media (min-width: 640px) { .img-coach1, .img-coach2, .img-coach3, .img-coach4 { aspect-ratio: 4 / 5; } }
 .img-coach1 { --hue: var(--c-weight); }
 .img-coach2 { --hue: var(--c-hiit); }
 .img-coach3 { --hue: var(--c-yoga); }
@@ -153,7 +154,7 @@ h1, h2 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
 .site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .35s, border-color .35s; border-bottom: 1px solid transparent; }
 .site-header.scrolled { background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-color: var(--line); }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem var(--pad); max-width: calc(var(--max) + 2 * var(--pad)); margin-inline: auto; }
-.logo { font: 400 1.6rem/1 var(--font-heading); letter-spacing: .04em; display: flex; align-items: center; gap: .5rem; }
+.logo { font: 400 1.6rem/1 var(--font-heading); color: var(--text); letter-spacing: .04em; display: flex; align-items: center; gap: .5rem; }
 .logo b { background: var(--brand); color: var(--brand-ink); padding: .15rem .45rem; transform: skewX(var(--skew)); font-weight: 400; }
 .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2.4vw, 2rem); font-weight: 700; font-size: .95rem; }
 .nav-links a:not(.btn) { position: relative; padding-block: .3rem; }
@@ -162,20 +163,24 @@ h1, h2 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
 .nav-links .btn { padding: .6rem 1.1rem; font-size: .9rem; }
 .menu-btn { display: none; width: 44px; height: 44px; background: none; border: 1px solid var(--line); border-radius: var(--radius); color: var(--text); cursor: pointer; }
 .menu-btn:active { transform: scale(.94); }
-.menu-btn span { display: block; width: 20px; height: 2px; background: currentColor; margin: 5px auto; transition: transform .3s, opacity .3s; }
-.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-btn span { display: block; width: 20px; height: 2px; background: currentColor; margin: 4px auto; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 .menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 @media (max-width: 760px) {
-  .menu-btn { display: block; }
-  .nav-links {
+  /* 沒有 JavaScript 時，選單直接換行顯示；有 JS 才收進漢堡選單 */
+  html:not(.js) *:has(> .nav-links) { flex-wrap: wrap; }
+  html:not(.js) header:has(.nav-links) { position: sticky; }
+  html:not(.js) .nav-links { flex: 1 1 100%; flex-wrap: wrap; justify-content: flex-start; gap: .4rem 1rem; }
+  .js .menu-btn { display: block; }
+  .js .nav-links {
     position: fixed; inset: 4.6rem 0 auto; flex-direction: column; align-items: stretch; gap: 0;
     background: var(--bg); border-bottom: 1px solid var(--line); padding: .5rem var(--pad) 1.5rem;
     transform: translateY(-110%); visibility: hidden; transition: transform .35s var(--ease), visibility .35s; z-index: -1;
   }
-  .nav-links.open { transform: none; visibility: visible; }
-  .nav-links a:not(.btn) { padding: 1rem 0; border-bottom: 1px solid var(--line); font-size: 1.1rem; }
-  .nav-links .btn { margin-top: 1rem; padding: .9rem; }
+  .js .nav-links.open { transform: none; visibility: visible; }
+  .js .nav-links a:not(.btn) { padding: 1rem 0; border-bottom: 1px solid var(--line); font-size: 1.1rem; }
+  .js .nav-links .btn { margin-top: 1rem; padding: .9rem; }
 }
 
 /* ==================== Hero ==================== */

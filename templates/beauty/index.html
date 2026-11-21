@@ -83,12 +83,16 @@ a:active, .filters button:active { opacity: .75; }
 .burger[aria-expanded="true"] span { opacity: 0; }
 .burger[aria-expanded="true"]::after { transform: translateY(-.41rem) rotate(-45deg); }
 @media (max-width: 760px) {
-  .burger { display: block; }
-  .menu { position: fixed; inset: 0 0 auto; top: 0; padding: 5.5rem var(--pad) 2rem; flex-direction: column; align-items: stretch; gap: 0; background: var(--surface); border-bottom: 1px solid var(--line); box-shadow: 0 20px 40px var(--shadow); transform: translateY(-105%); visibility: hidden; transition: transform .45s var(--ease), visibility 0s .45s; z-index: -1; font-size: 1.05rem; }
-  .menu.open { transform: none; visibility: visible; transition: transform .45s var(--ease); }
-  .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line); }
-  .menu a:not(.btn)::after { display: none; }
-  .menu .btn { margin-top: 1.25rem; min-height: 3rem; }
+  /* 沒有 JavaScript 時，選單直接換行顯示；有 JS 才收進漢堡選單 */
+  html:not(.js) *:has(> .menu) { flex-wrap: wrap; }
+  html:not(.js) header:has(.menu) { position: sticky; }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; justify-content: flex-start; gap: .4rem 1rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: 0 0 auto; top: 0; padding: 5.5rem var(--pad) 2rem; flex-direction: column; align-items: stretch; gap: 0; background: var(--surface); border-bottom: 1px solid var(--line); box-shadow: 0 20px 40px var(--shadow); transform: translateY(-105%); visibility: hidden; transition: transform .45s var(--ease), visibility 0s .45s; z-index: -1; font-size: 1.05rem; }
+  .js .menu.open { transform: none; visibility: visible; transition: transform .45s var(--ease); }
+  .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line); }
+  .js .menu a:not(.btn)::after { display: none; }
+  .js .menu .btn { margin-top: 1.25rem; min-height: 3rem; }
 }
 
 /* ---------- 通用區塊 ---------- */
