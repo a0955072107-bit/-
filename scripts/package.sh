@@ -21,7 +21,6 @@ SLUGS=(
 for entry in "${SLUGS[@]}"; do
   slug="${entry%%:*}"; name="${entry#*:}"
   src="templates/$slug/index.html"
-  [ "$slug" = studio ] && src="index.html"   # 設計工作室版本就是根目錄的 Lumen Studio
   [ -f "$src" ] || { echo "略過 $slug（找不到 $src）"; continue; }
 
   dir="$OUT/build/$name"

@@ -2,8 +2,8 @@
 
 | 路徑 | 內容 |
 |---|---|
-| `index.html` | Lumen Studio 設計工作室模板（說明見下方） |
-| `templates/` | 展示頁 + 5 款行業模板：餐廳、美容美髮、健身、診所、專業事務所 |
+| `index.html` | Lumen Studio 原始網站（說明見下方） |
+| `templates/` | 展示頁 + 6 款模板：餐廳、美容美髮、健身、診所、專業事務所、設計工作室（`studio/` 是 Lumen Studio 的販售版） |
 | `templates/_docs/` | 隨商品附上的使用說明、授權條款 |
 | `templates/SPEC.md` | 模板製作規格（新增模板時遵循） |
 | `scripts/package.sh` | 打包成可販售的 zip → `dist/` |
