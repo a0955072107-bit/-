@@ -78,7 +78,7 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: var(--heading-weight
 .site-header.scrolled { background: color-mix(in srgb, var(--night) 94%, transparent); border-color: color-mix(in srgb, var(--brass-lt) 35%, transparent); padding-block: .6rem; }
 html:not(.js) .site-header { background: var(--night); }
 .nav { max-width: var(--max); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-.logo { display: flex; align-items: baseline; gap: .5rem; font: 900 1.3rem/1 var(--font-heading); }
+.logo { display: flex; align-items: baseline; gap: .5rem; font: var(--heading-weight) 1.3rem/1 var(--font-heading); font-synthesis: none; }
 .logo small { font: 400 1.15rem/1 var(--font-display); color: var(--brass-lt); }
 .menu { display: flex; align-items: center; gap: clamp(.9rem, 2vw, 1.8rem); font-size: .92rem; }
 .menu a:not(.btn) { padding-block: .3rem; border-bottom: 1px solid transparent; transition: border-color .3s, color .3s; }
@@ -279,7 +279,7 @@ section { padding: clamp(4rem, 11vh, 7rem) var(--pad); }
 .faq { max-width: 46rem; margin-inline: auto; }
 .faq details { border-bottom: 1px solid var(--line); }
 .faq details:first-child { border-top: 1px solid var(--line); }
-.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.2rem .2rem; font: 700 1.05rem/1.6 var(--font-heading); transition: color .3s; }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.2rem .2rem; font: 700 1.05rem/1.6 var(--font-body); transition: color .3s; }
 .faq summary:hover { color: var(--brand); }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after { content: "+"; flex: none; width: 1.9rem; height: 1.9rem; display: grid; place-items: center; border: 1px solid var(--brand); color: var(--brand); font: 400 1.2rem/1 var(--font-body); border-radius: var(--radius); transition: transform .3s var(--ease); }

@@ -38,6 +38,14 @@
 | 露營 | `…/templates/en/camping/` | `…/templates/camping/` |
 | 個人品牌 | `…/templates/en/freelancer/` | `…/templates/freelancer/` |
 | App／SaaS | `…/templates/en/saas/` | `…/templates/saas/` |
+| 諮商／教練 | `…/templates/en/coach/` | `…/templates/coach/` |
+| 水電修繕 | `…/templates/en/contractor/` | `…/templates/contractor/` |
+| 非營利 | `…/templates/en/nonprofit/` | `…/templates/nonprofit/` |
+| Link-in-bio | `…/templates/en/linkinbio/` | `…/templates/linkinbio/` |
+| 理髮廳 | `…/templates/en/barber/` | `…/templates/barber/` |
+| 研討會 | `…/templates/en/conference/` | `…/templates/conference/` |
+| 刺青 | `…/templates/en/tattoo/` | `…/templates/tattoo/` |
+| 共享辦公 | `…/templates/en/coworking/` | `…/templates/coworking/` |
 
 上架前每個連結都打開確認一次。
 
@@ -55,7 +63,7 @@
 ```bash
 bash scripts/package.sh
 ```
-`dist/` 會產生 22 個單款 zip 和 1 個全套 zip，每包都附英文版和繁體中文版。
+`dist/` 會產生 30 個單款 zip 和 1 個全套 zip，每包都附英文版和繁體中文版。
 
 ---
 
@@ -68,7 +76,7 @@ bash scripts/package.sh
 ## 1. 上架順序
 
 1. 先上 **網站客製服務**。其他商品的說明會連到它，所以先上才拿得到網址。
-2. 再上 22 款單一模板（建議先上最有把握的 6 款，其他陸續上，讓商店持續有新品）。
+2. 再上 30 款單一模板（建議先上最有把握的 6 款，其他陸續上，讓商店持續有新品）。
 3. 最後上 **全套組合包**（Bundle）。
 
 ---
@@ -152,7 +160,7 @@ Thanks! We'll email you within 1 business day with a short form to collect your 
 
 ---
 
-## 4. 單一模板（22 款）
+## 4. 單一模板（30 款）
 
 每款的共用設定：
 
@@ -867,24 +875,272 @@ App／軟體產品登陸頁模板。功能：產品介面展示、功能介紹�
 [貼上「共用文字」]
 ```
 
+### 4-23. 心理諮商／教練
+
+- **Name**：`Therapist & Coach Website Template (English + 繁體中文) — One-Page HTML`
+- **URL**：`therapist-coach-template`
+- **Cover**：`sales/covers/en/coach-cover.png`
+- **Tags**：`therapist website`, `counseling website`, `coach website`, `html template`, `website template`
+- **Description**：
+```
+A warm, calm one-page website for therapists, counselors and coaches. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Services with session length and fees
+- Approach, about and credentials sections
+- First-session steps and privacy FAQ
+- Private booking form
+- Crisis-line notice built in
+- SEO-ready with schema.org data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+心理諮商／教練網站模板。功能：服務與費用、諮商取向、關於我、初談流程、保密與取消政策、預約表單、危機專線提醒。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-24. 水電修繕／工程行
+
+- **Name**：`Contractor & Handyman Website Template (English + 繁體中文)`
+- **URL**：`contractor-handyman-template`
+- **Cover**：`sales/covers/en/contractor-cover.png`
+- **Tags**：`contractor website`, `plumber website`, `handyman website`, `html template`, `website template`
+- **Description**：
+```
+A rugged, dependable one-page website for plumbers, electricians and handymen. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Big click-to-call header and sticky call bar
+- Emergency / scheduled service toggle
+- Price guide table and service area map
+- Before and after gallery
+- Quote request form
+- SEO-ready with schema.org data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+水電修繕網站模板。功能：大型撥號按鈕、急修／預約切換、參考價目、服務區域、施工前後對比、估價表單。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-25. 非營利／教會
+
+- **Name**：`Nonprofit & Church Website Template with Donation Widget (English + 繁體中文)`
+- **URL**：`nonprofit-charity-template`
+- **Cover**：`sales/covers/en/nonprofit-cover.png`
+- **Tags**：`nonprofit website`, `charity website`, `church website`, `donation page`, `html template`
+- **Description**：
+```
+A hopeful, credible one-page website for nonprofits, charities and churches. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Donation widget with one-time / monthly and impact text
+- Programs, stories and volunteer sign-up
+- Events calendar
+- Transparency section (annual report, registration no.)
+- Notes for adapting to a church
+- SEO-ready with schema.org NGO data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+非營利／教會網站模板。功能：捐款小工具（單次／定期、影響力說明）、服務計畫、受助者故事、志工招募、活動行事曆、財務透明。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-26. Link-in-bio 個人連結頁
+
+- **Name**：`Link-in-Bio Page Template — Linktree Alternative (English + 繁體中文)`
+- **URL**：`link-in-bio-template`
+- **Cover**：`sales/covers/en/linkinbio-cover.png`
+- **Tags**：`link in bio`, `linktree alternative`, `creator page`, `html template`, `bio link`
+- **Description**：
+```
+A characterful link-in-bio page for creators and small shops. Host it free, no subscription. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- 3 switchable themes (Paper, Midnight, Bold)
+- Social icon row and link buttons
+- Featured product and latest video cards
+- Email sign-up
+- Share / copy link button
+- SEO-ready with schema.org Person data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+Link-in-bio 個人連結頁模板（Linktree 替代品）。功能：三種主題切換、社群連結、連結按鈕、精選商品、最新影片、Email 訂閱、分享按鈕。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-27. 男士理髮廳
+
+- **Name**：`Barbershop Website Template (English + 繁體中文) — One-Page HTML`
+- **URL**：`barbershop-template`
+- **Cover**：`sales/covers/en/barber-cover.png`
+- **Tags**：`barbershop website`, `barber website`, `mens grooming`, `html template`, `website template`
+- **Description**：
+```
+A classic-meets-modern one-page website for barbershops. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Price list with durations
+- Barber profiles that preselect the booking form
+- Open-now badge and typical wait
+- Style gallery
+- Booking form
+- SEO-ready with schema.org data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+男士理髮廳網站模板。功能：價目表、理髮師介紹（點選自動帶入預約）、營業中與候位提示、作品集、預約表單。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-28. 研討會／講座活動
+
+- **Name**：`Conference & Workshop Event Landing Page (English + 繁體中文)`
+- **URL**：`conference-event-template`
+- **Cover**：`sales/covers/en/conference-cover.png`
+- **Tags**：`conference website`, `event landing page`, `workshop page`, `html template`, `event template`
+- **Description**：
+```
+A bold, poster-style landing page for conferences, summits and workshops. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Live countdown and big-date hero
+- Speaker grid with accessible bio modal
+- Agenda tabs by track or day
+- Add-to-calendar (.ics) download
+- Ticket tiers with automatic early-bird cut-off
+- SEO-ready with schema.org Event data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+研討會／講座活動頁模板。功能：倒數計時、講者介紹、分軌議程、加入行事曆、票種與早鳥自動截止、場地交通、贊助方案。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-29. 刺青工作室
+
+- **Name**：`Tattoo Studio Website Template (English + 繁體中文) — One-Page HTML`
+- **URL**：`tattoo-studio-template`
+- **Cover**：`sales/covers/en/tattoo-cover.png`
+- **Tags**：`tattoo website`, `tattoo studio`, `artist portfolio`, `html template`, `website template`
+- **Description**：
+```
+An edgy, fine-art one-page website for tattoo studios. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Portfolio filter by artist and style with lightbox
+- Flash sheet with fixed prices that preselect the form
+- Pricing, process and aftercare
+- Age and health notes
+- Consultation booking form
+- SEO-ready with schema.org data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+刺青工作室網站模板。功能：依刺青師與風格篩選的作品集、現貨 Flash 圖、價格說明、刺青流程、照護須知、預約表單。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-30. 共享辦公室
+
+- **Name**：`Coworking Space Website Template (English + 繁體中文) — One-Page HTML`
+- **URL**：`coworking-space-template`
+- **Cover**：`sales/covers/en/coworking-cover.png`
+- **Tags**：`coworking website`, `office space`, `meeting rooms`, `html template`, `website template`
+- **Description**：
+```
+A lively, design-forward one-page website for coworking spaces. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Space types from hot desks to private offices
+- Day / month pricing toggle
+- Meeting room estimator with capacity check
+- Amenities, community events and location
+- Tour booking form
+- SEO-ready with schema.org data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+共享辦公室網站模板。功能：空間類型、日租／月租切換、會議室即時估價、設施介紹、社群活動、預約參觀。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
 ---
 
 ## 5. 全套組合包（最後上）
 
 Gumroad 可以建立 **Bundle**，把已上架的商品組合起來賣。如果後台沒有 Bundle，就另外上一個商品，上傳 `all-templates-bundle.zip`。
 
-- **Name**：`All 22 Business Website Templates Bundle (English + 繁體中文)`
+- **Name**：`All 30 Business Website Templates Bundle (English + 繁體中文)`
 - **URL**：`website-templates-bundle`
-- **Price**：`199`（單買合計 $858，約打 2.3 折；上市優惠 $149）
+- **Price**：`249`（單買合計 $1,170，約打 2 折；上市優惠 $199）
 - **Cover**：用 Canva 把多張封面拼成一張
 - **Description**：
 ```
-All 22 templates in one bundle, from restaurants, salons and clinics to campsites, florists and SaaS products. Save over 75% versus buying separately.
+All 30 templates in one bundle, from restaurants, salons and clinics to campsites, florists and SaaS products. Save over 75% versus buying separately.
 
 Perfect for freelancers who build sites for local businesses: one licence per template per website (see LICENSE.md).
 
 ──────────
-二十二款模板一次帶走，從餐廳、美業、診所到露營、花店、軟體產品都有，比單買省超過七成五。適合幫在地店家接案的人。
+三十款模板一次帶走，從餐廳、美業、診所到露營、花店、軟體產品都有，比單買省超過七成五。適合幫在地店家接案的人。
 
 [貼上「共用文字」]
 ```

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>行業網站模板集</title>
-<meta name="description" content="二十二款適合各行各業的一頁式網站模板：餐廳、手搖飲、美業、健身、瑜珈、診所、事務所、民宿、露營、房仲、婚禮、攝影、寵物、補習班、室內設計、烘焙、花店、汽車、清潔、個人品牌、軟體產品。純 HTML，附中英文版。">
+<meta name="description" content="三十款適合各行各業的一頁式網站模板：餐廳、手搖飲、美業、健身、瑜珈、診所、事務所、民宿、露營、房仲、婚禮、攝影、寵物、補習班、室內設計、烘焙、花店、汽車、清潔、個人品牌、軟體產品。純 HTML，附中英文版。">
 <meta name="theme-color" content="#f6f5f1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,7 +76,7 @@
 </head>
 <body>
 <header>
-  <h1>二十二款行業網站模板，換上你的文字就能上線。</h1>
+  <h1>三十款行業網站模板，換上你的文字就能上線。</h1>
   <p class="lead">純 HTML 一頁式網站，不用安裝任何軟體、不需要後台。改文字、換照片、調顏色，就能交給店家使用，也能免費部署到 GitHub Pages 或 Netlify。</p>
   <ul class="chips">
     <li>手機版完整適配</li><li>一處改色，全站換色</li><li>內建 SEO 結構化資料</li><li>LINE／電話／地圖按鈕</li><li>無圖片授權問題</li>
@@ -122,6 +122,14 @@
     { slug: 'camping', href: 'camping/', name: '星野營地', type: '露營區／豪華露營', desc: '營位與價格、可點選的營地地圖、住宿費用試算、營地規範。', tags: ['露營','豪華露營','戶外'] },
     { slug: 'freelancer', href: 'freelancer/', name: '陳以恩', type: '個人品牌／自由工作者', desc: '作品集、技能與經歷、合作流程、深淺色模式切換。', tags: ['接案','履歷','作品集'] },
     { slug: 'saas', href: 'saas/', name: '排排', type: 'App／軟體產品', desc: '產品介面展示、功能介紹、月繳／年繳切換的方案價格、比較表。', tags: ['軟體','App','新創'] },
+    { slug: 'coach', href: 'coach/', name: '林予安', type: '心理諮商／教練', desc: '服務與費用、初談流程、保密說明、預約表單，附危機專線提醒。', tags: ['諮商','教練','身心'] },
+    { slug: 'contractor', href: 'contractor/', name: '穩固水電', type: '水電修繕／工程行', desc: '急修／預約切換、參考價目、服務區域、估價表單。', tags: ['水電','修繕','到府'] },
+    { slug: 'nonprofit', href: 'nonprofit/', name: '暖光協會', type: '非營利／教會', desc: '捐款小工具（單次／定期）、志工招募、活動行事曆、財務透明。', tags: ['公益','社福','教會'] },
+    { slug: 'linkinbio', href: 'linkinbio/', name: '小島日記', type: 'Link-in-bio 個人連結頁', desc: '三種主題切換、社群連結、精選商品、分享按鈕。', tags: ['創作者','連結頁','社群'] },
+    { slug: 'barber', href: 'barber/', name: '老派 Oldboy', type: '男士理髮廳', desc: '價目表、指定理髮師預約、營業中標示、作品集。', tags: ['理髮','男士','油頭'] },
+    { slug: 'conference', href: 'conference/', name: '數位轉型論壇', type: '研討會／講座活動', desc: '倒數計時、講者介紹、分軌議程、加入行事曆、早鳥票自動截止。', tags: ['研討會','講座','活動'] },
+    { slug: 'tattoo', href: 'tattoo/', name: '墨島', type: '刺青工作室', desc: '依刺青師與風格篩選作品、現貨 Flash 圖、照護須知、預約。', tags: ['刺青','藝術','工作室'] },
+    { slug: 'coworking', href: 'coworking/', name: '方格 Grid', type: '共享辦公室', desc: '日租／月租切換、會議室即時估價、設施介紹、預約參觀。', tags: ['共享辦公','會議室','商登'] },
   ];
   const grid = document.getElementById('grid');
   grid.innerHTML = items.map(i => `

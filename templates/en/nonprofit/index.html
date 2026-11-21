@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  Note for buyers: nonprofit, community charity and church template
+  1. The organization name, EIN and all registration details are fictional. Replace them with your real information before going live.
+  2. Only claim 501(c)(3) status and tax deductibility if the IRS has granted it to your organization.
+  3. Using this for a church:
+     - Rename "What we do" to "Ministries" and swap the three cards for Sunday school, small groups, care visits and so on.
+     - Turn "Upcoming events" into "Service times", for example Sunday Worship 10:00 AM, Wednesday Prayer 7:30 PM, Youth Group Saturday 3:00 PM.
+     - Change "Donate" to "Give" and the widget heading to "Give online".
+     - In the JSON-LD, change "@type" to ["Church", "LocalBusiness"].
+-->
+<title>Harbor Light Community Project | After-School Tutoring and Senior Meals in Cedar Harbor</title>
+<meta name="description" content="Harbor Light Community Project pairs Cedar Harbor kids with after-school tutors and delivers hot meals to homebound seniors. Give once or monthly, or sign up to volunteer.">
+<meta property="og:title" content="Harbor Light Community Project | No kid studies alone. No neighbor eats alone.">
+<meta property="og:description" content="A neighborhood nonprofit running after-school tutoring, senior meal delivery and family support in Cedar Harbor, Maine. Donate, volunteer or read our annual report.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#c9432f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["NGO", "LocalBusiness"],
+  "name": "Harbor Light Community Project",
+  "description": "A neighborhood nonprofit offering after-school tutoring, senior meal delivery and family support in Cedar Harbor, Maine.",
+  "url": "https://example.com/",
+  "telephone": "(555) 012-3456",
+  "email": "hello@example.com",
+  "areaServed": "Cedar Harbor, ME",
+  "nonprofitStatus": "Nonprofit501c3",
+  "taxID": "00-0000000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "214 Wharf Street",
+    "addressLocality": "Cedar Harbor",
+    "addressRegion": "ME",
+    "postalCode": "04011",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "12:00" }
+  ],
+  "potentialAction": {
+    "@type": "DonateAction",
+    "name": "Donate online",
+    "target": "https://example.com/donate",
+    "priceCurrency": "USD",
+    "recipient": { "@type": "NGO", "name": "Harbor Light Community Project" }
+  }
+}
+</script>
+<style>
+/* ============================================================
+   THEME SETTINGS: edit here to change the whole site's colors and fonts
+   ============================================================ */
+:root {
+  --brand: #c9432f;          /* Brand color (sunrise coral: buttons, links, highlights) */
+  --brand-ink: #fffaf3;      /* Text color on top of the brand color */
+  --brand-deep: #9e2f20;     /* Deep brand shade (hover, button base shadow) */
+  --brand-soft: #fbe4d8;     /* Soft brand tint (illustration backdrops, icon tiles) */
+  --brand-light: #f7a58f;    /* Light brand tint (accent text on navy sections) */
+  --sun: #f5c242;            /* Sunny yellow (the single accent, use sparingly) */
+  --sun-ink: #3a2a00;        /* Text color on top of sunny yellow */
+  --sun-soft: #fdf0c8;       /* Pale yellow (impact box, tag backgrounds) */
+  --bg: #fbf4ea;             /* Page background (soft cream) */
+  --surface: #fffaf3;        /* Card and form surfaces (warm white) */
+  --text: #1c2b4b;           /* Main text (deep navy) */
+  --muted: #55607a;          /* Secondary text */
+  --line: #ecdfcc;           /* Dividers and borders */
+  --night: #1c2b4b;          /* Dark section background (impact numbers, footer) */
+  --night-ink: #fbf4ea;      /* Text on dark sections */
+  --night-muted: #c9cfdd;    /* Secondary text on dark sections */
+  --skin: #f1c9a5;           /* Illustration skin tone */
+  --hair: #c9cfdd;           /* Illustration gray hair */
+  --shadow: 0 16px 36px -18px color-mix(in srgb, var(--text) 32%, transparent); /* Soft card shadow */
+  --radius: 22px;            /* Card corner radius */
+  --radius-sm: 12px;         /* Small element corner radius */
+  --font-heading: "Nunito Sans", system-ui, sans-serif; /* Heading font (humanist sans) */
+  --font-body: "Nunito Sans", system-ui, sans-serif;    /* Body font */
+  --max: 1160px;             /* Max content width */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 800; line-height: 1.3; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 8px; }
+::selection { background: var(--sun); color: var(--sun-ink); }
+.wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+section { padding-block: clamp(4rem, 10vw, 6.5rem); }
+.sec-head { max-width: 40rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
+.sec-head.center { margin-inline: auto; text-align: center; }
+.sec-head h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: .6rem; }
+.sec-head p { color: var(--muted); }
+.alt { background: var(--surface); }
+/* Hand-drawn squiggle underline (below section headings) */
+.squiggle { display: block; width: 7rem; height: 12px; margin-top: .5rem; color: var(--sun); }
+.center .squiggle { margin-inline: auto; }
+
+/* ---------- Buttons ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .8rem 1.5rem; border-radius: 999px; font-weight: 700; font-size: 1rem; font-family: inherit; border: 2px solid transparent; transition: background .25s, color .25s, transform .25s, border-color .25s, box-shadow .25s; cursor: pointer; }
+.btn svg { width: 1.15rem; height: 1.15rem; flex: none; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); box-shadow: 0 4px 0 var(--brand-deep); }
+.btn-primary:hover { background: var(--brand-deep); transform: translateY(-2px); }
+.btn:active { transform: translateY(2px); box-shadow: none; }
+.btn-ghost { border-color: var(--text); color: var(--text); background: var(--surface); }
+.btn-ghost:hover { background: var(--sun-soft); transform: translateY(-2px); }
+.btn-sm { padding: .5rem 1.1rem; font-size: .92rem; }
+a:not(.btn):active { opacity: .7; }
+.text-link { color: var(--brand); font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; transition: color .2s, text-decoration-color .2s; }
+.text-link:hover { color: var(--brand-deep); text-decoration-color: var(--sun); }
+
+/* ---------- Header ---------- */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 93%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .6rem; font: 800 1.15rem/1.2 var(--font-heading); }
+.logo-mark { width: 2.5rem; height: 2.5rem; flex: none; }
+.logo-mark .m-sun { fill: var(--sun); }
+.logo-mark .m-roof { fill: var(--brand); }
+.logo-mark .m-ln { fill: none; stroke: var(--text); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.nav-links { display: flex; align-items: center; gap: 1.35rem; font-size: .95rem; }
+.nav-links a:not(.btn) { color: var(--muted); font-weight: 500; transition: color .2s; }
+.nav-links a:not(.btn):hover { color: var(--brand); }
+.menu-btn { display: none; width: 44px; height: 44px; border: 1.5px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--text); cursor: pointer; transition: background .2s, transform .2s; }
+.menu-btn:hover { background: var(--sun-soft); }
+.menu-btn:active { transform: scale(.94); }
+.menu-btn span { display: block; width: 18px; height: 2px; margin: 4px auto; background: currentColor; border-radius: 2px; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+@media (min-width: 761px) and (max-width: 1080px) { .nav-links .opt { display: none; } }
+@media (max-width: 760px) {
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: 72px; left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .75rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: .75rem 1rem; border-radius: var(--radius-sm); }
+  .js .nav-links .btn { margin-top: .5rem; }
+  /* Without JS: the menu wraps below the logo and the header becomes sticky */
+  html:not(.js) .site-header { position: sticky; background: var(--surface); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: .75rem; }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: 2.5rem; }
+}
+
+/* ---------- Hand-drawn illustrations (inline SVG, colors come from theme variables) ---------- */
+.ill .f-brand { fill: var(--brand); }
+.ill .f-deep { fill: var(--brand-deep); }
+.ill .f-soft { fill: var(--brand-soft); }
+.ill .f-sun { fill: var(--sun); }
+.ill .f-sunsoft { fill: var(--sun-soft); }
+.ill .f-surface { fill: var(--surface); }
+.ill .f-night { fill: var(--night); }
+.ill .f-skin { fill: var(--skin); }
+.ill .f-hair { fill: var(--hair); }
+.ill .f-none { fill: none; }
+.ill .ln { stroke: var(--text); stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+.ill .ln-sun { fill: none; stroke: var(--sun); stroke-width: 5; stroke-linecap: round; }
+.ill .ln-brand { fill: none; stroke: var(--brand); stroke-width: 3.5; stroke-linecap: round; }
+
+/* ---------- Art placeholders (rounded photo frames) ---------- */
+/* Replace with a photo: .img-story1 { background: url(images/story-1.jpg) center/cover; } (same for .img-story2), then delete the ::before shape */
+/* Replace with a photo: put a Google Maps iframe inside .img-map (Share, then Embed a map, copy the code), or use .img-map { background: url(images/map.png) center/cover; } */
+.img { position: relative; overflow: hidden; background-color: var(--brand-soft); }
+.frame { border-radius: 999px 999px var(--radius) var(--radius); aspect-ratio: 4 / 3.6; border: 3px solid var(--text); }
+.img-story1 {
+  background-image:
+    radial-gradient(circle at 68% 42%, var(--sun) 0 13%, transparent 13.5%),
+    repeating-conic-gradient(from 0deg at 68% 42%, color-mix(in srgb, var(--sun) 30%, transparent) 0 8deg, transparent 8deg 22deg),
+    linear-gradient(var(--sun-soft), var(--brand-soft));
+}
+.img-story2 {
+  background-image:
+    radial-gradient(circle at 30% 38%, var(--surface) 0 11%, transparent 11.5%),
+    repeating-linear-gradient(-35deg, color-mix(in srgb, var(--brand) 12%, transparent) 0 10px, transparent 10px 26px),
+    linear-gradient(var(--brand-soft), var(--sun-soft));
+}
+.img-story1::before, .img-story2::before { content: ""; position: absolute; inset: auto -10% -28% -10%; height: 55%; border-radius: 50% 50% 0 0; background: var(--brand); border-top: 3px solid var(--text); }
+.img-story2::before { background: var(--night); inset: auto 5% -30% -25%; }
+.img-map {
+  border-radius: var(--radius); border: 3px solid var(--text); min-height: 320px;
+  background-color: var(--surface);
+  background-image:
+    linear-gradient(90deg, transparent 46%, var(--sun-soft) 46% 54%, transparent 54%),
+    linear-gradient(transparent 58%, var(--sun-soft) 58% 64%, transparent 64%),
+    linear-gradient(115deg, transparent 30%, var(--brand-soft) 30% 34%, transparent 34%),
+    linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: auto, auto, auto, 32px 32px, 32px 32px;
+}
+.img-map svg { position: absolute; left: 50%; top: 61%; width: 64px; translate: -50% -100%; }
+
+/* ---------- Hero ---------- */
+.hero { padding-top: calc(72px + clamp(1.5rem, 4vw, 3rem)); padding-bottom: clamp(3.5rem, 8vw, 5.5rem); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.hero h1 { font-size: clamp(2.3rem, 5.6vw, 4rem); line-height: 1.18; margin-bottom: 1.1rem; }
+.hero-sub { color: var(--muted); font-size: 1.12rem; max-width: 30rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 1.9rem; }
+.hero-note { margin-top: 1.4rem; font-size: .9rem; color: var(--muted); display: flex; align-items: center; gap: .5rem; }
+.hero-note svg { width: 1.2rem; height: 1.2rem; flex: none; color: var(--brand); }
+.hero-art { position: relative; }
+.hero-art .ill { display: block; width: 100%; height: auto; }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-art { max-width: 30rem; margin-inline: auto; width: 100%; }
+}
+
+/* ---------- Programs ---------- */
+.prog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.prog { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem 1.6rem 1.8rem; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+.prog-ico { width: 100%; max-width: 8.5rem; aspect-ratio: 4 / 3; margin-bottom: 1rem; border-radius: 50% 50% 46% 54% / 56% 48% 52% 44%; background: var(--brand-soft); }
+.prog:nth-child(2) .prog-ico { background: var(--sun-soft); }
+.prog h3 { font-size: 1.3rem; margin-bottom: .45rem; }
+.prog p { color: var(--muted); }
+.impact-line { margin-top: auto; padding-top: 1.1rem; font-weight: 700; color: var(--text); display: flex; gap: .55rem; align-items: flex-start; }
+.impact-line svg { width: 1.3rem; height: 1.3rem; flex: none; color: var(--brand); margin-top: .2rem; }
+.prog > p:not(.impact-line) { margin-bottom: .2rem; }
+@media (max-width: 900px) { .prog-grid { grid-template-columns: minmax(0, 1fr); } .prog { display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); column-gap: 1.25rem; } .prog-ico { grid-row: span 3; } }
+@media (max-width: 480px) { .prog { grid-template-columns: minmax(0, 1fr); } .prog-ico { grid-row: auto; max-width: 7rem; } }
+
+/* ---------- Impact numbers ---------- */
+.impact { background: var(--night); color: var(--night-ink); position: relative; }
+.impact .sec-head p { color: var(--night-muted); }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; }
+.stat { padding: 1.4rem 1.2rem; border-radius: var(--radius); border: 1.5px dashed color-mix(in srgb, var(--night-ink) 30%, transparent); text-align: center; }
+.stat b { display: block; font: 800 clamp(2.2rem, 5vw, 3.2rem)/1.1 var(--font-heading); color: var(--sun); font-variant-numeric: tabular-nums; }
+.stat span { display: block; margin-top: .5rem; color: var(--night-muted); font-size: .95rem; }
+.impact .sample-note { margin-top: 1.8rem; text-align: center; font-size: .85rem; color: var(--night-muted); }
+@media (max-width: 860px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---------- Donation widget ---------- */
+.donate-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.covers { display: grid; gap: .9rem; margin-top: 1.5rem; }
+.covers li { display: flex; gap: .75rem; align-items: flex-start; }
+.covers svg { width: 1.6rem; height: 1.6rem; flex: none; color: var(--brand); }
+.give { background: var(--surface); border: 3px solid var(--text); border-radius: var(--radius); padding: clamp(1.25rem, 4vw, 2.25rem); box-shadow: 8px 8px 0 var(--sun); }
+.give h3 { font-size: 1.35rem; margin-bottom: 1.1rem; }
+.give fieldset { border: 0; margin-bottom: 1.25rem; min-width: 0; }
+.give legend { font-weight: 700; margin-bottom: .55rem; font-size: .95rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.freq { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: .3rem; border-radius: 999px; background: var(--bg); border: 1.5px solid var(--line); }
+.freq label { text-align: center; padding: .55rem .5rem; border-radius: 999px; font-weight: 700; cursor: pointer; transition: background .2s, color .2s; }
+.freq label:hover { color: var(--brand); }
+.freq input:checked + label { background: var(--text); color: var(--night-ink); }
+.amounts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6rem; }
+.amounts label { display: block; text-align: center; padding: .8rem .4rem; border-radius: var(--radius-sm); border: 2px solid var(--line); background: var(--surface); font: 800 1.05rem/1.2 var(--font-heading); cursor: pointer; transition: border-color .2s, background .2s, transform .2s; font-variant-numeric: tabular-nums; }
+.amounts label:hover { border-color: var(--brand); }
+.amounts label:active { transform: scale(.97); }
+.amounts input:checked + label { border-color: var(--brand); background: var(--brand-soft); }
+.give input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+.give input[type="radio"]:focus-visible + label { outline: 3px solid var(--brand); outline-offset: 2px; }
+.custom-field { margin-top: .8rem; }
+.custom-field label { display: block; font-size: .9rem; color: var(--muted); margin-bottom: .3rem; }
+.js .give:not(.is-custom) .custom-field { display: none; }
+.impact-box { display: flex; gap: .9rem; align-items: flex-start; padding: 1rem 1.1rem; border-radius: var(--radius-sm); background: var(--sun-soft); color: var(--sun-ink); margin-bottom: 1.25rem; }
+.impact-box svg { width: 2.4rem; height: 2.4rem; flex: none; }
+.impact-box strong { display: block; font-size: .9rem; }
+.give .btn { width: 100%; font-size: 1.1rem; padding-block: .95rem; }
+.give .btn[aria-disabled="true"] { opacity: .55; }
+.give-note { margin-top: .9rem; font-size: .85rem; color: var(--muted); text-align: center; }
+@media (max-width: 860px) { .donate-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 440px) { .amounts { grid-template-columns: repeat(2, minmax(0, 1fr)); } .give { box-shadow: 5px 5px 0 var(--sun); } }
+
+/* ---------- Form controls ---------- */
+.field { display: grid; gap: .35rem; }
+.field label, .field legend { font-weight: 700; font-size: .95rem; }
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select, textarea { width: 100%; font: inherit; color: var(--text); background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius-sm); padding: .7rem .9rem; transition: border-color .2s; }
+input:hover, select:hover, textarea:hover { border-color: color-mix(in srgb, var(--text) 35%, transparent); }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent); }
+textarea { min-height: 7rem; resize: vertical; }
+
+/* ---------- Stories ---------- */
+.story-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 3rem); }
+.story { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 1.5rem; align-items: center; }
+.story blockquote p { font-size: 1.08rem; line-height: 1.85; }
+.story blockquote p::before { content: "\201C"; } .story blockquote p::after { content: "\201D"; }
+.story figcaption { margin-top: .9rem; font-weight: 700; }
+.story figcaption span { display: block; font-weight: 400; font-size: .9rem; color: var(--muted); }
+.names-note { margin-top: 2rem; font-size: .88rem; color: var(--muted); }
+@media (max-width: 980px) { .story-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 520px) { .story { grid-template-columns: minmax(0, 1fr); } .story .frame { max-width: 15rem; } }
+
+/* ---------- Volunteer ---------- */
+.vol-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.vol-ill { width: min(16rem, 70%); height: auto; display: block; margin: 0 0 1.5rem; }
+.roles { display: grid; gap: 1rem; }
+.roles li { padding: 1rem 1.2rem; border-radius: var(--radius-sm); background: var(--bg); border: 1px solid var(--line); }
+.roles h3 { font-size: 1.08rem; }
+.roles p { color: var(--muted); font-size: .95rem; }
+.vol-form { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.25rem, 4vw, 2rem); display: grid; gap: 1rem; }
+.vol-form .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.vol-form fieldset { border: 0; min-width: 0; }
+.checks { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin-top: .4rem; }
+.checks label { display: inline-flex; align-items: center; gap: .45rem; font-weight: 400; cursor: pointer; }
+.checks input { width: 1.15rem; height: 1.15rem; accent-color: var(--brand); }
+.form-note { font-size: .85rem; color: var(--muted); }
+@media (max-width: 860px) { .vol-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 520px) { .vol-form .row { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Events ---------- */
+.events { display: grid; gap: 1rem; }
+.event { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr) auto; gap: 1.5rem; align-items: center; padding: 1.25rem 1.5rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.date { text-align: center; border-radius: var(--radius-sm); background: var(--brand); color: var(--brand-ink); padding: .55rem .3rem .7rem; line-height: 1.15; }
+.date span { display: block; font-size: .85rem; }
+.date b { display: block; font: 800 2rem/1.05 var(--font-heading); font-variant-numeric: tabular-nums; }
+.event:nth-child(2) .date { background: var(--sun); color: var(--sun-ink); }
+.event:nth-child(3) .date { background: var(--night); color: var(--night-ink); }
+.event h3 { font-size: 1.2rem; }
+.event-meta { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; font-size: .92rem; color: var(--muted); margin-block: .2rem .35rem; }
+.event-meta span { display: inline-flex; align-items: center; gap: .35rem; }
+.event-meta svg { width: 1rem; height: 1rem; color: var(--brand); }
+.event p { color: var(--muted); font-size: .95rem; }
+@media (max-width: 680px) { .event { grid-template-columns: 4.5rem minmax(0, 1fr); gap: 1rem; padding: 1.1rem; } .event .btn { grid-column: 1 / -1; } }
+
+/* ---------- Financial transparency ---------- */
+.fin-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); }
+.fin-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.25rem, 4vw, 2rem); }
+.fin-card h3 { font-size: 1.2rem; margin-bottom: 1rem; }
+.bars { display: grid; gap: 1rem; }
+.bar-label { display: flex; justify-content: space-between; gap: 1rem; font-size: .95rem; margin-bottom: .35rem; }
+.bar-label b { font-variant-numeric: tabular-nums; }
+.bar { height: 14px; border-radius: 999px; background: var(--bg); border: 1.5px solid var(--line); overflow: hidden; }
+.bar i { display: block; height: 100%; width: var(--w); border-radius: 999px; background: var(--brand); }
+.bars li:nth-child(2) .bar i { background: var(--sun); }
+.bars li:nth-child(3) .bar i { background: var(--night); }
+.docs { display: grid; gap: .75rem; margin-bottom: 1.5rem; }
+.docs a { display: flex; align-items: center; gap: .8rem; padding: .8rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--line); font-weight: 700; transition: border-color .2s, background .2s; }
+.docs a:hover { border-color: var(--brand); background: var(--brand-soft); }
+.docs a:focus-visible { outline-offset: 2px; }
+.docs svg { width: 1.6rem; height: 1.6rem; flex: none; color: var(--brand); }
+.docs small { display: block; font-weight: 400; color: var(--muted); }
+.reg { display: grid; gap: .5rem; font-size: .92rem; }
+.reg div { display: grid; grid-template-columns: minmax(0, 7.5rem) minmax(0, 1fr); gap: .75rem; padding-top: .5rem; border-top: 1px dashed var(--line); }
+.reg dt { color: var(--muted); }
+@media (max-width: 860px) { .fin-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Partners ---------- */
+.partner-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1rem; }
+.partner { display: grid; place-items: center; text-align: center; min-height: 5.5rem; padding: .75rem; border-radius: var(--radius-sm); border: 2px dashed color-mix(in srgb, var(--text) 25%, transparent); color: var(--muted); font-size: .9rem; font-weight: 500; }
+.partners-cta { margin-top: 1.75rem; text-align: center; color: var(--muted); }
+@media (max-width: 900px) { .partner-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .partner-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---------- Contact ---------- */
+.contact-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: stretch; }
+.info { display: grid; gap: 1.1rem; margin-bottom: 1.6rem; }
+.info li { display: flex; gap: .8rem; align-items: flex-start; }
+.info svg { width: 1.4rem; height: 1.4rem; flex: none; color: var(--brand); margin-top: .25rem; }
+.info b { display: block; }
+.contact-btns { display: flex; flex-wrap: wrap; gap: .75rem; }
+.map-wrap { display: grid; gap: .9rem; }
+@media (max-width: 860px) { .contact-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--night); color: var(--night-muted); padding-block: 3.5rem 2rem; font-size: .95rem; }
+.site-footer .logo { color: var(--night-ink); margin-bottom: 1rem; }
+.site-footer .logo-mark .m-ln { stroke: var(--night-ink); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; }
+.site-footer h2 { color: var(--night-ink); font-size: 1rem; margin-bottom: .6rem; }
+.site-footer a:hover { color: var(--sun); }
+.social { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: .8rem; }
+.social a { text-decoration: underline; text-underline-offset: 3px; }
+.foot-bottom { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid color-mix(in srgb, var(--night-ink) 15%, transparent); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .82rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Mobile sticky bar ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 760px) {
+  .mobile-bar { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: .6rem; position: fixed; inset: auto 0 0; z-index: 60; padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 -1px 0 var(--line); }
+  .mobile-bar .btn { padding: .75rem .8rem; }
+  body { padding-bottom: 80px; }
+}
+
+/* ---------- Scroll reveal ---------- */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ==================== Section: Header ==================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Harbor Light Community Project, back to top">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle class="m-sun" cx="27" cy="13" r="8"/><path class="m-roof m-ln" d="M5 21 Q12 14 19 9 Q26 14 33 21 Z"/><path class="m-ln" d="M9 20 V33 H29 V20 M17 33 V26 Q19 24 21 26 V33"/></svg>
+      Harbor Light
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="Main menu">
+      <a href="#programs">Programs</a>
+      <a href="#impact" class="opt">Impact</a>
+      <a href="#stories">Stories</a>
+      <a href="#volunteer">Volunteer</a>
+      <a href="#events">Events</a>
+      <a href="#transparency" class="opt">Financials</a>
+      <a href="#contact" class="opt">Contact</a>
+      <a href="#donate" class="btn btn-primary btn-sm">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>No kid studies alone. No neighbor eats alone.</h1>
+      <p class="hero-sub">We pair Cedar Harbor kids with after-school tutors and bring hot meals to seniors who can't easily get out.</p>
+      <div class="hero-cta">
+        <a href="#donate" class="btn btn-primary">Donate</a>
+        <a href="#volunteer" class="btn btn-ghost">Volunteer with us</a>
+      </div>
+      <p class="hero-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>501(c)(3) nonprofit. Your gift is tax-deductible.</p>
+    </div>
+    <div class="hero-art">
+      <!-- Hand-drawn illustration: colors come from theme variables. To use a photo instead, swap in <div class="img frame" role="img" aria-label="..."></div> -->
+      <svg class="ill" viewBox="0 0 560 480" role="img" aria-label="Hand-drawn illustration: under a rising sun, a volunteer carries a lunch box and walks with a child toward an older neighbor">
+        <path class="f-soft" d="M62 118 C86 40 224 18 304 38 C424 68 522 62 532 182 C542 302 502 420 362 440 C222 460 62 432 42 322 C28 242 44 172 62 118 Z"/>
+        <g class="ln-sun"><path d="M330 114 L311 103 M356 88 L345 69 M392 78 V56 M428 88 L439 69 M454 114 L473 103 M464 150 H486 M320 150 H298"/></g>
+        <circle class="f-sun ln" cx="392" cy="150" r="58"/>
+        <path class="f-surface ln" d="M36 334 C140 292 222 302 300 322 C380 342 452 300 528 312 L530 410 C470 446 124 452 48 404 Z"/>
+        <g class="ln">
+          <rect class="f-night" x="158" y="204" width="17" height="34" rx="3"/>
+          <path class="f-surface" d="M76 254 H186 V352 H76 Z"/>
+          <path class="f-brand" d="M58 258 Q95 222 131 194 Q168 224 204 258 Q131 252 58 258 Z"/>
+          <rect class="f-night" x="117" y="298" width="28" height="54" rx="13"/>
+          <rect class="f-sun" x="88" y="274" width="22" height="22" rx="3"/>
+          <path class="f-surface" d="M414 286 H506 V364 H414 Z"/>
+          <path class="f-night" d="M400 290 Q432 262 460 240 Q492 264 522 290 Q460 284 400 290 Z"/>
+          <rect class="f-sun" x="448" y="304" width="24" height="24" rx="3"/>
+          <path class="f-none" d="M460 304 V328 M448 316 H472"/>
+          <path class="f-none" d="M30 364 C150 352 400 358 540 366"/>
+        </g>
+        <path class="f-brand" d="M243 214 C243 204 255 202 258 212 C261 202 273 204 273 214 C273 224 258 232 258 238 C258 232 243 224 243 214 Z"/>
+        <path class="ln-brand" d="M222 196 q-6 -8 0 -16 M292 192 q6 -8 0 -16"/>
+        <g class="ln">
+          <path class="f-night" d="M188 338 Q215 322 242 338 L248 420 Q215 428 182 420 Z"/>
+          <circle class="f-skin" cx="215" cy="304" r="21"/>
+          <path class="f-hair" d="M194 300 Q196 280 215 281 Q234 280 236 300 Q224 290 215 292 Q204 290 194 300 Z"/>
+          <path class="f-none" d="M202 420 V440 M228 420 V440 M244 362 Q258 368 262 380 L268 440"/>
+          <path class="f-none" d="M208 312 Q215 318 222 312"/>
+          <path class="f-brand" d="M268 312 Q300 294 332 312 L340 420 Q300 430 260 420 Z"/>
+          <circle class="f-skin" cx="300" cy="270" r="23"/>
+          <path class="f-night" d="M277 266 Q280 244 300 245 Q322 244 324 266 Q312 256 300 258 Q286 256 277 266 Z"/>
+          <path class="f-none" d="M292 278 Q300 285 308 278 M285 422 V442 M315 422 V442"/>
+          <rect class="f-sun" x="276" y="342" width="46" height="32" rx="6"/>
+          <path class="f-none" d="M276 352 H322 M272 318 Q268 346 280 356 M330 320 Q342 352 352 372"/>
+          <path class="f-sun" d="M357 350 Q380 336 403 350 L408 414 Q380 422 352 414 Z"/>
+          <circle class="f-skin" cx="380" cy="320" r="18"/>
+          <path class="f-night" d="M362 318 Q362 300 380 301 Q398 300 398 318 Q388 310 380 311 Q370 310 362 318 Z"/>
+          <path class="f-none" d="M373 326 Q380 332 387 326 M368 414 V438 M392 414 V438"/>
+          <rect class="f-brand" x="396" y="356" width="20" height="36" rx="7"/>
+        </g>
+        <path class="ln-brand" d="M290 334 q-4 -8 0 -14 M306 334 q4 -8 0 -14"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Programs ==================== -->
+<!-- For a church: rename to "Ministries" and swap the cards for Sunday school, small groups, care visits and so on -->
+<section class="alt" id="programs">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>What we do</h2>
+      <svg class="squiggle" viewBox="0 0 112 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M3 7 Q 12 1 21 7 T 39 7 T 57 7 T 75 7 T 93 7 T 109 7"/></svg>
+      <p>Three year-round programs, each one built around what our neighbors actually asked for. We know every kid and every senior by name.</p>
+    </div>
+    <!-- Sample content — replace before going live -->
+    <div class="prog-grid">
+      <article class="prog reveal">
+        <svg class="prog-ico ill" viewBox="0 0 120 90" aria-hidden="true">
+          <g class="ln">
+            <path class="f-surface" d="M16 28 Q38 20 60 30 L60 74 Q38 66 16 72 Z"/>
+            <path class="f-surface" d="M104 28 Q82 20 60 30 L60 74 Q82 66 104 72 Z"/>
+            <path class="f-none" d="M26 40 Q38 36 50 41 M26 50 Q38 46 50 51 M70 41 Q82 36 94 40"/>
+            <path class="f-sun" d="M86 12 L96 18 L76 54 L68 56 L66 48 Z"/>
+          </g>
+        </svg>
+        <h3>After-school tutoring</h3>
+        <p>Every weekday after school, college students and retired teachers help kids with homework, read together and share a snack.</p>
+        <p class="impact-line"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.4-9.3C1.2 8.2 3.5 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.7 0 6 3.7 4.6 7.2C19.5 16.4 12 21 12 21Z"/></svg>48 elementary students every week</p>
+      </article>
+      <article class="prog reveal">
+        <svg class="prog-ico ill" viewBox="0 0 120 90" aria-hidden="true">
+          <path class="ln-brand" d="M46 26 q-6 -7 0 -14 M60 24 q6 -7 0 -14 M74 26 q-6 -7 0 -14"/>
+          <g class="ln">
+            <rect class="f-brand" x="24" y="44" width="72" height="32" rx="8"/>
+            <rect class="f-sun" x="18" y="34" width="84" height="14" rx="7"/>
+            <path class="f-none" d="M60 50 V74"/>
+          </g>
+        </svg>
+        <h3>Senior meal delivery</h3>
+        <p>Our kitchen cooks fresh every morning, and volunteers drive hot lunches to homebound seniors, with a friendly check-in at the door.</p>
+        <p class="impact-line"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.4-9.3C1.2 8.2 3.5 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.7 0 6 3.7 4.6 7.2C19.5 16.4 12 21 12 21Z"/></svg>70 hot meals every weekday</p>
+      </article>
+      <article class="prog reveal">
+        <svg class="prog-ico ill" viewBox="0 0 120 90" aria-hidden="true">
+          <g class="ln">
+            <path class="f-surface" d="M34 42 H86 V78 H34 Z"/>
+            <path class="f-brand" d="M24 46 Q42 30 60 16 Q78 30 96 46 Q60 40 24 46 Z"/>
+          </g>
+          <path class="f-brand" d="M50 56 C50 50 58 48 60 54 C62 48 70 50 70 56 C70 62 60 68 60 72 C60 68 50 62 50 56 Z"/>
+        </svg>
+        <h3>Family support visits</h3>
+        <p>Our caseworkers visit families at home and help them apply for benefits and find health care and job resources, so no one has to go it alone.</p>
+        <p class="impact-line"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.4-9.3C1.2 8.2 3.5 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.7 0 6 3.7 4.6 7.2C19.5 16.4 12 21 12 21Z"/></svg>36 families supported year-round</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Impact numbers ==================== -->
+<section class="impact" id="impact">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2>What your support made possible last year</h2>
+      <svg class="squiggle" viewBox="0 0 112 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M3 7 Q 12 1 21 7 T 39 7 T 57 7 T 75 7 T 93 7 T 109 7"/></svg>
+    </div>
+    <!-- Sample content — replace before going live -->
+    <div class="stats reveal">
+      <div class="stat"><b>17,800</b><span>meals delivered to seniors</span></div>
+      <div class="stat"><b>9,200</b><span>hours of after-school tutoring</span></div>
+      <div class="stat"><b>164</b><span>regular volunteers</span></div>
+      <div class="stat"><b>82%</b><span>of every dollar goes to programs</span></div>
+    </div>
+    <p class="sample-note">Figures from fiscal year 2025. See the full numbers in our annual report below.</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Donate ==================== -->
+<section id="donate">
+  <div class="wrap donate-grid">
+    <div class="reveal">
+      <div class="sec-head">
+        <h2>Turn kindness into something real</h2>
+        <svg class="squiggle" viewBox="0 0 112 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M3 7 Q 12 1 21 7 T 39 7 T 57 7 T 75 7 T 93 7 T 109 7"/></svg>
+        <p>Monthly gifts let us plan volunteer schedules and food orders ahead of time, so they go the furthest. Every one-time gift matters too.</p>
+      </div>
+      <ul class="covers">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>You'll get an emailed receipt for your taxes right after you give.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Change or cancel a monthly gift anytime with a quick email or call.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Prefer to mail a check or give stock? <a class="text-link" href="#contact">Get in touch</a> and we'll walk you through it.</span></li>
+      </ul>
+    </div>
+
+    <!--
+      Donation widget:
+      The button links to the URL in data-pay and appends ?amount=AMOUNT&frequency=once or monthly.
+      Connect it to one of these:
+      - Stripe Payment Links: create a payment link in your Stripe dashboard (you can let customers choose the amount) and paste its URL into data-pay.
+      - PayPal: create a Donate button and paste its link into data-pay.
+      - Givebutter, Donorbox or a similar donation page: paste the page URL into data-pay.
+      Edit the amounts and impact text through each input's value and data-impact.
+    -->
+    <div class="give reveal" id="give" data-pay="https://example.com/donate" data-cur="$" data-locale="en-US" data-unit="5"
+      data-small="Every dollar goes straight to our kids and seniors."
+      data-monthly="Give monthly and that's {y} of steady support each year."
+      data-label-once="Donate {a}" data-label-month="Donate {a} monthly">
+      <h3>Give online</h3>
+      <fieldset>
+        <legend>Frequency</legend>
+        <div class="freq">
+          <input type="radio" name="freq" id="f-once" value="once" checked><label for="f-once">One-time</label>
+          <input type="radio" name="freq" id="f-month" value="monthly"><label for="f-month">Monthly</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Amount</legend>
+        <div class="amounts">
+          <input type="radio" name="amount" id="a1" value="25" data-impact="5 hot meals delivered to a homebound senior."><label for="a1">$25</label>
+          <input type="radio" name="amount" id="a2" value="50" checked data-impact="A month of after-school snacks and supplies for one student."><label for="a2">$50</label>
+          <input type="radio" name="amount" id="a3" value="100" data-impact="A full month of weekday meals and check-ins for one senior."><label for="a3">$100</label>
+          <input type="radio" name="amount" id="a4" value="custom" data-impact="{n} hot meals delivered to seniors in our neighborhood."><label for="a4">Custom</label>
+        </div>
+        <div class="custom-field">
+          <label for="give-custom">Custom amount (USD)</label>
+          <input type="number" id="give-custom" min="5" step="1" inputmode="numeric" placeholder="e.g. 75">
+        </div>
+      </fieldset>
+      <div class="impact-box" aria-live="polite">
+        <svg class="ill" viewBox="0 0 48 48" aria-hidden="true"><g class="ln"><rect class="f-brand" x="8" y="22" width="32" height="18" rx="5"/><rect class="f-sun" x="5" y="16" width="38" height="9" rx="4.5"/></g><path class="ln-brand" d="M18 12 q-3 -4 0 -8 M30 12 q3 -4 0 -8"/></svg>
+        <p><strong>Your gift can provide:</strong><span id="give-impact">A month of after-school snacks and supplies for one student.</span></p>
+      </div>
+      <a class="btn btn-primary" id="give-btn" href="https://example.com/donate">Donate $50</a>
+      <p class="give-note">Payments are processed securely by our payment partner. We never store your card details.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Stories ==================== -->
+<section class="alt" id="stories">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Stories from our neighbors</h2>
+      <svg class="squiggle" viewBox="0 0 112 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M3 7 Q 12 1 21 7 T 39 7 T 57 7 T 75 7 T 93 7 T 109 7"/></svg>
+      <p>Behind every number is an ordinary day that got a little better.</p>
+    </div>
+    <!-- Sample content — replace before going live (get written consent from the person or their guardian before sharing any story) -->
+    <div class="story-grid">
+      <figure class="story reveal">
+        <div class="img img-story1 frame" role="img" aria-label="Photo of a student doing homework at the tutoring program"></div>
+        <div>
+          <blockquote><p>I used to go home and watch TV by myself. Now I can't wait to get to tutoring. My math tests aren't blank anymore, and my tutor says I've improved the most.</p></blockquote>
+          <figcaption>Maya<span>4th grader, in the program for two years</span></figcaption>
+        </div>
+      </figure>
+      <figure class="story reveal">
+        <div class="img img-story2 frame" role="img" aria-label="Photo of a volunteer delivering a meal to a senior's front door"></div>
+        <div>
+          <blockquote><p>My kids live out of state, and some days I don't talk to anyone. When I hear the car pull up at noon, I know my volunteer is here. It carries me through the whole day.</p></blockquote>
+          <figcaption>Mrs. Dolores<span>82, on meal delivery for three years</span></figcaption>
+        </div>
+      </figure>
+    </div>
+    <p class="names-note">Names have been changed to protect the privacy of the people we serve.</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Volunteer ==================== -->
+<section id="volunteer">
+  <div class="wrap vol-grid">
+    <div class="reveal">
+      <svg class="vol-ill ill" viewBox="0 0 240 170" aria-hidden="true">
+        <circle class="f-sunsoft" cx="120" cy="86" r="80"/>
+        <path class="f-brand ln" d="M88 62 C88 40 114 36 120 56 C126 36 152 40 152 62 C152 86 120 104 120 116 C120 104 88 86 88 62 Z"/>
+        <g class="ln">
+          <path class="f-skin" d="M24 108 Q34 98 48 106 Q70 120 96 124 Q112 126 120 140 L120 158 Q78 160 46 144 Q30 136 24 108 Z"/>
+          <path class="f-skin" d="M216 108 Q206 98 192 106 Q170 120 144 124 Q128 126 120 140 L120 158 Q162 160 194 144 Q210 136 216 108 Z"/>
+        </g>
+        <path class="ln-sun" d="M60 40 l-10 -10 M180 40 l10 -10 M120 14 v-10"/>
+      </svg>
+      <div class="sec-head">
+        <h2>Two hours a week can light up someone's day</h2>
+        <p>No special skills needed, just a willingness to show up regularly. After you sign up, we'll invite you to an orientation and a short training.</p>
+      </div>
+      <ul class="roles">
+        <li><h3>Homework buddy</h3><p>Weekdays 4:00–6:00 PM. Help elementary students with homework and reading. Great for college students and retired teachers.</p></li>
+        <li><h3>Meal delivery driver</h3><p>Weekdays 10:30 AM–12:30 PM. Drive a route of about 10 homes using your own car.</p></li>
+        <li><h3>Event helper</h3><p>Lend a hand at our markets, holiday dinners and fundraisers. Flexible hours.</p></li>
+      </ul>
+    </div>
+    <!--
+      Connect the form to Formspree (free plan includes 50 submissions a month):
+      1. Sign up at https://formspree.io and create a new form.
+      2. Replace your-form-id in the action below with your form ID.
+      3. Formspree emails you a confirmation on the first submission. Confirm it and sign-ups will start arriving in your inbox.
+    -->
+    <form class="vol-form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="hidden" name="_subject" value="New volunteer sign-up">
+      <div class="row">
+        <div class="field"><label for="v-name">Name</label><input type="text" id="v-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="v-phone">Phone</label><input type="tel" id="v-phone" name="phone" autocomplete="tel" placeholder="(555) 012-3456" required></div>
+      </div>
+      <div class="field"><label for="v-email">Email</label><input type="email" id="v-email" name="email" autocomplete="email" required></div>
+      <div class="field">
+        <label for="v-role">I'd like to help with</label>
+        <select id="v-role" name="role">
+          <option>Homework buddy</option>
+          <option>Meal delivery driver</option>
+          <option>Event helper</option>
+          <option>Anything, please match me</option>
+        </select>
+      </div>
+      <fieldset class="field">
+        <legend>When are you available? (choose any)</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="time" value="Weekday mornings"> Weekday mornings</label>
+          <label><input type="checkbox" name="time" value="Weekday afternoons"> Weekday afternoons</label>
+          <label><input type="checkbox" name="time" value="Weekends"> Weekends</label>
+        </div>
+      </fieldset>
+      <div class="field"><label for="v-msg">Anything else we should know? (optional)</label><textarea id="v-msg" name="message" placeholder="For example: past volunteer experience, languages you speak, neighborhoods you can cover"></textarea></div>
+      <button type="submit" class="btn btn-primary">Sign me up</button>
+      <p class="form-note">We'll reach out within 3 business days. Your details are only used to coordinate volunteering and are never shared.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== Section: Events ==================== -->
+<!-- For a church: turn this into "Service times", for example Sunday Worship 10:00 AM, Wednesday Prayer 7:30 PM -->
+<section class="alt" id="events">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Upcoming events</h2>
+      <svg class="squiggle" viewBox="0 0 112 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M3 7 Q 12 1 21 7 T 39 7 T 57 7 T 75 7 T 93 7 T 109 7"/></svg>
+      <p>Bring the family. The best way to get to know us is to stop by in person.</p>
+    </div>
+    <!-- Sample content — replace before going live -->
+    <ul class="events">
+      <li class="event reveal">
+        <div class="date"><span>Dec</span><b>06</b></div>
+        <div>
+          <h3>Holiday Craft Market</h3>
+          <div class="event-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Sunday, 10 AM–4 PM</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11Z"/><circle cx="12" cy="10" r="2"/></svg>Town Green</span>
+          </div>
+          <p>Cookies and crafts made by our students. Every dollar funds winter break tutoring.</p>
+        </div>
+        <a href="#contact" class="btn btn-ghost btn-sm">Event details</a>
+      </li>
+      <li class="event reveal">
+        <div class="date"><span>Dec</span><b>20</b></div>
+        <div>
+          <h3>Seniors' Winter Supper</h3>
+          <div class="event-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Sunday, 11 AM–2 PM</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11Z"/><circle cx="12" cy="10" r="2"/></svg>Harbor Light Center</span>
+          </div>
+          <p>A warm meal and old favorites on the piano for the seniors on our routes. We need 20 drivers and table hosts.</p>
+        </div>
+        <a href="#volunteer" class="btn btn-ghost btn-sm">Help out</a>
+      </li>
+      <li class="event reveal">
+        <div class="date"><span>Jan</span><b>10</b></div>
+        <div>
+          <h3>New Volunteer Orientation</h3>
+          <div class="event-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Saturday, 2–4:30 PM</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11Z"/><circle cx="12" cy="10" r="2"/></svg>Harbor Light Center</span>
+          </div>
+          <p>Learn about our programs, safety basics and scheduling. You can start helping the following week.</p>
+        </div>
+        <a href="#volunteer" class="btn btn-ghost btn-sm">Save my spot</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== Section: Financial transparency ==================== -->
+<section id="transparency">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Where every dollar goes</h2>
+      <svg class="squiggle" viewBox="0 0 112 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M3 7 Q 12 1 21 7 T 39 7 T 57 7 T 75 7 T 93 7 T 109 7"/></svg>
+      <p>We publish independently audited financials every year, and donors are always welcome to ask us questions.</p>
+    </div>
+    <div class="fin-grid">
+      <div class="fin-card reveal">
+        <h3>How we spent funds in 2025</h3>
+        <!-- Sample content — replace before going live (change the --w percentage in each style to resize the bar) -->
+        <ul class="bars">
+          <li><div class="bar-label"><span>Programs (meals, tutoring, visits)</span><b>82%</b></div><div class="bar"><i style="--w: 82%"></i></div></li>
+          <li><div class="bar-label"><span>Management and staff</span><b>12%</b></div><div class="bar"><i style="--w: 12%"></i></div></li>
+          <li><div class="bar-label"><span>Fundraising</span><b>6%</b></div><div class="bar"><i style="--w: 6%"></i></div></li>
+        </ul>
+      </div>
+      <div class="fin-card reveal">
+        <h3>Public documents</h3>
+        <!-- Point each href at your uploaded PDF, for example files/annual-report-2025.pdf -->
+        <div class="docs">
+          <a href="files/annual-report-2025.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7l-4-4Z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></svg><span>2025 Annual Report<small>PDF with program results and financials</small></span></a>
+          <a href="files/form-990-2025.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7l-4-4Z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></svg><span>IRS Form 990<small>PDF of our most recent filing</small></span></a>
+        </div>
+        <dl class="reg">
+          <div><dt>Tax status</dt><dd>501(c)(3) public charity (replace with your status)</dd></div>
+          <div><dt>EIN</dt><dd>00-0000000 (replace with your EIN)</dd></div>
+          <div><dt>Registered in</dt><dd>State of Maine (replace with your state)</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Partners ==================== -->
+<!-- Swap each .partner for a logo: <div class="partner"><img src="images/partner-1.png" alt="Partner name" width="120"></div> (ask permission first) -->
+<section class="alt" id="partners">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2>Partners who help light the way</h2>
+      <svg class="squiggle" viewBox="0 0 112 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M3 7 Q 12 1 21 7 T 39 7 T 57 7 T 75 7 T 93 7 T 109 7"/></svg>
+    </div>
+    <div class="partner-grid reveal">
+      <div class="partner">Business partner logo</div>
+      <div class="partner">Local school logo</div>
+      <div class="partner">Foundation logo</div>
+      <div class="partner">Health clinic logo</div>
+      <div class="partner">Local restaurant logo</div>
+      <div class="partner">University club logo</div>
+    </div>
+    <p class="partners-cta">Want to plan a team volunteer day or donate supplies? <a class="text-link" href="#contact">Let's talk</a>.</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Contact ==================== -->
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <div class="sec-head">
+        <h2>Come say hello</h2>
+        <p>Dropping off donations, visiting tutoring or just curious about what we do? Give us a call first and we'll put the kettle on.</p>
+      </div>
+      <ul class="info">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11Z"/><circle cx="12" cy="10" r="2"/></svg><span><b>Address</b>214 Wharf Street, Cedar Harbor, ME 04011</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Office hours</b>Monday to Friday, 9 AM–6 PM<br>Saturday, 9 AM–12 PM</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span><b>Email</b><a class="text-link" href="mailto:hello@example.com">hello@example.com</a></span></li>
+      </ul>
+      <!-- WhatsApp button: swap the link for LINE, Messenger (https://m.me/yourpage) or Instagram (https://ig.me/m/yourhandle) if you prefer -->
+      <div class="contact-btns">
+        <a href="tel:+15550123456" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(555) 012-3456</a>
+        <a href="https://wa.me/15550123456" target="_blank" rel="noopener" class="btn btn-ghost">Message on WhatsApp</a>
+      </div>
+    </div>
+    <div class="map-wrap reveal">
+      <div class="img img-map" role="img" aria-label="Map showing our location">
+        <svg class="ill" viewBox="0 0 64 80" aria-hidden="true"><path class="f-brand ln" d="M32 76 C32 76 6 48 6 30 A26 26 0 0 1 58 30 C58 48 32 76 32 76 Z"/><circle class="f-sun ln" cx="32" cy="30" r="9"/></svg>
+      </div>
+      <a class="text-link" href="https://maps.google.com/?q=214+Wharf+Street,+Cedar+Harbor,+ME+04011" target="_blank" rel="noopener">Open in Google Maps</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle class="m-sun" cx="27" cy="13" r="8"/><path class="m-roof m-ln" d="M5 21 Q12 14 19 9 Q26 14 33 21 Z"/><path class="m-ln" d="M9 20 V33 H29 V20 M17 33 V26 Q19 24 21 26 V33"/></svg>Harbor Light Community Project</div>
+        <p>214 Wharf Street, Cedar Harbor, ME 04011<br>Phone: <a href="tel:+15550123456">(555) 012-3456</a></p>
+        <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="https://wa.me/15550123456" target="_blank" rel="noopener">WhatsApp</a></div>
+      </div>
+      <div>
+        <h2>Office hours</h2>
+        <p>Monday to Friday, 9 AM–6 PM<br>Saturday, 9 AM–12 PM<br>Closed Sundays and holidays</p>
+      </div>
+      <div>
+        <h2>Quick links</h2>
+        <p><a href="#donate">Donate</a><br><a href="#volunteer">Volunteer</a><br><a href="#events">Upcoming events</a><br><a href="#transparency">Financials</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y"></span> Harbor Light Community Project</span>
+      <span>A 501(c)(3) nonprofit, EIN 00-0000000 (replace with your EIN)</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== Section: Mobile sticky bar ==================== -->
+<div class="mobile-bar">
+  <a href="#volunteer" class="btn btn-ghost">Volunteer</a>
+  <a href="#donate" class="btn btn-primary">Donate now</a>
+</div>
+
+<script>
+// Footer year
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// Header background on scroll
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+// Mobile menu
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  links.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+};
+menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// Donation widget: switch one-time or monthly, pick an amount, update the impact text and payment link live
+const give = document.getElementById('give');
+const d = give.dataset, custom = document.getElementById('give-custom');
+const out = document.getElementById('give-impact'), payBtn = document.getElementById('give-btn');
+const money = n => d.cur + n.toLocaleString(d.locale);
+const update = () => {
+  const freq = give.querySelector('[name="freq"]:checked').value;
+  const pick = give.querySelector('[name="amount"]:checked');
+  const isCustom = pick.value === 'custom';
+  give.classList.toggle('is-custom', isCustom);
+  const amt = isCustom ? Math.max(0, Math.floor(Number(custom.value) || 0)) : Number(pick.value);
+  const n = Math.floor(amt / Number(d.unit));
+  let text = isCustom && n < 1 ? d.small : pick.dataset.impact.replace('{n}', n);
+  if (freq === 'monthly' && amt > 0) text += ' ' + d.monthly.replace('{y}', money(amt * 12));
+  out.textContent = text;
+  payBtn.textContent = (freq === 'monthly' ? d.labelMonth : d.labelOnce).replace('{a}', money(amt));
+  payBtn.href = d.pay + '?amount=' + amt + '&frequency=' + freq;
+  payBtn.setAttribute('aria-disabled', amt <= 0);
+};
+give.addEventListener('change', update);
+custom.addEventListener('input', update);
+payBtn.addEventListener('click', e => { if (payBtn.getAttribute('aria-disabled') === 'true') { e.preventDefault(); custom.focus(); } });
+update();
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => io.observe(el));
+} else reveals.forEach(el => el.classList.add('in'));
+</script>
+</body>
+</html>

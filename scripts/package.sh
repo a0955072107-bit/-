@@ -32,6 +32,14 @@ SLUGS=(
   "camping:campsite-glamping-template"
   "freelancer:freelancer-portfolio-template"
   "saas:app-saas-landing-template"
+  "coach:therapist-coach-template"
+  "contractor:contractor-handyman-template"
+  "nonprofit:nonprofit-charity-template"
+  "linkinbio:link-in-bio-template"
+  "barber:barbershop-template"
+  "conference:conference-event-template"
+  "tattoo:tattoo-studio-template"
+  "coworking:coworking-space-template"
 )
 
 for entry in "${SLUGS[@]}"; do

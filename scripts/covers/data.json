@@ -1,24 +1,362 @@
 [
- {"slug":"restaurant","title":"Restaurant & Café\nWebsite Template","bg":"#f6efe3","ink":"#2b1d14","acc":"#b4532a","pills":["Tabbed menu","Live open/closed badge","Reservation form"]},
- {"slug":"beauty","title":"Hair & Nail Salon\nWebsite Template","bg":"#f8eeeb","ink":"#2e292a","acc":"#8e4f5c","pills":["Price list","Filterable portfolio","Chat booking"]},
- {"slug":"fitness","title":"Gym & Personal\nTraining Template","bg":"#0e0f0c","ink":"#f3f3ee","acc":"#c6ff3d","pills":["Weekly timetable","Pricing toggle","Free-trial form"]},
- {"slug":"clinic","title":"Dental & Medical\nClinic Template","bg":"#f5f8fa","ink":"#1e293b","acc":"#0f766e","pills":["Today's hours","Clinic schedule","Online booking"]},
- {"slug":"consulting","title":"Law, Accounting &\nConsulting Template","bg":"#14213d","ink":"#f7f3ea","acc":"#d4b67a","pills":["Practice areas","Team profiles","Consultation form"]},
- {"slug":"studio","title":"Design Studio &\nPortfolio Template","bg":"#f4f1ea","ink":"#1c1b19","acc":"#b0522d","pills":["Editorial layout","Selected work","Dark mode"]},
- {"slug":"bnb","title":"B&B & Guesthouse\nWebsite Template","bg":"#f3eee3","ink":"#1f2b23","acc":"#4a6648","pills":["Room rates","Nights calculator","Booking form"]},
- {"slug":"realestate","title":"Real Estate Agent\nWebsite Template","bg":"#f6f5f1","ink":"#1d1f23","acc":"#1f3d99","pills":["Listing search","Agent profile","Viewing requests"]},
- {"slug":"wedding","title":"Wedding Website\nwith RSVP","bg":"#f5efe3","ink":"#1e2420","acc":"#56653f","pills":["Live countdown","Event details","RSVP form"]},
- {"slug":"photographer","title":"Photographer\nPortfolio Template","bg":"#121110","ink":"#ede6da","acc":"#e8923a","pills":["Filter + lightbox","Session packages","Booking form"]},
- {"slug":"pet","title":"Pet Grooming &\nDaycare Template","bg":"#fdf6e7","ink":"#1c2541","acc":"#1c2541","pills":["Prices by size","Before & after","Booking form"]},
- {"slug":"education","title":"Tutoring Center\nWebsite Template","bg":"#f7f9fe","ink":"#16203a","acc":"#1d4ed8","pills":["Courses by grade","Timetable","Free trial booking"]},
- {"slug":"interior","title":"Interior Design\nStudio Template","bg":"#ece5db","ink":"#2a2723","acc":"#8a5b3d","pills":["Project filter","Before/after slider","Consult booking"]},
- {"slug":"bakery","title":"Bakery & Dessert\nShop Template","bg":"#fffaf0","ink":"#3b2418","acc":"#b3312b","pills":["This week's bakes","Order builder","Pickup form"]},
- {"slug":"tea","title":"Bubble Tea Shop\nWebsite Template","bg":"#1d5c3a","ink":"#fbf1dc","acc":"#f0a63a","pills":["Drink customiser","Menu tabs","Branch locator"]},
- {"slug":"auto","title":"Car Care & Garage\nWebsite Template","bg":"#eceef1","ink":"#1a1e23","acc":"#c41f2a","pills":["Prices by vehicle","Mileage reminder","Service booking"]},
- {"slug":"cleaning","title":"Home Cleaning\nService Template","bg":"#f6f9f5","ink":"#24344a","acc":"#2b7a3b","pills":["Instant quote","Room checklist","Booking form"]},
- {"slug":"florist","title":"Florist & Flower\nShop Template","bg":"#173326","ink":"#f3ead8","acc":"#f2a93b","pills":["Bouquet shop","Delivery dates","Subscriptions"]},
- {"slug":"yoga","title":"Yoga & Pilates\nStudio Template","bg":"#f8f2eb","ink":"#3a2621","acc":"#9b5443","pills":["Daily timetable","Class packs","Intro booking"]},
- {"slug":"camping","title":"Campsite & Glamping\nWebsite Template","bg":"#111833","ink":"#f3ead6","acc":"#f47b2a","pills":["Site rates","Clickable camp map","Stay estimate"]},
- {"slug":"freelancer","title":"Freelancer Portfolio\n& Résumé Template","bg":"#f5f4ef","ink":"#16161a","acc":"#e24a12","pills":["Bento portfolio","Light/dark mode","Enquiry form"]},
- {"slug":"saas","title":"SaaS & App\nLanding Page","bg":"#f7f9f8","ink":"#111814","acc":"#0b7a4b","pills":["Product UI mock","Pricing toggle","Comparison table"]}
+ {
+  "slug": "restaurant",
+  "title": "Restaurant & Café\nWebsite Template",
+  "bg": "#f6efe3",
+  "ink": "#2b1d14",
+  "acc": "#b4532a",
+  "pills": [
+   "Tabbed menu",
+   "Live open/closed badge",
+   "Reservation form"
+  ]
+ },
+ {
+  "slug": "beauty",
+  "title": "Hair & Nail Salon\nWebsite Template",
+  "bg": "#f8eeeb",
+  "ink": "#2e292a",
+  "acc": "#8e4f5c",
+  "pills": [
+   "Price list",
+   "Filterable portfolio",
+   "Chat booking"
+  ]
+ },
+ {
+  "slug": "fitness",
+  "title": "Gym & Personal\nTraining Template",
+  "bg": "#0e0f0c",
+  "ink": "#f3f3ee",
+  "acc": "#c6ff3d",
+  "pills": [
+   "Weekly timetable",
+   "Pricing toggle",
+   "Free-trial form"
+  ]
+ },
+ {
+  "slug": "clinic",
+  "title": "Dental & Medical\nClinic Template",
+  "bg": "#f5f8fa",
+  "ink": "#1e293b",
+  "acc": "#0f766e",
+  "pills": [
+   "Today's hours",
+   "Clinic schedule",
+   "Online booking"
+  ]
+ },
+ {
+  "slug": "consulting",
+  "title": "Law, Accounting &\nConsulting Template",
+  "bg": "#14213d",
+  "ink": "#f7f3ea",
+  "acc": "#d4b67a",
+  "pills": [
+   "Practice areas",
+   "Team profiles",
+   "Consultation form"
+  ]
+ },
+ {
+  "slug": "studio",
+  "title": "Design Studio &\nPortfolio Template",
+  "bg": "#f4f1ea",
+  "ink": "#1c1b19",
+  "acc": "#b0522d",
+  "pills": [
+   "Editorial layout",
+   "Selected work",
+   "Dark mode"
+  ]
+ },
+ {
+  "slug": "bnb",
+  "title": "B&B & Guesthouse\nWebsite Template",
+  "bg": "#f3eee3",
+  "ink": "#1f2b23",
+  "acc": "#4a6648",
+  "pills": [
+   "Room rates",
+   "Nights calculator",
+   "Booking form"
+  ]
+ },
+ {
+  "slug": "realestate",
+  "title": "Real Estate Agent\nWebsite Template",
+  "bg": "#f6f5f1",
+  "ink": "#1d1f23",
+  "acc": "#1f3d99",
+  "pills": [
+   "Listing search",
+   "Agent profile",
+   "Viewing requests"
+  ]
+ },
+ {
+  "slug": "wedding",
+  "title": "Wedding Website\nwith RSVP",
+  "bg": "#f5efe3",
+  "ink": "#1e2420",
+  "acc": "#56653f",
+  "pills": [
+   "Live countdown",
+   "Event details",
+   "RSVP form"
+  ]
+ },
+ {
+  "slug": "photographer",
+  "title": "Photographer\nPortfolio Template",
+  "bg": "#121110",
+  "ink": "#ede6da",
+  "acc": "#e8923a",
+  "pills": [
+   "Filter + lightbox",
+   "Session packages",
+   "Booking form"
+  ]
+ },
+ {
+  "slug": "pet",
+  "title": "Pet Grooming &\nDaycare Template",
+  "bg": "#fdf6e7",
+  "ink": "#1c2541",
+  "acc": "#1c2541",
+  "pills": [
+   "Prices by size",
+   "Before & after",
+   "Booking form"
+  ]
+ },
+ {
+  "slug": "education",
+  "title": "Tutoring Center\nWebsite Template",
+  "bg": "#f7f9fe",
+  "ink": "#16203a",
+  "acc": "#1d4ed8",
+  "pills": [
+   "Courses by grade",
+   "Timetable",
+   "Free trial booking"
+  ]
+ },
+ {
+  "slug": "interior",
+  "title": "Interior Design\nStudio Template",
+  "bg": "#ece5db",
+  "ink": "#2a2723",
+  "acc": "#8a5b3d",
+  "pills": [
+   "Project filter",
+   "Before/after slider",
+   "Consult booking"
+  ]
+ },
+ {
+  "slug": "bakery",
+  "title": "Bakery & Dessert\nShop Template",
+  "bg": "#fffaf0",
+  "ink": "#3b2418",
+  "acc": "#b3312b",
+  "pills": [
+   "This week's bakes",
+   "Order builder",
+   "Pickup form"
+  ]
+ },
+ {
+  "slug": "tea",
+  "title": "Bubble Tea Shop\nWebsite Template",
+  "bg": "#1d5c3a",
+  "ink": "#fbf1dc",
+  "acc": "#f0a63a",
+  "pills": [
+   "Drink customiser",
+   "Menu tabs",
+   "Branch locator"
+  ]
+ },
+ {
+  "slug": "auto",
+  "title": "Car Care & Garage\nWebsite Template",
+  "bg": "#eceef1",
+  "ink": "#1a1e23",
+  "acc": "#c41f2a",
+  "pills": [
+   "Prices by vehicle",
+   "Mileage reminder",
+   "Service booking"
+  ]
+ },
+ {
+  "slug": "cleaning",
+  "title": "Home Cleaning\nService Template",
+  "bg": "#f6f9f5",
+  "ink": "#24344a",
+  "acc": "#2b7a3b",
+  "pills": [
+   "Instant quote",
+   "Room checklist",
+   "Booking form"
+  ]
+ },
+ {
+  "slug": "florist",
+  "title": "Florist & Flower\nShop Template",
+  "bg": "#173326",
+  "ink": "#f3ead8",
+  "acc": "#f2a93b",
+  "pills": [
+   "Bouquet shop",
+   "Delivery dates",
+   "Subscriptions"
+  ]
+ },
+ {
+  "slug": "yoga",
+  "title": "Yoga & Pilates\nStudio Template",
+  "bg": "#f8f2eb",
+  "ink": "#3a2621",
+  "acc": "#9b5443",
+  "pills": [
+   "Daily timetable",
+   "Class packs",
+   "Intro booking"
+  ]
+ },
+ {
+  "slug": "camping",
+  "title": "Campsite & Glamping\nWebsite Template",
+  "bg": "#111833",
+  "ink": "#f3ead6",
+  "acc": "#f47b2a",
+  "pills": [
+   "Site rates",
+   "Clickable camp map",
+   "Stay estimate"
+  ]
+ },
+ {
+  "slug": "freelancer",
+  "title": "Freelancer Portfolio\n& Résumé Template",
+  "bg": "#f5f4ef",
+  "ink": "#16161a",
+  "acc": "#e24a12",
+  "pills": [
+   "Bento portfolio",
+   "Light/dark mode",
+   "Enquiry form"
+  ]
+ },
+ {
+  "slug": "saas",
+  "title": "SaaS & App\nLanding Page",
+  "bg": "#f7f9f8",
+  "ink": "#111814",
+  "acc": "#0b7a4b",
+  "pills": [
+   "Product UI mock",
+   "Pricing toggle",
+   "Comparison table"
+  ]
+ },
+ {
+  "slug": "coach",
+  "title": "Therapist & Coach\nWebsite Template",
+  "bg": "#f3eee4",
+  "ink": "#24323f",
+  "acc": "#3f5a73",
+  "pills": [
+   "Services & fees",
+   "First-session steps",
+   "Private booking"
+  ]
+ },
+ {
+  "slug": "contractor",
+  "title": "Contractor & Handyman\nWebsite Template",
+  "bg": "#1f2630",
+  "ink": "#f2efe6",
+  "acc": "#f5b301",
+  "pills": [
+   "Emergency toggle",
+   "Price guide",
+   "Quote form"
+  ]
+ },
+ {
+  "slug": "nonprofit",
+  "title": "Nonprofit & Church\nWebsite Template",
+  "bg": "#fbf5ec",
+  "ink": "#1d2a44",
+  "acc": "#d9503f",
+  "pills": [
+   "Donation widget",
+   "Volunteer signup",
+   "Events"
+  ]
+ },
+ {
+  "slug": "linkinbio",
+  "title": "Link-in-Bio\nPage Template",
+  "bg": "#f6efe2",
+  "ink": "#1b1b1b",
+  "acc": "#d8462b",
+  "pills": [
+   "3 themes",
+   "Share button",
+   "Featured product"
+  ]
+ },
+ {
+  "slug": "barber",
+  "title": "Barbershop\nWebsite Template",
+  "bg": "#1b1714",
+  "ink": "#f2e8d8",
+  "acc": "#c59a4b",
+  "pills": [
+   "Price list",
+   "Book a barber",
+   "Open-now badge"
+  ]
+ },
+ {
+  "slug": "conference",
+  "title": "Conference & Event\nLanding Page",
+  "bg": "#f5f3ee",
+  "ink": "#111111",
+  "acc": "#e8461e",
+  "pills": [
+   "Agenda tabs",
+   "Speakers",
+   "Add to calendar"
+  ]
+ },
+ {
+  "slug": "tattoo",
+  "title": "Tattoo Studio\nWebsite Template",
+  "bg": "#f1ece2",
+  "ink": "#121212",
+  "acc": "#c8281e",
+  "pills": [
+   "Artist filter",
+   "Flash sheet",
+   "Consult booking"
+  ]
+ },
+ {
+  "slug": "coworking",
+  "title": "Coworking Space\nWebsite Template",
+  "bg": "#f7f5ef",
+  "ink": "#1c2a22",
+  "acc": "#2f5d46",
+  "pills": [
+   "Day/month pricing",
+   "Room estimator",
+   "Book a tour"
+  ]
+ }
 ]
