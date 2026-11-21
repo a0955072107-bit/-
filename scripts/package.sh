@@ -16,6 +16,14 @@ SLUGS=(
   "clinic:clinic-template"
   "consulting:consulting-firm-template"
   "studio:design-studio-template"
+  "bnb:bnb-guesthouse-template"
+  "realestate:real-estate-template"
+  "wedding:wedding-event-template"
+  "photographer:photographer-portfolio-template"
+  "pet:pet-grooming-template"
+  "education:tutoring-school-template"
+  "interior:interior-design-template"
+  "bakery:bakery-dessert-template"
 )
 
 for entry in "${SLUGS[@]}"; do

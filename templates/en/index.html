@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business Website Templates</title>
+<meta name="description" content="Fourteen one-page website templates for small businesses: restaurant, salon, gym, clinic, consulting, studio, B&amp;B, real estate, wedding, photographer, pet grooming, tutoring, interior design and bakery. Pure HTML, English and Traditional Chinese.">
+<meta name="theme-color" content="#f6f5f1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f5f1;
+    --surface: #ffffff;
+    --text: #1d1d1b;
+    --muted: #66645e;
+    --line: rgba(29, 29, 27, .12);
+    --brand: #2f5d50;
+    --brand-ink: #ffffff;
+    --radius: 18px;
+    --font: "Inter", system-ui, sans-serif;
+    --pad: clamp(1rem, 5vw, 4rem);
+    --shadow: rgba(0, 0, 0, .35);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141513; --surface: #1d1e1b; --text: #ecebe6; --muted: #a3a19a;
+      --line: rgba(236, 235, 230, .12); --brand: #7fc3ae; --brand-ink: #10231d;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141513; --surface: #1d1e1b; --text: #ecebe6; --muted: #a3a19a;
+    --line: rgba(236, 235, 230, .12); --brand: #7fc3ae; --brand-ink: #10231d;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { background: var(--bg); color: var(--text); font: 400 1rem/1.7 var(--font); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  a:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; border-radius: 6px; }
+
+  header { padding: clamp(3rem, 9vw, 7rem) var(--pad) clamp(2rem, 5vw, 3.5rem); max-width: 1280px; margin: 0 auto; }
+  h1 { font-size: clamp(2rem, 5.4vw, 3.8rem); line-height: 1.15; letter-spacing: -.02em; font-weight: 700; max-width: 16em; text-wrap: balance; }
+  .lead { color: var(--muted); max-width: 38em; margin-top: 1.1rem; font-size: clamp(1rem, 1.6vw, 1.12rem); }
+  .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.6rem; list-style: none; }
+  .chips li { font-size: .85rem; padding: .35rem .8rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+
+  .lang { display: inline-block; margin-top: 1.4rem; font-size: .9rem; color: var(--brand); text-underline-offset: 3px; }
+  .lang:hover { color: var(--text); }
+  main { max-width: 1280px; margin: 0 auto; padding: 0 var(--pad) 5rem; }
+  .grid { display: grid; gap: clamp(1rem, 2.5vw, 2rem); grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform .35s, box-shadow .35s; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px var(--shadow); }
+  .card:active { transform: translateY(-1px); }
+  .btn:hover { filter: brightness(1.08); }
+  .btn:active { filter: brightness(.94); }
+  @media (prefers-reduced-motion: reduce) { .card, .card:hover, .card:active { transition: none; transform: none; } }
+  .preview { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--bg); border-bottom: 1px solid var(--line); }
+  .preview iframe { position: absolute; top: 0; left: 0; width: 1440px; height: 900px; border: 0; transform-origin: 0 0; pointer-events: none; }
+  .body { padding: 1.2rem 1.3rem 1.4rem; display: flex; flex-direction: column; gap: .5rem; flex: 1; }
+  .body h2 { font-size: 1.15rem; font-weight: 600; text-wrap: balance; }
+  .features > h2 { grid-column: 1 / -1; font-size: 1.3rem; font-weight: 600; }
+  .body p { color: var(--muted); font-size: .93rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .2rem; }
+  .tags span { font-size: .75rem; color: var(--muted); background: var(--bg); border-radius: 6px; padding: .15rem .5rem; }
+  .actions { margin-top: auto; padding-top: .8rem; display: flex; gap: .6rem; }
+  .btn { display: inline-flex; align-items: center; gap: .4rem; text-decoration: none; font-size: .9rem; font-weight: 500; padding: .55rem 1rem; border-radius: 10px; background: var(--brand); color: var(--brand-ink); }
+  .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); }
+
+  .features { margin-top: clamp(3rem, 7vw, 5rem); display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
+  .features div { border-top: 2px solid var(--brand); padding-top: .9rem; }
+  .features h3 { font-size: 1rem; font-weight: 600; }
+  .features p { color: var(--muted); font-size: .92rem; margin-top: .3rem; }
+  footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 2rem var(--pad) 3rem; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Fourteen business website templates. Add your words and launch.</h1>
+  <p class="lead">One-page websites in pure HTML. No installs, no admin panel, no monthly fees. Change the text, swap in photos, pick your colours, and publish for free on GitHub Pages or Netlify.</p>
+  <ul class="chips">
+    <li>Mobile-first</li><li>One place to restyle everything</li><li>SEO structured data built in</li><li>Call, chat and map buttons</li><li>No stock photo licences</li><li>English + 繁體中文</li>
+  </ul>
+  <a class="lang" href="../" hreflang="zh-Hant">繁體中文版</a>
+</header>
+
+<main>
+  <div class="grid" id="grid"></div>
+
+  <section class="features" aria-labelledby="feat-h">
+    <h2 id="feat-h">Included in every template</h2>
+    <div><h3>Easy to edit</h3><p>Colours and fonts live in one THEME SETTINGS block, and every section is clearly labelled.</p></div>
+    <div><h3>Easy to launch</h3><p>A single HTML file that runs on any host, with a step-by-step publishing guide.</p></div>
+    <div><h3>Built to convert</h3><p>Booking or contact forms, a sticky mobile call to action and business data Google understands.</p></div>
+    <div><h3>Commercial use</h3><p>Use it for your own site or a client's. See the licence for details.</p></div>
+  </section>
+</main>
+
+<footer>© <span id="y"></span> Business Website Templates</footer>
+
+<script>
+  const items = [
+    { href: 'restaurant/', name: 'Hiyori Kitchen', type: 'Restaurant & Café', desc: 'Tabbed menu, live open/closed badge and a reservation form.', tags: ['Restaurant', 'Café', 'Bistro'] },
+    { href: 'beauty/', name: 'Mist Hair & Nail', type: 'Hair & Nail Salon', desc: 'Price list, stylist profiles, filterable portfolio and chat booking.', tags: ['Salon', 'Nails', 'Beauty'] },
+    { href: 'fitness/', name: 'CORE 52', type: 'Gym & Personal Training', desc: 'Weekly timetable, monthly/yearly pricing toggle and a free-trial form.', tags: ['Gym', 'Fitness', 'Coach'] },
+    { href: 'clinic/', name: 'Harbor Dental', type: 'Dental & Medical Clinic', desc: "Today's hours card, highlighted schedule and first-visit guide.", tags: ['Dental', 'Clinic', 'Health'] },
+    { href: 'consulting/', name: 'Hartwell & Co.', type: 'Law, Accounting & Consulting', desc: 'Practice areas, process timeline, team and consultation form.', tags: ['Law', 'Accounting', 'Advisory'] },
+    { href: 'studio/', name: 'Lumen Studio', type: 'Design Studio & Portfolio', desc: 'Editorial layout, selected work, scroll animations and dark mode.', tags: ['Design', 'Portfolio', 'Agency'] },
+    { href: 'bnb/', name: 'Fernhill Guesthouse', type: 'B&B & Guesthouse', desc: 'Room types and rates, nearby spots, and a booking form that counts nights.', tags: ['B&B', 'Lodging', 'Travel'] },
+    { href: 'realestate/', name: 'Keystone Realty', type: 'Real Estate Agent', desc: 'Filterable listings, agent profile and viewing requests.', tags: ['Real estate', 'Listings', 'Rentals'] },
+    { href: 'wedding/', name: 'Emma & Daniel', type: 'Wedding & Event', desc: 'Live countdown, event details and an RSVP form.', tags: ['Wedding', 'Event', 'RSVP'] },
+    { href: 'photographer/', name: 'Nora Hale', type: 'Photographer', desc: 'Filterable portfolio with lightbox, packages and booking.', tags: ['Photography', 'Portfolio', 'Freelance'] },
+    { href: 'pet/', name: 'Furday Pet Spa', type: 'Pet Grooming & Daycare', desc: 'Prices by pet size, before/after gallery and booking form.', tags: ['Pets', 'Grooming', 'Daycare'] },
+    { href: 'education/', name: 'Brightpath Learning', type: 'Tutoring & Classes', desc: 'Courses by grade, weekly timetable, teachers and free-trial booking.', tags: ['Tutoring', 'Education', 'Classes'] },
+    { href: 'interior/', name: 'Wood & Light', type: 'Interior Design', desc: 'Filterable projects, before/after slider, fees and process.', tags: ['Interior', 'Renovation', 'Design'] },
+    { href: 'bakery/', name: 'Wheat & Days', type: 'Bakery & Dessert Shop', desc: "This week's bakes, product tabs and a pre-order form with totals.", tags: ['Bakery', 'Cakes', 'Pre-order'] },
+  ];
+  const grid = document.getElementById('grid');
+  grid.innerHTML = items.map(i => `
+    <article class="card">
+      <div class="preview"><iframe src="${i.href}" title="${i.name} preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div>
+      <div class="body">
+        <h2>${i.type}</h2>
+        <p>${i.name} — ${i.desc}</p>
+        <div class="tags">${i.tags.map(t => `<span>${t}</span>`).join('')}</div>
+        <div class="actions"><a class="btn" href="${i.href}">View demo</a></div>
+      </div>
+    </article>`).join('');
+  const fit = () => document.querySelectorAll('.preview').forEach(p => {
+    p.querySelector('iframe').style.transform = `scale(${p.clientWidth / 1440})`;
+  });
+  new ResizeObserver(fit).observe(grid);
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

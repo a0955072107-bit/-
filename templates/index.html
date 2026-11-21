@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>行業網站模板集</title>
-<meta name="description" content="六款適合各行各業的一頁式網站模板：餐廳、美容美髮、健身、診所、專業事務所、設計工作室。純 HTML，買了就能用。">
+<meta name="description" content="十四款適合各行各業的一頁式網站模板：餐廳、美業、健身、診所、事務所、工作室、民宿、房仲、婚禮、攝影、寵物、補習班、室內設計、烘焙。純 HTML，附中英文版。">
 <meta name="theme-color" content="#f6f5f1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +45,8 @@
   .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.6rem; list-style: none; }
   .chips li { font-size: .85rem; padding: .35rem .8rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
 
+  .lang { display: inline-block; margin-top: 1.4rem; font-size: .9rem; color: var(--brand); text-underline-offset: 3px; }
+  .lang:hover { color: var(--text); }
   main { max-width: 1280px; margin: 0 auto; padding: 0 var(--pad) 5rem; }
   .grid { display: grid; gap: clamp(1rem, 2.5vw, 2rem); grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform .35s, box-shadow .35s; }
@@ -74,11 +76,12 @@
 </head>
 <body>
 <header>
-  <h1>六款行業網站模板，換上你的文字就能上線。</h1>
+  <h1>十四款行業網站模板，換上你的文字就能上線。</h1>
   <p class="lead">純 HTML 一頁式網站，不用安裝任何軟體、不需要後台。改文字、換照片、調顏色，就能交給店家使用，也能免費部署到 GitHub Pages 或 Netlify。</p>
   <ul class="chips">
     <li>手機版完整適配</li><li>一處改色，全站換色</li><li>內建 SEO 結構化資料</li><li>LINE／電話／地圖按鈕</li><li>無圖片授權問題</li>
   </ul>
+  <a class="lang" href="en/" hreflang="en">English version</a>
 </header>
 
 <main>
@@ -103,6 +106,14 @@
     { slug: 'clinic', href: 'clinic/', name: '安和牙醫', type: '診所', desc: '門診時間表（自動標示今天）、診療項目、就診須知。', tags: ['牙醫', '診所', '醫療'] },
     { slug: 'consulting', href: 'consulting/', name: '恆信聯合事務所', type: '會計師／律師／顧問', desc: '服務流程、專業團隊、常見問題、預約諮詢表單。', tags: ['會計', '法律', '顧問'] },
     { slug: 'studio', href: 'studio/', name: 'Lumen Studio', type: '設計工作室／作品集', desc: '編輯風格排版、作品展示、捲動動畫、自動深色模式。', tags: ['設計', '作品集', '工作室'] },
+    { slug: 'bnb', href: 'bnb/', name: '山嵐民宿', type: '民宿／B&B', desc: '房型與價格、周邊景點、自動計算住宿晚數的訂房表單。', tags: ['民宿', '旅宿', '觀光'] },
+    { slug: 'realestate', href: 'realestate/', name: '安居不動產', type: '房仲／不動產', desc: '可篩選的物件列表、經紀人介紹、預約看屋。', tags: ['房仲', '不動產', '租屋'] },
+    { slug: 'wedding', href: 'wedding/', name: '子晴 & 立恆', type: '婚禮／活動', desc: '倒數計時、婚禮資訊、RSVP 出席回覆表單。', tags: ['婚禮', '活動', '邀請函'] },
+    { slug: 'photographer', href: 'photographer/', name: '林曜攝影', type: '攝影師', desc: '可篩選作品集、燈箱看大圖、拍攝方案與預約。', tags: ['攝影', '作品集', '接案'] },
+    { slug: 'pet', href: 'pet/', name: '毛日子', type: '寵物美容／旅館', desc: '依體型分類的價目表、美容前後對比、預約表單。', tags: ['寵物', '美容', '安親'] },
+    { slug: 'education', href: 'education/', name: '青禾學苑', type: '補習班／才藝教室', desc: '分年級課程、每週課表、師資介紹、免費試聽預約。', tags: ['補習班', '教育', '才藝'] },
+    { slug: 'interior', href: 'interior/', name: '木與光', type: '室內設計', desc: '可篩選案例、裝修前後對比滑桿、收費方式與流程。', tags: ['室內設計', '裝修', '統包'] },
+    { slug: 'bakery', href: 'bakery/', name: '小麥日常', type: '烘焙／甜點店', desc: '本週出爐表、商品分頁、自動計算金額的預訂表單。', tags: ['烘焙', '甜點', '預購'] },
   ];
   const grid = document.getElementById('grid');
   grid.innerHTML = items.map(i => `
