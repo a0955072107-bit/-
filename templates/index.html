@@ -21,6 +21,7 @@
     --radius: 18px;
     --font: "Inter", "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
     --pad: clamp(1rem, 5vw, 4rem);
+    --shadow: rgba(0, 0, 0, .35);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -39,8 +40,7 @@
   a:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; border-radius: 6px; }
 
   header { padding: clamp(3rem, 9vw, 7rem) var(--pad) clamp(2rem, 5vw, 3.5rem); max-width: 1280px; margin: 0 auto; }
-  .eyebrow { font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--brand); font-weight: 600; }
-  h1 { font-size: clamp(2rem, 5.4vw, 3.8rem); line-height: 1.15; letter-spacing: -.02em; margin-top: .8rem; font-weight: 700; max-width: 16em; }
+  h1 { font-size: clamp(2rem, 5.4vw, 3.8rem); line-height: 1.15; letter-spacing: -.02em; font-weight: 700; max-width: 16em; text-wrap: balance; }
   .lead { color: var(--muted); max-width: 38em; margin-top: 1.1rem; font-size: clamp(1rem, 1.6vw, 1.12rem); }
   .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.6rem; list-style: none; }
   .chips li { font-size: .85rem; padding: .35rem .8rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
@@ -48,11 +48,16 @@
   main { max-width: 1280px; margin: 0 auto; padding: 0 var(--pad) 5rem; }
   .grid { display: grid; gap: clamp(1rem, 2.5vw, 2rem); grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform .35s, box-shadow .35s; }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(0,0,0,.35); }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px var(--shadow); }
+  .card:active { transform: translateY(-1px); }
+  .btn:hover { filter: brightness(1.08); }
+  .btn:active { filter: brightness(.94); }
+  @media (prefers-reduced-motion: reduce) { .card, .card:hover, .card:active { transition: none; transform: none; } }
   .preview { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--bg); border-bottom: 1px solid var(--line); }
   .preview iframe { position: absolute; top: 0; left: 0; width: 1440px; height: 900px; border: 0; transform-origin: 0 0; pointer-events: none; }
   .body { padding: 1.2rem 1.3rem 1.4rem; display: flex; flex-direction: column; gap: .5rem; flex: 1; }
-  .body h2 { font-size: 1.15rem; font-weight: 600; }
+  .body h2 { font-size: 1.15rem; font-weight: 600; text-wrap: balance; }
+  .features > h2 { grid-column: 1 / -1; font-size: 1.3rem; font-weight: 600; }
   .body p { color: var(--muted); font-size: .93rem; }
   .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .2rem; }
   .tags span { font-size: .75rem; color: var(--muted); background: var(--bg); border-radius: 6px; padding: .15rem .5rem; }
@@ -69,7 +74,6 @@
 </head>
 <body>
 <header>
-  <p class="eyebrow">Website Templates · 繁體中文</p>
   <h1>六款行業網站模板，換上你的文字就能上線。</h1>
   <p class="lead">純 HTML 一頁式網站，不用安裝任何軟體、不需要後台。改文字、換照片、調顏色，就能交給店家使用，也能免費部署到 GitHub Pages 或 Netlify。</p>
   <ul class="chips">
@@ -80,7 +84,8 @@
 <main>
   <div class="grid" id="grid"></div>
 
-  <section class="features" aria-label="模板特色">
+  <section class="features" aria-labelledby="feat-h">
+    <h2 id="feat-h">每一款都有的功能</h2>
     <div><h3>好改</h3><p>顏色和字型都集中在檔案開頭的「主題設定」，每個區塊都有中文註解標示。</p></div>
     <div><h3>好上線</h3><p>只有一個 HTML 檔，丟到任何主機都能跑，附逐步部署說明。</p></div>
     <div><h3>會帶客人</h3><p>每個模板都有預約或聯絡表單、手機版底部行動按鈕，以及 Google 看得懂的商家資料。</p></div>
