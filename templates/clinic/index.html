@@ -47,13 +47,13 @@
    ============================================================ */
 :root {
   --brand: #0f766e;          /* 品牌主色（按鈕、重點文字），換科別可改成醫療藍 #1d4ed8 */
-  --brand-ink: #ffffff;      /* 在品牌色上的文字顏色 */
+  --brand-ink: #f7fdfc;      /* 在品牌色上的文字顏色 */
   --brand-deep: #134e4a;     /* 品牌深色（hover、深色區塊背景） */
   --brand-soft: #e3f3f1;     /* 品牌淺色（圖示底、標籤底） */
   --aqua: #8fd9cf;           /* 藝術佔位圖用的水藍色 */
   --sky: #cfe9f7;            /* 藝術佔位圖用的淺天藍 */
   --bg: #f5f8fa;             /* 頁面背景（極淺冷灰） */
-  --surface: #ffffff;        /* 卡片、表格等表面顏色 */
+  --surface: #fcfefe;        /* 卡片、表格等表面顏色 */
   --text: #1e293b;           /* 主要文字（石板深灰） */
   --muted: #526073;          /* 次要文字 */
   --line: #dfe6ec;           /* 分隔線、邊框 */
@@ -106,11 +106,16 @@ a:not(.btn):active { opacity: .7; }
 .menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 @media (max-width: 760px) {
-  .menu-btn { display: block; }
-  .nav-links { position: absolute; top: 72px; left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .75rem; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
-  .nav-links.open { opacity: 1; visibility: visible; transform: none; }
-  .nav-links a:not(.btn) { padding: .8rem 1rem; border-radius: var(--radius-sm); }
-  .nav-links .btn { margin-top: .5rem; }
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: 72px; left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .75rem; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: .8rem 1rem; border-radius: var(--radius-sm); }
+  .js .nav-links .btn { margin-top: .5rem; }
+  /* 沒有 JS 時：選單直接展開成可換行的連結列 */
+  html:not(.js) .site-header { background: var(--surface); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: .75rem; }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: 11rem; }
 }
 
 /* ---------- 藝術佔位圖 ---------- */
@@ -315,7 +320,7 @@ a:not(.btn):active { opacity: .7; }
       <!-- 今日門診卡片：由 JS 讀取下方「門診時間表」自動產生，改表格即可 -->
       <aside class="today-card" aria-live="polite">
         <h2>今日門診 <small id="today-label">請見門診時間表</small></h2>
-        <ul id="today-list"><li><b>—</b><span>請參考下方門診時間表</span></li></ul>
+        <ul id="today-list"><li><b>門診</b><span>請參考下方門診時間表</span></li></ul>
       </aside>
     </div>
   </div>
