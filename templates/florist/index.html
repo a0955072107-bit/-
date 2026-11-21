@@ -236,7 +236,7 @@ section { padding: clamp(4.5rem, 11vh, 7.5rem) var(--pad); position: relative; }
 /* ---------- 區塊：花束商品 ---------- */
 .shop-top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1.2rem 2rem; margin-bottom: 2rem; }
 .shop-top .sec-head { margin-bottom: 0; }
-.notice { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--brand); border-radius: var(--radius); padding: .8rem 1.1rem; font-size: .9rem; max-width: 26rem; }
+.notice { background: var(--surface); border: 1px solid color-mix(in srgb, var(--brand) 45%, var(--line)); border-radius: var(--radius); padding: .8rem 1.1rem; font-size: .9rem; max-width: 26rem; }
 .tablist { display: flex; gap: .4rem; overflow-x: auto; padding-bottom: .3rem; margin-bottom: 1.8rem; scrollbar-width: none; }
 .tab { flex: none; font: 500 .95rem/1 var(--font-body); color: var(--text); background: transparent; border: 1.5px solid var(--line); border-radius: 999px; padding: .75rem 1.25rem; cursor: pointer; transition: background-color .3s, border-color .3s, color .3s; }
 .tab:hover { border-color: var(--brand); color: var(--brand); }
@@ -294,7 +294,7 @@ html:not(.js) .tablist { display: none; }
 @media (max-width: 560px) { .form > * { grid-column: 1 / -1; } }
 .field { display: grid; gap: .35rem; min-width: 0; }
 .field label, .field .lbl { font-size: .88rem; font-weight: 500; }
-.form input, .form select, .form textarea { width: 100%; min-width: 0; font: 400 1rem/1.5 var(--font-body); color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .7rem .85rem; transition: border-color .3s, box-shadow .3s; }
+.form input, .form select, .form textarea { width: 100%; min-width: 0; font: 400 1rem/1.5 var(--font-body); color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .7rem .85rem; transition: border-color .3s; }
 .form textarea { min-height: 6.5rem; resize: vertical; }
 .form input:hover, .form select:hover, .form textarea:hover { border-color: color-mix(in srgb, var(--brand) 50%, var(--line)); }
 .form input:focus-visible, .form select:focus-visible, .form textarea:focus-visible { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 22%, transparent); }
@@ -335,7 +335,7 @@ html:not(.js) .tablist { display: none; }
 /* ---------- 區塊：訂購 ---------- */
 .order { display: grid; gap: clamp(1.5rem, 4vw, 3rem); grid-template-columns: minmax(0, 1fr); align-items: start; }
 .order .sec-head { margin-bottom: 0; }
-.cardprev { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem 1.6rem 1.6rem; box-shadow: 0 18px 40px var(--shadow); transform: rotate(-1.5deg); margin-top: 1.8rem; max-width: 24rem; }
+.cardprev { position: relative; background: var(--surface); border-radius: var(--radius); padding: 2rem 1.6rem 1.6rem; box-shadow: 0 18px 40px var(--shadow); transform: rotate(-1.5deg); margin-top: 1.8rem; max-width: 24rem; }
 .cardprev svg { position: absolute; right: -1rem; top: -1.6rem; width: 5rem; height: 5rem; }
 .cardprev .to { font-size: .85rem; color: var(--muted); }
 .cardprev p.msg { font: 400 1.25rem/1.7 var(--font-heading); margin-top: .5rem; min-height: 5rem; white-space: pre-line; overflow-wrap: anywhere; }
@@ -448,7 +448,7 @@ html:not(.js) .tablist { display: none; }
   <div class="wrap">
     <div class="reveal">
       <h1><span>今天剪下的野花，</span><span>明天就在你家</span></h1>
-      <p class="lead">台中西區的小花店。每天清晨進花、手工包束，中午 12:00 前下單，台中市區當日送達。</p>
+      <p class="lead">台中西區的小花店。每天清晨進花、手工包束，台中市區當日送達。</p>
       <div class="ctas">
         <a class="btn btn-primary" href="#order">訂購花束</a>
         <a class="btn btn-ghost" href="#subscribe">每月訂花</a>
