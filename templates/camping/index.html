@@ -265,12 +265,12 @@ section { padding: clamp(4.5rem, 11vh, 7.5rem) var(--pad); }
 
 /* ==================== 營地設施 ==================== */
 .facilities { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); }
-.fac { display: grid; align-content: start; gap: .5rem; padding: 1.5rem 1.25rem 1.75rem 0; border-bottom: 1px solid var(--line); }
+.fac { display: grid; align-content: start; gap: .5rem; padding: 1.5rem 1rem 1.75rem 0; border-bottom: 1px solid var(--line); }
 .fac .ico { width: 2.25rem; height: 2.25rem; color: var(--brand); stroke-width: 1.5; }
 .fac h3 { font-size: 1.2rem; letter-spacing: -.01em; }
 .fac p { color: var(--muted); font-size: .92rem; }
 @media (max-width: 900px) { .facilities { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 420px) { .facilities { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 340px) { .facilities { grid-template-columns: minmax(0, 1fr); } }
 
 /* ==================== 營地地圖 ==================== */
 .map-layout { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr); gap: 2rem; align-items: start; }

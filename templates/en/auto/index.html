@@ -497,7 +497,7 @@ section { padding: clamp(4rem, 10vw, 7rem) var(--pad); position: relative; }
   <div class="wrap hero-grid">
     <div>
       <h1>Factory-spec care for every mile</h1>
-      <p class="hero-lead">A neighborhood service shop and detailing studio in Long Beach. Oil changes to ceramic coating, with a written quote before we start and an inspection report when we finish.</p>
+      <p class="hero-lead">Long Beach service and detailing. Written quote before we start, inspection report when we finish.</p>
       <div class="hero-cta">
         <a href="#booking" class="btn">Book a service</a>
         <a href="#pricing" class="btn ghost">See pricing</a>
@@ -604,7 +604,7 @@ section { padding: clamp(4rem, 10vw, 7rem) var(--pad); position: relative; }
       <h3>Sedan</h3>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Sedan pricing (scrolls sideways)">
         <table class="sheet">
-          <thead><tr><th scope="col">Service</th><th scope="col">What's included</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
+          <thead><tr><th scope="col">Service</th><th scope="col">What’s included</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
           <tbody>
             <tr><th scope="row">Oil service</th><td>Full synthetic, 5 qt, filter, 40-point check</td><td class="t">1 hr</td><td class="p">$89</td></tr>
             <tr><th scope="row">Ceramic coating</th><td>Three-stage polish, 9H coat, 1-year warranty</td><td class="t">1.5 days</td><td class="p">$899</td></tr>
@@ -620,7 +620,7 @@ section { padding: clamp(4rem, 10vw, 7rem) var(--pad); position: relative; }
       <h3>SUV</h3>
       <div class="table-scroll" tabindex="0" role="region" aria-label="SUV pricing (scrolls sideways)">
         <table class="sheet">
-          <thead><tr><th scope="col">Service</th><th scope="col">What's included</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
+          <thead><tr><th scope="col">Service</th><th scope="col">What’s included</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
           <tbody>
             <tr><th scope="row">Oil service</th><td>Full synthetic, 6 qt, filter, 40-point check</td><td class="t">1 hr</td><td class="p">$109</td></tr>
             <tr><th scope="row">Ceramic coating</th><td>Three-stage polish, 9H coat, 1-year warranty</td><td class="t">2 days</td><td class="p">$1,099</td></tr>
@@ -636,7 +636,7 @@ section { padding: clamp(4rem, 10vw, 7rem) var(--pad); position: relative; }
       <h3>Truck and van</h3>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Truck and van pricing (scrolls sideways)">
         <table class="sheet">
-          <thead><tr><th scope="col">Service</th><th scope="col">What's included</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
+          <thead><tr><th scope="col">Service</th><th scope="col">What’s included</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
           <tbody>
             <tr><th scope="row">Oil service</th><td>Full synthetic, 8 qt, filter, 40-point check</td><td class="t">1.5 hr</td><td class="p">$139</td></tr>
             <tr><th scope="row">Ceramic coating</th><td>Three-stage polish, 9H coat, 1-year warranty</td><td class="t">2.5 days</td><td class="p">$1,299</td></tr>
@@ -781,7 +781,7 @@ section { padding: clamp(4rem, 10vw, 7rem) var(--pad); position: relative; }
   <div class="wrap">
     <div class="sec-head reveal">
       <h2>What customers say</h2>
-      <p>Most new customers come from a friend's referral. That is the rating we care about most.</p>
+      <p>Most new customers come from a friend’s referral. That is the rating we care about most.</p>
     </div>
     <!-- Sample content: replace with real data before going live -->
     <div class="reviews">
@@ -974,7 +974,7 @@ const calc = () => {
   const status = document.getElementById('status'), left = document.getElementById('left'), fill = document.getElementById('fill');
   let msg = 'Enter both readings to see your result.', cls = '', rest = 0, ratio = 0;
   if (!isNaN(now) && !isNaN(last)) {
-    if (now < last) { msg = 'Current mileage can\'t be lower than your last service. Please check both numbers.'; cls = 'over'; }
+    if (now < last) { msg = 'Current mileage can’t be lower than your last service. Please check both numbers.'; cls = 'over'; }
     else {
       rest = last + step - now; ratio = Math.min((now - last) / step, 1);
       if (rest > 1000) { msg = `Looking good. Your next service is due at ${fmt(last + step)} ${unit}.`; cls = 'ok'; }
