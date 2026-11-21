@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>極光車研 Aurora Auto Care｜新莊汽車保養、鍍膜、內裝清潔與板金</title>
+<meta name="description" content="極光車研位於新北市新莊區，提供定期保養、鍍膜、內裝清潔、輪胎、冷氣與板金服務。原廠料件、施工前書面報價、12 個月保固，線上即可預約。">
+<meta property="og:title" content="極光車研 Aurora Auto Care｜新莊汽車保養與美容">
+<meta property="og:description" content="定期保養、鍍膜、內裝清潔、輪胎、冷氣與板金。原廠料件、透明報價、12 個月保固。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#eceef1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Rajdhani:wght@600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "極光車研 Aurora Auto Care",
+  "telephone": "02-1234-5678",
+  "url": "https://example.com/",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "思源路 168 號",
+    "addressLocality": "新莊區",
+    "addressRegion": "新北市",
+    "postalCode": "242",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
+  ]
+}
+</script>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #c41f2a;            /* 品牌主色（訊號紅）：按鈕、價格、重點線條 */
+  --brand-deep: #9e1720;       /* 品牌深色：按鈕滑過時的顏色 */
+  --brand-bright: #ff5c62;     /* 亮紅：深色區塊上的強調文字（對比 AA） */
+  --brand-ink: #f6f7f9;        /* 在 brand 色上的文字顏色（帶冷調的白） */
+  --bg: #eceef1;               /* 網頁底色（淺鋼灰） */
+  --surface: #f7f8fa;          /* 卡片、表單、交錯區塊底色 */
+  --surface-2: #e1e4e8;        /* 次一層底色（表頭、輸入框、頁尾） */
+  --text: #1a1e23;             /* 主要文字（石墨黑） */
+  --muted: #5a626c;            /* 次要說明文字（鋼灰） */
+  --line: #c9ced5;             /* 細分隔線、邊框 */
+  --line-strong: #9aa2ac;      /* 量測刻度線、較明顯的邊框 */
+  --steel-1: #f2f4f6;          /* 金屬反光：亮部 */
+  --steel-2: #b4bbc4;          /* 金屬反光：中間調 */
+  --steel-3: #5f6873;          /* 金屬反光：暗部 */
+  --cabin: #8c8072;            /* 佔位圖：內裝皮革色 */
+  --dust: #6d5b48;             /* 佔位圖：煞車粉塵、髒污色 */
+  --dark-bg: #15181c;          /* 深色區塊底色（里程提醒） */
+  --dark-surface: #1f2328;     /* 深色區塊內的面板底色 */
+  --dark-text: #eef0f3;        /* 深色區塊文字 */
+  --dark-muted: #a3abb5;       /* 深色區塊次要文字 */
+  --dark-line: #343a42;        /* 深色區塊分隔線 */
+  --ok: #5fd38d;               /* 里程狀態：良好（用於深色底） */
+  --warn: #f2b33d;             /* 里程狀態：即將到期（用於深色底） */
+  --shade: #0b0d10;            /* 陰影基準色 */
+  --radius: 3px;               /* 圓角大小（技術感建議小圓角） */
+  --font-heading: "Barlow Condensed", "Noto Sans TC", "PingFang TC", sans-serif; /* 標題字型（窄體無襯線） */
+  --font-num: "Rajdhani", "Barlow Condensed", "Noto Sans TC", sans-serif;          /* 數字、儀表字型 */
+  --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; /* 內文字型 */
+  --pad: clamp(1rem, 5vw, 4rem); /* 頁面左右留白 */
+  --max: 1200px;               /* 內容最大寬度 */
+  --ease: cubic-bezier(.2, .7, .1, 1); /* 動畫曲線 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; -webkit-text-size-adjust: 100%; scroll-padding-top: 4.5rem; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.7 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 2px; }
+.wrap { max-width: var(--max); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: .5rem; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 99; }
+.skip:focus { left: .5rem; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+h1, h2, h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+
+/* ---------- 按鈕 ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  padding: .85rem 1.5rem; font: 700 1rem/1.2 var(--font-body);
+  border: 1px solid var(--brand); border-radius: var(--radius); cursor: pointer;
+  background: var(--brand); color: var(--brand-ink);
+  box-shadow: 0 10px 24px -14px color-mix(in srgb, var(--brand) 80%, transparent);
+  transition: transform .2s var(--ease), background-color .2s, color .2s, border-color .2s;
+}
+.btn:hover { background: var(--brand-deep); border-color: var(--brand-deep); transform: translateY(-2px); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled, .form :disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.btn.ghost { background: transparent; color: var(--text); border-color: var(--line-strong); box-shadow: none; }
+.btn.ghost:hover { background: var(--text); color: var(--surface); border-color: var(--text); }
+a:not(.btn):hover { color: var(--brand); }
+a:not(.btn):active { opacity: .7; }
+
+/* ---------- 區塊與標題（標題下方的量測刻度線） ---------- */
+section { padding: clamp(4rem, 10vw, 7rem) var(--pad); position: relative; }
+.alt { background: var(--surface); }
+.sec-head { display: grid; gap: 1rem; margin-bottom: clamp(2.25rem, 5vw, 3.5rem); padding-bottom: 1.25rem; position: relative; }
+.sec-head::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 9px;
+  background:
+    linear-gradient(var(--line-strong), var(--line-strong)) left bottom / 100% 1px no-repeat,
+    repeating-linear-gradient(90deg, var(--line-strong) 0 1px, transparent 1px 10px) left bottom / 100% 5px no-repeat,
+    repeating-linear-gradient(90deg, var(--text) 0 1px, transparent 1px 100px) left bottom / 100% 9px no-repeat;
+}
+.sec-head::before { content: ""; position: absolute; left: 0; bottom: 0; width: 4.5rem; height: 3px; background: var(--brand); z-index: 1; }
+@media (min-width: 860px) { .sec-head { grid-template-columns: minmax(0, 1fr) minmax(0, 26rem); align-items: end; column-gap: 3rem; } }
+.sec-head h2 { font: 700 clamp(2.1rem, 5.5vw, 3.4rem)/1.05 var(--font-heading); }
+.sec-head p { color: var(--muted); }
+
+/* ==================== 藝術佔位圖 ====================
+   以下為不用照片的 CSS 漸層佔位圖（金屬反光、輪框、內裝）。
+   換成照片：.img-hero { background: url(images/hero.jpg) center/cover; }
+   換成照片：.img-paint-a { background: url(images/paint-before.jpg) center/cover; }（paint-b、cabin-a、cabin-b、rim-a、rim-b 同理）
+   換成照片：.img-tech1 { background: url(images/tech1.jpg) center/cover; }（tech2～4 同理）
+   換成照片：.img-map { background: url(images/shop.jpg) center/cover; }
+   ===================================================== */
+.img { position: relative; overflow: hidden; background-color: var(--surface-2); isolation: isolate; }
+/* Hero 背後的反光金屬面板 */
+.img-hero {
+  background:
+    linear-gradient(104deg, transparent 0 22%, color-mix(in srgb, var(--steel-1) 90%, transparent) 22.4% 27%, transparent 27.4%),
+    linear-gradient(104deg, transparent 0 31%, color-mix(in srgb, var(--steel-1) 55%, transparent) 31.2% 32.4%, transparent 32.6%),
+    linear-gradient(104deg, transparent 0 68%, color-mix(in srgb, var(--steel-1) 70%, transparent) 68.3% 71%, transparent 71.3%),
+    linear-gradient(180deg, var(--steel-1) 0%, var(--steel-2) 58%, var(--steel-3) 58.2%, var(--steel-2) 62%, var(--surface-2) 100%);
+}
+.img-hero::after { /* 細網格，像工程圖紙 */
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background:
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--text) 6%, transparent) 0 1px, transparent 1px 32px),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--text) 6%, transparent) 0 1px, transparent 1px 32px);
+}
+/* 施工前後：漆面 */
+.img-paint-a {
+  background:
+    repeating-radial-gradient(circle at 30% 40%, color-mix(in srgb, var(--steel-1) 22%, transparent) 0 1px, transparent 1px 7px),
+    repeating-radial-gradient(circle at 75% 70%, color-mix(in srgb, var(--steel-1) 18%, transparent) 0 1px, transparent 1px 9px),
+    radial-gradient(ellipse at 60% 20%, color-mix(in srgb, var(--dust) 35%, transparent), transparent 70%),
+    linear-gradient(170deg, var(--steel-2), var(--steel-3));
+}
+.img-paint-b {
+  background:
+    linear-gradient(118deg, transparent 0 34%, color-mix(in srgb, var(--steel-1) 85%, transparent) 34.5% 37%, transparent 37.5%),
+    linear-gradient(118deg, transparent 0 41%, color-mix(in srgb, var(--steel-1) 45%, transparent) 41.3% 42.2%, transparent 42.5%),
+    radial-gradient(ellipse 70% 40% at 50% 0%, color-mix(in srgb, var(--steel-1) 35%, transparent), transparent 70%),
+    linear-gradient(170deg, var(--steel-3), var(--dark-bg));
+}
+/* 施工前後：內裝座椅 */
+.img-cabin-a {
+  background:
+    radial-gradient(circle at 28% 62%, color-mix(in srgb, var(--dust) 70%, transparent) 0 8%, transparent 14%),
+    radial-gradient(circle at 70% 38%, color-mix(in srgb, var(--dust) 55%, transparent) 0 6%, transparent 11%),
+    repeating-linear-gradient(90deg, transparent 0 46px, color-mix(in srgb, var(--shade) 25%, transparent) 46px 48px),
+    linear-gradient(180deg, color-mix(in srgb, var(--cabin) 70%, var(--steel-3)), var(--cabin));
+}
+.img-cabin-b {
+  background:
+    linear-gradient(100deg, transparent 0 55%, color-mix(in srgb, var(--steel-1) 30%, transparent) 55.5% 60%, transparent 60.5%),
+    repeating-linear-gradient(90deg, transparent 0 46px, color-mix(in srgb, var(--steel-1) 40%, transparent) 46px 47px, color-mix(in srgb, var(--shade) 30%, transparent) 47px 48px),
+    linear-gradient(180deg, var(--cabin), color-mix(in srgb, var(--cabin) 75%, var(--shade)));
+}
+/* 施工前後：輪框（用 conic 漸層畫出輪輻） */
+.img-rim-a, .img-rim-b { --rim: var(--steel-1); --bed: var(--steel-2); }
+.img-rim-a { --rim: color-mix(in srgb, var(--steel-2) 60%, var(--dust)); --bed: color-mix(in srgb, var(--steel-3) 70%, var(--dust)); }
+.img-rim-a, .img-rim-b {
+  background:
+    radial-gradient(circle at 50% 50%, var(--brand) 0 3%, var(--steel-3) 3.5% 8%, var(--rim) 8.5% 11%, transparent 11.5%),
+    radial-gradient(circle at 50% 50%, transparent 0 33%, var(--rim) 33.5% 36%, var(--shade) 36.5% 47%, var(--steel-3) 47.5% 48.5%, transparent 49%),
+    radial-gradient(circle at 50% 50%, transparent 0 49%, var(--bed) 49.5%),
+    repeating-conic-gradient(from 0deg at 50% 50%, color-mix(in srgb, var(--shade) 70%, transparent) 0 1deg, transparent 1deg 3deg),
+    repeating-conic-gradient(from 10deg at 50% 50%, var(--rim) 0 9deg, color-mix(in srgb, var(--shade) 85%, var(--steel-3)) 9deg 36deg),
+    linear-gradient(160deg, var(--bed), var(--steel-3));
+}
+.img-rim-a::after, .img-rim-b::after { content: ""; position: absolute; inset: 0; }
+.img-rim-a::after { background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--dust) 45%, transparent) 0 34%, transparent 35%); }
+.img-rim-b::after { background: linear-gradient(130deg, transparent 30%, color-mix(in srgb, var(--steel-1) 40%, transparent) 46%, transparent 60%); }
+/* 技師形象圖：工作燈下的金屬面板與輪框剪影 */
+.img-tech1, .img-tech2, .img-tech3, .img-tech4 { aspect-ratio: 4 / 3; }
+.img-tech1 { --spot: 30% 30%; } .img-tech2 { --spot: 70% 25%; } .img-tech3 { --spot: 40% 70%; } .img-tech4 { --spot: 65% 60%; }
+.img-tech1, .img-tech2, .img-tech3, .img-tech4 {
+  background:
+    radial-gradient(circle at 50% 44%, var(--text) 0 14%, transparent 14.5%),
+    radial-gradient(ellipse 36% 30% at 50% 100%, var(--text) 0 99%, transparent 100%),
+    radial-gradient(circle at 51.5% 43.5%, var(--brand) 0 14.6%, transparent 15.1%),
+    radial-gradient(ellipse 36.6% 30.6% at 51% 99.4%, var(--brand) 0 99%, transparent 100%),
+    radial-gradient(ellipse at var(--spot), color-mix(in srgb, var(--steel-1) 55%, transparent), transparent 60%),
+    linear-gradient(104deg, transparent 0 60%, color-mix(in srgb, var(--steel-1) 30%, transparent) 60.5% 64%, transparent 64.5%),
+    linear-gradient(170deg, var(--steel-2), var(--steel-3));
+}
+/* 地圖 */
+.img-map {
+  min-height: 300px;
+  background:
+    radial-gradient(circle at 56% 46%, var(--brand) 0 8px, color-mix(in srgb, var(--brand) 25%, transparent) 9px 24px, transparent 25px),
+    linear-gradient(32deg, transparent 47%, var(--surface) 47.4% 50.6%, transparent 51%),
+    linear-gradient(-58deg, transparent 62%, var(--surface) 62.3% 64%, transparent 64.3%),
+    linear-gradient(90deg, transparent 28%, var(--surface) 28.3% 29.6%, transparent 29.9%),
+    linear-gradient(0deg, transparent 70%, var(--surface) 70.3% 71.6%, transparent 71.9%),
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--text) 5%, transparent) 0 1px, transparent 1px 40px),
+    var(--surface-2);
+}
+
+/* ---------- 輪胎胎紋分隔帶 ---------- */
+.tread { height: 28px; background:
+  linear-gradient(135deg, var(--text) 25%, transparent 25%) -14px 0 / 28px 28px,
+  linear-gradient(225deg, var(--text) 25%, transparent 25%) -14px 0 / 28px 28px,
+  linear-gradient(315deg, var(--text) 25%, transparent 25%) 0 0 / 28px 28px,
+  linear-gradient(45deg, var(--text) 25%, transparent 25%) 0 0 / 28px 28px,
+  var(--steel-3); }
+
+/* ==================== 頁首 ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .3s, border-color .3s; border-bottom: 1px solid transparent; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 90%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-color: var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .85rem var(--pad); max-width: calc(var(--max) + 2 * var(--pad)); margin-inline: auto; }
+.logo { display: flex; align-items: center; gap: .6rem; color: var(--text); }
+.logo svg { width: 38px; height: 38px; flex: none; }
+.logo .mk-ring { fill: none; stroke: var(--text); stroke-width: 2; }
+.logo .mk-arc { fill: none; stroke: var(--brand); stroke-width: 3; stroke-linecap: round; }
+.logo strong { display: block; font: 700 1.15rem/1.1 var(--font-body); }
+.logo small { display: block; font: 600 .85rem/1.1 var(--font-heading); color: var(--muted); }
+.nav-links { display: flex; align-items: center; gap: clamp(.9rem, 2vw, 1.8rem); font-weight: 500; font-size: .95rem; }
+.nav-links a:not(.btn) { position: relative; padding-block: .3rem; }
+.nav-links a:not(.btn)::after { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 100%; background: var(--brand); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease); }
+.nav-links a:not(.btn):hover::after, .nav-links a:not(.btn):focus-visible::after { transform: scaleX(1); }
+.nav-links .btn { padding: .6rem 1.1rem; font-size: .92rem; }
+.menu-btn { display: none; width: 44px; height: 44px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--text); cursor: pointer; }
+.menu-btn:hover { border-color: var(--text); }
+.menu-btn:active { transform: scale(.94); }
+.menu-btn span { display: block; width: 20px; height: 2px; background: currentColor; margin: 4px auto; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* 沒有 JavaScript 時，選單直接換行顯示在 logo 下方；有 JS 才收進漢堡選單 */
+  html:not(.js) .nav { flex-wrap: wrap; }
+  html:not(.js) .site-header { position: sticky; background: var(--surface); border-color: var(--line); }
+  html:not(.js) .nav-links { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: 3rem; }
+  .js .menu-btn { display: block; }
+  .js .nav-links {
+    position: fixed; inset: 4.4rem 0 auto; flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--surface); border-bottom: 1px solid var(--line); padding: .5rem var(--pad) 1.5rem;
+    box-shadow: 0 20px 40px -20px color-mix(in srgb, var(--shade) 40%, transparent);
+    transform: translateY(-120%); visibility: hidden; transition: transform .35s var(--ease), visibility .35s; z-index: -1;
+  }
+  .js .nav-links.open { transform: none; visibility: visible; }
+  .js .nav-links a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+  .js .nav-links .btn { margin-top: 1rem; padding: .9rem; }
+}
+
+/* ==================== Hero ==================== */
+.hero { padding-top: clamp(6rem, 12vw, 7.5rem); padding-bottom: clamp(3rem, 7vw, 5rem); overflow: clip; }
+.hero-grid { display: grid; gap: 2.5rem; grid-template-columns: minmax(0, 1fr); align-items: center; }
+@media (min-width: 960px) { .hero-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 3rem; } }
+.hero h1 { font: 700 clamp(2.6rem, 7vw, 4.6rem)/1.06 var(--font-heading); margin-bottom: 1.1rem; }
+.hero-lead { max-width: 32rem; font-size: clamp(1rem, 2vw, 1.12rem); color: var(--muted); }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.75rem; }
+.hero-specs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 2.25rem; border-top: 1px solid var(--line-strong); }
+.hero-specs div { padding: .9rem .75rem 0 0; }
+.hero-specs div + div { padding-left: .75rem; border-left: 1px solid var(--line); }
+.hero-specs strong { display: block; font: 700 clamp(1.6rem, 4vw, 2.2rem)/1 var(--font-num); }
+.hero-specs span { font-size: .85rem; color: var(--muted); }
+.car-fig { position: relative; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 30px 60px -40px color-mix(in srgb, var(--shade) 60%, transparent); }
+.car-fig .img-hero { position: absolute; inset: 0; z-index: -1; }
+.car { display: block; width: 100%; height: auto; padding: 1rem .5rem .5rem; }
+.car .body { fill: url(#paint); stroke: var(--text); stroke-width: 1.5; stroke-linejoin: round; }
+.car .s1 { stop-color: var(--steel-1); } .car .s2 { stop-color: var(--steel-2); } .car .s3 { stop-color: var(--steel-3); }
+.car .glass { fill: var(--text); opacity: .82; }
+.car .glare { fill: none; stroke: var(--steel-1); stroke-width: 3; stroke-linecap: round; opacity: .9; }
+.car .stripe { fill: none; stroke: var(--brand); stroke-width: 3; }
+.car .tire { fill: var(--text); }
+.car .tread-ring { fill: none; stroke: var(--steel-3); stroke-width: 4; stroke-dasharray: 3 4; }
+.car .rim { fill: var(--steel-2); stroke: var(--steel-1); stroke-width: 1.5; }
+.car .spokes { stroke: var(--steel-3); stroke-width: 4; stroke-linecap: round; }
+.car .hub { fill: var(--brand); }
+.car .ground { stroke: var(--text); stroke-width: 1; }
+.car .dim { stroke: var(--muted); stroke-width: 1; fill: none; }
+.car .dim-txt { fill: var(--muted); font: 700 13px var(--font-num); }
+.car .call { stroke: var(--brand); stroke-width: 1; fill: none; }
+.car .call-dot { fill: var(--brand); }
+.car .call-txt { fill: var(--text); font: 500 13px var(--font-body); }
+@media (max-width: 600px) { .car .call-txt, .car .dim-txt { font-size: 19px; } }
+
+/* ==================== 服務項目 ==================== */
+.svc-grid, .team, .reviews, .why-grid, .ba-grid { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .svc-grid, .team { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .svc-grid, .reviews, .why-grid, .ba-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1080px) { .team { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.svc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; position: relative; transition: border-color .25s, transform .25s var(--ease); }
+.svc:hover { border-color: var(--text); transform: translateY(-3px); }
+.svc::before { content: ""; position: absolute; left: -1px; top: -1px; width: 2.5rem; height: 3px; background: var(--brand); }
+.svc svg { width: 44px; height: 44px; margin-bottom: 1rem; fill: none; stroke: var(--text); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.svc svg .hl { stroke: var(--brand); }
+.svc h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: .45rem; }
+.svc p { color: var(--muted); font-size: .95rem; }
+.spec { margin-top: 1.1rem; border-top: 1px solid var(--line); font-size: .88rem; }
+.spec div { display: flex; justify-content: space-between; gap: 1rem; padding: .5rem 0; border-bottom: 1px dashed var(--line); }
+.spec dt { color: var(--muted); }
+.spec dd { font-weight: 700; text-align: right; }
+
+/* ==================== 價目表 ==================== */
+.tabs { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--bg); margin-bottom: 1.25rem; }
+.tabs button { border: 0; background: transparent; color: var(--muted); font: 700 .98rem/1 var(--font-body); padding: .75rem 1.2rem; border-radius: 2px; cursor: pointer; transition: background-color .2s, color .2s; }
+.tabs button:hover { color: var(--text); background: var(--surface-2); }
+.tabs button:active { transform: scale(.97); }
+.tabs button[aria-selected="true"] { background: var(--text); color: var(--surface); }
+.table-scroll { overflow-x: auto; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--surface); -webkit-overflow-scrolling: touch; }
+.price-panel + .price-panel { margin-top: 1.5rem; }
+.js .price-panel:not(.on) { display: none; }
+.js .price-panel + .price-panel { margin-top: 0; }
+.price-panel h3 { font: 600 1.3rem/1.2 var(--font-heading); margin-bottom: .6rem; }
+.js .price-panel h3 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.sheet { width: 100%; min-width: 600px; border-collapse: collapse; font-size: .95rem; }
+.sheet th, .sheet td { padding: .9rem 1rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.sheet thead th { background: var(--surface-2); font-weight: 700; font-size: .88rem; color: var(--muted); border-bottom: 1px solid var(--line-strong); }
+.sheet tbody th { font-weight: 700; white-space: nowrap; }
+.sheet td.t { font: 600 1.05rem/1.4 var(--font-num); white-space: nowrap; color: var(--muted); }
+.sheet td.p { font: 700 1.25rem/1.3 var(--font-num); color: var(--brand); white-space: nowrap; text-align: right; }
+.sheet thead th:last-child { text-align: right; }
+.sheet tbody tr:last-child > * { border-bottom: 0; }
+.sheet tbody tr:hover { background: color-mix(in srgb, var(--brand) 4%, transparent); }
+.note { color: var(--muted); font-size: .85rem; margin-top: .9rem; }
+.hint { color: var(--muted); font-size: .85rem; margin-top: .6rem; }
+@media (min-width: 680px) { .hint { display: none; } }
+
+/* ==================== 里程提醒（深色區塊） ==================== */
+.dark { background: var(--dark-bg); color: var(--dark-text); }
+.dark .sec-head p, .dark .muted { color: var(--dark-muted); }
+.dark .sec-head::after { background:
+    linear-gradient(var(--dark-line), var(--dark-line)) left bottom / 100% 1px no-repeat,
+    repeating-linear-gradient(90deg, var(--dark-line) 0 1px, transparent 1px 10px) left bottom / 100% 5px no-repeat,
+    repeating-linear-gradient(90deg, var(--dark-muted) 0 1px, transparent 1px 100px) left bottom / 100% 9px no-repeat; }
+.dark :focus-visible { outline-color: var(--brand-bright); }
+.gauge-grid { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .gauge-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; } }
+.gauge-copy ul { display: grid; gap: .8rem; margin-top: 1.5rem; }
+.gauge-copy li { padding-left: 1.4rem; position: relative; color: var(--dark-muted); }
+.gauge-copy li::before { content: ""; position: absolute; left: 0; top: .75em; width: .8rem; height: 1px; background: var(--brand-bright); }
+.gauge-copy li strong { color: var(--dark-text); }
+.gauge { background: var(--dark-surface); border: 1px solid var(--dark-line); border-radius: var(--radius); padding: clamp(1.25rem, 4vw, 2rem); display: grid; gap: 1.25rem; }
+.gauge .row { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 520px) { .gauge .row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.gauge label { display: grid; gap: .4rem; font-weight: 500; font-size: .92rem; color: var(--dark-muted); }
+.gauge input { width: 100%; font: 700 1.5rem/1.2 var(--font-num); color: var(--dark-text); background: var(--dark-bg); border: 1px solid var(--dark-line); border-radius: var(--radius); padding: .7rem .9rem; }
+.gauge input:hover { border-color: var(--dark-muted); }
+.gauge input:focus-visible { outline: 2px solid var(--brand-bright); outline-offset: 1px; }
+.readout { border-top: 1px solid var(--dark-line); padding-top: 1.25rem; }
+.readout .lbl { font-size: .9rem; color: var(--dark-muted); }
+.readout .big { font: 700 clamp(2.8rem, 10vw, 4.4rem)/1 var(--font-num); margin: .3rem 0 .9rem; font-variant-numeric: tabular-nums; }
+.readout .big small { font-size: .4em; color: var(--dark-muted); margin-left: .35rem; }
+.bar { height: 10px; background: repeating-linear-gradient(90deg, var(--dark-line) 0 2px, transparent 2px 10%), var(--dark-bg); border: 1px solid var(--dark-line); border-radius: 2px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--st, var(--dark-muted)); transform-origin: left; transform: scaleX(var(--fill, 0)); transition: transform .5s var(--ease), background-color .3s; }
+.status { margin-top: .9rem; font-weight: 700; color: var(--st, var(--dark-muted)); }
+.status.ok { --st: var(--ok); } .status.warn { --st: var(--warn); } .status.over { --st: var(--brand-bright); }
+.gauge .btn { justify-self: start; }
+
+/* ==================== 施工前後 ==================== */
+.ba { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.ba-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--text); }
+.ba-pair > div { position: relative; }
+.ba-pair .img { aspect-ratio: 1 / 1; }
+.ba-pair span { position: absolute; left: .6rem; bottom: .6rem; z-index: 1; font-size: .8rem; font-weight: 700; background: var(--surface); color: var(--text); padding: .2rem .55rem; border-radius: 2px; }
+.ba-pair div + div span { background: var(--brand); color: var(--brand-ink); }
+.ba-body { padding: 1.25rem 1.4rem 1.5rem; }
+.ba-body h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: .35rem; }
+.ba-body p { color: var(--muted); font-size: .92rem; }
+
+/* ==================== 為什麼選我們 ==================== */
+.why { border-top: 3px solid var(--text); padding-top: 1.4rem; }
+.why .num { font: 700 3rem/1 var(--font-num); color: var(--brand); }
+.why h3 { font: 700 1.6rem/1.2 var(--font-heading); margin: .5rem 0 .5rem; }
+.why p { color: var(--muted); }
+
+/* ==================== 技師團隊 ==================== */
+.tech { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.tech .img { border-bottom: 3px solid var(--brand); }
+.tech-body { padding: 1.2rem 1.25rem 1.4rem; }
+.tech h3 { font-size: 1.2rem; font-weight: 700; }
+.tech .role { color: var(--brand); font-weight: 700; font-size: .9rem; margin-bottom: .5rem; }
+.tech p { color: var(--muted); font-size: .92rem; }
+.certs { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
+.certs li { font-size: .78rem; font-weight: 500; padding: .2rem .55rem; background: var(--bg); border: 1px solid var(--line); border-radius: 2px; }
+
+/* ==================== 顧客評價 ==================== */
+.review { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; display: flex; flex-direction: column; gap: 1rem; }
+.score { display: flex; align-items: baseline; gap: .5rem; }
+.score b { font: 700 2.2rem/1 var(--font-num); color: var(--brand); }
+.score span { color: var(--muted); font-size: .88rem; }
+.review blockquote { flex: 1; }
+.review footer { color: var(--muted); font-size: .88rem; border-top: 1px solid var(--line); padding-top: .8rem; }
+.review footer strong { color: var(--text); }
+
+/* ==================== 常見問題 ==================== */
+.faq { max-width: 860px; border-top: 1px solid var(--line-strong); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.15rem 0; font-weight: 700; font-size: 1.05rem; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:hover { color: var(--brand); }
+.faq summary::after { content: ""; flex: none; width: 14px; height: 14px; background: linear-gradient(currentColor, currentColor) center / 100% 2px no-repeat, linear-gradient(currentColor, currentColor) center / 2px 100% no-repeat; transition: transform .25s var(--ease); }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { color: var(--muted); padding: 0 2rem 1.25rem 0; }
+
+/* ==================== 線上預約表單 ==================== */
+.book-grid, .loc { display: grid; gap: 2.5rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 920px) { .book-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); } .loc { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.book-copy h2 { font: 700 clamp(2.1rem, 5.5vw, 3.4rem)/1.05 var(--font-heading); margin-bottom: 1rem; }
+.book-copy > p { color: var(--muted); max-width: 28rem; }
+.steps { margin-top: 1.75rem; display: grid; gap: 1rem; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 2.6rem minmax(0, 1fr); gap: .75rem; align-items: baseline; counter-increment: s; }
+.steps li::before { content: "0" counter(s); font: 700 1.5rem/1 var(--font-num); color: var(--brand); }
+.contact-btns { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+.form { background: var(--bg); padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--line-strong); border-radius: var(--radius); display: grid; gap: 1rem; }
+.form label { display: grid; gap: .35rem; font-weight: 500; font-size: .92rem; }
+.form input, .form select { width: 100%; font: 400 1rem/1.4 var(--font-body); color: var(--text); background: var(--surface); border: 1px solid var(--line-strong); border-radius: var(--radius); padding: .75rem .85rem; min-height: 48px; }
+.form input:hover, .form select:hover { border-color: var(--text); }
+.form input:focus-visible, .form select:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.form .row { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 500px) { .form .row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.form .small { color: var(--muted); font-size: .8rem; }
+
+/* ==================== 營業時間與地圖 ==================== */
+.loc .img-map { border-radius: var(--radius); border: 1px solid var(--line-strong); }
+.hours { width: 100%; border-collapse: collapse; margin-top: 1.25rem; font-size: .98rem; }
+.hours th, .hours td { padding: .75rem 0; border-bottom: 1px solid var(--line); text-align: left; }
+.hours td { text-align: right; font: 700 1.1rem/1.3 var(--font-num); }
+.hours tr.off td { color: var(--muted); font: 500 .95rem/1.3 var(--font-body); }
+.addr { margin-top: 1.25rem; display: grid; gap: .3rem; }
+.addr a { font-weight: 700; }
+
+/* ==================== 頁尾 ==================== */
+.site-footer { background: var(--surface-2); border-top: 3px solid var(--text); padding: 3.5rem var(--pad) 2rem; color: var(--muted); font-size: .92rem; }
+.foot-grid { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .foot-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.site-footer h2 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: .7rem; }
+.site-footer li + li { margin-top: .3rem; }
+.social { display: flex; gap: .5rem; }
+.social a { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid var(--line-strong); border-radius: var(--radius); font: 700 .85rem/1 var(--font-heading); color: var(--text); transition: background-color .2s, color .2s; }
+.social a:hover { background: var(--text); color: var(--surface); }
+.social a:active { transform: scale(.95); }
+.copy { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line-strong); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .85rem; }
+
+/* ---------- 手機底部固定按鈕 ---------- */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  .sticky-cta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .6rem var(--pad) calc(.6rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--line-strong); }
+  body { padding-bottom: 4.6rem; }
+}
+
+/* ---------- 捲動漸入動畫 ---------- */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<!-- ==================== 區塊：頁首導覽 ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav" aria-label="主選單">
+    <a href="#top" class="logo" aria-label="極光車研 回到頂端">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle class="mk-ring" cx="20" cy="20" r="17"/><path class="mk-arc" d="M8 25 Q20 6 32 25"/><circle class="mk-ring" cx="20" cy="25" r="3"/></svg>
+      <span><strong>極光車研</strong><small>Aurora Auto Care</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="開啟選單"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links">
+      <a href="#services">服務</a>
+      <a href="#pricing">價目</a>
+      <a href="#reminder">里程提醒</a>
+      <a href="#gallery">案例</a>
+      <a href="#faq">問答</a>
+      <a href="#location">地點</a>
+      <a href="#booking" class="btn">線上預約</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ==================== 區塊：Hero 主視覺 ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>每一公里，都照原廠規格照顧</h1>
+      <p class="hero-lead">新莊在地保養廠與美容工作室。從機油到鍍膜，施工前先給你書面報價，完工附上檢查紀錄。</p>
+      <div class="hero-cta">
+        <a href="#booking" class="btn">線上預約</a>
+        <a href="#pricing" class="btn ghost">看價目</a>
+      </div>
+      <!-- 範例內容：上線前請換成真實資料 -->
+      <div class="hero-specs">
+        <div><strong>12</strong><span>個月施工保固</span></div>
+        <div><strong>4.9</strong><span>顧客平均評分</span></div>
+        <div><strong>3,800+</strong><span>台次服務紀錄</span></div>
+      </div>
+    </div>
+    <figure class="car-fig">
+      <div class="img img-hero" role="img" aria-label="反光金屬面板背景"></div>
+      <svg class="car" viewBox="0 0 660 300" role="img" aria-label="轎車側面線稿，標示車長、軸距與施工重點">
+        <defs><linearGradient id="paint" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="s1"/><stop offset=".45" class="s2"/><stop offset=".46" class="s3"/><stop offset="1" class="s2"/></linearGradient></defs>
+        <path class="body" d="M52 196 L52 172 Q54 152 84 146 L188 130 Q222 96 276 82 L404 78 Q452 80 494 118 L582 134 Q620 142 624 170 L624 194 Q624 202 616 202 L566 202 A50 50 0 0 0 466 202 L216 202 A50 50 0 0 0 116 202 L60 202 Q52 202 52 196 Z"/>
+        <path class="glass" d="M212 130 Q240 100 280 92 L350 90 L354 130 Z"/>
+        <path class="glass" d="M368 90 L404 90 Q440 94 470 126 L372 130 Z"/>
+        <path class="glare" d="M96 156 Q300 136 600 150"/>
+        <path class="stripe" d="M60 180 L616 180"/>
+        <g><circle class="tire" cx="166" cy="202" r="42"/><circle class="tread-ring" cx="166" cy="202" r="38"/><circle class="rim" cx="166" cy="202" r="27"/>
+          <path class="spokes" d="M166 180 V224 M144 202 H188 M150 186 L182 218 M182 186 L150 218"/><circle class="hub" cx="166" cy="202" r="6"/></g>
+        <g><circle class="tire" cx="516" cy="202" r="42"/><circle class="tread-ring" cx="516" cy="202" r="38"/><circle class="rim" cx="516" cy="202" r="27"/>
+          <path class="spokes" d="M516 180 V224 M494 202 H538 M500 186 L532 218 M532 186 L500 218"/><circle class="hub" cx="516" cy="202" r="6"/></g>
+        <line class="ground" x1="20" y1="244" x2="640" y2="244"/>
+        <path class="dim" d="M52 258 V282 M624 258 V282 M52 272 H624 M166 252 V262 M516 252 V262 M166 256 H516"/>
+        <text class="dim-txt" x="338" y="292" text-anchor="middle">4,690 mm</text>
+        <text class="dim-txt" x="341" y="251" text-anchor="middle">2,700 mm</text>
+        <path class="dim" d="M644 78 H654 M644 244 H654 M649 78 V244"/>
+        <text class="dim-txt" x="0" y="0" text-anchor="middle" transform="translate(638 161) rotate(-90)">1,445 mm</text>
+        <path class="call" d="M560 140 L590 60 H640"/><circle class="call-dot" cx="560" cy="140" r="4"/><text class="call-txt" x="640" y="52" text-anchor="end">鍍膜 9H</text>
+        <path class="call" d="M300 84 L270 34 H200"/><circle class="call-dot" cx="300" cy="84" r="4"/><text class="call-txt" x="200" y="26">冷氣 濾網</text>
+        <path class="call" d="M140 176 L96 104 H40"/><circle class="call-dot" cx="140" cy="176" r="4"/><text class="call-txt" x="40" y="96">胎壓 36 psi</text>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<div class="tread" aria-hidden="true"></div>
+
+<!-- ==================== 區塊：服務項目 ==================== -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>服務項目</h2>
+      <p>保養與美容在同一個廠區完成，一次交車就把該做的事做好，不用兩頭跑。</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 18h20l4 6v14H10V24z"/><path class="hl" d="M24 6v8M20 10h8"/><path d="M16 30h16"/></svg>
+        <h3>定期保養</h3>
+        <p>機油、機油芯、空氣芯與煞車油依原廠週期更換，附 40 項檢查表。</p>
+        <dl class="spec"><div><dt>建議週期</dt><dd>每 5,000 km</dd></div><div><dt>施工時間</dt><dd>約 60 分鐘</dd></div></dl>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 32c6-10 30-10 36 0"/><path class="hl" d="M12 22l4-6M24 18V10M36 22l-4-6"/><path d="M6 38h36"/></svg>
+        <h3>鍍膜與拋光</h3>
+        <p>三道研磨去除細紋與水痕，再上陶瓷鍍膜，撥水效果與亮度可維持一年以上。</p>
+        <dl class="spec"><div><dt>硬度</dt><dd>9H 陶瓷</dd></div><div><dt>施工時間</dt><dd>1～2 天</dd></div></dl>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 40V20a6 6 0 0 1 6-6h6a6 6 0 0 1 6 6v8H18"/><path d="M12 40h24"/><path class="hl" d="M34 8l4 4M40 6v4"/></svg>
+        <h3>內裝清潔</h3>
+        <p>座椅、地毯與頂棚深層清洗，蒸氣除菌加上冷氣出風口除臭，車內回到新車味道。</p>
+        <dl class="spec"><div><dt>項目</dt><dd>椅布、皮革、地毯</dd></div><div><dt>施工時間</dt><dd>約 4 小時</dd></div></dl>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="8"/><path class="hl" d="M24 7v6M24 35v6M7 24h6M35 24h6"/></svg>
+        <h3>輪胎與定位</h3>
+        <p>換胎、平衡、四輪定位一次完成，附胎紋深度與胎壓紀錄，跑高速更穩定。</p>
+        <dl class="spec"><div><dt>定位精度</dt><dd>±0.05°</dd></div><div><dt>施工時間</dt><dd>約 90 分鐘</dd></div></dl>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6v36M8 15l32 18M8 33l32-18"/><path class="hl" d="M20 8l4 4 4-4M20 40l4-4 4 4"/></svg>
+        <h3>冷氣系統</h3>
+        <p>冷媒壓力檢測與回收充填，清洗蒸發器並更換濾網，夏天出風口很快就涼。</p>
+        <dl class="spec"><div><dt>冷媒</dt><dd>R134a／R1234yf</dd></div><div><dt>施工時間</dt><dd>約 2 小時</dd></div></dl>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 34l10-10 6 6 16-16"/><path class="hl" d="M32 14h8v8"/><path d="M8 40h32"/></svg>
+        <h3>板金烤漆</h3>
+        <p>凹痕整形、局部或全車烤漆，電腦調色比對原車漆號，修補後幾乎看不出色差。</p>
+        <dl class="spec"><div><dt>調色方式</dt><dd>電腦配色</dd></div><div><dt>施工時間</dt><dd>2～5 天</dd></div></dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：價目表 ==================== -->
+<section id="pricing" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>價目表</h2>
+      <p>依車型大小分級計價，價格已含工資與料件。實際金額以施工前書面估價單為準。</p>
+    </div>
+    <!-- 修改價格：直接改下方三個表格的數字。tabs 的 data-tab 要對應 panel 的 id -->
+    <div class="tabs reveal" role="tablist" aria-label="選擇車型">
+      <button type="button" role="tab" id="tab-sedan" aria-controls="p-sedan" aria-selected="true" data-tab="p-sedan">轎車</button>
+      <button type="button" role="tab" id="tab-suv" aria-controls="p-suv" aria-selected="false" tabindex="-1" data-tab="p-suv">休旅車</button>
+      <button type="button" role="tab" id="tab-large" aria-controls="p-large" aria-selected="false" tabindex="-1" data-tab="p-large">大型車</button>
+    </div>
+    <div class="reveal">
+    <div class="price-panel on" id="p-sedan" role="tabpanel" aria-labelledby="tab-sedan">
+      <h3>轎車</h3>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="轎車價目（可左右捲動）">
+        <table class="sheet">
+          <thead><tr><th scope="col">項目</th><th scope="col">內容</th><th scope="col">工時</th><th scope="col">價格</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">基本保養</th><td>全合成機油 4L、機油芯、40 項檢查</td><td class="t">1 hr</td><td class="p">NT$2,400</td></tr>
+            <tr><th scope="row">陶瓷鍍膜</th><td>三道研磨、9H 鍍膜、一年保固</td><td class="t">1.5 天</td><td class="p">NT$12,800</td></tr>
+            <tr><th scope="row">內裝深層清潔</th><td>座椅、地毯、頂棚、蒸氣除菌</td><td class="t">4 hr</td><td class="p">NT$4,500</td></tr>
+            <tr><th scope="row">輪胎平衡定位</th><td>四輪平衡、四輪定位、胎壓校正</td><td class="t">1.5 hr</td><td class="p">NT$1,800</td></tr>
+            <tr><th scope="row">冷氣保養</th><td>冷媒回收充填、蒸發器清洗、濾網</td><td class="t">2 hr</td><td class="p">NT$3,200</td></tr>
+            <tr><th scope="row">板金烤漆</th><td>單片凹痕整形與烤漆</td><td class="t">2 天</td><td class="p">NT$5,500 起</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="price-panel" id="p-suv" role="tabpanel" aria-labelledby="tab-suv">
+      <h3>休旅車</h3>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="休旅車價目（可左右捲動）">
+        <table class="sheet">
+          <thead><tr><th scope="col">項目</th><th scope="col">內容</th><th scope="col">工時</th><th scope="col">價格</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">基本保養</th><td>全合成機油 5L、機油芯、40 項檢查</td><td class="t">1 hr</td><td class="p">NT$2,900</td></tr>
+            <tr><th scope="row">陶瓷鍍膜</th><td>三道研磨、9H 鍍膜、一年保固</td><td class="t">2 天</td><td class="p">NT$15,800</td></tr>
+            <tr><th scope="row">內裝深層清潔</th><td>三排座椅、地毯、頂棚、蒸氣除菌</td><td class="t">5 hr</td><td class="p">NT$5,500</td></tr>
+            <tr><th scope="row">輪胎平衡定位</th><td>四輪平衡、四輪定位、胎壓校正</td><td class="t">1.5 hr</td><td class="p">NT$2,200</td></tr>
+            <tr><th scope="row">冷氣保養</th><td>冷媒回收充填、前後蒸發器清洗、濾網</td><td class="t">2.5 hr</td><td class="p">NT$3,800</td></tr>
+            <tr><th scope="row">板金烤漆</th><td>單片凹痕整形與烤漆</td><td class="t">2 天</td><td class="p">NT$6,500 起</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="price-panel" id="p-large" role="tabpanel" aria-labelledby="tab-large">
+      <h3>大型車</h3>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="大型車價目（可左右捲動）">
+        <table class="sheet">
+          <thead><tr><th scope="col">項目</th><th scope="col">內容</th><th scope="col">工時</th><th scope="col">價格</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">基本保養</th><td>全合成機油 7L、機油芯、40 項檢查</td><td class="t">1.5 hr</td><td class="p">NT$3,600</td></tr>
+            <tr><th scope="row">陶瓷鍍膜</th><td>三道研磨、9H 鍍膜、一年保固</td><td class="t">2.5 天</td><td class="p">NT$19,800</td></tr>
+            <tr><th scope="row">內裝深層清潔</th><td>多排座椅、地毯、頂棚、蒸氣除菌</td><td class="t">6 hr</td><td class="p">NT$6,800</td></tr>
+            <tr><th scope="row">輪胎平衡定位</th><td>四輪平衡、四輪定位、胎壓校正</td><td class="t">2 hr</td><td class="p">NT$2,800</td></tr>
+            <tr><th scope="row">冷氣保養</th><td>冷媒回收充填、前後蒸發器清洗、濾網</td><td class="t">3 hr</td><td class="p">NT$4,600</td></tr>
+            <tr><th scope="row">板金烤漆</th><td>單片凹痕整形與烤漆</td><td class="t">3 天</td><td class="p">NT$8,000 起</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+    <p class="hint">手機上可左右滑動表格，查看工時與價格。</p>
+    <p class="note">轎車指一般四門房車與掀背車；休旅車含跨界休旅與中型 SUV；大型車含七人座、廂型車與皮卡。</p>
+  </div>
+</section>
+
+<!-- ==================== 區塊：保養里程提醒（深色區塊） ==================== -->
+<section id="reminder" class="dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>保養里程提醒</h2>
+      <p>輸入目前里程與上次保養時的里程，馬上算出距離下次保養還有多遠。</p>
+    </div>
+    <div class="gauge-grid">
+      <div class="gauge-copy reveal">
+        <p class="muted">多數車款建議每 5,000 公里或半年做一次基本保養，以先到者為準。常跑山路、短程或高溫環境，可以再提早一些。</p>
+        <ul>
+          <li><strong>每 5,000 km</strong>　機油與機油芯</li>
+          <li><strong>每 10,000 km</strong>　空氣芯、冷氣濾網</li>
+          <li><strong>每 40,000 km</strong>　煞車油、變速箱油</li>
+        </ul>
+      </div>
+      <!-- 保養間隔：改 data-interval 的數字即可（單位 km） -->
+      <form class="gauge reveal" id="gauge" data-interval="5000" data-unit="km" novalidate>
+        <div class="row">
+          <label>目前里程（km）<input type="number" id="now" inputmode="numeric" min="0" step="1" placeholder="例：48200"></label>
+          <label>上次保養里程（km）<input type="number" id="last" inputmode="numeric" min="0" step="1" placeholder="例：45000"></label>
+        </div>
+        <button type="submit" class="btn">計算下次保養</button>
+        <div class="readout" aria-live="polite">
+          <p class="lbl">距離下次保養</p>
+          <p class="big"><span id="left">0</span><small>km</small></p>
+          <div class="bar" aria-hidden="true"><i id="fill"></i></div>
+          <p class="status" id="status">輸入兩個里程數後即可計算。</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：施工前後 ==================== -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>施工前後</h2>
+      <p>每台車施工前後都會在同一個燈光位置拍照存檔，交車時一起給你看。</p>
+    </div>
+    <div class="ba-grid">
+      <article class="ba reveal">
+        <div class="ba-pair">
+          <div><div class="img img-paint-a" role="img" aria-label="施工前：漆面布滿細紋與水痕"></div><span>施工前</span></div>
+          <div><div class="img img-paint-b" role="img" aria-label="施工後：漆面深邃有鏡面反光"></div><span>施工後</span></div>
+        </div>
+        <div class="ba-body"><h3>漆面研磨與鍍膜</h3><p>六年車齡的深灰色轎車，去除洗車紋後上 9H 鍍膜。</p></div>
+      </article>
+      <article class="ba reveal">
+        <div class="ba-pair">
+          <div><div class="img img-cabin-a" role="img" aria-label="施工前：座椅有明顯污漬"></div><span>施工前</span></div>
+          <div><div class="img img-cabin-b" role="img" aria-label="施工後：座椅乾淨，車縫線清楚"></div><span>施工後</span></div>
+        </div>
+        <div class="ba-body"><h3>內裝深層清潔</h3><p>有小孩與寵物的家庭休旅，椅布污漬與異味一次處理。</p></div>
+      </article>
+      <article class="ba reveal">
+        <div class="ba-pair">
+          <div><div class="img img-rim-a" role="img" aria-label="施工前：輪框覆蓋煞車粉塵"></div><span>施工前</span></div>
+          <div><div class="img img-rim-b" role="img" aria-label="施工後：輪框恢復金屬光澤"></div><span>施工後</span></div>
+        </div>
+        <div class="ba-body"><h3>輪框除鐵粉</h3><p>鐵粉去除劑浸潤分解煞車粉塵，再上輪框專用鍍膜。</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：為什麼選我們 ==================== -->
+<section id="why" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>為什麼選我們</h2>
+      <p>保養最怕的是不知道換了什麼、花了多少。我們把每一步都寫清楚。</p>
+    </div>
+    <div class="why-grid">
+      <article class="why reveal">
+        <p class="num">01</p>
+        <h3>原廠料件</h3>
+        <p>機油、濾芯與煞車零件使用原廠或同等 OEM 認證料件，舊件可以現場確認後再丟。</p>
+      </article>
+      <article class="why reveal">
+        <p class="num">02</p>
+        <h3>透明報價</h3>
+        <p>施工前提供書面估價，追加項目一定先拍照說明，經你同意才會動工。</p>
+      </article>
+      <article class="why reveal">
+        <p class="num">03</p>
+        <h3>施工保固</h3>
+        <p>保養與維修享 12 個月或 10,000 公里保固，鍍膜另附一年回廠檢查。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：技師團隊 ==================== -->
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>技師團隊</h2>
+      <p>四位技師都有原廠或專業認證，平均年資超過十年。</p>
+    </div>
+    <div class="team">
+      <article class="tech reveal">
+        <div class="img img-tech1" role="img" aria-label="廠長陳建宏形象圖"></div>
+        <div class="tech-body"><h3>陳建宏</h3><p class="role">廠長，引擎與底盤</p><p>前原廠服務廠技術主任，擅長疑難雜症診斷。</p><ul class="certs"><li>汽車修護乙級</li><li>18 年資歷</li></ul></div>
+      </article>
+      <article class="tech reveal">
+        <div class="img img-tech2" role="img" aria-label="美容主任林佳穎形象圖"></div>
+        <div class="tech-body"><h3>林佳穎</h3><p class="role">美容主任，鍍膜與拋光</p><p>對漆面要求近乎潔癖，負責所有鍍膜案件驗收。</p><ul class="certs"><li>鍍膜認證講師</li><li>11 年資歷</li></ul></div>
+      </article>
+      <article class="tech reveal">
+        <div class="img img-tech3" role="img" aria-label="技師王志豪形象圖"></div>
+        <div class="tech-body"><h3>王志豪</h3><p class="role">技師，冷氣與電系</p><p>冷氣與電系專長，油電車高壓系統也能處理。</p><ul class="certs"><li>汽車冷凍空調</li><li>9 年資歷</li></ul></div>
+      </article>
+      <article class="tech reveal">
+        <div class="img img-tech4" role="img" aria-label="技師張育誠形象圖"></div>
+        <div class="tech-body"><h3>張育誠</h3><p class="role">技師，板金烤漆</p><p>負責板金整形與調色，色差比對一律在自然光下確認。</p><ul class="certs"><li>烤漆丙級</li><li>12 年資歷</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：顧客評價 ==================== -->
+<section id="reviews" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>顧客評價</h2>
+      <p>大部分新客人都是朋友介紹來的，這是我們最在意的評分。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="reviews">
+      <figure class="review reveal">
+        <div class="score"><b>5.0</b><span>定期保養，轎車</span></div>
+        <blockquote>第一次遇到保養前會先給估價單的店，換下來的機油芯還拿給我看。價格跟原廠差不多，但等待時間短很多。</blockquote>
+        <footer><strong>李先生</strong>，新莊，固定回廠三年</footer>
+      </figure>
+      <figure class="review reveal">
+        <div class="score"><b>5.0</b><span>陶瓷鍍膜，休旅車</span></div>
+        <blockquote>鍍膜完下雨天開出去，水珠直接滾掉。半年回廠檢查也很仔細，還順便幫我處理了一道小刮痕。</blockquote>
+        <footer><strong>Vivian</strong>，三重，鍍膜客戶</footer>
+      </figure>
+      <figure class="review reveal">
+        <div class="score"><b>4.8</b><span>冷氣保養，大型車</span></div>
+        <blockquote>七人座後座一直不冷，其他店都說要換壓縮機。這裡檢查後只是膨脹閥問題，省了一大筆錢。</blockquote>
+        <footer><strong>黃太太</strong>，泰山，冷氣維修</footer>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：常見問題 ==================== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>常見問題</h2>
+      <p>找不到答案的話，直接打電話或傳 LINE 問我們。</p>
+    </div>
+    <div class="faq reveal">
+      <details><summary>在這裡保養，會影響原廠保固嗎？</summary><p>不會。只要使用符合原廠規格的料件並留下保養紀錄，原廠保固依然有效。我們每次都會開立紀錄並蓋章。</p></details>
+      <details><summary>保養需要等多久？可以在現場等嗎？</summary><p>基本保養約 60 分鐘，現場有休息區、Wi-Fi 與咖啡。鍍膜與板金需要留車，我們會在完工前一小時通知你。</p></details>
+      <details><summary>可以自備機油或零件嗎？</summary><p>可以，但自備料件無法提供料件保固，只保固施工。建議先拍照或傳型號給我們確認規格。</p></details>
+      <details><summary>鍍膜後多久可以洗車？</summary><p>鍍膜完成後一週內避免洗車與淋雨，之後建議使用中性洗車精手洗，並避免自動洗車機。</p></details>
+      <details><summary>付款方式有哪些？</summary><p>可使用現金、信用卡、LINE Pay 與街口支付，鍍膜與板金案件可分期付款。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：線上預約 ==================== -->
+<section id="booking" class="alt">
+  <div class="wrap book-grid">
+    <div class="book-copy reveal">
+      <h2>線上預約</h2>
+      <p>填好資料後，我們會在營業時間內一小時內來電確認。急件請直接打電話。</p>
+      <ol class="steps">
+        <li><span>送出預約，選好想要的日期與時段。</span></li>
+        <li><span>技師來電確認車況，先給你預估金額。</span></li>
+        <li><span>到廠施工，完工附檢查紀錄與照片。</span></li>
+      </ol>
+      <div class="contact-btns">
+        <a class="btn ghost" href="tel:0212345678">撥打 02-1234-5678</a>
+        <a class="btn ghost" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 詢問</a>
+      </div>
+    </div>
+    <!--
+      表單送出設定（Formspree，免費方案每月 50 則）：
+      1. 到 https://formspree.io 用 Email 註冊免費帳號
+      2. 建立一個新表單，複製表單 ID（像 xyzabcd 這樣的一串字）
+      3. 把下方 action 裡的 your-form-id 換成你的表單 ID，預約資料就會寄到你的信箱
+    -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="row">
+        <label>姓名<input type="text" name="name" autocomplete="name" required></label>
+        <label>電話<input type="tel" name="phone" autocomplete="tel" inputmode="tel" required></label>
+      </div>
+      <div class="row">
+        <label>車牌<input type="text" name="plate" placeholder="例：ABC-1234" required></label>
+        <label>車型
+          <select name="car_size" required>
+            <option value="">請選擇</option><option>轎車</option><option>休旅車</option><option>大型車</option>
+          </select>
+        </label>
+      </div>
+      <label>服務項目
+        <select name="service" required>
+          <option value="">請選擇</option><option>定期保養</option><option>鍍膜與拋光</option><option>內裝清潔</option><option>輪胎與定位</option><option>冷氣系統</option><option>板金烤漆</option><option>其他／不確定</option>
+        </select>
+      </label>
+      <div class="row">
+        <label>日期<input type="date" name="date" required></label>
+        <label>時段
+          <select name="time" required>
+            <option value="">請選擇</option><option>09:00–11:00</option><option>11:00–13:00</option><option>13:00–15:00</option><option>15:00–17:00</option><option>17:00–19:00</option>
+          </select>
+        </label>
+      </div>
+      <button type="submit" class="btn">送出預約</button>
+      <p class="small">送出即表示同意我們以電話或 LINE 聯絡你，資料只用於確認預約。</p>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== 區塊：營業時間與地圖 ==================== -->
+<section id="location">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>營業時間與地點</h2>
+      <p>新莊思源路上，近新北產業園區站。廠區有 8 個停車位，到店不用找車位。</p>
+    </div>
+    <div class="loc">
+      <div class="reveal">
+        <table class="hours">
+          <caption class="sr">營業時間</caption>
+          <tbody>
+            <tr><th scope="row">週一至週五</th><td>09:00–19:00</td></tr>
+            <tr><th scope="row">週六</th><td>09:00–17:00</td></tr>
+            <tr class="off"><th scope="row">週日與國定假日</th><td>公休</td></tr>
+          </tbody>
+        </table>
+        <div class="addr">
+          <p>新北市新莊區思源路 168 號</p>
+          <p><a href="tel:0212345678">02-1234-5678</a></p>
+        </div>
+        <div class="contact-btns">
+          <a class="btn" href="https://maps.google.com/?q=新北市新莊區思源路168號" target="_blank" rel="noopener">Google 地圖導航</a>
+          <a class="btn ghost" href="tel:0212345678">撥打電話</a>
+        </div>
+      </div>
+      <div class="img img-map reveal" role="img" aria-label="極光車研位置示意地圖"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h2>極光車研 Aurora Auto Care</h2><p>新莊在地汽車保養與美容工作室，原廠料件與透明報價。</p></div>
+      <div><h2>聯絡資訊</h2><ul><li>新北市新莊區思源路 168 號</li><li><a href="tel:0212345678">02-1234-5678</a></li><li><a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 官方帳號</a></li></ul></div>
+      <div><h2>營業時間</h2><ul><li>週一至週五 09:00–19:00</li><li>週六 09:00–17:00</li><li>週日與國定假日公休</li></ul></div>
+      <div><h2>追蹤我們</h2><div class="social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="YouTube">YT</a></div></div>
+    </div>
+    <div class="copy"><span>© <span id="y"></span> 極光車研 Aurora Auto Care</span><span>新北市新莊區</span></div>
+  </div>
+</footer>
+
+<!-- 手機底部固定按鈕 -->
+<div class="sticky-cta">
+  <a href="tel:0212345678" class="btn ghost">撥打電話</a>
+  <a href="#booking" class="btn">線上預約</a>
+</div>
+
+<script>
+// 年份
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// 捲動後頁首出現背景
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+onScroll();
+addEventListener('scroll', onScroll, { passive: true });
+
+// 漢堡選單
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? '關閉選單' : '開啟選單');
+  links.classList.toggle('open', open);
+};
+menuBtn.addEventListener('click', () => setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+// 價目表分頁（支援左右方向鍵）
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+const selectTab = tab => tabs.forEach(t => {
+  const on = t === tab;
+  t.setAttribute('aria-selected', on);
+  t.tabIndex = on ? 0 : -1;
+  document.getElementById(t.dataset.tab).classList.toggle('on', on);
+});
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => selectTab(t));
+  t.addEventListener('keydown', e => {
+    const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+    if (d) { const n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); selectTab(n); }
+  });
+});
+
+// 保養里程提醒
+const gauge = document.getElementById('gauge');
+const fmt = n => n.toLocaleString('zh-TW');
+const calc = () => {
+  const now = parseFloat(gauge.now.value), last = parseFloat(gauge.last.value);
+  const step = +gauge.dataset.interval, unit = gauge.dataset.unit;
+  const status = document.getElementById('status'), left = document.getElementById('left'), fill = document.getElementById('fill');
+  let msg = '輸入兩個里程數後即可計算。', cls = '', rest = 0, ratio = 0;
+  if (!isNaN(now) && !isNaN(last)) {
+    if (now < last) { msg = '目前里程不能小於上次保養里程，請再確認一次。'; cls = 'over'; }
+    else {
+      rest = last + step - now; ratio = Math.min((now - last) / step, 1);
+      if (rest > 1000) { msg = `狀態良好，下次保養在 ${fmt(last + step)} ${unit}。`; cls = 'ok'; }
+      else if (rest > 0) { msg = `快到保養里程了，建議這兩週內預約。`; cls = 'warn'; }
+      else { msg = `已超過保養里程 ${fmt(-rest)} ${unit}，請盡快安排保養。`; cls = 'over'; }
+    }
+  }
+  left.textContent = fmt(Math.max(rest, 0));
+  fill.style.setProperty('--fill', ratio);
+  status.textContent = msg; status.className = 'status ' + cls;
+  fill.parentElement.style.setProperty('--st', cls ? `var(--${cls === 'over' ? 'brand-bright' : cls})` : '');
+};
+gauge.addEventListener('input', calc);
+gauge.addEventListener('submit', e => { e.preventDefault(); calc(); });
+
+// 捲動漸入
+const items = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  items.forEach(el => io.observe(el));
+} else {
+  items.forEach(el => el.classList.add('in'));
+}
+</script>
+</body>
+</html>

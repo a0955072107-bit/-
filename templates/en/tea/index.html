@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muu Tea Bar | Fresh-Brewed Bubble Tea in Portland, Three Locations</title>
+<meta name="description" content="Muu Tea Bar brews Taiwanese loose-leaf tea every 4 hours and cooks boba fresh daily. Three Portland locations, order online for pickup or delivery, franchise inquiries welcome.">
+<meta name="theme-color" content="#1d5c3a">
+<meta property="og:title" content="Muu Tea Bar | Fresh-Brewed Bubble Tea in Portland">
+<meta property="og:description" content="Real Taiwanese tea, brewed every 4 hours. Boba cooked fresh daily. Dial in your sweetness and ice, then order ahead at any of our three shops.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Muu Tea Bar",
+  "url": "https://example.com/",
+  "telephone": "(555) 012-3456",
+  "priceRange": "$4–9",
+  "servesCuisine": ["Bubble tea", "Taiwanese tea", "Milk tea", "Fruit tea"],
+  "hasMap": "https://maps.google.com/?q=128+Maple+Street,+Portland,+OR+97205",
+  "address": { "@type": "PostalAddress", "streetAddress": "128 Maple Street", "addressLocality": "Portland", "addressRegion": "OR", "postalCode": "97205", "addressCountry": "US" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:00", "closes": "23:00" }
+  ],
+  "department": [
+    { "@type": "CafeOrCoffeeShop", "name": "Muu Tea Bar Hawthorne", "telephone": "(555) 012-3457", "hasMap": "https://maps.google.com/?q=2045+Lakeview+Avenue,+Portland,+OR+97214",
+      "address": { "@type": "PostalAddress", "streetAddress": "2045 Lakeview Avenue", "addressLocality": "Portland", "addressRegion": "OR", "postalCode": "97214", "addressCountry": "US" },
+      "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:30", "closes": "22:00" }] },
+    { "@type": "CafeOrCoffeeShop", "name": "Muu Tea Bar Pearl Market", "telephone": "(555) 012-3458", "hasMap": "https://maps.google.com/?q=12+Linden+Court,+Portland,+OR+97209",
+      "address": { "@type": "PostalAddress", "streetAddress": "12 Linden Court", "addressLocality": "Portland", "addressRegion": "OR", "postalCode": "97209", "addressCountry": "US" },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "11:00", "closes": "22:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "10:00", "closes": "22:30" }] }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   THEME SETTINGS: edit here to change the whole site's colors and fonts
+   ============================================================ */
+:root {
+  --brand: #1d5c3a;          /* Brand color (deep tea green): hero background, headings, buttons */
+  --brand-ink: #fbf1dc;      /* Text color on brand (milk cream) */
+  --brand-deep: #123d26;     /* Darker tea green: footer and menu background */
+  --bg: #fbf1dc;             /* Page background (fresh milk cream) */
+  --surface: #fff8ea;        /* Cards, forms and raised surfaces (milky white) */
+  --text: #2b170c;           /* Main text and sticker outlines (boba brown) */
+  --muted: #5e4232;          /* Secondary and helper text */
+  --line: #e6d3ae;           /* Light dividers and input borders */
+  --amber: #e8962a;          /* Accent (oolong amber): primary buttons, stickers */
+  --amber-ink: #2b170c;      /* Text color on amber */
+  --chili: #c4401f;          /* "Best seller" tag background (chili red) */
+  --chili-ink: #fff8ea;      /* Text color on chili */
+  --tapioca: #3a2214;        /* Tapioca brown: rewards section background */
+  --pearl: #24110a;          /* Art placeholder: boba pearls */
+  --syrup: #8a4a1f;          /* Art placeholder: brown sugar syrup */
+  --milk: #f3e2c0;           /* Art placeholder: fresh milk */
+  --milktea: #c98d5a;        /* Art placeholder: milk tea */
+  --oolong: #c2701f;         /* Art placeholder: oolong tea */
+  --greentea: #c9b94a;       /* Art placeholder: green tea */
+  --passion: #f2b632;        /* Art placeholder: passion fruit */
+  --matcha: #8fb84e;         /* Art placeholder: matcha green backdrop */
+  --cap: #fff3d6;            /* Art placeholder: cheese foam */
+  --straw: #c4401f;          /* Art placeholder: straw */
+  --shadow: color-mix(in srgb, var(--text) 26%, transparent); /* Soft shadow */
+  --radius: 20px;            /* Corner radius */
+  --stroke: 3px;             /* Sticker outline width */
+  --pop: 5px;                /* Sticker hard-shadow offset */
+  --font-heading: "Bricolage Grotesque", "Arial Narrow", sans-serif; /* Heading font (condensed, heavy) */
+  --font-body: "Figtree", system-ui, sans-serif;     /* Body font */
+  --max: 1200px;             /* Max content width */
+  --pad: clamp(1rem, 5vw, 3rem); /* Side padding */
+  --gap: clamp(1.25rem, 3.5vw, 2.5rem); /* Column gap for multi-column sections */
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.7 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 800; font-stretch: 78%; line-height: 1.08; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 10px; }
+::selection { background: var(--amber); color: var(--amber-ink); }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: clamp(4rem, 9vw, 6.5rem); position: relative; }
+.sec-title { font-size: clamp(2.3rem, 5.4vw, 3.8rem); margin-bottom: .8rem; color: var(--brand); }
+.sec-lead { color: var(--muted); max-width: 36rem; font-size: 1.05rem; }
+.sec-head { margin-bottom: clamp(2rem, 5vw, 3rem); }
+.sticker-box { background: var(--surface); border: var(--stroke) solid var(--text); border-radius: var(--radius); box-shadow: var(--pop) var(--pop) 0 var(--text); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .85rem 1.6rem; border-radius: 999px; font: 700 1.05rem/1.2 var(--font-body); text-decoration: none; border: var(--stroke) solid var(--text); cursor: pointer; transition: transform .15s, box-shadow .15s, background-color .2s, color .2s; }
+.btn-primary { background: var(--amber); color: var(--amber-ink); box-shadow: 4px 4px 0 var(--text); }
+.btn-primary:hover { background: color-mix(in srgb, var(--amber) 84%, var(--surface)); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--text); }
+.btn-ghost { background: var(--surface); color: var(--text); box-shadow: 4px 4px 0 var(--text); }
+.btn-ghost:hover { background: var(--milk); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--text); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--text); }
+a:not(.btn):hover { color: var(--brand); }
+a:not(.btn):active { opacity: .7; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+.hero .btn-ghost { background: transparent; color: var(--brand-ink); border-color: var(--brand-ink); box-shadow: none; }
+.hero .btn-ghost:hover { background: color-mix(in srgb, var(--brand-ink) 12%, transparent); box-shadow: none; }
+
+/* Scroll reveal: only hidden when JS is on */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+html:not(.js) .js-only { display: none !important; }
+.js .nojs-only { display: none !important; }
+
+/* ==================== Header ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; color: var(--brand-ink); transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled { background: var(--brand-deep); box-shadow: 0 var(--stroke) 0 var(--text); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+.logo-mark { width: 42px; height: 42px; flex: none; border-radius: 50%; border: var(--stroke) solid var(--text); box-shadow: 3px 3px 0 var(--text);
+  background: radial-gradient(circle closest-side, var(--pearl) 0 80%, transparent 88%) 30% 70% / 11px 11px no-repeat, radial-gradient(circle closest-side, var(--pearl) 0 80%, transparent 88%) 64% 76% / 11px 11px no-repeat, radial-gradient(circle closest-side, var(--pearl) 0 80%, transparent 88%) 48% 46% / 11px 11px no-repeat, var(--amber); }
+.logo b { font: 800 1.35rem/1 var(--font-heading); font-stretch: 80%; display: block; }
+.logo small { font: 600 .82rem/1.1 var(--font-body); opacity: .85; }
+.nav-menu { display: flex; align-items: center; gap: 1.2rem; list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; font-weight: 600; padding-block: .3rem; background: linear-gradient(var(--amber), var(--amber)) left bottom / 0 3px no-repeat; transition: background-size .25s, color .2s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 3px; color: var(--brand-ink); }
+.nav-menu .btn { padding: .55rem 1.15rem; font-size: .98rem; }
+.nav-toggle { display: none; width: 46px; height: 46px; border: var(--stroke) solid var(--text); background: var(--amber); color: var(--text); cursor: pointer; border-radius: 14px; box-shadow: 3px 3px 0 var(--text); transition: transform .15s, box-shadow .15s; }
+.nav-toggle:hover { background: color-mix(in srgb, var(--amber) 84%, var(--surface)); }
+.nav-toggle:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--text); }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 20px; height: 3px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; border-radius: 2px; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 1020px) and (min-width: 761px) { .nav-menu { gap: .8rem; font-size: .92rem; } .logo small { display: none; } }
+@media (max-width: 760px) {
+  /* Without JavaScript the menu wraps below the logo; with JS it collapses into the hamburger */
+  html:not(.js) .nav { flex-wrap: wrap; height: auto; padding-block: .8rem; }
+  html:not(.js) .site-header { position: sticky; background: var(--brand-deep); }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: 2.5rem; }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--brand-deep); border-bottom: var(--stroke) solid var(--text); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: .8rem 0; border-bottom: 1px solid color-mix(in srgb, var(--brand-ink) 18%, transparent); }
+  .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+  .js .site-header:has(.nav-menu.open) { background: var(--brand-deep); }
+}
+
+/* ==================== Art placeholders ====================
+   Every .img-cup is a bubble tea cup drawn with CSS gradients: sealed rim, straw, tea, foam and boba.
+   Change a cup with variables: --tea (tea color), --tea-top (top tone), --cap-h (foam height); add .has-pearl for boba.
+   Replace with a photo: .img-xx { background: url(images/xxx.jpg) center/cover; }
+   (after switching to photos, delete the .img-cup ::before / ::after rules too) */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; }
+.img-cup { --tea: var(--milktea); --tea-top: color-mix(in srgb, var(--milktea) 78%, var(--milk)); --cap-h: 0%; --pearl-img: none; --pearl-h: 0%; --stripes: none;
+  aspect-ratio: 4 / 5; border: var(--stroke) solid var(--text);
+  background:
+    linear-gradient(90deg, var(--straw) 0 58%, color-mix(in srgb, var(--straw) 60%, var(--surface)) 58% 78%, var(--straw) 78%) 58% 12.5% / 8% 36% no-repeat,
+    linear-gradient(var(--text), var(--text)) 50% 28.5% / 47% 4% no-repeat,
+    radial-gradient(ellipse 30% 4% at 52% 90%, var(--shadow) 0 70%, transparent 74%),
+    var(--art-pattern, radial-gradient(circle closest-side, color-mix(in srgb, var(--surface) 30%, transparent) 0 40%, transparent 46%) 0 0 / 30px 30px),
+    var(--art-bg, var(--amber)); }
+/* Cup body: tapered cup with foam, tea, brown sugar stripes and boba from top to bottom */
+.img-cup::before, .img-cup::after { content: ""; position: absolute; left: 30%; right: 30%; top: 30%; bottom: 12%; clip-path: polygon(0 0, 100% 0, 86% 100%, 14% 100%); pointer-events: none; }
+.img-cup::before { z-index: 1;
+  background:
+    linear-gradient(90deg, transparent 18%, color-mix(in srgb, var(--surface) 34%, transparent) 18% 27%, transparent 27%),
+    linear-gradient(var(--cap) 0 var(--cap-h), transparent 0),
+    var(--pearl-img) 0 100% / 20% 12% repeat-x,
+    var(--pearl-img) 10% 85% / 20% 12% repeat-x,
+    var(--stripes),
+    linear-gradient(to top, var(--syrup) 0 var(--pearl-h), transparent 0),
+    linear-gradient(var(--tea-top), var(--tea)); }
+/* Hard shadow behind the cup for a sticker look */
+.img-cup::after { background: var(--text); transform: translate(7%, 3%); }
+.has-pearl { --pearl-img: radial-gradient(circle closest-side, var(--pearl) 0 80%, transparent 88%); --pearl-h: 26%; }
+.has-cap { --cap-h: 22%; }
+.cup-brown, [data-tea="brown"] { --tea: var(--milk); --tea-top: var(--surface); --stripes: repeating-linear-gradient(-24deg, transparent 0 9%, color-mix(in srgb, var(--syrup) 78%, transparent) 9% 14%); }
+.cup-oolong, [data-tea="oolong"] { --tea: var(--oolong); --tea-top: color-mix(in srgb, var(--oolong) 70%, var(--passion)); }
+.cup-fruit, [data-tea="fruit"] { --tea: var(--passion); --tea-top: var(--greentea); --stripes: radial-gradient(circle closest-side, var(--pearl) 0 30%, transparent 40%) 0 0 / 22% 13%; }
+[data-tea="green"] { --tea: var(--greentea); --tea-top: color-mix(in srgb, var(--greentea) 70%, var(--milk)); }
+[data-tea="milk"] { --tea: var(--milktea); }
+.bg-amber { --art-bg: var(--amber); }
+.bg-matcha { --art-bg: var(--matcha); }
+.bg-milk { --art-bg: var(--milk); --art-pattern: radial-gradient(circle closest-side, color-mix(in srgb, var(--syrup) 18%, transparent) 0 40%, transparent 46%) 0 0 / 30px 30px; }
+
+/* Replace with a photo: .img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero { aspect-ratio: 1 / 1; border-radius: 50%; border-width: 4px; box-shadow: 8px 8px 0 var(--text);
+  --art-pattern: repeating-conic-gradient(from 0deg at 50% 60%, color-mix(in srgb, var(--surface) 22%, transparent) 0 7deg, transparent 7deg 20deg); }
+
+/* ==================== Hero ==================== */
+.hero { background: var(--brand); color: var(--brand-ink); padding-block: calc(72px + clamp(1.5rem, 5vw, 3.5rem)) clamp(3rem, 7vw, 5rem); overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--gap); align-items: center; }
+.hero h1 { font-size: clamp(3rem, 7.4vw, 6.4rem); line-height: 1; margin-bottom: 1.2rem; }
+.hero .lead { font-size: clamp(1.05rem, 1.6vw, 1.25rem); max-width: 31rem; margin-bottom: 1.8rem; opacity: .95; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; }
+.hero-note { margin-top: 1.6rem; font-size: .95rem; opacity: .9; }
+.hero-note b { font-variant-numeric: tabular-nums; }
+.hero-art { position: relative; max-width: 500px; width: 100%; justify-self: center; }
+.sticker { position: absolute; z-index: 2; background: var(--amber); color: var(--amber-ink); border: var(--stroke) solid var(--text); box-shadow: 3px 3px 0 var(--text); font: 800 1.05rem/1.15 var(--font-body); padding: .55rem .95rem; border-radius: 14px; text-align: center; }
+.sticker.s1 { top: 8%; left: -4%; transform: rotate(-8deg); }
+.sticker.s2 { bottom: 10%; right: -3%; transform: rotate(6deg); background: var(--surface); }
+.sticker.s3 { top: 2%; right: 6%; width: 92px; height: 92px; border-radius: 50%; display: grid; place-content: center; background: var(--chili); color: var(--chili-ink); transform: rotate(12deg); font-size: .95rem; }
+.sticker big { display: block; font: 800 1.9rem/1 var(--font-heading); font-stretch: 80%; }
+.ticker { background: var(--text); color: var(--amber); border-block: var(--stroke) solid var(--text); overflow: hidden; transform: rotate(-1.2deg); margin: -1.2rem -1rem 0; position: relative; z-index: 2; }
+.ticker ul { display: flex; gap: 2.4rem; list-style: none; padding: .8rem 1rem; white-space: nowrap; font: 800 1.35rem/1 var(--font-heading); font-stretch: 80%; justify-content: center; }
+.ticker li:nth-child(even) { color: var(--brand-ink); }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-art { max-width: 340px; margin-top: 1rem; }
+  .ticker ul { justify-content: flex-start; font-size: 1.1rem; }
+}
+
+/* ==================== Signature drinks ==================== */
+.sig-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.sig { padding: 1rem 1rem 1.4rem; display: flex; flex-direction: column; gap: .7rem; transition: transform .2s; }
+.sig:nth-child(2) { transform: rotate(1deg); } .sig:nth-child(3) { transform: rotate(-1deg); }
+.sig .img { border-radius: calc(var(--radius) - 6px); }
+.sig h3 { font-size: 1.85rem; color: var(--brand); }
+.sig p { color: var(--muted); }
+.sig-foot { display: flex; align-items: center; justify-content: space-between; gap: .6rem; margin-top: auto; flex-wrap: wrap; }
+.price { font: 800 1.5rem/1 var(--font-heading); font-stretch: 80%; font-variant-numeric: tabular-nums; }
+.price small { font: 600 .9rem/1 var(--font-body); color: var(--muted); }
+@media (max-width: 860px) { .sig-grid { grid-template-columns: minmax(0, 1fr); max-width: 440px; margin-inline: auto; } .sig .img { width: 62%; justify-self: center; align-self: center; } }
+
+/* Tags: best seller / can be hot / caffeine-free */
+.tags { display: flex; flex-wrap: wrap; gap: .35rem; list-style: none; }
+.tag { font: 700 .82rem/1 var(--font-body); padding: .38rem .6rem; border-radius: 8px; border: 2px solid var(--text); background: var(--surface); color: var(--text); }
+.tag-hot { background: var(--chili); color: var(--chili-ink); }
+.tag-warm { background: var(--amber); color: var(--amber-ink); }
+.tag-free { background: var(--surface); color: var(--brand); border-color: var(--brand); }
+
+/* ==================== Menu ==================== */
+.menu { background: var(--surface); border-block: var(--stroke) solid var(--text); }
+.tabs { display: flex; gap: .6rem; margin-bottom: 2rem; flex-wrap: wrap; }
+.tab { font: 700 1.05rem/1 var(--font-body); padding: .85rem 1.4rem; border-radius: 999px; border: var(--stroke) solid var(--text); background: var(--bg); color: var(--text); cursor: pointer; transition: transform .15s, box-shadow .15s, background-color .2s, color .2s; }
+.tab:hover { background: var(--milk); }
+.tab:active { transform: translate(2px, 2px); }
+.tab[aria-selected="true"] { background: var(--brand); color: var(--brand-ink); box-shadow: 4px 4px 0 var(--text); }
+.panel + .panel { margin-top: 2.5rem; }
+.js .panel + .panel { margin-top: 0; }
+.panel-title { font: 800 1.6rem/1.2 var(--font-heading); font-stretch: 80%; margin-bottom: 1rem; color: var(--brand); }
+.items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; list-style: none; }
+.item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem 1rem; align-items: start; padding: 1.1rem 1.2rem; background: var(--bg); border: 2px solid var(--text); border-radius: 16px; }
+.item h3 { font-size: 1.4rem; }
+.item p { grid-column: 1 / -1; color: var(--muted); font-size: .94rem; }
+.item .tags { grid-column: 1 / -1; }
+.ml { display: flex; gap: .4rem; font-variant-numeric: tabular-nums; }
+.ml span { display: grid; text-align: center; min-width: 3.4rem; padding: .3rem .4rem; border-radius: 10px; background: var(--surface); border: 2px solid var(--line); font: 800 1.15rem/1.1 var(--font-heading); font-stretch: 80%; }
+.ml small { font: 600 .75rem/1.2 var(--font-body); color: var(--muted); }
+.menu-note { margin-top: 1.6rem; color: var(--muted); font-size: .92rem; }
+@media (max-width: 760px) { .items { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Build your drink ==================== */
+.custom { background: var(--brand); color: var(--brand-ink); }
+.custom .sec-title { color: var(--brand-ink); }
+.custom .sec-lead { color: color-mix(in srgb, var(--brand-ink) 86%, transparent); }
+.mix-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .9fr); gap: var(--gap); align-items: start; }
+.mix { padding: clamp(1.2rem, 3vw, 2rem); color: var(--text); display: grid; gap: 1.4rem; }
+.mix fieldset { border: 0; min-width: 0; }
+.mix legend, .mix .lbl { font: 800 1.25rem/1.2 var(--font-heading); font-stretch: 80%; margin-bottom: .6rem; display: block; }
+.mix select { width: 100%; font: 600 1rem var(--font-body); color: var(--text); background: var(--bg); border: 2px solid var(--text); border-radius: 12px; padding: .75rem .8rem; min-height: 50px; }
+.pills { display: flex; flex-wrap: wrap; gap: .5rem; }
+.pill { position: relative; cursor: pointer; }
+.pill input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.pill span { display: inline-block; padding: .6rem .95rem; border: 2px solid var(--text); border-radius: 999px; background: var(--bg); font-weight: 700; font-size: .95rem; transition: transform .15s, background-color .2s, box-shadow .15s; }
+.pill:hover span { background: var(--milk); }
+.pill:active span { transform: translate(2px, 2px); }
+.pill input:checked + span { background: var(--amber); box-shadow: 3px 3px 0 var(--text); }
+.pill input:focus-visible + span { outline: 3px solid var(--brand); outline-offset: 2px; }
+.pill small { font-weight: 600; color: var(--muted); }
+.receipt { padding: 1.2rem; color: var(--text); position: sticky; top: 92px; display: grid; gap: 1rem; }
+.receipt .img { max-width: 240px; width: 70%; justify-self: center; }
+.receipt h3 { font-size: 1.5rem; }
+.receipt output { display: block; }
+#mix-sum { font-weight: 600; font-size: 1.08rem; min-height: 3.4em; }
+.total { display: flex; align-items: baseline; justify-content: space-between; border-top: 2px dashed var(--text); padding-top: .9rem; }
+#mix-price { font: 800 2.3rem/1 var(--font-heading); font-stretch: 80%; color: var(--brand); font-variant-numeric: tabular-nums; }
+.receipt .btn { width: 100%; }
+.small-note { font-size: .88rem; color: var(--muted); }
+@media (max-width: 860px) { .mix-grid { grid-template-columns: minmax(0, 1fr); } .receipt { position: static; } }
+
+/* ==================== Locations ==================== */
+.store-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.store { padding: 1.5rem; display: flex; flex-direction: column; gap: .8rem; position: relative; }
+.store h3 { font-size: 1.8rem; color: var(--brand); padding-right: 4.5rem; }
+.store .flag { position: absolute; top: -14px; right: 16px; background: var(--chili); color: var(--chili-ink); border: 2px solid var(--text); border-radius: 10px; padding: .3rem .65rem; font-weight: 800; font-size: .88rem; transform: rotate(5deg); }
+.store dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .3rem .9rem; font-size: .96rem; }
+.store dt { font-weight: 700; color: var(--muted); }
+.store dd { font-variant-numeric: tabular-nums; }
+.store-actions { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: auto; padding-top: .4rem; }
+.store-actions .btn { padding: .65rem 1.1rem; font-size: .95rem; flex: 1 1 auto; }
+@media (max-width: 960px) { .store-grid { grid-template-columns: minmax(0, 1fr); max-width: 560px; } }
+
+/* ==================== Delivery ==================== */
+.order { background: var(--amber); border-block: var(--stroke) solid var(--text); }
+.order .sec-title { color: var(--text); }
+.order .sec-lead { color: var(--text); }
+.order-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--gap); align-items: center; }
+.order-grid .sec-head { margin-bottom: 0; }
+.platforms { display: grid; gap: .8rem; min-width: min(100%, 340px); }
+.platforms .btn { justify-content: space-between; padding: 1rem 1.4rem; font-size: 1.15rem; border-radius: 16px; }
+.platforms .btn small { font: 600 .85rem/1 var(--font-body); color: var(--muted); }
+@media (max-width: 760px) { .order-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Rewards ==================== */
+.member { background: var(--tapioca); color: var(--brand-ink); }
+.member .sec-title { color: var(--amber); }
+.member .sec-lead { color: color-mix(in srgb, var(--brand-ink) 86%, transparent); }
+.member-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap); align-items: center; }
+.stamp-card { color: var(--text); padding: clamp(1.2rem, 3vw, 1.8rem); transform: rotate(-2deg); background: var(--milk); }
+.stamp-card h3 { font-size: 1.6rem; margin-bottom: 1rem; }
+.stamps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .6rem; list-style: none; }
+.stamps li { aspect-ratio: 1; border-radius: 50%; border: 2px dashed var(--text); background: var(--surface); }
+.stamps li.on { border-style: solid; background: radial-gradient(circle closest-side, var(--pearl) 0 46%, transparent 52%), var(--amber); }
+.stamps li:last-child { background: var(--chili); border-style: solid; }
+.stamp-card p { margin-top: 1rem; font-size: .92rem; color: var(--muted); }
+.perks { list-style: none; display: grid; gap: 1rem; margin-bottom: 1.6rem; }
+.perks li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem; align-items: start; }
+.perks b { font: 800 1.7rem/1 var(--font-heading); font-stretch: 80%; color: var(--amber); min-width: 3.2rem; }
+.perks h3 { font-size: 1.3rem; margin-bottom: .2rem; }
+.perks p { color: color-mix(in srgb, var(--brand-ink) 84%, transparent); font-size: .96rem; }
+@media (max-width: 860px) { .member-grid { grid-template-columns: minmax(0, 1fr); } .stamp-card { max-width: 440px; } }
+
+/* ==================== Franchise ==================== */
+.fr-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap); align-items: start; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin-top: 1.8rem; list-style: none; }
+.facts li { background: var(--surface); border: 2px solid var(--text); border-radius: 16px; padding: 1rem; }
+.facts b { display: block; font: 800 2rem/1 var(--font-heading); font-stretch: 80%; color: var(--brand); margin-bottom: .3rem; }
+.facts span { font-size: .9rem; color: var(--muted); }
+.form { padding: clamp(1.3rem, 3.5vw, 2rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.form h3 { grid-column: 1 / -1; font-size: 1.6rem; color: var(--brand); }
+.field { display: grid; gap: .35rem; min-width: 0; align-content: start; }
+.field.full, .form .btn, .form > small { grid-column: 1 / -1; }
+.field label { font-weight: 700; font-size: .92rem; }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 2px solid var(--line); border-radius: 12px; padding: .7rem .85rem; min-height: 48px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--text); box-shadow: 3px 3px 0 var(--amber); }
+.field textarea { min-height: 96px; resize: vertical; }
+.form > small { color: var(--muted); font-size: .85rem; }
+@media (max-width: 860px) { .fr-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .form { grid-template-columns: minmax(0, 1fr); } .facts li { padding: .8rem .7rem; } .facts b { font-size: 1.6rem; } }
+
+/* ==================== Footer ==================== */
+.site-footer { background: var(--brand-deep); color: color-mix(in srgb, var(--brand-ink) 86%, transparent); padding-block: 3.5rem 2rem; font-size: .95rem; border-top: var(--stroke) solid var(--text); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.site-footer h2 { color: var(--amber); font-size: 1.5rem; margin-bottom: .7rem; }
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; color: var(--amber); }
+.social { display: flex; gap: 1rem; margin-top: .8rem; flex-wrap: wrap; }
+.copy { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid color-mix(in srgb, var(--brand-ink) 18%, transparent); font-size: .85rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* Mobile sticky action bar */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 80px; }
+  .sticky-cta { display: flex; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: var(--brand-deep); color: var(--brand-ink); border-top: var(--stroke) solid var(--text); }
+  .sticky-cta .btn-primary { flex: 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== Section: Header ==================== -->
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main menu">
+    <a href="#hero" class="logo"><span class="logo-mark" aria-hidden="true"></span><span><b>Muu Tea Bar</b><small>Fresh-brewed boba</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-links" aria-label="Open menu"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#signature">Favorites</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#custom">Build yours</a></li>
+      <li><a href="#stores">Locations</a></li>
+      <li><a href="#member">Rewards</a></li>
+      <li><a href="#franchise">Franchise</a></li>
+      <li><a href="#order" class="btn btn-primary">Order online</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Fresh tea. Fresh boba. Every day.</h1>
+      <p class="lead">Real Taiwanese loose-leaf tea, re-brewed every 4 hours. Sweetness and ice, exactly how you like it.</p>
+      <div class="hero-cta">
+        <a href="#order" class="btn btn-primary">Order online</a>
+        <a href="#menu" class="btn btn-ghost">See the menu</a>
+      </div>
+      <p class="hero-note">Three shops, open daily until <b>11:00 pm</b></p>
+    </div>
+    <div class="hero-art">
+      <div class="img img-cup img-hero cup-brown has-pearl bg-amber" role="img" aria-label="A brown sugar boba milk with tiger stripes and a red straw, set against an amber sunburst"></div>
+      <p class="sticker s1" aria-hidden="true">Boba cooked daily</p>
+      <p class="sticker s2" aria-hidden="true">100% Taiwan tea</p>
+      <p class="sticker s3" aria-hidden="true"><span><big>4hr</big>brew</span></p>
+    </div>
+  </div>
+</section>
+<div class="ticker" aria-hidden="true">
+  <ul><li>Brown Sugar Boba</li><li>Jin Xuan Cheese Foam</li><li>Passion Fruit Green</li><li>House Oolong Milk Tea</li><li>Winter Melon Lemon</li><li>Hojicha Latte</li></ul>
+</div>
+
+<!-- ==================== Section: Signature drinks ==================== -->
+<section id="signature">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">Start with these three</h2>
+      <p class="sec-lead">First time here? These are the cups our crew recommends most. Every one can be tuned for sweetness and ice.</p>
+    </div>
+    <div class="sig-grid">
+      <article class="sig sticker-box reveal">
+        <div class="img img-cup cup-brown has-pearl bg-amber" role="img" aria-label="Fresh milk with brown sugar tiger stripes and a layer of boba at the bottom"></div>
+        <h3>Brown Sugar Boba Milk</h3>
+        <p>Slow-cooked brown sugar syrup streaked down the cup, with chewy boba made fresh every morning. No tea, so it works at night too.</p>
+        <div class="sig-foot"><span class="price">$6.25 <small>and up</small></span><ul class="tags"><li class="tag tag-hot">Best seller</li><li class="tag tag-free">Caffeine-free</li></ul></div>
+      </article>
+      <article class="sig sticker-box reveal">
+        <div class="img img-cup cup-oolong has-cap bg-matcha" role="img" aria-label="An amber Jin Xuan oolong topped with a thick cheese foam cap on a matcha green background"></div>
+        <h3>Jin Xuan Cheese Foam</h3>
+        <p>Buttery Jin Xuan oolong under a cap of lightly salted cream. Sip the foam first, then go in for the tea.</p>
+        <div class="sig-foot"><span class="price">$5.50 <small>and up</small></span><ul class="tags"><li class="tag tag-hot">Best seller</li></ul></div>
+      </article>
+      <article class="sig sticker-box reveal">
+        <div class="img img-cup cup-fruit bg-milk" role="img" aria-label="A yellow-green passion fruit green tea with seeds on a cream background"></div>
+        <h3>Passion Fruit Green Tea</h3>
+        <p>Whole passion fruit cut to order and shaken with Four Seasons green tea. Our summer sellout, often gone by evening.</p>
+        <div class="sig-foot"><span class="price">$5.25 <small>and up</small></span><ul class="tags"><li class="tag tag-warm">Can be hot</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Menu ==================== -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">Menu</h2>
+      <p class="sec-lead">Medium is 16 oz, large is 24 oz. Prices in USD and may vary slightly by location.</p>
+    </div>
+    <div class="tabs js-only" role="tablist" aria-label="Menu categories">
+      <button class="tab" type="button" role="tab" id="tab-tea" aria-controls="panel-tea" aria-selected="true">Pure tea</button>
+      <button class="tab" type="button" role="tab" id="tab-milk" aria-controls="panel-milk" aria-selected="false" tabindex="-1">Milk tea</button>
+      <button class="tab" type="button" role="tab" id="tab-fruit" aria-controls="panel-fruit" aria-selected="false" tabindex="-1">Fresh fruit</button>
+      <button class="tab" type="button" role="tab" id="tab-season" aria-controls="panel-season" aria-selected="false" tabindex="-1">Seasonal</button>
+    </div>
+    <!-- To add an item: copy one <li class="item"> and change the name, description, M/L prices and tags -->
+    <div class="panel" role="tabpanel" id="panel-tea" aria-labelledby="tab-tea" tabindex="0">
+      <p class="panel-title nojs-only">Pure tea</p>
+      <ul class="items">
+        <li class="item"><h3>Jin Xuan Oolong</h3><div class="ml"><span><small>M</small>3.75</span><span><small>L</small>4.25</span></div><p>Light and naturally milky. The easiest way into straight tea.</p><ul class="tags"><li class="tag tag-hot">Best seller</li><li class="tag tag-warm">Can be hot</li></ul></li>
+        <li class="item"><h3>Four Seasons Green</h3><div class="ml"><span><small>M</small>3.75</span><span><small>L</small>4.25</span></div><p>Bright and floral with a sweet finish. Made for fruit.</p><ul class="tags"><li class="tag tag-warm">Can be hot</li></ul></li>
+        <li class="item"><h3>Tieguanyin Roast</h3><div class="ml"><span><small>M</small>4.25</span><span><small>L</small>4.75</span></div><p>Deep-roasted and woody. For people who like it strong.</p><ul class="tags"><li class="tag tag-warm">Can be hot</li></ul></li>
+        <li class="item"><h3>Honey Black Tea</h3><div class="ml"><span><small>M</small>3.75</span><span><small>L</small>4.25</span></div><p>Small-leaf black tea with a natural honey note. Great with zero sugar.</p><ul class="tags"><li class="tag tag-warm">Can be hot</li></ul></li>
+        <li class="item"><h3>Roasted Buckwheat</h3><div class="ml"><span><small>M</small>3.75</span><span><small>L</small>4.25</span></div><p>Toasty and nutty. Kid-friendly and pregnancy-friendly.</p><ul class="tags"><li class="tag tag-free">Caffeine-free</li><li class="tag tag-warm">Can be hot</li></ul></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-milk" aria-labelledby="tab-milk" tabindex="0">
+      <p class="panel-title nojs-only">Milk tea</p>
+      <ul class="items">
+        <li class="item"><h3>House Oolong Milk Tea</h3><div class="ml"><span><small>M</small>4.95</span><span><small>L</small>5.75</span></div><p>Roasted oolong and whole milk, with the tea out front.</p><ul class="tags"><li class="tag tag-hot">Best seller</li><li class="tag tag-warm">Can be hot</li></ul></li>
+        <li class="item"><h3>Brown Sugar Boba Milk</h3><div class="ml"><span><small>M</small>6.25</span><span><small>L</small>6.95</span></div><p>House brown sugar syrup and fresh boba, tiger stripes and all.</p><ul class="tags"><li class="tag tag-hot">Best seller</li><li class="tag tag-free">Caffeine-free</li></ul></li>
+        <li class="item"><h3>Jin Xuan Cheese Foam</h3><div class="ml"><span><small>M</small>5.50</span><span><small>L</small>6.25</span></div><p>Salted cream cap over Jin Xuan oolong. Don't stir it.</p><ul class="tags"><li class="tag tag-hot">Best seller</li></ul></li>
+        <li class="item"><h3>Hojicha Latte</h3><div class="ml"><span><small>M</small>5.75</span><span><small>L</small>6.50</span></div><p>Whisked Japanese roasted green tea. Mellow and lower in caffeine.</p><ul class="tags"><li class="tag tag-warm">Can be hot</li></ul></li>
+        <li class="item"><h3>Taro Milk</h3><div class="ml"><span><small>M</small>6.50</span><span><small>L</small>7.25</span></div><p>Real taro, steamed and mashed daily, with little chunks to chew.</p><ul class="tags"><li class="tag tag-free">Caffeine-free</li><li class="tag tag-warm">Can be hot</li></ul></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-fruit" aria-labelledby="tab-fruit" tabindex="0">
+      <p class="panel-title nojs-only">Fresh fruit</p>
+      <ul class="items">
+        <li class="item"><h3>Passion Fruit Green Tea</h3><div class="ml"><span><small>M</small>5.25</span><span><small>L</small>5.95</span></div><p>Whole passion fruit cut to order, tart and seedy.</p><ul class="tags"><li class="tag tag-hot">Best seller</li><li class="tag tag-warm">Can be hot</li></ul></li>
+        <li class="item"><h3>Winter Melon Lemonade</h3><div class="ml"><span><small>M</small>4.50</span><span><small>L</small>5.25</span></div><p>Old-school winter melon syrup with fresh-squeezed lemon.</p><ul class="tags"><li class="tag tag-free">Caffeine-free</li></ul></li>
+        <li class="item"><h3>Orange Oolong</h3><div class="ml"><span><small>M</small>5.50</span><span><small>L</small>6.25</span></div><p>Fresh-pressed orange over light Jin Xuan oolong.</p><ul class="tags"><li class="tag">Pressed daily</li></ul></li>
+        <li class="item"><h3>Grapefruit Green Tea</h3><div class="ml"><span><small>M</small>5.95</span><span><small>L</small>6.75</span></div><p>Loaded with ruby grapefruit pulp. A little bitter, very refreshing.</p><ul class="tags"><li class="tag tag-hot">Best seller</li></ul></li>
+        <li class="item"><h3>Pineapple Four Seasons</h3><div class="ml"><span><small>M</small>5.50</span><span><small>L</small>6.25</span></div><p>Slow-cooked pineapple jam shaken with floral green tea.</p><ul class="tags"><li class="tag tag-warm">Can be hot</li></ul></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-season" aria-labelledby="tab-season" tabindex="0">
+      <p class="panel-title nojs-only">Seasonal</p>
+      <ul class="items">
+        <li class="item"><h3>Ginger Brown Sugar Milk</h3><div class="ml"><span><small>M</small>6.25</span><span><small>L</small>6.95</span></div><p>Fresh ginger and brown sugar. Warms you right up.</p><ul class="tags"><li class="tag tag-warm">Can be hot</li><li class="tag tag-free">Caffeine-free</li></ul></li>
+        <li class="item"><h3>Longan Red Date Oolong</h3><div class="ml"><span><small>M</small>5.75</span><span><small>L</small>6.50</span></div><p>Dried longan and jujube simmered into roasted oolong.</p><ul class="tags"><li class="tag tag-warm">Can be hot</li></ul></li>
+        <li class="item"><h3>Strawberry Milk</h3><div class="ml"><span><small>M</small>7.50</span><span><small>L</small>8.50</span></div><p>Fresh strawberries muddled daily. Here until the season ends.</p><ul class="tags"><li class="tag tag-hot">Best seller</li><li class="tag tag-free">Caffeine-free</li></ul></li>
+        <li class="item"><h3>Crème Brûlée Milk Tea</h3><div class="ml"><span><small>M</small>6.50</span><span><small>L</small>7.25</span></div><p>A whole caramel custard dropped into oolong milk tea.</p><ul class="tags"><li class="tag tag-warm">Can be hot</li></ul></li>
+      </ul>
+    </div>
+    <p class="menu-note">Toppings: boba, coconut jelly or grass jelly $0.75 each; cheese foam or pudding $1.25 each. Hot drinks come in medium only.</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Build your drink ==================== -->
+<section class="custom" id="custom">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">Build your cup</h2>
+      <p class="sec-lead">Pick a drink, sweetness, ice and toppings. We turn it into one line you can read to the barista or paste into your delivery notes.</p>
+    </div>
+    <div class="mix-grid">
+      <!-- Editing options: data-m / data-l are the medium / large prices, data-tea sets the cup color (milk, oolong, fruit, brown, green), data-pearl / data-cap mean the drink already comes with boba / cheese foam; data-p on toppings is the add-on price -->
+      <form class="mix sticker-box reveal" id="mix" onsubmit="return false">
+        <div>
+          <label class="lbl" for="mix-drink">Drink</label>
+          <select id="mix-drink" name="drink">
+            <option data-m="4.95" data-l="5.75" data-tea="milk" selected>House Oolong Milk Tea</option>
+            <option data-m="6.25" data-l="6.95" data-tea="brown" data-pearl="1">Brown Sugar Boba Milk</option>
+            <option data-m="5.50" data-l="6.25" data-tea="oolong" data-cap="1">Jin Xuan Cheese Foam</option>
+            <option data-m="3.75" data-l="4.25" data-tea="green">Jin Xuan Oolong</option>
+            <option data-m="5.25" data-l="5.95" data-tea="fruit">Passion Fruit Green Tea</option>
+            <option data-m="4.50" data-l="5.25" data-tea="fruit">Winter Melon Lemonade</option>
+          </select>
+        </div>
+        <fieldset><legend>Size</legend><div class="pills">
+          <label class="pill"><input type="radio" name="size" value="M" checked><span>Medium 16 oz</span></label>
+          <label class="pill"><input type="radio" name="size" value="L"><span>Large 24 oz</span></label>
+        </div></fieldset>
+        <fieldset><legend>Sweetness</legend><div class="pills">
+          <label class="pill"><input type="radio" name="sugar" value="0% sweet"><span>0%</span></label>
+          <label class="pill"><input type="radio" name="sugar" value="30% sweet"><span>30%</span></label>
+          <label class="pill"><input type="radio" name="sugar" value="50% sweet" checked><span>50%</span></label>
+          <label class="pill"><input type="radio" name="sugar" value="70% sweet"><span>70%</span></label>
+          <label class="pill"><input type="radio" name="sugar" value="100% sweet"><span>100%</span></label>
+        </div></fieldset>
+        <fieldset><legend>Ice</legend><div class="pills">
+          <label class="pill"><input type="radio" name="ice" value="no ice"><span>No ice</span></label>
+          <label class="pill"><input type="radio" name="ice" value="light ice"><span>Light</span></label>
+          <label class="pill"><input type="radio" name="ice" value="less ice" checked><span>Less</span></label>
+          <label class="pill"><input type="radio" name="ice" value="regular ice"><span>Regular</span></label>
+        </div></fieldset>
+        <fieldset><legend>Toppings</legend><div class="pills">
+          <label class="pill"><input type="checkbox" name="top" value="boba" data-p="0.75" data-k="pearl"><span>Boba <small>+0.75</small></span></label>
+          <label class="pill"><input type="checkbox" name="top" value="coconut jelly" data-p="0.75"><span>Coconut jelly <small>+0.75</small></span></label>
+          <label class="pill"><input type="checkbox" name="top" value="grass jelly" data-p="0.75"><span>Grass jelly <small>+0.75</small></span></label>
+          <label class="pill"><input type="checkbox" name="top" value="cheese foam" data-p="1.25" data-k="cap"><span>Cheese foam <small>+1.25</small></span></label>
+          <label class="pill"><input type="checkbox" name="top" value="pudding" data-p="1.25"><span>Pudding <small>+1.25</small></span></label>
+        </div></fieldset>
+      </form>
+      <aside class="receipt sticker-box reveal" aria-labelledby="mix-title">
+        <div class="img img-cup bg-matcha" id="mix-art" data-tea="milk" role="img" aria-label="Drink illustration that changes with your choices"></div>
+        <h3 id="mix-title">Your cup</h3>
+        <output id="mix-sum" for="mix" aria-live="polite">Medium House Oolong Milk Tea, 50% sweet, less ice</output>
+        <p class="total"><span>Subtotal</span><output id="mix-price" for="mix">$4.95</output></p>
+        <a href="#order" class="btn btn-primary">Order this cup</a>
+        <p class="small-note nojs-only">Once you've picked, just tell the barista or add it to your delivery notes.</p>
+        <p class="small-note js-only">Estimate only. Final prices are set in store and on delivery apps.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Locations ==================== -->
+<section id="stores">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">Three shops around Portland</h2>
+      <p class="sec-lead">Walk in, call ahead, or order online for pickup at any location. Opening another shop? Copy a location card.</p>
+    </div>
+    <div class="store-grid">
+      <article class="store sticker-box reveal">
+        <span class="flag">Flagship</span>
+        <h3>Downtown</h3>
+        <dl>
+          <dt>Address</dt><dd>128 Maple Street, Portland, OR 97205</dd>
+          <dt>Hours</dt><dd>Daily 10:00 am–11:00 pm</dd>
+          <dt>Phone</dt><dd>(555) 012-3456</dd>
+        </dl>
+        <div class="store-actions">
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=128+Maple+Street,+Portland,+OR+97205" target="_blank" rel="noopener">Google Maps</a>
+          <a class="btn btn-ghost" href="tel:+15550123456">Call</a>
+        </div>
+      </article>
+      <article class="store sticker-box reveal">
+        <h3>Hawthorne</h3>
+        <dl>
+          <dt>Address</dt><dd>2045 Lakeview Avenue, Portland, OR 97214</dd>
+          <dt>Hours</dt><dd>Daily 10:30 am–10:00 pm</dd>
+          <dt>Phone</dt><dd>(555) 012-3457</dd>
+        </dl>
+        <div class="store-actions">
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=2045+Lakeview+Avenue,+Portland,+OR+97214" target="_blank" rel="noopener">Google Maps</a>
+          <a class="btn btn-ghost" href="tel:+15550123457">Call</a>
+        </div>
+      </article>
+      <article class="store sticker-box reveal">
+        <h3>Pearl Market</h3>
+        <dl>
+          <dt>Address</dt><dd>12 Linden Court, Portland, OR 97209</dd>
+          <dt>Hours</dt><dd>Mon–Fri 11:00 am–10:00 pm<br>Sat–Sun 10:00 am–10:30 pm</dd>
+          <dt>Phone</dt><dd>(555) 012-3458</dd>
+        </dl>
+        <div class="store-actions">
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=12+Linden+Court,+Portland,+OR+97209" target="_blank" rel="noopener">Google Maps</a>
+          <a class="btn btn-ghost" href="tel:+15550123458">Call</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Order online / delivery ==================== -->
+<section class="order" id="order">
+  <div class="wrap order-grid">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">Staying in? We deliver.</h2>
+      <p class="sec-lead">Search "Muu Tea Bar" on your delivery app. Coming to us? Order ahead on WhatsApp and skip the line.</p>
+    </div>
+    <!-- Replace href="#" with your store page URL on each delivery platform.
+         WhatsApp can be swapped for LINE, Messenger or an Instagram DM link. -->
+    <div class="platforms reveal">
+      <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Uber Eats delivery <small>about 30 min</small></a>
+      <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">foodpanda delivery <small>about 30 min</small></a>
+      <a class="btn btn-ghost" href="https://wa.me/15550123456" target="_blank" rel="noopener">WhatsApp pickup <small>skip the line</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Rewards ==================== -->
+<section class="member" id="member">
+  <div class="wrap member-grid">
+    <div class="stamp-card sticker-box reveal">
+      <h3>Muu Stamp Card</h3>
+      <ul class="stamps" aria-label="Sample stamp card: 7 of 10 stamps collected">
+        <li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li>
+        <li class="on"></li><li class="on"></li><li></li><li></li><li></li>
+      </ul>
+      <p>Fill the tenth spot and your next medium drink is on us.</p>
+    </div>
+    <div class="reveal">
+      <h2 class="sec-title">Join Muu Rewards and sip on us</h2>
+      <!-- Sample content: replace with real details before going live -->
+      <ul class="perks">
+        <li><b>1</b><div><h3>A stamp per cup</h3><p>Every drink earns one stamp, at all three shops and on pickup orders.</p></div></li>
+        <li><b>10</b><div><h3>Free medium drink</h3><p>Ten stamps gets you any medium drink. Toppings extra.</p></div></li>
+        <li><b>B-day</b><div><h3>Birthday treat</h3><p>Show your card during your birthday month for a free large house milk tea.</p></div></li>
+      </ul>
+      <a class="btn btn-primary" href="https://wa.me/15550123456" target="_blank" rel="noopener">Join on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Franchise ==================== -->
+<section id="franchise">
+  <div class="wrap fr-grid">
+    <div class="reveal">
+      <h2 class="sec-title">Open a Muu Tea Bar</h2>
+      <p class="sec-lead">We bring the tea recipes, equipment plan, training and launch marketing. Want a shop in your city? Leave your details and our team will reach out within 3 business days.</p>
+      <!-- Sample content: replace with real details before going live -->
+      <ul class="facts">
+        <li><b>3</b><span>company-run shops</span></li>
+        <li><b>300 sq ft</b><span>minimum footprint</span></li>
+        <li><b>30 days</b><span>hands-on training</span></li>
+      </ul>
+    </div>
+    <!-- This form uses Formspree (free plan: 50 submissions a month):
+         1. Sign up at https://formspree.io and create a new form
+         2. Copy the form ID from its URL (for example xyzabcd)
+         3. Replace your-form-id in the action below to receive inquiries by email -->
+    <form class="form sticker-box reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <h3>Franchise inquiry</h3>
+      <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">Phone</label><input id="f-tel" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(555) 012-3456" required></div>
+      <div class="field"><label for="f-mail">Email</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="f-area">Target city</label><input id="f-area" name="city" placeholder="e.g. Seattle, WA"></div>
+      <div class="field full"><label for="f-msg">Questions</label><textarea id="f-msg" name="message" placeholder="e.g. Do you have a space yet? Budget? Ideal opening date?"></textarea></div>
+      <button class="btn btn-primary" type="submit">Send inquiry</button>
+      <small>We only use your details to follow up on franchising. Never shared.</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>Muu Tea Bar</h2>
+        <p>Head office: 128 Maple Street, Portland, OR 97205<br>Phone <a href="tel:+15550123456">(555) 012-3456</a></p>
+        <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="https://wa.me/15550123456">WhatsApp</a></div>
+      </div>
+      <div>
+        <h2>Hours</h2>
+        <p>Downtown: daily 10:00 am–11:00 pm<br>Hawthorne: daily 10:30 am–10:00 pm<br>Pearl Market: 10:00 am–10:30 pm (weekdays from 11:00 am)</p>
+      </div>
+      <div>
+        <h2>Quick links</h2>
+        <p><a href="#menu">Menu</a><br><a href="#stores">Locations</a><br><a href="#order">Order online</a><br><a href="#franchise">Franchise</a></p>
+      </div>
+    </div>
+    <p class="copy">© <span id="y"></span> Muu Tea Bar</p>
+  </div>
+</footer>
+
+<!-- Mobile sticky action bar -->
+<div class="sticky-cta">
+  <a href="#order" class="btn btn-primary">Order online</a>
+  <a href="#stores" class="btn btn-ghost">Find a shop</a>
+</div>
+
+<script>
+const T = { cur: '$', dec: 2, locale: 'en-US', open: 'Close menu', closed: 'Open menu', size: { M: 'Medium', L: 'Large' }, add: 'add ', sep: ', ', list: ' + ' };
+const $ = (s, el = document) => el.querySelector(s), $$ = (s, el = document) => [...el.querySelectorAll(s)];
+$('#y').textContent = new Date().getFullYear();
+
+// Header background on scroll
+const header = $('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// Hamburger menu
+const toggle = $('.nav-toggle'), menu = $('#menu-links');
+const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? T.open : T.closed); };
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+$$('a', menu).forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// Scroll reveal
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+$$('.reveal').forEach(el => io.observe(el));
+
+// Menu tabs (arrow keys, Home and End supported)
+const tabs = $$('[role="tab"]');
+const select = (t, focus = true) => {
+  tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+  if (focus) t.focus();
+};
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => select(t));
+  t.addEventListener('keydown', e => {
+    const k = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+    if (k !== undefined) { e.preventDefault(); select(tabs[(k + tabs.length) % tabs.length]); }
+  });
+});
+select(tabs[0], false);
+
+// Build your drink: compose a one-line order and total the price
+const mix = $('#mix'), sum = $('#mix-sum'), price = $('#mix-price'), art = $('#mix-art');
+const calc = () => {
+  const d = mix.drink.selectedOptions[0], size = mix.size.value, tops = $$('[name="top"]:checked', mix);
+  const total = +d.dataset[size.toLowerCase()] + tops.reduce((n, t) => n + +t.dataset.p, 0);
+  const parts = [`${T.size[size]} ${d.textContent}`, mix.sugar.value, mix.ice.value];
+  if (tops.length) parts.push(T.add + tops.map(t => t.value).join(T.list));
+  sum.textContent = parts.join(T.sep);
+  price.textContent = T.cur + total.toLocaleString(T.locale, { minimumFractionDigits: T.dec, maximumFractionDigits: T.dec });
+  art.dataset.tea = d.dataset.tea;
+  art.classList.toggle('has-pearl', d.dataset.pearl || tops.some(t => t.dataset.k === 'pearl'));
+  art.classList.toggle('has-cap', d.dataset.cap || tops.some(t => t.dataset.k === 'cap'));
+};
+mix.addEventListener('change', calc); calc();
+</script>
+</body>
+</html>

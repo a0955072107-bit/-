@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CleanDay Home Services | House, Move-Out &amp; Office Cleaning in Cedar Hollow, OR</title>
+<meta name="description" content="CleanDay Home Services offers recurring house cleaning, deep cleans, move-out cleaning, office cleaning and AC cleaning in Cedar Hollow, OR. Get an instant online quote; we bring every supply.">
+<meta property="og:title" content="CleanDay Home Services | Cleaning in Cedar Hollow, OR">
+<meta property="og:description" content="Enter your square footage and room count, see a price and time estimate in 30 seconds, then book online.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2b7a3b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "CleanDay Home Services",
+  "telephone": "(555) 012-3456",
+  "url": "https://example.com/",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "128 Maple Street, Suite 3",
+    "addressLocality": "Cedar Hollow",
+    "addressRegion": "OR",
+    "postalCode": "97231",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Cedar Hollow" },
+    { "@type": "Place", "name": "Northgate" },
+    { "@type": "Place", "name": "Willow Park" },
+    { "@type": "Place", "name": "Eastbrook" },
+    { "@type": "Place", "name": "Lakeside" }
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:30", "closes": "18:00" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   THEME SETTINGS: edit these values to restyle colors and fonts site-wide
+   ============================================================ */
+:root {
+  --brand: #2b7a3b;          /* Brand color (fresh leaf green): buttons, highlights, check icons */
+  --brand-ink: #f8fcf5;      /* Text color on top of the brand color */
+  --brand-deep: #1d5a2b;     /* Deep brand: button hover, dark panels */
+  --brand-soft: #e4f2df;     /* Light brand: icon and tag backgrounds */
+  --lemon: #f7d84a;          /* Accent (lemon yellow): sparkles, highlights, accent blocks */
+  --lemon-soft: #fdf6d3;     /* Soft lemon: notes and featured card background */
+  --sky: #d9ebf5;            /* Pale sky blue for bubbles and the window art */
+  --bg: #f6f9f5;             /* Page background (crisp white with a hint of green) */
+  --surface: #fdfefb;        /* Cards and form surfaces (never pure white) */
+  --text: #24344a;           /* Main text (deep blue-grey) */
+  --muted: #536276;          /* Secondary text */
+  --line: #dbe5dc;           /* Dividers and borders */
+  --shadow: 0 14px 34px -16px rgba(36, 52, 74, .22); /* Soft card shadow */
+  --radius: 22px;            /* Card corner radius (soft and friendly) */
+  --radius-sm: 12px;         /* Small element radius */
+  --font-heading: "Nunito", system-ui, sans-serif;          /* Heading font (rounded sans) */
+  --font-body: "Nunito Sans", "Nunito", system-ui, sans-serif; /* Body font */
+  --max: 1160px;             /* Max content width */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 800; line-height: 1.3; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 8px; }
+.wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+section { padding-block: clamp(4rem, 9vw, 6.5rem); }
+.sec-head { max-width: 40rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
+.sec-head h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: .6rem; }
+.sec-head p { color: var(--muted); }
+.num { font-variant-numeric: tabular-nums; }
+.spark { color: var(--lemon); }
+
+/* ---------- Buttons ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .8rem 1.5rem; border-radius: 999px; font-weight: 700; font-family: var(--font-body); font-size: 1rem; border: 2px solid transparent; transition: background .25s, color .25s, transform .25s, border-color .25s; cursor: pointer; }
+.btn svg { width: 1.15rem; height: 1.15rem; flex: none; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: var(--brand-deep); transform: translateY(-2px); }
+.btn-ghost { border-color: color-mix(in srgb, var(--brand) 35%, transparent); color: var(--brand-deep); background: var(--surface); }
+.btn-ghost:hover { border-color: var(--brand); transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.97); }
+a:not(.btn):hover { color: var(--brand); }
+a:not(.btn):active { opacity: .7; }
+
+/* ---------- Header ---------- */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .55rem; font: 800 1.15rem/1.1 var(--font-heading); }
+.logo small { display: block; font: 500 .75rem var(--font-body); color: var(--muted); }
+.logo-mark { width: 2.4rem; height: 2.4rem; border-radius: 50% 50% 50% 14px; background: var(--brand); color: var(--brand-ink); display: grid; place-items: center; position: relative; flex: none; }
+.logo-mark svg { width: 1.35rem; height: 1.35rem; }
+.logo-mark::after { content: ""; position: absolute; top: -3px; right: -3px; width: .7rem; height: .7rem; border-radius: 50%; background: var(--lemon); box-shadow: 0 0 0 2px var(--bg); }
+.nav-links { display: flex; align-items: center; gap: 1.5rem; font-size: .94rem; }
+.nav-links a:not(.btn) { color: var(--muted); transition: color .2s; }
+.nav-links .btn { padding: .6rem 1.2rem; font-size: .94rem; }
+.menu-btn { display: none; width: 44px; height: 44px; border: 0; border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); color: var(--text); cursor: pointer; }
+.menu-btn:hover { color: var(--brand); }
+.menu-btn:active { transform: scale(.95); }
+.menu-btn span { display: block; width: 20px; height: 2px; margin: 4px auto; background: currentColor; border-radius: 2px; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+@media (min-width: 761px) and (max-width: 1020px) { .nav-links .opt { display: none; } }
+@media (max-width: 760px) {
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: 72px; left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .75rem; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: .8rem 1rem; border-radius: var(--radius-sm); }
+  .js .nav-links .btn { margin-top: .5rem; }
+  /* Without JS: the menu shows as a wrapping row of links and the header becomes sticky */
+  html:not(.js) .site-header { position: sticky; background: var(--surface); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: .75rem; }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: 2.5rem; }
+}
+
+/* ---------- Art placeholders ---------- */
+/* Replace with a photo: .img-hero { background: url(images/clean-room.jpg) center/cover; } (also delete the .img-hero ::before and ::after rules) */
+/* Replace with a photo: .img-why { background: url(images/team.jpg) center/cover; } */
+/* Replace with a photo: .img-map { background: url(images/area-map.jpg) center/cover; } */
+.img { position: relative; overflow: hidden; background-color: var(--brand-soft); }
+.img-hero {
+  border-radius: 40px 40px 40px 120px; aspect-ratio: 5 / 4.6;
+  background:
+    radial-gradient(circle at 18% 78%, color-mix(in srgb, var(--surface) 70%, transparent) 0 7%, transparent 7.5%),
+    radial-gradient(circle at 30% 88%, color-mix(in srgb, var(--surface) 55%, transparent) 0 4%, transparent 4.5%),
+    radial-gradient(circle at 10% 92%, color-mix(in srgb, var(--surface) 60%, transparent) 0 3%, transparent 3.5%),
+    radial-gradient(70% 55% at 100% 100%, color-mix(in srgb, var(--brand) 55%, var(--brand-soft)) 0 60%, transparent 61%),
+    linear-gradient(170deg, var(--sky), color-mix(in srgb, var(--sky) 40%, var(--brand-soft)));
+}
+/* Window and frame */
+.img-hero::before { content: ""; position: absolute; inset: 12% 22% 34% 30%; border-radius: 18px 18px 6px 6px; border: 10px solid var(--surface);
+  background:
+    linear-gradient(var(--surface), var(--surface)) center/8px 100% no-repeat,
+    linear-gradient(var(--surface), var(--surface)) center/100% 8px no-repeat,
+    linear-gradient(125deg, transparent 30%, color-mix(in srgb, var(--surface) 55%, transparent) 30% 40%, transparent 40% 52%, color-mix(in srgb, var(--surface) 40%, transparent) 52% 56%, transparent 56%),
+    linear-gradient(180deg, color-mix(in srgb, var(--lemon) 40%, var(--sky)), var(--sky));
+  box-shadow: 0 24px 0 -14px color-mix(in srgb, var(--surface) 80%, transparent); }
+/* Potted plant on the sill */
+.img-hero::after { content: ""; position: absolute; left: 62%; bottom: 25%; width: 15%; aspect-ratio: 1 / 1.3;
+  background:
+    radial-gradient(ellipse 30% 45% at 35% 30%, var(--brand) 98%, transparent) ,
+    radial-gradient(ellipse 30% 45% at 65% 28%, color-mix(in srgb, var(--brand) 70%, var(--lemon)) 98%, transparent),
+    linear-gradient(var(--lemon), var(--lemon)) bottom/70% 42% no-repeat;
+  border-radius: 0 0 10px 10px; }
+.img-why { border-radius: var(--radius); min-height: 15rem;
+  background:
+    radial-gradient(circle at 75% 30%, color-mix(in srgb, var(--surface) 80%, transparent) 0 12%, transparent 12.5%),
+    radial-gradient(circle at 62% 46%, color-mix(in srgb, var(--surface) 55%, transparent) 0 6%, transparent 6.5%),
+    radial-gradient(circle at 85% 55%, color-mix(in srgb, var(--surface) 50%, transparent) 0 4%, transparent 4.5%),
+    repeating-linear-gradient(90deg, transparent 0 46px, color-mix(in srgb, var(--surface) 25%, transparent) 46px 48px),
+    linear-gradient(150deg, var(--brand-soft), color-mix(in srgb, var(--brand) 45%, var(--sky))); }
+.img-map { border-radius: var(--radius); min-height: 18rem;
+  background:
+    radial-gradient(circle at 46% 44%, var(--brand) 0 3%, color-mix(in srgb, var(--brand) 25%, transparent) 3.2% 14%, transparent 14.5%),
+    linear-gradient(28deg, transparent 47%, color-mix(in srgb, var(--sky) 90%, var(--brand-soft)) 47% 53%, transparent 53%),
+    repeating-linear-gradient(0deg, transparent 0 38px, color-mix(in srgb, var(--surface) 70%, transparent) 38px 41px),
+    repeating-linear-gradient(90deg, transparent 0 52px, color-mix(in srgb, var(--surface) 70%, transparent) 52px 55px),
+    linear-gradient(160deg, var(--brand-soft), var(--lemon-soft)); }
+
+/* ---------- Hero ---------- */
+.hero { padding-top: calc(72px + clamp(1.5rem, 5vw, 3.5rem)); position: relative;
+  background: radial-gradient(50rem 26rem at 90% 0%, color-mix(in srgb, var(--lemon) 22%, transparent), transparent 70%), radial-gradient(40rem 30rem at 0% 100%, color-mix(in srgb, var(--sky) 60%, transparent), transparent 70%); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.hero h1 { font-size: clamp(2.2rem, 5.4vw, 3.7rem); line-height: 1.2; margin-bottom: 1.1rem; }
+.hero-sub { color: var(--muted); font-size: 1.1rem; max-width: 31rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.8rem; }
+.hero-facts { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.8rem; font-size: .9rem; }
+.hero-facts li { display: inline-flex; align-items: center; gap: .45rem; padding: .3rem .85rem .3rem .45rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); }
+.hero-art { position: relative; }
+.hero-art .spark { position: absolute; width: 2.6rem; height: 2.6rem; filter: drop-shadow(0 4px 6px color-mix(in srgb, var(--text) 18%, transparent)); }
+.hero-art .s1 { top: -1rem; right: 8%; width: 3.4rem; height: 3.4rem; }
+.hero-art .s2 { top: 30%; left: -1.2rem; width: 2rem; height: 2rem; }
+.hero-art .s3 { top: 8%; right: 30%; width: 1.4rem; height: 1.4rem; color: var(--surface); }
+.bubble { position: absolute; border-radius: 50%; border: 2px solid color-mix(in srgb, var(--surface) 90%, transparent); background: radial-gradient(circle at 32% 30%, color-mix(in srgb, var(--surface) 95%, transparent) 0 14%, color-mix(in srgb, var(--surface) 25%, transparent) 15%); }
+.bubble.b1 { width: 4rem; height: 4rem; right: 6%; bottom: 38%; }
+.bubble.b2 { width: 2.2rem; height: 2.2rem; right: 20%; bottom: 52%; }
+.js .bubble { animation: float 6s ease-in-out infinite; }
+.js .bubble.b2 { animation-delay: -2s; }
+@keyframes float { 50% { transform: translateY(-10px); } }
+.tick { flex: none; width: 1.35rem; height: 1.35rem; border-radius: 50%; background: var(--brand); display: grid; place-items: center; }
+.tick::before { content: ""; width: .32rem; height: .6rem; margin-top: -.12rem; border: solid var(--brand-ink); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); }
+.tick.todo { background: transparent; border: 2px solid var(--line); }
+.tick.todo::before { display: none; }
+.job-card { position: absolute; left: -2rem; bottom: 1.5rem; width: min(19rem, 82%); background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.15rem 1.25rem; }
+.job-title { display: flex; justify-content: space-between; align-items: baseline; gap: .5rem; font: 800 1rem var(--font-heading); }
+.job-title small { font: 500 .8rem var(--font-body); color: var(--muted); }
+.job-card ul { margin-block: .7rem .8rem; display: grid; gap: .45rem; font-size: .9rem; }
+.job-card li { display: flex; align-items: center; gap: .6rem; }
+.job-card li.done { color: var(--muted); }
+.bar { height: .5rem; border-radius: 999px; background: var(--brand-soft); overflow: hidden; }
+.bar i { display: block; width: 75%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--brand), color-mix(in srgb, var(--brand) 50%, var(--lemon))); }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .img-hero { aspect-ratio: 4 / 3; }
+  .job-card { position: relative; left: auto; bottom: auto; width: auto; margin: -3rem 1rem 0; }
+  .hero-art .s2 { left: .2rem; }
+}
+
+/* ---------- Shared card ---------- */
+.card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); }
+
+/* ---------- Services ---------- */
+.svc-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.svc { padding: 1.6rem; display: flex; flex-direction: column; gap: .45rem; transition: transform .3s, box-shadow .3s; }
+.svc:hover { transform: translateY(-4px); }
+.svc-icon { width: 3.1rem; height: 3.1rem; border-radius: 50% 50% 50% 12px; display: grid; place-items: center; background: var(--brand-soft); color: var(--brand); margin-bottom: .5rem; }
+.svc-icon svg { width: 1.6rem; height: 1.6rem; }
+.svc h3 { font-size: 1.18rem; }
+.svc p { color: var(--muted); font-size: .95rem; }
+.svc .price { margin-top: auto; padding-top: .6rem; font-weight: 700; color: var(--brand-deep); font-variant-numeric: tabular-nums; }
+.svc-feature { grid-row: span 2; background: var(--lemon-soft); border-color: color-mix(in srgb, var(--lemon) 55%, var(--line)); position: relative; overflow: hidden; }
+.svc-feature .svc-icon { background: var(--lemon); color: var(--text); }
+.svc-feature h3 { font-size: 1.5rem; }
+.svc-feature ul { display: grid; gap: .5rem; margin-top: .6rem; font-size: .95rem; }
+.svc-feature li { display: flex; gap: .6rem; align-items: center; }
+.svc-feature .big-spark { position: absolute; right: -1.5rem; top: -1.5rem; width: 7rem; height: 7rem; color: color-mix(in srgb, var(--lemon) 70%, transparent); }
+.svc-feature .row { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+@media (max-width: 960px) { .svc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .svc-feature { grid-row: auto; grid-column: 1 / -1; } }
+@media (max-width: 600px) { .svc-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Instant quote ---------- */
+.quote { background: var(--surface); }
+.calc { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 1.25rem; align-items: start; }
+.calc-in { padding: clamp(1.25rem, 4vw, 2rem); display: grid; gap: 1.5rem; background: var(--bg); box-shadow: none; }
+.calc fieldset { border: 0; min-width: 0; }
+.calc legend, .calc .lbl { display: flex; justify-content: space-between; gap: 1rem; width: 100%; font-weight: 700; margin-bottom: .6rem; }
+.calc output { color: var(--brand-deep); font-variant-numeric: tabular-nums; }
+.range { width: 100%; accent-color: var(--brand); height: 1.6rem; cursor: pointer; }
+.range-scale { display: flex; justify-content: space-between; font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.seg { display: flex; flex-wrap: wrap; gap: .5rem; }
+.seg label, .addons label { position: relative; cursor: pointer; }
+.seg input, .addons input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.seg span { display: grid; place-items: center; min-width: 3.4rem; padding: .5rem .9rem; border-radius: 999px; border: 2px solid var(--line); background: var(--surface); font-weight: 700; font-variant-numeric: tabular-nums; transition: background .2s, border-color .2s, color .2s; }
+.seg label:hover span, .addons label:hover span { border-color: var(--brand); }
+.seg input:checked + span { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.seg input:focus-visible + span, .addons input:focus-visible + span { outline: 3px solid var(--brand); outline-offset: 2px; }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+select, input[type="text"], input[type="tel"], input[type="date"], textarea { width: 100%; font: inherit; color: var(--text); background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius-sm); padding: .65rem .85rem; transition: border-color .2s; }
+select:hover, input:hover, textarea:hover { border-color: color-mix(in srgb, var(--brand) 45%, var(--line)); }
+select:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid color-mix(in srgb, var(--brand) 35%, transparent); outline-offset: 0; border-color: var(--brand); }
+.addons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; }
+.addons label > span { display: flex; align-items: center; gap: .55rem; padding: .7rem .8rem; border-radius: var(--radius-sm); border: 2px solid var(--line); background: var(--surface); font-size: .93rem; line-height: 1.35; transition: border-color .2s, background .2s; }
+.addons span small { display: block; color: var(--muted); font-size: .8rem; }
+.addons .box { flex: none; width: 1.25rem; height: 1.25rem; border-radius: 6px; border: 2px solid var(--line); display: grid; place-items: center; transition: background .2s, border-color .2s; }
+.addons input:checked + span { border-color: var(--brand); background: var(--brand-soft); }
+.addons input:checked + span .box { background: var(--brand); border-color: var(--brand); }
+.addons input:checked + span .box::before { content: ""; width: .28rem; height: .55rem; margin-top: -.1rem; border: solid var(--brand-ink); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.calc-out { position: sticky; top: 92px; padding: clamp(1.5rem, 4vw, 2rem); background: var(--brand-deep); color: var(--brand-ink); border: 0; overflow: hidden; }
+.calc-out .big-spark { position: absolute; right: -1.2rem; bottom: -1.2rem; width: 8rem; height: 8rem; color: color-mix(in srgb, var(--lemon) 35%, transparent); }
+.calc-out h3 { font-size: 1.05rem; font-weight: 700; opacity: .9; }
+.est { font: 800 clamp(2rem, 5vw, 2.6rem)/1.15 var(--font-heading); margin-block: .4rem .6rem; font-variant-numeric: tabular-nums; color: var(--lemon); }
+.est-hours { display: flex; align-items: center; gap: .5rem; font-weight: 500; }
+.est-hours svg { width: 1.2rem; height: 1.2rem; }
+.calc-note { margin-block: 1rem 1.25rem; padding: .8rem 1rem; border-radius: var(--radius-sm); background: color-mix(in srgb, var(--brand-ink) 10%, transparent); font-size: .88rem; line-height: 1.6; position: relative; }
+.calc-out .btn { width: 100%; background: var(--lemon); color: var(--text); position: relative; }
+.calc-out .btn:hover { background: var(--lemon-soft); }
+@media (max-width: 900px) { .calc { grid-template-columns: minmax(0, 1fr); } .calc-out { position: relative; top: auto; } }
+@media (max-width: 560px) { .addons, .two { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Room-by-room checklist ---------- */
+.rooms { display: grid; gap: .9rem; max-width: 52rem; }
+.room { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); transition: box-shadow .3s, border-color .3s; }
+.room[open] { box-shadow: var(--shadow); border-color: color-mix(in srgb, var(--brand) 30%, var(--line)); }
+.room summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; align-items: center; gap: 1rem; padding: 1rem 1.25rem; border-radius: var(--radius); }
+.room summary::-webkit-details-marker { display: none; }
+.room summary:hover h3 { color: var(--brand); }
+.room-icon { width: 2.8rem; height: 2.8rem; border-radius: 50%; background: var(--brand-soft); color: var(--brand); display: grid; place-items: center; }
+.room-icon svg { width: 1.45rem; height: 1.45rem; }
+.room summary h3 { font-size: 1.12rem; transition: color .2s; }
+.room-count { font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.room summary::after { content: ""; width: .6rem; height: .6rem; border: solid var(--muted); border-width: 0 2px 2px 0; transform: rotate(45deg) translateY(-3px); transition: transform .3s; }
+.room[open] summary::after { transform: rotate(225deg) translateY(-3px); }
+.room ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem 1.5rem; padding: .25rem 1.5rem 1.4rem 5.05rem; }
+.room li { display: flex; gap: .6rem; align-items: flex-start; font-size: .95rem; }
+.room li .tick { width: 1.2rem; height: 1.2rem; margin-top: .25rem; }
+.room-hint { margin-top: 1.25rem; color: var(--muted); font-size: .9rem; }
+@media (max-width: 600px) { .room ul { grid-template-columns: minmax(0, 1fr); padding-left: 1.25rem; } .room-count { display: none; } .room summary { grid-template-columns: auto minmax(0, 1fr) auto; } }
+
+/* ---------- How it works ---------- */
+.process { background: var(--surface); }
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; counter-reset: s; position: relative; }
+.steps::before { content: ""; position: absolute; top: 1.6rem; left: 12%; right: 12%; border-top: 2px dashed color-mix(in srgb, var(--brand) 35%, transparent); }
+.step { position: relative; text-align: center; padding-inline: .5rem; }
+.step-n { width: 3.2rem; height: 3.2rem; margin: 0 auto 1rem; border-radius: 50%; background: var(--brand); color: var(--brand-ink); display: grid; place-items: center; font: 800 1.2rem var(--font-heading); box-shadow: 0 0 0 8px var(--surface); }
+.step:nth-child(4) .step-n { background: var(--lemon); color: var(--text); }
+.step h3 { font-size: 1.1rem; margin-bottom: .3rem; }
+.step p { color: var(--muted); font-size: .94rem; }
+@media (max-width: 860px) {
+  .steps { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .steps::before { top: 1.6rem; bottom: 1.6rem; left: 1.6rem; right: auto; border-top: 0; border-left: 2px dashed color-mix(in srgb, var(--brand) 35%, transparent); }
+  .step { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0 1rem; text-align: left; padding: 0; }
+  .step-n { grid-row: span 2; margin: 0; }
+}
+
+/* ---------- Why choose us ---------- */
+.why-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
+.why-art { display: grid; gap: 1rem; }
+.why-quote { padding: 1.4rem 1.5rem; background: var(--lemon-soft); border-color: color-mix(in srgb, var(--lemon) 55%, var(--line)); box-shadow: none; display: flex; gap: 1rem; align-items: flex-start; }
+.why-quote svg { flex: none; width: 2rem; height: 2rem; color: var(--brand); }
+.why-quote p { font-size: .95rem; }
+.why-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem 2rem; }
+.why-h { display: flex; align-items: center; gap: .7rem; margin-bottom: .4rem; }
+.why-h h3 { font-size: 1.12rem; }
+.why-ic { flex: none; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--brand-soft); color: var(--brand); display: grid; place-items: center; }
+.why-ic svg { width: 1.3rem; height: 1.3rem; }
+.why-item p { color: var(--muted); font-size: .95rem; }
+.fine { font-size: .82rem; color: var(--muted); margin-top: 1.5rem; }
+@media (max-width: 860px) { .why-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .why-list { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Reviews ---------- */
+.reviews { background: linear-gradient(180deg, var(--bg), var(--brand-soft)); }
+.rev-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1.5rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
+.rev-top .sec-head { margin: 0; }
+.score { display: flex; align-items: center; gap: 1rem; padding: .9rem 1.3rem; }
+.score b { font: 800 2.2rem/1 var(--font-heading); font-variant-numeric: tabular-nums; }
+.score small { display: block; color: var(--muted); font-size: .85rem; }
+.stars { display: flex; gap: 2px; color: var(--lemon); }
+.stars svg { width: 1.1rem; height: 1.1rem; filter: drop-shadow(0 0 1px color-mix(in srgb, var(--text) 45%, transparent)); }
+.rev-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.rev { padding: 1.6rem; display: flex; flex-direction: column; gap: 1rem; }
+.rev:nth-child(2) { transform: translateY(1.25rem); }
+.rev blockquote { font-size: 1rem; }
+.rev footer { margin-top: auto; display: flex; align-items: center; gap: .75rem; font-size: .9rem; }
+.avatar { width: 2.6rem; height: 2.6rem; border-radius: 50%; display: grid; place-items: center; background: var(--brand-soft); color: var(--brand-deep); font-weight: 700; }
+.rev footer small { display: block; color: var(--muted); }
+@media (max-width: 900px) { .rev-grid { grid-template-columns: minmax(0, 1fr); } .rev:nth-child(2) { transform: none; } }
+
+/* ---------- FAQ ---------- */
+.faq-wrap { max-width: 50rem; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 1rem; padding: 1.15rem .25rem; font-weight: 700; }
+.faq summary:hover { color: var(--brand); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--brand-soft); color: var(--brand); font-size: 1.25rem; line-height: 1; transition: transform .3s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 .25rem 1.2rem; color: var(--muted); }
+
+/* ---------- Booking form ---------- */
+.book { background: var(--surface); }
+.book-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+.contact-list { display: grid; gap: .8rem; margin-top: 1.5rem; }
+.contact-list .btn { justify-content: flex-start; }
+.form { padding: clamp(1.25rem, 4vw, 2rem); display: grid; gap: 1.1rem; background: var(--bg); box-shadow: none; }
+.field label, .field .lbl { display: block; font-weight: 700; font-size: .95rem; margin-bottom: .35rem; }
+.field label span, .field .lbl span { color: var(--brand); }
+.field small { display: block; color: var(--muted); font-size: .82rem; margin-top: .3rem; }
+.field fieldset { border: 0; min-width: 0; }
+textarea { min-height: 6rem; resize: vertical; }
+.form .btn { justify-self: start; }
+@media (max-width: 860px) { .book-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Service area ---------- */
+.area-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; align-items: stretch; }
+.area-list { padding: clamp(1.5rem, 4vw, 2rem); display: grid; gap: 1.4rem; align-content: start; }
+.area-list h3 { font-size: 1.1rem; margin-bottom: .6rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+.chips li { font-size: .9rem; padding: .25rem .8rem; border-radius: 999px; background: var(--brand-soft); color: var(--brand-deep); }
+.area-list p { color: var(--muted); font-size: .92rem; }
+.map-box { position: relative; }
+.map-box .btn { position: absolute; left: 1rem; bottom: 1rem; }
+@media (max-width: 860px) { .area-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--text); color: color-mix(in srgb, var(--surface) 80%, transparent); padding-block: 3.5rem 2rem; font-size: .92rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; }
+.site-footer .logo { color: var(--surface); margin-bottom: 1rem; }
+.site-footer .logo small { color: color-mix(in srgb, var(--surface) 70%, transparent); }
+.site-footer .logo-mark::after { box-shadow: 0 0 0 2px var(--text); }
+.site-footer h2 { color: var(--surface); font-size: .98rem; margin-bottom: .6rem; }
+.site-footer a:not(.btn):hover { color: var(--lemon); }
+.social { display: flex; gap: 1rem; margin-top: .8rem; }
+.social a { text-decoration: underline; text-underline-offset: 3px; }
+.foot-bottom { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid color-mix(in srgb, var(--surface) 15%, transparent); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .82rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Mobile sticky bar ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 760px) {
+  .mobile-bar { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: .6rem; position: fixed; inset: auto 0 0; z-index: 60; padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 -1px 0 var(--line); }
+  .mobile-bar .btn { padding: .75rem 1rem; }
+  body { padding-bottom: 80px; }
+}
+
+/* ---------- Scroll reveal ---------- */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Shared icons: the sparkle motif, reused with <use href="#i-spark"> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.5c.7 5.3 2.6 8 10.5 10.5-7.9 2.5-9.8 5.2-10.5 10.5-.7-5.3-2.6-8-10.5-10.5C9.4 9.5 11.3 6.8 12 1.5z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5-4.9-4.5 6.6-.8z"/></symbol>
+</svg>
+
+<!-- ==================== Section: Header ==================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="CleanDay Home Services, back to top">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16M7 20l1-8h8l1 8M9 12V7a3 3 0 0 1 6 0v5"/></svg></span>
+      <span>CleanDay<small>Home Services</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu" data-open="Open menu" data-close="Close menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="Main menu">
+      <a href="#services">Services</a>
+      <a href="#quote">Instant quote</a>
+      <a href="#checklist" class="opt">Checklist</a>
+      <a href="#faq">FAQ</a>
+      <a href="#areas" class="opt">Service area</a>
+      <a href="#book" class="btn btn-primary">Book a clean</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <h1>Come home to a place that feels fresh</h1>
+      <p class="hero-sub">Home, office and move-out cleaning across Cedar Hollow. Get a price in 30 seconds; our cleaners show up on time and bring every supply.</p>
+      <div class="hero-cta">
+        <a href="#quote" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7h7M8.5 11h1M12 11h1M15.5 11h0M8.5 15h1M12 15h1M15.5 15h0"/></svg>Get a quote</a>
+        <a href="#services" class="btn btn-ghost">See plans</a>
+      </div>
+      <!-- Sample content: replace before going live -->
+      <ul class="hero-facts">
+        <li><span class="tick" aria-hidden="true"></span>Supplies included</li>
+        <li><span class="tick" aria-hidden="true"></span>Background-checked staff</li>
+        <li><span class="tick" aria-hidden="true"></span>Monday to Saturday</li>
+      </ul>
+    </div>
+    <div class="hero-art reveal">
+      <div class="img img-hero" role="img" aria-label="Illustration of a bright living room with a sparkling clean window"></div>
+      <span class="bubble b1" aria-hidden="true"></span>
+      <span class="bubble b2" aria-hidden="true"></span>
+      <svg class="spark s1" aria-hidden="true"><use href="#i-spark"/></svg>
+      <svg class="spark s2" aria-hidden="true"><use href="#i-spark"/></svg>
+      <svg class="spark s3" aria-hidden="true"><use href="#i-spark"/></svg>
+      <!-- Sample content: replace before going live -->
+      <aside class="job-card" aria-label="Sample cleaning progress">
+        <p class="job-title">Today's checklist <small>3 bed, 2 bath</small></p>
+        <ul>
+          <li class="done"><span class="tick" aria-hidden="true"></span>Dust and mop living room</li>
+          <li class="done"><span class="tick" aria-hidden="true"></span>Degrease counters and stove</li>
+          <li class="done"><span class="tick" aria-hidden="true"></span>Descale the shower</li>
+          <li><span class="tick todo" aria-hidden="true"></span>Windows and tracks</li>
+        </ul>
+        <div class="bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Progress"><i></i></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Services ==================== -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Our services</h2>
+      <p>From a weekly tidy to a full move-out clean, we staff each job by size and condition, and show you the price up front.</p>
+    </div>
+    <!-- Sample content: replace before going live (prices) -->
+    <div class="svc-grid">
+      <article class="card svc svc-feature reveal">
+        <svg class="big-spark" aria-hidden="true"><use href="#i-spark"/></svg>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/></svg></div>
+        <h3>Recurring cleaning</h3>
+        <p>Weekly or every other week at a set time. We try to send the same cleaner each visit, so they learn how you like things.</p>
+        <ul>
+          <li><span class="tick" aria-hidden="true"></span>Dusting, vacuuming and mopping throughout</li>
+          <li><span class="tick" aria-hidden="true"></span>Kitchen and bathroom refresh</li>
+          <li><span class="tick" aria-hidden="true"></span>Trash out, beds made</li>
+        </ul>
+        <p class="price">From $55 per hour, 3-hour minimum</p>
+        <div class="row"><a href="#quote" class="btn btn-primary">Price my home</a></div>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3l7 7M17 6l-9 9M4 20l4-5 1 1-5 4zM12 10l2 2"/></svg></div>
+        <h3>Deep cleaning</h3>
+        <p>Before the holidays, a change of season, or when it has been a while. Grease, soap scum and the corners get real attention.</p>
+        <p class="price">From $65 per hour</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></div>
+        <h3>Move-out cleaning</h3>
+        <p>An empty-home clean, top to bottom, so the walkthrough with your landlord goes smoothly.</p>
+        <p class="price">From $70 per hour</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M10 21v-4h4v4"/></svg></div>
+        <h3>Office cleaning</h3>
+        <p>After hours or on weekends, so work goes on undisturbed. Monthly contracts available.</p>
+        <p class="price">From $55 per hour</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="8" rx="2"/><path d="M6 10h12M7 17c0 1.5-1 2-1 3M12 17v3M17 17c0 1.5 1 2 1 3"/></svg></div>
+        <h3>AC unit cleaning</h3>
+        <p>Filters, coils and vents on wall-mounted units, for less dust and fewer musty smells.</p>
+        <p class="price">From $129 per unit</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Instant quote ==================== -->
+<!-- To change pricing: edit data-rate (price per hour), data-mult (time multiplier) and data-h (add-on hours) below.
+     data-k is base hours per square foot; data-round is the rounding step for prices -->
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Get an instant quote</h2>
+      <p>Slide to your square footage, pick your rooms, and see an estimated price and time right away.</p>
+    </div>
+    <div class="calc reveal" id="calc" data-k="0.003" data-cur="$" data-round="10" data-to="to" data-hrs="About {h} hours, crew of {c}" data-rb="{r} bed {b} bath">
+      <div class="card calc-in">
+        <div>
+          <label class="lbl" for="c-size">Home size <output id="o-size" for="c-size">1000 sq ft</output></label>
+          <input class="range" type="range" id="c-size" min="400" max="4000" step="50" value="1000" data-unit="sq ft">
+          <div class="range-scale num" aria-hidden="true"><span>400 sq ft</span><span>4,000 sq ft</span></div>
+        </div>
+        <div class="two">
+          <fieldset>
+            <legend>Bedrooms</legend>
+            <div class="seg">
+              <label><input type="radio" name="rooms" value="1"><span>1</span></label>
+              <label><input type="radio" name="rooms" value="2" checked><span>2</span></label>
+              <label><input type="radio" name="rooms" value="3"><span>3</span></label>
+              <label><input type="radio" name="rooms" value="4"><span>4+</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Bathrooms</legend>
+            <div class="seg">
+              <label><input type="radio" name="baths" value="1" checked><span>1</span></label>
+              <label><input type="radio" name="baths" value="2"><span>2</span></label>
+              <label><input type="radio" name="baths" value="3"><span>3+</span></label>
+            </div>
+          </fieldset>
+        </div>
+        <div>
+          <label class="lbl" for="c-type">Type of clean</label>
+          <select id="c-type">
+            <option value="Recurring" data-rate="55" data-mult="1">Recurring ($55 per hour)</option>
+            <option value="Deep clean" data-rate="65" data-mult="1.6">Deep clean ($65 per hour)</option>
+            <option value="Move-out" data-rate="70" data-mult="1.8">Move-out ($70 per hour)</option>
+            <option value="Office" data-rate="55" data-mult="0.8">Office ($55 per hour)</option>
+          </select>
+        </div>
+        <fieldset>
+          <legend>Add-ons</legend>
+          <div class="addons">
+            <label><input type="checkbox" value="Inside fridge" data-h="0.75"><span><i class="box" aria-hidden="true"></i><span>Inside fridge<small>Adds about 45 min</small></span></span></label>
+            <label><input type="checkbox" value="Inside oven" data-h="0.5"><span><i class="box" aria-hidden="true"></i><span>Inside oven<small>Adds about 30 min</small></span></span></label>
+            <label><input type="checkbox" value="Windows" data-h="1"><span><i class="box" aria-hidden="true"></i><span>Interior windows<small>Adds about 1 hour</small></span></span></label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="card calc-out" aria-live="polite">
+        <svg class="big-spark" aria-hidden="true"><use href="#i-spark"/></svg>
+        <h3>Estimated price</h3>
+        <p class="est" id="est-price">$200 to 260</p>
+        <p class="est-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span id="est-hours">About 4 hours, crew of 1</span></p>
+        <p class="calc-note">This is an online estimate. Your cleaner confirms the final price on site, based on condition, clutter and access, before any work begins. No surprise charges later.</p>
+        <a href="#book" class="btn">Book with this quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Room-by-room checklist ==================== -->
+<section id="checklist">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>What we clean, room by room</h2>
+      <p>Here is a standard recurring clean. Open a room to see the full list; deep and move-out cleans add detail work on top.</p>
+    </div>
+    <div class="rooms reveal">
+      <details class="room" name="room" open>
+        <summary>
+          <span class="room-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18v-6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6M2 14h20v4H2zM6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3M5 18v2M19 18v2"/></svg></span>
+          <h3>Living room and bedrooms</h3><span class="room-count">6 tasks</span>
+        </summary>
+        <ul>
+          <li><span class="tick" aria-hidden="true"></span>Dust surfaces, shelves and electronics</li>
+          <li><span class="tick" aria-hidden="true"></span>Vacuum sofas, fluff cushions</li>
+          <li><span class="tick" aria-hidden="true"></span>Make beds; change linens on request</li>
+          <li><span class="tick" aria-hidden="true"></span>Wipe switches and door handles</li>
+          <li><span class="tick" aria-hidden="true"></span>Vacuum and mop all floors</li>
+          <li><span class="tick" aria-hidden="true"></span>Empty trash and recycling</li>
+        </ul>
+      </details>
+      <details class="room" name="room">
+        <summary>
+          <span class="room-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M3 14h18M8 6c0-1.5 1-2 1-3M12 6c0-1.5 1-2 1-3M16 6c0-1.5 1-2 1-3"/></svg></span>
+          <h3>Kitchen</h3><span class="room-count">6 tasks</span>
+        </summary>
+        <ul>
+          <li><span class="tick" aria-hidden="true"></span>Clean and sanitize counters and sink</li>
+          <li><span class="tick" aria-hidden="true"></span>Degrease stovetop</li>
+          <li><span class="tick" aria-hidden="true"></span>Wipe range hood exterior</li>
+          <li><span class="tick" aria-hidden="true"></span>Microwave inside and out</li>
+          <li><span class="tick" aria-hidden="true"></span>Wipe cabinet fronts</li>
+          <li><span class="tick" aria-hidden="true"></span>Inside fridge (add-on)</li>
+        </ul>
+      </details>
+      <details class="room" name="room">
+        <summary>
+          <span class="room-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM6 12V5a2 2 0 0 1 4 0M7 20l-1 2M17 20l1 2"/></svg></span>
+          <h3>Bathrooms</h3><span class="room-count">6 tasks</span>
+        </summary>
+        <ul>
+          <li><span class="tick" aria-hidden="true"></span>Scrub toilet inside, outside and base</li>
+          <li><span class="tick" aria-hidden="true"></span>Descale sinks, faucets and mirrors</li>
+          <li><span class="tick" aria-hidden="true"></span>Shower glass and doors</li>
+          <li><span class="tick" aria-hidden="true"></span>Scrub the tub</li>
+          <li><span class="tick" aria-hidden="true"></span>Clear hair from floor drains</li>
+          <li><span class="tick" aria-hidden="true"></span>Fold towels, tidy toiletries</li>
+        </ul>
+      </details>
+      <details class="room" name="room">
+        <summary>
+          <span class="room-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M12 3v18M4 12h16"/></svg></span>
+          <h3>Patio and windows</h3><span class="room-count">5 tasks</span>
+        </summary>
+        <ul>
+          <li><span class="tick" aria-hidden="true"></span>Sweep and scrub the patio</li>
+          <li><span class="tick" aria-hidden="true"></span>Dust window screens</li>
+          <li><span class="tick" aria-hidden="true"></span>Clean frames and sliding tracks</li>
+          <li><span class="tick" aria-hidden="true"></span>Wipe interior glass</li>
+          <li><span class="tick" aria-hidden="true"></span>Exterior glass within safe reach (add-on)</li>
+        </ul>
+      </details>
+    </div>
+    <p class="room-hint reveal">Want extra attention somewhere? Add it to the notes when you book and we will plan the time for it.</p>
+  </div>
+</section>
+
+<!-- ==================== Section: How it works ==================== -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Four steps to a clean home</h2>
+      <p>From quote to walkthrough, you know what happens next.</p>
+    </div>
+    <ol class="steps reveal">
+      <li class="step"><span class="step-n">1</span><h3>Get a quote</h3><p>Enter your size and rooms to see a price and time estimate.</p></li>
+      <li class="step"><span class="step-n">2</span><h3>Pick a time</h3><p>Choose a date and slot; we call within one business day to confirm.</p></li>
+      <li class="step"><span class="step-n">3</span><h3>We clean</h3><p>Your crew arrives on time with all supplies and confirms the price first.</p></li>
+      <li class="step"><span class="step-n">4</span><h3>Walk through</h3><p>We check every room with you, and you pay once you are happy.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== Section: Why choose us ==================== -->
+<section id="why">
+  <div class="wrap why-grid">
+    <div class="why-art reveal">
+      <div class="img img-why" role="img" aria-label="Illustration of a neatly packed cleaning caddy"></div>
+      <div class="card why-quote">
+        <svg aria-hidden="true"><use href="#i-spark"/></svg>
+        <p>We won't promise perfection every time. We will promise to finish the job, and to come back if we missed a spot.</p>
+      </div>
+    </div>
+    <div>
+      <div class="sec-head reveal">
+        <h2>Why people pick CleanDay</h2>
+        <p>Letting someone into your home takes trust. Here is what we do to earn it.</p>
+      </div>
+      <!-- Sample content: replace before going live (adjust insurance and screening details to match your business) -->
+      <div class="why-list reveal">
+        <div class="why-item">
+          <div class="why-h"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Insured</h3></div>
+          <p>We carry general liability insurance. If something gets damaged during a clean, it is handled under the policy terms.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-h"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="8" r="4"/><path d="M3 21c0-3.5 3-6 7-6 1.4 0 2.6.3 3.7.8M16 18l2 2 4-4"/></svg></span><h3>Background checked</h3></div>
+          <p>Every staff cleaner passes a background check and completes our cleaning and in-home etiquette training.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-h"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6v4H9zM8 7h8l1 4v9a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-9zM10 14h4"/></svg></span><h3>Supplies included</h3></div>
+          <p>We bring the tools and products, gentle formulas where we can. Prefer your own? Just let us know.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-h"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11v9H4v-9zM7 11l4-7a2 2 0 0 1 3 2l-1 4h5a2 2 0 0 1 2 2.3l-1.2 6A2 2 0 0 1 16.8 20H7"/></svg></span><h3>Re-clean promise</h3></div>
+          <p>Tell us within 24 hours if something was missed and we will send someone back to fix it at no charge.</p>
+        </div>
+      </div>
+      <p class="fine">Insurance coverage and re-clean conditions are subject to our terms of service.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Reviews ==================== -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="rev-top">
+      <div class="sec-head reveal">
+        <h2>What clients say</h2>
+        <p>Homes and offices across Cedar Hollow.</p>
+      </div>
+      <!-- Sample content: replace before going live -->
+      <div class="card score reveal">
+        <b>4.8</b>
+        <div>
+          <div class="stars" role="img" aria-label="5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <small>From 320 service ratings</small>
+        </div>
+      </div>
+    </div>
+    <!-- Sample content: replace before going live -->
+    <div class="rev-grid">
+      <article class="card rev reveal">
+        <blockquote>Same cleaner every other Friday. She remembers to work around the litter box and the floors are spotless. Our weekends are ours again.</blockquote>
+        <footer><span class="avatar" aria-hidden="true">JL</span><div>Jenna L.<small>Recurring cleaning, Willow Park</small></div></footer>
+      </article>
+      <article class="card rev reveal">
+        <blockquote>Booked the day before my lease ended and two cleaners showed up the next morning. The kitchen grease was gone and I got my full deposit back.</blockquote>
+        <footer><span class="avatar" aria-hidden="true">MR</span><div>Marcus R.<small>Move-out cleaning, Eastbrook</small></div></footer>
+      </article>
+      <article class="card rev reveal">
+        <blockquote>The online quote was almost exactly what they confirmed on site. No upsell. And the AC finally stopped smelling musty.</blockquote>
+        <footer><span class="avatar" aria-hidden="true">DC</span><div>Diane C.<small>Deep clean and AC cleaning, Lakeside</small></div></footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: FAQ ==================== -->
+<section class="faq" id="faq">
+  <div class="wrap faq-wrap">
+    <div class="sec-head reveal">
+      <h2>Questions, answered</h2>
+    </div>
+    <div class="reveal">
+      <details>
+        <summary>Do I need to be home during the clean?</summary>
+        <p>Not necessarily. We suggest being home for the first visit to walk us through; after that you can leave a key or door code, and we send photos when we finish.</p>
+      </details>
+      <details>
+        <summary>How close is the online quote to the final price?</summary>
+        <p>Usually very close. Your cleaner looks over the space, confirms price and time, and only starts once you agree. There are no surprise charges mid-clean.</p>
+      </details>
+      <details>
+        <summary>Do I need to provide supplies?</summary>
+        <p>No, we bring everything. If you have marble, hardwood or other special surfaces, or want us to use specific products, add a note when you book.</p>
+      </details>
+      <details>
+        <summary>How do I reschedule or cancel?</summary>
+        <p>Reschedule or cancel free of charge up to 48 hours before your clean. Cancellations within 24 hours carry a $25 trip fee.</p>
+      </details>
+      <details>
+        <summary>Do you invoice businesses?</summary>
+        <p>Yes. We email receipts for every visit, and office contracts can be billed monthly.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Booking form ==================== -->
+<section class="book" id="book">
+  <div class="wrap book-grid">
+    <div class="reveal">
+      <div class="sec-head">
+        <h2>Book a home clean</h2>
+        <p>Send us your details and we will call within one business day to confirm the time and price. Rather talk now? Call or message us.</p>
+      </div>
+      <div class="contact-list">
+        <a href="tel:+15550123456" class="btn btn-ghost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(555) 012-3456</a>
+        <!-- WhatsApp button: swap the link for LINE, Messenger (https://m.me/yourpage) or Instagram (https://ig.me/m/yourhandle) if you prefer -->
+        <a href="https://wa.me/15550123456" class="btn btn-ghost" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4c5 0 9 3.1 9 7s-4 7-9 7c-.8 0-1.6-.1-2.3-.2L5 20l1-3.5C4.1 15.2 3 13.2 3 11c0-3.9 4-7 9-7z"/></svg>Message on WhatsApp</a>
+      </div>
+    </div>
+    <!-- This form uses Formspree (free plan: 50 submissions per month):
+         1. Sign up at https://formspree.io and create a new form
+         2. Copy the form ID from its URL (e.g. xyzabcd)
+         3. Replace your-form-id in the action below to receive bookings by email -->
+    <form class="card form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="two">
+        <div class="field"><label for="f-name">Name <span>*</span></label><input type="text" id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-tel">Phone <span>*</span></label><input type="tel" id="f-tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="(555) 012-3456" required></div>
+      </div>
+      <div class="field">
+        <label for="f-area">Neighborhood <span>*</span></label>
+        <select id="f-area" name="neighborhood" required>
+          <option value="">Choose your area</option>
+          <optgroup label="Cedar Hollow">
+            <option>Downtown</option><option>Mill District</option><option>Northgate</option><option>Willow Park</option>
+          </optgroup>
+          <optgroup label="Nearby">
+            <option>Eastbrook</option><option>Lakeside</option><option>Pine Ridge</option><option>Southport</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="two">
+        <div class="field"><label for="f-date">Preferred date <span>*</span></label><input type="date" id="f-date" name="date" required></div>
+        <div class="field">
+          <fieldset>
+            <legend class="lbl">Time slot <span>*</span></legend>
+            <div class="seg">
+              <label><input type="radio" name="slot" value="Morning 9:00–12:00" required checked><span>Morning</span></label>
+              <label><input type="radio" name="slot" value="Afternoon 1:30–5:30"><span>Afternoon</span></label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-est">Your quote</label>
+        <input type="text" id="f-est" name="quote" placeholder="e.g. Recurring, 1000 sq ft, 2 bed 1 bath">
+        <small>Filled in automatically from the quote tool above. Leave it blank and we will price it on site.</small>
+      </div>
+      <div class="field"><label for="f-note">Notes</label><textarea id="f-note" name="notes" placeholder="Pets, rooms to focus on, parking or gate codes"></textarea></div>
+      <button type="submit" class="btn btn-primary">Request booking</button>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== Section: Service area ==================== -->
+<section id="areas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Where we clean</h2>
+      <p>We cover Cedar Hollow and the surrounding neighborhoods. Not on the list? Give us a call and ask.</p>
+    </div>
+    <div class="area-grid">
+      <div class="card area-list reveal">
+        <div>
+          <h3>Cedar Hollow</h3>
+          <ul class="chips"><li>Downtown</li><li>Mill District</li><li>Northgate</li><li>Willow Park</li><li>Old Orchard</li><li>Riverside</li></ul>
+        </div>
+        <div>
+          <h3>Nearby</h3>
+          <ul class="chips"><li>Eastbrook</li><li>Lakeside</li><li>Pine Ridge</li><li>Southport</li><li>Fern Valley</li></ul>
+        </div>
+        <p>A small travel fee may apply to outlying addresses. We will always tell you before booking.</p>
+      </div>
+      <div class="map-box reveal">
+        <div class="img img-map" role="img" aria-label="Illustrated map of the CleanDay service area"></div>
+        <a href="https://maps.google.com/?q=128+Maple+Street,+Cedar+Hollow,+OR+97231" class="btn btn-primary" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>View on Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16M7 20l1-8h8l1 8M9 12V7a3 3 0 0 1 6 0v5"/></svg></span><span>CleanDay<small>Home Services</small></span></a>
+        <p>House, move-out and office cleaning in Cedar Hollow and nearby.</p>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <p>128 Maple Street, Suite 3, Cedar Hollow, OR 97231</p>
+        <p><a href="tel:+15550123456">(555) 012-3456</a></p>
+        <p><a href="https://wa.me/15550123456" target="_blank" rel="noopener">WhatsApp</a></p>
+      </div>
+      <div>
+        <h2>Office hours</h2>
+        <p>Monday to Saturday, 8:30 am–6:00 pm</p>
+        <p>Closed Sundays and public holidays</p>
+        <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a></div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y"></span> CleanDay Home Services</span>
+      <span>Online prices are estimates; final pricing is confirmed on site</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== Section: Mobile sticky bar ==================== -->
+<div class="mobile-bar">
+  <a href="#quote" class="btn btn-primary">Get a quote</a>
+  <a href="tel:+15550123456" class="btn btn-ghost">Call us</a>
+</div>
+
+<script>
+// Current year
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// Header background on scroll
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+// Hamburger menu
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  links.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? menuBtn.dataset.close : menuBtn.dataset.open);
+};
+menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// Instant quote: hours = size × k × service multiplier + bedrooms × 0.3 + bathrooms × 0.5 + add-on hours (2-hour minimum)
+const calc = document.getElementById('calc');
+const $ = s => calc.querySelector(s);
+const fmt = n => n.toLocaleString('en-US');
+const update = () => {
+  const d = calc.dataset, size = $('#c-size'), opt = $('#c-type').selectedOptions[0];
+  const rooms = +$('[name=rooms]:checked').value, baths = +$('[name=baths]:checked').value;
+  const extras = [...calc.querySelectorAll('.addons input:checked')];
+  let h = size.value * d.k * opt.dataset.mult + rooms * 0.3 + baths * 0.5;
+  h = Math.max(2, h + extras.reduce((s, x) => s + +x.dataset.h, 0));
+  const crew = h > 5 ? 2 : 1, price = h * opt.dataset.rate, r = +d.round;
+  const lo = Math.round(price * 0.9 / r) * r, hi = Math.round(price * 1.15 / r) * r;
+  const range = `${d.cur}${fmt(lo)} ${d.to} ${d.cur}${fmt(hi)}`;
+  const hrs = d.hrs.replace('{h}', Math.round(h / crew * 2) / 2).replace('{c}', crew);
+  $('#o-size').textContent = `${size.value} ${size.dataset.unit}`;
+  $('#est-price').textContent = range;
+  $('#est-hours').textContent = hrs;
+  const parts = [opt.value, `${size.value} ${size.dataset.unit}`, d.rb.replace('{r}', rooms).replace('{b}', baths), ...extras.map(x => x.value)];
+  document.getElementById('f-est').value = `${parts.join(' / ')}: ${range} (${hrs})`;
+};
+calc.addEventListener('input', update);
+update();
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => io.observe(el));
+} else reveals.forEach(el => el.classList.add('in'));
+</script>
+</body>
+</html>

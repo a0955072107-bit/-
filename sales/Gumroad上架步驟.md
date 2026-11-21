@@ -89,7 +89,7 @@ Don't have time to edit it yourself? We'll customise this template with your tex
 | 商品類型 | 一般 **Digital product**。若後台有 **Commission**（委託，先收訂金）或 **Call**（預約通話）類型，也可以改用 |
 | Name | `Website Customization Service — We Build Your Business Site 網站客製服務` |
 | URL | `website-customization` |
-| Price | `199`（Basic），另外用 **Versions** 加 `Plus $349` |
+| Price | `249`（Basic），另外用 **Versions** 加 `Plus $449` |
 | Cover | 可以先沿用任一張模板封面，之後再用 Canva 另做一張 |
 | Summary（You'll get） | `A ready-to-launch website for your business, built from one of our templates.` |
 
@@ -97,8 +97,8 @@ Don't have time to edit it yourself? We'll customise this template with your tex
 
 | 名稱 | 價格 | 說明 |
 |---|---|---|
-| Basic | $199 | Your text, photos, colours, contact/booking links and form set up; published on a free host. 1 revision round. |
-| Plus | $349 | Everything in Basic, plus custom domain setup, one extra page or section, and 2 revision rounds. |
+| Basic | $249 | Your text, photos, colours, contact/booking links and form set up; published on a free host. 1 revision round. |
+| Plus | $449 | Everything in Basic, plus custom domain setup, one extra page or section, and 2 revision rounds. |
 
 **Description**
 ```

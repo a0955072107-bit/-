@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>星野營地 Starfield Camp｜苗栗南庄溪谷露營區與豪華露營</title>
+<meta name="description" content="星野營地位在苗栗南庄海拔 600 公尺的溪谷，有草地、棧板、雨棚、豪華帳篷與車宿五種營位，熱水衛浴、寵物友善，晴朗的夜晚抬頭就是銀河。線上試算價格、立即訂位。">
+<meta property="og:title" content="星野營地 Starfield Camp｜苗栗南庄露營區">
+<meta property="og:description" content="南庄溪谷裡的星空營地。五種營位，帶狗也歡迎，今晚就睡在銀河底下。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#10173a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #f47b2a;          /* 品牌主色：營火橘，用於主要按鈕與重點 */
+  --brand-ink: #1d0d03;      /* 在 brand 色上的文字顏色（對比 AA） */
+  --brand-deep: #9c3f08;     /* 淺色紙張區塊上的橘色文字與連結（對比 AA） */
+  --bg: #ece2c9;             /* 網頁底色：牛皮紙地圖色 */
+  --surface: #f8f2e4;        /* 卡片與輸入框底色：略帶暖調的白紙 */
+  --text: #1b2117;           /* 主要文字顏色：森林墨色 */
+  --muted: #51553f;          /* 次要文字顏色 */
+  --line: color-mix(in srgb, var(--text) 20%, transparent); /* 細線、邊框顏色 */
+  --contour: #b49d6c;        /* 紙張地圖上的等高線顏色 */
+  --night: #10173a;          /* 夜空靛藍：Hero、設施、訂位等深色區塊底色 */
+  --night-2: #1a2352;        /* 深色區塊裡的卡片底色 */
+  --night-deep: #04060e;     /* 夜空最深處、頁尾底色 */
+  --star: #f3efe2;           /* 深色區塊上的主要文字（星光米白） */
+  --star-muted: #aab0cc;     /* 深色區塊上的次要文字 */
+  --forest: #234b37;         /* 輔助色：森林綠，用於試算與評價區塊 */
+  --forest-2: #2d5b44;       /* 森林綠區塊裡的卡片底色 */
+  --forest-ink: #eef2e3;     /* 森林綠上的文字顏色 */
+  --forest-muted: #bccdb9;   /* 森林綠上的次要文字 */
+  --water: #4f8fa6;          /* 地圖上的溪流顏色 */
+  --shadow: #120c04;         /* 陰影基底色，搭配 color-mix 調透明度 */
+  --radius: 10px;            /* 圓角大小 */
+  --font-heading: "Bricolage Grotesque", "Noto Sans TC", "PingFang TC", sans-serif; /* 標題、數字與 logo 字型 */
+  --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; /* 內文字型 */
+  --pad: clamp(1.25rem, 5vw, 5rem); /* 左右留白 */
+  --ease: cubic-bezier(.2, .7, .1, 1); /* 動畫緩動曲線 */
+  --header-h: 4.25rem;       /* 頁首高度 */
+  /* 藝術佔位圖用色（換成照片後可刪除） */
+  --art-dusk: #e2894a;       /* 黃昏地平線 */
+  --art-sky: #2b3570;        /* 傍晚天空 */
+  --art-grass: #3f7146;      /* 草地 */
+  --art-grass-2: #2c5634;    /* 草地暗部 */
+  --art-wood: #b07a45;       /* 棧板木頭 */
+  --art-wood-2: #7c5129;     /* 木頭縫隙 */
+  --art-canvas: #efe0bf;     /* 帳篷帆布 */
+  --art-glow: #ffc66b;       /* 帳篷裡的燈光 */
+  --art-rock: #5b5f72;       /* 遠山岩石 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; scroll-padding-top: calc(var(--header-h) + 1rem); }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); -webkit-font-smoothing: antialiased; overflow-x: clip; }
+a { color: inherit; }
+ul { list-style: none; }
+h1, h2, h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; font-family: var(--font-heading); font-weight: 800; line-height: 1.1; letter-spacing: -.02em; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; }
+.skip { position: absolute; left: -999px; top: 0; z-index: 120; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; }
+.skip:focus { left: 1rem; }
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+.ico { width: 1.6rem; height: 1.6rem; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---------- 三種區塊底色：紙張地圖、夜空、森林 ---------- */
+.night { --bg: var(--night); --surface: var(--night-2); --text: var(--star); --muted: var(--star-muted); --line: color-mix(in srgb, var(--star) 16%, transparent); --link: var(--brand); background: var(--night); color: var(--star); }
+.forest { --bg: var(--forest); --surface: var(--forest-2); --text: var(--forest-ink); --muted: var(--forest-muted); --line: color-mix(in srgb, var(--forest-ink) 20%, transparent); --link: var(--art-glow); background: var(--forest); color: var(--forest-ink); }
+.paper { --link: var(--brand-deep); position: relative; isolation: isolate; background-color: var(--bg);
+  /* 紙張地圖紋理：兩組等高線＋淡淡的經緯格線 */
+  background-image:
+    repeating-radial-gradient(ellipse 60% 45% at 12% 18%, transparent 0 34px, color-mix(in srgb, var(--contour) 34%, transparent) 34px 35.5px),
+    repeating-radial-gradient(ellipse 50% 60% at 92% 88%, transparent 0 28px, color-mix(in srgb, var(--contour) 28%, transparent) 28px 29.5px),
+    linear-gradient(color-mix(in srgb, var(--contour) 14%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--contour) 14%, transparent) 1px, transparent 1px);
+  background-size: auto, auto, 120px 120px, 120px 120px;
+}
+/* 紙張顆粒 */
+.paper::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .14; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+/* ---------- 按鈕 ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .7rem 1.5rem;
+  border: 2px solid var(--text); border-radius: 999px; font: 700 1rem/1.2 var(--font-body); color: var(--text); background: none; cursor: pointer; text-decoration: none;
+  transition: background-color .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.btn:hover { background: color-mix(in srgb, var(--text) 10%, transparent); transform: translateY(-2px); }
+.btn:active { transform: translateY(1px); }
+.btn-brand { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); box-shadow: 0 6px 0 color-mix(in srgb, var(--brand) 45%, var(--shadow)); }
+.btn-brand:hover { background: color-mix(in srgb, var(--brand) 85%, var(--star)); border-color: color-mix(in srgb, var(--brand) 85%, var(--star)); box-shadow: 0 8px 0 color-mix(in srgb, var(--brand) 45%, var(--shadow)); }
+.btn-brand:active { box-shadow: 0 2px 0 color-mix(in srgb, var(--brand) 45%, var(--shadow)); }
+.text-link { color: var(--link, var(--brand-deep)); font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .3em; transition: color .25s var(--ease), text-decoration-color .25s var(--ease); }
+.text-link:hover { color: var(--text); text-decoration-color: var(--brand); }
+.text-link:active { opacity: .7; }
+
+/* ==================== 頁首 ==================== */
+.site-header {
+  position: fixed; inset: 0 0 auto; z-index: 50; color: var(--star);
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  min-height: var(--header-h); padding: 0 var(--pad); border-bottom: 1px solid transparent;
+  transition: background-color .4s var(--ease), border-color .4s var(--ease);
+}
+.site-header.scrolled { background: color-mix(in srgb, var(--night) 94%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-color: color-mix(in srgb, var(--star) 14%, transparent); }
+.logo { display: inline-flex; align-items: center; gap: .55rem; font: 800 1.2rem/1 var(--font-heading); text-decoration: none; letter-spacing: -.01em; }
+.logo .ico { color: var(--brand); width: 1.75rem; height: 1.75rem; }
+.logo small { font: 500 .85rem/1 var(--font-heading); color: var(--star-muted); }
+.logo:hover small { color: var(--star); }
+.logo:active { opacity: .75; }
+.menu { display: flex; align-items: center; gap: clamp(.9rem, 2vw, 1.75rem); font-size: .92rem; }
+.menu a:not(.btn) { padding-block: .35rem; color: var(--star-muted); text-decoration: none; transition: color .25s var(--ease); }
+.menu a:not(.btn):hover { color: var(--star); }
+.menu a:not(.btn):active { opacity: .7; }
+.menu .btn { min-height: 42px; padding: .45rem 1.15rem; box-shadow: none; }
+.burger { display: none; width: 44px; height: 44px; background: none; border: 2px solid color-mix(in srgb, var(--star) 30%, transparent); border-radius: 50%; color: var(--star); cursor: pointer; }
+.burger:hover { border-color: var(--star); }
+.burger:active { transform: scale(.94); }
+.burger span, .burger span::before, .burger span::after { display: block; width: 18px; height: 2px; background: currentColor; margin: auto; position: relative; transition: transform .3s var(--ease), background-color .3s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* 沒有 JavaScript 時，選單直接換行顯示在 logo 下方；有 JS 才收進漢堡選單 */
+  html:not(.js) .site-header { position: sticky; top: 0; flex-wrap: wrap; padding-block: 1rem; background: var(--night); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .25rem 1.25rem; }
+  html:not(.js) .menu .btn { display: none; }
+  .js .burger { display: block; }
+  .js .menu {
+    position: absolute; inset: 100% 0 auto; flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--night); padding: .5rem var(--pad) 1.5rem; border-bottom: 1px solid color-mix(in srgb, var(--star) 14%, transparent);
+    transform: translateY(-.75rem); opacity: 0; visibility: hidden;
+    transition: transform .35s var(--ease), opacity .35s var(--ease), visibility .35s;
+  }
+  .js .menu.open { transform: none; opacity: 1; visibility: visible; }
+  .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid color-mix(in srgb, var(--star) 12%, transparent); font-size: 1.1rem; color: var(--star); }
+  .js .menu .btn { margin-top: 1.25rem; min-height: 48px; }
+}
+
+/* ==================== Hero ==================== */
+.hero { position: relative; isolation: isolate; min-height: min(100svh, 980px); display: grid; align-content: center; padding: calc(var(--header-h) + 2rem) var(--pad) clamp(9rem, 22vh, 14rem); overflow: clip; color: var(--star); }
+.hero > .img { position: absolute; inset: 0; z-index: -2; }
+.ridge { position: absolute; inset: auto 0 -1px; width: 100%; height: clamp(150px, 26vh, 280px); z-index: -1; pointer-events: none; }
+.ridge .r1 { fill: var(--art-rock); opacity: .55; }
+.ridge .r2 { fill: var(--forest); }
+.ridge .r3 { fill: var(--night-deep); }
+.ridge .tent { fill: var(--art-glow); }
+.ridge .glow { fill: var(--brand); opacity: .55; filter: blur(14px); }
+.hero-inner { max-width: 44rem; animation: rise 1s .15s var(--ease) both; }
+.hero h1 .nb { display: inline-block; }
+.hero h1 { font-size: clamp(3rem, 8.5vw, 7.25rem); line-height: .95; letter-spacing: -.04em; }
+.hero p { margin-top: 1.25rem; max-width: 29rem; font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: var(--star-muted); }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; margin-top: 2rem; }
+.hero .text-link { color: var(--star); text-decoration-color: color-mix(in srgb, var(--star) 45%, transparent); }
+.hero .text-link:hover { color: var(--brand); text-decoration-color: var(--brand); }
+.hero-facts { display: flex; flex-wrap: wrap; gap: .5rem 2rem; margin-top: 2.5rem; font-size: .9rem; color: var(--star-muted); }
+.hero-facts b { display: block; font: 700 1.35rem/1.2 var(--font-heading); color: var(--star); }
+@keyframes rise { from { opacity: 0; transform: translateY(1.25rem); } to { opacity: 1; transform: none; } }
+
+/* ==================== 通用區塊 ==================== */
+section { padding: clamp(4.5rem, 11vh, 7.5rem) var(--pad); }
+.wrap { max-width: 76rem; margin-inline: auto; }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 1rem 3rem; align-items: end; margin-bottom: clamp(2.25rem, 5vh, 3.5rem); }
+.sec-head h2 { font-size: clamp(2.2rem, 5.2vw, 4.2rem); padding-bottom: .9rem; border-bottom: 4px dashed var(--brand); justify-self: start; }
+.sec-head p { color: var(--muted); max-width: 32rem; }
+.sec-head.solo { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 760px) { .sec-head { grid-template-columns: minmax(0, 1fr); } }
+.js .reveal { opacity: 0; transform: translateY(1.75rem); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+
+/* ---------- 藝術佔位圖：全部用 CSS 繪製 ---------- */
+.img { position: relative; overflow: hidden; background-color: var(--art-sky); }
+.img::before, .img::after { content: ""; position: absolute; }
+/* 星點：Hero 與營位圖共用 */
+.stars {
+  background-image:
+    radial-gradient(1.5px 1.5px at 20px 30px, var(--star) 50%, transparent 100%),
+    radial-gradient(1px 1px at 90px 80px, var(--star) 50%, transparent 100%),
+    radial-gradient(1px 1px at 150px 20px, color-mix(in srgb, var(--star) 70%, transparent) 50%, transparent 100%),
+    radial-gradient(2px 2px at 60px 140px, var(--art-glow) 50%, transparent 100%),
+    radial-gradient(1px 1px at 170px 120px, var(--star) 50%, transparent 100%);
+  background-size: 200px 170px;
+}
+
+/* 換成照片：.img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero {
+  background-color: var(--night-deep);
+  background-image:
+    radial-gradient(1.5px 1.5px at 20px 30px, var(--star) 50%, transparent 100%),
+    radial-gradient(1px 1px at 90px 80px, var(--star) 50%, transparent 100%),
+    radial-gradient(1px 1px at 150px 20px, color-mix(in srgb, var(--star) 60%, transparent) 50%, transparent 100%),
+    radial-gradient(2px 2px at 60px 140px, var(--art-glow) 50%, transparent 100%),
+    radial-gradient(1px 1px at 170px 120px, var(--star) 50%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 40px 60px, var(--star) 50%, transparent 100%),
+    radial-gradient(1px 1px at 120px 10px, var(--star) 50%, transparent 100%),
+    /* 銀河光帶 */
+    linear-gradient(118deg, transparent 38%, color-mix(in srgb, var(--star-muted) 14%, transparent) 50%, color-mix(in srgb, var(--art-dusk) 8%, transparent) 56%, transparent 66%),
+    /* 月亮 */
+    radial-gradient(circle at 82% 22%, var(--star) 0 2.1rem, color-mix(in srgb, var(--star) 18%, transparent) 2.2rem, transparent 9rem),
+    linear-gradient(to bottom, var(--night-deep) 0%, var(--night) 55%, var(--night-2) 80%, color-mix(in srgb, var(--art-dusk) 35%, var(--night-2)) 100%);
+  background-size: 200px 170px, 200px 170px, 200px 170px, 200px 170px, 200px 170px, 310px 260px, 310px 260px, 100% 100%, 100% 100%, 100% 100%;
+}
+
+/* 營位卡片的插畫：天空＋地面，帳篷用 ::before / ::after 畫 */
+.site .img { aspect-ratio: 16 / 9; border-radius: calc(var(--radius) - 2px); }
+/* 換成照片：.img-grass { background: url(images/grass.jpg) center/cover; } 並刪掉 .img-grass::before/::after */
+.img-grass { background-image: repeating-linear-gradient(100deg, transparent 0 7px, color-mix(in srgb, var(--art-grass-2) 60%, transparent) 7px 9px), linear-gradient(to bottom, var(--art-sky) 0%, var(--art-dusk) 58%, var(--art-grass) 58%, var(--art-grass-2)); background-size: 100% 42%, 100% 100%; background-position: bottom, 0 0; background-repeat: no-repeat; }
+.img-grass::before { left: 18%; bottom: 22%; width: 38%; height: 44%; clip-path: polygon(50% 0, 100% 100%, 0 100%); background: linear-gradient(90deg, var(--brand) 50%, color-mix(in srgb, var(--brand) 70%, var(--shadow)) 50%); }
+.img-grass::after { left: 32%; bottom: 22%; width: 10%; height: 18%; clip-path: polygon(50% 0, 100% 100%, 0 100%); background: var(--art-glow); }
+/* 換成照片：.img-deck { background: url(images/deck.jpg) center/cover; } */
+.img-deck { background-image: repeating-linear-gradient(90deg, var(--art-wood) 0 26px, var(--art-wood-2) 26px 29px), linear-gradient(to bottom, var(--art-sky), var(--art-dusk) 62%, var(--art-grass-2) 62%); background-size: 100% 30%, 100% 100%; background-position: bottom, 0 0; background-repeat: no-repeat; }
+.img-deck::before { left: 30%; bottom: 26%; width: 40%; height: 40%; border-radius: 50% 50% 0 0 / 100% 100% 0 0; background: linear-gradient(90deg, var(--forest) 0 48%, var(--forest-2) 48%); }
+.img-deck::after { left: 45%; bottom: 26%; width: 10%; height: 20%; border-radius: 40% 40% 0 0; background: var(--art-glow); }
+/* 換成照片：.img-canopy { background: url(images/canopy.jpg) center/cover; } */
+.img-canopy { background-image: linear-gradient(to bottom, var(--art-sky), var(--art-dusk) 60%, var(--art-grass) 60%, var(--art-grass-2)); }
+.img-canopy::before { left: 12%; right: 12%; top: 22%; height: 22%; clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%); background: repeating-linear-gradient(90deg, var(--art-canvas) 0 22px, var(--brand) 22px 44px); }
+.img-canopy::after { left: 14%; right: 14%; top: 44%; height: 34%; background: linear-gradient(90deg, var(--art-wood-2) 0 4px, transparent 4px calc(50% - 2px), var(--art-wood-2) calc(50% - 2px) calc(50% + 2px), transparent calc(50% + 2px) calc(100% - 4px), var(--art-wood-2) calc(100% - 4px)), linear-gradient(to top, color-mix(in srgb, var(--art-glow) 45%, transparent), transparent 70%); }
+/* 換成照片：.img-glamp { background: url(images/glamping.jpg) center/cover; } */
+.img-glamp { background-color: var(--night);
+  background-image: radial-gradient(circle, var(--art-glow) 0 2px, transparent 3px), radial-gradient(1px 1px at 30px 20px, var(--star) 50%, transparent), linear-gradient(to bottom, var(--night-deep), var(--night) 60%, var(--forest) 60%, var(--art-grass-2));
+  background-size: 34px 34px, 90px 70px, 100% 100%; background-position: 0 14%, 0 0, 0 0; background-repeat: repeat-x, repeat, no-repeat; }
+.img-glamp::before { left: 50%; bottom: 18%; width: min(46%, 18rem); aspect-ratio: 1.25; transform: translateX(-50%); clip-path: polygon(50% 0, 56% 6%, 100% 100%, 0 100%, 44% 6%); background: radial-gradient(ellipse 30% 40% at 50% 100%, var(--art-glow), transparent 100%), linear-gradient(90deg, var(--art-canvas), color-mix(in srgb, var(--art-canvas) 70%, var(--art-dusk))); }
+.img-glamp::after { left: 50%; bottom: 18%; width: min(10%, 4rem); height: 26%; transform: translateX(-50%); clip-path: polygon(50% 0, 100% 100%, 0 100%); background: var(--art-glow); }
+/* 換成照片：.img-car { background: url(images/car.jpg) center/cover; } */
+.img-car { background-image: linear-gradient(to bottom, var(--art-sky), var(--art-dusk) 64%, var(--art-rock) 64%, color-mix(in srgb, var(--art-rock) 60%, var(--shadow))); }
+.img-car::before { left: 24%; bottom: 24%; width: 52%; height: 22%; border-radius: 14px 26px 8px 8px; background: radial-gradient(circle at 22% 100%, var(--shadow) 0 12%, transparent 13%), radial-gradient(circle at 78% 100%, var(--shadow) 0 12%, transparent 13%), linear-gradient(to bottom, var(--forest-2) 0 55%, var(--forest) 55%); }
+.img-car::after { left: 30%; bottom: 46%; width: 36%; height: 18%; clip-path: polygon(0 100%, 12% 0, 100% 0, 100% 100%); background: linear-gradient(90deg, var(--brand), color-mix(in srgb, var(--brand) 70%, var(--shadow))); }
+/* 換成照片：.img-creek { background: url(images/creek.jpg) center/cover; } */
+.img-creek { background-image:
+  radial-gradient(ellipse 70% 18% at 40% 92%, color-mix(in srgb, var(--water) 90%, var(--star)) 0 60%, transparent 62%),
+  radial-gradient(ellipse 80% 40% at 10% 80%, var(--art-grass-2) 0 70%, transparent 71%),
+  radial-gradient(ellipse 70% 45% at 95% 70%, var(--forest) 0 70%, transparent 71%),
+  radial-gradient(ellipse 90% 40% at 60% 62%, color-mix(in srgb, var(--forest) 60%, var(--art-rock)) 0 70%, transparent 71%),
+  radial-gradient(circle at 70% 30%, var(--art-glow) 0 3rem, transparent 3.2rem),
+  linear-gradient(to bottom, color-mix(in srgb, var(--art-dusk) 55%, var(--forest)), var(--art-dusk)); }
+
+/* ==================== 營位類型 ==================== */
+.sites { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.site { position: relative; display: flex; flex-direction: column; gap: 1rem; padding: .75rem .75rem 1.25rem; background: var(--surface); border: 2px solid var(--text); border-radius: var(--radius); box-shadow: 5px 5px 0 color-mix(in srgb, var(--text) 85%, transparent); transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease); }
+.site.wide { grid-column: span 2; }
+.site.wide .img { aspect-ratio: 21 / 9; }
+.site:target, .site.hl { border-color: var(--brand); box-shadow: 7px 7px 0 var(--brand); transform: translate(-2px, -2px); }
+.site-body { display: flex; flex-direction: column; gap: .85rem; padding-inline: .5rem; flex: 1; }
+.site h3 { font-size: 1.6rem; }
+.zone-tag { position: absolute; top: 1.4rem; left: 1.4rem; font: 700 .85rem/1 var(--font-body); padding: .35rem .6rem; border-radius: 6px; background: var(--forest); color: var(--forest-ink); letter-spacing: 0; }
+.specs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .4rem 1rem; font-size: .92rem; }
+.specs dt { color: var(--muted); font-size: .85rem; }
+.specs dd { font-weight: 700; }
+.prices { display: flex; gap: .5rem; flex-wrap: wrap; }
+.price { font-variant-numeric: tabular-nums; flex: 1 1 8rem; padding: .55rem .8rem; border: 2px dashed var(--line); border-radius: 8px; font-size: .85rem; color: var(--muted); }
+.price b { display: block; font-variant-numeric: tabular-nums; font: 800 1.4rem/1.2 var(--font-heading); color: var(--text); }
+.feat { display: grid; gap: .3rem; font-size: .92rem; }
+.feat li { display: flex; gap: .55rem; align-items: baseline; }
+.feat li::before { content: ""; flex: none; width: .7rem; height: .6rem; background: var(--brand); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.site .text-link { margin-top: auto; align-self: flex-start; background: none; border: 0; font: inherit; font-weight: 700; cursor: pointer; }
+@media (max-width: 1000px) { .sites { grid-template-columns: repeat(2, minmax(0, 1fr)); } .site.wide { grid-column: auto; } .site.wide .img { aspect-ratio: 16 / 9; } }
+@media (max-width: 640px) { .sites { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 營地設施 ==================== */
+.facilities { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); }
+.fac { display: grid; align-content: start; gap: .5rem; padding: 1.5rem 1.25rem 1.75rem 0; border-bottom: 1px solid var(--line); }
+.fac .ico { width: 2.25rem; height: 2.25rem; color: var(--brand); stroke-width: 1.5; }
+.fac h3 { font-size: 1.2rem; letter-spacing: -.01em; }
+.fac p { color: var(--muted); font-size: .92rem; }
+@media (max-width: 900px) { .facilities { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 420px) { .facilities { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 營地地圖 ==================== */
+.map-layout { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
+.map-frame { background: var(--surface); border: 2px solid var(--text); border-radius: var(--radius); padding: .5rem; box-shadow: 5px 5px 0 color-mix(in srgb, var(--text) 85%, transparent); }
+.camp-map { display: block; width: 100%; height: auto; font-family: var(--font-body); }
+.camp-map .land { fill: var(--bg); }
+.camp-map .cont { fill: none; stroke: var(--contour); stroke-width: 1.2; opacity: .7; }
+.camp-map .creek { fill: none; stroke: var(--water); stroke-width: 16; stroke-linecap: round; }
+.camp-map .creek-hi { fill: none; stroke: color-mix(in srgb, var(--water) 50%, var(--surface)); stroke-width: 4; stroke-linecap: round; stroke-dasharray: 10 14; }
+.camp-map .road { fill: none; stroke: var(--surface); stroke-width: 12; stroke-linecap: round; }
+.camp-map .road-edge { fill: none; stroke: var(--muted); stroke-width: 15; stroke-linecap: round; }
+.camp-map .trail { fill: none; stroke: var(--brand-deep); stroke-width: 2.5; stroke-dasharray: 2 7; stroke-linecap: round; }
+.camp-map .tree { fill: var(--forest); opacity: .8; }
+.camp-map .lbl { fill: var(--text); font-size: 15px; font-weight: 700; }
+.camp-map .sub { fill: var(--muted); font-size: 12px; }
+.camp-map .poi { fill: var(--night); }
+.camp-map .poi-t { fill: var(--star); font-size: 12px; font-weight: 700; }
+.camp-map .fire { fill: var(--brand); }
+.zone { cursor: pointer; outline: none; }
+.zone .z { fill: color-mix(in srgb, var(--forest) 22%, var(--bg)); stroke: var(--forest); stroke-width: 2.5; stroke-dasharray: 7 5; transition: fill .25s var(--ease), stroke .25s var(--ease); }
+.zone:hover .z { fill: color-mix(in srgb, var(--brand) 30%, var(--bg)); stroke: var(--brand-deep); }
+.zone:focus-visible .z { stroke: var(--brand-deep); stroke-width: 5; stroke-dasharray: none; }
+.zone.on .z { fill: color-mix(in srgb, var(--brand) 55%, var(--bg)); stroke: var(--brand-deep); stroke-dasharray: none; }
+.zone:active .z { fill: color-mix(in srgb, var(--brand) 70%, var(--bg)); }
+.map-side h3 { font-size: 1.35rem; margin-bottom: .75rem; }
+.map-side p { color: var(--muted); font-size: .95rem; }
+.legend { display: grid; gap: .6rem; margin: 1.25rem 0; font-size: .95rem; }
+.legend li { display: flex; gap: .75rem; align-items: center; }
+.legend i { flex: none; width: 1.6rem; height: 1rem; border-radius: 3px; }
+.lg-zone { background: color-mix(in srgb, var(--forest) 22%, var(--bg)); border: 2px dashed var(--forest); }
+.lg-creek { background: var(--water); }
+.lg-trail { height: 0 !important; border-top: 3px dotted var(--brand-deep); border-radius: 0 !important; }
+.lg-poi { background: var(--night); }
+@media (max-width: 900px) { .map-layout { grid-template-columns: minmax(0, 1fr); } }
+/* 手機上地圖保持可讀的大小，改成左右滑動 */
+@media (max-width: 640px) { .map-frame { overflow-x: auto; -webkit-overflow-scrolling: touch; } .camp-map { min-width: 600px; } }
+
+/* ==================== 價格試算 ==================== */
+.estimator { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 1.5rem; align-items: stretch; }
+.est-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding: clamp(1.25rem, 3vw, 2rem); background: var(--surface); border-radius: var(--radius); }
+.est-out { display: flex; flex-direction: column; justify-content: center; gap: .5rem; padding: clamp(1.25rem, 3vw, 2rem); border: 2px dashed color-mix(in srgb, var(--forest-ink) 40%, transparent); border-radius: var(--radius); }
+.est-out .big { font: 800 clamp(2.4rem, 5vw, 3.5rem)/1 var(--font-heading); color: var(--art-glow); letter-spacing: -.03em; }
+.est-out p { color: var(--muted); font-size: .95rem; }
+.est-out .nights { color: var(--text); font-size: 1.1rem; font-weight: 700; }
+.note { font-size: .85rem; color: var(--muted); }
+@media (max-width: 860px) { .estimator { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 表單共用 ---------- */
+.field { display: grid; gap: .35rem; min-width: 0; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: .9rem; font-weight: 500; color: var(--muted); }
+.field input, .field select, .field textarea { width: 100%; min-width: 0; min-height: 48px; padding: .65rem .85rem; font: inherit; color: var(--text); background: var(--bg); border: 2px solid var(--line); border-radius: 8px; transition: border-color .2s var(--ease); }
+.field textarea { min-height: 7rem; resize: vertical; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: color-mix(in srgb, var(--text) 45%, transparent); }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { border-color: var(--brand); outline-offset: 1px; }
+.field input:disabled, .field select:disabled, .btn:disabled { opacity: .5; cursor: not-allowed; }
+.night .field input, .night .field select, .night .field textarea, .forest .field input, .forest .field select { color-scheme: dark; }
+@media (max-width: 520px) { .est-form, .form { grid-template-columns: minmax(0, 1fr) !important; } }
+
+/* ==================== 周邊活動 ==================== */
+.nearby { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
+.nearby .img { aspect-ratio: 4 / 5; border-radius: var(--radius); border: 2px solid var(--text); }
+.acts { display: grid; gap: 0; }
+.act { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .25rem 1.5rem; padding: 1.25rem 0; border-bottom: 2px dashed var(--line); }
+.act:first-child { padding-top: 0; }
+.act h3 { font-size: 1.3rem; }
+.act .dist { font: 700 .95rem/1.4 var(--font-heading); color: var(--brand-deep); text-align: right; }
+.act p { grid-column: 1 / -1; color: var(--muted); font-size: .95rem; }
+@media (max-width: 760px) { .nearby { grid-template-columns: minmax(0, 1fr); } .nearby .img { aspect-ratio: 16 / 10; } }
+
+/* ==================== 營地規範 ==================== */
+.rules { display: grid; gap: .75rem; max-width: 52rem; }
+.rules details { background: var(--surface); border-radius: var(--radius); border: 1px solid var(--line); }
+.rules summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: .9rem; padding: 1.1rem 1.25rem; font: 700 1.15rem/1.35 var(--font-heading); border-radius: var(--radius); transition: background-color .2s var(--ease); }
+.rules summary::-webkit-details-marker { display: none; }
+.rules summary .ico { color: var(--brand); }
+.rules summary::after { content: "+"; margin-left: auto; font: 500 1.5rem/1 var(--font-body); color: var(--brand); transition: transform .3s var(--ease); }
+.rules details[open] summary::after { transform: rotate(45deg); }
+.rules summary:hover { background: color-mix(in srgb, var(--star) 6%, transparent); }
+.rules summary:active { background: color-mix(in srgb, var(--star) 10%, transparent); }
+.rules .rule-body { padding: 0 1.25rem 1.25rem calc(1.25rem + 1.6rem + .9rem); color: var(--muted); }
+.rules .rule-body li + li { margin-top: .35rem; }
+@media (max-width: 520px) { .rules .rule-body { padding-left: 1.25rem; } }
+
+/* ==================== 天氣與裝備 ==================== */
+.weather { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; background: var(--surface); border: 2px solid var(--text); border-radius: var(--radius); }
+table { font-variant-numeric: tabular-nums; width: 100%; min-width: 34rem; border-collapse: collapse; font-size: .95rem; }
+th, td { text-align: left; padding: .85rem 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+thead th { font-size: .88rem; font-weight: 700; color: var(--muted); background: color-mix(in srgb, var(--contour) 18%, var(--surface)); }
+tbody th { font-family: var(--font-heading); font-weight: 800; white-space: nowrap; }
+tbody tr:last-child > * { border-bottom: 0; }
+.gear h3 { font-size: 1.3rem; margin-bottom: .6rem; }
+.gear h3 + ul { margin-bottom: 1.5rem; }
+.gear ul { display: grid; gap: .35rem; }
+.gear li { display: flex; gap: .6rem; align-items: baseline; }
+.gear li::before { content: ""; flex: none; width: .55rem; height: .55rem; border: 2px solid var(--brand-deep); border-radius: 2px; transform: translateY(-.1rem); }
+@media (max-width: 900px) { .weather { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 評價 ==================== */
+.reviews { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.review { display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem; background: var(--surface); border-radius: var(--radius); }
+.review blockquote { font-size: 1.02rem; line-height: 1.8; }
+.review figcaption { margin-top: auto; font-size: .9rem; color: var(--muted); }
+.review figcaption b { display: block; color: var(--text); font-size: 1rem; }
+.score { font: 800 1rem/1 var(--font-heading); color: var(--art-glow); }
+@media (max-width: 900px) { .reviews { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 訂位 ==================== */
+.booking { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.booking h2 { font-size: clamp(2.2rem, 5vw, 4rem); }
+.booking .intro { margin-top: 1rem; color: var(--muted); max-width: 28rem; }
+.contact-btns { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+.contact-info { margin-top: 1.75rem; font-style: normal; display: grid; gap: .3rem; color: var(--muted); font-size: .95rem; }
+.contact-info a { color: var(--text); }
+.contact-info a:hover { color: var(--brand); }
+.form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding: clamp(1.25rem, 3vw, 2rem); background: var(--surface); border-radius: var(--radius); border: 1px solid var(--line); }
+.form .btn { grid-column: 1 / -1; }
+.form-note { font-size: .85rem; color: var(--muted); }
+@media (max-width: 860px) { .booking { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 交通 ==================== */
+.access { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.route { padding: 1.5rem; background: var(--surface); border: 2px solid var(--text); border-radius: var(--radius); }
+.route h3 { font-size: 1.3rem; margin-bottom: .6rem; }
+.route p, .route li { color: var(--muted); font-size: .95rem; }
+.route ol { padding-left: 1.2rem; display: grid; gap: .35rem; }
+.route.warn { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.route.warn h3 { color: var(--brand-ink); }
+.route.warn li { color: var(--brand-ink); }
+.route.warn ul { display: grid; gap: .45rem; }
+.access-cta { display: flex; flex-wrap: wrap; gap: 1rem 1.75rem; align-items: center; margin-top: 2rem; }
+@media (max-width: 900px) { .access { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 頁尾 ==================== */
+.site-footer { position: relative; background: var(--night-deep); color: var(--star-muted); padding: 5.5rem var(--pad) calc(2rem + 4.5rem); font-size: .95rem; }
+.foot-ridge { position: absolute; inset: -59px 0 auto; width: 100%; height: 60px; fill: var(--night-deep); }
+.foot-grid { max-width: 76rem; margin-inline: auto; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; }
+.site-footer .logo { color: var(--star); }
+.site-footer p { margin-top: .75rem; }
+.site-footer h2 { font-size: 1rem; color: var(--star); margin-bottom: .6rem; letter-spacing: 0; }
+.site-footer address { font-style: normal; }
+.site-footer a { color: var(--star); text-decoration-color: color-mix(in srgb, var(--star) 35%, transparent); transition: color .2s var(--ease); }
+.site-footer a:hover { color: var(--brand); }
+.site-footer a:active { opacity: .7; }
+.social { display: flex; gap: 1.25rem; margin-top: 1rem; }
+.copy { max-width: 76rem; margin: 3rem auto 0; padding-top: 1.5rem; border-top: 1px solid color-mix(in srgb, var(--star) 12%, transparent); font-size: .85rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (min-width: 761px) { .site-footer { padding-bottom: 2rem; } }
+
+/* ---------- 手機底部固定按鈕 ---------- */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 45; padding: .7rem var(--pad) calc(.85rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--night-deep) 92%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.sticky-cta .btn { width: 100%; }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- 減少動態 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal, .hero-inner { transform: none; opacity: 1; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Campground",
+  "name": "星野營地 Starfield Camp",
+  "description": "苗栗南庄海拔 600 公尺的溪谷露營區，提供草地、棧板、雨棚、豪華帳篷與車宿營位。",
+  "telephone": "037-123-456",
+  "email": "hello@starfield.example",
+  "url": "https://example.com/",
+  "priceRange": "NT$700–5,200",
+  "petsAllowed": true,
+  "checkinTime": "13:00",
+  "checkoutTime": "11:00",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "東河村星野路 168 號",
+    "addressLocality": "南庄鄉",
+    "addressRegion": "苗栗縣",
+    "postalCode": "353",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "08:00", "closes": "21:00" }
+  ],
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "熱水淋浴", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "營位電源", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Wi-Fi（管理中心）", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "寵物友善", "value": true }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<!-- 圖示庫：用 <svg class="ico"><use href="#i-tent"/></svg> 引用 -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-tent" viewBox="0 0 24 24"><path d="M2 20h20M3.5 20 12 4l8.5 16M12 4v3M8.5 20 12 13l3.5 7"/></symbol>
+  <symbol id="i-fire" viewBox="0 0 24 24"><path d="M12 2.5c.8 3 4.5 4.6 4.5 9a4.5 4.5 0 0 1-9 0c0-2 1-3.4 2.2-4.4 0 1.7.9 2.8 2.1 2.8 0-2.6-1.2-4.6.2-7.4Z"/><path d="M4.5 21.5 19.5 18M4.5 18l15 3.5"/></symbol>
+  <symbol id="i-shower" viewBox="0 0 24 24"><path d="M5 21V9a4 4 0 0 1 4-4h1.5a4 4 0 0 1 4 4"/><path d="M10.5 9h8"/><path d="M11.5 13v1.5M14.5 13v1.5M17.5 13v1.5M13 17v1.5M16 17v1.5"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01" stroke-width="3"/></symbol>
+  <symbol id="i-paw" viewBox="0 0 24 24"><circle cx="5.5" cy="11" r="1.8"/><circle cx="9.3" cy="6.3" r="1.8"/><circle cx="14.7" cy="6.3" r="1.8"/><circle cx="18.5" cy="11" r="1.8"/><path d="M12 12c-2.5 0-5 3.5-5 6 0 1.5 1.2 2.2 2.6 2 1-.2 1.6-.6 2.4-.6s1.4.4 2.4.6c1.4.2 2.6-.5 2.6-2 0-2.5-2.5-6-5-6Z"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v4M15 3v4M6 7h12v3a6 6 0 0 1-12 0V7ZM12 16v5"/></symbol>
+  <symbol id="i-sink" viewBox="0 0 24 24"><path d="M3.5 13h17v1a6 6 0 0 1-6 6h-5a6 6 0 0 1-6-6v-1ZM12 13V7a3 3 0 0 1 3-3h3M18 4v3"/></symbol>
+  <symbol id="i-ice" viewBox="0 0 24 24"><path d="M12 2.5v19M3.8 7.2l16.4 9.6M3.8 16.8l16.4-9.6M9 4.3l3 2 3-2M9 19.7l3-2 3 2"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 6.5h16M9.5 6.5V4h5v2.5M6 6.5l1 14h10l1-14M10 10.5v6M14 10.5v6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+</svg>
+
+<!-- ==================== 區塊：頁首導覽 ==================== -->
+<header class="site-header">
+  <a href="#top" class="logo" aria-label="星野營地 回到頂端"><svg class="ico" aria-hidden="true"><use href="#i-tent"/></svg>星野營地 <small>Starfield</small></a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="開啟選單"><span></span></button>
+  <nav class="menu" id="menu" aria-label="主選單">
+    <a href="#sites">營位</a>
+    <a href="#facilities">設施</a>
+    <a href="#map">營地地圖</a>
+    <a href="#estimate">價格試算</a>
+    <a href="#rules">營地規範</a>
+    <a href="#access">交通</a>
+    <a href="#reserve" class="btn btn-brand">立即訂位</a>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ==================== 區塊：主視覺 Hero ==================== -->
+<section class="hero" id="top">
+  <div class="img img-hero" role="img" aria-label="夜晚的山谷營地，天上布滿星星與銀河，山稜線上有一頂亮著燈的帳篷"></div>
+  <svg class="ridge" viewBox="0 0 1440 280" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path class="r1" d="M0 150 120 95 230 140 360 60 470 120 590 80 720 130 860 40 990 115 1110 70 1240 125 1350 85 1440 110V280H0Z"/>
+    <path class="r2" d="M0 200 140 150 260 185 400 120 520 170 650 140 780 185 930 110 1060 165 1200 130 1330 175 1440 150V280H0Z"/>
+    <ellipse class="glow" cx="1012" cy="196" rx="70" ry="26"/>
+    <path class="tent" d="M985 214 1012 178 1039 214Z"/>
+    <path class="r3" d="M0 240 180 205 330 232 520 196 700 236 880 210 1060 238 1240 204 1440 230V280H0Z"/>
+  </svg>
+  <div class="hero-inner">
+    <h1><span class="nb">今晚，</span><span class="nb">睡在銀河底下</span></h1>
+    <p>苗栗南庄海拔 600 公尺的溪谷營地，五種營位，帶狗也歡迎。</p>
+    <div class="hero-actions">
+      <a href="#reserve" class="btn btn-brand">立即訂位</a>
+      <a href="#sites" class="text-link">看營位</a>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <dl class="hero-facts">
+      <div><dt>營位</dt><dd><b>42 格</b></dd></div>
+      <div><dt>入營／拔營</dt><dd><b>13:00／11:00</b></dd></div>
+      <div><dt>光害等級</dt><dd><b>極低</b></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ==================== 區塊：營位類型 ==================== -->
+<!-- 價格改這裡的同時，也要一起改「價格試算」下拉選單裡的 data-wd（平日）與 data-we（假日） -->
+<section class="paper" id="sites">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>選一塊今晚的地</h2>
+      <p>從自己搭帳的草地，到有床有電暖器的豪華帳篷。每一格營位都有編號，在下方地圖上可以找到位置。</p>
+    </div>
+    <div class="sites">
+      <article class="site reveal" id="site-grass">
+        <div class="img img-grass" role="img" aria-label="傍晚的草地上搭著一頂橘色三角帳篷"></div>
+        <div class="site-body">
+          <p class="zone-tag">A 區</p><h3>草地營位</h3>
+          <dl class="specs">
+            <div><dt>尺寸</dt><dd>10 × 10 公尺</dd></div>
+            <div><dt>建議人數</dt><dd>4 至 6 人</dd></div>
+          </dl>
+          <div class="prices">
+            <div class="price">平日<b>NT$800</b></div>
+            <div class="price">假日<b>NT$1,200</b></div>
+          </div>
+          <ul class="feat"><li>可停一台車在營位旁</li><li>每格附 110V 電源</li><li>離溪邊步行 1 分鐘</li></ul>
+          <a href="#estimate" class="text-link" data-pick="grass">試算這個營位</a>
+        </div>
+      </article>
+      <article class="site reveal" id="site-deck">
+        <div class="img img-deck" role="img" aria-label="木頭棧板平台上搭著一頂綠色圓頂帳篷"></div>
+        <div class="site-body">
+          <p class="zone-tag">B 區</p><h3>棧板營位</h3>
+          <dl class="specs">
+            <div><dt>尺寸</dt><dd>6 × 6 公尺</dd></div>
+            <div><dt>建議人數</dt><dd>2 至 4 人</dd></div>
+          </dl>
+          <div class="prices">
+            <div class="price">平日<b>NT$1,000</b></div>
+            <div class="price">假日<b>NT$1,500</b></div>
+          </div>
+          <ul class="feat"><li>離地 30 公分，雨天不積水</li><li>附營釘掛環，免敲營釘</li><li>每格附 110V 電源</li></ul>
+          <a href="#estimate" class="text-link" data-pick="deck">試算這個營位</a>
+        </div>
+      </article>
+      <article class="site reveal" id="site-canopy">
+        <div class="img img-canopy" role="img" aria-label="條紋雨棚下方擺著桌椅，透出溫暖燈光"></div>
+        <div class="site-body">
+          <p class="zone-tag">C 區</p><h3>雨棚區</h3>
+          <dl class="specs">
+            <div><dt>尺寸</dt><dd>8 × 6 公尺（含棚）</dd></div>
+            <div><dt>建議人數</dt><dd>4 至 8 人</dd></div>
+          </dl>
+          <div class="prices">
+            <div class="price">平日<b>NT$1,400</b></div>
+            <div class="price">假日<b>NT$1,900</b></div>
+          </div>
+          <ul class="feat"><li>固定式鋼構雨棚，下雨照樣煮飯</li><li>附木桌與照明燈</li><li>適合兩家人包場</li></ul>
+          <a href="#estimate" class="text-link" data-pick="canopy">試算這個營位</a>
+        </div>
+      </article>
+      <article class="site wide reveal" id="site-glamp">
+        <div class="img img-glamp" role="img" aria-label="星空下亮著燈的鐘型帆布帳篷，上方掛著一串小燈泡"></div>
+        <div class="site-body">
+          <p class="zone-tag">D 區</p><h3>豪華帳篷</h3>
+          <dl class="specs">
+            <div><dt>尺寸</dt><dd>直徑 5 公尺鐘型帳</dd></div>
+            <div><dt>建議人數</dt><dd>2 至 4 人</dd></div>
+          </dl>
+          <div class="prices">
+            <div class="price">平日<b>NT$3,800</b></div>
+            <div class="price">假日<b>NT$5,200</b></div>
+          </div>
+          <ul class="feat"><li>雙人床墊、羽絨被與電暖器，拎包入住</li><li>私人木平台與烤肉爐</li><li>含隔天早餐與營火柴一捆</li></ul>
+          <a href="#estimate" class="text-link" data-pick="glamp">試算這個營位</a>
+        </div>
+      </article>
+      <article class="site reveal" id="site-car">
+        <div class="img img-car" role="img" aria-label="碎石地上停著一台車頂架著帳篷的休旅車"></div>
+        <div class="site-body">
+          <p class="zone-tag">E 區</p><h3>車宿</h3>
+          <dl class="specs">
+            <div><dt>尺寸</dt><dd>4 × 7 公尺車位</dd></div>
+            <div><dt>建議人數</dt><dd>1 至 3 人</dd></div>
+          </dl>
+          <div class="prices">
+            <div class="price">平日<b>NT$700</b></div>
+            <div class="price">假日<b>NT$1,000</b></div>
+          </div>
+          <ul class="feat"><li>平整碎石地，車頂帳也適用</li><li>附 110V 電源</li><li>靠近衛浴與管理中心</li></ul>
+          <a href="#estimate" class="text-link" data-pick="car">試算這個營位</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：營地設施 ==================== -->
+<section class="night" id="facilities">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>營地設施</h2>
+      <p>山裡的夜晚很安靜，生活上的小事我們先幫你準備好。</p>
+    </div>
+    <ul class="facilities reveal">
+      <li class="fac"><svg class="ico" aria-hidden="true"><use href="#i-shower"/></svg><h3>熱水淋浴</h3><p>男女各 6 間獨立隔間，24 小時熱水。</p></li>
+      <li class="fac"><svg class="ico" aria-hidden="true"><use href="#i-plug"/></svg><h3>營位電源</h3><p>每格 110V／15A，電熱毯與小電鍋都能用。</p></li>
+      <li class="fac"><svg class="ico" aria-hidden="true"><use href="#i-wifi"/></svg><h3>Wi-Fi</h3><p>管理中心周邊有網路，營區刻意保留低收訊。</p></li>
+      <li class="fac"><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg><h3>寵物友善</h3><p>牽繩即可入營，另有狗狗沖洗台與草地放風區。</p></li>
+      <li class="fac"><svg class="ico" aria-hidden="true"><use href="#i-sink"/></svg><h3>炊事洗手台</h3><p>三處洗手台，附洗碗精與廚餘桶。</p></li>
+      <li class="fac"><svg class="ico" aria-hidden="true"><use href="#i-fire"/></svg><h3>公共營火區</h3><p>每晚 19:00–21:30 開放，柴火可在小賣部購買。</p></li>
+      <li class="fac"><svg class="ico" aria-hidden="true"><use href="#i-ice"/></svg><h3>冰箱與製冰</h3><p>公用冰箱可放食材，冰塊每包 NT$50。</p></li>
+      <li class="fac"><svg class="ico" aria-hidden="true"><use href="#i-tent"/></svg><h3>新手裝備租借</h3><p>帳篷、睡袋、桌椅一套 NT$1,200，到場就能睡。</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== 區塊：營地地圖 ==================== -->
+<!-- 地圖上每個區域都是連結：點擊或用 Tab 鍵選取後按 Enter，就會跳到對應的營位卡片並標示出來 -->
+<section class="paper" id="map">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>營地地圖</h2>
+      <p>營區沿著東河溪展開。點地圖上的區域，就能看到那一區的營位介紹。</p>
+    </div>
+    <div class="map-layout">
+      <div class="map-frame reveal">
+        <svg class="camp-map" viewBox="0 0 900 560" role="group" aria-label="星野營地平面圖，共有 A 到 E 五個營位區">
+          <rect class="land" width="900" height="560" rx="6"/>
+          <path class="cont" d="M560 40c90-20 220 0 270 60s-10 140-120 150-210-40-220-100 0-100 70-110Z"/>
+          <path class="cont" d="M600 75c60-10 150 5 180 45s-20 90-90 95-140-25-150-65 10-70 60-75Z"/>
+          <path class="cont" d="M640 105c35-5 85 5 100 25s-15 50-55 50-75-15-80-35 5-35 35-40Z"/>
+          <path class="cont" d="M30 470c80-40 180-30 230 10M20 520c100-50 240-40 300 10"/>
+          <path class="creek" d="M-10 150C120 170 160 250 260 270s200-30 280 30 140 170 380 160"/>
+          <path class="creek-hi" d="M-10 150C120 170 160 250 260 270s200-30 280 30 140 170 380 160"/>
+          <path class="road-edge" d="M470 570V470c0-40-30-60-80-70"/>
+          <path class="road" d="M470 570V470c0-40-30-60-80-70"/>
+          <path class="trail" d="M520 330c40-40 60-90 110-130s90-70 70-110"/>
+          <g class="trees" aria-hidden="true">
+            <circle class="tree" cx="40" cy="60" r="16"/><circle class="tree" cx="78" cy="40" r="12"/><circle class="tree" cx="120" cy="70" r="14"/>
+            <circle class="tree" cx="860" cy="300" r="15"/><circle class="tree" cx="830" cy="340" r="11"/><circle class="tree" cx="640" cy="520" r="13"/>
+            <circle class="tree" cx="300" cy="40" r="12"/><circle class="tree" cx="330" cy="62" r="9"/>
+          </g>
+
+          <a class="zone" href="#site-grass" data-site="grass" aria-label="A 區 草地營位，查看營位介紹">
+            <path class="z" d="M150 40h250l20 150H170Z"/>
+            <text class="lbl" x="200" y="110">A 草地營位</text>
+            <text class="sub" x="200" y="132">16 格</text>
+          </a>
+          <a class="zone" href="#site-deck" data-site="deck" aria-label="B 區 棧板營位，查看營位介紹">
+            <path class="z" d="M60 300h200v110H60Z"/>
+            <text class="lbl" x="82" y="350">B 棧板營位</text>
+            <text class="sub" x="82" y="372">10 格，溪畔</text>
+          </a>
+          <a class="zone" href="#site-canopy" data-site="canopy" aria-label="C 區 雨棚區，查看營位介紹">
+            <path class="z" d="M440 120h120v130H440Z"/>
+            <text class="lbl" x="458" y="178">C 雨棚區</text>
+            <text class="sub" x="458" y="200">6 格</text>
+          </a>
+          <a class="zone" href="#site-glamp" data-site="glamp" aria-label="D 區 豪華帳篷，查看營位介紹">
+            <path class="z" d="M620 60c70-15 160 0 190 45s-15 100-90 105-130-20-140-60 0-80 40-90Z"/>
+            <text class="lbl" x="640" y="130">D 豪華帳篷</text>
+            <text class="sub" x="640" y="152">5 頂，觀景坡</text>
+          </a>
+          <a class="zone" href="#site-car" data-site="car" aria-label="E 區 車宿，查看營位介紹">
+            <path class="z" d="M520 400h170v110H520Z"/>
+            <text class="lbl" x="540" y="450">E 車宿</text>
+            <text class="sub" x="540" y="472">5 格，碎石地</text>
+          </a>
+
+          <g aria-hidden="true">
+            <rect class="poi" x="300" y="420" width="96" height="30" rx="5"/><text class="poi-t" x="316" y="440">管理中心</text>
+            <rect class="poi" x="300" y="200" width="72" height="30" rx="5"/><text class="poi-t" x="316" y="220">衛浴</text>
+            <rect class="poi" x="720" y="400" width="72" height="30" rx="5"/><text class="poi-t" x="736" y="420">衛浴</text>
+            <circle class="fire" cx="330" cy="330" r="14"/><text class="sub" x="352" y="335">營火區</text>
+            <text class="sub" x="650" y="250">觀星步道</text>
+            <text class="sub" x="478" y="548">入口</text>
+            <text class="sub" x="30" y="190">東河溪</text>
+            <text class="lbl" x="840" y="520">N</text><path class="cont" d="M846 500v-36l-8 14m8-14 8 14"/>
+          </g>
+        </svg>
+      </div>
+      <div class="map-side reveal">
+        <h3>怎麼看這張圖</h3>
+        <p>點選或按 Tab 鍵移到任一區域，再按 Enter，就會帶你到那一區的營位卡片。手機上地圖可以左右滑動。</p>
+        <ul class="legend">
+          <li><i class="lg-zone"></i>營位區，可點選</li>
+          <li><i class="lg-creek"></i>東河溪，夏天可戲水</li>
+          <li><i class="lg-trail"></i>觀星步道，單程 15 分鐘</li>
+          <li><i class="lg-poi"></i>管理中心與衛浴</li>
+        </ul>
+        <p>夜間營區只開地燈，記得帶頭燈。營火區旁就是管理中心，有事隨時找我們。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：價格試算 ==================== -->
+<!-- 試算只依平日／假日價格計算（週五、週六晚算假日），不會查詢實際空位，也不含連假加價 -->
+<section class="forest" id="estimate">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>先算算要花多少</h2>
+      <p>選好營位和日期，馬上知道住幾晚、大概多少錢。週五、週六晚以假日價計算。</p>
+    </div>
+    <div class="estimator reveal">
+      <form class="est-form" id="est" onsubmit="return false">
+        <div class="field full">
+          <label for="e-site">營位類型</label>
+          <select id="e-site">
+            <option value="grass" data-wd="800" data-we="1200">草地營位</option>
+            <option value="deck" data-wd="1000" data-we="1500">棧板營位</option>
+            <option value="canopy" data-wd="1400" data-we="1900">雨棚區</option>
+            <option value="glamp" data-wd="3800" data-we="5200">豪華帳篷</option>
+            <option value="car" data-wd="700" data-we="1000">車宿</option>
+          </select>
+        </div>
+        <div class="field"><label for="e-in">入營日</label><input id="e-in" type="date"></div>
+        <div class="field"><label for="e-out">拔營日</label><input id="e-out" type="date"></div>
+        <div class="field full">
+          <label for="e-qty">營位數量</label>
+          <select id="e-qty"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        </div>
+      </form>
+      <div class="est-out" aria-live="polite">
+        <p class="nights" id="e-nights">選好入營和拔營日期</p>
+        <div class="big" id="e-total">NT$0</div>
+        <p id="e-break">平日與假日晚數會顯示在這裡。</p>
+        <p class="note">這只是價格估算，不代表還有空位。實際空位與連假價格，以我們回覆的訂位確認為準。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：周邊活動 ==================== -->
+<section class="paper" id="nearby">
+  <div class="wrap nearby">
+    <div class="img img-creek reveal" role="img" aria-label="夕陽下的溪谷，兩側是層層的森林山坡"></div>
+    <div>
+      <div class="sec-head solo reveal">
+        <h2>白天也有得玩</h2>
+        <p>把車停好，接下來兩天不用一直開車。</p>
+      </div>
+      <ul class="acts">
+        <li class="act reveal"><h3>東河溪戲水</h3><span class="dist">步行 2 分鐘</span><p>營區旁的淺灘水深約到膝蓋，夏天下午最熱鬧。大雨後會封溪，請以現場公告為準。</p></li>
+        <li class="act reveal"><h3>週六觀星導覽</h3><span class="dist">營區內</span><p>每週六 20:30，營主帶大家認星座、拍銀河，晴天才開，免費參加。</p></li>
+        <li class="act reveal"><h3>向天湖步道</h3><span class="dist">車程 25 分鐘</span><p>來回約 2 小時的森林步道，終點是安靜的高山湖，適合清晨出發。</p></li>
+        <li class="act reveal"><h3>南庄老街</h3><span class="dist">車程 20 分鐘</span><p>桂花巷、客家小吃和咖啡館，回程順便補齊晚餐食材。</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：營地規範 ==================== -->
+<section class="night" id="rules">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>營地規範</h2>
+      <p>山谷裡聲音傳得很遠。請一起遵守這幾件事，讓每個人都睡得好。</p>
+    </div>
+    <div class="rules reveal">
+      <details open>
+        <summary><svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg>安靜時間</summary>
+        <ul class="rule-body"><li>22:00–07:00 為安靜時間，請關掉音響、降低說話音量。</li><li>夜間請勿發動車輛或使用發電機。</li><li>屢勸不聽者，營主有權請你離場且不退費。</li></ul>
+      </details>
+      <details>
+        <summary><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg>寵物</summary>
+        <ul class="rule-body"><li>歡迎帶狗，全程請繫牽繩，夜間請留在營位內。</li><li>排泄物請自行撿拾，管理中心有免費拾便袋。</li><li>豪華帳篷每頂限一隻寵物，請於訂位時告知。</li></ul>
+      </details>
+      <details>
+        <summary><svg class="ico" aria-hidden="true"><use href="#i-trash"/></svg>垃圾</summary>
+        <ul class="rule-body"><li>一般垃圾、資源回收與廚餘請分類後丟到管理中心旁的回收站。</li><li>油汙請勿倒進洗手台，可裝瓶交給管理中心。</li><li>拔營前請恢復營位原狀，我們會在 11:00 巡場。</li></ul>
+      </details>
+      <details>
+        <summary><svg class="ico" aria-hidden="true"><use href="#i-fire"/></svg>用火</summary>
+        <ul class="rule-body"><li>營位內只能使用離地的焚火台，禁止直接在草地上生火。</li><li>強風或乾旱期間會暫停用火，以現場公告為準。</li><li>睡前請確認火源完全熄滅，灰燼倒在指定的灰燼桶。</li></ul>
+      </details>
+      <details>
+        <summary><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>入營與拔營</summary>
+        <ul class="rule-body"><li>入營 13:00 起，拔營 11:00 前。提早或延後需視空位加價。</li><li>19:00 後山路較暗，建議天黑前抵達。</li></ul>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：天氣與裝備建議 ==================== -->
+<section class="paper" id="weather">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>天氣與裝備建議</h2>
+      <p>海拔 600 公尺，晚上通常比平地低 5 度左右。出發前可以參考這張表。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="weather">
+      <div class="table-scroll reveal">
+        <table>
+          <thead><tr><th scope="col">季節</th><th scope="col">白天</th><th scope="col">夜晚</th><th scope="col">要注意</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">春 3 至 5 月</th><td>20 至 26°C</td><td>12 至 16°C</td><td>螢火蟲季，午後常有短暫陣雨</td></tr>
+            <tr><th scope="row">夏 6 至 8 月</th><td>27 至 32°C</td><td>20 至 23°C</td><td>午後雷陣雨，颱風警報時停止營業</td></tr>
+            <tr><th scope="row">秋 9 至 11 月</th><td>22 至 28°C</td><td>14 至 18°C</td><td>最穩定的觀星季，晝夜溫差大</td></tr>
+            <tr><th scope="row">冬 12 至 2 月</th><td>14 至 19°C</td><td>6 至 10°C</td><td>寒流時可能低於 5°C，豪華帳篷有電暖器</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="gear reveal">
+        <h3>一定要帶</h3>
+        <ul><li>頭燈或手電筒</li><li>防水外套與一件保暖中層</li><li>防蚊液，溪邊傍晚蚊蟲較多</li><li>焚火台（自備或現場租借）</li></ul>
+        <h3>現場可以租</h3>
+        <ul><li>帳篷、睡袋、睡墊</li><li>折疊桌椅與營燈</li><li>卡式爐與鍋具組</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：評價 ==================== -->
+<section class="forest" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>營友怎麼說</h2>
+      <p>開營三年，很多家庭每一季都回來。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="reviews">
+      <figure class="review reveal">
+        <span class="score" aria-label="5 顆星，滿分 5 顆">5.0／5</span>
+        <blockquote>第一次帶小孩露營就選豪華帳篷，床很好睡，半夜起來上廁所，抬頭真的看到銀河。小孩說下次要自己搭帳篷。</blockquote>
+        <figcaption><b>林先生一家</b>豪華帳篷，11 月入住</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <span class="score" aria-label="5 顆星，滿分 5 顆">5.0／5</span>
+        <blockquote>棧板營位下雨完全不怕，熱水很穩。最喜歡十點後整個營區都安靜下來，只剩溪水的聲音。</blockquote>
+        <figcaption><b>Mia 與阿哲</b>棧板營位，常客</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <span class="score" aria-label="4 顆星，滿分 5 顆">4.0／5</span>
+        <blockquote>狗狗可以跟著下溪玩，還有沖洗台。山路最後一段比較窄，會車要慢，但到了之後一切都值得。</blockquote>
+        <figcaption><b>陳小姐與柴犬豆豆</b>草地營位</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：訂位表單 ==================== -->
+<section class="night" id="reserve">
+  <div class="wrap booking">
+    <div class="reveal">
+      <h2>立即訂位</h2>
+      <p class="intro">填好日期與營位，我們會在 24 小時內回覆空位與匯款資訊。想問細節，也可以直接打電話或傳 LINE。</p>
+      <div class="contact-btns">
+        <a href="tel:037123456" class="btn btn-brand">來電 037-123-456</a>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn" target="_blank" rel="noopener">LINE 詢問</a>
+      </div>
+      <address class="contact-info">
+        <span>苗栗縣南庄鄉東河村星野路 168 號</span>
+        <a href="mailto:hello@starfield.example">hello@starfield.example</a>
+        <span>管理中心每天 08:00–21:00</span>
+      </address>
+    </div>
+    <!--
+      表單使用 Formspree（免費方案每月 50 筆）：
+      1. 到 https://formspree.io 註冊並建立新表單
+      2. 把下方 action 裡的 your-form-id 換成你拿到的表單 ID
+      3. 第一次送出時，Formspree 會寄信請你確認信箱
+    -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="field"><label for="f-name">姓名</label><input id="f-name" name="姓名" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">手機</label><input id="f-tel" name="手機" type="tel" autocomplete="tel" required></div>
+      <div class="field full"><label for="f-mail">Email</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
+      <div class="field full">
+        <label for="f-site">營位類型</label>
+        <select id="f-site" name="營位類型" required>
+          <option value="">請選擇</option>
+          <option>草地營位</option>
+          <option>棧板營位</option>
+          <option>雨棚區</option>
+          <option>豪華帳篷</option>
+          <option>車宿</option>
+        </select>
+      </div>
+      <div class="field"><label for="f-in">入營日</label><input id="f-in" name="入營日" type="date" required></div>
+      <div class="field"><label for="f-out">拔營日</label><input id="f-out" name="拔營日" type="date" required></div>
+      <div class="field"><label for="f-ppl">人數</label><input id="f-ppl" name="人數" type="number" min="1" max="12" value="2"></div>
+      <div class="field">
+        <label for="f-pet">帶寵物</label>
+        <select id="f-pet" name="寵物"><option>沒有</option><option>1 隻</option><option>2 隻以上</option></select>
+      </div>
+      <div class="field full"><label for="f-msg">備註</label><textarea id="f-msg" name="備註" placeholder="例如：想要靠溪邊的位置、需要租裝備"></textarea></div>
+      <button type="submit" class="btn btn-brand">送出訂位申請</button>
+      <p class="form-note full">送出後還不算訂位成功，收到我們的確認信並完成匯款才算數。</p>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== 區塊：交通 ==================== -->
+<section class="paper" id="access">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>怎麼上山</h2>
+      <p>從國道三號下來大約 40 分鐘。最後一段是山路，請預留時間慢慢開。</p>
+    </div>
+    <div class="access">
+      <div class="route reveal">
+        <h3>自行開車</h3>
+        <ol><li>國道三號下頭份交流道</li><li>接台 3 線往南庄方向</li><li>過南庄市區後依「星野營地」指標右轉</li><li>沿山路上行約 6 公里抵達</li></ol>
+      </div>
+      <div class="route warn reveal">
+        <h3>山路提醒</h3>
+        <ul><li>最後 6 公里為單線道，彎道多，會車請靠山壁側禮讓。</li><li>營區前 2 公里手機訊號不穩，請先下載離線地圖。</li><li>大型露營車（超過 7 公尺）請先來電確認。</li><li>天黑後山路沒有路燈，建議 18:00 前抵達。</li></ul>
+      </div>
+      <div class="route reveal">
+        <h3>大眾運輸</h3>
+        <p>搭火車到竹南站，轉乘往南庄的客運到南庄站。我們提供預約接駁，單程每車 NT$400，請在訂位時一起告知。</p>
+      </div>
+    </div>
+    <div class="access-cta reveal">
+      <a href="https://maps.google.com/?q=苗栗縣南庄鄉東河村星野路168號" class="btn btn-brand" target="_blank" rel="noopener">在 Google 地圖開啟</a>
+      <a href="tel:037123456" class="text-link">迷路了？打給營主</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<footer class="site-footer">
+  <svg class="foot-ridge" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 60V40l160-28 120 22 180-34 160 30 150-20 170 26 140-24 180 30 180-22V60Z"/></svg>
+  <div class="foot-grid">
+    <div>
+      <a href="#top" class="logo"><svg class="ico" aria-hidden="true"><use href="#i-tent"/></svg>星野營地 <small>Starfield</small></a>
+      <p>苗栗南庄溪谷裡的星空營地。草地、棧板、雨棚、豪華帳篷與車宿，全年開放。</p>
+      <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+    <div>
+      <h2>聯絡資訊</h2>
+      <address>
+        <a href="https://maps.google.com/?q=苗栗縣南庄鄉東河村星野路168號" target="_blank" rel="noopener">苗栗縣南庄鄉東河村星野路 168 號</a><br>
+        電話 <a href="tel:037123456">037-123-456</a><br>
+        <a href="mailto:hello@starfield.example">hello@starfield.example</a>
+      </address>
+    </div>
+    <div>
+      <h2>營業時間</h2>
+      <p>管理中心每天 08:00–21:00<br>入營 13:00 起，拔營 11:00 前<br>颱風警報期間暫停營業</p>
+    </div>
+  </div>
+  <p class="copy">© <span id="y"></span> 星野營地 Starfield Camp</p>
+</footer>
+
+<!-- 手機底部固定按鈕 -->
+<div class="sticky-cta"><a href="#reserve" class="btn btn-brand">立即訂位</a></div>
+
+<script>
+(function () {
+  var d = document, header = d.querySelector('.site-header'), burger = d.querySelector('.burger'), menu = d.getElementById('menu');
+
+  // 頁首捲動背景
+  function onScroll() { header.classList.toggle('scrolled', scrollY > 40 || menu.classList.contains('open')); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // 漢堡選單
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? '關閉選單' : '開啟選單');
+    onScroll();
+  }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // 捲動漸入
+  var targets = d.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) targets.forEach(function (el) { el.classList.add('in'); });
+  else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
+    targets.forEach(function (el) { io.observe(el); });
+  }
+
+  // 地圖區域：點選後標示地圖區域與對應的營位卡片，並帶入試算
+  var zones = d.querySelectorAll('.zone'), sel = d.getElementById('e-site');
+  function pick(site) {
+    zones.forEach(function (z) { z.classList.toggle('on', z.dataset.site === site); });
+    d.querySelectorAll('.site').forEach(function (c) { c.classList.toggle('hl', c.id === 'site-' + site); });
+    sel.value = site; calc();
+  }
+  zones.forEach(function (z) { z.addEventListener('click', function () { pick(z.dataset.site); }); });
+  d.querySelectorAll('[data-pick]').forEach(function (a) { a.addEventListener('click', function () { pick(a.dataset.pick); }); });
+
+  // 價格試算（只計算價格，不查詢實際空位）
+  var ci = d.getElementById('e-in'), co = d.getElementById('e-out'), qty = d.getElementById('e-qty'), DAY = 864e5;
+  function money(n) { return 'NT$' + n.toLocaleString('zh-TW'); }
+  function calc() {
+    var o = sel.options[sel.selectedIndex], a = Date.parse(ci.value), b = Date.parse(co.value), n = Math.round((b - a) / DAY), we = 0;
+    if (ci.value) co.min = new Date(a + DAY).toISOString().slice(0, 10);
+    if (!(n > 0)) { d.getElementById('e-nights').textContent = ci.value && co.value ? '拔營日要晚於入營日' : '選好入營和拔營日期'; d.getElementById('e-total').textContent = money(0); return; }
+    for (var i = 0; i < n; i++) { var w = new Date(a + i * DAY).getUTCDay(); if (w === 5 || w === 6) we++; }
+    var q = +qty.value, total = (we * o.dataset.we + (n - we) * o.dataset.wd) * q;
+    d.getElementById('e-nights').textContent = o.text + ' ' + q + ' 格，共 ' + n + ' 晚';
+    d.getElementById('e-break').textContent = '平日 ' + (n - we) + ' 晚 × ' + money(+o.dataset.wd) + '，假日 ' + we + ' 晚 × ' + money(+o.dataset.we);
+    d.getElementById('e-total').textContent = money(total);
+  }
+  [sel, ci, co, qty].forEach(function (el) { el.addEventListener('change', calc); el.addEventListener('input', calc); });
+  var today = new Date().toISOString().slice(0, 10);
+  ci.min = today; d.getElementById('f-in').min = today; d.getElementById('f-out').min = today;
+
+  d.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
