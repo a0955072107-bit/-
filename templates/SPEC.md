@@ -54,3 +54,29 @@
   `/tmp/claude-0/-home-user--/205e49d8-9465-5a2b-bca8-edeae4bfe130/scratchpad/shots/<slug>-desktop.png`、`<slug>-mobile.png`。
   實際打開圖片檢查，修好版面問題後再截一次。Google Fonts 在沙箱裡不一定載得到；系統的中文備用字型是 WenQuanYi Zen Hei，這是正常的。
 - 用 JS 檢查 390px 寬度時 `document.documentElement.scrollWidth <= 390`，而且 console 不能有錯誤。
+
+## 設計規則（Hallmark 防 AI 感，必須遵守）
+1. 標題上方不要放小標籤（eyebrow，例如 h2 上面的「OUR SERVICES」）。
+2. 不要用「大寫字母＋加寬字距」的小字標籤。導覽列、標籤、說明文字、表頭都用內文字型，字級小一階，正常大小寫，字距正常。
+3. 不要用「A · B · C」這種用中間點串起來的資訊字串，不要在連結文字後面黏箭頭（「了解更多 →」），不要用裝飾性的狀態圓點，不要用 emoji 當圖示，不要在標題裡把單一個字改成斜體或另一個顏色。
+4. 不要用紫色到藍色、紫色到粉色的漸層。
+5. 不要寫 `transition: all`，也不要對 width、height、top、left 做動畫。
+6. 所有顏色（包含陰影的 rgba）都要用 :root 裡的變數。白色也要略帶主色調，不要用純 #fff。
+7. 放圖片的 grid 欄位用 `minmax(0,1fr)`。大標題加上 `overflow-wrap: break-word; min-width: 0; text-wrap: balance`。
+8. 按鈕和連結要有 :hover、:active、:focus-visible 三種狀態。標題層級一次只能降一級（不要從 h1 直接跳到 h3）。
+9. 1280×800 的畫面不捲動，就要看得到首屏的大標題、一句說明和主要按鈕。首屏文字要簡短。
+10. 內文的句子裡不要用破折號（—、–）。時間範圍可以用，例如 10:00–18:00。
+11. 虛構的評價和數據旁邊，都要加上 `<!-- 範例內容：上線前請換成真實資料 -->`。
+12. 手機選單要有不用 JS 也能運作的備案：隱藏選單的樣式只在 `html.js` 底下生效。沒有 JS 時，選單換行顯示在 logo 下方，header 改成 position: sticky。
+
+## 英文版
+- 同一個模板要另外做一份英文版，放在 `templates/en/<slug>/index.html`。設計、CSS、JS 都要和中文版一樣，只改語言和跟語言有關的內容。
+- 英文版用自然、道地的行銷英文，不要直譯。店名改成英文的虛構名稱，地址用虛構的美國地址（例如 `128 Maple Street, Portland, OR 97205`），電話用 `(555) 012-3456`，價格用美元。
+- LINE 按鈕改成 WhatsApp（`https://wa.me/15550123456`），並加註解說明買家可以換回 LINE、Messenger 或 Instagram。
+- 所有程式碼註解都翻成英文：例如 `Section: 名稱`、`THEME SETTINGS`、`Replace with a photo: …`、`Sample content — replace before going live`。
+- 中文字型換成風格相近的拉丁字型，並移除用不到的字型載入。
+- 檢查英文版裡沒有殘留任何中文字。
+
+## 驗收補充
+- lint：把檔案複製到 scratchpad，執行 `node /home/user/nutlope/hallmark/skills/hallmark/scripts/sloplint.mjs <副本>`。第 20 條（戳記）可以忽略，第 19 條如果是時間範圍也可以忽略，其他 FAIL 都要修掉。
+- 截圖和所有暫存檔都只能放在 scratchpad 裡，不要寫進 repo。
