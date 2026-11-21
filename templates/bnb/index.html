@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>山嵐民宿 Lanshan Inn｜宜蘭礁溪的山景溫泉民宿</title>
+<meta name="description" content="山嵐民宿 Lanshan Inn 位在宜蘭礁溪的山腳下，四間房各有山景大窗，提供手作早餐、溫泉湯屋與免費單車。線上即可訂房。">
+<meta name="theme-color" content="#4a6648">
+<meta property="og:title" content="山嵐民宿 Lanshan Inn｜礁溪山腳下的慢旅宿">
+<meta property="og:description" content="推開窗就是晨霧和山稜線。泡一池礁溪溫泉，吃一份在地小農早餐，在宜蘭慢慢住幾晚。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Noto+Serif+TC:wght@500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BedAndBreakfast",
+  "name": "山嵐民宿 Lanshan Inn",
+  "telephone": "03-123-4567",
+  "url": "https://example.com/",
+  "priceRange": "NT$3,200–6,400",
+  "checkinTime": "15:00",
+  "checkoutTime": "11:00",
+  "petsAllowed": true,
+  "numberOfRooms": 4,
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "溫泉湯屋", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "含早餐", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "免費停車", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "免費單車", "value": true }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "林尾路 168 號",
+    "addressLocality": "礁溪鄉",
+    "addressRegion": "宜蘭縣",
+    "postalCode": "262",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "09:00", "closes": "21:00" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #4a6648;          /* 品牌主色（苔蘚綠）：按鈕、強調文字 */
+  --brand-ink: #f8f7f0;      /* 在 brand 色上的文字顏色 */
+  --bg: #f3eee3;             /* 網頁底色（亞麻色） */
+  --surface: #faf8f2;        /* 卡片、表單等浮起區塊的底色 */
+  --text: #1f2b23;           /* 主要文字（深森林綠） */
+  --muted: #546058;          /* 次要文字、說明文字 */
+  --line: #ddd5c3;           /* 分隔線、邊框 */
+  --deep: #22352a;           /* 深色區塊底色（訂房、頁尾） */
+  --sage: #a3b59d;           /* 輔助色（霧鼠尾草綠）：標籤、裝飾 */
+  --mist: #e4e8df;           /* 藝術佔位圖：晨霧 */
+  --dawn: #ecdcc0;           /* 藝術佔位圖：清晨天光 */
+  --ridge-1: #c3cfbd;        /* 藝術佔位圖：最遠的山稜 */
+  --ridge-2: #94a78f;        /* 藝術佔位圖：中景山稜 */
+  --ridge-3: #607a62;        /* 藝術佔位圖：近景山稜 */
+  --ridge-4: #33493a;        /* 藝術佔位圖：最近的樹林剪影 */
+  --wood: #b48c64;           /* 藝術佔位圖：木地板、木牆 */
+  --wood-dark: #8a6845;      /* 藝術佔位圖：木紋深色線條 */
+  --linen: #f1ece2;          /* 藝術佔位圖：床單、枕頭 */
+  --water: #9fbfb8;          /* 藝術佔位圖：溫泉、溪水 */
+  --shadow-soft: color-mix(in srgb, var(--text) 12%, transparent);  /* 淡陰影：卡片、選單 */
+  --shadow-deep: color-mix(in srgb, var(--text) 28%, transparent);  /* 深陰影：佔位圖中的床 */
+  --radius: 14px;            /* 圓角大小 */
+  --font-heading: "Newsreader", "Noto Serif TC", "Songti TC", serif;  /* 標題字型 */
+  --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; /* 內文字型 */
+  --max: 1180px;             /* 內容最大寬度 */
+  --pad: clamp(1rem, 5vw, 3rem); /* 左右留白 */
+  --gap: clamp(1.25rem, 3.5vw, 2.5rem); /* 多欄區塊的欄距 */
+}
+
+/* ---------- 基礎 ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 72px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.8 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; line-height: 1.3; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: clamp(4.5rem, 10vw, 7.5rem); }
+.sec-title { font-size: clamp(1.85rem, 4vw, 2.75rem); margin-bottom: .9rem; }
+.sec-lead { color: var(--muted); max-width: 36rem; }
+.sec-head { margin-bottom: clamp(2.2rem, 5vw, 3.5rem); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .85rem 1.6rem; border-radius: 999px; font: 700 1rem/1.2 var(--font-body); text-decoration: none; border: 2px solid var(--brand); cursor: pointer; transition: transform .2s, background-color .2s, color .2s, border-color .2s; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: color-mix(in srgb, var(--brand) 80%, var(--text)); border-color: color-mix(in srgb, var(--brand) 80%, var(--text)); }
+.btn-ghost { background: transparent; color: var(--brand); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.btn:active { transform: translateY(1px) scale(.98); }
+.btn:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+a:not(.btn):hover { color: var(--brand); }
+a:not(.btn):active { opacity: .7; }
+
+/* 捲動漸入：只有 JS 啟用時才先隱藏 */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .9s ease, transform .9s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ==================== 頁首 ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .65rem; text-decoration: none; }
+.logo-mark { width: 40px; height: 40px; border-radius: 50%; flex: none; background: linear-gradient(var(--mist), var(--dawn)); position: relative; overflow: hidden; }
+.logo-mark::before { content: ""; position: absolute; inset: 40% -10% 0; background: var(--brand); clip-path: polygon(0 100%, 0 55%, 28% 18%, 46% 48%, 66% 8%, 100% 52%, 100% 100%); }
+.logo b { font: 600 1.2rem/1.1 var(--font-heading); display: block; }
+.logo small { font: 400 .8rem/1.2 var(--font-heading); color: var(--muted); }
+.nav-menu { display: flex; align-items: center; gap: 1.4rem; list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; font-weight: 500; font-size: .95rem; padding-block: .3rem; background: linear-gradient(var(--brand), var(--brand)) left bottom / 0 2px no-repeat; transition: background-size .3s, color .2s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 2px; }
+.nav-menu .btn { padding: .55rem 1.2rem; }
+.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: 10px; }
+.nav-toggle:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.nav-toggle:active { transform: scale(.95); }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 2px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; border-radius: 2px; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (min-width: 761px) and (max-width: 1020px) { .nav-menu .nav-extra { display: none; } }
+@media (max-width: 760px) {
+  /* 沒有 JavaScript 時，選單直接換行顯示；有 JS 才收進漢堡選單 */
+  html:not(.js) .nav { flex-wrap: wrap; padding-block: .6rem; }
+  html:not(.js) .site-header { position: sticky; background: var(--bg); }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1rem; }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); box-shadow: 0 12px 24px var(--shadow-soft); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: .85rem 0; border-bottom: 1px solid var(--line); }
+  .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+  .js .site-header:has(.nav-menu.open) { background: var(--bg); }
+}
+
+/* ==================== 藝術佔位圖 ====================
+   每一個 .img-xx 都是用 CSS 漸層畫的「山景、晨霧、木頭房間」氛圍圖。
+   換成照片：.img-xx { background: url(images/xxx.jpg) center/cover; }
+   （換照片後可把該 class 的 ::before / ::after 一起刪掉） */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; background-color: var(--mist); }
+.img::before, .img::after { content: ""; position: absolute; pointer-events: none; }
+
+/* 換成照片：.img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero { aspect-ratio: 16 / 6; border-radius: 0;
+  background:
+    radial-gradient(circle at 72% 58%, var(--surface) 0 4%, color-mix(in srgb, var(--dawn) 80%, var(--surface)) 4.5% 9%, transparent 22%),
+    linear-gradient(180deg, var(--bg) 0%, var(--dawn) 42%, var(--mist) 62%, var(--ridge-1) 100%); }
+.img-hero::before { inset: 22% 0 0; background: linear-gradient(180deg, var(--ridge-2), color-mix(in srgb, var(--ridge-2) 30%, var(--mist)) 70%);
+  clip-path: polygon(0 52%, 9% 34%, 17% 44%, 28% 14%, 38% 36%, 47% 26%, 58% 46%, 69% 20%, 80% 38%, 90% 24%, 100% 40%, 100% 100%, 0 100%); }
+.img-hero::after { inset: 50% 0 0; background:
+    linear-gradient(180deg, color-mix(in srgb, var(--mist) 65%, transparent) 0 6%, transparent 40%),
+    linear-gradient(180deg, var(--ridge-3), var(--ridge-4) 85%);
+  clip-path: polygon(0 40%, 6% 30%, 14% 46%, 24% 22%, 33% 42%, 44% 18%, 52% 34%, 62% 28%, 73% 50%, 84% 26%, 93% 40%, 100% 30%, 100% 100%, 0 100%); }
+.hero-mist { position: absolute; inset: auto -10% 26% -10%; height: 22%; z-index: 1; pointer-events: none;
+  background: radial-gradient(ellipse 40% 60% at 30% 50%, color-mix(in srgb, var(--surface) 70%, transparent), transparent 70%), radial-gradient(ellipse 35% 50% at 75% 60%, color-mix(in srgb, var(--surface) 55%, transparent), transparent 70%);
+  filter: blur(8px); animation: drift 14s ease-in-out infinite alternate; }
+@keyframes drift { from { transform: translateX(-3%); } to { transform: translateX(4%); } }
+
+/* 房間：木地板＋山景窗＋床。用 --wall、--win 調整每間的牆色與窗戶位置 */
+/* 換成照片：.img-r1 ~ .img-r4 { background: url(images/room-1.jpg) center/cover; } */
+.img-room { aspect-ratio: 4 / 3; --wall: var(--linen); --win: 12%;
+  background:
+    linear-gradient(180deg, transparent 0 66%, color-mix(in srgb, var(--text) 18%, transparent) 66% 67%, transparent 67%),
+    repeating-linear-gradient(90deg, transparent 0 58px, color-mix(in srgb, var(--wood-dark) 70%, transparent) 58px 60px) bottom / 100% 34% no-repeat,
+    repeating-linear-gradient(0deg, var(--wood) 0 6px, color-mix(in srgb, var(--wood) 88%, var(--wood-dark)) 6px 9px) bottom / 100% 34% no-repeat,
+    linear-gradient(180deg, var(--wall), color-mix(in srgb, var(--wall) 85%, var(--wood))); }
+.img-room::before { left: var(--win); top: 12%; width: 36%; height: 40%; border: 6px solid var(--wood-dark); border-radius: 4px;
+  background:
+    linear-gradient(90deg, transparent 49%, var(--wood-dark) 49% 51%, transparent 51%),
+    radial-gradient(ellipse 70% 45% at 25% 100%, var(--ridge-3) 98%, transparent 100%),
+    radial-gradient(ellipse 65% 70% at 85% 100%, var(--ridge-2) 98%, transparent 100%),
+    radial-gradient(ellipse 80% 85% at 45% 100%, var(--ridge-1) 98%, transparent 100%),
+    linear-gradient(180deg, var(--dawn), var(--mist)); }
+.img-room::after { right: 8%; bottom: 14%; width: 52%; height: 28%; border-radius: 10px 10px 6px 6px; box-shadow: 0 16px 22px var(--shadow-deep);
+  background:
+    radial-gradient(ellipse 16% 22% at 22% 20%, var(--surface) 96%, transparent 100%),
+    radial-gradient(ellipse 16% 22% at 52% 20%, var(--surface) 96%, transparent 100%),
+    linear-gradient(180deg, transparent 0 40%, var(--sage) 40% 62%, var(--linen) 62%),
+    linear-gradient(180deg, var(--linen), var(--linen)); }
+.img-r2 { --wall: color-mix(in srgb, var(--wood) 55%, var(--linen)); --win: 52%;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 22px, color-mix(in srgb, var(--wood-dark) 35%, transparent) 22px 23px) top / 100% 66% no-repeat,
+    linear-gradient(180deg, transparent 0 66%, color-mix(in srgb, var(--text) 18%, transparent) 66% 67%, transparent 67%),
+    repeating-linear-gradient(90deg, transparent 0 58px, color-mix(in srgb, var(--wood-dark) 70%, transparent) 58px 60px) bottom / 100% 34% no-repeat,
+    repeating-linear-gradient(0deg, var(--wood) 0 6px, color-mix(in srgb, var(--wood) 88%, var(--wood-dark)) 6px 9px) bottom / 100% 34% no-repeat,
+    linear-gradient(180deg, var(--wall), color-mix(in srgb, var(--wall) 85%, var(--wood))); }
+.img-r2::after { left: 6%; right: auto; width: 40%; height: 26%; border-radius: 50% 50% 8px 8px / 30% 30% 8px 8px;
+  background: radial-gradient(ellipse 60% 40% at 50% 30%, color-mix(in srgb, var(--water) 80%, var(--surface)), var(--water) 70%), var(--water);
+  border: 7px solid var(--wood-dark); }
+.img-r3 { --wall: color-mix(in srgb, var(--sage) 35%, var(--linen)); --win: 8%; }
+.img-r3::after { width: 64%; background:
+    radial-gradient(ellipse 9% 22% at 12% 20%, var(--surface) 96%, transparent 100%),
+    radial-gradient(ellipse 9% 22% at 32% 20%, var(--surface) 96%, transparent 100%),
+    radial-gradient(ellipse 9% 22% at 66% 20%, var(--surface) 96%, transparent 100%),
+    radial-gradient(ellipse 9% 22% at 86% 20%, var(--surface) 96%, transparent 100%),
+    linear-gradient(90deg, transparent 0 48.5%, var(--wood-dark) 48.5% 51.5%, transparent 51.5%),
+    linear-gradient(180deg, transparent 0 40%, var(--sage) 40% 62%, var(--linen) 62%), var(--linen); }
+.img-r4 { --wall: color-mix(in srgb, var(--dawn) 60%, var(--linen)); --win: 56%; }
+.img-r4::after { left: 8%; right: auto; width: 44%; }
+
+/* 溫泉湯屋：檜木湯池與蒸氣 */
+/* 換成照片：.img-spring { background: url(images/spring.jpg) center/cover; } */
+.img-spring { aspect-ratio: 4 / 5;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 30px, color-mix(in srgb, var(--wood-dark) 45%, transparent) 30px 32px),
+    linear-gradient(180deg, color-mix(in srgb, var(--wood) 70%, var(--linen)), var(--wood)); }
+.img-spring::before { left: 8%; right: 8%; bottom: 10%; height: 34%; border-radius: 12px; border: 12px solid var(--wood-dark); box-shadow: 0 18px 30px var(--shadow-deep);
+  background: radial-gradient(ellipse 50% 30% at 40% 30%, color-mix(in srgb, var(--surface) 55%, transparent), transparent 70%), linear-gradient(180deg, color-mix(in srgb, var(--water) 75%, var(--surface)), var(--water)); }
+.img-spring::after { left: 18%; right: 18%; top: 22%; height: 40%; filter: blur(16px); opacity: .7;
+  background: radial-gradient(ellipse 30% 50% at 35% 70%, var(--surface), transparent 70%), radial-gradient(ellipse 25% 45% at 65% 45%, var(--surface), transparent 70%);
+  animation: steam 6s ease-in-out infinite alternate; }
+@keyframes steam { from { transform: translateY(12px) scaleY(.9); opacity: .4; } to { transform: translateY(-14px) scaleY(1.1); opacity: .75; } }
+
+/* 周邊景點 */
+/* 換成照片：.img-s1 ~ .img-s4 { background: url(images/spot-1.jpg) center/cover; } */
+.img-spot { aspect-ratio: 3 / 2; }
+.img-s1 { background: radial-gradient(ellipse 60% 30% at 50% 100%, var(--water), transparent 70%), linear-gradient(180deg, var(--mist), var(--ridge-1)); }
+.img-s1::before { left: 44%; width: 12%; top: 0; bottom: 18%; background: linear-gradient(90deg, color-mix(in srgb, var(--surface) 80%, transparent), var(--surface), color-mix(in srgb, var(--surface) 75%, var(--water))); filter: blur(1px); }
+.img-s1::after { inset: 0; background: linear-gradient(90deg, var(--ridge-4) 0 30%, transparent 30% 70%, var(--ridge-3) 70%); clip-path: polygon(0 0, 44% 0, 40% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 60% 100%, 56% 0, 100% 0); opacity: .9; }
+.img-s2 { background: linear-gradient(180deg, var(--dawn), var(--mist)); }
+.img-s2::before { inset: 0; background: repeating-linear-gradient(90deg, var(--ridge-4) 0 10px, transparent 10px 46px, var(--ridge-3) 46px 54px, transparent 54px 90px); opacity: .85; }
+.img-s2::after { left: 30%; right: 30%; bottom: 0; height: 40%; background: var(--wood); clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%); opacity: .8; }
+.img-s3 { background: linear-gradient(180deg, var(--dawn) 0 40%, var(--water) 40%); }
+.img-s3::before { left: 50%; top: 22%; width: 34%; height: 22%; transform: translateX(-50%); background: var(--ridge-3); clip-path: polygon(0 100%, 30% 40%, 55% 0, 70% 30%, 100% 100%); }
+.img-s3::after { inset: 46% 0 0; background: repeating-linear-gradient(0deg, transparent 0 10px, color-mix(in srgb, var(--surface) 30%, transparent) 10px 12px); }
+.img-s4 { background: linear-gradient(180deg, var(--mist), var(--linen)); }
+.img-s4::before { inset: 30% 0 0; background: var(--ridge-2); clip-path: polygon(0 60%, 20% 30%, 40% 55%, 65% 20%, 100% 50%, 100% 100%, 0 100%); }
+.img-s4::after { left: 12%; right: 12%; bottom: 10%; height: 30%; background: radial-gradient(ellipse 30% 30% at 30% 40%, color-mix(in srgb, var(--surface) 70%, transparent), transparent 70%), linear-gradient(180deg, color-mix(in srgb, var(--water) 85%, var(--surface)), var(--water)); border-radius: 50%; filter: blur(.5px); }
+
+/* 交通：簡易地圖 */
+/* 換成照片或地圖截圖：.img-map { background: url(images/map.jpg) center/cover; } */
+.img-map { aspect-ratio: 4 / 3; background:
+    linear-gradient(28deg, transparent 0 47%, var(--surface) 47% 50%, transparent 50%),
+    linear-gradient(-62deg, transparent 0 60%, var(--surface) 60% 62%, transparent 62%),
+    radial-gradient(ellipse 45% 35% at 15% 15%, color-mix(in srgb, var(--ridge-2) 70%, transparent), transparent 70%),
+    radial-gradient(ellipse 40% 30% at 85% 85%, color-mix(in srgb, var(--water) 70%, transparent), transparent 70%),
+    repeating-linear-gradient(0deg, transparent 0 39px, var(--line) 39px 40px),
+    repeating-linear-gradient(90deg, transparent 0 39px, var(--line) 39px 40px),
+    var(--mist); }
+.img-map::before { width: 34px; height: 34px; left: 50%; top: 46%; transform: translate(-50%, -100%) rotate(-45deg); border-radius: 50% 50% 50% 0; background: var(--brand); box-shadow: 0 6px 14px var(--shadow-deep); }
+.img-map::after { width: 12px; height: 12px; left: 50%; top: 46%; transform: translate(-50%, -190%); border-radius: 50%; background: var(--brand-ink); }
+
+/* ==================== 主視覺 ==================== */
+.hero { padding: 0; position: relative; background: var(--bg); }
+.hero-text { padding-top: calc(72px + clamp(2.5rem, 7vw, 5rem)); padding-bottom: clamp(1rem, 3vw, 2rem); text-align: center; position: relative; z-index: 2; }
+.hero h1 { font-size: clamp(2.4rem, 6.2vw, 4.4rem); line-height: 1.2; margin: 0 auto 1.1rem; max-width: 16ch; }
+.hero .lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--muted); max-width: 30rem; text-wrap: balance; margin: 0 auto 1.9rem; }
+.hero-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem; }
+.hero-art { position: relative; overflow: hidden; margin-top: clamp(-3rem, -4vw, -1rem); }
+.hero-facts { position: absolute; z-index: 2; left: 0; right: 0; bottom: clamp(1rem, 3vw, 2rem); display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; list-style: none; padding-inline: var(--pad); }
+.hero-facts li { background: color-mix(in srgb, var(--deep) 72%, transparent); color: var(--brand-ink); padding: .4rem .95rem; border-radius: 999px; font-size: .9rem; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+@media (max-width: 760px) {
+  .img-hero { aspect-ratio: 4 / 3; }
+  .hero-facts { position: static; padding-block: 1rem 0; background: var(--ridge-4); margin-top: -1px; padding-bottom: 1.2rem; }
+}
+
+/* ==================== 房型 ==================== */
+.rooms { background: var(--surface); }
+.room-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.room { display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--line); border-radius: calc(var(--radius) + 4px); overflow: hidden; }
+.room .img { border-radius: 0; }
+.room-body { padding: clamp(1.3rem, 3vw, 1.9rem); display: flex; flex-direction: column; gap: 1rem; flex: 1; }
+.room h3 { font-size: 1.5rem; }
+.room-desc { color: var(--muted); font-size: .95rem; margin-top: -.5rem; }
+.specs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; }
+.specs div { background: var(--surface); border-radius: 10px; padding: .55rem .7rem; font-size: .88rem; line-height: 1.5; }
+.specs dt { color: var(--muted); font-size: .8rem; }
+.specs dd { font-weight: 500; }
+.amen { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; }
+.amen li { font-size: .85rem; padding: .2rem .7rem; border-radius: 999px; background: color-mix(in srgb, var(--sage) 28%, transparent); color: var(--text); }
+.room-foot { margin-top: auto; display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.prices { display: flex; gap: 1.4rem; font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.prices b { display: block; font: 600 1.35rem/1.2 var(--font-heading); color: var(--text); font-variant-numeric: tabular-nums; }
+.room-foot .btn { padding: .65rem 1.3rem; }
+.rooms-note { color: var(--muted); font-size: .88rem; margin-top: 2rem; }
+@media (max-width: 860px) { .room-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 400px) { .specs { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .specs div:last-child { grid-column: 1 / -1; } }
+
+/* ==================== 住宿特色 ==================== */
+.feat-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: var(--gap); align-items: center; }
+.feat-list { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem var(--gap); }
+.feat-list li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .9rem; align-items: start; }
+.ico { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: color-mix(in srgb, var(--sage) 35%, transparent); color: var(--brand); }
+.feat-list h3 { font-size: 1.15rem; margin-bottom: .2rem; }
+.feat-list p { color: var(--muted); font-size: .93rem; line-height: 1.7; }
+@media (max-width: 860px) { .feat-grid { grid-template-columns: minmax(0, 1fr); } .img-spring { aspect-ratio: 16 / 10; } }
+@media (max-width: 560px) { .feat-list { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 周邊景點 ==================== */
+.nearby { background: color-mix(in srgb, var(--sage) 18%, var(--bg)); }
+.spot-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap); list-style: none; }
+.spot h3 { font-size: 1.2rem; margin: 1rem 0 .3rem; }
+.spot p { color: var(--muted); font-size: .92rem; line-height: 1.7; }
+.time { display: inline-block; margin-top: .6rem; font-size: .85rem; font-weight: 500; color: var(--brand); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: .15rem .7rem; }
+@media (max-width: 960px) { .spot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .spot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 入住須知 ==================== */
+.rules-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: var(--gap); align-items: start; }
+.times { display: flex; gap: 1rem; margin-top: 1.6rem; }
+.times div { flex: 1; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.2rem; color: var(--muted); font-size: .9rem; }
+.times b { display: block; font: 600 1.8rem/1.2 var(--font-heading); color: var(--text); font-variant-numeric: tabular-nums; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-child { border-top: 1px solid var(--line); }
+.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.15rem .25rem; font: 500 1.12rem/1.4 var(--font-heading); border-radius: 6px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font: 400 1.2rem/1 var(--font-body); color: var(--brand); background: color-mix(in srgb, var(--sage) 28%, transparent); transition: transform .3s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq summary:hover { color: var(--brand); }
+.faq summary:active { opacity: .75; }
+.faq .ans { padding: 0 .25rem 1.25rem; color: var(--muted); }
+.faq .ans ul { padding-left: 1.2rem; display: grid; gap: .3rem; }
+@media (max-width: 860px) { .rules-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 住客評價 ==================== */
+.reviews { background: var(--surface); }
+.review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.review { display: flex; flex-direction: column; gap: 1rem; padding-top: 1.4rem; border-top: 2px solid var(--sage); }
+.stars { color: var(--brand); letter-spacing: 0; }
+.review blockquote { font: 400 1.12rem/1.8 var(--font-heading); flex: 1; }
+.review figcaption { font-size: .9rem; color: var(--muted); }
+.review figcaption b { color: var(--text); }
+@media (max-width: 860px) { .review-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 訂房 ==================== */
+.book { background: var(--deep); color: var(--bg); position: relative; padding-top: clamp(6rem, 12vw, 9rem); }
+.book::before { content: ""; position: absolute; top: -1px; left: 0; right: 0; height: clamp(40px, 6vw, 80px); background: var(--surface); clip-path: polygon(0 0, 100% 0, 100% 30%, 88% 70%, 76% 40%, 62% 85%, 50% 45%, 36% 80%, 22% 35%, 10% 75%, 0 40%); }
+.book .sec-lead { color: color-mix(in srgb, var(--bg) 82%, transparent); }
+.book-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: var(--gap); align-items: start; }
+.quick { display: grid; gap: .8rem; margin-top: 2rem; }
+.quick .btn { justify-content: flex-start; }
+.btn-light { background: transparent; color: var(--bg); border-color: color-mix(in srgb, var(--bg) 40%, transparent); }
+.btn-light:hover { background: color-mix(in srgb, var(--bg) 12%, transparent); }
+.book .small-note { color: color-mix(in srgb, var(--bg) 75%, transparent); font-size: .88rem; margin-top: 1.2rem; }
+.form { background: var(--surface); color: var(--text); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.4rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.1rem; }
+.field { display: grid; gap: .35rem; min-width: 0; align-content: start; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-weight: 500; font-size: .92rem; }
+.field label span { color: var(--brand); }
+.field input, .field select, .field textarea { width: 100%; min-width: 0; font: inherit; color: var(--text); background: var(--bg); border: 1.5px solid var(--line); border-radius: 10px; padding: .7rem .85rem; min-height: 48px; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: var(--sage); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 22%, transparent); }
+.field textarea { min-height: 96px; resize: vertical; }
+.nights { grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .3rem 1rem; background: color-mix(in srgb, var(--sage) 22%, transparent); border-radius: 10px; padding: .7rem 1rem; font-size: .95rem; }
+.nights b { font-family: var(--font-heading); font-size: 1.1rem; font-variant-numeric: tabular-nums; }
+.form .btn { grid-column: 1 / -1; width: 100%; }
+.form small { grid-column: 1 / -1; color: var(--muted); font-size: .85rem; text-align: center; }
+@media (max-width: 860px) { .book-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .form { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 交通 ==================== */
+.access-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap); align-items: center; }
+.addr { font: 500 1.3rem/1.6 var(--font-heading); margin-bottom: .4rem; }
+.route { list-style: none; margin: 1.4rem 0 1.8rem; display: grid; gap: .9rem; }
+.route li { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: .8rem; color: var(--muted); font-size: .95rem; padding-bottom: .9rem; border-bottom: 1px solid var(--line); }
+.route b { color: var(--text); font-weight: 700; }
+.access-cta { display: flex; flex-wrap: wrap; gap: .8rem; }
+@media (max-width: 860px) { .access-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 頁尾 ==================== */
+.site-footer { background: var(--deep); color: color-mix(in srgb, var(--bg) 82%, transparent); padding-block: 3.5rem 2rem; font-size: .93rem; border-top: 1px solid color-mix(in srgb, var(--bg) 14%, transparent); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.site-footer h2 { color: var(--bg); font-size: 1.15rem; margin-bottom: .8rem; }
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { color: var(--bg); text-decoration: underline; }
+.social { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+.copy { border-top: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); margin-top: 2.5rem; padding-top: 1.5rem; font-size: .85rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 手機底部固定按鈕 ==================== */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 76px; }
+  .sticky-cta { display: flex; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -1px 0 var(--line); }
+  .sticky-cta .btn-primary { flex: 1; }
+  .sticky-cta .btn-ghost { padding-inline: 1.1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== 區塊：頁首導覽 ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav wrap" aria-label="主選單">
+    <a href="#hero" class="logo" aria-label="山嵐民宿 回到頂端">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span><b>山嵐民宿</b><small>Lanshan Inn</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-links" aria-label="開啟選單"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#rooms">房型</a></li>
+      <li><a href="#features">住宿特色</a></li>
+      <li><a href="#nearby">周邊景點</a></li>
+      <li class="nav-extra"><a href="#rules">入住須知</a></li>
+      <li class="nav-extra"><a href="#reviews">住客評價</a></li>
+      <li><a href="#access">交通</a></li>
+      <li><a href="#book" class="btn btn-primary">立即訂房</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- ==================== 區塊：主視覺 ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-text">
+    <h1>推開窗，<br>山嵐就在床邊</h1>
+    <p class="lead">礁溪山腳下的四間小房，泡一池溫泉、吃一份手作早餐，在宜蘭慢慢住幾晚。</p>
+    <div class="hero-cta">
+      <a href="#book" class="btn btn-primary">立即訂房</a>
+      <a href="#rooms" class="btn btn-ghost">查看房型</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="img img-hero" role="img" aria-label="清晨薄霧繚繞的層層山稜線"></div>
+    <div class="hero-mist" aria-hidden="true"></div>
+    <ul class="hero-facts">
+      <li>礁溪火車站開車 8 分鐘</li>
+      <li>每房含早餐</li>
+      <li>溫泉湯屋</li>
+      <li>免費停車</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== 區塊：房型 ==================== -->
+<section class="rooms" id="rooms">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">四間房，四種看山的方式</h2>
+      <p class="sec-lead">每間房都有面山大窗與獨立衛浴，房價皆含兩客早餐。假日指週五、週六及連續假日前一晚。</p>
+    </div>
+    <div class="room-grid">
+      <article class="room reveal">
+        <div class="img img-room img-r1" role="img" aria-label="木地板雙人房，窗外是晨霧中的山"></div>
+        <div class="room-body">
+          <h3>晨霧雙人房</h3>
+          <p class="room-desc">最早被晨光叫醒的房間，躺在床上就能看山霧慢慢散開。</p>
+          <dl class="specs">
+            <div><dt>人數</dt><dd>2 人</dd></div>
+            <div><dt>床型</dt><dd>一張雙人床</dd></div>
+            <div><dt>坪數</dt><dd>8 坪</dd></div>
+          </dl>
+          <ul class="amen" aria-label="房內設備">
+            <li>山景大窗</li><li>手沖咖啡組</li><li>獨立衛浴</li><li>免費 Wi-Fi</li>
+          </ul>
+          <div class="room-foot">
+            <div class="prices"><div>平日<b>NT$3,200</b></div><div>假日<b>NT$3,800</b></div></div>
+            <a href="#book" class="btn btn-ghost" data-room="晨霧雙人房">預訂這間</a>
+          </div>
+        </div>
+      </article>
+      <article class="room reveal">
+        <div class="img img-room img-r2" role="img" aria-label="木牆房間裡的檜木溫泉湯池"></div>
+        <div class="room-body">
+          <h3>檜木湯屋房</h3>
+          <p class="room-desc">房內有引礁溪溫泉的檜木湯池，泡著湯就能看見遠山。</p>
+          <dl class="specs">
+            <div><dt>人數</dt><dd>2 人</dd></div>
+            <div><dt>床型</dt><dd>一張加大雙人床</dd></div>
+            <div><dt>坪數</dt><dd>11 坪</dd></div>
+          </dl>
+          <ul class="amen" aria-label="房內設備">
+            <li>室內檜木湯池</li><li>私人陽台</li><li>浴袍</li><li>藍牙喇叭</li>
+          </ul>
+          <div class="room-foot">
+            <div class="prices"><div>平日<b>NT$4,800</b></div><div>假日<b>NT$5,800</b></div></div>
+            <a href="#book" class="btn btn-ghost" data-room="檜木湯屋房">預訂這間</a>
+          </div>
+        </div>
+      </article>
+      <article class="room reveal">
+        <div class="img img-room img-r3" role="img" aria-label="兩張雙人床並排的寬敞四人房"></div>
+        <div class="room-body">
+          <h3>竹林四人房</h3>
+          <p class="room-desc">兩張雙人床和一張大木桌，適合家庭或好友一起住。</p>
+          <dl class="specs">
+            <div><dt>人數</dt><dd>4 人</dd></div>
+            <div><dt>床型</dt><dd>兩張雙人床</dd></div>
+            <div><dt>坪數</dt><dd>13 坪</dd></div>
+          </dl>
+          <ul class="amen" aria-label="房內設備">
+            <li>竹林景觀</li><li>大浴缸</li><li>兒童備品</li><li>小冰箱</li>
+          </ul>
+          <div class="room-foot">
+            <div class="prices"><div>平日<b>NT$5,200</b></div><div>假日<b>NT$6,400</b></div></div>
+            <a href="#book" class="btn btn-ghost" data-room="竹林四人房">預訂這間</a>
+          </div>
+        </div>
+      </article>
+      <article class="room reveal">
+        <div class="img img-room img-r4" role="img" aria-label="通往小庭院的毛孩友善房"></div>
+        <div class="room-body">
+          <h3>庭院毛孩房</h3>
+          <p class="room-desc">一樓獨立出入，門外就是圍起來的小草地，毛孩可以放心跑。</p>
+          <dl class="specs">
+            <div><dt>人數</dt><dd>2 至 3 人</dd></div>
+            <div><dt>床型</dt><dd>雙人床＋沙發床</dd></div>
+            <div><dt>坪數</dt><dd>10 坪</dd></div>
+          </dl>
+          <ul class="amen" aria-label="房內設備">
+            <li>專屬小庭院</li><li>寵物床與碗</li><li>防滑地板</li><li>洗腳池</li>
+          </ul>
+          <div class="room-foot">
+            <div class="prices"><div>平日<b>NT$3,600</b></div><div>假日<b>NT$4,300</b></div></div>
+            <a href="#book" class="btn btn-ghost" data-room="庭院毛孩房">預訂這間</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="rooms-note">價格為每房每晚，含稅與早餐。加一人 NT$800（含早餐），6 歲以下不佔床免費。</p>
+  </div>
+</section>
+
+<!-- ==================== 區塊：住宿特色 ==================== -->
+<section id="features">
+  <div class="wrap feat-grid">
+    <div class="img img-spring reveal" role="img" aria-label="木造湯屋裡冒著熱氣的檜木溫泉池"></div>
+    <div class="reveal">
+      <div class="sec-head">
+        <h2 class="sec-title">住在這裡的小日常</h2>
+        <p class="sec-lead">我們是一家三口經營的小民宿，不追求豪華，只想讓你住得舒服、睡得飽。</p>
+      </div>
+      <ul class="feat-list">
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h14v2a6 6 0 0 1-6 6h-2a6 6 0 0 1-6-6v-2Zm14 1h1a2.5 2.5 0 0 1 0 5h-2M8 4v3m4-3v3"/></svg></span>
+          <div><h3>手作早餐</h3><p>每天 8:00–10:00，用三星蔥、在地米和當季蔬果做的宜蘭家常早餐。</p></div>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16c2 0 2 2 4.5 2S10 16 12 16s2 2 4.5 2S19 16 21 16M8 12c0-2 1.5-2 1.5-4S8 6 8 4m4 8c0-2 1.5-2 1.5-4S12 6 12 4m4 8c0-2 1.5-2 1.5-4S16 6 16 4"/></svg></span>
+          <div><h3>礁溪溫泉湯屋</h3><p>弱鹼性碳酸氫鈉泉，公共湯屋可預約 50 分鐘，住客免費。</p></div>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l4-7h6l2 7M10 9l2.5 7M14 5h3"/></svg></span>
+          <div><h3>免費單車</h3><p>備有 6 台城市車與兒童座椅，沿著田間小路騎到溫泉公園。</p></div>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="10" r="2"/><circle cx="9.5" cy="5.5" r="2"/><circle cx="14.5" cy="5.5" r="2"/><circle cx="18.5" cy="10" r="2"/><path d="M12 11c-3 0-5.5 4-5.5 6.5 0 2 2 2.5 3 2s1.5-.5 2.5-.5 1.5 0 2.5.5 3 0 3-2C17.5 15 15 11 12 11Z"/></svg></span>
+          <div><h3>毛孩友善</h3><p>庭院毛孩房可帶 2 隻 15 公斤以下的狗狗，清潔費每晚 NT$500。</p></div>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-6h6v6"/></svg></span>
+          <div><h3>免費停車</h3><p>院子裡有 6 個平面車位，不用煩惱找位子。</p></div>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V11M12 11c0-4-3-7-8-7 0 4 3 7 8 7Zm0 0c0-3.5 2.5-6 7-6 0 3.5-2.5 6-7 6Z"/></svg></span>
+          <div><h3>慢活小旅程</h3><p>可代訂溯溪、農場採果與在地導覽，行程由主人親自推薦。</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：周邊景點 ==================== -->
+<section class="nearby" id="nearby">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">出門走走，都不用太遠</h2>
+      <p class="sec-lead">時間以開車或步行估算，假日下午車流較多，建議早點出門。</p>
+    </div>
+    <ul class="spot-grid">
+      <li class="spot reveal">
+        <div class="img img-spot img-s1" role="img" aria-label="山谷間的瀑布"></div>
+        <h3>五峰旗瀑布</h3>
+        <p>三層瀑布藏在山谷裡，步道平緩，夏天特別涼快。</p>
+        <span class="time">開車 8 分鐘</span>
+      </li>
+      <li class="spot reveal">
+        <div class="img img-spot img-s2" role="img" aria-label="林間木棧步道"></div>
+        <h3>林美石磐步道</h3>
+        <p>沿著溪谷走進森林，來回約一個半小時，有不少小瀑布。</p>
+        <span class="time">開車 15 分鐘</span>
+      </li>
+      <li class="spot reveal">
+        <div class="img img-spot img-s3" role="img" aria-label="海面上的島嶼"></div>
+        <h3>外澳海灘看龜山島</h3>
+        <p>衝浪、看海、吃海景咖啡，天氣好時龜山島就在眼前。</p>
+        <span class="time">開車 20 分鐘</span>
+      </li>
+      <li class="spot reveal">
+        <div class="img img-spot img-s4" role="img" aria-label="山邊冒著熱氣的溫泉池"></div>
+        <h3>礁溪溫泉公園</h3>
+        <p>免費泡腳池和森林風呂，晚上再去逛逛溫泉街小吃。</p>
+        <span class="time">單車 10 分鐘</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== 區塊：入住須知 ==================== -->
+<section id="rules">
+  <div class="wrap rules-grid">
+    <div class="reveal">
+      <h2 class="sec-title">入住前，先知道這些</h2>
+      <p class="sec-lead">還有其他問題，歡迎直接傳 LINE 問我們，通常一小時內回覆。</p>
+      <div class="times">
+        <div><b>15:00</b>入住時間起</div>
+        <div><b>11:00</b>退房時間前</div>
+      </div>
+    </div>
+    <div class="faq reveal">
+      <details open>
+        <summary>入住與退房時間</summary>
+        <div class="ans"><ul><li>入住 15:00–21:00，晚於 21:00 抵達請先告知。</li><li>退房 11:00 前，可免費寄放行李到 15:00。</li><li>提早入住視當天房況，無法保證。</li></ul></div>
+      </details>
+      <details>
+        <summary>訂金與取消政策</summary>
+        <div class="ans"><ul><li>訂房後 3 天內支付三成訂金，即完成預訂。</li><li>入住前 14 天以上取消，全額退還訂金。</li><li>入住前 7 至 13 天取消，退還五成；7 天內取消恕不退還。</li><li>遇颱風、地震等天災，可免費改期或全額退款。</li></ul></div>
+      </details>
+      <details>
+        <summary>停車與交通接送</summary>
+        <div class="ans"><ul><li>院內免費停車 6 位，先到先停，不需預約。</li><li>礁溪火車站或轉運站可免費接送，請於前一天預約。</li></ul></div>
+      </details>
+      <details>
+        <summary>寵物與兒童</summary>
+        <div class="ans"><ul><li>寵物限住庭院毛孩房，最多 2 隻，請自備尿布墊。</li><li>6 歲以下不佔床免費，可提供兒童備品與嬰兒床。</li></ul></div>
+      </details>
+      <details>
+        <summary>其他房務規定</summary>
+        <div class="ans"><ul><li>全館禁菸，室內請勿使用明火或烹煮。</li><li>22:00 後為安靜時間，請降低音量。</li><li>民宿已合法登記，可開立收據。</li></ul></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：住客評價 ==================== -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">住過的人這樣說</h2>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="review-grid">
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 顆星，滿分 5 顆星">★★★★★</div>
+        <blockquote>早上六點被窗外的山霧美到起床，泡完湯再吃早餐，三星蔥蛋餅好吃到想外帶。下次還要再來住。</blockquote>
+        <figcaption><b>Yuki</b><br>入住檜木湯屋房</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 顆星，滿分 5 顆星">★★★★★</div>
+        <blockquote>帶兩個孩子來，房間很大、備品很齊。老闆借我們單車騎去溫泉公園，孩子玩到不想回台北。</blockquote>
+        <figcaption><b>陳先生</b><br>入住竹林四人房</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 顆星，滿分 5 顆星">★★★★★</div>
+        <blockquote>終於找到可以帶柴犬的民宿。小庭院圍得很好，牠一早就在草地上打滾，我們也睡得很安心。</blockquote>
+        <figcaption><b>林小姐</b><br>入住庭院毛孩房</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：訂房 ==================== -->
+<section class="book" id="book">
+  <div class="wrap book-grid">
+    <div class="reveal">
+      <h2 class="sec-title">替你留一間看得見山的房</h2>
+      <p class="sec-lead">送出表單後，我們會在 24 小時內以電話或 LINE 確認空房與訂金方式。急件請直接來電。</p>
+      <div class="quick">
+        <a class="btn btn-light" href="tel:031234567">電話訂房 03-123-4567</a>
+        <a class="btn btn-light" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 訂房 @yourlineid</a>
+      </div>
+      <p class="small-note">客服時間 09:00–21:00，週二下午為公休整理時間。</p>
+    </div>
+    <!-- 表單使用 Formspree（免費方案每月 50 則）：
+         1. 到 https://formspree.io 註冊並建立新表單
+         2. 複製表單網址中的 ID（例如 xyzabcd）
+         3. 把下面 action 裡的 your-form-id 換成你的 ID 即可收到 Email 通知 -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="field"><label for="f-in">入住日期 <span>*</span></label><input id="f-in" name="入住日期" type="date" required></div>
+      <div class="field"><label for="f-out">退房日期 <span>*</span></label><input id="f-out" name="退房日期" type="date" required></div>
+      <p class="nights" aria-live="polite"><span id="nights">請選擇入住與退房日期</span><b id="estimate"></b></p>
+      <input type="hidden" name="晚數" id="f-nights">
+      <div class="field"><label for="f-guests">人數 <span>*</span></label>
+        <select id="f-guests" name="人數" required>
+          <option value="">請選擇</option>
+          <option>1 位</option><option selected>2 位</option><option>3 位</option><option>4 位</option><option>5 位以上（將來電確認）</option>
+        </select></div>
+      <!-- 房型的 data-wd／data-we 是平日／假日價格，用來試算總價；修改房價時請一起改 -->
+      <div class="field"><label for="f-room">房型 <span>*</span></label>
+        <select id="f-room" name="房型" required>
+          <option value="">請選擇</option>
+          <option data-wd="3200" data-we="3800">晨霧雙人房</option>
+          <option data-wd="4800" data-we="5800">檜木湯屋房</option>
+          <option data-wd="5200" data-we="6400">竹林四人房</option>
+          <option data-wd="3600" data-we="4300">庭院毛孩房</option>
+        </select></div>
+      <div class="field"><label for="f-name">姓名 <span>*</span></label><input id="f-name" name="姓名" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">電話 <span>*</span></label><input id="f-tel" name="電話" type="tel" autocomplete="tel" inputmode="tel" placeholder="0912-345-678" required></div>
+      <div class="field full"><label for="f-note">備註</label><textarea id="f-note" name="備註" placeholder="例如：預計抵達時間、需要接送、帶毛孩同行、加床需求…"></textarea></div>
+      <button class="btn btn-primary" type="submit">送出訂房需求</button>
+      <small>送出後尚未完成預訂，收到我們的確認訊息才算訂房成功。</small>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== 區塊：交通 ==================== -->
+<section id="access">
+  <div class="wrap access-grid">
+    <div class="reveal">
+      <h2 class="sec-title">怎麼來山嵐</h2>
+      <p class="addr">宜蘭縣礁溪鄉林尾路 168 號</p>
+      <p class="sec-lead">電話 <a href="tel:031234567">03-123-4567</a></p>
+      <ul class="route">
+        <li><b>開車</b>國道五號礁溪交流道下，往五峰旗方向約 6 分鐘</li>
+        <li><b>火車</b>礁溪火車站下車，計程車約 8 分鐘，或預約免費接送</li>
+        <li><b>客運</b>台北轉運站搭國道客運到礁溪轉運站，約 50 分鐘</li>
+        <li><b>停車</b>院內免費車位 6 個，大型車請先告知</li>
+      </ul>
+      <div class="access-cta">
+        <a class="btn btn-primary" href="https://maps.google.com/?q=宜蘭縣礁溪鄉林尾路168號" target="_blank" rel="noopener">在 Google 地圖開啟</a>
+        <a class="btn btn-ghost" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 預約接送</a>
+      </div>
+    </div>
+    <div class="img img-map reveal" role="img" aria-label="山嵐民宿位置示意地圖"></div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>山嵐民宿 Lanshan Inn</h2>
+        <p>宜蘭縣礁溪鄉林尾路 168 號<br>電話 <a href="tel:031234567">03-123-4567</a><br>宜蘭縣民宿登記第 000 號</p>
+        <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="https://line.me/R/ti/p/@yourlineid">LINE</a></div>
+      </div>
+      <div>
+        <h2>服務時間</h2>
+        <p>入住 15:00–21:00<br>退房 11:00 前<br>客服 09:00–21:00</p>
+      </div>
+      <div>
+        <h2>快速連結</h2>
+        <p><a href="#rooms">房型與房價</a><br><a href="#rules">入住須知</a><br><a href="#book">線上訂房</a></p>
+      </div>
+    </div>
+    <p class="copy">© <span id="y"></span> 山嵐民宿 Lanshan Inn</p>
+  </div>
+</footer>
+
+<!-- ==================== 區塊：手機底部固定按鈕 ==================== -->
+<div class="sticky-cta">
+  <a href="#book" class="btn btn-primary">立即訂房</a>
+  <a href="tel:031234567" class="btn btn-ghost" aria-label="撥打電話 03-123-4567">來電</a>
+</div>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// 頁首捲動背景
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// 漢堡選單
+const toggle = document.querySelector('.nav-toggle'), menu = document.getElementById('menu-links');
+const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? '關閉選單' : '開啟選單'); };
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// 捲動漸入
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// 訂房日期：預設今天入住、明天退房，並計算晚數與預估房價（週五、週六晚算假日價）
+const $ = id => document.getElementById(id);
+const fIn = $('f-in'), fOut = $('f-out'), room = $('f-room');
+const pad = n => String(n).padStart(2, '0');
+const iso = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const toDate = s => new Date(s + 'T00:00');
+const addDays = (s, n) => { const d = toDate(s); d.setDate(d.getDate() + n); return iso(d); };
+const today = iso(new Date());
+fIn.min = today; fIn.value = today; fOut.value = addDays(today, 1);
+const LABEL = { pick: '請選擇入住與退房日期', nights: n => `共 ${n} 晚`, total: t => `預估 NT$${t.toLocaleString()}`, hint: '選擇房型即可試算房價' };
+function update() {
+  if (!fIn.value) { $('nights').textContent = LABEL.pick; $('estimate').textContent = ''; return; }
+  fOut.min = addDays(fIn.value, 1);
+  if (!fOut.value || fOut.value <= fIn.value) fOut.value = addDays(fIn.value, 1);
+  const n = Math.round((toDate(fOut.value) - toDate(fIn.value)) / 864e5);
+  $('nights').textContent = LABEL.nights(n); $('f-nights').value = n;
+  const opt = room.selectedOptions[0];
+  let total = 0;
+  if (opt && opt.dataset.wd) for (let i = 0; i < n; i++) { const day = toDate(addDays(fIn.value, i)).getDay(); total += +(day === 5 || day === 6 ? opt.dataset.we : opt.dataset.wd); }
+  $('estimate').textContent = total ? LABEL.total(total) : LABEL.hint;
+}
+[fIn, fOut, room].forEach(el => el.addEventListener('change', update)); update();
+
+// 房型卡片的「預訂這間」自動帶入房型
+document.querySelectorAll('[data-room]').forEach(a => a.addEventListener('click', () => { room.value = a.dataset.room; update(); }));
+</script>
+</body>
+</html>
