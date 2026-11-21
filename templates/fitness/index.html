@@ -71,7 +71,6 @@ ul { list-style: none; }
 ::selection { background: var(--brand); color: var(--brand-ink); }
 :focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 2px; }
 .wrap { max-width: var(--max); margin-inline: auto; }
-.en { font-family: var(--font-heading); text-transform: uppercase; letter-spacing: .04em; font-weight: 400; }
 .skip { position: absolute; left: -999px; top: .5rem; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 99; }
 .skip:focus { left: .5rem; }
 
@@ -85,16 +84,18 @@ ul { list-style: none; }
   transition: transform .25s var(--ease), background .25s, color .25s;
 }
 .btn:hover { transform: translateY(-2px); }
-.btn.ghost { background: transparent; color: var(--text); border-color: var(--text); }
+.btn:active { transform: translateY(1px) scale(.98); }
+.btn.ghost { background: transparent; color: var(--text); border-color: var(--text); clip-path: none; }
 .btn.ghost:hover { background: var(--text); color: var(--bg); }
-.btn .arr { font-family: var(--font-heading); }
+a:not(.btn):active { opacity: .7; }
 
 /* ---------- 標籤與區塊標題 ---------- */
-.tag { display: inline-block; font: 400 .8rem/1 var(--font-heading); letter-spacing: .18em; text-transform: uppercase; color: var(--brand-ink); background: var(--brand); padding: .4rem .7rem; transform: skewX(var(--skew)); }
+.tag { display: inline-block; font: 900 .85rem/1 var(--font-body); color: var(--brand-ink); background: var(--brand); padding: .45rem .8rem; transform: skewX(var(--skew)); }
 section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
 .sec-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1.5rem; margin-bottom: clamp(2.5rem, 6vw, 4rem); }
-.sec-head h2 { font: 900 clamp(2rem, 6vw, 3.8rem)/1.05 var(--font-heading); margin-top: 1rem; letter-spacing: .01em; }
-.sec-head h2 .en { display: block; color: var(--brand); font-size: .55em; letter-spacing: .08em; margin-bottom: .2rem; }
+.sec-head > * { min-width: 0; }
+.sec-head h2 { font: 900 clamp(2.2rem, 6vw, 4rem)/1.05 var(--font-heading); padding-left: 1rem; border-left: 6px solid var(--brand); }
+h1, h2 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
 .sec-head p { color: var(--muted); max-width: 30rem; }
 .sec-num { font: 400 clamp(4rem, 12vw, 9rem)/.8 var(--font-heading); color: transparent; -webkit-text-stroke: 1px var(--line); position: absolute; right: var(--pad); top: clamp(2rem, 6vw, 4rem); pointer-events: none; }
 
@@ -160,6 +161,7 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
 .nav-links a:not(.btn):hover::after { transform: scaleX(1); }
 .nav-links .btn { padding: .6rem 1.1rem; font-size: .9rem; }
 .menu-btn { display: none; width: 44px; height: 44px; background: none; border: 1px solid var(--line); border-radius: var(--radius); color: var(--text); cursor: pointer; }
+.menu-btn:active { transform: scale(.94); }
 .menu-btn span { display: block; width: 20px; height: 2px; background: currentColor; margin: 5px auto; transition: transform .3s, opacity .3s; }
 .menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
@@ -181,15 +183,11 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
 .hero .img-hero { position: absolute; inset: 0; z-index: -1; }
 .hero .img-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, var(--bg)); }
 .hero-inner { width: 100%; }
-.hero-kicker { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; color: var(--muted); font-weight: 500; }
-.hero h1 { font: 900 clamp(3.2rem, 13vw, 11rem)/.92 var(--font-heading); text-transform: uppercase; margin: 1.5rem 0 1.25rem; letter-spacing: .005em; }
-.hero h1 .l { display: block; }
-.hero h1 .hl { color: var(--brand); font-style: italic; }
-.hero h1 .stroke { color: transparent; -webkit-text-stroke: 2px var(--text); }
-.hero h1 .tc { font-family: var(--font-body); font-size: .42em; letter-spacing: .06em; display: block; margin-top: .6rem; }
+.hero h1 { font: 900 clamp(3.4rem, 12vw, 9.5rem)/.92 var(--font-heading); text-transform: uppercase; margin-bottom: 1.25rem; }
+.hero h1 .tc { font-family: var(--font-body); font-size: .36em; line-height: 1.25; display: block; margin-top: .8rem; text-transform: none; }
 .hero-lead { max-width: 34rem; font-size: clamp(1rem, 2.2vw, 1.15rem); color: var(--muted); }
 .hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 2rem; }
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: clamp(2.5rem, 6vw, 4rem); border-top: 1px solid var(--line); }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(2.5rem, 6vw, 4rem); border-top: 1px solid var(--line); }
 .stat { padding: 1.25rem 1rem 0 0; }
 .stat + .stat { padding-left: 1rem; border-left: 1px solid var(--line); }
 .stat strong { display: block; font: 400 clamp(2rem, 7vw, 4.4rem)/1 var(--font-heading); color: var(--text); }
@@ -198,17 +196,21 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
 
 /* ---------- 跑馬燈 ---------- */
 .ticker { background: var(--brand); color: var(--brand-ink); overflow: hidden; transform: skewY(-2deg); margin-block: -1rem; position: relative; z-index: 2; }
-.ticker div { display: flex; gap: 2.5rem; padding: .8rem 0; width: max-content; font: 400 1.3rem/1 var(--font-heading); letter-spacing: .08em; animation: marquee 28s linear infinite; }
+.ticker div { display: flex; align-items: center; gap: 1.5rem; padding: .8rem 0; width: max-content; font: 900 1.3rem/1 var(--font-body); animation: marquee 28s linear infinite; }
+.ticker i { width: 10px; height: 1.1rem; background: var(--brand-ink); transform: skewX(var(--skew)); }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 /* ==================== 課程類型 ==================== */
-.classes-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
+/* 卡片格線：手機 1 欄、平板 2 欄、桌機 3～4 欄 */
+.classes-grid, .coaches, .plans, .reviews { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .classes-grid, .coaches { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .classes-grid, .plans, .reviews { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1080px) { .coaches { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .class-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; position: relative; overflow: hidden; transition: border-color .3s, transform .3s var(--ease); }
 .class-card:hover { border-color: var(--c); transform: translateY(-4px); }
 .class-card::before { content: ""; position: absolute; top: 0; left: 0; width: 6rem; height: 4px; background: var(--c); transform: skewX(-30deg); transform-origin: left; }
 .class-card .no { font: 400 3.5rem/1 var(--font-heading); color: transparent; -webkit-text-stroke: 1px color-mix(in srgb, var(--c) 60%, transparent); position: absolute; right: 1.25rem; top: 1rem; }
-.class-card .en { color: var(--c); font-size: .85rem; letter-spacing: .16em; }
-.class-card h3 { font-size: 1.5rem; font-weight: 900; margin: .3rem 0 .6rem; }
+.class-card h3 { font-size: 1.5rem; font-weight: 900; margin: .2rem 0 .6rem; padding-right: 4rem; }
 .class-card p { color: var(--muted); font-size: .95rem; }
 .meta { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.25rem; }
 .meta li { font-size: .82rem; font-weight: 700; padding: .3rem .65rem; border: 1px solid var(--line); border-radius: 99px; background: var(--surface-2); }
@@ -227,9 +229,8 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
 .table-scroll:focus-visible { outline-offset: 2px; }
 .sched { width: 100%; min-width: 820px; border-collapse: collapse; text-align: center; font-size: .9rem; }
 .sched th, .sched td { border: 1px solid var(--line); padding: .55rem .45rem; }
-.sched thead th { background: var(--surface-2); font: 400 1rem/1.2 var(--font-heading); letter-spacing: .08em; padding-block: .9rem; }
-.sched thead th small { display: block; font: 500 .75rem/1.3 var(--font-body); color: var(--muted); letter-spacing: 0; }
-.sched tbody th { font: 400 1.05rem/1 var(--font-heading); color: var(--brand); background: var(--surface-2); white-space: nowrap; width: 5.5rem; }
+.sched thead th { background: var(--surface-2); font-weight: 700; padding-block: .9rem; }
+.sched tbody th { font: 400 1.15rem/1 var(--font-heading); color: var(--brand); background: var(--surface-2); white-space: nowrap; width: 5.5rem; }
 .sched td:empty::after { content: "—"; color: var(--line); }
 .slot { display: block; padding: .5rem .3rem; border-left: 4px solid var(--c); background: color-mix(in srgb, var(--c) 16%, transparent); border-radius: 2px; font-weight: 700; line-height: 1.3; }
 .slot small { display: block; font-weight: 400; color: var(--muted); font-size: .75rem; }
@@ -237,12 +238,11 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
 @media (min-width: 900px) { .hint { display: none; } }
 
 /* ==================== 教練團隊 ==================== */
-.coaches { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); }
 .coach { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
 .coach .img { border-bottom: 3px solid var(--hue, var(--brand)); }
 .coach-body { padding: 1.25rem 1.25rem 1.5rem; }
-.coach-body .en { font-size: .8rem; color: var(--brand); letter-spacing: .16em; }
-.coach h3 { font-size: 1.35rem; font-weight: 900; margin: .15rem 0 .5rem; }
+.coach h3 { font-size: 1.35rem; font-weight: 900; }
+.coach .role { color: var(--brand); font-weight: 700; font-size: .9rem; margin-bottom: .6rem; }
 .coach p { color: var(--muted); font-size: .92rem; }
 .certs { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
 .certs li { font-size: .75rem; font-weight: 700; padding: .25rem .55rem; background: var(--surface-2); border: 1px solid var(--line); border-radius: 2px; }
@@ -250,18 +250,18 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
 /* ==================== 會員方案 ==================== */
 #pricing { background: linear-gradient(180deg, var(--bg), var(--surface)); }
 .toggle { display: inline-flex; padding: 4px; border: 1px solid var(--line); border-radius: 99px; background: var(--surface); }
+.toggle button:active { transform: scale(.96); }
 .toggle button { border: 0; background: transparent; color: var(--muted); font: 700 .95rem/1 var(--font-body); padding: .7rem 1.2rem; border-radius: 99px; cursor: pointer; }
 .toggle button[aria-pressed="true"] { background: var(--brand); color: var(--brand-ink); }
 .toggle .save { font-size: .75rem; margin-left: .3rem; }
-.plans { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); align-items: stretch; }
 .plan { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem 1.75rem; display: flex; flex-direction: column; position: relative; }
 .plan.hot { border: 2px solid var(--brand); background: color-mix(in srgb, var(--brand) 7%, var(--surface)); box-shadow: 0 30px 60px -30px color-mix(in srgb, var(--brand) 45%, transparent); }
 .plan .badge { position: absolute; top: -.9rem; left: 1.5rem; }
-.plan h3 { font: 400 1.7rem/1 var(--font-heading); letter-spacing: .06em; }
-.plan h3 small { display: block; font: 700 .95rem/1.6 var(--font-body); color: var(--muted); letter-spacing: 0; margin-top: .3rem; }
+.plan h3 { font: 400 1.9rem/1 var(--font-heading); }
+.plan h3 small { display: block; font: 700 .95rem/1.6 var(--font-body); color: var(--muted); margin-top: .3rem; }
 .price { display: flex; align-items: baseline; gap: .35rem; margin: 1.5rem 0 .25rem; }
 .price b { font: 400 clamp(2.8rem, 8vw, 3.6rem)/1 var(--font-heading); }
-.price span { color: var(--muted); font-weight: 500; }
+.price > span { color: var(--muted); font-weight: 500; }
 .price-note { color: var(--muted); font-size: .85rem; min-height: 1.5em; }
 .plan ul { margin: 1.5rem 0 2rem; display: grid; gap: .7rem; flex: 1; }
 .plan li { padding-left: 1.6rem; position: relative; font-size: .95rem; }
@@ -269,9 +269,8 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
 .plan .btn { width: 100%; }
 
 /* ==================== 學員見證 ==================== */
-.reviews { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
 .review { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; display: flex; flex-direction: column; gap: 1rem; }
-.result { align-self: flex-start; font: 400 1.5rem/1 var(--font-heading); letter-spacing: .03em; color: var(--brand-ink); background: var(--brand); padding: .45rem .8rem; transform: skewX(var(--skew)); }
+.result { align-self: flex-start; font: 400 1.6rem/1 var(--font-heading); color: var(--brand-ink); background: var(--brand); padding: .45rem .8rem; transform: skewX(var(--skew)); }
 .review blockquote { font-size: 1.02rem; flex: 1; }
 .review footer { color: var(--muted); font-size: .88rem; border-top: 1px solid var(--line); padding-top: .9rem; }
 .review footer strong { color: var(--text); }
@@ -280,34 +279,37 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
 /* ==================== 免費體驗表單 ==================== */
 #trial { background: var(--brand); color: var(--brand-ink); overflow: clip; }
 #trial::before { content: "FREE TRIAL"; position: absolute; right: -2rem; bottom: -2.5rem; font: 400 clamp(6rem, 22vw, 18rem)/1 var(--font-heading); color: transparent; -webkit-text-stroke: 2px color-mix(in srgb, var(--brand-ink) 14%, transparent); pointer-events: none; white-space: nowrap; }
-.trial-grid { display: grid; gap: 2.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); position: relative; }
+.trial-grid, .loc { display: grid; gap: 2.5rem; grid-template-columns: minmax(0, 1fr); position: relative; }
+@media (min-width: 900px) { .trial-grid, .loc { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .trial-copy h2 { font: 900 clamp(2.2rem, 7vw, 4.4rem)/1.02 var(--font-heading); }
-.trial-copy h2 .en { display: block; font-size: .55em; letter-spacing: .08em; }
 .trial-copy p { margin-top: 1rem; font-weight: 500; max-width: 28rem; }
 .trial-copy ul { margin-top: 1.5rem; display: grid; gap: .5rem; font-weight: 700; }
-.trial-copy li::before { content: "→ "; font-family: var(--font-heading); }
+.trial-copy li { padding-left: 1.4rem; position: relative; }
+.trial-copy li::before { content: ""; position: absolute; left: 0; top: .45em; width: .7rem; height: .7rem; background: var(--brand-ink); transform: skewX(var(--skew)); }
 .form { background: var(--bg); color: var(--text); padding: clamp(1.5rem, 4vw, 2.25rem); border-radius: var(--radius); display: grid; gap: 1rem; box-shadow: 14px 14px 0 var(--brand-ink); }
 .form label { display: grid; gap: .4rem; font-weight: 700; font-size: .92rem; }
 .form input, .form select { width: 100%; font: 400 1rem/1.4 var(--font-body); color: var(--text); background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius); padding: .8rem .9rem; }
 .form input:focus-visible, .form select:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
-.form .row { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); }
+.form .row { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 480px) { .form .row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .form .small { color: var(--muted); font-size: .8rem; }
 
 /* ==================== 地點資訊 ==================== */
-.loc { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); }
 .loc .img-map { border-radius: var(--radius); border: 1px solid var(--line); }
 .info { display: grid; gap: 1.25rem; align-content: start; }
 .info dl { display: grid; gap: 1rem; }
-.info dl div { display: grid; grid-template-columns: 6rem 1fr; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
-.info dt { font: 400 .95rem/1.7 var(--font-heading); letter-spacing: .1em; color: var(--brand); }
+.info dl div { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
+.info dt { font-weight: 700; color: var(--brand); }
 .contact-btns { display: flex; flex-wrap: wrap; gap: .75rem; }
 
 /* ==================== 頁尾 ==================== */
 .site-footer { border-top: 1px solid var(--line); padding: 3.5rem var(--pad) 2rem; color: var(--muted); font-size: .92rem; }
-.foot-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
-.site-footer h4 { font: 400 1rem/1 var(--font-heading); letter-spacing: .14em; color: var(--text); margin-bottom: .9rem; }
+.foot-grid { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .foot-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.site-footer h2 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: .8rem; }
 .social { display: flex; gap: .6rem; }
-.social a { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: var(--radius); font: 400 .8rem/1 var(--font-heading); color: var(--text); transition: background .25s, color .25s; }
+.social a { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: var(--radius); font: 700 .8rem/1 var(--font-body); color: var(--text); transition: background .25s, color .25s; }
 .social a:hover { background: var(--brand); color: var(--brand-ink); }
 .copy { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .85rem; }
 
@@ -356,17 +358,13 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
 <section class="hero" id="hero">
   <div class="img img-hero" role="img" aria-label="昏暗的訓練場地，萊姆綠光束斜劃過畫面"></div>
   <div class="wrap hero-inner">
-    <div class="hero-kicker"><span class="tag">Banqiao · New Taipei</span><span>板橋 24 小時精品健身工作室</span></div>
-    <h1>
-      <span class="l">Train <span class="hl">Hard.</span></span>
-      <span class="l stroke">Live Strong.</span>
-      <span class="l tc">把每一次流汗，變成看得見的改變</span>
-    </h1>
-    <p class="hero-lead">小班制課程搭配專業教練，從第一次進健身房到挑戰個人紀錄，我們陪你一起練、一起變強。</p>
+    <h1>Train hard.<span class="tc">把每一次流汗，變成看得見的改變</span></h1>
+    <p class="hero-lead">板橋 24 小時健身工作室。小班課程加上專業教練，陪你從第一次上手練到個人紀錄。</p>
     <div class="hero-cta">
-      <a href="#trial" class="btn">免費體驗 <span class="arr">→</span></a>
+      <a href="#trial" class="btn">免費體驗</a>
       <a href="#schedule" class="btn ghost">看課表</a>
     </div>
+    <!-- 範例內容：上線前請換成真實評價／數據 -->
     <div class="stats">
       <div class="stat"><strong>1,200<em>+</em></strong><span>累積學員</span></div>
       <div class="stat"><strong>12</strong><span>位認證教練</span></div>
@@ -376,8 +374,8 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
 </section>
 
 <div class="ticker" aria-hidden="true"><div>
-  <span>Strength ✦</span><span>HIIT ✦</span><span>Boxing ✦</span><span>Yoga ✦</span><span>TRX ✦</span><span>Personal Training ✦</span>
-  <span>Strength ✦</span><span>HIIT ✦</span><span>Boxing ✦</span><span>Yoga ✦</span><span>TRX ✦</span><span>Personal Training ✦</span>
+  <span>重量訓練</span><i></i><span>HIIT</span><i></i><span>拳擊</span><i></i><span>瑜珈</span><i></i><span>TRX</span><i></i><span>一對一教練</span><i></i>
+  <span>重量訓練</span><i></i><span>HIIT</span><i></i><span>拳擊</span><i></i><span>瑜珈</span><i></i><span>TRX</span><i></i><span>一對一教練</span><i></i>
 </div></div>
 
 <!-- ==================== 區塊：課程類型 ==================== -->
@@ -385,48 +383,42 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
   <span class="sec-num" aria-hidden="true">01</span>
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><span class="tag">Programs</span><h2><span class="en">Find your training</span>課程類型</h2></div>
+      <h2>課程類型</h2>
       <p>六種課程涵蓋力量、心肺與柔軟度，依程度分級，初學者也能安心開始。</p>
     </div>
     <div class="classes-grid">
       <article class="class-card c-weight reveal">
         <span class="no en" aria-hidden="true">01</span>
-        <span class="en">Strength</span>
         <h3>重量訓練</h3>
         <p>深蹲、硬舉、臥推三大項為核心，教練逐一調整動作，安全建立肌力。</p>
         <ul class="meta"><li>程度 中階<span class="lv" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span></li><li>60 分鐘</li><li>上限 8 人</li></ul>
       </article>
       <article class="class-card c-hiit reveal">
         <span class="no en" aria-hidden="true">02</span>
-        <span class="en">HIIT</span>
         <h3>HIIT 高強度間歇</h3>
         <p>短時間高強度循環，提升心肺與燃脂效率，下班後最有感的 45 分鐘。</p>
         <ul class="meta"><li>程度 進階<span class="lv" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span></li><li>45 分鐘</li><li>上限 12 人</li></ul>
       </article>
       <article class="class-card c-box reveal">
         <span class="no en" aria-hidden="true">03</span>
-        <span class="en">Boxing</span>
         <h3>拳擊體能</h3>
         <p>步法、組合拳與打靶訓練，釋放壓力的同時鍛鍊核心與協調性。</p>
         <ul class="meta"><li>程度 中階<span class="lv" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span></li><li>60 分鐘</li><li>附拳套</li></ul>
       </article>
       <article class="class-card c-yoga reveal">
         <span class="no en" aria-hidden="true">04</span>
-        <span class="en">Yoga</span>
         <h3>伸展瑜珈</h3>
         <p>著重呼吸與關節活動度，幫助訓練後恢復，改善久坐造成的肩頸緊繃。</p>
         <ul class="meta"><li>程度 入門<span class="lv" aria-hidden="true"><i class="on"></i><i></i><i></i></span></li><li>60 分鐘</li><li>附瑜珈墊</li></ul>
       </article>
       <article class="class-card c-trx reveal">
         <span class="no en" aria-hidden="true">05</span>
-        <span class="en">TRX</span>
         <h3>TRX 懸吊訓練</h3>
         <p>利用自身體重與懸吊帶，強化核心穩定，強度可依角度自由調整。</p>
         <ul class="meta"><li>程度 入門<span class="lv" aria-hidden="true"><i class="on"></i><i></i><i></i></span></li><li>50 分鐘</li><li>上限 10 人</li></ul>
       </article>
       <article class="class-card c-pt reveal">
         <span class="no en" aria-hidden="true">06</span>
-        <span class="en">Personal Training</span>
         <h3>一對一教練</h3>
         <p>先做體態與動作評估，再量身規劃課表，適合有明確目標或舊傷需要照顧的你。</p>
         <ul class="meta"><li>程度 不限<span class="lv" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span></li><li>60 分鐘</li><li>預約制</li></ul>
@@ -440,7 +432,7 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
   <span class="sec-num" aria-hidden="true">02</span>
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><span class="tag">Timetable</span><h2><span class="en">Weekly schedule</span>每週課表</h2></div>
+      <h2>每週課表</h2>
       <p>團體課需事先預約，一對一教練時段可另行安排。課表每月更新。</p>
     </div>
     <ul class="legend reveal" aria-label="課程顏色圖例">
@@ -451,7 +443,7 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
       <table class="sched">
         <caption class="skip">CORE 52 每週團體課表</caption>
         <thead>
-          <tr><th scope="col">Time</th><th scope="col">Mon<small>週一</small></th><th scope="col">Tue<small>週二</small></th><th scope="col">Wed<small>週三</small></th><th scope="col">Thu<small>週四</small></th><th scope="col">Fri<small>週五</small></th><th scope="col">Sat<small>週六</small></th><th scope="col">Sun<small>週日</small></th></tr>
+          <tr><th scope="col">時段</th><th scope="col">週一</th><th scope="col">週二</th><th scope="col">週三</th><th scope="col">週四</th><th scope="col">週五</th><th scope="col">週六</th><th scope="col">週日</th></tr>
         </thead>
         <tbody>
           <tr><th scope="row">07:00</th>
@@ -469,7 +461,7 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
         </tbody>
       </table>
     </div>
-    <p class="hint">← 左右滑動查看完整一週課表 →</p>
+    <p class="hint">手機上可左右滑動，查看完整一週課表。</p>
   </div>
 </section>
 
@@ -478,28 +470,28 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
   <span class="sec-num" aria-hidden="true">03</span>
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><span class="tag">Coaches</span><h2><span class="en">Meet the team</span>教練團隊</h2></div>
+      <h2>教練團隊</h2>
       <p>每位教練都持有國際認證，並定期進修，用專業帶你安全地進步。</p>
     </div>
     <div class="coaches">
       <article class="coach reveal">
         <div class="img img-coach1" role="img" aria-label="Leo 教練形象圖"></div>
-        <div class="coach-body"><span class="en">Head Coach · Strength</span><h3>Leo 林子傑</h3><p>前大專舉重選手，擅長肌力與體態雕塑，教學細心、注重動作品質。</p>
+        <div class="coach-body"><h3>Leo 林子傑</h3><p class="role">總教練，專長肌力與體態</p><p>前大專舉重選手，擅長肌力與體態雕塑，教學細心、注重動作品質。</p>
           <ul class="certs"><li>NSCA-CSCS</li><li>運動傷害防護</li><li>10 年資歷</li></ul></div>
       </article>
       <article class="coach reveal">
         <div class="img img-coach2" role="img" aria-label="Kai 教練形象圖"></div>
-        <div class="coach-body"><span class="en">HIIT · TRX</span><h3>Kai 陳凱文</h3><p>課堂節奏明快、氣氛熱血，專長功能性訓練與減脂計畫設計。</p>
+        <div class="coach-body"><h3>Kai 陳凱文</h3><p class="role">HIIT 與 TRX 教練</p><p>課堂節奏明快、氣氛熱血，專長功能性訓練與減脂計畫設計。</p>
           <ul class="certs"><li>ACE-CPT</li><li>TRX STC</li><li>CPR／AED</li></ul></div>
       </article>
       <article class="coach reveal">
         <div class="img img-coach3" role="img" aria-label="Mia 教練形象圖"></div>
-        <div class="coach-body"><span class="en">Yoga · Mobility</span><h3>Mia 王思妤</h3><p>結合瑜珈與關節活動度訓練，幫助學員改善姿勢、加速恢復。</p>
+        <div class="coach-body"><h3>Mia 王思妤</h3><p class="role">瑜珈與活動度教練</p><p>結合瑜珈與關節活動度訓練，幫助學員改善姿勢、加速恢復。</p>
           <ul class="certs"><li>RYT-200</li><li>FRC 活動度</li><li>皮拉提斯</li></ul></div>
       </article>
       <article class="coach reveal">
         <div class="img img-coach4" role="img" aria-label="Ray 教練形象圖"></div>
-        <div class="coach-body"><span class="en">Boxing</span><h3>Ray 黃睿</h3><p>業餘拳擊賽經驗豐富，從基本步法教起，讓新手也能打出自信。</p>
+        <div class="coach-body"><h3>Ray 黃睿</h3><p class="role">拳擊教練</p><p>業餘拳擊賽經驗豐富，從基本步法教起，讓新手也能打出自信。</p>
           <ul class="certs"><li>拳擊 C 級教練</li><li>ACSM-CPT</li><li>運動營養</li></ul></div>
       </article>
     </div>
@@ -511,7 +503,7 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
   <span class="sec-num" aria-hidden="true">04</span>
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><span class="tag">Membership</span><h2><span class="en">Pick your plan</span>會員方案</h2></div>
+      <h2>會員方案</h2>
       <div class="toggle" role="group" aria-label="切換付款週期">
         <button type="button" data-cycle="month" aria-pressed="true">月繳</button>
         <button type="button" data-cycle="year" aria-pressed="false">年繳<span class="save">省 2 個月</span></button>
@@ -550,24 +542,25 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
   <span class="sec-num" aria-hidden="true">05</span>
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><span class="tag">Results</span><h2><span class="en">Real progress</span>學員見證</h2></div>
+      <h2>學員見證</h2>
       <p>沒有速成，只有穩定的累積。這是幾位學員持續訓練後的改變。</p>
     </div>
+    <!-- 範例內容：上線前請換成真實評價／數據 -->
     <div class="reviews">
       <figure class="review reveal">
         <span class="result">3 個月 −4kg</span>
         <blockquote>以前完全不敢碰槓鈴，Leo 從空槓教起，一步一步調整姿勢。現在每週固定來三次，腰痠也改善很多。</blockquote>
-        <footer><strong>Amber</strong>・上班族・Core 會員</footer>
+        <footer><strong>Amber</strong>，上班族，Core 會員</footer>
       </figure>
       <figure class="review reveal">
         <span class="result">深蹲 +20kg</span>
         <blockquote>一對一課程很有系統，每次都會記錄重量和感受。半年下來深蹲從 60 公斤進步到 80 公斤，很有成就感。</blockquote>
-        <footer><strong>阿哲</strong>・工程師・Elite 會員</footer>
+        <footer><strong>阿哲</strong>，工程師，Elite 會員</footer>
       </figure>
       <figure class="review reveal">
         <span class="result">體脂 −3%</span>
         <blockquote>下班後上 HIIT 和拳擊，流完汗壓力全消。教練會依狀況給替代動作，不會硬撐受傷。</blockquote>
-        <footer><strong>Yuna</strong>・設計師・Core 會員</footer>
+        <footer><strong>Yuna</strong>，設計師，Core 會員</footer>
       </figure>
     </div>
     <p class="disclaimer">＊個人成果因體質、飲食與訓練頻率而異，以上為學員分享，不代表保證效果。</p>
@@ -578,7 +571,7 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
 <section id="trial">
   <div class="wrap trial-grid">
     <div class="trial-copy reveal">
-      <h2><span class="en">Your first class is on us</span>首堂免費體驗</h2>
+      <h2>首堂免費體驗</h2>
       <p>填寫資料後，我們會在一個工作天內以電話或 LINE 與你確認時段。不推銷、不綁約，先來感受看看。</p>
       <ul><li>免費體態評估</li><li>任選一堂團體課</li><li>提供毛巾與置物櫃</li></ul>
     </div>
@@ -607,7 +600,7 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
           <option>平日晚上（18:00–22:00）</option><option>週末任何時段</option>
         </select>
       </label>
-      <button type="submit" class="btn">送出預約 <span class="arr">→</span></button>
+      <button type="submit" class="btn">送出預約</button>
       <p class="small">送出即表示同意我們以電話或 LINE 聯繫你，資料僅用於預約確認。</p>
     </form>
   </div>
@@ -618,17 +611,17 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
   <span class="sec-num" aria-hidden="true">06</span>
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><span class="tag">Location</span><h2><span class="en">Find us</span>地點資訊</h2></div>
+      <h2>地點資訊</h2>
       <p>捷運府中站步行 4 分鐘，附近有收費停車場。</p>
     </div>
     <div class="loc">
       <div class="img img-map reveal" role="img" aria-label="工作室位置示意地圖"></div>
       <div class="info reveal">
         <dl>
-          <div><dt>Address</dt><dd>新北市板橋區文化路一段 52 號 3 樓</dd></div>
-          <div><dt>Hours</dt><dd>會員 24 小時開放<br>櫃檯服務 週一至週五 10:00–22:00、週末 09:00–18:00</dd></div>
-          <div><dt>Phone</dt><dd>02-1234-5678</dd></div>
-          <div><dt>Metro</dt><dd>板南線 府中站 1 號出口</dd></div>
+          <div><dt>地址</dt><dd>新北市板橋區文化路一段 52 號 3 樓</dd></div>
+          <div><dt>營業時間</dt><dd>會員 24 小時開放<br>櫃檯服務 週一至週五 10:00–22:00、週末 09:00–18:00</dd></div>
+          <div><dt>電話</dt><dd>02-1234-5678</dd></div>
+          <div><dt>交通</dt><dd>板南線 府中站 1 號出口</dd></div>
         </dl>
         <div class="contact-btns">
           <a class="btn" href="tel:0212345678">撥打電話</a>
@@ -646,11 +639,11 @@ section { padding: clamp(4.5rem, 11vw, 8rem) var(--pad); position: relative; }
   <div class="wrap">
     <div class="foot-grid">
       <div><a href="#top" class="logo">CORE <b>52</b></a><p style="margin-top:1rem">CORE 52 健身工作室<br>板橋的 24 小時精品健身空間。</p></div>
-      <div><h4>Contact</h4><p>新北市板橋區文化路一段 52 號 3 樓<br><a href="tel:0212345678">02-1234-5678</a></p></div>
-      <div><h4>Hours</h4><p>會員 24 小時開放<br>櫃檯 平日 10:00–22:00<br>櫃檯 週末 09:00–18:00</p></div>
-      <div><h4>Follow</h4><div class="social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="YouTube">YT</a><a href="https://line.me/R/ti/p/@yourlineid" aria-label="LINE">LN</a></div></div>
+      <div><h2>聯絡我們</h2><p>新北市板橋區文化路一段 52 號 3 樓<br><a href="tel:0212345678">02-1234-5678</a></p></div>
+      <div><h2>營業時間</h2><p>會員 24 小時開放<br>櫃檯 平日 10:00–22:00<br>櫃檯 週末 09:00–18:00</p></div>
+      <div><h2>追蹤我們</h2><div class="social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="YouTube">YT</a><a href="https://line.me/R/ti/p/@yourlineid" aria-label="LINE">LN</a></div></div>
     </div>
-    <div class="copy"><span>© <span id="y"></span> CORE 52 健身工作室</span><span>Train Hard. Live Strong.</span></div>
+    <div class="copy"><span>© <span id="y"></span> CORE 52 健身工作室</span><span>板橋 24 小時健身工作室</span></div>
   </div>
 </footer>
 

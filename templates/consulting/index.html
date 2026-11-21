@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>恆信聯合事務所 Hengxin Partners｜台北信義 稅務・記帳・公司設立・法律諮詢</title>
+<title>恆信聯合事務所 Hengxin Partners｜台北信義 稅務、記帳、公司設立與法律諮詢</title>
 <meta name="description" content="恆信聯合事務所位於台北市信義區，由會計師與律師共同執業，提供稅務規劃、記帳代理、公司設立與法律諮詢，一站解決企業的財稅與法務需求。">
 <meta property="og:title" content="恆信聯合事務所 Hengxin Partners">
 <meta property="og:description" content="會計師與律師共同執業，稅務、記帳、公司設立、法律諮詢一次到位。">
@@ -43,14 +43,16 @@ body { background: var(--bg); color: var(--text); font: 400 1rem/1.8 var(--font-
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 img { max-width: 100%; }
-h1, h2, h3 { font-family: var(--font-heading-tc); font-weight: 700; line-height: 1.35; letter-spacing: .02em; }
+h1, h2, h3 { font-family: var(--font-heading-tc); font-weight: 700; line-height: 1.35; letter-spacing: .02em; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
 :focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 2px; }
 .wrap { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; }
 .skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 100; }
 .skip:focus { left: 1rem; }
 
 /* ---------- 按鈕 ---------- */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .75rem 1.6rem; border-radius: var(--radius); font-weight: 500; letter-spacing: .08em; border: 1px solid transparent; transition: background .25s, color .25s, border-color .25s, transform .25s; cursor: pointer; font-size: .95rem; font-family: inherit; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .75rem 1.6rem; border-radius: var(--radius); font-weight: 500; border: 1px solid transparent; transition: background .25s, color .25s, border-color .25s, transform .25s; cursor: pointer; font-size: .95rem; font-family: inherit; }
+.btn:active { transform: translateY(1px) scale(.99); }
+a:active { opacity: .8; }
 .btn-gold { background: var(--brand); color: var(--brand-ink); }
 .btn-gold:hover { background: color-mix(in srgb, var(--brand) 82%, var(--on-navy)); transform: translateY(-1px); }
 .btn-ghost { border-color: color-mix(in srgb, var(--on-navy) 45%, transparent); color: var(--on-navy); }
@@ -62,9 +64,6 @@ h1, h2, h3 { font-family: var(--font-heading-tc); font-weight: 700; line-height:
 
 /* ---------- 通用區塊 ---------- */
 section { padding-block: clamp(4.5rem, 10vw, 8rem); }
-.eyebrow { display: inline-flex; align-items: center; gap: .9rem; font: 400 .78rem/1 "Libre Baskerville", serif; letter-spacing: .28em; text-transform: uppercase; color: var(--brand-deep); }
-.eyebrow::before { content: ""; width: 2.25rem; height: 1px; background: currentColor; }
-.dark .eyebrow { color: var(--brand); }
 .sec-head { display: grid; gap: 1.25rem; margin-bottom: clamp(2.5rem, 6vw, 4rem); max-width: 46rem; }
 .sec-head h2 { font-size: clamp(1.75rem, 4vw, 2.6rem); }
 .sec-head p { color: var(--muted); }
@@ -124,9 +123,9 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4.5rem; }
 .logo { display: flex; align-items: center; gap: .7rem; line-height: 1.15; }
 .logo-mark { width: 2.4rem; height: 2.4rem; display: grid; place-items: center; border: 1px solid var(--brand); color: var(--brand); font: 1.25rem/1 var(--font-heading); }
-.logo b { font: 700 1.05rem/1.2 var(--font-heading-tc); letter-spacing: .12em; display: block; }
-.logo small { font: .62rem/1 "Libre Baskerville", serif; letter-spacing: .24em; text-transform: uppercase; color: var(--on-navy-muted); }
-.menu { display: flex; align-items: center; gap: clamp(1rem, 2.4vw, 2rem); font-size: .92rem; letter-spacing: .06em; }
+.logo b { font: 700 1.05rem/1.2 var(--font-heading-tc); letter-spacing: .04em; display: block; }
+.logo small { font: .78rem/1.2 var(--font-body); color: var(--on-navy-muted); }
+.menu { display: flex; align-items: center; gap: clamp(1rem, 2.4vw, 2rem); font-size: .92rem; }
 .menu a:not(.btn) { position: relative; padding-block: .3rem; }
 .menu a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--brand); transform: scaleX(0); transition: transform .3s; }
 .menu a:not(.btn):hover::after { transform: scaleX(1); }
@@ -147,26 +146,25 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
 }
 
 /* ==================== Hero ==================== */
-.hero { background: radial-gradient(ellipse at 85% 10%, color-mix(in srgb, var(--brand) 14%, transparent), transparent 55%), var(--navy); padding-top: clamp(7rem, 14vw, 10rem); padding-bottom: 0; }
+.hero { background: radial-gradient(ellipse at 85% 10%, color-mix(in srgb, var(--brand) 14%, transparent), transparent 55%), var(--navy); padding-top: clamp(6.5rem, 11vw, 8rem); padding-bottom: 0; }
 .hero-grid { display: grid; gap: clamp(2.5rem, 6vw, 5rem); align-items: center; }
-.hero h1 { font-size: clamp(2.1rem, 6vw, 3.9rem); line-height: 1.25; margin: 1.5rem 0; letter-spacing: .03em; }
-.hero h1 em { font-style: normal; color: var(--brand); }
+.hero h1 { font-size: clamp(1.9rem, 4.2vw, 3.6rem); line-height: 1.25; margin: 1.5rem 0; letter-spacing: .03em; }
 .hero-lead { color: var(--on-navy-muted); font-size: clamp(1rem, 1.6vw, 1.1rem); max-width: 34rem; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 2.25rem; }
 .hero-art { position: relative; }
 .hero-art .img { box-shadow: 0 30px 60px -30px var(--navy-ink); outline: 1px solid color-mix(in srgb, var(--brand) 35%, transparent); outline-offset: 12px; }
 .hero-art figcaption { position: absolute; left: -1px; bottom: 1.5rem; background: var(--surface); color: var(--text); padding: 1rem 1.25rem; font-size: .85rem; line-height: 1.5; border-left: 3px solid var(--brand); max-width: 15rem; }
 .hero-art figcaption b { font-family: var(--font-heading-tc); display: block; font-size: 1rem; }
-.trust { margin-top: clamp(3.5rem, 8vw, 6rem); border-top: 1px solid color-mix(in srgb, var(--brand) 35%, transparent); display: grid; grid-template-columns: repeat(2, 1fr); }
+.trust { margin-top: clamp(3rem, 6vw, 4.5rem); border-top: 1px solid color-mix(in srgb, var(--brand) 35%, transparent); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .trust div { padding: 1.75rem 1rem 2rem; text-align: center; }
 .trust div + div { border-left: 1px solid color-mix(in srgb, var(--on-navy) 12%, transparent); }
 .trust div:nth-child(3) { border-left: 0; }
 .trust div:nth-child(n+3) { border-top: 1px solid color-mix(in srgb, var(--on-navy) 12%, transparent); }
 .trust strong { display: block; font: clamp(2.1rem, 5vw, 3rem)/1.1 var(--font-heading); color: var(--brand); }
-.trust span { font-size: .85rem; letter-spacing: .1em; color: var(--on-navy-muted); }
+.trust span { font-size: .85rem; color: var(--on-navy-muted); }
 @media (min-width: 900px) {
-  .hero-grid { grid-template-columns: 1.15fr .85fr; }
-  .trust { grid-template-columns: repeat(4, 1fr); }
+  .hero-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); }
+  .trust { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .trust div:nth-child(3) { border-left: 1px solid color-mix(in srgb, var(--on-navy) 12%, transparent); }
   .trust div:nth-child(n+3) { border-top: 0; }
 }
@@ -175,50 +173,51 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
 /* ==================== 服務領域 ==================== */
 .services { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
 .service { background: var(--surface); padding: 2.25rem 1.75rem; display: flex; flex-direction: column; gap: .85rem; transition: background .3s; position: relative; }
-.service::before { content: ""; position: absolute; left: 0; top: 0; height: 2px; width: 0; background: var(--brand); transition: width .4s; }
-.service:hover::before { width: 100%; }
-.service .no { font: 1rem/1 var(--font-heading); color: var(--brand-deep); letter-spacing: .1em; }
+.service::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--brand); transform: scaleX(0); transform-origin: left; transition: transform .4s; }
+.service:hover::before { transform: scaleX(1); }
+.service .no { font: 1rem/1 var(--font-heading); color: var(--brand-deep); }
 .service h3 { font-size: 1.3rem; }
 .service p { color: var(--muted); font-size: .95rem; flex: 1; }
-.service a { color: var(--navy); font-weight: 500; font-size: .9rem; letter-spacing: .08em; display: inline-flex; gap: .4rem; align-items: center; border-bottom: 1px solid var(--brand); align-self: flex-start; padding-bottom: .15rem; }
+.service a { color: var(--navy); font-weight: 500; font-size: .9rem; display: inline-flex; gap: .4rem; align-items: center; border-bottom: 1px solid var(--brand); align-self: flex-start; padding-bottom: .15rem; }
 .service a:hover { color: var(--brand-deep); }
-@media (min-width: 640px) { .services { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1000px) { .services { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 640px) { .services { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .services { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* ==================== 為什麼選擇我們 ==================== */
 .why-grid { display: grid; gap: clamp(2.5rem, 6vw, 5rem); align-items: center; }
 .values { display: grid; gap: 0; }
-.value { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding: 1.6rem 0; border-top: 1px solid color-mix(in srgb, var(--on-navy) 14%, transparent); }
+.value { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: 1rem; padding: 1.6rem 0; border-top: 1px solid color-mix(in srgb, var(--on-navy) 14%, transparent); }
 .value:last-child { border-bottom: 1px solid color-mix(in srgb, var(--on-navy) 14%, transparent); }
 .value .mark { width: 3rem; height: 3rem; border: 1px solid var(--brand); display: grid; place-items: center; color: var(--brand); font: 1.1rem/1 var(--font-heading); transform: rotate(45deg); }
 .value .mark i { transform: rotate(-45deg); font-style: normal; }
 .value h3 { font-size: 1.2rem; margin-bottom: .3rem; }
 .value p { color: var(--on-navy-muted); font-size: .95rem; }
 .why-grid .img { outline: 1px solid color-mix(in srgb, var(--brand) 30%, transparent); outline-offset: -14px; }
-@media (min-width: 900px) { .why-grid { grid-template-columns: .9fr 1.1fr; } }
+@media (min-width: 900px) { .why-grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); } }
 @media (max-width: 899px) { .why-grid .img { aspect-ratio: 16 / 10; } }
 
 /* ==================== 服務流程 ==================== */
-.steps { display: grid; gap: 0; counter-reset: s; position: relative; }
+.steps { list-style: none; display: grid; gap: 0; counter-reset: s; position: relative; }
 .step { position: relative; padding: 0 0 2.25rem 4.25rem; }
 .step::before { counter-increment: s; content: "0" counter(s); position: absolute; left: 0; top: 0; width: 3rem; height: 3rem; border-radius: 50%; display: grid; place-items: center; background: var(--surface); border: 1px solid var(--brand); color: var(--brand-deep); font: 1rem/1 var(--font-heading); z-index: 1; }
 .step::after { content: ""; position: absolute; left: 1.5rem; top: 3rem; bottom: 0; width: 1px; background: var(--line); }
 .step:last-child::after { display: none; }
 .step h3 { font-size: 1.15rem; padding-top: .55rem; margin-bottom: .35rem; }
 .step p { color: var(--muted); font-size: .93rem; }
-.step small { display: inline-block; margin-top: .6rem; font-size: .78rem; letter-spacing: .1em; color: var(--brand-deep); border: 1px solid var(--line); padding: .1rem .6rem; border-radius: 999px; }
+.step small { display: inline-block; margin-top: .6rem; font-size: .8rem; color: var(--brand-deep); border: 1px solid var(--line); padding: .1rem .6rem; border-radius: 999px; }
 @media (min-width: 900px) {
-  .steps { grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+  .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; }
   .step { padding: 4.75rem 0 0; }
   .step::after { left: 3.5rem; right: -2rem; top: 1.5rem; bottom: auto; width: auto; height: 1px; }
 }
 
 /* ==================== 專業團隊 ==================== */
 .team-sec { background: color-mix(in srgb, var(--surface) 55%, var(--bg)); border-block: 1px solid var(--line); }
-.team { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: clamp(1.25rem, 3vw, 2rem); }
+.team { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 2rem); }
+@media (min-width: 1000px) { .team { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .member h3 { font-size: 1.2rem; margin-top: 1.1rem; }
-.member h3 span { font: .78rem/1 "Libre Baskerville", serif; letter-spacing: .12em; color: var(--muted); margin-left: .5rem; }
-.member .role { color: var(--brand-deep); font-size: .9rem; font-weight: 500; letter-spacing: .06em; }
+.member h3 span { font: 400 .85rem/1 var(--font-body); color: var(--muted); margin-left: .5rem; }
+.member .role { color: var(--brand-deep); font-size: .9rem; font-weight: 500; }
 .member ul { margin-top: .7rem; padding-top: .7rem; border-top: 1px solid var(--line); font-size: .87rem; color: var(--muted); display: grid; gap: .2rem; }
 .member li::before { content: "— "; color: var(--brand-deep); }
 
@@ -229,7 +228,7 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
 .quote blockquote { font: 500 1.05rem/1.9 var(--font-heading-tc); }
 .quote figcaption { font-size: .88rem; color: var(--on-navy-muted); padding-top: 1rem; border-top: 1px solid color-mix(in srgb, var(--on-navy) 14%, transparent); }
 .quote figcaption b { color: var(--on-navy); font-weight: 500; display: block; }
-@media (min-width: 900px) { .quotes { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 900px) { .quotes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* ==================== 常見問題 ==================== */
 .faq-grid { display: grid; gap: 2.5rem; }
@@ -240,14 +239,14 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
 .faq summary::after { content: "+"; position: absolute; right: .25rem; top: 50%; transform: translateY(-50%); font: 1.6rem/1 var(--font-heading); color: var(--brand-deep); transition: transform .3s; }
 .faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
 .faq details p { color: var(--muted); padding: 0 2.5rem 1.5rem 0; }
-@media (min-width: 900px) { .faq-grid { grid-template-columns: 1fr 2fr; gap: 4rem; } .faq-grid .sec-head { position: sticky; top: 7rem; align-self: start; } }
+@media (min-width: 900px) { .faq-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 4rem; } .faq-grid .sec-head { position: sticky; top: 7rem; align-self: start; } }
 
 /* ==================== 預約諮詢 ==================== */
 .contact-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); }
 .form { background: var(--surface); color: var(--text); padding: clamp(1.5rem, 4vw, 2.75rem); border-radius: var(--radius); border-top: 3px solid var(--brand); display: grid; gap: 1.1rem; }
 .form .row { display: grid; gap: 1.1rem; }
 .field { display: grid; gap: .4rem; }
-.field label, .field span { font-size: .88rem; font-weight: 500; letter-spacing: .04em; }
+.field label, .field span { font-size: .88rem; font-weight: 500; }
 .field label i { color: var(--brand-deep); font-style: normal; }
 .field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .75rem .9rem; min-height: 48px; }
 .field textarea { min-height: 7.5rem; resize: vertical; }
@@ -259,27 +258,27 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
 .form-note { font-size: .8rem; color: var(--muted); text-align: center; }
 .info { display: grid; gap: 1.5rem; align-content: start; }
 .info dl { display: grid; gap: 1.1rem; }
-.info dt { font: .75rem/1 "Libre Baskerville", serif; letter-spacing: .22em; text-transform: uppercase; color: var(--brand); margin-bottom: .35rem; }
+.info dt { font-size: .85rem; color: var(--brand); margin-bottom: .2rem; }
 .info dd { color: var(--on-navy); }
 .info dd a { border-bottom: 1px solid color-mix(in srgb, var(--brand) 60%, transparent); }
 .info .btns { display: flex; flex-wrap: wrap; gap: .75rem; }
 .info .btn { min-height: 44px; padding: .55rem 1.1rem; font-size: .88rem; }
-@media (min-width: 640px) { .form .row { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 960px) { .contact-grid { grid-template-columns: .8fr 1.2fr; } }
+@media (min-width: 640px) { .form .row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+@media (min-width: 960px) { .contact-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); } }
 
 /* ==================== 頁尾 ==================== */
 .site-footer { background: var(--navy-ink); color: var(--on-navy-muted); padding: 4rem 0 6rem; font-size: .9rem; }
 .foot-grid { display: grid; gap: 2rem; padding-bottom: 2.5rem; border-bottom: 1px solid color-mix(in srgb, var(--on-navy) 12%, transparent); }
 .site-footer .logo { color: var(--on-navy); }
-.site-footer h4 { color: var(--on-navy); font: 700 .95rem/1.4 var(--font-heading-tc); letter-spacing: .1em; margin-bottom: .8rem; }
+.site-footer h2 { color: var(--on-navy); font: 700 1rem/1.4 var(--font-heading-tc); margin-bottom: .8rem; }
 .site-footer a:hover { color: var(--brand); }
 .social { display: flex; gap: .75rem; margin-top: 1rem; }
 .social a { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid color-mix(in srgb, var(--on-navy) 25%, transparent); border-radius: 50%; font-size: .78rem; }
 .copy { padding-top: 1.5rem; font-size: .8rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; }
-@media (min-width: 760px) { .foot-grid { grid-template-columns: 1.4fr 1fr 1fr; } .site-footer { padding-bottom: 3rem; } }
+@media (min-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); } .site-footer { padding-bottom: 3rem; } }
 
 /* ---------- 手機底部固定按鈕 ---------- */
-.sticky-cta { position: fixed; inset: auto 0 0; z-index: 40; display: grid; grid-template-columns: auto 1fr; gap: .6rem; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--navy) 96%, transparent); border-top: 1px solid color-mix(in srgb, var(--brand) 40%, transparent); }
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 40; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .6rem; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--navy) 96%, transparent); border-top: 1px solid color-mix(in srgb, var(--brand) 40%, transparent); }
 .sticky-cta .btn { min-height: 46px; }
 @media (min-width: 761px) { .sticky-cta { display: none; } }
 
@@ -349,9 +348,8 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
   <div class="wrap">
     <div class="hero-grid">
       <div class="reveal">
-        <p class="eyebrow">Accounting · Tax · Legal</p>
-        <h1>財稅與法務，<br>交給<em>值得信賴</em>的夥伴。</h1>
-        <p class="hero-lead">恆信聯合事務所由會計師與律師共同執業，從公司設立、每月記帳、年度稅務規劃到合約與爭議處理，一個窗口替您把關，讓您專心經營本業。</p>
+        <h1>財稅與法務，<br>交給值得信賴的夥伴。</h1>
+        <p class="hero-lead">會計師與律師共同執業，從公司設立、記帳報稅到合約法務，一個窗口替您把關。</p>
         <div class="hero-cta">
           <a href="#contact" class="btn btn-gold">預約諮詢</a>
           <a href="#services" class="btn btn-ghost">了解服務</a>
@@ -362,6 +360,7 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
         <figcaption><b>首次諮詢 30 分鐘免費</b>會計師、律師同席，一次釐清方向。</figcaption>
       </figure>
     </div>
+    <!-- 範例內容：上線前請換成真實評價／數據 -->
     <div class="trust" aria-label="事務所實績">
       <div><strong data-count="20">20</strong><span>+ 年執業經驗</span></div>
       <div><strong data-count="800">800</strong><span>+ 企業客戶</span></div>
@@ -375,7 +374,6 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
 <section id="services">
   <div class="wrap">
     <div class="sec-head reveal">
-      <p class="eyebrow">Practice Areas</p>
       <h2>服務領域</h2>
       <p>從新創到中型企業、從個人到家族，我們依您的階段與規模，提供量身打造的專業服務。</p>
     </div>
@@ -384,37 +382,37 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
         <span class="no">01</span>
         <h3>稅務規劃與申報</h3>
         <p>營所稅、營業稅、個人綜所稅申報，結合法規與實務，在合法範圍內降低稅負、避免補稅風險。</p>
-        <a href="#contact">了解更多 <span aria-hidden="true">→</span></a>
+        <a href="#contact">了解更多</a>
       </article>
       <article class="service">
         <span class="no">02</span>
         <h3>記帳代理</h3>
         <p>每月憑證整理、帳務處理、扣繳申報與財務報表，雲端上傳憑證，隨時掌握公司營運數字。</p>
-        <a href="#contact">了解更多 <span aria-hidden="true">→</span></a>
+        <a href="#contact">了解更多</a>
       </article>
       <article class="service">
         <span class="no">03</span>
         <h3>公司設立與變更</h3>
         <p>公司名稱預查、資本額驗資、設立登記、稅籍登記一條龍辦理，另提供增資、遷址、解散清算。</p>
-        <a href="#contact">了解更多 <span aria-hidden="true">→</span></a>
+        <a href="#contact">了解更多</a>
       </article>
       <article class="service">
         <span class="no">04</span>
         <h3>企業法律諮詢</h3>
         <p>合約審閱與擬定、勞資爭議、股東協議、智慧財產保護，事前預防比事後補救更省成本。</p>
-        <a href="#contact">了解更多 <span aria-hidden="true">→</span></a>
+        <a href="#contact">了解更多</a>
       </article>
       <article class="service">
         <span class="no">05</span>
         <h3>財務簽證與查核</h3>
         <p>財務報表簽證、稅務簽證與內部控制建置，協助企業取得銀行融資與投資人信任。</p>
-        <a href="#contact">了解更多 <span aria-hidden="true">→</span></a>
+        <a href="#contact">了解更多</a>
       </article>
       <article class="service">
         <span class="no">06</span>
         <h3>家族傳承與遺贈稅</h3>
         <p>遺產、贈與稅規劃與申報，結合信託、保險與股權安排，讓資產平穩交棒給下一代。</p>
-        <a href="#contact">了解更多 <span aria-hidden="true">→</span></a>
+        <a href="#contact">了解更多</a>
       </article>
     </div>
   </div>
@@ -426,7 +424,6 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
     <div class="img img-why reveal" role="img" aria-label="拱門與金色網格構成的建築意象"></div>
     <div>
       <div class="sec-head reveal">
-        <p class="eyebrow">Why Hengxin</p>
         <h2>為什麼選擇恆信</h2>
         <p>專業是基本，我們更在意的是：讓您在每一次決策前，都有人可以商量。</p>
       </div>
@@ -444,7 +441,6 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
 <section id="process">
   <div class="wrap">
     <div class="sec-head reveal">
-      <p class="eyebrow">How We Work</p>
       <h2>服務流程</h2>
       <p>四個步驟，從第一次聯繫到長期陪伴，每一步都清楚透明。</p>
     </div>
@@ -461,32 +457,31 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
 <section class="team-sec" id="team">
   <div class="wrap">
     <div class="sec-head reveal">
-      <p class="eyebrow">Our Partners</p>
       <h2>專業團隊</h2>
       <p>四位合夥人平均執業逾 15 年，橫跨會計、稅務與商事法律領域。</p>
     </div>
     <div class="team reveal">
       <article class="member">
         <div class="img img-person img-p1" role="img" aria-label="合夥人 林致遠 肖像"></div>
-        <h3>林致遠<span>CHIH-YUAN LIN</span></h3>
+        <h3>林致遠<span>Chih-Yuan Lin</span></h3>
         <p class="role">主持會計師</p>
         <ul><li>中華民國會計師</li><li>稅務簽證 20 年經驗</li></ul>
       </article>
       <article class="member">
         <div class="img img-person img-p2" role="img" aria-label="合夥人 陳書涵 肖像"></div>
-        <h3>陳書涵<span>SHU-HAN CHEN</span></h3>
+        <h3>陳書涵<span>Shu-Han Chen</span></h3>
         <p class="role">合夥律師</p>
         <ul><li>中華民國律師</li><li>公司法、勞動法專長</li></ul>
       </article>
       <article class="member">
         <div class="img img-person img-p3" role="img" aria-label="合夥人 王柏翰 肖像"></div>
-        <h3>王柏翰<span>PO-HAN WANG</span></h3>
+        <h3>王柏翰<span>Po-Han Wang</span></h3>
         <p class="role">合夥會計師</p>
         <ul><li>中華民國會計師</li><li>美國 CPA</li></ul>
       </article>
       <article class="member">
         <div class="img img-person img-p4" role="img" aria-label="合夥人 張雅婷 肖像"></div>
-        <h3>張雅婷<span>YA-TING CHANG</span></h3>
+        <h3>張雅婷<span>Ya-Ting Chang</span></h3>
         <p class="role">稅務顧問</p>
         <ul><li>記帳及報稅代理人</li><li>遺產及贈與稅規劃</li></ul>
       </article>
@@ -498,21 +493,23 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
 <section class="dark" id="testimonials">
   <div class="wrap">
     <div class="sec-head reveal">
-      <p class="eyebrow">Testimonials</p>
       <h2>客戶見證</h2>
     </div>
     <div class="quotes reveal">
+      <!-- 範例內容：上線前請換成真實評價／數據 -->
       <figure class="quote">
         <blockquote>從公司設立到第一年報稅都交給恆信，連股東協議也一起處理好。創業初期最怕踩雷，有他們在真的安心很多。</blockquote>
-        <figcaption><b>軟體新創公司 創辦人</b>合作 3 年・公司設立、記帳、法律諮詢</figcaption>
+        <figcaption><b>軟體新創公司 創辦人</b>合作 3 年，公司設立、記帳、法律諮詢</figcaption>
       </figure>
+      <!-- 範例內容：上線前請換成真實評價／數據 -->
       <figure class="quote">
         <blockquote>國稅局查核時，會計師陪同說明並整理好所有佐證資料，最後沒有補稅。專業又冷靜，讓人很放心。</blockquote>
-        <figcaption><b>製造業 財務經理</b>合作 8 年・稅務簽證</figcaption>
+        <figcaption><b>製造業 財務經理</b>合作 8 年，稅務簽證</figcaption>
       </figure>
+      <!-- 範例內容：上線前請換成真實評價／數據 -->
       <figure class="quote">
         <blockquote>父親的遺產規劃涉及土地與股權，律師與會計師一起開會討論，方案清楚、費用透明，家人之間也少了很多摩擦。</blockquote>
-        <figcaption><b>家族企業 第二代經營者</b>合作 2 年・家族傳承規劃</figcaption>
+        <figcaption><b>家族企業 第二代經營者</b>合作 2 年，家族傳承規劃</figcaption>
       </figure>
     </div>
   </div>
@@ -522,7 +519,6 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
 <section id="faq">
   <div class="wrap faq-grid">
     <div class="sec-head reveal">
-      <p class="eyebrow">FAQ</p>
       <h2>常見問題</h2>
       <p>沒有找到答案嗎？歡迎直接來電 <a href="tel:0212345678" style="border-bottom:1px solid currentColor">02-1234-5678</a>。</p>
     </div>
@@ -556,14 +552,13 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
   <div class="wrap contact-grid">
     <div class="info reveal">
       <div class="sec-head" style="margin-bottom:0">
-        <p class="eyebrow">Contact</p>
         <h2>預約諮詢</h2>
         <p>填寫表單後，我們將於一個工作天內與您聯繫，安排會計師或律師為您服務。</p>
       </div>
       <dl>
-        <div><dt>Phone</dt><dd><a href="tel:0212345678">02-1234-5678</a></dd></div>
-        <div><dt>Address</dt><dd><a href="https://maps.google.com/?q=台北市信義區松仁路100號" target="_blank" rel="noopener">台北市信義區松仁路 100 號 18 樓</a></dd></div>
-        <div><dt>Hours</dt><dd>週一至週五 09:00–18:00<br><span class="muted">週末與夜間可預約</span></dd></div>
+        <div><dt>電話</dt><dd><a href="tel:0212345678">02-1234-5678</a></dd></div>
+        <div><dt>地址</dt><dd><a href="https://maps.google.com/?q=台北市信義區松仁路100號" target="_blank" rel="noopener">台北市信義區松仁路 100 號 18 樓</a></dd></div>
+        <div><dt>營業時間</dt><dd>週一至週五 09:00–18:00<br><span class="muted">週末與夜間可預約</span></dd></div>
       </dl>
       <div class="btns">
         <a href="tel:0212345678" class="btn btn-gold">撥打電話</a>
@@ -622,11 +617,11 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
         </div>
       </div>
       <div>
-        <h4>聯絡資訊</h4>
+        <h2>聯絡資訊</h2>
         <p>台北市信義區松仁路 100 號 18 樓<br>電話 <a href="tel:0212345678">02-1234-5678</a><br>service@hengxin-partners.example</p>
       </div>
       <div>
-        <h4>營業時間</h4>
+        <h2>營業時間</h2>
         <p>週一至週五 09:00–18:00<br>週六、日及國定假日休息<br>（可另約時段）</p>
       </div>
     </div>
