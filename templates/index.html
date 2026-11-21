@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>行業網站模板集</title>
+<meta name="description" content="六款適合各行各業的一頁式網站模板：餐廳、美容美髮、健身、診所、專業事務所、設計工作室。純 HTML，買了就能用。">
+<meta name="theme-color" content="#f6f5f1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f5f1;
+    --surface: #ffffff;
+    --text: #1d1d1b;
+    --muted: #66645e;
+    --line: rgba(29, 29, 27, .12);
+    --brand: #2f5d50;
+    --brand-ink: #ffffff;
+    --radius: 18px;
+    --font: "Inter", "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
+    --pad: clamp(1rem, 5vw, 4rem);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141513; --surface: #1d1e1b; --text: #ecebe6; --muted: #a3a19a;
+      --line: rgba(236, 235, 230, .12); --brand: #7fc3ae; --brand-ink: #10231d;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141513; --surface: #1d1e1b; --text: #ecebe6; --muted: #a3a19a;
+    --line: rgba(236, 235, 230, .12); --brand: #7fc3ae; --brand-ink: #10231d;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { background: var(--bg); color: var(--text); font: 400 1rem/1.7 var(--font); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  a:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; border-radius: 6px; }
+
+  header { padding: clamp(3rem, 9vw, 7rem) var(--pad) clamp(2rem, 5vw, 3.5rem); max-width: 1280px; margin: 0 auto; }
+  .eyebrow { font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--brand); font-weight: 600; }
+  h1 { font-size: clamp(2rem, 5.4vw, 3.8rem); line-height: 1.15; letter-spacing: -.02em; margin-top: .8rem; font-weight: 700; max-width: 16em; }
+  .lead { color: var(--muted); max-width: 38em; margin-top: 1.1rem; font-size: clamp(1rem, 1.6vw, 1.12rem); }
+  .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.6rem; list-style: none; }
+  .chips li { font-size: .85rem; padding: .35rem .8rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+
+  main { max-width: 1280px; margin: 0 auto; padding: 0 var(--pad) 5rem; }
+  .grid { display: grid; gap: clamp(1rem, 2.5vw, 2rem); grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform .35s, box-shadow .35s; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(0,0,0,.35); }
+  .preview { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--bg); border-bottom: 1px solid var(--line); }
+  .preview iframe { position: absolute; top: 0; left: 0; width: 1440px; height: 900px; border: 0; transform-origin: 0 0; pointer-events: none; }
+  .body { padding: 1.2rem 1.3rem 1.4rem; display: flex; flex-direction: column; gap: .5rem; flex: 1; }
+  .body h2 { font-size: 1.15rem; font-weight: 600; }
+  .body p { color: var(--muted); font-size: .93rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .2rem; }
+  .tags span { font-size: .75rem; color: var(--muted); background: var(--bg); border-radius: 6px; padding: .15rem .5rem; }
+  .actions { margin-top: auto; padding-top: .8rem; display: flex; gap: .6rem; }
+  .btn { display: inline-flex; align-items: center; gap: .4rem; text-decoration: none; font-size: .9rem; font-weight: 500; padding: .55rem 1rem; border-radius: 10px; background: var(--brand); color: var(--brand-ink); }
+  .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); }
+
+  .features { margin-top: clamp(3rem, 7vw, 5rem); display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
+  .features div { border-top: 2px solid var(--brand); padding-top: .9rem; }
+  .features h3 { font-size: 1rem; font-weight: 600; }
+  .features p { color: var(--muted); font-size: .92rem; margin-top: .3rem; }
+  footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 2rem var(--pad) 3rem; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<header>
+  <p class="eyebrow">Website Templates · 繁體中文</p>
+  <h1>六款行業網站模板，換上你的文字就能上線。</h1>
+  <p class="lead">純 HTML 一頁式網站，不用安裝任何軟體、不需要後台。改文字、換照片、調顏色，就能交給店家使用，也能免費部署到 GitHub Pages 或 Netlify。</p>
+  <ul class="chips">
+    <li>手機版完整適配</li><li>一處改色，全站換色</li><li>內建 SEO 結構化資料</li><li>LINE／電話／地圖按鈕</li><li>無圖片授權問題</li>
+  </ul>
+</header>
+
+<main>
+  <div class="grid" id="grid"></div>
+
+  <section class="features" aria-label="模板特色">
+    <div><h3>好改</h3><p>顏色和字型都集中在檔案開頭的「主題設定」，每個區塊都有中文註解標示。</p></div>
+    <div><h3>好上線</h3><p>只有一個 HTML 檔，丟到任何主機都能跑，附逐步部署說明。</p></div>
+    <div><h3>會帶客人</h3><p>每個模板都有預約或聯絡表單、手機版底部行動按鈕，以及 Google 看得懂的商家資料。</p></div>
+    <div><h3>可商用</h3><p>購買後可以用在自己的網站或客戶的網站上，詳見授權條款。</p></div>
+  </section>
+</main>
+
+<footer>© <span id="y"></span> 行業網站模板集</footer>
+
+<script>
+  const items = [
+    { slug: 'restaurant', href: 'restaurant/', name: '日和食堂', type: '餐廳／咖啡廳', desc: '分頁菜單、即時「營業中」標示、線上訂位表單。', tags: ['餐飲', '咖啡廳', '早午餐'] },
+    { slug: 'beauty', href: 'beauty/', name: '霧光 Mist', type: '美容美髮／美甲', desc: '價目表、設計師介紹、可篩選的作品集、LINE 預約。', tags: ['美髮', '美甲', '美容'] },
+    { slug: 'fitness', href: 'fitness/', name: 'CORE 52', type: '健身房／私人教練', desc: '每週課表、月繳／年繳切換的方案價格、免費體驗表單。', tags: ['健身', '瑜珈', '教練'] },
+    { slug: 'clinic', href: 'clinic/', name: '安和牙醫', type: '診所', desc: '門診時間表（自動標示今天）、診療項目、就診須知。', tags: ['牙醫', '診所', '醫療'] },
+    { slug: 'consulting', href: 'consulting/', name: '恆信聯合事務所', type: '會計師／律師／顧問', desc: '服務流程、專業團隊、常見問題、預約諮詢表單。', tags: ['會計', '法律', '顧問'] },
+    { slug: 'studio', href: '../', name: 'Lumen Studio', type: '設計工作室／作品集', desc: '編輯風格排版、作品展示、捲動動畫、自動深色模式。', tags: ['設計', '作品集', '工作室'] },
+  ];
+  const grid = document.getElementById('grid');
+  grid.innerHTML = items.map(i => `
+    <article class="card">
+      <div class="preview"><iframe src="${i.href}" title="${i.name} 預覽" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div>
+      <div class="body">
+        <h2>${i.type}</h2>
+        <p>${i.name} — ${i.desc}</p>
+        <div class="tags">${i.tags.map(t => `<span>${t}</span>`).join('')}</div>
+        <div class="actions"><a class="btn" href="${i.href}">查看 Demo</a></div>
+      </div>
+    </article>`).join('');
+  const fit = () => document.querySelectorAll('.preview').forEach(p => {
+    p.querySelector('iframe').style.transform = `scale(${p.clientWidth / 1440})`;
+  });
+  new ResizeObserver(fit).observe(grid);
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

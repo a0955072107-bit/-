@@ -1,3 +1,20 @@
+# 行業網站模板集
+
+| 路徑 | 內容 |
+|---|---|
+| `index.html` | Lumen Studio 設計工作室模板（說明見下方） |
+| `templates/` | 展示頁 + 5 款行業模板：餐廳、美容美髮、健身、診所、專業事務所 |
+| `templates/_docs/` | 隨商品附上的使用說明、授權條款 |
+| `templates/SPEC.md` | 模板製作規格（新增模板時遵循） |
+| `scripts/package.sh` | 打包成可販售的 zip → `dist/` |
+| `sales/上架文案.md` | 定價、平台、商品文案、Etsy 標籤 |
+
+```bash
+bash scripts/package.sh   # 產生 dist/*.zip
+```
+
+---
+
 # Lumen Studio — 一頁式網站
 
 極簡、編輯風格的一頁式網站，純 HTML + CSS + 少量 JavaScript，不需要任何建置工具。
