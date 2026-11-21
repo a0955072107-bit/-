@@ -181,8 +181,8 @@ section { padding: clamp(4.5rem, 11vh, 7.5rem) var(--pad); position: relative; }
 .img.no-bloom::before, .img.no-bloom::after { display: none; }
 /* 共用：花莖線條與葉片（放在背景最上層） */
 .img { --stems:
-    linear-gradient(96deg, transparent calc(50% - 1px), var(--leaf) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px)) no-repeat 48% 100% / 30% 55%,
-    linear-gradient(80deg, transparent calc(50% - 1px), var(--leaf) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px)) no-repeat 62% 100% / 30% 46%,
+    linear-gradient(96deg, transparent calc(50% - 1px), var(--leaf) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px)) no-repeat 48% 100% / 30% 66%,
+    linear-gradient(80deg, transparent calc(50% - 1px), var(--leaf) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px)) no-repeat 62% 100% / 30% 52%,
     radial-gradient(50% 50%, var(--leaf) 0 96%, transparent 100%) no-repeat 36% 72% / 14% 7%,
     radial-gradient(50% 50%, var(--leaf-light) 0 96%, transparent 100%) no-repeat 64% 80% / 12% 6%; }
 
@@ -212,7 +212,7 @@ section { padding: clamp(4.5rem, 11vh, 7.5rem) var(--pad); position: relative; }
 /* 換成照片：.img-store { background: url(images/storefront.jpg) center/cover; }（並加上 no-bloom） */
 .img-store { background:
     repeating-linear-gradient(90deg, var(--brand) 0 9%, var(--petal-cream) 9% 18%) no-repeat 50% 14% / 100% 16%,
-    radial-gradient(circle at 9% 100%, var(--brand) 0 60%, transparent 62%) repeat-x 0 23% / 18% 4%,
+    radial-gradient(circle at 50% 0%, var(--brand) 0 70%, transparent 72%) repeat-x 0 26.5% / 18% 6%,
     linear-gradient(color-mix(in srgb, var(--petal-butter) 70%, var(--petal-cream)), color-mix(in srgb, var(--petal-butter) 50%, var(--kraft))) no-repeat 22% 70% / 40% 46%,
     linear-gradient(var(--forest-2), var(--forest-2)) no-repeat 82% 78% / 24% 62%,
     linear-gradient(var(--forest), var(--forest)); --c1: var(--petal-poppy); --c2: var(--forest); --c3: var(--petal-deep); --s1: 16%; --x1: 14%; --y1: 66%; --s2: 13%; --x2: 30%; --y2: 70%; --d1: var(--petal-marigold); }
@@ -267,7 +267,7 @@ html:not(.js) .tablist { display: none; }
 .plan h3 { font-size: 1.7rem; }
 .plan .price { font: 500 2rem/1 var(--font-body); color: var(--accent); }
 .plan .price small { font: 400 .9rem/1 var(--font-body); color: var(--on-forest-muted); }
-.plan ul { display: grid; gap: .45rem; font-size: .94rem; color: var(--on-forest-muted); flex: 1; }
+.plan ul { display: grid; align-content: start; gap: .45rem; font-size: .94rem; color: var(--on-forest-muted); flex: 1; }
 .plan li { padding-left: 1.2rem; position: relative; }
 .plan li::before { content: ""; position: absolute; left: 0; top: .7em; width: .55rem; height: 1px; background: var(--accent); }
 .plan.featured { background: var(--on-forest); color: var(--text); border-color: var(--on-forest); }
@@ -279,7 +279,7 @@ html:not(.js) .tablist { display: none; }
 .plans-note { margin-top: 1.8rem; text-align: center; font-size: .92rem; }
 
 /* ---------- 區塊：婚禮與活動 ---------- */
-.events { display: grid; gap: clamp(2rem, 5vw, 4rem); grid-template-columns: minmax(0, 1fr); }
+.events { display: grid; gap: clamp(2rem, 5vw, 4rem); grid-template-columns: minmax(0, 1fr); align-items: start; }
 .events .img-ev { aspect-ratio: 5 / 4; margin-bottom: 1.8rem; }
 .services { display: grid; gap: 1.2rem; margin-top: 1.6rem; }
 .services li { border-top: 1px solid var(--line); padding-top: 1rem; }
@@ -775,11 +775,11 @@ html:not(.js) .tablist { display: none; }
         <h2>訂購花束</h2>
         <p>填好收件資料送出後，我們會在一小時內以電話或 LINE 確認，並提供轉帳或刷卡連結。</p>
       </div>
-      <!-- 花卡預覽：右邊的花卡內容輸入時會即時更新 -->
+      <!-- 花卡預覽：在表單的「花卡內容」輸入時會即時更新 -->
       <div class="cardprev" aria-hidden="true">
         <svg viewBox="0 0 120 120"><use href="#poppy" fill="url(#gPoppy)"/></svg>
         <p class="to">給收到花的你</p>
-        <p class="msg" id="card-preview" data-ph="在右邊寫下想說的話，我們會用手寫抄在花卡上。">在右邊寫下想說的話，我們會用手寫抄在花卡上。</p>
+        <p class="msg" id="card-preview" data-ph="在「花卡內容」寫下想說的話，我們會用手寫抄在花卡上。">在「花卡內容」寫下想說的話，我們會用手寫抄在花卡上。</p>
         <p class="sign">野花小舍 手寫代筆</p>
       </div>
     </div>
