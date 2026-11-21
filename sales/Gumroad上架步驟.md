@@ -30,6 +30,14 @@
 | 補習班 | `…/templates/en/education/` | `…/templates/education/` |
 | 室內設計 | `…/templates/en/interior/` | `…/templates/interior/` |
 | 烘焙 | `…/templates/en/bakery/` | `…/templates/bakery/` |
+| 手搖飲 | `…/templates/en/tea/` | `…/templates/tea/` |
+| 汽車 | `…/templates/en/auto/` | `…/templates/auto/` |
+| 清潔 | `…/templates/en/cleaning/` | `…/templates/cleaning/` |
+| 花店 | `…/templates/en/florist/` | `…/templates/florist/` |
+| 瑜珈 | `…/templates/en/yoga/` | `…/templates/yoga/` |
+| 露營 | `…/templates/en/camping/` | `…/templates/camping/` |
+| 個人品牌 | `…/templates/en/freelancer/` | `…/templates/freelancer/` |
+| App／SaaS | `…/templates/en/saas/` | `…/templates/saas/` |
 
 上架前每個連結都打開確認一次。
 
@@ -47,14 +55,14 @@
 ```bash
 bash scripts/package.sh
 ```
-`dist/` 會產生 14 個單款 zip 和 1 個全套 zip，每包都附英文版和繁體中文版。
+`dist/` 會產生 22 個單款 zip 和 1 個全套 zip，每包都附英文版和繁體中文版。
 
 ---
 
 ## 1. 上架順序
 
 1. 先上 **網站客製服務**。其他商品的說明會連到它，所以先上才拿得到網址。
-2. 再上 14 款單一模板（建議先上最有把握的 6 款，其他陸續上，讓商店持續有新品）。
+2. 再上 22 款單一模板（建議先上最有把握的 6 款，其他陸續上，讓商店持續有新品）。
 3. 最後上 **全套組合包**（Bundle）。
 
 ---
@@ -138,7 +146,7 @@ Thanks! We'll email you within 1 business day with a short form to collect your 
 
 ---
 
-## 4. 單一模板（14 款）
+## 4. 單一模板（22 款）
 
 每款的共用設定：
 
@@ -605,24 +613,272 @@ What you get
 [貼上「共用文字」]
 ```
 
+### 4-15. 手搖飲／茶飲店
+
+- **Name**：`Bubble Tea Shop Website Template (English + 繁體中文) — One-Page HTML`
+- **URL**：`bubble-tea-shop-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`bubble tea website`, `cafe website`, `drink menu`, `html template`, `website template`
+- **Description**：
+```
+A bold, poppy one-page website for bubble tea shops and tea bars. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Menu tabs with size prices and tags
+- Drink customiser: sweetness, ice and toppings with live price
+- Multi-branch locations with hours and maps
+- Delivery app buttons and loyalty info
+- Franchise enquiry form
+- SEO-ready with schema.org data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+手搖飲／茶飲店網站模板。功能：分頁菜單、甜度冰塊配料客製試算、多門市據點、外送平台按鈕、集點說明、加盟洽詢表單。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-16. 汽車美容／保養廠
+
+- **Name**：`Car Detailing & Auto Repair Website Template (English + 繁體中文)`
+- **URL**：`auto-care-garage-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`auto repair website`, `car detailing`, `garage website`, `html template`, `website template`
+- **Description**：
+```
+A precise, premium one-page website for car detailing studios and garages. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Price list by vehicle size in tabs
+- Service mileage reminder calculator
+- Before and after gallery
+- Technician team and FAQ
+- Service booking form with plate and model
+- SEO-ready with schema.org AutoRepair data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+汽車美容／保養廠網站模板。功能：依車型分頁的價目表、保養里程提醒、施工前後對比、技師團隊、線上預約表單、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-17. 居家清潔
+
+- **Name**：`Home Cleaning Service Website Template with Instant Quote (English + 繁體中文)`
+- **URL**：`home-cleaning-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`cleaning website`, `maid service`, `home services`, `html template`, `website template`
+- **Description**：
+```
+A fresh, trustworthy one-page website for home and office cleaning services. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Instant quote calculator by size, rooms and add-ons
+- Room-by-room cleaning checklist
+- 4-step process and service areas
+- Reviews and FAQ
+- Booking form that carries over the quote
+- SEO-ready with schema.org data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+居家清潔網站模板。功能：即時估價計算機、各空間清潔項目、服務流程、服務區域、評價、自動帶入估價的預約表單。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-18. 花店
+
+- **Name**：`Florist Website Template (English + 繁體中文) — One-Page HTML`
+- **URL**：`florist-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`florist website`, `flower shop`, `flower delivery`, `html template`, `website template`
+- **Description**：
+```
+A lush, botanical one-page website for florists and flower studios. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Bouquet tabs with size pricing
+- Delivery date logic with same-day cut-off
+- Monthly flower subscription plans
+- Wedding and event florals enquiry
+- Gift card message with character counter
+- SEO-ready with schema.org Florist data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+花店網站模板。功能：花束分頁與價格、配送日期判斷（當日截止時間）、每月訂花方案、婚禮活動花藝、花卡字數提示、訂購表單。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-19. 瑜珈／皮拉提斯
+
+- **Name**：`Yoga & Pilates Studio Website Template (English + 繁體中文)`
+- **URL**：`yoga-pilates-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`yoga website`, `pilates studio`, `wellness website`, `html template`, `website template`
+- **Description**：
+```
+A serene, sculptural one-page website for yoga and pilates studios. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Day-by-day class timetable with today selected
+- Class types with level and duration
+- Intro offers and class packs
+- Teacher profiles and studio gallery
+- Intro class booking form
+- SEO-ready with schema.org data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+瑜珈／皮拉提斯網站模板。功能：依星期切換的課表（自動選今天）、課程類型、體驗與課程方案、老師介紹、空間介紹、體驗課預約。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-20. 露營區／豪華露營
+
+- **Name**：`Campsite & Glamping Website Template (English + 繁體中文)`
+- **URL**：`campsite-glamping-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`campground website`, `glamping website`, `outdoor website`, `html template`, `website template`
+- **Description**：
+```
+An adventurous one-page website for campsites and glamping sites. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Site types with weekday and weekend rates
+- Clickable camp map that highlights each site
+- Stay estimate from your dates
+- Facilities, camp rules and gear tips
+- Reservation form
+- SEO-ready with schema.org Campground data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+露營區／豪華露營網站模板。功能：營位類型與平假日價格、可點選的營地地圖、住宿費用試算、營地設施、營地規範、裝備建議、訂位表單。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-21. 個人品牌／自由工作者
+
+- **Name**：`Freelancer Portfolio & Résumé Website Template (English + 繁體中文)`
+- **URL**：`freelancer-portfolio-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`portfolio website`, `resume website`, `freelancer`, `personal website`, `html template`
+- **Description**：
+```
+A confident, modern one-page website for freelancers, designers and developers. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Bento-style case study grid
+- Services with starting prices
+- Skills, experience timeline and résumé download
+- Light / dark mode toggle
+- Project enquiry form
+- SEO-ready with schema.org Person data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+個人品牌／自由工作者網站模板。功能：作品集、服務與起價、技能與經歷、履歷下載、合作流程、深淺色模式切換、合作洽談表單。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
+### 4-22. App／軟體產品登陸頁
+
+- **Name**：`SaaS & App Landing Page Template (English + 繁體中文) — One-Page HTML`
+- **URL**：`app-saas-landing-template`
+- **Cover**：還沒做，Canva 依同樣版型做一張
+- **Tags**：`saas landing page`, `app landing page`, `startup website`, `html template`, `landing page`
+- **Description**：
+```
+A crisp product-marketing landing page for apps and SaaS products. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): [英文 Demo 網址]
+🔗 Live demo (中文): [中文 Demo 網址]
+
+Features
+- Product UI mock built in HTML (easy to swap for screenshots)
+- Feature sections with mini UI previews
+- Pricing tiers with monthly / yearly toggle
+- Feature comparison table
+- Email sign-up CTA band
+- SEO-ready with schema.org SoftwareApplication data
+
+What you get
+- English and Traditional Chinese versions
+- Step-by-step guide and commercial licence
+
+──────────
+App／軟體產品登陸頁模板。功能：產品介面展示、功能介紹、使用流程、月繳／年繳切換的方案價格、功能比較表、Email 訂閱。附英文版與繁體中文版、中文教學、商業授權。
+
+[貼上「共用文字」]
+```
+
 ---
 
 ## 5. 全套組合包（最後上）
 
 Gumroad 可以建立 **Bundle**，把已上架的商品組合起來賣。如果後台沒有 Bundle，就另外上一個商品，上傳 `all-templates-bundle.zip`。
 
-- **Name**：`All 14 Business Website Templates Bundle (English + 繁體中文)`
+- **Name**：`All 22 Business Website Templates Bundle (English + 繁體中文)`
 - **URL**：`website-templates-bundle`
-- **Price**：`99`（單買合計 $336，等於打 3 折）
+- **Price**：`129`（單買合計 $528，約打 2.5 折）
 - **Cover**：用 Canva 把多張封面拼成一張
 - **Description**：
 ```
-Every template in one bundle: Restaurant, Salon, Gym, Clinic, Consulting Firm, Design Studio, B&B, Real Estate, Wedding, Photographer, Pet Grooming, Tutoring, Interior Design and Bakery. Save over 70% versus buying separately.
+All 22 templates in one bundle, from restaurants, salons and clinics to campsites, florists and SaaS products. Save over 75% versus buying separately.
 
 Perfect for freelancers who build sites for local businesses: one licence per template per website (see LICENSE.md).
 
 ──────────
-十四款模板一次帶走：餐廳、美業、健身、診所、事務所、工作室、民宿、房仲、婚禮、攝影、寵物、補習班、室內設計、烘焙，比單買省超過七成。適合幫在地店家接案的人。
+二十二款模板一次帶走，從餐廳、美業、診所到露營、花店、軟體產品都有，比單買省超過七成五。適合幫在地店家接案的人。
 
 [貼上「共用文字」]
 ```

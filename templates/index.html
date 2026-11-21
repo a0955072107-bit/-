@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>行業網站模板集</title>
-<meta name="description" content="十四款適合各行各業的一頁式網站模板：餐廳、美業、健身、診所、事務所、工作室、民宿、房仲、婚禮、攝影、寵物、補習班、室內設計、烘焙。純 HTML，附中英文版。">
+<meta name="description" content="二十二款適合各行各業的一頁式網站模板：餐廳、手搖飲、美業、健身、瑜珈、診所、事務所、民宿、露營、房仲、婚禮、攝影、寵物、補習班、室內設計、烘焙、花店、汽車、清潔、個人品牌、軟體產品。純 HTML，附中英文版。">
 <meta name="theme-color" content="#f6f5f1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,7 +76,7 @@
 </head>
 <body>
 <header>
-  <h1>十四款行業網站模板，換上你的文字就能上線。</h1>
+  <h1>二十二款行業網站模板，換上你的文字就能上線。</h1>
   <p class="lead">純 HTML 一頁式網站，不用安裝任何軟體、不需要後台。改文字、換照片、調顏色，就能交給店家使用，也能免費部署到 GitHub Pages 或 Netlify。</p>
   <ul class="chips">
     <li>手機版完整適配</li><li>一處改色，全站換色</li><li>內建 SEO 結構化資料</li><li>LINE／電話／地圖按鈕</li><li>無圖片授權問題</li>
@@ -114,6 +114,14 @@
     { slug: 'education', href: 'education/', name: '青禾學苑', type: '補習班／才藝教室', desc: '分年級課程、每週課表、師資介紹、免費試聽預約。', tags: ['補習班', '教育', '才藝'] },
     { slug: 'interior', href: 'interior/', name: '木與光', type: '室內設計', desc: '可篩選案例、裝修前後對比滑桿、收費方式與流程。', tags: ['室內設計', '裝修', '統包'] },
     { slug: 'bakery', href: 'bakery/', name: '小麥日常', type: '烘焙／甜點店', desc: '本週出爐表、商品分頁、自動計算金額的預訂表單。', tags: ['烘焙', '甜點', '預購'] },
+    { slug: 'tea', href: 'tea/', name: '沐茶', type: '手搖飲／茶飲店', desc: '分頁菜單、甜度冰塊客製試算、多門市據點、加盟洽詢。', tags: ['手搖飲','茶飲','飲料'] },
+    { slug: 'auto', href: 'auto/', name: '極光車研', type: '汽車美容／保養廠', desc: '依車型分頁的價目表、保養里程提醒、施工前後對比、線上預約。', tags: ['汽車','保養','美容'] },
+    { slug: 'cleaning', href: 'cleaning/', name: '淨日', type: '居家清潔', desc: '即時估價計算機、各空間清潔項目、服務區域、預約表單。', tags: ['清潔','打掃','到府'] },
+    { slug: 'florist', href: 'florist/', name: '野花小舍', type: '花店', desc: '花束分頁、配送日期判斷、每月訂花、花卡字數提示。', tags: ['花店','花束','訂花'] },
+    { slug: 'yoga', href: 'yoga/', name: '息 Breathe', type: '瑜珈／皮拉提斯', desc: '依星期切換的課表、課程方案、老師介紹、體驗課預約。', tags: ['瑜珈','皮拉提斯','身心'] },
+    { slug: 'camping', href: 'camping/', name: '星野營地', type: '露營區／豪華露營', desc: '營位與價格、可點選的營地地圖、住宿費用試算、營地規範。', tags: ['露營','豪華露營','戶外'] },
+    { slug: 'freelancer', href: 'freelancer/', name: '陳以恩', type: '個人品牌／自由工作者', desc: '作品集、技能與經歷、合作流程、深淺色模式切換。', tags: ['接案','履歷','作品集'] },
+    { slug: 'saas', href: 'saas/', name: '排排', type: 'App／軟體產品', desc: '產品介面展示、功能介紹、月繳／年繳切換的方案價格、比較表。', tags: ['軟體','App','新創'] },
   ];
   const grid = document.getElementById('grid');
   grid.innerHTML = items.map(i => `
