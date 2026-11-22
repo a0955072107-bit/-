@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>青葉総合事務所｜税理士・弁護士が連携する日本橋の会計・法律事務所</title>
+<meta name="description" content="青葉総合事務所は、東京・日本橋で税理士と弁護士が同じチームで対応する会計・法律事務所です。税務申告、記帳代行、会社設立、企業法務、相続・事業承継まで、お金と契約のご相談をワンストップでお受けします。">
+<meta property="og:title" content="青葉総合事務所｜税理士・弁護士のワンストップ事務所">
+<meta property="og:description" content="税務申告、記帳代行、会社設立、企業法務。税理士と弁護士が同じ窓口でご相談をお受けします。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#142338">
+<!-- 多言語版（SEO）：公開後は href を完全な URL に置き換えてください。例：https://www.yourbusiness.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   テーマ設定：ここを変えるだけでサイト全体の配色とフォントが変わります
+   ============================================================ */
+:root {
+  --brand: #b8964f;          /* ブランドカラー：落ち着いたゴールド。ボタンやアクセントの線に使います */
+  --brand-ink: #142338;      /* ブランドカラーの上に置く文字色（深いネイビー、AA のコントラスト） */
+  --brand-deep: #7a5d22;     /* 濃いゴールド：明るい背景の上のゴールドの文字（AA のコントラスト） */
+  --navy: #142338;           /* 深いネイビー：暗いセクションの背景 */
+  --navy-ink: #0b1524;       /* さらに濃いインクブルー：フッターと、画像グラデーションの暗い側 */
+  --on-navy: #f4efe3;        /* 暗いセクションのメインの文字色 */
+  --on-navy-muted: #b9c1cf;  /* 暗いセクションの補足テキスト */
+  --bg: #f7f4ec;             /* ページ背景：アイボリー */
+  --surface: #fffdf8;        /* カードとフォームの背景 */
+  --text: #1a2232;           /* メインの文字色 */
+  --muted: #565d6b;          /* 補足テキストの色 */
+  --line: #d9d2c1;           /* 細い線と枠線 */
+  --radius: 4px;             /* 角の丸み（小さめにすると堅実な印象になります） */
+  --font-heading: "DM Serif Display", "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif; /* 数字、ロゴマーク、アクセント用の装飾フォント */
+  --font-title: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;     /* 見出し、質問、引用のフォント */
+  --font-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif; /* 本文フォント */
+  --maxw: 1200px;            /* コンテンツの最大幅 */
+  --pad: clamp(1.25rem, 5vw, 3rem); /* ページの左右の余白 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1.0625rem/1.7 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+img { max-width: 100%; }
+h1, h2, h3 { font-family: var(--font-title); font-weight: 700; line-height: 1.25; letter-spacing: -.01em; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 2px; }
+.wrap { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 100; }
+.skip:focus { left: 1rem; }
+
+/* ---------- ボタン ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .75rem 1.6rem; border-radius: var(--radius); font-weight: 500; border: 1px solid transparent; transition: background .25s, color .25s, border-color .25s, transform .25s; cursor: pointer; font-size: .95rem; font-family: inherit; }
+.btn:active { transform: translateY(1px) scale(.99); }
+a:active { opacity: .8; }
+.btn-gold { background: var(--brand); color: var(--brand-ink); }
+.btn-gold:hover { background: color-mix(in srgb, var(--brand) 82%, var(--on-navy)); transform: translateY(-1px); }
+.btn-ghost { border-color: color-mix(in srgb, var(--on-navy) 45%, transparent); color: var(--on-navy); }
+.btn-ghost:hover { border-color: var(--brand); color: var(--brand); }
+.btn-navy { background: var(--navy); color: var(--on-navy); }
+.btn-navy:hover { background: var(--navy-ink); }
+.btn-line { border-color: var(--navy); color: var(--navy); }
+.btn-line:hover { background: var(--navy); color: var(--on-navy); }
+
+/* ---------- セクション共通のスタイル ---------- */
+section { padding-block: clamp(4.5rem, 10vw, 8rem); }
+.sec-head { display: grid; gap: 1.25rem; margin-bottom: clamp(2.5rem, 6vw, 4rem); max-width: 46rem; }
+.sec-head h2 { font-size: clamp(1.75rem, 4vw, 2.6rem); }
+.sec-head p { color: var(--muted); }
+.dark { background: var(--navy); color: var(--on-navy); }
+.dark .sec-head p, .dark .muted { color: var(--on-navy-muted); }
+
+/* ==================== アートプレースホルダー（仮の画像） ==================== */
+/* .img はすべて CSS で描いた仮の画像です。写真に差し替える場合：該当するクラスを
+   .img-xx { background: url(images/xxx.jpg) center/cover; } に変更し、その ::before / ::after の指定を削除してください */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); background: linear-gradient(160deg, var(--navy) 0%, var(--navy-ink) 100%); isolation: isolate; }
+.img::before, .img::after { content: ""; position: absolute; inset: 0; z-index: -1; }
+/* 写真に差し替える場合：.img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero { min-height: 100%; aspect-ratio: 4 / 5; }
+.img-hero::before { /* 柱 */
+  background:
+    repeating-linear-gradient(90deg, transparent 0 11%, color-mix(in srgb, var(--brand) 55%, transparent) 11% calc(11% + 1px), transparent calc(11% + 1px) 14%, color-mix(in srgb, var(--brand) 30%, transparent) 14% calc(14% + 1px), transparent calc(14% + 1px) 25%);
+  -webkit-mask: linear-gradient(to bottom, transparent 0 22%, var(--navy) 22% 84%, transparent 84%);
+          mask: linear-gradient(to bottom, transparent 0 22%, var(--navy) 22% 84%, transparent 84%);
+}
+.img-hero::after { /* 破風と土台 */
+  background:
+    linear-gradient(to top right, transparent calc(50% - 1px), color-mix(in srgb, var(--brand) 70%, transparent) 50%, transparent calc(50% + 1px)) 10% 8% / 40% 13% no-repeat,
+    linear-gradient(to top left, transparent calc(50% - 1px), color-mix(in srgb, var(--brand) 70%, transparent) 50%, transparent calc(50% + 1px)) 90% 8% / 40% 13% no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 50% 21.5% / 84% 1px no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 50% 85% / 90% 1px no-repeat,
+    linear-gradient(color-mix(in srgb, var(--brand) 50%, transparent), color-mix(in srgb, var(--brand) 50%, transparent)) 50% 88% / 96% 1px no-repeat,
+    radial-gradient(circle at 70% 30%, color-mix(in srgb, var(--brand) 22%, transparent), transparent 55%);
+}
+/* 写真に差し替える場合：.img-why { background: url(images/office.jpg) center/cover; } */
+.img-why { aspect-ratio: 4 / 5; }
+.img-why::before { /* 細いゴールドのグリッド */
+  background:
+    repeating-linear-gradient(0deg, transparent 0 39px, color-mix(in srgb, var(--brand) 16%, transparent) 39px 40px),
+    repeating-linear-gradient(90deg, transparent 0 39px, color-mix(in srgb, var(--brand) 16%, transparent) 39px 40px);
+}
+.img-why::after { /* アーチ */
+  inset: 18% 22% 0;
+  border: 1px solid var(--brand); border-bottom: 0; border-radius: 999px 999px 0 0;
+  box-shadow: inset 0 0 0 14px var(--navy-ink), inset 0 0 0 15px color-mix(in srgb, var(--brand) 55%, transparent);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 18%, transparent), transparent 70%);
+}
+/* 写真に差し替える場合：.img-p1〜.img-p4 { background: url(images/partner-1.jpg) center/cover; } */
+.img-person { aspect-ratio: 4 / 5; }
+.img-person::before { /* 抽象的なポートレート：頭と肩 */
+  background:
+    radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--on-navy) 26%, transparent) 0 15%, transparent calc(15% + 1px)),
+    radial-gradient(ellipse 42% 30% at 50% 100%, color-mix(in srgb, var(--on-navy) 20%, transparent) 0 99%, transparent 100%);
+}
+.img-person::after { background: repeating-linear-gradient(var(--deg, 135deg), transparent 0 18px, color-mix(in srgb, var(--brand) 18%, transparent) 18px 19px); }
+.img-p2 { --deg: 45deg; background: linear-gradient(200deg, color-mix(in srgb, var(--navy) 80%, var(--brand)), var(--navy-ink)); }
+.img-p3 { --deg: 90deg; }
+.img-p4 { --deg: 0deg; background: linear-gradient(140deg, color-mix(in srgb, var(--navy) 85%, var(--brand)), var(--navy-ink)); }
+
+/* ==================== ヘッダー ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .35s, box-shadow .35s; color: var(--on-navy); }
+.site-header.scrolled { background: color-mix(in srgb, var(--navy) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 color-mix(in srgb, var(--brand) 35%, transparent); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4.5rem; }
+.logo { display: flex; align-items: center; gap: .7rem; line-height: 1.15; }
+.logo-mark { width: 2.4rem; height: 2.4rem; display: grid; place-items: center; border: 1px solid var(--brand); color: var(--brand); font: 1.25rem/1 var(--font-heading); }
+.logo b { font: 700 1.05rem/1.2 var(--font-title); letter-spacing: 0; display: block; }
+.logo small { font: .78rem/1.2 var(--font-body); color: var(--on-navy-muted); }
+.menu { display: flex; align-items: center; gap: clamp(1rem, 2.4vw, 2rem); font-size: .92rem; }
+.menu a:not(.btn) { position: relative; padding-block: .3rem; }
+.menu a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--brand); transform: scaleX(0); transition: transform .3s; }
+.menu a:not(.btn):hover::after { transform: scaleX(1); }
+.menu .btn { min-height: 42px; padding: .55rem 1.2rem; }
+.burger { display: none; width: 44px; height: 44px; background: none; border: 1px solid color-mix(in srgb, var(--on-navy) 35%, transparent); border-radius: var(--radius); color: inherit; cursor: pointer; }
+.burger span, .burger span::before, .burger span::after { display: block; width: 18px; height: 1.5px; background: currentColor; margin: auto; position: relative; transition: transform .3s, background .3s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* JavaScript がない場合はメニューを次の行に折り返して表示し、JS があるときはハンバーガーメニューにまとめます */
+  html:not(.js) *:has(> .menu) { flex-wrap: wrap; }
+  html:not(.js) header:has(.menu) { position: sticky; background: var(--navy); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; justify-content: flex-start; gap: .4rem 1rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: 4.5rem 0 auto; flex-direction: column; align-items: stretch; gap: 0; background: var(--navy); padding: .5rem var(--pad) 1.5rem; border-top: 1px solid color-mix(in srgb, var(--brand) 35%, transparent); transform: translateY(-120%); visibility: hidden; transition: transform .35s, visibility .35s; }
+  .js .menu.open { transform: none; visibility: visible; }
+  .js .menu a:not(.btn) { padding: .95rem 0; border-bottom: 1px solid color-mix(in srgb, var(--on-navy) 12%, transparent); }
+  .js .menu .btn { margin-top: 1rem; min-height: 48px; }
+}
+
+/* ==================== ファーストビュー ==================== */
+.hero { background: radial-gradient(ellipse at 85% 10%, color-mix(in srgb, var(--brand) 14%, transparent), transparent 55%), var(--navy); padding-top: clamp(6.5rem, 11vw, 8rem); padding-bottom: 0; }
+.hero-grid { display: grid; gap: clamp(2.5rem, 6vw, 5rem); align-items: center; }
+.hero h1 { font-size: clamp(1.8rem, 3.8vw, 3.1rem); line-height: 1.35; margin: 1.5rem 0; letter-spacing: normal; }
+.hero-lead { color: var(--on-navy-muted); font-size: clamp(1rem, 1.6vw, 1.1rem); max-width: 34rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 2.25rem; }
+.hero-art { position: relative; }
+.hero-art .img { box-shadow: 0 30px 60px -30px var(--navy-ink); outline: 1px solid color-mix(in srgb, var(--brand) 35%, transparent); outline-offset: 12px; }
+.hero-art figcaption { position: absolute; left: -1px; bottom: 1.5rem; background: var(--surface); color: var(--text); padding: 1rem 1.25rem; font-size: .85rem; line-height: 1.5; border-left: 3px solid var(--brand); max-width: 17rem; }
+.hero-art figcaption b { font-family: var(--font-title); display: block; font-size: 1rem; }
+.trust { margin-top: clamp(3rem, 6vw, 4.5rem); border-top: 1px solid color-mix(in srgb, var(--brand) 35%, transparent); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.trust div { padding: 1.75rem 1rem 2rem; text-align: center; }
+.trust div + div { border-left: 1px solid color-mix(in srgb, var(--on-navy) 12%, transparent); }
+.trust div:nth-child(3) { border-left: 0; }
+.trust div:nth-child(n+3) { border-top: 1px solid color-mix(in srgb, var(--on-navy) 12%, transparent); }
+.trust strong { display: block; font: clamp(2.1rem, 5vw, 3rem)/1.1 var(--font-heading); color: var(--brand); }
+.trust span { font-size: .85rem; color: var(--on-navy-muted); }
+@media (min-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); }
+  .trust { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .trust div:nth-child(3) { border-left: 1px solid color-mix(in srgb, var(--on-navy) 12%, transparent); }
+  .trust div:nth-child(n+3) { border-top: 0; }
+}
+@media (max-width: 899px) { .hero-art { max-width: 26rem; } .hero-art .img { aspect-ratio: 4 / 3; } }
+
+/* ==================== 業務内容 ==================== */
+.services { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.service { background: var(--surface); padding: 2.25rem 1.75rem; display: flex; flex-direction: column; gap: .85rem; transition: background .3s; position: relative; }
+.service::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--brand); transform: scaleX(0); transform-origin: left; transition: transform .4s; }
+.service:hover::before { transform: scaleX(1); }
+.service .no { font: 1rem/1 var(--font-heading); color: var(--brand-deep); }
+.service h3 { font-size: 1.3rem; }
+.service p { color: var(--muted); font-size: .95rem; flex: 1; }
+.service a { color: var(--navy); font-weight: 500; font-size: .9rem; display: inline-flex; gap: .4rem; align-items: center; border-bottom: 1px solid var(--brand); align-self: flex-start; padding-bottom: .15rem; }
+.service a:hover { color: var(--brand-deep); }
+@media (min-width: 640px) { .services { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .services { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== 選ばれる理由 ==================== */
+.why-grid { display: grid; gap: clamp(2.5rem, 6vw, 5rem); align-items: center; }
+.values { display: grid; gap: 0; }
+.value { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: 1rem; padding: 1.6rem 0; border-top: 1px solid color-mix(in srgb, var(--on-navy) 14%, transparent); }
+.value:last-child { border-bottom: 1px solid color-mix(in srgb, var(--on-navy) 14%, transparent); }
+.value .mark { width: 3rem; height: 3rem; border: 1px solid var(--brand); display: grid; place-items: center; color: var(--brand); font: 1.1rem/1 var(--font-heading); transform: rotate(45deg); }
+.value .mark i { transform: rotate(-45deg); font-style: normal; }
+.value h3 { font-size: 1.2rem; margin-bottom: .3rem; }
+.value p { color: var(--on-navy-muted); font-size: .95rem; }
+.why-grid .img { outline: 1px solid color-mix(in srgb, var(--brand) 30%, transparent); outline-offset: -14px; }
+@media (min-width: 900px) { .why-grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); } }
+@media (max-width: 899px) { .why-grid .img { aspect-ratio: 16 / 10; } }
+
+/* ==================== ご相談の流れ ==================== */
+.steps { list-style: none; display: grid; gap: 0; counter-reset: s; position: relative; }
+.step { position: relative; padding: 0 0 2.25rem 4.25rem; }
+.step::before { counter-increment: s; content: "0" counter(s); position: absolute; left: 0; top: 0; width: 3rem; height: 3rem; border-radius: 50%; display: grid; place-items: center; background: var(--surface); border: 1px solid var(--brand); color: var(--brand-deep); font: 1rem/1 var(--font-heading); z-index: 1; }
+.step::after { content: ""; position: absolute; left: 1.5rem; top: 3rem; bottom: 0; width: 1px; background: var(--line); }
+.step:last-child::after { display: none; }
+.step h3 { font-size: 1.15rem; padding-top: .55rem; margin-bottom: .35rem; }
+.step p { color: var(--muted); font-size: .93rem; }
+.step small { display: inline-block; margin-top: .6rem; font-size: .8rem; color: var(--brand-deep); border: 1px solid var(--line); padding: .1rem .6rem; border-radius: 999px; }
+@media (min-width: 900px) {
+  .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; }
+  .step { padding: 4.75rem 0 0; }
+  .step::after { left: 3.5rem; right: -2rem; top: 1.5rem; bottom: auto; width: auto; height: 1px; }
+}
+
+/* ==================== 専門家紹介 ==================== */
+.team-sec { background: color-mix(in srgb, var(--surface) 55%, var(--bg)); border-block: 1px solid var(--line); }
+.team { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 2rem); }
+@media (min-width: 1000px) { .team { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.member h3 { font-size: 1.2rem; margin-top: 1.1rem; }
+.member h3 span { font: 400 .85rem/1 var(--font-body); color: var(--muted); margin-left: .5rem; }
+.member .role { color: var(--brand-deep); font-size: .9rem; font-weight: 500; }
+.member ul { margin-top: .7rem; padding-top: .7rem; border-top: 1px solid var(--line); font-size: .87rem; color: var(--muted); display: grid; gap: .2rem; }
+.member li::before { content: "・"; color: var(--brand-deep); }
+
+/* ==================== お客様の声 ==================== */
+.quotes { display: grid; gap: clamp(1.25rem, 3vw, 2rem); }
+.quote { border: 1px solid color-mix(in srgb, var(--brand) 35%, transparent); padding: 2.5rem 1.75rem 1.75rem; position: relative; display: flex; flex-direction: column; gap: 1.5rem; }
+.quote::before { content: "\201C"; position: absolute; top: -.2rem; left: 1.5rem; font: 4.5rem/1 var(--font-heading); color: var(--brand); }
+.quote blockquote { font: 400 1.05rem/1.8 var(--font-title); }
+.quote figcaption { font-size: .88rem; color: var(--on-navy-muted); padding-top: 1rem; border-top: 1px solid color-mix(in srgb, var(--on-navy) 14%, transparent); }
+.quote figcaption b { color: var(--on-navy); font-weight: 500; display: block; }
+@media (min-width: 900px) { .quotes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== よくある質問 ==================== */
+.faq-grid { display: grid; gap: 2.5rem; }
+.faq details { border-top: 1px solid var(--line); }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; padding: 1.35rem 2.5rem 1.35rem 0; position: relative; font: 700 1.08rem/1.6 var(--font-title); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: .25rem; top: 50%; transform: translateY(-50%); font: 1.6rem/1 var(--font-heading); color: var(--brand-deep); transition: transform .3s; }
+.faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+.faq details p { color: var(--muted); padding: 0 2.5rem 1.5rem 0; }
+@media (min-width: 900px) { .faq-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 4rem; } .faq-grid .sec-head { position: sticky; top: 7rem; align-self: start; } }
+
+/* ==================== 無料相談のご予約 ==================== */
+.contact-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); }
+.form { background: var(--surface); color: var(--text); padding: clamp(1.5rem, 4vw, 2.75rem); border-radius: var(--radius); border-top: 3px solid var(--brand); display: grid; gap: 1.1rem; }
+.form .row { display: grid; gap: 1.1rem; }
+.field { display: grid; gap: .4rem; }
+.field label, .field span { font-size: .88rem; font-weight: 500; }
+.field label i { color: var(--brand-deep); font-style: normal; }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .75rem .9rem; min-height: 48px; }
+.field textarea { min-height: 7.5rem; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 30%, transparent); }
+.agree { display: flex; gap: .6rem; align-items: flex-start; font-size: .87rem; color: var(--muted); }
+.agree input { width: 1.15rem; height: 1.15rem; margin-top: .3rem; accent-color: var(--navy); flex: none; }
+.agree a { text-decoration: underline; color: var(--navy); }
+.form .btn { width: 100%; }
+.form-note { font-size: .8rem; color: var(--muted); text-align: center; }
+.info { display: grid; gap: 1.5rem; align-content: start; }
+.info dl { display: grid; gap: 1.1rem; }
+.info dt { font-size: .85rem; color: var(--brand); margin-bottom: .2rem; }
+.info dd { color: var(--on-navy); }
+.info dd a { border-bottom: 1px solid color-mix(in srgb, var(--brand) 60%, transparent); }
+.info .btns { display: flex; flex-wrap: wrap; gap: .75rem; }
+.info .btn { min-height: 44px; padding: .55rem 1.1rem; font-size: .88rem; }
+@media (min-width: 640px) { .form .row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+@media (min-width: 960px) { .contact-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); } }
+
+/* ==================== フッター ==================== */
+.site-footer { background: var(--navy-ink); color: var(--on-navy-muted); padding: 4rem 0 6rem; font-size: .9rem; }
+.foot-grid { display: grid; gap: 2rem; padding-bottom: 2.5rem; border-bottom: 1px solid color-mix(in srgb, var(--on-navy) 12%, transparent); }
+.site-footer .logo { color: var(--on-navy); }
+.site-footer h2 { color: var(--on-navy); font: 700 1rem/1.4 var(--font-title); margin-bottom: .8rem; }
+.site-footer a:hover { color: var(--brand); }
+.social { display: flex; gap: .75rem; margin-top: 1rem; }
+.social a { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid color-mix(in srgb, var(--on-navy) 25%, transparent); border-radius: 50%; font-size: .78rem; }
+.copy { padding-top: 1.5rem; font-size: .8rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; }
+@media (min-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); } .site-footer { padding-bottom: 3rem; } }
+
+/* ---------- スマホ下部の固定ボタン ---------- */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 40; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .6rem; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--navy) 96%, transparent); border-top: 1px solid color-mix(in srgb, var(--brand) 40%, transparent); }
+.sticky-cta .btn { min-height: 46px; }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- スクロールでフェードイン ---------- */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== 言語切り替え（lang-switch） ==================== */
+.nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
+.lang-switch { display: flex; align-items: center; gap: .1rem; flex: none; margin-inline-start: .5rem; padding-inline-start: .6rem; border-inline-start: 1px solid color-mix(in srgb, var(--on-navy) 22%, transparent); font: 400 .8rem/1 var(--font-body); letter-spacing: normal; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; border-radius: var(--radius); color: var(--on-navy-muted); font-weight: 400; text-decoration: none; text-underline-offset: 5px; text-decoration-thickness: 1.5px; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--on-navy); background: color-mix(in srgb, var(--on-navy) 10%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--on-navy) 18%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--on-navy); font-weight: 700; text-decoration-line: underline; text-decoration-color: var(--brand); }
+@media (max-width: 760px) {
+  /* スマホ：メニューボタンの左に常に表示します。JS がオフのときはロゴと同じ行に残ります */
+  .nav > .lang-switch { order: 1; margin-inline: 0 0; padding-inline-start: 0; border: 0; }
+  .nav > .burger { order: 2; }
+  .nav > .menu { order: 3; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  /* タブレット幅：ヘッダーが折り返さないよう、メニューの間隔を詰めて切り替えとロゴを収めます */
+  .nav > .menu { gap: .9rem; font-size: .85rem; }
+  .nav > .menu .btn { padding-inline: .9rem; }
+  .nav > .lang-switch { margin-inline-start: 0; padding-inline-start: .3rem; }
+  .lang-switch a { padding-inline: .15rem; }
+}
+@media (min-width: 761px) and (max-width: 960px) {
+  /* 狭めのタブレット：さらに一段詰めます */
+  .nav { gap: .5rem; }
+  .nav > .menu { gap: .5rem; font-size: .78rem; }
+  .nav > .menu .btn { padding-inline: .6rem; }
+  .nav > .logo .logo-mark { display: none; }
+}
+@media (max-width: 400px) {
+  /* 幅 400px 未満のスマホ：ロゴが 1 行に収まるよう余白を詰めます */
+  .nav { gap: .5rem; }
+  .nav > .logo { gap: .5rem; }
+  .nav > .logo .logo-mark { width: 2rem; height: 2rem; font-size: 1.05rem; }
+}
+/* フッターの言語リンク */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius); }
+.foot-lang a:hover { text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { font-weight: 700; text-decoration: underline; text-decoration-color: var(--brand); }
+
+/* ==================== 日本語の組版 ====================
+   禁則処理を厳しめにし、見出しは字間を詰めず、文節の区切りで改行します */
+html { line-break: strict; }
+body { line-break: strict; word-break: normal; }
+h1, h2, h3, h4 { letter-spacing: normal; word-break: auto-phrase; }
+/* 日本語のナビは単語の途中で折り返さないようにします */
+header nav a { white-space: nowrap; }
+/* 大きな見出しは約物（、。）の余白を詰めて組みます */
+h1 { font-feature-settings: "palt"; }
+@media (min-width: 761px) and (max-width: 920px) {
+  /* 日本語のメニューは幅を取るので、狭いタブレットでは「よくある質問」をメニューから外します（ページ内には残ります） */
+  .nav > .menu a[href="#faq"] { display: none; }
+}
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<!--
+  JSON-LD 構造化データ：現在の種類は ProfessionalService です。
+  会計事務所・税理士事務所なら "AccountingService"、法律事務所なら "LegalService" に変えてもかまいません。
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "青葉総合事務所",
+  "description": "税理士と弁護士が連携し、税務申告、記帳代行、会社設立、企業法務をワンストップでサポートします。",
+  "telephone": "+81-3-1234-5678",
+  "email": "info@aoba-office.example",
+  "url": "https://www.example.com/",
+  "priceRange": "¥¥",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "日本橋2-11-3 日本橋青葉ビル18階",
+    "addressLocality": "中央区",
+    "addressRegion": "東京都",
+    "postalCode": "103-0027",
+    "addressCountry": "JP"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" }
+  ],
+  "areaServed": "JP"
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<!-- ==================== Section: ヘッダーとナビゲーション ==================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="青葉総合事務所、ページの先頭へ">
+      <span class="logo-mark" aria-hidden="true">青</span>
+      <span><b>青葉総合事務所</b><small>税理士・弁護士</small></span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="メニューを開く"><span></span></button>
+    <nav class="menu" id="menu" aria-label="メインメニュー">
+      <a href="#services">業務内容</a>
+      <a href="#why">選ばれる理由</a>
+      <a href="#process">ご相談の流れ</a>
+      <a href="#team">専門家紹介</a>
+      <a href="#faq">よくある質問</a>
+      <a href="#contact" class="btn btn-gold">無料相談</a>
+    </nav>
+    <!-- lang-switch：言語切り替え。言語を追加するときは、ここにリンクを足して、対応するフォルダを作成してください -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="ja">JA</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ==================== Section: ファーストビュー ==================== -->
+<section class="hero dark" id="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="reveal">
+        <h1>税務も法務も、<br>信頼できる専門家に。</h1>
+        <p class="hero-lead">税理士と弁護士が同じチームで対応します。会社設立、記帳、税務申告から契約書のチェックまで、全体を把握したひとつの窓口にご相談いただけます。</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-gold">無料相談を予約する</a>
+          <a href="#services" class="btn btn-ghost">業務内容を見る</a>
+        </div>
+      </div>
+      <figure class="hero-art reveal">
+        <div class="img img-hero" role="img" aria-label="事務所ロビーの石の柱と建築のライン"></div>
+        <figcaption><b>初回30分の相談は無料</b>税理士と弁護士が同席し、次にやるべきことを明確にします。</figcaption>
+      </figure>
+    </div>
+    <!-- サンプル内容：公開前に実際の口コミや数字に差し替えてください -->
+    <div class="trust" aria-label="事務所の実績">
+      <div><strong data-count="20">20</strong><span>年以上の実績</span></div>
+      <div><strong data-count="800">800</strong><span>社以上の顧問先</span></div>
+      <div><strong data-count="12">12</strong><span>名の税理士・弁護士</span></div>
+      <div><strong data-count="98">98</strong><span>％の顧問契約継続率</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: 業務内容 ==================== -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>業務内容</h2>
+      <p>創業期の会社から成長企業、個人やご家族まで。いまの状況と、これから目指す姿に合わせてサポートします。</p>
+    </div>
+    <div class="services reveal">
+      <article class="service">
+        <span class="no">01</span>
+        <h3>税務申告、節税対策</h3>
+        <p>法人税、消費税、所得税の申告をていねいに作成します。正当な節税の方法を幅広く検討し、思わぬ追徴課税を防ぎます。</p>
+        <a href="#contact">税務について相談する</a>
+      </article>
+      <article class="service">
+        <span class="no">02</span>
+        <h3>記帳代行、給与計算</h3>
+        <p>毎月の帳簿づけ、給与計算、源泉所得税の納付、試算表の作成まで。領収書をクラウドにアップロードすれば、いつでも数字を確認できます。</p>
+        <a href="#contact">記帳代行について相談する</a>
+      </article>
+      <article class="service">
+        <span class="no">03</span>
+        <h3>会社設立</h3>
+        <p>株式会社か合同会社かの選択、定款の作成、設立登記、税務署への届出まで一括でサポート。役員変更や本店移転、解散などの手続きにも対応します。</p>
+        <a href="#contact">会社設立について相談する</a>
+      </article>
+      <article class="service">
+        <span class="no">04</span>
+        <h3>企業法務</h3>
+        <p>契約書の作成とチェック、労務トラブル、株主間契約、知的財産の保護。早めの対策は、あとから問題を解決するよりずっと負担が小さくて済みます。</p>
+        <a href="#contact">企業法務について相談する</a>
+      </article>
+      <article class="service">
+        <span class="no">05</span>
+        <h3>融資、資金調達のサポート</h3>
+        <p>事業計画書や資金繰り表の作成、金融機関や投資家に求められる資料の準備をお手伝いし、安心して資金調達に臨めるようにします。</p>
+        <a href="#contact">資金調達について相談する</a>
+      </article>
+      <article class="service">
+        <span class="no">06</span>
+        <h3>相続、事業承継</h3>
+        <p>信託、生命保険、株式の持ち方を組み合わせた相続税・贈与税の対策で、大切な資産と会社をご家族や後継者へ円滑に引き継ぎます。</p>
+        <a href="#contact">相続について相談する</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: 選ばれる理由 ==================== -->
+<section class="dark" id="why">
+  <div class="wrap why-grid">
+    <div class="img img-why reveal" role="img" aria-label="細いゴールドのグリッドを背にしたアーチ"></div>
+    <div>
+      <div class="sec-head reveal">
+        <h2>青葉総合事務所が<wbr>選ばれる理由</h2>
+        <p>専門知識は出発点にすぎません。私たちが大切にしているのは、大きな決断の前にいつでも相談できる相手でいることです。</p>
+      </div>
+      <div class="values reveal">
+        <div class="value"><span class="mark" aria-hidden="true"><i>I</i></span><div><h3>会計も法律も、ひとつの窓口で</h3><p>税理士と弁護士がひとつのチームで動くので、事務所をいくつも回ったり、同じ説明を何度も繰り返したりする必要はありません。</p></div></div>
+        <div class="value"><span class="mark" aria-hidden="true"><i>II</i></span><div><h3>明確なお見積もり、追加費用なし</h3><p>業務を始める前に、書面でお見積もりと業務範囲をお渡しします。途中で予定外の費用が発生することはありません。</p></div></div>
+        <div class="value"><span class="mark" aria-hidden="true"><i>III</i></span><div><h3>専任の担当者が1営業日以内にお返事</h3><p>お客様ごとに担当者を決めています。平日にいただいたメールや LINE には、1営業日以内にお返事します。</p></div></div>
+        <div class="value"><span class="mark" aria-hidden="true"><i>IV</i></span><div><h3>守秘義務の徹底と、暗号化された保管</h3><p>秘密保持契約を結び、書類は暗号化したクラウドに保管します。閲覧できるのは担当チームのメンバーだけです。</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: ご相談の流れ ==================== -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>ご相談の流れ</h2>
+      <p>はじめてのお問い合わせから長いお付き合いまで、わかりやすい4つのステップで進めます。</p>
+    </div>
+    <ol class="steps reveal">
+      <li class="step"><h3>お問い合わせ</h3><p>フォーム、お電話、LINE から、現在の状況とご相談内容をお知らせください。</p><small>1営業日以内にご返信</small></li>
+      <li class="step"><h3>ヒアリング</h3><p>税理士または弁護士がお話をうかがい、課題、リスク、選択肢を整理します。</p><small>初回30分無料</small></li>
+      <li class="step"><h3>ご提案とお見積もり</h3><p>スケジュールと費用を記載した提案書をお送りします。ご納得いただけたら、委任契約を結びます。</p><small>3営業日以内</small></li>
+      <li class="step"><h3>業務の実施とフォロー</h3><p>担当者が業務を進めながら随時ご報告し、その後も期限のお知らせや法改正の情報をお届けします。</p><small>継続サポート</small></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== Section: 専門家紹介 ==================== -->
+<section class="team-sec" id="team">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>専門家紹介</h2>
+      <p>会計、税務、企業法務の分野で、平均15年の経験を持つ4名の専門家が対応します。</p>
+    </div>
+    <!-- サンプル内容：公開前に、氏名、役職、資格を実際のメンバーに差し替えてください -->
+    <div class="team reveal">
+      <article class="member">
+        <div class="img img-person img-p1" role="img" aria-label="代表税理士 青葉大輔のポートレート"></div>
+        <h3>青葉 大輔<span>税理士</span></h3>
+        <p class="role">代表</p>
+        <ul><li>税理士</li><li>税務実務20年</li></ul>
+      </article>
+      <article class="member">
+        <div class="img img-person img-p2" role="img" aria-label="弁護士 中村沙織のポートレート"></div>
+        <h3>中村 沙織<span>弁護士</span></h3>
+        <p class="role">パートナー（法務担当）</p>
+        <ul><li>弁護士</li><li>会社法、労働法</li></ul>
+      </article>
+      <article class="member">
+        <div class="img img-person img-p3" role="img" aria-label="公認会計士 渡辺誠のポートレート"></div>
+        <h3>渡辺 誠<span>公認会計士</span></h3>
+        <p class="role">パートナー（会計担当）</p>
+        <ul><li>公認会計士、税理士</li><li>経営計画、資金調達</li></ul>
+      </article>
+      <article class="member">
+        <div class="img img-person img-p4" role="img" aria-label="税理士 小林恵美のポートレート"></div>
+        <h3>小林 恵美<span>税理士</span></h3>
+        <p class="role">相続担当</p>
+        <ul><li>記帳、税務申告</li><li>相続税、贈与税の対策</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: お客様の声 ==================== -->
+<section class="dark" id="testimonials">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>お客様の声</h2>
+    </div>
+    <div class="quotes reveal">
+      <!-- サンプル内容：公開前に実際の口コミや数字に差し替えてください -->
+      <figure class="quote">
+        <blockquote>会社の設立から1期目の決算、株主間契約書の作成までお願いしました。創業したばかりのころは何もかもが不安でしたが、いつでも相談できる相手がいることが本当に心強かったです。</blockquote>
+        <figcaption><b>ソフトウェア会社 代表</b>顧問契約3年目：会社設立、記帳、法務相談</figcaption>
+      </figure>
+      <!-- サンプル内容：公開前に実際の口コミや数字に差し替えてください -->
+      <figure class="quote">
+        <blockquote>税務調査のときは、担当の税理士さんがすべての面談に立ち会い、必要な資料も事前にそろえてくれました。結果は追徴なし。落ち着いていて、細やかで、とても安心できました。</blockquote>
+        <figcaption><b>製造業 経理部長</b>顧問契約8年目：税務顧問</figcaption>
+      </figure>
+      <!-- サンプル内容：公開前に実際の口コミや数字に差し替えてください -->
+      <figure class="quote">
+        <blockquote>父の遺産には土地と会社の株式がありました。弁護士さんと税理士さんが一緒に説明してくれたので計画がわかりやすく、費用も明確で、家族の間でもめることなく進められました。</blockquote>
+        <figcaption><b>家業を継いだ二代目経営者</b>顧問契約2年目：事業承継</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: よくある質問 ==================== -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head reveal">
+      <h2>よくある質問</h2>
+      <p>ここにないご質問は、お電話 <a href="tel:+81312345678" style="border-bottom:1px solid currentColor">03-1234-5678</a> でお気軽にどうぞ。</p>
+    </div>
+    <div class="faq reveal">
+      <details open>
+        <summary>相談料はかかりますか？</summary>
+        <p>初回30分のご相談は、ご来所でもオンラインでも無料です。詳しい調査や意見書が必要な場合は、事前に費用をお伝えし、ご了承いただいてから業務を始めます。</p>
+      </details>
+      <details>
+        <summary>会社設立にはどのくらいかかりますか？</summary>
+        <p>必要な書類がそろってから、多くの場合1〜2週間で設立登記と税務署への届出が完了します。外国籍の役員がいる場合や許認可が必要な業種では時間がかかることがあるため、着手前にスケジュールをご案内します。</p>
+      </details>
+      <details>
+        <summary>記帳代行の月額費用はいくらですか？</summary>
+        <p>事業の規模、毎月の取引量、決算書の作成範囲によって異なります。小規模な会社では月額¥22,000（税込）からが目安で、簡単なヒアリングのあと書面でお見積もりをお出しします。</p>
+      </details>
+      <details>
+        <summary>遠方に住んでいても依頼できますか？</summary>
+        <p>もちろんです。オンラインでのご相談や、安全なクラウドでの書類のやりとりに対応しており、原本は郵送でお送りいただけます。すでに全国、海外のお客様ともお取引があります。</p>
+      </details>
+      <details>
+        <summary>情報は秘密にしてもらえますか？</summary>
+        <p>はい。税理士と弁護士には法律上の守秘義務があり、すべてのお客様と秘密保持契約を結んでいます。書類は暗号化して保管し、閲覧できるのは担当メンバーに限っています。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: 無料相談のご予約 ==================== -->
+<section class="dark" id="contact">
+  <div class="wrap contact-grid">
+    <div class="info reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <h2>無料相談のご予約</h2>
+        <p>フォームを送信いただくと、1営業日以内にご連絡し、ご相談内容に合った税理士または弁護士をご案内します。</p>
+      </div>
+      <dl>
+        <div><dt>電話</dt><dd><a href="tel:+81312345678">03-1234-5678</a></dd></div>
+        <div><dt>住所</dt><dd><a href="https://maps.google.com/?q=東京都中央区日本橋2-11-3" target="_blank" rel="noopener">〒103-0027<br>東京都中央区日本橋2-11-3 日本橋青葉ビル18階</a></dd></div>
+        <div><dt>受付時間</dt><dd>平日 9:00〜18:00<br><span class="muted">夜間、土日のご相談も予約制で承ります</span></dd></div>
+      </dl>
+      <!--
+        メッセージボタン：下の LINE リンクの @ のあとを、ご自身の LINE 公式アカウントの ID に置き換えてください。
+        ほかの連絡手段に変えることもできます。例：
+          Instagram：https://ig.me/m/yourusername
+          Chatwork などのビジネスチャットの URL
+      -->
+      <div class="btns">
+        <a href="tel:+81312345678" class="btn btn-gold">電話で相談する</a>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE で相談する</a>
+        <a href="https://maps.google.com/?q=東京都中央区日本橋2-11-3" class="btn btn-ghost" target="_blank" rel="noopener">Google マップ</a>
+      </div>
+    </div>
+    <!--
+      このフォームは Formspree を使っています（無料プランで月50件まで受信できます）：
+      1. https://formspree.io に登録し、新しいフォームを作成します
+      2. 下の action 属性にある your-form-id を、ご自身のフォーム ID に置き換えます
+      3. 初回の送信時に、Formspree からメールアドレス確認のメールが届きます
+    -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="row">
+        <div class="field"><label for="f-name">お名前 <i>*</i></label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-co">会社名</label><input id="f-co" name="company" autocomplete="organization"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="f-tel">電話番号 <i>*</i></label><input id="f-tel" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="f-mail">メールアドレス <i>*</i></label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
+      </div>
+      <div class="field">
+        <label for="f-type">ご相談の内容 <i>*</i></label>
+        <select id="f-type" name="service" required>
+          <option value="">選択してください</option>
+          <option>税務申告、節税対策</option>
+          <option>記帳代行、給与計算</option>
+          <option>会社設立</option>
+          <option>企業法務</option>
+          <option>融資、資金調達のサポート</option>
+          <option>相続、事業承継</option>
+          <option>その他</option>
+        </select>
+      </div>
+      <div class="field"><label for="f-msg">詳しい内容</label><textarea id="f-msg" name="message" placeholder="会社の規模やご希望の時期など、状況を簡単にお書きください"></textarea></div>
+      <label class="agree"><input type="checkbox" name="privacy_consent" value="yes" required> <span><a href="#">プライバシーポリシー</a>を読み、内容に同意します。お問い合わせへの回答のために、青葉総合事務所が個人情報を取得、利用することに同意します。</span></label>
+      <button type="submit" class="btn btn-navy">相談を申し込む</button>
+      <p class="form-note">いただいた情報はご連絡のためにのみ使用し、第三者に提供することはありません。</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: フッター ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark" aria-hidden="true">青</span><span><b>青葉総合事務所</b><small>税理士・弁護士</small></span></a>
+        <p style="margin-top:1rem;max-width:22rem">税理士と弁護士が、事業の確かな成長を支えます。</p>
+        <!-- SNS リンク：# をご自身のアカウントの URL に置き換えてください。LINE は Instagram の DM などに変えてもかまいません。 -->
+        <div class="social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="X">X</a>
+          <a href="https://line.me/R/ti/p/@yourlineid" aria-label="LINE">LINE</a>
+        </div>
+      </div>
+      <div>
+        <h2>お問い合わせ</h2>
+        <p>〒103-0027<br>東京都中央区日本橋2-11-3<br>日本橋青葉ビル18階<br>電話 <a href="tel:+81312345678">03-1234-5678</a><br>info@aoba-office.example</p>
+      </div>
+      <div>
+        <h2>受付時間</h2>
+        <p>平日 9:00〜18:00<br>土日祝日は休業<br>（時間外のご相談は予約制）</p>
+      </div>
+    </div>
+    <div class="copy"><span>© <span id="y"></span> 青葉総合事務所</span><span>当サイトの内容は一般的な情報であり、個別の法律相談、税務相談に代わるものではありません。</span></div>
+    <!-- フッターの言語リンク：ヘッダーの lang-switch と同じ内容にします -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a></p>
+  </div>
+</footer>
+
+<!-- スマホ下部の固定ボタン -->
+<div class="sticky-cta">
+  <a href="tel:+81312345678" class="btn btn-ghost" aria-label="電話する">電話</a>
+  <a href="#contact" class="btn btn-gold">無料相談を予約</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function () {
+  var header = document.querySelector('.site-header');
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('menu');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fmt = new Intl.NumberFormat('ja-JP');
+
+  // スクロールしたらヘッダーに背景を付ける
+  function onScroll() { header.classList.toggle('scrolled', scrollY > 20); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // ハンバーガーメニュー
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    header.classList.toggle('scrolled', open || scrollY > 20);
+  }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // 数字のカウントアップ（ja-JP の書式、例：1,200）
+  function countUp(el) {
+    var end = +el.dataset.count;
+    if (reduce) { el.textContent = fmt.format(end); return; }
+    var t0 = performance.now();
+    (function tick(t) {
+      var p = Math.min((t - t0) / 1600, 1);
+      el.textContent = fmt.format(Math.round(end * (1 - Math.pow(1 - p, 3))));
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+
+  // スクロールでフェードインし、カウンターを開始
+  var targets = document.querySelectorAll('.reveal, [data-count]');
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('in'); if (el.dataset.count) el.textContent = fmt.format(el.dataset.count); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        if (e.target.dataset.count) countUp(e.target);
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.15 });
+    targets.forEach(function (el) { io.observe(el); });
+  }
+
+  document.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>マスメ コワーキング｜神田のフリーデスク、個室オフィス、貸し会議室</title>
+<meta name="description" content="マスメ コワーキングは東京・神田のコワーキングスペースです。フリーデスク、固定デスク、個室オフィス、時間貸しの会議室、イベントスペース、バーチャルオフィスを、1 日単位でも月額でもご利用いただけます。">
+<meta property="og:title" content="マスメ コワーキング">
+<meta property="og:description" content="小川町駅から徒歩 2 分。フリーデスク、個室オフィス、時間貸しの会議室。会議室の料金をその場で試算して、見学を予約できます。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f4ee">
+<!-- 多言語版（SEO）：公開後は href を完全な URL に書き換えてください。例：https://www.yourshop.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   テーマ設定：ここを変えるだけで、サイト全体の配色とフォントが変わります
+   ============================================================ */
+:root {
+  --brand: #8fe3c0;          /* ブランドカラー：ミント。メインボタンと色付きのタイルに使います */
+  --brand-ink: #15171c;      /* ブランドカラー上の文字色（インク、AA コントラスト） */
+  --brand-deep: #1b6e50;     /* 濃いミント：明るい背景の上のアクセント文字やリンク（AA コントラスト） */
+  --brand-hover: #74d6ad;    /* メインボタンのホバー色 */
+  --sun: #ffd25e;            /* アクセント：バターイエロー。タイルやタグに使います */
+  --sky: #c3d9fb;            /* アクセント：淡い空色。タイルに使います */
+  --leaf: #2f7d55;           /* イラスト風プレースホルダー：観葉植物の葉 */
+  --leaf-light: #58b07f;     /* イラスト風プレースホルダー：葉のハイライト */
+  --wood: #e6c99f;           /* イラスト風プレースホルダー：木の天板 */
+  --wood-side: #c49a68;      /* イラスト風プレースホルダー：机の側面 */
+  --bg: #f6f4ee;             /* ページ背景：あたたかい白 */
+  --surface: #fcfbf7;        /* カードとフォーム（少しあたたかみのある白） */
+  --surface-2: #eeebe2;      /* サブ背景：入力欄、交互のセクション */
+  --text: #15171c;           /* メインの文字色：インク */
+  --muted: #555a63;          /* 補足の文字色 */
+  --line: #dcd8cc;           /* 細い罫線と枠線 */
+  --grid: color-mix(in srgb, var(--text) 6%, transparent); /* 背景のグリッド線 */
+  --ink: #15171c;            /* 暗いセクションの背景：インク */
+  --ink-2: #22252c;          /* 暗いセクション内のカード背景 */
+  --on-ink: #f1f0ea;         /* 暗いセクション上のメインの文字色 */
+  --on-ink-muted: #a9adb5;   /* 暗いセクション上の補足の文字色 */
+  --radius: 22px;            /* カードの角の丸み（角丸の四角がこのテンプレートの特徴です） */
+  --radius-sm: 12px;         /* ボタンと入力欄の角の丸み */
+  --font-heading: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif; /* 見出しフォント */
+  --font-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif; /* 本文フォント */
+  --maxw: 1240px;            /* コンテンツの最大幅 */
+  --pad: clamp(1rem, 5vw, 3rem); /* 左右の余白 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.85 var(--font-body); line-break: strict; font-variant-numeric: tabular-nums; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; line-height: 1.4; letter-spacing: 0; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+/* 日本語の見出しは <wbr> の位置で改行し、1 文字だけが次の行に残らないようにします */
+h1, h2 { word-break: keep-all; }
+:focus-visible { outline: 3px solid var(--brand-deep); outline-offset: 3px; border-radius: 6px; }
+.wrap { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--ink); color: var(--on-ink); padding: .5rem 1rem; z-index: 100; }
+.skip:focus { left: 1rem; }
+svg { flex: none; }
+
+/* ---------- ボタン ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .7rem 1.4rem; border-radius: var(--radius-sm); border: 2px solid transparent; font: 700 .97rem/1.2 var(--font-body); cursor: pointer; transition: background .2s, color .2s, border-color .2s, transform .2s, box-shadow .2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(1px); box-shadow: none; }
+.btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+a:active { opacity: .85; }
+.btn-main { background: var(--brand); color: var(--brand-ink); border-color: var(--ink); box-shadow: 3px 3px 0 var(--ink); }
+.btn-main:hover { background: var(--brand-hover); box-shadow: 4px 5px 0 var(--ink); }
+.btn-line { border-color: var(--ink); color: var(--text); background: transparent; }
+.btn-line:hover { background: var(--ink); color: var(--on-ink); }
+.btn-ink { background: var(--ink); color: var(--on-ink); }
+.btn-ink:hover { background: var(--ink-2); }
+.link { color: var(--brand-deep); font-weight: 700; border-bottom: 2px solid currentColor; transition: color .2s; }
+.link:hover { color: var(--text); }
+
+/* ---------- セクション共通 ---------- */
+section { padding-block: clamp(4rem, 9vw, 7.5rem); }
+.sec-head { display: grid; gap: .9rem; margin-bottom: clamp(2rem, 5vw, 3.5rem); max-width: 42rem; }
+.sec-head h2 { font-size: clamp(1.7rem, 3.8vw, 2.6rem); }
+.sec-head p { color: var(--muted); font-size: 1.03rem; }
+.alt { background: var(--surface-2); }
+.dark { background: var(--ink); color: var(--on-ink); }
+.dark .sec-head p { color: var(--on-ink-muted); }
+.tag { display: inline-block; font-size: .85rem; font-weight: 500; padding: .15rem .65rem; border-radius: 8px; background: var(--sun); color: var(--brand-ink); }
+
+/* ==================== ヘッダー ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .75rem 1.5rem; min-height: 4.5rem; padding-block: .6rem; }
+.logo { display: flex; align-items: center; gap: .65rem; }
+.logo b { font: 700 1.2rem/1.1 var(--font-heading); display: block; }
+.logo small { display: block; font-size: .75rem; color: var(--muted); }
+.logo-mark { display: grid; grid-template-columns: repeat(2, 14px); gap: 4px; }
+.logo-mark i { width: 14px; height: 14px; border-radius: 4px; background: var(--brand); }
+.logo-mark i:nth-child(2) { background: var(--sun); }
+.logo-mark i:nth-child(3) { background: var(--ink); }
+.logo-mark i:nth-child(4) { background: var(--sky); }
+.menu { display: flex; align-items: center; gap: clamp(.9rem, 2vw, 1.8rem); font-size: .93rem; font-weight: 500; }
+.menu a { white-space: nowrap; }
+.menu a:not(.btn) { padding-block: .3rem; border-bottom: 2px solid transparent; transition: border-color .2s, color .2s; }
+.menu a:not(.btn):hover { border-color: var(--brand-deep); color: var(--brand-deep); }
+.menu .btn { min-height: 42px; padding: .45rem 1.1rem; }
+.burger { display: none; width: 46px; height: 46px; background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius-sm); color: var(--text); cursor: pointer; transition: background .2s; }
+.burger:hover { background: var(--brand); }
+.burger:active { transform: translateY(1px); }
+.burger span, .burger span::before, .burger span::after { display: block; width: 18px; height: 2px; background: currentColor; margin: auto; position: relative; transition: transform .3s, background .3s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* JS がないとき：メニューをロゴの下に折り返し、ヘッダーを sticky にします */
+  html:not(.js) .site-header { position: sticky; background: var(--bg); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .3rem 1.1rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: 4.5rem 0 auto; flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); padding: .5rem var(--pad) 1.5rem; border-top: 1px solid var(--line); box-shadow: 0 24px 30px -20px color-mix(in srgb, var(--ink) 30%, transparent); transform: translateY(-130%); visibility: hidden; transition: transform .35s, visibility .35s; }
+  .js .menu.open { transform: none; visibility: visible; }
+  .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line); }
+  .js .menu .btn { margin-top: 1rem; min-height: 48px; }
+}
+/* 言語切り替え：デスクトップではメインボタンの横、スマホでは開いたメニューの最上部（JS あり）、JS なしではメニューと一緒に折り返します */
+.lang-switch { display: flex; align-items: center; gap: .1rem; padding-left: clamp(.4rem, 1vw, .9rem); border-left: 1px solid var(--line); font-size: .8rem; line-height: 1; white-space: nowrap; }
+.menu .lang-switch a[hreflang] { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border: 0; color: var(--muted); font-weight: 400; text-decoration: underline 1px transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.menu .lang-switch a[hreflang]:hover { color: var(--brand-deep); text-decoration-color: currentColor; }
+.menu .lang-switch a[hreflang]:active { opacity: .7; }
+.menu .lang-switch a[hreflang]:focus-visible { outline-offset: 0; }
+.menu .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: var(--brand-deep); text-decoration-thickness: 2px; }
+@media (max-width: 760px) {
+  html:not(.js) .lang-switch { border-left: 0; padding-left: 0; margin-left: -.3rem; }
+  .js .menu .lang-switch { order: -1; align-self: flex-start; border-left: 0; padding: 0 0 .4rem; margin-left: -.3rem; font-size: .92rem; }
+  .js .menu .lang-switch a[hreflang] { padding: 0 .3rem; border-bottom: 0; min-width: 40px; min-height: 40px; }
+}
+/* タブレット幅：メニューを詰めて、言語切り替えが入ってもヘッダーが折り返さないようにします */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .menu { gap: clamp(.55rem, 1.1vw, .9rem); font-size: .88rem; }
+  .menu a { white-space: nowrap; }
+  .lang-switch { padding-left: .25rem; }
+  .menu .lang-switch a[hreflang] { padding: 0; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  /* タブレット幅では場所が足りないため、補助リンク（class="opt"）を隠します。デスクトップとスマホのメニューでは表示されます */
+  .menu .opt { display: none; }
+}
+@media (min-width: 761px) and (max-width: 860px) {
+  .logo small { display: none; }
+  .nav { column-gap: .75rem; }
+  .menu { gap: .55rem; font-size: .84rem; }
+  .menu .btn { padding-inline: .8rem; }
+}
+
+/* ==================== イラスト風プレースホルダー ==================== */
+/* .img はすべて CSS で描いたオフィスの風景です（アイソメトリックの床グリッドと家具）。写真に差し替えるには、
+   .img-xx { background: url(images/xxx.jpg) center/cover; } を指定し、s-desk や s-plant などのシーン用クラスを削除してください */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; border: 2px solid var(--ink);
+  background:
+    repeating-linear-gradient(30deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(150deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    var(--brand); }
+.img::before, .img::after { content: ""; position: absolute; inset: 0; z-index: -1; }
+
+/* 写真に差し替える：.img-desk { background: url(images/hot-desk.jpg) center/cover; } */
+.s-desk { background:
+    linear-gradient(var(--ink), var(--ink)) 14% 70% / 3px 22% no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 50% 84% / 3px 18% no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 86% 70% / 3px 22% no-repeat,
+    repeating-linear-gradient(30deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(150deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    var(--brand); }
+.s-desk::before { /* アイソメトリックの机、ノートパソコン、コーヒーカップ */
+  clip-path: polygon(50% 30%, 88% 50%, 50% 70%, 12% 50%);
+  background:
+    radial-gradient(circle at 66% 52%, var(--ink) 0 5px, var(--surface) 5px 7px, transparent 7.5px),
+    linear-gradient(150deg, transparent 38%, var(--ink) 38% 52%, transparent 52%) 40% 46% / 34% 22% no-repeat,
+    var(--wood); }
+.s-desk::after { clip-path: polygon(12% 50%, 50% 70%, 88% 50%, 88% 55%, 50% 75%, 12% 55%); background: linear-gradient(90deg, var(--wood-side) 50%, color-mix(in srgb, var(--wood-side) 70%, var(--ink)) 50%); }
+
+/* 写真に差し替える：.img-plant { background: url(images/plant.jpg) center/cover; } */
+.s-plant { background-color: var(--sun); }
+.s-plant::before { /* 葉 */
+  background:
+    radial-gradient(ellipse 12% 22% at 38% 38%, var(--leaf) 96%, transparent 100%),
+    radial-gradient(ellipse 12% 24% at 62% 34%, var(--leaf-light) 96%, transparent 100%),
+    radial-gradient(ellipse 11% 20% at 50% 24%, var(--leaf) 96%, transparent 100%),
+    radial-gradient(ellipse 20% 10% at 30% 54%, var(--leaf-light) 96%, transparent 100%),
+    radial-gradient(ellipse 20% 10% at 70% 52%, var(--leaf) 96%, transparent 100%); }
+.s-plant::after { /* 鉢 */
+  clip-path: polygon(34% 60%, 66% 60%, 61% 86%, 39% 86%);
+  background: linear-gradient(var(--surface) 0 12%, var(--ink) 12%); }
+
+/* 写真に差し替える：.img-lamp { background: url(images/lamp.jpg) center/cover; } */
+.s-lamp { background:
+    linear-gradient(var(--ink), var(--ink)) 46% 82% / 3px 52% no-repeat,
+    radial-gradient(ellipse 18% 4% at 47% 90%, var(--ink) 96%, transparent 100%),
+    repeating-linear-gradient(30deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    var(--sky); }
+.s-lamp::before { /* ランプシェード */
+  clip-path: polygon(34% 18%, 58% 18%, 68% 36%, 24% 36%); background: var(--ink); }
+.s-lamp::after { /* あたたかい光 */
+  clip-path: polygon(26% 36%, 66% 36%, 94% 100%, 0 100%);
+  background: linear-gradient(color-mix(in srgb, var(--sun) 85%, transparent), transparent 80%); }
+
+/* 写真に差し替える：.img-plan { background: url(images/office.jpg) center/cover; } */
+.s-plan { background: radial-gradient(circle, color-mix(in srgb, var(--ink) 22%, transparent) 1.2px, transparent 1.8px) 0 0 / 16px 16px, var(--surface); }
+.s-plan::before { /* 間取り図：壁と部屋 */
+  inset: 12%; border: 3px solid var(--ink); border-radius: 12px;
+  background:
+    linear-gradient(var(--ink), var(--ink)) 46% 0 / 3px 62% no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 0 60% / 34% 3px no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 100% 44% / 44% 3px no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 0 0 / 46% 60% no-repeat,
+    linear-gradient(var(--sun), var(--sun)) 100% 0 / 54% 44% no-repeat,
+    linear-gradient(var(--sky), var(--sky)) 100% 100% / 54% 56% no-repeat; }
+.s-plan::after { /* 間取り図上のデスク */
+  inset: 20% 60% 48% 20%;
+  background: repeating-linear-gradient(90deg, var(--ink) 0 10px, transparent 10px 18px) 0 0 / 100% 10px no-repeat,
+    repeating-linear-gradient(90deg, var(--ink) 0 10px, transparent 10px 18px) 0 100% / 100% 10px no-repeat; }
+
+/* 写真に差し替える：.img-meet { background: url(images/meeting-room.jpg) center/cover; } */
+.s-meet { background:
+    repeating-linear-gradient(30deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(150deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    var(--sky); }
+.s-meet::before { /* 長いテーブル */
+  inset: 36% 22%; border-radius: 999px; background: var(--wood); box-shadow: 0 6px 0 var(--wood-side), 0 6px 0 2px var(--ink), 0 0 0 2px var(--ink); }
+.s-meet::after { /* 椅子 */
+  background:
+    radial-gradient(circle at 34% 24%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 50% 24%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 66% 24%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 34% 80%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 50% 80%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 66% 80%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 13% 52%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 87% 52%, var(--ink) 0 8px, transparent 9px); }
+
+/* 写真に差し替える：.img-event { background: url(images/event.jpg) center/cover; } */
+.s-event { background-color: var(--sun); }
+.s-event::before { /* ステージとスクリーン */
+  inset: 12% 20% auto; height: 24%; border-radius: 10px; border: 5px solid var(--ink); background: var(--brand); }
+.s-event::after { /* 並んだ客席 */
+  inset: 46% 14% 12%; background: radial-gradient(circle, var(--ink) 0 5px, transparent 6px) 0 0 / 26px 24px; }
+
+/* 写真に差し替える：.img-mail { background: url(images/mailroom.jpg) center/cover; } */
+.s-mail::before { /* 封筒と切手 */
+  inset: 28% 20%; border-radius: 12px; border: 2px solid var(--ink);
+  background: linear-gradient(var(--sun), var(--sun)) 90% 14% / 14% 22% no-repeat, var(--surface); }
+.s-mail::after { clip-path: polygon(21% 29%, 79% 29%, 50% 56%); background: color-mix(in srgb, var(--surface) 80%, var(--ink)); }
+
+/* 写真に差し替える：.img-map { background: url(images/map.jpg) center/cover; } */
+.img-map { min-height: 300px; height: 100%; background:
+    linear-gradient(var(--brand), var(--brand)) 30% 30% / 18% 22% no-repeat,
+    linear-gradient(var(--sun), var(--sun)) 82% 76% / 20% 18% no-repeat,
+    repeating-linear-gradient(0deg, transparent 0 58px, var(--surface) 58px 70px),
+    repeating-linear-gradient(90deg, transparent 0 74px, var(--surface) 74px 86px),
+    var(--surface-2); }
+.img-map::before { /* 川沿いと幹線道路 */
+  background: linear-gradient(110deg, transparent 0 8%, var(--sky) 8% 18%, transparent 18%); }
+.img-map::after { /* 位置を示すピン */
+  inset: calc(50% - 30px) auto auto calc(55% - 18px); width: 36px; height: 36px; z-index: 1;
+  border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--ink);
+  box-shadow: inset 0 0 0 10px var(--ink), inset 0 0 0 18px var(--brand); }
+
+/* ==================== ファーストビュー ==================== */
+.hero { padding-top: clamp(6rem, 10vw, 7rem); padding-bottom: clamp(3rem, 6vw, 4rem);
+  background: linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 48px 48px, linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 48px 48px, var(--bg); }
+.hero-grid { display: grid; gap: clamp(2.25rem, 5vw, 4.5rem); align-items: center; }
+.hero h1 { font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.3; }
+.hero-lead { color: var(--muted); font-size: clamp(1.02rem, 1.5vw, 1.15rem); max-width: 31rem; margin-top: 1.25rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 1.9rem; }
+.board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); gap: clamp(.5rem, 1.4vw, 1rem); aspect-ratio: 1; max-width: 560px; width: 100%; margin-inline: auto;
+  grid-template-areas: "plan plan desk" "plan plan plant" "lamp meet meet"; }
+.board .img { border-radius: clamp(14px, 2.4vw, var(--radius)); }
+.board .s-plan { grid-area: plan; } .board .s-desk { grid-area: desk; } .board .s-plant { grid-area: plant; } .board .s-lamp { grid-area: lamp; } .board .s-meet { grid-area: meet; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+.facts div { padding: 1rem; background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius-sm); }
+.facts strong { display: block; font: 700 clamp(1.4rem, 3.5vw, 2.1rem)/1.1 var(--font-heading); }
+.facts span { font-size: .85rem; color: var(--muted); }
+@media (min-width: 900px) { .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); } }
+
+/* ==================== スペース ==================== */
+.spaces { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+.space { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); padding: .8rem .8rem 1.4rem; display: grid; gap: .9rem; align-content: start; transition: transform .25s, box-shadow .25s; }
+.space:hover { transform: translateY(-4px); box-shadow: 5px 6px 0 var(--ink); }
+.space .img { aspect-ratio: 16 / 10; border-radius: 14px; }
+.space h3 { font-size: 1.2rem; padding-inline: .5rem; }
+.space p { color: var(--muted); padding-inline: .5rem; font-size: .95rem; }
+.space .from { font-weight: 700; color: var(--brand-deep); }
+@media (min-width: 620px) { .spaces { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .spaces { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== 料金プラン ==================== */
+.plans-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1.25rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
+.plans-top .sec-head { margin-bottom: 0; }
+.toggle { display: inline-flex; padding: 4px; border: 2px solid var(--ink); border-radius: 14px; background: var(--surface); }
+html:not(.js) .toggle { display: none; }
+.toggle button { font: 700 .95rem/1 var(--font-body); min-height: 42px; padding: 0 1.3rem; border: 0; border-radius: 10px; background: transparent; color: var(--text); cursor: pointer; transition: background .2s, color .2s; }
+.toggle button:hover { background: var(--surface-2); }
+.toggle button:active { transform: translateY(1px); }
+.toggle button[aria-pressed="true"] { background: var(--ink); color: var(--on-ink); }
+.plans { display: grid; gap: 1rem; }
+.plan { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2rem); display: grid; gap: 1.1rem; align-content: start; }
+.plan h3 { font-size: 1.25rem; }
+.plan .desc { color: var(--muted); font-size: .95rem; }
+.price { font-family: var(--font-heading); display: flex; align-items: baseline; flex-wrap: wrap; gap: .2rem; }
+.price small { font-size: .95rem; font-weight: 700; }
+.price .amt { font-size: clamp(2.1rem, 4.6vw, 2.6rem); font-weight: 700; line-height: 1; }
+.price .per { font-family: var(--font-body); color: var(--muted); font-size: .92rem; }
+.plan ul { display: grid; gap: .55rem; font-size: .95rem; }
+.plan li { display: flex; gap: .55rem; align-items: start; }
+.plan li svg { margin-top: .4rem; color: var(--brand-deep); }
+.plan .btn { margin-top: .4rem; }
+.plan.pick { background: var(--ink); color: var(--on-ink); box-shadow: 6px 6px 0 var(--brand); }
+.plan.pick .desc, .plan.pick .price .per { color: var(--on-ink-muted); }
+.plan.pick li svg { color: var(--brand); }
+.plan-head { display: flex; justify-content: space-between; align-items: center; gap: .6rem; flex-wrap: wrap; }
+.plans-note { margin-top: 1.5rem; color: var(--muted); font-size: .92rem; }
+@media (min-width: 900px) { .plans { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; } }
+
+/* ==================== 会議室の料金試算 ==================== */
+.est { display: grid; gap: 1rem; }
+.est-form { background: var(--surface); color: var(--text); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.2rem); display: grid; gap: 1.1rem; align-content: start; }
+.est-form .row { display: grid; gap: 1.1rem; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.est-out { background: var(--ink-2); border: 2px solid color-mix(in srgb, var(--on-ink) 18%, transparent); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.2rem); display: grid; gap: 1rem; align-content: start; }
+.est-out .label { color: var(--on-ink-muted); font-size: .92rem; }
+.est-total { font: 700 clamp(2.6rem, 7vw, 3.8rem)/1 var(--font-heading); color: var(--brand); display: block; }
+.est-rate { color: var(--on-ink-muted); font-size: .92rem; }
+.cap { border-radius: var(--radius-sm); padding: .85rem 1rem; display: flex; gap: .65rem; align-items: start; font-size: .95rem; background: color-mix(in srgb, var(--brand) 16%, transparent); border: 1px solid color-mix(in srgb, var(--brand) 50%, transparent); }
+.cap svg { margin-top: .3rem; color: var(--brand); }
+.cap.warn { background: color-mix(in srgb, var(--sun) 16%, transparent); border-color: color-mix(in srgb, var(--sun) 60%, transparent); }
+.cap.warn svg { color: var(--sun); }
+.est-out .btn { justify-self: start; }
+@media (min-width: 900px) { .est { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); } }
+
+/* ==================== フォームの入力欄 ==================== */
+.field { display: grid; gap: .4rem; min-width: 0; }
+.field label { font-size: .9rem; font-weight: 500; }
+.field label i { color: var(--brand-deep); font-style: normal; }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 2px solid var(--line); border-radius: var(--radius-sm); padding: .7rem .9rem; min-height: 50px; transition: border-color .2s, box-shadow .2s; }
+.field textarea { min-height: 7rem; resize: vertical; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: color-mix(in srgb, var(--ink) 45%, transparent); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 55%, transparent); }
+
+/* ==================== 設備 ==================== */
+.amen { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.amen li { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); padding: 1.2rem; display: grid; gap: .5rem; align-content: start; }
+.amen .ico { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: var(--brand); color: var(--brand-ink); }
+.amen li:nth-child(3n+2) .ico { background: var(--sun); }
+.amen li:nth-child(3n) .ico { background: var(--sky); }
+.amen h3 { font-size: 1.05rem; margin-top: .3rem; }
+.amen p { color: var(--muted); font-size: .9rem; }
+@media (min-width: 760px) { .amen { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; } .amen li { padding: 1.6rem; } }
+
+/* ==================== コミュニティイベント ==================== */
+.events { display: grid; gap: 1rem; }
+.event { background: var(--ink-2); border-radius: var(--radius); padding: 1.3rem; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.1rem; align-items: start; border: 2px solid color-mix(in srgb, var(--on-ink) 14%, transparent); }
+.date { width: 72px; aspect-ratio: 1; border-radius: 16px; background: var(--brand); color: var(--brand-ink); display: grid; place-content: center; text-align: center; line-height: 1.1; }
+.event:nth-child(2) .date { background: var(--sun); }
+.event:nth-child(3) .date { background: var(--sky); }
+.date b { font: 700 1.6rem/1 var(--font-heading); display: block; }
+.date small { font-size: .78rem; margin-top: .2rem; }
+.event h3 { font-size: 1.1rem; }
+.event p { color: var(--on-ink-muted); font-size: .93rem; margin-top: .3rem; }
+.event .when { color: var(--on-ink); font-size: .88rem; margin-top: .5rem; }
+.community-cta { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; color: var(--on-ink-muted); }
+.btn-mint-line { border-color: var(--brand); color: var(--brand); }
+.btn-mint-line:hover { background: var(--brand); color: var(--brand-ink); }
+@media (min-width: 900px) { .events { grid-template-columns: repeat(3, minmax(0, 1fr)); } .event { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== アクセス ==================== */
+.loc { display: grid; gap: 1rem; }
+.loc-info { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.2rem); display: grid; gap: 1.2rem; align-content: start; }
+.loc-info dl { display: grid; gap: 1rem; }
+.loc-info dt { font-size: .88rem; color: var(--muted); }
+.loc-info dd { font-weight: 500; }
+.loc-btns { display: flex; flex-wrap: wrap; gap: .7rem; }
+.loc-btns .btn { min-height: 44px; padding: .5rem 1.1rem; font-size: .92rem; }
+@media (min-width: 900px) { .loc { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); } }
+
+/* ==================== 会員の声 ==================== */
+.quotes { display: grid; gap: 1rem; }
+.quote { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 1.9rem); display: grid; gap: 1.2rem; align-content: space-between; }
+.quote blockquote { font-size: 1rem; }
+.quote figcaption { display: flex; align-items: center; gap: .8rem; font-size: .9rem; }
+.quote figcaption b { display: block; font-weight: 700; }
+.quote figcaption span { color: var(--muted); }
+.avatar { width: 44px; height: 44px; border-radius: 12px; background: var(--brand); border: 2px solid var(--ink); flex: none; }
+.quote:nth-child(2) .avatar { background: var(--sun); }
+.quote:nth-child(3) .avatar { background: var(--sky); }
+@media (min-width: 900px) { .quotes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== よくある質問 ==================== */
+.faq-grid { display: grid; gap: 1rem; }
+.faq { display: grid; gap: .7rem; }
+.faq details { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius-sm); }
+.faq summary { cursor: pointer; list-style: none; padding: 1rem 1.2rem; font-weight: 700; display: flex; justify-content: space-between; gap: 1rem; align-items: center; border-radius: var(--radius-sm); transition: background .2s; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:hover { background: var(--surface-2); }
+.faq summary::after { content: "+"; font: 700 1.4rem/1 var(--font-heading); width: 32px; height: 32px; flex: none; display: grid; place-items: center; border-radius: 9px; background: var(--brand); color: var(--brand-ink); transition: transform .25s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 1.2rem 1.15rem; color: var(--muted); }
+@media (min-width: 900px) { .faq-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr); gap: 4rem; } .faq-grid .sec-head { position: sticky; top: 7rem; align-self: start; } }
+
+/* ==================== 見学予約 ==================== */
+.contact-grid { display: grid; gap: clamp(2rem, 5vw, 3.5rem); }
+.form { background: var(--surface); border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); border-radius: var(--radius); padding: clamp(1.3rem, 4vw, 2.4rem); display: grid; gap: 1.1rem; }
+.form .row { display: grid; gap: 1.1rem; }
+.form .btn { width: 100%; }
+.form-note { font-size: .82rem; color: var(--muted); text-align: center; }
+.contact-side { display: grid; gap: 1.4rem; align-content: start; }
+.contact-side ol { display: grid; gap: .9rem; }
+.contact-side li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: .8rem; align-items: start; }
+.contact-side li b { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; background: var(--ink); color: var(--on-ink); font-family: var(--font-heading); }
+.contact-side li span { padding-top: .4rem; }
+.contact-side .btns { display: flex; flex-wrap: wrap; gap: .7rem; }
+@media (min-width: 640px) { .form .row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+@media (min-width: 960px) { .contact-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); } }
+
+/* ==================== フッター ==================== */
+/* フッターの言語リンク */
+.f-lang { display: flex; flex-wrap: wrap; gap: 0 .9rem; margin-block: -6px; }
+.f-lang a { display: inline-flex; align-items: center; min-height: 32px; color: var(--on-ink-muted); text-decoration: underline 1px transparent; text-underline-offset: .3em; transition: color .2s, text-decoration-color .2s; }
+.f-lang a:hover { color: var(--brand); text-decoration-color: currentColor; }
+.f-lang a:active { opacity: .7; }
+.f-lang a[aria-current="page"] { color: var(--on-ink); font-weight: 700; text-decoration-color: currentColor; }
+.site-footer { background: var(--ink); color: var(--on-ink-muted); padding: 4rem 0 7rem; font-size: .92rem; }
+.foot-grid { display: grid; gap: 2rem; padding-bottom: 2.5rem; border-bottom: 1px solid color-mix(in srgb, var(--on-ink) 15%, transparent); }
+.site-footer .logo { color: var(--on-ink); }
+.site-footer .logo small { color: var(--on-ink-muted); }
+.site-footer .logo-mark i:nth-child(3) { background: var(--on-ink); }
+.site-footer h2 { color: var(--on-ink); font: 700 1rem/1.4 var(--font-body); margin-bottom: .7rem; }
+.site-footer a:not(.logo) { transition: color .2s; }
+.site-footer a:not(.logo):hover { color: var(--brand); }
+.social { display: flex; gap: .6rem; margin-top: 1.1rem; }
+.social a { min-width: 44px; height: 44px; padding-inline: .7rem; display: grid; place-items: center; border: 2px solid color-mix(in srgb, var(--on-ink) 25%, transparent); border-radius: 12px; font-size: .8rem; transition: border-color .2s, color .2s; }
+.social a:hover { border-color: var(--brand); }
+.copy { padding-top: 1.5rem; font-size: .82rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; }
+@media (min-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); } .site-footer { padding-bottom: 3rem; } }
+
+/* ---------- スマホ用の固定ボタン ---------- */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 40; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .6rem; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 96%, transparent); border-top: 1px solid var(--line); }
+.sticky-cta .btn { min-height: 48px; box-shadow: none; }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- スクロールで表示 ---------- */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<!--
+  JSON-LD 構造化データ：schema.org にはコワーキング専用の型がないため、
+  LocalBusiness を使い、additionalType で Coworking を指定しています。
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "additionalType": "http://www.productontology.org/id/Coworking",
+  "name": "マスメ コワーキング",
+  "description": "東京・神田のコワーキングスペース。フリーデスク、固定デスク、個室オフィス、時間貸しの会議室、イベントスペース、バーチャルオフィスを提供しています。",
+  "telephone": "+81-3-1234-5678",
+  "email": "hello@masume.example",
+  "url": "https://www.example.com/",
+  "priceRange": "¥2,200〜",
+  "currenciesAccepted": "JPY",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "神田錦町 2-8-5 5階",
+    "addressLocality": "千代田区",
+    "addressRegion": "東京都",
+    "postalCode": "101-0054",
+    "addressCountry": "JP"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "10:00", "closes": "16:00" }
+  ],
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "1Gbps の高速 Wi-Fi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "月額会員は 24 時間利用可能", "value": true }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+
+<!-- ==================== Section: Header ==================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="マスメ コワーキング、ページの先頭へ">
+      <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span><b>マスメ</b><small>コワーキングスペース</small></span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="メニューを開く"><span></span></button>
+    <nav class="menu" id="menu" aria-label="メインメニュー">
+      <a href="#spaces">スペース</a>
+      <a href="#plans">料金</a>
+      <a href="#estimate">会議室の試算</a>
+      <a href="#amenities">設備</a>
+      <a href="#community">イベント</a>
+      <a href="#location">アクセス</a>
+      <a class="opt" href="#faq">よくある質問</a>
+      <a href="#contact" class="btn btn-main">見学を予約</a>
+      <!-- lang-switch：言語切り替え。言語を追加するときは、ここにリンクを足し、対応するフォルダを作成してください -->
+      <nav class="lang-switch" aria-label="Language 語言">
+        <details class="lang-menu">
+          <summary lang="ja">JA</summary>
+          <div class="lang-list">
+            <a href="../en/" hreflang="en" lang="en">English</a>
+            <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+            <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+            <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a>
+          </div>
+        </details>
+      </nav>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="reveal">
+        <h1>働き方に合う、<wbr>ひとマスを。</h1>
+        <p class="hero-lead">駅から徒歩 2 分のデスク、個室、会議室。1 日単位でも、月額でも借りられます。</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-main">見学を予約</a>
+          <a href="#plans" class="btn btn-line">料金プランを見る</a>
+        </div>
+      </div>
+      <div class="board reveal">
+        <div class="img s-plan" role="img" aria-label="オープンデスク、会議室、個室オフィスが並ぶ間取り図"></div>
+        <div class="img s-desk" role="img" aria-label="ノートパソコンとコーヒーが置かれた木の机"></div>
+        <div class="img s-plant" role="img" aria-label="窓辺の大きな観葉植物"></div>
+        <div class="img s-lamp" role="img" aria-label="あたたかい光を落とすフロアランプ"></div>
+        <div class="img s-meet" role="img" aria-label="8 人掛けの会議室のテーブルと椅子"></div>
+      </div>
+    </div>
+    <!-- サンプル内容：公開前に実際の情報に差し替えてください -->
+    <div class="facts reveal" aria-label="スペースの概要">
+      <div><strong>120</strong><span>席のデスク</span></div>
+      <div><strong>6</strong><span>室の会議室</span></div>
+      <div><strong>24h</strong><span>月額会員はいつでも利用可</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Spaces ==================== -->
+<section id="spaces">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>チームの成長に合わせて選べる<wbr>6 つのスペース</h2>
+      <p>ひとりのフリーランスも、3 人のスタートアップも、20 人のサテライトチームも、ぴったりの場所が見つかります。まずは 1 日試してから、続けるかどうか決めてください。</p>
+    </div>
+    <!-- サンプル内容：公開前に実際の情報に差し替えてください -->
+    <div class="spaces">
+      <article class="space reveal">
+        <div class="img s-desk" role="img" aria-label="オープンラウンジのフリーデスク"></div>
+        <h3>フリーデスク</h3>
+        <p>空いている席ならどこでも自由に。窓際のカウンター、大きなテーブル、ソファなど、その日の気分で選べます。</p>
+        <p class="from">1 日 ¥2,200 から</p>
+      </article>
+      <article class="space reveal">
+        <div class="img s-lamp" role="img" aria-label="デスクライトと収納付きの固定デスク"></div>
+        <h3>固定デスク</h3>
+        <p>自分専用のデスクとロッカー付き。モニターや書類は置いたままで大丈夫です。</p>
+        <p class="from">月額 ¥38,500 から</p>
+      </article>
+      <article class="space reveal">
+        <div class="img s-plan" role="img" aria-label="2〜8 名用の個室オフィスの間取り"></div>
+        <h3>個室オフィス</h3>
+        <p>2〜8 名向けの鍵付き個室。家具とネット回線は設置済みなので、パソコンを持ってくるだけです。</p>
+        <p class="from">月額 ¥110,000 から</p>
+      </article>
+      <article class="space reveal">
+        <div class="img s-meet" role="img" aria-label="会議室のテーブルとモニター"></div>
+        <h3>会議室</h3>
+        <p>4〜16 名まで。65 インチモニター、ホワイトボード、Web 会議用カメラ付きで、1 時間単位でご利用いただけます。</p>
+        <p class="from">1 時間 ¥1,650 から</p>
+      </article>
+      <article class="space reveal">
+        <div class="img s-event" role="img" aria-label="ステージと客席が並ぶイベントスペース"></div>
+        <h3>イベントスペース</h3>
+        <p>最大 60 名。トークイベント、新商品の発表会、ワークショップ、ポップアップ展示に。</p>
+        <p class="from">1 時間 ¥16,500 から</p>
+      </article>
+      <article class="space reveal">
+        <div class="img s-mail" role="img" aria-label="事業用の住所と郵便物の受け取り"></div>
+        <h3>バーチャルオフィス</h3>
+        <p>実在する事業用の住所を利用でき、郵便物や荷物の受け取りも対応。届いたらすぐにお知らせします。</p>
+        <p class="from">月額 ¥5,500 から</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Pricing ==================== -->
+<section class="alt" id="plans">
+  <div class="wrap">
+    <div class="plans-top">
+      <div class="sec-head reveal">
+        <h2>わかりやすい料金</h2>
+        <p>どのプランも光熱費、Wi-Fi、コーヒーバーの利用料込みです。3 か月以上のご契約で 5% 割引になります。価格はすべて税込です。</p>
+      </div>
+      <!-- 日額と月額の切り替え：料金は各 .amt と .per の data-day、data-month 属性に書いてあります -->
+      <div class="toggle reveal" role="group" aria-label="料金の表示単位">
+        <button type="button" data-period="day" aria-pressed="false">1 日</button>
+        <button type="button" data-period="month" aria-pressed="true">月額</button>
+      </div>
+    </div>
+    <!-- サンプル内容：公開前に実際の情報に差し替えてください -->
+    <div class="plans" aria-live="polite">
+      <article class="plan reveal">
+        <h3>フリーデスク</h3>
+        <p class="desc">ときどき立ち寄って、好きな席で働きたい方に。</p>
+        <p class="price"><small>¥</small><span class="amt" data-day="2,200" data-month="22,000">22,000</span><span class="per" data-day="／1 名、1 日" data-month="／1 名、月額">／1 名、月額</span></p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>ラウンジの空いている席を自由に利用</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>会議室を月 2 時間まで無料</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>コーヒーとお茶は飲み放題</li>
+        </ul>
+        <a href="#contact" class="btn btn-line">1 日無料で試す</a>
+      </article>
+      <article class="plan pick reveal">
+        <div class="plan-head"><h3>固定デスク</h3><span class="tag">いちばん人気</span></div>
+        <p class="desc">毎日通うので、自分の席がほしい方に。</p>
+        <p class="price"><small>¥</small><span class="amt" data-day="2,750" data-month="38,500">38,500</span><span class="per" data-day="／1 名、1 日" data-month="／1 名、月額">／1 名、月額</span></p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>専用デスクとロッカー</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>会議室を月 6 時間まで無料</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>月額会員は 24 時間利用可能</li>
+        </ul>
+        <a href="#contact" class="btn btn-main">見学を予約</a>
+      </article>
+      <article class="plan reveal">
+        <h3>個室オフィス</h3>
+        <p class="desc">扉を閉めて集中したい、2〜4 名のチームに。</p>
+        <p class="price"><small>¥</small><span class="amt" data-day="8,800" data-month="110,000">110,000</span><span class="per" data-day="／1 室、1 日" data-month="／1 室、月額">／1 室、月額</span></p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>社名入りの表札が付いた鍵付き個室</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>会議室を月 12 時間まで無料</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>法人登記に利用可能</li>
+        </ul>
+        <a href="#contact" class="btn btn-line">空き状況を確認</a>
+      </article>
+    </div>
+    <p class="plans-note reveal">住所だけが必要な方へ。郵便物の受け取りと到着通知付きのバーチャルオフィスは、月額 ¥5,500 からご利用いただけます。</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Meeting room estimator ==================== -->
+<section class="dark" id="estimate">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>会議室の料金を<wbr>その場で試算</h2>
+      <p>部屋、利用時間、人数を選ぶだけで、料金と全員が入れるかどうかがすぐにわかります。</p>
+    </div>
+    <div class="est reveal">
+      <!-- 料金のルール：各 option の data-rate が 1 時間あたりの料金、data-cap が定員です。ここで編集してください。 -->
+      <form class="est-form" id="est" onsubmit="return false">
+        <div class="field">
+          <label for="e-room">部屋</label>
+          <select id="e-room">
+            <option value="小会議室" data-rate="1650" data-cap="4">小会議室（4 名、1 時間 ¥1,650）</option>
+            <option value="スタジオルーム" data-rate="3300" data-cap="8" selected>スタジオルーム（8 名、1 時間 ¥3,300）</option>
+            <option value="ボードルーム" data-rate="6600" data-cap="16">ボードルーム（16 名、1 時間 ¥6,600）</option>
+            <option value="イベントホール" data-rate="16500" data-cap="60">イベントホール（60 名、1 時間 ¥16,500）</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="field"><label for="e-hours">利用時間（時間）</label><input id="e-hours" type="number" min="1" max="12" step="1" value="2" inputmode="numeric"></div>
+          <div class="field"><label for="e-people">人数（名）</label><input id="e-people" type="number" min="1" max="200" step="1" value="6" inputmode="numeric"></div>
+        </div>
+      </form>
+      <div class="est-out" aria-live="polite">
+        <span class="label">お見積もり合計（税込）</span>
+        <output class="est-total" id="e-total" for="e-room e-hours e-people">¥6,600</output>
+        <p class="est-rate" id="e-rate">¥3,300 × 2 時間。4 時間以上のご利用で 10% 割引になります。</p>
+        <p class="cap" id="e-cap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.8a3.5 3.5 0 010 6.4M18.5 14.8c1.7.8 2.7 2.5 3 5.2"/></svg><span id="e-msg">ゆとりがあります。この部屋の定員は 8 名なので、あと 2 席空いています。</span></p>
+        <a href="#contact" class="btn btn-main">この部屋を予約する</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Amenities ==================== -->
+<section id="amenities">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>来たらすぐに、<wbr>仕事を始められる</h2>
+      <p>ノートパソコンだけ持ってきてください。あとはすべてそろっています。</p>
+    </div>
+    <ul class="amen">
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0120 0M5.2 12.3a10.4 10.4 0 0113.6 0M8.5 15.8a5.6 5.6 0 017 0"/><circle cx="12" cy="19.3" r="1.2" fill="currentColor"/></svg></span>
+        <h3>1Gbps の高速 Wi-Fi</h3>
+        <p>予備回線が 2 本あるので、Web 会議が途切れません。</p>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h12v5a5 5 0 01-5 5H9a5 5 0 01-5-5z"/><path d="M16 10.5h1.5a2.5 2.5 0 010 5H16M8 3.5c-.6.9.6 1.6 0 2.5M12 3.5c-.6.9.6 1.6 0 2.5"/></svg></span>
+        <h3>コーヒーバー</h3>
+        <p>近所の焙煎所の豆、茶葉のお茶、オーツミルクを一日中どうぞ。</p>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M7 8V3.5h10V8"/><rect x="3" y="8" width="18" height="9" rx="2"/><path d="M7 14h10v6.5H7z"/></svg></span>
+        <h3>印刷とスキャン</h3>
+        <p>カラー印刷やクラウドへのスキャンも、カードキーをかざすだけ。</p>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M9 6h6v6H9z"/><path d="M15 15.5v2"/></svg></span>
+        <h3>電話ブース</h3>
+        <p>防音ブースが 4 つ。お客様との電話も、周りを気にせずできます。</p>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3" width="17" height="18" rx="2"/><path d="M12 3v18M7.5 9v2M16.5 9v2"/></svg></span>
+        <h3>ロッカー</h3>
+        <p>固定デスクと個室オフィスには標準で付いています。フリーデスクはオプションで追加できます。</p>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg></span>
+        <h3>24 時間利用</h3>
+        <p>月額会員はカードキーでいつでも入館できます。締め切り前の夜も安心です。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== Section: Community events ==================== -->
+<section class="dark" id="community">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>コミュニティイベント</h2>
+      <p>デスクを借りに来て、人とのつながりが生まれる場所です。会員は無料、ゲストの方もお気軽にお申し込みください。</p>
+    </div>
+    <!-- サンプル内容：公開前に実際の情報に差し替えてください -->
+    <div class="events">
+      <article class="event reveal">
+        <div class="date"><b>水</b><small>毎週</small></div>
+        <div>
+          <h3>朝活クラブ：3 分間の自己紹介</h3>
+          <p>取り組んでいる仕事を持ち寄って、コーヒーを片手に隣の席の人と知り合いましょう。</p>
+          <p class="when">8:30〜9:30、ラウンジ</p>
+        </div>
+      </article>
+      <article class="event reveal">
+        <div class="date"><b>18</b><small>毎月</small></div>
+        <div>
+          <h3>フリーランスの確定申告と契約の基本</h3>
+          <p>地元の税理士と弁護士が基本をわかりやすく解説します。質疑応答の時間もあります。</p>
+          <p class="when">19:00〜21:00、イベントホール</p>
+        </div>
+      </article>
+      <article class="event reveal">
+        <div class="date"><b>27</b><small>毎月</small></div>
+        <div>
+          <h3>屋上で月末の交流会</h3>
+          <p>屋上で一杯飲みながら月をしめくくり、それぞれの取り組みを語り合います。</p>
+          <p class="when">18:30〜21:00、屋上テラス</p>
+        </div>
+      </article>
+    </div>
+    <div class="community-cta reveal">
+      <!-- LINE リンク：@yourlineid を自分の LINE 公式アカウント ID に書き換えてください。Instagram やメールに差し替えても使えます -->
+      <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-mint-line">LINE でイベント情報を受け取る</a>
+      <span>翌月のイベント予定は、毎月 1 日にお届けします。</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Getting here ==================== -->
+<section id="location">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>アクセス</h2>
+      <p>神田と神保町のあいだ、オフィス街の一角にあります。電車でも自転車でも来やすく、隣の駐車場は会員割引があります。</p>
+    </div>
+    <div class="loc">
+      <div class="loc-info reveal">
+        <dl>
+          <div><dt>住所</dt><dd>〒101-0054 東京都千代田区神田錦町 2-8-5 5階</dd></div>
+          <div><dt>電車</dt><dd>都営新宿線「小川町駅」B7 出口から徒歩 2 分、東京メトロ「神保町駅」から徒歩 6 分</dd></div>
+          <div><dt>自転車</dt><dd>1 階に屋内の駐輪場があります</dd></div>
+          <div><dt>駐車場</dt><dd>隣のコインパーキング、会員は 1 時間 ¥400</dd></div>
+          <div><dt>営業時間</dt><dd>平日 8:00〜20:00<br>土曜 10:00〜16:00、月額会員は 24 時間利用可</dd></div>
+        </dl>
+        <div class="loc-btns">
+          <a href="https://maps.google.com/?q=東京都千代田区神田錦町2-8-5" class="btn btn-ink" target="_blank" rel="noopener">Google マップで開く</a>
+          <a href="tel:+81312345678" class="btn btn-line">03-1234-5678</a>
+        </div>
+      </div>
+      <div class="img img-map reveal" role="img" aria-label="イラストの地図：マスメ コワーキングは小川町駅の近くにあります"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Member reviews ==================== -->
+<section class="alt" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>会員の声</h2>
+    </div>
+    <!-- サンプル内容：公開前に実際の情報に差し替えてください -->
+    <div class="quotes">
+      <figure class="quote reveal">
+        <blockquote>自宅のダイニングテーブルから固定デスクに移って、ようやく仕事と生活の切り替えができるようになりました。朝活クラブがきっかけで、長くお付き合いできるお客様が 2 社も見つかりました。</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true"></span><span><b>Mさん</b><span>ブランドデザイナー、固定デスク</span></span></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <blockquote>4 人のチームで個室を借りて、もうすぐ 1 年です。回線は速いし、会議室の予約も簡単。お客様が来たときの印象もいいです。</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true"></span><span><b>Kさん</b><span>ソフトウェア企業 共同創業者</span></span></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <blockquote>イベントホールで 50 人規模の新商品発表会を開きました。プロジェクター、音響、ケータリングまで、1 回の予約でまとめて手配できました。</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true"></span><span><b>Sさん</b><span>マーケティング会社 イベント担当</span></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: FAQ ==================== -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head reveal">
+      <h2>よくあるご質問</h2>
+      <p>ほかにも気になることがあれば、お電話か LINE でお気軽にどうぞ。</p>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>契約の前に試せますか？</summary>
+        <p>はい。見学のご予約で、フリーデスクを半日無料でお試しいただけます。気に入ったらプランをお選びください。</p>
+      </details>
+      <details>
+        <summary>会議室は何時間から予約できますか？</summary>
+        <p>1 時間から、1 時間単位でご利用いただけます。4 時間以上で 10% 割引です。会員の方は、プランに含まれる無料時間から先に使えます。</p>
+      </details>
+      <details>
+        <summary>この住所で法人登記はできますか？</summary>
+        <p>はい。バーチャルオフィスと個室オフィスのプランには、登記に使える事業用の住所と、郵便物や荷物の受け取りが含まれます。</p>
+      </details>
+      <details>
+        <summary>月額プランに契約期間の縛りはありますか？</summary>
+        <p>月単位のご契約です。3 か月以上で 5%、12 か月で 10% 割引になります。解約は 30 日前までにお知らせください。</p>
+      </details>
+      <details>
+        <summary>来客や犬を連れてきてもいいですか？</summary>
+        <p>来客の方は受付でチェックインのうえ、ラウンジや会議室でお会いいただけます。おとなしいワンちゃんは、金曜日に限り同伴できます。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Book a tour ==================== -->
+<section class="alt" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-side reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <h2>見学のご予約</h2>
+        <p>簡単なご要望をお知らせください。1 営業日以内にご連絡し、日時を調整します。</p>
+      </div>
+      <ol>
+        <li><b>1</b><span>フォームに記入し、見学したいスペースを選びます</span></li>
+        <li><b>2</b><span>お電話で日時を確定します</span></li>
+        <li><b>3</b><span>見学のあと、そのまま半日無料でお仕事できます</span></li>
+      </ol>
+      <div class="btns">
+        <a href="tel:+81312345678" class="btn btn-ink">03-1234-5678 に電話</a>
+        <!-- LINE リンク：@yourlineid を自分の LINE 公式アカウント ID に書き換えてください。Instagram の DM に差し替えても使えます -->
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-line">LINE で問い合わせる</a>
+      </div>
+    </div>
+    <!--
+      フォームの送信先：formspree.io で無料登録してフォームを作成すると、フォーム ID が発行されます。
+      下の action の your-form-id を書き換えると、送信内容がメールで届きます。
+    -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="row">
+        <div class="field"><label for="f-name">お名前 <i>*</i></label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-tel">電話番号 <i>*</i></label><input id="f-tel" name="phone" type="tel" autocomplete="tel" placeholder="090-1234-5678" required></div>
+      </div>
+      <div class="field"><label for="f-email">メールアドレス</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="name@example.com"></div>
+      <div class="row">
+        <div class="field">
+          <label for="f-type">ご興味のあるスペース <i>*</i></label>
+          <select id="f-type" name="space" required>
+            <option value="">選択してください</option>
+            <option>フリーデスク</option>
+            <option>固定デスク</option>
+            <option>個室オフィス</option>
+            <option>会議室</option>
+            <option>イベントスペース</option>
+            <option>バーチャルオフィス</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-size">ご利用人数</label>
+          <select id="f-size" name="team_size">
+            <option>1 名</option>
+            <option>2〜4 名</option>
+            <option>5〜10 名</option>
+            <option>11 名以上</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label for="f-date">見学のご希望日</label><input id="f-date" name="tour_date" type="date"></div>
+      <div class="field"><label for="f-msg">そのほかご要望</label><textarea id="f-msg" name="message" placeholder="駐車場の要否、入居希望日、会議室の用途など"></textarea></div>
+      <button type="submit" class="btn btn-main">見学を申し込む</button>
+      <p class="form-note">ご入力いただいた情報は、ご連絡のためだけに使用します。営業メールはお送りしません。</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span><b>マスメ</b><small>コワーキングスペース</small></span></a>
+        <p style="margin-top:1rem;max-width:22rem">小川町駅のそばで、フレキシブルなデスク、会議室、事業用の住所をご用意しています。</p>
+        <div class="social">
+          <a href="#" aria-label="X">X</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <!-- LINE リンク：@yourlineid を自分の LINE 公式アカウント ID に書き換えてください -->
+          <a href="https://line.me/R/ti/p/@yourlineid" aria-label="LINE">LINE</a>
+        </div>
+      </div>
+      <div>
+        <h2>お問い合わせ</h2>
+        <p>〒101-0054<br>東京都千代田区神田錦町 2-8-5 5階<br>電話 <a href="tel:+81312345678">03-1234-5678</a><br>hello@masume.example</p>
+      </div>
+      <div>
+        <h2>営業時間</h2>
+        <p>平日 8:00〜20:00<br>土曜 10:00〜16:00<br>月額会員は 24 時間利用可</p>
+      </div>
+    </div>
+    <div class="copy"><span>© <span id="y"></span> マスメ コワーキング</span><span class="f-lang"><a href="../en/" hreflang="en" lang="en">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></span><span>イラストはイメージです</span></div>
+  </div>
+</footer>
+
+<!-- ==================== Section: Mobile sticky CTA ==================== -->
+<div class="sticky-cta">
+  <a href="tel:+81312345678" class="btn btn-line" aria-label="03-1234-5678 に電話する">電話</a>
+  <a href="#contact" class="btn btn-main">見学を予約</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function () {
+  var header = document.querySelector('.site-header');
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('menu');
+
+  // スクロール時のヘッダー背景
+  function onScroll() { header.classList.toggle('scrolled', scrollY > 20 || menu.classList.contains('open')); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // スマホのメニュー
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    onScroll();
+  }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // 日額と月額の切り替え
+  var periods = document.querySelectorAll('.toggle button');
+  periods.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var p = b.dataset.period;
+      periods.forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+      document.querySelectorAll('.plan [data-day]').forEach(function (el) { el.textContent = el.dataset[p]; });
+    });
+  });
+
+  // 会議室の料金試算（4 時間以上で 10% 割引）
+  var room = document.getElementById('e-room'), hours = document.getElementById('e-hours'), people = document.getElementById('e-people');
+  var fmt = function (n) { return Math.round(n).toLocaleString('ja-JP'); };
+  function estimate() {
+    var o = room.options[room.selectedIndex], rate = +o.dataset.rate, cap = +o.dataset.cap;
+    var h = Math.min(12, Math.max(1, Math.round(+hours.value) || 1)), n = Math.max(1, Math.round(+people.value) || 1);
+    var off = h >= 4;
+    document.getElementById('e-total').textContent = '¥' + fmt(rate * h * (off ? 0.9 : 1));
+    document.getElementById('e-rate').textContent = '¥' + fmt(rate) + ' × ' + h + ' 時間。' + (off ? '4 時間以上のため 10% 割引を適用しました。' : '4 時間以上のご利用で 10% 割引になります。');
+    var msg, better = [].find.call(room.options, function (x) { return +x.dataset.cap >= n; }), left = cap - n;
+    if (n <= cap) msg = 'ゆとりがあります。この部屋の定員は ' + cap + ' 名なので、あと ' + left + ' 席空いています。';
+    else msg = 'この部屋の定員は ' + cap + ' 名です。' + (better ? '代わりに' + better.value + '（定員 ' + better.dataset.cap + ' 名）をおすすめします。' : '60 名を超える場合は、お電話ください。一緒にレイアウトを考えます。');
+    document.getElementById('e-msg').textContent = msg;
+    document.getElementById('e-cap').classList.toggle('warn', n > cap);
+  }
+  document.getElementById('est').addEventListener('input', estimate); estimate();
+
+  // スクロールで表示
+  var targets = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12 });
+    targets.forEach(function (el) { io.observe(el); });
+  }
+
+  document.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

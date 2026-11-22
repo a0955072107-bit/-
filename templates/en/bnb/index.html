@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fernhill Guesthouse | A Quiet Mountain B&amp;B near Asheville</title>
+<meta name="description" content="Fernhill Guesthouse is a four-room mountain B&amp;B outside Asheville, NC, with ridge-view windows, a farm breakfast every morning, a cedar hot tub and free bikes. Book your stay online.">
+<meta name="theme-color" content="#4a6648">
+<meta property="og:title" content="Fernhill Guesthouse | Slow Mornings in the Blue Ridge">
+<meta property="og:description" content="Open the curtains to morning mist on the ridgeline. Soak in the cedar tub, linger over a farm breakfast and stay a few unhurried nights.">
+<meta property="og:type" content="website">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.yourshop.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BedAndBreakfast",
+  "name": "Fernhill Guesthouse",
+  "telephone": "(555) 012-3456",
+  "url": "https://example.com/",
+  "priceRange": "$165–$285",
+  "checkinTime": "15:00",
+  "checkoutTime": "11:00",
+  "petsAllowed": true,
+  "numberOfRooms": 4,
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Hot tub", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Breakfast included", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Free parking", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Free bikes", "value": true }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "42 Laurel Ridge Road",
+    "addressLocality": "Asheville",
+    "addressRegion": "NC",
+    "postalCode": "28804",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "09:00", "closes": "21:00" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   THEME SETTINGS: edit these values to change the colors and fonts of the whole site
+   ============================================================ */
+:root {
+  --brand: #4a6648;          /* Brand color (moss green): buttons, accent text */
+  --brand-ink: #f8f7f0;      /* Text color on top of the brand color */
+  --bg: #f3eee3;             /* Page background (warm linen) */
+  --surface: #faf8f2;        /* Raised surfaces: cards, forms */
+  --text: #1f2b23;           /* Main text (deep forest green) */
+  --muted: #546058;          /* Secondary text, captions */
+  --line: #ddd5c3;           /* Dividers, borders */
+  --deep: #22352a;           /* Dark sections (booking, footer) */
+  --sage: #a3b59d;           /* Secondary color (misty sage): tags, details */
+  --mist: #e4e8df;           /* Art placeholder: morning mist */
+  --dawn: #ecdcc0;           /* Art placeholder: dawn light */
+  --ridge-1: #c3cfbd;        /* Art placeholder: farthest ridge */
+  --ridge-2: #94a78f;        /* Art placeholder: middle ridge */
+  --ridge-3: #607a62;        /* Art placeholder: near ridge */
+  --ridge-4: #33493a;        /* Art placeholder: closest treeline */
+  --wood: #b48c64;           /* Art placeholder: wood floors and walls */
+  --wood-dark: #8a6845;      /* Art placeholder: dark wood grain */
+  --linen: #f1ece2;          /* Art placeholder: bed linen, pillows */
+  --water: #9fbfb8;          /* Art placeholder: hot tub water, streams */
+  --shadow-soft: color-mix(in srgb, var(--text) 12%, transparent);  /* Soft shadow: cards, menu */
+  --shadow-deep: color-mix(in srgb, var(--text) 28%, transparent);  /* Deep shadow: beds in the art placeholders */
+  --radius: 14px;            /* Corner radius */
+  --font-heading: "Newsreader", Georgia, "Times New Roman", serif;  /* Heading font */
+  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif; /* Body font */
+  --max: 1180px;             /* Max content width */
+  --pad: clamp(1rem, 5vw, 3rem); /* Side padding */
+  --gap: clamp(1.25rem, 3.5vw, 2.5rem); /* Column gap for multi-column sections */
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 72px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1.0625rem/1.7 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; line-height: 1.3; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: clamp(4.5rem, 10vw, 7.5rem); }
+.sec-title { font-size: clamp(1.85rem, 4vw, 2.75rem); margin-bottom: .9rem; }
+.sec-lead { color: var(--muted); max-width: 36rem; }
+.sec-head { margin-bottom: clamp(2.2rem, 5vw, 3.5rem); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .85rem 1.6rem; border-radius: 999px; font: 700 1rem/1.2 var(--font-body); text-decoration: none; border: 2px solid var(--brand); cursor: pointer; transition: transform .2s, background-color .2s, color .2s, border-color .2s; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: color-mix(in srgb, var(--brand) 80%, var(--text)); border-color: color-mix(in srgb, var(--brand) 80%, var(--text)); }
+.btn-ghost { background: transparent; color: var(--brand); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.btn:active { transform: translateY(1px) scale(.98); }
+.btn:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+a:not(.btn):hover { color: var(--brand); }
+a:not(.btn):active { opacity: .7; }
+
+/* Scroll reveal: content is only hidden when JS is running */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .9s ease, transform .9s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ==================== Header ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .65rem; text-decoration: none; }
+.logo-mark { width: 40px; height: 40px; border-radius: 50%; flex: none; background: linear-gradient(var(--mist), var(--dawn)); position: relative; overflow: hidden; }
+.logo-mark::before { content: ""; position: absolute; inset: 40% -10% 0; background: var(--brand); clip-path: polygon(0 100%, 0 55%, 28% 18%, 46% 48%, 66% 8%, 100% 52%, 100% 100%); }
+.logo b { font: 600 1.2rem/1.1 var(--font-heading); display: block; }
+.logo small { font: 400 .8rem/1.2 var(--font-heading); color: var(--muted); }
+.nav-menu { display: flex; align-items: center; gap: 1.4rem; list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; font-weight: 500; font-size: .95rem; padding-block: .3rem; background: linear-gradient(var(--brand), var(--brand)) left bottom / 0 2px no-repeat; transition: background-size .3s, color .2s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 2px; }
+.nav-menu .btn { padding: .55rem 1.2rem; }
+.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: 10px; }
+.nav-toggle:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.nav-toggle:active { transform: scale(.95); }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 2px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; border-radius: 2px; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (min-width: 761px) and (max-width: 1020px) { .nav-menu .nav-extra { display: none; } }
+@media (max-width: 760px) {
+  /* Without JavaScript the menu wraps below the logo; with JS it folds into the hamburger */
+  html:not(.js) .nav { flex-wrap: wrap; padding-block: .6rem; }
+  html:not(.js) .site-header { position: sticky; background: var(--bg); }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1rem; }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); box-shadow: 0 12px 24px var(--shadow-soft); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: .85rem 0; border-bottom: 1px solid var(--line); }
+  .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+  .js .site-header:has(.nav-menu.open) { background: var(--bg); }
+}
+
+/* ==================== Art placeholders ====================
+   Each .img-xx is a mood image of mountains, mist or wood-paneled rooms drawn with CSS gradients.
+   Replace with a photo: .img-xx { background: url(images/xxx.jpg) center/cover; }
+   (After switching to a photo you can delete that class's ::before / ::after rules.) */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; background-color: var(--mist); }
+.img::before, .img::after { content: ""; position: absolute; pointer-events: none; }
+
+/* Replace with a photo: .img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero { aspect-ratio: 16 / 6; border-radius: 0;
+  background:
+    radial-gradient(circle at 72% 58%, var(--surface) 0 4%, color-mix(in srgb, var(--dawn) 80%, var(--surface)) 4.5% 9%, transparent 22%),
+    linear-gradient(180deg, var(--bg) 0%, var(--dawn) 42%, var(--mist) 62%, var(--ridge-1) 100%); }
+.img-hero::before { inset: 22% 0 0; background: linear-gradient(180deg, var(--ridge-2), color-mix(in srgb, var(--ridge-2) 30%, var(--mist)) 70%);
+  clip-path: polygon(0 52%, 9% 34%, 17% 44%, 28% 14%, 38% 36%, 47% 26%, 58% 46%, 69% 20%, 80% 38%, 90% 24%, 100% 40%, 100% 100%, 0 100%); }
+.img-hero::after { inset: 50% 0 0; background:
+    linear-gradient(180deg, color-mix(in srgb, var(--mist) 65%, transparent) 0 6%, transparent 40%),
+    linear-gradient(180deg, var(--ridge-3), var(--ridge-4) 85%);
+  clip-path: polygon(0 40%, 6% 30%, 14% 46%, 24% 22%, 33% 42%, 44% 18%, 52% 34%, 62% 28%, 73% 50%, 84% 26%, 93% 40%, 100% 30%, 100% 100%, 0 100%); }
+.hero-mist { position: absolute; inset: auto -10% 26% -10%; height: 22%; z-index: 1; pointer-events: none;
+  background: radial-gradient(ellipse 40% 60% at 30% 50%, color-mix(in srgb, var(--surface) 70%, transparent), transparent 70%), radial-gradient(ellipse 35% 50% at 75% 60%, color-mix(in srgb, var(--surface) 55%, transparent), transparent 70%);
+  filter: blur(8px); animation: drift 14s ease-in-out infinite alternate; }
+@keyframes drift { from { transform: translateX(-3%); } to { transform: translateX(4%); } }
+
+/* Rooms: wood floor, mountain window and bed. Use --wall and --win to set each room's wall color and window position */
+/* Replace with a photo: .img-r1 ~ .img-r4 { background: url(images/room-1.jpg) center/cover; } */
+.img-room { aspect-ratio: 4 / 3; --wall: var(--linen); --win: 12%;
+  background:
+    linear-gradient(180deg, transparent 0 66%, color-mix(in srgb, var(--text) 18%, transparent) 66% 67%, transparent 67%),
+    repeating-linear-gradient(90deg, transparent 0 58px, color-mix(in srgb, var(--wood-dark) 70%, transparent) 58px 60px) bottom / 100% 34% no-repeat,
+    repeating-linear-gradient(0deg, var(--wood) 0 6px, color-mix(in srgb, var(--wood) 88%, var(--wood-dark)) 6px 9px) bottom / 100% 34% no-repeat,
+    linear-gradient(180deg, var(--wall), color-mix(in srgb, var(--wall) 85%, var(--wood))); }
+.img-room::before { left: var(--win); top: 12%; width: 36%; height: 40%; border: 6px solid var(--wood-dark); border-radius: 4px;
+  background:
+    linear-gradient(90deg, transparent 49%, var(--wood-dark) 49% 51%, transparent 51%),
+    radial-gradient(ellipse 70% 45% at 25% 100%, var(--ridge-3) 98%, transparent 100%),
+    radial-gradient(ellipse 65% 70% at 85% 100%, var(--ridge-2) 98%, transparent 100%),
+    radial-gradient(ellipse 80% 85% at 45% 100%, var(--ridge-1) 98%, transparent 100%),
+    linear-gradient(180deg, var(--dawn), var(--mist)); }
+.img-room::after { right: 8%; bottom: 14%; width: 52%; height: 28%; border-radius: 10px 10px 6px 6px; box-shadow: 0 16px 22px var(--shadow-deep);
+  background:
+    radial-gradient(ellipse 16% 22% at 22% 20%, var(--surface) 96%, transparent 100%),
+    radial-gradient(ellipse 16% 22% at 52% 20%, var(--surface) 96%, transparent 100%),
+    linear-gradient(180deg, transparent 0 40%, var(--sage) 40% 62%, var(--linen) 62%),
+    linear-gradient(180deg, var(--linen), var(--linen)); }
+.img-r2 { --wall: color-mix(in srgb, var(--wood) 55%, var(--linen)); --win: 52%;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 22px, color-mix(in srgb, var(--wood-dark) 35%, transparent) 22px 23px) top / 100% 66% no-repeat,
+    linear-gradient(180deg, transparent 0 66%, color-mix(in srgb, var(--text) 18%, transparent) 66% 67%, transparent 67%),
+    repeating-linear-gradient(90deg, transparent 0 58px, color-mix(in srgb, var(--wood-dark) 70%, transparent) 58px 60px) bottom / 100% 34% no-repeat,
+    repeating-linear-gradient(0deg, var(--wood) 0 6px, color-mix(in srgb, var(--wood) 88%, var(--wood-dark)) 6px 9px) bottom / 100% 34% no-repeat,
+    linear-gradient(180deg, var(--wall), color-mix(in srgb, var(--wall) 85%, var(--wood))); }
+.img-r2::after { left: 6%; right: auto; width: 40%; height: 26%; border-radius: 50% 50% 8px 8px / 30% 30% 8px 8px;
+  background: radial-gradient(ellipse 60% 40% at 50% 30%, color-mix(in srgb, var(--water) 80%, var(--surface)), var(--water) 70%), var(--water);
+  border: 7px solid var(--wood-dark); }
+.img-r3 { --wall: color-mix(in srgb, var(--sage) 35%, var(--linen)); --win: 8%; }
+.img-r3::after { width: 64%; background:
+    radial-gradient(ellipse 9% 22% at 12% 20%, var(--surface) 96%, transparent 100%),
+    radial-gradient(ellipse 9% 22% at 32% 20%, var(--surface) 96%, transparent 100%),
+    radial-gradient(ellipse 9% 22% at 66% 20%, var(--surface) 96%, transparent 100%),
+    radial-gradient(ellipse 9% 22% at 86% 20%, var(--surface) 96%, transparent 100%),
+    linear-gradient(90deg, transparent 0 48.5%, var(--wood-dark) 48.5% 51.5%, transparent 51.5%),
+    linear-gradient(180deg, transparent 0 40%, var(--sage) 40% 62%, var(--linen) 62%), var(--linen); }
+.img-r4 { --wall: color-mix(in srgb, var(--dawn) 60%, var(--linen)); --win: 56%; }
+.img-r4::after { left: 8%; right: auto; width: 44%; }
+
+/* Hot tub: cedar soaking tub with steam */
+/* Replace with a photo: .img-spring { background: url(images/spring.jpg) center/cover; } */
+.img-spring { aspect-ratio: 4 / 5;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 30px, color-mix(in srgb, var(--wood-dark) 45%, transparent) 30px 32px),
+    linear-gradient(180deg, color-mix(in srgb, var(--wood) 70%, var(--linen)), var(--wood)); }
+.img-spring::before { left: 8%; right: 8%; bottom: 10%; height: 34%; border-radius: 12px; border: 12px solid var(--wood-dark); box-shadow: 0 18px 30px var(--shadow-deep);
+  background: radial-gradient(ellipse 50% 30% at 40% 30%, color-mix(in srgb, var(--surface) 55%, transparent), transparent 70%), linear-gradient(180deg, color-mix(in srgb, var(--water) 75%, var(--surface)), var(--water)); }
+.img-spring::after { left: 18%; right: 18%; top: 22%; height: 40%; filter: blur(16px); opacity: .7;
+  background: radial-gradient(ellipse 30% 50% at 35% 70%, var(--surface), transparent 70%), radial-gradient(ellipse 25% 45% at 65% 45%, var(--surface), transparent 70%);
+  animation: steam 6s ease-in-out infinite alternate; }
+@keyframes steam { from { transform: translateY(12px) scaleY(.9); opacity: .4; } to { transform: translateY(-14px) scaleY(1.1); opacity: .75; } }
+
+/* Nearby spots */
+/* Replace with a photo: .img-s1 ~ .img-s4 { background: url(images/spot-1.jpg) center/cover; } */
+.img-spot { aspect-ratio: 3 / 2; }
+.img-s1 { background: radial-gradient(ellipse 60% 30% at 50% 100%, var(--water), transparent 70%), linear-gradient(180deg, var(--mist), var(--ridge-1)); }
+.img-s1::before { left: 44%; width: 12%; top: 0; bottom: 18%; background: linear-gradient(90deg, color-mix(in srgb, var(--surface) 80%, transparent), var(--surface), color-mix(in srgb, var(--surface) 75%, var(--water))); filter: blur(1px); }
+.img-s1::after { inset: 0; background: linear-gradient(90deg, var(--ridge-4) 0 30%, transparent 30% 70%, var(--ridge-3) 70%); clip-path: polygon(0 0, 44% 0, 40% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 60% 100%, 56% 0, 100% 0); opacity: .9; }
+.img-s2 { background: linear-gradient(180deg, var(--dawn), var(--mist)); }
+.img-s2::before { inset: 0; background: repeating-linear-gradient(90deg, var(--ridge-4) 0 10px, transparent 10px 46px, var(--ridge-3) 46px 54px, transparent 54px 90px); opacity: .85; }
+.img-s2::after { left: 30%; right: 30%; bottom: 0; height: 40%; background: var(--wood); clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%); opacity: .8; }
+.img-s3 { background: linear-gradient(180deg, var(--dawn) 0 40%, var(--water) 40%); }
+.img-s3::before { left: 50%; top: 22%; width: 34%; height: 22%; transform: translateX(-50%); background: var(--ridge-3); clip-path: polygon(0 100%, 30% 40%, 55% 0, 70% 30%, 100% 100%); }
+.img-s3::after { inset: 46% 0 0; background: repeating-linear-gradient(0deg, transparent 0 10px, color-mix(in srgb, var(--surface) 30%, transparent) 10px 12px); }
+.img-s4 { background: linear-gradient(180deg, var(--mist), var(--linen)); }
+.img-s4::before { inset: 30% 0 0; background: var(--ridge-2); clip-path: polygon(0 60%, 20% 30%, 40% 55%, 65% 20%, 100% 50%, 100% 100%, 0 100%); }
+.img-s4::after { left: 12%; right: 12%; bottom: 10%; height: 30%; background: radial-gradient(ellipse 30% 30% at 30% 40%, color-mix(in srgb, var(--surface) 70%, transparent), transparent 70%), linear-gradient(180deg, color-mix(in srgb, var(--water) 85%, var(--surface)), var(--water)); border-radius: 50%; filter: blur(.5px); }
+
+/* Getting here: simple map */
+/* Replace with a photo or map screenshot: .img-map { background: url(images/map.jpg) center/cover; } */
+.img-map { aspect-ratio: 4 / 3; background:
+    linear-gradient(28deg, transparent 0 47%, var(--surface) 47% 50%, transparent 50%),
+    linear-gradient(-62deg, transparent 0 60%, var(--surface) 60% 62%, transparent 62%),
+    radial-gradient(ellipse 45% 35% at 15% 15%, color-mix(in srgb, var(--ridge-2) 70%, transparent), transparent 70%),
+    radial-gradient(ellipse 40% 30% at 85% 85%, color-mix(in srgb, var(--water) 70%, transparent), transparent 70%),
+    repeating-linear-gradient(0deg, transparent 0 39px, var(--line) 39px 40px),
+    repeating-linear-gradient(90deg, transparent 0 39px, var(--line) 39px 40px),
+    var(--mist); }
+.img-map::before { width: 34px; height: 34px; left: 50%; top: 46%; transform: translate(-50%, -100%) rotate(-45deg); border-radius: 50% 50% 50% 0; background: var(--brand); box-shadow: 0 6px 14px var(--shadow-deep); }
+.img-map::after { width: 12px; height: 12px; left: 50%; top: 46%; transform: translate(-50%, -190%); border-radius: 50%; background: var(--brand-ink); }
+
+/* ==================== Hero ==================== */
+.hero { padding: 0; position: relative; background: var(--bg); }
+.hero-text { padding-top: calc(72px + clamp(2.5rem, 7vw, 5rem)); padding-bottom: clamp(1rem, 3vw, 2rem); text-align: center; position: relative; z-index: 2; }
+.hero h1 { font-size: clamp(2.4rem, 6.2vw, 4.4rem); line-height: 1.2; margin: 0 auto 1.1rem; max-width: 16ch; }
+.hero .lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--muted); max-width: 30rem; text-wrap: balance; margin: 0 auto 1.9rem; }
+.hero-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem; }
+.hero-art { position: relative; overflow: hidden; margin-top: clamp(-3rem, -4vw, -1rem); }
+.hero-facts { position: absolute; z-index: 2; left: 0; right: 0; bottom: clamp(1rem, 3vw, 2rem); display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; list-style: none; padding-inline: var(--pad); }
+.hero-facts li { background: color-mix(in srgb, var(--deep) 72%, transparent); color: var(--brand-ink); padding: .4rem .95rem; border-radius: 999px; font-size: .9rem; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+@media (max-width: 760px) {
+  .img-hero { aspect-ratio: 4 / 3; }
+  .hero-facts { position: static; padding-block: 1rem 0; background: var(--ridge-4); margin-top: -1px; padding-bottom: 1.2rem; }
+}
+
+/* ==================== Rooms ==================== */
+.rooms { background: var(--surface); }
+.room-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.room { display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--line); border-radius: calc(var(--radius) + 4px); overflow: hidden; }
+.room .img { border-radius: 0; }
+.room-body { padding: clamp(1.3rem, 3vw, 1.9rem); display: flex; flex-direction: column; gap: 1rem; flex: 1; }
+.room h3 { font-size: 1.5rem; }
+.room-desc { color: var(--muted); font-size: .95rem; margin-top: -.5rem; }
+.specs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; }
+.specs div { background: var(--surface); border-radius: 10px; padding: .55rem .7rem; font-size: .88rem; line-height: 1.5; }
+.specs dt { color: var(--muted); font-size: .8rem; }
+.specs dd { font-weight: 500; }
+.amen { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; }
+.amen li { font-size: .85rem; padding: .2rem .7rem; border-radius: 999px; background: color-mix(in srgb, var(--sage) 28%, transparent); color: var(--text); }
+.room-foot { margin-top: auto; display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.prices { display: flex; gap: 1.4rem; font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.prices b { display: block; font: 600 1.35rem/1.2 var(--font-heading); color: var(--text); font-variant-numeric: tabular-nums; }
+.room-foot .btn { padding: .65rem 1.3rem; }
+.rooms-note { color: var(--muted); font-size: .88rem; margin-top: 2rem; }
+@media (max-width: 860px) { .room-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 400px) { .specs { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .specs div:last-child { grid-column: 1 / -1; } }
+
+/* ==================== Amenities ==================== */
+.feat-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: var(--gap); align-items: center; }
+.feat-list { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem var(--gap); }
+.feat-list li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .9rem; align-items: start; }
+.ico { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: color-mix(in srgb, var(--sage) 35%, transparent); color: var(--brand); }
+.feat-list h3 { font-size: 1.15rem; margin-bottom: .2rem; }
+.feat-list p { color: var(--muted); font-size: .93rem; line-height: 1.7; }
+@media (max-width: 860px) { .feat-grid { grid-template-columns: minmax(0, 1fr); } .img-spring { aspect-ratio: 16 / 10; } }
+@media (max-width: 560px) { .feat-list { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Nearby ==================== */
+.nearby { background: color-mix(in srgb, var(--sage) 18%, var(--bg)); }
+.spot-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap); list-style: none; }
+.spot h3 { font-size: 1.2rem; margin: 1rem 0 .3rem; }
+.spot p { color: var(--muted); font-size: .92rem; line-height: 1.7; }
+.time { display: inline-block; margin-top: .6rem; font-size: .85rem; font-weight: 500; color: var(--brand); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: .15rem .7rem; }
+@media (max-width: 960px) { .spot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .spot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== House policies ==================== */
+.rules-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: var(--gap); align-items: start; }
+.times { display: flex; gap: 1rem; margin-top: 1.6rem; }
+.times div { flex: 1; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.2rem; color: var(--muted); font-size: .9rem; }
+.times b { display: block; font: 600 1.8rem/1.2 var(--font-heading); color: var(--text); font-variant-numeric: tabular-nums; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-child { border-top: 1px solid var(--line); }
+.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.15rem .25rem; font: 500 1.12rem/1.4 var(--font-heading); border-radius: 6px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font: 400 1.2rem/1 var(--font-body); color: var(--brand); background: color-mix(in srgb, var(--sage) 28%, transparent); transition: transform .3s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq summary:hover { color: var(--brand); }
+.faq summary:active { opacity: .75; }
+.faq .ans { padding: 0 .25rem 1.25rem; color: var(--muted); }
+.faq .ans ul { padding-left: 1.2rem; display: grid; gap: .3rem; }
+@media (max-width: 860px) { .rules-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Guest reviews ==================== */
+.reviews { background: var(--surface); }
+.review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.review { display: flex; flex-direction: column; gap: 1rem; padding-top: 1.4rem; border-top: 2px solid var(--sage); }
+.stars { color: var(--brand); letter-spacing: 0; }
+.review blockquote { font: 400 1.12rem/1.8 var(--font-heading); flex: 1; }
+.review figcaption { font-size: .9rem; color: var(--muted); }
+.review figcaption b { color: var(--text); }
+@media (max-width: 860px) { .review-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Booking ==================== */
+.book { background: var(--deep); color: var(--bg); position: relative; padding-top: clamp(6rem, 12vw, 9rem); }
+.book::before { content: ""; position: absolute; top: -1px; left: 0; right: 0; height: clamp(40px, 6vw, 80px); background: var(--surface); clip-path: polygon(0 0, 100% 0, 100% 30%, 88% 70%, 76% 40%, 62% 85%, 50% 45%, 36% 80%, 22% 35%, 10% 75%, 0 40%); }
+.book .sec-lead { color: color-mix(in srgb, var(--bg) 82%, transparent); }
+.book-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: var(--gap); align-items: start; }
+.quick { display: grid; gap: .8rem; margin-top: 2rem; }
+.quick .btn { justify-content: flex-start; }
+.btn-light { background: transparent; color: var(--bg); border-color: color-mix(in srgb, var(--bg) 40%, transparent); }
+.btn-light:hover { background: color-mix(in srgb, var(--bg) 12%, transparent); }
+.book .small-note { color: color-mix(in srgb, var(--bg) 75%, transparent); font-size: .88rem; margin-top: 1.2rem; }
+.form { background: var(--surface); color: var(--text); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.4rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.1rem; }
+.field { display: grid; gap: .35rem; min-width: 0; align-content: start; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-weight: 500; font-size: .92rem; }
+.field label span { color: var(--brand); }
+.field input, .field select, .field textarea { width: 100%; min-width: 0; font: inherit; color: var(--text); background: var(--bg); border: 1.5px solid var(--line); border-radius: 10px; padding: .7rem .85rem; min-height: 48px; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: var(--sage); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 22%, transparent); }
+.field textarea { min-height: 96px; resize: vertical; }
+.nights { grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .3rem 1rem; background: color-mix(in srgb, var(--sage) 22%, transparent); border-radius: 10px; padding: .7rem 1rem; font-size: .95rem; }
+.nights b { font-family: var(--font-heading); font-size: 1.1rem; font-variant-numeric: tabular-nums; }
+.form .btn { grid-column: 1 / -1; width: 100%; }
+.form small { grid-column: 1 / -1; color: var(--muted); font-size: .85rem; text-align: center; }
+@media (max-width: 860px) { .book-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .form { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Getting here ==================== */
+.access-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap); align-items: center; }
+.addr { font: 500 1.3rem/1.6 var(--font-heading); margin-bottom: .4rem; }
+.route { list-style: none; margin: 1.4rem 0 1.8rem; display: grid; gap: .9rem; }
+.route li { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: .8rem; color: var(--muted); font-size: .95rem; padding-bottom: .9rem; border-bottom: 1px solid var(--line); }
+.route b { color: var(--text); font-weight: 700; }
+.access-cta { display: flex; flex-wrap: wrap; gap: .8rem; }
+@media (max-width: 860px) { .access-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Footer ==================== */
+.site-footer { background: var(--deep); color: color-mix(in srgb, var(--bg) 82%, transparent); padding-block: 3.5rem 2rem; font-size: .93rem; border-top: 1px solid color-mix(in srgb, var(--bg) 14%, transparent); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.site-footer h2 { color: var(--bg); font-size: 1.15rem; margin-bottom: .8rem; }
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { color: var(--bg); text-decoration: underline; }
+.social { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+.copy { border-top: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); margin-top: 2.5rem; padding-top: 1.5rem; font-size: .85rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Mobile sticky button ==================== */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 76px; }
+  .sticky-cta { display: flex; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -1px 0 var(--line); }
+  .sticky-cta .btn-primary { flex: 1; }
+  .sticky-cta .btn-ghost { padding-inline: 1.1rem; }
+}
+/* ==================== Language switcher ==================== */
+/* Header language switcher: small and quiet; the current language is bold and underlined (not colour alone) */
+.nav-menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .6rem; border-left: 1px solid var(--line); font: 400 .8rem/1 var(--font-body); }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: var(--muted); border-radius: var(--radius); text-decoration: none; text-underline-offset: .4em; text-decoration-thickness: 1px; transition: color .25s, background-color .25s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 7%, transparent); }
+.lang-switch a:active { opacity: .7; }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 0; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 600; text-decoration-line: underline; }
+@media (max-width: 760px) {
+  /* Mobile: the switcher sits left of the menu button and stays visible */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .nav-toggle { order: 2; }
+  .nav-menu { order: 3; }
+}
+/* Footer language text links */
+.foot-lang { display: flex; flex-wrap: wrap; align-items: center; gap: 0 .5rem; margin-top: 1.25rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; min-height: 32px; padding-inline: .2rem; text-underline-offset: .35em; }
+.foot-lang a:hover { text-decoration-line: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { font-weight: 600; text-decoration-line: underline; }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+</head>
+<body>
+
+<!-- ==================== Section: Header ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav wrap" aria-label="Main menu">
+    <a href="#hero" class="logo" aria-label="Fernhill Guesthouse, back to top">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span><b>Fernhill</b><small>Guesthouse</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-links" aria-label="Open menu"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#features">Amenities</a></li>
+      <li><a href="#nearby">Nearby</a></li>
+      <li class="nav-extra"><a href="#rules">Policies</a></li>
+      <li class="nav-extra"><a href="#reviews">Reviews</a></li>
+      <li><a href="#access">Directions</a></li>
+      <li><a href="#book" class="btn btn-primary">Book your stay</a></li>
+    </ul>
+    <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="en">EN</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en" aria-current="page">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </nav>
+</header>
+
+<main>
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-text">
+    <h1>Wake up to mist on the ridgeline</h1>
+    <p class="lead">Four quiet rooms at the edge of the Blue Ridge. Soak in the cedar tub, linger over breakfast and stay a little longer.</p>
+    <div class="hero-cta">
+      <a href="#book" class="btn btn-primary">Book your stay</a>
+      <a href="#rooms" class="btn btn-ghost">View rooms</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="img img-hero" role="img" aria-label="Layered mountain ridges in soft morning mist"></div>
+    <div class="hero-mist" aria-hidden="true"></div>
+    <ul class="hero-facts">
+      <li>12 minutes to downtown</li>
+      <li>Breakfast included</li>
+      <li>Cedar hot tub</li>
+      <li>Free parking</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== Section: Rooms ==================== -->
+<section class="rooms" id="rooms">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">Four rooms, four ways to watch the mountains</h2>
+      <p class="sec-lead">Every room has a big ridge-view window and a private bath, and every rate includes breakfast for two. Weekend rates apply on Friday and Saturday nights and holiday eves.</p>
+    </div>
+    <div class="room-grid">
+      <article class="room reveal">
+        <div class="img img-room img-r1" role="img" aria-label="Wood-floored queen room with a window onto misty hills"></div>
+        <div class="room-body">
+          <h3>Morning Mist Queen</h3>
+          <p class="room-desc">The first room the sun finds. Watch the fog lift off the hills without leaving bed.</p>
+          <dl class="specs">
+            <div><dt>Sleeps</dt><dd>2 guests</dd></div>
+            <div><dt>Bed</dt><dd>1 queen</dd></div>
+            <div><dt>Size</dt><dd>280 sq ft</dd></div>
+          </dl>
+          <ul class="amen" aria-label="In-room amenities">
+            <li>Ridge-view window</li><li>Pour-over coffee kit</li><li>Private bath</li><li>Free Wi-Fi</li>
+          </ul>
+          <div class="room-foot">
+            <div class="prices"><div>Weekdays<b>$165</b></div><div>Weekends<b>$195</b></div></div>
+            <a href="#book" class="btn btn-ghost" data-room="Morning Mist Queen">Book this room</a>
+          </div>
+        </div>
+      </article>
+      <article class="room reveal">
+        <div class="img img-room img-r2" role="img" aria-label="Wood-paneled suite with a cedar soaking tub"></div>
+        <div class="room-body">
+          <h3>Cedar Soaking Suite</h3>
+          <p class="room-desc">A deep cedar tub sits right by the window, so you can soak with the mountains in view.</p>
+          <dl class="specs">
+            <div><dt>Sleeps</dt><dd>2 guests</dd></div>
+            <div><dt>Bed</dt><dd>1 king</dd></div>
+            <div><dt>Size</dt><dd>380 sq ft</dd></div>
+          </dl>
+          <ul class="amen" aria-label="In-room amenities">
+            <li>Cedar soaking tub</li><li>Private balcony</li><li>Robes</li><li>Bluetooth speaker</li>
+          </ul>
+          <div class="room-foot">
+            <div class="prices"><div>Weekdays<b>$245</b></div><div>Weekends<b>$285</b></div></div>
+            <a href="#book" class="btn btn-ghost" data-room="Cedar Soaking Suite">Book this room</a>
+          </div>
+        </div>
+      </article>
+      <article class="room reveal">
+        <div class="img img-room img-r3" role="img" aria-label="Spacious family room with two queen beds"></div>
+        <div class="room-body">
+          <h3>Laurel Family Room</h3>
+          <p class="room-desc">Two queens and a long farm table. Room for the whole crew, or a couple of old friends.</p>
+          <dl class="specs">
+            <div><dt>Sleeps</dt><dd>4 guests</dd></div>
+            <div><dt>Bed</dt><dd>2 queens</dd></div>
+            <div><dt>Size</dt><dd>430 sq ft</dd></div>
+          </dl>
+          <ul class="amen" aria-label="In-room amenities">
+            <li>Forest view</li><li>Clawfoot tub</li><li>Kids’ amenities</li><li>Mini fridge</li>
+          </ul>
+          <div class="room-foot">
+            <div class="prices"><div>Weekdays<b>$225</b></div><div>Weekends<b>$265</b></div></div>
+            <a href="#book" class="btn btn-ghost" data-room="Laurel Family Room">Book this room</a>
+          </div>
+        </div>
+      </article>
+      <article class="room reveal">
+        <div class="img img-room img-r4" role="img" aria-label="Ground-floor pet-friendly room opening onto a garden"></div>
+        <div class="room-body">
+          <h3>Garden Dog-Friendly Room</h3>
+          <p class="room-desc">Its own ground-floor entrance and a fenced patch of lawn, so your dog can roam freely.</p>
+          <dl class="specs">
+            <div><dt>Sleeps</dt><dd>2 to 3 guests</dd></div>
+            <div><dt>Bed</dt><dd>Queen + sofa bed</dd></div>
+            <div><dt>Size</dt><dd>330 sq ft</dd></div>
+          </dl>
+          <ul class="amen" aria-label="In-room amenities">
+            <li>Private yard</li><li>Dog bed and bowls</li><li>Non-slip floors</li><li>Paw-wash station</li>
+          </ul>
+          <div class="room-foot">
+            <div class="prices"><div>Weekdays<b>$175</b></div><div>Weekends<b>$205</b></div></div>
+            <a href="#book" class="btn btn-ghost" data-room="Garden Dog-Friendly Room">Book this room</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="rooms-note">Rates are per room, per night, with breakfast included. Taxes are added at checkout. Extra adult $35 per night; kids under 6 stay free.</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Amenities ==================== -->
+<section id="features">
+  <div class="wrap feat-grid">
+    <div class="img img-spring reveal" role="img" aria-label="Steam rising from a cedar hot tub in a wooden bathhouse"></div>
+    <div class="reveal">
+      <div class="sec-head">
+        <h2 class="sec-title">Small comforts, every day</h2>
+        <p class="sec-lead">We’re a family of three running a small inn. Nothing fancy, just good beds, good coffee and a quiet place to rest.</p>
+      </div>
+      <ul class="feat-list">
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h14v2a6 6 0 0 1-6 6h-2a6 6 0 0 1-6-6v-2Zm14 1h1a2.5 2.5 0 0 1 0 5h-2M8 4v3m4-3v3"/></svg></span>
+          <div><h3>Farm breakfast</h3><p>Served 8:00–10:00 AM with local eggs, stone-ground grits, biscuits and whatever the market has that week.</p></div>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16c2 0 2 2 4.5 2S10 16 12 16s2 2 4.5 2S19 16 21 16M8 12c0-2 1.5-2 1.5-4S8 6 8 4m4 8c0-2 1.5-2 1.5-4S12 6 12 4m4 8c0-2 1.5-2 1.5-4S16 6 16 4"/></svg></span>
+          <div><h3>Cedar hot tub</h3><p>Book a private 50-minute soak under the hemlocks. Free for guests, open until 10 PM.</p></div>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l4-7h6l2 7M10 9l2.5 7M14 5h3"/></svg></span>
+          <div><h3>Free bikes</h3><p>Six cruisers and a kid’s trailer, ready for the greenway down to the river.</p></div>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="10" r="2"/><circle cx="9.5" cy="5.5" r="2"/><circle cx="14.5" cy="5.5" r="2"/><circle cx="18.5" cy="10" r="2"/><path d="M12 11c-3 0-5.5 4-5.5 6.5 0 2 2 2.5 3 2s1.5-.5 2.5-.5 1.5 0 2.5.5 3 0 3-2C17.5 15 15 11 12 11Z"/></svg></span>
+          <div><h3>Dogs welcome</h3><p>Up to two dogs under 35 lb in the Garden Room, with a $40 cleaning fee per stay.</p></div>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-6h6v6"/></svg></span>
+          <div><h3>Free parking</h3><p>Six spots right in the driveway. No circling the block.</p></div>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V11M12 11c0-4-3-7-8-7 0 4 3 7 8 7Zm0 0c0-3.5 2.5-6 7-6 0 3.5-2.5 6-7 6Z"/></svg></span>
+          <div><h3>Local know-how</h3><p>We’ll set you up with river tubing, orchard picking and the hikes the guidebooks miss.</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Nearby ==================== -->
+<section class="nearby" id="nearby">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">Easy day trips from the porch</h2>
+      <p class="sec-lead">Times are by car, bike or on foot. Leaf season brings weekend traffic, so head out early.</p>
+    </div>
+    <ul class="spot-grid">
+      <li class="spot reveal">
+        <div class="img img-spot img-s1" role="img" aria-label="A waterfall between forested cliffs"></div>
+        <h3>Cascade Falls Trail</h3>
+        <p>An easy mile to a 60-foot waterfall. Bring water shoes in summer.</p>
+        <span class="time">20 min drive</span>
+      </li>
+      <li class="spot reveal">
+        <div class="img img-spot img-s2" role="img" aria-label="A wooden path through tall trees"></div>
+        <h3>Big Laurel Loop</h3>
+        <p>A shady 3-mile loop through old hemlocks and rhododendron tunnels.</p>
+        <span class="time">15 min drive</span>
+      </li>
+      <li class="spot reveal">
+        <div class="img img-spot img-s3" role="img" aria-label="A calm lake with a small island"></div>
+        <h3>Lake Juniper</h3>
+        <p>Rent a kayak, paddle out to the island and picnic on the dock.</p>
+        <span class="time">25 min drive</span>
+      </li>
+      <li class="spot reveal">
+        <div class="img img-spot img-s4" role="img" aria-label="A steaming pool at the foot of the hills"></div>
+        <h3>Hot Springs mineral baths</h3>
+        <p>Soak in warm mineral water by the river, then grab lunch on Main Street.</p>
+        <span class="time">40 min drive</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== Section: House policies ==================== -->
+<section id="rules">
+  <div class="wrap rules-grid">
+    <div class="reveal">
+      <h2 class="sec-title">Good to know before you arrive</h2>
+      <p class="sec-lead">Still have questions? Send us a WhatsApp message. We usually reply within the hour.</p>
+      <div class="times">
+        <div><b>3 PM</b>Check-in from</div>
+        <div><b>11 AM</b>Check-out by</div>
+      </div>
+    </div>
+    <div class="faq reveal">
+      <details open>
+        <summary>Check-in and check-out</summary>
+        <div class="ans"><ul><li>Check-in is 3:00–9:00 PM. Arriving later? Just let us know.</li><li>Check-out is by 11:00 AM. We’re happy to hold bags until 3 PM.</li><li>Early check-in depends on the day and can’t be guaranteed.</li></ul></div>
+      </details>
+      <details>
+        <summary>Deposit and cancellation</summary>
+        <div class="ans"><ul><li>A 30% deposit within 3 days confirms your booking.</li><li>Cancel 14 or more days ahead for a full refund.</li><li>Cancel 7 to 13 days ahead for a 50% refund. Within 7 days, the deposit is non-refundable.</li><li>Severe weather? Reschedule free or get a full refund.</li></ul></div>
+      </details>
+      <details>
+        <summary>Parking and pickup</summary>
+        <div class="ans"><ul><li>Six free spots in the driveway, first come, first served.</li><li>Free pickup from the downtown bus station; please book a day ahead.</li></ul></div>
+      </details>
+      <details>
+        <summary>Dogs and kids</summary>
+        <div class="ans"><ul><li>Dogs stay in the Garden Room only, two at most. Please bring their own bedding.</li><li>Kids under 6 stay free; we have a crib and kids’ amenities on request.</li></ul></div>
+      </details>
+      <details>
+        <summary>House rules</summary>
+        <div class="ans"><ul><li>No smoking anywhere on the property, and no open flames or cooking in rooms.</li><li>Quiet hours start at 10 PM.</li><li>We’re a licensed lodging business and can provide receipts.</li></ul></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Guest reviews ==================== -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">What our guests say</h2>
+    </div>
+    <!-- Sample content: replace with real data before going live -->
+    <div class="review-grid">
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>I woke up at six just to watch the fog roll off the ridge. A soak in the cedar tub, then those biscuits. We’re already planning our next trip.</blockquote>
+        <figcaption><b>Rachel M.</b><br>Stayed in the Cedar Soaking Suite</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>We brought two kids and the room had space for everyone. The hosts lent us bikes for the greenway and the kids didn’t want to go home.</blockquote>
+        <figcaption><b>David K.</b><br>Stayed in the Laurel Family Room</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>Finally, a B&amp;B that truly welcomes dogs. The little yard is fully fenced, so our beagle rolled in the grass every morning while we drank coffee.</blockquote>
+        <figcaption><b>Jenna L.</b><br>Stayed in the Garden Room</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Booking ==================== -->
+<section class="book" id="book">
+  <div class="wrap book-grid">
+    <div class="reveal">
+      <h2 class="sec-title">Save yourself a room with a view</h2>
+      <p class="sec-lead">Send us your dates and we’ll confirm availability and deposit details within 24 hours. Need an answer today? Give us a call.</p>
+      <div class="quick">
+        <a class="btn btn-light" href="tel:+15550123456">Call (555) 012-3456</a>
+        <!-- WhatsApp button: swap in LINE (https://line.me/R/ti/p/@yourlineid), Messenger (https://m.me/yourpage) or Instagram (https://ig.me/m/yourhandle) if you prefer -->
+        <a class="btn btn-light" href="https://wa.me/15550123456" target="_blank" rel="noopener">Message us on WhatsApp</a>
+      </div>
+      <p class="small-note">We answer messages 9:00 AM–9:00 PM, every day.</p>
+    </div>
+    <!-- This form uses Formspree (the free plan includes 50 submissions a month):
+         1. Sign up at https://formspree.io and create a new form
+         2. Copy the form ID from its URL (for example xyzabcd)
+         3. Replace your-form-id in the action below and submissions arrive in your inbox -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="field"><label for="f-in">Check-in <span>*</span></label><input id="f-in" name="Check-in" type="date" required></div>
+      <div class="field"><label for="f-out">Check-out <span>*</span></label><input id="f-out" name="Check-out" type="date" required></div>
+      <p class="nights" aria-live="polite"><span id="nights">Choose your check-in and check-out dates</span><b id="estimate"></b></p>
+      <input type="hidden" name="Nights" id="f-nights">
+      <div class="field"><label for="f-guests">Guests <span>*</span></label>
+        <select id="f-guests" name="Guests" required>
+          <option value="">Select</option>
+          <option>1 guest</option><option selected>2 guests</option><option>3 guests</option><option>4 guests</option><option>5 or more (we’ll call you)</option>
+        </select></div>
+      <!-- data-wd / data-we are the weekday / weekend rates used for the price estimate; update them when you change rates -->
+      <div class="field"><label for="f-room">Room <span>*</span></label>
+        <select id="f-room" name="Room" required>
+          <option value="">Select</option>
+          <option data-wd="165" data-we="195">Morning Mist Queen</option>
+          <option data-wd="245" data-we="285">Cedar Soaking Suite</option>
+          <option data-wd="225" data-we="265">Laurel Family Room</option>
+          <option data-wd="175" data-we="205">Garden Dog-Friendly Room</option>
+        </select></div>
+      <div class="field"><label for="f-name">Name <span>*</span></label><input id="f-name" name="Name" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">Phone <span>*</span></label><input id="f-tel" name="Phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(555) 555-0199" required></div>
+      <div class="field full"><label for="f-note">Notes</label><textarea id="f-note" name="Notes" placeholder="Arrival time, pickup, bringing a dog, extra bed…"></textarea></div>
+      <button class="btn btn-primary" type="submit">Send booking request</button>
+      <small>Your booking is confirmed once you hear back from us.</small>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== Section: Getting here ==================== -->
+<section id="access">
+  <div class="wrap access-grid">
+    <div class="reveal">
+      <h2 class="sec-title">Finding Fernhill</h2>
+      <p class="addr">42 Laurel Ridge Road, Asheville, NC 28804</p>
+      <p class="sec-lead">Phone <a href="tel:+15550123456">(555) 012-3456</a></p>
+      <ul class="route">
+        <li><b>Car</b>Take I-26 to exit 25, then follow Laurel Ridge Road uphill for 6 minutes</li>
+        <li><b>Air</b>The regional airport is 25 minutes away by rideshare</li>
+        <li><b>Bus</b>Free pickup from the downtown station, booked a day ahead</li>
+        <li><b>Parking</b>Six free spots on site. Let us know if you’re bringing an RV</li>
+      </ul>
+      <div class="access-cta">
+        <a class="btn btn-primary" href="https://maps.google.com/?q=42+Laurel+Ridge+Road,+Asheville,+NC+28804" target="_blank" rel="noopener">Open in Google Maps</a>
+        <a class="btn btn-ghost" href="https://wa.me/15550123456" target="_blank" rel="noopener">Arrange a pickup</a>
+      </div>
+    </div>
+    <div class="img img-map reveal" role="img" aria-label="Map showing the location of Fernhill Guesthouse"></div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>Fernhill Guesthouse</h2>
+        <p>42 Laurel Ridge Road, Asheville, NC 28804<br>Phone <a href="tel:+15550123456">(555) 012-3456</a><br>Lodging permit #0000</p>
+        <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="https://wa.me/15550123456">WhatsApp</a></div>
+      </div>
+      <div>
+        <h2>Hours</h2>
+        <p>Check-in 3:00–9:00 PM<br>Check-out by 11:00 AM<br>Front desk 9:00 AM–9:00 PM</p>
+      </div>
+      <div>
+        <h2>Quick links</h2>
+        <p><a href="#rooms">Rooms and rates</a><br><a href="#rules">House policies</a><br><a href="#book">Book online</a></p>
+      </div>
+    </div>
+    <!-- Footer language links: same set as the header lang-switch; update both when you add a language -->
+    <p class="foot-lang"><span>Language</span><a href="../en/" hreflang="en" lang="en" aria-current="page">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="../ja/" hreflang="ja" lang="ja">日本語</a></p>
+    <p class="copy">© <span id="y"></span> Fernhill Guesthouse</p>
+  </div>
+</footer>
+
+<!-- ==================== Section: Mobile sticky button ==================== -->
+<div class="sticky-cta">
+  <a href="#book" class="btn btn-primary">Book your stay</a>
+  <a href="tel:+15550123456" class="btn btn-ghost" aria-label="Call (555) 012-3456">Call</a>
+</div>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// Header background on scroll
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// Hamburger menu
+const toggle = document.querySelector('.nav-toggle'), menu = document.getElementById('menu-links');
+const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); };
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// Scroll reveal
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Booking dates: default to check-in today, check-out tomorrow, then count nights and estimate the price (Friday and Saturday nights use the weekend rate)
+const $ = id => document.getElementById(id);
+const fIn = $('f-in'), fOut = $('f-out'), room = $('f-room');
+const pad = n => String(n).padStart(2, '0');
+const iso = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const toDate = s => new Date(s + 'T00:00');
+const addDays = (s, n) => { const d = toDate(s); d.setDate(d.getDate() + n); return iso(d); };
+const today = iso(new Date());
+fIn.min = today; fIn.value = today; fOut.value = addDays(today, 1);
+const LABEL = { pick: 'Choose your check-in and check-out dates', nights: n => `${n} ${n === 1 ? 'night' : 'nights'}`, total: t => `Est. $${t.toLocaleString('en-US')}`, hint: 'Pick a room to see an estimate' };
+function update() {
+  if (!fIn.value) { $('nights').textContent = LABEL.pick; $('estimate').textContent = ''; return; }
+  fOut.min = addDays(fIn.value, 1);
+  if (!fOut.value || fOut.value <= fIn.value) fOut.value = addDays(fIn.value, 1);
+  const n = Math.round((toDate(fOut.value) - toDate(fIn.value)) / 864e5);
+  $('nights').textContent = LABEL.nights(n); $('f-nights').value = n;
+  const opt = room.selectedOptions[0];
+  let total = 0;
+  if (opt && opt.dataset.wd) for (let i = 0; i < n; i++) { const day = toDate(addDays(fIn.value, i)).getDay(); total += +(day === 5 || day === 6 ? opt.dataset.we : opt.dataset.wd); }
+  $('estimate').textContent = total ? LABEL.total(total) : LABEL.hint;
+}
+[fIn, fOut, room].forEach(el => el.addEventListener('change', update)); update();
+
+// "Book this room" buttons preselect the room in the form
+document.querySelectorAll('[data-room]').forEach(a => a.addEventListener('click', () => { room.value = a.dataset.room; update(); }));
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

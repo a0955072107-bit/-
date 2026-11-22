@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>森之境 The Grove Residences｜竹北 2 至 4 房新建案，預約賞屋</title>
+<meta name="description" content="森之境位於新竹竹北森境路，168 戶 2、3、4 房住宅，62% 基地留給綠地，頂樓空中花園與 25 米恆溫泳池。接待中心每日 10:00–19:00 開放預約賞屋。">
+<meta property="og:title" content="森之境 The Grove Residences｜竹北新建案">
+<meta property="og:description" content="住進一片被留下來的森林。2 至 4 房，接待中心開放預約賞屋。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2e4a3b">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #2e4a3b;          /* 品牌主色（森林綠）：按鈕、重點線條 */
+  --brand-ink: #f1eee6;      /* 在 brand 色上的文字顏色（對比 AA） */
+  --brand-deep: #213729;     /* 深森林綠：按鈕滑過時的顏色 */
+  --accent: #7f5629;         /* 古銅色：數字與小重點（在 bg 上對比 AA） */
+  --accent-soft: #c9a06a;    /* 淺古銅：深色區塊上的強調色 */
+  --bg: #ebe6dc;             /* 網頁底色：石灰岩米色 */
+  --surface: #f4f1ea;        /* 卡片、表單底色（帶暖色，不用純白） */
+  --stone: #ddd5c6;          /* 深一階的石材色：交錯區塊底色 */
+  --text: #22241f;           /* 主要文字顏色：炭黑 */
+  --muted: #56574e;          /* 次要文字顏色 */
+  --line: #c6bcaa;           /* 細線、邊框顏色 */
+  --ink: #1b201c;            /* 深色區塊底色（墨綠炭黑） */
+  --ink-2: #262d28;          /* 深色區塊裡的卡片 */
+  --on-ink: #ebe6dc;         /* 深色區塊上的主要文字 */
+  --on-ink-muted: #aeb0a4;   /* 深色區塊上的次要文字 */
+  --sky-day: #dfe4dc;        /* 首屏插畫：白天天空 */
+  --sky-haze: #efe7d8;       /* 首屏插畫：地平線霧色 */
+  --dusk-top: #232a3a;       /* 首屏插畫：黃昏天空上緣 */
+  --dusk-mid: #5b4b55;       /* 首屏插畫：黃昏天空中段 */
+  --dusk-low: #c48a5a;       /* 首屏插畫：黃昏地平線 */
+  --sun: #f3d9a8;            /* 太陽與星光 */
+  --glow: #f2c27b;           /* 亮燈窗戶的暖光 */
+  --map-land: #efeae0;       /* 地圖：陸地 */
+  --map-park: #c3cfb6;       /* 地圖：公園綠地 */
+  --map-water: #b4c6c9;      /* 地圖：河流 */
+  --map-road: #faf8f2;       /* 地圖：主要道路 */
+  --shadow: #1b201c29;       /* 陰影顏色（帶透明度） */
+  --radius: 2px;             /* 圓角大小（建築感直角；想柔和可改 8px） */
+  --font-display: "Italiana", "Noto Sans TC", Georgia, serif;   /* 標題字型（細瘦寬體） */
+  --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; /* 內文字型 */
+  --maxw: 1240px;            /* 內容最大寬度 */
+  --pad: clamp(1rem, 5vw, 3rem); /* 左右留白 */
+  --head-h: 4.5rem;          /* 頁首高度 */
+
+  /* ---------- 動畫設定 ---------- */
+  --motion-speed: 1;         /* 動畫速度倍率：1 為標準，1.5 更慢更沉穩，0.7 更俐落 */
+  --motion-ease: cubic-bezier(.22, .8, .2, 1);   /* 主要緩動曲線（快出慢停） */
+  --motion-bounce: cubic-bezier(.34, 1.56, .64, 1); /* 地圖標記落下的彈跳曲線 */
+  --motion-distance: 28px;   /* 浮現動畫的位移距離 */
+  --dur: calc(900ms * var(--motion-speed)); /* 基本動畫長度（由速度倍率換算） */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+svg { display: block; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 300; line-height: 1.2; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+h2 { font-size: clamp(2rem, 4.4vw, 3.4rem); letter-spacing: .04em; }
+h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); }
+p { text-wrap: pretty; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+.wrap { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 100; }
+.skip:focus { left: 1rem; }
+section { padding-block: clamp(4.5rem, 10vw, 8rem); }
+.sec-head { display: grid; gap: 1rem; max-width: 46rem; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.sec-head p { color: var(--muted); font-size: 1.05rem; }
+
+/* ---------- 按鈕 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .75rem 1.5rem; border-radius: var(--radius); font: 500 .98rem/1.2 var(--font-body); border: 1px solid transparent; cursor: pointer; transition: background-color .25s, color .25s, border-color .25s, transform .25s var(--motion-ease); }
+.btn:active { transform: translateY(1px) scale(.98); }
+.btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.btn-brand { background: var(--brand); color: var(--brand-ink); }
+.btn-brand:hover { background: var(--brand-deep); transform: translateY(-2px); }
+.btn-line { border-color: var(--text); color: var(--text); }
+.btn-line:hover { background: var(--text); color: var(--bg); }
+.btn-ghost { border-color: color-mix(in srgb, var(--on-ink) 50%, transparent); color: var(--on-ink); }
+.btn-ghost:hover { border-color: var(--on-ink); background: color-mix(in srgb, var(--on-ink) 10%, transparent); }
+.btn-ghost:focus-visible { outline-color: var(--accent-soft); }
+.link { color: var(--brand); border-bottom: 1px solid currentColor; padding-bottom: .1rem; transition: color .2s, border-color .2s; }
+.link:hover { color: var(--accent); }
+.link:active, a:active { opacity: .8; }
+
+/* ---------- 頁首導覽 ---------- */
+.site-header { position: sticky; top: 0; z-index: 50; transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 92%, transparent); box-shadow: 0 1px 0 var(--line); backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: var(--head-h); flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: .65rem; }
+.logo svg { width: 30px; height: 30px; stroke: var(--brand); stroke-width: 1.6; fill: none; }
+.logo b { display: block; font: 400 1.35rem/1 var(--font-display); letter-spacing: .12em; }
+.logo small { display: block; font-size: .78rem; color: var(--muted); line-height: 1.3; }
+.menu { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.4rem; font-size: .95rem; }
+.menu a:not(.btn) { padding-block: .4rem; background: linear-gradient(currentColor, currentColor) left bottom / 100% 1px no-repeat; background-size: 0 1px; transition: background-size .35s var(--motion-ease), color .2s; }
+.menu a:not(.btn):hover { background-size: 100% 1px; color: var(--brand); }
+.menu .btn { min-height: 42px; padding: .55rem 1.1rem; }
+.burger { display: none; }
+@media (max-width: 760px) {
+  html.js .burger { display: grid; place-items: center; width: 48px; height: 48px; background: none; border: 1px solid var(--line); border-radius: var(--radius); cursor: pointer; transition: border-color .2s, background-color .2s; }
+  html.js .burger:hover { border-color: var(--text); }
+  html.js .burger:active { background: var(--stone); }
+  .burger span, .burger span::before, .burger span::after { display: block; width: 20px; height: 1.5px; background: var(--text); transition: transform .3s var(--motion-ease), opacity .2s; }
+  .burger span { position: relative; }
+  .burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+  .burger span::before { transform: translateY(-6px); }
+  .burger span::after { transform: translateY(6px); }
+  .burger[aria-expanded="true"] span { background: transparent; }
+  .burger[aria-expanded="true"] span::before { transform: rotate(45deg); background: var(--text); }
+  .burger[aria-expanded="true"] span::after { transform: rotate(-45deg); background: var(--text); }
+  html:not(.js) .menu { width: 100%; padding-bottom: .75rem; }
+  html.js .menu { position: absolute; inset: 100% 0 auto; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); box-shadow: 0 12px 24px var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .3s, transform .3s var(--motion-ease), visibility 0s .3s; }
+  html.js .menu a:not(.btn) { padding-block: .85rem; border-bottom: 1px solid var(--line); background: none; }
+  html.js .menu .btn { margin-top: 1rem; }
+  html.menu-open .menu { opacity: 1; visibility: visible; transform: none; transition: opacity .3s, transform .3s var(--motion-ease); }
+  html.menu-open .site-header { background: var(--bg); }
+}
+/* ---------- 語言切換（頁首 lang-switch 與頁尾 foot-lang） ---------- */
+.lang-switch { display: flex; align-items: center; flex: none; font: 500 .8rem/1 var(--font-body); letter-spacing: 0; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: var(--radius); color: var(--muted); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 9%, transparent); text-decoration: none; }
+.lang-switch a:active { opacity: .7; }
+/* 桌機：主選單靠右，語言切換緊接在主要按鈕後面 */
+.site-header .menu { margin-left: auto; }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .35em; }
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin-bottom: .75rem; }
+.foot-lang a { display: inline-flex; align-items: center; min-height: 32px; color: var(--on-ink-muted); text-decoration: none; transition: color .2s; }
+.foot-lang a:hover { color: var(--on-ink); }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { color: var(--on-ink); font-weight: 700; text-decoration: underline; text-underline-offset: .3em; }
+@media (max-width: 760px) {
+  /* 手機：語言切換留在漢堡按鈕左邊，保持可見；沒有 JS 時和 logo 同一行，選單換到下一行 */
+  .site-header .lang-switch { order: 1; margin-left: auto; }
+  .site-header .burger { order: 2; }
+  .site-header .menu { order: 3; }
+  .nav { gap: .5rem; }
+}
+@media (max-width: 380px) {
+  /* 很窄的手機（380px 以下）再收緊一點間距，讓 logo、語言切換和漢堡按鈕維持同一行 */
+  .nav { gap: .25rem; }
+}
+
+/* ---------- 首屏 ---------- */
+.hero { padding-block: 1rem 3rem; }
+.hero-grid { display: grid; gap: 2rem; align-items: center; }
+.hero-copy { display: grid; gap: 1.25rem; justify-items: start; }
+.hero h1 { font-size: clamp(2.5rem, 6.2vw, 5rem); line-height: 1.12; letter-spacing: .03em; }
+.lines > span { display: block; overflow: hidden; padding-bottom: .08em; }
+.lines > span > span { display: block; }
+.hero-lead { font-size: clamp(1.02rem, 1.4vw, 1.15rem); color: var(--muted); max-width: 30rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .75rem; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: .5rem 2rem; padding-top: 1rem; border-top: 1px solid var(--line); width: 100%; max-width: 30rem; font-size: .9rem; }
+.hero-meta dt { color: var(--muted); font-size: .82rem; }
+.hero-meta dd { font-weight: 500; }
+.hero-art { position: relative; aspect-ratio: 5 / 5.4; overflow: hidden; border-radius: var(--radius); isolation: isolate; }
+.sky, .sky-dusk { position: absolute; inset: 0; z-index: -2; }
+.sky { background: linear-gradient(180deg, var(--sky-day), var(--sky-haze) 75%); }
+.sky-dusk { opacity: 0; background:
+  radial-gradient(1.4px 1.4px at 18% 16%, var(--sun), transparent),
+  radial-gradient(1.2px 1.2px at 72% 10%, var(--sun), transparent),
+  radial-gradient(1px 1px at 86% 26%, var(--sun), transparent),
+  radial-gradient(1.2px 1.2px at 34% 8%, var(--sun), transparent),
+  radial-gradient(1px 1px at 56% 22%, var(--sun), transparent),
+  linear-gradient(180deg, var(--dusk-top), var(--dusk-mid) 58%, var(--dusk-low)); }
+.sun { position: absolute; z-index: -1; top: 12%; right: 14%; width: 18%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, var(--sun) 55%, color-mix(in srgb, var(--sun) 0%, transparent) 70%); }
+.facade { position: absolute; inset: auto 0 0; width: 100%; height: 100%; }
+.facade .bfill rect { fill: var(--surface); }
+.facade .tint rect { fill: var(--ink); opacity: 0; }
+.facade .halo rect { fill: var(--glow); opacity: 0; }
+.facade .win-off rect { fill: none; stroke: var(--line); stroke-width: 1; }
+.facade .wins rect { fill: var(--glow); }
+.facade .ln { stroke: var(--text); stroke-width: 1.3; stroke-linecap: round; stroke-dasharray: 1; }
+.hero-art figcaption { position: absolute; left: 1rem; bottom: .75rem; font-size: .78rem; color: var(--muted); }
+@media (min-width: 900px) {
+  .hero { padding-block: 1.5rem 4rem; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); min-height: calc(100svh - var(--head-h) - 3rem); }
+  .hero-art { aspect-ratio: auto; height: min(calc(100svh - var(--head-h) - 4rem), 720px); }
+}
+
+/* ---------- 關鍵數字與單價區間 ---------- */
+.facts-sec { background: var(--surface); }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 2rem 1.5rem; }
+.fact { border-top: 1px solid var(--line); padding-top: 1.1rem; }
+.num { font: 400 clamp(2.6rem, 5vw, 3.6rem)/1 var(--font-display); color: var(--accent); font-variant-numeric: tabular-nums; }
+.num small { font: 500 1rem/1 var(--font-body); color: var(--text); margin-left: .25rem; }
+.fact p:last-child { color: var(--muted); font-size: .92rem; margin-top: .5rem; }
+.range { margin-top: clamp(3rem, 6vw, 4.5rem); padding: clamp(1.25rem, 3vw, 2.25rem); background: var(--bg); border-radius: var(--radius); }
+.range-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 2rem; align-items: baseline; margin-bottom: 3.25rem; }
+.range-head h3 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
+.range-head p { color: var(--muted); font-size: .92rem; }
+.range-track { position: relative; height: 10px; background: var(--stone); border-radius: 5px; margin-block: 2.5rem 3.5rem; }
+.range-fill { position: absolute; top: 0; bottom: 0; left: var(--a); width: calc(var(--b) - var(--a)); background: linear-gradient(90deg, var(--brand), var(--accent)); border-radius: 5px; transform-origin: left; }
+.range-mark { position: absolute; left: var(--p); bottom: 18px; transform: translateX(-50%); font-size: .82rem; line-height: 1.3; text-align: center; white-space: nowrap; }
+.range-mark::after { content: ""; position: absolute; left: 50%; top: calc(100% + 2px); width: 1px; height: 14px; background: var(--text); }
+.range-mark.low { bottom: auto; top: 18px; }
+.range-mark.low::after { top: auto; bottom: calc(100% + 2px); }
+.range-mark b { display: block; font-weight: 500; }
+.range-scale { display: flex; justify-content: space-between; font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* ---------- 格局導覽（捲動跟隨） ---------- */
+.scrolly { display: grid; gap: 2rem; }
+.plan-fig { position: sticky; top: var(--head-h); z-index: 2; background: var(--bg); padding-block: .5rem 1rem; align-self: start; }
+.plan-frame { background: var(--surface); border-radius: var(--radius); padding: clamp(.5rem, 2vw, 1.5rem); overflow: hidden; }
+.splan { width: 100%; height: auto; max-height: 34svh; margin-inline: auto; }
+.plan-zoom { transform-box: view-box; transform-origin: 0 0; transition: transform calc(1.1s * var(--motion-speed)) var(--motion-ease); }
+.wall { fill: none; stroke: var(--text); stroke-width: 5; }
+.rm-box { fill: none; stroke: var(--text); stroke-width: 1.5; }
+.rm-hl { fill: var(--brand); opacity: 0; transition: opacity .5s var(--motion-ease); }
+.rm.on .rm-hl { opacity: .16; }
+.fur { fill: none; stroke: var(--muted); stroke-width: 1; }
+.rm-name { font: 500 15px var(--font-body); fill: var(--text); }
+.rm-size { font: 400 12px var(--font-body); fill: var(--muted); }
+.rm.on .rm-name { fill: var(--brand); }
+.compass { fill: none; stroke: var(--muted); stroke-width: 1.2; }
+.plan-cap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: .75rem; font-size: .9rem; color: var(--muted); }
+.plan-prog { flex: 1; max-width: 12rem; height: 2px; background: var(--line); overflow: hidden; }
+.plan-prog span { display: block; height: 100%; background: var(--brand); transform: scaleX(.17); transform-origin: left; transition: transform .6s var(--motion-ease); }
+.steps { display: grid; }
+.step { min-height: 62svh; display: grid; align-content: center; gap: .6rem; padding-block: 2rem; border-top: 1px solid var(--line); transition: opacity .5s; }
+.step-no { font: 400 1.1rem/1 var(--font-display); color: var(--accent); }
+.step-size { font-weight: 500; }
+.step p:last-child { color: var(--muted); max-width: 30rem; }
+.js .step { opacity: .35; }
+.js .step.on { opacity: 1; }
+@media (max-width: 899px) { .rm-name { font-size: 22px; } .uplan .rm-name { font-size: 24px; } .rm-size { display: none; } .js .step { min-height: 52svh; } }
+@media (min-width: 900px) {
+  .scrolly { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: clamp(2rem, 6vw, 6rem); }
+  .plan-fig { top: calc(var(--head-h) + 2rem); padding: 0; }
+  .splan { max-height: 62svh; }
+  .step { min-height: 78svh; }
+}
+
+/* ---------- 房型切換 ---------- */
+.units-sec { background: var(--stone); }
+.tabs { display: inline-flex; gap: .25rem; padding: .3rem; background: var(--bg); border-radius: calc(var(--radius) + 4px); margin-bottom: 2rem; }
+.tabs button { min-height: 44px; min-width: 5.5rem; padding: .5rem 1.25rem; border: 0; background: none; border-radius: var(--radius); font: 500 1rem var(--font-body); color: var(--muted); cursor: pointer; transition: background-color .3s, color .3s; }
+.tabs button:hover { color: var(--text); }
+.tabs button:active { transform: scale(.97); }
+.tabs button[aria-selected="true"] { background: var(--brand); color: var(--brand-ink); }
+html:not(.js) .tabs { display: none; }
+.units { display: grid; gap: 4rem; }
+.unit { display: grid; gap: 2rem; align-items: center; }
+.unit-plan { background: var(--surface); border-radius: var(--radius); padding: clamp(.75rem, 2vw, 1.75rem); }
+.uplan { width: 100%; height: auto; }
+.uplan .rm-hl { opacity: 0; }
+.unit-info { display: grid; gap: 1.1rem; justify-items: start; }
+.unit-info > p { color: var(--muted); }
+.tbl-wrap { width: 100%; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: .7rem 0; border-bottom: 1px solid var(--line); }
+th { font-weight: 400; color: var(--muted); font-size: .92rem; }
+td { text-align: right; font: 400 1.35rem/1.2 var(--font-display); }
+td small { font: 400 .85rem var(--font-body); color: var(--muted); }
+.tr-price td { color: var(--accent); }
+.js .units { grid-template-areas: "u"; }
+.js .unit { grid-area: u; transition: opacity calc(.6s * var(--motion-speed)) var(--motion-ease), transform calc(.7s * var(--motion-speed)) var(--motion-ease), visibility 0s; }
+.js .unit.off { opacity: 0; transform: scale(.96); visibility: hidden; pointer-events: none; transition: opacity .35s, transform .5s, visibility 0s .5s; }
+@media (min-width: 900px) { .unit { grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr); gap: clamp(2rem, 5vw, 5rem); } }
+
+/* ---------- 公共設施（水平捲動） ---------- */
+.amen { background: var(--ink); color: var(--on-ink); padding-block: 0; }
+.amen-sticky { padding-block: clamp(4.5rem, 10vw, 8rem); }
+.amen-head { max-width: none; }
+.amen-head p { color: var(--on-ink-muted); }
+.amen-track { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 1.5rem; }
+.amen-card { display: grid; gap: .6rem; align-content: start; }
+.amen-card .img { aspect-ratio: 4 / 3; border-radius: var(--radius); margin-bottom: .6rem; }
+.amen-card p { color: var(--on-ink-muted); font-size: .95rem; }
+.amen-card small { color: var(--accent-soft); font-size: .85rem; }
+.amen-bar { display: none; }
+
+/* ---------- 生活圈地圖 ---------- */
+.loc-grid { display: grid; gap: 2.5rem; }
+.map { background: var(--surface); border-radius: var(--radius); overflow: hidden; }
+.map-svg { width: 100%; height: auto; }
+.m-land { fill: var(--map-land); }
+.m-park { fill: var(--map-park); }
+.m-river { fill: none; stroke: var(--map-water); stroke-width: 22; stroke-linecap: round; }
+.m-roads { fill: none; stroke: var(--map-road); stroke-width: 9; }
+.m-minor { fill: none; stroke: var(--map-road); stroke-width: 3; }
+.m-rail { fill: none; stroke: var(--muted); stroke-width: 2; stroke-dasharray: 10 6; }
+.ring { fill: none; stroke: var(--brand); stroke-width: 1.2; stroke-dasharray: 3 5; transform-box: fill-box; transform-origin: center; }
+.ring-lbl { font: 400 12px var(--font-body); fill: var(--brand); }
+.site rect { fill: var(--brand); }
+.site text { font: 400 20px var(--font-display); fill: var(--text); paint-order: stroke; stroke: var(--map-land); stroke-width: 5px; }
+.pin { transform-box: fill-box; transform-origin: 50% 100%; }
+.pin-body { fill: var(--accent); }
+.pin-dot { fill: var(--surface); }
+.pin-lbl text { font: 500 14px var(--font-body); fill: var(--text); paint-order: stroke; stroke: var(--map-land); stroke-width: 5px; stroke-linejoin: round; }
+.pl-dist { font-weight: 400; fill: var(--muted); }
+@media (max-width: 640px) { .pin-lbl text { font-size: 22px; } .ring-lbl { font-size: 17px; } }
+.places { display: grid; gap: 0; align-content: start; }
+.places li { display: flex; justify-content: space-between; gap: 1rem; padding-block: .95rem; border-bottom: 1px solid var(--line); }
+.places li:first-child { border-top: 1px solid var(--line); }
+.places span { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.loc-links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+@media (min-width: 900px) { .loc-grid { grid-template-columns: minmax(0, 1.5fr) minmax(0, .8fr); align-items: start; } }
+
+/* ---------- 品牌故事 ---------- */
+.story-sec { background: var(--surface); --mask-bg: var(--surface); }
+.story { display: grid; gap: clamp(3rem, 7vw, 6rem); }
+.story .sec-head { margin-bottom: 0; }
+.story-row { display: grid; gap: 2rem; align-items: center; }
+.story-row .img { aspect-ratio: 4 / 3; }
+.story-text { display: grid; gap: 1rem; }
+.story-text p { color: var(--muted); }
+.story-text .who { color: var(--text); font-weight: 500; }
+.quote { font: 400 clamp(1.5rem, 3vw, 2.2rem)/1.45 var(--font-display); max-width: 44rem; text-wrap: balance; border-left: 2px solid var(--accent); padding-left: 1.25rem; }
+.quote footer { font: 400 .92rem var(--font-body); color: var(--muted); margin-top: .75rem; }
+@media (min-width: 900px) {
+  .story-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(3rem, 6vw, 6rem); }
+  .story-row.flip .mask { order: 2; }
+}
+
+/* ---------- 圖片藝術佔位圖 ---------- */
+/* 換成照片時，把對應 class 的 background 改成照片，並刪掉該 class 的 ::before／::after 圖樣。 */
+.img { position: relative; overflow: hidden; background: var(--stone); }
+.img::before, .img::after { content: ""; position: absolute; }
+/* 換成照片：.img-night { background: url(images/exterior-night.jpg) center/cover; } */
+.img-night { background: linear-gradient(180deg, var(--dusk-top), var(--dusk-mid) 62%, var(--dusk-low)); }
+.img-night::before { left: 34%; right: 30%; top: 16%; bottom: 0; background: repeating-linear-gradient(0deg, var(--ink) 0 7px, transparent 7px 22px), repeating-linear-gradient(90deg, color-mix(in srgb, var(--glow) 85%, transparent) 0 18px, var(--ink) 18px 26px); }
+.img-night::after { left: 0; right: 0; bottom: 0; height: 14%; background: radial-gradient(40px 30px at 12% 0, var(--ink) 98%, transparent), radial-gradient(56px 40px at 88% 10%, var(--ink) 98%, transparent), var(--ink); }
+/* 換成照片：.img-lobby { background: url(images/lobby.jpg) center/cover; } */
+.img-lobby { background: radial-gradient(ellipse 60% 40% at 50% 100%, color-mix(in srgb, var(--glow) 55%, transparent), transparent), repeating-linear-gradient(90deg, var(--stone) 0 46px, color-mix(in srgb, var(--stone) 85%, var(--text)) 46px 47px), var(--sky-haze); }
+.img-lobby::before { left: 30%; right: 30%; top: 18%; bottom: 0; border-radius: 999px 999px 0 0; background: linear-gradient(180deg, var(--surface), color-mix(in srgb, var(--glow) 40%, var(--surface))); box-shadow: inset 0 0 0 10px color-mix(in srgb, var(--accent) 35%, var(--stone)); }
+/* 換成照片：.img-living { background: url(images/living.jpg) center/cover; } */
+.img-living { background: linear-gradient(180deg, var(--sky-haze) 0 66%, color-mix(in srgb, var(--accent) 30%, var(--stone)) 66%); }
+.img-living::before { left: 10%; right: 40%; top: 10%; bottom: 34%; background: linear-gradient(90deg, var(--sky-day) 0 48%, transparent 48% 52%, var(--sky-day) 52%); box-shadow: 0 0 0 8px var(--surface); }
+.img-living::after { left: 46%; right: 8%; bottom: 22%; height: 18%; border-radius: 6px 6px 0 0; background: var(--brand); box-shadow: 0 30px 0 -6px color-mix(in srgb, var(--brand) 70%, var(--ink)); }
+/* 換成照片：.img-bed { background: url(images/bedroom.jpg) center/cover; } */
+.img-bed { background: linear-gradient(180deg, var(--surface) 0 58%, var(--stone) 58%); }
+.img-bed::before { left: 18%; right: 18%; top: 38%; bottom: 18%; border-radius: 4px; background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 55%, var(--stone)) 0 22%, var(--sky-haze) 22% 38%, var(--surface) 38%); }
+.img-bed::after { right: 8%; top: 12%; width: 22%; height: 34%; background: radial-gradient(circle at 50% 100%, color-mix(in srgb, var(--glow) 70%, transparent), transparent 70%); }
+/* 換成照片：.img-garden { background: url(images/garden.jpg) center/cover; } */
+.img-garden { background: radial-gradient(circle at 18% 78%, var(--brand) 0 18%, transparent 18.5%), radial-gradient(circle at 46% 70%, color-mix(in srgb, var(--brand) 70%, var(--map-park)) 0 22%, transparent 22.5%), radial-gradient(circle at 80% 80%, var(--brand-deep) 0 20%, transparent 20.5%), linear-gradient(180deg, var(--sky-day), var(--map-park)); }
+.img-garden::before { left: 0; right: 0; bottom: 0; height: 18%; background: var(--stone); }
+/* 換成照片：.img-pool { background: url(images/pool.jpg) center/cover; } */
+.img-pool { background: repeating-linear-gradient(90deg, transparent 0 calc(20% - 2px), var(--surface) calc(20% - 2px) 20%), repeating-linear-gradient(180deg, var(--map-water) 0 10px, color-mix(in srgb, var(--map-water) 75%, var(--brand)) 10px 13px); }
+.img-pool::before { left: 0; right: 0; top: 0; height: 22%; background: var(--stone); }
+/* 換成照片：.img-gym { background: url(images/gym.jpg) center/cover; } */
+.img-gym { background: linear-gradient(180deg, var(--ink-2) 0 70%, var(--stone) 70%); }
+.img-gym::before { inset: 14% 10% 36%; background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--map-park) 60%, var(--ink-2)) 0 22%, var(--ink) 22% 24%); }
+.img-gym::after { left: 22%; right: 22%; bottom: 20%; height: 6px; background: var(--accent-soft); box-shadow: -20px 0 0 6px var(--on-ink-muted), 20px 0 0 6px var(--on-ink-muted); }
+/* 換成照片：.img-reading { background: url(images/library.jpg) center/cover; } */
+.img-reading { background: repeating-linear-gradient(90deg, var(--accent) 0 10px, color-mix(in srgb, var(--accent) 60%, var(--stone)) 10px 16px, var(--brand) 16px 24px, var(--stone) 24px 30px); }
+.img-reading::before { left: 0; right: 0; top: 0; bottom: 0; background: repeating-linear-gradient(180deg, transparent 0 56px, var(--ink-2) 56px 62px); }
+.img-reading::after { left: 8%; right: 8%; bottom: 0; height: 26%; background: color-mix(in srgb, var(--accent) 40%, var(--ink-2)); }
+/* 換成照片：.img-dev { background: url(images/developer.jpg) center/cover; } */
+.img-dev { background: repeating-linear-gradient(180deg, var(--stone) 0 30px, color-mix(in srgb, var(--stone) 80%, var(--text)) 30px 31px), var(--stone); }
+.img-dev::before { left: 12%; bottom: 0; width: 34%; height: 70%; background: linear-gradient(180deg, var(--brand), var(--brand-deep)); }
+.img-dev::after { right: 14%; bottom: 0; width: 26%; height: 52%; background: color-mix(in srgb, var(--accent) 50%, var(--stone)); }
+/* 換成照片：.img-arch { background: url(images/architect.jpg) center/cover; } */
+.img-arch { background: repeating-linear-gradient(0deg, transparent 0 23px, color-mix(in srgb, var(--brand) 18%, transparent) 23px 24px), repeating-linear-gradient(90deg, transparent 0 23px, color-mix(in srgb, var(--brand) 18%, transparent) 23px 24px), var(--surface); }
+.img-arch::before { left: 24%; right: 24%; top: 16%; bottom: 16%; border: 1.5px solid var(--brand); background: repeating-linear-gradient(0deg, transparent 0 18px, color-mix(in srgb, var(--brand) 50%, transparent) 18px 19px); }
+.img-arch::after { left: 16%; right: 16%; bottom: 16%; height: 1.5px; background: var(--text); }
+
+/* ---------- 遮罩展開（圖片） ---------- */
+.mask { position: relative; overflow: hidden; border-radius: var(--radius); }
+.mask::after { content: ""; position: absolute; inset: 0; background: var(--mask-bg, var(--bg)); transform: scaleX(0); transform-origin: right; pointer-events: none; }
+
+/* ---------- 圖庫 ---------- */
+.gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.75rem, 2vw, 1.5rem); }
+.gallery figure { display: grid; gap: .5rem; }
+.gallery figure.g-wide { grid-column: 1 / -1; }
+.gallery .mask { aspect-ratio: 4 / 3; }
+.gallery .g-wide .mask { aspect-ratio: 16 / 7; }
+.gallery .img { position: absolute; inset: 0; }
+.gallery figcaption { font-size: .88rem; color: var(--muted); }
+@media (min-width: 900px) { .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); } .gallery figure.g-wide { grid-column: span 2; } .gallery .g-wide .mask { aspect-ratio: auto; height: 100%; min-height: 0; } .gallery figure.g-wide { grid-template-rows: minmax(0, 1fr) auto; } }
+
+/* ---------- 預約賞屋 ---------- */
+.visit-sec { background: var(--stone); }
+.visit { display: grid; gap: 2.5rem; }
+.visit-info { display: grid; gap: 1.25rem; align-content: start; }
+.visit-info > p { color: var(--muted); }
+.visit-info dl { display: grid; gap: .9rem; }
+.visit-info dt { font-size: .85rem; color: var(--muted); }
+.visit-info dd { font-weight: 500; }
+.visit-links { display: flex; flex-wrap: wrap; gap: .75rem; }
+.form { background: var(--surface); padding: clamp(1.25rem, 3vw, 2.25rem); border-radius: var(--radius); display: grid; gap: 1.1rem; grid-template-columns: minmax(0, 1fr); }
+.field { display: grid; gap: .35rem; }
+.field label { font-size: .9rem; font-weight: 500; }
+.field input, .field select, .field textarea { width: 100%; min-height: 48px; padding: .7rem .85rem; font: 400 1rem var(--font-body); color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); transition: border-color .2s; }
+.field textarea { min-height: 6.5rem; resize: vertical; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: var(--muted); }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent); }
+.form-note { font-size: .85rem; color: var(--muted); }
+.form .btn { width: 100%; }
+@media (min-width: 640px) { .form { grid-template-columns: repeat(2, minmax(0, 1fr)); } .field.full, .form .btn, .form-note { grid-column: 1 / -1; } }
+@media (min-width: 900px) { .visit { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(3rem, 6vw, 6rem); } }
+
+/* ---------- 常見問題 ---------- */
+.faq { max-width: 52rem; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-child { border-top: 1px solid var(--line); }
+.faq summary { display: flex; justify-content: space-between; gap: 1rem; align-items: center; padding-block: 1.25rem; cursor: pointer; list-style: none; font-size: 1.08rem; font-weight: 500; transition: color .2s; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; flex: none; width: 12px; height: 12px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-3px); transition: transform .35s var(--motion-ease); }
+.faq details[open] summary::after { transform: rotate(225deg); }
+.faq summary:hover { color: var(--brand); }
+.faq summary:active { opacity: .8; }
+.faq details p { padding-bottom: 1.4rem; color: var(--muted); max-width: 44rem; }
+
+/* ---------- 頁尾 ---------- */
+.site-footer { background: var(--ink); color: var(--on-ink); padding-block: 4rem 2rem; font-size: .92rem; }
+.foot { display: grid; gap: 2.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.site-footer h2 { font-size: 1.6rem; margin-bottom: .75rem; }
+.site-footer h3 { font: 500 1rem var(--font-body); margin-bottom: .75rem; }
+.site-footer p, .site-footer dd, .site-footer li { color: var(--on-ink-muted); }
+.site-footer dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .35rem 1rem; }
+.site-footer dt { color: var(--on-ink); }
+.site-footer a:not(.btn) { transition: color .2s; }
+.site-footer a:not(.btn):hover { color: var(--accent-soft); }
+.site-footer a:focus-visible { outline-color: var(--accent-soft); }
+.social { display: flex; flex-wrap: wrap; gap: 1rem; }
+.legal { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid color-mix(in srgb, var(--on-ink) 18%, transparent); display: grid; gap: .5rem; font-size: .82rem; }
+
+/* ---------- 手機底部固定按鈕 ---------- */
+.mcta { position: fixed; inset: auto 0 0; z-index: 40; display: none; gap: .5rem; padding: .6rem var(--pad) calc(.6rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 94%, transparent); box-shadow: 0 -1px 0 var(--line); backdrop-filter: blur(8px); }
+.mcta .btn { flex: 1; }
+@media (max-width: 760px) { .mcta { display: flex; } body { padding-bottom: 4.6rem; } }
+
+/* ============================================================
+   動態效果：只在使用者沒有開啟「減少動態」時啟用
+   ============================================================ */
+@media (prefers-reduced-motion: no-preference) {
+  /* 首屏：建築線稿自己畫出來、窗戶逐一亮燈、標題遮罩浮現 */
+  .facade .ln { animation: draw calc(1.3s * var(--motion-speed)) var(--motion-ease) calc(var(--d) * 55ms * var(--motion-speed)) both; }
+  .facade .wins rect { animation: light calc(.7s * var(--motion-speed)) ease-out calc((1.9s + var(--w) * 45ms) * var(--motion-speed)) both; }
+  .facade .win-off rect { animation: fade calc(.8s * var(--motion-speed)) ease-out calc(1.6s * var(--motion-speed)) both; }
+  .facade .bfill { animation: fade calc(1.2s * var(--motion-speed)) ease-out calc(1.2s * var(--motion-speed)) both; }
+  .lines > span > span { animation: rise calc(1.1s * var(--motion-speed)) var(--motion-ease) both; }
+  .lines > span:nth-child(2) > span { animation-delay: calc(.14s * var(--motion-speed)); }
+  .hero-lead, .hero-cta, .hero-meta { animation: up var(--dur) var(--motion-ease) calc(.35s * var(--motion-speed)) both; }
+  .hero-cta { animation-delay: calc(.5s * var(--motion-speed)); }
+  .hero-meta { animation-delay: calc(.65s * var(--motion-speed)); }
+
+  /* 捲動漸入（只有 JS 啟用時才先隱藏） */
+  .js .reveal { opacity: 0; transform: translateY(var(--motion-distance)); transition: opacity var(--dur) var(--motion-ease), transform var(--dur) var(--motion-ease); transition-delay: calc(var(--i, 0) * 90ms); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  .js .mask::after { transform: scaleX(1); transition: transform calc(1.2s * var(--motion-speed)) var(--motion-ease) calc(var(--i, 0) * 110ms); }
+  .js .mask .img { transform: scale(1.14); transition: transform calc(1.6s * var(--motion-speed)) var(--motion-ease) calc(var(--i, 0) * 110ms); }
+  .js .mask.in::after { transform: scaleX(0); }
+  .js .mask.in .img { transform: none; }
+
+  /* 單價區間條 */
+  .js .range .range-fill { transform: scaleX(0); transition: transform calc(1.4s * var(--motion-speed)) var(--motion-ease) .2s; }
+  .js .range .range-mark { opacity: 0; translate: 0 -12px; transition: opacity .5s, translate .7s var(--motion-bounce); transition-delay: calc(1s + var(--i) * 160ms); }
+  .js .range.in .range-fill { transform: none; }
+  .js .range.in .range-mark { opacity: 1; translate: 0 0; }
+
+  /* 地圖：標記依序落下彈跳、距離標籤浮現 */
+  .js .map .pin, .js .map .pin-lbl, .js .map .ring, .js .map .ring-lbl { opacity: 0; }
+  .js .map.in .pin-lbl, .js .map.in .ring-lbl { opacity: 1; }
+  .js .map.in .pin { animation: drop calc(.9s * var(--motion-speed)) var(--motion-ease) calc((.5s + var(--i) * 180ms) * var(--motion-speed)) both; }
+  .js .map.in .pin-lbl { animation: fade .6s ease-out calc((1.1s + var(--i) * 180ms) * var(--motion-speed)) both; }
+  .js .map.in .ring { animation: ring calc(1.2s * var(--motion-speed)) var(--motion-ease) both; }
+  .js .map.in .ring.r2 { animation-delay: .2s; }
+  .js .map.in .ring-lbl { animation: fade .6s ease-out .9s both; }
+
+  /* 房型切換：平面圖房間依序浮現 */
+  .js .unit:not(.off) .uplan .rm { animation: fade calc(.6s * var(--motion-speed)) ease-out both; }
+  .js .unit:not(.off) .uplan .rm:nth-child(3n+1) { animation-delay: .08s; }
+  .js .unit:not(.off) .uplan .rm:nth-child(3n+2) { animation-delay: .18s; }
+  .js .unit:not(.off) .uplan .rm:nth-child(3n) { animation-delay: .28s; }
+
+  /* CSS 捲動驅動動畫：瀏覽器支援才啟用，不支援時維持靜態版面 */
+  @supports (animation-timeline: scroll()) {
+    .sky-dusk { animation: to-visible linear both; animation-timeline: scroll(root); animation-range: 0 85vh; }
+    .sun { animation: sunset linear both; animation-timeline: scroll(root); animation-range: 0 85vh; }
+    .facade .tint rect { animation: to-tint linear both; animation-timeline: scroll(root); animation-range: 0 85vh; }
+    .facade .halo rect { animation: to-glow linear both; animation-timeline: scroll(root); animation-range: 20vh 85vh; }
+    .hero-copy { animation: drift linear both; animation-timeline: scroll(root); animation-range: 0 100vh; }
+
+    .gallery .img { animation: plx linear both; animation-timeline: view(); }
+    .js .gallery .mask .img { transform: none; }
+
+    .amen-pin { height: 300vh; view-timeline-name: --amen; }
+    .amen-sticky { position: sticky; top: var(--head-h); height: calc(100svh - var(--head-h)); overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding-block: 1rem 2rem; }
+    .amen-head { margin-bottom: 2rem; }
+    .amen-track { display: flex; width: max-content; margin-left: var(--pad); gap: clamp(1rem, 2.5vw, 2rem); animation: slide linear both; animation-timeline: --amen; animation-range: contain 0% contain 100%; }
+    .amen-card { width: min(76vw, 400px); }
+    .amen-card .img { aspect-ratio: 16 / 10; }
+    .amen-bar { display: block; height: 2px; margin-top: 2rem; background: color-mix(in srgb, var(--on-ink) 20%, transparent); }
+    .amen-bar span { display: block; height: 100%; background: var(--accent-soft); transform-origin: left; animation: grow linear both; animation-timeline: --amen; animation-range: contain 0% contain 100%; }
+  }
+}
+@keyframes draw { from { stroke-dashoffset: 1; } }
+@keyframes light { 0% { opacity: 0; } 40% { opacity: .9; } 55% { opacity: .35; } 100% { opacity: 1; } }
+@keyframes fade { from { opacity: 0; } }
+@keyframes rise { from { transform: translateY(110%); } }
+@keyframes up { from { opacity: 0; transform: translateY(var(--motion-distance)); } }
+@keyframes drop { 0% { opacity: 0; transform: translateY(-70px); } 45% { opacity: 1; transform: translateY(0); } 62% { transform: translateY(-14px); } 78% { transform: translateY(0); } 90% { transform: translateY(-4px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes ring { from { opacity: 0; transform: scale(.4); } to { opacity: 1; transform: none; } }
+@keyframes to-visible { to { opacity: 1; } }
+@keyframes to-tint { to { opacity: .42; } }
+@keyframes to-glow { to { opacity: .45; } }
+@keyframes sunset { to { transform: translateY(260%); opacity: .25; } }
+@keyframes drift { to { transform: translateY(-48px); opacity: .5; } }
+@keyframes plx { from { transform: translateY(-5%) scale(1.12); } to { transform: translateY(5%) scale(1.12); } }
+@keyframes slide { to { transform: translateX(calc(-100% + 100vw - 2 * var(--pad))); } }
+@keyframes grow { from { transform: scaleX(0); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Residence",
+      "name": "森之境 The Grove Residences",
+      "description": "新竹縣竹北市新建案，168 戶 2 至 4 房住宅，62% 綠覆率，頂樓空中花園與恆溫泳池。",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "森境路 88 號",
+        "addressLocality": "竹北市",
+        "addressRegion": "新竹縣",
+        "postalCode": "302",
+        "addressCountry": "TW"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 24.8301,
+        "longitude": 121.0102
+      },
+      "url": "https://www.example.com/"
+    },
+    {
+      "@type": "RealEstateAgent",
+      "name": "森之境 接待中心",
+      "telephone": "+886-3-123-4567",
+      "email": "hello@thegrove.example",
+      "url": "https://www.example.com/",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "森境路 88 號",
+        "addressLocality": "竹北市",
+        "addressRegion": "新竹縣",
+        "postalCode": "302",
+        "addressCountry": "TW"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "19:00"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<div id="sentinel" aria-hidden="true"></div>
+
+<!-- ==================== 區塊：頁首導覽 ==================== -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="森之境 回到頂端">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 29V14a11 11 0 0 1 22 0v15M3 29h26M16 29V13M11 19l5-5 5 5M12 24l4-4 4 4"/></svg>
+      <span><b>森之境</b><small>The Grove Residences</small></span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="開啟選單"><span></span></button>
+    <nav class="menu" id="menu" aria-label="主選單">
+      <a href="#plan">格局</a>
+      <a href="#units">房型</a>
+      <a href="#amenities">公設</a>
+      <a href="#location">生活圈</a>
+      <a href="#story">品牌</a>
+      <a href="#visit" class="btn btn-brand">預約賞屋</a>
+    </nav>
+    <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="zh-Hant">繁</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ==================== 區塊：首屏 ==================== -->
+<section class="hero" id="top" aria-labelledby="hero-h">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1 id="hero-h" class="lines"><span><span>住進一片</span></span><span><span>留下來的森林</span></span></h1>
+      <p class="hero-lead">竹北森境路上的 168 戶住宅，基地 62% 留給樹。2、3、4 房，實品屋每日開放。</p>
+      <div class="hero-cta">
+        <a href="#visit" class="btn btn-brand">預約賞屋</a>
+        <a href="#units" class="btn btn-line">看房型與價格</a>
+      </div>
+      <!-- 範例內容：上線前請換成真實資料 -->
+      <dl class="hero-meta">
+        <div><dt>地點</dt><dd>新竹竹北</dd></div>
+        <div><dt>房型</dt><dd>2 至 4 房</dd></div>
+        <div><dt>預計完工</dt><dd>2027 年</dd></div>
+      </dl>
+    </div>
+    <figure class="hero-art" role="img" aria-label="森之境建築外觀線稿，窗戶逐一亮起，往下捲動時天色從白天轉為黃昏">
+      <div class="sky"></div>
+      <div class="sky-dusk"></div>
+      <div class="sun"></div>
+      <svg class="facade" viewBox="0 0 480 560" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false">
+      <g class="bfill"><rect x="150" y="90" width="200" height="430"/><rect x="60" y="400" width="90" height="120"/><rect x="350" y="330" width="80" height="190"/><rect x="160" y="66" width="180" height="24"/></g>
+      <g class="tint"><rect x="150" y="90" width="200" height="430"/><rect x="60" y="400" width="90" height="120"/><rect x="350" y="330" width="80" height="190"/><rect x="160" y="66" width="180" height="24"/></g>
+      <g class="halo"><rect x="152" y="91" width="46" height="29" rx="6"/><rect x="202" y="91" width="46" height="29" rx="6"/><rect x="252" y="91" width="46" height="29" rx="6"/><rect x="302" y="91" width="46" height="29" rx="6"/><rect x="152" y="121" width="46" height="29" rx="6"/><rect x="202" y="121" width="46" height="29" rx="6"/><rect x="302" y="121" width="46" height="29" rx="6"/><rect x="152" y="151" width="46" height="29" rx="6"/><rect x="202" y="151" width="46" height="29" rx="6"/><rect x="252" y="151" width="46" height="29" rx="6"/><rect x="302" y="151" width="46" height="29" rx="6"/><rect x="202" y="181" width="46" height="29" rx="6"/><rect x="302" y="181" width="46" height="29" rx="6"/><rect x="152" y="211" width="46" height="29" rx="6"/><rect x="202" y="211" width="46" height="29" rx="6"/><rect x="302" y="211" width="46" height="29" rx="6"/><rect x="152" y="241" width="46" height="29" rx="6"/><rect x="202" y="241" width="46" height="29" rx="6"/><rect x="252" y="241" width="46" height="29" rx="6"/><rect x="302" y="241" width="46" height="29" rx="6"/><rect x="152" y="271" width="46" height="29" rx="6"/><rect x="202" y="271" width="46" height="29" rx="6"/><rect x="252" y="271" width="46" height="29" rx="6"/><rect x="202" y="301" width="46" height="29" rx="6"/><rect x="252" y="301" width="46" height="29" rx="6"/><rect x="302" y="301" width="46" height="29" rx="6"/><rect x="302" y="331" width="46" height="29" rx="6"/><rect x="152" y="361" width="46" height="29" rx="6"/><rect x="252" y="361" width="46" height="29" rx="6"/><rect x="302" y="361" width="46" height="29" rx="6"/><rect x="202" y="391" width="46" height="29" rx="6"/><rect x="202" y="451" width="46" height="29" rx="6"/><rect x="252" y="451" width="46" height="29" rx="6"/><rect x="302" y="451" width="46" height="29" rx="6"/><rect x="61" y="443" width="43" height="34" rx="6"/><rect x="106" y="443" width="43" height="34" rx="6"/><rect x="61" y="483" width="43" height="34" rx="6"/><rect x="106" y="483" width="43" height="34" rx="6"/><rect x="351" y="334" width="38" height="40" rx="6"/><rect x="391" y="334" width="38" height="40" rx="6"/><rect x="351" y="384" width="38" height="40" rx="6"/><rect x="351" y="434" width="38" height="40" rx="6"/><rect x="391" y="434" width="38" height="40" rx="6"/></g>
+      <g class="win-off"><rect x="257" y="126" width="36" height="19"/><rect x="157" y="186" width="36" height="19"/><rect x="257" y="186" width="36" height="19"/><rect x="257" y="216" width="36" height="19"/><rect x="307" y="276" width="36" height="19"/><rect x="157" y="306" width="36" height="19"/><rect x="157" y="336" width="36" height="19"/><rect x="207" y="336" width="36" height="19"/><rect x="257" y="336" width="36" height="19"/><rect x="207" y="366" width="36" height="19"/><rect x="157" y="396" width="36" height="19"/><rect x="257" y="396" width="36" height="19"/><rect x="307" y="396" width="36" height="19"/><rect x="157" y="426" width="36" height="19"/><rect x="207" y="426" width="36" height="19"/><rect x="257" y="426" width="36" height="19"/><rect x="307" y="426" width="36" height="19"/><rect x="157" y="456" width="36" height="19"/><rect x="66" y="408" width="33" height="24"/><rect x="111" y="408" width="33" height="24"/><rect x="396" y="389" width="28" height="30"/></g>
+      <g class="wins"><rect class="win" style="--w:22" x="157" y="96" width="36" height="19"/><rect class="win" style="--w:9" x="207" y="96" width="36" height="19"/><rect class="win" style="--w:20" x="257" y="96" width="36" height="19"/><rect class="win" style="--w:35" x="307" y="96" width="36" height="19"/><rect class="win" style="--w:16" x="157" y="126" width="36" height="19"/><rect class="win" style="--w:31" x="207" y="126" width="36" height="19"/><rect class="win" style="--w:19" x="307" y="126" width="36" height="19"/><rect class="win" style="--w:26" x="157" y="156" width="36" height="19"/><rect class="win" style="--w:22" x="207" y="156" width="36" height="19"/><rect class="win" style="--w:7" x="257" y="156" width="36" height="19"/><rect class="win" style="--w:37" x="307" y="156" width="36" height="19"/><rect class="win" style="--w:17" x="207" y="186" width="36" height="19"/><rect class="win" style="--w:16" x="307" y="186" width="36" height="19"/><rect class="win" style="--w:26" x="157" y="216" width="36" height="19"/><rect class="win" style="--w:6" x="207" y="216" width="36" height="19"/><rect class="win" style="--w:9" x="307" y="216" width="36" height="19"/><rect class="win" style="--w:13" x="157" y="246" width="36" height="19"/><rect class="win" style="--w:30" x="207" y="246" width="36" height="19"/><rect class="win" style="--w:14" x="257" y="246" width="36" height="19"/><rect class="win" style="--w:37" x="307" y="246" width="36" height="19"/><rect class="win" style="--w:35" x="157" y="276" width="36" height="19"/><rect class="win" style="--w:9" x="207" y="276" width="36" height="19"/><rect class="win" style="--w:16" x="257" y="276" width="36" height="19"/><rect class="win" style="--w:8" x="207" y="306" width="36" height="19"/><rect class="win" style="--w:3" x="257" y="306" width="36" height="19"/><rect class="win" style="--w:16" x="307" y="306" width="36" height="19"/><rect class="win" style="--w:17" x="307" y="336" width="36" height="19"/><rect class="win" style="--w:17" x="157" y="366" width="36" height="19"/><rect class="win" style="--w:17" x="257" y="366" width="36" height="19"/><rect class="win" style="--w:9" x="307" y="366" width="36" height="19"/><rect class="win" style="--w:10" x="207" y="396" width="36" height="19"/><rect class="win" style="--w:0" x="207" y="456" width="36" height="19"/><rect class="win" style="--w:14" x="257" y="456" width="36" height="19"/><rect class="win" style="--w:15" x="307" y="456" width="36" height="19"/><rect class="win" style="--w:38" x="66" y="448" width="33" height="24"/><rect class="win" style="--w:14" x="111" y="448" width="33" height="24"/><rect class="win" style="--w:17" x="66" y="488" width="33" height="24"/><rect class="win" style="--w:39" x="111" y="488" width="33" height="24"/><rect class="win" style="--w:34" x="356" y="339" width="28" height="30"/><rect class="win" style="--w:18" x="396" y="339" width="28" height="30"/><rect class="win" style="--w:31" x="356" y="389" width="28" height="30"/><rect class="win" style="--w:0" x="356" y="439" width="28" height="30"/><rect class="win" style="--w:28" x="396" y="439" width="28" height="30"/></g>
+      <g class="lines" fill="none"><path class="ln" pathLength="1" style="--d:0" d="M8 520H472"/><path class="ln" pathLength="1" style="--d:1" d="M150 520V90H350V520"/><path class="ln" pathLength="1" style="--d:2" d="M138 90H362"/><path class="ln" pathLength="1" style="--d:3" d="M160 90V66H340V90"/><path class="ln" pathLength="1" style="--d:4" d="M170 52H330M184 66V52M222 66V52M260 66V52M298 66V52"/><path class="ln" pathLength="1" style="--d:5" d="M156 400H60V520"/><path class="ln" pathLength="1" style="--d:6" d="M54 400H156M60 440H150M60 480H150"/><path class="ln" pathLength="1" style="--d:7" d="M344 330H430V520"/><path class="ln" pathLength="1" style="--d:8" d="M344 330H436M350 380H430M350 430H430M350 475H430"/><path class="ln" pathLength="1" style="--d:9" d="M144 490H356"/><path class="ln" pathLength="1" style="--d:10" d="M144 460H356"/><path class="ln" pathLength="1" style="--d:11" d="M144 430H356"/><path class="ln" pathLength="1" style="--d:12" d="M144 400H356"/><path class="ln" pathLength="1" style="--d:13" d="M144 370H356"/><path class="ln" pathLength="1" style="--d:14" d="M144 340H356"/><path class="ln" pathLength="1" style="--d:15" d="M144 310H356"/><path class="ln" pathLength="1" style="--d:16" d="M144 280H356"/><path class="ln" pathLength="1" style="--d:17" d="M144 250H356"/><path class="ln" pathLength="1" style="--d:18" d="M144 220H356"/><path class="ln" pathLength="1" style="--d:19" d="M144 190H356"/><path class="ln" pathLength="1" style="--d:20" d="M144 160H356"/><path class="ln" pathLength="1" style="--d:21" d="M144 130H356"/><path class="ln" pathLength="1" style="--d:22" d="M200 90V490M250 90V490M300 90V490"/><path class="ln" pathLength="1" style="--d:23" d="M226 520V498H274V520M250 498V520"/><path class="ln" pathLength="1" style="--d:24" d="M8 470a20 20 0 1 0 40 0a20 20 0 1 0 -40 0M28 490V520"/><path class="ln" pathLength="1" style="--d:25" d="M82 360a22 22 0 1 0 44 0a22 22 0 1 0 -44 0M104 382V520"/><path class="ln" pathLength="1" style="--d:26" d="M430 464a22 22 0 1 0 44 0a22 22 0 1 0 -44 0M452 486V520"/><path class="ln" pathLength="1" style="--d:27" d="M361 306a11 11 0 1 0 22 0a11 11 0 1 0 -22 0M372 317V520"/><path class="ln" pathLength="1" style="--d:28" d="M396 300a14 14 0 1 0 28 0a14 14 0 1 0 -28 0M410 314V520"/></g>
+    </svg>
+    </figure>
+  </div>
+</section>
+
+<!-- ==================== 區塊：關鍵數字與單價區間 ==================== -->
+<section class="facts-sec" id="facts" aria-labelledby="facts-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="facts-h">留給樹的，比留給車的多</h2>
+      <p>一棟 22 層的塔樓，只占基地四成。剩下的地方是樹林、步道和一條小溪。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="facts">
+      <div class="fact"><p class="num"><span data-count="168">168</span><small>戶</small></p><p>總戶數，每層 8 戶</p></div>
+      <div class="fact"><p class="num"><span data-count="62">62</span><small>%</small></p><p>基地綠覆率</p></div>
+      <div class="fact"><p class="num"><span data-count="1820">1,820</span><small>坪</small></p><p>基地面積</p></div>
+      <div class="fact"><p class="num"><span data-count="40">40</span><small>棵</small></p><p>保留的原生老樹</p></div>
+      <div class="fact"><p class="num"><span data-count="7">7</span><small>分鐘</small></p><p>開車到高鐵站</p></div>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="range" role="group" aria-labelledby="range-h">
+      <div class="range-head">
+        <h3 id="range-h">每坪單價 58 至 72 萬</h3>
+        <p>依樓層、座向與房型而定，總價 1,680 萬起</p>
+      </div>
+      <div class="range-track">
+        <div class="range-fill" style="--a:32.5%;--b:67.5%"></div>
+        <span class="range-mark" style="--p:37.5%;--i:0"><b>2 房</b>均價 60 萬</span>
+        <span class="range-mark low" style="--p:47.5%;--i:1"><b>3 房</b>均價 64 萬</span>
+        <span class="range-mark" style="--p:62.5%;--i:2"><b>4 房</b>均價 70 萬</span>
+      </div>
+      <div class="range-scale" aria-hidden="true"><span>45 萬</span><span>55</span><span>65</span><span>75</span><span>85 萬</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：格局導覽（捲動時平面圖固定，逐一介紹空間） ==================== -->
+<section id="plan" aria-labelledby="plan-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="plan-h">走一遍 B 型 3 房</h2>
+      <p>往下捲動，從玄關一路走到陽台。每個空間的尺寸都標在旁邊。</p>
+    </div>
+    <div class="scrolly">
+      <figure class="plan-fig">
+        <div class="plan-frame"><svg class="splan" viewBox="0 0 600 420" aria-hidden="true" focusable="false"><g class="plan-zoom"><rect class="wall" x="20" y="20" width="560" height="380"/><g class="rm" data-g="master"><rect class="rm-hl" x="20" y="20" width="210" height="170"/><rect class="rm-box" x="20" y="20" width="210" height="170"/><g class="fur"><rect x="90" y="101.8" width="70" height="78.2" rx="3"/><path d="M96 117.8H154"/></g><text class="rm-name" x="32" y="46">主臥</text><text class="rm-size" x="32" y="64">5.2×4.2 m</text></g><g class="rm" data-g="master"><rect class="rm-hl" x="230" y="20" width="80" height="100"/><rect class="rm-box" x="230" y="20" width="80" height="100"/><g class="fur"><rect x="240" y="86" width="56" height="24" rx="11"/></g><text class="rm-name" x="242" y="46">主衛</text></g><g class="rm" data-g="master"><rect class="rm-hl" x="230" y="120" width="80" height="70"/><rect class="rm-box" x="230" y="120" width="80" height="70"/><g class="fur"></g><text class="rm-name" x="242" y="146">更衣</text></g><g class="rm" data-g="bedrooms"><rect class="rm-hl" x="310" y="20" width="140" height="170"/><rect class="rm-box" x="310" y="20" width="140" height="170"/><g class="fur"><rect x="345" y="101.8" width="70" height="78.2" rx="3"/><path d="M351 117.8H409"/></g><text class="rm-name" x="322" y="46">次臥</text><text class="rm-size" x="322" y="64">3.4×4.2 m</text></g><g class="rm" data-g="bedrooms"><rect class="rm-hl" x="450" y="20" width="130" height="170"/><rect class="rm-box" x="450" y="20" width="130" height="170"/><g class="fur"><rect x="482.5" y="101.8" width="65" height="78.2" rx="3"/><path d="M488.5 117.8H541.5"/></g><text class="rm-name" x="462" y="46">三房</text><text class="rm-size" x="462" y="64">3.2×4.2 m</text></g><g class="rm" data-g="living"><rect class="rm-hl" x="20" y="190" width="280" height="150"/><rect class="rm-box" x="20" y="190" width="280" height="150"/><g class="fur"><path d="M36 276h126v14H50v44H36Z"/><rect x="68" y="300" width="61.6" height="22" rx="3"/></g><text class="rm-name" x="32" y="216">客廳</text><text class="rm-size" x="32" y="234">6.8×3.6 m</text></g><g class="rm" data-g="balcony"><rect class="rm-hl" x="20" y="340" width="280" height="60"/><rect class="rm-box" x="20" y="340" width="280" height="60"/><g class="fur"><path d="M30 390H290" stroke-dasharray="4 5"/></g><text class="rm-name" x="32" y="366">陽台</text><text class="rm-size" x="32" y="384">6.8×1.5 m</text></g><g class="rm" data-g="kitchen"><rect class="rm-hl" x="300" y="190" width="170" height="210"/><rect class="rm-box" x="300" y="190" width="170" height="210"/><g class="fur"><rect x="355" y="344" width="60" height="36" rx="3"/><rect x="440" y="204" width="18" height="94.5" rx="2"/></g><text class="rm-name" x="312" y="216">餐廚</text><text class="rm-size" x="312" y="234">4.2×5.1 m</text></g><g class="rm" data-g="bedrooms"><rect class="rm-hl" x="470" y="190" width="110" height="100"/><rect class="rm-box" x="470" y="190" width="110" height="100"/><g class="fur"><rect x="480" y="256" width="56" height="24" rx="11"/></g><text class="rm-name" x="482" y="216">公衛</text></g><g class="rm" data-g="entry"><rect class="rm-hl" x="470" y="290" width="110" height="110"/><rect class="rm-box" x="470" y="290" width="110" height="110"/><g class="fur"></g><text class="rm-name" x="482" y="316">玄關</text><text class="rm-size" x="482" y="334">2.6×2.7 m</text></g><path class="compass" d="M560 398v-14m-4 6l4-6 4 6"/></g></svg></div>
+        <figcaption class="plan-cap"><span>B 型 3 房，48.5 坪<span class="sr">, </span> <b class="plan-now" aria-live="polite"></b></span><span class="plan-prog" aria-hidden="true"><span></span></span></figcaption>
+      </figure>
+      <ol class="steps">
+        <li class="step" data-g="entry"><span class="step-no">01</span><h3>玄關</h3><p class="step-size">2.6 × 2.7 m，約 2.1 坪</p><p>雙面收納櫃加上落塵區，雨傘、球鞋和嬰兒車都留在這裡。開門時感應燈先亮起。</p></li>
+        <li class="step" data-g="living"><span class="step-no">02</span><h3>客廳</h3><p class="step-size">6.8 × 3.6 m，約 7.4 坪</p><p>4.2 米寬的落地窗朝東南，早上的光一路照到沙發後方。天花板淨高 3.2 米。</p></li>
+        <li class="step" data-g="kitchen"><span class="step-no">03</span><h3>餐廚</h3><p class="step-size">4.2 × 5.1 m，約 6.5 坪</p><p>中島與餐桌排成一直線，做菜時也看得見客廳和陽台。附三口爐與嵌入式蒸烤爐。</p></li>
+        <li class="step" data-g="master"><span class="step-no">04</span><h3>主臥套房</h3><p class="step-size">5.2 × 4.2 m，含衛浴與更衣室約 9.8 坪</p><p>主衛有浴缸和獨立淋浴間，走入式更衣室，床頭牆預留 2.4 米。</p></li>
+        <li class="step" data-g="bedrooms"><span class="step-no">05</span><h3>次臥與三房</h3><p class="step-size">各約 3.8 至 4.2 坪</p><p>兩間都放得下雙人床，三房也能改成書房或遊戲室。公衛乾濕分離。</p></li>
+        <li class="step" data-g="balcony"><span class="step-no">06</span><h3>陽台</h3><p class="step-size">6.8 × 1.5 m，約 3.1 坪</p><p>深 1.5 米，放得下兩張躺椅和一排植栽槽，自動澆灌管線已預埋。</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：房型切換 ==================== -->
+<section class="units-sec" id="units" aria-labelledby="units-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="units-h">三種房型，同一片森林</h2>
+      <p>每一戶都有前後雙面採光與至少一個陽台。價格為範例，實際以接待中心報價為準。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="tabs" role="tablist" aria-label="選擇房型">
+      <button role="tab" id="t-u2" aria-controls="u2" aria-selected="false" tabindex="-1">2 房</button>
+      <button role="tab" id="t-u3" aria-controls="u3" aria-selected="true">3 房</button>
+      <button role="tab" id="t-u4" aria-controls="u4" aria-selected="false" tabindex="-1">4 房</button>
+    </div>
+    <div class="units">
+      <article class="unit" id="u2" role="tabpanel" aria-labelledby="t-u2">
+        <div class="unit-plan"><svg class="uplan" viewBox="0 0 600 420" aria-hidden="true" focusable="false"><g class="plan-zoom"><rect class="wall" x="20" y="20" width="560" height="380"/><g class="rm" data-g="a"><rect class="rm-hl" x="20" y="20" width="230" height="180"/><rect class="rm-box" x="20" y="20" width="230" height="180"/><g class="fur"><rect x="100" y="110" width="70" height="80" rx="3"/><path d="M106 126H164"/></g><text class="rm-name" x="32" y="46">主臥</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="250" y="20" width="100" height="110"/><rect class="rm-box" x="250" y="20" width="100" height="110"/><g class="fur"><rect x="260" y="96" width="56" height="24" rx="11"/></g><text class="rm-name" x="262" y="46">公衛</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="250" y="130" width="100" height="70"/><rect class="rm-box" x="250" y="130" width="100" height="70"/><g class="fur"></g><text class="rm-name" x="262" y="156">儲藏</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="350" y="20" width="230" height="180"/><rect class="rm-box" x="350" y="20" width="230" height="180"/><g class="fur"><rect x="430" y="110" width="70" height="80" rx="3"/><path d="M436 126H494"/></g><text class="rm-name" x="362" y="46">次臥</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="20" y="200" width="330" height="140"/><rect class="rm-box" x="20" y="200" width="330" height="140"/><g class="fur"><path d="M36 276h148.5v14H50v44H36Z"/><rect x="68" y="300" width="72.6" height="22" rx="3"/></g><text class="rm-name" x="32" y="226">客餐廳</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="20" y="340" width="330" height="60"/><rect class="rm-box" x="20" y="340" width="330" height="60"/><g class="fur"><path d="M30 390H340" stroke-dasharray="4 5"/></g><text class="rm-name" x="32" y="366">陽台</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="350" y="200" width="130" height="200"/><rect class="rm-box" x="350" y="200" width="130" height="200"/><g class="fur"><rect x="385" y="344" width="60" height="36" rx="3"/><rect x="450" y="214" width="18" height="90" rx="2"/></g><text class="rm-name" x="362" y="226">餐廚</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="480" y="200" width="100" height="200"/><rect class="rm-box" x="480" y="200" width="100" height="200"/><g class="fur"></g><text class="rm-name" x="492" y="226">玄關</text></g><path class="compass" d="M560 398v-14m-4 6l4-6 4 6"/></g></svg></div>
+        <div class="unit-info">
+          <h3>A 型，2 房 2 廳</h3>
+          <p>給兩個人或小家庭的第一間好房子。客餐廳打通，主臥和次臥分在兩側，彼此不吵。</p>
+          <div class="tbl-wrap">
+            <table>
+              <caption class="sr">A 型，2 房 2 廳</caption>
+              <tbody>
+                <tr><th scope="row">權狀坪數</th><td><span data-n="36.8" data-dec="1">36.8</span> <small>坪</small></td></tr>
+                <tr><th scope="row">室內實坪</th><td><span data-n="24.6" data-dec="1">24.6</span> <small>坪</small></td></tr>
+                <tr><th scope="row">陽台</th><td><span data-n="3.2" data-dec="1">3.2</span> <small>坪</small></td></tr>
+                <tr><th scope="row">房間</th><td><span data-n="2">2</span> <small>房</small></td></tr>
+                <tr><th scope="row">衛浴</th><td><span data-n="1">1</span> <small>間</small></td></tr>
+                <tr><th scope="row">平面車位</th><td><span data-n="1">1</span> <small>位</small></td></tr>
+                <tr class="tr-price"><th scope="row">總價區間</th><td><span data-n="1680">1,680</span> 至 <span data-n="1980">1,980</span> <small>萬</small></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="#visit" class="btn btn-brand" data-unit="2 房">預約看 2 房</a>
+        </div>
+      </article>
+      <article class="unit" id="u3" role="tabpanel" aria-labelledby="t-u3">
+        <div class="unit-plan"><svg class="uplan" viewBox="0 0 600 420" aria-hidden="true" focusable="false"><g class="plan-zoom"><rect class="wall" x="20" y="20" width="560" height="380"/><g class="rm" data-g="master"><rect class="rm-hl" x="20" y="20" width="210" height="170"/><rect class="rm-box" x="20" y="20" width="210" height="170"/><g class="fur"><rect x="90" y="101.8" width="70" height="78.2" rx="3"/><path d="M96 117.8H154"/></g><text class="rm-name" x="32" y="46">主臥</text></g><g class="rm" data-g="master"><rect class="rm-hl" x="230" y="20" width="80" height="100"/><rect class="rm-box" x="230" y="20" width="80" height="100"/><g class="fur"><rect x="240" y="86" width="56" height="24" rx="11"/></g><text class="rm-name" x="242" y="46">主衛</text></g><g class="rm" data-g="master"><rect class="rm-hl" x="230" y="120" width="80" height="70"/><rect class="rm-box" x="230" y="120" width="80" height="70"/><g class="fur"></g><text class="rm-name" x="242" y="146">更衣</text></g><g class="rm" data-g="bedrooms"><rect class="rm-hl" x="310" y="20" width="140" height="170"/><rect class="rm-box" x="310" y="20" width="140" height="170"/><g class="fur"><rect x="345" y="101.8" width="70" height="78.2" rx="3"/><path d="M351 117.8H409"/></g><text class="rm-name" x="322" y="46">次臥</text></g><g class="rm" data-g="bedrooms"><rect class="rm-hl" x="450" y="20" width="130" height="170"/><rect class="rm-box" x="450" y="20" width="130" height="170"/><g class="fur"><rect x="482.5" y="101.8" width="65" height="78.2" rx="3"/><path d="M488.5 117.8H541.5"/></g><text class="rm-name" x="462" y="46">三房</text></g><g class="rm" data-g="living"><rect class="rm-hl" x="20" y="190" width="280" height="150"/><rect class="rm-box" x="20" y="190" width="280" height="150"/><g class="fur"><path d="M36 276h126v14H50v44H36Z"/><rect x="68" y="300" width="61.6" height="22" rx="3"/></g><text class="rm-name" x="32" y="216">客廳</text></g><g class="rm" data-g="balcony"><rect class="rm-hl" x="20" y="340" width="280" height="60"/><rect class="rm-box" x="20" y="340" width="280" height="60"/><g class="fur"><path d="M30 390H290" stroke-dasharray="4 5"/></g><text class="rm-name" x="32" y="366">陽台</text></g><g class="rm" data-g="kitchen"><rect class="rm-hl" x="300" y="190" width="170" height="210"/><rect class="rm-box" x="300" y="190" width="170" height="210"/><g class="fur"><rect x="355" y="344" width="60" height="36" rx="3"/><rect x="440" y="204" width="18" height="94.5" rx="2"/></g><text class="rm-name" x="312" y="216">餐廚</text></g><g class="rm" data-g="bedrooms"><rect class="rm-hl" x="470" y="190" width="110" height="100"/><rect class="rm-box" x="470" y="190" width="110" height="100"/><g class="fur"><rect x="480" y="256" width="56" height="24" rx="11"/></g><text class="rm-name" x="482" y="216">公衛</text></g><g class="rm" data-g="entry"><rect class="rm-hl" x="470" y="290" width="110" height="110"/><rect class="rm-box" x="470" y="290" width="110" height="110"/><g class="fur"></g><text class="rm-name" x="482" y="316">玄關</text></g><path class="compass" d="M560 398v-14m-4 6l4-6 4 6"/></g></svg></div>
+        <div class="unit-info">
+          <h3>B 型，3 房 2 廳</h3>
+          <p>最多人選的格局。主臥套房獨立在一側，餐廚對著客廳，孩子長大也不必換房。</p>
+          <div class="tbl-wrap">
+            <table>
+              <caption class="sr">B 型，3 房 2 廳</caption>
+              <tbody>
+                <tr><th scope="row">權狀坪數</th><td><span data-n="48.5" data-dec="1">48.5</span> <small>坪</small></td></tr>
+                <tr><th scope="row">室內實坪</th><td><span data-n="32.8" data-dec="1">32.8</span> <small>坪</small></td></tr>
+                <tr><th scope="row">陽台</th><td><span data-n="4.1" data-dec="1">4.1</span> <small>坪</small></td></tr>
+                <tr><th scope="row">房間</th><td><span data-n="3">3</span> <small>房</small></td></tr>
+                <tr><th scope="row">衛浴</th><td><span data-n="2">2</span> <small>間</small></td></tr>
+                <tr><th scope="row">平面車位</th><td><span data-n="1">1</span> <small>位</small></td></tr>
+                <tr class="tr-price"><th scope="row">總價區間</th><td><span data-n="2280">2,280</span> 至 <span data-n="2690">2,690</span> <small>萬</small></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="#visit" class="btn btn-brand" data-unit="3 房">預約看 3 房</a>
+        </div>
+      </article>
+      <article class="unit" id="u4" role="tabpanel" aria-labelledby="t-u4">
+        <div class="unit-plan"><svg class="uplan" viewBox="0 0 600 420" aria-hidden="true" focusable="false"><g class="plan-zoom"><rect class="wall" x="20" y="20" width="560" height="380"/><g class="rm" data-g="a"><rect class="rm-hl" x="20" y="20" width="200" height="170"/><rect class="rm-box" x="20" y="20" width="200" height="170"/><g class="fur"><rect x="85" y="101.8" width="70" height="78.2" rx="3"/><path d="M91 117.8H149"/></g><text class="rm-name" x="32" y="46">主臥</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="220" y="20" width="90" height="95"/><rect class="rm-box" x="220" y="20" width="90" height="95"/><g class="fur"><rect x="230" y="81" width="56" height="24" rx="11"/></g><text class="rm-name" x="232" y="46">主衛</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="220" y="115" width="90" height="75"/><rect class="rm-box" x="220" y="115" width="90" height="75"/><g class="fur"></g><text class="rm-name" x="232" y="141">更衣</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="310" y="20" width="135" height="140"/><rect class="rm-box" x="310" y="20" width="135" height="140"/><g class="fur"><rect x="343.75" y="85.6" width="67.5" height="64.4" rx="3"/><path d="M349.75 101.6H405.25"/></g><text class="rm-name" x="322" y="46">次臥</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="445" y="20" width="135" height="140"/><rect class="rm-box" x="445" y="20" width="135" height="140"/><g class="fur"><rect x="478.75" y="85.6" width="67.5" height="64.4" rx="3"/><path d="M484.75 101.6H540.25"/></g><text class="rm-name" x="457" y="46">三房</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="445" y="160" width="135" height="120"/><rect class="rm-box" x="445" y="160" width="135" height="120"/><g class="fur"><rect x="478.75" y="214.8" width="67.5" height="55.2" rx="3"/><path d="M484.75 230.8H540.25"/></g><text class="rm-name" x="457" y="186">四房</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="310" y="160" width="135" height="70"/><rect class="rm-box" x="310" y="160" width="135" height="70"/><g class="fur"></g><text class="rm-name" x="322" y="186">公衛</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="20" y="190" width="290" height="150"/><rect class="rm-box" x="20" y="190" width="290" height="150"/><g class="fur"><path d="M36 276h130.5v14H50v44H36Z"/><rect x="68" y="300" width="63.8" height="22" rx="3"/></g><text class="rm-name" x="32" y="216">客廳</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="20" y="340" width="425" height="60"/><rect class="rm-box" x="20" y="340" width="425" height="60"/><g class="fur"><path d="M30 390H435" stroke-dasharray="4 5"/></g><text class="rm-name" x="32" y="366">陽台</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="310" y="230" width="135" height="110"/><rect class="rm-box" x="310" y="230" width="135" height="110"/><g class="fur"></g><text class="rm-name" x="322" y="256">餐廚</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="445" y="280" width="135" height="120"/><rect class="rm-box" x="445" y="280" width="135" height="120"/><g class="fur"></g><text class="rm-name" x="457" y="306">玄關</text></g><path class="compass" d="M560 398v-14m-4 6l4-6 4 6"/></g></svg></div>
+        <div class="unit-info">
+          <h3>C 型，4 房 2 廳</h3>
+          <p>邊間雙面採光，只有每層兩戶。長陽台從客廳延伸到餐廚，三代同住也有各自的空間。</p>
+          <div class="tbl-wrap">
+            <table>
+              <caption class="sr">C 型，4 房 2 廳</caption>
+              <tbody>
+                <tr><th scope="row">權狀坪數</th><td><span data-n="66.2" data-dec="1">66.2</span> <small>坪</small></td></tr>
+                <tr><th scope="row">室內實坪</th><td><span data-n="45" data-dec="1">45.0</span> <small>坪</small></td></tr>
+                <tr><th scope="row">陽台</th><td><span data-n="5.6" data-dec="1">5.6</span> <small>坪</small></td></tr>
+                <tr><th scope="row">房間</th><td><span data-n="4">4</span> <small>房</small></td></tr>
+                <tr><th scope="row">衛浴</th><td><span data-n="3">3</span> <small>間</small></td></tr>
+                <tr><th scope="row">平面車位</th><td><span data-n="2">2</span> <small>位</small></td></tr>
+                <tr class="tr-price"><th scope="row">總價區間</th><td><span data-n="3180">3,180</span> 至 <span data-n="3760">3,760</span> <small>萬</small></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="#visit" class="btn btn-brand" data-unit="4 房">預約看 4 房</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：公共設施（往下捲動時水平移動；不支援的瀏覽器顯示為格狀） ==================== -->
+<section class="amen" id="amenities" aria-labelledby="amen-h">
+  <div class="amen-pin">
+    <div class="amen-sticky">
+      <div class="wrap amen-head sec-head">
+        <h2 id="amen-h">一千坪的公共設施</h2>
+        <p>泳池、健身房、空中花園和閱覽室，全部只給住戶使用。</p>
+      </div>
+      <div class="amen-track">
+        <article class="amen-card"><div class="img img-pool" role="img" aria-label="25 米恆溫泳池"></div><h3>25 米恆溫泳池</h3><p>地下一樓挑高 6 米，全年維持 28 度，旁邊有烤箱和蒸氣室。</p><small>B1，06:00–22:00</small></article>
+        <article class="amen-card"><div class="img img-gym" role="img" aria-label="健身房"></div><h3>健身房</h3><p>有氧、重訓與飛輪分區，整面落地窗對著中庭的樟樹。</p><small>2F，24 小時刷卡</small></article>
+        <article class="amen-card"><div class="img img-garden" role="img" aria-label="空中花園"></div><h3>空中花園</h3><p>頂樓 120 坪的花園，種了 40 棵原生樹，傍晚能看到整片竹北夜景。</p><small>RF，住戶專用</small></article>
+        <article class="amen-card"><div class="img img-lobby" role="img" aria-label="迎賓大廳"></div><h3>迎賓大廳</h3><p>9 米挑高大廳，石材牆面與全天候管家，包裹與訪客都在這裡處理。</p><small>1F，全天候管家</small></article>
+        <article class="amen-card"><div class="img img-reading" role="img" aria-label="森林閱覽室"></div><h3>森林閱覽室</h3><p>三面書牆和一張 6 米長桌，在家工作的人最常待的地方。</p><small>2F，07:00–23:00</small></article>
+      </div>
+      <div class="wrap"><div class="amen-bar" aria-hidden="true"><span></span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：生活圈地圖 ==================== -->
+<section id="location" aria-labelledby="loc-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="loc-h">上學、上班、散步，都在附近</h2>
+      <p>距離為直線或實際車程估算，僅供參考。</p>
+    </div>
+    <div class="loc-grid">
+      <figure class="map"><svg class="map-svg" viewBox="0 0 640 440" role="img" aria-labelledby="map-t">
+      <title id="map-t">森之境周邊生活圈示意圖</title>
+      <rect class="m-land" width="640" height="440"/>
+      <path class="m-park" d="M60 70C120 40 210 60 230 110S200 200 130 196 30 150 60 70Z"/>
+      <path class="m-park" d="M420 380C460 360 540 372 560 400L560 440H400Z"/>
+      <path class="m-river" d="M-10 250C80 230 120 280 200 268S320 180 380 130 520 40 650 20"/>
+      <g class="m-roads"><path d="M0 230H640M330 0V440M0 400L640 120"/></g>
+      <g class="m-minor"><path d="M120 0V440M470 0V440M0 330H640M0 110H640M220 160L420 300"/></g>
+      <path class="m-rail" d="M560 0L520 440"/>
+      <g class="rings"><circle class="ring" cx="330" cy="230" r="80"/><circle class="ring r2" cx="330" cy="230" r="160"/></g>
+      <text class="ring-lbl" x="330" y="142" text-anchor="middle">步行 5 分鐘</text>
+      <g class="site"><rect x="318" y="218" width="24" height="24" rx="3"/><text x="352" y="262">森之境</text></g>
+      <g transform="translate(150 132)"><g class="pin" style="--i:0"><path class="pin-body" d="M0 0C-4-10-13-16-13-27A13 13 0 1 1 13-27C13-16 4-10 0 0Z"/><circle class="pin-dot" cx="0" cy="-27" r="4.5"/></g><g class="pin-lbl" style="--i:0"><text x="20" y="-30" text-anchor="start"><tspan class="pl-name">竹林河濱公園</tspan><tspan class="pl-dist" x="20" dy="1.25em">300 m</tspan></text></g></g><g transform="translate(206 326)"><g class="pin" style="--i:1"><path class="pin-body" d="M0 0C-4-10-13-16-13-27A13 13 0 1 1 13-27C13-16 4-10 0 0Z"/><circle class="pin-dot" cx="0" cy="-27" r="4.5"/></g><g class="pin-lbl" style="--i:1"><text x="20" y="-30" text-anchor="start"><tspan class="pl-name">禾風國小</tspan><tspan class="pl-dist" x="20" dy="1.25em">步行 6 分鐘</tspan></text></g></g><g transform="translate(540 84)"><g class="pin" style="--i:2"><path class="pin-body" d="M0 0C-4-10-13-16-13-27A13 13 0 1 1 13-27C13-16 4-10 0 0Z"/><circle class="pin-dot" cx="0" cy="-27" r="4.5"/></g><g class="pin-lbl" style="--i:2"><text x="-20" y="-30" text-anchor="end"><tspan class="pl-name">高鐵站</tspan><tspan class="pl-dist" x="-20" dy="1.25em">車程 7 分鐘</tspan></text></g></g><g transform="translate(470 344)"><g class="pin" style="--i:3"><path class="pin-body" d="M0 0C-4-10-13-16-13-27A13 13 0 1 1 13-27C13-16 4-10 0 0Z"/><circle class="pin-dot" cx="0" cy="-27" r="4.5"/></g><g class="pin-lbl" style="--i:3"><text x="20" y="-30" text-anchor="start"><tspan class="pl-name">生活超市</tspan><tspan class="pl-dist" x="20" dy="1.25em">800 m</tspan></text></g></g><g transform="translate(588 236)"><g class="pin" style="--i:4"><path class="pin-body" d="M0 0C-4-10-13-16-13-27A13 13 0 1 1 13-27C13-16 4-10 0 0Z"/><circle class="pin-dot" cx="0" cy="-27" r="4.5"/></g><g class="pin-lbl" style="--i:4"><text x="-20" y="-30" text-anchor="end"><tspan class="pl-name">科學園區</tspan><tspan class="pl-dist" x="-20" dy="1.25em">車程 12 分鐘</tspan></text></g></g>
+    </svg></figure>
+      <div>
+        <ul class="places">
+          <li class="reveal" style="--i:0">竹林河濱公園<span>300 m</span></li>
+          <li class="reveal" style="--i:1">禾風國小<span>步行 6 分鐘</span></li>
+          <li class="reveal" style="--i:2">高鐵站<span>車程 7 分鐘</span></li>
+          <li class="reveal" style="--i:3">生活超市<span>800 m</span></li>
+          <li class="reveal" style="--i:4">科學園區<span>車程 12 分鐘</span></li>
+        </ul>
+        <div class="loc-links">
+          <a class="btn btn-line" href="https://maps.google.com/?q=%E6%96%B0%E7%AB%B9%E7%B8%A3%E7%AB%B9%E5%8C%97%E5%B8%82%E6%A3%AE%E5%A2%83%E8%B7%AF%2088%20%E8%99%9F" target="_blank" rel="noopener">在 Google 地圖開啟</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：品牌故事：建商與建築師 ==================== -->
+<section class="story-sec" id="story" aria-labelledby="story-h">
+  <div class="wrap story">
+    <div class="sec-head reveal">
+      <h2 id="story-h">蓋房子之前，先數了樹</h2>
+    </div>
+    <div class="story-row">
+      <div class="mask"><div class="img img-dev" role="img" aria-label="森境建設過去完成的住宅外牆示意"></div></div>
+      <div class="story-text reveal">
+        <h3>森境建設</h3>
+        <p class="who">在竹北蓋房子 28 年，完成 14 個住宅案</p>
+        <p>我們習慣從基地本身開始。這塊地上原本有 40 棵樟樹與苦楝，規劃時把塔樓往北移，讓每一棵都留在原地，地下室也跟著退縮。</p>
+        <p>交屋後的 10 年，結構與防水問題由我們負責到底。</p>
+      </div>
+    </div>
+    <div class="story-row flip">
+      <div class="mask"><div class="img img-arch" role="img" aria-label="建築師的立面草圖示意"></div></div>
+      <div class="story-text reveal">
+        <h3>林禾建築師事務所</h3>
+        <p class="who">主持建築師 林禾</p>
+        <p>立面用三種深淺的石材，從地面往上一層比一層淺，遠看像樹幹慢慢融進天空。每一戶的陽台都深 1.5 米，夏天的太陽照不進客廳深處。</p>
+      </div>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <blockquote class="quote reveal">
+      <p>好的住宅不必搶眼。它應該讓窗外那棵樹，看起來比房子本身更重要。</p>
+      <footer>林禾，主持建築師</footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ==================== 區塊：圖庫 ==================== -->
+<section id="gallery" aria-labelledby="gal-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="gal-h">實品屋與公設</h2>
+      <p>以下為 3D 模擬與實品屋示意，實際以合約附圖為準。</p>
+    </div>
+    <div class="gallery">
+      <figure class="g-wide"><div class="mask" style="--i:0"><div class="img img-night" role="img" aria-label="外觀夜景模擬"></div></div><figcaption>外觀夜景模擬</figcaption></figure>
+      <figure class=""><div class="mask" style="--i:1"><div class="img img-lobby" role="img" aria-label="迎賓大廳"></div></div><figcaption>迎賓大廳</figcaption></figure>
+      <figure class=""><div class="mask" style="--i:2"><div class="img img-living" role="img" aria-label="B 型客廳樣品屋"></div></div><figcaption>B 型客廳樣品屋</figcaption></figure>
+      <figure class=""><div class="mask" style="--i:0"><div class="img img-bed" role="img" aria-label="主臥套房"></div></div><figcaption>主臥套房</figcaption></figure>
+      <figure class=""><div class="mask" style="--i:1"><div class="img img-garden" role="img" aria-label="頂樓空中花園"></div></div><figcaption>頂樓空中花園</figcaption></figure>
+      <figure class="g-wide"><div class="mask" style="--i:2"><div class="img img-pool" role="img" aria-label="地下一樓泳池"></div></div><figcaption>地下一樓泳池</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：預約賞屋表單 ==================== -->
+<section class="visit-sec" id="visit" aria-labelledby="visit-h">
+  <div class="wrap visit">
+    <div class="visit-info reveal">
+      <h2 id="visit-h">來接待中心，走一趟實品屋</h2>
+      <p>留下聯絡方式與想看的時段，專人會在一個工作天內與你確認。現場也能直接看工地。</p>
+      <dl>
+        <div><dt>接待中心</dt><dd>新竹縣竹北市森境路 88 號</dd></div>
+        <div><dt>開放時間</dt><dd>每日 10:00–19:00</dd></div>
+        <div><dt>賞屋專線</dt><dd><a class="link" href="tel:+88631234567">03-123-4567</a></dd></div>
+      </dl>
+      <div class="visit-links">
+        <a class="btn btn-brand" href="tel:+88631234567">撥打賞屋專線</a>
+        <a class="btn btn-line" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 詢問</a>
+        <a class="btn btn-line" href="https://maps.google.com/?q=%E6%96%B0%E7%AB%B9%E7%B8%A3%E7%AB%B9%E5%8C%97%E5%B8%82%E6%A3%AE%E5%A2%83%E8%B7%AF%2088%20%E8%99%9F" target="_blank" rel="noopener">導航到接待中心</a>
+      </div>
+    </div>
+    <!-- 表單送到 Formspree（免費）：到 https://formspree.io 註冊，建立表單後把 action 裡的 your-form-id 換成你的表單 ID，表單內容就會寄到你的信箱。 -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="field"><label for="f-name">姓名</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">手機</label><input id="f-tel" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+      <div class="field"><label for="f-date">希望日期</label><input id="f-date" name="date" type="date"></div>
+      <div class="field"><label for="f-time">希望時段</label><select id="f-time" name="time"><option>上午 10:00–12:00</option><option>下午 13:00–16:00</option><option>傍晚 16:00–19:00</option></select></div>
+      <div class="field full"><label for="f-unit">想看的房型</label><select id="f-unit" name="unit"><option>2 房</option><option>3 房</option><option>4 房</option><option>還沒決定</option></select></div>
+      <div class="field full"><label for="f-msg">想先了解的事（選填）</label><textarea id="f-msg" name="message"></textarea></div>
+      <button class="btn btn-brand" type="submit">送出預約</button>
+      <p class="form-note">資料只用於安排賞屋，不會提供給第三方。</p>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== 區塊：常見問題 ==================== -->
+<section id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2 id="faq-h">買預售屋前，常被問到的事</h2></div>
+    <div class="faq">
+      <details><summary>預售屋的付款方式是什麼？</summary><p>一般分為訂金、簽約金、開工款、工程期款與交屋款，工程期款依進度分期繳交。實際比例以買賣契約為準，接待中心可以幫你試算。</p></details>
+      <details><summary>預計什麼時候交屋？</summary><p>目前預計 2027 年第四季取得使用執照，之後約 3 個月完成交屋。工程進度每月會更新在住戶專區。</p></details>
+      <details><summary>可以做客變嗎？</summary><p>可以。簽約後到結構體完成前，可以調整隔間、插座位置與部分建材，第一次客變免費。</p></details>
+      <details><summary>價金有履約保證嗎？</summary><p>有。本案採不動產開發信託，價金存入信託專戶，依工程進度撥付給建商。</p></details>
+      <details><summary>有實品屋可以看嗎？</summary><p>接待中心內有 B 型 3 房實品屋與建材展示區，平日與假日都能預約，現場也可以直接看工地。</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾與建案資訊 ==================== -->
+<!-- 預售屋廣告需遵守相關法規：請依《公平交易法》、《消費者保護法》與《不動產經紀業管理條例》標示建案資訊，上線前請由代銷與法務確認內容。 -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h2>森之境</h2>
+        <p>新竹縣竹北市森境路 88 號</p>
+        <p><a href="tel:+88631234567">03-123-4567</a></p>
+        <p>接待中心每日 10:00–19:00</p>
+      </div>
+      <div>
+        <h3>建案資訊</h3>
+        <dl>
+          <dt>投資興建</dt><dd>森境建設股份有限公司</dd>
+          <dt>建築設計</dt><dd>林禾建築師事務所</dd>
+          <dt>營造廠商</dt><dd>○○營造股份有限公司</dd>
+          <dt>建照字號</dt><dd>（000）府建字第 00000 號</dd>
+          <dt>經紀業</dt><dd>○○不動產代銷經紀業，備查字號 000000</dd>
+        </dl>
+      </div>
+      <div>
+        <h3>追蹤我們</h3>
+        <ul class="social">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+        <p style="margin-top:1rem"><a href="#faq">常見問題</a></p>
+      </div>
+    </div>
+    <div class="legal">
+      <p>本網站圖片皆為 3D 模擬示意，價格與坪數為範例，實際以買賣契約與附圖為準。</p>
+      <!-- 頁尾語言切換：和頁首的 lang-switch 同一組連結 -->
+      <nav class="foot-lang" aria-label="Language 語言">
+        <a href="../en/" hreflang="en" lang="en">EN</a>
+        <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+        <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+      </nav>
+      <p>© <span id="y"></span> 森之境 The Grove Residences</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== 區塊：手機底部固定按鈕 ==================== -->
+<div class="mcta">
+  <a class="btn btn-line" href="tel:+88631234567">致電</a>
+  <a class="btn btn-brand" href="#visit">預約賞屋</a>
+</div>
+
+<script>
+(function () {
+  var d = document, root = d.documentElement;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var locale = 'zh-TW';
+
+  // 手機選單：點連結後自動關閉
+  var burger = d.querySelector('.burger'), menu = d.getElementById('menu');
+  function setMenu(open) { burger.setAttribute('aria-expanded', open); root.classList.toggle('menu-open', open); }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+
+  // 頁首：離開首屏頂端後出現背景（用 IntersectionObserver，不監聽 scroll）
+  var head = d.querySelector('.site-header');
+  new IntersectionObserver(function (e) { head.classList.toggle('scrolled', !e[0].isIntersecting); }).observe(d.getElementById('sentinel'));
+
+  // 數字動畫（requestAnimationFrame）
+  function fmt(v, dec) { return v.toLocaleString(locale, { minimumFractionDigits: dec, maximumFractionDigits: dec }); }
+  function tween(el, from, to, dur) {
+    var dec = +(el.dataset.dec || 0), t0 = performance.now();
+    if (reduce) { el.textContent = fmt(to, dec); return; }
+    (function f(t) {
+      var p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 4);
+      el.textContent = fmt(from + (to - from) * e, dec);
+      if (p < 1) requestAnimationFrame(f);
+    })(t0);
+  }
+  var counters = d.querySelectorAll('[data-count]');
+  if (!reduce) counters.forEach(function (c) { c.textContent = fmt(0, +(c.dataset.dec || 0)); });
+
+  // 捲動進場：加上 .in，並觸發數字動畫
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in');
+      e.target.querySelectorAll('[data-count]').forEach(function (c) { tween(c, 0, +c.dataset.count, 1800); });
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.2, rootMargin: '0px 0px -6% 0px' });
+  d.querySelectorAll('.reveal, .mask, .map, .range, .facts').forEach(function (el) { io.observe(el); });
+
+  // 格局導覽：捲到哪一段，平面圖就亮起並放大那個空間
+  var fig = d.querySelector('.plan-fig');
+  if (fig) {
+    var zoom = fig.querySelector('.plan-zoom'), rooms = fig.querySelectorAll('.rm'), steps = d.querySelectorAll('.step');
+    var cap = fig.querySelector('.plan-now'), bar = fig.querySelector('.plan-prog span');
+    var setStep = function (s) {
+      var k = [].indexOf.call(steps, s), x0 = 1e9, y0 = 1e9, x1 = 0, y1 = 0;
+      steps.forEach(function (x) { x.classList.toggle('on', x === s); });
+      rooms.forEach(function (r) {
+        var on = r.dataset.g === s.dataset.g, b;
+        r.classList.toggle('on', on);
+        if (on) { b = r.querySelector('.rm-box').getBBox(); x0 = Math.min(x0, b.x); y0 = Math.min(y0, b.y); x1 = Math.max(x1, b.x + b.width); y1 = Math.max(y1, b.y + b.height); }
+      });
+      cap.textContent = s.querySelector('h3').textContent;
+      bar.style.transform = 'scaleX(' + (k + 1) / steps.length + ')';
+      var sc = 1.3, tx = Math.min(0, Math.max(600 - 600 * sc, 300 - sc * (x0 + x1) / 2)), ty = Math.min(0, Math.max(420 - 420 * sc, 210 - sc * (y0 + y1) / 2));
+      zoom.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + sc + ')';
+    };
+    var sio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) setStep(e.target); }); }, { rootMargin: '-45% 0px -45% 0px' });
+    steps.forEach(function (s) { sio.observe(s); });
+  }
+
+  // 房型切換：交叉淡入加縮放，規格數字從上一個房型滾到新數值
+  var tabs = d.querySelectorAll('[role="tab"]'), panels = d.querySelectorAll('.unit');
+  function show(i, focus) {
+    var cur = d.querySelector('.unit:not(.off)'), next = panels[i];
+    var old = cur ? [].map.call(cur.querySelectorAll('[data-n]'), function (n) { return +n.dataset.n; }) : [];
+    tabs.forEach(function (t, j) { t.setAttribute('aria-selected', j === i); t.tabIndex = j === i ? 0 : -1; });
+    panels.forEach(function (p, j) { p.classList.toggle('off', j !== i); });
+    if (focus) tabs[i].focus();
+    if (cur && cur !== next) next.querySelectorAll('[data-n]').forEach(function (n, k) { tween(n, old[k] || 0, +n.dataset.n, 900); });
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { show(i); });
+    t.addEventListener('keydown', function (e) {
+      var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (k) { e.preventDefault(); show((i + k + tabs.length) % tabs.length, true); }
+    });
+  });
+  show(1);
+
+  // 點「預約看 X 房」自動帶入表單的房型
+  d.querySelectorAll('[data-unit]').forEach(function (a) {
+    a.addEventListener('click', function () { d.getElementById('f-unit').value = a.dataset.unit; });
+  });
+
+  d.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

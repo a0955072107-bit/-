@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>方格 Grid Commons 共享空间｜台北大同区 共享办公室、会议室租借、商登地址</title>
+<meta name="description" content="方格 Grid Commons 共享空间位于台北市大同区，捷运大桥头站步行 3 分钟。提供自由座、固定座、独立办公室、会议室与活动场地租借，以及公司登记地址，日租月租都弹性。">
+<meta property="og:title" content="方格 Grid Commons 共享空间">
+<meta property="og:description" content="大桥头站旁的共享办公室。自由座、独立办公室、会议室按时租，在线估价、预约参观。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f4ee">
+<!-- 多语版本（SEO）：上线后把 href 换成完整网址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   主题设置：改这里就能换整站配色与字体
+   ============================================================ */
+:root {
+  --brand: #8fe3c0;          /* 品牌主色：薄荷绿，用于主要按钮与色块 */
+  --brand-ink: #15171c;      /* 在 brand 色上的文本颜色（墨黑，对比 AA） */
+  --brand-deep: #1b6e50;     /* 深薄荷：浅底上的强调文本、链接（对比 AA） */
+  --brand-hover: #74d6ad;    /* 主要按钮滑过时的颜色 */
+  --sun: #ffd25e;            /* 辅助色：奶油黄，用于色块与标签 */
+  --sky: #c3d9fb;            /* 辅助色：淡天蓝，用于色块 */
+  --leaf: #2f7d55;           /* 占位图：植物叶片 */
+  --leaf-light: #58b07f;     /* 占位图：植物亮面 */
+  --wood: #e6c99f;           /* 占位图：桌面木色 */
+  --wood-side: #c49a68;      /* 占位图：桌面侧边 */
+  --bg: #f6f4ee;             /* 网页底色：暖白 */
+  --surface: #fcfbf7;        /* 卡片、表单底色（略带暖调的白） */
+  --surface-2: #eeebe2;      /* 次要底色：输入框、交错区块 */
+  --text: #15171c;           /* 主要文本：墨黑 */
+  --muted: #555a63;          /* 次要文本 */
+  --line: #dcd8cc;           /* 细线、边框 */
+  --grid: color-mix(in srgb, var(--text) 6%, transparent); /* 背景方格线 */
+  --ink: #15171c;            /* 深色区块背景：墨黑 */
+  --ink-2: #22252c;          /* 深色区块里的卡片底色 */
+  --on-ink: #f1f0ea;         /* 深色区块上的主要文本 */
+  --on-ink-muted: #a9adb5;   /* 深色区块上的次要文本 */
+  --radius: 22px;            /* 卡片圆角（圆角方块是这个模板的招牌） */
+  --radius-sm: 12px;         /* 按钮、输入框圆角 */
+  --font-heading: "Sora", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; /* 标题字体 */
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; /* 内文本型 */
+  --maxw: 1240px;            /* 内容最大宽度 */
+  --pad: clamp(1rem, 5vw, 3rem); /* 左右留白 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); font-variant-numeric: tabular-nums; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; line-height: 1.25; letter-spacing: -.01em; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand-deep); outline-offset: 3px; border-radius: 6px; }
+.wrap { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--ink); color: var(--on-ink); padding: .5rem 1rem; z-index: 100; }
+.skip:focus { left: 1rem; }
+svg { flex: none; }
+
+/* ---------- 按钮 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .7rem 1.4rem; border-radius: var(--radius-sm); border: 2px solid transparent; font: 700 .97rem/1.2 var(--font-body); cursor: pointer; transition: background .2s, color .2s, border-color .2s, transform .2s, box-shadow .2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(1px); box-shadow: none; }
+.btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+a:active { opacity: .85; }
+.btn-main { background: var(--brand); color: var(--brand-ink); border-color: var(--ink); box-shadow: 3px 3px 0 var(--ink); }
+.btn-main:hover { background: var(--brand-hover); box-shadow: 4px 5px 0 var(--ink); }
+.btn-line { border-color: var(--ink); color: var(--text); background: transparent; }
+.btn-line:hover { background: var(--ink); color: var(--on-ink); }
+.btn-ink { background: var(--ink); color: var(--on-ink); }
+.btn-ink:hover { background: var(--ink-2); }
+.link { color: var(--brand-deep); font-weight: 700; border-bottom: 2px solid currentColor; transition: color .2s; }
+.link:hover { color: var(--text); }
+
+/* ---------- 通用区块 ---------- */
+section { padding-block: clamp(4rem, 9vw, 7.5rem); }
+.sec-head { display: grid; gap: .9rem; margin-bottom: clamp(2rem, 5vw, 3.5rem); max-width: 42rem; }
+.sec-head h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); }
+.sec-head p { color: var(--muted); font-size: 1.05rem; }
+.alt { background: var(--surface-2); }
+.dark { background: var(--ink); color: var(--on-ink); }
+.dark .sec-head p { color: var(--on-ink-muted); }
+.tag { display: inline-block; font-size: .85rem; font-weight: 500; padding: .15rem .65rem; border-radius: 8px; background: var(--sun); color: var(--brand-ink); }
+
+/* ==================== 页眉导览 ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .75rem 1.5rem; min-height: 4.5rem; padding-block: .6rem; }
+.logo { display: flex; align-items: center; gap: .65rem; }
+.logo b { font: 700 1.15rem/1.1 var(--font-heading); display: block; }
+.logo small { display: block; font-size: .78rem; color: var(--muted); }
+.logo-mark { display: grid; grid-template-columns: repeat(2, 14px); gap: 4px; }
+.logo-mark i { width: 14px; height: 14px; border-radius: 4px; background: var(--brand); }
+.logo-mark i:nth-child(2) { background: var(--sun); }
+.logo-mark i:nth-child(3) { background: var(--ink); }
+.logo-mark i:nth-child(4) { background: var(--sky); }
+.menu { display: flex; align-items: center; gap: clamp(.9rem, 2vw, 1.8rem); font-size: .93rem; font-weight: 500; }
+.menu a:not(.btn) { padding-block: .3rem; border-bottom: 2px solid transparent; transition: border-color .2s, color .2s; }
+.menu a:not(.btn):hover { border-color: var(--brand-deep); color: var(--brand-deep); }
+.menu .btn { min-height: 42px; padding: .45rem 1.1rem; }
+.burger { display: none; width: 46px; height: 46px; background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius-sm); color: var(--text); cursor: pointer; transition: background .2s; }
+.burger:hover { background: var(--brand); }
+.burger:active { transform: translateY(1px); }
+.burger span, .burger span::before, .burger span::after { display: block; width: 18px; height: 2px; background: currentColor; margin: auto; position: relative; transition: transform .3s, background .3s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* 没有 JS 时：菜单换行显示在 logo 下方，页眉改成 sticky */
+  html:not(.js) .site-header { position: sticky; background: var(--bg); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .3rem 1.1rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: 4.5rem 0 auto; flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); padding: .5rem var(--pad) 1.5rem; border-top: 1px solid var(--line); box-shadow: 0 24px 30px -20px color-mix(in srgb, var(--ink) 30%, transparent); transform: translateY(-130%); visibility: hidden; transition: transform .35s, visibility .35s; }
+  .js .menu.open { transform: none; visibility: visible; }
+  .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line); }
+  .js .menu .btn { margin-top: 1rem; min-height: 48px; }
+}
+/* 语言切换：桌机在主要按钮右边，手机（有 JS）在展开菜单的最上方；没有 JS 时跟着菜单换行显示 */
+.lang-switch { display: flex; align-items: center; gap: .1rem; padding-left: clamp(.4rem, 1vw, .9rem); border-left: 1px solid var(--line); font-size: .8rem; line-height: 1; white-space: nowrap; }
+.menu .lang-switch a[hreflang] { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border: 0; color: var(--muted); font-weight: 400; text-decoration: underline 1px transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.menu .lang-switch a[hreflang]:hover { color: var(--brand-deep); text-decoration-color: currentColor; }
+.menu .lang-switch a[hreflang]:active { opacity: .7; }
+.menu .lang-switch a[hreflang]:focus-visible { outline-offset: 0; }
+.menu .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: var(--brand-deep); text-decoration-thickness: 2px; }
+@media (max-width: 760px) {
+  html:not(.js) .lang-switch { border-left: 0; padding-left: 0; margin-left: -.3rem; }
+  .js .menu .lang-switch { order: -1; align-self: flex-start; border-left: 0; padding: 0 0 .4rem; margin-left: -.3rem; font-size: .92rem; }
+  .js .menu .lang-switch a[hreflang] { padding: 0 .3rem; border-bottom: 0; min-width: 40px; min-height: 40px; }
+}
+/* 平板宽度：缩小菜单间距，让语言切换放得下、页眉不换行 */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .menu { gap: clamp(.55rem, 1.1vw, .9rem); font-size: .88rem; }
+  .menu a { white-space: nowrap; }
+  .lang-switch { padding-left: .25rem; }
+  .menu .lang-switch a[hreflang] { padding: 0; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  /* 平板宽度空间不够：暂时隐藏次要链接（class="opt"），手机菜单与桌机仍会显示 */
+  .menu .opt { display: none; }
+}
+
+/* ==================== 艺术占位图 ==================== */
+/* 所有 .img 都是用 CSS 画的办公场景（等角地板格线＋家具）。换成照片：在对应 class 改成
+   .img-xx { background: url(images/xxx.jpg) center/cover; }，并把 s-desk、s-plant 这类场景 class 删掉即可 */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; border: 2px solid var(--ink);
+  background:
+    repeating-linear-gradient(30deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(150deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    var(--brand); }
+.img::before, .img::after { content: ""; position: absolute; inset: 0; z-index: -1; }
+
+/* 换成照片：.img-desk { background: url(images/hot-desk.jpg) center/cover; } */
+.s-desk { background:
+    linear-gradient(var(--ink), var(--ink)) 14% 70% / 3px 22% no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 50% 84% / 3px 18% no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 86% 70% / 3px 22% no-repeat,
+    repeating-linear-gradient(30deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(150deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    var(--brand); }
+.s-desk::before { /* 等角桌面＋笔电＋咖啡杯 */
+  clip-path: polygon(50% 30%, 88% 50%, 50% 70%, 12% 50%);
+  background:
+    radial-gradient(circle at 66% 52%, var(--ink) 0 5px, var(--surface) 5px 7px, transparent 7.5px),
+    linear-gradient(150deg, transparent 38%, var(--ink) 38% 52%, transparent 52%) 40% 46% / 34% 22% no-repeat,
+    var(--wood); }
+.s-desk::after { clip-path: polygon(12% 50%, 50% 70%, 88% 50%, 88% 55%, 50% 75%, 12% 55%); background: linear-gradient(90deg, var(--wood-side) 50%, color-mix(in srgb, var(--wood-side) 70%, var(--ink)) 50%); }
+
+/* 换成照片：.img-plant { background: url(images/plant.jpg) center/cover; } */
+.s-plant { background-color: var(--sun); }
+.s-plant::before { /* 叶片 */
+  background:
+    radial-gradient(ellipse 12% 22% at 38% 38%, var(--leaf) 96%, transparent 100%),
+    radial-gradient(ellipse 12% 24% at 62% 34%, var(--leaf-light) 96%, transparent 100%),
+    radial-gradient(ellipse 11% 20% at 50% 24%, var(--leaf) 96%, transparent 100%),
+    radial-gradient(ellipse 20% 10% at 30% 54%, var(--leaf-light) 96%, transparent 100%),
+    radial-gradient(ellipse 20% 10% at 70% 52%, var(--leaf) 96%, transparent 100%); }
+.s-plant::after { /* 花盆 */
+  clip-path: polygon(34% 60%, 66% 60%, 61% 86%, 39% 86%);
+  background: linear-gradient(var(--surface) 0 12%, var(--ink) 12%); }
+
+/* 换成照片：.img-lamp { background: url(images/lamp.jpg) center/cover; } */
+.s-lamp { background:
+    linear-gradient(var(--ink), var(--ink)) 46% 82% / 3px 52% no-repeat,
+    radial-gradient(ellipse 18% 4% at 47% 90%, var(--ink) 96%, transparent 100%),
+    repeating-linear-gradient(30deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    var(--sky); }
+.s-lamp::before { /* 灯罩 */
+  clip-path: polygon(34% 18%, 58% 18%, 68% 36%, 24% 36%); background: var(--ink); }
+.s-lamp::after { /* 暖光 */
+  clip-path: polygon(26% 36%, 66% 36%, 94% 100%, 0 100%);
+  background: linear-gradient(color-mix(in srgb, var(--sun) 85%, transparent), transparent 80%); }
+
+/* 换成照片：.img-plan { background: url(images/office.jpg) center/cover; } */
+.s-plan { background: radial-gradient(circle, color-mix(in srgb, var(--ink) 22%, transparent) 1.2px, transparent 1.8px) 0 0 / 16px 16px, var(--surface); }
+.s-plan::before { /* 平面图：墙与房间 */
+  inset: 12%; border: 3px solid var(--ink); border-radius: 12px;
+  background:
+    linear-gradient(var(--ink), var(--ink)) 46% 0 / 3px 62% no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 0 60% / 34% 3px no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 100% 44% / 44% 3px no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 0 0 / 46% 60% no-repeat,
+    linear-gradient(var(--sun), var(--sun)) 100% 0 / 54% 44% no-repeat,
+    linear-gradient(var(--sky), var(--sky)) 100% 100% / 54% 56% no-repeat; }
+.s-plan::after { /* 平面图上的桌椅 */
+  inset: 20% 60% 48% 20%;
+  background: repeating-linear-gradient(90deg, var(--ink) 0 10px, transparent 10px 18px) 0 0 / 100% 10px no-repeat,
+    repeating-linear-gradient(90deg, var(--ink) 0 10px, transparent 10px 18px) 0 100% / 100% 10px no-repeat; }
+
+/* 换成照片：.img-meet { background: url(images/meeting-room.jpg) center/cover; } */
+.s-meet { background:
+    repeating-linear-gradient(30deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(150deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    var(--sky); }
+.s-meet::before { /* 长桌 */
+  inset: 36% 22%; border-radius: 999px; background: var(--wood); box-shadow: 0 6px 0 var(--wood-side), 0 6px 0 2px var(--ink), 0 0 0 2px var(--ink); }
+.s-meet::after { /* 椅子 */
+  background:
+    radial-gradient(circle at 34% 24%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 50% 24%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 66% 24%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 34% 80%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 50% 80%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 66% 80%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 13% 52%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 87% 52%, var(--ink) 0 8px, transparent 9px); }
+
+/* 换成照片：.img-event { background: url(images/event.jpg) center/cover; } */
+.s-event { background-color: var(--sun); }
+.s-event::before { /* 舞台与屏幕 */
+  inset: 12% 20% auto; height: 24%; border-radius: 10px; border: 5px solid var(--ink); background: var(--brand); }
+.s-event::after { /* 一排排座位 */
+  inset: 46% 14% 12%; background: radial-gradient(circle, var(--ink) 0 5px, transparent 6px) 0 0 / 26px 24px; }
+
+/* 换成照片：.img-mail { background: url(images/mailroom.jpg) center/cover; } */
+.s-mail::before { /* 信封＋邮票 */
+  inset: 28% 20%; border-radius: 12px; border: 2px solid var(--ink);
+  background: linear-gradient(var(--sun), var(--sun)) 90% 14% / 14% 22% no-repeat, var(--surface); }
+.s-mail::after { clip-path: polygon(21% 29%, 79% 29%, 50% 56%); background: color-mix(in srgb, var(--surface) 80%, var(--ink)); }
+
+/* 换成照片：.img-map { background: url(images/map.jpg) center/cover; } */
+.img-map { min-height: 300px; height: 100%; background:
+    linear-gradient(var(--brand), var(--brand)) 30% 30% / 18% 22% no-repeat,
+    linear-gradient(var(--sun), var(--sun)) 82% 76% / 20% 18% no-repeat,
+    repeating-linear-gradient(0deg, transparent 0 58px, var(--surface) 58px 70px),
+    repeating-linear-gradient(90deg, transparent 0 74px, var(--surface) 74px 86px),
+    var(--surface-2); }
+.img-map::before { /* 河岸与快速道路 */
+  background: linear-gradient(110deg, transparent 0 8%, var(--sky) 8% 18%, transparent 18%); }
+.img-map::after { /* 位置标记 */
+  inset: calc(50% - 30px) auto auto calc(55% - 18px); width: 36px; height: 36px; z-index: 1;
+  border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--ink);
+  box-shadow: inset 0 0 0 10px var(--ink), inset 0 0 0 18px var(--brand); }
+
+/* ==================== Hero ==================== */
+.hero { padding-top: clamp(6rem, 10vw, 7rem); padding-bottom: clamp(3rem, 6vw, 4rem);
+  background: linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 48px 48px, linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 48px 48px, var(--bg); }
+.hero-grid { display: grid; gap: clamp(2.25rem, 5vw, 4.5rem); align-items: center; }
+.hero h1 { font-size: clamp(2.3rem, 5.4vw, 4.3rem); line-height: 1.15; }
+.hero-lead { color: var(--muted); font-size: clamp(1.02rem, 1.5vw, 1.15rem); max-width: 31rem; margin-top: 1.25rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 1.9rem; }
+.board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); gap: clamp(.5rem, 1.4vw, 1rem); aspect-ratio: 1; max-width: 560px; width: 100%; margin-inline: auto;
+  grid-template-areas: "plan plan desk" "plan plan plant" "lamp meet meet"; }
+.board .img { border-radius: clamp(14px, 2.4vw, var(--radius)); }
+.board .s-plan { grid-area: plan; } .board .s-desk { grid-area: desk; } .board .s-plant { grid-area: plant; } .board .s-lamp { grid-area: lamp; } .board .s-meet { grid-area: meet; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+.facts div { padding: 1rem; background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius-sm); }
+.facts strong { display: block; font: 700 clamp(1.4rem, 3.5vw, 2.1rem)/1.1 var(--font-heading); }
+.facts span { font-size: .85rem; color: var(--muted); }
+@media (min-width: 900px) { .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); } }
+
+/* ==================== 空间类型 ==================== */
+.spaces { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+.space { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); padding: .8rem .8rem 1.4rem; display: grid; gap: .9rem; align-content: start; transition: transform .25s, box-shadow .25s; }
+.space:hover { transform: translateY(-4px); box-shadow: 5px 6px 0 var(--ink); }
+.space .img { aspect-ratio: 16 / 10; border-radius: 14px; }
+.space h3 { font-size: 1.25rem; padding-inline: .5rem; }
+.space p { color: var(--muted); padding-inline: .5rem; font-size: .96rem; }
+.space .from { font-weight: 700; color: var(--brand-deep); }
+@media (min-width: 620px) { .spaces { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .spaces { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== 方案价格 ==================== */
+.plans-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1.25rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
+.plans-top .sec-head { margin-bottom: 0; }
+.toggle { display: inline-flex; padding: 4px; border: 2px solid var(--ink); border-radius: 14px; background: var(--surface); }
+html:not(.js) .toggle { display: none; }
+.toggle button { font: 700 .95rem/1 var(--font-body); min-height: 42px; padding: 0 1.3rem; border: 0; border-radius: 10px; background: transparent; color: var(--text); cursor: pointer; transition: background .2s, color .2s; }
+.toggle button:hover { background: var(--surface-2); }
+.toggle button:active { transform: translateY(1px); }
+.toggle button[aria-pressed="true"] { background: var(--ink); color: var(--on-ink); }
+.plans { display: grid; gap: 1rem; }
+.plan { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2rem); display: grid; gap: 1.1rem; align-content: start; }
+.plan h3 { font-size: 1.3rem; }
+.plan .desc { color: var(--muted); font-size: .95rem; }
+.price { font-family: var(--font-heading); display: flex; align-items: baseline; flex-wrap: wrap; gap: .2rem; }
+.price small { font-size: .95rem; font-weight: 600; }
+.price .amt { font-size: clamp(2.2rem, 5vw, 2.8rem); font-weight: 700; line-height: 1; }
+.price .per { font-family: var(--font-body); color: var(--muted); font-size: .95rem; }
+.plan ul { display: grid; gap: .55rem; font-size: .95rem; }
+.plan li { display: flex; gap: .55rem; align-items: start; }
+.plan li svg { margin-top: .3rem; color: var(--brand-deep); }
+.plan .btn { margin-top: .4rem; }
+.plan.pick { background: var(--ink); color: var(--on-ink); box-shadow: 6px 6px 0 var(--brand); }
+.plan.pick .desc, .plan.pick .price .per { color: var(--on-ink-muted); }
+.plan.pick li svg { color: var(--brand); }
+.plan-head { display: flex; justify-content: space-between; align-items: center; gap: .6rem; flex-wrap: wrap; }
+.plans-note { margin-top: 1.5rem; color: var(--muted); font-size: .92rem; }
+@media (min-width: 900px) { .plans { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; } }
+
+/* ==================== 会议室即时估价 ==================== */
+.est { display: grid; gap: 1rem; }
+.est-form { background: var(--surface); color: var(--text); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.2rem); display: grid; gap: 1.1rem; align-content: start; }
+.est-form .row { display: grid; gap: 1.1rem; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.est-out { background: var(--ink-2); border: 2px solid color-mix(in srgb, var(--on-ink) 18%, transparent); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.2rem); display: grid; gap: 1rem; align-content: start; }
+.est-out .label { color: var(--on-ink-muted); font-size: .92rem; }
+.est-total { font: 700 clamp(2.6rem, 7vw, 3.8rem)/1 var(--font-heading); color: var(--brand); display: block; }
+.est-rate { color: var(--on-ink-muted); font-size: .92rem; }
+.cap { border-radius: var(--radius-sm); padding: .85rem 1rem; display: flex; gap: .65rem; align-items: start; font-size: .95rem; background: color-mix(in srgb, var(--brand) 16%, transparent); border: 1px solid color-mix(in srgb, var(--brand) 50%, transparent); }
+.cap svg { margin-top: .2rem; color: var(--brand); }
+.cap.warn { background: color-mix(in srgb, var(--sun) 16%, transparent); border-color: color-mix(in srgb, var(--sun) 60%, transparent); }
+.cap.warn svg { color: var(--sun); }
+.est-out .btn { justify-self: start; }
+@media (min-width: 900px) { .est { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); } }
+
+/* ==================== 表单字段 ==================== */
+.field { display: grid; gap: .4rem; min-width: 0; }
+.field label { font-size: .9rem; font-weight: 500; }
+.field label i { color: var(--brand-deep); font-style: normal; }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 2px solid var(--line); border-radius: var(--radius-sm); padding: .7rem .9rem; min-height: 50px; transition: border-color .2s, box-shadow .2s; }
+.field textarea { min-height: 7rem; resize: vertical; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: color-mix(in srgb, var(--ink) 45%, transparent); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 55%, transparent); }
+
+/* ==================== 设施 ==================== */
+.amen { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.amen li { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); padding: 1.2rem; display: grid; gap: .5rem; align-content: start; }
+.amen .ico { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: var(--brand); color: var(--brand-ink); }
+.amen li:nth-child(3n+2) .ico { background: var(--sun); }
+.amen li:nth-child(3n) .ico { background: var(--sky); }
+.amen h3 { font-size: 1.05rem; margin-top: .3rem; }
+.amen p { color: var(--muted); font-size: .9rem; }
+@media (min-width: 760px) { .amen { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; } .amen li { padding: 1.6rem; } }
+
+/* ==================== 社群活动 ==================== */
+.events { display: grid; gap: 1rem; }
+.event { background: var(--ink-2); border-radius: var(--radius); padding: 1.3rem; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.1rem; align-items: start; border: 2px solid color-mix(in srgb, var(--on-ink) 14%, transparent); }
+.date { width: 72px; aspect-ratio: 1; border-radius: 16px; background: var(--brand); color: var(--brand-ink); display: grid; place-content: center; text-align: center; line-height: 1.1; }
+.event:nth-child(2) .date { background: var(--sun); }
+.event:nth-child(3) .date { background: var(--sky); }
+.date b { font: 700 1.6rem/1 var(--font-heading); display: block; }
+.date small { font-size: .78rem; }
+.event h3 { font-size: 1.12rem; }
+.event p { color: var(--on-ink-muted); font-size: .93rem; margin-top: .3rem; }
+.event .when { color: var(--on-ink); font-size: .88rem; margin-top: .5rem; }
+.community-cta { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; color: var(--on-ink-muted); }
+.btn-mint-line { border-color: var(--brand); color: var(--brand); }
+.btn-mint-line:hover { background: var(--brand); color: var(--brand-ink); }
+@media (min-width: 900px) { .events { grid-template-columns: repeat(3, minmax(0, 1fr)); } .event { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 交通 ==================== */
+.loc { display: grid; gap: 1rem; }
+.loc-info { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.2rem); display: grid; gap: 1.2rem; align-content: start; }
+.loc-info dl { display: grid; gap: 1rem; }
+.loc-info dt { font-size: .88rem; color: var(--muted); }
+.loc-info dd { font-weight: 500; }
+.loc-btns { display: flex; flex-wrap: wrap; gap: .7rem; }
+.loc-btns .btn { min-height: 44px; padding: .5rem 1.1rem; font-size: .92rem; }
+@media (min-width: 900px) { .loc { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); } }
+
+/* ==================== 成员评价 ==================== */
+.quotes { display: grid; gap: 1rem; }
+.quote { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 1.9rem); display: grid; gap: 1.2rem; align-content: space-between; }
+.quote blockquote { font-size: 1.02rem; }
+.quote figcaption { display: flex; align-items: center; gap: .8rem; font-size: .9rem; }
+.quote figcaption b { display: block; font-weight: 700; }
+.quote figcaption span { color: var(--muted); }
+.avatar { width: 44px; height: 44px; border-radius: 12px; background: var(--brand); border: 2px solid var(--ink); flex: none; }
+.quote:nth-child(2) .avatar { background: var(--sun); }
+.quote:nth-child(3) .avatar { background: var(--sky); }
+@media (min-width: 900px) { .quotes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== 常见问题 ==================== */
+.faq-grid { display: grid; gap: 1rem; }
+.faq { display: grid; gap: .7rem; }
+.faq details { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius-sm); }
+.faq summary { cursor: pointer; list-style: none; padding: 1rem 1.2rem; font-weight: 700; display: flex; justify-content: space-between; gap: 1rem; align-items: center; border-radius: var(--radius-sm); transition: background .2s; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:hover { background: var(--surface-2); }
+.faq summary::after { content: "+"; font: 600 1.4rem/1 var(--font-heading); width: 32px; height: 32px; flex: none; display: grid; place-items: center; border-radius: 9px; background: var(--brand); color: var(--brand-ink); transition: transform .25s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 1.2rem 1.15rem; color: var(--muted); }
+@media (min-width: 900px) { .faq-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr); gap: 4rem; } .faq-grid .sec-head { position: sticky; top: 7rem; align-self: start; } }
+
+/* ==================== 参观／预约 ==================== */
+.contact-grid { display: grid; gap: clamp(2rem, 5vw, 3.5rem); }
+.form { background: var(--surface); border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); border-radius: var(--radius); padding: clamp(1.3rem, 4vw, 2.4rem); display: grid; gap: 1.1rem; }
+.form .row { display: grid; gap: 1.1rem; }
+.form .btn { width: 100%; }
+.form-note { font-size: .82rem; color: var(--muted); text-align: center; }
+.contact-side { display: grid; gap: 1.4rem; align-content: start; }
+.contact-side ol { display: grid; gap: .9rem; }
+.contact-side li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: .8rem; align-items: start; }
+.contact-side li b { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; background: var(--ink); color: var(--on-ink); font-family: var(--font-heading); }
+.contact-side li span { padding-top: .45rem; }
+.contact-side .btns { display: flex; flex-wrap: wrap; gap: .7rem; }
+@media (min-width: 640px) { .form .row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+@media (min-width: 960px) { .contact-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); } }
+
+/* ==================== 页脚 ==================== */
+/* 页脚语言链接 */
+.f-lang { display: flex; flex-wrap: wrap; gap: 0 .9rem; margin-block: -6px; }
+.f-lang a { display: inline-flex; align-items: center; min-height: 32px; color: var(--on-ink-muted); text-decoration: underline 1px transparent; text-underline-offset: .3em; transition: color .2s, text-decoration-color .2s; }
+.f-lang a:hover { color: var(--brand); text-decoration-color: currentColor; }
+.f-lang a:active { opacity: .7; }
+.f-lang a[aria-current="page"] { color: var(--on-ink); font-weight: 700; text-decoration-color: currentColor; }
+.site-footer { background: var(--ink); color: var(--on-ink-muted); padding: 4rem 0 7rem; font-size: .92rem; }
+.foot-grid { display: grid; gap: 2rem; padding-bottom: 2.5rem; border-bottom: 1px solid color-mix(in srgb, var(--on-ink) 15%, transparent); }
+.site-footer .logo { color: var(--on-ink); }
+.site-footer .logo small { color: var(--on-ink-muted); }
+.site-footer .logo-mark i:nth-child(3) { background: var(--on-ink); }
+.site-footer h2 { color: var(--on-ink); font: 700 1rem/1.4 var(--font-body); margin-bottom: .7rem; }
+.site-footer a:not(.logo) { transition: color .2s; }
+.site-footer a:not(.logo):hover { color: var(--brand); }
+.social { display: flex; gap: .6rem; margin-top: 1.1rem; }
+.social a { min-width: 44px; height: 44px; padding-inline: .7rem; display: grid; place-items: center; border: 2px solid color-mix(in srgb, var(--on-ink) 25%, transparent); border-radius: 12px; font-size: .8rem; transition: border-color .2s, color .2s; }
+.social a:hover { border-color: var(--brand); }
+.copy { padding-top: 1.5rem; font-size: .82rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; }
+@media (min-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); } .site-footer { padding-bottom: 3rem; } }
+
+/* ---------- 手机底部固定按钮 ---------- */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 40; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .6rem; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 96%, transparent); border-top: 1px solid var(--line); }
+.sticky-cta .btn { min-height: 48px; box-shadow: none; }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- 卷动渐入 ---------- */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<!--
+  JSON-LD 结构化数据：schema.org 没有专属的共享办公室类型，
+  所以用 LocalBusiness，再以 additionalType 标注为 Coworking（共享空间）。
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "additionalType": "http://www.productontology.org/id/Coworking",
+  "name": "方格 Grid Commons 共享空间",
+  "description": "台北市大同区共享办公室，提供自由座、固定座、独立办公室、会议室与活动场地租借，以及公司登记地址服务。",
+  "telephone": "+886-2-1234-5678",
+  "email": "hello@gridcommons.example",
+  "url": "https://www.example.com/",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "承德路二段 88 号 5 楼",
+    "addressLocality": "大同区",
+    "addressRegion": "台北市",
+    "postalCode": "103",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "10:00", "closes": "18:00" }
+  ],
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "高速 Wi-Fi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "会员 24 小时门禁", "value": true }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<!-- ==================== 区块：页眉导览 ==================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="方格 Grid Commons 共享空间 回到顶端">
+      <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span><b>方格</b><small>Grid Commons</small></span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="打开菜单"><span></span></button>
+    <nav class="menu" id="menu" aria-label="主菜单">
+      <a href="#spaces">空间类型</a>
+      <a href="#plans">方案价格</a>
+      <a href="#estimate">会议室估价</a>
+      <a href="#amenities">设施</a>
+      <a href="#community">社群活动</a>
+      <a href="#location">交通</a>
+      <a class="opt" href="#faq">常见问题</a>
+      <a href="#contact" class="btn btn-main">预约参观</a>
+      <!-- lang-switch：语言切换。要添加语言时，在这里加一个链接，并添加对应的文件夹 -->
+      <nav class="lang-switch" aria-label="Language 语言">
+        <details class="lang-menu">
+          <summary lang="zh-Hans">简</summary>
+          <div class="lang-list">
+            <a href="../en/" hreflang="en" lang="en">English</a>
+            <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+            <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a>
+            <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+          </div>
+        </details>
+      </nav>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ==================== 区块：主视觉 Hero ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="reveal">
+        <h1>把工作，放进刚刚好的格子里。</h1>
+        <p class="hero-lead">大桥头站步行 3 分钟。自由座、独立办公室、会议室，日租月租都弹性。</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-main">预约参观</a>
+          <a href="#plans" class="btn btn-line">看方案</a>
+        </div>
+      </div>
+      <div class="board reveal">
+        <div class="img s-plan" role="img" aria-label="共享空间平面图：开放座位区、会议室与独立办公室"></div>
+        <div class="img s-desk" role="img" aria-label="木质工作桌上的笔电与咖啡"></div>
+        <div class="img s-plant" role="img" aria-label="窗边的大叶盆栽"></div>
+        <div class="img s-lamp" role="img" aria-label="洒下暖光的落地灯"></div>
+        <div class="img s-meet" role="img" aria-label="八人会议室的长桌与座椅"></div>
+      </div>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="facts reveal" aria-label="空间规模">
+      <div><strong>120</strong><span>个工作座位</span></div>
+      <div><strong>6</strong><span>间会议室</span></div>
+      <div><strong>24h</strong><span>会员门禁</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：空间类型 ==================== -->
+<section id="spaces">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>六种空间，跟着团队一起长大</h2>
+      <p>一个人接案、三人新创，或二十人的部门分点，都有适合的位置。先试一天，再决定要不要长住。</p>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="spaces">
+      <article class="space reveal">
+        <div class="img s-desk" role="img" aria-label="开放区的自由座工作桌"></div>
+        <h3>自由座</h3>
+        <p>开放区任选座位，靠窗、长桌、沙发区随心情换。</p>
+        <p class="from">NT$ 350 起／日</p>
+      </article>
+      <article class="space reveal">
+        <div class="img s-lamp" role="img" aria-label="固定座上的台灯与个人收纳"></div>
+        <h3>固定座</h3>
+        <p>专属桌位加上锁柜，屏幕和文档放着不用收。</p>
+        <p class="from">NT$ 7,800 起／月</p>
+      </article>
+      <article class="space reveal">
+        <div class="img s-plan" role="img" aria-label="二到八人独立办公室的平面配置"></div>
+        <h3>独立办公室</h3>
+        <p>2 到 8 人的可上锁房间，家具网络都备好，拎包入住。</p>
+        <p class="from">NT$ 24,000 起／月</p>
+      </article>
+      <article class="space reveal">
+        <div class="img s-meet" role="img" aria-label="会议室长桌与屏幕"></div>
+        <h3>会议室</h3>
+        <p>4 到 16 人，附 65 吋屏幕、白板与视频镜头，按小时计费。</p>
+        <p class="from">NT$ 400 起／小时</p>
+      </article>
+      <article class="space reveal">
+        <div class="img s-event" role="img" aria-label="活动场地的舞台与座位"></div>
+        <h3>活动场地</h3>
+        <p>可容纳 60 人，适合讲座、发表会、工作坊与小型展览。</p>
+        <p class="from">NT$ 3,000 起／小时</p>
+      </article>
+      <article class="space reveal">
+        <div class="img s-mail" role="img" aria-label="商业登记地址与代收信件"></div>
+        <h3>商登地址</h3>
+        <p>公司登记、代收挂号与包裹，到件即时通知。</p>
+        <p class="from">NT$ 1,500 起／月</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：方案价格 ==================== -->
+<section class="alt" id="plans">
+  <div class="wrap">
+    <div class="plans-top">
+      <div class="sec-head reveal">
+        <h2>方案价格</h2>
+        <p>价格皆含税、水电、网络与咖啡吧。月租方案绑约 3 个月以上，再享 95 折。</p>
+      </div>
+      <!-- 日租／月租切换：价格写在每个 .amt、.per 的 data-day 与 data-month 属性里 -->
+      <div class="toggle reveal" role="group" aria-label="计费方式">
+        <button type="button" data-period="day" aria-pressed="false">日租</button>
+        <button type="button" data-period="month" aria-pressed="true">月租</button>
+      </div>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="plans" aria-live="polite">
+      <article class="plan reveal">
+        <h3>自由座</h3>
+        <p class="desc">偶尔进办公室、喜欢换座位的人。</p>
+        <p class="price"><small>NT$</small><span class="amt" data-day="350" data-month="4,800">4,800</span><span class="per" data-day="／人／日" data-month="／人／月">／人／月</span></p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>开放区任选座位</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>每月 2 小时会议室额度</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>咖啡、茶饮无限供应</li>
+        </ul>
+        <a href="#contact" class="btn btn-line">预约试坐</a>
+      </article>
+      <article class="plan pick reveal">
+        <div class="plan-head"><h3>固定座</h3><span class="tag">最多人选</span></div>
+        <p class="desc">每天都来，想要自己的桌子。</p>
+        <p class="price"><small>NT$</small><span class="amt" data-day="550" data-month="7,800">7,800</span><span class="per" data-day="／人／日" data-month="／人／月">／人／月</span></p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>专属桌位与个人锁柜</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>每月 6 小时会议室额度</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>月租会员 24 小时门禁</li>
+        </ul>
+        <a href="#contact" class="btn btn-main">预约参观</a>
+      </article>
+      <article class="plan reveal">
+        <h3>独立办公室</h3>
+        <p class="desc">2 到 4 人团队，需要关上门讨论。</p>
+        <p class="price"><small>NT$</small><span class="amt" data-day="1,800" data-month="24,000">24,000</span><span class="per" data-day="／间／日" data-month="／间／月">／间／月</span></p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>可上锁房间与门牌</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>每月 12 小时会议室额度</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>可申请公司登记地址</li>
+        </ul>
+        <a href="#contact" class="btn btn-line">询问空房</a>
+      </article>
+    </div>
+    <p class="plans-note reveal">只需要地址？商登方案每月 NT$1,500 起，含代收信件与到件通知。</p>
+  </div>
+</section>
+
+<!-- ==================== 区块：会议室即时估价 ==================== -->
+<section class="dark" id="estimate">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>会议室即时估价</h2>
+      <p>选好房型、时数和人数，马上看到费用，也帮你确认坐不坐得下。</p>
+    </div>
+    <div class="est reveal">
+      <!-- 估价规则：每个 option 的 data-rate 是每小时价格、data-cap 是容纳人数，改这里就好 -->
+      <form class="est-form" id="est" onsubmit="return false">
+        <div class="field">
+          <label for="e-room">房型</label>
+          <select id="e-room">
+            <option value="小会议室" data-rate="400" data-cap="4">小会议室（4 人，NT$400／小时）</option>
+            <option value="中会议室" data-rate="700" data-cap="8" selected>中会议室（8 人，NT$700／小时）</option>
+            <option value="大会议室" data-rate="1200" data-cap="16">大会议室（16 人，NT$1,200／小时）</option>
+            <option value="活动场地" data-rate="3000" data-cap="60">活动场地（60 人，NT$3,000／小时）</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="field"><label for="e-hours">时数</label><input id="e-hours" type="number" min="1" max="12" step="1" value="2" inputmode="numeric"></div>
+          <div class="field"><label for="e-people">与会人数</label><input id="e-people" type="number" min="1" max="200" step="1" value="6" inputmode="numeric"></div>
+        </div>
+      </form>
+      <div class="est-out" aria-live="polite">
+        <span class="label">预估费用（含税）</span>
+        <output class="est-total" id="e-total" for="e-room e-hours e-people">NT$ 1,400</output>
+        <p class="est-rate" id="e-rate">NT$700 × 2 小时。预约 4 小时以上享 9 折。</p>
+        <p class="cap" id="e-cap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.8a3.5 3.5 0 010 6.4M18.5 14.8c1.7.8 2.7 2.5 3 5.2"/></svg><span id="e-msg">容量没问题：这间最多 8 人，还有 2 个空位。</span></p>
+        <a href="#contact" class="btn btn-main">预约这间会议室</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：设施 ==================== -->
+<section id="amenities">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>来了就能开工的设施</h2>
+      <p>你只需要带笔电。其他的，我们都准备好了。</p>
+    </div>
+    <ul class="amen">
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0120 0M5.2 12.3a10.4 10.4 0 0113.6 0M8.5 15.8a5.6 5.6 0 017 0"/><circle cx="12" cy="19.3" r="1.2" fill="currentColor"/></svg></span>
+        <h3>500M 光纤 Wi-Fi</h3>
+        <p>双线路备援，视频会议不卡顿。</p>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h12v5a5 5 0 01-5 5H9a5 5 0 01-5-5z"/><path d="M16 10.5h1.5a2.5 2.5 0 010 5H16M8 3.5c-.6.9.6 1.6 0 2.5M12 3.5c-.6.9.6 1.6 0 2.5"/></svg></span>
+        <h3>咖啡吧</h3>
+        <p>精品咖啡豆、茶包、燕麦奶无限供应。</p>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M7 8V3.5h10V8"/><rect x="3" y="8" width="18" height="9" rx="2"/><path d="M7 14h10v6.5H7z"/></svg></span>
+        <h3>印表与扫描</h3>
+        <p>彩色打印、扫描到云端，刷会员卡就能用。</p>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M9 6h6v6H9z"/><path d="M15 15.5v2"/></svg></span>
+        <h3>隔音电话亭</h3>
+        <p>4 座单人电话亭，接客户电话不怕吵到人。</p>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3" width="17" height="18" rx="2"/><path d="M12 3v18M7.5 9v2M16.5 9v2"/></svg></span>
+        <h3>个人锁柜</h3>
+        <p>固定座以上附锁柜，自由座可加购。</p>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg></span>
+        <h3>24 小时门禁</h3>
+        <p>月租会员刷卡进出，半夜赶案也有位置。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== 区块：社群活动 ==================== -->
+<section class="dark" id="community">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>社群活动</h2>
+      <p>在这里工作，也在这里认识合作伙伴。会员免费参加，非会员也欢迎报名。</p>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="events">
+      <article class="event reveal">
+        <div class="date"><b>03</b><small>每周三</small></div>
+        <div>
+          <h3>早餐会：三分钟自我介绍</h3>
+          <p>带着你的项目来，配一杯咖啡认识隔壁桌的人。</p>
+          <p class="when">08:30–09:30 开放区</p>
+        </div>
+      </article>
+      <article class="event reveal">
+        <div class="date"><b>18</b><small>每月中</small></div>
+        <div>
+          <h3>接案者报税与合约小讲堂</h3>
+          <p>邀请会计师、律师分享，现场开放提问。</p>
+          <p class="when">19:00–21:00 活动场地</p>
+        </div>
+      </article>
+      <article class="event reveal">
+        <div class="date"><b>27</b><small>每月底</small></div>
+        <div>
+          <h3>月底屋顶小酒馆</h3>
+          <p>辛苦一个月，来屋顶喝一杯，交换最近在忙的事。</p>
+          <p class="when">18:30–21:00 顶楼露台</p>
+        </div>
+      </article>
+    </div>
+    <div class="community-cta reveal">
+      <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-mint-line">加入 LINE 收活动通知</a>
+      <span>每月初公布下个月的活动行事历。</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：交通 ==================== -->
+<section id="location">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>交通与位置</h2>
+      <p>位在大稻埕与北门之间，捷运、公车、YouBike 都方便，开车也有特约停车场。</p>
+    </div>
+    <div class="loc">
+      <div class="loc-info reveal">
+        <dl>
+          <div><dt>地址</dt><dd>台北市大同区承德路二段 88 号 5 楼</dd></div>
+          <div><dt>捷运</dt><dd>中和新芦线 大桥头站 1 号出口，步行 3 分钟</dd></div>
+          <div><dt>公车</dt><dd>大桥头站下车，步行 2 分钟</dd></div>
+          <div><dt>停车</dt><dd>隔壁特约停车场，会员每小时 NT$40</dd></div>
+          <div><dt>营业时间</dt><dd>周一至周五 09:00–21:00<br>周六 10:00–18:00，月租会员 24 小时</dd></div>
+        </dl>
+        <div class="loc-btns">
+          <a href="https://maps.google.com/?q=台北市大同区承德路二段88号" class="btn btn-ink" target="_blank" rel="noopener">打开 Google 地图</a>
+          <a href="tel:0212345678" class="btn btn-line">02-1234-5678</a>
+        </div>
+      </div>
+      <div class="img img-map reveal" role="img" aria-label="示意地图：方格共享空间位于大桥头站旁，邻近淡水河岸"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：成员评价 ==================== -->
+<section class="alt" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>成员怎么说</h2>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="quotes">
+      <figure class="quote reveal">
+        <blockquote>从家里搬来固定座之后，工作和生活终于分开了。早餐会还帮我接到两个长期客户。</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true"></span><span><b>林小姐</b><span>品牌设计师，固定座会员</span></span></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <blockquote>四人团队租独立办公室快一年，网络稳、会议室好订，访客来也很体面。</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true"></span><span><b>陈先生</b><span>软件新创共同创办人</span></span></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <blockquote>我们在活动场地办了 50 人的产品发表，投影、音响和茶点都一次搞定。</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true"></span><span><b>黄小姐</b><span>行销公司活动企划</span></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：常见问题 ==================== -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head reveal">
+      <h2>常见问题</h2>
+      <p>找不到答案的话，直接打电话或传 LINE 给我们。</p>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>可以先试用再决定吗？</summary>
+        <p>可以。预约参观当天就能免费试坐半天自由座，满意再选方案。</p>
+      </details>
+      <details>
+        <summary>会议室最少要租多久？</summary>
+        <p>最少 1 小时，以小时为单位计费。预约 4 小时以上享 9 折，会员可先使用每月的免费额度。</p>
+      </details>
+      <details>
+        <summary>商登地址可以办公司登记吗？</summary>
+        <p>可以。我们提供租赁契约与房屋税单影本，协助你完成公司或行号设立登记，也可以代收挂号信件。</p>
+      </details>
+      <details>
+        <summary>月租方案要绑约吗？</summary>
+        <p>最短一个月就能租，绑约 3 个月以上享 95 折，12 个月以上享 9 折。到期前 30 天告知即可不续约。</p>
+      </details>
+      <details>
+        <summary>可以带访客或宠物吗？</summary>
+        <p>访客请在柜台登记，可在开放区或会议室接待。小型宠物须放在提笼内，并先告知柜台。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：参观／预约 ==================== -->
+<section class="alt" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-side reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <h2>预约参观</h2>
+        <p>留下数据，我们会在一个工作天内回复，约好时间带你看空间。</p>
+      </div>
+      <ol>
+        <li><b>1</b><span>填写表单，选择想看的空间</span></li>
+        <li><b>2</b><span>专人来电确认参观时间</span></li>
+        <li><b>3</b><span>现场参观，免费试坐半天</span></li>
+      </ol>
+      <div class="btns">
+        <a href="tel:0212345678" class="btn btn-ink">来电 02-1234-5678</a>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-line">LINE 询问</a>
+      </div>
+    </div>
+    <!--
+      表单送出：到 formspree.io 免费注册，创建表单后会拿到一组代码，
+      把下面 action 里的 your-form-id 换成你的代码，送出的数据就会寄到你的信箱。
+    -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="row">
+        <div class="field"><label for="f-name">姓名 <i>*</i></label><input id="f-name" name="姓名" autocomplete="name" required></div>
+        <div class="field"><label for="f-tel">电话 <i>*</i></label><input id="f-tel" name="电话" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+      <div class="row">
+        <div class="field">
+          <label for="f-type">想了解的空间 <i>*</i></label>
+          <select id="f-type" name="空间类型" required>
+            <option value="">请选择</option>
+            <option>自由座</option>
+            <option>固定座</option>
+            <option>独立办公室</option>
+            <option>会议室</option>
+            <option>活动场地</option>
+            <option>商登地址</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-size">团队人数</label>
+          <select id="f-size" name="团队人数">
+            <option>1 人</option>
+            <option>2–4 人</option>
+            <option>5–10 人</option>
+            <option>10 人以上</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label for="f-date">希望参观日期</label><input id="f-date" name="参观日期" type="date"></div>
+      <div class="field"><label for="f-msg">其他需求</label><textarea id="f-msg" name="其他需求" placeholder="例如需要停车位、预计入住时间、会议室用途"></textarea></div>
+      <button type="submit" class="btn btn-main">送出预约</button>
+      <p class="form-note">送出即表示同意我们使用数据联系你，不会用于其他用途。</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 区块：页脚 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span><b>方格</b><small>Grid Commons</small></span></a>
+        <p style="margin-top:1rem;max-width:22rem">大桥头站旁的共享办公室，提供弹性座位、会议室与商登地址。</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="https://line.me/R/ti/p/@yourlineid" aria-label="LINE">LINE</a>
+        </div>
+      </div>
+      <div>
+        <h2>联系信息</h2>
+        <p>台北市大同区承德路二段 88 号 5 楼<br>电话 <a href="tel:0212345678">02-1234-5678</a><br>hello@gridcommons.example</p>
+      </div>
+      <div>
+        <h2>营业时间</h2>
+        <p>周一至周五 09:00–21:00<br>周六 10:00–18:00<br>月租会员 24 小时门禁</p>
+      </div>
+    </div>
+    <div class="copy"><span>© <span id="y"></span> 方格 Grid Commons 共享空间</span><span class="f-lang"><a href="../en/" hreflang="en" lang="en">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a></span><span>空间图片仅供示意</span></div>
+  </div>
+</footer>
+
+<!-- ==================== 区块：手机底部固定按钮 ==================== -->
+<div class="sticky-cta">
+  <a href="tel:0212345678" class="btn btn-line" aria-label="拨打电话 02-1234-5678">来电</a>
+  <a href="#contact" class="btn btn-main">预约参观</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function () {
+  var header = document.querySelector('.site-header');
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('menu');
+
+  // 页眉卷动背景
+  function onScroll() { header.classList.toggle('scrolled', scrollY > 20 || menu.classList.contains('open')); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // 汉堡菜单
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
+    onScroll();
+  }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // 日租／月租切换
+  var periods = document.querySelectorAll('.toggle button');
+  periods.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var p = b.dataset.period;
+      periods.forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+      document.querySelectorAll('.plan [data-day]').forEach(function (el) { el.textContent = el.dataset[p]; });
+    });
+  });
+
+  // 会议室即时估价（4 小时以上 9 折）
+  var room = document.getElementById('e-room'), hours = document.getElementById('e-hours'), people = document.getElementById('e-people');
+  var fmt = function (n) { return Math.round(n).toLocaleString('en-US'); };
+  function estimate() {
+    var o = room.options[room.selectedIndex], rate = +o.dataset.rate, cap = +o.dataset.cap;
+    var h = Math.min(12, Math.max(1, Math.round(+hours.value) || 1)), n = Math.max(1, Math.round(+people.value) || 1);
+    var off = h >= 4;
+    document.getElementById('e-total').textContent = 'NT$ ' + fmt(rate * h * (off ? 0.9 : 1));
+    document.getElementById('e-rate').textContent = 'NT$' + fmt(rate) + ' × ' + h + ' 小时。' + (off ? '已套用 4 小时以上 9 折。' : '预约 4 小时以上享 9 折。');
+    var msg, better = [].find.call(room.options, function (x) { return +x.dataset.cap >= n; });
+    if (n <= cap) msg = '容量没问题：这间最多 ' + cap + ' 人，还有 ' + (cap - n) + ' 个空位。';
+    else msg = '这间最多 ' + cap + ' 人，' + (better ? '建议改选「' + better.value + '」（' + better.dataset.cap + ' 人）。' : '超过 60 人请直接来电，我们帮你规划场地。');
+    document.getElementById('e-msg').textContent = msg;
+    document.getElementById('e-cap').classList.toggle('warn', n > cap);
+  }
+  document.getElementById('est').addEventListener('input', estimate); estimate();
+
+  // 卷动渐入
+  var targets = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12 });
+    targets.forEach(function (el) { io.observe(el); });
+  }
+
+  document.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

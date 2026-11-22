@@ -1,3 +1,23 @@
+# 行業網站模板集
+
+| 路徑 | 內容 |
+|---|---|
+| `index.html` | Lumen Studio 原始網站（說明見下方） |
+| `templates/` | 中文展示頁 + 30 款模板（繁體中文）；`templates/en/` 是英文展示頁與英文版 |
+| `templates/_docs/` | 隨商品附上的使用說明、授權條款 |
+| `templates/SPEC.md` | 模板製作規格（新增模板時遵循） |
+| `scripts/package.sh` | 打包成可販售的 zip → `dist/` |
+| `sales/Gumroad上架步驟.md` | Gumroad 每個欄位要填什麼（中英） |
+| `sales/行銷計畫.md` | 國外需求、定價、推廣、接案管道 |
+| `sales/covers/en/` | 英文封面與正方形縮圖（`node scripts/covers/make.js` 產生） |
+| `sales/上架文案.md` | 早期總覽與其他平台建議 |
+
+```bash
+bash scripts/package.sh   # 產生 dist/*.zip
+```
+
+---
+
 # Lumen Studio — 一頁式網站
 
 極簡、編輯風格的一頁式網站，純 HTML + CSS + 少量 JavaScript，不需要任何建置工具。

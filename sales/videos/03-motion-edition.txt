@@ -1,0 +1,5 @@
+Animated websites with no libraries. The Motion editions use native CSS scroll-driven animations and a little vanilla JS: an envelope intro for weddings, a live booking calendar for SaaS, a course-by-course tasting menu for restaurants. Zero dependencies, fast to load, and they respect reduced-motion settings.
+
+#webdesign #cssanimation #scrollanimation #websitetemplate #weddingwebsite #frontend #htmlcss #nomonthlyfees
+
+Templates: polyglotpages.gumroad.com

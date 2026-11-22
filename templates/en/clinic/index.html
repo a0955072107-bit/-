@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  ⚠ NOTE FOR BUYERS: healthcare advertising rules
+  Dental and medical advertising is regulated in most places (for example by the FTC and
+  your state dental board in the US, or the GDC and ASA in the UK). When you edit the copy, avoid
+  words such as "best", "No. 1", "guaranteed", "painless", "permanent cure" or "100%",
+  and leave out before/after photos, patient testimonials and discount offers unless your local
+  rules allow them. Keep the content objective and factual, and ask someone familiar with your
+  local healthcare advertising rules to review it before going live.
+-->
+<title>Harbor Dental | Family Dental Care in Portland, OR</title>
+<meta name="description" content="Harbor Dental is a family dental practice in Portland, OR, offering general dentistry, pediatric dentistry, gum care, implants, orthodontics and whitening. Book online or by phone.">
+<meta property="og:title" content="Harbor Dental | Family Dental Care in Portland, OR">
+<meta property="og:description" content="General, pediatric and gum care, implants, orthodontics and whitening. See our hours, meet our dentists and find directions.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f766e">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.yourbusiness.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Harbor Dental",
+  "telephone": "+1-555-012-3456",
+  "url": "https://example.com/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "128 Maple Street, Suite 100",
+    "addressLocality": "Portland",
+    "addressRegion": "OR",
+    "postalCode": "97205",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "14:00", "closes": "17:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "18:30", "closes": "21:00" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   THEME SETTINGS — change these to restyle the whole site
+   ============================================================ */
+:root {
+  --brand: #0f766e;          /* Brand color (buttons, key text); for a different specialty try medical blue #1d4ed8 */
+  --brand-ink: #f7fdfc;      /* Text color on top of the brand color */
+  --brand-deep: #134e4a;     /* Deep brand shade (hover states, dark panels) */
+  --brand-soft: #e3f3f1;     /* Light brand tint (icon backgrounds, chips) */
+  --aqua: #8fd9cf;           /* Aqua used in the placeholder art */
+  --sky: #cfe9f7;            /* Pale sky blue used in the placeholder art */
+  --bg: #f5f8fa;             /* Page background (very light cool gray) */
+  --surface: #fcfefe;        /* Cards, tables and other surfaces */
+  --text: #1e293b;           /* Main text (deep slate) */
+  --muted: #526073;          /* Secondary text */
+  --line: #dfe6ec;           /* Dividers and borders */
+  --closed: #8a5a12;         /* Color of the "Closed" label */
+  --shadow: 0 10px 30px -12px rgba(15, 50, 70, .18); /* Soft card shadow */
+  --radius: 18px;            /* Card corner radius */
+  --radius-sm: 10px;         /* Corner radius for small elements */
+  --font-heading: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif; /* Heading font */
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;    /* Body font */
+  --max: 1160px;             /* Maximum content width */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); line-height: 1.3; letter-spacing: -.01em; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+.wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+section { padding-block: clamp(4rem, 10vw, 7rem); }
+.sec-head { max-width: 40rem; margin-bottom: clamp(2rem, 5vw, 3.25rem); }
+.sec-head h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: .6rem; }
+.sec-head p { color: var(--muted); }
+
+/* ---------- Buttons ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .8rem 1.5rem; border-radius: 999px; font-weight: 500; border: 1.5px solid transparent; transition: background .25s, color .25s, transform .25s, border-color .25s; cursor: pointer; }
+.btn svg { width: 1.1rem; height: 1.1rem; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: var(--brand-deep); transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.97); }
+a:not(.btn):active { opacity: .7; }
+.btn-ghost { border-color: color-mix(in srgb, var(--brand) 40%, transparent); color: var(--brand); background: var(--surface); }
+.btn-ghost:hover { border-color: var(--brand); transform: translateY(-2px); }
+
+/* ---------- Header ---------- */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 90%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .6rem; font: 700 1.15rem/1 var(--font-heading); }
+.logo-mark { width: 2.2rem; height: 2.2rem; border-radius: 12px; background: var(--brand); color: var(--brand-ink); display: grid; place-items: center; }
+.logo-mark svg { width: 1.3rem; height: 1.3rem; }
+.nav-links { display: flex; align-items: center; gap: 1.75rem; font-size: .95rem; }
+.nav-links a:not(.btn) { color: var(--muted); transition: color .2s; }
+.nav-links a:not(.btn):hover { color: var(--brand); }
+.nav-links .btn { padding: .6rem 1.2rem; }
+.menu-btn { display: none; width: 44px; height: 44px; border: 0; border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); color: var(--text); cursor: pointer; }
+.menu-btn span { display: block; width: 20px; height: 2px; margin: 4px auto; background: currentColor; border-radius: 2px; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: 72px; left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .75rem; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: .8rem 1rem; border-radius: var(--radius-sm); }
+  .js .nav-links .btn { margin-top: .5rem; }
+  /* Without JS: the menu opens up as a wrapping row of links */
+  html:not(.js) .site-header { background: var(--surface); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: .75rem; }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: 11rem; }
+}
+
+/* ---------- Placeholder art ---------- */
+/* Replace with a photo: .img-hero { background: url(images/clinic.jpg) center/cover; } */
+/* Replace with a photo: .img-doc1 { background: url(images/doctor-1.jpg) center/cover; } (same for .img-doc2 and .img-doc3) */
+.img { position: relative; overflow: hidden; background-color: var(--brand-soft); }
+.img-hero {
+  border-radius: 32px; aspect-ratio: 4 / 4.4;
+  background:
+    radial-gradient(circle at 78% 18%, color-mix(in srgb, var(--surface) 85%, transparent) 0 9%, transparent 9.5%),
+    radial-gradient(circle at 20% 85%, color-mix(in srgb, var(--aqua) 70%, transparent) 0 22%, transparent 22.5%),
+    radial-gradient(circle at 85% 90%, color-mix(in srgb, var(--sky) 90%, transparent) 0 30%, transparent 30.5%),
+    linear-gradient(155deg, var(--sky), var(--aqua) 55%, color-mix(in srgb, var(--brand) 55%, var(--aqua)));
+}
+/* Centered tooth outline and cross motif */
+.img-hero::before { content: ""; position: absolute; inset: 22% 24% 26%; border-radius: 46% 46% 40% 40% / 38% 38% 62% 62%; border: 3px solid color-mix(in srgb, var(--surface) 75%, transparent); background: color-mix(in srgb, var(--surface) 22%, transparent); }
+.img-hero::after { content: ""; position: absolute; left: 50%; top: 42%; width: 64px; height: 64px; translate: -50% -50%;
+  background: linear-gradient(var(--surface), var(--surface)) center/20px 64px no-repeat, linear-gradient(var(--surface), var(--surface)) center/64px 20px no-repeat; opacity: .9; border-radius: 6px; }
+.img-doc { aspect-ratio: 4 / 3.4; }
+.img-doc::before { content: ""; position: absolute; left: 50%; bottom: -18%; width: 64%; aspect-ratio: 1; translate: -50% 0; border-radius: 50% 50% 0 0; background: color-mix(in srgb, var(--surface) 70%, transparent); }
+.img-doc::after { content: ""; position: absolute; left: 50%; top: 20%; width: 28%; aspect-ratio: 1; translate: -50% 0; border-radius: 50%; background: color-mix(in srgb, var(--surface) 85%, transparent); }
+.img-doc1 { background: radial-gradient(circle at 15% 15%, var(--sky) 0 18%, transparent 18.5%), linear-gradient(160deg, var(--brand-soft), var(--aqua)); }
+.img-doc2 { background: radial-gradient(circle at 88% 20%, var(--aqua) 0 16%, transparent 16.5%), linear-gradient(160deg, var(--sky), color-mix(in srgb, var(--aqua) 60%, var(--sky))); }
+.img-doc3 { background: radial-gradient(circle at 80% 85%, var(--sky) 0 22%, transparent 22.5%), linear-gradient(200deg, color-mix(in srgb, var(--brand) 30%, var(--aqua)), var(--brand-soft)); }
+
+/* ---------- Hero ---------- */
+.hero { padding-top: calc(72px + clamp(2rem, 6vw, 4.5rem)); background: radial-gradient(60rem 30rem at 85% 0%, color-mix(in srgb, var(--aqua) 22%, transparent), transparent 70%); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.hero h1 { font-size: clamp(2.1rem, 5.2vw, 3.5rem); margin-bottom: 1.1rem; }
+.hero-sub { color: var(--muted); font-size: 1.08rem; max-width: 32rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+.hero-facts { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-top: 2rem; color: var(--muted); font-size: .92rem; }
+.hero-facts li::before { content: "✓"; color: var(--brand); font-weight: 700; margin-right: .4rem; }
+.hero-art { position: relative; }
+.today-card { position: absolute; left: -2rem; bottom: 2rem; width: min(20rem, 85%); background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.2rem 1.3rem; }
+.today-card h2 { font-size: 1rem; display: flex; justify-content: space-between; align-items: baseline; }
+.today-card h2 small { font: 500 .82rem var(--font-body); color: var(--muted); }
+.today-card ul { margin-top: .7rem; display: grid; gap: .45rem; }
+.today-card li { display: grid; grid-template-columns: auto 1fr auto; gap: .6rem; align-items: center; font-size: .88rem; padding: .5rem .7rem; border-radius: var(--radius-sm); background: var(--bg); }
+.today-card li b { font: 600 .82rem var(--font-heading); color: var(--brand); }
+.today-card li span { color: var(--muted); line-height: 1.45; font-size: .84rem; }
+.today-card .tag { font-style: normal; white-space: nowrap; font-size: .75rem; padding: .1rem .55rem; border-radius: 999px; background: var(--brand-soft); color: var(--brand-deep); }
+.today-card li.off b, .today-card li.off .tag { color: var(--closed); }
+.today-card li.off .tag { background: color-mix(in srgb, var(--closed) 10%, transparent); }
+.today-card li.now { background: var(--brand-soft); }
+.today-card li.now .tag { background: var(--brand); color: var(--brand-ink); }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .img-hero { aspect-ratio: 4 / 3; }
+  .today-card { position: relative; left: auto; bottom: auto; width: auto; margin: -3.5rem 1rem 0; }
+}
+
+/* ---------- Shared card ---------- */
+.card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); }
+
+/* ---------- Services ---------- */
+.svc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.svc { padding: 1.75rem; transition: transform .3s, box-shadow .3s; }
+.svc:hover { transform: translateY(-4px); }
+.svc-icon { width: 3.25rem; height: 3.25rem; border-radius: 14px; display: grid; place-items: center; background: var(--brand-soft); color: var(--brand); margin-bottom: 1.1rem; }
+.svc-icon svg { width: 1.75rem; height: 1.75rem; }
+.svc h3 { font-size: 1.15rem; margin-bottom: .4rem; }
+.svc p { color: var(--muted); font-size: .95rem; }
+@media (max-width: 960px) { .svc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .svc-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Our dentists ---------- */
+.team { background: var(--surface); }
+.doc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.doc { overflow: hidden; background: var(--bg); box-shadow: none; }
+.doc-body { padding: 1.4rem 1.5rem 1.6rem; }
+.doc-role { font-size: .85rem; color: var(--brand); font-weight: 500; }
+.doc h3 { font-size: 1.25rem; margin-block: .15rem .8rem; }
+.doc dl { display: grid; grid-template-columns: auto 1fr; gap: .35rem .9rem; font-size: .92rem; }
+.doc dt { color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.chips span { font-size: .8rem; padding: .15rem .6rem; border-radius: 999px; background: var(--brand-soft); color: var(--brand-deep); }
+@media (max-width: 960px) { .doc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .doc-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Office hours table ---------- */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius); }
+.schedule { width: 100%; min-width: 720px; border-collapse: separate; border-spacing: 0; text-align: center; font-size: .95rem; }
+.schedule th, .schedule td { padding: 1rem .6rem; border-bottom: 1px solid var(--line); }
+.schedule thead th { font: 600 .95rem var(--font-heading); background: var(--brand-soft); color: var(--brand-deep); }
+.schedule tbody th { text-align: left; padding-left: 1.25rem; white-space: nowrap; }
+.schedule tbody th small { display: block; font: 400 .8rem var(--font-body); color: var(--muted); }
+.schedule tbody tr:last-child > * { border-bottom: 0; }
+.schedule .off { color: var(--closed); font-size: .88rem; }
+.schedule .today { background: color-mix(in srgb, var(--brand) 9%, var(--surface)); font-weight: 500; }
+.schedule thead .today { background: var(--brand); color: var(--brand-ink); }
+.schedule thead .today::after { content: "Today"; display: block; font: 500 .72rem var(--font-body); opacity: .9; }
+.table-note { margin-top: 1rem; font-size: .88rem; color: var(--muted); }
+.scroll-hint { display: none; font-size: .82rem; color: var(--muted); margin-bottom: .5rem; }
+@media (max-width: 760px) { .scroll-hint { display: block; } }
+
+/* ---------- First visit + FAQ ---------- */
+.guide { background: var(--surface); }
+.guide-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.checklist { padding: 1.75rem; background: var(--bg); box-shadow: none; }
+.checklist h3, .faq h3 { font-size: 1.2rem; margin-bottom: 1rem; }
+.checklist li { display: flex; gap: .8rem; padding-block: .7rem; border-bottom: 1px dashed var(--line); }
+.checklist li:last-child { border-bottom: 0; }
+.checklist li::before { content: ""; flex: none; width: 1.3rem; height: 1.3rem; margin-top: .25rem; border-radius: 6px; border: 2px solid var(--brand); background: linear-gradient(var(--brand), var(--brand)) center/50% 50% no-repeat; }
+.checklist small { display: block; color: var(--muted); font-size: .88rem; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 1rem; padding: 1.1rem .25rem; font-weight: 500; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; display: grid; place-items: center; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--brand-soft); color: var(--brand); font-size: 1.2rem; line-height: 1; transition: transform .3s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 .25rem 1.2rem; color: var(--muted); }
+@media (max-width: 860px) { .guide-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Directions ---------- */
+.access-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 1.5rem; }
+.access-info { padding: clamp(1.5rem, 4vw, 2.25rem); display: grid; gap: 1.4rem; }
+.access-info h3 { font-size: 1rem; color: var(--brand); margin-bottom: .2rem; }
+.access-info p { color: var(--muted); }
+.access-info p strong { color: var(--text); font-weight: 500; }
+.access-cta { padding: clamp(1.5rem, 4vw, 2.25rem); background: var(--brand-deep); color: var(--brand-ink); border: 0; display: flex; flex-direction: column; justify-content: center; gap: 1rem; position: relative; overflow: hidden; }
+.access-cta::after { content: ""; position: absolute; right: -4rem; top: -4rem; width: 14rem; aspect-ratio: 1; border-radius: 50%; border: 2.5rem solid color-mix(in srgb, var(--brand-ink) 8%, transparent); }
+.access-cta h3 { font-size: 1.5rem; }
+.access-cta p { opacity: .9; }
+.access-cta .btn-primary { background: var(--brand-ink); color: var(--brand-deep); }
+.access-cta .btn-ghost { background: transparent; color: var(--brand-ink); border-color: color-mix(in srgb, var(--brand-ink) 50%, transparent); }
+.access-cta .row { display: flex; flex-wrap: wrap; gap: .7rem; position: relative; z-index: 1; }
+@media (max-width: 860px) { .access-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--text); color: color-mix(in srgb, var(--surface) 78%, transparent); padding-block: 3.5rem 2rem; font-size: .92rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; }
+.site-footer .logo { color: var(--surface); margin-bottom: 1rem; }
+.site-footer h2 { color: var(--surface); font-size: .95rem; margin-bottom: .6rem; }
+.site-footer a:hover { color: var(--surface); }
+.social { display: flex; gap: 1rem; margin-top: .8rem; }
+.social a { text-decoration: underline; text-underline-offset: 3px; }
+.foot-bottom { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid color-mix(in srgb, var(--surface) 15%, transparent); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .82rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Sticky mobile buttons ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 760px) {
+  .mobile-bar { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 60; padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 -1px 0 var(--line); }
+  .mobile-bar .btn { padding: .75rem 1rem; }
+  body { padding-bottom: 76px; }
+}
+
+/* ---------- Scroll fade-in ---------- */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== Language switcher (lang-switch) ==================== */
+.nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
+.lang-switch { display: flex; align-items: center; gap: .1rem; flex: none; margin-inline-start: .5rem; padding-inline-start: .6rem; border-inline-start: 1px solid var(--line); font: 400 .8rem/1 var(--font-body); letter-spacing: normal; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; border-radius: var(--radius-sm); color: var(--muted); font-weight: 400; text-decoration: none; text-underline-offset: 5px; text-decoration-thickness: 1.5px; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-line: underline; text-decoration-color: var(--brand); }
+@media (max-width: 760px) {
+  /* Mobile: sits left of the menu button and stays visible; with JS off it stays on the logo row */
+  .nav > .lang-switch { order: 1; margin-inline: 0 0; padding-inline-start: 0; border: 0; }
+  .nav > .menu-btn { order: 2; }
+  .nav > .nav-links { order: 3; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  /* Tablet widths: tighten the menu so the switcher and logo fit without wrapping the header */
+  .nav > .nav-links { gap: .9rem; font-size: .85rem; }
+  .nav > .nav-links .btn { padding-inline: .9rem; }
+  .nav > .lang-switch { margin-inline-start: 0; padding-inline-start: .3rem; }
+  .lang-switch a { padding-inline: .15rem; }
+}
+@media (min-width: 761px) and (max-width: 960px) {
+  /* Narrow tablets: tighten one more step */
+  .nav > .nav-links { gap: .6rem; font-size: .8rem; }
+  .nav > .nav-links .btn { padding-inline: .7rem; }
+}
+@media (max-width: 400px) {
+  /* Phones narrower than 400px: tighten spacing so the logo stays on one line */
+  .nav { gap: .5rem; }
+}
+/* Footer language links */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius-sm); }
+.foot-lang a:hover { text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { font-weight: 700; text-decoration: underline; text-decoration-color: var(--brand); }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ==================== Section: Header & navigation ==================== -->
+<!-- Booking buttons use WhatsApp (https://wa.me/15550123456). You can swap in LINE (https://line.me/R/ti/p/@yourlineid), Messenger (https://m.me/yourpage), Instagram (https://ig.me/m/yourhandle) or your online booking page. -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Harbor Dental, back to top">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c-2.5 0-4 2-4 4.5 0 3 1.5 5 2 8 .4 2.5 1 5.5 2.5 5.5S9.5 17 12 17s3 4 4.5 4 2.1-3 2.5-5.5c.5-3 2-5 2-8C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3Z"/></svg></span>
+      Harbor Dental
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="Main menu">
+      <a href="#services">Services</a>
+      <a href="#team">Our dentists</a>
+      <a href="#schedule">Hours</a>
+      <a href="#guide">First visit</a>
+      <a href="#access">Directions</a>
+      <a href="https://wa.me/15550123456" class="btn btn-primary" target="_blank" rel="noopener">Book a visit</a>
+    </nav>
+    <!-- lang-switch: language switcher. To add a language, add a link here and create a matching folder -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="en">EN</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en" aria-current="page">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <h1>Careful, unhurried care for every tooth</h1>
+      <p class="hero-sub">Harbor Dental is a family practice in downtown Portland. Before any treatment, we walk you through your exam results and options so you can decide with a clear picture.</p>
+      <div class="hero-cta">
+        <a href="https://wa.me/15550123456" class="btn btn-primary" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book a visit</a>
+        <a href="tel:+15550123456" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call (555) 012-3456</a>
+      </div>
+      <!-- Sample content: replace with your real details before going live -->
+      <ul class="hero-facts">
+        <li>Most dental plans accepted</li>
+        <li>Instruments sterilized to standard protocols</li>
+        <li>Open Monday to Saturday</li>
+      </ul>
+    </div>
+    <div class="hero-art reveal">
+      <div class="img img-hero" role="img" aria-label="Illustration of a bright, airy treatment room"></div>
+      <!-- Today's hours card: built by JS from the office hours table below, so just edit the table -->
+      <aside class="today-card" aria-live="polite">
+        <h2>Today’s hours <small id="today-label">See the schedule</small></h2>
+        <ul id="today-list"><li><b>Hours</b><span>See the office hours table below</span></li></ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Services ==================== -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Services</h2>
+      <p>After an exam, your dentist explains the treatment options that suit your needs and what they cost.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c-2.5 0-4 2-4 4.5 0 3 1.5 5 2 8 .4 2.5 1 5.5 2.5 5.5S9.5 17 12 17s3 4 4.5 4 2.1-3 2.5-5.5c.5-3 2-5 2-8C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3Z"/></svg></div>
+        <h3>General Dentistry</h3>
+        <p>Checkups, cleanings, fillings and root canal treatment. Good oral health starts with everyday care.</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5a4.5 4.5 0 0 0 7 0M9 9.5h.01M15 9.5h.01"/></svg></div>
+        <h3>Children’s Dentistry</h3>
+        <p>Baby teeth checkups, fluoride varnish and sealants, explained in words kids understand so they get comfortable at the dentist.</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9c3-3 6 2 9-1s6 2 9-1"/><path d="M6 12v5a2 2 0 0 0 4 0v-4M14 13v4a2 2 0 0 0 4 0v-5"/></svg></div>
+        <h3>Gum Care</h3>
+        <p>If your gums bleed or a tooth feels loose, we can check your gum health and plan treatment and follow-up visits to match.</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10c1.5 0 2.5 1.5 2 3l-1 3H6L5 6c-.5-1.5.5-3 2-3Z"/><path d="M9 9v3l1 1v2l2 1 2-1v-2l1-1V9M10 17l2 4 2-4"/></svg></div>
+        <h3>Dental Implants</h3>
+        <p>We use imaging to assess bone and overall health first, then explain the process, timeline and aftercare before scheduling.</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="4" height="6" rx="1"/><rect x="10" y="9" width="4" height="6" rx="1"/><rect x="17" y="9" width="4" height="6" rx="1"/><path d="M2 12h20"/></svg></div>
+        <h3>Orthodontics</h3>
+        <p>Consultations for traditional braces and clear aligners. We discuss the options for your bite and an estimated treatment time.</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg></div>
+        <h3>Teeth Whitening</h3>
+        <p>We check your teeth and gums first, then explain the difference between in-office and at-home whitening and what to keep in mind.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Our dentists ==================== -->
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Our dentists</h2>
+      <p>Every dentist on our team is licensed and takes part in ongoing continuing education.</p>
+    </div>
+    <!-- Sample content: replace with your real details before going live -->
+    <div class="doc-grid">
+      <article class="card doc reveal">
+        <div class="img img-doc img-doc1" role="img" aria-label="Photo placeholder for Dr. Hart"></div>
+        <div class="doc-body">
+          <span class="doc-role">Practice owner</span>
+          <h3>Dr. Emily Hart</h3>
+          <dl>
+            <dt>Education</dt><dd>DDS, Pacific Northwest School of Dentistry</dd>
+            <dt>Focus</dt><dd class="chips"><span>Implants</span><span>Restorations</span><span>Root canals</span></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card doc reveal">
+        <div class="img img-doc img-doc2" role="img" aria-label="Photo placeholder for Dr. Shah"></div>
+        <div class="doc-body">
+          <span class="doc-role">Associate dentist</span>
+          <h3>Dr. Priya Shah</h3>
+          <dl>
+            <dt>Education</dt><dd>DMD, Lakeshore University School of Dental Medicine</dd>
+            <dt>Focus</dt><dd class="chips"><span>Children’s dentistry</span><span>Orthodontics</span><span>Preventive care</span></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card doc reveal">
+        <div class="img img-doc img-doc3" role="img" aria-label="Photo placeholder for Dr. Reyes"></div>
+        <div class="doc-body">
+          <span class="doc-role">Associate dentist</span>
+          <h3>Dr. Daniel Reyes</h3>
+          <dl>
+            <dt>Education</dt><dd>DDS, Westbrook College of Dentistry</dd>
+            <dt>Focus</dt><dd class="chips"><span>Gum treatment</span><span>Whitening</span><span>General dentistry</span></dd>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Office hours ==================== -->
+<!-- How to edit: change the dentist names or "Closed" right in the table, and the "Today's hours" card above updates automatically.
+     Put each session's times in its row's data-time="start-end" attribute (24-hour format, e.g. 14:00-17:30); the card shows them as 12-hour times. -->
+<section id="schedule">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Office hours</h2>
+      <p>We recommend booking ahead. Walk-in patients are seen in order of arrival. Holiday hours are posted separately.</p>
+    </div>
+    <p class="scroll-hint">Swipe sideways to see the full schedule</p>
+    <div class="table-scroll card reveal">
+      <table class="schedule" id="schedule-table">
+        <thead>
+          <tr><th scope="col">Session</th><th scope="col">Mon</th><th scope="col">Tue</th><th scope="col">Wed</th><th scope="col">Thu</th><th scope="col">Fri</th><th scope="col">Sat</th><th scope="col">Sun</th></tr>
+        </thead>
+        <tbody>
+          <tr data-name="Morning" data-time="09:00-12:00"><th scope="row">Morning<small>9:00 AM–12:00 PM</small></th><td>Dr. Hart</td><td>Dr. Shah</td><td>Dr. Hart</td><td>Dr. Reyes</td><td>Dr. Hart</td><td>Dr. Shah</td><td class="off">Closed</td></tr>
+          <tr data-name="Afternoon" data-time="14:00-17:30"><th scope="row">Afternoon<small>2:00 PM–5:30 PM</small></th><td>Dr. Reyes</td><td>Dr. Hart</td><td>Dr. Shah</td><td>Dr. Hart</td><td>Dr. Reyes</td><td class="off">Closed</td><td class="off">Closed</td></tr>
+          <tr data-name="Evening" data-time="18:30-21:00"><th scope="row">Evening<small>6:30 PM–9:00 PM</small></th><td>Dr. Shah</td><td>Dr. Reyes</td><td>Dr. Reyes</td><td>Dr. Shah</td><td class="off">Closed</td><td class="off">Closed</td><td class="off">Closed</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">* Check-in closes 30 minutes before the end of each session. If a dentist’s schedule changes, our posted notice applies.</p>
+  </div>
+</section>
+
+<!-- ==================== Section: First visit + FAQ ==================== -->
+<section class="guide" id="guide">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Your first visit and FAQ</h2>
+      <p>Coming in for the first time? Here is what helps your visit go smoothly.</p>
+    </div>
+    <div class="guide-grid">
+      <div class="card checklist reveal">
+        <h3>What to bring</h3>
+        <ul>
+          <li><div>Insurance card<small>So we can check your coverage. No insurance? Just let us know when you book.</small></div></li>
+          <li><div>Photo ID<small>Used to set up your patient record. A parent or guardian should come with children.</small></div></li>
+          <li><div>A list of current medications<small>Please tell your dentist about blood thinners, osteoporosis medication and similar.</small></div></li>
+          <li><div>Medical history and allergies<small>Heart conditions, diabetes, pregnancy or drug allergies.</small></div></li>
+          <li><div>Arrive 10 minutes early<small>To fill in a new patient form so your dentist understands your needs.</small></div></li>
+        </ul>
+      </div>
+      <div class="faq reveal">
+        <h3>Frequently asked questions</h3>
+        <details open>
+          <summary>Do I need an appointment, or can I walk in?</summary>
+          <p>Walk-ins are welcome, but booking ahead by phone or WhatsApp usually means a shorter wait. Walk-in patients are seen in order of arrival.</p>
+        </details>
+        <details>
+          <summary>How often should I have a cleaning? Does insurance cover it?</summary>
+          <p>Many adults come in every six months, and many dental plans cover two cleanings a year. Your dentist will recommend a schedule based on your exam.</p>
+        </details>
+        <details>
+          <summary>When should my child first see a dentist?</summary>
+          <p>We suggest starting regular checkups once the first baby tooth comes in. Fluoride varnish can be applied at these visits if your dentist recommends it.</p>
+        </details>
+        <details>
+          <summary>How much do implants or braces cost?</summary>
+          <p>Costs depend on your oral health and the treatment you choose. After an exam, your dentist will go over a treatment plan and itemized estimate before anything begins.</p>
+        </details>
+        <details>
+          <summary>What if I can’t make my appointment?</summary>
+          <p>Please call or message us on WhatsApp as early as you can. We will help you reschedule, and the time can go to another patient who needs it.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Directions ==================== -->
+<section id="access">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Getting here</h2>
+    </div>
+    <div class="access-grid">
+      <div class="card access-info reveal">
+        <div><h3>Address</h3><p><strong>128 Maple Street, Suite 100, Portland, OR 97205</strong></p></div>
+        <div><h3>Light rail</h3><p>Get off at the Maple Street stop. We are about an 8-minute walk away.</p></div>
+        <div><h3>Bus</h3><p>Lines 12, 20 and 44 stop at Maple &amp; 5th, about a 2-minute walk from the office.</p></div>
+        <div><h3>Parking</h3><p>Metered street parking is available on nearby blocks, and the Maple Street public garage is about a 3-minute walk. Bike racks are by the front entrance.</p></div>
+      </div>
+      <div class="card access-cta reveal">
+        <h3>Book or ask a question</h3>
+        <p>Phone: (555) 012-3456<br>Our front desk answers during office hours, or you can message us on WhatsApp to book.</p>
+        <div class="row">
+          <a href="https://wa.me/15550123456" class="btn btn-primary" target="_blank" rel="noopener">Book on WhatsApp</a>
+          <a href="https://maps.google.com/?q=128+Maple+Street,+Portland,+OR+97205" class="btn btn-ghost" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c-2.5 0-4 2-4 4.5 0 3 1.5 5 2 8 .4 2.5 1 5.5 2.5 5.5S9.5 17 12 17s3 4 4.5 4 2.1-3 2.5-5.5c.5-3 2-5 2-8C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3Z"/></svg></span>Harbor Dental</div>
+        <p>128 Maple Street, Suite 100<br>Portland, OR 97205<br>Phone: <a href="tel:+15550123456">(555) 012-3456</a></p>
+        <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="https://wa.me/15550123456" target="_blank" rel="noopener">WhatsApp</a></div>
+      </div>
+      <div>
+        <h2>Office hours</h2>
+        <p>Morning, Mon to Sat: 9:00 AM–12:00 PM<br>Afternoon, Mon to Fri: 2:00 PM–5:30 PM<br>Evening, Mon to Thu: 6:30 PM–9:00 PM<br>Closed Sundays</p>
+      </div>
+      <div>
+        <h2>Quick links</h2>
+        <p><a href="#services">Services</a><br><a href="#team">Our dentists</a><br><a href="#schedule">Office hours</a><br><a href="#access">Getting here</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y"></span> Harbor Dental</span>
+      <span>Information on this site is for general reference only. Treatment depends on your dentist’s assessment.</span>
+    </div>
+    <!-- Footer language links: same set as the header lang-switch -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja">日本語</a></p>
+  </div>
+</footer>
+
+<!-- ==================== Section: Sticky mobile buttons ==================== -->
+<div class="mobile-bar">
+  <a href="tel:+15550123456" class="btn btn-ghost">Call us</a>
+  <a href="https://wa.me/15550123456" class="btn btn-primary" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<script>
+// Year
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// Header background on scroll
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+// Hamburger menu
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  links.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+};
+menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// Office hours: highlight today's column and build the "Today's hours" card
+const now = new Date();
+const col = (now.getDay() + 6) % 7 + 1; // Monday = 1 … Sunday = 7
+const toMin = t => { const [h, m] = t.split(':'); return h * 60 + +m; };
+const fmt = t => { const [h, m] = t.split(':'); return new Date(2000, 0, 1, h, m).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }); };
+const nowMin = now.getHours() * 60 + now.getMinutes();
+const table = document.getElementById('schedule-table');
+table.querySelectorAll('tr').forEach(tr => tr.children[col] && tr.children[col].classList.add('today'));
+const items = [...table.tBodies[0].rows].map(tr => {
+  const cell = tr.cells[col];
+  const off = cell.classList.contains('off');
+  const [s, e] = tr.dataset.time.split('-');
+  let tag = off ? 'Closed' : nowMin < toMin(s) ? 'Later today' : nowMin < toMin(e) ? 'Open now' : 'Ended';
+  const cls = off ? 'off' : tag === 'Open now' ? 'now' : '';
+  const who = off ? 'No session today' : cell.textContent.trim();
+  return `<li class="${cls}"><b>${tr.dataset.name}</b><span>${fmt(s)}–${fmt(e)}<br>${who}</span><em class="tag">${tag}</em></li>`;
+});
+document.getElementById('today-list').innerHTML = items.join('');
+document.getElementById('today-label').textContent = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+
+// Scroll fade-in
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => io.observe(el));
+} else reveals.forEach(el => el.classList.add('in'));
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

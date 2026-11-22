@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小麥日常 Wheat & Days｜台中南屯的手作烘焙坊</title>
+<meta name="description" content="小麥日常 Wheat & Days 是台中南屯的社區烘焙坊，每天現烤酸種麵包、可頌與季節蛋糕，生日蛋糕與禮盒可線上預訂、門市取貨。">
+<meta name="theme-color" content="#b3312b">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<meta property="og:title" content="小麥日常 Wheat & Days｜台中南屯手作烘焙坊">
+<meta property="og:description" content="每天早上八點第一爐出爐。酸種麵包、發酵奶油可頌、季節蛋糕與禮盒，線上預訂、門市取貨。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..700,100&family=Nunito:wght@400;600;700&family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "小麥日常 Wheat & Days",
+  "telephone": "04-1234-5678",
+  "url": "https://example.com/",
+  "priceRange": "NT$45–1,380",
+  "servesCuisine": ["麵包", "蛋糕", "甜點禮盒"],
+  "acceptsReservations": "True",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "麥田路 18 號",
+    "addressLocality": "南屯區",
+    "addressRegion": "台中市",
+    "postalCode": "408",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "08:00", "closes": "18:00" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #b3312b;          /* 品牌主色（櫻桃紅）：按鈕、價格、強調文字 */
+  --brand-ink: #fffaf0;      /* 在 brand 色上的文字顏色 */
+  --bg: #fffaf0;             /* 網頁底色（帶奶油調的暖白） */
+  --surface: #fffdf7;        /* 卡片、表單等浮起區塊的底色 */
+  --text: #3b2418;           /* 主要文字（黑巧克力色） */
+  --muted: #6b4c3b;          /* 次要文字、說明文字 */
+  --line: #ecdcbc;           /* 分隔線、邊框 */
+  --butter: #f7e3a1;         /* 奶油黃：區塊底色、標籤 */
+  --butter-soft: #fcf1cf;    /* 淡奶油黃：區塊底色 */
+  --pistachio: #c5d59c;      /* 開心果綠：區塊底色、裝飾 */
+  --pistachio-soft: #edf2dc; /* 淡開心果綠：區塊底色 */
+  --leaf: #46602a;           /* 深開心果綠：「需預訂」標籤文字 */
+  --crust: #b9742f;          /* 藝術佔位圖：麵包外皮 */
+  --golden: #e2a54d;         /* 藝術佔位圖：可頌金黃色 */
+  --sponge: #f1cf8b;         /* 藝術佔位圖：蛋糕體 */
+  --cream: #fff6e4;          /* 藝術佔位圖：鮮奶油、糖霜 */
+  --cocoa: #6a3a22;          /* 藝術佔位圖：巧克力 */
+  --shadow-soft: color-mix(in srgb, var(--text) 12%, transparent);  /* 淡陰影：卡片、選單 */
+  --shadow-deep: color-mix(in srgb, var(--text) 28%, transparent);  /* 深陰影：佔位圖中的蛋糕、麵包 */
+  --radius: 22px;            /* 圓角大小 */
+  --scallop: 14px;           /* 波浪花邊的半徑 */
+  --font-heading: "Fraunces", "Noto Serif TC", "Songti TC", serif;   /* 標題字型 */
+  --font-body: "Nunito", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; /* 內文字型 */
+  --max: 1180px;             /* 內容最大寬度 */
+  --pad: clamp(1rem, 5vw, 3rem); /* 左右留白 */
+  --gap: clamp(1.25rem, 4vw, 3rem); /* 多欄區塊的欄距 */
+}
+
+/* ---------- 基礎 ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 72px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.25; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 8px; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: clamp(4.5rem, 10vw, 7rem); position: relative; background: var(--sec-bg, var(--bg)); }
+.sec-title { font-size: clamp(1.9rem, 4.2vw, 2.8rem); margin-bottom: .9rem; }
+.sec-lead { color: var(--muted); max-width: 36rem; }
+.sec-head { margin-bottom: clamp(2rem, 5vw, 3.2rem); }
+.sec-head.center { text-align: center; } .sec-head.center .sec-lead { margin-inline: auto; }
+
+/* 波浪花邊：在區塊頂端長出一排半圓，顏色跟著該區塊的 --sec-bg */
+.scallop::before { content: ""; position: absolute; left: 0; right: 0; top: calc(var(--scallop) * -1 + 1px); height: var(--scallop);
+  background: radial-gradient(circle at 50% 100%, var(--sec-bg) calc(var(--scallop) - .5px), transparent var(--scallop)) 50% 0 / calc(var(--scallop) * 2) var(--scallop) repeat-x; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .85rem 1.6rem; border-radius: 999px; font: 700 1rem/1.2 var(--font-body); text-decoration: none; border: 2px solid var(--brand); cursor: pointer; transition: transform .2s, background-color .2s, color .2s, box-shadow .2s; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); box-shadow: 0 4px 0 color-mix(in srgb, var(--brand) 60%, var(--text)); }
+.btn-primary:hover { background: color-mix(in srgb, var(--brand) 86%, var(--text)); }
+.btn-ghost { background: transparent; color: var(--brand); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--brand) 9%, transparent); }
+.btn:active { transform: translateY(2px); box-shadow: none; }
+a:not(.btn):hover { color: var(--brand); }
+a:not(.btn):active { opacity: .7; }
+button:disabled { opacity: .4; cursor: not-allowed; }
+
+/* 捲動漸入：只有 JS 啟用時才先隱藏 */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+/* 只在有／沒有 JS 時顯示的內容 */
+html:not(.js) .js-only { display: none !important; }
+.js .nojs-only { display: none !important; }
+
+/* ==================== 頁首 ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 93%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+.logo-mark { width: 40px; height: 40px; flex: none; border-radius: 50%; background: radial-gradient(circle, var(--brand) 0 22%, var(--butter) 23% 58%, var(--brand) 59%); outline: 2px dotted var(--brand); outline-offset: 2px; }
+.logo b { font: 700 1.2rem/1.1 var(--font-heading); display: block; }
+.logo small { font: 600 .8rem/1 var(--font-body); color: var(--muted); }
+.nav-menu { display: flex; align-items: center; gap: 1.4rem; list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; font-weight: 600; padding-block: .3rem; background: linear-gradient(var(--brand), var(--brand)) left bottom / 0 2px no-repeat; transition: background-size .3s, color .2s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 2px; }
+.nav-menu .btn { padding: .55rem 1.2rem; }
+.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: 12px; }
+.nav-toggle:hover { background: color-mix(in srgb, var(--butter) 60%, transparent); }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 2px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; border-radius: 2px; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 900px) and (min-width: 761px) { .nav-menu { gap: .9rem; font-size: .93rem; } }
+@media (max-width: 760px) {
+  /* 沒有 JavaScript 時，選單直接換行顯示；有 JS 才收進漢堡選單 */
+  html:not(.js) .nav { flex-wrap: wrap; height: auto; padding-block: .8rem; }
+  html:not(.js) .site-header { position: sticky; background: var(--bg); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: clamp(2rem, 6vw, 4rem); }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); box-shadow: 0 12px 24px var(--shadow-soft); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: .85rem 0; border-bottom: 1px dashed var(--line); }
+  .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+  .js .site-header:has(.nav-menu.open) { background: var(--bg); }
+}
+
+/* ==================== 藝術佔位圖 ====================
+   每一個 .img-xx 都是用 CSS 漸層畫的烘焙插畫（蛋糕、可頌、麵包、禮盒、彩色糖珠）。
+   換成照片：.img-xx { background: url(images/xxx.jpg) center/cover; }
+   （換照片後可把該 class 的 ::before / ::after 一起刪掉） */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; background-color: var(--butter-soft); }
+.img::before, .img::after { content: ""; position: absolute; pointer-events: none; }
+/* 彩色糖珠圖樣（可疊在任何佔位圖底下） */
+.sprinkles { background-image:
+  radial-gradient(ellipse 7px 2.5px at 18% 22%, var(--brand) 98%, transparent),
+  radial-gradient(ellipse 2.5px 7px at 62% 14%, var(--leaf) 98%, transparent),
+  radial-gradient(ellipse 7px 2.5px at 78% 58%, var(--cocoa) 98%, transparent),
+  radial-gradient(ellipse 2.5px 7px at 34% 70%, var(--golden) 98%, transparent),
+  radial-gradient(circle at 48% 44%, var(--brand) 0 2.5px, transparent 3px),
+  radial-gradient(circle at 88% 88%, var(--leaf) 0 2.5px, transparent 3px),
+  radial-gradient(circle at 8% 90%, var(--cocoa) 0 2px, transparent 2.5px);
+  background-size: 96px 96px; }
+.t-butter { background-color: var(--butter); }
+.t-pist { background-color: var(--pistachio); }
+.t-cream { background-color: var(--butter-soft); }
+
+/* 換成照片：.img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero { aspect-ratio: 1 / 1; border-radius: 50%; background-color: var(--pistachio); box-shadow: inset 0 0 0 12px var(--pistachio-soft); }
+/* 蛋糕本體：糖霜、奶油夾層、果醬與蛋糕體 */
+.img-hero::before { left: 22%; right: 22%; bottom: 25%; height: 40%; border-radius: 26px 26px 10px 10px;
+  background:
+    radial-gradient(circle at 50% 0, var(--cream) 0 11px, transparent 12px) 0 22px / 30px 30px repeat-x,
+    linear-gradient(var(--cream) 0 24px, transparent 24px),
+    linear-gradient(transparent 0 46%, var(--brand) 46% 53%, var(--cream) 53% 60%, transparent 60% 76%, var(--cream) 76% 82%, transparent 82%),
+    var(--sponge);
+  box-shadow: 0 14px 0 -2px var(--surface), 0 16px 0 0 var(--line), 0 34px 40px var(--shadow-deep); }
+/* 頂端的櫻桃 */
+.img-hero::after { width: 15%; aspect-ratio: 1; left: 42.5%; top: 26%; border-radius: 50%;
+  background: radial-gradient(circle at 34% 32%, var(--cream) 0 10%, transparent 14%), radial-gradient(circle at 50% 50%, var(--brand) 0 69%, transparent 70%);
+  animation: bob 4s ease-in-out infinite alternate; }
+@keyframes bob { from { transform: translateY(0); } to { transform: translateY(-6px); } }
+
+/* 換成照片：.img-croissant { background: url(images/croissant.jpg) center/cover; } */
+/* 可頌：中間一顆大橢圓，加上一層層的摺痕；兩側的小橢圓是尖角 */
+.img-croissant::before { left: 26%; right: 26%; top: 33%; height: 34%; border-radius: 50% 50% 42% 42% / 64% 64% 36% 36%; z-index: 1;
+  background: radial-gradient(ellipse 60% 40% at 50% 26%, color-mix(in srgb, var(--cream) 55%, transparent), transparent 70%),
+    repeating-linear-gradient(90deg, var(--golden) 0 15%, color-mix(in srgb, var(--crust) 85%, var(--text)) 15% 17.5%);
+  box-shadow: 0 16px 22px var(--shadow-deep); }
+.img-croissant::after { left: 12%; right: 12%; top: 40%; height: 34%;
+  background: radial-gradient(ellipse 17% 30% at 24% 42%, var(--golden) 0 96%, transparent 100%), radial-gradient(ellipse 17% 30% at 76% 42%, var(--golden) 0 96%, transparent 100%),
+    radial-gradient(ellipse 13% 24% at 14% 58%, var(--crust) 0 96%, transparent 100%), radial-gradient(ellipse 13% 24% at 86% 58%, var(--crust) 0 96%, transparent 100%),
+    radial-gradient(ellipse 8% 16% at 8% 74%, color-mix(in srgb, var(--crust) 75%, var(--text)) 0 95%, transparent 100%), radial-gradient(ellipse 8% 16% at 92% 74%, color-mix(in srgb, var(--crust) 75%, var(--text)) 0 95%, transparent 100%); }
+
+/* 換成照片：.img-loaf { background: url(images/loaf.jpg) center/cover; } */
+/* 麵包：圓頂外皮、斜切割紋與撒粉 */
+.img-loaf::before { left: 18%; right: 18%; top: 30%; height: 42%; border-radius: 50% 50% 30% 30% / 72% 72% 28% 28%;
+  background: repeating-linear-gradient(118deg, transparent 0 17%, color-mix(in srgb, var(--sponge) 80%, var(--cream)) 17% 21%, transparent 21% 34%),
+    radial-gradient(ellipse 70% 60% at 50% 30%, var(--crust), color-mix(in srgb, var(--crust) 70%, var(--text)));
+  box-shadow: 0 16px 22px var(--shadow-deep); }
+.img-loaf::after { inset: 0; background: radial-gradient(circle at 34% 34%, var(--cream) 0 1.5px, transparent 2px) 0 0 / 22px 18px, linear-gradient(transparent 76%, color-mix(in srgb, var(--crust) 35%, var(--sponge)) 76%); opacity: .9; z-index: -1; }
+
+/* 換成照片：.img-cake { background: url(images/cake.jpg) center/cover; } */
+/* 整顆蛋糕：側面夾層加上頂部的橢圓糖霜與莓果 */
+.img-cake::before { left: 22%; right: 22%; top: 42%; height: 34%; border-radius: 0 0 50% 50% / 0 0 22% 22%;
+  background: linear-gradient(transparent 0 34%, var(--cake-fill, var(--brand)) 34% 42%, var(--cream) 42% 50%, transparent 50% 72%, var(--cream) 72% 78%, transparent 78%), var(--cake-body, var(--sponge));
+  box-shadow: 0 18px 22px var(--shadow-deep); }
+.img-cake::after { left: 22%; right: 22%; top: 32%; height: 22%; border-radius: 50%;
+  background: radial-gradient(circle at 30% 50%, var(--cake-fill, var(--brand)) 0 6%, transparent 7%), radial-gradient(circle at 50% 38%, var(--cake-fill, var(--brand)) 0 6%, transparent 7%), radial-gradient(circle at 70% 52%, var(--cake-fill, var(--brand)) 0 6%, transparent 7%), var(--cake-top, var(--cream));
+  box-shadow: inset 0 -4px 0 color-mix(in srgb, var(--text) 10%, transparent); }
+.cake-choco { --cake-body: var(--cocoa); --cake-top: color-mix(in srgb, var(--cocoa) 80%, var(--text)); --cake-fill: var(--sponge); }
+.cake-pist { --cake-body: var(--pistachio); --cake-top: var(--pistachio-soft); }
+.cake-basque { --cake-body: var(--sponge); --cake-top: color-mix(in srgb, var(--crust) 75%, var(--text)); --cake-fill: var(--golden); }
+
+/* 換成照片：.img-box { background: url(images/giftbox.jpg) center/cover; } */
+/* 禮盒：盒身、盒蓋與十字緞帶，上方是蝴蝶結 */
+.img-box::before { left: 24%; right: 24%; top: 38%; height: 40%; border-radius: 8px;
+  background: linear-gradient(90deg, transparent 44%, var(--brand) 44% 56%, transparent 56%), linear-gradient(transparent 0 22%, color-mix(in srgb, var(--text) 12%, transparent) 22% 25%, transparent 25%), var(--surface);
+  box-shadow: 0 18px 22px var(--shadow-deep); }
+.img-box::after { width: 30%; height: 15%; left: 35%; top: 26%;
+  background: radial-gradient(ellipse 30% 46% at 28% 50%, transparent 0 40%, var(--brand) 42% 98%, transparent), radial-gradient(ellipse 30% 46% at 72% 50%, transparent 0 40%, var(--brand) 42% 98%, transparent), radial-gradient(circle at 50% 70%, var(--brand) 0 14%, transparent 15%); }
+
+/* ==================== 主視覺 ==================== */
+.hero { --sec-bg: var(--bg); padding-top: calc(72px + clamp(2rem, 5vw, 3.5rem)); padding-bottom: clamp(4rem, 8vw, 6rem); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--gap); align-items: center; }
+.hero h1 { font-size: clamp(2.5rem, 6.4vw, 4.6rem); line-height: 1.12; margin-bottom: 1.2rem; }
+.hero p.lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--muted); max-width: 30rem; margin-bottom: 2rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; }
+.hero-note { margin-top: 1.8rem; font-size: .95rem; color: var(--muted); }
+.hero-note b { color: var(--text); font-variant-numeric: tabular-nums; }
+.hero-art { position: relative; max-width: 460px; width: 100%; justify-self: center; }
+.hero-art .tag { position: absolute; right: 0; bottom: 6%; background: var(--surface); padding: .75rem 1.1rem; border-radius: 16px; box-shadow: 0 14px 30px var(--shadow-soft); font-size: .9rem; max-width: 13rem; border: 2px solid var(--butter); }
+.hero-art .tag b { display: block; font-family: var(--font-heading); color: var(--brand); }
+@media (max-width: 860px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } .hero-art { max-width: 340px; } }
+
+/* ==================== 本週出爐 ==================== */
+.bake { --sec-bg: var(--butter-soft); }
+.week-scroll { overflow-x: auto; scroll-snap-type: x proximity; padding: .4rem .2rem 1rem; margin-inline: -.2rem; }
+.week { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .8rem; list-style: none; }
+.week > li { background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1rem 1.2rem; scroll-snap-align: start; position: relative; }
+.week h3 { font-size: 1.2rem; margin-bottom: .5rem; }
+.week ul { list-style: none; font-size: .92rem; color: var(--muted); display: grid; gap: .35rem; }
+.week li.off { background: transparent; border-style: dashed; }
+.week li.today { border-color: var(--brand); box-shadow: 0 8px 0 -2px var(--butter), 0 8px 0 0 var(--brand); }
+.week li.today h3::after { content: "今天"; font: 700 .72rem/1 var(--font-body); margin-left: .45rem; padding: .25rem .55rem; border-radius: 999px; background: var(--brand); color: var(--brand-ink); vertical-align: .2rem; }
+.bake-note { margin-top: 1.4rem; color: var(--muted); font-size: .92rem; }
+@media (max-width: 1020px) { .week { grid-template-columns: repeat(7, 10.5rem); } }
+
+/* ==================== 商品 ==================== */
+.products { --sec-bg: var(--bg); }
+.tabs { display: flex; justify-content: center; gap: .5rem; margin-bottom: 2.4rem; flex-wrap: wrap; }
+.tab { font: 700 1rem/1 var(--font-body); padding: .8rem 1.5rem; border-radius: 999px; border: 2px solid var(--line); background: var(--surface); color: var(--text); cursor: pointer; transition: background-color .2s, border-color .2s, color .2s, transform .2s; }
+.tab:hover { border-color: var(--brand); }
+.tab:active { transform: scale(.97); }
+.tab[aria-selected="true"] { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.panel + .panel { margin-top: 2.5rem; }
+.js .panel + .panel { margin-top: 0; }
+.panel-title { font: 600 1.3rem/1.3 var(--font-heading); margin-bottom: 1rem; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; list-style: none; }
+.item { background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.item .img { aspect-ratio: 4 / 3; border-radius: 0; }
+.item-body { padding: 1.1rem 1.2rem 1.3rem; display: grid; gap: .35rem; }
+.item-head { display: flex; justify-content: space-between; align-items: baseline; gap: .8rem; }
+.item h3 { font-size: 1.15rem; }
+.price { font: 700 1.1rem/1 var(--font-heading); color: var(--brand); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.item p { color: var(--muted); font-size: .93rem; line-height: 1.6; }
+.tags { display: flex; flex-wrap: wrap; gap: .35rem; list-style: none; margin-top: .3rem; }
+.tags li { font-size: .78rem; font-weight: 700; padding: .15rem .6rem; border-radius: 999px; }
+.tg-limit { background: color-mix(in srgb, var(--brand) 12%, transparent); color: var(--brand); }
+.tg-pre { background: var(--pistachio-soft); color: var(--leaf); }
+.prod-note { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 2rem; }
+@media (max-width: 960px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .grid { grid-template-columns: minmax(0, 1fr); gap: .9rem; }
+  .item { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); }
+  .item .img { aspect-ratio: auto; min-height: 7.5rem; }
+  .item-body { padding: .9rem 1rem 1rem; }
+  .item-head { flex-direction: column; gap: .3rem; }
+}
+
+/* ==================== 客製蛋糕 ==================== */
+.custom { --sec-bg: var(--pistachio-soft); }
+.custom-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: var(--gap); align-items: start; }
+.sizes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; list-style: none; }
+.size { background: var(--surface); border-radius: var(--radius); padding: 1.2rem 1rem; text-align: center; border: 2px solid var(--pistachio); }
+.size .dish { display: grid; place-items: center; margin: 0 auto .8rem; width: 88%; aspect-ratio: 1; }
+.size .dish::before { content: ""; width: var(--d); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, var(--cream) 0 52%, var(--sponge) 53% 64%, var(--cream) 65%); box-shadow: 0 0 0 4px var(--surface), 0 0 0 6px var(--pistachio); }
+.size h3 { font-size: 1.15rem; }
+.size p { font-size: .9rem; color: var(--muted); }
+.size .price { display: block; margin-top: .5rem; }
+.flavours { margin-top: 2rem; }
+.flavours h3, .lead-time h3 { font-size: 1.25rem; margin-bottom: .8rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; }
+.chips li { background: var(--surface); border: 1.5px solid var(--pistachio); padding: .4rem .9rem; border-radius: 999px; font-size: .92rem; font-weight: 600; }
+.lead-time { background: var(--surface); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2rem); border: 2px solid var(--pistachio); }
+.steps { list-style: none; counter-reset: s; display: grid; gap: 1rem; margin-bottom: 1.4rem; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: .8rem; align-items: start; color: var(--muted); font-size: .95rem; }
+.steps li::before { content: counter(s); width: 2.4rem; height: 2.4rem; border-radius: 50%; display: grid; place-items: center; background: var(--butter); color: var(--text); font: 700 1.05rem/1 var(--font-heading); }
+.steps b { display: block; color: var(--text); }
+@media (max-width: 860px) { .custom-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .sizes { gap: .5rem; } .size { padding: 1rem .5rem; } }
+
+/* ==================== 顧客評價 ==================== */
+.reviews { --sec-bg: var(--butter-soft); }
+.review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
+.review { background: var(--surface); border-radius: var(--radius); padding: 1.7rem; display: flex; flex-direction: column; gap: 1rem; box-shadow: 0 6px 0 var(--butter); }
+.stars { color: var(--brand); font-size: 1.05rem; letter-spacing: 0; }
+.review blockquote { font: 500 1.05rem/1.8 var(--font-heading); flex: 1; }
+.review figcaption { font-size: .9rem; color: var(--muted); }
+.review figcaption b { color: var(--text); }
+@media (max-width: 860px) { .review-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 門市資訊 ==================== */
+.visit { --sec-bg: var(--bg); }
+.visit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.card { background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2.2rem); }
+.card h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+.table-scroll { overflow-x: auto; }
+.hours { width: 100%; border-collapse: collapse; min-width: 260px; }
+.hours th, .hours td { text-align: left; padding: .65rem .5rem; border-bottom: 1px dashed var(--line); }
+.hours th { font-weight: 600; }
+.hours td { text-align: right; font-variant-numeric: tabular-nums; }
+.hours tr.today { background: var(--butter-soft); }
+.hours tr.today th::after { content: "今天"; font-size: .72rem; font-weight: 700; margin-left: .5rem; padding: .1rem .5rem; border-radius: 999px; background: var(--brand); color: var(--brand-ink); }
+.hours .closed { color: var(--muted); }
+.addr { font: 600 1.15rem/1.6 var(--font-heading); margin-bottom: .3rem; }
+.visit-list { list-style: none; margin: 1.2rem 0 1.5rem; display: grid; gap: .7rem; }
+.visit-list li { display: flex; gap: .7rem; color: var(--muted); font-size: .95rem; }
+.visit-list b { color: var(--text); white-space: nowrap; }
+.card-cta { display: flex; flex-wrap: wrap; gap: .6rem; }
+.small-note { font-size: .88rem; color: var(--muted); margin-top: 1rem; }
+@media (max-width: 760px) { .visit-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 常見問題 ==================== */
+.faq { --sec-bg: var(--pistachio-soft); }
+.faq-list { max-width: 48rem; margin-inline: auto; display: grid; gap: .8rem; }
+.faq details { background: var(--surface); border-radius: 18px; border: 2px solid var(--pistachio); }
+.faq summary { cursor: pointer; list-style: none; padding: 1.1rem 3.2rem 1.1rem 1.3rem; font-weight: 700; position: relative; border-radius: 16px; transition: background-color .2s; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 1.2rem; top: 50%; translate: 0 -50%; font: 600 1.5rem/1 var(--font-heading); color: var(--brand); transition: rotate .25s; }
+.faq details[open] summary::after { rotate: 45deg; }
+.faq summary:hover { background: color-mix(in srgb, var(--pistachio) 30%, transparent); }
+.faq summary:active { background: color-mix(in srgb, var(--pistachio) 50%, transparent); }
+.faq details p { padding: 0 1.3rem 1.2rem; color: var(--muted); }
+
+/* ==================== 線上預訂 ==================== */
+.order { --sec-bg: var(--butter-soft); }
+.order-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap); align-items: start; }
+.picker { background: var(--surface); border-radius: var(--radius); padding: clamp(1.2rem, 3vw, 1.8rem); border: 2px solid var(--butter); }
+.picker h3 { font-size: 1.25rem; margin-bottom: .6rem; }
+.picks { list-style: none; }
+.pick { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .4rem 1rem; align-items: center; padding-block: .85rem; border-bottom: 1px dashed var(--line); }
+.pick b { display: block; font-weight: 700; }
+.pick span { font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.step { display: inline-flex; align-items: center; border: 2px solid var(--line); border-radius: 999px; background: var(--bg); }
+.step button { width: 40px; height: 40px; border: 0; border-radius: 50%; background: transparent; color: var(--brand); font: 700 1.25rem/1 var(--font-body); cursor: pointer; transition: background-color .2s, transform .2s; }
+.step button:hover:not(:disabled) { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.step button:active:not(:disabled) { transform: scale(.92); }
+.step input { width: 2.6rem; text-align: center; border: 0; background: transparent; font: 700 1rem/1 var(--font-body); color: var(--text); -moz-appearance: textfield; appearance: textfield; }
+.step input::-webkit-inner-spin-button, .step input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.total { display: flex; justify-content: space-between; align-items: baseline; margin-top: 1.1rem; font-weight: 700; }
+.total output { font: 700 1.6rem/1 var(--font-heading); color: var(--brand); font-variant-numeric: tabular-nums; }
+.picker .small-note { margin-top: .6rem; }
+.quick { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.4rem; }
+.form { background: var(--surface); color: var(--text); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.2rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.1rem; border: 2px solid var(--butter); }
+.form h3 { grid-column: 1 / -1; font-size: 1.25rem; }
+.field { display: grid; gap: .35rem; min-width: 0; align-content: start; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-weight: 700; font-size: .92rem; }
+.field label span { color: var(--brand); }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1.5px solid var(--line); border-radius: 14px; padding: .7rem .85rem; min-height: 48px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 22%, transparent); }
+.field textarea { min-height: 96px; resize: vertical; }
+.field small { font-size: .82rem; color: var(--muted); }
+.form .btn { grid-column: 1 / -1; width: 100%; }
+.form > small { grid-column: 1 / -1; color: var(--muted); font-size: .85rem; text-align: center; }
+@media (max-width: 860px) { .order-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .form { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 頁尾 ==================== */
+.site-footer { --sec-bg: var(--text); position: relative; background: var(--sec-bg); color: color-mix(in srgb, var(--bg) 82%, transparent); padding-block: 3.5rem 2rem; font-size: .93rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: 2rem; }
+.site-footer h2 { color: var(--bg); font-size: 1.1rem; margin-bottom: .8rem; }
+.site-footer a { text-decoration: none; } .site-footer a:hover { text-decoration: underline; color: var(--butter); }
+.social { display: flex; gap: 1rem; margin-top: 1rem; }
+.copy { border-top: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); margin-top: 2.5rem; padding-top: 1.5rem; font-size: .85rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 手機底部固定按鈕 ==================== */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 76px; }
+  .sticky-cta { display: flex; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -1px 0 var(--line); }
+  .sticky-cta .btn-primary { flex: 1; }
+  .sticky-cta .btn-ghost { padding-inline: 1.1rem; }
+}
+
+/* ==================== 語言切換（頁首 lang-switch 與頁尾 foot-lang） ==================== */
+.nav > .nav-menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; padding-left: .5rem; border-left: 2px dotted var(--line); font: 700 .85rem/1 var(--font-body); }
+.lang-switch a { display: grid; place-items: center; min-width: 2rem; min-height: 2rem; padding-inline: .3rem; border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--butter) 60%, transparent); }
+.lang-switch a:active { background: var(--butter); }
+.lang-switch a:focus-visible { outline-offset: 1px; border-radius: 999px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 800; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+/* 平板寬度：加上語言切換後空間較緊，先隱藏 .opt 的次要連結，避免選單換行或擠到 logo */
+@media (min-width: 761px) and (max-width: 940px) { .nav-menu .opt { display: none; } }
+/* 最窄的平板寬度：再收緊一點間距 */
+@media (min-width: 761px) and (max-width: 860px) { .nav-menu .opt-sm { display: none; } .nav-menu { gap: .75rem; } .lang-switch { padding-left: 0; border-left: 0; } }
+@media (max-width: 760px) {
+  /* 手機：語言切換固定在漢堡按鈕左邊；沒有 JS 時和 logo 同一行，選單換到下一行 */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .nav-toggle { order: 2; flex: none; }
+  /* 頁首在手機上的間距縮小一點，避免擠到 logo */
+  .nav { gap: .5rem; }
+  .nav-menu { order: 3; }
+}
+/* 很窄的手機（380px 以下）：頁首放不下時，語言切換改到展開選單的最上方 */
+@media (max-width: 380px) {
+  .js .lang-switch { display: none; position: absolute; top: calc(72px + .6rem); left: var(--pad); }
+  .js .nav-menu { padding-top: 3rem; }
+  .js .nav-menu.open ~ .lang-switch { display: flex; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem .75rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline-color: var(--butter); }
+.foot-lang a[aria-current="page"] { color: var(--bg); font-weight: 800; text-decoration: underline; text-decoration-color: var(--butter); text-underline-offset: 4px; }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+</head>
+<body>
+
+<!-- ==================== 區塊：頁首導覽 ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav wrap" aria-label="主選單">
+    <a href="#hero" class="logo" aria-label="小麥日常 回到頂端">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span><b>小麥日常</b><small>Wheat &amp; Days</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-links" aria-label="開啟選單"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#bake">本週出爐</a></li>
+      <li><a href="#products">商品</a></li>
+      <li><a href="#custom">客製蛋糕</a></li>
+      <li class="opt-sm"><a href="#visit">門市資訊</a></li>
+      <li class="opt"><a href="#faq">常見問題</a></li>
+      <li><a href="#order" class="btn btn-primary">線上預訂</a></li>
+    </ul>
+    <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="zh-Hant">繁</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </nav>
+</header>
+
+<main>
+<!-- ==================== 區塊：主視覺 ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>每天早上八點，<br>麵包剛出爐</h1>
+      <p class="lead">南屯巷口的小烘焙坊。酸種麵包、奶油可頌和季節蛋糕，線上預訂，到店就拿得到。</p>
+      <div class="hero-cta">
+        <a href="#order" class="btn btn-primary">線上預訂</a>
+        <a href="#bake" class="btn btn-ghost">看本週麵包</a>
+      </div>
+      <p class="hero-note">蛋糕與禮盒請於 <b>3 天前</b>預訂，週一公休。</p>
+    </div>
+    <div class="hero-art">
+      <div class="img img-hero sprinkles" role="img" aria-label="開心果綠底上，一顆夾著草莓果醬的鮮奶油蛋糕，頂端放著櫻桃"></div>
+      <p class="tag"><b>本月限定</b>開心果覆盆子慕斯</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：本週出爐 ==================== -->
+<section class="bake scallop" id="bake">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">本週出爐</h2>
+      <p class="sec-lead">每天的麵包不一樣，想吃的那一款，記得挑對日子來。</p>
+    </div>
+    <!-- 修改出爐表時，data-day 為星期（0=日、1=一 … 6=六），JS 會自動標出今天 -->
+    <div class="week-scroll reveal" role="region" aria-label="每週出爐表，可左右捲動" tabindex="0">
+      <ol class="week">
+        <li data-day="1" class="off"><h3>週一</h3><ul><li>公休，讓酵母休息一天</li></ul></li>
+        <li data-day="2"><h3>週二</h3><ul><li>發酵奶油可頌</li><li>老麵鄉村酸種</li><li>鹽奶油小餐包</li></ul></li>
+        <li data-day="3"><h3>週三</h3><ul><li>蜂蜜燕麥吐司</li><li>紅酒桂圓核桃</li><li>發酵奶油可頌</li></ul></li>
+        <li data-day="4"><h3>週四</h3><ul><li>開心果可頌捲</li><li>全麥核桃</li><li>肉桂捲</li></ul></li>
+        <li data-day="5"><h3>週五</h3><ul><li>發酵奶油可頌</li><li>老麵鄉村酸種</li><li>巧克力布里歐</li></ul></li>
+        <li data-day="6"><h3>週六</h3><ul><li>全品項出爐</li><li>限定草莓丹麥</li></ul></li>
+        <li data-day="0"><h3>週日</h3><ul><li>蜂蜜燕麥吐司</li><li>肉桂捲</li><li>鹽奶油小餐包</li></ul></li>
+      </ol>
+    </div>
+    <p class="bake-note">第一爐 08:00，第二爐 11:30。熱門品項通常中午前售完，可以先打電話請我們幫你留。</p>
+  </div>
+</section>
+
+<!-- ==================== 區塊：商品 ==================== -->
+<section class="products scallop" id="products">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">今天帶什麼回家？</h2>
+      <p class="sec-lead">麵包現場購買，蛋糕與禮盒建議提前預訂。</p>
+    </div>
+    <div class="tabs js-only" role="tablist" aria-label="商品分類">
+      <button class="tab" role="tab" id="tab-bread" aria-controls="panel-bread" aria-selected="true">麵包</button>
+      <button class="tab" role="tab" id="tab-cake" aria-controls="panel-cake" aria-selected="false" tabindex="-1">蛋糕</button>
+      <button class="tab" role="tab" id="tab-gift" aria-controls="panel-gift" aria-selected="false" tabindex="-1">禮盒</button>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-bread" aria-labelledby="tab-bread" tabindex="0">
+      <p class="panel-title nojs-only">麵包</p>
+      <ul class="grid">
+        <li class="item"><div class="img img-croissant t-butter" role="img" aria-label="一顆層次分明的金黃可頌"></div><div class="item-body"><div class="item-head"><h3>發酵奶油可頌</h3><span class="price">NT$75</span></div><p>法國發酵奶油，摺出 27 層酥脆。</p><ul class="tags"><li class="tg-limit">限量</li></ul></div></li>
+        <li class="item"><div class="img img-loaf t-cream" role="img" aria-label="表面有割紋的圓頂鄉村麵包"></div><div class="item-body"><div class="item-head"><h3>老麵鄉村酸種</h3><span class="price">NT$220</span></div><p>48 小時低溫發酵，外皮脆、內裡 Q 彈。</p></div></li>
+        <li class="item"><div class="img img-loaf t-pist" role="img" aria-label="撒了燕麥的吐司麵包"></div><div class="item-body"><div class="item-head"><h3>蜂蜜燕麥吐司</h3><span class="price">NT$160</span></div><p>台灣龍眼蜜與燕麥，切片當早餐剛好。</p></div></li>
+        <li class="item"><div class="img img-croissant t-pist" role="img" aria-label="開心果綠底上的可頌捲"></div><div class="item-body"><div class="item-head"><h3>開心果可頌捲</h3><span class="price">NT$95</span></div><p>西西里開心果醬，一口就是堅果香。</p><ul class="tags"><li class="tg-limit">限量</li></ul></div></li>
+        <li class="item"><div class="img img-loaf t-butter" role="img" aria-label="深色外皮的桂圓核桃麵包"></div><div class="item-body"><div class="item-head"><h3>紅酒桂圓核桃</h3><span class="price">NT$260</span></div><p>紅酒浸泡桂圓一整晚，配核桃剛剛好。</p></div></li>
+        <li class="item"><div class="img img-croissant t-cream" role="img" aria-label="小巧的鹽奶油餐包"></div><div class="item-body"><div class="item-head"><h3>鹽奶油小餐包</h3><span class="price">NT$45</span></div><p>底部烤出焦脆奶油，撒一點海鹽。</p></div></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-cake" aria-labelledby="tab-cake" tabindex="0">
+      <p class="panel-title nojs-only">蛋糕</p>
+      <ul class="grid">
+        <li class="item"><div class="img img-cake t-butter" role="img" aria-label="夾著草莓果醬的鮮奶油蛋糕"></div><div class="item-body"><div class="item-head"><h3>草莓鮮奶油蛋糕 6 吋</h3><span class="price">NT$980</span></div><p>大湖草莓與北海道鮮奶油，甜度很低。</p><ul class="tags"><li class="tg-pre">需預訂3天</li></ul></div></li>
+        <li class="item"><div class="img img-cake cake-pist t-cream" role="img" aria-label="開心果綠的慕斯蛋糕，頂端有覆盆子"></div><div class="item-body"><div class="item-head"><h3>開心果覆盆子慕斯 6 吋</h3><span class="price">NT$1,180</span></div><p>開心果慕斯包著酸甜覆盆子內餡。</p><ul class="tags"><li class="tg-limit">限量</li><li class="tg-pre">需預訂3天</li></ul></div></li>
+        <li class="item"><div class="img img-cake cake-choco t-pist" role="img" aria-label="深色的生巧克力蛋糕"></div><div class="item-body"><div class="item-head"><h3>70% 生巧克力蛋糕 6 吋</h3><span class="price">NT$1,080</span></div><p>單一產地黑巧克力，口感像松露。</p><ul class="tags"><li class="tg-pre">需預訂3天</li></ul></div></li>
+        <li class="item"><div class="img img-cake cake-basque t-butter" role="img" aria-label="表面焦香的巴斯克乳酪蛋糕"></div><div class="item-body"><div class="item-head"><h3>巴斯克乳酪 6 吋</h3><span class="price">NT$880</span></div><p>表面烤到焦香，中心半熟濕潤。</p></div></li>
+        <li class="item"><div class="img img-loaf t-cream" role="img" aria-label="淋上檸檬糖霜的長條磅蛋糕"></div><div class="item-body"><div class="item-head"><h3>檸檬糖霜磅蛋糕</h3><span class="price">NT$420</span></div><p>一整條，適合帶去下午茶。</p></div></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-gift" aria-labelledby="tab-gift" tabindex="0">
+      <p class="panel-title nojs-only">禮盒</p>
+      <ul class="grid">
+        <li class="item"><div class="img img-box t-butter" role="img" aria-label="綁著紅色緞帶的餅乾禮盒"></div><div class="item-body"><div class="item-head"><h3>手工餅乾禮盒 12 入</h3><span class="price">NT$580</span></div><p>奶油酥餅、可可沙布列等四種口味。</p></div></li>
+        <li class="item"><div class="img img-box t-pist" role="img" aria-label="開心果綠底上的磅蛋糕禮盒"></div><div class="item-body"><div class="item-head"><h3>季節磅蛋糕禮盒</h3><span class="price">NT$880</span></div><p>三種當季口味切片，附手寫卡片。</p><ul class="tags"><li class="tg-pre">需預訂3天</li></ul></div></li>
+        <li class="item"><div class="img img-box t-cream sprinkles" role="img" aria-label="撒滿彩色糖珠的彌月禮盒"></div><div class="item-body"><div class="item-head"><h3>彌月蛋糕禮盒</h3><span class="price">NT$680</span></div><p>十盒以上享九折，可加印寶寶名字。</p><ul class="tags"><li class="tg-pre">需預訂3天</li></ul></div></li>
+        <li class="item"><div class="img img-croissant t-butter sprinkles" role="img" aria-label="裝滿可頌與餐包的早餐麵包籃"></div><div class="item-body"><div class="item-head"><h3>週末早餐麵包籃</h3><span class="price">NT$720</span></div><p>可頌、餐包、吐司加自製果醬，四人份。</p><ul class="tags"><li class="tg-limit">限量</li></ul></div></li>
+      </ul>
+    </div>
+    <p class="prod-note">價格皆含稅。商品依季節調整，實際品項以門市當日為準。</p>
+  </div>
+</section>
+
+<!-- ==================== 區塊：客製蛋糕 ==================== -->
+<section class="custom scallop" id="custom">
+  <div class="wrap custom-grid">
+    <div class="reveal">
+      <div class="sec-head">
+        <h2 class="sec-title">客製一顆生日蛋糕</h2>
+        <p class="sec-lead">選尺寸、挑口味，再告訴我們想寫的字。插牌與蠟燭免費附上。</p>
+      </div>
+      <ul class="sizes">
+        <li class="size"><span class="dish" style="--d: 52%" aria-hidden="true"></span><h3>4 吋</h3><p>2 至 3 人</p><span class="price">NT$680 起</span></li>
+        <li class="size"><span class="dish" style="--d: 72%" aria-hidden="true"></span><h3>6 吋</h3><p>4 至 6 人</p><span class="price">NT$980 起</span></li>
+        <li class="size"><span class="dish" style="--d: 92%" aria-hidden="true"></span><h3>8 吋</h3><p>8 至 10 人</p><span class="price">NT$1,380 起</span></li>
+      </ul>
+      <div class="flavours">
+        <h3>口味</h3>
+        <ul class="chips">
+          <li>草莓鮮奶油</li><li>開心果覆盆子</li><li>70% 生巧克力</li><li>伯爵茶蜂蜜</li><li>芒果百香（夏季）</li><li>栗子蒙布朗（秋冬）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="lead-time reveal">
+      <h3>預訂流程</h3>
+      <ol class="steps">
+        <li><span><b>7 天前</b>填寫預訂表單，或用 LINE 傳參考圖給我們。</span></li>
+        <li><span><b>3 天前</b>確認口味與文字，付訂金 50% 保留檔期。</span></li>
+        <li><span><b>取貨當天</b>到門市取蛋糕，附保冷袋與保冷劑。</span></li>
+      </ol>
+      <a class="btn btn-primary" href="#order">開始預訂</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：顧客評價 ==================== -->
+<section class="reviews scallop" id="reviews">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">鄰居們這樣說</h2>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="review-grid">
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 顆星，滿分 5 顆星">★★★★★</div>
+        <blockquote>女兒生日訂了草莓蛋糕，鮮奶油一點都不膩，全家吃到最後一口。店員還幫忙把字寫得超可愛。</blockquote>
+        <figcaption><b>王太太</b><br>住在附近三年</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 顆星，滿分 5 顆星">★★★★★</div>
+        <blockquote>每週二一定來買可頌，外皮真的會掉滿桌碎屑。酸種麵包放兩三天回烤還是很香。</blockquote>
+        <figcaption><b>陳先生</b><br>可頌常客</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 顆星，滿分 5 顆星">★★★★★</div>
+        <blockquote>公司中秋訂了四十盒餅乾禮盒，包裝好看、準時交貨，同事收到都在問哪裡買的。</blockquote>
+        <figcaption><b>Ivy</b><br>企業採購</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：門市資訊 ==================== -->
+<section class="visit scallop" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">門市資訊</h2>
+      <p class="sec-lead">店裡有四個小座位，可以坐下來配一杯咖啡。</p>
+    </div>
+    <div class="visit-grid">
+      <div class="card reveal">
+        <h3>營業時間</h3>
+        <!-- 修改營業時間時，也要同步修改 head 的 JSON-LD -->
+        <div class="table-scroll">
+          <table class="hours" aria-label="每週營業時間">
+            <tbody>
+              <tr data-day="1"><th scope="row">星期一</th><td class="closed">公休</td></tr>
+              <tr data-day="2"><th scope="row">星期二</th><td>08:00–19:00</td></tr>
+              <tr data-day="3"><th scope="row">星期三</th><td>08:00–19:00</td></tr>
+              <tr data-day="4"><th scope="row">星期四</th><td>08:00–19:00</td></tr>
+              <tr data-day="5"><th scope="row">星期五</th><td>08:00–19:00</td></tr>
+              <tr data-day="6"><th scope="row">星期六</th><td>08:00–18:00</td></tr>
+              <tr data-day="0"><th scope="row">星期日</th><td>08:00–18:00</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small-note">售完提早打烊，會在 Instagram 限時動態公告。</p>
+      </div>
+      <div class="card reveal">
+        <h3>怎麼來</h3>
+        <p class="addr">台中市南屯區麥田路 18 號</p>
+        <p class="small-note" style="margin-top:0">電話 <a href="tel:0412345678">04-1234-5678</a></p>
+        <ul class="visit-list">
+          <li><b>捷運</b>綠線南屯站 2 號出口，步行約 8 分鐘</li>
+          <li><b>公車</b>「麥田路口」站下車，步行 1 分鐘</li>
+          <li><b>停車</b>店門口可停機車，汽車請停對面公有停車場</li>
+        </ul>
+        <div class="card-cta">
+          <a class="btn btn-primary" href="https://maps.google.com/?q=台中市南屯區麥田路18號" target="_blank" rel="noopener">在 Google 地圖開啟</a>
+          <a class="btn btn-ghost" href="tel:0412345678">打電話給我們</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：常見問題 ==================== -->
+<section class="faq scallop" id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">常見問題</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary>麵包和蛋糕可以放多久？</summary>
+        <p>麵包常溫可放 2 天，吃不完請切片冷凍，回烤前不用退冰。鮮奶油蛋糕請冷藏並在 24 小時內吃完，巴斯克乳酪冷藏可放 3 天。</p>
+      </details>
+      <details>
+        <summary>有過敏原標示嗎？</summary>
+        <p>我們的產品大多含有麩質、蛋、奶與堅果，並在同一個廚房製作，無法保證完全不沾染。有過敏需求請在備註告訴我們，店員會協助確認成分。</p>
+      </details>
+      <details>
+        <summary>可以宅配或外送嗎？</summary>
+        <p>餅乾與磅蛋糕禮盒可以冷藏宅配全台，滿 NT$1,500 免運。鮮奶油蛋糕與慕斯為了品質，只提供門市自取，台中市區可另外安排專人外送。</p>
+      </details>
+      <details>
+        <summary>預訂後可以改期或取消嗎？</summary>
+        <p>取貨日 3 天前可免費改期或取消。3 天內因為材料已經備好，訂金恕不退還，但可以保留一次改期。</p>
+      </details>
+      <details>
+        <summary>要怎麼付款？</summary>
+        <p>收到預訂後，我們會以電話或 LINE 確認並提供轉帳資訊。門市可使用現金、信用卡與 LINE Pay。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：線上預訂 ==================== -->
+<section class="order scallop" id="order">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">線上預訂，到店取貨</h2>
+      <p class="sec-lead">先挑好蛋糕和禮盒，訂單摘要會自動帶進表單。我們會在一個工作天內與你確認。</p>
+    </div>
+    <div class="order-grid">
+      <div class="picker reveal">
+        <h3>挑選品項</h3>
+        <!-- 修改品項時，data-name 是摘要裡的名稱，data-price 是單價（只填數字） -->
+        <ul class="picks">
+          <li class="pick" data-name="草莓鮮奶油蛋糕 6 吋" data-price="980"><div><b>草莓鮮奶油蛋糕 6 吋</b><span>NT$980</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="減少一個草莓鮮奶油蛋糕">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="草莓鮮奶油蛋糕數量"><button type="button" data-d="1" aria-label="增加一個草莓鮮奶油蛋糕">+</button></div></li>
+          <li class="pick" data-name="開心果覆盆子慕斯 6 吋" data-price="1180"><div><b>開心果覆盆子慕斯 6 吋</b><span>NT$1,180</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="減少一個開心果覆盆子慕斯">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="開心果覆盆子慕斯數量"><button type="button" data-d="1" aria-label="增加一個開心果覆盆子慕斯">+</button></div></li>
+          <li class="pick" data-name="70% 生巧克力蛋糕 6 吋" data-price="1080"><div><b>70% 生巧克力蛋糕 6 吋</b><span>NT$1,080</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="減少一個生巧克力蛋糕">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="生巧克力蛋糕數量"><button type="button" data-d="1" aria-label="增加一個生巧克力蛋糕">+</button></div></li>
+          <li class="pick" data-name="巴斯克乳酪 6 吋" data-price="880"><div><b>巴斯克乳酪 6 吋</b><span>NT$880</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="減少一個巴斯克乳酪">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="巴斯克乳酪數量"><button type="button" data-d="1" aria-label="增加一個巴斯克乳酪">+</button></div></li>
+          <li class="pick" data-name="手工餅乾禮盒 12 入" data-price="580"><div><b>手工餅乾禮盒 12 入</b><span>NT$580</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="減少一盒手工餅乾禮盒">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="手工餅乾禮盒數量"><button type="button" data-d="1" aria-label="增加一盒手工餅乾禮盒">+</button></div></li>
+          <li class="pick" data-name="季節磅蛋糕禮盒" data-price="880"><div><b>季節磅蛋糕禮盒</b><span>NT$880</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="減少一盒季節磅蛋糕禮盒">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="季節磅蛋糕禮盒數量"><button type="button" data-d="1" aria-label="增加一盒季節磅蛋糕禮盒">+</button></div></li>
+        </ul>
+        <p class="total js-only"><span>預估金額</span><output id="total" for="f-summary" aria-live="polite">NT$0</output></p>
+        <p class="small-note js-only">調整數量會重新產生表單裡的訂單摘要，實際金額以店家確認為準。</p>
+        <p class="small-note nojs-only">請把想訂的品項與數量寫在表單的「訂單摘要」欄位。</p>
+        <div class="quick">
+          <a class="btn btn-ghost" href="tel:0412345678">電話預訂 04-1234-5678</a>
+          <a class="btn btn-ghost" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 預訂</a>
+        </div>
+      </div>
+      <!-- 表單使用 Formspree（免費方案每月 50 則）：
+           1. 到 https://formspree.io 註冊並建立新表單
+           2. 複製表單網址中的 ID（例如 xyzabcd）
+           3. 把下面 action 裡的 your-form-id 換成你的 ID，就能用 Email 收到預訂 -->
+      <form class="form reveal" id="order-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <h3>取貨資料</h3>
+        <div class="field"><label for="f-name">姓名 <span>*</span></label><input id="f-name" name="姓名" autocomplete="name" required></div>
+        <div class="field"><label for="f-tel">電話 <span>*</span></label><input id="f-tel" name="電話" type="tel" autocomplete="tel" inputmode="tel" placeholder="0912-345-678" required></div>
+        <div class="field"><label for="f-date">取貨日期 <span>*</span></label><input id="f-date" name="取貨日期" type="date" required><small>蛋糕與禮盒請選 3 天後</small></div>
+        <div class="field"><label for="f-time">取貨時段 <span>*</span></label>
+          <select id="f-time" name="取貨時段" required>
+            <option value="">請選擇</option>
+            <option>上午 08:00–11:00</option><option>中午 11:00–14:00</option><option>下午 14:00–17:00</option><option>傍晚 17:00–19:00（週末至 18:00）</option>
+          </select></div>
+        <div class="field full"><label for="f-summary">訂單摘要 <span>*</span></label><textarea id="f-summary" name="訂單摘要" required placeholder="例如：草莓鮮奶油蛋糕 6 吋 × 1"></textarea></div>
+        <input type="hidden" id="f-total" name="預估金額" value="">
+        <div class="field full"><label for="f-note">備註</label><textarea id="f-note" name="備註" placeholder="例如：蛋糕上寫「生日快樂 小安」、需要蠟燭、過敏原…"></textarea></div>
+        <button class="btn btn-primary" type="submit">送出預訂</button>
+        <small>送出後訂單尚未成立，我們確認後會再通知你付款方式。</small>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<footer class="site-footer scallop">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>小麥日常 Wheat &amp; Days</h2>
+        <p>台中市南屯區麥田路 18 號<br>電話 <a href="tel:0412345678">04-1234-5678</a></p>
+        <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="https://line.me/R/ti/p/@yourlineid">LINE</a></div>
+      </div>
+      <div>
+        <h2>營業時間</h2>
+        <p>週二至週五 08:00–19:00<br>週六、週日 08:00–18:00<br>週一公休</p>
+      </div>
+      <div>
+        <h2>快速連結</h2>
+        <p><a href="#bake">本週出爐</a><br><a href="#custom">客製蛋糕</a><br><a href="#order">線上預訂</a></p>
+      </div>
+    </div>
+    <p class="copy">© <span id="y"></span> 小麥日常 Wheat &amp; Days</p>
+    <!-- 頁尾語言連結：和頁首的 lang-switch 相同 -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja">日本語</a></p>
+  </div>
+</footer>
+
+<!-- ==================== 區塊：手機底部固定按鈕 ==================== -->
+<div class="sticky-cta">
+  <a href="#order" class="btn btn-primary">線上預訂</a>
+  <a href="tel:0412345678" class="btn btn-ghost" aria-label="撥打電話 04-1234-5678">來電</a>
+</div>
+
+<script>
+// 語言與時區設定（換語言時只要改這裡）
+const T = { cur: 'NT$', sum: '合計', open: '關閉選單', closed: '開啟選單', tz: 'Asia/Taipei', locale: 'zh-TW' };
+const $ = (s, el = document) => el.querySelector(s), $$ = (s, el = document) => [...el.querySelectorAll(s)];
+$('#y').textContent = new Date().getFullYear();
+
+// 頁首捲動背景
+const header = $('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// 漢堡選單
+const toggle = $('.nav-toggle'), menu = $('#menu-links');
+const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? T.open : T.closed); };
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+$$('a', menu).forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// 捲動漸入
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+$$('.reveal').forEach(el => io.observe(el));
+
+// 商品分頁（支援方向鍵、Home、End）
+const tabs = $$('[role="tab"]');
+const select = (t, focus = true) => {
+  tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+  if (focus) t.focus();
+};
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => select(t));
+  t.addEventListener('keydown', e => {
+    const k = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+    if (k !== undefined) { e.preventDefault(); select(tabs[(k + tabs.length) % tabs.length]); }
+  });
+});
+select(tabs[0], false);
+
+// 標出今天（出爐表與營業時間）
+const now = new Date(new Date().toLocaleString('en-US', { timeZone: T.tz })), day = now.getDay();
+$$(`[data-day="${day}"]`).forEach(el => el.classList.add('today'));
+const todayCard = $(`.week li[data-day="${day}"]`), scroller = $('.week-scroll');
+if (todayCard && scroller.scrollWidth > scroller.clientWidth) scroller.scrollLeft = todayCard.offsetLeft - scroller.offsetLeft - 8;
+
+// 預訂清單：數量加減、計算金額、自動填入訂單摘要
+const picks = $$('.pick'), summary = $('#f-summary'), totalOut = $('#total'), totalField = $('#f-total');
+const money = n => T.cur + n.toLocaleString(T.locale);
+const calc = () => {
+  let total = 0; const lines = [];
+  picks.forEach(p => {
+    const input = $('input', p), q = Math.min(20, Math.max(0, parseInt(input.value, 10) || 0));
+    input.value = q; $('[data-d="-1"]', p).disabled = q === 0;
+    if (q) { total += q * p.dataset.price; lines.push(`${p.dataset.name} × ${q}（${money(q * p.dataset.price)}）`); }
+  });
+  totalOut.textContent = money(total); totalField.value = total ? money(total) : '';
+  summary.value = lines.length ? `${lines.join('\n')}\n${T.sum} ${money(total)}` : '';
+};
+picks.forEach(p => {
+  $$('button', p).forEach(b => b.addEventListener('click', () => { const i = $('input', p); i.value = (+i.value || 0) + +b.dataset.d; calc(); }));
+  $('input', p).addEventListener('change', calc);
+});
+calc();
+
+// 取貨日期最早為 3 天後
+const min = new Date(now); min.setDate(min.getDate() + 3);
+const pad = n => String(n).padStart(2, '0');
+$('#f-date').min = `${min.getFullYear()}-${pad(min.getMonth() + 1)}-${pad(min.getDate())}`;
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

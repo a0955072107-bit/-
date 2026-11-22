@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keystone Realty | Austin Homes to Buy, Sell and Rent</title>
+<meta name="description" content="Keystone Realty is an independent Austin brokerage helping buyers, sellers and renters in Zilker, Mueller, East Austin and Downtown. Honest pricing, guided tours and one agent from first showing to closing day.">
+<meta property="og:title" content="Keystone Realty | Austin Homes to Buy, Sell and Rent">
+<meta property="og:description" content="Hand-picked Austin listings, free home valuations and one agent who stays with you all the way to closing.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1f3d99">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.yourshop.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="es" href="../es/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   THEME SETTINGS: change these to restyle the whole site
+   ============================================================ */
+:root {
+  --brand: #1f3d99;          /* Brand color (deep cobalt): buttons, prices, accent lines */
+  --brand-ink: #f6f5f1;      /* Text color on the brand color (off-white, AA contrast) */
+  --brand-deep: #172e73;     /* Darker cobalt: button hover color */
+  --brand-soft: #a9bbf2;     /* Light cobalt: accent text on dark sections (AA contrast) */
+  --ink: #1d1f23;            /* Charcoal: dark section background and image shadows */
+  --ink-2: #2a2d33;          /* Lighter charcoal: cards inside dark sections */
+  --on-ink: #f1efe9;         /* Main text on dark sections */
+  --on-ink-muted: #b4b7bd;   /* Secondary text on dark sections */
+  --bg: #f6f5f1;             /* Page background: off-white */
+  --surface: #fbfbf8;        /* Card and form background (slightly warm, never pure white) */
+  --text: #1d1f23;           /* Main text color: charcoal */
+  --muted: #565b63;          /* Secondary text color */
+  --line: #d6d4cc;           /* Hairlines and borders */
+  --radius: 0px;             /* Corner radius (sharp corners by default; try 6px for a softer look) */
+  --font-heading: "Manrope", "Helvetica Neue", Arial, system-ui, sans-serif;/* Heading font (geometric sans) */
+  --font-num: "Manrope", system-ui, sans-serif;                     /* Number font: prices and stats */
+  --font-body: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif; /* Body text font */
+  --maxw: 1240px;            /* Maximum content width */
+  --pad: clamp(1rem, 5vw, 3rem); /* Left and right page padding */
+  --head-h: 4.25rem;         /* Header height */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 800; line-height: 1.3; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+.wrap { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 100; }
+.skip:focus { left: 1rem; }
+
+/* ---------- Buttons ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .7rem 1.4rem; border-radius: var(--radius); font: 700 .95rem/1.2 var(--font-body); border: 1.5px solid transparent; transition: background .2s, color .2s, border-color .2s, transform .2s; cursor: pointer; }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+a:active { opacity: .85; }
+.btn-brand { background: var(--brand); color: var(--brand-ink); }
+.btn-brand:hover { background: var(--brand-deep); }
+.btn-ink { background: var(--ink); color: var(--on-ink); }
+.btn-ink:hover { background: var(--brand); color: var(--brand-ink); }
+.btn-line { border-color: var(--text); color: var(--text); }
+.btn-line:hover { background: var(--text); color: var(--bg); }
+.btn-ghost { border-color: color-mix(in srgb, var(--on-ink) 45%, transparent); color: var(--on-ink); }
+.btn-ghost:hover { border-color: var(--on-ink); background: color-mix(in srgb, var(--on-ink) 10%, transparent); }
+.link { font-weight: 700; color: var(--brand); border-bottom: 1.5px solid currentColor; padding-bottom: .1rem; transition: color .2s; }
+.link:hover { color: var(--brand-deep); }
+
+/* ---------- Shared section styles ---------- */
+section { padding-block: clamp(4rem, 9vw, 7rem); }
+.sec-head { display: grid; gap: 1rem; margin-bottom: clamp(2rem, 5vw, 3.25rem); max-width: 44rem; }
+.sec-head h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); letter-spacing: -.01em; }
+.sec-head p { color: var(--muted); }
+.sec-head.split { max-width: none; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1rem 2rem; }
+.sec-head.split > div { display: grid; gap: 1rem; max-width: 40rem; }
+.dark { background: var(--ink); color: var(--on-ink); }
+.dark .sec-head p { color: var(--on-ink-muted); }
+
+/* ==================== Art placeholders ==================== */
+/* Every .img is architectural art drawn in CSS. Replace with a photo: change the matching class to
+   .img-xx { background: url(images/xxx.jpg) center/cover; } and delete that class's ::before / ::after rules */
+.img { position: relative; overflow: hidden; isolation: isolate; background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 8%, var(--bg)), color-mix(in srgb, var(--brand) 22%, var(--bg))); }
+.img::before, .img::after { content: ""; position: absolute; z-index: -1; }
+/* Facade: building window grid. Replace with a photo: .img-facade { background: url(images/building.jpg) center/cover; } */
+.img-facade::before { /* Main tower: cobalt frame with pale glass */
+  inset: var(--top, 14%) var(--r, 30%) 0 var(--l, 14%);
+  background:
+    repeating-linear-gradient(90deg, var(--brand) 0 var(--mw, 7px), transparent var(--mw, 7px) var(--cw, 26px)),
+    repeating-linear-gradient(0deg, var(--brand) 0 9px, transparent 9px var(--rh, 30px)),
+    linear-gradient(160deg, color-mix(in srgb, var(--surface) 80%, var(--brand)), color-mix(in srgb, var(--brand) 45%, var(--surface)));
+}
+.img-facade::after { /* Side wing: charcoal block with ribbon windows */
+  inset: var(--top2, 42%) 6% 0 auto; width: var(--w2, 30%);
+  background:
+    repeating-linear-gradient(0deg, var(--ink) 0 16px, color-mix(in srgb, var(--on-ink) 30%, var(--ink)) 16px 24px),
+    var(--ink);
+  box-shadow: -10px 0 0 0 color-mix(in srgb, var(--ink) 18%, transparent);
+}
+/* Window close-up. Replace with a photo: .img-win { background: url(images/window.jpg) center/cover; } */
+.img-win { background: color-mix(in srgb, var(--ink) 90%, var(--brand)); }
+.img-win::before { /* Window frame and mullions */
+  inset: 12% 14%;
+  border: 8px solid var(--bg);
+  background:
+    linear-gradient(var(--bg), var(--bg)) 50% 0 / 5px 100% no-repeat,
+    linear-gradient(var(--bg), var(--bg)) 0 38% / 100% 5px no-repeat,
+    repeating-linear-gradient(90deg, transparent 0 calc(25% - 2px), color-mix(in srgb, var(--bg) 70%, transparent) calc(25% - 2px) 25%),
+    linear-gradient(200deg, color-mix(in srgb, var(--brand) 55%, var(--bg)), color-mix(in srgb, var(--brand) 85%, var(--ink)));
+}
+.img-win::after { /* Glass reflection */
+  inset: 12% 14%;
+  background: linear-gradient(118deg, transparent 0 38%, color-mix(in srgb, var(--surface) 30%, transparent) 38% 46%, transparent 46% 52%, color-mix(in srgb, var(--surface) 16%, transparent) 52% 55%, transparent 55%);
+  z-index: 0;
+}
+/* Floor plan line art. Replace with a photo: .img-plan { background: url(images/floorplan.jpg) center/cover; } */
+.img-plan {
+  background:
+    repeating-linear-gradient(0deg, transparent 0 19px, color-mix(in srgb, var(--brand) 12%, transparent) 19px 20px),
+    repeating-linear-gradient(90deg, transparent 0 19px, color-mix(in srgb, var(--brand) 12%, transparent) 19px 20px),
+    var(--surface);
+}
+.img-plan::before { /* Exterior walls and partitions */
+  inset: 14% 12%;
+  border: 4px solid var(--text);
+  background:
+    linear-gradient(var(--text), var(--text)) var(--x1, 42%) 0 / 2px 58% no-repeat,
+    linear-gradient(var(--text), var(--text)) 0 58% / var(--x1, 42%) 2px no-repeat,
+    linear-gradient(var(--text), var(--text)) 100% var(--y2, 46%) / 36% 2px no-repeat,
+    linear-gradient(var(--text), var(--text)) 64% 100% / 2px 30% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--brand) 14%, transparent), color-mix(in srgb, var(--brand) 14%, transparent)) 100% 100% / 36% 54% no-repeat;
+}
+.img-plan::after { /* Door leaf and swing arc */
+  left: calc(12% + var(--x1, 42%) * .76); top: 34%; width: 13%; aspect-ratio: 1;
+  border-top: 1.5px solid var(--brand); border-right: 1.5px solid var(--brand); border-left: 2px solid var(--text);
+  border-top-right-radius: 100%;
+  z-index: 0;
+}
+/* Row of townhouses. Replace with a photo: .img-row { background: url(images/townhouse.jpg) center/cover; } */
+.img-row::before { /* Terraced facade */
+  inset: 26% 0 0;
+  background:
+    repeating-linear-gradient(90deg, var(--ink) 0 3px, transparent 3px 25%),
+    repeating-linear-gradient(0deg, transparent 0 18%, var(--ink) 18% 20%),
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--brand) 60%, var(--surface)) 0 25%, color-mix(in srgb, var(--brand) 35%, var(--surface)) 25% 50%);
+}
+.img-row::after { /* Window openings for each unit */
+  inset: 32% 0 6%;
+  background: repeating-linear-gradient(90deg, transparent 0 6%, color-mix(in srgb, var(--surface) 75%, transparent) 6% 19%, transparent 19% 25%);
+  -webkit-mask: repeating-linear-gradient(0deg, transparent 0 8%, var(--ink) 8% 15%, transparent 15% 20%);
+          mask: repeating-linear-gradient(0deg, transparent 0 8%, var(--ink) 8% 15%, transparent 15% 20%);
+  z-index: 0;
+}
+/* Variations for listing cards */
+.v2 { --top: 8%; --l: 30%; --r: 12%; --cw: 34px; --rh: 22px; --top2: 30%; --w2: 22%; }
+.v2::after { inset: var(--top2) auto 0 6%; }
+.v3 { --x1: 56%; --y2: 34%; }
+.v4 { --top: 22%; --l: 8%; --r: 8%; --cw: 20px; --rh: 26px; --top2: 100%; }
+/* Agent portrait. Replace with a photo: .img-agent { background: url(images/agent.jpg) center/cover; } */
+.img-agent { background: linear-gradient(170deg, color-mix(in srgb, var(--brand) 70%, var(--ink)), var(--ink)); }
+.img-agent::before { /* Abstract portrait */
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 36%, color-mix(in srgb, var(--on-ink) 34%, transparent) 0 14%, transparent calc(14% + 1px)),
+    radial-gradient(ellipse 40% 32% at 50% 100%, color-mix(in srgb, var(--on-ink) 26%, transparent) 0 99%, transparent 100%);
+}
+.img-agent::after { /* Window grid backdrop */
+  inset: 0;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 calc(33.33% - 1px), color-mix(in srgb, var(--on-ink) 14%, transparent) calc(33.33% - 1px) 33.33%),
+    repeating-linear-gradient(0deg, transparent 0 calc(25% - 1px), color-mix(in srgb, var(--on-ink) 14%, transparent) calc(25% - 1px) 25%);
+  z-index: -2;
+}
+
+/* ==================== Header ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: var(--head-h); }
+.logo { display: flex; align-items: center; gap: .65rem; line-height: 1.15; }
+.logo-mark { width: 2.25rem; height: 2.25rem; display: grid; place-items: center; background: var(--brand); color: var(--brand-ink); font: 900 1.05rem/1 var(--font-body); }
+.logo b { font: 800 1.08rem/1.2 var(--font-heading); display: block; }
+.logo small { font: .78rem/1.2 var(--font-body); color: var(--muted); }
+.menu { display: flex; align-items: center; gap: clamp(.9rem, 2.2vw, 1.9rem); font-size: .93rem; font-weight: 500; }
+.menu a:not(.btn) { position: relative; padding-block: .3rem; }
+.menu a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--brand); transform: scaleX(0); transform-origin: left; transition: transform .25s; }
+.menu a:not(.btn):hover::after { transform: scaleX(1); }
+.menu .btn { min-height: 42px; padding: .5rem 1.1rem; }
+.burger { display: none; width: 44px; height: 44px; background: none; border: 1.5px solid var(--text); color: var(--text); cursor: pointer; }
+.burger:hover { background: color-mix(in srgb, var(--text) 8%, transparent); }
+.burger span, .burger span::before, .burger span::after { display: block; width: 18px; height: 2px; background: currentColor; margin: auto; position: relative; transition: transform .3s, background .3s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* Without JavaScript the menu wraps below the logo; with JS it collapses into the burger menu */
+  html:not(.js) *:has(> .menu) { flex-wrap: wrap; }
+  html:not(.js) header:has(.menu) { position: sticky; background: var(--bg); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1rem; padding-bottom: .75rem; }
+  html:not(.js) .hero { padding-top: 2.5rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: var(--head-h) 0 auto; flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); padding: .25rem var(--pad) 1.5rem; border-bottom: 1px solid var(--line); transform: translateY(-120%); visibility: hidden; transition: transform .3s, visibility .3s; }
+  .js .menu.open { transform: none; visibility: visible; }
+  .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line); }
+  .js .menu .btn { margin-top: 1rem; min-height: 48px; }
+}
+
+/* ==================== Hero and search ==================== */
+.hero { padding-top: calc(var(--head-h) + clamp(1.5rem, 4vw, 3rem)); padding-bottom: clamp(3rem, 6vw, 4.5rem); border-bottom: 1px solid var(--line); }
+.hero-grid { display: grid; gap: clamp(2rem, 4vw, 3.5rem); align-items: end; }
+.hero h1 { font-size: clamp(2rem, 4.6vw, 3.7rem); line-height: 1.18; letter-spacing: -.02em; }
+.hero-lead { color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.12rem); max-width: 34rem; margin-top: 1.1rem; }
+.search { margin-top: clamp(1.5rem, 3vw, 2.25rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1.5px solid var(--text); background: var(--surface); }
+.search .sf { display: grid; gap: .1rem; padding: .55rem .9rem .5rem; border-bottom: 1px solid var(--line); min-width: 0; }
+.search .sf:nth-child(odd) { border-right: 1px solid var(--line); }
+.search .sf:nth-child(3) { grid-column: 1 / -1; border-right: 0; }
+.search label { font-size: .8rem; color: var(--muted); font-weight: 500; }
+.search select { font: 500 1rem/1.4 var(--font-body); color: var(--text); background: transparent; border: 0; padding: .2rem 0; min-height: 34px; width: 100%; cursor: pointer; }
+.search select:focus-visible { outline-offset: 2px; }
+.search .btn { grid-column: 1 / -1; min-height: 54px; font-size: 1rem; }
+.hero-sub { margin-top: 1.1rem; font-size: .93rem; color: var(--muted); }
+.hero-art { position: relative; margin: 0; }
+.hero-art .img { aspect-ratio: 4 / 3; border: 1.5px solid var(--text); }
+.hero-art figcaption { position: absolute; left: 0; bottom: 0; background: var(--ink); color: var(--on-ink); padding: .9rem 1.2rem; font-size: .85rem; line-height: 1.5; max-width: 15rem; }
+.hero-art figcaption b { display: block; font: 800 1.6rem/1.15 var(--font-num); color: var(--brand-soft); }
+@media (min-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); }
+  .search { grid-template-columns: repeat(3, minmax(0, 1fr)) auto; }
+  .search .sf { border-bottom: 0; border-right: 1px solid var(--line); }
+  .search .sf:nth-child(3) { grid-column: auto; border-right: 1px solid var(--line); }
+  .search .btn { grid-column: auto; padding-inline: 1.8rem; }
+  .hero-art .img { aspect-ratio: 4 / 5; }
+}
+
+/* ==================== Featured listings ==================== */
+.result-count { font-variant-numeric: tabular-nums; font-size: .93rem; color: var(--muted); }
+.result-count b { font-family: var(--font-num); color: var(--text); }
+.listings { display: grid; gap: clamp(1rem, 2.5vw, 1.75rem); }
+.listing { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); transition: border-color .2s, transform .25s, box-shadow .25s; }
+.listing[hidden] { display: none; }
+.listing:hover { border-color: var(--text); transform: translateY(-3px); box-shadow: 6px 6px 0 color-mix(in srgb, var(--brand) 22%, transparent); }
+.listing .img { aspect-ratio: 4 / 3; border-bottom: 1px solid var(--line); }
+.tags { position: absolute; top: .75rem; left: .75rem; display: flex; gap: .4rem; z-index: 1; }
+.tag { font-size: .78rem; font-weight: 700; padding: .2rem .55rem; background: var(--brand); color: var(--brand-ink); }
+.tag.cut { background: var(--ink); color: var(--on-ink); }
+.tag.rent { background: var(--surface); color: var(--text); border: 1px solid var(--text); }
+.listing .body { padding: 1.2rem 1.25rem 1.3rem; display: flex; flex-direction: column; gap: .35rem; flex: 1; }
+.listing h3 { font-size: 1.12rem; line-height: 1.45; font-weight: 700; }
+.listing .loc { font-size: .87rem; color: var(--muted); }
+.price { font: 800 1.55rem/1.2 var(--font-num); color: var(--brand); margin-top: .35rem; font-variant-numeric: tabular-nums; }
+.price small { font: 500 .85rem/1 var(--font-body); color: var(--muted); margin-left: .25rem; }
+.price s { font: 500 .85rem/1 var(--font-num); color: var(--muted); margin-left: .4rem; }
+.specs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--line); margin-block: .7rem .9rem; }
+.specs div { padding: .55rem .5rem; text-align: center; }
+.specs div + div { border-left: 1px solid var(--line); }
+.specs dt { font-size: .75rem; color: var(--muted); }
+.specs dd { font-weight: 700; font-size: .93rem; }
+.listing .foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+.listing .id { font: 500 .8rem/1 var(--font-num); color: var(--muted); }
+.listing .btn { min-height: 42px; padding: .45rem 1rem; font-size: .88rem; }
+.no-results { border: 1.5px dashed var(--line); padding: 2.5rem 1.5rem; text-align: center; display: grid; gap: 1rem; justify-items: center; }
+.no-results[hidden] { display: none; }
+.no-results p { color: var(--muted); }
+@media (min-width: 640px) { .listings { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1020px) { .listings { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== Services ==================== */
+.services-sec { background: color-mix(in srgb, var(--brand) 5%, var(--bg)); border-block: 1px solid var(--line); }
+.services { display: grid; border-top: 1.5px solid var(--text); }
+.service { padding: 1.75rem 0; border-bottom: 1px solid var(--line); display: grid; align-content: start; grid-template-columns: 3.25rem minmax(0, 1fr); gap: 0 1rem; }
+.service .no { font: 800 1.05rem/1.6 var(--font-num); color: var(--brand); }
+.service h3 { font-size: 1.25rem; margin-bottom: .4rem; }
+.service p { color: var(--muted); font-size: .95rem; }
+.service ul { margin-top: .7rem; display: flex; flex-wrap: wrap; gap: .4rem; }
+.service li { font-size: .8rem; border: 1px solid var(--line); padding: .1rem .55rem; background: var(--surface); }
+@media (min-width: 760px) {
+  .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service { padding: 2rem 2rem 2rem 0; }
+  .service:nth-child(even) { padding-left: 2rem; border-left: 1px solid var(--line); }
+}
+@media (min-width: 1100px) {
+  .services { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .service { grid-template-columns: minmax(0, 1fr); padding: 2rem 1.5rem; border-left: 1px solid var(--line); }
+  .service:nth-child(even) { padding-left: 1.5rem; }
+  .service:first-child { border-left: 0; padding-left: 0; }
+  .service .no { margin-bottom: 1.5rem; }
+}
+
+/* ==================== Track record ==================== */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid color-mix(in srgb, var(--on-ink) 20%, transparent); }
+.stat { padding: 1.75rem 1rem 1.75rem 0; border-bottom: 1px solid color-mix(in srgb, var(--on-ink) 20%, transparent); }
+.stat:nth-child(even) { padding-left: 1.25rem; border-left: 1px solid color-mix(in srgb, var(--on-ink) 20%, transparent); }
+.stat strong { display: block; font: 800 clamp(2.3rem, 6vw, 3.6rem)/1 var(--font-num); color: var(--on-ink); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat strong small { font-size: .45em; color: var(--brand-soft); margin-left: .15rem; }
+.stat > span { display: block; margin-top: .6rem; font-size: .9rem; color: var(--on-ink-muted); }
+.deals { margin-top: clamp(2rem, 4vw, 3rem); display: grid; gap: .75rem; }
+.deal { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .25rem 1rem; padding: 1rem 1.2rem; background: var(--ink-2); font-size: .92rem; }
+.deal b { font-weight: 500; }
+.deal span { color: var(--on-ink-muted); }
+.deal em { font: 800 1rem/1.6 var(--font-num); font-style: normal; color: var(--brand-soft); grid-row: span 2; align-self: center; }
+@media (min-width: 900px) {
+  .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .stat { padding-left: 1.5rem; border-left: 1px solid color-mix(in srgb, var(--on-ink) 20%, transparent); }
+  .stat:first-child { padding-left: 0; border-left: 0; }
+  .deals { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* ==================== Meet the agent ==================== */
+.agent-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.agent-photo { position: relative; max-width: 26rem; }
+.agent-photo .img { aspect-ratio: 4 / 5; }
+.agent-photo::after { content: ""; position: absolute; inset: 1rem -1rem -1rem 1rem; border: 1.5px solid var(--brand); z-index: -1; }
+.agent-photo { isolation: isolate; }
+.agent h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); }
+.agent .role { color: var(--brand); font-weight: 700; margin-top: .4rem; }
+.agent > p { color: var(--muted); margin-top: 1rem; max-width: 36rem; }
+.creds { margin-top: 1.75rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid var(--line); background: var(--surface); }
+.creds div { padding: 1rem 1.1rem; }
+.creds div:nth-child(even) { border-left: 1px solid var(--line); }
+.creds div:nth-child(n+3) { border-top: 1px solid var(--line); }
+.creds dt { font-size: .8rem; color: var(--muted); }
+.creds dd { font-weight: 700; overflow-wrap: anywhere; }
+.agent .btns { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+@media (min-width: 900px) { .agent-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); } }
+
+/* ==================== Buying process ==================== */
+.process-sec { border-top: 1px solid var(--line); }
+.steps { display: grid; counter-reset: s; border-top: 1.5px solid var(--text); }
+.step { position: relative; padding: 1.4rem 0 1.4rem 3.75rem; border-bottom: 1px solid var(--line); }
+.step::before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: 1.4rem; width: 2.5rem; height: 2.5rem; display: grid; place-items: center; background: var(--brand); color: var(--brand-ink); font: 800 1.05rem/1 var(--font-num); }
+.step h3 { font-size: 1.12rem; margin-bottom: .25rem; }
+.step p { color: var(--muted); font-size: .92rem; }
+@media (min-width: 900px) {
+  .steps { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .step { padding: 4.5rem 1.25rem 0 0; border-bottom: 0; }
+  .step + .step { padding-left: 1.25rem; border-left: 1px solid var(--line); }
+  .step::before { top: 1.25rem; }
+  .step + .step::before { left: 1.25rem; }
+}
+
+/* ==================== Reviews ==================== */
+.reviews-sec { background: color-mix(in srgb, var(--brand) 5%, var(--bg)); border-block: 1px solid var(--line); }
+.reviews { display: grid; gap: clamp(1rem, 2.5vw, 1.75rem); }
+.review { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--brand); padding: 1.6rem 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+.review blockquote { font-size: 1.02rem; line-height: 1.85; }
+.review figcaption { margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .87rem; color: var(--muted); }
+.review figcaption b { display: block; color: var(--text); }
+@media (min-width: 900px) { .reviews { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== Viewing request form ==================== */
+.contact-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); }
+.info { display: grid; gap: 1.5rem; align-content: start; }
+.info dl { display: grid; gap: 1rem; border-top: 1px solid color-mix(in srgb, var(--on-ink) 20%, transparent); padding-top: 1.5rem; }
+.info dt { font-size: .85rem; color: var(--brand-soft); }
+.info dd a { border-bottom: 1px solid color-mix(in srgb, var(--on-ink) 50%, transparent); }
+.info dd a:hover { color: var(--brand-soft); }
+.info .btns { display: flex; flex-wrap: wrap; gap: .75rem; }
+.info .btn { min-height: 44px; padding: .5rem 1.1rem; font-size: .9rem; }
+.form { background: var(--surface); color: var(--text); padding: clamp(1.25rem, 4vw, 2.5rem); display: grid; gap: 1.1rem; border-top: 4px solid var(--brand); }
+.form .row { display: grid; gap: 1.1rem; }
+.field { display: grid; gap: .35rem; }
+.field label { font-size: .88rem; font-weight: 500; }
+.field label i { color: var(--brand); font-style: normal; }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .7rem .85rem; min-height: 48px; }
+.field textarea { min-height: 7rem; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent); }
+.agree { display: flex; gap: .6rem; align-items: flex-start; font-size: .86rem; color: var(--muted); }
+.agree input { width: 1.15rem; height: 1.15rem; margin-top: .3rem; accent-color: var(--brand); flex: none; }
+.agree a { text-decoration: underline; color: var(--brand); }
+.form .btn { width: 100%; }
+.form-note { font-size: .8rem; color: var(--muted); text-align: center; }
+@media (min-width: 640px) { .form .row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+@media (min-width: 960px) { .contact-grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); } }
+
+/* ==================== Footer ==================== */
+.site-footer { background: var(--ink); color: var(--on-ink-muted); padding: 3.5rem 0 6.5rem; font-size: .9rem; border-top: 1px solid color-mix(in srgb, var(--on-ink) 14%, transparent); }
+.foot-grid { display: grid; gap: 2rem; padding-bottom: 2.25rem; border-bottom: 1px solid color-mix(in srgb, var(--on-ink) 14%, transparent); }
+.site-footer .logo { color: var(--on-ink); }
+.site-footer .logo small { color: var(--on-ink-muted); }
+.site-footer h2 { color: var(--on-ink); font: 700 1rem/1.4 var(--font-body); margin-bottom: .7rem; }
+.site-footer a:hover { color: var(--brand-soft); }
+.license { display: grid; gap: .2rem; }
+.social { display: flex; gap: .6rem; margin-top: 1rem; }
+.social a { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid color-mix(in srgb, var(--on-ink) 28%, transparent); font-size: .78rem; transition: border-color .2s, color .2s; }
+.social a:hover { border-color: var(--brand-soft); }
+.copy { padding-top: 1.5rem; font-size: .8rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; }
+@media (min-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr); } .site-footer { padding-bottom: 3rem; } }
+
+/* ---------- Mobile sticky bottom bar ---------- */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 40; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .6rem; padding: .65rem var(--pad) calc(.65rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 96%, transparent); border-top: 1px solid var(--line); }
+.sticky-cta .btn { min-height: 46px; }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- Scroll reveal ---------- */
+.js .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+/* ==================== Language switcher ==================== */
+/* Header language switcher: small and quiet; the current language is bold and underlined (not colour alone) */
+.menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .6rem; border-left: 1px solid var(--line); font: 400 .8rem/1 var(--font-body); }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: var(--muted); border-radius: var(--radius); text-decoration: none; text-underline-offset: .4em; text-decoration-thickness: 1px; transition: color .25s, background-color .25s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 7%, transparent); }
+.lang-switch a:active { opacity: .7; }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 0; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 600; text-decoration-line: underline; }
+@media (max-width: 760px) {
+  /* Mobile: the switcher sits left of the menu button and stays visible */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .burger { order: 2; }
+  .menu { order: 3; }
+  /* Without JS the logo may shrink and wrap so the switcher stays on the same row */
+  html:not(.js) .logo { flex: 1 1 0; min-width: 0; }
+}
+/* Footer language text links */
+.foot-lang { display: flex; flex-wrap: wrap; align-items: center; gap: 0 .5rem; margin-top: 1.25rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; min-height: 32px; padding-inline: .2rem; text-underline-offset: .35em; }
+.foot-lang a:hover { text-decoration-line: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { font-weight: 600; text-decoration-line: underline; }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<!-- JSON-LD structured data: type is RealEstateAgent. Replace the name, phone, address and hours with your own. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Keystone Realty",
+  "description": "Independent Austin real estate brokerage for buying, selling, renting and free home valuations.",
+  "telephone": "+1-555-012-3456",
+  "email": "hello@keystone-realty.example",
+  "url": "https://www.example.com/",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2418 Cedar Lane, Suite 100",
+    "addressLocality": "Austin",
+    "addressRegion": "TX",
+    "postalCode": "78704",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "10:00", "closes": "21:00" }
+  ],
+  "areaServed": ["Zilker", "Mueller", "East Austin", "Downtown Austin"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- ==================== Section: Header and navigation ==================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Keystone Realty, back to top">
+      <span class="logo-mark" aria-hidden="true">K</span>
+      <span><b>Keystone Realty</b><small>Independent Austin brokerage</small></span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span></button>
+    <nav class="menu" id="menu" aria-label="Main menu">
+      <a href="#listings">Listings</a>
+      <a href="#services">Services</a>
+      <a href="#results">Track record</a>
+      <a href="#agent">Your agent</a>
+      <a href="#process">How it works</a>
+      <a href="#contact" class="btn btn-brand">Book a viewing</a>
+    </nav>
+    <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="en">EN</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en" aria-current="page">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+          <a href="../es/" hreflang="es" lang="es">Español</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ==================== Section: Hero and property search ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Know the market.<br>Then find your home.</h1>
+      <p class="hero-lead">Real comps on every listing. One agent from first tour to closing.</p>
+      <!-- Property search: option values must match the data-area, data-type and data-price attributes on the listing cards below -->
+      <form class="search" id="search" action="#listings" role="search" aria-label="Search listings">
+        <div class="sf">
+          <label for="s-area">Neighborhood</label>
+          <select id="s-area" name="area">
+            <option value="">Any area</option>
+            <option value="zilker">Zilker</option>
+            <option value="mueller">Mueller</option>
+            <option value="east">East Austin</option>
+            <option value="downtown">Downtown</option>
+          </select>
+        </div>
+        <div class="sf">
+          <label for="s-type">Buy or rent</label>
+          <select id="s-type" name="type">
+            <option value="">Buy or rent</option>
+            <option value="buy">Buy</option>
+            <option value="rent">Rent</option>
+          </select>
+        </div>
+        <div class="sf">
+          <label for="s-budget">Budget</label>
+          <!-- Budget format: type:min:max (purchase prices in dollars, rent in dollars per month) -->
+          <select id="s-budget" name="budget">
+            <option value="">Any budget</option>
+            <optgroup label="Purchase price">
+              <option value="buy:0:600000">Under $600K</option>
+              <option value="buy:600000:1000000">$600K to $1M</option>
+              <option value="buy:1000000:99999999">$1M and up</option>
+            </optgroup>
+            <optgroup label="Monthly rent">
+              <option value="rent:0:2500">Under $2,500</option>
+              <option value="rent:2500:99999">$2,500 and up</option>
+            </optgroup>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-brand">Search homes</button>
+      </form>
+      <p class="hero-sub">Thinking of selling? <a href="#contact" class="link">Get a free home valuation</a></p>
+    </div>
+    <figure class="hero-art">
+      <div class="img img-facade" role="img" aria-label="Window grid on a modern residential building"></div>
+      <!-- Sample content: replace with real data before going live -->
+      <figcaption><b>12 homes</b>newly listed this month, mostly in Zilker and Mueller</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ==================== Section: Featured listings ==================== -->
+<section id="listings">
+  <div class="wrap">
+    <div class="sec-head split reveal">
+      <div>
+        <h2>Featured listings</h2>
+        <p>We walk through every home before it goes live, so the photos, square footage and floor plans are exactly as described.</p>
+      </div>
+      <p class="result-count" aria-live="polite">Showing <b id="count">6</b> homes</p>
+    </div>
+    <!--
+      Listing cards: copy an <article class="listing"> to add another home.
+      data-area: neighborhood code (must match the search bar options)
+      data-type: buy for sale, rent for lease
+      data-price: purchase price in dollars, or monthly rent in dollars
+      Sample content: replace with real data before going live
+    -->
+    <div class="listings">
+      <article class="listing" data-area="zilker" data-type="buy" data-price="849000">
+        <div class="img img-facade" role="img" aria-label="Exterior of a mid-rise condo building"><div class="tags"><span class="tag">New</span></div></div>
+        <div class="body">
+          <h3>Corner condo with park views and two balconies</h3>
+          <p class="loc">Zilker, Barton Hills Drive</p>
+          <p class="price">$849,000</p>
+          <dl class="specs"><div><dt>Size</dt><dd>1,820 sq ft</dd></div><div><dt>Beds and baths</dt><dd>3 bd, 2 ba</dd></div><div><dt>Built</dt><dd>2019</dd></div></dl>
+          <div class="foot"><span class="id">ID A-101</span><a href="#contact" class="btn btn-line" data-id="A-101" data-need="Buying">Book a viewing</a></div>
+        </div>
+      </article>
+      <article class="listing" data-area="zilker" data-type="buy" data-price="529000">
+        <div class="img img-win" role="img" aria-label="Floor-to-ceiling living room window"><div class="tags"><span class="tag cut">Price cut</span></div></div>
+        <div class="body">
+          <h3>Bright two-bedroom near Lady Bird Lake trails</h3>
+          <p class="loc">Zilker, South Lamar Boulevard</p>
+          <p class="price">$529,000<s>$559,000</s></p>
+          <dl class="specs"><div><dt>Size</dt><dd>1,140 sq ft</dd></div><div><dt>Beds and baths</dt><dd>2 bd, 1 ba</dd></div><div><dt>Built</dt><dd>2011</dd></div></dl>
+          <div class="foot"><span class="id">ID A-102</span><a href="#contact" class="btn btn-line" data-id="A-102" data-need="Buying">Book a viewing</a></div>
+        </div>
+      </article>
+      <article class="listing" data-area="mueller" data-type="buy" data-price="1149000">
+        <div class="img img-plan" role="img" aria-label="Four-bedroom floor plan"></div>
+        <div class="body">
+          <h3>Four-bedroom family home with a two-car garage</h3>
+          <p class="loc">Mueller, Aldrich Street</p>
+          <p class="price">$1,149,000</p>
+          <dl class="specs"><div><dt>Size</dt><dd>2,960 sq ft</dd></div><div><dt>Beds and baths</dt><dd>4 bd, 3 ba</dd></div><div><dt>Built</dt><dd>2016</dd></div></dl>
+          <div class="foot"><span class="id">ID A-103</span><a href="#contact" class="btn btn-line" data-id="A-103" data-need="Buying">Book a viewing</a></div>
+        </div>
+      </article>
+      <article class="listing" data-area="zilker" data-type="rent" data-price="2150">
+        <div class="img img-facade v2" role="img" aria-label="Newly built apartment building"><div class="tags"><span class="tag">New</span><span class="tag rent">For rent</span></div></div>
+        <div class="body">
+          <h3>Brand-new studio loft, short leases welcome</h3>
+          <p class="loc">Zilker, Kinney Avenue</p>
+          <p class="price">$2,150<small>/ month</small></p>
+          <dl class="specs"><div><dt>Size</dt><dd>640 sq ft</dd></div><div><dt>Beds and baths</dt><dd>1 bd, 1 ba</dd></div><div><dt>Built</dt><dd>2025</dd></div></dl>
+          <div class="foot"><span class="id">ID R-201</span><a href="#contact" class="btn btn-line" data-id="R-201" data-need="Renting">Book a viewing</a></div>
+        </div>
+      </article>
+      <article class="listing" data-area="east" data-type="rent" data-price="3400">
+        <div class="img img-plan v3" role="img" aria-label="Three-bedroom floor plan"><div class="tags"><span class="tag cut">Price cut</span><span class="tag rent">For rent</span></div></div>
+        <div class="body">
+          <h3>Furnished three-bedroom near the rail line</h3>
+          <p class="loc">East Austin, Chicon Street</p>
+          <p class="price">$3,400<small>/ month</small><s>$3,650</s></p>
+          <dl class="specs"><div><dt>Size</dt><dd>1,450 sq ft</dd></div><div><dt>Beds and baths</dt><dd>3 bd, 2 ba</dd></div><div><dt>Built</dt><dd>2020</dd></div></dl>
+          <div class="foot"><span class="id">ID R-202</span><a href="#contact" class="btn btn-line" data-id="R-202" data-need="Renting">Book a viewing</a></div>
+        </div>
+      </article>
+      <article class="listing" data-area="downtown" data-type="buy" data-price="1650000">
+        <div class="img img-row" role="img" aria-label="Row of downtown townhouses"></div>
+        <div class="body">
+          <h3>Live and work townhouse with street-level retail</h3>
+          <p class="loc">Downtown, East 6th Street</p>
+          <p class="price">$1,650,000</p>
+          <dl class="specs"><div><dt>Size</dt><dd>3,100 sq ft</dd></div><div><dt>Beds and baths</dt><dd>4 bd, 3 ba</dd></div><div><dt>Built</dt><dd>2004</dd></div></dl>
+          <div class="foot"><span class="id">ID A-104</span><a href="#contact" class="btn btn-line" data-id="A-104" data-need="Buying">Book a viewing</a></div>
+        </div>
+      </article>
+    </div>
+    <div class="no-results" id="no-results" hidden>
+      <p>No homes match those filters right now. Tell us what you are looking for and we will let you know first when one comes up.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center">
+        <button type="button" class="btn btn-line" id="reset">Clear filters</button>
+        <a href="#contact" class="btn btn-brand">Set up a home alert</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Services ==================== -->
+<section class="services-sec" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>How we can help</h2>
+      <p>Buying, selling, renting, or just curious what your place is worth. One call gets you a real person.</p>
+    </div>
+    <div class="services reveal">
+      <article class="service">
+        <span class="no">01</span>
+        <div><h3>Buying</h3><p>We shortlist homes by budget, commute and schools, tour them with you and pull recent comps so you can offer with confidence.</p><ul><li>Guided tours</li><li>Offer strategy</li><li>Mortgage estimates</li></ul></div>
+      </article>
+      <article class="service">
+        <span class="no">02</span>
+        <div><h3>Selling</h3><p>Professional photos, floor plans and wide online exposure, plus a weekly report on showings and buyer feedback.</p><ul><li>Pro photography</li><li>MLS and portals</li><li>Weekly updates</li></ul></div>
+      </article>
+      <article class="service">
+        <span class="no">03</span>
+        <div><h3>Renting</h3><p>Tenant screening, lease drafting and move-in inspections, with full property management if you are away or simply busy.</p><ul><li>Tenant screening</li><li>Lease drafting</li><li>Property management</li></ul></div>
+      </article>
+      <article class="service">
+        <span class="no">04</span>
+        <div><h3>Home valuation</h3><p>We combine recent sales, condition and comparable homes in your building or street into a written valuation within three business days, free.</p><ul><li>Free of charge</li><li>Written report</li><li>In-home visit</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Track record ==================== -->
+<section class="dark" id="results">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Our track record</h2>
+      <p>Twelve years selling homes in Austin, and most of our new clients come from past ones.</p>
+    </div>
+    <!-- Sample content: replace with real data before going live -->
+    <div class="stats reveal">
+      <div class="stat"><strong><span data-count="420">420</span><small>+</small></strong><span>homes sold</span></div>
+      <div class="stat"><strong><span data-count="38">38</span><small>days</small></strong><span>average time to contract</span></div>
+      <div class="stat"><strong><span data-count="98">98</span><small>%</small></strong><span>average sale to list price</span></div>
+      <div class="stat"><strong><span data-count="62">62</span><small>%</small></strong><span>of clients come by referral</span></div>
+    </div>
+    <!-- Sample content: replace with real data before going live -->
+    <div class="deals reveal" aria-label="Recently sold">
+      <div class="deal"><b>Three-bedroom bungalow, Travis Heights</b><span>Under contract in 21 days</span><em>$712K</em></div>
+      <div class="deal"><b>Two-bedroom condo, Mueller</b><span>Under contract in 34 days</span><em>$468K</em></div>
+      <div class="deal"><b>Four-bedroom home, Crestview</b><span>Under contract in 45 days</span><em>$895K</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Meet the agent ==================== -->
+<section id="agent">
+  <div class="wrap agent-grid">
+    <div class="agent-photo reveal">
+      <div class="img img-agent" role="img" aria-label="Portrait of agent Megan Ruiz"></div>
+    </div>
+    <!-- Sample content: replace name, license number and years with real data before going live -->
+    <div class="agent reveal">
+      <h2>Meet Megan Ruiz</h2>
+      <p class="role">Broker and founder, Keystone Realty</p>
+      <p>I have lived in Austin for twenty years and sold homes here for twelve. Before you make an offer, I will walk you through the condition, the HOA and what similar homes actually sold for. I care less about a fast closing and more about you loving the place a year from now.</p>
+      <dl class="creds">
+        <div><dt>Real estate license</dt><dd>TX License #000000</dd></div>
+        <div><dt>Experience</dt><dd>12 years</dd></div>
+        <div><dt>Neighborhoods</dt><dd>Zilker, Mueller, East Austin</dd></div>
+        <div><dt>Specialty</dt><dd>Condos and first homes</dd></div>
+      </dl>
+      <div class="btns">
+        <a href="tel:+15550123456" class="btn btn-brand">Call Megan</a>
+        <a href="https://wa.me/15550123456" class="btn btn-line" target="_blank" rel="noopener">Message on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Buying process ==================== -->
+<section class="process-sec" id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>How buying works</h2>
+      <p>First home or fifth, it is five clear steps, and you will never be guessing what comes next.</p>
+    </div>
+    <ol class="steps reveal">
+      <li class="step"><h3>Talk it through</h3><p>We go over budget, down payment and the neighborhoods you love, then run a quick mortgage estimate.</p></li>
+      <li class="step"><h3>Tour homes</h3><p>We line up showings and point out condition, light and HOA fees on site.</p></li>
+      <li class="step"><h3>Make an offer</h3><p>Recent comps in hand, we negotiate a fair price with the seller.</p></li>
+      <li class="step"><h3>Go under contract</h3><p>Inspection, appraisal and title are scheduled, and your earnest money sits safely in escrow.</p></li>
+      <li class="step"><h3>Close and move in</h3><p>We join the final walkthrough, hand over the keys and help set up utilities.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== Section: Reviews ==================== -->
+<section class="reviews-sec" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>What clients say</h2>
+    </div>
+    <div class="reviews reveal">
+      <!-- Sample content: replace with real reviews before going live -->
+      <figure class="review">
+        <blockquote>We were first-time buyers and knew nothing. Megan was blunt about the pros and cons of every place and even dug up the HOA meeting minutes for us. We found a three-bedroom under budget and still love it a year later.</blockquote>
+        <figcaption><b>Daniel and Priya K.</b>First home, Zilker</figcaption>
+      </figure>
+      <!-- Sample content: replace with real reviews before going live -->
+      <figure class="review">
+        <blockquote>Every week I got a showing report, including exactly why buyers thought it was overpriced. After one price adjustment we were under contract within a month, for more than I expected.</blockquote>
+        <figcaption><b>Laura M.</b>Sold a home, Mueller</figcaption>
+      </figure>
+      <!-- Sample content: replace with real reviews before going live -->
+      <figure class="review">
+        <blockquote>I work overseas, so Keystone manages my rental. Tenant screening was thorough, the monthly statements are clear, and they send photos before any repair. I honestly never worry about it.</blockquote>
+        <figcaption><b>James T.</b>Property management, East Austin</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Viewing request form ==================== -->
+<section class="dark" id="contact">
+  <div class="wrap contact-grid">
+    <div class="info reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <h2>Book a viewing or list with us</h2>
+        <p>Send the form and we will call you back the same day to set a time. Tours, valuations and advice are always free.</p>
+      </div>
+      <dl>
+        <div><dt>Phone</dt><dd><a href="tel:+15550123456">(555) 012-3456</a></dd></div>
+        <div><dt>Office</dt><dd><a href="https://maps.google.com/?q=2418+Cedar+Lane,+Austin,+TX+78704" target="_blank" rel="noopener">2418 Cedar Lane, Suite 100<br>Austin, TX 78704</a></dd></div>
+        <div><dt>Hours</dt><dd>Open daily, 10:00 AM to 9:00 PM</dd></div>
+      </dl>
+      <!--
+        Messaging button: WhatsApp is set up below. Replace 15550123456 with your number in international format, digits only.
+        You can swap in another channel instead, for example:
+          LINE:      https://line.me/R/ti/p/@yourlineid
+          Messenger: https://m.me/yourpagename
+          Instagram: https://ig.me/m/yourusername
+      -->
+      <div class="btns">
+        <a href="tel:+15550123456" class="btn btn-brand">Call us</a>
+        <a href="https://wa.me/15550123456" class="btn btn-ghost" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a href="https://maps.google.com/?q=2418+Cedar+Lane,+Austin,+TX+78704" class="btn btn-ghost" target="_blank" rel="noopener">Google Maps</a>
+      </div>
+    </div>
+    <!--
+      This form uses Formspree (the free plan includes 50 submissions a month):
+      1. Sign up at https://formspree.io and create a new form
+      2. Replace your-form-id in the action attribute below with your form ID
+      3. On the first submission, Formspree will email you to confirm your address
+    -->
+    <form class="form reveal" id="book" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="row">
+        <div class="field"><label for="f-name">Full name <i>*</i></label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-tel">Phone <i>*</i></label><input id="f-tel" name="phone" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="f-need">I am interested in <i>*</i></label>
+          <select id="f-need" name="interest" required>
+            <option value="">Please choose</option>
+            <option>Buying</option>
+            <option>Selling</option>
+            <option>Renting</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-id">Listing ID</label><input id="f-id" name="listing_id" placeholder="For example A-101, or leave blank"></div>
+      </div>
+      <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Good times for a tour, your budget, or anything you would like to know"></textarea></div>
+      <label class="agree"><input type="checkbox" name="privacy_consent" value="yes" required> <span>I agree that Keystone Realty may use my details under its <a href="#">privacy policy</a> to arrange viewings and follow up on my request.</span></label>
+      <button type="submit" class="btn btn-brand">Request a viewing</button>
+      <p class="form-note">We only use your details to contact you. We never share them.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark" aria-hidden="true">K</span><span><b>Keystone Realty</b><small>Independent Austin brokerage</small></span></a>
+        <p style="margin-top:1rem;max-width:22rem">Know the market before you make a move.</p>
+        <!-- Social links: replace # with your profile URLs. The WhatsApp link can be swapped for LINE, Messenger or Instagram. -->
+        <div class="social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="https://wa.me/15550123456" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <p>2418 Cedar Lane, Suite 100<br>Austin, TX 78704<br>Phone <a href="tel:+15550123456">(555) 012-3456</a><br>hello@keystone-realty.example</p>
+      </div>
+      <div>
+        <h2>Hours</h2>
+        <p>Open daily, 10:00 AM to 9:00 PM<br>Closed on major holidays<br>Evening tours by appointment</p>
+      </div>
+      <!--
+        Brokerage disclosure: most US states require advertising to show the licensed brokerage name,
+        and many also require the license number. Texas, for example, requires links to the
+        Information About Brokerage Services form and the Consumer Protection Notice.
+        Replace the placeholders below and check your state's current rules before going live.
+      -->
+      <div class="license">
+        <h2>Licensing</h2>
+        <p>Brokerage: Keystone Realty LLC</p>
+        <p>Brokerage license #0000000</p>
+        <p>Broker: Megan Ruiz, license #000000</p>
+        <p><a href="#">Information About Brokerage Services</a><br><a href="#">Consumer Protection Notice</a></p>
+        <p>Equal Housing Opportunity</p>
+      </div>
+    </div>
+    <!-- Footer language links: same set as the header lang-switch; update both when you add a language -->
+    <p class="foot-lang"><span>Language</span><a href="../en/" hreflang="en" lang="en" aria-current="page">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="../ja/" hreflang="ja" lang="ja">日本語</a><a href="../es/" hreflang="es" lang="es">Español</a></p>
+    <div class="copy"><span>© <span id="y"></span> Keystone Realty</span><span>Listing details are believed accurate but not guaranteed. Prices may change without notice.</span></div>
+  </div>
+</footer>
+
+<!-- Mobile sticky bottom bar -->
+<div class="sticky-cta">
+  <a href="tel:+15550123456" class="btn btn-line" aria-label="Call us">Call</a>
+  <a href="#contact" class="btn btn-brand">Book a viewing</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function () {
+  var header = document.querySelector('.site-header');
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('menu');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Header background on scroll
+  function onScroll() { header.classList.toggle('scrolled', menu.classList.contains('open') || scrollY > 20); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // Burger menu
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    onScroll();
+  }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // Listing search filter
+  var form = document.getElementById('search');
+  var cards = document.querySelectorAll('.listing');
+  var empty = document.getElementById('no-results');
+  function filter() {
+    var f = form.elements, area = f.area.value, type = f.type.value, b = f.budget.value.split(':'), n = 0;
+    cards.forEach(function (c) {
+      var d = c.dataset, p = +d.price;
+      var ok = (!area || d.area === area) && (!type || d.type === type) &&
+        (!b[0] || (d.type === b[0] && p >= +b[1] && p <= +b[2]));
+      c.hidden = !ok; if (ok) n++;
+    });
+    empty.hidden = n > 0;
+    document.getElementById('count').textContent = n;
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); filter();
+    document.getElementById('listings').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+  });
+  document.getElementById('reset').addEventListener('click', function () { form.reset(); filter(); });
+
+  // "Book a viewing" on a card fills in the listing ID and interest
+  document.querySelectorAll('[data-id]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      document.getElementById('f-id').value = a.dataset.id;
+      document.getElementById('f-need').value = a.dataset.need;
+    });
+  });
+
+  // Count-up numbers
+  function countUp(el) {
+    var end = +el.dataset.count, t0 = performance.now();
+    if (reduce) return;
+    (function tick(t) {
+      var p = Math.min((t - t0) / 1400, 1);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+
+  // Scroll reveal and count-up trigger
+  var targets = document.querySelectorAll('.reveal, [data-count]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        if (e.target.dataset.count) countUp(e.target);
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.15 });
+    targets.forEach(function (el) { io.observe(el); });
+  } else {
+    targets.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  document.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

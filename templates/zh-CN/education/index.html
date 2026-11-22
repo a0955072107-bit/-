@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  给买家的提醒：补习班招生广告
+  依各县市短期补习班管理规则，招生广告应载明立案名称与立案字号，
+  也请避免「保证考上」「保证进步」「百分百」等保证成效的字眼。
+  页脚已预留「立案字号」字段，上线前请换成你的实际数据。
+-->
+<title>青禾学苑｜中坜国小、国中、高中数学英文自然补习与儿童程序</title>
+<meta name="description" content="青禾学苑位于桃园市中坜区，提供国小到高中数学、英文、自然小班课程与儿童程序课，每月提供学习报告，欢迎预约免费试听。">
+<meta property="og:title" content="青禾学苑｜中坜小班制补习班与儿童程序">
+<meta property="og:description" content="国小到高中数学、英文、自然小班授课，另有儿童程序与电子积木课程。查看课程、课表与师资，预约免费试听。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1d4ed8">
+<!-- 多语版本（SEO）：上线后把 href 换成完整网址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["EducationalOrganization", "LocalBusiness"],
+  "name": "青禾学苑",
+  "description": "国小到高中数学、英文、自然小班课程与儿童程序课",
+  "telephone": "03-1234-5678",
+  "url": "https://example.com/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "青禾路 88 号 3 楼",
+    "addressLocality": "中坜区",
+    "addressRegion": "桃园市",
+    "postalCode": "320",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "14:00", "closes": "21:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:30", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:30", "closes": "12:00" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   主题设置：改这里就能换整站配色与字体
+   ============================================================ */
+:root {
+  --brand: #1d4ed8;          /* 品牌主色（钴蓝：按钮、链接、重点） */
+  --brand-ink: #f7f9ff;      /* 在品牌色上的文本颜色 */
+  --brand-deep: #1e3a8a;     /* 品牌深色（hover、深色区块背景） */
+  --brand-soft: #e5ecff;     /* 品牌浅色（图标底、数学课标签底） */
+  --sun: #ffc83d;            /* 辅助亮黄色（便利贴、重点标记，少量使用） */
+  --sun-ink: #3d2c00;        /* 在亮黄色上的文本颜色 */
+  --sun-soft: #fff3cc;       /* 浅黄色（英文课标签底） */
+  --sage: #e3f1ea;           /* 浅绿色（自然课标签底） */
+  --sage-ink: #1f5a3d;       /* 在浅绿色上的文本颜色 */
+  --bg: #f7f9fe;             /* 页面背景（极浅蓝白） */
+  --surface: #fdfdff;        /* 卡片、表格、表单等表面颜色 */
+  --text: #16203a;           /* 主要文本（深蓝灰） */
+  --muted: #4b5673;          /* 次要文本 */
+  --line: #dde4f3;           /* 分隔线、边框 */
+  --grid: #e6ecfa;           /* 笔记本方格纹线条颜色 */
+  --shadow: 0 12px 30px -14px rgba(29, 52, 140, .24); /* 卡片柔和阴影 */
+  --radius: 16px;            /* 卡片圆角 */
+  --radius-sm: 10px;         /* 小组件圆角 */
+  --font-heading: "Lexend", "Noto Sans SC", system-ui, sans-serif; /* 标题字体 */
+  --font-body: "Noto Sans SC", "Lexend", system-ui, sans-serif;    /* 内文本型 */
+  --max: 1160px;             /* 内容最大宽度 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); line-height: 1.3; letter-spacing: -.01em; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+::selection { background: var(--sun); color: var(--sun-ink); }
+.wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+section { padding-block: clamp(4rem, 10vw, 7rem); }
+.sec-head { max-width: 40rem; margin-bottom: clamp(2rem, 5vw, 3.25rem); }
+.sec-head h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: .6rem; }
+.sec-head p { color: var(--muted); }
+/* 笔记本方格纹背景 */
+.paper { background-color: var(--bg); background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 28px 28px; }
+.alt { background: var(--surface); }
+
+/* ---------- 按钮 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .8rem 1.5rem; border-radius: 12px; font-weight: 500; font-size: 1rem; font-family: inherit; border: 1.5px solid transparent; transition: background .25s, color .25s, transform .25s, border-color .25s, box-shadow .25s; cursor: pointer; }
+.btn svg { width: 1.1rem; height: 1.1rem; flex: none; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); box-shadow: 0 4px 0 var(--brand-deep); }
+.btn-primary:hover { background: var(--brand-deep); transform: translateY(-2px); }
+.btn:active { transform: translateY(2px); box-shadow: none; }
+.btn-ghost { border-color: color-mix(in srgb, var(--brand) 40%, transparent); color: var(--brand); background: var(--surface); }
+.btn-ghost:hover { border-color: var(--brand); background: var(--brand-soft); transform: translateY(-2px); }
+.btn:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+a:not(.btn):active { opacity: .7; }
+.text-link { color: var(--brand); font-weight: 500; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; transition: color .2s, text-decoration-color .2s; }
+.text-link:hover { color: var(--brand-deep); text-decoration-color: var(--sun); }
+
+/* ---------- 页眉 ---------- */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .6rem; font: 600 1.2rem/1 var(--font-heading); white-space: nowrap; }
+.logo-mark { width: 2.3rem; height: 2.3rem; border-radius: 10px; background: var(--brand); color: var(--brand-ink); display: grid; place-items: center; position: relative; }
+.logo-mark::after { content: ""; position: absolute; right: -3px; top: -3px; width: .7rem; height: .7rem; border-radius: 3px; background: var(--sun); }
+.logo-mark svg { width: 1.35rem; height: 1.35rem; }
+.nav-links { display: flex; align-items: center; gap: 1.5rem; font-size: .95rem; }
+.nav-links a:not(.btn) { color: var(--muted); transition: color .2s; }
+.nav-links a:not(.btn):hover { color: var(--brand); }
+.nav-links .btn { padding: .55rem 1.1rem; font-size: .95rem; }
+.menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--text); cursor: pointer; transition: background .2s, transform .2s; }
+.menu-btn:hover { background: var(--brand-soft); }
+.menu-btn:active { transform: scale(.94); }
+.menu-btn span { display: block; width: 20px; height: 2px; margin: 4px auto; background: currentColor; border-radius: 2px; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+@media (min-width: 761px) and (max-width: 1020px) { .nav-links .opt { display: none; } }
+@media (max-width: 760px) {
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: 72px; left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .75rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: .8rem 1rem; border-radius: var(--radius-sm); }
+  .js .nav-links .btn { margin-top: .5rem; }
+  /* 没有 JS 时：菜单直接换行显示在 logo 下方，页眉改成 sticky */
+  html:not(.js) .site-header { position: sticky; background: var(--surface); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: .75rem; }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: 2.5rem; }
+}
+
+/* ---------- 艺术占位图 ---------- */
+/* 换成照片：.img-hero { background: url(images/classroom.jpg) center/cover; }，并删除 .img-hero 里面的 <svg> */
+/* 换成照片：.img-t1 { background: url(images/teacher-1.jpg) center/cover; }（.img-t2 到 .img-t4 同理），并删除 ::before、::after 图样 */
+.img { position: relative; overflow: hidden; background-color: var(--brand-soft); }
+.img-hero { border-radius: 28px; aspect-ratio: 5 / 4.6; border: 1px solid var(--line); box-shadow: var(--shadow);
+  background-color: var(--surface);
+  background-image: linear-gradient(color-mix(in srgb, var(--brand) 11%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--brand) 11%, transparent) 1px, transparent 1px);
+  background-size: 24px 24px; background-position: -1px -1px; }
+.img-hero svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.img-hero .s-brand { fill: var(--brand); }
+.img-hero .s-deep { fill: var(--brand-deep); }
+.img-hero .s-soft { fill: var(--brand-soft); }
+.img-hero .s-sun { fill: var(--sun); }
+.img-hero .s-sunsoft { fill: var(--sun-soft); }
+.img-hero .s-sage { fill: var(--sage); }
+.img-hero .s-surface { fill: var(--surface); }
+.img-hero .s-text { fill: var(--text); }
+.img-hero .l-brand { fill: none; stroke: var(--brand); stroke-width: 4; stroke-linecap: round; }
+.img-hero .l-thin { fill: none; stroke: var(--brand); stroke-width: 2; stroke-dasharray: 6 7; stroke-linecap: round; }
+.img-hero .l-text { fill: none; stroke: var(--text); stroke-width: 3; stroke-linecap: round; }
+.img-hero .l-sun { fill: none; stroke: var(--sun); stroke-width: 10; stroke-linecap: round; opacity: .85; }
+.img-t { aspect-ratio: 1; border-radius: var(--radius) var(--radius) 0 0;
+  background-image: linear-gradient(color-mix(in srgb, var(--brand) 10%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--brand) 10%, transparent) 1px, transparent 1px);
+  background-size: 20px 20px; }
+.img-t::before { content: ""; position: absolute; left: 50%; bottom: -16%; width: 60%; aspect-ratio: 1; translate: -50% 0; border-radius: 50% 50% 0 0; background: var(--brand); }
+.img-t::after { content: ""; position: absolute; left: 50%; top: 20%; width: 27%; aspect-ratio: 1; translate: -50% 0; border-radius: 50%; background: color-mix(in srgb, var(--surface) 92%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, var(--brand) 20%, transparent); }
+.img-t1 { background-color: var(--brand-soft); }
+.img-t2 { background-color: var(--sun-soft); }
+.img-t2::before { background: var(--brand-deep); }
+.img-t3 { background-color: var(--sage); }
+.img-t3::before { border-radius: 40% 40% 0 0; }
+.img-t4 { background-color: var(--brand-soft); }
+.img-t4::before { background: var(--text); border-radius: 30% 30% 0 0; }
+.shape { position: absolute; z-index: 1; }
+.shape-tri { right: 12%; top: 12%; width: 18%; aspect-ratio: 1; background: var(--sun); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.shape-dot { left: 12%; top: 14%; width: 14%; aspect-ratio: 1; border-radius: 50%; border: 4px solid var(--brand); }
+.shape-sq { right: 12%; top: 14%; width: 14%; aspect-ratio: 1; border-radius: 4px; background: var(--sun); rotate: 12deg; }
+.shape-brk { left: 12%; top: 14%; width: 18%; aspect-ratio: 1.4; border: 4px solid var(--brand); border-right: 0; border-radius: 6px 0 0 6px; }
+
+/* ---------- Hero ---------- */
+.hero { padding-top: calc(72px + clamp(2rem, 5vw, 3.5rem)); padding-bottom: clamp(3.5rem, 8vw, 6rem); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.hero h1 { font-size: clamp(2.2rem, 5.2vw, 3.6rem); line-height: 1.22; margin-bottom: 1.1rem; }
+.hero-sub { color: var(--muted); font-size: 1.1rem; max-width: 31rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 2rem; }
+.hero-facts { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2rem; font-size: .92rem; }
+.hero-facts li { display: inline-flex; align-items: center; gap: .45rem; padding: .3rem .8rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); }
+.hero-facts li::before { content: ""; width: .55rem; height: .9rem; border: solid var(--brand); border-width: 0 2.5px 2.5px 0; rotate: 40deg; translate: 0 -2px; }
+.hero-art { position: relative; }
+.note { position: absolute; right: -1rem; bottom: -1.5rem; width: min(15.5rem, 70%); padding: 1.1rem 1.2rem 1.2rem; background: var(--sun); color: var(--sun-ink); border-radius: 4px 4px 18px 4px; box-shadow: var(--shadow); rotate: -3deg; }
+.note h2 { font-size: 1rem; margin-bottom: .4rem; }
+.note li { font-size: .9rem; line-height: 1.6; padding-block: .25rem; border-top: 1px solid color-mix(in srgb, var(--sun-ink) 18%, transparent); font-variant-numeric: tabular-nums; }
+.note li:first-child { border-top: 0; }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .img-hero { aspect-ratio: 4 / 3; }
+  .note { right: .75rem; bottom: -2rem; }
+  .hero-art { margin-bottom: 1.5rem; }
+}
+
+/* ---------- 卡片通用 ---------- */
+.card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); }
+.ico { width: 3rem; height: 3rem; border-radius: 12px; display: grid; place-items: center; background: var(--brand-soft); color: var(--brand); }
+.ico svg { width: 1.6rem; height: 1.6rem; }
+.ico.eng { background: var(--sun-soft); color: var(--sun-ink); }
+.ico.sci { background: var(--sage); color: var(--sage-ink); }
+.ico.code { background: var(--brand); color: var(--brand-ink); }
+
+/* ---------- 课程（分页签） ---------- */
+.tablist { display: inline-flex; flex-wrap: wrap; gap: .35rem; padding: .35rem; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 1.75rem; }
+.tablist [role="tab"] { font: 500 .98rem/1 var(--font-body); padding: .7rem 1.25rem; border: 0; border-radius: 10px; background: transparent; color: var(--muted); cursor: pointer; transition: background .2s, color .2s, transform .2s; }
+.tablist [role="tab"]:hover { color: var(--brand); background: var(--brand-soft); }
+.tablist [role="tab"]:active { transform: scale(.96); }
+.tablist [role="tab"][aria-selected="true"] { background: var(--brand); color: var(--brand-ink); box-shadow: inset 0 -3px 0 var(--sun); }
+html:not(.js) .tablist { display: none; }
+.panel + .panel { margin-top: 2.5rem; }
+.js .panel + .panel { margin-top: 0; }
+.panel-title { display: none; font: 600 1.15rem var(--font-heading); margin-bottom: 1rem; }
+html:not(.js) .panel-title { display: block; }
+.course-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.course { padding: 1.6rem; display: flex; flex-direction: column; gap: 1rem; transition: transform .3s, border-color .3s; }
+.course:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--brand) 35%, transparent); }
+.course-top { display: flex; align-items: center; gap: .9rem; }
+.course h3 { font-size: 1.2rem; }
+.course dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .4rem 1rem; font-size: .94rem; }
+.course dt { color: var(--muted); }
+.course dd { font-variant-numeric: tabular-nums; }
+.fee { margin-top: auto; padding-top: 1rem; border-top: 1px dashed var(--line); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.fee strong { font: 600 1.35rem/1.2 var(--font-heading); color: var(--brand-deep); font-variant-numeric: tabular-nums; }
+.fee strong small { font: 400 .85rem var(--font-body); color: var(--muted); }
+.course-note { margin-top: 1.5rem; font-size: .9rem; color: var(--muted); }
+@media (max-width: 960px) { .course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .course-grid { grid-template-columns: minmax(0, 1fr); } .tablist { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); width: 100%; } .tablist [role="tab"] { padding-inline: .5rem; } }
+@media (max-width: 480px) { .tablist { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---------- 教学特色 ---------- */
+.feat-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.feat-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem 2rem; }
+.feat h3 { font-size: 1.1rem; margin-block: .9rem .3rem; }
+.feat p { color: var(--muted); font-size: .95rem; }
+.report { padding: 1.6rem; position: relative; }
+.report::before { content: ""; position: absolute; left: 50%; top: -12px; width: 5.5rem; height: 22px; translate: -50% 0; background: color-mix(in srgb, var(--sun) 70%, transparent); rotate: -2deg; border-radius: 3px; }
+.report h3 { font-size: 1.1rem; }
+.report-meta { font-size: .85rem; color: var(--muted); margin-bottom: 1.1rem; }
+.bars { display: grid; gap: .85rem; }
+.bars li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .3rem .75rem; font-size: .9rem; }
+.bars b { font-weight: 500; font-variant-numeric: tabular-nums; color: var(--brand-deep); }
+.bars i { grid-column: 1 / -1; height: 10px; border-radius: 99px; background: var(--brand-soft); overflow: hidden; }
+.bars i::before { content: ""; display: block; height: 100%; width: 100%; border-radius: inherit; background: var(--brand); transform-origin: left; transform: scaleX(var(--v)); }
+.report blockquote { margin-top: 1.2rem; padding: .9rem 1rem; border-radius: var(--radius-sm); background: var(--sun-soft); color: var(--sun-ink); font-size: .9rem; }
+@media (max-width: 900px) { .feat-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .feat-list { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 师资介绍 ---------- */
+.teacher-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; }
+.teacher { overflow: hidden; }
+.teacher-body { padding: 1.2rem 1.3rem 1.4rem; }
+.teacher h3 { font-size: 1.15rem; }
+.subj { display: inline-block; margin-block: .35rem .8rem; font-size: .82rem; font-weight: 500; padding: .1rem .6rem; border-radius: 999px; background: var(--brand-soft); color: var(--brand-deep); }
+.teacher dl { display: grid; gap: .1rem; font-size: .9rem; }
+.teacher dt { color: var(--muted); font-size: .82rem; }
+.teacher dd + dt { margin-top: .45rem; }
+@media (max-width: 1000px) { .teacher-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) {
+  .teacher-grid { grid-template-columns: minmax(0, 1fr); }
+  .teacher { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); }
+  .img-t { align-self: start; border-radius: var(--radius) 0 var(--radius) 0; }
+  .teacher .shape { display: none; }
+}
+
+/* ---------- 每周课表 ---------- */
+.legend { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin-bottom: 1rem; font-size: .88rem; color: var(--muted); }
+.legend li { display: inline-flex; align-items: center; gap: .45rem; }
+.legend li::before { content: ""; width: 14px; height: 14px; border-radius: 4px; border: 1px solid var(--line); }
+.legend .k-math::before { background: var(--brand-soft); }
+.legend .k-eng::before { background: var(--sun-soft); }
+.legend .k-sci::before { background: var(--sage); }
+.legend .k-code::before { background: var(--brand); }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius); }
+.week { width: 100%; min-width: 900px; table-layout: fixed; border-collapse: separate; border-spacing: 0; font-size: .9rem; }
+.week th, .week td { padding: .8rem .55rem; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); vertical-align: top; text-align: left; }
+.week tr > :last-child { border-right: 0; }
+.week thead th:first-child { width: 120px; }
+.week thead th { font: 600 .92rem var(--font-heading); background: var(--brand-soft); color: var(--brand-deep); text-align: center; }
+.week tbody th { white-space: nowrap; font-weight: 500; padding-left: 1.1rem; }
+.week tbody th small { display: block; font-weight: 400; font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.week tbody tr:last-child > * { border-bottom: 0; }
+.week td.off { color: var(--muted); font-size: .84rem; text-align: center; vertical-align: middle; background: color-mix(in srgb, var(--bg) 70%, var(--surface)); }
+.cls { display: block; padding: .4rem .55rem; border-radius: 8px; line-height: 1.4; font-weight: 500; }
+.cls + .cls { margin-top: .35rem; }
+.cls small { display: block; font-weight: 400; font-size: .76rem; opacity: .85; }
+.c-math { background: var(--brand-soft); color: var(--brand-deep); }
+.c-eng { background: var(--sun-soft); color: var(--sun-ink); }
+.c-sci { background: var(--sage); color: var(--sage-ink); }
+.c-code { background: var(--brand); color: var(--brand-ink); }
+.c-free { background: var(--surface); color: var(--muted); border: 1px dashed var(--line); font-weight: 400; }
+.table-note { margin-top: 1rem; font-size: .88rem; color: var(--muted); }
+.scroll-hint { display: none; font-size: .82rem; color: var(--muted); margin-bottom: .5rem; }
+@media (max-width: 860px) { .scroll-hint { display: block; } }
+
+/* ---------- 学生成果 ---------- */
+.result-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.result { padding: 1.5rem; display: flex; flex-direction: column; gap: .8rem; }
+.result h3 { font-size: 1.05rem; }
+.score { display: flex; align-items: flex-end; gap: .75rem; height: 7rem; padding-top: .5rem; border-bottom: 2px solid var(--line); }
+.score span { flex: 1; height: var(--h); border-radius: 8px 8px 0 0; background: var(--brand-soft); display: flex; align-items: flex-start; justify-content: center; padding-top: .3rem; font: 600 .95rem var(--font-heading); color: var(--brand-deep); font-variant-numeric: tabular-nums; }
+.score span:last-child { background: var(--brand); color: var(--brand-ink); }
+.score-cap { display: flex; gap: .75rem; font-size: .8rem; color: var(--muted); margin-top: -.4rem; }
+.score-cap span { flex: 1; text-align: center; }
+.result p { color: var(--muted); font-size: .92rem; }
+.result-code { justify-content: flex-start; }
+.code-win { border-radius: 10px; background: var(--text); color: var(--brand-soft); padding: .9rem 1rem; font: 400 .82rem/1.7 ui-monospace, Menlo, Consolas, monospace; height: 7rem; overflow: hidden; }
+.code-win .k { color: var(--sun); }
+.disclaimer { margin-top: 1.5rem; font-size: .88rem; color: var(--muted); max-width: 46rem; }
+@media (max-width: 900px) { .result-grid { grid-template-columns: minmax(0, 1fr); max-width: 34rem; } }
+
+/* ---------- 家长评价 ---------- */
+.review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.review { padding: 1.6rem; display: flex; flex-direction: column; gap: 1rem; }
+.review::before { content: "“"; font: 700 3rem/0.6 var(--font-heading); color: var(--sun); height: 1.2rem; }
+.review blockquote { font-size: .98rem; }
+.review figcaption { margin-top: auto; font-size: .88rem; color: var(--muted); }
+.review figcaption b { display: block; color: var(--text); font-weight: 500; }
+@media (max-width: 900px) { .review-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 常见问题 ---------- */
+.faq { max-width: 52rem; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 1rem; padding: 1.1rem .25rem; font-weight: 500; transition: color .2s; }
+.faq summary:hover { color: var(--brand); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; display: grid; place-items: center; width: 1.8rem; height: 1.8rem; border-radius: 8px; background: var(--brand-soft); color: var(--brand); font-size: 1.2rem; line-height: 1; transition: transform .3s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 .25rem 1.2rem; color: var(--muted); }
+
+/* ---------- 试听预约表单 ---------- */
+.trial { background: var(--brand-deep); color: var(--brand-ink); position: relative; overflow: hidden;
+  background-image: linear-gradient(color-mix(in srgb, var(--brand-ink) 6%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--brand-ink) 6%, transparent) 1px, transparent 1px);
+  background-size: 28px 28px; }
+.trial-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.trial .sec-head p { color: color-mix(in srgb, var(--brand-ink) 82%, transparent); }
+.steps { display: grid; gap: 1.1rem; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .9rem; counter-increment: s; }
+.steps li::before { content: counter(s); display: grid; place-items: center; width: 2.1rem; height: 2.1rem; border-radius: 8px; background: var(--sun); color: var(--sun-ink); font: 600 1rem var(--font-heading); }
+.steps b { display: block; font-weight: 500; }
+.steps span { font-size: .92rem; color: color-mix(in srgb, var(--brand-ink) 80%, transparent); }
+.form { background: var(--surface); color: var(--text); padding: clamp(1.4rem, 4vw, 2.25rem); border-radius: var(--radius); display: grid; gap: 1.1rem; box-shadow: var(--shadow); }
+.form .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.form label, .form legend { display: grid; gap: .35rem; font-weight: 500; font-size: .93rem; }
+.form input:not([type="checkbox"]), .form select, .form textarea { width: 100%; font: 400 1rem/1.5 var(--font-body); color: var(--text); background: var(--bg); border: 1.5px solid var(--line); border-radius: var(--radius-sm); padding: .7rem .85rem; transition: border-color .2s; }
+.form input:hover, .form select:hover, .form textarea:hover { border-color: color-mix(in srgb, var(--brand) 40%, var(--line)); }
+.form input:focus-visible, .form select:focus-visible, .form textarea:focus-visible { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 22%, transparent); }
+.form textarea { min-height: 5.5rem; resize: vertical; }
+.form fieldset { border: 0; min-width: 0; }
+.form legend { margin-bottom: .45rem; }
+.checks { display: flex; flex-wrap: wrap; gap: .5rem; }
+.checks label { display: inline-flex; align-items: center; gap: .45rem; font-weight: 400; padding: .45rem .85rem; border: 1.5px solid var(--line); border-radius: 10px; cursor: pointer; transition: border-color .2s, background .2s; }
+.checks label:hover { border-color: var(--brand); }
+.checks label:has(input:checked) { background: var(--brand-soft); border-color: var(--brand); }
+.checks input { width: 1.05rem; height: 1.05rem; accent-color: var(--brand); }
+.form .btn { justify-self: start; }
+.form .small { font-size: .82rem; color: var(--muted); }
+@media (max-width: 900px) { .trial-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 520px) { .form .row { grid-template-columns: minmax(0, 1fr); } .form .btn { justify-self: stretch; } }
+
+/* ---------- 交通与上课时间 ---------- */
+.access-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 1.5rem; }
+.access-info { padding: clamp(1.5rem, 4vw, 2.25rem); display: grid; gap: 1.3rem; }
+.access-info h3 { font-size: 1rem; color: var(--brand); margin-bottom: .2rem; }
+.access-info p { color: var(--muted); }
+.access-info p strong { color: var(--text); font-weight: 500; }
+.hours { padding: clamp(1.5rem, 4vw, 2.25rem); display: flex; flex-direction: column; gap: 1.1rem; }
+.hours h3 { font-size: 1.2rem; }
+.hours dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .55rem 1.25rem; font-variant-numeric: tabular-nums; }
+.hours dt { color: var(--muted); }
+.hours .row { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: auto; }
+@media (max-width: 860px) { .access-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 页脚 ---------- */
+.site-footer { background: var(--text); color: color-mix(in srgb, var(--surface) 78%, transparent); padding-block: 3.5rem 2rem; font-size: .92rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; }
+.site-footer .logo { color: var(--surface); margin-bottom: 1rem; }
+.site-footer h2 { color: var(--surface); font-size: .95rem; margin-bottom: .6rem; }
+.site-footer a { transition: color .2s; }
+.site-footer a:hover { color: var(--sun); }
+.social { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: .8rem; }
+.social a { text-decoration: underline; text-underline-offset: 3px; }
+.foot-bottom { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid color-mix(in srgb, var(--surface) 15%, transparent); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .82rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 手机底部固定按钮 ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 760px) {
+  .mobile-bar { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: .6rem; position: fixed; inset: auto 0 0; z-index: 60; padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 -1px 0 var(--line); }
+  .mobile-bar .btn { padding: .75rem .8rem; }
+  body { padding-bottom: 80px; }
+}
+
+/* ---------- 卷动渐入 ---------- */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== 语言切换（页眉 lang-switch 与页脚 foot-lang） ==================== */
+.nav > .nav-links { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .6rem; border-left: 1px solid var(--line); font: 500 .85rem/1 var(--font-heading); }
+.lang-switch a { display: grid; place-items: center; min-width: 2rem; min-height: 2rem; padding-inline: .3rem; border-radius: 8px; color: var(--muted); transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--brand); background: var(--brand-soft); }
+.lang-switch a:active { opacity: 1; background: color-mix(in srgb, var(--brand) 18%, transparent); }
+.lang-switch a:focus-visible { outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+/* 平板宽度：加上语言切换后，菜单间距缩小一点，避免换行 */
+@media (min-width: 761px) and (max-width: 860px) { .nav-links { gap: .75rem; } .lang-switch { padding-left: 0; border-left: 0; } }
+@media (max-width: 760px) {
+  /* 手机：语言切换固定在汉堡按钮左边；没有 JS 时和 logo 同一行，菜单换到下一行 */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .menu-btn { order: 2; flex: none; }
+  .nav-links { order: 3; }
+  html:not(.js) .nav-links { flex: 1 1 100%; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem .75rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; }
+.foot-lang a[aria-current="page"] { color: var(--surface); font-weight: 700; text-decoration: underline; text-decoration-color: var(--sun); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.foot-lang a:focus-visible { outline-color: var(--sun); }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ==================== 区块：页眉导览 ==================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="青禾学苑 回到顶端">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><path d="M12 13c0-4 3-6 7-6 0 4-3 6-7 6Z"/><path d="M12 11C12 7.5 9.5 5 5 5c0 3.5 2.5 6 7 6Z"/></svg></span>
+      青禾学苑
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="打开菜单"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="主菜单">
+      <a href="#courses">课程</a>
+      <a href="#features" class="opt">教学特色</a>
+      <a href="#teachers">师资</a>
+      <a href="#schedule">课表</a>
+      <a href="#faq" class="opt">常见问题</a>
+      <a href="#contact">交通</a>
+      <a href="#trial" class="btn btn-primary">预约免费试听</a>
+    </nav>
+    <!-- lang-switch：语言切换。要添加语言时，在这里加一个链接，并添加对应的文件夹 -->
+    <nav class="lang-switch" aria-label="Language 语言">
+      <details class="lang-menu">
+        <summary lang="zh-Hans">简</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ==================== 区块：主视觉 Hero ==================== -->
+<section class="hero paper" id="home">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <h1>把卡住的观念，一题一题弄懂</h1>
+      <p class="hero-sub">青禾学苑在中坜，国小到高中数学、英文、自然小班授课，另有儿童程序课。先来试听一堂，再决定。</p>
+      <div class="hero-cta">
+        <a href="#trial" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>预约免费试听</a>
+        <a href="#courses" class="btn btn-ghost">看课程</a>
+      </div>
+      <ul class="hero-facts">
+        <li>每班 6 至 12 人</li>
+        <li>每月学习报告</li>
+        <li>课后在线复习</li>
+      </ul>
+    </div>
+    <div class="hero-art reveal">
+      <div class="img img-hero" role="img" aria-label="方格笔记本上的铅笔、三角板与几何图形插画">
+        <svg viewBox="0 0 500 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path class="l-sun" d="M70 318 C 140 300, 200 300, 262 312"/>
+          <circle class="s-soft" cx="372" cy="128" r="78"/>
+          <circle class="l-brand" cx="372" cy="128" r="78"/>
+          <path class="l-thin" d="M372 128 L 438 86"/>
+          <circle class="s-brand" cx="372" cy="128" r="7"/>
+          <path class="s-sun" d="M64 96 L 64 262 L 222 262 Z"/>
+          <path class="s-surface" d="M92 160 L 92 236 L 168 236 Z"/>
+          <path class="l-text" d="M64 240 h 18 v 22"/>
+          <path class="l-brand" d="M70 410 Q 190 250, 300 360 T 470 300"/>
+          <circle class="s-brand" cx="190" cy="318" r="7"/>
+          <circle class="s-brand" cx="300" cy="360" r="7"/>
+          <rect class="s-sage" x="300" y="236" width="120" height="74" rx="10" transform="rotate(-6 360 273)"/>
+          <path class="l-thin" d="M318 262 h 80 M318 286 h 56" transform="rotate(-6 360 273)"/>
+          <g transform="rotate(38 250 160)">
+            <rect class="s-brand" x="150" y="146" width="190" height="30" rx="4"/>
+            <rect class="s-deep" x="150" y="146" width="190" height="10" rx="4"/>
+            <rect class="s-sunsoft" x="128" y="146" width="24" height="30" rx="5"/>
+            <rect class="s-text" x="146" y="146" width="8" height="30"/>
+            <path class="s-sunsoft" d="M340 146 L 382 161 L 340 176 Z"/>
+            <path class="s-text" d="M368 156 L 382 161 L 368 166 Z"/>
+          </g>
+        </svg>
+      </div>
+      <!-- 范例内容：上线前请换成真实数据 -->
+      <aside class="note">
+        <h2>本周可试听</h2>
+        <ul>
+          <li>周二 17:00 国小数学</li>
+          <li>周四 19:00 国中英文</li>
+          <li>周六 10:00 儿童程序</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：课程（国小／国中／高中／才艺分页） ==================== -->
+<!-- 修改方式：每个 role="tabpanel" 是一个分页，里面放 3 张课程卡。添加分页时，按钮的 aria-controls 要对应分页的 id。 -->
+<section id="courses">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>课程与学费</h2>
+      <p>依年级分班，开课前先做程度评估，再安排适合的班级。学费以月计，含讲义与在线复习视频。</p>
+    </div>
+    <div class="reveal">
+      <div class="tablist" role="tablist" aria-label="依年级选择课程">
+        <button role="tab" id="tab-ele" aria-controls="panel-ele" aria-selected="true">国小</button>
+        <button role="tab" id="tab-jr" aria-controls="panel-jr" aria-selected="false" tabindex="-1">国中</button>
+        <button role="tab" id="tab-sr" aria-controls="panel-sr" aria-selected="false" tabindex="-1">高中</button>
+        <button role="tab" id="tab-art" aria-controls="panel-art" aria-selected="false" tabindex="-1">才艺</button>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-ele" aria-labelledby="tab-ele" tabindex="0">
+        <p class="panel-title">国小课程</p>
+        <div class="course-grid">
+          <article class="card course">
+            <div class="course-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 4v6M4 7h6M14 7h6M4 17h6M15 14l4 6M19 14l-4 6"/></svg></span><h3>国小数学</h3></div>
+            <dl><dt>年级</dt><dd>3 至 6 年级</dd><dt>人数</dt><dd>每班 8 人以内</dd><dt>时段</dt><dd>周二、周四 17:00–18:30</dd></dl>
+            <div class="fee"><strong>NT$3,200 <small>／月</small></strong><a href="#trial" class="text-link">预约试听</a></div>
+          </article>
+          <article class="card course">
+            <div class="course-top"><span class="ico eng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19 9 5l5 14M6 14h6"/><path d="M15 9h5M17.5 9v10"/></svg></span><h3>国小英文</h3></div>
+            <dl><dt>年级</dt><dd>1 至 6 年级（分级授课）</dd><dt>人数</dt><dd>每班 8 人以内</dd><dt>时段</dt><dd>周一、周三 17:00–18:30</dd></dl>
+            <div class="fee"><strong>NT$3,000 <small>／月</small></strong><a href="#trial" class="text-link">预约试听</a></div>
+          </article>
+          <article class="card course">
+            <div class="course-top"><span class="ico sci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7 15h10"/></svg></span><h3>国小自然探究</h3></div>
+            <dl><dt>年级</dt><dd>4 至 6 年级</dd><dt>人数</dt><dd>每班 10 人以内</dd><dt>时段</dt><dd>周六 10:00–12:00</dd></dl>
+            <div class="fee"><strong>NT$2,400 <small>／月</small></strong><a href="#trial" class="text-link">预约试听</a></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-jr" aria-labelledby="tab-jr" tabindex="0">
+        <p class="panel-title">国中课程</p>
+        <div class="course-grid">
+          <article class="card course">
+            <div class="course-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 4v6M4 7h6M14 7h6M4 17h6M15 14l4 6M19 14l-4 6"/></svg></span><h3>国中数学</h3></div>
+            <dl><dt>年级</dt><dd>国一至国三</dd><dt>人数</dt><dd>每班 10 人以内</dd><dt>时段</dt><dd>周一、周三 19:00–21:00</dd></dl>
+            <div class="fee"><strong>NT$4,200 <small>／月</small></strong><a href="#trial" class="text-link">预约试听</a></div>
+          </article>
+          <article class="card course">
+            <div class="course-top"><span class="ico eng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19 9 5l5 14M6 14h6"/><path d="M15 9h5M17.5 9v10"/></svg></span><h3>国中英文</h3></div>
+            <dl><dt>年级</dt><dd>国一至国三</dd><dt>人数</dt><dd>每班 10 人以内</dd><dt>时段</dt><dd>周二、周四 19:00–21:00</dd></dl>
+            <div class="fee"><strong>NT$4,000 <small>／月</small></strong><a href="#trial" class="text-link">预约试听</a></div>
+          </article>
+          <article class="card course">
+            <div class="course-top"><span class="ico sci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7 15h10"/></svg></span><h3>国中理化</h3></div>
+            <dl><dt>年级</dt><dd>国二、国三</dd><dt>人数</dt><dd>每班 10 人以内</dd><dt>时段</dt><dd>周五 19:00–21:00</dd></dl>
+            <div class="fee"><strong>NT$3,600 <small>／月</small></strong><a href="#trial" class="text-link">预约试听</a></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-sr" aria-labelledby="tab-sr" tabindex="0">
+        <p class="panel-title">高中课程</p>
+        <div class="course-grid">
+          <article class="card course">
+            <div class="course-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 20h18M4 20V4"/><path d="M4 18c4 0 5-12 9-12s4 6 7 6"/></svg></span><h3>高中数学</h3></div>
+            <dl><dt>年级</dt><dd>高一至高三（含学测复习）</dd><dt>人数</dt><dd>每班 12 人以内</dd><dt>时段</dt><dd>周二、周四 19:00–21:00</dd></dl>
+            <div class="fee"><strong>NT$5,200 <small>／月</small></strong><a href="#trial" class="text-link">预约试听</a></div>
+          </article>
+          <article class="card course">
+            <div class="course-top"><span class="ico eng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h11a3 3 0 0 1 3 3v12H7a3 3 0 0 1-3-3Z"/><path d="M8 9h6M8 13h6"/></svg></span><h3>高中英文</h3></div>
+            <dl><dt>年级</dt><dd>高一至高三（阅读与写作）</dd><dt>人数</dt><dd>每班 12 人以内</dd><dt>时段</dt><dd>周一、周五 19:00–21:00</dd></dl>
+            <div class="fee"><strong>NT$4,800 <small>／月</small></strong><a href="#trial" class="text-link">预约试听</a></div>
+          </article>
+          <article class="card course">
+            <div class="course-top"><span class="ico sci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.6"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(120 12 12)"/></svg></span><h3>高中物理与化学</h3></div>
+            <dl><dt>年级</dt><dd>高二、高三</dd><dt>人数</dt><dd>每班 12 人以内</dd><dt>时段</dt><dd>周六 13:30–16:30</dd></dl>
+            <div class="fee"><strong>NT$4,600 <small>／月</small></strong><a href="#trial" class="text-link">预约试听</a></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-art" aria-labelledby="tab-art" tabindex="0">
+        <p class="panel-title">才艺课程</p>
+        <div class="course-grid">
+          <article class="card course">
+            <div class="course-top"><span class="ico code"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="8" height="7" rx="2"/><rect x="13" y="13" width="8" height="7" rx="2"/><path d="M7 11v3a2 2 0 0 0 2 2h4"/></svg></span><h3>Scratch 动画与游戏</h3></div>
+            <dl><dt>年级</dt><dd>国小 2 至 4 年级</dd><dt>人数</dt><dd>每班 6 人以内</dd><dt>时段</dt><dd>周六 10:00–11:30</dd></dl>
+            <div class="fee"><strong>NT$2,800 <small>／月</small></strong><a href="#trial" class="text-link">预约试听</a></div>
+          </article>
+          <article class="card course">
+            <div class="course-top"><span class="ico code"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></span><h3>Python 程序入门</h3></div>
+            <dl><dt>年级</dt><dd>国小 5 年级至国中</dd><dt>人数</dt><dd>每班 6 人以内</dd><dt>时段</dt><dd>周六 13:00–14:30</dd></dl>
+            <div class="fee"><strong>NT$3,200 <small>／月</small></strong><a href="#trial" class="text-link">预约试听</a></div>
+          </article>
+          <article class="card course">
+            <div class="course-top"><span class="ico code"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="7" width="14" height="12" rx="3"/><path d="M12 7V4M9 12h.01M15 12h.01M9.5 16h5M2 12h3M19 12h3"/></svg></span><h3>电子积木与机器人</h3></div>
+            <dl><dt>年级</dt><dd>国小 3 至 6 年级</dd><dt>人数</dt><dd>每班 6 人以内</dd><dt>时段</dt><dd>周日 10:00–11:30</dd></dl>
+            <div class="fee"><strong>NT$3,000 <small>／月</small></strong><a href="#trial" class="text-link">预约试听</a></div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <p class="course-note">＊ 兄弟姊妹同时报名，第二位学费九折。教材费与退费方式依桃园市短期补习班相关规定办理。</p>
+  </div>
+</section>
+
+<!-- ==================== 区块：教学特色 ==================== -->
+<section class="alt" id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>教学特色</h2>
+      <p>我们在意的不是多上几堂课，而是孩子每一堂都真的有听懂。</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-list">
+        <div class="feat reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 2 6 5.5"/></svg></span>
+          <h3>小班制教学</h3>
+          <p>每班 6 至 12 人，老师叫得出每位学生的名字，也看得到每个人的作答过程。</p>
+        </div>
+        <div class="feat reveal">
+          <span class="ico eng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6Z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg></span>
+          <h3>每月学习报告</h3>
+          <p>单元掌握度、作业完成率与老师评语，每月初传给家长，孩子的进度不用猜。</p>
+        </div>
+        <div class="feat reveal">
+          <span class="ico sci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="m10 9 4 2-4 2Z"/><path d="M8 21h8"/></svg></span>
+          <h3>在线复习视频</h3>
+          <p>每堂课录制重点讲解，请假或考前都能回看，视频保留到学期结束。</p>
+        </div>
+        <div class="feat reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+          <h3>开课前程度评估</h3>
+          <p>入班前先做 30 分钟诊断测验，找出需要补强的单元，再决定适合的班级。</p>
+        </div>
+        <div class="feat reveal">
+          <span class="ico eng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg></span>
+          <h3>课后自习室</h3>
+          <p>平日 14:00 起开放自习，值班老师可以即时解题，写完作业再回家。</p>
+        </div>
+        <div class="feat reveal">
+          <span class="ico code"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></span>
+          <h3>家长即时联系</h3>
+          <p>到班、离班与请假都有 LINE 通知，有任何问题可以直接找导师讨论。</p>
+        </div>
+      </div>
+      <!-- 范例内容：上线前请换成真实数据 -->
+      <article class="card report reveal" aria-label="学习报告范例">
+        <h3>学习报告范例</h3>
+        <p class="report-meta">国二数学｜十月份</p>
+        <ul class="bars">
+          <li>一元二次方程序 <b>86%</b><i style="--v:.86"></i></li>
+          <li>配方法与公式解 <b>72%</b><i style="--v:.72"></i></li>
+          <li>应用题读题 <b>58%</b><i style="--v:.58"></i></li>
+          <li>作业完成率 <b>95%</b><i style="--v:.95"></i></li>
+        </ul>
+        <blockquote>老师评语：计算错误明显减少，下个月会加强应用题的读题与列式，建议每周在家看两部复习视频。</blockquote>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：师资介绍 ==================== -->
+<section id="teachers">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>师资介绍</h2>
+      <p>每位老师都是专任，固定带班，学期中不轻易换老师。</p>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="teacher-grid">
+      <article class="card teacher reveal">
+        <div class="img img-t img-t1" role="img" aria-label="陈品妤老师照片占位图"><span class="shape shape-tri"></span></div>
+        <div class="teacher-body">
+          <h3>陈品妤 老师</h3>
+          <span class="subj">数学</span>
+          <dl><dt>学历</dt><dd>国立中央大学 数学系</dd><dt>任教</dt><dd>国中、高中数学，教学 9 年</dd></dl>
+        </div>
+      </article>
+      <article class="card teacher reveal">
+        <div class="img img-t img-t2" role="img" aria-label="林郁翔老师照片占位图"><span class="shape shape-dot"></span></div>
+        <div class="teacher-body">
+          <h3>林郁翔 老师</h3>
+          <span class="subj">英文</span>
+          <dl><dt>学历</dt><dd>国立台湾师范大学 英语学系</dd><dt>任教</dt><dd>国小至高中英文，教学 7 年</dd></dl>
+        </div>
+      </article>
+      <article class="card teacher reveal">
+        <div class="img img-t img-t3" role="img" aria-label="黄思婷老师照片占位图"><span class="shape shape-sq"></span></div>
+        <div class="teacher-body">
+          <h3>黄思婷 老师</h3>
+          <span class="subj">自然、理化</span>
+          <dl><dt>学历</dt><dd>国立清华大学 化学系硕士</dd><dt>任教</dt><dd>国中理化、高中化学，教学 6 年</dd></dl>
+        </div>
+      </article>
+      <article class="card teacher reveal">
+        <div class="img img-t img-t4" role="img" aria-label="张哲维老师照片占位图"><span class="shape shape-brk"></span></div>
+        <div class="teacher-body">
+          <h3>张哲维 老师</h3>
+          <span class="subj">儿童程序</span>
+          <dl><dt>学历</dt><dd>元智大学 信息工程学系</dd><dt>任教</dt><dd>Scratch、Python、电子积木，教学 5 年</dd></dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：每周课表 ==================== -->
+<!-- 修改方式：每格放一个或多个 <span class="cls c-科目">，科目颜色有 c-math、c-eng、c-sci、c-code。没课的格子用 <td class="off">。 -->
+<section class="alt" id="schedule">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>每周课表</h2>
+      <p>以下为本学期固定班级时段，寒暑假另有营队与冲刺班，开放报名时会另行公告。</p>
+    </div>
+    <ul class="legend reveal">
+      <li class="k-math">数学</li><li class="k-eng">英文</li><li class="k-sci">自然</li><li class="k-code">程序</li>
+    </ul>
+    <p class="scroll-hint">左右滑动可查看完整课表</p>
+    <div class="table-scroll card reveal" tabindex="0" role="region" aria-label="每周课表">
+      <table class="week">
+        <thead>
+          <tr><th scope="col">时段</th><th scope="col">周一</th><th scope="col">周二</th><th scope="col">周三</th><th scope="col">周四</th><th scope="col">周五</th><th scope="col">周六</th><th scope="col">周日</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">上午<small>10:00–12:00</small></th>
+            <td class="off">无课</td><td class="off">无课</td><td class="off">无课</td><td class="off">无课</td><td class="off">无课</td>
+            <td><span class="cls c-sci">国小自然探究<small>4 至 6 年级</small></span><span class="cls c-code">Scratch<small>10:00–11:30</small></span></td>
+            <td><span class="cls c-code">电子积木与机器人<small>10:00–11:30</small></span></td>
+          </tr>
+          <tr>
+            <th scope="row">下午<small>13:00–16:30</small></th>
+            <td class="off">无课</td><td class="off">无课</td><td class="off">无课</td><td class="off">无课</td><td class="off">无课</td>
+            <td><span class="cls c-code">Python 入门<small>13:00–14:30</small></span><span class="cls c-sci">高中物理与化学<small>13:30–16:30</small></span></td>
+            <td class="off">休馆</td>
+          </tr>
+          <tr>
+            <th scope="row">傍晚<small>17:00–18:30</small></th>
+            <td><span class="cls c-eng">国小英文<small>1 至 6 年级</small></span></td>
+            <td><span class="cls c-math">国小数学<small>3 至 6 年级</small></span></td>
+            <td><span class="cls c-eng">国小英文<small>1 至 6 年级</small></span></td>
+            <td><span class="cls c-math">国小数学<small>3 至 6 年级</small></span></td>
+            <td><span class="cls c-free">自习室开放<small>值班老师解题</small></span></td>
+            <td class="off">无课</td><td class="off">休馆</td>
+          </tr>
+          <tr>
+            <th scope="row">晚上<small>19:00–21:00</small></th>
+            <td><span class="cls c-math">国中数学</span><span class="cls c-eng">高中英文</span></td>
+            <td><span class="cls c-eng">国中英文</span><span class="cls c-math">高中数学</span></td>
+            <td><span class="cls c-math">国中数学</span></td>
+            <td><span class="cls c-eng">国中英文</span><span class="cls c-math">高中数学</span></td>
+            <td><span class="cls c-sci">国中理化</span><span class="cls c-eng">高中英文</span></td>
+            <td class="off">无课</td><td class="off">休馆</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">＊ 各班额满即停止招生，可先预约试听并登记候补。国定假日停课，补课时间另行通知。</p>
+  </div>
+</section>
+
+<!-- ==================== 区块：学生成果 ==================== -->
+<section id="results">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>学生成果</h2>
+      <p>进步通常不是一夕之间，而是每个月多弄懂一点。以下是几位同学一学期的变化。</p>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="result-grid">
+      <article class="card result reveal">
+        <h3>国二 小芸，数学段考</h3>
+        <div class="score"><span style="--h:58%">58</span><span style="--h:76%">76</span></div>
+        <div class="score-cap"><span>上学期</span><span>本学期</span></div>
+        <p>先回头补强国一的分数与代数基础，再进到新单元，计算失误少了一半。</p>
+      </article>
+      <article class="card result reveal">
+        <h3>高三 宇轩，英文仿真考</h3>
+        <div class="score"><span style="--h:60%">9 级</span><span style="--h:73%">11 级</span></div>
+        <div class="score-cap"><span>高二下</span><span>高三上</span></div>
+        <p>每周一篇长文阅读加上写作批改，阅读速度变快，作文段落也更有条理。</p>
+      </article>
+      <article class="card result result-code reveal">
+        <h3>国小五年级 小睿，儿童程序</h3>
+        <div class="code-win" aria-hidden="true"><span class="k">当</span> 绿旗被点击<br>重复 10 次<br>&nbsp;&nbsp;移动 10 点<br>&nbsp;&nbsp;<span class="k">如果</span> 碰到边缘 就反弹</div>
+        <p>上了一学期的 Scratch，完成第一个接水果小游戏，并在学校的成果发表会上展示。</p>
+      </article>
+    </div>
+    <p class="disclaimer">每位学生的起点与学习状况不同，以上为经家长同意分享的个别案例，不代表每位学生都会有相同结果。</p>
+  </div>
+</section>
+
+<!-- ==================== 区块：家长评价 ==================== -->
+<section class="alt" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>家长怎么说</h2>
+      <p>来自在学学生家长的回馈。</p>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="review-grid">
+      <figure class="card review reveal">
+        <blockquote>每个月的学习报告写得很具体，哪个单元还不熟一看就知道。孩子说老师讲得慢一点，但他终于敢举手问问题了。</blockquote>
+        <figcaption><b>王妈妈</b>国二学生家长</figcaption>
+      </figure>
+      <figure class="card review reveal">
+        <blockquote>原本只是想让孩子周末有事做，没想到他现在会自己在家改 Scratch 项目，还会教妹妹怎么写。</blockquote>
+        <figcaption><b>李爸爸</b>国小四年级学生家长</figcaption>
+      </figure>
+      <figure class="card review reveal">
+        <blockquote>高三很忙，复习视频帮了很大的忙。请假的那周回家看视频，下次上课还跟得上，不用另外补课。</blockquote>
+        <figcaption><b>陈妈妈</b>高三学生家长</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：常见问题 ==================== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>常见问题</h2>
+    </div>
+    <div class="faq reveal">
+      <details open>
+        <summary>试听要收费吗？可以试听几堂？</summary>
+        <p>每位学生每个科目可免费试听一堂，试听前会先做简短的程度评估，结束后老师会和家长说明孩子的状况。</p>
+      </details>
+      <details>
+        <summary>班级人数多少？会依程度分班吗？</summary>
+        <p>国小与才艺班每班 6 至 10 人，国高中每班 10 至 12 人。同年级会依评估结果分成基础班与高端班。</p>
+      </details>
+      <details>
+        <summary>请假的话怎么补课？</summary>
+        <p>请在上课前通过 LINE 告知，可以观看当堂的复习视频，或预约自习室时段，由值班老师协助补上进度。</p>
+      </details>
+      <details>
+        <summary>学习报告包含哪些内容？</summary>
+        <p>每月一次，内容包含各单元掌握度、作业完成率、小考成绩与老师评语，并附上下个月的学习重点。</p>
+      </details>
+      <details>
+        <summary>学费怎么缴？中途想退费怎么办？</summary>
+        <p>学费按月缴交，可以现金或转帐。退费依桃园市短期补习班相关规定办理，报名时会提供完整的退费说明。</p>
+      </details>
+      <details>
+        <summary>儿童程序课需要自备电脑吗？</summary>
+        <p>不需要，教室提供每人一台电脑与电子积木套件。如果想在家练习，老师会协助设置免费的练习环境。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：试听预约表单 ==================== -->
+<section class="trial" id="trial">
+  <div class="wrap trial-grid">
+    <div class="reveal">
+      <div class="sec-head">
+        <h2>预约免费试听</h2>
+        <p>留下联系方式，我们会在一个工作天内来电，和你约好试听时间。</p>
+      </div>
+      <ol class="steps">
+        <li><div><b>填写表单或来电</b><span>告诉我们孩子的年级和想上的科目。</span></div></li>
+        <li><div><b>程度评估</b><span>试听前 30 分钟做简短测验，了解目前的学习状况。</span></div></li>
+        <li><div><b>试听一堂课</b><span>直接进班上课，课后老师会和家长说明评估结果。</span></div></li>
+      </ol>
+    </div>
+    <!--
+      表单送出设置（Formspree，免费方案每月 50 则）：
+      1. 到 https://formspree.io 注册并创建新表单
+      2. 拷贝表单网址中的 ID（例如 xyzabcd）
+      3. 把下方 action 的 your-form-id 换成你的 ID 即可
+    -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="row">
+        <label>家长姓名<input type="text" name="parent_name" autocomplete="name" required placeholder="王小明"></label>
+        <label>联系电话<input type="tel" name="phone" autocomplete="tel" required placeholder="0912-345-678" pattern="[0-9\-+ ]{8,}"></label>
+      </div>
+      <label>学生年级
+        <select name="grade" required>
+          <option value="">请选择年级</option>
+          <optgroup label="国小"><option>国小一年级</option><option>国小二年级</option><option>国小三年级</option><option>国小四年级</option><option>国小五年级</option><option>国小六年级</option></optgroup>
+          <optgroup label="国中"><option>国一</option><option>国二</option><option>国三</option></optgroup>
+          <optgroup label="高中"><option>高一</option><option>高二</option><option>高三</option></optgroup>
+        </select>
+      </label>
+      <fieldset>
+        <legend>想上的科目（可复选）</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="subjects" value="数学">数学</label>
+          <label><input type="checkbox" name="subjects" value="英文">英文</label>
+          <label><input type="checkbox" name="subjects" value="自然">自然</label>
+          <label><input type="checkbox" name="subjects" value="儿童程序">儿童程序</label>
+        </div>
+      </fieldset>
+      <label>方便时段
+        <select name="time" required>
+          <option value="">请选择时段</option>
+          <option>平日傍晚（17:00–18:30）</option><option>平日晚上（19:00–21:00）</option>
+          <option>周六上午</option><option>周六下午</option><option>周日上午</option>
+        </select>
+      </label>
+      <label>想让老师知道的事（选填）<textarea name="message" placeholder="例如：数学分数不稳定，想先加强基础"></textarea></label>
+      <button type="submit" class="btn btn-primary">送出试听预约</button>
+      <p class="small">送出即表示同意我们以电话或 LINE 联系你，数据仅用于安排试听。</p>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== 区块：交通与上课时间 ==================== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>交通与上课时间</h2>
+    </div>
+    <div class="access-grid">
+      <div class="card access-info reveal">
+        <div><h3>地址</h3><p><strong>桃园市中坜区青禾路 88 号 3 楼</strong></p></div>
+        <div><h3>火车</h3><p>台铁中坜车站前站出口，步行约 10 分钟。</p></div>
+        <div><h3>公车</h3><p>搭乘市区公车至「青禾路口」站下车，步行约 2 分钟。</p></div>
+        <div><h3>接送</h3><p>大楼前有临时停车接送区，机车可停放于一楼停车场，汽车请停附近公有停车场。</p></div>
+      </div>
+      <div class="card hours reveal">
+        <h3>柜台服务时间</h3>
+        <dl>
+          <dt>周一至周五</dt><dd>14:00–21:30</dd>
+          <dt>周六</dt><dd>09:30–17:00</dd>
+          <dt>周日</dt><dd>09:30–12:00</dd>
+        </dl>
+        <p class="small">电话：<a href="tel:03-1234-5678" class="text-link">03-1234-5678</a></p>
+        <div class="row">
+          <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-primary" target="_blank" rel="noopener">LINE 询问</a>
+          <a href="https://maps.google.com/?q=桃园市中坜区青禾路88号" class="btn btn-ghost" target="_blank" rel="noopener">打开 Google 地图</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 区块：页脚 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><path d="M12 13c0-4 3-6 7-6 0 4-3 6-7 6Z"/><path d="M12 11C12 7.5 9.5 5 5 5c0 3.5 2.5 6 7 6Z"/></svg></span>青禾学苑</div>
+        <p>桃园市中坜区青禾路 88 号 3 楼<br>电话：<a href="tel:03-1234-5678">03-1234-5678</a></p>
+        <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE</a></div>
+      </div>
+      <div>
+        <h2>柜台服务时间</h2>
+        <p>周一至周五 14:00–21:30<br>周六 09:30–17:00<br>周日 09:30–12:00</p>
+      </div>
+      <div>
+        <h2>快速链接</h2>
+        <p><a href="#courses">课程与学费</a><br><a href="#teachers">师资介绍</a><br><a href="#schedule">每周课表</a><br><a href="#trial">预约免费试听</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y"></span> 青禾学苑</span>
+      <span>立案字号：府教终字第 0000000 号（请换成实际字号）</span>
+    </div>
+    <!-- 页脚语言链接：和页眉的 lang-switch 相同 -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja">日本語</a></p>
+  </div>
+</footer>
+
+<!-- ==================== 区块：手机底部固定按钮 ==================== -->
+<div class="mobile-bar">
+  <a href="tel:03-1234-5678" class="btn btn-ghost">拨打电话</a>
+  <a href="#trial" class="btn btn-primary">预约免费试听</a>
+</div>
+
+<script>
+// 年份
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// 页眉卷动背景
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+// 汉堡菜单
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  links.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
+};
+menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// 课程分页签：点击或用左右方向键、Home、End 切换
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+const showTab = tab => tabs.forEach(t => {
+  const on = t === tab;
+  t.setAttribute('aria-selected', on);
+  t.tabIndex = on ? 0 : -1;
+  document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+});
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => showTab(t));
+  t.addEventListener('keydown', e => {
+    const n = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+    if (n === undefined) return;
+    e.preventDefault();
+    const next = tabs[(n + tabs.length) % tabs.length];
+    next.focus(); showTab(next);
+  });
+});
+showTab(tabs[0]);
+
+// 卷动渐入
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => io.observe(el));
+} else reveals.forEach(el => el.classList.add('in'));
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>沐茶 Muu Tea｜高雄现萃手摇茶饮，三家门市在线点餐</title>
+<meta name="description" content="沐茶 Muu Tea 是高雄在地的手摇茶饮品牌，台湾茶叶每 4 小时现萃、珍珠每天现煮。新兴、左营、苓雅三家门市，Uber Eats、foodpanda 在线点餐，欢迎加盟洽询。">
+<meta name="theme-color" content="#1d5c3a">
+<!-- 多语版本（SEO）：上线后把 href 换成完整网址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<meta property="og:title" content="沐茶 Muu Tea｜高雄现萃手摇茶饮">
+<meta property="og:description" content="台湾茶叶每 4 小时现萃，珍珠每天现煮。甜度冰块自己调，三家门市在线点、到店取。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..800&family=Figtree:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "沐茶 Muu Tea",
+  "url": "https://example.com/",
+  "telephone": "07-1234-5678",
+  "priceRange": "NT$30–95",
+  "servesCuisine": ["手摇饮", "台湾茶", "奶茶", "鲜果茶"],
+  "hasMap": "https://maps.google.com/?q=高雄市新兴区茶香路88号",
+  "address": { "@type": "PostalAddress", "streetAddress": "茶香路 88 号", "addressLocality": "新兴区", "addressRegion": "高雄市", "postalCode": "800", "addressCountry": "TW" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:00", "closes": "23:00" }
+  ],
+  "department": [
+    { "@type": "CafeOrCoffeeShop", "name": "沐茶 Muu Tea 左营莲潭店", "telephone": "07-2345-6789", "hasMap": "https://maps.google.com/?q=高雄市左营区翠湖路205号",
+      "address": { "@type": "PostalAddress", "streetAddress": "翠湖路 205 号", "addressLocality": "左营区", "addressRegion": "高雄市", "postalCode": "813", "addressCountry": "TW" },
+      "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:30", "closes": "22:00" }] },
+    { "@type": "CafeOrCoffeeShop", "name": "沐茶 Muu Tea 苓雅文化店", "telephone": "07-3456-7890", "hasMap": "https://maps.google.com/?q=高雄市苓雅区沐光街12号",
+      "address": { "@type": "PostalAddress", "streetAddress": "沐光街 12 号", "addressLocality": "苓雅区", "addressRegion": "高雄市", "postalCode": "802", "addressCountry": "TW" },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "11:00", "closes": "22:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "10:00", "closes": "22:30" }] }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   主题设置：改这里就能换整站配色与字体
+   ============================================================ */
+:root {
+  --brand: #1d5c3a;          /* 品牌主色（深茶绿）：主视觉底色、标题、按钮 */
+  --brand-ink: #fbf1dc;      /* 在 brand 色上的文本颜色（奶霜色） */
+  --brand-deep: #123d26;     /* 深一阶的茶绿：页脚、菜单底色 */
+  --bg: #fbf1dc;             /* 网页底色（鲜奶霜色） */
+  --surface: #fff8ea;        /* 卡片、表单等浮起区块的底色（带奶味的白） */
+  --text: #2b170c;           /* 主要文本与贴纸外框（珍珠深棕） */
+  --muted: #5e4232;          /* 次要文本、说明文本 */
+  --line: #e6d3ae;           /* 淡分隔线、输入框边框 */
+  --amber: #e8962a;          /* 强调色（乌龙琥珀）：主要按钮、贴纸 */
+  --amber-ink: #2b170c;      /* 在 amber 色上的文本颜色 */
+  --chili: #c4401f;          /* 「热销」标签底色（辣椒红） */
+  --chili-ink: #fff8ea;      /* 在 chili 色上的文本颜色 */
+  --tapioca: #3a2214;        /* 树薯棕：会员区块底色 */
+  --pearl: #24110a;          /* 艺术占位图：珍珠 */
+  --syrup: #8a4a1f;          /* 艺术占位图：黑糖糖浆 */
+  --milk: #f3e2c0;           /* 艺术占位图：鲜奶 */
+  --milktea: #c98d5a;        /* 艺术占位图：奶茶 */
+  --oolong: #c2701f;         /* 艺术占位图：乌龙茶汤 */
+  --greentea: #c9b94a;       /* 艺术占位图：绿茶茶汤 */
+  --passion: #f2b632;        /* 艺术占位图：百香果 */
+  --matcha: #8fb84e;         /* 艺术占位图：抹茶绿底色 */
+  --cap: #fff3d6;            /* 艺术占位图：奶盖 */
+  --straw: #c4401f;          /* 艺术占位图：吸管 */
+  --shadow: color-mix(in srgb, var(--text) 26%, transparent); /* 柔和阴影 */
+  --radius: 20px;            /* 圆角大小 */
+  --stroke: 3px;             /* 贴纸外框粗细 */
+  --pop: 5px;                /* 贴纸硬阴影的位移距离 */
+  --font-heading: "Bricolage Grotesque", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; /* 标题字体（窄体粗黑） */
+  --font-body: "Figtree", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;     /* 内文本型 */
+  --max: 1200px;             /* 内容最大宽度 */
+  --pad: clamp(1rem, 5vw, 3rem); /* 左右留白 */
+  --gap: clamp(1.25rem, 3.5vw, 2.5rem); /* 多栏区块的栏距 */
+}
+
+/* ---------- 基础 ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.7 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 800; font-stretch: 78%; line-height: 1.08; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 10px; }
+::selection { background: var(--amber); color: var(--amber-ink); }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: clamp(4rem, 9vw, 6.5rem); position: relative; }
+.sec-title { font-size: clamp(2.3rem, 5.4vw, 3.8rem); margin-bottom: .8rem; color: var(--brand); }
+.sec-lead { color: var(--muted); max-width: 36rem; font-size: 1.05rem; }
+.sec-head { margin-bottom: clamp(2rem, 5vw, 3rem); }
+.sticker-box { background: var(--surface); border: var(--stroke) solid var(--text); border-radius: var(--radius); box-shadow: var(--pop) var(--pop) 0 var(--text); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .85rem 1.6rem; border-radius: 999px; font: 700 1.05rem/1.2 var(--font-body); text-decoration: none; border: var(--stroke) solid var(--text); cursor: pointer; transition: transform .15s, box-shadow .15s, background-color .2s, color .2s; }
+.btn-primary { background: var(--amber); color: var(--amber-ink); box-shadow: 4px 4px 0 var(--text); }
+.btn-primary:hover { background: color-mix(in srgb, var(--amber) 84%, var(--surface)); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--text); }
+.btn-ghost { background: var(--surface); color: var(--text); box-shadow: 4px 4px 0 var(--text); }
+.btn-ghost:hover { background: var(--milk); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--text); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--text); }
+a:not(.btn):hover { color: var(--brand); }
+a:not(.btn):active { opacity: .7; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+.hero .btn-ghost { background: transparent; color: var(--brand-ink); border-color: var(--brand-ink); box-shadow: none; }
+.hero .btn-ghost:hover { background: color-mix(in srgb, var(--brand-ink) 12%, transparent); box-shadow: none; }
+
+/* 卷动渐入：只有 JS 激活时才先隐藏 */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+html:not(.js) .js-only { display: none !important; }
+.js .nojs-only { display: none !important; }
+
+/* ==================== 页眉 ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; color: var(--brand-ink); transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled { background: var(--brand-deep); box-shadow: 0 var(--stroke) 0 var(--text); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+.logo-mark { width: 42px; height: 42px; flex: none; border-radius: 50%; border: var(--stroke) solid var(--text); box-shadow: 3px 3px 0 var(--text);
+  background: radial-gradient(circle closest-side, var(--pearl) 0 80%, transparent 88%) 30% 70% / 11px 11px no-repeat, radial-gradient(circle closest-side, var(--pearl) 0 80%, transparent 88%) 64% 76% / 11px 11px no-repeat, radial-gradient(circle closest-side, var(--pearl) 0 80%, transparent 88%) 48% 46% / 11px 11px no-repeat, var(--amber); }
+.logo b { font: 800 1.35rem/1 var(--font-heading); font-stretch: 80%; display: block; }
+.logo small { font: 600 .82rem/1.1 var(--font-body); opacity: .85; }
+.nav-menu { display: flex; align-items: center; gap: 1.2rem; list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; font-weight: 600; padding-block: .3rem; background: linear-gradient(var(--amber), var(--amber)) left bottom / 0 3px no-repeat; transition: background-size .25s, color .2s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 3px; color: var(--brand-ink); }
+.nav-menu .btn { padding: .55rem 1.15rem; font-size: .98rem; }
+.nav-toggle { display: none; width: 46px; height: 46px; border: var(--stroke) solid var(--text); background: var(--amber); color: var(--text); cursor: pointer; border-radius: 14px; box-shadow: 3px 3px 0 var(--text); transition: transform .15s, box-shadow .15s; }
+.nav-toggle:hover { background: color-mix(in srgb, var(--amber) 84%, var(--surface)); }
+.nav-toggle:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--text); }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 20px; height: 3px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; border-radius: 2px; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 1020px) and (min-width: 761px) { .nav-menu { gap: .8rem; font-size: .92rem; } .logo small { display: none; } }
+@media (max-width: 760px) {
+  /* 没有 JavaScript 时，菜单直接换行显示；有 JS 才收进汉堡菜单 */
+  html:not(.js) .nav { flex-wrap: wrap; height: auto; padding-block: .8rem; }
+  html:not(.js) .site-header { position: sticky; background: var(--brand-deep); }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: 2.5rem; }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--brand-deep); border-bottom: var(--stroke) solid var(--text); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: .8rem 0; border-bottom: 1px solid color-mix(in srgb, var(--brand-ink) 18%, transparent); }
+  .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+  .js .site-header:has(.nav-menu.open) { background: var(--brand-deep); }
+}
+
+/* ==================== 艺术占位图 ====================
+   每一个 .img-cup 都是用 CSS 渐层画的手摇杯：封膜杯口、吸管、茶汤、奶盖与珍珠。
+   改杯子内容只要换变量：--tea（茶汤）、--tea-top（上层茶色）、--cap-h（奶盖高度）、加上 .has-pearl 就有珍珠。
+   换成照片：.img-xx { background: url(images/xxx.jpg) center/cover; }
+   （换照片后把 .img-cup 的 ::before / ::after 一起删掉） */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; }
+.img-cup { --tea: var(--milktea); --tea-top: color-mix(in srgb, var(--milktea) 78%, var(--milk)); --cap-h: 0%; --pearl-img: none; --pearl-h: 0%; --stripes: none;
+  aspect-ratio: 4 / 5; border: var(--stroke) solid var(--text);
+  background:
+    linear-gradient(90deg, var(--straw) 0 58%, color-mix(in srgb, var(--straw) 60%, var(--surface)) 58% 78%, var(--straw) 78%) 58% 12.5% / 8% 36% no-repeat,
+    linear-gradient(var(--text), var(--text)) 50% 28.5% / 47% 4% no-repeat,
+    radial-gradient(ellipse 30% 4% at 52% 90%, var(--shadow) 0 70%, transparent 74%),
+    var(--art-pattern, radial-gradient(circle closest-side, color-mix(in srgb, var(--surface) 30%, transparent) 0 40%, transparent 46%) 0 0 / 30px 30px),
+    var(--art-bg, var(--amber)); }
+/* 杯身：梯形杯，由上而下是奶盖、茶汤、黑糖虎纹、珍珠 */
+.img-cup::before, .img-cup::after { content: ""; position: absolute; left: 30%; right: 30%; top: 30%; bottom: 12%; clip-path: polygon(0 0, 100% 0, 86% 100%, 14% 100%); pointer-events: none; }
+.img-cup::before { z-index: 1;
+  background:
+    linear-gradient(90deg, transparent 18%, color-mix(in srgb, var(--surface) 34%, transparent) 18% 27%, transparent 27%),
+    linear-gradient(var(--cap) 0 var(--cap-h), transparent 0),
+    var(--pearl-img) 0 100% / 20% 12% repeat-x,
+    var(--pearl-img) 10% 85% / 20% 12% repeat-x,
+    var(--stripes),
+    linear-gradient(to top, var(--syrup) 0 var(--pearl-h), transparent 0),
+    linear-gradient(var(--tea-top), var(--tea)); }
+/* 杯身后方的硬阴影，做出贴纸感 */
+.img-cup::after { background: var(--text); transform: translate(7%, 3%); }
+.has-pearl { --pearl-img: radial-gradient(circle closest-side, var(--pearl) 0 80%, transparent 88%); --pearl-h: 26%; }
+.has-cap { --cap-h: 22%; }
+.cup-brown, [data-tea="brown"] { --tea: var(--milk); --tea-top: var(--surface); --stripes: repeating-linear-gradient(-24deg, transparent 0 9%, color-mix(in srgb, var(--syrup) 78%, transparent) 9% 14%); }
+.cup-oolong, [data-tea="oolong"] { --tea: var(--oolong); --tea-top: color-mix(in srgb, var(--oolong) 70%, var(--passion)); }
+.cup-fruit, [data-tea="fruit"] { --tea: var(--passion); --tea-top: var(--greentea); --stripes: radial-gradient(circle closest-side, var(--pearl) 0 30%, transparent 40%) 0 0 / 22% 13%; }
+[data-tea="green"] { --tea: var(--greentea); --tea-top: color-mix(in srgb, var(--greentea) 70%, var(--milk)); }
+[data-tea="milk"] { --tea: var(--milktea); }
+.bg-amber { --art-bg: var(--amber); }
+.bg-matcha { --art-bg: var(--matcha); }
+.bg-milk { --art-bg: var(--milk); --art-pattern: radial-gradient(circle closest-side, color-mix(in srgb, var(--syrup) 18%, transparent) 0 40%, transparent 46%) 0 0 / 30px 30px; }
+
+/* 换成照片：.img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero { aspect-ratio: 1 / 1; border-radius: 50%; border-width: 4px; box-shadow: 8px 8px 0 var(--text);
+  --art-pattern: repeating-conic-gradient(from 0deg at 50% 60%, color-mix(in srgb, var(--surface) 22%, transparent) 0 7deg, transparent 7deg 20deg); }
+
+/* ==================== 主视觉 ==================== */
+.hero { background: var(--brand); color: var(--brand-ink); padding-block: calc(72px + clamp(1.5rem, 5vw, 3.5rem)) clamp(3rem, 7vw, 5rem); overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--gap); align-items: center; }
+.hero h1 { font-size: clamp(3rem, 7.4vw, 6.4rem); line-height: 1; margin-bottom: 1.2rem; }
+.hero .lead { font-size: clamp(1.05rem, 1.6vw, 1.25rem); max-width: 31rem; margin-bottom: 1.8rem; opacity: .95; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; }
+.hero-note { margin-top: 1.6rem; font-size: .95rem; opacity: .9; }
+.hero-note b { font-variant-numeric: tabular-nums; }
+.hero-art { position: relative; max-width: 500px; width: 100%; justify-self: center; }
+.sticker { position: absolute; z-index: 2; background: var(--amber); color: var(--amber-ink); border: var(--stroke) solid var(--text); box-shadow: 3px 3px 0 var(--text); font: 800 1.05rem/1.15 var(--font-body); padding: .55rem .95rem; border-radius: 14px; text-align: center; }
+.sticker.s1 { top: 8%; left: -4%; transform: rotate(-8deg); }
+.sticker.s2 { bottom: 10%; right: -3%; transform: rotate(6deg); background: var(--surface); }
+.sticker.s3 { top: 2%; right: 6%; width: 92px; height: 92px; border-radius: 50%; display: grid; place-content: center; background: var(--chili); color: var(--chili-ink); transform: rotate(12deg); font-size: .95rem; }
+.sticker big { display: block; font: 800 1.9rem/1 var(--font-heading); font-stretch: 80%; }
+.ticker { background: var(--text); color: var(--amber); border-block: var(--stroke) solid var(--text); overflow: hidden; transform: rotate(-1.2deg); margin: -1.2rem -1rem 0; position: relative; z-index: 2; }
+.ticker ul { display: flex; gap: 2.4rem; list-style: none; padding: .8rem 1rem; white-space: nowrap; font: 800 1.35rem/1 var(--font-heading); font-stretch: 80%; justify-content: center; }
+.ticker li:nth-child(even) { color: var(--brand-ink); }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-art { max-width: 340px; margin-top: 1rem; }
+  .ticker ul { justify-content: flex-start; font-size: 1.1rem; }
+}
+
+/* ==================== 招牌推荐 ==================== */
+.sig-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.sig { padding: 1rem 1rem 1.4rem; display: flex; flex-direction: column; gap: .7rem; transition: transform .2s; }
+.sig:nth-child(2) { transform: rotate(1deg); } .sig:nth-child(3) { transform: rotate(-1deg); }
+.sig .img { border-radius: calc(var(--radius) - 6px); }
+.sig h3 { font-size: 1.85rem; color: var(--brand); }
+.sig p { color: var(--muted); }
+.sig-foot { display: flex; align-items: center; justify-content: space-between; gap: .6rem; margin-top: auto; flex-wrap: wrap; }
+.price { font: 800 1.5rem/1 var(--font-heading); font-stretch: 80%; font-variant-numeric: tabular-nums; }
+.price small { font: 600 .9rem/1 var(--font-body); color: var(--muted); }
+@media (max-width: 860px) { .sig-grid { grid-template-columns: minmax(0, 1fr); max-width: 440px; margin-inline: auto; } .sig .img { width: 62%; justify-self: center; align-self: center; } }
+
+/* 标签：热销／可做热／无咖啡因 */
+.tags { display: flex; flex-wrap: wrap; gap: .35rem; list-style: none; }
+.tag { font: 700 .82rem/1 var(--font-body); padding: .38rem .6rem; border-radius: 8px; border: 2px solid var(--text); background: var(--surface); color: var(--text); }
+.tag-hot { background: var(--chili); color: var(--chili-ink); }
+.tag-warm { background: var(--amber); color: var(--amber-ink); }
+.tag-free { background: var(--surface); color: var(--brand); border-color: var(--brand); }
+
+/* ==================== 菜单 ==================== */
+.menu { background: var(--surface); border-block: var(--stroke) solid var(--text); }
+.tabs { display: flex; gap: .6rem; margin-bottom: 2rem; flex-wrap: wrap; }
+.tab { font: 700 1.05rem/1 var(--font-body); padding: .85rem 1.4rem; border-radius: 999px; border: var(--stroke) solid var(--text); background: var(--bg); color: var(--text); cursor: pointer; transition: transform .15s, box-shadow .15s, background-color .2s, color .2s; }
+.tab:hover { background: var(--milk); }
+.tab:active { transform: translate(2px, 2px); }
+.tab[aria-selected="true"] { background: var(--brand); color: var(--brand-ink); box-shadow: 4px 4px 0 var(--text); }
+.panel + .panel { margin-top: 2.5rem; }
+.js .panel + .panel { margin-top: 0; }
+.panel-title { font: 800 1.6rem/1.2 var(--font-heading); font-stretch: 80%; margin-bottom: 1rem; color: var(--brand); }
+.items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; list-style: none; }
+.item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem 1rem; align-items: start; padding: 1.1rem 1.2rem; background: var(--bg); border: 2px solid var(--text); border-radius: 16px; }
+.item h3 { font-size: 1.4rem; }
+.item p { grid-column: 1 / -1; color: var(--muted); font-size: .94rem; }
+.item .tags { grid-column: 1 / -1; }
+.ml { display: flex; gap: .4rem; font-variant-numeric: tabular-nums; }
+.ml span { display: grid; text-align: center; min-width: 3.4rem; padding: .3rem .4rem; border-radius: 10px; background: var(--surface); border: 2px solid var(--line); font: 800 1.15rem/1.1 var(--font-heading); font-stretch: 80%; }
+.ml small { font: 600 .75rem/1.2 var(--font-body); color: var(--muted); }
+.menu-note { margin-top: 1.6rem; color: var(--muted); font-size: .92rem; }
+@media (max-width: 760px) { .items { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 客制饮料 ==================== */
+.custom { background: var(--brand); color: var(--brand-ink); }
+.custom .sec-title { color: var(--brand-ink); }
+.custom .sec-lead { color: color-mix(in srgb, var(--brand-ink) 86%, transparent); }
+.mix-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .9fr); gap: var(--gap); align-items: start; }
+.mix { padding: clamp(1.2rem, 3vw, 2rem); color: var(--text); display: grid; gap: 1.4rem; }
+.mix fieldset { border: 0; min-width: 0; }
+.mix legend, .mix .lbl { font: 800 1.25rem/1.2 var(--font-heading); font-stretch: 80%; margin-bottom: .6rem; display: block; }
+.mix select { width: 100%; font: 600 1rem var(--font-body); color: var(--text); background: var(--bg); border: 2px solid var(--text); border-radius: 12px; padding: .75rem .8rem; min-height: 50px; }
+.pills { display: flex; flex-wrap: wrap; gap: .5rem; }
+.pill { position: relative; cursor: pointer; }
+.pill input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.pill span { display: inline-block; padding: .6rem .95rem; border: 2px solid var(--text); border-radius: 999px; background: var(--bg); font-weight: 700; font-size: .95rem; transition: transform .15s, background-color .2s, box-shadow .15s; }
+.pill:hover span { background: var(--milk); }
+.pill:active span { transform: translate(2px, 2px); }
+.pill input:checked + span { background: var(--amber); box-shadow: 3px 3px 0 var(--text); }
+.pill input:focus-visible + span { outline: 3px solid var(--brand); outline-offset: 2px; }
+.pill small { font-weight: 600; color: var(--muted); }
+.receipt { padding: 1.2rem; color: var(--text); position: sticky; top: 92px; display: grid; gap: 1rem; }
+.receipt .img { max-width: 240px; width: 70%; justify-self: center; }
+.receipt h3 { font-size: 1.5rem; }
+.receipt output { display: block; }
+#mix-sum { font-weight: 600; font-size: 1.08rem; min-height: 3.4em; }
+.total { display: flex; align-items: baseline; justify-content: space-between; border-top: 2px dashed var(--text); padding-top: .9rem; }
+#mix-price { font: 800 2.3rem/1 var(--font-heading); font-stretch: 80%; color: var(--brand); font-variant-numeric: tabular-nums; }
+.receipt .btn { width: 100%; }
+.small-note { font-size: .88rem; color: var(--muted); }
+@media (max-width: 860px) { .mix-grid { grid-template-columns: minmax(0, 1fr); } .receipt { position: static; } }
+
+/* ==================== 门市据点 ==================== */
+.store-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.store { padding: 1.5rem; display: flex; flex-direction: column; gap: .8rem; position: relative; }
+.store h3 { font-size: 1.8rem; color: var(--brand); padding-right: 4.5rem; }
+.store .flag { position: absolute; top: -14px; right: 16px; background: var(--chili); color: var(--chili-ink); border: 2px solid var(--text); border-radius: 10px; padding: .3rem .65rem; font-weight: 800; font-size: .88rem; transform: rotate(5deg); }
+.store dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .3rem .9rem; font-size: .96rem; }
+.store dt { font-weight: 700; color: var(--muted); }
+.store dd { font-variant-numeric: tabular-nums; }
+.store-actions { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: auto; padding-top: .4rem; }
+.store-actions .btn { padding: .65rem 1.1rem; font-size: .95rem; flex: 1 1 auto; }
+@media (max-width: 960px) { .store-grid { grid-template-columns: minmax(0, 1fr); max-width: 560px; } }
+
+/* ==================== 外送平台 ==================== */
+.order { background: var(--amber); border-block: var(--stroke) solid var(--text); }
+.order .sec-title { color: var(--text); }
+.order .sec-lead { color: var(--text); }
+.order-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--gap); align-items: center; }
+.order-grid .sec-head { margin-bottom: 0; }
+.platforms { display: grid; gap: .8rem; min-width: min(100%, 340px); }
+.platforms .btn { justify-content: space-between; padding: 1rem 1.4rem; font-size: 1.15rem; border-radius: 16px; }
+.platforms .btn small { font: 600 .85rem/1 var(--font-body); color: var(--muted); }
+@media (max-width: 760px) { .order-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 会员集点 ==================== */
+.member { background: var(--tapioca); color: var(--brand-ink); }
+.member .sec-title { color: var(--amber); }
+.member .sec-lead { color: color-mix(in srgb, var(--brand-ink) 86%, transparent); }
+.member-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap); align-items: center; }
+.stamp-card { color: var(--text); padding: clamp(1.2rem, 3vw, 1.8rem); transform: rotate(-2deg); background: var(--milk); }
+.stamp-card h3 { font-size: 1.6rem; margin-bottom: 1rem; }
+.stamps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .6rem; list-style: none; }
+.stamps li { aspect-ratio: 1; border-radius: 50%; border: 2px dashed var(--text); background: var(--surface); }
+.stamps li.on { border-style: solid; background: radial-gradient(circle closest-side, var(--pearl) 0 46%, transparent 52%), var(--amber); }
+.stamps li:last-child { background: var(--chili); border-style: solid; }
+.stamp-card p { margin-top: 1rem; font-size: .92rem; color: var(--muted); }
+.perks { list-style: none; display: grid; gap: 1rem; margin-bottom: 1.6rem; }
+.perks li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem; align-items: start; }
+.perks b { font: 800 1.7rem/1 var(--font-heading); font-stretch: 80%; color: var(--amber); min-width: 3.2rem; }
+.perks h3 { font-size: 1.3rem; margin-bottom: .2rem; }
+.perks p { color: color-mix(in srgb, var(--brand-ink) 84%, transparent); font-size: .96rem; }
+@media (max-width: 860px) { .member-grid { grid-template-columns: minmax(0, 1fr); } .stamp-card { max-width: 440px; } }
+
+/* ==================== 加盟洽询 ==================== */
+.fr-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap); align-items: start; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin-top: 1.8rem; list-style: none; }
+.facts li { background: var(--surface); border: 2px solid var(--text); border-radius: 16px; padding: 1rem; }
+.facts b { display: block; font: 800 2rem/1 var(--font-heading); font-stretch: 80%; color: var(--brand); margin-bottom: .3rem; }
+.facts span { font-size: .9rem; color: var(--muted); }
+.form { padding: clamp(1.3rem, 3.5vw, 2rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.form h3 { grid-column: 1 / -1; font-size: 1.6rem; color: var(--brand); }
+.field { display: grid; gap: .35rem; min-width: 0; align-content: start; }
+.field.full, .form .btn, .form > small { grid-column: 1 / -1; }
+.field label { font-weight: 700; font-size: .92rem; }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 2px solid var(--line); border-radius: 12px; padding: .7rem .85rem; min-height: 48px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--text); box-shadow: 3px 3px 0 var(--amber); }
+.field textarea { min-height: 96px; resize: vertical; }
+.form > small { color: var(--muted); font-size: .85rem; }
+@media (max-width: 860px) { .fr-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .form { grid-template-columns: minmax(0, 1fr); } .facts li { padding: .8rem .7rem; } .facts b { font-size: 1.6rem; } }
+
+/* ==================== 页脚 ==================== */
+.site-footer { background: var(--brand-deep); color: color-mix(in srgb, var(--brand-ink) 86%, transparent); padding-block: 3.5rem 2rem; font-size: .95rem; border-top: var(--stroke) solid var(--text); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.site-footer h2 { color: var(--amber); font-size: 1.5rem; margin-bottom: .7rem; }
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; color: var(--amber); }
+.social { display: flex; gap: 1rem; margin-top: .8rem; flex-wrap: wrap; }
+.copy { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid color-mix(in srgb, var(--brand-ink) 18%, transparent); font-size: .85rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* 手机底部固定按钮 */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 80px; }
+  .sticky-cta { display: flex; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: var(--brand-deep); color: var(--brand-ink); border-top: var(--stroke) solid var(--text); }
+  .sticky-cta .btn-primary { flex: 1; }
+}
+
+/* ==================== 语言切换（页眉 lang-switch 与页脚 foot-lang） ==================== */
+.nav > .nav-menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; padding-left: .5rem; border-left: 2px solid color-mix(in srgb, var(--brand-ink) 25%, transparent); font: 700 .85rem/1 var(--font-body); }
+.lang-switch a { display: grid; place-items: center; min-width: 2rem; min-height: 2rem; padding-inline: .3rem; border-radius: 10px; color: color-mix(in srgb, var(--brand-ink) 80%, transparent); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--brand-ink); background: color-mix(in srgb, var(--brand-ink) 12%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--brand-ink) 22%, transparent); }
+.lang-switch a:focus-visible { outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--brand-ink); font-weight: 800; text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 3px; text-underline-offset: 4px; }
+/* 平板宽度：加上语言切换后空间较紧，先隐藏 .opt 的次要链接，避免菜单换行或挤到 logo */
+@media (min-width: 761px) and (max-width: 1040px) { .nav-menu .opt { display: none; } }
+@media (max-width: 760px) {
+  /* 手机：语言切换固定在汉堡按钮左边；没有 JS 时和 logo 同一行，菜单换到下一行 */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .nav-toggle { order: 2; flex: none; }
+  /* 页眉在手机上的间距缩小一点，避免挤到 logo */
+  .nav { gap: .75rem; }
+  .nav-menu { order: 3; }
+}
+/* 很窄的手机（380px 以下）：页眉放不下时，语言切换改到展开菜单的最上方 */
+@media (max-width: 380px) {
+  .js .lang-switch { display: none; position: absolute; top: calc(72px + .6rem); left: var(--pad); }
+  .js .nav-menu { padding-top: 3rem; }
+  .js .nav-menu.open ~ .lang-switch { display: flex; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem .75rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { color: var(--brand-ink); font-weight: 800; text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+</head>
+<body>
+
+<!-- ==================== 区块：页眉导览 ==================== -->
+<header class="site-header">
+  <nav class="wrap nav" aria-label="主菜单">
+    <a href="#hero" class="logo"><span class="logo-mark" aria-hidden="true"></span><span><b>沐茶 Muu Tea</b><small>高雄现萃手摇</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-links" aria-label="打开菜单"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#signature">招牌</a></li>
+      <li><a href="#menu">菜单</a></li>
+      <li><a href="#custom">客制</a></li>
+      <li><a href="#stores">门市</a></li>
+      <li class="opt"><a href="#member">集点</a></li>
+      <li class="opt"><a href="#franchise">加盟</a></li>
+      <li><a href="#order" class="btn btn-primary">在线点餐</a></li>
+    </ul>
+    <!-- lang-switch：语言切换。要添加语言时，在这里加一个链接，并添加对应的文件夹 -->
+    <nav class="lang-switch" aria-label="Language 语言">
+      <details class="lang-menu">
+        <summary lang="zh-Hans">简</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </nav>
+</header>
+
+<main>
+<!-- ==================== 区块：主视觉 ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>茶要现泡，<br>珍珠要现煮</h1>
+      <p class="lead">高雄长大的手摇茶。台湾茶叶每 4 小时重新萃取，甜度冰块照你的习惯调。</p>
+      <div class="hero-cta">
+        <a href="#order" class="btn btn-primary">在线点餐</a>
+        <a href="#menu" class="btn btn-ghost">看菜单</a>
+      </div>
+      <p class="hero-note">三家门市每天营业，最晚到 <b>23:00</b></p>
+    </div>
+    <div class="hero-art">
+      <div class="img img-cup img-hero cup-brown has-pearl bg-amber" role="img" aria-label="琥珀色放射背景上，一杯插着红色吸管的黑糖珍珠鲜奶，杯壁有黑糖虎纹"></div>
+      <p class="sticker s1" aria-hidden="true">珍珠每天现煮</p>
+      <p class="sticker s2" aria-hidden="true">台湾茶 100%</p>
+      <p class="sticker s3" aria-hidden="true"><span><big>4hr</big>现萃</span></p>
+    </div>
+  </div>
+</section>
+<div class="ticker" aria-hidden="true">
+  <ul><li>黑糖珍珠鲜奶</li><li>金萱奶盖</li><li>百香绿茶</li><li>招牌乌龙奶茶</li><li>冬瓜柠檬</li><li>焙茶拿铁</li></ul>
+</div>
+
+<!-- ==================== 区块：招牌推荐 ==================== -->
+<section id="signature">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">先从这三杯开始</h2>
+      <p class="sec-lead">第一次来不知道点什么，店员最常推荐的就是这三杯。每一杯都可以调甜度和冰块。</p>
+    </div>
+    <div class="sig-grid">
+      <article class="sig sticker-box reveal">
+        <div class="img img-cup cup-brown has-pearl bg-amber" role="img" aria-label="鲜奶里挂着黑糖虎纹，杯底满满珍珠的黑糖珍珠鲜奶"></div>
+        <h3>黑糖珍珠鲜奶</h3>
+        <p>小火慢炒的黑糖浆沿杯壁流下，配上每天现煮、Q 弹带劲的珍珠。不含茶，晚上喝也安心。</p>
+        <div class="sig-foot"><span class="price">NT$65 <small>起</small></span><ul class="tags"><li class="tag tag-hot">热销</li><li class="tag tag-free">无咖啡因</li></ul></div>
+      </article>
+      <article class="sig sticker-box reveal">
+        <div class="img img-cup cup-oolong has-cap bg-matcha" role="img" aria-label="抹茶绿底上，一杯顶着厚厚奶盖的琥珀色金萱乌龙"></div>
+        <h3>金萱奶盖</h3>
+        <p>阿里山金萱自带淡淡奶香，上面铺一层微咸奶盖。先喝一口奶盖，再大口喝茶。</p>
+        <div class="sig-foot"><span class="price">NT$55 <small>起</small></span><ul class="tags"><li class="tag tag-hot">热销</li></ul></div>
+      </article>
+      <article class="sig sticker-box reveal">
+        <div class="img img-cup cup-fruit bg-milk" role="img" aria-label="奶霜色底上，一杯黄绿渐层、带着百香果籽的百香绿茶"></div>
+        <h3>百香绿茶</h3>
+        <p>屏东百香果整颗现切，加上四季春绿茶，酸甜刚好。夏天卖最快，常常傍晚就售完。</p>
+        <div class="sig-foot"><span class="price">NT$50 <small>起</small></span><ul class="tags"><li class="tag tag-warm">可做热</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：菜单 ==================== -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">菜单</h2>
+      <p class="sec-lead">中杯 500ml、大杯 700ml。价格为新台币，各门市可能略有不同。</p>
+    </div>
+    <div class="tabs js-only" role="tablist" aria-label="菜单分类">
+      <button class="tab" type="button" role="tab" id="tab-tea" aria-controls="panel-tea" aria-selected="true">原茶</button>
+      <button class="tab" type="button" role="tab" id="tab-milk" aria-controls="panel-milk" aria-selected="false" tabindex="-1">奶茶</button>
+      <button class="tab" type="button" role="tab" id="tab-fruit" aria-controls="panel-fruit" aria-selected="false" tabindex="-1">鲜果</button>
+      <button class="tab" type="button" role="tab" id="tab-season" aria-controls="panel-season" aria-selected="false" tabindex="-1">季节限定</button>
+    </div>
+    <!-- 添加品项：拷贝一个 <li class="item">，改名称、说明、中杯／大杯价格与标签 -->
+    <div class="panel" role="tabpanel" id="panel-tea" aria-labelledby="tab-tea" tabindex="0">
+      <p class="panel-title nojs-only">原茶</p>
+      <ul class="items">
+        <li class="item"><h3>金萱青茶</h3><div class="ml"><span><small>M</small>30</span><span><small>L</small>35</span></div><p>清爽带奶香，第一次喝原茶的人最容易爱上。</p><ul class="tags"><li class="tag tag-hot">热销</li><li class="tag tag-warm">可做热</li></ul></li>
+        <li class="item"><h3>四季春</h3><div class="ml"><span><small>M</small>30</span><span><small>L</small>35</span></div><p>花香明亮、尾韵回甘，最适合配鲜果。</p><ul class="tags"><li class="tag tag-warm">可做热</li></ul></li>
+        <li class="item"><h3>铁观音乌龙</h3><div class="ml"><span><small>M</small>35</span><span><small>L</small>40</span></div><p>重焙火的木质香，喜欢浓茶的人必点。</p><ul class="tags"><li class="tag tag-warm">可做热</li></ul></li>
+        <li class="item"><h3>蜜香红茶</h3><div class="ml"><span><small>M</small>30</span><span><small>L</small>35</span></div><p>花莲小叶种红茶，天然蜜香，不加糖也好喝。</p><ul class="tags"><li class="tag tag-warm">可做热</li></ul></li>
+        <li class="item"><h3>荞麦茶</h3><div class="ml"><span><small>M</small>30</span><span><small>L</small>35</span></div><p>烘焙谷物香，孕妇和小朋友也能放心喝。</p><ul class="tags"><li class="tag tag-free">无咖啡因</li><li class="tag tag-warm">可做热</li></ul></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-milk" aria-labelledby="tab-milk" tabindex="0">
+      <p class="panel-title nojs-only">奶茶</p>
+      <ul class="items">
+        <li class="item"><h3>招牌乌龙奶茶</h3><div class="ml"><span><small>M</small>50</span><span><small>L</small>60</span></div><p>焙火乌龙配上浓醇鲜奶，茶味走在前面。</p><ul class="tags"><li class="tag tag-hot">热销</li><li class="tag tag-warm">可做热</li></ul></li>
+        <li class="item"><h3>黑糖珍珠鲜奶</h3><div class="ml"><span><small>M</small>65</span><span><small>L</small>75</span></div><p>现炒黑糖浆与现煮珍珠，杯壁挂满虎纹。</p><ul class="tags"><li class="tag tag-hot">热销</li><li class="tag tag-free">无咖啡因</li></ul></li>
+        <li class="item"><h3>金萱奶盖</h3><div class="ml"><span><small>M</small>55</span><span><small>L</small>65</span></div><p>微咸奶盖配金萱青茶，喝的时候不要搅拌。</p><ul class="tags"><li class="tag tag-hot">热销</li></ul></li>
+        <li class="item"><h3>焙茶拿铁</h3><div class="ml"><span><small>M</small>60</span><span><small>L</small>70</span></div><p>日式焙茶粉现刷，香气温润，咖啡因较低。</p><ul class="tags"><li class="tag tag-warm">可做热</li></ul></li>
+        <li class="item"><h3>芋泥鲜奶</h3><div class="ml"><span><small>M</small>70</span><span><small>L</small>80</span></div><p>大甲芋头每天蒸煮压泥，吃得到芋头颗粒。</p><ul class="tags"><li class="tag tag-free">无咖啡因</li><li class="tag tag-warm">可做热</li></ul></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-fruit" aria-labelledby="tab-fruit" tabindex="0">
+      <p class="panel-title nojs-only">鲜果</p>
+      <ul class="items">
+        <li class="item"><h3>百香绿茶</h3><div class="ml"><span><small>M</small>50</span><span><small>L</small>60</span></div><p>屏东百香果整颗现切，酸甜带果籽。</p><ul class="tags"><li class="tag tag-hot">热销</li><li class="tag tag-warm">可做热</li></ul></li>
+        <li class="item"><h3>冬瓜柠檬</h3><div class="ml"><span><small>M</small>45</span><span><small>L</small>55</span></div><p>古早味冬瓜露加现挤柠檬，解渴第一名。</p><ul class="tags"><li class="tag tag-free">无咖啡因</li></ul></li>
+        <li class="item"><h3>柳橙青茶</h3><div class="ml"><span><small>M</small>55</span><span><small>L</small>65</span></div><p>当季柳橙现榨，配金萱青茶的清香。</p><ul class="tags"><li class="tag">当日现榨</li></ul></li>
+        <li class="item"><h3>葡萄柚绿茶</h3><div class="ml"><span><small>M</small>60</span><span><small>L</small>70</span></div><p>红肉葡萄柚果肉满满，微苦回甘。</p><ul class="tags"><li class="tag tag-hot">热销</li></ul></li>
+        <li class="item"><h3>凤梨四季春</h3><div class="ml"><span><small>M</small>55</span><span><small>L</small>65</span></div><p>关庙凤梨熬成果酱，香甜不腻口。</p><ul class="tags"><li class="tag tag-warm">可做热</li></ul></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-season" aria-labelledby="tab-season" tabindex="0">
+      <p class="panel-title nojs-only">季节限定</p>
+      <ul class="items">
+        <li class="item"><h3>姜汁黑糖鲜奶</h3><div class="ml"><span><small>M</small>65</span><span><small>L</small>75</span></div><p>竹姜熬汁加黑糖，冬天喝完全身暖起来。</p><ul class="tags"><li class="tag tag-warm">可做热</li><li class="tag tag-free">无咖啡因</li></ul></li>
+        <li class="item"><h3>桂圆红枣乌龙</h3><div class="ml"><span><small>M</small>60</span><span><small>L</small>70</span></div><p>台南东山桂圆与红枣慢煮，配焙火乌龙。</p><ul class="tags"><li class="tag tag-warm">可做热</li></ul></li>
+        <li class="item"><h3>草莓鲜奶</h3><div class="ml"><span><small>M</small>85</span><span><small>L</small>95</span></div><p>大湖草莓每天现捣，只卖到草莓季结束。</p><ul class="tags"><li class="tag tag-hot">热销</li><li class="tag tag-free">无咖啡因</li></ul></li>
+        <li class="item"><h3>烤布丁奶茶</h3><div class="ml"><span><small>M</small>70</span><span><small>L</small>80</span></div><p>整颗焦糖烤布丁放进乌龙奶茶里。</p><ul class="tags"><li class="tag tag-warm">可做热</li></ul></li>
+      </ul>
+    </div>
+    <p class="menu-note">加料：珍珠、椰果、仙草冻各 NT$10，奶盖、布丁各 NT$15。热饮限中杯。</p>
+  </div>
+</section>
+
+<!-- ==================== 区块：客制你的饮料 ==================== -->
+<section class="custom" id="custom">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">调一杯你的版本</h2>
+      <p class="sec-lead">选好饮料、甜度、冰块和加料，下面会整理成一句话，点餐时直接念给店员或贴到外送备注。</p>
+    </div>
+    <div class="mix-grid">
+      <!-- 修改选项：data-m／data-l 是中杯／大杯价格，data-tea 决定杯子的颜色（milk、oolong、fruit、brown、green），data-pearl／data-cap 代表饮料本身有珍珠／奶盖；加料的 data-p 是加价 -->
+      <form class="mix sticker-box reveal" id="mix" onsubmit="return false">
+        <div>
+          <label class="lbl" for="mix-drink">饮料</label>
+          <select id="mix-drink" name="drink">
+            <option data-m="50" data-l="60" data-tea="milk" selected>招牌乌龙奶茶</option>
+            <option data-m="65" data-l="75" data-tea="brown" data-pearl="1">黑糖珍珠鲜奶</option>
+            <option data-m="55" data-l="65" data-tea="oolong" data-cap="1">金萱奶盖</option>
+            <option data-m="30" data-l="35" data-tea="green">金萱青茶</option>
+            <option data-m="50" data-l="60" data-tea="fruit">百香绿茶</option>
+            <option data-m="45" data-l="55" data-tea="fruit">冬瓜柠檬</option>
+          </select>
+        </div>
+        <fieldset><legend>杯型</legend><div class="pills">
+          <label class="pill"><input type="radio" name="size" value="M" checked><span>中杯 M</span></label>
+          <label class="pill"><input type="radio" name="size" value="L"><span>大杯 L</span></label>
+        </div></fieldset>
+        <fieldset><legend>甜度</legend><div class="pills">
+          <label class="pill"><input type="radio" name="sugar" value="无糖 0%"><span>无糖 0%</span></label>
+          <label class="pill"><input type="radio" name="sugar" value="微糖 30%"><span>微糖 30%</span></label>
+          <label class="pill"><input type="radio" name="sugar" value="半糖 50%" checked><span>半糖 50%</span></label>
+          <label class="pill"><input type="radio" name="sugar" value="少糖 70%"><span>少糖 70%</span></label>
+          <label class="pill"><input type="radio" name="sugar" value="全糖 100%"><span>全糖 100%</span></label>
+        </div></fieldset>
+        <fieldset><legend>冰块</legend><div class="pills">
+          <label class="pill"><input type="radio" name="ice" value="去冰"><span>去冰</span></label>
+          <label class="pill"><input type="radio" name="ice" value="微冰"><span>微冰</span></label>
+          <label class="pill"><input type="radio" name="ice" value="少冰" checked><span>少冰</span></label>
+          <label class="pill"><input type="radio" name="ice" value="正常冰"><span>正常冰</span></label>
+        </div></fieldset>
+        <fieldset><legend>加料</legend><div class="pills">
+          <label class="pill"><input type="checkbox" name="top" value="珍珠" data-p="10" data-k="pearl"><span>珍珠 <small>+10</small></span></label>
+          <label class="pill"><input type="checkbox" name="top" value="椰果" data-p="10"><span>椰果 <small>+10</small></span></label>
+          <label class="pill"><input type="checkbox" name="top" value="仙草冻" data-p="10"><span>仙草冻 <small>+10</small></span></label>
+          <label class="pill"><input type="checkbox" name="top" value="奶盖" data-p="15" data-k="cap"><span>奶盖 <small>+15</small></span></label>
+          <label class="pill"><input type="checkbox" name="top" value="布丁" data-p="15"><span>布丁 <small>+15</small></span></label>
+        </div></fieldset>
+      </form>
+      <aside class="receipt sticker-box reveal" aria-labelledby="mix-title">
+        <div class="img img-cup bg-matcha" id="mix-art" data-tea="milk" role="img" aria-label="依照你的选择变化的饮料示意图"></div>
+        <h3 id="mix-title">你的这杯</h3>
+        <output id="mix-sum" for="mix" aria-live="polite">中杯 招牌乌龙奶茶，半糖 50%，少冰</output>
+        <p class="total"><span>小计</span><output id="mix-price" for="mix">NT$50</output></p>
+        <a href="#order" class="btn btn-primary">用这杯去点餐</a>
+        <p class="small-note nojs-only">选好之后，把你的组合告诉店员或写在外送备注即可。</p>
+        <p class="small-note js-only">金额仅供参考，以门市与外送平台标价为准。</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：门市据点 ==================== -->
+<section id="stores">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">三家门市，都在高雄</h2>
+      <p class="sec-lead">每家店都能现场点、电话预订或在线点餐自取。添加分店时，拷贝一张门市卡片就好。</p>
+    </div>
+    <div class="store-grid">
+      <article class="store sticker-box reveal">
+        <span class="flag">旗舰店</span>
+        <h3>新兴店</h3>
+        <dl>
+          <dt>地址</dt><dd>高雄市新兴区茶香路 88 号</dd>
+          <dt>营业</dt><dd>每日 10:00–23:00</dd>
+          <dt>电话</dt><dd>07-1234-5678</dd>
+        </dl>
+        <div class="store-actions">
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=高雄市新兴区茶香路88号" target="_blank" rel="noopener">Google 地图</a>
+          <a class="btn btn-ghost" href="tel:0712345678">拨打电话</a>
+        </div>
+      </article>
+      <article class="store sticker-box reveal">
+        <h3>左营莲潭店</h3>
+        <dl>
+          <dt>地址</dt><dd>高雄市左营区翠湖路 205 号</dd>
+          <dt>营业</dt><dd>每日 10:30–22:00</dd>
+          <dt>电话</dt><dd>07-2345-6789</dd>
+        </dl>
+        <div class="store-actions">
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=高雄市左营区翠湖路205号" target="_blank" rel="noopener">Google 地图</a>
+          <a class="btn btn-ghost" href="tel:0723456789">拨打电话</a>
+        </div>
+      </article>
+      <article class="store sticker-box reveal">
+        <h3>苓雅文化店</h3>
+        <dl>
+          <dt>地址</dt><dd>高雄市苓雅区沐光街 12 号</dd>
+          <dt>营业</dt><dd>平日 11:00–22:00<br>周末 10:00–22:30</dd>
+          <dt>电话</dt><dd>07-3456-7890</dd>
+        </dl>
+        <div class="store-actions">
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=高雄市苓雅区沐光街12号" target="_blank" rel="noopener">Google 地图</a>
+          <a class="btn btn-ghost" href="tel:0734567890">拨打电话</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：在线点餐／外送平台 ==================== -->
+<section class="order" id="order">
+  <div class="wrap order-grid">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">懒得出门？外送到家</h2>
+      <p class="sec-lead">在外送平台搜索「沐茶」就找得到我们。想自己来拿，用 LINE 先点好，到店直接取。</p>
+    </div>
+    <!-- 把 href="#" 换成你在各外送平台的店家页面网址 -->
+    <div class="platforms reveal">
+      <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Uber Eats 外送 <small>约 30 分钟</small></a>
+      <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">foodpanda 外送 <small>约 30 分钟</small></a>
+      <a class="btn btn-ghost" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 预点自取 <small>免排队</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：会员集点 ==================== -->
+<section class="member" id="member">
+  <div class="wrap member-grid">
+    <div class="stamp-card sticker-box reveal">
+      <h3>沐茶集点卡</h3>
+      <ul class="stamps" aria-label="集点卡示意：10 格中已集 7 点">
+        <li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li>
+        <li class="on"></li><li class="on"></li><li></li><li></li><li></li>
+      </ul>
+      <p>第 10 格集满，就能换一杯中杯饮料。</p>
+    </div>
+    <div class="reveal">
+      <h2 class="sec-title">加入 LINE 会员，喝越多送越多</h2>
+      <!-- 范例内容：上线前请换成真实数据 -->
+      <ul class="perks">
+        <li><b>1 点</b><div><h3>每杯都集点</h3><p>任何饮料一杯一点，三家门市和 LINE 预点都通用。</p></div></li>
+        <li><b>10 点</b><div><h3>换一杯中杯</h3><p>集满 10 点，任选一杯中杯饮料，加料另计。</p></div></li>
+        <li><b>生日</b><div><h3>当月请你喝</h3><p>生日当月出示会员卡，招待一杯大杯招牌奶茶。</p></div></li>
+      </ul>
+      <a class="btn btn-primary" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">加入 LINE 会员</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：加盟洽询 ==================== -->
+<section id="franchise">
+  <div class="wrap fr-grid">
+    <div class="reveal">
+      <h2 class="sec-title">一起开一家沐茶</h2>
+      <p class="sec-lead">我们提供茶叶配方、设备规划、教育训练和开幕行销。想在你的城市开店，留下数据，总部会在 3 个工作天内联系你。</p>
+      <!-- 范例内容：上线前请换成真实数据 -->
+      <ul class="facts">
+        <li><b>3</b><span>直营门市</span></li>
+        <li><b>8 坪</b><span>最小店面需求</span></li>
+        <li><b>30 天</b><span>完整教育训练</span></li>
+      </ul>
+    </div>
+    <!-- 表单使用 Formspree（免费方案每月 50 则）：
+         1. 到 https://formspree.io 注册并创建新表单
+         2. 拷贝表单网址中的 ID（例如 xyzabcd）
+         3. 把下面 action 里的 your-form-id 换成你的 ID，就能用 Email 收到加盟洽询 -->
+    <form class="form sticker-box reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <h3>加盟洽询</h3>
+      <div class="field"><label for="f-name">姓名</label><input id="f-name" name="姓名" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">电话</label><input id="f-tel" name="电话" type="tel" autocomplete="tel" inputmode="tel" placeholder="0912-345-678" required></div>
+      <div class="field"><label for="f-mail">Email</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="f-area">预计开店地区</label><input id="f-area" name="开店地区" placeholder="例如：台南市东区"></div>
+      <div class="field full"><label for="f-msg">想问的事</label><textarea id="f-msg" name="消息" placeholder="例如：是否已有店面、预算规划、预计开店时间"></textarea></div>
+      <button class="btn btn-primary" type="submit">送出洽询</button>
+      <small>数据只用于加盟联系，不会提供给第三方。</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 区块：页脚 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>沐茶 Muu Tea</h2>
+        <p>总部：高雄市新兴区茶香路 88 号<br>电话 <a href="tel:0712345678">07-1234-5678</a></p>
+        <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="https://line.me/R/ti/p/@yourlineid">LINE</a></div>
+      </div>
+      <div>
+        <h2>营业时间</h2>
+        <p>新兴店 每日 10:00–23:00<br>左营莲潭店 每日 10:30–22:00<br>苓雅文化店 10:00–22:30（平日 11:00 开门）</p>
+      </div>
+      <div>
+        <h2>快速链接</h2>
+        <p><a href="#menu">菜单</a><br><a href="#stores">门市据点</a><br><a href="#order">在线点餐</a><br><a href="#franchise">加盟洽询</a></p>
+      </div>
+    </div>
+    <p class="copy">© <span id="y"></span> 沐茶 Muu Tea</p>
+    <!-- 页脚语言链接：和页眉的 lang-switch 相同 -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja">日本語</a></p>
+  </div>
+</footer>
+
+<!-- 手机版底部固定按钮 -->
+<div class="sticky-cta">
+  <a href="#order" class="btn btn-primary">在线点餐</a>
+  <a href="#stores" class="btn btn-ghost">找门市</a>
+</div>
+
+<script>
+const T = { cur: 'NT$', dec: 0, locale: 'zh-TW', open: '关闭菜单', closed: '打开菜单', size: { M: '中杯', L: '大杯' }, add: '加', sep: '，', list: '、' };
+const $ = (s, el = document) => el.querySelector(s), $$ = (s, el = document) => [...el.querySelectorAll(s)];
+$('#y').textContent = new Date().getFullYear();
+
+// 页眉卷动背景
+const header = $('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// 汉堡菜单
+const toggle = $('.nav-toggle'), menu = $('#menu-links');
+const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? T.open : T.closed); };
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+$$('a', menu).forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// 卷动渐入
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+$$('.reveal').forEach(el => io.observe(el));
+
+// 菜单分页（支持方向键、Home、End）
+const tabs = $$('[role="tab"]');
+const select = (t, focus = true) => {
+  tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+  if (focus) t.focus();
+};
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => select(t));
+  t.addEventListener('keydown', e => {
+    const k = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+    if (k !== undefined) { e.preventDefault(); select(tabs[(k + tabs.length) % tabs.length]); }
+  });
+});
+select(tabs[0], false);
+
+// 客制饮料：组出一句点餐文本，并计算金额
+const mix = $('#mix'), sum = $('#mix-sum'), price = $('#mix-price'), art = $('#mix-art');
+const calc = () => {
+  const d = mix.drink.selectedOptions[0], size = mix.size.value, tops = $$('[name="top"]:checked', mix);
+  const total = +d.dataset[size.toLowerCase()] + tops.reduce((n, t) => n + +t.dataset.p, 0);
+  const parts = [`${T.size[size]} ${d.textContent}`, mix.sugar.value, mix.ice.value];
+  if (tops.length) parts.push(T.add + tops.map(t => t.value).join(T.list));
+  sum.textContent = parts.join(T.sep);
+  price.textContent = T.cur + total.toLocaleString(T.locale, { minimumFractionDigits: T.dec, maximumFractionDigits: T.dec });
+  art.dataset.tea = d.dataset.tea;
+  art.classList.toggle('has-pearl', d.dataset.pearl || tops.some(t => t.dataset.k === 'pearl'));
+  art.classList.toggle('has-cap', d.dataset.cap || tops.some(t => t.dataset.k === 'cap'));
+};
+mix.addEventListener('change', calc); calc();
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

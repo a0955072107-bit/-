@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>墨島タトゥー｜大阪・南船場の完全予約制タトゥースタジオ</title>
+<meta name="description" content="墨島タトゥーは大阪・南船場にある完全予約制のタトゥースタジオです。ファインライン、トラディショナル、和彫り、ブラック＆グレーを得意とする 3 人の彫り師が在籍。オーダーメイドのデザイン、すぐ彫れるフラッシュ、オンラインでのカウンセリング予約に対応しています。">
+<meta property="og:title" content="墨島タトゥー｜大阪・南船場のタトゥースタジオ">
+<meta property="og:description" content="大阪・南船場の完全予約制タトゥースタジオ。ファインラインから和彫りの大きな作品まで、すべてあなたの物語から描き起こします。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ece5d6">
+<!-- 多言語版（SEO）：公開後は href を完全な URL に書き換えてください。例：https://www.yourshop.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ============================================================
+   テーマ設定：ここを変えるだけで、サイト全体の配色とフォントが変わります
+   ============================================================ */
+:root {
+  --brand: #b9301b;          /* ブランドカラー：朱色。サイトで唯一のアクセントカラーです */
+  --brand-ink: #f6f1e6;      /* ブランドカラー上の文字色（AA コントラスト） */
+  --bg: #ece5d6;             /* ページ背景：生成りの紙 */
+  --surface: #e2dac8;        /* 交互に使うセクション背景（料金、アフターケア） */
+  --paper: #f6f1e6;          /* カード、イラスト、入力欄：あたたかいオフホワイト */
+  --text: #16130f;           /* メインの文字色と線画の色：墨色 */
+  --muted: #514b42;          /* 補足の文字色 */
+  --line: var(--text);       /* 太い枠線の色（フラッシュシートの黒い枠） */
+  --line-soft: color-mix(in srgb, var(--text) 22%, transparent); /* 細い区切り線 */
+  --shadow: var(--text);     /* ボタンやカードの、ずらした硬い影の色 */
+  --border: 2px;             /* 太い枠線の幅 */
+  --radius: 0;               /* 角の丸み（フラッシュシート風なら 0 が似合います） */
+  --font-logo: "UnifrakturCook", "Zen Kaku Gothic New", serif; /* ロゴ専用のブラックレター。スタジオ名の欧文表記だけに使います */
+  --font-heading: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif; /* 見出しと数字のフォント */
+  --font-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif; /* 本文フォント */
+  --pad: clamp(1rem, 4.5vw, 4.5rem); /* 左右の余白 */
+  --gap: clamp(1rem, 2.2vw, 1.75rem); /* カード同士の間隔 */
+  --ease: cubic-bezier(.2, .7, .1, 1); /* アニメーションのイージング */
+  --header-h: 4.25rem;       /* ヘッダーの高さ（スマホのメニューはここから開きます） */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; scroll-padding-top: var(--header-h); }
+html:has(.lightbox[open]) { overflow: hidden; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.85 var(--font-body); line-break: strict; -webkit-font-smoothing: antialiased; overflow-x: clip; }
+a { color: inherit; }
+ul, ol { list-style: none; }
+h1, h2, h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; font-family: var(--font-heading); font-weight: 700; line-height: 1.3; letter-spacing: 0; }
+/* 日本語の見出しは <wbr> の位置で改行し、1 文字だけが次の行に残らないようにします */
+h1, h2 { word-break: keep-all; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; }
+.skip { position: absolute; left: -999px; top: 0; z-index: 120; background: var(--text); color: var(--paper); padding: .5rem 1rem; }
+.skip:focus { left: 1rem; }
+
+/* ---------- ボタン：ステッカーのような黒枠と硬い影 ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .7rem 1.35rem;
+  border: var(--border) solid var(--line); border-radius: var(--radius); background: var(--paper); color: var(--text);
+  font: 700 1rem/1.2 var(--font-body); text-decoration: none; cursor: pointer; box-shadow: 4px 4px 0 var(--shadow);
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease), background-color .2s var(--ease);
+}
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--shadow); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--shadow); }
+.btn:disabled { opacity: .5; cursor: not-allowed; transform: none; box-shadow: none; }
+.btn-brand { background: var(--brand); color: var(--brand-ink); }
+.btn-brand:hover { background: color-mix(in srgb, var(--brand) 88%, var(--text)); }
+.text-link { font-weight: 500; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .25em; transition: color .2s var(--ease); }
+.text-link:hover { color: var(--brand); }
+.text-link:active { opacity: .7; }
+
+/* ==================== ヘッダー ==================== */
+.site-header {
+  position: fixed; inset: 0 0 auto; z-index: 50;
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  min-height: var(--header-h); padding: 0 var(--pad); border-bottom: var(--border) solid transparent;
+  transition: background-color .3s var(--ease), border-color .3s var(--ease);
+}
+.site-header.scrolled { background: var(--bg); border-color: var(--line); }
+.logo { display: inline-flex; align-items: baseline; gap: .55rem; text-decoration: none; white-space: nowrap; }
+.logo b { font: 700 1.6rem/1 var(--font-logo); }
+.logo small { font: 700 .88rem/1 var(--font-body); }
+.logo:hover b { color: var(--brand); }
+.logo:active { opacity: .7; }
+.menu { display: flex; align-items: center; gap: clamp(.9rem, 2vw, 1.75rem); font-size: .95rem; font-weight: 500; }
+.menu a { white-space: nowrap; }
+.menu a:not(.btn) { padding-block: .3rem; text-decoration: none; border-bottom: 2px solid transparent; transition: border-color .2s var(--ease), color .2s var(--ease); }
+.menu a:not(.btn):hover { border-color: var(--brand); color: var(--brand); }
+.menu a:not(.btn):active { opacity: .7; }
+.menu .btn { min-height: 42px; padding: .45rem 1rem; box-shadow: 3px 3px 0 var(--shadow); }
+.burger { display: none; width: 46px; height: 46px; background: var(--paper); border: var(--border) solid var(--line); color: inherit; cursor: pointer; }
+.burger:hover { background: var(--surface); }
+.burger:active { transform: scale(.94); }
+.burger span, .burger span::before, .burger span::after { display: block; width: 20px; height: 2px; background: currentColor; margin: auto; position: relative; transition: transform .3s var(--ease), background-color .3s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* JS がないときはメニューをロゴの下に折り返して表示し、JS があるときはハンバーガーにまとめます */
+  html:not(.js) .site-header { position: sticky; top: 0; flex-wrap: wrap; padding-block: .9rem; background: var(--bg); border-color: var(--line); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .25rem 1.1rem; }
+  html:not(.js) .menu .btn { display: none; }
+  .js .burger { display: block; }
+  .js .menu {
+    position: absolute; inset: 100% 0 auto; flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--bg); padding: .25rem var(--pad) 1.5rem; border-bottom: var(--border) solid var(--line);
+    transform: translateY(-.75rem); opacity: 0; visibility: hidden;
+    transition: transform .3s var(--ease), opacity .3s var(--ease), visibility .3s;
+  }
+  .js .menu.open { transform: none; opacity: 1; visibility: visible; }
+  .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line-soft); font-size: 1.1rem; }
+  .js .menu .btn { margin-top: 1.25rem; min-height: 48px; }
+}
+/* 言語切り替え：デスクトップではメインボタンの横、スマホでは開いたメニューの最上部（JS あり）、JS なしではメニューと一緒に折り返します */
+.lang-switch { display: flex; align-items: center; gap: .1rem; padding-left: clamp(.4rem, 1vw, .9rem); border-left: 1px solid var(--line-soft); font-size: .8rem; line-height: 1; white-space: nowrap; }
+.menu .lang-switch a[hreflang] { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border: 0; color: var(--muted); font-weight: 400; text-decoration: underline 1px transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.menu .lang-switch a[hreflang]:hover { color: var(--brand); text-decoration-color: currentColor; }
+.menu .lang-switch a[hreflang]:active { opacity: .7; }
+.menu .lang-switch a[hreflang]:focus-visible { outline-offset: 0; }
+.menu .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: var(--brand); text-decoration-thickness: 2px; }
+@media (max-width: 760px) {
+  html:not(.js) .lang-switch { border-left: 0; padding-left: 0; margin-left: -.3rem; }
+  .js .menu .lang-switch { order: -1; align-self: flex-start; border-left: 0; padding: 0 0 .4rem; margin-left: -.3rem; font-size: .92rem; }
+  .js .menu .lang-switch a[hreflang] { padding: 0 .3rem; border-bottom: 0; min-width: 40px; min-height: 40px; }
+}
+/* タブレット幅：メニューを詰めて、言語切り替えが入ってもヘッダーが折り返さないようにします */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .menu { gap: clamp(.55rem, 1.1vw, .9rem); font-size: .88rem; }
+  .menu a { white-space: nowrap; }
+  .lang-switch { padding-left: .25rem; }
+  .menu .lang-switch a[hreflang] { padding: 0; }
+}
+@media (min-width: 761px) and (max-width: 900px) {
+  /* タブレット幅では場所が足りないため、補助リンク（class="opt"）を隠します。デスクトップとスマホのメニューでは表示されます */
+  .menu .opt { display: none; }
+  .logo small { display: none; }
+}
+
+/* ==================== ファーストビュー ==================== */
+.hero { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--gap) clamp(2rem, 5vw, 5rem); align-items: center; padding: calc(var(--header-h) + clamp(1.5rem, 5vh, 3.5rem)) var(--pad) clamp(2.5rem, 7vh, 4.5rem); }
+.hero h1 { font-size: clamp(2.5rem, 6vw, 5.4rem); line-height: 1.2; font-weight: 900; }
+.hero p { margin-top: 1.25rem; max-width: 32rem; font-size: clamp(1.02rem, 1.5vw, 1.15rem); color: var(--muted); }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; margin-top: 1.9rem; }
+.hero-inner { animation: rise .9s .1s var(--ease) both; }
+@keyframes rise { from { opacity: 0; transform: translateY(1.25rem); } to { opacity: 1; transform: none; } }
+/* ファーストビュー右側：2×2 のフラッシュシート */
+.sheet { border: var(--border) solid var(--line); background: var(--paper); box-shadow: 8px 8px 0 var(--shadow); animation: rise .9s .25s var(--ease) both; }
+.sheet-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.sheet-cell { position: relative; border-right: var(--border) solid var(--line); border-bottom: var(--border) solid var(--line); }
+.sheet-cell:nth-child(2n) { border-right: 0; }
+.sheet-cell span { position: absolute; left: .6rem; top: .45rem; font: 700 .8rem/1 var(--font-heading); z-index: 1; }
+.sheet-foot { display: flex; justify-content: space-between; gap: 1rem; padding: .6rem .9rem; font: 700 .88rem/1.4 var(--font-heading); }
+.sheet-foot span:last-child { color: var(--brand); }
+@media (max-width: 860px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .sheet { max-width: 26rem; }
+}
+
+/* ==================== セクション共通 ==================== */
+section { padding: clamp(4rem, 10vh, 7rem) var(--pad); border-top: var(--border) solid var(--line); }
+.alt { background: var(--surface); }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem var(--gap); align-items: end; margin-bottom: clamp(2rem, 5vh, 3.25rem); }
+.sec-head h2 { font-size: clamp(2rem, 4.4vw, 3.6rem); font-weight: 900; }
+.sec-head p { color: var(--muted); max-width: 34rem; }
+@media (max-width: 760px) { .sec-head { grid-template-columns: minmax(0, 1fr); } }
+.js .reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+.tag { display: inline-block; padding: .15rem .55rem; border: var(--border) solid var(--line); font: 700 .85rem/1.5 var(--font-body); background: var(--paper); }
+.tag.open { background: var(--text); color: var(--paper); }
+.tag.wait { color: var(--muted); border-style: dashed; }
+
+/* ---------- イラスト風プレースホルダー：フラッシュの線画（インライン SVG）と CSS の紙の質感 ---------- */
+/* 線画の色はこれらの変数で決まります：--fk 塗り、--fa アクセントの塗り、--sw 線の太さ。
+   実際の写真を使うには、.img の中の <svg> を削除し、下のコメントのように対応するクラスに背景画像を指定してください。 */
+.img { position: relative; overflow: hidden; aspect-ratio: 1; background-color: var(--paper); background-size: cover; background-position: center;
+  --fk: var(--paper); --fa: var(--brand); --sw: 2.6; }
+.img svg { position: absolute; inset: 9%; width: 82%; height: 82%; overflow: visible; }
+.r-45 { aspect-ratio: 4 / 5; } .r-54 { aspect-ratio: 5 / 4; }
+/* スタイル別の表現：ファインライン（細い線、色なし）とブラック＆グレー（グレーの陰影） */
+.v-fine { --sw: 1.3; --fa: var(--paper); }
+.v-bg { --fa: color-mix(in srgb, var(--text) 62%, var(--paper)); --fk: color-mix(in srgb, var(--text) 10%, var(--paper)); }
+/* SVG 線画の共通スタイル */
+.k { fill: var(--fk); stroke: var(--text); stroke-width: var(--sw); stroke-linejoin: round; stroke-linecap: round; }
+.a { fill: var(--fa); stroke: var(--text); stroke-width: var(--sw); stroke-linejoin: round; }
+.b { fill: var(--text); }
+.s { fill: none; stroke: var(--text); stroke-width: var(--sw); stroke-linecap: round; stroke-linejoin: round; }
+.sn-o { fill: none; stroke: var(--text); stroke-width: 15; stroke-linecap: round; }
+.sn-i { fill: none; stroke: var(--fk); stroke-width: 10; stroke-linecap: round; }
+.sn-d { fill: none; stroke: var(--fa); stroke-width: 3.5; stroke-dasharray: 3 7; }
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* 写真に差し替える：.img-dots { background: url(images/work-01.jpg) center/cover; } */
+.img-dots { background-image: radial-gradient(color-mix(in srgb, var(--text) 14%, transparent) 1.2px, transparent 1.6px); background-size: 12px 12px; }
+/* 写真に差し替える：.img-hatch { background: url(images/work-02.jpg) center/cover; } */
+.img-hatch { background-image: repeating-linear-gradient(135deg, transparent 0 9px, color-mix(in srgb, var(--text) 9%, transparent) 9px 10px); }
+/* 写真に差し替える：.img-sun { background: url(images/work-03.jpg) center/cover; } */
+.img-sun { background-image: radial-gradient(circle at 74% 24%, color-mix(in srgb, var(--brand) 22%, transparent) 0 20%, transparent 20.5%); }
+/* 写真に差し替える：.img-plain { background: url(images/work-04.jpg) center/cover; } */
+.img-plain { background-image: linear-gradient(to bottom, transparent 82%, color-mix(in srgb, var(--text) 6%, transparent) 82%); }
+/* 写真に差し替える：.img-smoke { background: url(images/work-05.jpg) center/cover; } */
+.img-smoke { background-image: radial-gradient(ellipse at 50% 55%, transparent 30%, color-mix(in srgb, var(--text) 22%, transparent) 100%); }
+
+/* ==================== 彫り師 ==================== */
+.artists { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.artist { display: flex; flex-direction: column; border: var(--border) solid var(--line); background: var(--paper); min-width: 0; }
+.artist .img { border-bottom: var(--border) solid var(--line); }
+.artist-body { display: flex; flex-direction: column; gap: .9rem; padding: clamp(1.25rem, 2.5vw, 1.75rem); flex: 1; }
+.artist-top { display: flex; justify-content: space-between; align-items: center; gap: .75rem; flex-wrap: wrap; }
+.artist h3 { font-size: 1.6rem; }
+.artist h3 small { font: 700 .95rem/1 var(--font-heading); color: var(--muted); margin-left: .5rem; }
+.specs { display: flex; flex-wrap: wrap; gap: .4rem; }
+.specs li { padding: .1rem .6rem; border: 1px solid var(--line); font-size: .88rem; }
+.artist p { color: var(--muted); font-size: .95rem; }
+.artist .text-link { margin-top: auto; align-self: flex-start; }
+@media (max-width: 900px) { .artists { grid-template-columns: minmax(0, 1fr); max-width: 34rem; } .artist { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); } .artist .img { border-bottom: 0; border-right: var(--border) solid var(--line); aspect-ratio: auto; min-height: 100%; } }
+@media (max-width: 520px) { .artist { display: flex; } .artist .img { aspect-ratio: 5 / 4; min-height: 0; border-right: 0; border-bottom: var(--border) solid var(--line); } }
+
+/* ==================== 作品集 ==================== */
+.filters { display: grid; gap: .9rem; margin-bottom: 1.75rem; }
+html:not(.js) .filters, html:not(.js) .count { display: none; }
+.filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.filter-row b { font-weight: 700; font-size: .95rem; min-width: 4.5rem; }
+.chip { min-height: 44px; padding: .45rem 1rem; border: var(--border) solid var(--line); background: var(--paper); color: var(--text); font: 500 .95rem/1 var(--font-body); cursor: pointer; transition: background-color .2s var(--ease), color .2s var(--ease); }
+.chip:hover { background: var(--surface); }
+.chip:active { transform: translateY(1px); }
+.chip[aria-pressed="true"] { background: var(--text); color: var(--paper); }
+.count { font-size: .92rem; color: var(--muted); margin-bottom: 1rem; }
+.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: var(--border) solid var(--line); border-left: var(--border) solid var(--line); }
+.work { position: relative; border-right: var(--border) solid var(--line); border-bottom: var(--border) solid var(--line); background: var(--paper); min-width: 0; }
+.work[hidden] { display: none; }
+.work-btn { position: absolute; inset: 0; z-index: 2; width: 100%; background: none; border: 0; cursor: zoom-in; }
+.work-btn:focus-visible { outline-offset: -5px; }
+.work:hover { background: var(--surface); }
+.work:hover .img { background-color: var(--surface); --fk: var(--surface); }
+.work-btn:active ~ figcaption { color: var(--brand); }
+.work figcaption { display: flex; justify-content: space-between; gap: .25rem .75rem; flex-wrap: wrap; padding: .55rem .8rem .7rem; border-top: 1px solid var(--line-soft); font-size: .88rem; }
+.work figcaption b { font-weight: 700; }
+.work figcaption span { color: var(--muted); }
+.empty { padding: 2rem 0; color: var(--muted); }
+@media (max-width: 1000px) { .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } .filter-row b { flex-basis: 100%; } }
+
+/* ---------- ライトボックス ---------- */
+.lightbox { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; border: 0; padding: 4.5rem var(--pad) 1.5rem; background: var(--bg); color: var(--text); }
+.lightbox[open] { display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 1rem; animation: lbin .25s var(--ease); }
+.lightbox::backdrop { background: transparent; }
+@keyframes lbin { from { opacity: 0; } to { opacity: 1; } }
+.lb-stage { display: grid; place-items: center; min-height: 0; }
+.lb-stage .img { width: min(100%, calc(100svh - 10rem)); border: var(--border) solid var(--line); box-shadow: 8px 8px 0 var(--shadow); }
+.lb-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.lb-cap b { font: 700 1.2rem/1.4 var(--font-body); margin-right: .75rem; }
+.lb-cap span { color: var(--muted); }
+.lb-nav { display: flex; gap: .6rem; }
+.lb-btn { display: grid; place-items: center; width: 48px; height: 48px; border: var(--border) solid var(--line); background: var(--paper); color: var(--text); cursor: pointer; box-shadow: 3px 3px 0 var(--shadow); transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
+.lb-btn:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--shadow); }
+.lb-btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--shadow); }
+.lb-btn svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.2; }
+.lb-close { position: absolute; top: 1rem; right: var(--pad); }
+
+/* ==================== フラッシュ ==================== */
+.flashes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.flash { display: flex; flex-direction: column; border: var(--border) solid var(--line); background: var(--paper); min-width: 0; }
+.flash .img { border-bottom: var(--border) solid var(--line); aspect-ratio: 5 / 4; }
+.flash-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .35rem 1rem; align-items: end; padding: 1rem 1.15rem 1.25rem; flex: 1; }
+.flash h3 { font-size: 1.25rem; }
+.flash .meta { grid-column: 1; font-size: .9rem; color: var(--muted); }
+.flash .price { grid-column: 2; grid-row: 1 / 3; font: 900 1.5rem/1 var(--font-heading); color: var(--brand); font-variant-numeric: tabular-nums; }
+.flash .btn { grid-column: 1 / -1; margin-top: .75rem; }
+.flash-note { margin-top: 1.75rem; color: var(--muted); font-size: .95rem; }
+@media (max-width: 900px) { .flashes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .flashes { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 料金 ==================== */
+.prices { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: var(--border) solid var(--line); background: var(--paper); }
+.price-cell { padding: clamp(1.25rem, 2.5vw, 2rem); border-right: var(--border) solid var(--line); display: grid; gap: .5rem; align-content: start; min-width: 0; }
+.price-cell:last-child { border-right: 0; }
+.price-cell h3 { font: 700 1.05rem/1.4 var(--font-body); }
+.price-cell .num { font: 900 clamp(1.8rem, 3vw, 2.6rem)/1.1 var(--font-heading); font-variant-numeric: tabular-nums; }
+.price-cell .num small { display: inline-block; font: 500 .9rem var(--font-body); color: var(--muted); margin-left: .3rem; }
+.price-cell p { color: var(--muted); font-size: .93rem; }
+.price-cell.hl .num { color: var(--brand); }
+.price-foot { margin-top: 1.5rem; color: var(--muted); font-size: .95rem; max-width: 52rem; }
+@media (max-width: 900px) { .prices { grid-template-columns: repeat(2, minmax(0, 1fr)); } .price-cell:nth-child(2) { border-right: 0; } .price-cell:nth-child(-n+2) { border-bottom: var(--border) solid var(--line); } }
+@media (max-width: 480px) { .prices { grid-template-columns: minmax(0, 1fr); } .price-cell { border-right: 0; border-bottom: var(--border) solid var(--line); } .price-cell:last-child { border-bottom: 0; } }
+
+/* ==================== 施術の流れ ==================== */
+.steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--gap); counter-reset: step; }
+.step { border-top: 6px solid var(--line); padding-top: 1.1rem; min-width: 0; }
+.step::before { counter-increment: step; content: counter(step, decimal-leading-zero); display: block; font: 900 2.4rem/1 var(--font-heading); color: var(--brand); margin-bottom: .6rem; }
+.step h3 { font-size: 1.2rem; margin-bottom: .45rem; }
+.step p { color: var(--muted); font-size: .93rem; }
+@media (max-width: 1000px) { .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .steps { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== アフターケアと年齢・健康の条件 ==================== */
+.care-wrap { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--gap) clamp(2rem, 5vw, 4rem); align-items: start; }
+.care-wrap h2 { font-size: clamp(2rem, 4.4vw, 3.4rem); font-weight: 900; margin-bottom: 1.5rem; }
+.care { border-top: var(--border) solid var(--line); }
+.care details { border-bottom: var(--border) solid var(--line); }
+.care summary { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.05rem .25rem; font-weight: 700; font-size: 1.05rem; cursor: pointer; list-style: none; transition: color .2s var(--ease); }
+.care summary::-webkit-details-marker { display: none; }
+.care summary::after { content: "+"; font: 700 1.6rem/1 var(--font-heading); transition: transform .25s var(--ease); }
+.care details[open] summary::after { transform: rotate(45deg); }
+.care summary:hover { color: var(--brand); }
+.care summary:active { opacity: .7; }
+.care details ul { padding: 0 .25rem 1.25rem; display: grid; gap: .45rem; color: var(--muted); }
+.care details li { padding-left: 1.1rem; position: relative; }
+.care details li::before { content: ""; position: absolute; left: 0; top: .9em; width: .55rem; height: 2px; background: var(--text); }
+.rules { border: var(--border) solid var(--line); background: var(--paper); padding: clamp(1.5rem, 3vw, 2.25rem); box-shadow: 8px 8px 0 var(--shadow); }
+.rules h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+.age { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+.age strong { display: grid; place-items: center; width: 4.6rem; height: 4.6rem; flex: none; border: 3px solid var(--brand); color: var(--brand); border-radius: 50%; font: 900 1.5rem/1 var(--font-heading); transform: rotate(-8deg); }
+.age p { font-weight: 500; }
+.rules ul { display: grid; gap: .6rem; border-top: 1px solid var(--line-soft); padding-top: 1rem; }
+.rules li { color: var(--muted); font-size: .95rem; padding-left: 1.1rem; position: relative; }
+.rules li::before { content: ""; position: absolute; left: 0; top: .9em; width: .55rem; height: 2px; background: var(--brand); }
+@media (max-width: 900px) { .care-wrap { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== お客様の声 ==================== */
+.reviews { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.review { display: flex; flex-direction: column; justify-content: space-between; gap: 1.5rem; padding: clamp(1.4rem, 2.6vw, 2rem); border: var(--border) solid var(--line); background: var(--paper); min-width: 0; }
+.review blockquote { font-size: 1.02rem; line-height: 1.9; }
+.review blockquote::before { content: "\201C"; display: block; font: 700 3.2rem/.7 var(--font-heading); color: var(--brand); margin-bottom: .4rem; }
+.review figcaption { font-size: .9rem; color: var(--muted); border-top: 1px solid var(--line-soft); padding-top: .9rem; }
+.review figcaption b { display: block; color: var(--text); }
+@media (max-width: 900px) { .reviews { grid-template-columns: minmax(0, 1fr); max-width: 38rem; } }
+
+/* ==================== 予約フォーム ==================== */
+.booking { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--gap) clamp(2rem, 5vw, 5rem); }
+.booking h2 { font-size: clamp(2rem, 4.4vw, 3.6rem); font-weight: 900; margin-bottom: 1.25rem; }
+.booking .intro { color: var(--muted); max-width: 28rem; }
+.deposit { margin-top: 1.5rem; padding: 1rem 1.15rem; border: var(--border) solid var(--brand); background: var(--paper); font-size: .95rem; max-width: 28rem; }
+.deposit b { color: var(--brand); }
+.contact-btns { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 1.75rem; }
+.contact-info { margin-top: 2rem; font-style: normal; display: grid; gap: .4rem; font-size: .95rem; color: var(--muted); }
+.contact-info a:hover { color: var(--brand); }
+.contact-info a:active { opacity: .7; }
+.form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; align-content: start; padding: clamp(1.25rem, 3vw, 2rem); border: var(--border) solid var(--line); background: var(--paper); box-shadow: 8px 8px 0 var(--shadow); }
+.form .full { grid-column: 1 / -1; }
+.field { display: grid; gap: .35rem; min-width: 0; }
+.field label { font-size: .92rem; font-weight: 700; }
+.field label small { font-weight: 400; color: var(--muted); margin-left: .4rem; }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 48px; font: 400 1rem/1.5 var(--font-body); color: var(--text); background: var(--bg);
+  border: var(--border) solid var(--line); border-radius: var(--radius); padding: .6rem .8rem; transition: background-color .2s var(--ease), border-color .2s var(--ease);
+}
+.field input:hover, .field select:hover, .field textarea:hover { background: var(--surface); }
+.field textarea { min-height: 7rem; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); background: var(--paper); }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { box-shadow: 0 0 0 2px var(--brand); }
+.field.flash-picked select { border-color: var(--brand); box-shadow: 0 0 0 2px var(--brand); }
+.check { display: flex; gap: .65rem; align-items: flex-start; font-size: .95rem; }
+.check input { width: 1.25rem; height: 1.25rem; margin-top: .3rem; accent-color: var(--brand); flex: none; }
+.form .btn { justify-self: start; }
+.form-note { font-size: .86rem; color: var(--muted); }
+@media (max-width: 900px) { .booking { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .form { grid-template-columns: minmax(0, 1fr); box-shadow: 5px 5px 0 var(--shadow); } .form .btn { justify-self: stretch; } }
+
+/* ==================== フッター ==================== */
+/* フッターの言語リンク */
+.f-lang { display: flex; flex-wrap: wrap; gap: 0 .9rem; padding-top: .6rem; font-size: .86rem; }
+.f-lang a { display: inline-flex; align-items: center; min-height: 32px; color: color-mix(in srgb, var(--paper) 78%, var(--text)); text-decoration: underline 1px transparent; text-underline-offset: .3em; transition: color .2s, text-decoration-color .2s; }
+.f-lang a:hover { color: var(--paper); text-decoration-color: currentColor; }
+.f-lang a:active { opacity: .7; }
+.f-lang a[aria-current="page"] { color: var(--paper); font-weight: 700; text-decoration-color: currentColor; }
+.site-footer { background: var(--text); color: var(--paper); padding: 3.5rem var(--pad) 2rem; font-size: .95rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: var(--gap) clamp(2rem, 5vw, 4rem); padding-bottom: 2rem; border-bottom: 1px solid color-mix(in srgb, var(--paper) 25%, transparent); }
+.site-footer .logo b { font-size: 2.2rem; }
+.site-footer .logo { margin-bottom: .9rem; }
+.site-footer .logo:hover b { color: var(--paper); text-decoration: underline; }
+.site-footer p, .site-footer address { color: color-mix(in srgb, var(--paper) 78%, var(--text)); font-style: normal; }
+.site-footer h2 { font: 700 1.05rem/1.4 var(--font-body); margin-bottom: .5rem; }
+.site-footer a:not(.logo):hover { color: var(--paper); text-decoration-color: var(--paper); }
+.site-footer a:active { opacity: .7; }
+.social { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1rem; }
+.social a { text-decoration: underline; text-underline-offset: .25em; }
+.copy { padding-top: 1.5rem; font-size: .86rem; color: color-mix(in srgb, var(--paper) 70%, var(--text)); }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } .site-footer { padding-bottom: 6.5rem; } }
+
+/* ---------- スマホ用の固定ボタン ---------- */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 45; padding: .7rem var(--pad) calc(.75rem + env(safe-area-inset-bottom)); background: var(--bg); border-top: var(--border) solid var(--line); }
+.sticky-cta .btn { width: 100%; box-shadow: 3px 3px 0 var(--shadow); }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- 動きを減らす設定 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { transform: none; opacity: 1; }
+}
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<!-- JSON-LD 構造化データ：タトゥースタジオには TattooParlor（LocalBusiness の一種）を使います。実際の情報に書き換えてください -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TattooParlor",
+  "name": "墨島タトゥー",
+  "alternateName": "Sumijima Tattoo",
+  "description": "大阪・南船場の完全予約制タトゥースタジオ。ファインライン、トラディショナル、和彫り、ブラック＆グレーが得意です。",
+  "telephone": "+81-6-1234-5678",
+  "email": "hello@sumijima.example",
+  "url": "https://www.example.com/",
+  "priceRange": "¥15,000〜",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "南船場 4-8-12 2階",
+    "addressLocality": "大阪市中央区",
+    "addressRegion": "大阪府",
+    "postalCode": "542-0081",
+    "addressCountry": "JP"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "12:00", "closes": "21:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+
+<!-- フラッシュの線画ライブラリ：<symbol> ひとつが 1 デザインで、<use href="#t-xxx"> で使い回します。自由に追加、削除できます -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="t-swallow" viewBox="0 0 100 100">
+    <path class="k" d="M62 42 C52 28 38 18 14 12 C24 22 30 28 36 36 C28 33 20 33 12 36 C26 42 40 48 52 52 Z"/>
+    <path class="s" d="M24 20 C34 26 42 32 50 42 M20 36 C32 38 42 42 50 48"/>
+    <path class="k" d="M44 58 L12 66 L28 60 L16 80 L48 62 Z"/>
+    <path class="k" d="M70 34 C60 42 52 52 40 58 C52 62 62 56 68 50 C74 44 80 40 84 36 C82 30 76 30 70 34 Z"/>
+    <path class="a" d="M70 42 C64 50 56 56 46 58 C56 60 64 54 69 48 Z"/>
+    <path class="k" d="M58 52 C62 64 64 76 60 90 C54 78 50 68 48 58 Z"/>
+    <path class="s" d="M56 60 C58 68 58 76 58 82"/>
+    <path class="k" d="M83 33 L94 31 L84 38 Z"/>
+    <circle class="b" cx="78" cy="34" r="2"/>
+  </symbol>
+  <symbol id="t-dagger" viewBox="0 0 100 100">
+    <path class="k" d="M43 44 L57 44 L50 96 Z"/>
+    <path class="s" d="M50 48 L50 86"/>
+    <path class="a" d="M22 70 C34 62 40 66 50 62 C60 58 66 62 78 54 L80 64 C68 72 62 68 50 72 C40 76 34 72 24 80 Z"/>
+    <path class="s" d="M24 80 L18 84 L22 70 M78 54 L84 50 L80 64"/>
+    <path class="k" d="M26 38 C26 33 32 33 34 36 L66 36 C68 33 74 33 74 38 C74 43 68 43 66 41 L34 41 C32 43 26 43 26 38 Z"/>
+    <rect class="k" x="45" y="16" width="10" height="20"/>
+    <path class="s" d="M45 21 L55 24 M45 27 L55 30"/>
+    <circle class="a" cx="50" cy="11" r="5.5"/>
+  </symbol>
+  <symbol id="t-rose" viewBox="0 0 100 100">
+    <path class="s" d="M50 70 C50 78 52 86 50 96"/>
+    <path class="k" d="M49 74 C38 82 26 84 14 80 C22 72 36 70 49 74 Z"/>
+    <path class="s" d="M18 79 C28 77 38 76 46 75"/>
+    <path class="k" d="M52 78 C62 84 74 86 86 80 C78 72 64 72 52 78 Z"/>
+    <path class="s" d="M84 80 C74 79 62 79 56 78"/>
+    <path class="a" d="M50 20 C68 18 80 32 77 48 C74 63 62 71 50 71 C35 71 23 61 23 46 C23 31 35 21 50 20 Z"/>
+    <path class="k" d="M38 32 C44 24 60 24 64 34 C68 44 60 54 50 54 C40 54 34 46 38 38 Z"/>
+    <path class="s" d="M44 36 C48 32 56 33 57 39 C58 45 52 48 48 46 C45 44 46 40 50 40"/>
+    <path class="s" d="M28 44 C34 56 42 62 54 62 C64 62 70 56 74 48 M33 30 C36 28 40 27 43 28"/>
+  </symbol>
+  <symbol id="t-snake" viewBox="0 0 100 100">
+    <path class="sn-o" d="M22 90 C6 76 26 64 48 64 C72 64 88 52 76 38 C66 28 40 40 34 28 C30 20 38 13 48 14"/>
+    <path class="sn-i" d="M22 90 C6 76 26 64 48 64 C72 64 88 52 76 38 C66 28 40 40 34 28 C30 20 38 13 48 14"/>
+    <path class="sn-d" d="M22 90 C6 76 26 64 48 64 C72 64 88 52 76 38 C66 28 40 40 34 28 C30 20 38 13 48 14"/>
+    <path class="k" d="M46 8 C56 6 66 9 68 14 C66 20 56 22 46 20 C42 16 42 11 46 8 Z"/>
+    <circle class="b" cx="58" cy="12" r="2"/>
+    <path class="s" d="M68 14 L78 12 M68 14 L78 18"/>
+  </symbol>
+  <symbol id="t-wave" viewBox="0 0 100 100">
+    <circle class="a" cx="76" cy="24" r="12"/>
+    <path class="k" d="M8 84 C10 52 36 28 62 32 C82 36 90 56 78 66 C68 74 54 68 56 58 C58 50 68 52 68 58 C60 58 50 60 46 70 C44 76 46 82 48 84 Z"/>
+    <path class="s" d="M18 78 C22 58 38 42 58 40 M26 80 C30 66 40 56 52 52"/>
+    <path class="k" d="M62 32 L58 24 L66 30 L66 22 L72 32 Z"/>
+    <path class="s" d="M4 88 H96 M12 94 H88"/>
+  </symbol>
+  <symbol id="t-moth" viewBox="0 0 100 100">
+    <path class="k" d="M49 40 C36 22 14 24 10 40 C9 54 30 58 48 52 Z"/>
+    <path class="k" d="M51 40 C64 22 86 24 90 40 C91 54 70 58 52 52 Z"/>
+    <path class="k" d="M48 54 C36 60 26 72 32 80 C40 84 47 70 49 60 Z"/>
+    <path class="k" d="M52 54 C64 60 74 72 68 80 C60 84 53 70 51 60 Z"/>
+    <circle class="a" cx="30" cy="40" r="5"/>
+    <circle class="a" cx="70" cy="40" r="5"/>
+    <path class="s" d="M20 46 C28 50 38 50 46 48 M80 46 C72 50 62 50 54 48"/>
+    <ellipse class="k" cx="50" cy="52" rx="3.5" ry="17"/>
+    <path class="s" d="M48 36 C44 26 40 22 34 20 M52 36 C56 26 60 22 66 20"/>
+  </symbol>
+  <symbol id="t-moon" viewBox="0 0 100 100">
+    <path class="k" d="M58 14 A36 36 0 1 0 58 86 A28 28 0 1 1 58 14 Z"/>
+    <path class="a" d="M74 30 L77 40 L87 42 L77 45 L74 56 L71 45 L61 42 L71 40 Z"/>
+    <path class="s" d="M84 66 L84 74 M80 70 L88 70 M64 76 L64 80 M62 78 L66 78"/>
+    <path class="s" d="M30 30 C26 40 26 58 34 70"/>
+  </symbol>
+  <symbol id="t-heart" viewBox="0 0 100 100">
+    <path class="a" d="M50 86 C20 64 12 46 22 32 C32 20 46 26 50 38 C54 26 68 20 78 32 C88 46 80 64 50 86 Z"/>
+    <path class="s" d="M30 34 C26 38 26 44 28 48"/>
+    <path class="k" d="M8 52 L22 48 L22 64 L8 68 L14 60 Z"/>
+    <path class="k" d="M92 52 L78 48 L78 64 L92 68 L86 60 Z"/>
+    <path class="k" d="M20 46 C38 50 62 50 80 46 L80 62 C62 66 38 66 20 62 Z"/>
+    <path class="s" d="M50 10 L50 22 M36 14 L40 24 M64 14 L60 24"/>
+  </symbol>
+</svg>
+
+<!-- ==================== Section: Header and navigation ==================== -->
+<header class="site-header">
+  <a href="#top" class="logo" aria-label="墨島タトゥー、ページの先頭へ"><b>Sumijima</b><small>墨島タトゥー</small></a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="メニューを開く"><span></span></button>
+  <nav class="menu" id="menu" aria-label="メインメニュー">
+    <a href="#artists">彫り師</a>
+    <a href="#work">作品集</a>
+    <a href="#flash">フラッシュ</a>
+    <a href="#pricing">料金</a>
+    <a href="#process">流れ</a>
+    <a class="opt" href="#care">アフターケア</a>
+    <a href="#booking" class="btn btn-brand">カウンセリング予約</a>
+    <!-- lang-switch：言語切り替え。言語を追加するときは、ここにリンクを足し、対応するフォルダを作成してください -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="ja">JA</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <h1>ゆっくり描いて、<br>一生まとう。</h1>
+    <p>大阪・南船場の完全予約制タトゥースタジオです。3 人の彫り師が、ファインラインから和彫りの大きな作品まで、あなたの物語から一つひとつ描き起こします。</p>
+    <div class="hero-actions">
+      <a href="#booking" class="btn btn-brand">カウンセリングを予約</a>
+      <a href="#work" class="text-link">作品を見る</a>
+    </div>
+  </div>
+  <div class="sheet" role="img" aria-label="ツバメ、バラ、短剣、ヘビの 4 つの古典的な線画が並ぶフラッシュシート">
+    <div class="sheet-grid">
+      <div class="sheet-cell"><span>No.01</span><div class="img img-dots"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-swallow"/></svg></div></div>
+      <div class="sheet-cell"><span>No.02</span><div class="img img-plain"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-rose"/></svg></div></div>
+      <div class="sheet-cell"><span>No.03</span><div class="img img-hatch"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-dagger"/></svg></div></div>
+      <div class="sheet-cell"><span>No.04</span><div class="img img-sun"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-snake"/></svg></div></div>
+    </div>
+    <div class="sheet-foot"><span>フラッシュシート Vol.07</span><span>どれも一度きりのデザイン</span></div>
+  </div>
+</section>
+
+<!-- ==================== Section: Artists ==================== -->
+<!-- サンプル内容：公開前に実際の情報に差し替えてください -->
+<section id="artists">
+  <div class="sec-head reveal">
+    <h2>彫り師紹介</h2>
+    <p>3 人の彫り師は、それぞれまったく違う持ち味があります。誰に頼めばいいか迷ったら、予約時に「指名なし」を選んでください。デザインの内容に合わせてご提案します。</p>
+  </div>
+  <div class="artists">
+    <article class="artist reveal">
+      <div class="img img-sun" role="img" aria-label="茂木の代表作：波と赤い太陽"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-wave"/></svg></div>
+      <div class="artist-body">
+        <div class="artist-top"><h3>茂木<small>代表</small></h3><span class="tag open">予約受付中</span></div>
+        <ul class="specs" aria-label="得意なスタイル"><li>トラディショナル</li><li>和彫り</li></ul>
+        <p>彫り師歴 14 年を経てスタジオを開業。太い線と鮮やかな色で、30 年後もくっきり読めるタトゥーを彫ります。</p>
+        <a href="#work" class="text-link" data-show-artist="mo">茂木の作品を見る</a>
+      </div>
+    </article>
+    <article class="artist reveal">
+      <div class="img img-dots v-fine" role="img" aria-label="瑠衣の代表作：ファインラインの蛾"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-moth"/></svg></div>
+      <div class="artist-body">
+        <div class="artist-top"><h3>瑠衣<small>ファインライン</small></h3><span class="tag wait">キャンセル待ち</span></div>
+        <ul class="specs" aria-label="得意なスタイル"><li>ファインライン</li><li>小さな作品</li></ul>
+        <p>イラストレーターから彫り師に転身。シングルニードルで描く植物や昆虫に定評があります。次回の予約受付は 3 月からで、いまはキャンセル待ちを受け付けています。</p>
+        <a href="#work" class="text-link" data-show-artist="lu">瑠衣の作品を見る</a>
+      </div>
+    </article>
+    <article class="artist reveal">
+      <div class="img img-smoke v-bg" role="img" aria-label="加納の代表作：ブラック＆グレーのヘビ"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-snake"/></svg></div>
+      <div class="artist-body">
+        <div class="artist-top"><h3>加納<small>大きな作品</small></h3><span class="tag open">予約受付中</span></div>
+        <ul class="specs" aria-label="得意なスタイル"><li>ブラック＆グレー</li><li>和彫り</li></ul>
+        <p>なめらかなグレーの陰影と、五分袖から背中一面までの大きな作品が得意です。最初の一本を入れる前に、回数と予算を一緒に計画します。</p>
+        <a href="#work" class="text-link" data-show-artist="k">加納の作品を見る</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ==================== Section: Portfolio ==================== -->
+<!-- サンプル内容：公開前に自分の作品と説明に差し替えてください -->
+<section class="alt" id="work">
+  <div class="sec-head reveal">
+    <h2>作品集</h2>
+    <p>彫り師やスタイルで絞り込めます。作品をクリックすると拡大表示され、矢印キーで前後の作品を見られます。</p>
+  </div>
+  <div class="filters">
+    <div class="filter-row" role="group" aria-label="彫り師で絞り込む">
+      <b>彫り師</b>
+      <button type="button" class="chip" data-g="artist" data-v="all" aria-pressed="true">すべて</button>
+      <button type="button" class="chip" data-g="artist" data-v="mo" aria-pressed="false">茂木</button>
+      <button type="button" class="chip" data-g="artist" data-v="lu" aria-pressed="false">瑠衣</button>
+      <button type="button" class="chip" data-g="artist" data-v="k" aria-pressed="false">加納</button>
+    </div>
+    <div class="filter-row" role="group" aria-label="スタイルで絞り込む">
+      <b>スタイル</b>
+      <button type="button" class="chip" data-g="style" data-v="all" aria-pressed="true">すべて</button>
+      <button type="button" class="chip" data-g="style" data-v="fine" aria-pressed="false">ファインライン</button>
+      <button type="button" class="chip" data-g="style" data-v="trad" aria-pressed="false">トラディショナル</button>
+      <button type="button" class="chip" data-g="style" data-v="jp" aria-pressed="false">和彫り</button>
+      <button type="button" class="chip" data-g="style" data-v="bg" aria-pressed="false">ブラック＆グレー</button>
+    </div>
+  </div>
+  <p class="count" aria-live="polite"><span id="count">12</span> 点の作品を表示中</p>
+  <div class="gallery">
+    <figure class="work" data-artist="mo" data-style="trad">
+      <button type="button" class="work-btn" aria-label="拡大：帰り道のツバメ"></button>
+      <div class="img img-dots" role="img" aria-label="お腹が赤いトラディショナルのツバメ"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-swallow"/></svg></div>
+      <figcaption><b>帰り道のツバメ</b><span>茂木、トラディショナル</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="lu" data-style="fine">
+      <button type="button" class="work-btn" aria-label="拡大：夜の蛾"></button>
+      <div class="img img-plain v-fine" role="img" aria-label="左右対称の羽をもつファインラインの蛾"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-moth"/></svg></div>
+      <figcaption><b>夜の蛾</b><span>瑠衣、ファインライン</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="k" data-style="bg">
+      <button type="button" class="work-btn" aria-label="拡大：黒いバラ"></button>
+      <div class="img img-smoke v-bg" role="img" aria-label="葉のついたブラック＆グレーのバラ"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-rose"/></svg></div>
+      <figcaption><b>黒いバラ</b><span>加納、ブラック＆グレー</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="mo" data-style="jp">
+      <button type="button" class="work-btn" aria-label="拡大：波と日輪"></button>
+      <div class="img img-sun" role="img" aria-label="赤い太陽の下の和彫りの波"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-wave"/></svg></div>
+      <figcaption><b>波と日輪</b><span>茂木、和彫り</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="lu" data-style="fine">
+      <button type="button" class="work-btn" aria-label="拡大：新月"></button>
+      <div class="img img-dots v-fine" role="img" aria-label="ファインラインの三日月と星"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-moon"/></svg></div>
+      <figcaption><b>新月</b><span>瑠衣、ファインライン</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="k" data-style="jp">
+      <button type="button" class="work-btn" aria-label="拡大：とぐろを巻くヘビ"></button>
+      <div class="img img-hatch" role="img" aria-label="お腹のうろこが赤い、とぐろを巻く和彫りのヘビ"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-snake"/></svg></div>
+      <figcaption><b>とぐろを巻くヘビ</b><span>加納、和彫り</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="mo" data-style="trad">
+      <button type="button" class="work-btn" aria-label="拡大：バナーと短剣"></button>
+      <div class="img img-plain" role="img" aria-label="赤いバナーを貫くトラディショナルの短剣"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-dagger"/></svg></div>
+      <figcaption><b>バナーと短剣</b><span>茂木、トラディショナル</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="lu" data-style="fine">
+      <button type="button" class="work-btn" aria-label="拡大：一輪のバラ"></button>
+      <div class="img img-hatch v-fine" role="img" aria-label="ファインラインの一輪のバラ"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-rose"/></svg></div>
+      <figcaption><b>一輪のバラ</b><span>瑠衣、ファインライン</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="k" data-style="bg">
+      <button type="button" class="work-btn" aria-label="拡大：灰色の蛾"></button>
+      <div class="img img-smoke v-bg" role="img" aria-label="ブラック＆グレーの蛾"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-moth"/></svg></div>
+      <figcaption><b>灰色の蛾</b><span>加納、ブラック＆グレー</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="mo" data-style="trad">
+      <button type="button" class="work-btn" aria-label="拡大：ハートとバナー"></button>
+      <div class="img img-sun" role="img" aria-label="空白のバナーを添えたトラディショナルの赤いハート"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-heart"/></svg></div>
+      <figcaption><b>ハートとバナー</b><span>茂木、トラディショナル</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="lu" data-style="fine">
+      <button type="button" class="work-btn" aria-label="拡大：小さなツバメ"></button>
+      <div class="img img-plain v-fine" role="img" aria-label="ファインラインの小さなツバメ"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-swallow"/></svg></div>
+      <figcaption><b>小さなツバメ</b><span>瑠衣、ファインライン</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="k" data-style="bg">
+      <button type="button" class="work-btn" aria-label="拡大：暗い潮"></button>
+      <div class="img img-smoke v-bg" role="img" aria-label="灰色の太陽とブラック＆グレーの波"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-wave"/></svg></div>
+      <figcaption><b>暗い潮</b><span>加納、ブラック＆グレー</span></figcaption>
+    </figure>
+  </div>
+  <p class="empty" id="empty" hidden>この組み合わせの作品はまだありません。ほかの条件で探すか、カウンセリングで彫り師に直接ご相談ください。</p>
+</section>
+
+<!-- ライトボックス：作品をクリックすると開きます。Esc キーで閉じ、矢印キーで作品を切り替えます -->
+<dialog class="lightbox" id="lightbox" aria-label="拡大表示">
+  <button type="button" class="lb-btn lb-close" aria-label="閉じる"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="lb-stage"></div>
+  <div class="lb-bar">
+    <p class="lb-cap" aria-live="polite"></p>
+    <div class="lb-nav">
+      <button type="button" class="lb-btn lb-prev" aria-label="前の作品"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button type="button" class="lb-btn lb-next" aria-label="次の作品"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</dialog>
+
+<!-- ==================== Section: Flash ==================== -->
+<!-- サンプル内容：公開前に実際の情報に差し替えてください -->
+<section id="flash">
+  <div class="sec-head reveal">
+    <h2>すぐ彫れる<wbr>フラッシュ</h2>
+    <p>描き上がっているデザインを、決まった料金で。サイズは少しだけ調整できます。どれも一度彫ったら、壁から外します。</p>
+  </div>
+  <div class="flashes">
+    <article class="flash reveal">
+      <div class="img img-dots" role="img" aria-label="フラッシュデザイン：帰り道のツバメ"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-swallow"/></svg></div>
+      <div class="flash-body">
+        <h3>帰り道のツバメ</h3><p class="price">¥20,000</p>
+        <p class="meta">約 8cm、茂木</p>
+        <a href="#booking" class="btn" data-flash="帰り道のツバメ" data-artist="茂木">このデザインを予約</a>
+      </div>
+    </article>
+    <article class="flash reveal">
+      <div class="img img-plain v-fine" role="img" aria-label="フラッシュデザイン：ファインラインの蛾"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-moth"/></svg></div>
+      <div class="flash-body">
+        <h3>ファインラインの蛾</h3><p class="price">¥16,000</p>
+        <p class="meta">約 6cm、瑠衣</p>
+        <a href="#booking" class="btn" data-flash="ファインラインの蛾" data-artist="瑠衣">このデザインを予約</a>
+      </div>
+    </article>
+    <article class="flash reveal">
+      <div class="img img-hatch" role="img" aria-label="フラッシュデザイン：バナーと短剣"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-dagger"/></svg></div>
+      <div class="flash-body">
+        <h3>バナーと短剣</h3><p class="price">¥25,000</p>
+        <p class="meta">約 10cm、茂木</p>
+        <a href="#booking" class="btn" data-flash="バナーと短剣" data-artist="茂木">このデザインを予約</a>
+      </div>
+    </article>
+    <article class="flash reveal">
+      <div class="img img-smoke v-bg" role="img" aria-label="フラッシュデザイン：ブラック＆グレーのヘビ"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-snake"/></svg></div>
+      <div class="flash-body">
+        <h3>ブラック＆グレーのヘビ</h3><p class="price">¥35,000</p>
+        <p class="meta">約 13cm、加納</p>
+        <a href="#booking" class="btn" data-flash="ブラック＆グレーのヘビ" data-artist="加納">このデザインを予約</a>
+      </div>
+    </article>
+    <article class="flash reveal">
+      <div class="img img-sun" role="img" aria-label="フラッシュデザイン：小さな波"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-wave"/></svg></div>
+      <div class="flash-body">
+        <h3>小さな波</h3><p class="price">¥18,000</p>
+        <p class="meta">約 8cm、茂木</p>
+        <a href="#booking" class="btn" data-flash="小さな波" data-artist="茂木">このデザインを予約</a>
+      </div>
+    </article>
+    <article class="flash reveal">
+      <div class="img img-dots v-fine" role="img" aria-label="フラッシュデザイン：月と星"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-moon"/></svg></div>
+      <div class="flash-body">
+        <h3>月と星</h3><p class="price">¥15,000</p>
+        <p class="meta">約 4cm、瑠衣</p>
+        <a href="#booking" class="btn" data-flash="月と星" data-artist="瑠衣">このデザインを予約</a>
+      </div>
+    </article>
+  </div>
+  <p class="flash-note reveal">フラッシュの料金はデザイン代込み（税込）です。色の小さな変更は無料で承ります。構図を変える場合はオーダーメイド扱いとなり、時間制の料金でお見積もりします。</p>
+</section>
+
+<!-- ==================== Section: Pricing ==================== -->
+<section class="alt" id="pricing">
+  <div class="sec-head reveal">
+    <h2>料金</h2>
+    <p>料金はサイズ、部位、細かさで決まります。カウンセリングのあとに明確なお見積もりをお出しし、施術の途中で金額が上がることはありません。</p>
+  </div>
+  <!-- サンプル内容：公開前に実際の情報に差し替えてください -->
+  <div class="prices reveal">
+    <div class="price-cell"><h3>最低料金</h3><p class="num">¥15,000</p><p>5cm までの小さな作品に。準備費と消耗品代を含みます。</p></div>
+    <div class="price-cell"><h3>時間制</h3><p class="num">¥20,000<small>1 時間</small></p><p>中くらいから大きな作品は、実際の施術時間で計算します。</p></div>
+    <div class="price-cell"><h3>1 日施術</h3><p class="num">¥110,000<small>約 6 時間</small></p><p>腕一本や背中など、複数回かかる作品におすすめです。</p></div>
+    <div class="price-cell hl"><h3>予約金</h3><p class="num">¥10,000</p><p>日程の確定時にお支払いいただき、当日の合計から差し引きます。</p></div>
+  </div>
+  <p class="price-foot reveal">価格はすべて税込です。予約金は施術時間の確保とデザインの準備に充てます。72 時間以内のキャンセルや無断キャンセルの場合、予約金はお返しできません。事前にご連絡いただければ、1 回まで日程を変更できます。3 か月以内のお直しは無料です。</p>
+</section>
+
+<!-- ==================== Section: Process ==================== -->
+<section id="process">
+  <div class="sec-head reveal">
+    <h2>施術の流れ</h2>
+    <p>初めてのタトゥーの不安は、たいてい「次に何が起こるかわからない」ことから生まれます。最初から最後まで、すべてお伝えします。</p>
+  </div>
+  <ol class="steps">
+    <li class="step reveal"><h3>カウンセリング</h3><p>フォームか DM で、デザインのイメージ、部位、おおよそのサイズをお送りください。2 日以内にお返事します。</p></li>
+    <li class="step reveal"><h3>デザイン</h3><p>担当の彫り師が下絵を描き、納得いくまで修正します。最後にサイズを決めます。</p></li>
+    <li class="step reveal"><h3>予約金と日程</h3><p>予約金のお支払いで日程を確保します。よく眠り、食事を済ませておくなど、当日の準備もお知らせします。</p></li>
+    <li class="step reveal"><h3>施術当日</h3><p>転写した下絵に納得いただいてから彫り始めます。針は使い捨てで、休憩はいつでも取れます。</p></li>
+    <li class="step reveal"><h3>治癒とお直し</h3><p>アフターケアの説明をお渡しします。気になることはいつでも連絡でき、3 か月以内のお直しは無料です。</p></li>
+  </ol>
+</section>
+
+<!-- ==================== Section: Aftercare and age and health rules ==================== -->
+<section class="alt" id="care">
+  <div class="care-wrap">
+    <div class="reveal">
+      <h2>アフターケア</h2>
+      <div class="care">
+        <details open>
+          <summary>1〜3 日目</summary>
+          <ul>
+            <li>彫り師の指示どおりのタイミングで保護フィルムをはがし、ぬるま湯と無香料の石けんでやさしく洗います。</li>
+            <li>清潔なペーパータオルで押さえるように水気を取ります。布のタオルでこするのは避けてください。</li>
+            <li>アフターケア用の軟膏を薄く塗り、肌を呼吸させます。</li>
+          </ul>
+        </details>
+        <details>
+          <summary>4〜14 日目</summary>
+          <ul>
+            <li>皮がむけたり、かゆくなったりするのは正常です。かいたり、はがしたりしないでください。</li>
+            <li>湯船、プール、温泉、サウナ、長時間の日光浴は控えてください。</li>
+            <li>こすれを減らすため、ゆったりした服を着てください。</li>
+          </ul>
+        </details>
+        <details>
+          <summary>1 か月以降</summary>
+          <ul>
+            <li>屋外では日焼け止めを使うと、線や色が長くきれいに保てます。</li>
+            <li>色むらや線のゆがみが気になったら、3 か月以内の無料お直しをご予約ください。</li>
+          </ul>
+        </details>
+        <details>
+          <summary>ご連絡いただきたいとき</summary>
+          <ul>
+            <li>赤みが広がる、熱をもつ、膿が出る場合は、まず医療機関を受診し、そのあとでお知らせください。</li>
+            <li>そのほか不安なことがあれば、担当の彫り師に写真を送ってください。</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+    <!-- 年齢と健康の条件：お住まいの地域の条例（年齢制限、保護者の同意、本人確認書類など）に合わせて調整し、公開前に確認してください -->
+    <aside class="rules reveal" aria-labelledby="rules-title">
+      <h3 id="rules-title">年齢と健康について</h3>
+      <div class="age"><strong>18+</strong><p>施術は 18 歳以上の方に限ります。当日は顔写真付きの身分証明書をお持ちください。</p></div>
+      <ul>
+        <li>妊娠中、授乳中の方への施術はお断りしています。</li>
+        <li>糖尿病、血液が固まりにくい体質、心臓の持病、ケロイドの既往がある方は、カウンセリング時にお知らせください。</li>
+        <li>施術前 24 時間は飲酒をお控えください。酔っている方への施術はできません。</li>
+        <li>施術部位に日焼け、傷、湿疹がある場合は、完全に治ってから始めます。</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ==================== Section: Reviews ==================== -->
+<section id="reviews">
+  <div class="sec-head reveal">
+    <h2>お客様の声</h2>
+    <p>Google の口コミと Instagram の DM から、いくつかご紹介します。</p>
+  </div>
+  <!-- サンプル内容：公開前に実際のお客様の声に差し替えてください -->
+  <div class="reviews">
+    <figure class="review reveal">
+      <blockquote>初めてのタトゥーで、ガチガチに緊張していました。茂木さんが近所の古い喫茶店の話をしてくれているうちに、気づいたら終わっていました。1 年たってもツバメの線はくっきりしたままです。</blockquote>
+      <figcaption><b>Yさん</b>トラディショナルのツバメ、前腕</figcaption>
+    </figure>
+    <figure class="review reveal">
+      <blockquote>瑠衣さんのキャンセル待ちで 2 か月待ちましたが、その価値は十分ありました。下絵をいくつかの角度で当ててくれて、最終的な位置は自分の想像よりずっと良くなりました。</blockquote>
+      <figcaption><b>Aさん</b>ファインラインの植物、鎖骨</figcaption>
+    </figure>
+    <figure class="review reveal">
+      <blockquote>五分袖は 4 回かかりましたが、加納さんは毎回、計画と費用を先に説明してくれました。想定外の出費はゼロ。グレーの陰影は実物のほうがさらにきれいです。</blockquote>
+      <figcaption><b>Tさん</b>ブラック＆グレー、五分袖</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ==================== Section: Booking form ==================== -->
+<section class="alt" id="booking">
+  <div class="booking">
+    <div class="reveal">
+      <h2>カウンセリング<wbr>予約</h2>
+      <p class="intro">彫りたいイメージを教えてください。担当の彫り師が 2 営業日以内に、お見積もりと空いている日程をお送りします。お急ぎの場合は、お電話か LINE でどうぞ。</p>
+      <p class="deposit"><b>予約金について：</b>デザインと日程が決まったら、予約金 ¥10,000 のお支払いで予約が確定します。当日の合計金額から差し引きます。</p>
+      <div class="contact-btns">
+        <a href="tel:+81612345678" class="btn btn-brand">06-1234-5678 に電話</a>
+        <!-- LINE ボタン：@yourlineid を自分の LINE 公式アカウント ID に書き換えてください。Instagram の DM に差し替える場合は、リンクと文言を変えるだけです -->
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn" target="_blank" rel="noopener">LINE で相談</a>
+        <a href="https://maps.google.com/?q=大阪府大阪市中央区南船場4-8-12" class="btn" target="_blank" rel="noopener">地図を見る</a>
+      </div>
+      <address class="contact-info">
+        <span>〒542-0081 大阪府大阪市中央区南船場 4-8-12 2階</span>
+        <a href="mailto:hello@sumijima.example">hello@sumijima.example</a>
+        <span>完全予約制、火曜日〜日曜日 12:00〜21:00</span>
+      </address>
+    </div>
+    <!--
+      このフォームは Formspree を使っています（無料プランは月 50 件まで送信できます）：
+      1. https://formspree.io で登録し、新しいフォームを作成します
+      2. 下の action の your-form-id を、自分のフォーム ID に書き換えます
+      3. 初回の送信後、Formspree からメールアドレスの確認メールが届きます
+      無料プランはファイルの添付に対応していないため、参考画像は説明やリンクで送ってもらい、返信後に画像を受け取ってください。
+    -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="field"><label for="f-name">お名前</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="f-contact">ご連絡先<small>電話、メール、LINE、Instagram</small></label><input id="f-contact" name="contact" required></div>
+      <div class="field">
+        <label for="f-artist">担当の彫り師</label>
+        <select id="f-artist" name="artist">
+          <option>指名なし</option>
+          <option>茂木</option>
+          <option>瑠衣</option>
+          <option>加納</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-style">スタイル</label>
+        <select id="f-style" name="style">
+          <option value="">選択してください</option>
+          <option>ファインライン</option>
+          <option>トラディショナル</option>
+          <option>和彫り</option>
+          <option>ブラック＆グレー</option>
+          <option>まだ決めていない</option>
+        </select>
+      </div>
+      <div class="field full" id="flash-field">
+        <label for="f-flash">フラッシュデザイン<small>選んだ場合、イメージ欄は空欄で大丈夫です</small></label>
+        <select id="f-flash" name="flash">
+          <option value="">選ばない（オーダーメイド希望）</option>
+          <option>帰り道のツバメ</option>
+          <option>ファインラインの蛾</option>
+          <option>バナーと短剣</option>
+          <option>ブラック＆グレーのヘビ</option>
+          <option>小さな波</option>
+          <option>月と星</option>
+        </select>
+      </div>
+      <div class="field"><label for="f-place">部位</label><input id="f-place" name="placement" placeholder="例：左腕の内側"></div>
+      <div class="field">
+        <label for="f-size">サイズ</label>
+        <select id="f-size" name="size">
+          <option value="">選択してください</option>
+          <option>5cm 未満</option>
+          <option>5〜10cm</option>
+          <option>10〜20cm</option>
+          <option>20cm 以上、または大きな作品</option>
+        </select>
+      </div>
+      <div class="field full"><label for="f-idea">デザインのイメージ</label><textarea id="f-idea" name="idea" placeholder="彫りたいもの、込めたい意味、目指す雰囲気など"></textarea></div>
+      <div class="field full"><label for="f-ref">参考資料</label><textarea id="f-ref" name="references" placeholder="参考画像のリンクを貼るか、好きな線や色の雰囲気を書いてください"></textarea></div>
+      <label class="check full"><input type="checkbox" name="age_confirmed" value="yes" required>18 歳以上であり、予約金の規定に同意します</label>
+      <button type="submit" class="btn btn-brand">送信する</button>
+      <p class="form-note full">このフォームの送信だけでは日程は確定しません。彫り師からの返信後、予約金のお支払いで枠を確保します。ご入力いただいた情報は、ご連絡のためだけに使用します。</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="foot-grid">
+    <div>
+      <a href="#top" class="logo"><b>Sumijima</b><small>墨島タトゥー</small></a>
+      <p>大阪・南船場の完全予約制タトゥースタジオ。ファインライン、トラディショナル、和彫り、ブラック＆グレー。</p>
+      <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">X</a>
+        <a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE</a>
+      </div>
+    </div>
+    <div>
+      <h2>所在地</h2>
+      <address>
+        <a href="https://maps.google.com/?q=大阪府大阪市中央区南船場4-8-12" target="_blank" rel="noopener">〒542-0081<br>大阪市中央区南船場 4-8-12 2階</a><br>
+        電話 <a href="tel:+81612345678">06-1234-5678</a><br>
+        <a href="mailto:hello@sumijima.example">hello@sumijima.example</a>
+      </address>
+    </div>
+    <div>
+      <h2>営業時間</h2>
+      <p>火曜日〜日曜日 12:00〜21:00<br>月曜定休、完全予約制</p>
+    </div>
+  </div>
+  <p class="copy">© <span id="y"></span> 墨島タトゥー</p>
+  <p class="f-lang"><a href="../en/" hreflang="en" lang="en">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></p>
+</footer>
+
+<!-- スマホ用の固定ボタン -->
+<div class="sticky-cta"><a href="#booking" class="btn btn-brand">カウンセリングを予約</a></div>
+
+<script>
+(function () {
+  var d = document, header = d.querySelector('.site-header'), burger = d.querySelector('.burger'), menu = d.getElementById('menu');
+
+  // スクロール時のヘッダー背景
+  function onScroll() { header.classList.toggle('scrolled', scrollY > 30 || menu.classList.contains('open')); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // ハンバーガーメニュー
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    onScroll();
+  }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // スクロールでフェードイン
+  var targets = d.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) targets.forEach(function (el) { el.classList.add('in'); });
+  else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
+    targets.forEach(function (el) { io.observe(el); });
+  }
+
+  // 作品集の絞り込み：彫り師とスタイルを組み合わせられます
+  var works = [].slice.call(d.querySelectorAll('.work')), chips = d.querySelectorAll('.chip'), sel = { artist: 'all', style: 'all' };
+  function apply() {
+    var n = 0;
+    works.forEach(function (w) {
+      w.hidden = (sel.artist !== 'all' && w.dataset.artist !== sel.artist) || (sel.style !== 'all' && w.dataset.style !== sel.style);
+      if (!w.hidden) n++;
+    });
+    chips.forEach(function (c) { c.setAttribute('aria-pressed', sel[c.dataset.g] === c.dataset.v); });
+    d.getElementById('count').textContent = n; d.getElementById('empty').hidden = n > 0;
+  }
+  chips.forEach(function (c) { c.addEventListener('click', function () { sel[c.dataset.g] = c.dataset.v; apply(); }); });
+  d.querySelectorAll('[data-show-artist]').forEach(function (a) {
+    a.addEventListener('click', function () { sel.artist = a.dataset.showArtist; sel.style = 'all'; apply(); });
+  });
+
+  // ライトボックス：クリックで開き、矢印キーで切り替え、Esc で閉じます。Tab はダイアログ内を移動します
+  var lb = d.getElementById('lightbox'), stage = lb.querySelector('.lb-stage'), cap = lb.querySelector('.lb-cap'), list = [], cur = 0, opener = null;
+  function show(i) {
+    cur = (i + list.length) % list.length;
+    stage.replaceChildren(list[cur].querySelector('.img').cloneNode(true));
+    var b = d.createElement('b'), s = d.createElement('span');
+    b.textContent = list[cur].querySelector('figcaption b').textContent;
+    s.textContent = list[cur].querySelector('figcaption span').textContent + '（' + (cur + 1) + ' / ' + list.length + '）';
+    cap.replaceChildren(b, s);
+  }
+  works.forEach(function (w) {
+    w.querySelector('.work-btn').addEventListener('click', function () {
+      list = works.filter(function (x) { return !x.hidden; }); opener = this;
+      show(list.indexOf(w)); lb.showModal(); lb.querySelector('.lb-close').focus();
+    });
+  });
+  lb.querySelector('.lb-prev').addEventListener('click', function () { show(cur - 1); });
+  lb.querySelector('.lb-next').addEventListener('click', function () { show(cur + 1); });
+  lb.querySelector('.lb-close').addEventListener('click', function () { lb.close(); });
+  lb.addEventListener('click', function (e) { if (e.target === lb || e.target === stage) lb.close(); });
+  lb.addEventListener('close', function () { if (opener) opener.focus(); });
+  lb.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') show(cur - 1);
+    else if (e.key === 'ArrowRight') show(cur + 1);
+    else if (e.key === 'Tab') {
+      var f = lb.querySelectorAll('button'), first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && d.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && d.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+
+  // 「このデザインを予約」：フォームでそのフラッシュと彫り師を選んだ状態にします
+  var fFlash = d.getElementById('f-flash'), fArtist = d.getElementById('f-artist');
+  d.querySelectorAll('[data-flash]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      fFlash.value = a.dataset.flash; fArtist.value = a.dataset.artist;
+      d.getElementById('flash-field').classList.add('flash-picked');
+    });
+  });
+  fFlash.addEventListener('change', function () { d.getElementById('flash-field').classList.remove('flash-picked'); });
+
+  d.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

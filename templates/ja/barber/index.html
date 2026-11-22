@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>黒鉄理容室｜蔵前のクラシックな理容室 カットと顔そり</title>
+<meta name="description" content="東京・蔵前の理容室「黒鉄」。ポンパドール、フェード、ひげの手入れ、蒸しタオルの顔そりまで、経験豊富な理容師 4 名が担当します。ネット予約のほか、予約なしのご来店も歓迎です。">
+<meta property="og:title" content="黒鉄理容室｜蔵前のクラシックな理容室 カットと顔そり">
+<meta property="og:description" content="ポンパドール、フェード、蒸しタオルの顔そり。ネットで予約しても、ふらりと立ち寄っても大丈夫です。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#6b1d26">
+<!-- 多言語版（SEO）：公開後は href を完全な URL に書き換えてください。例：https://www.yourshop.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ============================================================
+   テーマ設定：ここを変えるだけで、サイト全体の配色とフォントが変わります
+   ============================================================ */
+:root {
+  --brand: #6b1d26;          /* ブランドカラー（オックスブラッド）。ボタンとファーストビューの背景 */
+  --brand-deep: #4a1219;     /* ブランドカラーの濃い色。グラデーションや革の陰影に使います */
+  --brand-ink: #f5ecdc;      /* ブランドカラー上の文字色（クリーム） */
+  --bg: #f2e9d8;             /* ページ背景（古紙のようなクリーム） */
+  --surface: #f9f3e7;        /* カードとフォームの背景 */
+  --surface-2: #e8dbc2;      /* 交互に使うセクション背景（濃いめのクリーム） */
+  --night: #17130f;          /* 暗いセクションの背景（黒に近い色） */
+  --night-2: #2a221b;        /* 暗いセクション上のカードの色 */
+  --on-night: #efe5d2;       /* 暗い背景の上の文字色 */
+  --text: #1c1814;           /* メインの文字色（黒に近い色） */
+  --muted: #5d5047;          /* 補足の文字色 */
+  --line: #cdb994;           /* 区切り線と枠線（淡い真鍮色） */
+  --brass: #a8803a;          /* 真鍮色。装飾の線だけに使います */
+  --brass-lt: #d6b268;       /* 明るい真鍮色。暗い背景の上のアクセント文字に使います */
+  --chrome: #c4beb1;         /* イラスト風プレースホルダー：椅子やかみそりのクロム */
+  --shadow: color-mix(in srgb, var(--night) 22%, transparent); /* 影の色 */
+  --radius: 3px;             /* 角の丸み（昔の看板風、ほぼ直角） */
+  --font-heading: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif; /* 見出しフォント（明朝体） */
+  --heading-weight: 800;     /* 見出しの太さ */
+  --font-display: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif; /* 看板用フォント：ロゴ、料金、数字 */
+  --font-num: var(--font-body);  /* 所要時間や時間帯などの小さな数字（初期設定は本文と同じ） */
+  --font-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif; /* 本文フォント */
+  --pad: clamp(1rem, 5vw, 5rem); /* セクションの左右の余白 */
+  --max: 1160px;             /* コンテンツの最大幅 */
+  --ease: cubic-bezier(.2, .7, .1, 1); /* アニメーションのイージング */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.85 var(--font-body); line-break: strict; font-variant-numeric: tabular-nums; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: var(--heading-weight); font-synthesis: none; overflow-wrap: break-word; min-width: 0; text-wrap: balance; line-height: 1.4; letter-spacing: 0; }
+/* 日本語の見出しは <wbr> の位置で改行し、1 文字だけが次の行に残らないようにします */
+h1, h2 { word-break: keep-all; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.wrap { max-width: var(--max); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 99; }
+.skip:focus { left: 1rem; top: 1rem; }
+
+/* ---------- ボタン ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 3rem; padding: .7rem 1.5rem; border-radius: var(--radius); font: 700 .98rem/1 var(--font-body); border: 1.5px solid var(--brand); transition: transform .3s var(--ease), background-color .3s, color .3s, border-color .3s; cursor: pointer; }
+.btn:active { transform: translateY(1px) scale(.98); }
+.btn-primary { background: var(--brand); color: var(--brand-ink); box-shadow: inset 0 0 0 3px var(--brand), inset 0 0 0 4px color-mix(in srgb, var(--brand-ink) 45%, transparent); }
+.btn-primary:hover { background: var(--brand-deep); border-color: var(--brand-deep); }
+.btn-ghost { background: transparent; color: var(--brand); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--brand) 9%, transparent); }
+.btn-cream { background: var(--brand-ink); color: var(--brand); border-color: var(--brand-ink); }
+.btn-cream:hover { background: var(--surface-2); border-color: var(--surface-2); }
+.btn-line { background: transparent; color: var(--brand-ink); border-color: color-mix(in srgb, var(--brand-ink) 60%, transparent); }
+.btn-line:hover { background: color-mix(in srgb, var(--brand-ink) 12%, transparent); border-color: var(--brand-ink); }
+.btn:disabled, .field input:disabled, .field select:disabled { opacity: .5; cursor: not-allowed; }
+.btn svg { width: 1.1em; height: 1.1em; fill: currentColor; }
+.text-link { color: var(--brand); font-weight: 700; border-bottom: 1.5px solid color-mix(in srgb, var(--brand) 40%, transparent); padding-bottom: .1rem; transition: border-color .3s, color .3s; }
+.text-link:hover { border-color: var(--brand); }
+.text-link:active { color: var(--brand-deep); }
+
+/* ---------- ヘッダー ---------- */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; color: var(--on-night); padding: 1rem var(--pad); border-bottom: 1px solid transparent; transition: background-color .4s, border-color .4s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--night) 94%, transparent); border-color: color-mix(in srgb, var(--brass-lt) 35%, transparent); }
+html:not(.js) .site-header { background: var(--night); }
+.nav { max-width: var(--max); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.logo { display: flex; align-items: baseline; gap: .5rem; font: var(--heading-weight) 1.4rem/1 var(--font-heading); font-synthesis: none; white-space: nowrap; }
+.logo small { font: 600 1rem/1 var(--font-display); color: var(--brass-lt); }
+.menu { display: flex; align-items: center; gap: clamp(.9rem, 2vw, 1.8rem); font-size: .92rem; }
+.menu a:not(.btn) { padding-block: .3rem; border-bottom: 1px solid transparent; transition: border-color .3s, color .3s; white-space: nowrap; }
+.menu a:not(.btn):hover { border-color: var(--brass-lt); color: var(--brass-lt); }
+.menu a:not(.btn):active { opacity: .7; }
+.menu .btn { min-height: 2.5rem; padding: .5rem 1.1rem; font-size: .88rem; white-space: nowrap; }
+.burger { display: none; width: 2.75rem; height: 2.75rem; border: 1px solid color-mix(in srgb, var(--on-night) 35%, transparent); border-radius: var(--radius); background: transparent; cursor: pointer; position: relative; color: var(--on-night); }
+.burger:hover { border-color: var(--brass-lt); }
+.burger:active { opacity: .7; }
+.burger span, .burger::before, .burger::after { content: ""; position: absolute; left: 25%; right: 25%; height: 2px; background: currentColor; transition: transform .35s var(--ease), opacity .3s; }
+.burger::before { top: 33%; } .burger span { top: calc(50% - 1px); } .burger::after { bottom: 33%; }
+.burger[aria-expanded="true"]::before { transform: translateY(.36rem) rotate(45deg); }
+.burger[aria-expanded="true"] span { opacity: 0; }
+.burger[aria-expanded="true"]::after { transform: translateY(-.36rem) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* JS がないときはメニューをロゴの下に折り返して表示し、JS があるときはハンバーガーにまとめます */
+  html:not(.js) .nav { flex-wrap: wrap; }
+  html:not(.js) .site-header { position: sticky; }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .3rem 1rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: 0 0 auto; padding: 5rem var(--pad) 2rem; flex-direction: column; align-items: stretch; gap: 0; background: var(--night); border-bottom: 1px solid var(--brass); transform: translateY(-105%); visibility: hidden; transition: transform .45s var(--ease), visibility 0s .45s; z-index: -1; font-size: 1.05rem; }
+  .js .menu.open { transform: none; visibility: visible; transition: transform .45s var(--ease); }
+  .js .menu a:not(.btn) { padding: .85rem 0; border-bottom: 1px solid color-mix(in srgb, var(--on-night) 15%, transparent); }
+  .js .menu .btn { margin-top: 1.2rem; min-height: 3rem; }
+}
+/* 言語切り替え：デスクトップではメインボタンの横、スマホでは開いたメニューの最上部（JS あり）、JS なしではメニューと一緒に折り返します */
+.lang-switch { display: flex; align-items: center; gap: .1rem; padding-left: clamp(.4rem, 1vw, .9rem); border-left: 1px solid color-mix(in srgb, var(--on-night) 28%, transparent); font-size: .8rem; line-height: 1; white-space: nowrap; }
+.menu .lang-switch a[hreflang] { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border: 0; color: color-mix(in srgb, var(--on-night) 78%, transparent); font-weight: 400; text-decoration: underline 1px transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.menu .lang-switch a[hreflang]:hover { color: var(--brass-lt); text-decoration-color: currentColor; }
+.menu .lang-switch a[hreflang]:active { opacity: .7; }
+.menu .lang-switch a[hreflang]:focus-visible { outline-offset: 0; }
+.menu .lang-switch a[aria-current="page"] { color: var(--on-night); font-weight: 700; text-decoration-color: var(--brass-lt); text-decoration-thickness: 2px; }
+@media (max-width: 760px) {
+  html:not(.js) .lang-switch { border-left: 0; padding-left: 0; margin-left: -.3rem; }
+  .js .menu .lang-switch { order: -1; align-self: flex-start; border-left: 0; padding: 0 0 .4rem; margin-left: -.3rem; font-size: .92rem; }
+  .js .menu .lang-switch a[hreflang] { padding: 0 .3rem; border-bottom: 0; min-width: 40px; min-height: 40px; }
+}
+/* タブレット幅：メニューを詰めて、言語切り替えが入ってもヘッダーが折り返さないようにします */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .menu { gap: clamp(.55rem, 1.1vw, .9rem); font-size: .88rem; }
+  .menu a { white-space: nowrap; }
+  .lang-switch { padding-left: .25rem; }
+  .menu .lang-switch a[hreflang] { padding: 0; }
+}
+@media (min-width: 761px) and (max-width: 900px) {
+  /* タブレット幅では場所が足りないため、補助リンク（class="opt"）を隠します。デスクトップとスマホのメニューでは表示されます */
+  .menu .opt { display: none; }
+}
+
+/* ---------- セクション共通 ---------- */
+section { padding: clamp(4rem, 11vh, 7rem) var(--pad); }
+.sec-head { text-align: center; max-width: 42rem; margin: 0 auto clamp(2.2rem, 5vh, 3.5rem); }
+/* 見出しの両側に細い二重線。昔の看板のような雰囲気です */
+.sec-head h2 { display: flex; align-items: center; justify-content: center; gap: 1rem; font-size: clamp(1.7rem, 4vw, 2.5rem); }
+.sec-head h2::before, .sec-head h2::after { content: ""; flex: 0 1 3.5rem; height: 5px; border-block: 1px solid var(--brass); }
+.sec-head p { color: var(--muted); margin-top: .8rem; }
+.dark { background: var(--night); color: var(--on-night); }
+.dark .sec-head p { color: color-mix(in srgb, var(--on-night) 78%, transparent); }
+.alt { background: var(--surface-2); }
+/* 二重線の枠。昔の店の看板のような雰囲気です */
+.frame { border: 1px solid var(--line); box-shadow: inset 0 0 0 5px var(--surface), inset 0 0 0 6px var(--line); background: var(--surface); }
+
+/* ---------- イラスト風プレースホルダー ----------
+   .img-xx はすべて CSS で描いたイラストです。写真に差し替えられます（中にある装飾用の <span> も忘れずに削除してください）。 */
+.img { position: relative; overflow: hidden; isolation: isolate; background-color: var(--night-2); }
+.chrome { background: linear-gradient(90deg, color-mix(in srgb, var(--chrome) 45%, var(--night)), var(--chrome) 30%, var(--on-night) 48%, var(--chrome) 62%, color-mix(in srgb, var(--chrome) 40%, var(--night))); }
+.leather { background: linear-gradient(90deg, var(--brand-deep), var(--brand) 28%, color-mix(in srgb, var(--brand) 78%, var(--brand-ink)) 48%, var(--brand) 70%, var(--brand-deep)); }
+/* 写真に差し替える：.img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero {
+  background:
+    radial-gradient(48% 34% at 50% 34%, color-mix(in srgb, var(--brass-lt) 26%, transparent), transparent 72%),
+    repeating-linear-gradient(90deg, transparent 0 38px, color-mix(in srgb, var(--on-night) 5%, transparent) 38px 40px),
+    linear-gradient(var(--night-2), var(--night));
+}
+.img-hero::before { content: ""; position: absolute; left: -30%; right: -30%; bottom: 0; height: 30%; z-index: -1; background: repeating-conic-gradient(color-mix(in srgb, var(--on-night) 70%, transparent) 0 25%, var(--night) 0 50%) 0 0 / 46px 46px; transform: perspective(260px) rotateX(52deg); transform-origin: bottom; opacity: .45; }
+.chair { position: absolute; left: 50%; bottom: 6%; width: 64%; aspect-ratio: 1 / 1.2; transform: translateX(-50%); filter: drop-shadow(0 18px 18px var(--shadow)); }
+.chair span { position: absolute; display: block; }
+.c-head { left: 35%; top: 0; width: 30%; height: 9%; border-radius: 40% 40% 28% 28%; }
+.c-neck { left: 47.5%; top: 8.5%; width: 5%; height: 5%; }
+.c-back { left: 25%; top: 13%; width: 50%; height: 38%; border-radius: 16% 16% 5% 5%; }
+.c-back::after { content: ""; position: absolute; inset: 12% 14%; background: repeating-linear-gradient(90deg, transparent 0 18%, color-mix(in srgb, var(--brand-deep) 70%, transparent) 18% 20%); border-radius: 10%; }
+.c-arm { top: 41%; width: 20%; height: 7%; border-radius: 999px; }
+.c-arm.l { left: 6%; } .c-arm.r { right: 6%; }
+.c-arm::after { content: ""; position: absolute; left: 42%; width: 16%; top: 100%; height: 110%; background: inherit; }
+.c-seat { left: 15%; top: 49%; width: 70%; height: 11%; border-radius: 22% 22% 34% 34% / 50%; }
+.c-trim { left: 22%; top: 59%; width: 56%; height: 5%; border-radius: 0 0 8px 8px; }
+.c-pole { left: 44%; top: 63%; width: 12%; height: 27%; }
+.c-foot { left: 28%; top: 72%; width: 44%; height: 4%; border-radius: 999px; }
+.c-base { left: 12%; top: 88%; width: 76%; height: 11%; border-radius: 50%; }
+/* 写真に差し替える：.img-razor { background: url(images/razor.jpg) center/cover; } */
+.img-razor { background: radial-gradient(60% 50% at 50% 50%, color-mix(in srgb, var(--brass-lt) 18%, transparent), transparent 70%), repeating-linear-gradient(135deg, var(--night-2) 0 12px, var(--night) 12px 24px); }
+.razor { position: absolute; left: 50%; top: 50%; width: 82%; aspect-ratio: 5 / 1; transform: translate(-50%, -50%) rotate(-16deg); filter: drop-shadow(0 10px 10px var(--shadow)); }
+.razor span { position: absolute; display: block; }
+.r-handle { left: 0; top: 34%; width: 60%; height: 34%; border-radius: 999px; background: radial-gradient(circle at 7% 50%, var(--brass-lt) 0 4px, transparent 5px), radial-gradient(circle at 93% 50%, var(--brass-lt) 0 4px, transparent 5px), linear-gradient(var(--brand), var(--brand-deep)); }
+.r-blade { left: 55%; top: 14%; width: 45%; height: 58%; clip-path: polygon(0 34%, 70% 0, 92% 4%, 100% 30%, 97% 100%, 0 70%); background: linear-gradient(172deg, var(--on-night), var(--chrome) 45%, color-mix(in srgb, var(--chrome) 50%, var(--night))); }
+.r-blade::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 22%; background: color-mix(in srgb, var(--night) 55%, transparent); }
+/* 写真に差し替える：.img-tin { background: url(images/pomade.jpg) center/cover; } */
+.img-tin { background: repeating-linear-gradient(100deg, var(--brand-deep) 0 6px, color-mix(in srgb, var(--brand-deep) 80%, var(--night)) 6px 9px, var(--brand-deep) 9px 22px), var(--brand-deep); }
+.tin { position: absolute; left: 50%; top: 50%; width: 62%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; display: grid; place-items: center; text-align: center; color: var(--brand-ink); font: 800 clamp(1.2rem, 3.4vw, 2rem)/1 var(--font-display); box-shadow: 0 16px 26px var(--shadow);
+  background:
+    radial-gradient(circle at 34% 28%, color-mix(in srgb, var(--on-night) 30%, transparent), transparent 38%),
+    radial-gradient(circle, transparent 0 58%, var(--brass-lt) 58.5% 60.5%, transparent 61%),
+    radial-gradient(circle, var(--brand) 0 70%, transparent 70.5%),
+    conic-gradient(var(--chrome), var(--on-night), var(--chrome), color-mix(in srgb, var(--chrome) 50%, var(--night)), var(--chrome)); }
+/* 写真に差し替える：.img-shop { background: url(images/shop.jpg) center/cover; } */
+.img-shop {
+  background:
+    repeating-conic-gradient(var(--on-night) 0 25%, var(--night) 0 50%) left bottom / 44px 44px repeat-x,
+    linear-gradient(transparent 62%, var(--brass) 62% 63%, var(--brand-deep) 63%),
+    radial-gradient(ellipse 34% 40% at 50% 45%, color-mix(in srgb, var(--chrome) 45%, var(--night-2)) 0 70%, var(--brass-lt) 71% 75%, transparent 76%) 0 0 / 25% 100% repeat-x,
+    linear-gradient(var(--night-2), var(--night));
+}
+/* 人物のプレースホルダーは 2 つの変数の組み合わせです：--bd（背景）と --hair（髪型） */
+.bust { background:
+    var(--hair, linear-gradient(transparent, transparent)),
+    radial-gradient(circle at 50% 42%, var(--night) 0 17%, transparent 17.5%),
+    radial-gradient(ellipse 44% 30% at 50% 100%, var(--night) 0 98%, transparent 100%),
+    var(--bd); }
+/* 写真に差し替える：.img-b1 { background: url(images/barber-1.jpg) center/cover; }（.img-b2〜b4 も同様） */
+.img-b1 { --bd: radial-gradient(60% 50% at 50% 35%, color-mix(in srgb, var(--brand-ink) 30%, transparent), transparent 70%), var(--brand); --hair: radial-gradient(ellipse 22% 11% at 54% 25%, var(--night) 0 98%, transparent 100%); }
+.img-b2 { --bd: repeating-linear-gradient(90deg, var(--surface-2) 0 22px, var(--line) 22px 24px); --hair: radial-gradient(ellipse 16% 12% at 50% 56%, var(--night) 0 98%, transparent 100%); }
+.img-b3 { --bd: radial-gradient(70% 60% at 50% 30%, var(--brass-lt), var(--brass)); --hair: linear-gradient(transparent, transparent); }
+.img-b4 { --bd: radial-gradient(60% 50% at 50% 35%, color-mix(in srgb, var(--chrome) 70%, var(--on-night)), var(--chrome)); --hair: radial-gradient(ellipse 20% 9% at 46% 27%, var(--night) 0 98%, transparent 100%); }
+/* 写真に差し替える：.img-w1 { background: url(images/work-1.jpg) center/cover; }（.img-w2〜w8 も同様） */
+.img-w1 { --bd: linear-gradient(160deg, var(--brand), var(--brand-deep)); --hair: radial-gradient(ellipse 24% 12% at 56% 24%, var(--night) 0 98%, transparent 100%); }
+.img-w2 { --bd: linear-gradient(var(--surface-2) 0 50%, var(--line) 50%); --hair: linear-gradient(transparent, transparent); }
+.img-w3 { --bd: repeating-linear-gradient(45deg, var(--night-2) 0 14px, var(--night) 14px 28px); --hair: radial-gradient(circle at 50% 42%, transparent 0 17%, var(--brass-lt) 17.5% 18.5%, transparent 19%); }
+.img-w4 { --bd: radial-gradient(70% 60% at 50% 30%, var(--brass-lt), var(--brass)); --hair: radial-gradient(ellipse 15% 13% at 50% 56%, var(--night) 0 98%, transparent 100%); }
+.img-w5 { --bd: repeating-linear-gradient(0deg, var(--surface) 0 10px, var(--surface-2) 10px 20px); --hair: radial-gradient(ellipse 20% 9% at 44% 27%, var(--night) 0 98%, transparent 100%); }
+.img-w6 { --bd: conic-gradient(from 210deg at 50% 120%, var(--brand-deep), var(--brand), var(--brand-deep)); --hair: radial-gradient(ellipse 13% 8% at 50% 25%, var(--night) 0 98%, transparent 100%); }
+.img-w7 { --bd: linear-gradient(var(--chrome), color-mix(in srgb, var(--chrome) 60%, var(--night))); --hair: radial-gradient(ellipse 22% 10% at 50% 26%, var(--brand-deep) 0 98%, transparent 100%); }
+.img-w8 { --bd: radial-gradient(60% 50% at 50% 40%, color-mix(in srgb, var(--brass-lt) 35%, transparent), transparent 70%), var(--night-2); --hair: radial-gradient(ellipse 18% 14% at 50% 55%, var(--brass) 0 98%, transparent 100%); }
+
+/* ---------- ファーストビュー ---------- */
+.hero { position: relative; min-height: 100svh; display: grid; align-items: center; padding-top: 6.5rem; padding-bottom: 3.5rem; background: radial-gradient(90% 80% at 20% 30%, var(--brand), var(--brand-deep)); color: var(--brand-ink); overflow: clip; }
+.hero .wrap { display: grid; gap: clamp(2.5rem, 5vw, 4.5rem); align-items: center; width: 100%; }
+.sign { padding: clamp(1.4rem, 4vw, 2.8rem); border: 1px solid color-mix(in srgb, var(--brass-lt) 70%, transparent); box-shadow: inset 0 0 0 6px var(--brand), inset 0 0 0 7px color-mix(in srgb, var(--brass-lt) 45%, transparent); }
+.hero h1 { font-size: clamp(2rem, 4.6vw, 3.3rem); line-height: 1.35; }
+.hero .lead { margin-top: 1.2rem; max-width: 29rem; font-size: 1.06rem; color: color-mix(in srgb, var(--brand-ink) 88%, transparent); }
+.hero .ctas { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.8rem; }
+.hero .now-line { margin-top: 1.4rem; font-size: .9rem; color: color-mix(in srgb, var(--brand-ink) 85%, transparent); }
+.hero .now-line b { color: var(--brass-lt); font-weight: 700; }
+.hero-art { position: relative; justify-self: center; width: min(100%, 25rem); }
+.hero-art .img { aspect-ratio: 4 / 5; border-radius: 999px 999px var(--radius) var(--radius); border: 1px solid var(--brass-lt); box-shadow: 0 0 0 6px var(--brand-deep), 0 0 0 7px color-mix(in srgb, var(--brass-lt) 55%, transparent), 0 30px 60px var(--shadow); }
+.hero-art .badge { position: absolute; right: -4%; top: 10%; width: 6.4rem; aspect-ratio: 1; border-radius: 50%; display: grid; place-content: center; text-align: center; background: var(--brand-ink); color: var(--brand); font: 800 1.35rem/1 var(--font-display); box-shadow: inset 0 0 0 4px var(--brand-ink), inset 0 0 0 5px var(--brand); }
+.hero-art .badge small { display: block; font: 500 .75rem/1.5 var(--font-body); color: var(--muted); }
+@media (min-width: 900px) { .hero .wrap { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); } }
+@media (max-width: 899px) { .hero-art { width: min(80%, 21rem); } }
+
+/* サインポールのストライプ：サイト全体で 1 か所だけ使います */
+.pole { height: 18px; border-block: 2px solid var(--brass); background: repeating-linear-gradient(-45deg, var(--brand) 0 14px, var(--surface) 14px 28px, var(--night) 28px 34px, var(--surface) 34px 48px); background-size: 68px 100%; animation: spin 6s linear infinite; }
+@keyframes spin { to { background-position: 68px 0; } }
+
+/* ---------- 料金表 ---------- */
+.board { max-width: 62rem; margin-inline: auto; padding: clamp(1.4rem, 4vw, 3rem); border: 1px solid var(--brass); box-shadow: inset 0 0 0 6px var(--night), inset 0 0 0 7px color-mix(in srgb, var(--brass-lt) 50%, transparent); display: grid; gap: 2.2rem clamp(2rem, 5vw, 4rem); }
+@media (min-width: 860px) { .board { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.board h3 { font-size: 1.3rem; color: var(--brass-lt); padding-bottom: .6rem; margin-bottom: .4rem; border-bottom: 1px solid color-mix(in srgb, var(--brass-lt) 40%, transparent); }
+.row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 .5rem; padding-block: .6rem; }
+.row .name { flex: 0 1 auto; min-width: 0; font-weight: 700; }
+.row small { flex: 1 1 100%; font-size: .82rem; line-height: 1.6; margin-top: .3rem; color: color-mix(in srgb, var(--on-night) 75%, transparent); }
+.row .dots { flex: 1 1 1rem; min-width: .8rem; align-self: flex-end; margin-bottom: .45rem; border-bottom: 2px dotted color-mix(in srgb, var(--brass-lt) 55%, transparent); }
+.row .dur { font: 400 .85rem/1 var(--font-num); color: color-mix(in srgb, var(--on-night) 78%, transparent); white-space: nowrap; }
+.row .price { font: 800 1.25rem/1 var(--font-display); color: var(--brass-lt); white-space: nowrap; min-width: 5.2rem; text-align: right; }
+.board .combo { grid-column: 1 / -1; }
+.price-note { text-align: center; margin-top: 1.8rem; font-size: .88rem; color: color-mix(in srgb, var(--on-night) 75%, transparent); }
+
+/* ---------- 理容師 ---------- */
+.team { display: grid; gap: 1.5rem 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 900px) { .team { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.6rem; } }
+.barber { padding: .6rem .6rem 1.3rem; text-align: center; }
+.barber .img { aspect-ratio: 4 / 5; margin-bottom: 1rem; border-radius: 999px 999px 0 0; }
+.barber h3 { font-size: 1.2rem; }
+.barber h3 small { display: block; font: 600 .95rem/1.5 var(--font-display); color: var(--brand); }
+.barber p { color: var(--muted); font-size: .88rem; margin: .4rem .3rem .9rem; line-height: 1.7; }
+
+/* ---------- スタイル ---------- */
+.gallery { display: grid; gap: clamp(.75rem, 1.6vw, 1.2rem); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 760px) { .gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.work .img { aspect-ratio: 1; border: 1px solid var(--line); }
+.work figcaption { margin-top: .55rem; font-size: .9rem; font-weight: 700; }
+.tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .3rem; }
+.tags li { font-size: .75rem; font-weight: 500; padding: .1rem .5rem; border: 1px solid color-mix(in srgb, var(--brand) 45%, transparent); color: var(--brand); border-radius: var(--radius); }
+
+/* ---------- 当日来店 ---------- */
+.walkin { display: grid; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+@media (min-width: 860px) { .walkin { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); } }
+.status { padding: clamp(1.6rem, 4vw, 2.6rem); text-align: center; }
+.badge-open { display: inline-block; padding: .35rem 1rem; border: 1.5px solid var(--muted); color: var(--muted); font-weight: 700; border-radius: var(--radius); }
+.badge-open.open { border-color: var(--brand); background: var(--brand); color: var(--brand-ink); }
+.status .wait { font: 400 clamp(1.4rem, 3.6vw, 1.9rem)/1.4 var(--font-heading); font-weight: var(--heading-weight); margin: 1rem 0 .4rem; text-wrap: balance; }
+.status .sub { color: var(--muted); }
+.status .text-link { display: inline-block; margin-top: 1.2rem; }
+.table-wrap { overflow-x: auto; }
+.wait-table { width: 100%; min-width: 300px; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); }
+.wait-table caption { text-align: left; font-weight: 700; padding-bottom: .6rem; }
+.wait-table th, .wait-table td { padding: .7rem 1rem; text-align: left; border-bottom: 1px solid var(--line); }
+.wait-table th { font-size: .88rem; font-weight: 700; color: var(--muted); background: var(--surface-2); }
+.wait-table td { font-family: var(--font-num), var(--font-body); }
+.wait-table tr.now td { background: color-mix(in srgb, var(--brand) 12%, var(--surface)); font-weight: 500; }
+.wait-note { font-size: .85rem; color: var(--muted); margin-top: .7rem; }
+
+/* ---------- 店内 ---------- */
+.space { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 860px) { .space { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); } }
+.space figure { margin: 0; }
+.space .img { aspect-ratio: 1; border: 1px solid color-mix(in srgb, var(--brass-lt) 45%, transparent); }
+.space .wide { grid-column: 1 / -1; }
+.space .wide .img { aspect-ratio: 2 / 1; }
+@media (min-width: 860px) { .space .wide { grid-column: auto; } .space .wide .img { aspect-ratio: auto; height: 100%; min-height: 100%; } .space .wide { display: grid; grid-template-rows: minmax(0, 1fr) auto; } }
+.space figcaption { font-size: .88rem; margin-top: .5rem; color: color-mix(in srgb, var(--on-night) 80%, transparent); }
+
+/* ---------- お客様の声 ---------- */
+.reviews { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.review { padding: 1.8rem 1.6rem; display: flex; flex-direction: column; gap: .8rem; }
+.review .score { font: 800 2rem/1 var(--font-display); color: var(--brand); }
+.review .score small { font: 500 .8rem/1 var(--font-body); color: var(--muted); margin-left: .4rem; }
+.review blockquote { flex: 1; }
+.review cite { font-style: normal; font-size: .88rem; color: var(--muted); }
+
+/* ---------- よくある質問 ---------- */
+.faq { max-width: 46rem; margin-inline: auto; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-child { border-top: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.2rem .2rem; font: 700 1.05rem/1.6 var(--font-body); transition: color .3s; }
+.faq summary:hover { color: var(--brand); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; width: 1.9rem; height: 1.9rem; display: grid; place-items: center; border: 1px solid var(--brand); color: var(--brand); font: 400 1.2rem/1 var(--font-body); border-radius: var(--radius); transition: transform .3s var(--ease); }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { color: var(--muted); padding: 0 2.8rem 1.3rem .2rem; }
+
+/* ---------- 予約フォーム ---------- */
+.book { background: radial-gradient(90% 90% at 80% 20%, var(--brand), var(--brand-deep)); color: var(--brand-ink); }
+.book .wrap { display: grid; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+@media (min-width: 900px) { .book .wrap { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); } }
+.book h2 { font-size: clamp(1.8rem, 4.2vw, 2.6rem); }
+.book .intro p { margin-top: .9rem; color: color-mix(in srgb, var(--brand-ink) 88%, transparent); }
+.book .intro .ctas { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.6rem; }
+.form { padding: clamp(1.4rem, 4vw, 2.4rem); color: var(--text); display: grid; gap: 1rem; }
+@media (min-width: 600px) { .form { grid-template-columns: repeat(2, minmax(0, 1fr)); } .form .full { grid-column: 1 / -1; } }
+.field { display: grid; gap: .35rem; min-width: 0; }
+.field label { font-size: .88rem; font-weight: 700; }
+.field input, .field select { width: 100%; min-width: 0; min-height: 3rem; padding: .6rem .8rem; font: 400 1rem/1.4 var(--font-body); color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); transition: border-color .3s, box-shadow .3s; }
+.field input:hover, .field select:hover { border-color: var(--muted); }
+.field input:focus-visible, .field select:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.field select.flash { box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 35%, transparent); border-color: var(--brand); }
+.pick-note { font-size: .88rem; color: var(--brand); font-weight: 700; min-height: 1.4em; }
+.form .btn { width: 100%; }
+
+/* ---------- 営業時間とアクセス ---------- */
+.visit { display: grid; gap: clamp(1.5rem, 4vw, 3rem); grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.visit-card { padding: clamp(1.5rem, 3vw, 2.2rem); }
+.visit-card h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+.visit-card dl { display: grid; grid-template-columns: auto 1fr; gap: .5rem 1.4rem; }
+.visit-card dt { color: var(--muted); }
+.visit-card dd { font-family: var(--font-num), var(--font-body); }
+.visit-card address { font-style: normal; margin-top: 1.4rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+.visit-card .ctas { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.2rem; }
+.visit-card .btn { min-height: 2.75rem; padding-inline: 1.1rem; font-size: .92rem; }
+.map-art { min-height: 18rem; border: 1px solid var(--line); background:
+  radial-gradient(circle at 54% 46%, var(--brand) 0 .55rem, color-mix(in srgb, var(--brand) 22%, transparent) .6rem 1.8rem, transparent 1.85rem),
+  linear-gradient(90deg, transparent 52%, var(--surface) 52% 55%, transparent 55%),
+  linear-gradient(0deg, transparent 44%, var(--surface) 44% 47.5%, transparent 47.5%),
+  repeating-linear-gradient(0deg, transparent 0 52px, color-mix(in srgb, var(--surface) 70%, transparent) 52px 55px),
+  repeating-linear-gradient(90deg, transparent 0 52px, color-mix(in srgb, var(--surface) 70%, transparent) 52px 55px),
+  var(--surface-2); }
+
+/* ---------- フッター ---------- */
+/* フッターの言語リンク */
+.f-lang { display: flex; flex-wrap: wrap; gap: 0 .9rem; max-width: var(--max); margin: .6rem auto 0; font-size: .8rem; }
+.f-lang a { display: inline-flex; align-items: center; min-height: 32px; color: color-mix(in srgb, var(--on-night) 78%, transparent); text-decoration: underline 1px transparent; text-underline-offset: .3em; transition: color .2s, text-decoration-color .2s; }
+.f-lang a:hover { color: var(--brass-lt); text-decoration-color: currentColor; }
+.f-lang a:active { opacity: .7; }
+.f-lang a[aria-current="page"] { color: var(--on-night); font-weight: 700; text-decoration-color: currentColor; }
+.site-footer { background: var(--night); color: var(--on-night); padding: clamp(3rem, 8vh, 4.5rem) var(--pad) 6.5rem; border-top: 3px double var(--brass); }
+.site-footer .wrap { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.site-footer p, .site-footer li { font-size: .9rem; color: color-mix(in srgb, var(--on-night) 80%, transparent); }
+.site-footer .f-h { font-weight: 700; font-size: .9rem; margin-bottom: .8rem; color: var(--brass-lt); }
+.site-footer a { transition: color .3s; }
+.site-footer a:hover { color: var(--brass-lt); }
+.site-footer a:active { opacity: .7; }
+.social { display: flex; gap: 1rem; }
+.copy { max-width: var(--max); margin: 2.4rem auto 0; padding-top: 1.4rem; border-top: 1px solid color-mix(in srgb, var(--on-night) 18%, transparent); font-size: .8rem; color: color-mix(in srgb, var(--on-night) 72%, transparent); }
+@media (min-width: 761px) { .site-footer { padding-bottom: 3rem; } }
+
+/* ---------- スマホ用の固定ボタン ---------- */
+.sticky-cta { position: fixed; left: 1rem; right: 1rem; bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 40; box-shadow: inset 0 0 0 3px var(--brand), inset 0 0 0 4px color-mix(in srgb, var(--brand-ink) 45%, transparent), 0 12px 30px var(--shadow); }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- スクロールで表示（JS が動くときだけ最初に隠します） ---------- */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "黒鉄理容室",
+  "description": "ポンパドール、フェード、ひげの手入れ、蒸しタオルの顔そりを得意とするクラシックな理容室。",
+  "telephone": "03-1234-5678",
+  "priceRange": "¥1,650〜¥11,000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "蔵前 3-12-8",
+    "addressLocality": "台東区",
+    "addressRegion": "東京都",
+    "postalCode": "111-0051",
+    "addressCountry": "JP"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "11:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "20:00" }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+
+<!-- ==================== Section: Header ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav" aria-label="メインメニュー">
+    <a class="logo" href="#top">黒鉄<small>理容室</small></a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="メニューを開く"><span></span></button>
+    <div class="menu" id="menu">
+      <a href="#prices">料金</a>
+      <a href="#barbers">理容師</a>
+      <a href="#works">スタイル</a>
+      <a href="#walkin">当日来店</a>
+      <a class="opt" href="#faq">よくある質問</a>
+      <a href="#visit">アクセス</a>
+      <a class="btn btn-cream" href="#book">予約する</a>
+      <!-- lang-switch：言語切り替え。言語を追加するときは、ここにリンクを足し、対応するフォルダを作成してください -->
+      <nav class="lang-switch" aria-label="Language 語言">
+        <details class="lang-menu">
+          <summary lang="ja">JA</summary>
+          <div class="lang-list">
+            <a href="../en/" hreflang="en" lang="en">English</a>
+            <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+            <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+            <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a>
+          </div>
+        </details>
+      </nav>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="sign reveal">
+      <h1>昔ながらの、<wbr>きちんとした<wbr>散髪を。</h1>
+      <p class="lead">蒸しタオル、かみそり、よく研いだバリカン。椅子に座ったら、あとはお任せください。</p>
+      <div class="ctas">
+        <a class="btn btn-cream" href="#book">予約する</a>
+        <a class="btn btn-line" href="#prices">料金を見る</a>
+      </div>
+      <p class="now-line"><b class="js-state">火曜日から日曜日まで営業</b>。予約なしのご来店も、いつでも歓迎です。</p>
+    </div>
+    <div class="hero-art reveal">
+      <div class="img img-hero" role="img" aria-label="ヴィンテージの革張り理容椅子のイラスト">
+        <div class="chair" aria-hidden="true">
+          <span class="c-head leather"></span><span class="c-neck chrome"></span><span class="c-back leather"></span>
+          <span class="c-arm l leather"></span><span class="c-arm r leather"></span><span class="c-seat leather"></span>
+          <span class="c-trim chrome"></span><span class="c-pole chrome"></span><span class="c-foot chrome"></span><span class="c-base chrome"></span>
+        </div>
+      </div>
+      <div class="badge">2012<small>蔵前で創業</small></div>
+    </div>
+  </div>
+</section>
+<div class="pole" aria-hidden="true"></div>
+
+<!-- ==================== Section: Price list ==================== -->
+<section class="dark" id="prices">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>メニューと料金</h2>
+      <p>カットにはすべてシャンプーとスタイリングが含まれます。表示価格のみで、お会計時に追加料金はありません。</p>
+    </div>
+    <div class="board reveal">
+      <div>
+        <h3>カット</h3>
+        <div class="row"><span class="name">クラシックポンパドール</span><span class="dots"></span><span class="dur">60 分</span><span class="price">¥6,600</span><small>サイドパートやオールバック。ポマードで仕上げます</small></div>
+        <div class="row"><span class="name">フェードカット</span><span class="dots"></span><span class="dur">50 分</span><span class="price">¥5,500</span><small>ロー、ミッド、ハイ、スキンフェードから選べます</small></div>
+        <div class="row"><span class="name">シャンプー</span><span class="dots"></span><span class="dur">20 分</span><span class="price">¥1,650</span><small>頭皮マッサージとブロー付き</small></div>
+      </div>
+      <div>
+        <h3>ひげと顔そり</h3>
+        <div class="row"><span class="name">ひげの整え</span><span class="dots"></span><span class="dur">30 分</span><span class="price">¥3,300</span><small>形を整え、輪郭を引き締めて、ビアードオイルで仕上げ</small></div>
+        <div class="row"><span class="name">蒸しタオル顔そり</span><span class="dots"></span><span class="dur">45 分</span><span class="price">¥4,950</span><small>蒸しタオルを 2 回あて、かみそりで丁寧に剃ります</small></div>
+        <div class="row"><span class="name">襟足と顔まわりの整え</span><span class="dots"></span><span class="dur">15 分</span><span class="price">¥1,650</span><small>次のカットまでの、ちょっとしたお手入れに</small></div>
+      </div>
+      <div class="combo">
+        <h3>セットメニュー</h3>
+        <div class="row"><span class="name">黒鉄フルコース</span><span class="dots"></span><span class="dur">100 分</span><span class="price">¥11,000</span><small>カット、シャンプー、蒸しタオル顔そりをまとめて</small></div>
+        <div class="row"><span class="name">カットとひげ</span><span class="dots"></span><span class="dur">80 分</span><span class="price">¥8,250</span><small>お好きなカットに、ひげの整えをプラス</small></div>
+      </div>
+    </div>
+    <p class="price-note">価格はすべて税込です。火曜日から木曜日は、学生証のご提示でカットが ¥4,400 になります。</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Barbers ==================== -->
+<section id="barbers">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>理容師紹介</h2>
+      <p>椅子は 4 台、理容師も 4 人。指名したい人がいれば「この理容師で予約」を押すと、予約フォームに名前が入ります。</p>
+    </div>
+    <div class="team">
+      <article class="barber frame reveal">
+        <div class="img img-b1 bust" role="img" aria-label="理容師 佐藤の写真プレースホルダー"></div>
+        <h3>佐藤<small>店主</small></h3>
+        <p>ポンパドールとサイドパートが得意。理容師歴 14 年です。</p>
+        <a class="text-link" href="#book" data-barber="佐藤">この理容師で予約</a>
+      </article>
+      <article class="barber frame reveal">
+        <div class="img img-b2 bust" role="img" aria-label="理容師 渡辺の写真プレースホルダー"></div>
+        <h3>渡辺<small>熟練理容師</small></h3>
+        <p>かみそりの顔そりとひげの手入れを担当。30 年変わらない、確かな手つきです。</p>
+        <a class="text-link" href="#book" data-barber="渡辺">この理容師で予約</a>
+      </article>
+      <article class="barber frame reveal">
+        <div class="img img-b3 bust" role="img" aria-label="理容師 松本の写真プレースホルダー"></div>
+        <h3>松本<small>フェード担当</small></h3>
+        <p>スキンフェード、テーパー、くっきりしたラインデザインが得意です。</p>
+        <a class="text-link" href="#book" data-barber="松本">この理容師で予約</a>
+      </article>
+      <article class="barber frame reveal">
+        <div class="img img-b4 bust" role="img" aria-label="理容師 田村の写真プレースホルダー"></div>
+        <h3>田村<small>質感カット担当</small></h3>
+        <p>クロップやフレンチクロップなど、動きのあるショート。細い髪のお悩みもご相談ください。</p>
+        <a class="text-link" href="#book" data-barber="田村">この理容師で予約</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Work ==================== -->
+<section class="alt" id="works">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>最近のスタイル</h2>
+      <p>最近仕上げたスタイルの一部です。言葉で説明するより、写真を見せていただくのがいちばん確実です。</p>
+    </div>
+    <div class="gallery">
+      <figure class="work reveal"><div class="img img-w1 bust" role="img" aria-label="オールバックのポンパドールの例"></div><figcaption>オールバック<ul class="tags"><li>ポンパドール</li><li>ツヤ感</li></ul></figcaption></figure>
+      <figure class="work reveal"><div class="img img-w2 bust" role="img" aria-label="ミッドフェードの例"></div><figcaption>ミッドフェード<ul class="tags"><li>フェード</li><li>バリカン</li></ul></figcaption></figure>
+      <figure class="work reveal"><div class="img img-w3 bust" role="img" aria-label="坊主スタイルの例"></div><figcaption>坊主<ul class="tags"><li>短髪</li><li>手入れが楽</li></ul></figcaption></figure>
+      <figure class="work reveal"><div class="img img-w4 bust" role="img" aria-label="フルビアードの整えの例"></div><figcaption>フルビアード<ul class="tags"><li>ひげ</li><li>かみそり</li></ul></figcaption></figure>
+      <figure class="work reveal"><div class="img img-w5 bust" role="img" aria-label="紳士のサイドパートの例"></div><figcaption>サイドパート<ul class="tags"><li>ポンパドール</li><li>マット</li></ul></figcaption></figure>
+      <figure class="work reveal"><div class="img img-w6 bust" role="img" aria-label="フレンチクロップの例"></div><figcaption>フレンチクロップ<ul class="tags"><li>質感</li><li>ショート</li></ul></figcaption></figure>
+      <figure class="work reveal"><div class="img img-w7 bust" role="img" aria-label="スキンフェードの例"></div><figcaption>スキンフェード<ul class="tags"><li>フェード</li><li>地肌まで</li></ul></figcaption></figure>
+      <figure class="work reveal"><div class="img img-w8 bust" role="img" aria-label="あごひげの整えの例"></div><figcaption>あごひげ<ul class="tags"><li>ひげ</li><li>ライン</li></ul></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Walk-ins ==================== -->
+<section id="walkin">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>予約なしでも<wbr>歓迎</h2>
+      <p>予約がなくても、どうぞお気軽にお越しください。普段の待ち時間の目安を載せていますので、空いている時間帯を選ぶ参考にどうぞ。</p>
+    </div>
+    <div class="walkin">
+      <div class="status frame reveal" aria-live="polite">
+        <span class="badge-open js-state" id="state">火曜日から日曜日まで営業</span>
+        <p class="wait" id="wait">待ち時間はおよそ 10〜40 分です</p>
+        <p class="sub" id="sub">週末の夕方以降がいちばん混み合います。</p>
+        <a class="text-link" href="#book">待たずに済むよう事前に予約する</a>
+      </div>
+      <div class="reveal">
+        <!-- サンプル内容：公開前に実際の情報に差し替えてください（スクリプトは各行の data-from / data-to / data-wd / data-we を読み取ります） -->
+        <div class="table-wrap">
+          <table class="wait-table" id="waitTable">
+            <caption>当日来店の待ち時間の目安</caption>
+            <thead><tr><th scope="col">時間帯</th><th scope="col">平日</th><th scope="col">土日</th></tr></thead>
+            <tbody>
+              <tr data-from="10" data-to="13" data-wd="10" data-we="20"><td>10:00〜13:00</td><td>約 10 分</td><td>約 20 分</td></tr>
+              <tr data-from="13" data-to="17" data-wd="15" data-we="35"><td>13:00〜17:00</td><td>約 15 分</td><td>約 35 分</td></tr>
+              <tr data-from="17" data-to="20" data-wd="30" data-we="40"><td>17:00〜20:00</td><td>約 30 分</td><td>約 40 分</td></tr>
+              <tr data-from="20" data-to="22" data-wd="20" data-we="25"><td>20:00〜22:00</td><td>約 20 分</td><td>約 25 分</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="wait-note">月曜日は定休日です。待ち時間はあくまで目安で、当日の混み具合によって変わります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: The shop ==================== -->
+<section class="dark" id="space">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>店内のご紹介</h2>
+      <p>使い込んだ革の椅子が 4 台、市松模様の床、壁一面の鏡。お待ちの間はコーヒーとレコードをどうぞ。</p>
+    </div>
+    <div class="space">
+      <figure class="wide reveal"><div class="img img-shop" role="img" aria-label="鏡の並ぶ席と市松模様の床のイラスト"></div><figcaption>4 つの席と、横に長い一枚鏡</figcaption></figure>
+      <figure class="reveal"><div class="img img-razor" role="img" aria-label="かみそりのイラスト"><div class="razor" aria-hidden="true"><span class="r-handle"></span><span class="r-blade"></span></div></div><figcaption>刃はお客様ごとに新しいものを使います</figcaption></figure>
+      <figure class="reveal"><div class="img img-tin" role="img" aria-label="ポマード缶のイラスト"><div class="tin" aria-hidden="true">黒鉄</div></div><figcaption>当店オリジナルのポマード</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Reviews ==================== -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>常連さんの声</h2>
+    </div>
+    <!-- サンプル内容：公開前に実際の情報に差し替えてください -->
+    <div class="reviews">
+      <figure class="review frame reveal">
+        <p class="score">5.0<small>Google の口コミ</small></p>
+        <blockquote>翌日出社したら、3 人に「雰囲気変わった？」と聞かれました。佐藤さんは、切る前に家でどうセットしているかまで聞いてくれます。</blockquote>
+        <cite>会社員 Dさん</cite>
+      </figure>
+      <figure class="review frame reveal">
+        <p class="score">5.0<small>Google の口コミ</small></p>
+        <blockquote>初めての蒸しタオル顔そり。渡辺さんの手つきが本当に安定していて、思わず眠りそうになりました。こんなに肌がつるつるになったのは久しぶりです。</blockquote>
+        <cite>デザイナー Kさん</cite>
+      </figure>
+      <figure class="review frame reveal">
+        <p class="score">4.9<small>Google の口コミ</small></p>
+        <blockquote>松本さんのフェードはこのあたりでいちばんきれいで、3 週間たってもシルエットが崩れません。週末の夜は混みますが、平日の昼ならすぐ座れます。</blockquote>
+        <cite>大学生 Tさん</cite>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: FAQ ==================== -->
+<section class="alt" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>よくあるご質問</h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>予約は必要ですか？</summary>
+        <p>必要ありません。営業時間内なら、予約なしでいつでもご来店いただけます。指名したい理容師がいる場合や、週末の夕方以降にお越しの場合は、事前のご予約で待ち時間なくご案内できます。</p>
+      </details>
+      <details>
+        <summary>予約時間に遅れそうなときは？</summary>
+        <p>ご予約のお席は 10 分間お待ちしています。それを過ぎると次のお客様をご案内し、空いている時間にあらためてお入れします。遅れそうなときは、お電話でご連絡ください。</p>
+      </details>
+      <details>
+        <summary>支払い方法は？</summary>
+        <p>現金、各種クレジットカード、交通系 IC カード、PayPay がご利用いただけます。</p>
+      </details>
+      <details>
+        <summary>子どものカットもできますか？</summary>
+        <p>はい、6 歳以上の男の子なら通常のカット料金で承ります。初めてで緊張するお子さまは、お父さんのカットを先に見学してからでも大丈夫です。</p>
+      </details>
+      <details>
+        <summary>駐車場はありますか？</summary>
+        <p>専用の駐車場はありませんが、店の近くにコインパーキングが数か所あります。都営浅草線「蔵前駅」A3 出口から徒歩 2 分ですので、電車でのご来店がおすすめです。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Booking ==================== -->
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="intro reveal">
+      <h2>ご予約</h2>
+      <p>フォームを送信いただくと、営業時間内にお電話または SMS で確定のご連絡をします。お急ぎの場合は、お電話がいちばん早いです。</p>
+      <div class="ctas">
+        <a class="btn btn-cream" href="tel:+81312345678">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>
+          03-1234-5678
+        </a>
+        <!-- LINE ボタン：@yourlineid を自店の LINE 公式アカウント ID に書き換えてください。Instagram の DM などに差し替えても使えます -->
+        <a class="btn btn-line" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE で予約</a>
+      </div>
+    </div>
+    <!-- このフォームは Formspree（無料）を使っています。formspree.io で登録してフォームを作成し、下の action の your-form-id を自分のフォーム ID に書き換えてください。予約内容がメールで届きます。 -->
+    <form class="form frame reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="field"><label for="f-name">お名前</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">電話番号</label><input id="f-tel" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="090-1234-5678" required></div>
+      <div class="field">
+        <label for="f-barber">担当の理容師</label>
+        <select id="f-barber" name="barber">
+          <option value="指名なし">指名なし（空いている理容師）</option>
+          <option value="佐藤">佐藤（ポンパドール、サイドパート）</option>
+          <option value="渡辺">渡辺（顔そり、ひげ）</option>
+          <option value="松本">松本（フェード）</option>
+          <option value="田村">田村（質感カット）</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-service">メニュー</label>
+        <select id="f-service" name="service" required>
+          <option>クラシックポンパドール</option><option>フェードカット</option><option>ひげの整え</option><option>蒸しタオル顔そり</option>
+          <option>シャンプー</option><option>黒鉄フルコース</option><option>カットとひげ</option>
+        </select>
+      </div>
+      <div class="field"><label for="f-date">ご希望日</label><input id="f-date" name="date" type="date" required></div>
+      <div class="field">
+        <label for="f-time">ご希望の時間</label>
+        <select id="f-time" name="time" required>
+          <option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option>
+          <option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option><option>20:00</option>
+        </select>
+      </div>
+      <p class="pick-note full" id="pickNote" aria-live="polite"></p>
+      <button class="btn btn-primary full" type="submit">予約をリクエストする</button>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== Section: Hours and map ==================== -->
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>営業時間と<wbr>アクセス</h2>
+    </div>
+    <div class="visit">
+      <div class="visit-card frame reveal">
+        <h3>営業時間</h3>
+        <dl>
+          <dt>火〜木</dt><dd>11:00〜21:00</dd>
+          <dt>金曜日</dt><dd>11:00〜22:00</dd>
+          <dt>土曜日</dt><dd>10:00〜22:00</dd>
+          <dt>日曜日</dt><dd>10:00〜20:00</dd>
+          <dt>月曜日</dt><dd>定休日</dd>
+        </dl>
+        <address>〒111-0051 東京都台東区蔵前 3-12-8<br>都営浅草線「蔵前駅」A3 出口から徒歩 2 分</address>
+        <div class="ctas">
+          <a class="btn btn-primary" href="https://maps.google.com/?q=東京都台東区蔵前3-12-8" target="_blank" rel="noopener">Google マップ</a>
+          <a class="btn btn-ghost" href="tel:+81312345678">電話する</a>
+          <a class="btn btn-ghost" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE</a>
+        </div>
+      </div>
+      <a class="map-art reveal" href="https://maps.google.com/?q=東京都台東区蔵前3-12-8" target="_blank" rel="noopener" aria-label="お店の場所を Google マップで開く"></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p class="logo">黒鉄<small>理容室</small></p>
+      <p style="margin-top:.8rem">2012 年から蔵前で営業している、まちの理容室です。</p>
+    </div>
+    <div>
+      <p class="f-h">お問い合わせ</p>
+      <ul>
+        <li>東京都台東区蔵前 3-12-8</li>
+        <li><a href="tel:+81312345678">03-1234-5678</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-h">営業時間</p>
+      <ul>
+        <li>火〜金 11:00 から</li>
+        <li>土日 10:00 から</li>
+        <li>月曜定休</li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-h">フォローする</p>
+      <ul class="social">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">X</a></li>
+        <li><a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="copy">© <span id="y"></span> 黒鉄理容室</p>
+  <p class="f-lang"><a href="../en/" hreflang="en" lang="en">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></p>
+</footer>
+
+<!-- スマホ用の固定ボタン -->
+<a class="btn btn-primary sticky-cta" href="#book">予約する</a>
+
+<script>
+(() => {
+  // ヘッダー：スクロールしたら背景を表示
+  const header = document.querySelector('.site-header');
+  const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ハンバーガーメニュー
+  const burger = document.querySelector('.burger');
+  const menu = document.getElementById('menu');
+  const setMenu = open => {
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    menu.classList.toggle('open', open);
+  };
+  burger.addEventListener('click', () => setMenu(burger.getAttribute('aria-expanded') !== 'true'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+  // 「この理容師で予約」：フォームでその理容師を選んだ状態にします
+  const pick = document.getElementById('f-barber');
+  const note = document.getElementById('pickNote');
+  document.querySelectorAll('[data-barber]').forEach(a => a.addEventListener('click', () => {
+    pick.value = a.dataset.barber;
+    note.textContent = '指名：' + pick.options[pick.selectedIndex].text;
+    pick.classList.add('flash');
+    setTimeout(() => pick.classList.remove('flash'), 1800);
+  }));
+
+  // 過去の日付は選べないようにします
+  const now = new Date();
+  const local = new Date(now - now.getTimezoneOffset() * 6e4);
+  document.getElementById('f-date').min = local.toISOString().slice(0, 10);
+
+  // 営業状況と待ち時間の目安：営業時間はここで編集します（日曜日から土曜日の順、null は定休日）
+  const HOURS = [[10, 20], null, [11, 21], [11, 21], [11, 21], [11, 22], [10, 22]];
+  const DAYS = ['日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日'];
+  const d = now.getDay(), h = now.getHours() + now.getMinutes() / 60, today = HOURS[d];
+  const fmt = n => n + ':00';
+  const states = document.querySelectorAll('.js-state');
+  const wait = document.getElementById('wait'), sub = document.getElementById('sub');
+  if (today && h >= today[0] && h < today[1]) {
+    states.forEach(s => { s.textContent = 'ただいま営業中'; s.classList.add('open'); });
+    const row = [...document.querySelectorAll('#waitTable tbody tr')].find(r => h >= +r.dataset.from && h < +r.dataset.to);
+    if (row) { row.classList.add('now'); wait.textContent = '現在の待ち時間は約 ' + row.dataset[d === 0 || d === 6 ? 'we' : 'wd'] + ' 分です'; }
+    sub.textContent = '本日は ' + fmt(today[1]) + ' まで営業しています';
+  } else {
+    let i = today && h < today[0] ? 0 : 1;
+    while (!HOURS[(d + i) % 7]) i++;
+    const when = (i === 0 ? '本日' : i === 1 ? '明日' : DAYS[(d + i) % 7]) + ' ' + fmt(HOURS[(d + i) % 7][0]) + ' から営業します';
+    states.forEach(s => { s.textContent = 'ただいま営業時間外'; });
+    wait.textContent = when;
+    sub.textContent = '事前にご予約いただければ、お席を用意してお待ちしています。';
+  }
+
+  // スクロールで表示
+  const items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(el => io.observe(el));
+  } else {
+    items.forEach(el => el.classList.add('in'));
+  }
+
+  // フッターの年
+  document.getElementById('y').textContent = now.getFullYear();
+})();
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

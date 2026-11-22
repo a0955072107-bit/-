@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>墨島 Ink Isle Tattoo｜高雄鹽埕預約制刺青工作室</title>
+<meta name="description" content="墨島 Ink Isle Tattoo 是高雄鹽埕的預約制刺青工作室。三位刺青師專長細線、傳統、日式與黑灰寫實，提供客製設計與現貨 Flash 圖，線上預約諮詢。">
+<meta property="og:title" content="墨島 Ink Isle Tattoo｜高雄刺青工作室">
+<meta property="og:description" content="高雄鹽埕的預約制刺青工作室。細線、傳統、日式到黑灰寫實，每一張都從你的故事開始畫。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ece5d6">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Archivo+Narrow:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #b9301b;          /* 品牌主色：朱砂紅，全站唯一的強調色 */
+  --brand-ink: #f6f1e6;      /* 在 brand 色上的文字顏色（對比 AA） */
+  --bg: #ece5d6;             /* 網頁底色：骨白色畫紙 */
+  --surface: #e2dac8;        /* 次要區塊底色（價格、須知） */
+  --paper: #f6f1e6;          /* 卡片、圖稿與輸入框底色：略帶暖調的白 */
+  --text: #16130f;           /* 主要文字與線稿顏色：墨黑 */
+  --muted: #514b42;          /* 次要文字顏色 */
+  --line: var(--text);       /* 粗框線顏色（flash 圖紙的黑框） */
+  --line-soft: color-mix(in srgb, var(--text) 22%, transparent); /* 細分隔線 */
+  --shadow: var(--text);     /* 按鈕與卡片的硬陰影顏色 */
+  --border: 2px;             /* 粗框線寬度 */
+  --radius: 0;               /* 圓角大小（flash 圖紙風格建議 0） */
+  --font-logo: "UnifrakturCook", "Archivo Narrow", serif; /* logo 專用哥德體，只用在店名 */
+  --font-heading: "Archivo Narrow", "Noto Sans TC", "PingFang TC", system-ui, sans-serif; /* 標題、數字字型 */
+  --font-body: "Noto Sans TC", "Archivo Narrow", "PingFang TC", system-ui, sans-serif; /* 內文字型 */
+  --pad: clamp(1rem, 4.5vw, 4.5rem); /* 左右留白 */
+  --gap: clamp(1rem, 2.2vw, 1.75rem); /* 卡片之間的間距 */
+  --ease: cubic-bezier(.2, .7, .1, 1); /* 動畫緩動曲線 */
+  --header-h: 4.25rem;       /* 頁首高度（手機選單從這裡展開） */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; scroll-padding-top: var(--header-h); }
+html:has(.lightbox[open]) { overflow: hidden; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); -webkit-font-smoothing: antialiased; overflow-x: clip; }
+a { color: inherit; }
+ul, ol { list-style: none; }
+h1, h2, h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; font-family: var(--font-heading); font-weight: 700; line-height: 1.1; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; }
+.skip { position: absolute; left: -999px; top: 0; z-index: 120; background: var(--text); color: var(--paper); padding: .5rem 1rem; }
+.skip:focus { left: 1rem; }
+
+/* ---------- 按鈕：黑框加硬陰影，像貼紙 ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .7rem 1.35rem;
+  border: var(--border) solid var(--line); border-radius: var(--radius); background: var(--paper); color: var(--text);
+  font: 700 1rem/1.2 var(--font-body); text-decoration: none; cursor: pointer; box-shadow: 4px 4px 0 var(--shadow);
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease), background-color .2s var(--ease);
+}
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--shadow); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--shadow); }
+.btn:disabled { opacity: .5; cursor: not-allowed; transform: none; box-shadow: none; }
+.btn-brand { background: var(--brand); color: var(--brand-ink); }
+.btn-brand:hover { background: color-mix(in srgb, var(--brand) 88%, var(--text)); }
+.text-link { font-weight: 500; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .25em; transition: color .2s var(--ease); }
+.text-link:hover { color: var(--brand); }
+.text-link:active { opacity: .7; }
+
+/* ==================== 頁首 ==================== */
+.site-header {
+  position: fixed; inset: 0 0 auto; z-index: 50;
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  min-height: var(--header-h); padding: 0 var(--pad); border-bottom: var(--border) solid transparent;
+  transition: background-color .3s var(--ease), border-color .3s var(--ease);
+}
+.site-header.scrolled { background: var(--bg); border-color: var(--line); }
+.logo { display: inline-flex; align-items: baseline; gap: .55rem; text-decoration: none; white-space: nowrap; }
+.logo b { font: 700 1.6rem/1 var(--font-logo); }
+.logo small { font: 700 .95rem/1 var(--font-body); }
+.logo:hover b { color: var(--brand); }
+.logo:active { opacity: .7; }
+.menu { display: flex; align-items: center; gap: clamp(.9rem, 2vw, 1.75rem); font-size: .95rem; font-weight: 500; }
+.menu a:not(.btn) { padding-block: .3rem; text-decoration: none; border-bottom: 2px solid transparent; transition: border-color .2s var(--ease), color .2s var(--ease); }
+.menu a:not(.btn):hover { border-color: var(--brand); color: var(--brand); }
+.menu a:not(.btn):active { opacity: .7; }
+.menu .btn { min-height: 42px; padding: .45rem 1rem; box-shadow: 3px 3px 0 var(--shadow); }
+.burger { display: none; width: 46px; height: 46px; background: var(--paper); border: var(--border) solid var(--line); color: inherit; cursor: pointer; }
+.burger:hover { background: var(--surface); }
+.burger:active { transform: scale(.94); }
+.burger span, .burger span::before, .burger span::after { display: block; width: 20px; height: 2px; background: currentColor; margin: auto; position: relative; transition: transform .3s var(--ease), background-color .3s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* 沒有 JavaScript 時，選單直接換行顯示在 logo 下方；有 JS 才收進漢堡選單 */
+  html:not(.js) .site-header { position: sticky; top: 0; flex-wrap: wrap; padding-block: .9rem; background: var(--bg); border-color: var(--line); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .25rem 1.1rem; }
+  html:not(.js) .menu .btn { display: none; }
+  .js .burger { display: block; }
+  .js .menu {
+    position: absolute; inset: 100% 0 auto; flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--bg); padding: .25rem var(--pad) 1.5rem; border-bottom: var(--border) solid var(--line);
+    transform: translateY(-.75rem); opacity: 0; visibility: hidden;
+    transition: transform .3s var(--ease), opacity .3s var(--ease), visibility .3s;
+  }
+  .js .menu.open { transform: none; opacity: 1; visibility: visible; }
+  .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line-soft); font-size: 1.1rem; }
+  .js .menu .btn { margin-top: 1.25rem; min-height: 48px; }
+}
+/* 語言切換：桌機在主要按鈕右邊，手機（有 JS）在展開選單的最上方；沒有 JS 時跟著選單換行顯示 */
+.lang-switch { display: flex; align-items: center; gap: .1rem; padding-left: clamp(.4rem, 1vw, .9rem); border-left: 1px solid var(--line-soft); font-size: .8rem; line-height: 1; white-space: nowrap; }
+.menu .lang-switch a[hreflang] { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border: 0; color: var(--muted); font-weight: 400; text-decoration: underline 1px transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.menu .lang-switch a[hreflang]:hover { color: var(--brand); text-decoration-color: currentColor; }
+.menu .lang-switch a[hreflang]:active { opacity: .7; }
+.menu .lang-switch a[hreflang]:focus-visible { outline-offset: 0; }
+.menu .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: var(--brand); text-decoration-thickness: 2px; }
+@media (max-width: 760px) {
+  html:not(.js) .lang-switch { border-left: 0; padding-left: 0; margin-left: -.3rem; }
+  .js .menu .lang-switch { order: -1; align-self: flex-start; border-left: 0; padding: 0 0 .4rem; margin-left: -.3rem; font-size: .92rem; }
+  .js .menu .lang-switch a[hreflang] { padding: 0 .3rem; border-bottom: 0; min-width: 40px; min-height: 40px; }
+}
+/* 平板寬度：縮小選單間距，讓語言切換放得下、頁首不換行 */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .menu { gap: clamp(.55rem, 1.1vw, .9rem); font-size: .88rem; }
+  .menu a { white-space: nowrap; }
+  .lang-switch { padding-left: .25rem; }
+  .menu .lang-switch a[hreflang] { padding: 0; }
+}
+@media (min-width: 761px) and (max-width: 860px) {
+  /* 平板寬度空間不夠：暫時隱藏次要連結（class="opt"），手機選單與桌機仍會顯示 */
+  .menu .opt { display: none; }
+}
+
+/* ==================== Hero ==================== */
+.hero { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--gap) clamp(2rem, 5vw, 5rem); align-items: center; padding: calc(var(--header-h) + clamp(1.5rem, 5vh, 3.5rem)) var(--pad) clamp(2.5rem, 7vh, 4.5rem); }
+.hero h1 { font-size: clamp(2.9rem, 7.4vw, 6.6rem); line-height: 1; letter-spacing: -.02em; font-weight: 900; }
+.hero p { margin-top: 1.25rem; max-width: 32rem; font-size: clamp(1.02rem, 1.5vw, 1.18rem); color: var(--muted); }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; margin-top: 1.9rem; }
+.hero-inner { animation: rise .9s .1s var(--ease) both; }
+@keyframes rise { from { opacity: 0; transform: translateY(1.25rem); } to { opacity: 1; transform: none; } }
+/* 首屏右側：一張 2×2 的 flash 圖紙 */
+.sheet { border: var(--border) solid var(--line); background: var(--paper); box-shadow: 8px 8px 0 var(--shadow); animation: rise .9s .25s var(--ease) both; }
+.sheet-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.sheet-cell { position: relative; border-right: var(--border) solid var(--line); border-bottom: var(--border) solid var(--line); }
+.sheet-cell:nth-child(2n) { border-right: 0; }
+.sheet-cell span { position: absolute; left: .6rem; top: .45rem; font: 600 .8rem/1 var(--font-heading); z-index: 1; }
+.sheet-foot { display: flex; justify-content: space-between; gap: 1rem; padding: .6rem .9rem; font: 600 .9rem/1.3 var(--font-heading); }
+.sheet-foot span:last-child { color: var(--brand); }
+@media (max-width: 860px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .sheet { max-width: 26rem; }
+}
+
+/* ==================== 通用區塊 ==================== */
+section { padding: clamp(4rem, 10vh, 7rem) var(--pad); border-top: var(--border) solid var(--line); }
+.alt { background: var(--surface); }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem var(--gap); align-items: end; margin-bottom: clamp(2rem, 5vh, 3.25rem); }
+.sec-head h2 { font-size: clamp(2.3rem, 5.4vw, 4.4rem); letter-spacing: -.02em; font-weight: 900; }
+.sec-head p { color: var(--muted); max-width: 34rem; }
+@media (max-width: 760px) { .sec-head { grid-template-columns: minmax(0, 1fr); } }
+.js .reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+.tag { display: inline-block; padding: .15rem .55rem; border: var(--border) solid var(--line); font: 700 .85rem/1.5 var(--font-body); background: var(--paper); }
+.tag.open { background: var(--text); color: var(--paper); }
+.tag.wait { color: var(--muted); border-style: dashed; }
+
+/* ---------- 藝術佔位圖：flash 線稿（inline SVG）＋ CSS 紙紋 ---------- */
+/* 線稿顏色由下方變數控制：--fk 底色、--fa 強調色塊、--sw 線寬。
+   換成真實照片時：刪掉 .img 裡的 <svg>，再替對應 class 加上背景圖，例如下面每一段的註解。 */
+.img { position: relative; overflow: hidden; aspect-ratio: 1; background-color: var(--paper); background-size: cover; background-position: center;
+  --fk: var(--paper); --fa: var(--brand); --sw: 2.6; }
+.img svg { position: absolute; inset: 9%; width: 82%; height: 82%; overflow: visible; }
+.r-45 { aspect-ratio: 4 / 5; } .r-54 { aspect-ratio: 5 / 4; }
+/* 風格變化：細線（線更細、不上色）、黑灰寫實（灰階漸層） */
+.v-fine { --sw: 1.3; --fa: var(--paper); }
+.v-bg { --fa: color-mix(in srgb, var(--text) 62%, var(--paper)); --fk: color-mix(in srgb, var(--text) 10%, var(--paper)); }
+/* SVG 線稿共用樣式 */
+.k { fill: var(--fk); stroke: var(--text); stroke-width: var(--sw); stroke-linejoin: round; stroke-linecap: round; }
+.a { fill: var(--fa); stroke: var(--text); stroke-width: var(--sw); stroke-linejoin: round; }
+.b { fill: var(--text); }
+.s { fill: none; stroke: var(--text); stroke-width: var(--sw); stroke-linecap: round; stroke-linejoin: round; }
+.sn-o { fill: none; stroke: var(--text); stroke-width: 15; stroke-linecap: round; }
+.sn-i { fill: none; stroke: var(--fk); stroke-width: 10; stroke-linecap: round; }
+.sn-d { fill: none; stroke: var(--fa); stroke-width: 3.5; stroke-dasharray: 3 7; }
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* 換成照片：.img-dots { background: url(images/work-01.jpg) center/cover; } */
+.img-dots { background-image: radial-gradient(color-mix(in srgb, var(--text) 14%, transparent) 1.2px, transparent 1.6px); background-size: 12px 12px; }
+/* 換成照片：.img-hatch { background: url(images/work-02.jpg) center/cover; } */
+.img-hatch { background-image: repeating-linear-gradient(135deg, transparent 0 9px, color-mix(in srgb, var(--text) 9%, transparent) 9px 10px); }
+/* 換成照片：.img-sun { background: url(images/work-03.jpg) center/cover; } */
+.img-sun { background-image: radial-gradient(circle at 74% 24%, color-mix(in srgb, var(--brand) 22%, transparent) 0 20%, transparent 20.5%); }
+/* 換成照片：.img-plain { background: url(images/work-04.jpg) center/cover; } */
+.img-plain { background-image: linear-gradient(to bottom, transparent 82%, color-mix(in srgb, var(--text) 6%, transparent) 82%); }
+/* 換成照片：.img-smoke { background: url(images/work-05.jpg) center/cover; } */
+.img-smoke { background-image: radial-gradient(ellipse at 50% 55%, transparent 30%, color-mix(in srgb, var(--text) 22%, transparent) 100%); }
+
+/* ==================== 刺青師 ==================== */
+.artists { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.artist { display: flex; flex-direction: column; border: var(--border) solid var(--line); background: var(--paper); min-width: 0; }
+.artist .img { border-bottom: var(--border) solid var(--line); }
+.artist-body { display: flex; flex-direction: column; gap: .9rem; padding: clamp(1.25rem, 2.5vw, 1.75rem); flex: 1; }
+.artist-top { display: flex; justify-content: space-between; align-items: center; gap: .75rem; flex-wrap: wrap; }
+.artist h3 { font-size: 1.7rem; }
+.artist h3 small { font: 600 1rem/1 var(--font-heading); color: var(--muted); margin-left: .4rem; }
+.specs { display: flex; flex-wrap: wrap; gap: .4rem; }
+.specs li { padding: .1rem .6rem; border: 1px solid var(--line); font-size: .88rem; }
+.artist p { color: var(--muted); font-size: .96rem; }
+.artist .text-link { margin-top: auto; align-self: flex-start; }
+@media (max-width: 900px) { .artists { grid-template-columns: minmax(0, 1fr); max-width: 34rem; } .artist { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); } .artist .img { border-bottom: 0; border-right: var(--border) solid var(--line); aspect-ratio: auto; min-height: 100%; } }
+@media (max-width: 520px) { .artist { display: flex; } .artist .img { aspect-ratio: 5 / 4; min-height: 0; border-right: 0; border-bottom: var(--border) solid var(--line); } }
+
+/* ==================== 作品集 ==================== */
+.filters { display: grid; gap: .9rem; margin-bottom: 1.75rem; }
+html:not(.js) .filters, html:not(.js) .count { display: none; }
+.filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.filter-row b { font-weight: 700; font-size: .95rem; min-width: 4.5rem; }
+.chip { min-height: 44px; padding: .45rem 1rem; border: var(--border) solid var(--line); background: var(--paper); color: var(--text); font: 500 .95rem/1 var(--font-body); cursor: pointer; transition: background-color .2s var(--ease), color .2s var(--ease); }
+.chip:hover { background: var(--surface); }
+.chip:active { transform: translateY(1px); }
+.chip[aria-pressed="true"] { background: var(--text); color: var(--paper); }
+.count { font-size: .92rem; color: var(--muted); margin-bottom: 1rem; }
+.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: var(--border) solid var(--line); border-left: var(--border) solid var(--line); }
+.work { position: relative; border-right: var(--border) solid var(--line); border-bottom: var(--border) solid var(--line); background: var(--paper); min-width: 0; }
+.work[hidden] { display: none; }
+.work-btn { position: absolute; inset: 0; z-index: 2; width: 100%; background: none; border: 0; cursor: zoom-in; }
+.work-btn:focus-visible { outline-offset: -5px; }
+.work:hover { background: var(--surface); }
+.work:hover .img { background-color: var(--surface); --fk: var(--surface); }
+.work-btn:active ~ figcaption { color: var(--brand); }
+.work figcaption { display: flex; justify-content: space-between; gap: .25rem .75rem; flex-wrap: wrap; padding: .55rem .8rem .7rem; border-top: 1px solid var(--line-soft); font-size: .9rem; }
+.work figcaption b { font-weight: 700; }
+.work figcaption span { color: var(--muted); }
+.empty { padding: 2rem 0; color: var(--muted); }
+@media (max-width: 1000px) { .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } .filter-row b { flex-basis: 100%; } }
+
+/* ---------- 燈箱 ---------- */
+.lightbox { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; border: 0; padding: 4.5rem var(--pad) 1.5rem; background: var(--bg); color: var(--text); }
+.lightbox[open] { display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 1rem; animation: lbin .25s var(--ease); }
+.lightbox::backdrop { background: transparent; }
+@keyframes lbin { from { opacity: 0; } to { opacity: 1; } }
+.lb-stage { display: grid; place-items: center; min-height: 0; }
+.lb-stage .img { width: min(100%, calc(100svh - 10rem)); border: var(--border) solid var(--line); box-shadow: 8px 8px 0 var(--shadow); }
+.lb-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.lb-cap b { font: 700 1.25rem/1.3 var(--font-body); margin-right: .75rem; }
+.lb-cap span { color: var(--muted); }
+.lb-nav { display: flex; gap: .6rem; }
+.lb-btn { display: grid; place-items: center; width: 48px; height: 48px; border: var(--border) solid var(--line); background: var(--paper); color: var(--text); cursor: pointer; box-shadow: 3px 3px 0 var(--shadow); transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
+.lb-btn:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--shadow); }
+.lb-btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--shadow); }
+.lb-btn svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.2; }
+.lb-close { position: absolute; top: 1rem; right: var(--pad); }
+
+/* ==================== 現貨 Flash ==================== */
+.flashes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.flash { display: flex; flex-direction: column; border: var(--border) solid var(--line); background: var(--paper); min-width: 0; }
+.flash .img { border-bottom: var(--border) solid var(--line); aspect-ratio: 5 / 4; }
+.flash-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .35rem 1rem; align-items: end; padding: 1rem 1.15rem 1.25rem; flex: 1; }
+.flash h3 { font-size: 1.3rem; }
+.flash .meta { grid-column: 1; font-size: .9rem; color: var(--muted); }
+.flash .price { grid-column: 2; grid-row: 1 / 3; font: 700 1.6rem/1 var(--font-heading); color: var(--brand); font-variant-numeric: tabular-nums; }
+.flash .btn { grid-column: 1 / -1; margin-top: .75rem; }
+.flash-note { margin-top: 1.75rem; color: var(--muted); font-size: .95rem; }
+@media (max-width: 900px) { .flashes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .flashes { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 價格說明 ==================== */
+.prices { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: var(--border) solid var(--line); background: var(--paper); }
+.price-cell { padding: clamp(1.25rem, 2.5vw, 2rem); border-right: var(--border) solid var(--line); display: grid; gap: .5rem; align-content: start; min-width: 0; }
+.price-cell:last-child { border-right: 0; }
+.price-cell h3 { font: 700 1.05rem/1.4 var(--font-body); }
+.price-cell .num { font: 700 clamp(2rem, 3.6vw, 2.9rem)/1 var(--font-heading); letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
+.price-cell .num small { font: 500 .9rem var(--font-body); color: var(--muted); margin-left: .3rem; }
+.price-cell p { color: var(--muted); font-size: .93rem; }
+.price-cell.hl .num { color: var(--brand); }
+.price-foot { margin-top: 1.5rem; color: var(--muted); font-size: .95rem; max-width: 52rem; }
+@media (max-width: 900px) { .prices { grid-template-columns: repeat(2, minmax(0, 1fr)); } .price-cell:nth-child(2) { border-right: 0; } .price-cell:nth-child(-n+2) { border-bottom: var(--border) solid var(--line); } }
+@media (max-width: 480px) { .prices { grid-template-columns: minmax(0, 1fr); } .price-cell { border-right: 0; border-bottom: var(--border) solid var(--line); } .price-cell:last-child { border-bottom: 0; } }
+
+/* ==================== 刺青流程 ==================== */
+.steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--gap); counter-reset: step; }
+.step { border-top: 6px solid var(--line); padding-top: 1.1rem; min-width: 0; }
+.step::before { counter-increment: step; content: counter(step, decimal-leading-zero); display: block; font: 700 2.4rem/1 var(--font-heading); color: var(--brand); margin-bottom: .6rem; }
+.step h3 { font-size: 1.25rem; margin-bottom: .45rem; }
+.step p { color: var(--muted); font-size: .94rem; }
+@media (max-width: 1000px) { .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .steps { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 照護與健康須知 ==================== */
+.care-wrap { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--gap) clamp(2rem, 5vw, 4rem); align-items: start; }
+.care-wrap h2 { font-size: clamp(2.1rem, 4.6vw, 3.6rem); font-weight: 900; margin-bottom: 1.5rem; }
+.care { border-top: var(--border) solid var(--line); }
+.care details { border-bottom: var(--border) solid var(--line); }
+.care summary { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.05rem .25rem; font-weight: 700; font-size: 1.08rem; cursor: pointer; list-style: none; transition: color .2s var(--ease); }
+.care summary::-webkit-details-marker { display: none; }
+.care summary::after { content: "+"; font: 700 1.6rem/1 var(--font-heading); transition: transform .25s var(--ease); }
+.care details[open] summary::after { transform: rotate(45deg); }
+.care summary:hover { color: var(--brand); }
+.care summary:active { opacity: .7; }
+.care details ul { padding: 0 .25rem 1.25rem; display: grid; gap: .45rem; color: var(--muted); }
+.care details li { padding-left: 1.1rem; position: relative; }
+.care details li::before { content: ""; position: absolute; left: 0; top: .78em; width: .55rem; height: 2px; background: var(--text); }
+.rules { border: var(--border) solid var(--line); background: var(--paper); padding: clamp(1.5rem, 3vw, 2.25rem); box-shadow: 8px 8px 0 var(--shadow); }
+.rules h3 { font-size: 1.6rem; margin-bottom: 1rem; }
+.age { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+.age strong { display: grid; place-items: center; width: 4.6rem; height: 4.6rem; flex: none; border: 3px solid var(--brand); color: var(--brand); border-radius: 50%; font: 700 1.6rem/1 var(--font-heading); transform: rotate(-8deg); }
+.age p { font-weight: 500; }
+.rules ul { display: grid; gap: .6rem; border-top: 1px solid var(--line-soft); padding-top: 1rem; }
+.rules li { color: var(--muted); font-size: .95rem; padding-left: 1.1rem; position: relative; }
+.rules li::before { content: ""; position: absolute; left: 0; top: .75em; width: .55rem; height: 2px; background: var(--brand); }
+@media (max-width: 900px) { .care-wrap { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 評價 ==================== */
+.reviews { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.review { display: flex; flex-direction: column; justify-content: space-between; gap: 1.5rem; padding: clamp(1.4rem, 2.6vw, 2rem); border: var(--border) solid var(--line); background: var(--paper); min-width: 0; }
+.review blockquote { font-size: 1.04rem; line-height: 1.85; }
+.review blockquote::before { content: "\201C"; display: block; font: 700 3.2rem/.7 var(--font-heading); color: var(--brand); margin-bottom: .4rem; }
+.review figcaption { font-size: .9rem; color: var(--muted); border-top: 1px solid var(--line-soft); padding-top: .9rem; }
+.review figcaption b { display: block; color: var(--text); }
+@media (max-width: 900px) { .reviews { grid-template-columns: minmax(0, 1fr); max-width: 38rem; } }
+
+/* ==================== 預約表單 ==================== */
+.booking { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--gap) clamp(2rem, 5vw, 5rem); }
+.booking h2 { font-size: clamp(2.3rem, 5.4vw, 4.4rem); font-weight: 900; margin-bottom: 1.25rem; }
+.booking .intro { color: var(--muted); max-width: 28rem; }
+.deposit { margin-top: 1.5rem; padding: 1rem 1.15rem; border: var(--border) solid var(--brand); background: var(--paper); font-size: .95rem; max-width: 28rem; }
+.deposit b { color: var(--brand); }
+.contact-btns { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 1.75rem; }
+.contact-info { margin-top: 2rem; font-style: normal; display: grid; gap: .4rem; font-size: .95rem; color: var(--muted); }
+.contact-info a:hover { color: var(--brand); }
+.contact-info a:active { opacity: .7; }
+.form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; align-content: start; padding: clamp(1.25rem, 3vw, 2rem); border: var(--border) solid var(--line); background: var(--paper); box-shadow: 8px 8px 0 var(--shadow); }
+.form .full { grid-column: 1 / -1; }
+.field { display: grid; gap: .35rem; min-width: 0; }
+.field label { font-size: .92rem; font-weight: 700; }
+.field label small { font-weight: 400; color: var(--muted); margin-left: .3rem; }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 48px; font: 400 1rem/1.5 var(--font-body); color: var(--text); background: var(--bg);
+  border: var(--border) solid var(--line); border-radius: var(--radius); padding: .6rem .8rem; transition: background-color .2s var(--ease), border-color .2s var(--ease);
+}
+.field input:hover, .field select:hover, .field textarea:hover { background: var(--surface); }
+.field textarea { min-height: 7rem; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); background: var(--paper); }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { box-shadow: 0 0 0 2px var(--brand); }
+.field.flash-picked select { border-color: var(--brand); box-shadow: 0 0 0 2px var(--brand); }
+.check { display: flex; gap: .65rem; align-items: flex-start; font-size: .95rem; }
+.check input { width: 1.25rem; height: 1.25rem; margin-top: .2rem; accent-color: var(--brand); flex: none; }
+.form .btn { justify-self: start; }
+.form-note { font-size: .86rem; color: var(--muted); }
+@media (max-width: 900px) { .booking { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .form { grid-template-columns: minmax(0, 1fr); box-shadow: 5px 5px 0 var(--shadow); } .form .btn { justify-self: stretch; } }
+
+/* ==================== 頁尾 ==================== */
+/* 頁尾語言連結 */
+.f-lang { display: flex; flex-wrap: wrap; gap: 0 .9rem; padding-top: .6rem; font-size: .86rem; }
+.f-lang a { display: inline-flex; align-items: center; min-height: 32px; color: color-mix(in srgb, var(--paper) 78%, var(--text)); text-decoration: underline 1px transparent; text-underline-offset: .3em; transition: color .2s, text-decoration-color .2s; }
+.f-lang a:hover { color: var(--paper); text-decoration-color: currentColor; }
+.f-lang a:active { opacity: .7; }
+.f-lang a[aria-current="page"] { color: var(--paper); font-weight: 700; text-decoration-color: currentColor; }
+.site-footer { background: var(--text); color: var(--paper); padding: 3.5rem var(--pad) 2rem; font-size: .95rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: var(--gap) clamp(2rem, 5vw, 4rem); padding-bottom: 2rem; border-bottom: 1px solid color-mix(in srgb, var(--paper) 25%, transparent); }
+.site-footer .logo b { font-size: 2.2rem; }
+.site-footer .logo { margin-bottom: .9rem; }
+.site-footer .logo:hover b { color: var(--paper); text-decoration: underline; }
+.site-footer p, .site-footer address { color: color-mix(in srgb, var(--paper) 78%, var(--text)); font-style: normal; }
+.site-footer h2 { font: 700 1.05rem/1.4 var(--font-body); margin-bottom: .5rem; }
+.site-footer a:not(.logo):hover { color: var(--paper); text-decoration-color: var(--paper); }
+.site-footer a:active { opacity: .7; }
+.social { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1rem; }
+.social a { text-decoration: underline; text-underline-offset: .25em; }
+.copy { padding-top: 1.5rem; font-size: .86rem; color: color-mix(in srgb, var(--paper) 70%, var(--text)); }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } .site-footer { padding-bottom: 6.5rem; } }
+
+/* ---------- 手機底部固定按鈕 ---------- */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 45; padding: .7rem var(--pad) calc(.75rem + env(safe-area-inset-bottom)); background: var(--bg); border-top: var(--border) solid var(--line); }
+.sticky-cta .btn { width: 100%; box-shadow: 3px 3px 0 var(--shadow); }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- 減少動態 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { transform: none; opacity: 1; }
+}
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<!-- JSON-LD 結構化資料：刺青工作室使用 TattooParlor（LocalBusiness 的子類型），請換成真實資料 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TattooParlor",
+  "name": "墨島 Ink Isle Tattoo",
+  "description": "高雄鹽埕的預約制刺青工作室，專長細線、傳統、日式與黑灰寫實。",
+  "telephone": "+886-7-123-4567",
+  "email": "hello@inkisle.example",
+  "url": "https://www.example.com/",
+  "priceRange": "NT$2,500 起",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "七賢三路 123 號 2 樓",
+    "addressLocality": "鹽埕區",
+    "addressRegion": "高雄市",
+    "postalCode": "803",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "12:00", "closes": "21:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<!-- Flash 線稿圖庫：每個 <symbol> 是一張圖，用 <use href="#t-xxx"> 重複使用。可以直接刪除或新增 -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="t-swallow" viewBox="0 0 100 100">
+    <path class="k" d="M62 42 C52 28 38 18 14 12 C24 22 30 28 36 36 C28 33 20 33 12 36 C26 42 40 48 52 52 Z"/>
+    <path class="s" d="M24 20 C34 26 42 32 50 42 M20 36 C32 38 42 42 50 48"/>
+    <path class="k" d="M44 58 L12 66 L28 60 L16 80 L48 62 Z"/>
+    <path class="k" d="M70 34 C60 42 52 52 40 58 C52 62 62 56 68 50 C74 44 80 40 84 36 C82 30 76 30 70 34 Z"/>
+    <path class="a" d="M70 42 C64 50 56 56 46 58 C56 60 64 54 69 48 Z"/>
+    <path class="k" d="M58 52 C62 64 64 76 60 90 C54 78 50 68 48 58 Z"/>
+    <path class="s" d="M56 60 C58 68 58 76 58 82"/>
+    <path class="k" d="M83 33 L94 31 L84 38 Z"/>
+    <circle class="b" cx="78" cy="34" r="2"/>
+  </symbol>
+  <symbol id="t-dagger" viewBox="0 0 100 100">
+    <path class="k" d="M43 44 L57 44 L50 96 Z"/>
+    <path class="s" d="M50 48 L50 86"/>
+    <path class="a" d="M22 70 C34 62 40 66 50 62 C60 58 66 62 78 54 L80 64 C68 72 62 68 50 72 C40 76 34 72 24 80 Z"/>
+    <path class="s" d="M24 80 L18 84 L22 70 M78 54 L84 50 L80 64"/>
+    <path class="k" d="M26 38 C26 33 32 33 34 36 L66 36 C68 33 74 33 74 38 C74 43 68 43 66 41 L34 41 C32 43 26 43 26 38 Z"/>
+    <rect class="k" x="45" y="16" width="10" height="20"/>
+    <path class="s" d="M45 21 L55 24 M45 27 L55 30"/>
+    <circle class="a" cx="50" cy="11" r="5.5"/>
+  </symbol>
+  <symbol id="t-rose" viewBox="0 0 100 100">
+    <path class="s" d="M50 70 C50 78 52 86 50 96"/>
+    <path class="k" d="M49 74 C38 82 26 84 14 80 C22 72 36 70 49 74 Z"/>
+    <path class="s" d="M18 79 C28 77 38 76 46 75"/>
+    <path class="k" d="M52 78 C62 84 74 86 86 80 C78 72 64 72 52 78 Z"/>
+    <path class="s" d="M84 80 C74 79 62 79 56 78"/>
+    <path class="a" d="M50 20 C68 18 80 32 77 48 C74 63 62 71 50 71 C35 71 23 61 23 46 C23 31 35 21 50 20 Z"/>
+    <path class="k" d="M38 32 C44 24 60 24 64 34 C68 44 60 54 50 54 C40 54 34 46 38 38 Z"/>
+    <path class="s" d="M44 36 C48 32 56 33 57 39 C58 45 52 48 48 46 C45 44 46 40 50 40"/>
+    <path class="s" d="M28 44 C34 56 42 62 54 62 C64 62 70 56 74 48 M33 30 C36 28 40 27 43 28"/>
+  </symbol>
+  <symbol id="t-snake" viewBox="0 0 100 100">
+    <path class="sn-o" d="M22 90 C6 76 26 64 48 64 C72 64 88 52 76 38 C66 28 40 40 34 28 C30 20 38 13 48 14"/>
+    <path class="sn-i" d="M22 90 C6 76 26 64 48 64 C72 64 88 52 76 38 C66 28 40 40 34 28 C30 20 38 13 48 14"/>
+    <path class="sn-d" d="M22 90 C6 76 26 64 48 64 C72 64 88 52 76 38 C66 28 40 40 34 28 C30 20 38 13 48 14"/>
+    <path class="k" d="M46 8 C56 6 66 9 68 14 C66 20 56 22 46 20 C42 16 42 11 46 8 Z"/>
+    <circle class="b" cx="58" cy="12" r="2"/>
+    <path class="s" d="M68 14 L78 12 M68 14 L78 18"/>
+  </symbol>
+  <symbol id="t-wave" viewBox="0 0 100 100">
+    <circle class="a" cx="76" cy="24" r="12"/>
+    <path class="k" d="M8 84 C10 52 36 28 62 32 C82 36 90 56 78 66 C68 74 54 68 56 58 C58 50 68 52 68 58 C60 58 50 60 46 70 C44 76 46 82 48 84 Z"/>
+    <path class="s" d="M18 78 C22 58 38 42 58 40 M26 80 C30 66 40 56 52 52"/>
+    <path class="k" d="M62 32 L58 24 L66 30 L66 22 L72 32 Z"/>
+    <path class="s" d="M4 88 H96 M12 94 H88"/>
+  </symbol>
+  <symbol id="t-moth" viewBox="0 0 100 100">
+    <path class="k" d="M49 40 C36 22 14 24 10 40 C9 54 30 58 48 52 Z"/>
+    <path class="k" d="M51 40 C64 22 86 24 90 40 C91 54 70 58 52 52 Z"/>
+    <path class="k" d="M48 54 C36 60 26 72 32 80 C40 84 47 70 49 60 Z"/>
+    <path class="k" d="M52 54 C64 60 74 72 68 80 C60 84 53 70 51 60 Z"/>
+    <circle class="a" cx="30" cy="40" r="5"/>
+    <circle class="a" cx="70" cy="40" r="5"/>
+    <path class="s" d="M20 46 C28 50 38 50 46 48 M80 46 C72 50 62 50 54 48"/>
+    <ellipse class="k" cx="50" cy="52" rx="3.5" ry="17"/>
+    <path class="s" d="M48 36 C44 26 40 22 34 20 M52 36 C56 26 60 22 66 20"/>
+  </symbol>
+  <symbol id="t-moon" viewBox="0 0 100 100">
+    <path class="k" d="M58 14 A36 36 0 1 0 58 86 A28 28 0 1 1 58 14 Z"/>
+    <path class="a" d="M74 30 L77 40 L87 42 L77 45 L74 56 L71 45 L61 42 L71 40 Z"/>
+    <path class="s" d="M84 66 L84 74 M80 70 L88 70 M64 76 L64 80 M62 78 L66 78"/>
+    <path class="s" d="M30 30 C26 40 26 58 34 70"/>
+  </symbol>
+  <symbol id="t-heart" viewBox="0 0 100 100">
+    <path class="a" d="M50 86 C20 64 12 46 22 32 C32 20 46 26 50 38 C54 26 68 20 78 32 C88 46 80 64 50 86 Z"/>
+    <path class="s" d="M30 34 C26 38 26 44 28 48"/>
+    <path class="k" d="M8 52 L22 48 L22 64 L8 68 L14 60 Z"/>
+    <path class="k" d="M92 52 L78 48 L78 64 L92 68 L86 60 Z"/>
+    <path class="k" d="M20 46 C38 50 62 50 80 46 L80 62 C62 66 38 66 20 62 Z"/>
+    <path class="s" d="M50 10 L50 22 M36 14 L40 24 M64 14 L60 24"/>
+  </symbol>
+</svg>
+
+<!-- ==================== 區塊：頁首導覽 ==================== -->
+<header class="site-header">
+  <a href="#top" class="logo" aria-label="墨島刺青 回到頂端"><b>Ink Isle</b><small>墨島刺青</small></a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="開啟選單"><span></span></button>
+  <nav class="menu" id="menu" aria-label="主選單">
+    <a href="#artists">刺青師</a>
+    <a href="#work">作品集</a>
+    <a href="#flash">現貨 Flash</a>
+    <a href="#pricing">價格</a>
+    <a href="#process">流程</a>
+    <a class="opt" href="#care">須知</a>
+    <a href="#booking" class="btn btn-brand">預約諮詢</a>
+    <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="zh-Hant">繁</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ==================== 區塊：主視覺 Hero ==================== -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <h1>一輩子的圖，<br>值得慢慢畫。</h1>
+    <p>高雄鹽埕的預約制刺青工作室。三位刺青師，從細線到日式大圖，每一張都從你的故事開始畫。</p>
+    <div class="hero-actions">
+      <a href="#booking" class="btn btn-brand">預約諮詢</a>
+      <a href="#work" class="text-link">看作品</a>
+    </div>
+  </div>
+  <div class="sheet" role="img" aria-label="一張 flash 圖紙，畫著燕子、玫瑰、匕首與蛇四款經典線稿">
+    <div class="sheet-grid">
+      <div class="sheet-cell"><span>No.01</span><div class="img img-dots"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-swallow"/></svg></div></div>
+      <div class="sheet-cell"><span>No.02</span><div class="img img-plain"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-rose"/></svg></div></div>
+      <div class="sheet-cell"><span>No.03</span><div class="img img-hatch"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-dagger"/></svg></div></div>
+      <div class="sheet-cell"><span>No.04</span><div class="img img-sun"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-snake"/></svg></div></div>
+    </div>
+    <div class="sheet-foot"><span>Flash Sheet Vol.07</span><span>每張只刺一次</span></div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：刺青師 ==================== -->
+<!-- 範例內容：上線前請換成真實資料 -->
+<section id="artists">
+  <div class="sec-head reveal">
+    <h2>刺青師</h2>
+    <p>三個人，三種手路。不確定找誰也沒關係，預約時選「不指定」，我們會依照你的圖幫你配對。</p>
+  </div>
+  <div class="artists">
+    <article class="artist reveal">
+      <div class="img img-sun" role="img" aria-label="阿墨的代表圖：浪與紅日"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-wave"/></svg></div>
+      <div class="artist-body">
+        <div class="artist-top"><h3>阿墨<small>Mo</small></h3><span class="tag open">開放預約</span></div>
+        <ul class="specs" aria-label="擅長風格"><li>傳統</li><li>日式</li></ul>
+        <p>工作室創辦人，刺青 14 年。粗線條、飽和色塊，喜歡做能撐過三十年還清楚的圖。</p>
+        <a href="#work" class="text-link" data-show-artist="mo">看他的作品</a>
+      </div>
+    </article>
+    <article class="artist reveal">
+      <div class="img img-dots v-fine" role="img" aria-label="小鹿的代表圖：細線夜蛾"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-moth"/></svg></div>
+      <div class="artist-body">
+        <div class="artist-top"><h3>小鹿<small>Lu</small></h3><span class="tag wait">候補中</span></div>
+        <ul class="specs" aria-label="擅長風格"><li>細線</li><li>小圖</li></ul>
+        <p>插畫背景，擅長單針細線與植物、昆蟲題材。下一批檔期預計三月開放，可以先排候補。</p>
+        <a href="#work" class="text-link" data-show-artist="lu">看她的作品</a>
+      </div>
+    </article>
+    <article class="artist reveal">
+      <div class="img img-smoke v-bg" role="img" aria-label="老K的代表圖：黑灰盤蛇"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-snake"/></svg></div>
+      <div class="artist-body">
+        <div class="artist-top"><h3>老K<small>K</small></h3><span class="tag open">開放預約</span></div>
+        <ul class="specs" aria-label="擅長風格"><li>黑灰寫實</li><li>日式</li></ul>
+        <p>擅長黑灰漸層與大面積作品，半甲、背部都做。會先跟你討論分次的節奏與預算。</p>
+        <a href="#work" class="text-link" data-show-artist="k">看他的作品</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ==================== 區塊：作品集 ==================== -->
+<!-- 範例內容：上線前請換成你們自己的作品與說明 -->
+<section class="alt" id="work">
+  <div class="sec-head reveal">
+    <h2>作品集</h2>
+    <p>依刺青師或風格篩選，點任一張可以放大瀏覽，用左右方向鍵切換。</p>
+  </div>
+  <div class="filters">
+    <div class="filter-row" role="group" aria-label="依刺青師篩選">
+      <b>刺青師</b>
+      <button type="button" class="chip" data-g="artist" data-v="all" aria-pressed="true">全部</button>
+      <button type="button" class="chip" data-g="artist" data-v="mo" aria-pressed="false">阿墨</button>
+      <button type="button" class="chip" data-g="artist" data-v="lu" aria-pressed="false">小鹿</button>
+      <button type="button" class="chip" data-g="artist" data-v="k" aria-pressed="false">老K</button>
+    </div>
+    <div class="filter-row" role="group" aria-label="依風格篩選">
+      <b>風格</b>
+      <button type="button" class="chip" data-g="style" data-v="all" aria-pressed="true">全部</button>
+      <button type="button" class="chip" data-g="style" data-v="fine" aria-pressed="false">細線</button>
+      <button type="button" class="chip" data-g="style" data-v="trad" aria-pressed="false">傳統</button>
+      <button type="button" class="chip" data-g="style" data-v="jp" aria-pressed="false">日式</button>
+      <button type="button" class="chip" data-g="style" data-v="bg" aria-pressed="false">黑灰寫實</button>
+    </div>
+  </div>
+  <p class="count" aria-live="polite">共 <span id="count">12</span> 件作品</p>
+  <div class="gallery">
+    <figure class="work" data-artist="mo" data-style="trad">
+      <button type="button" class="work-btn" aria-label="放大檢視：歸航燕子"></button>
+      <div class="img img-dots" role="img" aria-label="傳統風格燕子，紅色腹部"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-swallow"/></svg></div>
+      <figcaption><b>歸航燕子</b><span>阿墨，傳統</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="lu" data-style="fine">
+      <button type="button" class="work-btn" aria-label="放大檢視：夜蛾"></button>
+      <div class="img img-plain v-fine" role="img" aria-label="細線夜蛾，對稱的翅膀"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-moth"/></svg></div>
+      <figcaption><b>夜蛾</b><span>小鹿，細線</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="k" data-style="bg">
+      <button type="button" class="work-btn" aria-label="放大檢視：黑玫瑰"></button>
+      <div class="img img-smoke v-bg" role="img" aria-label="黑灰寫實玫瑰與葉片"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-rose"/></svg></div>
+      <figcaption><b>黑玫瑰</b><span>老K，黑灰寫實</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="mo" data-style="jp">
+      <button type="button" class="work-btn" aria-label="放大檢視：浪與日"></button>
+      <div class="img img-sun" role="img" aria-label="日式浪花與紅色太陽"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-wave"/></svg></div>
+      <figcaption><b>浪與日</b><span>阿墨，日式</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="lu" data-style="fine">
+      <button type="button" class="work-btn" aria-label="放大檢視：新月"></button>
+      <div class="img img-dots v-fine" role="img" aria-label="細線新月與星星"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-moon"/></svg></div>
+      <figcaption><b>新月</b><span>小鹿，細線</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="k" data-style="jp">
+      <button type="button" class="work-btn" aria-label="放大檢視：盤蛇"></button>
+      <div class="img img-hatch" role="img" aria-label="日式盤蛇，紅色腹鱗"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-snake"/></svg></div>
+      <figcaption><b>盤蛇</b><span>老K，日式</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="mo" data-style="trad">
+      <button type="button" class="work-btn" aria-label="放大檢視：緞帶匕首"></button>
+      <div class="img img-plain" role="img" aria-label="傳統匕首穿過紅色緞帶"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-dagger"/></svg></div>
+      <figcaption><b>緞帶匕首</b><span>阿墨，傳統</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="lu" data-style="fine">
+      <button type="button" class="work-btn" aria-label="放大檢視：單枝玫瑰"></button>
+      <div class="img img-hatch v-fine" role="img" aria-label="細線單枝玫瑰"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-rose"/></svg></div>
+      <figcaption><b>單枝玫瑰</b><span>小鹿，細線</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="k" data-style="bg">
+      <button type="button" class="work-btn" aria-label="放大檢視：灰蛾"></button>
+      <div class="img img-smoke v-bg" role="img" aria-label="黑灰寫實飛蛾"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-moth"/></svg></div>
+      <figcaption><b>灰蛾</b><span>老K，黑灰寫實</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="mo" data-style="trad">
+      <button type="button" class="work-btn" aria-label="放大檢視：紅心緞帶"></button>
+      <div class="img img-sun" role="img" aria-label="傳統紅心與空白緞帶"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-heart"/></svg></div>
+      <figcaption><b>紅心緞帶</b><span>阿墨，傳統</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="lu" data-style="fine">
+      <button type="button" class="work-btn" aria-label="放大檢視：小燕"></button>
+      <div class="img img-plain v-fine" role="img" aria-label="細線小燕子"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-swallow"/></svg></div>
+      <figcaption><b>小燕</b><span>小鹿，細線</span></figcaption>
+    </figure>
+    <figure class="work" data-artist="k" data-style="bg">
+      <button type="button" class="work-btn" aria-label="放大檢視：暗浪"></button>
+      <div class="img img-smoke v-bg" role="img" aria-label="黑灰寫實浪花與灰色太陽"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-wave"/></svg></div>
+      <figcaption><b>暗浪</b><span>老K，黑灰寫實</span></figcaption>
+    </figure>
+  </div>
+  <p class="empty" id="empty" hidden>這個組合目前沒有作品，換個條件看看，或直接預約跟刺青師聊聊。</p>
+</section>
+
+<!-- 燈箱：點擊作品後開啟，支援 Esc 關閉與左右方向鍵切換 -->
+<dialog class="lightbox" id="lightbox" aria-label="作品放大檢視">
+  <button type="button" class="lb-btn lb-close" aria-label="關閉"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="lb-stage"></div>
+  <div class="lb-bar">
+    <p class="lb-cap" aria-live="polite"></p>
+    <div class="lb-nav">
+      <button type="button" class="lb-btn lb-prev" aria-label="上一張"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button type="button" class="lb-btn lb-next" aria-label="下一張"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</dialog>
+
+<!-- ==================== 區塊：現貨 Flash 圖 ==================== -->
+<!-- 範例內容：上線前請換成真實資料 -->
+<section id="flash">
+  <div class="sec-head reveal">
+    <h2>現貨 Flash 圖</h2>
+    <p>已經畫好的圖，固定價格、尺寸可微調。每張只刺一次，被選走就會從牆上撕下來。</p>
+  </div>
+  <div class="flashes">
+    <article class="flash reveal">
+      <div class="img img-dots" role="img" aria-label="Flash 圖：歸航燕子"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-swallow"/></svg></div>
+      <div class="flash-body">
+        <h3>歸航燕子</h3><p class="price">NT$3,500</p>
+        <p class="meta">約 8 公分，阿墨</p>
+        <a href="#booking" class="btn" data-flash="歸航燕子" data-artist="阿墨">我要這張</a>
+      </div>
+    </article>
+    <article class="flash reveal">
+      <div class="img img-plain v-fine" role="img" aria-label="Flash 圖：細線夜蛾"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-moth"/></svg></div>
+      <div class="flash-body">
+        <h3>細線夜蛾</h3><p class="price">NT$2,800</p>
+        <p class="meta">約 6 公分，小鹿</p>
+        <a href="#booking" class="btn" data-flash="細線夜蛾" data-artist="小鹿">我要這張</a>
+      </div>
+    </article>
+    <article class="flash reveal">
+      <div class="img img-hatch" role="img" aria-label="Flash 圖：緞帶匕首"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-dagger"/></svg></div>
+      <div class="flash-body">
+        <h3>緞帶匕首</h3><p class="price">NT$4,200</p>
+        <p class="meta">約 10 公分，阿墨</p>
+        <a href="#booking" class="btn" data-flash="緞帶匕首" data-artist="阿墨">我要這張</a>
+      </div>
+    </article>
+    <article class="flash reveal">
+      <div class="img img-smoke v-bg" role="img" aria-label="Flash 圖：黑灰盤蛇"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-snake"/></svg></div>
+      <div class="flash-body">
+        <h3>黑灰盤蛇</h3><p class="price">NT$5,500</p>
+        <p class="meta">約 12 公分，老K</p>
+        <a href="#booking" class="btn" data-flash="黑灰盤蛇" data-artist="老K">我要這張</a>
+      </div>
+    </article>
+    <article class="flash reveal">
+      <div class="img img-sun" role="img" aria-label="Flash 圖：小浪"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-wave"/></svg></div>
+      <div class="flash-body">
+        <h3>小浪</h3><p class="price">NT$3,200</p>
+        <p class="meta">約 7 公分，阿墨</p>
+        <a href="#booking" class="btn" data-flash="小浪" data-artist="阿墨">我要這張</a>
+      </div>
+    </article>
+    <article class="flash reveal">
+      <div class="img img-dots v-fine" role="img" aria-label="Flash 圖：新月與星"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#t-moon"/></svg></div>
+      <div class="flash-body">
+        <h3>新月與星</h3><p class="price">NT$2,500</p>
+        <p class="meta">約 4 公分，小鹿</p>
+        <a href="#booking" class="btn" data-flash="新月與星" data-artist="小鹿">我要這張</a>
+      </div>
+    </article>
+  </div>
+  <p class="flash-note reveal">Flash 圖價格已含設計，顏色可小幅調整。想改動構圖就算客製，會依時薪重新估價。</p>
+</section>
+
+<!-- ==================== 區塊：價格說明 ==================== -->
+<section class="alt" id="pricing">
+  <div class="sec-head reveal">
+    <h2>價格說明</h2>
+    <p>每張圖的價格依大小、部位與細節而定，諮詢後會給你明確報價，不會在刺的當下加價。</p>
+  </div>
+  <!-- 範例內容：上線前請換成真實資料 -->
+  <div class="prices reveal">
+    <div class="price-cell"><h3>最低消費</h3><p class="num">NT$2,500</p><p>適用 5 公分以內的小圖，含消毒耗材。</p></div>
+    <div class="price-cell"><h3>時薪</h3><p class="num">NT$4,000<small>每小時</small></p><p>中大型作品依實際刺的時間計算。</p></div>
+    <div class="price-cell"><h3>整日場</h3><p class="num">NT$22,000<small>約 6 小時</small></p><p>適合半甲、背部等需要分次的大圖。</p></div>
+    <div class="price-cell hl"><h3>訂金</h3><p class="num">NT$2,000</p><p>確認檔期時支付，會從當天的費用中扣除。</p></div>
+  </div>
+  <p class="price-foot reveal">訂金用來保留時段與準備設計圖。開工前 72 小時內取消或未到，訂金不退；提前告知可以改期一次。補色在完成後三個月內免費。</p>
+</section>
+
+<!-- ==================== 區塊：刺青流程 ==================== -->
+<section id="process">
+  <div class="sec-head reveal">
+    <h2>刺青流程</h2>
+    <p>第一次刺青最常緊張的是不知道接下來會發生什麼。整個過程大致是這樣。</p>
+  </div>
+  <ol class="steps">
+    <li class="step reveal"><h3>線上諮詢</h3><p>填表或私訊，告訴我們想法、部位與大概尺寸，兩天內回覆。</p></li>
+    <li class="step reveal"><h3>設計討論</h3><p>刺青師畫出草圖，可以修改到你點頭為止，再確定最終尺寸。</p></li>
+    <li class="step reveal"><h3>付訂排期</h3><p>支付訂金保留時段，我們會傳行前須知，提醒睡飽與吃飽。</p></li>
+    <li class="step reveal"><h3>刺青當天</h3><p>轉印確認位置後才開始。全程一次性針具，隨時可以喊休息。</p></li>
+    <li class="step reveal"><h3>照護與補色</h3><p>帶走照護說明，恢復期有問題隨時問，三個月內免費補色。</p></li>
+  </ol>
+</section>
+
+<!-- ==================== 區塊：照護須知與年齡健康須知 ==================== -->
+<section class="alt" id="care">
+  <div class="care-wrap">
+    <div class="reveal">
+      <h2>照護須知</h2>
+      <div class="care">
+        <details open>
+          <summary>前 3 天</summary>
+          <ul>
+            <li>保護膜依刺青師指示時間撕下，用溫水和無香料肥皂輕洗。</li>
+            <li>用乾淨紙巾按乾，不要用毛巾來回擦。</li>
+            <li>薄擦一層修護乳，讓皮膚透氣，不要厚敷。</li>
+          </ul>
+        </details>
+        <details>
+          <summary>第 4 至 14 天</summary>
+          <ul>
+            <li>開始脫皮、發癢是正常的，不要抓也不要撕。</li>
+            <li>避免泡澡、游泳、三溫暖和長時間曝曬。</li>
+            <li>穿寬鬆衣物，減少摩擦。</li>
+          </ul>
+        </details>
+        <details>
+          <summary>一個月之後</summary>
+          <ul>
+            <li>外出記得擦防曬，顏色和線條會維持得更久。</li>
+            <li>如果有掉色或線條不均，在三個月內預約免費補色。</li>
+          </ul>
+        </details>
+        <details>
+          <summary>什麼情況要聯絡我們</summary>
+          <ul>
+            <li>紅腫持續擴大、發熱或流膿，請先就醫，再傳訊息告訴我們。</li>
+            <li>任何不確定的狀況，拍照私訊給你的刺青師就好。</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+    <!-- 年齡與健康須知：以下規定請依你所在地的法規調整（例如未成年刺青的法令、身分證件要求），上線前請確認 -->
+    <aside class="rules reveal" aria-labelledby="rules-title">
+      <h3 id="rules-title">年齡與健康須知</h3>
+      <div class="age"><strong>18+</strong><p>本店只為年滿 18 歲的客人服務，當天請攜帶有照片的身分證件。</p></div>
+      <ul>
+        <li>懷孕、哺乳期間暫不提供服務。</li>
+        <li>有糖尿病、凝血問題、心臟疾病或蟹足腫體質，請在諮詢時先告知。</li>
+        <li>刺青前 24 小時內請勿飲酒，酒醉者恕不服務。</li>
+        <li>預計刺青的部位若有曬傷、傷口或皮膚炎，需等完全恢復再刺。</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ==================== 區塊：評價 ==================== -->
+<section id="reviews">
+  <div class="sec-head reveal">
+    <h2>客人怎麼說</h2>
+    <p>來自 Google 與 Instagram 私訊的回饋，節錄部分內容。</p>
+  </div>
+  <!-- 範例內容：上線前請換成真實資料 -->
+  <div class="reviews">
+    <figure class="review reveal">
+      <blockquote>第一次刺青超緊張，阿墨一直跟我聊高雄的老店，不知不覺就刺完了。燕子線條很乾淨，一年後還是很漂亮。</blockquote>
+      <figcaption><b>Wei</b>傳統燕子，前臂</figcaption>
+    </figure>
+    <figure class="review reveal">
+      <blockquote>候補了兩個月才排到小鹿，完全值得。她會先在皮膚上比好幾個角度，最後的位置比我原本想的更好看。</blockquote>
+      <figcaption><b>Ann</b>細線植物，鎖骨</figcaption>
+    </figure>
+    <figure class="review reveal">
+      <blockquote>半甲分成四次刺，老K每次都先講好進度和費用，沒有任何意外。黑灰的層次照片拍不出來，本人更好看。</blockquote>
+      <figcaption><b>陳先生</b>黑灰寫實，半甲</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ==================== 區塊：預約表單 ==================== -->
+<section class="alt" id="booking">
+  <div class="booking">
+    <div class="reveal">
+      <h2>預約諮詢</h2>
+      <p class="intro">告訴我們你的想法，刺青師會在兩個工作天內回覆報價與可預約的時段。比較急也可以直接打電話或傳 LINE。</p>
+      <p class="deposit"><b>關於訂金：</b>確認設計與時段後，需支付 NT$2,000 訂金才算完成預約，訂金會從當天費用中扣除。</p>
+      <div class="contact-btns">
+        <a href="tel:071234567" class="btn btn-brand">來電 07-123-4567</a>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn" target="_blank" rel="noopener">LINE 詢問</a>
+        <a href="https://maps.google.com/?q=高雄市鹽埕區七賢三路123號" class="btn" target="_blank" rel="noopener">工作室地圖</a>
+      </div>
+      <address class="contact-info">
+        <span>高雄市鹽埕區七賢三路 123 號 2 樓</span>
+        <a href="mailto:hello@inkisle.example">hello@inkisle.example</a>
+        <span>全預約制，週二至週日 12:00–21:00</span>
+      </address>
+    </div>
+    <!--
+      表單使用 Formspree（免費方案每月 50 筆）：
+      1. 到 https://formspree.io 註冊並建立新表單
+      2. 把下方 action 裡的 your-form-id 換成你拿到的表單 ID
+      3. 第一次送出時，Formspree 會寄信請你確認信箱
+      免費方案不支援上傳檔案，所以參考圖請客人用文字或連結說明，回覆後再用 LINE 或 IG 傳圖。
+    -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="field"><label for="f-name">姓名</label><input id="f-name" name="姓名" autocomplete="name" required></div>
+      <div class="field"><label for="f-contact">聯絡方式<small>電話、Email 或 IG 帳號</small></label><input id="f-contact" name="聯絡方式" required></div>
+      <div class="field">
+        <label for="f-artist">刺青師</label>
+        <select id="f-artist" name="刺青師">
+          <option>不指定</option>
+          <option>阿墨</option>
+          <option>小鹿</option>
+          <option>老K</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-style">風格</label>
+        <select id="f-style" name="風格">
+          <option value="">請選擇</option>
+          <option>細線</option>
+          <option>傳統</option>
+          <option>日式</option>
+          <option>黑灰寫實</option>
+          <option>還不確定</option>
+        </select>
+      </div>
+      <div class="field full" id="flash-field">
+        <label for="f-flash">現貨 Flash 圖<small>選了就不用填想法描述</small></label>
+        <select id="f-flash" name="Flash 圖">
+          <option value="">不選，我要客製設計</option>
+          <option>歸航燕子</option>
+          <option>細線夜蛾</option>
+          <option>緞帶匕首</option>
+          <option>黑灰盤蛇</option>
+          <option>小浪</option>
+          <option>新月與星</option>
+        </select>
+      </div>
+      <div class="field"><label for="f-place">部位</label><input id="f-place" name="部位" placeholder="例如：左前臂內側"></div>
+      <div class="field">
+        <label for="f-size">尺寸</label>
+        <select id="f-size" name="尺寸">
+          <option value="">請選擇</option>
+          <option>5 公分以內</option>
+          <option>5 至 10 公分</option>
+          <option>10 至 20 公分</option>
+          <option>20 公分以上或大面積</option>
+        </select>
+      </div>
+      <div class="field full"><label for="f-idea">想法描述</label><textarea id="f-idea" name="想法描述" placeholder="想刺的內容、對你的意義、喜歡的感覺"></textarea></div>
+      <div class="field full"><label for="f-ref">參考圖說明</label><textarea id="f-ref" name="參考圖說明" placeholder="貼上參考圖連結，或描述你喜歡的線條、顏色"></textarea></div>
+      <label class="check full"><input type="checkbox" name="年滿18歲" value="是" required>我已年滿 18 歲，並同意訂金規則</label>
+      <button type="submit" class="btn btn-brand">送出預約</button>
+      <p class="form-note full">送出不代表完成預約，刺青師回覆並收到訂金後才保留時段。資料只用於聯絡你，不會提供給第三方。</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<footer class="site-footer">
+  <div class="foot-grid">
+    <div>
+      <a href="#top" class="logo"><b>Ink Isle</b><small>墨島刺青</small></a>
+      <p>高雄鹽埕的預約制刺青工作室，細線、傳統、日式與黑灰寫實。</p>
+      <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Threads</a>
+      </div>
+    </div>
+    <div>
+      <h2>聯絡資訊</h2>
+      <address>
+        <a href="https://maps.google.com/?q=高雄市鹽埕區七賢三路123號" target="_blank" rel="noopener">高雄市鹽埕區七賢三路 123 號 2 樓</a><br>
+        電話 <a href="tel:071234567">07-123-4567</a><br>
+        <a href="mailto:hello@inkisle.example">hello@inkisle.example</a>
+      </address>
+    </div>
+    <div>
+      <h2>營業時間</h2>
+      <p>週二至週日 12:00–21:00<br>週一公休，全預約制</p>
+    </div>
+  </div>
+  <p class="copy">© <span id="y"></span> 墨島 Ink Isle Tattoo</p>
+  <p class="f-lang"><a href="../en/" hreflang="en" lang="en">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></p>
+</footer>
+
+<!-- 手機底部固定按鈕 -->
+<div class="sticky-cta"><a href="#booking" class="btn btn-brand">預約諮詢</a></div>
+
+<script>
+(function () {
+  var d = document, header = d.querySelector('.site-header'), burger = d.querySelector('.burger'), menu = d.getElementById('menu');
+
+  // 頁首捲動背景
+  function onScroll() { header.classList.toggle('scrolled', scrollY > 30 || menu.classList.contains('open')); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // 漢堡選單
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? '關閉選單' : '開啟選單');
+    onScroll();
+  }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // 捲動漸入
+  var targets = d.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) targets.forEach(function (el) { el.classList.add('in'); });
+  else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
+    targets.forEach(function (el) { io.observe(el); });
+  }
+
+  // 作品篩選：刺青師與風格可以同時選
+  var works = [].slice.call(d.querySelectorAll('.work')), chips = d.querySelectorAll('.chip'), sel = { artist: 'all', style: 'all' };
+  function apply() {
+    var n = 0;
+    works.forEach(function (w) {
+      w.hidden = (sel.artist !== 'all' && w.dataset.artist !== sel.artist) || (sel.style !== 'all' && w.dataset.style !== sel.style);
+      if (!w.hidden) n++;
+    });
+    chips.forEach(function (c) { c.setAttribute('aria-pressed', sel[c.dataset.g] === c.dataset.v); });
+    d.getElementById('count').textContent = n; d.getElementById('empty').hidden = n > 0;
+  }
+  chips.forEach(function (c) { c.addEventListener('click', function () { sel[c.dataset.g] = c.dataset.v; apply(); }); });
+  d.querySelectorAll('[data-show-artist]').forEach(function (a) {
+    a.addEventListener('click', function () { sel.artist = a.dataset.showArtist; sel.style = 'all'; apply(); });
+  });
+
+  // 燈箱：點擊開啟、方向鍵切換、Esc 關閉、Tab 留在燈箱內
+  var lb = d.getElementById('lightbox'), stage = lb.querySelector('.lb-stage'), cap = lb.querySelector('.lb-cap'), list = [], cur = 0, opener = null;
+  function show(i) {
+    cur = (i + list.length) % list.length;
+    stage.replaceChildren(list[cur].querySelector('.img').cloneNode(true));
+    var b = d.createElement('b'), s = d.createElement('span');
+    b.textContent = list[cur].querySelector('figcaption b').textContent;
+    s.textContent = list[cur].querySelector('figcaption span').textContent + '，' + (cur + 1) + ' / ' + list.length;
+    cap.replaceChildren(b, s);
+  }
+  works.forEach(function (w) {
+    w.querySelector('.work-btn').addEventListener('click', function () {
+      list = works.filter(function (x) { return !x.hidden; }); opener = this;
+      show(list.indexOf(w)); lb.showModal(); lb.querySelector('.lb-close').focus();
+    });
+  });
+  lb.querySelector('.lb-prev').addEventListener('click', function () { show(cur - 1); });
+  lb.querySelector('.lb-next').addEventListener('click', function () { show(cur + 1); });
+  lb.querySelector('.lb-close').addEventListener('click', function () { lb.close(); });
+  lb.addEventListener('click', function (e) { if (e.target === lb || e.target === stage) lb.close(); });
+  lb.addEventListener('close', function () { if (opener) opener.focus(); });
+  lb.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') show(cur - 1);
+    else if (e.key === 'ArrowRight') show(cur + 1);
+    else if (e.key === 'Tab') {
+      var f = lb.querySelectorAll('button'), first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && d.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && d.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+
+  // 「我要這張」：自動在表單選好 Flash 圖與刺青師
+  var fFlash = d.getElementById('f-flash'), fArtist = d.getElementById('f-artist');
+  d.querySelectorAll('[data-flash]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      fFlash.value = a.dataset.flash; fArtist.value = a.dataset.artist;
+      d.getElementById('flash-field').classList.add('flash-picked');
+    });
+  });
+  fFlash.addEventListener('change', function () { d.getElementById('flash-field').classList.remove('flash-picked'); });
+
+  d.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

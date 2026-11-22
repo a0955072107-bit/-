@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>方格 Grid Commons 共享空間｜台北大同區 共享辦公室、會議室租借、商登地址</title>
+<meta name="description" content="方格 Grid Commons 共享空間位於台北市大同區，捷運大橋頭站步行 3 分鐘。提供自由座、固定座、獨立辦公室、會議室與活動場地租借，以及公司登記地址，日租月租都彈性。">
+<meta property="og:title" content="方格 Grid Commons 共享空間">
+<meta property="og:description" content="大橋頭站旁的共享辦公室。自由座、獨立辦公室、會議室按時租，線上估價、預約參觀。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f4ee">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #8fe3c0;          /* 品牌主色：薄荷綠，用於主要按鈕與色塊 */
+  --brand-ink: #15171c;      /* 在 brand 色上的文字顏色（墨黑，對比 AA） */
+  --brand-deep: #1b6e50;     /* 深薄荷：淺底上的強調文字、連結（對比 AA） */
+  --brand-hover: #74d6ad;    /* 主要按鈕滑過時的顏色 */
+  --sun: #ffd25e;            /* 輔助色：奶油黃，用於色塊與標籤 */
+  --sky: #c3d9fb;            /* 輔助色：淡天藍，用於色塊 */
+  --leaf: #2f7d55;           /* 佔位圖：植物葉片 */
+  --leaf-light: #58b07f;     /* 佔位圖：植物亮面 */
+  --wood: #e6c99f;           /* 佔位圖：桌面木色 */
+  --wood-side: #c49a68;      /* 佔位圖：桌面側邊 */
+  --bg: #f6f4ee;             /* 網頁底色：暖白 */
+  --surface: #fcfbf7;        /* 卡片、表單底色（略帶暖調的白） */
+  --surface-2: #eeebe2;      /* 次要底色：輸入框、交錯區塊 */
+  --text: #15171c;           /* 主要文字：墨黑 */
+  --muted: #555a63;          /* 次要文字 */
+  --line: #dcd8cc;           /* 細線、邊框 */
+  --grid: color-mix(in srgb, var(--text) 6%, transparent); /* 背景方格線 */
+  --ink: #15171c;            /* 深色區塊背景：墨黑 */
+  --ink-2: #22252c;          /* 深色區塊裡的卡片底色 */
+  --on-ink: #f1f0ea;         /* 深色區塊上的主要文字 */
+  --on-ink-muted: #a9adb5;   /* 深色區塊上的次要文字 */
+  --radius: 22px;            /* 卡片圓角（圓角方塊是這個模板的招牌） */
+  --radius-sm: 12px;         /* 按鈕、輸入框圓角 */
+  --font-heading: "Sora", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; /* 標題字型 */
+  --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; /* 內文字型 */
+  --maxw: 1240px;            /* 內容最大寬度 */
+  --pad: clamp(1rem, 5vw, 3rem); /* 左右留白 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); font-variant-numeric: tabular-nums; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; line-height: 1.25; letter-spacing: -.01em; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand-deep); outline-offset: 3px; border-radius: 6px; }
+.wrap { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--ink); color: var(--on-ink); padding: .5rem 1rem; z-index: 100; }
+.skip:focus { left: 1rem; }
+svg { flex: none; }
+
+/* ---------- 按鈕 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .7rem 1.4rem; border-radius: var(--radius-sm); border: 2px solid transparent; font: 700 .97rem/1.2 var(--font-body); cursor: pointer; transition: background .2s, color .2s, border-color .2s, transform .2s, box-shadow .2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(1px); box-shadow: none; }
+.btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+a:active { opacity: .85; }
+.btn-main { background: var(--brand); color: var(--brand-ink); border-color: var(--ink); box-shadow: 3px 3px 0 var(--ink); }
+.btn-main:hover { background: var(--brand-hover); box-shadow: 4px 5px 0 var(--ink); }
+.btn-line { border-color: var(--ink); color: var(--text); background: transparent; }
+.btn-line:hover { background: var(--ink); color: var(--on-ink); }
+.btn-ink { background: var(--ink); color: var(--on-ink); }
+.btn-ink:hover { background: var(--ink-2); }
+.link { color: var(--brand-deep); font-weight: 700; border-bottom: 2px solid currentColor; transition: color .2s; }
+.link:hover { color: var(--text); }
+
+/* ---------- 通用區塊 ---------- */
+section { padding-block: clamp(4rem, 9vw, 7.5rem); }
+.sec-head { display: grid; gap: .9rem; margin-bottom: clamp(2rem, 5vw, 3.5rem); max-width: 42rem; }
+.sec-head h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); }
+.sec-head p { color: var(--muted); font-size: 1.05rem; }
+.alt { background: var(--surface-2); }
+.dark { background: var(--ink); color: var(--on-ink); }
+.dark .sec-head p { color: var(--on-ink-muted); }
+.tag { display: inline-block; font-size: .85rem; font-weight: 500; padding: .15rem .65rem; border-radius: 8px; background: var(--sun); color: var(--brand-ink); }
+
+/* ==================== 頁首導覽 ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .75rem 1.5rem; min-height: 4.5rem; padding-block: .6rem; }
+.logo { display: flex; align-items: center; gap: .65rem; }
+.logo b { font: 700 1.15rem/1.1 var(--font-heading); display: block; }
+.logo small { display: block; font-size: .78rem; color: var(--muted); }
+.logo-mark { display: grid; grid-template-columns: repeat(2, 14px); gap: 4px; }
+.logo-mark i { width: 14px; height: 14px; border-radius: 4px; background: var(--brand); }
+.logo-mark i:nth-child(2) { background: var(--sun); }
+.logo-mark i:nth-child(3) { background: var(--ink); }
+.logo-mark i:nth-child(4) { background: var(--sky); }
+.menu { display: flex; align-items: center; gap: clamp(.9rem, 2vw, 1.8rem); font-size: .93rem; font-weight: 500; }
+.menu a:not(.btn) { padding-block: .3rem; border-bottom: 2px solid transparent; transition: border-color .2s, color .2s; }
+.menu a:not(.btn):hover { border-color: var(--brand-deep); color: var(--brand-deep); }
+.menu .btn { min-height: 42px; padding: .45rem 1.1rem; }
+.burger { display: none; width: 46px; height: 46px; background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius-sm); color: var(--text); cursor: pointer; transition: background .2s; }
+.burger:hover { background: var(--brand); }
+.burger:active { transform: translateY(1px); }
+.burger span, .burger span::before, .burger span::after { display: block; width: 18px; height: 2px; background: currentColor; margin: auto; position: relative; transition: transform .3s, background .3s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* 沒有 JS 時：選單換行顯示在 logo 下方，頁首改成 sticky */
+  html:not(.js) .site-header { position: sticky; background: var(--bg); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .3rem 1.1rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: 4.5rem 0 auto; flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); padding: .5rem var(--pad) 1.5rem; border-top: 1px solid var(--line); box-shadow: 0 24px 30px -20px color-mix(in srgb, var(--ink) 30%, transparent); transform: translateY(-130%); visibility: hidden; transition: transform .35s, visibility .35s; }
+  .js .menu.open { transform: none; visibility: visible; }
+  .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line); }
+  .js .menu .btn { margin-top: 1rem; min-height: 48px; }
+}
+/* 語言切換：桌機在主要按鈕右邊，手機（有 JS）在展開選單的最上方；沒有 JS 時跟著選單換行顯示 */
+.lang-switch { display: flex; align-items: center; gap: .1rem; padding-left: clamp(.4rem, 1vw, .9rem); border-left: 1px solid var(--line); font-size: .8rem; line-height: 1; white-space: nowrap; }
+.menu .lang-switch a[hreflang] { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border: 0; color: var(--muted); font-weight: 400; text-decoration: underline 1px transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.menu .lang-switch a[hreflang]:hover { color: var(--brand-deep); text-decoration-color: currentColor; }
+.menu .lang-switch a[hreflang]:active { opacity: .7; }
+.menu .lang-switch a[hreflang]:focus-visible { outline-offset: 0; }
+.menu .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: var(--brand-deep); text-decoration-thickness: 2px; }
+@media (max-width: 760px) {
+  html:not(.js) .lang-switch { border-left: 0; padding-left: 0; margin-left: -.3rem; }
+  .js .menu .lang-switch { order: -1; align-self: flex-start; border-left: 0; padding: 0 0 .4rem; margin-left: -.3rem; font-size: .92rem; }
+  .js .menu .lang-switch a[hreflang] { padding: 0 .3rem; border-bottom: 0; min-width: 40px; min-height: 40px; }
+}
+/* 平板寬度：縮小選單間距，讓語言切換放得下、頁首不換行 */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .menu { gap: clamp(.55rem, 1.1vw, .9rem); font-size: .88rem; }
+  .menu a { white-space: nowrap; }
+  .lang-switch { padding-left: .25rem; }
+  .menu .lang-switch a[hreflang] { padding: 0; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  /* 平板寬度空間不夠：暫時隱藏次要連結（class="opt"），手機選單與桌機仍會顯示 */
+  .menu .opt { display: none; }
+}
+
+/* ==================== 藝術佔位圖 ==================== */
+/* 所有 .img 都是用 CSS 畫的辦公場景（等角地板格線＋家具）。換成照片：在對應 class 改成
+   .img-xx { background: url(images/xxx.jpg) center/cover; }，並把 s-desk、s-plant 這類場景 class 刪掉即可 */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; border: 2px solid var(--ink);
+  background:
+    repeating-linear-gradient(30deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(150deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    var(--brand); }
+.img::before, .img::after { content: ""; position: absolute; inset: 0; z-index: -1; }
+
+/* 換成照片：.img-desk { background: url(images/hot-desk.jpg) center/cover; } */
+.s-desk { background:
+    linear-gradient(var(--ink), var(--ink)) 14% 70% / 3px 22% no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 50% 84% / 3px 18% no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 86% 70% / 3px 22% no-repeat,
+    repeating-linear-gradient(30deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(150deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    var(--brand); }
+.s-desk::before { /* 等角桌面＋筆電＋咖啡杯 */
+  clip-path: polygon(50% 30%, 88% 50%, 50% 70%, 12% 50%);
+  background:
+    radial-gradient(circle at 66% 52%, var(--ink) 0 5px, var(--surface) 5px 7px, transparent 7.5px),
+    linear-gradient(150deg, transparent 38%, var(--ink) 38% 52%, transparent 52%) 40% 46% / 34% 22% no-repeat,
+    var(--wood); }
+.s-desk::after { clip-path: polygon(12% 50%, 50% 70%, 88% 50%, 88% 55%, 50% 75%, 12% 55%); background: linear-gradient(90deg, var(--wood-side) 50%, color-mix(in srgb, var(--wood-side) 70%, var(--ink)) 50%); }
+
+/* 換成照片：.img-plant { background: url(images/plant.jpg) center/cover; } */
+.s-plant { background-color: var(--sun); }
+.s-plant::before { /* 葉片 */
+  background:
+    radial-gradient(ellipse 12% 22% at 38% 38%, var(--leaf) 96%, transparent 100%),
+    radial-gradient(ellipse 12% 24% at 62% 34%, var(--leaf-light) 96%, transparent 100%),
+    radial-gradient(ellipse 11% 20% at 50% 24%, var(--leaf) 96%, transparent 100%),
+    radial-gradient(ellipse 20% 10% at 30% 54%, var(--leaf-light) 96%, transparent 100%),
+    radial-gradient(ellipse 20% 10% at 70% 52%, var(--leaf) 96%, transparent 100%); }
+.s-plant::after { /* 花盆 */
+  clip-path: polygon(34% 60%, 66% 60%, 61% 86%, 39% 86%);
+  background: linear-gradient(var(--surface) 0 12%, var(--ink) 12%); }
+
+/* 換成照片：.img-lamp { background: url(images/lamp.jpg) center/cover; } */
+.s-lamp { background:
+    linear-gradient(var(--ink), var(--ink)) 46% 82% / 3px 52% no-repeat,
+    radial-gradient(ellipse 18% 4% at 47% 90%, var(--ink) 96%, transparent 100%),
+    repeating-linear-gradient(30deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    var(--sky); }
+.s-lamp::before { /* 燈罩 */
+  clip-path: polygon(34% 18%, 58% 18%, 68% 36%, 24% 36%); background: var(--ink); }
+.s-lamp::after { /* 暖光 */
+  clip-path: polygon(26% 36%, 66% 36%, 94% 100%, 0 100%);
+  background: linear-gradient(color-mix(in srgb, var(--sun) 85%, transparent), transparent 80%); }
+
+/* 換成照片：.img-plan { background: url(images/office.jpg) center/cover; } */
+.s-plan { background: radial-gradient(circle, color-mix(in srgb, var(--ink) 22%, transparent) 1.2px, transparent 1.8px) 0 0 / 16px 16px, var(--surface); }
+.s-plan::before { /* 平面圖：牆與房間 */
+  inset: 12%; border: 3px solid var(--ink); border-radius: 12px;
+  background:
+    linear-gradient(var(--ink), var(--ink)) 46% 0 / 3px 62% no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 0 60% / 34% 3px no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 100% 44% / 44% 3px no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 0 0 / 46% 60% no-repeat,
+    linear-gradient(var(--sun), var(--sun)) 100% 0 / 54% 44% no-repeat,
+    linear-gradient(var(--sky), var(--sky)) 100% 100% / 54% 56% no-repeat; }
+.s-plan::after { /* 平面圖上的桌椅 */
+  inset: 20% 60% 48% 20%;
+  background: repeating-linear-gradient(90deg, var(--ink) 0 10px, transparent 10px 18px) 0 0 / 100% 10px no-repeat,
+    repeating-linear-gradient(90deg, var(--ink) 0 10px, transparent 10px 18px) 0 100% / 100% 10px no-repeat; }
+
+/* 換成照片：.img-meet { background: url(images/meeting-room.jpg) center/cover; } */
+.s-meet { background:
+    repeating-linear-gradient(30deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(150deg, color-mix(in srgb, var(--ink) 9%, transparent) 0 1px, transparent 1px 22px),
+    var(--sky); }
+.s-meet::before { /* 長桌 */
+  inset: 36% 22%; border-radius: 999px; background: var(--wood); box-shadow: 0 6px 0 var(--wood-side), 0 6px 0 2px var(--ink), 0 0 0 2px var(--ink); }
+.s-meet::after { /* 椅子 */
+  background:
+    radial-gradient(circle at 34% 24%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 50% 24%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 66% 24%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 34% 80%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 50% 80%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 66% 80%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 13% 52%, var(--ink) 0 8px, transparent 9px),
+    radial-gradient(circle at 87% 52%, var(--ink) 0 8px, transparent 9px); }
+
+/* 換成照片：.img-event { background: url(images/event.jpg) center/cover; } */
+.s-event { background-color: var(--sun); }
+.s-event::before { /* 舞台與螢幕 */
+  inset: 12% 20% auto; height: 24%; border-radius: 10px; border: 5px solid var(--ink); background: var(--brand); }
+.s-event::after { /* 一排排座位 */
+  inset: 46% 14% 12%; background: radial-gradient(circle, var(--ink) 0 5px, transparent 6px) 0 0 / 26px 24px; }
+
+/* 換成照片：.img-mail { background: url(images/mailroom.jpg) center/cover; } */
+.s-mail::before { /* 信封＋郵票 */
+  inset: 28% 20%; border-radius: 12px; border: 2px solid var(--ink);
+  background: linear-gradient(var(--sun), var(--sun)) 90% 14% / 14% 22% no-repeat, var(--surface); }
+.s-mail::after { clip-path: polygon(21% 29%, 79% 29%, 50% 56%); background: color-mix(in srgb, var(--surface) 80%, var(--ink)); }
+
+/* 換成照片：.img-map { background: url(images/map.jpg) center/cover; } */
+.img-map { min-height: 300px; height: 100%; background:
+    linear-gradient(var(--brand), var(--brand)) 30% 30% / 18% 22% no-repeat,
+    linear-gradient(var(--sun), var(--sun)) 82% 76% / 20% 18% no-repeat,
+    repeating-linear-gradient(0deg, transparent 0 58px, var(--surface) 58px 70px),
+    repeating-linear-gradient(90deg, transparent 0 74px, var(--surface) 74px 86px),
+    var(--surface-2); }
+.img-map::before { /* 河岸與快速道路 */
+  background: linear-gradient(110deg, transparent 0 8%, var(--sky) 8% 18%, transparent 18%); }
+.img-map::after { /* 位置標記 */
+  inset: calc(50% - 30px) auto auto calc(55% - 18px); width: 36px; height: 36px; z-index: 1;
+  border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--ink);
+  box-shadow: inset 0 0 0 10px var(--ink), inset 0 0 0 18px var(--brand); }
+
+/* ==================== Hero ==================== */
+.hero { padding-top: clamp(6rem, 10vw, 7rem); padding-bottom: clamp(3rem, 6vw, 4rem);
+  background: linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 48px 48px, linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 48px 48px, var(--bg); }
+.hero-grid { display: grid; gap: clamp(2.25rem, 5vw, 4.5rem); align-items: center; }
+.hero h1 { font-size: clamp(2.3rem, 5.4vw, 4.3rem); line-height: 1.15; }
+.hero-lead { color: var(--muted); font-size: clamp(1.02rem, 1.5vw, 1.15rem); max-width: 31rem; margin-top: 1.25rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 1.9rem; }
+.board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); gap: clamp(.5rem, 1.4vw, 1rem); aspect-ratio: 1; max-width: 560px; width: 100%; margin-inline: auto;
+  grid-template-areas: "plan plan desk" "plan plan plant" "lamp meet meet"; }
+.board .img { border-radius: clamp(14px, 2.4vw, var(--radius)); }
+.board .s-plan { grid-area: plan; } .board .s-desk { grid-area: desk; } .board .s-plant { grid-area: plant; } .board .s-lamp { grid-area: lamp; } .board .s-meet { grid-area: meet; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+.facts div { padding: 1rem; background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius-sm); }
+.facts strong { display: block; font: 700 clamp(1.4rem, 3.5vw, 2.1rem)/1.1 var(--font-heading); }
+.facts span { font-size: .85rem; color: var(--muted); }
+@media (min-width: 900px) { .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); } }
+
+/* ==================== 空間類型 ==================== */
+.spaces { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+.space { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); padding: .8rem .8rem 1.4rem; display: grid; gap: .9rem; align-content: start; transition: transform .25s, box-shadow .25s; }
+.space:hover { transform: translateY(-4px); box-shadow: 5px 6px 0 var(--ink); }
+.space .img { aspect-ratio: 16 / 10; border-radius: 14px; }
+.space h3 { font-size: 1.25rem; padding-inline: .5rem; }
+.space p { color: var(--muted); padding-inline: .5rem; font-size: .96rem; }
+.space .from { font-weight: 700; color: var(--brand-deep); }
+@media (min-width: 620px) { .spaces { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .spaces { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== 方案價格 ==================== */
+.plans-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1.25rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
+.plans-top .sec-head { margin-bottom: 0; }
+.toggle { display: inline-flex; padding: 4px; border: 2px solid var(--ink); border-radius: 14px; background: var(--surface); }
+html:not(.js) .toggle { display: none; }
+.toggle button { font: 700 .95rem/1 var(--font-body); min-height: 42px; padding: 0 1.3rem; border: 0; border-radius: 10px; background: transparent; color: var(--text); cursor: pointer; transition: background .2s, color .2s; }
+.toggle button:hover { background: var(--surface-2); }
+.toggle button:active { transform: translateY(1px); }
+.toggle button[aria-pressed="true"] { background: var(--ink); color: var(--on-ink); }
+.plans { display: grid; gap: 1rem; }
+.plan { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2rem); display: grid; gap: 1.1rem; align-content: start; }
+.plan h3 { font-size: 1.3rem; }
+.plan .desc { color: var(--muted); font-size: .95rem; }
+.price { font-family: var(--font-heading); display: flex; align-items: baseline; flex-wrap: wrap; gap: .2rem; }
+.price small { font-size: .95rem; font-weight: 600; }
+.price .amt { font-size: clamp(2.2rem, 5vw, 2.8rem); font-weight: 700; line-height: 1; }
+.price .per { font-family: var(--font-body); color: var(--muted); font-size: .95rem; }
+.plan ul { display: grid; gap: .55rem; font-size: .95rem; }
+.plan li { display: flex; gap: .55rem; align-items: start; }
+.plan li svg { margin-top: .3rem; color: var(--brand-deep); }
+.plan .btn { margin-top: .4rem; }
+.plan.pick { background: var(--ink); color: var(--on-ink); box-shadow: 6px 6px 0 var(--brand); }
+.plan.pick .desc, .plan.pick .price .per { color: var(--on-ink-muted); }
+.plan.pick li svg { color: var(--brand); }
+.plan-head { display: flex; justify-content: space-between; align-items: center; gap: .6rem; flex-wrap: wrap; }
+.plans-note { margin-top: 1.5rem; color: var(--muted); font-size: .92rem; }
+@media (min-width: 900px) { .plans { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; } }
+
+/* ==================== 會議室即時估價 ==================== */
+.est { display: grid; gap: 1rem; }
+.est-form { background: var(--surface); color: var(--text); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.2rem); display: grid; gap: 1.1rem; align-content: start; }
+.est-form .row { display: grid; gap: 1.1rem; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.est-out { background: var(--ink-2); border: 2px solid color-mix(in srgb, var(--on-ink) 18%, transparent); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.2rem); display: grid; gap: 1rem; align-content: start; }
+.est-out .label { color: var(--on-ink-muted); font-size: .92rem; }
+.est-total { font: 700 clamp(2.6rem, 7vw, 3.8rem)/1 var(--font-heading); color: var(--brand); display: block; }
+.est-rate { color: var(--on-ink-muted); font-size: .92rem; }
+.cap { border-radius: var(--radius-sm); padding: .85rem 1rem; display: flex; gap: .65rem; align-items: start; font-size: .95rem; background: color-mix(in srgb, var(--brand) 16%, transparent); border: 1px solid color-mix(in srgb, var(--brand) 50%, transparent); }
+.cap svg { margin-top: .2rem; color: var(--brand); }
+.cap.warn { background: color-mix(in srgb, var(--sun) 16%, transparent); border-color: color-mix(in srgb, var(--sun) 60%, transparent); }
+.cap.warn svg { color: var(--sun); }
+.est-out .btn { justify-self: start; }
+@media (min-width: 900px) { .est { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); } }
+
+/* ==================== 表單欄位 ==================== */
+.field { display: grid; gap: .4rem; min-width: 0; }
+.field label { font-size: .9rem; font-weight: 500; }
+.field label i { color: var(--brand-deep); font-style: normal; }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 2px solid var(--line); border-radius: var(--radius-sm); padding: .7rem .9rem; min-height: 50px; transition: border-color .2s, box-shadow .2s; }
+.field textarea { min-height: 7rem; resize: vertical; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: color-mix(in srgb, var(--ink) 45%, transparent); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 55%, transparent); }
+
+/* ==================== 設施 ==================== */
+.amen { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.amen li { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); padding: 1.2rem; display: grid; gap: .5rem; align-content: start; }
+.amen .ico { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: var(--brand); color: var(--brand-ink); }
+.amen li:nth-child(3n+2) .ico { background: var(--sun); }
+.amen li:nth-child(3n) .ico { background: var(--sky); }
+.amen h3 { font-size: 1.05rem; margin-top: .3rem; }
+.amen p { color: var(--muted); font-size: .9rem; }
+@media (min-width: 760px) { .amen { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; } .amen li { padding: 1.6rem; } }
+
+/* ==================== 社群活動 ==================== */
+.events { display: grid; gap: 1rem; }
+.event { background: var(--ink-2); border-radius: var(--radius); padding: 1.3rem; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.1rem; align-items: start; border: 2px solid color-mix(in srgb, var(--on-ink) 14%, transparent); }
+.date { width: 72px; aspect-ratio: 1; border-radius: 16px; background: var(--brand); color: var(--brand-ink); display: grid; place-content: center; text-align: center; line-height: 1.1; }
+.event:nth-child(2) .date { background: var(--sun); }
+.event:nth-child(3) .date { background: var(--sky); }
+.date b { font: 700 1.6rem/1 var(--font-heading); display: block; }
+.date small { font-size: .78rem; }
+.event h3 { font-size: 1.12rem; }
+.event p { color: var(--on-ink-muted); font-size: .93rem; margin-top: .3rem; }
+.event .when { color: var(--on-ink); font-size: .88rem; margin-top: .5rem; }
+.community-cta { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; color: var(--on-ink-muted); }
+.btn-mint-line { border-color: var(--brand); color: var(--brand); }
+.btn-mint-line:hover { background: var(--brand); color: var(--brand-ink); }
+@media (min-width: 900px) { .events { grid-template-columns: repeat(3, minmax(0, 1fr)); } .event { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 交通 ==================== */
+.loc { display: grid; gap: 1rem; }
+.loc-info { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.2rem); display: grid; gap: 1.2rem; align-content: start; }
+.loc-info dl { display: grid; gap: 1rem; }
+.loc-info dt { font-size: .88rem; color: var(--muted); }
+.loc-info dd { font-weight: 500; }
+.loc-btns { display: flex; flex-wrap: wrap; gap: .7rem; }
+.loc-btns .btn { min-height: 44px; padding: .5rem 1.1rem; font-size: .92rem; }
+@media (min-width: 900px) { .loc { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); } }
+
+/* ==================== 成員評價 ==================== */
+.quotes { display: grid; gap: 1rem; }
+.quote { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 1.9rem); display: grid; gap: 1.2rem; align-content: space-between; }
+.quote blockquote { font-size: 1.02rem; }
+.quote figcaption { display: flex; align-items: center; gap: .8rem; font-size: .9rem; }
+.quote figcaption b { display: block; font-weight: 700; }
+.quote figcaption span { color: var(--muted); }
+.avatar { width: 44px; height: 44px; border-radius: 12px; background: var(--brand); border: 2px solid var(--ink); flex: none; }
+.quote:nth-child(2) .avatar { background: var(--sun); }
+.quote:nth-child(3) .avatar { background: var(--sky); }
+@media (min-width: 900px) { .quotes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== 常見問題 ==================== */
+.faq-grid { display: grid; gap: 1rem; }
+.faq { display: grid; gap: .7rem; }
+.faq details { background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius-sm); }
+.faq summary { cursor: pointer; list-style: none; padding: 1rem 1.2rem; font-weight: 700; display: flex; justify-content: space-between; gap: 1rem; align-items: center; border-radius: var(--radius-sm); transition: background .2s; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:hover { background: var(--surface-2); }
+.faq summary::after { content: "+"; font: 600 1.4rem/1 var(--font-heading); width: 32px; height: 32px; flex: none; display: grid; place-items: center; border-radius: 9px; background: var(--brand); color: var(--brand-ink); transition: transform .25s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 1.2rem 1.15rem; color: var(--muted); }
+@media (min-width: 900px) { .faq-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr); gap: 4rem; } .faq-grid .sec-head { position: sticky; top: 7rem; align-self: start; } }
+
+/* ==================== 參觀／預約 ==================== */
+.contact-grid { display: grid; gap: clamp(2rem, 5vw, 3.5rem); }
+.form { background: var(--surface); border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); border-radius: var(--radius); padding: clamp(1.3rem, 4vw, 2.4rem); display: grid; gap: 1.1rem; }
+.form .row { display: grid; gap: 1.1rem; }
+.form .btn { width: 100%; }
+.form-note { font-size: .82rem; color: var(--muted); text-align: center; }
+.contact-side { display: grid; gap: 1.4rem; align-content: start; }
+.contact-side ol { display: grid; gap: .9rem; }
+.contact-side li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: .8rem; align-items: start; }
+.contact-side li b { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; background: var(--ink); color: var(--on-ink); font-family: var(--font-heading); }
+.contact-side li span { padding-top: .45rem; }
+.contact-side .btns { display: flex; flex-wrap: wrap; gap: .7rem; }
+@media (min-width: 640px) { .form .row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+@media (min-width: 960px) { .contact-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); } }
+
+/* ==================== 頁尾 ==================== */
+/* 頁尾語言連結 */
+.f-lang { display: flex; flex-wrap: wrap; gap: 0 .9rem; margin-block: -6px; }
+.f-lang a { display: inline-flex; align-items: center; min-height: 32px; color: var(--on-ink-muted); text-decoration: underline 1px transparent; text-underline-offset: .3em; transition: color .2s, text-decoration-color .2s; }
+.f-lang a:hover { color: var(--brand); text-decoration-color: currentColor; }
+.f-lang a:active { opacity: .7; }
+.f-lang a[aria-current="page"] { color: var(--on-ink); font-weight: 700; text-decoration-color: currentColor; }
+.site-footer { background: var(--ink); color: var(--on-ink-muted); padding: 4rem 0 7rem; font-size: .92rem; }
+.foot-grid { display: grid; gap: 2rem; padding-bottom: 2.5rem; border-bottom: 1px solid color-mix(in srgb, var(--on-ink) 15%, transparent); }
+.site-footer .logo { color: var(--on-ink); }
+.site-footer .logo small { color: var(--on-ink-muted); }
+.site-footer .logo-mark i:nth-child(3) { background: var(--on-ink); }
+.site-footer h2 { color: var(--on-ink); font: 700 1rem/1.4 var(--font-body); margin-bottom: .7rem; }
+.site-footer a:not(.logo) { transition: color .2s; }
+.site-footer a:not(.logo):hover { color: var(--brand); }
+.social { display: flex; gap: .6rem; margin-top: 1.1rem; }
+.social a { min-width: 44px; height: 44px; padding-inline: .7rem; display: grid; place-items: center; border: 2px solid color-mix(in srgb, var(--on-ink) 25%, transparent); border-radius: 12px; font-size: .8rem; transition: border-color .2s, color .2s; }
+.social a:hover { border-color: var(--brand); }
+.copy { padding-top: 1.5rem; font-size: .82rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; }
+@media (min-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); } .site-footer { padding-bottom: 3rem; } }
+
+/* ---------- 手機底部固定按鈕 ---------- */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 40; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .6rem; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 96%, transparent); border-top: 1px solid var(--line); }
+.sticky-cta .btn { min-height: 48px; box-shadow: none; }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- 捲動漸入 ---------- */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<!--
+  JSON-LD 結構化資料：schema.org 沒有專屬的共享辦公室類型，
+  所以用 LocalBusiness，再以 additionalType 標註為 Coworking（共享空間）。
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "additionalType": "http://www.productontology.org/id/Coworking",
+  "name": "方格 Grid Commons 共享空間",
+  "description": "台北市大同區共享辦公室，提供自由座、固定座、獨立辦公室、會議室與活動場地租借，以及公司登記地址服務。",
+  "telephone": "+886-2-1234-5678",
+  "email": "hello@gridcommons.example",
+  "url": "https://www.example.com/",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "承德路二段 88 號 5 樓",
+    "addressLocality": "大同區",
+    "addressRegion": "台北市",
+    "postalCode": "103",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "10:00", "closes": "18:00" }
+  ],
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "高速 Wi-Fi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "會員 24 小時門禁", "value": true }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<!-- ==================== 區塊：頁首導覽 ==================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="方格 Grid Commons 共享空間 回到頂端">
+      <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span><b>方格</b><small>Grid Commons</small></span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="開啟選單"><span></span></button>
+    <nav class="menu" id="menu" aria-label="主選單">
+      <a href="#spaces">空間類型</a>
+      <a href="#plans">方案價格</a>
+      <a href="#estimate">會議室估價</a>
+      <a href="#amenities">設施</a>
+      <a href="#community">社群活動</a>
+      <a href="#location">交通</a>
+      <a class="opt" href="#faq">常見問題</a>
+      <a href="#contact" class="btn btn-main">預約參觀</a>
+      <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+      <nav class="lang-switch" aria-label="Language 語言">
+        <details class="lang-menu">
+          <summary lang="zh-Hant">繁</summary>
+          <div class="lang-list">
+            <a href="../en/" hreflang="en" lang="en">English</a>
+            <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a>
+            <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+            <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+          </div>
+        </details>
+      </nav>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ==================== 區塊：主視覺 Hero ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="reveal">
+        <h1>把工作，放進剛剛好的格子裡。</h1>
+        <p class="hero-lead">大橋頭站步行 3 分鐘。自由座、獨立辦公室、會議室，日租月租都彈性。</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-main">預約參觀</a>
+          <a href="#plans" class="btn btn-line">看方案</a>
+        </div>
+      </div>
+      <div class="board reveal">
+        <div class="img s-plan" role="img" aria-label="共享空間平面圖：開放座位區、會議室與獨立辦公室"></div>
+        <div class="img s-desk" role="img" aria-label="木質工作桌上的筆電與咖啡"></div>
+        <div class="img s-plant" role="img" aria-label="窗邊的大葉盆栽"></div>
+        <div class="img s-lamp" role="img" aria-label="灑下暖光的落地燈"></div>
+        <div class="img s-meet" role="img" aria-label="八人會議室的長桌與座椅"></div>
+      </div>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="facts reveal" aria-label="空間規模">
+      <div><strong>120</strong><span>個工作座位</span></div>
+      <div><strong>6</strong><span>間會議室</span></div>
+      <div><strong>24h</strong><span>會員門禁</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：空間類型 ==================== -->
+<section id="spaces">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>六種空間，跟著團隊一起長大</h2>
+      <p>一個人接案、三人新創，或二十人的部門分點，都有適合的位置。先試一天，再決定要不要長住。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="spaces">
+      <article class="space reveal">
+        <div class="img s-desk" role="img" aria-label="開放區的自由座工作桌"></div>
+        <h3>自由座</h3>
+        <p>開放區任選座位，靠窗、長桌、沙發區隨心情換。</p>
+        <p class="from">NT$ 350 起／日</p>
+      </article>
+      <article class="space reveal">
+        <div class="img s-lamp" role="img" aria-label="固定座上的檯燈與個人收納"></div>
+        <h3>固定座</h3>
+        <p>專屬桌位加上鎖櫃，螢幕和文件放著不用收。</p>
+        <p class="from">NT$ 7,800 起／月</p>
+      </article>
+      <article class="space reveal">
+        <div class="img s-plan" role="img" aria-label="二到八人獨立辦公室的平面配置"></div>
+        <h3>獨立辦公室</h3>
+        <p>2 到 8 人的可上鎖房間，家具網路都備好，拎包入住。</p>
+        <p class="from">NT$ 24,000 起／月</p>
+      </article>
+      <article class="space reveal">
+        <div class="img s-meet" role="img" aria-label="會議室長桌與螢幕"></div>
+        <h3>會議室</h3>
+        <p>4 到 16 人，附 65 吋螢幕、白板與視訊鏡頭，按小時計費。</p>
+        <p class="from">NT$ 400 起／小時</p>
+      </article>
+      <article class="space reveal">
+        <div class="img s-event" role="img" aria-label="活動場地的舞台與座位"></div>
+        <h3>活動場地</h3>
+        <p>可容納 60 人，適合講座、發表會、工作坊與小型展覽。</p>
+        <p class="from">NT$ 3,000 起／小時</p>
+      </article>
+      <article class="space reveal">
+        <div class="img s-mail" role="img" aria-label="商業登記地址與代收信件"></div>
+        <h3>商登地址</h3>
+        <p>公司登記、代收掛號與包裹，到件即時通知。</p>
+        <p class="from">NT$ 1,500 起／月</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：方案價格 ==================== -->
+<section class="alt" id="plans">
+  <div class="wrap">
+    <div class="plans-top">
+      <div class="sec-head reveal">
+        <h2>方案價格</h2>
+        <p>價格皆含稅、水電、網路與咖啡吧。月租方案綁約 3 個月以上，再享 95 折。</p>
+      </div>
+      <!-- 日租／月租切換：價格寫在每個 .amt、.per 的 data-day 與 data-month 屬性裡 -->
+      <div class="toggle reveal" role="group" aria-label="計費方式">
+        <button type="button" data-period="day" aria-pressed="false">日租</button>
+        <button type="button" data-period="month" aria-pressed="true">月租</button>
+      </div>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="plans" aria-live="polite">
+      <article class="plan reveal">
+        <h3>自由座</h3>
+        <p class="desc">偶爾進辦公室、喜歡換座位的人。</p>
+        <p class="price"><small>NT$</small><span class="amt" data-day="350" data-month="4,800">4,800</span><span class="per" data-day="／人／日" data-month="／人／月">／人／月</span></p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>開放區任選座位</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>每月 2 小時會議室額度</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>咖啡、茶飲無限供應</li>
+        </ul>
+        <a href="#contact" class="btn btn-line">預約試坐</a>
+      </article>
+      <article class="plan pick reveal">
+        <div class="plan-head"><h3>固定座</h3><span class="tag">最多人選</span></div>
+        <p class="desc">每天都來，想要自己的桌子。</p>
+        <p class="price"><small>NT$</small><span class="amt" data-day="550" data-month="7,800">7,800</span><span class="per" data-day="／人／日" data-month="／人／月">／人／月</span></p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>專屬桌位與個人鎖櫃</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>每月 6 小時會議室額度</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>月租會員 24 小時門禁</li>
+        </ul>
+        <a href="#contact" class="btn btn-main">預約參觀</a>
+      </article>
+      <article class="plan reveal">
+        <h3>獨立辦公室</h3>
+        <p class="desc">2 到 4 人團隊，需要關上門討論。</p>
+        <p class="price"><small>NT$</small><span class="amt" data-day="1,800" data-month="24,000">24,000</span><span class="per" data-day="／間／日" data-month="／間／月">／間／月</span></p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>可上鎖房間與門牌</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>每月 12 小時會議室額度</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>可申請公司登記地址</li>
+        </ul>
+        <a href="#contact" class="btn btn-line">詢問空房</a>
+      </article>
+    </div>
+    <p class="plans-note reveal">只需要地址？商登方案每月 NT$1,500 起，含代收信件與到件通知。</p>
+  </div>
+</section>
+
+<!-- ==================== 區塊：會議室即時估價 ==================== -->
+<section class="dark" id="estimate">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>會議室即時估價</h2>
+      <p>選好房型、時數和人數，馬上看到費用，也幫你確認坐不坐得下。</p>
+    </div>
+    <div class="est reveal">
+      <!-- 估價規則：每個 option 的 data-rate 是每小時價格、data-cap 是容納人數，改這裡就好 -->
+      <form class="est-form" id="est" onsubmit="return false">
+        <div class="field">
+          <label for="e-room">房型</label>
+          <select id="e-room">
+            <option value="小會議室" data-rate="400" data-cap="4">小會議室（4 人，NT$400／小時）</option>
+            <option value="中會議室" data-rate="700" data-cap="8" selected>中會議室（8 人，NT$700／小時）</option>
+            <option value="大會議室" data-rate="1200" data-cap="16">大會議室（16 人，NT$1,200／小時）</option>
+            <option value="活動場地" data-rate="3000" data-cap="60">活動場地（60 人，NT$3,000／小時）</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="field"><label for="e-hours">時數</label><input id="e-hours" type="number" min="1" max="12" step="1" value="2" inputmode="numeric"></div>
+          <div class="field"><label for="e-people">與會人數</label><input id="e-people" type="number" min="1" max="200" step="1" value="6" inputmode="numeric"></div>
+        </div>
+      </form>
+      <div class="est-out" aria-live="polite">
+        <span class="label">預估費用（含稅）</span>
+        <output class="est-total" id="e-total" for="e-room e-hours e-people">NT$ 1,400</output>
+        <p class="est-rate" id="e-rate">NT$700 × 2 小時。預約 4 小時以上享 9 折。</p>
+        <p class="cap" id="e-cap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.8a3.5 3.5 0 010 6.4M18.5 14.8c1.7.8 2.7 2.5 3 5.2"/></svg><span id="e-msg">容量沒問題：這間最多 8 人，還有 2 個空位。</span></p>
+        <a href="#contact" class="btn btn-main">預約這間會議室</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：設施 ==================== -->
+<section id="amenities">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>來了就能開工的設施</h2>
+      <p>你只需要帶筆電。其他的，我們都準備好了。</p>
+    </div>
+    <ul class="amen">
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0120 0M5.2 12.3a10.4 10.4 0 0113.6 0M8.5 15.8a5.6 5.6 0 017 0"/><circle cx="12" cy="19.3" r="1.2" fill="currentColor"/></svg></span>
+        <h3>500M 光纖 Wi-Fi</h3>
+        <p>雙線路備援，視訊會議不卡頓。</p>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h12v5a5 5 0 01-5 5H9a5 5 0 01-5-5z"/><path d="M16 10.5h1.5a2.5 2.5 0 010 5H16M8 3.5c-.6.9.6 1.6 0 2.5M12 3.5c-.6.9.6 1.6 0 2.5"/></svg></span>
+        <h3>咖啡吧</h3>
+        <p>精品咖啡豆、茶包、燕麥奶無限供應。</p>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M7 8V3.5h10V8"/><rect x="3" y="8" width="18" height="9" rx="2"/><path d="M7 14h10v6.5H7z"/></svg></span>
+        <h3>印表與掃描</h3>
+        <p>彩色列印、掃描到雲端，刷會員卡就能用。</p>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M9 6h6v6H9z"/><path d="M15 15.5v2"/></svg></span>
+        <h3>隔音電話亭</h3>
+        <p>4 座單人電話亭，接客戶電話不怕吵到人。</p>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3" width="17" height="18" rx="2"/><path d="M12 3v18M7.5 9v2M16.5 9v2"/></svg></span>
+        <h3>個人鎖櫃</h3>
+        <p>固定座以上附鎖櫃，自由座可加購。</p>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg></span>
+        <h3>24 小時門禁</h3>
+        <p>月租會員刷卡進出，半夜趕案也有位置。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== 區塊：社群活動 ==================== -->
+<section class="dark" id="community">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>社群活動</h2>
+      <p>在這裡工作，也在這裡認識合作夥伴。會員免費參加，非會員也歡迎報名。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="events">
+      <article class="event reveal">
+        <div class="date"><b>03</b><small>每週三</small></div>
+        <div>
+          <h3>早餐會：三分鐘自我介紹</h3>
+          <p>帶著你的專案來，配一杯咖啡認識隔壁桌的人。</p>
+          <p class="when">08:30–09:30 開放區</p>
+        </div>
+      </article>
+      <article class="event reveal">
+        <div class="date"><b>18</b><small>每月中</small></div>
+        <div>
+          <h3>接案者報稅與合約小講堂</h3>
+          <p>邀請會計師、律師分享，現場開放提問。</p>
+          <p class="when">19:00–21:00 活動場地</p>
+        </div>
+      </article>
+      <article class="event reveal">
+        <div class="date"><b>27</b><small>每月底</small></div>
+        <div>
+          <h3>月底屋頂小酒館</h3>
+          <p>辛苦一個月，來屋頂喝一杯，交換最近在忙的事。</p>
+          <p class="when">18:30–21:00 頂樓露台</p>
+        </div>
+      </article>
+    </div>
+    <div class="community-cta reveal">
+      <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-mint-line">加入 LINE 收活動通知</a>
+      <span>每月初公布下個月的活動行事曆。</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：交通 ==================== -->
+<section id="location">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>交通與位置</h2>
+      <p>位在大稻埕與北門之間，捷運、公車、YouBike 都方便，開車也有特約停車場。</p>
+    </div>
+    <div class="loc">
+      <div class="loc-info reveal">
+        <dl>
+          <div><dt>地址</dt><dd>台北市大同區承德路二段 88 號 5 樓</dd></div>
+          <div><dt>捷運</dt><dd>中和新蘆線 大橋頭站 1 號出口，步行 3 分鐘</dd></div>
+          <div><dt>公車</dt><dd>大橋頭站下車，步行 2 分鐘</dd></div>
+          <div><dt>停車</dt><dd>隔壁特約停車場，會員每小時 NT$40</dd></div>
+          <div><dt>營業時間</dt><dd>週一至週五 09:00–21:00<br>週六 10:00–18:00，月租會員 24 小時</dd></div>
+        </dl>
+        <div class="loc-btns">
+          <a href="https://maps.google.com/?q=台北市大同區承德路二段88號" class="btn btn-ink" target="_blank" rel="noopener">開啟 Google 地圖</a>
+          <a href="tel:0212345678" class="btn btn-line">02-1234-5678</a>
+        </div>
+      </div>
+      <div class="img img-map reveal" role="img" aria-label="示意地圖：方格共享空間位於大橋頭站旁，鄰近淡水河岸"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：成員評價 ==================== -->
+<section class="alt" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>成員怎麼說</h2>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="quotes">
+      <figure class="quote reveal">
+        <blockquote>從家裡搬來固定座之後，工作和生活終於分開了。早餐會還幫我接到兩個長期客戶。</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true"></span><span><b>林小姐</b><span>品牌設計師，固定座會員</span></span></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <blockquote>四人團隊租獨立辦公室快一年，網路穩、會議室好訂，訪客來也很體面。</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true"></span><span><b>陳先生</b><span>軟體新創共同創辦人</span></span></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <blockquote>我們在活動場地辦了 50 人的產品發表，投影、音響和茶點都一次搞定。</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true"></span><span><b>黃小姐</b><span>行銷公司活動企劃</span></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：常見問題 ==================== -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head reveal">
+      <h2>常見問題</h2>
+      <p>找不到答案的話，直接打電話或傳 LINE 給我們。</p>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>可以先試用再決定嗎？</summary>
+        <p>可以。預約參觀當天就能免費試坐半天自由座，滿意再選方案。</p>
+      </details>
+      <details>
+        <summary>會議室最少要租多久？</summary>
+        <p>最少 1 小時，以小時為單位計費。預約 4 小時以上享 9 折，會員可先使用每月的免費額度。</p>
+      </details>
+      <details>
+        <summary>商登地址可以辦公司登記嗎？</summary>
+        <p>可以。我們提供租賃契約與房屋稅單影本，協助你完成公司或行號設立登記，也可以代收掛號信件。</p>
+      </details>
+      <details>
+        <summary>月租方案要綁約嗎？</summary>
+        <p>最短一個月就能租，綁約 3 個月以上享 95 折，12 個月以上享 9 折。到期前 30 天告知即可不續約。</p>
+      </details>
+      <details>
+        <summary>可以帶訪客或寵物嗎？</summary>
+        <p>訪客請在櫃台登記，可在開放區或會議室接待。小型寵物須放在提籠內，並先告知櫃台。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：參觀／預約 ==================== -->
+<section class="alt" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-side reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <h2>預約參觀</h2>
+        <p>留下資料，我們會在一個工作天內回覆，約好時間帶你看空間。</p>
+      </div>
+      <ol>
+        <li><b>1</b><span>填寫表單，選擇想看的空間</span></li>
+        <li><b>2</b><span>專人來電確認參觀時間</span></li>
+        <li><b>3</b><span>現場參觀，免費試坐半天</span></li>
+      </ol>
+      <div class="btns">
+        <a href="tel:0212345678" class="btn btn-ink">來電 02-1234-5678</a>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-line">LINE 詢問</a>
+      </div>
+    </div>
+    <!--
+      表單送出：到 formspree.io 免費註冊，建立表單後會拿到一組代碼，
+      把下面 action 裡的 your-form-id 換成你的代碼，送出的資料就會寄到你的信箱。
+    -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="row">
+        <div class="field"><label for="f-name">姓名 <i>*</i></label><input id="f-name" name="姓名" autocomplete="name" required></div>
+        <div class="field"><label for="f-tel">電話 <i>*</i></label><input id="f-tel" name="電話" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+      <div class="row">
+        <div class="field">
+          <label for="f-type">想了解的空間 <i>*</i></label>
+          <select id="f-type" name="空間類型" required>
+            <option value="">請選擇</option>
+            <option>自由座</option>
+            <option>固定座</option>
+            <option>獨立辦公室</option>
+            <option>會議室</option>
+            <option>活動場地</option>
+            <option>商登地址</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-size">團隊人數</label>
+          <select id="f-size" name="團隊人數">
+            <option>1 人</option>
+            <option>2–4 人</option>
+            <option>5–10 人</option>
+            <option>10 人以上</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label for="f-date">希望參觀日期</label><input id="f-date" name="參觀日期" type="date"></div>
+      <div class="field"><label for="f-msg">其他需求</label><textarea id="f-msg" name="其他需求" placeholder="例如需要停車位、預計入住時間、會議室用途"></textarea></div>
+      <button type="submit" class="btn btn-main">送出預約</button>
+      <p class="form-note">送出即表示同意我們使用資料聯絡你，不會用於其他用途。</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span><b>方格</b><small>Grid Commons</small></span></a>
+        <p style="margin-top:1rem;max-width:22rem">大橋頭站旁的共享辦公室，提供彈性座位、會議室與商登地址。</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="https://line.me/R/ti/p/@yourlineid" aria-label="LINE">LINE</a>
+        </div>
+      </div>
+      <div>
+        <h2>聯絡資訊</h2>
+        <p>台北市大同區承德路二段 88 號 5 樓<br>電話 <a href="tel:0212345678">02-1234-5678</a><br>hello@gridcommons.example</p>
+      </div>
+      <div>
+        <h2>營業時間</h2>
+        <p>週一至週五 09:00–21:00<br>週六 10:00–18:00<br>月租會員 24 小時門禁</p>
+      </div>
+    </div>
+    <div class="copy"><span>© <span id="y"></span> 方格 Grid Commons 共享空間</span><span class="f-lang"><a href="../en/" hreflang="en" lang="en">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></span><span>空間圖片僅供示意</span></div>
+  </div>
+</footer>
+
+<!-- ==================== 區塊：手機底部固定按鈕 ==================== -->
+<div class="sticky-cta">
+  <a href="tel:0212345678" class="btn btn-line" aria-label="撥打電話 02-1234-5678">來電</a>
+  <a href="#contact" class="btn btn-main">預約參觀</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function () {
+  var header = document.querySelector('.site-header');
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('menu');
+
+  // 頁首捲動背景
+  function onScroll() { header.classList.toggle('scrolled', scrollY > 20 || menu.classList.contains('open')); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // 漢堡選單
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? '關閉選單' : '開啟選單');
+    onScroll();
+  }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // 日租／月租切換
+  var periods = document.querySelectorAll('.toggle button');
+  periods.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var p = b.dataset.period;
+      periods.forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+      document.querySelectorAll('.plan [data-day]').forEach(function (el) { el.textContent = el.dataset[p]; });
+    });
+  });
+
+  // 會議室即時估價（4 小時以上 9 折）
+  var room = document.getElementById('e-room'), hours = document.getElementById('e-hours'), people = document.getElementById('e-people');
+  var fmt = function (n) { return Math.round(n).toLocaleString('en-US'); };
+  function estimate() {
+    var o = room.options[room.selectedIndex], rate = +o.dataset.rate, cap = +o.dataset.cap;
+    var h = Math.min(12, Math.max(1, Math.round(+hours.value) || 1)), n = Math.max(1, Math.round(+people.value) || 1);
+    var off = h >= 4;
+    document.getElementById('e-total').textContent = 'NT$ ' + fmt(rate * h * (off ? 0.9 : 1));
+    document.getElementById('e-rate').textContent = 'NT$' + fmt(rate) + ' × ' + h + ' 小時。' + (off ? '已套用 4 小時以上 9 折。' : '預約 4 小時以上享 9 折。');
+    var msg, better = [].find.call(room.options, function (x) { return +x.dataset.cap >= n; });
+    if (n <= cap) msg = '容量沒問題：這間最多 ' + cap + ' 人，還有 ' + (cap - n) + ' 個空位。';
+    else msg = '這間最多 ' + cap + ' 人，' + (better ? '建議改選「' + better.value + '」（' + better.dataset.cap + ' 人）。' : '超過 60 人請直接來電，我們幫你規劃場地。');
+    document.getElementById('e-msg').textContent = msg;
+    document.getElementById('e-cap').classList.toggle('warn', n > cap);
+  }
+  document.getElementById('est').addEventListener('input', estimate); estimate();
+
+  // 捲動漸入
+  var targets = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12 });
+    targets.forEach(function (el) { io.observe(el); });
+  }
+
+  document.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>安居不动产｜台中西屯 买屋、卖屋、租屋与房屋估价</title>
+<meta name="description" content="安居不动产位于台中市西屯区，专营西屯、南屯、北屯住宅买卖与租赁。对象附实价登录参考与屋况说明，从带看、议价到交屋由同一位经纪人负责。">
+<meta property="og:title" content="安居不动产｜台中西屯房屋买卖与租赁">
+<meta property="og:description" content="精选台中西屯、南屯、北屯对象，免费估价、陪同带看、履约保证，交屋前每一步都清楚透明。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1f3d99">
+<!-- 多语版本（SEO）：上线后把 href 换成完整网址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="es" href="../es/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   主题设置：改这里就能换整站配色与字体
+   ============================================================ */
+:root {
+  --brand: #1f3d99;          /* 品牌主色（深钴蓝）：按钮、价格、重点线条 */
+  --brand-ink: #f6f5f1;      /* 在 brand 色上的文本颜色（米白，对比 AA） */
+  --brand-deep: #172e73;     /* 深钴蓝：按钮滑过时的颜色 */
+  --brand-soft: #a9bbf2;     /* 浅钴蓝：深色区块上的强调文本（对比 AA） */
+  --ink: #1d1f23;            /* 炭黑：深色区块背景、图片暗部 */
+  --ink-2: #2a2d33;          /* 次炭黑：深色区块里的卡片 */
+  --on-ink: #f1efe9;         /* 深色区块上的主要文本 */
+  --on-ink-muted: #b4b7bd;   /* 深色区块上的次要文本 */
+  --bg: #f6f5f1;             /* 网页底色：米白 */
+  --surface: #fbfbf8;        /* 卡片、表单底色（带一点暖色，不用纯白） */
+  --text: #1d1f23;           /* 主要文本颜色：炭黑 */
+  --muted: #565b63;          /* 次要文本颜色 */
+  --line: #d6d4cc;           /* 细线、边框颜色 */
+  --radius: 0px;             /* 圆角大小（俐落直角风格；想柔和一点可改 6px） */
+  --font-heading: "Manrope", "Noto Sans SC", system-ui, sans-serif;  /* 标题字体（几何无衬线） */
+  --font-num: "Manrope", system-ui, sans-serif;                     /* 数字字体：价格、统计 */
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; /* 内文本型 */
+  --maxw: 1240px;            /* 内容最大宽度 */
+  --pad: clamp(1rem, 5vw, 3rem); /* 左右留白 */
+  --head-h: 4.25rem;         /* 页眉高度 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 800; line-height: 1.3; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+.wrap { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 100; }
+.skip:focus { left: 1rem; }
+
+/* ---------- 按钮 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .7rem 1.4rem; border-radius: var(--radius); font: 700 .95rem/1.2 var(--font-body); border: 1.5px solid transparent; transition: background .2s, color .2s, border-color .2s, transform .2s; cursor: pointer; }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+a:active { opacity: .85; }
+.btn-brand { background: var(--brand); color: var(--brand-ink); }
+.btn-brand:hover { background: var(--brand-deep); }
+.btn-ink { background: var(--ink); color: var(--on-ink); }
+.btn-ink:hover { background: var(--brand); color: var(--brand-ink); }
+.btn-line { border-color: var(--text); color: var(--text); }
+.btn-line:hover { background: var(--text); color: var(--bg); }
+.btn-ghost { border-color: color-mix(in srgb, var(--on-ink) 45%, transparent); color: var(--on-ink); }
+.btn-ghost:hover { border-color: var(--on-ink); background: color-mix(in srgb, var(--on-ink) 10%, transparent); }
+.link { font-weight: 700; color: var(--brand); border-bottom: 1.5px solid currentColor; padding-bottom: .1rem; transition: color .2s; }
+.link:hover { color: var(--brand-deep); }
+
+/* ---------- 通用区块 ---------- */
+section { padding-block: clamp(4rem, 9vw, 7rem); }
+.sec-head { display: grid; gap: 1rem; margin-bottom: clamp(2rem, 5vw, 3.25rem); max-width: 44rem; }
+.sec-head h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); letter-spacing: -.01em; }
+.sec-head p { color: var(--muted); }
+.sec-head.split { max-width: none; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1rem 2rem; }
+.sec-head.split > div { display: grid; gap: 1rem; max-width: 40rem; }
+.dark { background: var(--ink); color: var(--on-ink); }
+.dark .sec-head p { color: var(--on-ink-muted); }
+
+/* ==================== 艺术占位图 ==================== */
+/* 所有 .img 都是 CSS 绘制的建筑意象。换成照片：在对应 class 改成
+   .img-xx { background: url(images/xxx.jpg) center/cover; } 并删掉该 class 的 ::before / ::after 即可 */
+.img { position: relative; overflow: hidden; isolation: isolate; background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 8%, var(--bg)), color-mix(in srgb, var(--brand) 22%, var(--bg))); }
+.img::before, .img::after { content: ""; position: absolute; z-index: -1; }
+/* 立面：大楼窗格。换成照片：.img-facade { background: url(images/building.jpg) center/cover; } */
+.img-facade::before { /* 主栋：钴蓝框架＋浅色玻璃 */
+  inset: var(--top, 14%) var(--r, 30%) 0 var(--l, 14%);
+  background:
+    repeating-linear-gradient(90deg, var(--brand) 0 var(--mw, 7px), transparent var(--mw, 7px) var(--cw, 26px)),
+    repeating-linear-gradient(0deg, var(--brand) 0 9px, transparent 9px var(--rh, 30px)),
+    linear-gradient(160deg, color-mix(in srgb, var(--surface) 80%, var(--brand)), color-mix(in srgb, var(--brand) 45%, var(--surface)));
+}
+.img-facade::after { /* 侧栋：炭黑量体＋横向开窗 */
+  inset: var(--top2, 42%) 6% 0 auto; width: var(--w2, 30%);
+  background:
+    repeating-linear-gradient(0deg, var(--ink) 0 16px, color-mix(in srgb, var(--on-ink) 30%, var(--ink)) 16px 24px),
+    var(--ink);
+  box-shadow: -10px 0 0 0 color-mix(in srgb, var(--ink) 18%, transparent);
+}
+/* 窗户特写。换成照片：.img-win { background: url(images/window.jpg) center/cover; } */
+.img-win { background: color-mix(in srgb, var(--ink) 90%, var(--brand)); }
+.img-win::before { /* 窗框分格 */
+  inset: 12% 14%;
+  border: 8px solid var(--bg);
+  background:
+    linear-gradient(var(--bg), var(--bg)) 50% 0 / 5px 100% no-repeat,
+    linear-gradient(var(--bg), var(--bg)) 0 38% / 100% 5px no-repeat,
+    repeating-linear-gradient(90deg, transparent 0 calc(25% - 2px), color-mix(in srgb, var(--bg) 70%, transparent) calc(25% - 2px) 25%),
+    linear-gradient(200deg, color-mix(in srgb, var(--brand) 55%, var(--bg)), color-mix(in srgb, var(--brand) 85%, var(--ink)));
+}
+.img-win::after { /* 玻璃反光 */
+  inset: 12% 14%;
+  background: linear-gradient(118deg, transparent 0 38%, color-mix(in srgb, var(--surface) 30%, transparent) 38% 46%, transparent 46% 52%, color-mix(in srgb, var(--surface) 16%, transparent) 52% 55%, transparent 55%);
+  z-index: 0;
+}
+/* 平面图线稿。换成照片：.img-plan { background: url(images/floorplan.jpg) center/cover; } */
+.img-plan {
+  background:
+    repeating-linear-gradient(0deg, transparent 0 19px, color-mix(in srgb, var(--brand) 12%, transparent) 19px 20px),
+    repeating-linear-gradient(90deg, transparent 0 19px, color-mix(in srgb, var(--brand) 12%, transparent) 19px 20px),
+    var(--surface);
+}
+.img-plan::before { /* 外墙与隔间 */
+  inset: 14% 12%;
+  border: 4px solid var(--text);
+  background:
+    linear-gradient(var(--text), var(--text)) var(--x1, 42%) 0 / 2px 58% no-repeat,
+    linear-gradient(var(--text), var(--text)) 0 58% / var(--x1, 42%) 2px no-repeat,
+    linear-gradient(var(--text), var(--text)) 100% var(--y2, 46%) / 36% 2px no-repeat,
+    linear-gradient(var(--text), var(--text)) 64% 100% / 2px 30% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--brand) 14%, transparent), color-mix(in srgb, var(--brand) 14%, transparent)) 100% 100% / 36% 54% no-repeat;
+}
+.img-plan::after { /* 门片与开门弧线 */
+  left: calc(12% + var(--x1, 42%) * .76); top: 34%; width: 13%; aspect-ratio: 1;
+  border-top: 1.5px solid var(--brand); border-right: 1.5px solid var(--brand); border-left: 2px solid var(--text);
+  border-top-right-radius: 100%;
+  z-index: 0;
+}
+/* 透天街屋。换成照片：.img-row { background: url(images/townhouse.jpg) center/cover; } */
+.img-row::before { /* 连栋立面 */
+  inset: 26% 0 0;
+  background:
+    repeating-linear-gradient(90deg, var(--ink) 0 3px, transparent 3px 25%),
+    repeating-linear-gradient(0deg, transparent 0 18%, var(--ink) 18% 20%),
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--brand) 60%, var(--surface)) 0 25%, color-mix(in srgb, var(--brand) 35%, var(--surface)) 25% 50%);
+}
+.img-row::after { /* 各户窗洞 */
+  inset: 32% 0 6%;
+  background: repeating-linear-gradient(90deg, transparent 0 6%, color-mix(in srgb, var(--surface) 75%, transparent) 6% 19%, transparent 19% 25%);
+  -webkit-mask: repeating-linear-gradient(0deg, transparent 0 8%, var(--ink) 8% 15%, transparent 15% 20%);
+          mask: repeating-linear-gradient(0deg, transparent 0 8%, var(--ink) 8% 15%, transparent 15% 20%);
+  z-index: 0;
+}
+/* 对象卡片的变化款 */
+.v2 { --top: 8%; --l: 30%; --r: 12%; --cw: 34px; --rh: 22px; --top2: 30%; --w2: 22%; }
+.v2::after { inset: var(--top2) auto 0 6%; }
+.v3 { --x1: 56%; --y2: 34%; }
+.v4 { --top: 22%; --l: 8%; --r: 8%; --cw: 20px; --rh: 26px; --top2: 100%; }
+/* 经纪人肖像。换成照片：.img-agent { background: url(images/agent.jpg) center/cover; } */
+.img-agent { background: linear-gradient(170deg, color-mix(in srgb, var(--brand) 70%, var(--ink)), var(--ink)); }
+.img-agent::before { /* 抽象人像 */
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 36%, color-mix(in srgb, var(--on-ink) 34%, transparent) 0 14%, transparent calc(14% + 1px)),
+    radial-gradient(ellipse 40% 32% at 50% 100%, color-mix(in srgb, var(--on-ink) 26%, transparent) 0 99%, transparent 100%);
+}
+.img-agent::after { /* 背景窗格 */
+  inset: 0;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 calc(33.33% - 1px), color-mix(in srgb, var(--on-ink) 14%, transparent) calc(33.33% - 1px) 33.33%),
+    repeating-linear-gradient(0deg, transparent 0 calc(25% - 1px), color-mix(in srgb, var(--on-ink) 14%, transparent) calc(25% - 1px) 25%);
+  z-index: -2;
+}
+
+/* ==================== 页眉 ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: var(--head-h); }
+.logo { display: flex; align-items: center; gap: .65rem; line-height: 1.15; }
+.logo-mark { width: 2.25rem; height: 2.25rem; display: grid; place-items: center; background: var(--brand); color: var(--brand-ink); font: 900 1.05rem/1 var(--font-body); }
+.logo b { font: 800 1.08rem/1.2 var(--font-heading); display: block; }
+.logo small { font: .78rem/1.2 var(--font-body); color: var(--muted); }
+.menu { display: flex; align-items: center; gap: clamp(.9rem, 2.2vw, 1.9rem); font-size: .93rem; font-weight: 500; }
+.menu a:not(.btn) { position: relative; padding-block: .3rem; }
+.menu a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--brand); transform: scaleX(0); transform-origin: left; transition: transform .25s; }
+.menu a:not(.btn):hover::after { transform: scaleX(1); }
+.menu .btn { min-height: 42px; padding: .5rem 1.1rem; }
+.burger { display: none; width: 44px; height: 44px; background: none; border: 1.5px solid var(--text); color: var(--text); cursor: pointer; }
+.burger:hover { background: color-mix(in srgb, var(--text) 8%, transparent); }
+.burger span, .burger span::before, .burger span::after { display: block; width: 18px; height: 2px; background: currentColor; margin: auto; position: relative; transition: transform .3s, background .3s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* 没有 JavaScript 时，菜单直接换行显示；有 JS 才收进汉堡菜单 */
+  html:not(.js) *:has(> .menu) { flex-wrap: wrap; }
+  html:not(.js) header:has(.menu) { position: sticky; background: var(--bg); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1rem; padding-bottom: .75rem; }
+  html:not(.js) .hero { padding-top: 2.5rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: var(--head-h) 0 auto; flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); padding: .25rem var(--pad) 1.5rem; border-bottom: 1px solid var(--line); transform: translateY(-120%); visibility: hidden; transition: transform .3s, visibility .3s; }
+  .js .menu.open { transform: none; visibility: visible; }
+  .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line); }
+  .js .menu .btn { margin-top: 1rem; min-height: 48px; }
+}
+
+/* ==================== Hero 与搜索 ==================== */
+.hero { padding-top: calc(var(--head-h) + clamp(1.5rem, 4vw, 3rem)); padding-bottom: clamp(3rem, 6vw, 4.5rem); border-bottom: 1px solid var(--line); }
+.hero-grid { display: grid; gap: clamp(2rem, 4vw, 3.5rem); align-items: end; }
+.hero h1 { font-size: clamp(2rem, 4.6vw, 3.7rem); line-height: 1.18; letter-spacing: -.02em; }
+.hero-lead { color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.12rem); max-width: 34rem; margin-top: 1.1rem; }
+.search { margin-top: clamp(1.5rem, 3vw, 2.25rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1.5px solid var(--text); background: var(--surface); }
+.search .sf { display: grid; gap: .1rem; padding: .55rem .9rem .5rem; border-bottom: 1px solid var(--line); min-width: 0; }
+.search .sf:nth-child(odd) { border-right: 1px solid var(--line); }
+.search .sf:nth-child(3) { grid-column: 1 / -1; border-right: 0; }
+.search label { font-size: .8rem; color: var(--muted); font-weight: 500; }
+.search select { font: 500 1rem/1.4 var(--font-body); color: var(--text); background: transparent; border: 0; padding: .2rem 0; min-height: 34px; width: 100%; cursor: pointer; }
+.search select:focus-visible { outline-offset: 2px; }
+.search .btn { grid-column: 1 / -1; min-height: 54px; font-size: 1rem; }
+.hero-sub { margin-top: 1.1rem; font-size: .93rem; color: var(--muted); }
+.hero-art { position: relative; margin: 0; }
+.hero-art .img { aspect-ratio: 4 / 3; border: 1.5px solid var(--text); }
+.hero-art figcaption { position: absolute; left: 0; bottom: 0; background: var(--ink); color: var(--on-ink); padding: .9rem 1.2rem; font-size: .85rem; line-height: 1.5; max-width: 15rem; }
+.hero-art figcaption b { display: block; font: 800 1.6rem/1.15 var(--font-num); color: var(--brand-soft); }
+@media (min-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); }
+  .search { grid-template-columns: repeat(3, minmax(0, 1fr)) auto; }
+  .search .sf { border-bottom: 0; border-right: 1px solid var(--line); }
+  .search .sf:nth-child(3) { grid-column: auto; border-right: 1px solid var(--line); }
+  .search .btn { grid-column: auto; padding-inline: 1.8rem; }
+  .hero-art .img { aspect-ratio: 4 / 5; }
+}
+
+/* ==================== 精选对象 ==================== */
+.result-count { font-variant-numeric: tabular-nums; font-size: .93rem; color: var(--muted); }
+.result-count b { font-family: var(--font-num); color: var(--text); }
+.listings { display: grid; gap: clamp(1rem, 2.5vw, 1.75rem); }
+.listing { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); transition: border-color .2s, transform .25s, box-shadow .25s; }
+.listing[hidden] { display: none; }
+.listing:hover { border-color: var(--text); transform: translateY(-3px); box-shadow: 6px 6px 0 color-mix(in srgb, var(--brand) 22%, transparent); }
+.listing .img { aspect-ratio: 4 / 3; border-bottom: 1px solid var(--line); }
+.tags { position: absolute; top: .75rem; left: .75rem; display: flex; gap: .4rem; z-index: 1; }
+.tag { font-size: .78rem; font-weight: 700; padding: .2rem .55rem; background: var(--brand); color: var(--brand-ink); }
+.tag.cut { background: var(--ink); color: var(--on-ink); }
+.tag.rent { background: var(--surface); color: var(--text); border: 1px solid var(--text); }
+.listing .body { padding: 1.2rem 1.25rem 1.3rem; display: flex; flex-direction: column; gap: .35rem; flex: 1; }
+.listing h3 { font-size: 1.12rem; line-height: 1.45; font-weight: 700; }
+.listing .loc { font-size: .87rem; color: var(--muted); }
+.price { font: 800 1.55rem/1.2 var(--font-num); color: var(--brand); margin-top: .35rem; font-variant-numeric: tabular-nums; }
+.price small { font: 500 .85rem/1 var(--font-body); color: var(--muted); margin-left: .25rem; }
+.price s { font: 500 .85rem/1 var(--font-num); color: var(--muted); margin-left: .4rem; }
+.specs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--line); margin-block: .7rem .9rem; }
+.specs div { padding: .55rem .5rem; text-align: center; }
+.specs div + div { border-left: 1px solid var(--line); }
+.specs dt { font-size: .75rem; color: var(--muted); }
+.specs dd { font-weight: 700; font-size: .93rem; }
+.listing .foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+.listing .id { font: 500 .8rem/1 var(--font-num); color: var(--muted); }
+.listing .btn { min-height: 42px; padding: .45rem 1rem; font-size: .88rem; }
+.no-results { border: 1.5px dashed var(--line); padding: 2.5rem 1.5rem; text-align: center; display: grid; gap: 1rem; justify-items: center; }
+.no-results[hidden] { display: none; }
+.no-results p { color: var(--muted); }
+@media (min-width: 640px) { .listings { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1020px) { .listings { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== 服务项目 ==================== */
+.services-sec { background: color-mix(in srgb, var(--brand) 5%, var(--bg)); border-block: 1px solid var(--line); }
+.services { display: grid; border-top: 1.5px solid var(--text); }
+.service { padding: 1.75rem 0; border-bottom: 1px solid var(--line); display: grid; align-content: start; grid-template-columns: 3.25rem minmax(0, 1fr); gap: 0 1rem; }
+.service .no { font: 800 1.05rem/1.6 var(--font-num); color: var(--brand); }
+.service h3 { font-size: 1.25rem; margin-bottom: .4rem; }
+.service p { color: var(--muted); font-size: .95rem; }
+.service ul { margin-top: .7rem; display: flex; flex-wrap: wrap; gap: .4rem; }
+.service li { font-size: .8rem; border: 1px solid var(--line); padding: .1rem .55rem; background: var(--surface); }
+@media (min-width: 760px) {
+  .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service { padding: 2rem 2rem 2rem 0; }
+  .service:nth-child(even) { padding-left: 2rem; border-left: 1px solid var(--line); }
+}
+@media (min-width: 1100px) {
+  .services { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .service { grid-template-columns: minmax(0, 1fr); padding: 2rem 1.5rem; border-left: 1px solid var(--line); }
+  .service:nth-child(even) { padding-left: 1.5rem; }
+  .service:first-child { border-left: 0; padding-left: 0; }
+  .service .no { margin-bottom: 1.5rem; }
+}
+
+/* ==================== 成交实绩 ==================== */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid color-mix(in srgb, var(--on-ink) 20%, transparent); }
+.stat { padding: 1.75rem 1rem 1.75rem 0; border-bottom: 1px solid color-mix(in srgb, var(--on-ink) 20%, transparent); }
+.stat:nth-child(even) { padding-left: 1.25rem; border-left: 1px solid color-mix(in srgb, var(--on-ink) 20%, transparent); }
+.stat strong { display: block; font: 800 clamp(2.3rem, 6vw, 3.6rem)/1 var(--font-num); color: var(--on-ink); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat strong small { font-size: .45em; color: var(--brand-soft); margin-left: .15rem; }
+.stat > span { display: block; margin-top: .6rem; font-size: .9rem; color: var(--on-ink-muted); }
+.deals { margin-top: clamp(2rem, 4vw, 3rem); display: grid; gap: .75rem; }
+.deal { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .25rem 1rem; padding: 1rem 1.2rem; background: var(--ink-2); font-size: .92rem; }
+.deal b { font-weight: 500; }
+.deal span { color: var(--on-ink-muted); }
+.deal em { font: 800 1rem/1.6 var(--font-num); font-style: normal; color: var(--brand-soft); grid-row: span 2; align-self: center; }
+@media (min-width: 900px) {
+  .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .stat { padding-left: 1.5rem; border-left: 1px solid color-mix(in srgb, var(--on-ink) 20%, transparent); }
+  .stat:first-child { padding-left: 0; border-left: 0; }
+  .deals { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* ==================== 经纪人介绍 ==================== */
+.agent-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.agent-photo { position: relative; max-width: 26rem; }
+.agent-photo .img { aspect-ratio: 4 / 5; }
+.agent-photo::after { content: ""; position: absolute; inset: 1rem -1rem -1rem 1rem; border: 1.5px solid var(--brand); z-index: -1; }
+.agent-photo { isolation: isolate; }
+.agent h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); }
+.agent .role { color: var(--brand); font-weight: 700; margin-top: .4rem; }
+.agent > p { color: var(--muted); margin-top: 1rem; max-width: 36rem; }
+.creds { margin-top: 1.75rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid var(--line); background: var(--surface); }
+.creds div { padding: 1rem 1.1rem; }
+.creds div:nth-child(even) { border-left: 1px solid var(--line); }
+.creds div:nth-child(n+3) { border-top: 1px solid var(--line); }
+.creds dt { font-size: .8rem; color: var(--muted); }
+.creds dd { font-weight: 700; overflow-wrap: anywhere; }
+.agent .btns { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+@media (min-width: 900px) { .agent-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); } }
+
+/* ==================== 买房流程 ==================== */
+.process-sec { border-top: 1px solid var(--line); }
+.steps { display: grid; counter-reset: s; border-top: 1.5px solid var(--text); }
+.step { position: relative; padding: 1.4rem 0 1.4rem 3.75rem; border-bottom: 1px solid var(--line); }
+.step::before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: 1.4rem; width: 2.5rem; height: 2.5rem; display: grid; place-items: center; background: var(--brand); color: var(--brand-ink); font: 800 1.05rem/1 var(--font-num); }
+.step h3 { font-size: 1.12rem; margin-bottom: .25rem; }
+.step p { color: var(--muted); font-size: .92rem; }
+@media (min-width: 900px) {
+  .steps { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .step { padding: 4.5rem 1.25rem 0 0; border-bottom: 0; }
+  .step + .step { padding-left: 1.25rem; border-left: 1px solid var(--line); }
+  .step::before { top: 1.25rem; }
+  .step + .step::before { left: 1.25rem; }
+}
+
+/* ==================== 客户评价 ==================== */
+.reviews-sec { background: color-mix(in srgb, var(--brand) 5%, var(--bg)); border-block: 1px solid var(--line); }
+.reviews { display: grid; gap: clamp(1rem, 2.5vw, 1.75rem); }
+.review { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--brand); padding: 1.6rem 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+.review blockquote { font-size: 1.02rem; line-height: 1.85; }
+.review figcaption { margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .87rem; color: var(--muted); }
+.review figcaption b { display: block; color: var(--text); }
+@media (min-width: 900px) { .reviews { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== 预约看屋表单 ==================== */
+.contact-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); }
+.info { display: grid; gap: 1.5rem; align-content: start; }
+.info dl { display: grid; gap: 1rem; border-top: 1px solid color-mix(in srgb, var(--on-ink) 20%, transparent); padding-top: 1.5rem; }
+.info dt { font-size: .85rem; color: var(--brand-soft); }
+.info dd a { border-bottom: 1px solid color-mix(in srgb, var(--on-ink) 50%, transparent); }
+.info dd a:hover { color: var(--brand-soft); }
+.info .btns { display: flex; flex-wrap: wrap; gap: .75rem; }
+.info .btn { min-height: 44px; padding: .5rem 1.1rem; font-size: .9rem; }
+.form { background: var(--surface); color: var(--text); padding: clamp(1.25rem, 4vw, 2.5rem); display: grid; gap: 1.1rem; border-top: 4px solid var(--brand); }
+.form .row { display: grid; gap: 1.1rem; }
+.field { display: grid; gap: .35rem; }
+.field label { font-size: .88rem; font-weight: 500; }
+.field label i { color: var(--brand); font-style: normal; }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .7rem .85rem; min-height: 48px; }
+.field textarea { min-height: 7rem; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent); }
+.agree { display: flex; gap: .6rem; align-items: flex-start; font-size: .86rem; color: var(--muted); }
+.agree input { width: 1.15rem; height: 1.15rem; margin-top: .3rem; accent-color: var(--brand); flex: none; }
+.agree a { text-decoration: underline; color: var(--brand); }
+.form .btn { width: 100%; }
+.form-note { font-size: .8rem; color: var(--muted); text-align: center; }
+@media (min-width: 640px) { .form .row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+@media (min-width: 960px) { .contact-grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); } }
+
+/* ==================== 页脚 ==================== */
+.site-footer { background: var(--ink); color: var(--on-ink-muted); padding: 3.5rem 0 6.5rem; font-size: .9rem; border-top: 1px solid color-mix(in srgb, var(--on-ink) 14%, transparent); }
+.foot-grid { display: grid; gap: 2rem; padding-bottom: 2.25rem; border-bottom: 1px solid color-mix(in srgb, var(--on-ink) 14%, transparent); }
+.site-footer .logo { color: var(--on-ink); }
+.site-footer .logo small { color: var(--on-ink-muted); }
+.site-footer h2 { color: var(--on-ink); font: 700 1rem/1.4 var(--font-body); margin-bottom: .7rem; }
+.site-footer a:hover { color: var(--brand-soft); }
+.license { display: grid; gap: .2rem; }
+.social { display: flex; gap: .6rem; margin-top: 1rem; }
+.social a { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid color-mix(in srgb, var(--on-ink) 28%, transparent); font-size: .78rem; transition: border-color .2s, color .2s; }
+.social a:hover { border-color: var(--brand-soft); }
+.copy { padding-top: 1.5rem; font-size: .8rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; }
+@media (min-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr); } .site-footer { padding-bottom: 3rem; } }
+
+/* ---------- 手机底部固定按钮 ---------- */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 40; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .6rem; padding: .65rem var(--pad) calc(.65rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 96%, transparent); border-top: 1px solid var(--line); }
+.sticky-cta .btn { min-height: 46px; }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- 卷动渐入 ---------- */
+.js .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+/* ==================== 语言切换 ==================== */
+/* 页眉的语言切换：字小、低调；目前的语言用粗体加底线标示（不只靠颜色） */
+.menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .6rem; border-left: 1px solid var(--line); font: 400 .8rem/1 var(--font-body); }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: var(--muted); border-radius: var(--radius); text-decoration: none; text-underline-offset: .4em; text-decoration-thickness: 1px; transition: color .25s, background-color .25s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 7%, transparent); }
+.lang-switch a:active { opacity: .7; }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 0; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 600; text-decoration-line: underline; }
+@media (max-width: 760px) {
+  /* 手机：语言切换放在汉堡按钮左边，一直看得到 */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .burger { order: 2; }
+  .menu { order: 3; }
+  /* 没有 JS 时 logo 可以缩窄换行，让语言切换留在同一列 */
+  html:not(.js) .logo { flex: 1 1 0; min-width: 0; }
+}
+/* 页脚的语言文本链接 */
+.foot-lang { display: flex; flex-wrap: wrap; align-items: center; gap: 0 .5rem; margin-top: 1.25rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; min-height: 32px; padding-inline: .2rem; text-underline-offset: .35em; }
+.foot-lang a:hover { text-decoration-line: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { font-weight: 600; text-decoration-line: underline; }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<!-- JSON-LD 结构化数据：类型为 RealEstateAgent（不动产经纪）。请换成真实名称、电话、地址与营业时间。 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "安居不动产",
+  "description": "台中市西屯区在地房仲，提供买屋、卖屋、租赁与房屋估价服务。",
+  "telephone": "+886-4-1234-5678",
+  "email": "hello@anju-realty.example",
+  "url": "https://www.example.com/",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "市政北二路 200 号 1 楼",
+    "addressLocality": "西屯区",
+    "addressRegion": "台中市",
+    "postalCode": "407",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "10:00", "closes": "21:00" }
+  ],
+  "areaServed": ["台中市西屯区", "台中市南屯区", "台中市北屯区", "台中市西区"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<!-- ==================== 区块：页眉导览 ==================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="安居不动产 回到顶端">
+      <span class="logo-mark" aria-hidden="true">安</span>
+      <span><b>安居不动产</b><small>台中西屯在地房仲</small></span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="打开菜单"><span></span></button>
+    <nav class="menu" id="menu" aria-label="主菜单">
+      <a href="#listings">精选对象</a>
+      <a href="#services">服务项目</a>
+      <a href="#results">成交实绩</a>
+      <a href="#agent">经纪人</a>
+      <a href="#process">买房流程</a>
+      <a href="#contact" class="btn btn-brand">预约看屋</a>
+    </nav>
+    <!-- lang-switch：语言切换。要添加语言时，在这里加一个链接，并添加对应的文件夹 -->
+    <nav class="lang-switch" aria-label="Language 语言">
+      <details class="lang-menu">
+        <summary lang="zh-Hans">简</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+          <a href="../es/" hreflang="es" lang="es">Español</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ==================== 区块：主视觉与对象搜索 ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>在台中找家，<br>先看懂行情再出价。</h1>
+      <p class="hero-lead">每间对象附实价登录参考与屋况说明，带看到交屋由同一位经纪人负责。</p>
+      <!-- 对象搜索：选项的 value 要对应下方对象卡片的 data-area、data-type、data-price -->
+      <form class="search" id="search" action="#listings" role="search" aria-label="搜索对象">
+        <div class="sf">
+          <label for="s-area">区域</label>
+          <select id="s-area" name="area">
+            <option value="">全部区域</option>
+            <option value="xitun">西屯区</option>
+            <option value="nantun">南屯区</option>
+            <option value="beitun">北屯区</option>
+            <option value="west">西区</option>
+          </select>
+        </div>
+        <div class="sf">
+          <label for="s-type">类型</label>
+          <select id="s-type" name="type">
+            <option value="">买或租</option>
+            <option value="buy">买屋</option>
+            <option value="rent">租屋</option>
+          </select>
+        </div>
+        <div class="sf">
+          <label for="s-budget">预算</label>
+          <!-- 预算格式：类型:最低:最高（买屋单位为万元，租屋单位为元／月） -->
+          <select id="s-budget" name="budget">
+            <option value="">不限预算</option>
+            <optgroup label="买屋总价">
+              <option value="buy:0:2000">2,000 万以下</option>
+              <option value="buy:2000:3500">2,000～3,500 万</option>
+              <option value="buy:3500:99999">3,500 万以上</option>
+            </optgroup>
+            <optgroup label="租屋月租">
+              <option value="rent:0:25000">2.5 万以下</option>
+              <option value="rent:25000:999999">2.5 万以上</option>
+            </optgroup>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-brand">搜索对象</button>
+      </form>
+      <p class="hero-sub">想卖房吗？<a href="#contact" class="link">预约免费估价</a></p>
+    </div>
+    <figure class="hero-art">
+      <div class="img img-facade" role="img" aria-label="现代住宅大楼的立面窗格"></div>
+      <!-- 范例内容：上线前请换成真实数据 -->
+      <figcaption><b>12 间</b>本月新上架对象，以西屯、南屯为主</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ==================== 区块：精选对象 ==================== -->
+<section id="listings">
+  <div class="wrap">
+    <div class="sec-head split reveal">
+      <div>
+        <h2>精选对象</h2>
+        <p>经纪人亲自看过屋况才上架，照片、坪数与格局都如实标示。</p>
+      </div>
+      <p class="result-count" aria-live="polite">目前显示 <b id="count">6</b> 笔对象</p>
+    </div>
+    <!--
+      对象卡片：拷贝一张 <article class="listing"> 即可添加。
+      data-area：区域代码（要和搜索列的选项一致）
+      data-type：buy 为出售、rent 为出租
+      data-price：出售填「万元」数字、出租填「每月租金元」数字
+      范例内容：上线前请换成真实数据
+    -->
+    <div class="listings">
+      <article class="listing" data-area="xitun" data-type="buy" data-price="2980">
+        <div class="img img-facade" role="img" aria-label="七期景观大楼外观"><div class="tags"><span class="tag">新上架</span></div></div>
+        <div class="body">
+          <h3>七期景观三房，边间双采光</h3>
+          <p class="loc">台中市西屯区 市政北七路</p>
+          <p class="price">2,980<small>万</small></p>
+          <dl class="specs"><div><dt>权状坪数</dt><dd>38.6 坪</dd></div><div><dt>格局</dt><dd>3 房 2 卫</dd></div><div><dt>屋龄</dt><dd>6 年</dd></div></dl>
+          <div class="foot"><span class="id">编号 A-101</span><a href="#contact" class="btn btn-line" data-id="A-101" data-need="买屋">预约看屋</a></div>
+        </div>
+      </article>
+      <article class="listing" data-area="xitun" data-type="buy" data-price="1288">
+        <div class="img img-win" role="img" aria-label="电梯大楼客厅落地窗"><div class="tags"><span class="tag cut">降价</span></div></div>
+        <div class="body">
+          <h3>逢甲商圈电梯两房，近捷运站</h3>
+          <p class="loc">台中市西屯区 福星路</p>
+          <p class="price">1,288<small>万</small><s>1,380 万</s></p>
+          <dl class="specs"><div><dt>权状坪数</dt><dd>24.2 坪</dd></div><div><dt>格局</dt><dd>2 房 1 卫</dd></div><div><dt>屋龄</dt><dd>14 年</dd></div></dl>
+          <div class="foot"><span class="id">编号 A-102</span><a href="#contact" class="btn btn-line" data-id="A-102" data-need="买屋">预约看屋</a></div>
+        </div>
+      </article>
+      <article class="listing" data-area="nantun" data-type="buy" data-price="3680">
+        <div class="img img-plan" role="img" aria-label="四房格局平面图"></div>
+        <div class="body">
+          <h3>公益路生活圈四房，含双车位</h3>
+          <p class="loc">台中市南屯区 大墩十一街</p>
+          <p class="price">3,680<small>万</small></p>
+          <dl class="specs"><div><dt>权状坪数</dt><dd>52.3 坪</dd></div><div><dt>格局</dt><dd>4 房 3 卫</dd></div><div><dt>屋龄</dt><dd>9 年</dd></div></dl>
+          <div class="foot"><span class="id">编号 A-103</span><a href="#contact" class="btn btn-line" data-id="A-103" data-need="买屋">预约看屋</a></div>
+        </div>
+      </article>
+      <article class="listing" data-area="xitun" data-type="rent" data-price="16000">
+        <div class="img img-facade v2" role="img" aria-label="新成屋社区外观"><div class="tags"><span class="tag">新上架</span><span class="tag rent">出租</span></div></div>
+        <div class="body">
+          <h3>中科旁新成屋套房，可短租</h3>
+          <p class="loc">台中市西屯区 西屯路三段</p>
+          <p class="price">16,000<small>元／月</small></p>
+          <dl class="specs"><div><dt>室内坪数</dt><dd>12.5 坪</dd></div><div><dt>格局</dt><dd>1 房 1 卫</dd></div><div><dt>屋龄</dt><dd>1 年</dd></div></dl>
+          <div class="foot"><span class="id">编号 R-201</span><a href="#contact" class="btn btn-line" data-id="R-201" data-need="租屋">预约看屋</a></div>
+        </div>
+      </article>
+      <article class="listing" data-area="beitun" data-type="rent" data-price="32000">
+        <div class="img img-plan v3" role="img" aria-label="三房格局平面图"><div class="tags"><span class="tag cut">降价</span><span class="tag rent">出租</span></div></div>
+        <div class="body">
+          <h3>捷运文心崇德站三房，家具全配</h3>
+          <p class="loc">台中市北屯区 崇德路二段</p>
+          <p class="price">32,000<small>元／月</small><s>35,000</s></p>
+          <dl class="specs"><div><dt>权状坪数</dt><dd>33 坪</dd></div><div><dt>格局</dt><dd>3 房 2 卫</dd></div><div><dt>屋龄</dt><dd>5 年</dd></div></dl>
+          <div class="foot"><span class="id">编号 R-202</span><a href="#contact" class="btn btn-line" data-id="R-202" data-need="租屋">预约看屋</a></div>
+        </div>
+      </article>
+      <article class="listing" data-area="west" data-type="buy" data-price="5200">
+        <div class="img img-row" role="img" aria-label="勤美商圈透天街屋立面"></div>
+        <div class="body">
+          <h3>勤美商圈透天店住，一楼可营业</h3>
+          <p class="loc">台中市西区 中兴街</p>
+          <p class="price">5,200<small>万</small></p>
+          <dl class="specs"><div><dt>权状坪数</dt><dd>68 坪</dd></div><div><dt>格局</dt><dd>5 房 4 卫</dd></div><div><dt>屋龄</dt><dd>22 年</dd></div></dl>
+          <div class="foot"><span class="id">编号 A-104</span><a href="#contact" class="btn btn-line" data-id="A-104" data-need="买屋">预约看屋</a></div>
+        </div>
+      </article>
+    </div>
+    <div class="no-results" id="no-results" hidden>
+      <p>目前没有符合条件的对象。留下需求，有新对象时我们会优先通知您。</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center">
+        <button type="button" class="btn btn-line" id="reset">清除条件</button>
+        <a href="#contact" class="btn btn-brand">登记找房需求</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：服务项目 ==================== -->
+<section class="services-sec" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>服务项目</h2>
+      <p>不论买、卖、租或只是想知道房子值多少，一通电话就有专人协助。</p>
+    </div>
+    <div class="services reveal">
+      <article class="service">
+        <span class="no">01</span>
+        <div><h3>买屋</h3><p>依预算、通勤与学区筛选对象，陪同看屋并提供周边实价登录比较，帮您谈出合理价格。</p><ul><li>陪同带看</li><li>议价斡旋</li><li>贷款试算</li></ul></div>
+      </article>
+      <article class="service">
+        <span class="no">02</span>
+        <div><h3>卖屋</h3><p>专业摄影、格局图与多平台曝光，定期回报带看数与买方意见，让您掌握销售进度。</p><ul><li>专业摄影</li><li>多平台刊登</li><li>每周回报</li></ul></div>
+      </article>
+      <article class="service">
+        <span class="no">03</span>
+        <div><h3>租赁</h3><p>房东代租、租客筛选、租约撰写与点交，也提供包租代管，出国或工作忙也不用烦恼。</p><ul><li>租客筛选</li><li>租约撰写</li><li>包租代管</li></ul></div>
+      </article>
+      <article class="service">
+        <span class="no">04</span>
+        <div><h3>估价</h3><p>结合实价登录、屋况与同社区成交纪录，三个工作天内提供书面估价报告，不收任何费用。</p><ul><li>免费估价</li><li>书面报告</li><li>到府评估</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：成交实绩 ==================== -->
+<section class="dark" id="results">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>成交实绩</h2>
+      <p>深耕台中西屯 12 年，多数客户来自老客户转介绍。</p>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="stats reveal">
+      <div class="stat"><strong><span data-count="420">420</span><small>+</small></strong><span>累计成交件数</span></div>
+      <div class="stat"><strong><span data-count="38">38</span><small>天</small></strong><span>平均成交天数</span></div>
+      <div class="stat"><strong><span data-count="96">96</span><small>%</small></strong><span>成交价达委托底价</span></div>
+      <div class="stat"><strong><span data-count="62">62</span><small>%</small></strong><span>客户来自转介绍</span></div>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="deals reveal" aria-label="近期成交">
+      <div class="deal"><b>西屯区 惠来路 三房电梯大楼</b><span>委托 21 天成交</span><em>2,450 万</em></div>
+      <div class="deal"><b>南屯区 文心南路 两房平车</b><span>委托 34 天成交</span><em>1,620 万</em></div>
+      <div class="deal"><b>北屯区 敦富路 四楼透天</b><span>委托 45 天成交</span><em>2,880 万</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：经纪人介绍 ==================== -->
+<section id="agent">
+  <div class="wrap agent-grid">
+    <div class="agent-photo reveal">
+      <div class="img img-agent" role="img" aria-label="经纪人 林品妤 肖像"></div>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据（姓名、证书字号、年资） -->
+    <div class="agent reveal">
+      <h2>经纪人 林品妤</h2>
+      <p class="role">安居不动产 店长</p>
+      <p>在西屯住了二十年，也在这里卖了十二年的房子。我习惯先把屋况、管委会状况和周边行情说清楚，再让您决定要不要出价。比起成交速度，我更在意您住进去之后不后悔。</p>
+      <dl class="creds">
+        <div><dt>不动产经纪人证书</dt><dd>(000) 中市经字第 000000 号</dd></div>
+        <div><dt>从业年资</dt><dd>12 年</dd></div>
+        <div><dt>专长区域</dt><dd>西屯、南屯、北屯</dd></div>
+        <div><dt>擅长对象</dt><dd>电梯大楼、首购两三房</dd></div>
+      </dl>
+      <div class="btns">
+        <a href="tel:0412345678" class="btn btn-brand">直接来电</a>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-line" target="_blank" rel="noopener">加 LINE 聊聊</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：买房流程 ==================== -->
+<section class="process-sec" id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>买房流程</h2>
+      <p>第一次买房也不用担心，五个步骤，每一步都有人陪您确认。</p>
+    </div>
+    <ol class="steps reveal">
+      <li class="step"><h3>需求咨询</h3><p>聊聊预算、自备款与想住的生活圈，先做一次贷款试算。</p></li>
+      <li class="step"><h3>对象带看</h3><p>依需求安排看屋，现场说明屋况、采光与管理费。</p></li>
+      <li class="step"><h3>出价斡旋</h3><p>提供周边成交行情，协助您与屋主谈出合理价格。</p></li>
+      <li class="step"><h3>签约履保</h3><p>代书审阅产权，价金交由银行履约保证专户保管。</p></li>
+      <li class="step"><h3>交屋点交</h3><p>陪同验屋与点交钥匙，水电瓦斯过户一次处理好。</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== 区块：客户评价 ==================== -->
+<section class="reviews-sec" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>客户评价</h2>
+    </div>
+    <div class="reviews reveal">
+      <!-- 范例内容：上线前请换成真实数据 -->
+      <figure class="review">
+        <blockquote>第一次买房什么都不懂，品妤把每间房子的优缺点都讲得很直白，连管委会开会纪录都帮我们调来看。最后买到预算内的三房，住了一年很满意。</blockquote>
+        <figcaption><b>陈先生夫妻</b>西屯区 首购三房</figcaption>
+      </figure>
+      <!-- 范例内容：上线前请换成真实数据 -->
+      <figure class="review">
+        <blockquote>委托卖屋时每周都会收到带看回报，买方嫌贵的原因也讲得很清楚。调整一次价格后一个月内成交，价格比我预期的还好。</blockquote>
+        <figcaption><b>林小姐</b>南屯区 委托卖屋</figcaption>
+      </figure>
+      <!-- 范例内容：上线前请换成真实数据 -->
+      <figure class="review">
+        <blockquote>人在国外工作，房子交给安居代租代管。租客筛选很仔细，每月收到租金明细，修缮也会先拍照确认，完全不用操心。</blockquote>
+        <figcaption><b>黄先生</b>北屯区 包租代管</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：委托与预约看屋 ==================== -->
+<section class="dark" id="contact">
+  <div class="wrap contact-grid">
+    <div class="info reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <h2>预约看屋或委托</h2>
+        <p>填写表单后，我们会在当天回电与您确认时间。看屋、估价与咨询都不收费。</p>
+      </div>
+      <dl>
+        <div><dt>电话</dt><dd><a href="tel:0412345678">04-1234-5678</a></dd></div>
+        <div><dt>门市地址</dt><dd><a href="https://maps.google.com/?q=台中市西屯区市政北二路200号" target="_blank" rel="noopener">台中市西屯区市政北二路 200 号 1 楼</a></dd></div>
+        <div><dt>营业时间</dt><dd>每天 10:00–21:00</dd></div>
+      </dl>
+      <div class="btns">
+        <a href="tel:0412345678" class="btn btn-brand">拨打电话</a>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE 预约</a>
+        <a href="https://maps.google.com/?q=台中市西屯区市政北二路200号" class="btn btn-ghost" target="_blank" rel="noopener">Google 地图</a>
+      </div>
+    </div>
+    <!--
+      表单使用 Formspree（免费方案每月 50 笔）：
+      1. 到 https://formspree.io 注册并创建新表单
+      2. 把下方 action 里的 your-form-id 换成你拿到的表单 ID
+      3. 第一次送出时，Formspree 会寄信请你确认信箱
+    -->
+    <form class="form reveal" id="book" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="row">
+        <div class="field"><label for="f-name">姓名 <i>*</i></label><input id="f-name" name="姓名" autocomplete="name" required></div>
+        <div class="field"><label for="f-tel">电话 <i>*</i></label><input id="f-tel" name="电话" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="f-need">需求 <i>*</i></label>
+          <select id="f-need" name="需求" required>
+            <option value="">请选择</option>
+            <option>买屋</option>
+            <option>卖屋</option>
+            <option>租屋</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-id">对象编号</label><input id="f-id" name="对象编号" placeholder="例如 A-101，没有可留空"></div>
+      </div>
+      <div class="field"><label for="f-msg">留言</label><textarea id="f-msg" name="留言" placeholder="方便看屋的时段、预算或想了解的事"></textarea></div>
+      <label class="agree"><input type="checkbox" name="隐私同意" value="同意" required> <span>我同意安居不动产依 <a href="#">隐私权政策</a> 搜集并使用我的数据，以联系看屋与委托事宜。</span></label>
+      <button type="submit" class="btn btn-brand">送出预约</button>
+      <p class="form-note">数据仅供本公司联系使用，不会提供给第三方。</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 区块：页脚 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark" aria-hidden="true">安</span><span><b>安居不动产</b><small>台中西屯在地房仲</small></span></a>
+        <p style="margin-top:1rem;max-width:22rem">看懂行情再出价，住进去不后悔。</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="https://line.me/R/ti/p/@yourlineid" aria-label="LINE">LINE</a>
+        </div>
+      </div>
+      <div>
+        <h2>联系信息</h2>
+        <p>台中市西屯区市政北二路 200 号 1 楼<br>电话 <a href="tel:0412345678">04-1234-5678</a><br>hello@anju-realty.example</p>
+      </div>
+      <div>
+        <h2>营业时间</h2>
+        <p>每天 10:00–21:00<br>农历春节另行公告<br>夜间看屋可预约</p>
+      </div>
+      <!--
+        经纪业信息：依《不动产经纪业管理条例》，不动产广告应注明经纪业名称，
+        并建议一并标示经纪业许可字号与经纪人姓名、证书字号。
+        请换成主管机关核发的真实字号，上线前请再确认最新法规与地方主管机关规定。
+      -->
+      <div class="license">
+        <h2>经纪业信息</h2>
+        <p>经纪业名称：安居不动产经纪有限公司</p>
+        <p>经纪业许可字号：(000) 中市地价字第 0000000 号</p>
+        <p>经纪人：林品妤 (000) 中市经字第 000000 号</p>
+      </div>
+    </div>
+    <!-- 页脚语言链接：和页眉的 lang-switch 是同一组，添加语言时两边都要加 -->
+    <p class="foot-lang"><span>语言</span><a href="../en/" hreflang="en" lang="en">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a><a href="../ja/" hreflang="ja" lang="ja">日本語</a><a href="../es/" hreflang="es" lang="es">Español</a></p>
+    <div class="copy"><span>© <span id="y"></span> 安居不动产</span><span>对象信息以现场及权状为准，价格可能随时调整。</span></div>
+  </div>
+</footer>
+
+<!-- 手机底部固定按钮 -->
+<div class="sticky-cta">
+  <a href="tel:0412345678" class="btn btn-line" aria-label="拨打电话">来电</a>
+  <a href="#contact" class="btn btn-brand">预约看屋</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function () {
+  var header = document.querySelector('.site-header');
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('menu');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 页眉卷动背景
+  function onScroll() { header.classList.toggle('scrolled', menu.classList.contains('open') || scrollY > 20); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // 汉堡菜单
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
+    onScroll();
+  }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // 对象搜索筛选
+  var form = document.getElementById('search');
+  var cards = document.querySelectorAll('.listing');
+  var empty = document.getElementById('no-results');
+  function filter() {
+    var f = form.elements, area = f.area.value, type = f.type.value, b = f.budget.value.split(':'), n = 0;
+    cards.forEach(function (c) {
+      var d = c.dataset, p = +d.price;
+      var ok = (!area || d.area === area) && (!type || d.type === type) &&
+        (!b[0] || (d.type === b[0] && p >= +b[1] && p <= +b[2]));
+      c.hidden = !ok; if (ok) n++;
+    });
+    empty.hidden = n > 0;
+    document.getElementById('count').textContent = n;
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); filter();
+    document.getElementById('listings').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+  });
+  document.getElementById('reset').addEventListener('click', function () { form.reset(); filter(); });
+
+  // 点「预约看屋」自动带入对象编号与需求
+  document.querySelectorAll('[data-id]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      document.getElementById('f-id').value = a.dataset.id;
+      document.getElementById('f-need').value = a.dataset.need;
+    });
+  });
+
+  // 数字跳动
+  function countUp(el) {
+    var end = +el.dataset.count, t0 = performance.now();
+    if (reduce) return;
+    (function tick(t) {
+      var p = Math.min((t - t0) / 1400, 1);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+
+  // 卷动渐入＋触发数字
+  var targets = document.querySelectorAll('.reveal, [data-count]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        if (e.target.dataset.count) countUp(e.target);
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.15 });
+    targets.forEach(function (el) { io.observe(el); });
+  } else {
+    targets.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  document.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

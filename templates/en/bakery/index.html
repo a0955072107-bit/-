@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wheat &amp; Days Bakery | Neighborhood Bakery in Portland</title>
+<meta name="description" content="Wheat &amp; Days is a neighborhood bakery in Portland, baking sourdough, butter croissants and seasonal cakes every morning. Order birthday cakes and gift boxes online and pick them up in store.">
+<meta name="theme-color" content="#b3312b">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.yourshop.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<meta property="og:title" content="Wheat &amp; Days Bakery | Neighborhood Bakery in Portland">
+<meta property="og:description" content="First batch out of the oven at 8 a.m. Sourdough, cultured-butter croissants, seasonal cakes and gift boxes. Order ahead, pick up in store.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..700,100&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "Wheat & Days Bakery",
+  "telephone": "+1-555-012-3456",
+  "url": "https://example.com/",
+  "priceRange": "$3–$62",
+  "servesCuisine": ["Bread", "Cakes", "Pastries"],
+  "acceptsReservations": "True",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "214 Linden Avenue",
+    "addressLocality": "Portland",
+    "addressRegion": "OR",
+    "postalCode": "97214",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "08:00", "closes": "18:00" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   THEME SETTINGS: change these to restyle the whole site
+   ============================================================ */
+:root {
+  --brand: #b3312b;          /* Brand color (cherry red): buttons, prices, accent text */
+  --brand-ink: #fffaf0;      /* Text color on top of the brand color */
+  --bg: #fffaf0;             /* Page background (warm, buttery white) */
+  --surface: #fffdf7;        /* Raised surfaces: cards, forms */
+  --text: #3b2418;           /* Main text (dark chocolate) */
+  --muted: #6b4c3b;          /* Secondary text, captions */
+  --line: #ecdcbc;           /* Dividers and borders */
+  --butter: #f7e3a1;         /* Butter yellow: section backgrounds, badges */
+  --butter-soft: #fcf1cf;    /* Pale butter: section backgrounds */
+  --pistachio: #c5d59c;      /* Pistachio green: backgrounds, decoration */
+  --pistachio-soft: #edf2dc; /* Pale pistachio: section backgrounds */
+  --leaf: #46602a;           /* Deep pistachio: "order ahead" tag text */
+  --crust: #b9742f;          /* Art placeholder: bread crust */
+  --golden: #e2a54d;         /* Art placeholder: golden croissant */
+  --sponge: #f1cf8b;         /* Art placeholder: sponge cake */
+  --cream: #fff6e4;          /* Art placeholder: cream and icing */
+  --cocoa: #6a3a22;          /* Art placeholder: chocolate */
+  --shadow-soft: color-mix(in srgb, var(--text) 12%, transparent);  /* Soft shadow: cards, menus */
+  --shadow-deep: color-mix(in srgb, var(--text) 28%, transparent);  /* Deep shadow: cakes and loaves in the placeholders */
+  --radius: 22px;            /* Corner radius */
+  --scallop: 14px;           /* Radius of the scalloped edges */
+  --font-heading: "Fraunces", Georgia, "Times New Roman", serif;   /* Heading font */
+  --font-body: "Nunito", "Segoe UI", system-ui, sans-serif; /* Body font */
+  --max: 1180px;             /* Maximum content width */
+  --pad: clamp(1rem, 5vw, 3rem); /* Side padding */
+  --gap: clamp(1.25rem, 4vw, 3rem); /* Column gap for multi-column sections */
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 72px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.25; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 8px; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: clamp(4.5rem, 10vw, 7rem); position: relative; background: var(--sec-bg, var(--bg)); }
+.sec-title { font-size: clamp(1.9rem, 4.2vw, 2.8rem); margin-bottom: .9rem; }
+.sec-lead { color: var(--muted); max-width: 36rem; }
+.sec-head { margin-bottom: clamp(2rem, 5vw, 3.2rem); }
+.sec-head.center { text-align: center; } .sec-head.center .sec-lead { margin-inline: auto; }
+
+/* Scalloped edge: a row of half circles along the top of a section, colored with that section's --sec-bg */
+.scallop::before { content: ""; position: absolute; left: 0; right: 0; top: calc(var(--scallop) * -1 + 1px); height: var(--scallop);
+  background: radial-gradient(circle at 50% 100%, var(--sec-bg) calc(var(--scallop) - .5px), transparent var(--scallop)) 50% 0 / calc(var(--scallop) * 2) var(--scallop) repeat-x; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .85rem 1.6rem; border-radius: 999px; font: 700 1rem/1.2 var(--font-body); text-decoration: none; border: 2px solid var(--brand); cursor: pointer; transition: transform .2s, background-color .2s, color .2s, box-shadow .2s; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); box-shadow: 0 4px 0 color-mix(in srgb, var(--brand) 60%, var(--text)); }
+.btn-primary:hover { background: color-mix(in srgb, var(--brand) 86%, var(--text)); }
+.btn-ghost { background: transparent; color: var(--brand); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--brand) 9%, transparent); }
+.btn:active { transform: translateY(2px); box-shadow: none; }
+a:not(.btn):hover { color: var(--brand); }
+a:not(.btn):active { opacity: .7; }
+button:disabled { opacity: .4; cursor: not-allowed; }
+
+/* Fade in on scroll: content is only hidden when JS is running */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+/* Content shown only with or only without JS */
+html:not(.js) .js-only { display: none !important; }
+.js .nojs-only { display: none !important; }
+
+/* ==================== Header ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 93%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+.logo-mark { width: 40px; height: 40px; flex: none; border-radius: 50%; background: radial-gradient(circle, var(--brand) 0 22%, var(--butter) 23% 58%, var(--brand) 59%); outline: 2px dotted var(--brand); outline-offset: 2px; }
+.logo b { font: 700 1.2rem/1.1 var(--font-heading); display: block; }
+.logo small { font: 600 .8rem/1 var(--font-body); color: var(--muted); }
+.nav-menu { display: flex; align-items: center; gap: 1.4rem; list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; font-weight: 600; padding-block: .3rem; background: linear-gradient(var(--brand), var(--brand)) left bottom / 0 2px no-repeat; transition: background-size .3s, color .2s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 2px; }
+.nav-menu .btn { padding: .55rem 1.2rem; }
+.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: 12px; }
+.nav-toggle:hover { background: color-mix(in srgb, var(--butter) 60%, transparent); }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 2px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; border-radius: 2px; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 900px) and (min-width: 761px) { .nav-menu { gap: .9rem; font-size: .93rem; } }
+@media (max-width: 760px) {
+  /* Without JavaScript the menu simply wraps onto its own line; with JS it folds into the hamburger */
+  html:not(.js) .nav { flex-wrap: wrap; height: auto; padding-block: .8rem; }
+  html:not(.js) .site-header { position: sticky; background: var(--bg); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: clamp(2rem, 6vw, 4rem); }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); box-shadow: 0 12px 24px var(--shadow-soft); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: .85rem 0; border-bottom: 1px dashed var(--line); }
+  .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+  .js .site-header:has(.nav-menu.open) { background: var(--bg); }
+}
+
+/* ==================== Art placeholders ====================
+   Every .img-xx is a bakery illustration drawn with CSS gradients (cakes, croissants, loaves, gift boxes, sprinkles).
+   Replace with a photo: .img-xx { background: url(images/xxx.jpg) center/cover; }
+   (Once you use a photo, you can delete that class's ::before / ::after rules too) */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; background-color: var(--butter-soft); }
+.img::before, .img::after { content: ""; position: absolute; pointer-events: none; }
+/* Sprinkles pattern (can sit under any placeholder) */
+.sprinkles { background-image:
+  radial-gradient(ellipse 7px 2.5px at 18% 22%, var(--brand) 98%, transparent),
+  radial-gradient(ellipse 2.5px 7px at 62% 14%, var(--leaf) 98%, transparent),
+  radial-gradient(ellipse 7px 2.5px at 78% 58%, var(--cocoa) 98%, transparent),
+  radial-gradient(ellipse 2.5px 7px at 34% 70%, var(--golden) 98%, transparent),
+  radial-gradient(circle at 48% 44%, var(--brand) 0 2.5px, transparent 3px),
+  radial-gradient(circle at 88% 88%, var(--leaf) 0 2.5px, transparent 3px),
+  radial-gradient(circle at 8% 90%, var(--cocoa) 0 2px, transparent 2.5px);
+  background-size: 96px 96px; }
+.t-butter { background-color: var(--butter); }
+.t-pist { background-color: var(--pistachio); }
+.t-cream { background-color: var(--butter-soft); }
+
+/* Replace with a photo: .img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero { aspect-ratio: 1 / 1; border-radius: 50%; background-color: var(--pistachio); box-shadow: inset 0 0 0 12px var(--pistachio-soft); }
+/* The cake: icing, cream layers, jam and sponge */
+.img-hero::before { left: 22%; right: 22%; bottom: 25%; height: 40%; border-radius: 26px 26px 10px 10px;
+  background:
+    radial-gradient(circle at 50% 0, var(--cream) 0 11px, transparent 12px) 0 22px / 30px 30px repeat-x,
+    linear-gradient(var(--cream) 0 24px, transparent 24px),
+    linear-gradient(transparent 0 46%, var(--brand) 46% 53%, var(--cream) 53% 60%, transparent 60% 76%, var(--cream) 76% 82%, transparent 82%),
+    var(--sponge);
+  box-shadow: 0 14px 0 -2px var(--surface), 0 16px 0 0 var(--line), 0 34px 40px var(--shadow-deep); }
+/* The cherry on top */
+.img-hero::after { width: 15%; aspect-ratio: 1; left: 42.5%; top: 26%; border-radius: 50%;
+  background: radial-gradient(circle at 34% 32%, var(--cream) 0 10%, transparent 14%), radial-gradient(circle at 50% 50%, var(--brand) 0 69%, transparent 70%);
+  animation: bob 4s ease-in-out infinite alternate; }
+@keyframes bob { from { transform: translateY(0); } to { transform: translateY(-6px); } }
+
+/* Replace with a photo: .img-croissant { background: url(images/croissant.jpg) center/cover; } */
+/* Croissant: one large ellipse with layered folds; smaller ellipses on each side form the tips */
+.img-croissant::before { left: 26%; right: 26%; top: 33%; height: 34%; border-radius: 50% 50% 42% 42% / 64% 64% 36% 36%; z-index: 1;
+  background: radial-gradient(ellipse 60% 40% at 50% 26%, color-mix(in srgb, var(--cream) 55%, transparent), transparent 70%),
+    repeating-linear-gradient(90deg, var(--golden) 0 15%, color-mix(in srgb, var(--crust) 85%, var(--text)) 15% 17.5%);
+  box-shadow: 0 16px 22px var(--shadow-deep); }
+.img-croissant::after { left: 12%; right: 12%; top: 40%; height: 34%;
+  background: radial-gradient(ellipse 17% 30% at 24% 42%, var(--golden) 0 96%, transparent 100%), radial-gradient(ellipse 17% 30% at 76% 42%, var(--golden) 0 96%, transparent 100%),
+    radial-gradient(ellipse 13% 24% at 14% 58%, var(--crust) 0 96%, transparent 100%), radial-gradient(ellipse 13% 24% at 86% 58%, var(--crust) 0 96%, transparent 100%),
+    radial-gradient(ellipse 8% 16% at 8% 74%, color-mix(in srgb, var(--crust) 75%, var(--text)) 0 95%, transparent 100%), radial-gradient(ellipse 8% 16% at 92% 74%, color-mix(in srgb, var(--crust) 75%, var(--text)) 0 95%, transparent 100%); }
+
+/* Replace with a photo: .img-loaf { background: url(images/loaf.jpg) center/cover; } */
+/* Loaf: domed crust, diagonal scoring and a dusting of flour */
+.img-loaf::before { left: 18%; right: 18%; top: 30%; height: 42%; border-radius: 50% 50% 30% 30% / 72% 72% 28% 28%;
+  background: repeating-linear-gradient(118deg, transparent 0 17%, color-mix(in srgb, var(--sponge) 80%, var(--cream)) 17% 21%, transparent 21% 34%),
+    radial-gradient(ellipse 70% 60% at 50% 30%, var(--crust), color-mix(in srgb, var(--crust) 70%, var(--text)));
+  box-shadow: 0 16px 22px var(--shadow-deep); }
+.img-loaf::after { inset: 0; background: radial-gradient(circle at 34% 34%, var(--cream) 0 1.5px, transparent 2px) 0 0 / 22px 18px, linear-gradient(transparent 76%, color-mix(in srgb, var(--crust) 35%, var(--sponge)) 76%); opacity: .9; z-index: -1; }
+
+/* Replace with a photo: .img-cake { background: url(images/cake.jpg) center/cover; } */
+/* Whole cake: layered sides plus an oval iced top with berries */
+.img-cake::before { left: 22%; right: 22%; top: 42%; height: 34%; border-radius: 0 0 50% 50% / 0 0 22% 22%;
+  background: linear-gradient(transparent 0 34%, var(--cake-fill, var(--brand)) 34% 42%, var(--cream) 42% 50%, transparent 50% 72%, var(--cream) 72% 78%, transparent 78%), var(--cake-body, var(--sponge));
+  box-shadow: 0 18px 22px var(--shadow-deep); }
+.img-cake::after { left: 22%; right: 22%; top: 32%; height: 22%; border-radius: 50%;
+  background: radial-gradient(circle at 30% 50%, var(--cake-fill, var(--brand)) 0 6%, transparent 7%), radial-gradient(circle at 50% 38%, var(--cake-fill, var(--brand)) 0 6%, transparent 7%), radial-gradient(circle at 70% 52%, var(--cake-fill, var(--brand)) 0 6%, transparent 7%), var(--cake-top, var(--cream));
+  box-shadow: inset 0 -4px 0 color-mix(in srgb, var(--text) 10%, transparent); }
+.cake-choco { --cake-body: var(--cocoa); --cake-top: color-mix(in srgb, var(--cocoa) 80%, var(--text)); --cake-fill: var(--sponge); }
+.cake-pist { --cake-body: var(--pistachio); --cake-top: var(--pistachio-soft); }
+.cake-basque { --cake-body: var(--sponge); --cake-top: color-mix(in srgb, var(--crust) 75%, var(--text)); --cake-fill: var(--golden); }
+
+/* Replace with a photo: .img-box { background: url(images/giftbox.jpg) center/cover; } */
+/* Gift box: box, lid and crossed ribbon, with a bow on top */
+.img-box::before { left: 24%; right: 24%; top: 38%; height: 40%; border-radius: 8px;
+  background: linear-gradient(90deg, transparent 44%, var(--brand) 44% 56%, transparent 56%), linear-gradient(transparent 0 22%, color-mix(in srgb, var(--text) 12%, transparent) 22% 25%, transparent 25%), var(--surface);
+  box-shadow: 0 18px 22px var(--shadow-deep); }
+.img-box::after { width: 30%; height: 15%; left: 35%; top: 26%;
+  background: radial-gradient(ellipse 30% 46% at 28% 50%, transparent 0 40%, var(--brand) 42% 98%, transparent), radial-gradient(ellipse 30% 46% at 72% 50%, transparent 0 40%, var(--brand) 42% 98%, transparent), radial-gradient(circle at 50% 70%, var(--brand) 0 14%, transparent 15%); }
+
+/* ==================== Hero ==================== */
+.hero { --sec-bg: var(--bg); padding-top: calc(72px + clamp(2rem, 5vw, 3.5rem)); padding-bottom: clamp(4rem, 8vw, 6rem); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--gap); align-items: center; }
+.hero h1 { font-size: clamp(2.5rem, 6.4vw, 4.6rem); line-height: 1.12; margin-bottom: 1.2rem; }
+.hero p.lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--muted); max-width: 30rem; margin-bottom: 2rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; }
+.hero-note { margin-top: 1.8rem; font-size: .95rem; color: var(--muted); }
+.hero-note b { color: var(--text); font-variant-numeric: tabular-nums; }
+.hero-art { position: relative; max-width: 460px; width: 100%; justify-self: center; }
+.hero-art .tag { position: absolute; right: 0; bottom: 6%; background: var(--surface); padding: .75rem 1.1rem; border-radius: 16px; box-shadow: 0 14px 30px var(--shadow-soft); font-size: .9rem; max-width: 13rem; border: 2px solid var(--butter); }
+.hero-art .tag b { display: block; font-family: var(--font-heading); color: var(--brand); }
+@media (max-width: 860px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } .hero-art { max-width: 340px; } }
+
+/* ==================== This week's bake ==================== */
+.bake { --sec-bg: var(--butter-soft); }
+.week-scroll { overflow-x: auto; scroll-snap-type: x proximity; padding: .4rem .2rem 1rem; margin-inline: -.2rem; }
+.week { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .8rem; list-style: none; }
+.week > li { background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1rem 1.2rem; scroll-snap-align: start; position: relative; }
+.week h3 { font-size: 1.2rem; margin-bottom: .5rem; }
+.week ul { list-style: none; font-size: .92rem; color: var(--muted); display: grid; gap: .35rem; }
+.week li.off { background: transparent; border-style: dashed; }
+.week li.today { border-color: var(--brand); box-shadow: 0 8px 0 -2px var(--butter), 0 8px 0 0 var(--brand); }
+.week li.today h3::after { content: "Today"; font: 700 .72rem/1 var(--font-body); margin-left: .45rem; padding: .25rem .55rem; border-radius: 999px; background: var(--brand); color: var(--brand-ink); vertical-align: .2rem; }
+.bake-note { margin-top: 1.4rem; color: var(--muted); font-size: .92rem; }
+@media (max-width: 1020px) { .week { grid-template-columns: repeat(7, 10.5rem); } }
+
+/* ==================== Shop ==================== */
+.products { --sec-bg: var(--bg); }
+.tabs { display: flex; justify-content: center; gap: .5rem; margin-bottom: 2.4rem; flex-wrap: wrap; }
+.tab { font: 700 1rem/1 var(--font-body); padding: .8rem 1.5rem; border-radius: 999px; border: 2px solid var(--line); background: var(--surface); color: var(--text); cursor: pointer; transition: background-color .2s, border-color .2s, color .2s, transform .2s; }
+.tab:hover { border-color: var(--brand); }
+.tab:active { transform: scale(.97); }
+.tab[aria-selected="true"] { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.panel + .panel { margin-top: 2.5rem; }
+.js .panel + .panel { margin-top: 0; }
+.panel-title { font: 600 1.3rem/1.3 var(--font-heading); margin-bottom: 1rem; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; list-style: none; }
+.item { background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.item .img { aspect-ratio: 4 / 3; border-radius: 0; }
+.item-body { padding: 1.1rem 1.2rem 1.3rem; display: grid; gap: .35rem; }
+.item-head { display: flex; justify-content: space-between; align-items: baseline; gap: .8rem; }
+.item h3 { font-size: 1.15rem; }
+.price { font: 700 1.1rem/1 var(--font-heading); color: var(--brand); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.item p { color: var(--muted); font-size: .93rem; line-height: 1.6; }
+.tags { display: flex; flex-wrap: wrap; gap: .35rem; list-style: none; margin-top: .3rem; }
+.tags li { font-size: .78rem; font-weight: 700; padding: .15rem .6rem; border-radius: 999px; }
+.tg-limit { background: color-mix(in srgb, var(--brand) 12%, transparent); color: var(--brand); }
+.tg-pre { background: var(--pistachio-soft); color: var(--leaf); }
+.prod-note { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 2rem; }
+@media (max-width: 960px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .grid { grid-template-columns: minmax(0, 1fr); gap: .9rem; }
+  .item { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); }
+  .item .img { aspect-ratio: auto; min-height: 7.5rem; }
+  .item-body { padding: .9rem 1rem 1rem; }
+  .item-head { flex-direction: column; gap: .3rem; }
+}
+
+/* ==================== Custom cakes ==================== */
+.custom { --sec-bg: var(--pistachio-soft); }
+.custom-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: var(--gap); align-items: start; }
+.sizes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; list-style: none; }
+.size { background: var(--surface); border-radius: var(--radius); padding: 1.2rem 1rem; text-align: center; border: 2px solid var(--pistachio); }
+.size .dish { display: grid; place-items: center; margin: 0 auto .8rem; width: 88%; aspect-ratio: 1; }
+.size .dish::before { content: ""; width: var(--d); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, var(--cream) 0 52%, var(--sponge) 53% 64%, var(--cream) 65%); box-shadow: 0 0 0 4px var(--surface), 0 0 0 6px var(--pistachio); }
+.size h3 { font-size: 1.15rem; }
+.size p { font-size: .9rem; color: var(--muted); }
+.size .price { display: block; margin-top: .5rem; }
+.flavours { margin-top: 2rem; }
+.flavours h3, .lead-time h3 { font-size: 1.25rem; margin-bottom: .8rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; }
+.chips li { background: var(--surface); border: 1.5px solid var(--pistachio); padding: .4rem .9rem; border-radius: 999px; font-size: .92rem; font-weight: 600; }
+.lead-time { background: var(--surface); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2rem); border: 2px solid var(--pistachio); }
+.steps { list-style: none; counter-reset: s; display: grid; gap: 1rem; margin-bottom: 1.4rem; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: .8rem; align-items: start; color: var(--muted); font-size: .95rem; }
+.steps li::before { content: counter(s); width: 2.4rem; height: 2.4rem; border-radius: 50%; display: grid; place-items: center; background: var(--butter); color: var(--text); font: 700 1.05rem/1 var(--font-heading); }
+.steps b { display: block; color: var(--text); }
+@media (max-width: 860px) { .custom-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .sizes { gap: .5rem; } .size { padding: 1rem .5rem; } }
+
+/* ==================== Reviews ==================== */
+.reviews { --sec-bg: var(--butter-soft); }
+.review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
+.review { background: var(--surface); border-radius: var(--radius); padding: 1.7rem; display: flex; flex-direction: column; gap: 1rem; box-shadow: 0 6px 0 var(--butter); }
+.stars { color: var(--brand); font-size: 1.05rem; letter-spacing: 0; }
+.review blockquote { font: 500 1.05rem/1.8 var(--font-heading); flex: 1; }
+.review figcaption { font-size: .9rem; color: var(--muted); }
+.review figcaption b { color: var(--text); }
+@media (max-width: 860px) { .review-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Visit us ==================== */
+.visit { --sec-bg: var(--bg); }
+.visit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.card { background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2.2rem); }
+.card h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+.table-scroll { overflow-x: auto; }
+.hours { width: 100%; border-collapse: collapse; min-width: 260px; }
+.hours th, .hours td { text-align: left; padding: .65rem .5rem; border-bottom: 1px dashed var(--line); }
+.hours th { font-weight: 600; }
+.hours td { text-align: right; font-variant-numeric: tabular-nums; }
+.hours tr.today { background: var(--butter-soft); }
+.hours tr.today th::after { content: "Today"; font-size: .72rem; font-weight: 700; margin-left: .5rem; padding: .1rem .5rem; border-radius: 999px; background: var(--brand); color: var(--brand-ink); }
+.hours .closed { color: var(--muted); }
+.addr { font: 600 1.15rem/1.6 var(--font-heading); margin-bottom: .3rem; }
+.visit-list { list-style: none; margin: 1.2rem 0 1.5rem; display: grid; gap: .7rem; }
+.visit-list li { display: flex; gap: .7rem; color: var(--muted); font-size: .95rem; }
+.visit-list b { color: var(--text); white-space: nowrap; }
+.card-cta { display: flex; flex-wrap: wrap; gap: .6rem; }
+.small-note { font-size: .88rem; color: var(--muted); margin-top: 1rem; }
+@media (max-width: 760px) { .visit-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== FAQ ==================== */
+.faq { --sec-bg: var(--pistachio-soft); }
+.faq-list { max-width: 48rem; margin-inline: auto; display: grid; gap: .8rem; }
+.faq details { background: var(--surface); border-radius: 18px; border: 2px solid var(--pistachio); }
+.faq summary { cursor: pointer; list-style: none; padding: 1.1rem 3.2rem 1.1rem 1.3rem; font-weight: 700; position: relative; border-radius: 16px; transition: background-color .2s; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 1.2rem; top: 50%; translate: 0 -50%; font: 600 1.5rem/1 var(--font-heading); color: var(--brand); transition: rotate .25s; }
+.faq details[open] summary::after { rotate: 45deg; }
+.faq summary:hover { background: color-mix(in srgb, var(--pistachio) 30%, transparent); }
+.faq summary:active { background: color-mix(in srgb, var(--pistachio) 50%, transparent); }
+.faq details p { padding: 0 1.3rem 1.2rem; color: var(--muted); }
+
+/* ==================== Order ahead ==================== */
+.order { --sec-bg: var(--butter-soft); }
+.order-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap); align-items: start; }
+.picker { background: var(--surface); border-radius: var(--radius); padding: clamp(1.2rem, 3vw, 1.8rem); border: 2px solid var(--butter); }
+.picker h3 { font-size: 1.25rem; margin-bottom: .6rem; }
+.picks { list-style: none; }
+.pick { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .4rem 1rem; align-items: center; padding-block: .85rem; border-bottom: 1px dashed var(--line); }
+.pick b { display: block; font-weight: 700; }
+.pick span { font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.step { display: inline-flex; align-items: center; border: 2px solid var(--line); border-radius: 999px; background: var(--bg); }
+.step button { width: 40px; height: 40px; border: 0; border-radius: 50%; background: transparent; color: var(--brand); font: 700 1.25rem/1 var(--font-body); cursor: pointer; transition: background-color .2s, transform .2s; }
+.step button:hover:not(:disabled) { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.step button:active:not(:disabled) { transform: scale(.92); }
+.step input { width: 2.6rem; text-align: center; border: 0; background: transparent; font: 700 1rem/1 var(--font-body); color: var(--text); -moz-appearance: textfield; appearance: textfield; }
+.step input::-webkit-inner-spin-button, .step input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.total { display: flex; justify-content: space-between; align-items: baseline; margin-top: 1.1rem; font-weight: 700; }
+.total output { font: 700 1.6rem/1 var(--font-heading); color: var(--brand); font-variant-numeric: tabular-nums; }
+.picker .small-note { margin-top: .6rem; }
+.quick { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.4rem; }
+.form { background: var(--surface); color: var(--text); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.2rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.1rem; border: 2px solid var(--butter); }
+.form h3 { grid-column: 1 / -1; font-size: 1.25rem; }
+.field { display: grid; gap: .35rem; min-width: 0; align-content: start; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-weight: 700; font-size: .92rem; }
+.field label span { color: var(--brand); }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1.5px solid var(--line); border-radius: 14px; padding: .7rem .85rem; min-height: 48px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 22%, transparent); }
+.field textarea { min-height: 96px; resize: vertical; }
+.field small { font-size: .82rem; color: var(--muted); }
+.form .btn { grid-column: 1 / -1; width: 100%; }
+.form > small { grid-column: 1 / -1; color: var(--muted); font-size: .85rem; text-align: center; }
+@media (max-width: 860px) { .order-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .form { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Footer ==================== */
+.site-footer { --sec-bg: var(--text); position: relative; background: var(--sec-bg); color: color-mix(in srgb, var(--bg) 82%, transparent); padding-block: 3.5rem 2rem; font-size: .93rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: 2rem; }
+.site-footer h2 { color: var(--bg); font-size: 1.1rem; margin-bottom: .8rem; }
+.site-footer a { text-decoration: none; } .site-footer a:hover { text-decoration: underline; color: var(--butter); }
+.social { display: flex; gap: 1rem; margin-top: 1rem; }
+.copy { border-top: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); margin-top: 2.5rem; padding-top: 1.5rem; font-size: .85rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Mobile sticky buttons ==================== */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 76px; }
+  .sticky-cta { display: flex; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -1px 0 var(--line); }
+  .sticky-cta .btn-primary { flex: 1; }
+  .sticky-cta .btn-ghost { padding-inline: 1.1rem; }
+}
+
+/* ==================== Language switcher (header lang-switch and footer foot-lang) ==================== */
+.nav > .nav-menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; padding-left: .5rem; border-left: 2px dotted var(--line); font: 700 .85rem/1 var(--font-body); }
+.lang-switch a { display: grid; place-items: center; min-width: 2rem; min-height: 2rem; padding-inline: .3rem; border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--butter) 60%, transparent); }
+.lang-switch a:active { background: var(--butter); }
+.lang-switch a:focus-visible { outline-offset: 1px; border-radius: 999px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 800; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+/* Tablet widths: with the language switcher added, hide the secondary .opt links so the menu never wraps or squeezes the logo */
+@media (min-width: 761px) and (max-width: 940px) { .nav-menu .opt { display: none; } }
+/* Narrowest tablet widths: tighten the spacing a little more */
+@media (min-width: 761px) and (max-width: 860px) { .nav-menu .opt-sm { display: none; } .nav-menu { gap: .75rem; } .lang-switch { padding-left: 0; border-left: 0; } }
+@media (max-width: 760px) {
+  /* Mobile: the switcher sits left of the menu button; without JS it stays beside the logo and the menu wraps below */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .nav-toggle { order: 2; flex: none; }
+  /* Slightly tighter header spacing on phones so the logo never gets squeezed */
+  .nav { gap: .5rem; }
+  .nav-menu { order: 3; }
+}
+/* Very narrow phones (380px and below): the switcher moves to the top of the open menu */
+@media (max-width: 380px) {
+  .js .lang-switch { display: none; position: absolute; top: calc(72px + .6rem); left: var(--pad); }
+  .js .nav-menu { padding-top: 3rem; }
+  .js .nav-menu.open ~ .lang-switch { display: flex; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem .75rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline-color: var(--butter); }
+.foot-lang a[aria-current="page"] { color: var(--bg); font-weight: 800; text-decoration: underline; text-decoration-color: var(--butter); text-underline-offset: 4px; }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+</head>
+<body>
+
+<!-- ==================== Section: Header ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav wrap" aria-label="Main menu">
+    <a href="#hero" class="logo" aria-label="Wheat &amp; Days Bakery, back to top">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span><b>Wheat &amp; Days</b><small>Bakery</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-links" aria-label="Open menu"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#bake">This week</a></li>
+      <li><a href="#products">Shop</a></li>
+      <li><a href="#custom">Custom cakes</a></li>
+      <li class="opt-sm"><a href="#visit">Visit</a></li>
+      <li class="opt"><a href="#faq">FAQ</a></li>
+      <li><a href="#order" class="btn btn-primary">Order ahead</a></li>
+    </ul>
+    <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="en">EN</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en" aria-current="page">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </nav>
+</header>
+
+<main>
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Baked fresh every morning at eight</h1>
+      <p class="lead">Sourdough, butter croissants and seasonal cakes. Order online, pick up warm.</p>
+      <div class="hero-cta">
+        <a href="#order" class="btn btn-primary">Order ahead</a>
+        <a href="#bake" class="btn btn-ghost">See this week’s bread</a>
+      </div>
+      <p class="hero-note">Please order cakes and gift boxes <b>3 days ahead</b>. Closed Mondays.</p>
+    </div>
+    <div class="hero-art">
+      <div class="img img-hero sprinkles" role="img" aria-label="A layered cream cake with strawberry jam and a cherry on top, on a pistachio green background"></div>
+      <p class="tag"><b>This month only</b>Pistachio raspberry mousse</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: This week's bake ==================== -->
+<section class="bake scallop" id="bake">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">What’s baking this week</h2>
+      <p class="sec-lead">Every day brings a different lineup, so pick the right day for your favorite loaf.</p>
+    </div>
+    <!-- To edit the schedule: data-day is the weekday (0 = Sunday, 1 = Monday … 6 = Saturday). JS highlights today automatically -->
+    <div class="week-scroll reveal" role="region" aria-label="Weekly baking schedule, scrolls sideways" tabindex="0">
+      <ol class="week">
+        <li data-day="1" class="off"><h3>Mon</h3><ul><li>Closed, the starter gets a day off</li></ul></li>
+        <li data-day="2"><h3>Tue</h3><ul><li>Butter croissants</li><li>Country sourdough</li><li>Salted butter rolls</li></ul></li>
+        <li data-day="3"><h3>Wed</h3><ul><li>Honey oat loaf</li><li>Red wine walnut</li><li>Butter croissants</li></ul></li>
+        <li data-day="4"><h3>Thu</h3><ul><li>Pistachio swirls</li><li>Whole wheat walnut</li><li>Cinnamon rolls</li></ul></li>
+        <li data-day="5"><h3>Fri</h3><ul><li>Butter croissants</li><li>Country sourdough</li><li>Chocolate brioche</li></ul></li>
+        <li data-day="6"><h3>Sat</h3><ul><li>The full lineup</li><li>Strawberry danish</li></ul></li>
+        <li data-day="0"><h3>Sun</h3><ul><li>Honey oat loaf</li><li>Cinnamon rolls</li><li>Salted butter rolls</li></ul></li>
+      </ol>
+    </div>
+    <p class="bake-note">First batch at 8:00 a.m., second at 11:30 a.m. Favorites usually sell out by noon, so give us a call and we’ll set one aside.</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Shop ==================== -->
+<section class="products scallop" id="products">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">What are you taking home today?</h2>
+      <p class="sec-lead">Bread is first come, first served. Cakes and gift boxes are best ordered ahead.</p>
+    </div>
+    <div class="tabs js-only" role="tablist" aria-label="Product categories">
+      <button class="tab" role="tab" id="tab-bread" aria-controls="panel-bread" aria-selected="true">Bread</button>
+      <button class="tab" role="tab" id="tab-cake" aria-controls="panel-cake" aria-selected="false" tabindex="-1">Cakes</button>
+      <button class="tab" role="tab" id="tab-gift" aria-controls="panel-gift" aria-selected="false" tabindex="-1">Gift boxes</button>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-bread" aria-labelledby="tab-bread" tabindex="0">
+      <p class="panel-title nojs-only">Bread</p>
+      <ul class="grid">
+        <li class="item"><div class="img img-croissant t-butter" role="img" aria-label="A flaky golden croissant"></div><div class="item-body"><div class="item-head"><h3>Butter croissant</h3><span class="price">$3.75</span></div><p>Cultured French butter, folded into 27 crisp layers.</p><ul class="tags"><li class="tg-limit">Limited</li></ul></div></li>
+        <li class="item"><div class="img img-loaf t-cream" role="img" aria-label="A domed country loaf with scored crust"></div><div class="item-body"><div class="item-head"><h3>Country sourdough</h3><span class="price">$11</span></div><p>Cold-fermented for 48 hours. Crackly crust, chewy crumb.</p></div></li>
+        <li class="item"><div class="img img-loaf t-pist" role="img" aria-label="An oat-topped sandwich loaf"></div><div class="item-body"><div class="item-head"><h3>Honey oat loaf</h3><span class="price">$8</span></div><p>Wildflower honey and rolled oats. Made for toast.</p></div></li>
+        <li class="item"><div class="img img-croissant t-pist" role="img" aria-label="A pistachio swirl pastry on a green background"></div><div class="item-body"><div class="item-head"><h3>Pistachio swirl</h3><span class="price">$4.75</span></div><p>Sicilian pistachio cream rolled into laminated dough.</p><ul class="tags"><li class="tg-limit">Limited</li></ul></div></li>
+        <li class="item"><div class="img img-loaf t-butter" role="img" aria-label="A dark-crusted walnut loaf"></div><div class="item-body"><div class="item-head"><h3>Red wine walnut</h3><span class="price">$12</span></div><p>Raisins soaked overnight in red wine, plus toasted walnuts.</p></div></li>
+        <li class="item"><div class="img img-croissant t-cream" role="img" aria-label="A small salted butter roll"></div><div class="item-body"><div class="item-head"><h3>Salted butter roll</h3><span class="price">$3</span></div><p>Crisp, buttery base and a pinch of sea salt.</p></div></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-cake" aria-labelledby="tab-cake" tabindex="0">
+      <p class="panel-title nojs-only">Cakes</p>
+      <ul class="grid">
+        <li class="item"><div class="img img-cake t-butter" role="img" aria-label="A cream cake layered with strawberry jam"></div><div class="item-body"><div class="item-head"><h3>Strawberry cream cake, 6"</h3><span class="price">$48</span></div><p>Fresh strawberries and light whipped cream. Barely sweet.</p><ul class="tags"><li class="tg-pre">Order 3 days ahead</li></ul></div></li>
+        <li class="item"><div class="img img-cake cake-pist t-cream" role="img" aria-label="A pistachio green mousse cake topped with raspberries"></div><div class="item-body"><div class="item-head"><h3>Pistachio raspberry mousse, 6"</h3><span class="price">$58</span></div><p>Pistachio mousse around a tangy raspberry center.</p><ul class="tags"><li class="tg-limit">Limited</li><li class="tg-pre">Order 3 days ahead</li></ul></div></li>
+        <li class="item"><div class="img img-cake cake-choco t-pist" role="img" aria-label="A dark chocolate cake"></div><div class="item-body"><div class="item-head"><h3>70% chocolate cake, 6"</h3><span class="price">$54</span></div><p>Single-origin dark chocolate, smooth as a truffle.</p><ul class="tags"><li class="tg-pre">Order 3 days ahead</li></ul></div></li>
+        <li class="item"><div class="img img-cake cake-basque t-butter" role="img" aria-label="A Basque cheesecake with a caramelized top"></div><div class="item-body"><div class="item-head"><h3>Basque cheesecake, 6"</h3><span class="price">$44</span></div><p>Deeply caramelized outside, soft and creamy inside.</p></div></li>
+        <li class="item"><div class="img img-loaf t-cream" role="img" aria-label="A lemon pound cake with glaze"></div><div class="item-body"><div class="item-head"><h3>Lemon glazed loaf cake</h3><span class="price">$22</span></div><p>A whole loaf, ready for afternoon tea.</p></div></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-gift" aria-labelledby="tab-gift" tabindex="0">
+      <p class="panel-title nojs-only">Gift boxes</p>
+      <ul class="grid">
+        <li class="item"><div class="img img-box t-butter" role="img" aria-label="A cookie gift box tied with a red ribbon"></div><div class="item-body"><div class="item-head"><h3>Cookie gift box, 12 pieces</h3><span class="price">$28</span></div><p>Shortbread, cocoa sablés and two more house favorites.</p></div></li>
+        <li class="item"><div class="img img-box t-pist" role="img" aria-label="A pound cake gift box on a green background"></div><div class="item-body"><div class="item-head"><h3>Seasonal pound cake box</h3><span class="price">$42</span></div><p>Three seasonal flavors, sliced, with a handwritten card.</p><ul class="tags"><li class="tg-pre">Order 3 days ahead</li></ul></div></li>
+        <li class="item"><div class="img img-box t-cream sprinkles" role="img" aria-label="A gift box covered in colorful sprinkles"></div><div class="item-body"><div class="item-head"><h3>Baby shower box</h3><span class="price">$34</span></div><p>10% off orders of ten or more. We can add the baby’s name.</p><ul class="tags"><li class="tg-pre">Order 3 days ahead</li></ul></div></li>
+        <li class="item"><div class="img img-croissant t-butter sprinkles" role="img" aria-label="A basket of croissants and rolls"></div><div class="item-body"><div class="item-head"><h3>Weekend breakfast basket</h3><span class="price">$36</span></div><p>Croissants, rolls, a loaf and house jam. Feeds four.</p><ul class="tags"><li class="tg-limit">Limited</li></ul></div></li>
+      </ul>
+    </div>
+    <p class="prod-note">Prices include tax. Our lineup changes with the seasons, so what’s in the case may vary.</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Custom cakes ==================== -->
+<section class="custom scallop" id="custom">
+  <div class="wrap custom-grid">
+    <div class="reveal">
+      <div class="sec-head">
+        <h2 class="sec-title">Design your birthday cake</h2>
+        <p class="sec-lead">Pick a size and a flavor, then tell us what to write on top. Candles and a cake topper are on us.</p>
+      </div>
+      <ul class="sizes">
+        <li class="size"><span class="dish" style="--d: 52%" aria-hidden="true"></span><h3>4 inch</h3><p>Serves 2 to 3</p><span class="price">From $34</span></li>
+        <li class="size"><span class="dish" style="--d: 72%" aria-hidden="true"></span><h3>6 inch</h3><p>Serves 4 to 6</p><span class="price">From $48</span></li>
+        <li class="size"><span class="dish" style="--d: 92%" aria-hidden="true"></span><h3>8 inch</h3><p>Serves 8 to 10</p><span class="price">From $68</span></li>
+      </ul>
+      <div class="flavours">
+        <h3>Flavors</h3>
+        <ul class="chips">
+          <li>Strawberry cream</li><li>Pistachio raspberry</li><li>70% chocolate</li><li>Earl Grey honey</li><li>Mango passion fruit (summer)</li><li>Chestnut Mont Blanc (fall and winter)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="lead-time reveal">
+      <h3>How ordering works</h3>
+      <ol class="steps">
+        <li><span><b>7 days before</b>Send the order form, or message us a reference photo on WhatsApp.</span></li>
+        <li><span><b>3 days before</b>Confirm flavor and lettering, and pay a 50% deposit to hold your date.</span></li>
+        <li><span><b>Pickup day</b>Collect your cake in store, packed with an insulated bag and ice packs.</span></li>
+      </ol>
+      <a class="btn btn-primary" href="#order">Start your order</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Reviews ==================== -->
+<section class="reviews scallop" id="reviews">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">What the neighbors say</h2>
+    </div>
+    <!-- Sample content: replace with real reviews before going live -->
+    <div class="review-grid">
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>We ordered the strawberry cake for my daughter’s birthday. Not too sweet, and the whole family went back for seconds. They even made the lettering adorable.</blockquote>
+        <figcaption><b>Rachel W.</b><br>Neighbor for three years</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>Tuesday croissants are a non-negotiable for me. They shatter all over the table. The sourdough still toasts up beautifully two or three days later.</blockquote>
+        <figcaption><b>Marcus T.</b><br>Croissant regular</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>We ordered forty cookie boxes for our holiday party. Gorgeous packaging, right on time, and everyone asked where they came from.</blockquote>
+        <figcaption><b>Ivy L.</b><br>Office manager</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Visit us ==================== -->
+<section class="visit scallop" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">Visit the shop</h2>
+      <p class="sec-lead">We have four little seats inside if you’d like to stay for a coffee.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="card reveal">
+        <h3>Opening hours</h3>
+        <!-- If you change your hours, update the JSON-LD in the head as well -->
+        <div class="table-scroll">
+          <table class="hours" aria-label="Weekly opening hours">
+            <tbody>
+              <tr data-day="1"><th scope="row">Monday</th><td class="closed">Closed</td></tr>
+              <tr data-day="2"><th scope="row">Tuesday</th><td>8 a.m.–7 p.m.</td></tr>
+              <tr data-day="3"><th scope="row">Wednesday</th><td>8 a.m.–7 p.m.</td></tr>
+              <tr data-day="4"><th scope="row">Thursday</th><td>8 a.m.–7 p.m.</td></tr>
+              <tr data-day="5"><th scope="row">Friday</th><td>8 a.m.–7 p.m.</td></tr>
+              <tr data-day="6"><th scope="row">Saturday</th><td>8 a.m.–6 p.m.</td></tr>
+              <tr data-day="0"><th scope="row">Sunday</th><td>8 a.m.–6 p.m.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small-note">If we sell out early, we’ll post it in our Instagram stories.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Getting here</h3>
+        <p class="addr">214 Linden Avenue, Portland, OR 97214</p>
+        <p class="small-note" style="margin-top:0">Phone <a href="tel:+15550123456">(555) 012-3456</a></p>
+        <ul class="visit-list">
+          <li><b>Transit</b>Bus 12 to Linden &amp; 22nd, a one-minute walk</li>
+          <li><b>Bike</b>Racks right outside the front door</li>
+          <li><b>Parking</b>Free street parking on Linden Avenue</li>
+        </ul>
+        <div class="card-cta">
+          <a class="btn btn-primary" href="https://maps.google.com/?q=214+Linden+Avenue,+Portland,+OR+97214" target="_blank" rel="noopener">Open in Google Maps</a>
+          <a class="btn btn-ghost" href="tel:+15550123456">Give us a call</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: FAQ ==================== -->
+<section class="faq scallop" id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">Good to know</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary>How long will bread and cakes keep?</summary>
+        <p>Bread keeps for 2 days at room temperature. Slice and freeze anything extra, then toast straight from frozen. Cream cakes should be refrigerated and eaten within 24 hours; Basque cheesecake keeps 3 days in the fridge.</p>
+      </details>
+      <details>
+        <summary>Do you list allergens?</summary>
+        <p>Most of our products contain gluten, eggs, dairy and nuts, and everything is made in the same kitchen, so we can’t rule out cross-contact. Add a note to your order and we’ll walk you through the ingredients.</p>
+      </details>
+      <details>
+        <summary>Do you ship or deliver?</summary>
+        <p>Cookie and pound cake boxes ship nationwide, with free shipping on orders over $75. Cream cakes and mousses are pickup only to keep them perfect, but we can arrange local delivery within Portland.</p>
+      </details>
+      <details>
+        <summary>Can I change or cancel my order?</summary>
+        <p>You can reschedule or cancel for free up to 3 days before pickup. Inside 3 days we’ve already bought ingredients, so the deposit is non-refundable, but you can still move the date once.</p>
+      </details>
+      <details>
+        <summary>How do I pay?</summary>
+        <p>Once we receive your order, we’ll confirm by phone or message and send a payment link. In store we take cash, cards, Apple Pay and Google Pay.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Order ahead ==================== -->
+<section class="order scallop" id="order">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">Order ahead, pick up in store</h2>
+      <p class="sec-lead">Choose your cakes and gift boxes and we’ll fill in the order summary for you. We confirm every order within one business day.</p>
+    </div>
+    <div class="order-grid">
+      <div class="picker reveal">
+        <h3>Choose your treats</h3>
+        <!-- To edit items: data-name is the name shown in the summary, data-price is the unit price (numbers only) -->
+        <ul class="picks">
+          <li class="pick" data-name="Strawberry cream cake, 6 in" data-price="48"><div><b>Strawberry cream cake, 6"</b><span>$48</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="Remove one strawberry cream cake">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="Strawberry cream cake quantity"><button type="button" data-d="1" aria-label="Add one strawberry cream cake">+</button></div></li>
+          <li class="pick" data-name="Pistachio raspberry mousse, 6 in" data-price="58"><div><b>Pistachio raspberry mousse, 6"</b><span>$58</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="Remove one pistachio raspberry mousse">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="Pistachio raspberry mousse quantity"><button type="button" data-d="1" aria-label="Add one pistachio raspberry mousse">+</button></div></li>
+          <li class="pick" data-name="70% chocolate cake, 6 in" data-price="54"><div><b>70% chocolate cake, 6"</b><span>$54</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="Remove one chocolate cake">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="Chocolate cake quantity"><button type="button" data-d="1" aria-label="Add one chocolate cake">+</button></div></li>
+          <li class="pick" data-name="Basque cheesecake, 6 in" data-price="44"><div><b>Basque cheesecake, 6"</b><span>$44</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="Remove one Basque cheesecake">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="Basque cheesecake quantity"><button type="button" data-d="1" aria-label="Add one Basque cheesecake">+</button></div></li>
+          <li class="pick" data-name="Cookie gift box, 12 pieces" data-price="28"><div><b>Cookie gift box, 12 pieces</b><span>$28</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="Remove one cookie gift box">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="Cookie gift box quantity"><button type="button" data-d="1" aria-label="Add one cookie gift box">+</button></div></li>
+          <li class="pick" data-name="Seasonal pound cake box" data-price="42"><div><b>Seasonal pound cake box</b><span>$42</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="Remove one seasonal pound cake box">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="Seasonal pound cake box quantity"><button type="button" data-d="1" aria-label="Add one seasonal pound cake box">+</button></div></li>
+        </ul>
+        <p class="total js-only"><span>Estimated total</span><output id="total" for="f-summary" aria-live="polite">$0</output></p>
+        <p class="small-note js-only">Changing a quantity rewrites the order summary in the form. We’ll confirm the final price with you.</p>
+        <p class="small-note nojs-only">List the items and quantities you’d like in the “Order summary” field of the form.</p>
+        <div class="quick">
+          <a class="btn btn-ghost" href="tel:+15550123456">Call (555) 012-3456</a>
+          <!-- Messaging button: WhatsApp links use https://wa.me/ followed by your full number with country code (digits only).
+               You can swap in LINE (https://line.me/R/ti/p/@yourlineid), Messenger (https://m.me/yourpage)
+               or Instagram (https://ig.me/m/yourhandle) instead. Update the footer link too. -->
+          <a class="btn btn-ghost" href="https://wa.me/15550123456" target="_blank" rel="noopener">Order on WhatsApp</a>
+        </div>
+      </div>
+      <!-- This form uses Formspree (the free plan includes 50 submissions a month):
+           1. Sign up at https://formspree.io and create a new form
+           2. Copy the form ID from its endpoint URL (for example xyzabcd)
+           3. Replace your-form-id in the action below with your ID, and new orders will arrive by email -->
+      <form class="form reveal" id="order-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <h3>Pickup details</h3>
+        <div class="field"><label for="f-name">Name <span>*</span></label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-tel">Phone <span>*</span></label><input id="f-tel" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(555) 123-4567" required></div>
+        <div class="field"><label for="f-date">Pickup date <span>*</span></label><input id="f-date" name="pickup_date" type="date" required><small>Cakes and gift boxes need 3 days</small></div>
+        <div class="field"><label for="f-time">Pickup time <span>*</span></label>
+          <select id="f-time" name="pickup_time" required>
+            <option value="">Choose a time</option>
+            <option>Morning, 8–11 a.m.</option><option>Midday, 11 a.m.–2 p.m.</option><option>Afternoon, 2–5 p.m.</option><option>Evening, 5–7 p.m. (weekends until 6)</option>
+          </select></div>
+        <div class="field full"><label for="f-summary">Order summary <span>*</span></label><textarea id="f-summary" name="order_summary" required placeholder="For example: Strawberry cream cake, 6 in × 1"></textarea></div>
+        <input type="hidden" id="f-total" name="estimated_total" value="">
+        <div class="field full"><label for="f-note">Notes</label><textarea id="f-note" name="notes" placeholder="For example: write “Happy Birthday, Sam” on top, candles please, allergies…"></textarea></div>
+        <button class="btn btn-primary" type="submit">Send my order</button>
+        <small>Your order isn’t final until we confirm it and send payment details.</small>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer scallop">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>Wheat &amp; Days Bakery</h2>
+        <p>214 Linden Avenue, Portland, OR 97214<br>Phone <a href="tel:+15550123456">(555) 012-3456</a></p>
+        <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="https://wa.me/15550123456">WhatsApp</a></div>
+      </div>
+      <div>
+        <h2>Hours</h2>
+        <p>Tuesday to Friday 8 a.m.–7 p.m.<br>Saturday and Sunday 8 a.m.–6 p.m.<br>Closed Mondays</p>
+      </div>
+      <div>
+        <h2>Quick links</h2>
+        <p><a href="#bake">This week’s bake</a><br><a href="#custom">Custom cakes</a><br><a href="#order">Order ahead</a></p>
+      </div>
+    </div>
+    <p class="copy">© <span id="y"></span> Wheat &amp; Days Bakery</p>
+    <!-- Footer language links: same as the lang-switch in the header -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja">日本語</a></p>
+  </div>
+</footer>
+
+<!-- ==================== Section: Mobile sticky buttons ==================== -->
+<div class="sticky-cta">
+  <a href="#order" class="btn btn-primary">Order ahead</a>
+  <a href="tel:+15550123456" class="btn btn-ghost" aria-label="Call (555) 012-3456">Call</a>
+</div>
+
+<script>
+// Language and time zone settings (the only lines to change for another language)
+const T = { cur: '$', sum: 'Total', open: 'Close menu', closed: 'Open menu', tz: 'America/Los_Angeles', locale: 'en-US' };
+const $ = (s, el = document) => el.querySelector(s), $$ = (s, el = document) => [...el.querySelectorAll(s)];
+$('#y').textContent = new Date().getFullYear();
+
+// Header background on scroll
+const header = $('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// Hamburger menu
+const toggle = $('.nav-toggle'), menu = $('#menu-links');
+const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? T.open : T.closed); };
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+$$('a', menu).forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// Fade in on scroll
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+$$('.reveal').forEach(el => io.observe(el));
+
+// Product tabs (arrow keys, Home and End supported)
+const tabs = $$('[role="tab"]');
+const select = (t, focus = true) => {
+  tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+  if (focus) t.focus();
+};
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => select(t));
+  t.addEventListener('keydown', e => {
+    const k = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+    if (k !== undefined) { e.preventDefault(); select(tabs[(k + tabs.length) % tabs.length]); }
+  });
+});
+select(tabs[0], false);
+
+// Highlight today (baking schedule and opening hours)
+const now = new Date(new Date().toLocaleString('en-US', { timeZone: T.tz })), day = now.getDay();
+$$(`[data-day="${day}"]`).forEach(el => el.classList.add('today'));
+const todayCard = $(`.week li[data-day="${day}"]`), scroller = $('.week-scroll');
+if (todayCard && scroller.scrollWidth > scroller.clientWidth) scroller.scrollLeft = todayCard.offsetLeft - scroller.offsetLeft - 8;
+
+// Order builder: quantity steppers, running total, auto-filled order summary
+const picks = $$('.pick'), summary = $('#f-summary'), totalOut = $('#total'), totalField = $('#f-total');
+const money = n => T.cur + n.toLocaleString(T.locale);
+const calc = () => {
+  let total = 0; const lines = [];
+  picks.forEach(p => {
+    const input = $('input', p), q = Math.min(20, Math.max(0, parseInt(input.value, 10) || 0));
+    input.value = q; $('[data-d="-1"]', p).disabled = q === 0;
+    if (q) { total += q * p.dataset.price; lines.push(`${p.dataset.name} × ${q} (${money(q * p.dataset.price)})`); }
+  });
+  totalOut.textContent = money(total); totalField.value = total ? money(total) : '';
+  summary.value = lines.length ? `${lines.join('\n')}\n${T.sum} ${money(total)}` : '';
+};
+picks.forEach(p => {
+  $$('button', p).forEach(b => b.addEventListener('click', () => { const i = $('input', p); i.value = (+i.value || 0) + +b.dataset.d; calc(); }));
+  $('input', p).addEventListener('change', calc);
+});
+calc();
+
+// Earliest pickup date is 3 days from today
+const min = new Date(now); min.setDate(min.getDate() + 3);
+const pad = n => String(n).padStart(2, '0');
+$('#f-date').min = `${min.getFullYear()}-${pad(min.getMonth() + 1)}-${pad(min.getDate())}`;
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

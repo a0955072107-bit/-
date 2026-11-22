@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>沈墨 Mo Shen｜視覺設計與動態導演作品集</title>
+<meta name="description" content="沈墨 Mo Shen，台北視覺設計師與動態導演。為音樂祭、美術館、電影節與獨立品牌製作識別系統、片頭動畫與展覽影像。">
+<meta property="og:title" content="沈墨 Mo Shen｜視覺設計與動態導演">
+<meta property="og:description" content="識別系統、片頭動畫、展覽影像。把品牌變成會呼吸的畫面。">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#f1efe9">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Manrope:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script>
+  // 有 JavaScript 才啟用動畫的初始狀態；沒有 JS 時內容全部直接顯示
+  document.documentElement.classList.add('js');
+</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --paper: #f1efe9;          /* 米白紙色：淺色區塊的底色 */
+  --ink: #0f0f0e;            /* 墨黑：深色區塊的底色與主要文字 */
+  --brand: #ff3d1f;          /* 品牌主色：訊號紅，用於按鈕、強調色塊 */
+  --brand-ink: #0f0f0e;      /* 在 brand 色上的文字顏色（深色字，對比 AA） */
+  --brand-deep: #c22a0e;     /* 在米白底上當文字用的紅（對比 AA） */
+  --muted-light: #5a5850;    /* 淺色區塊的次要文字 */
+  --muted-dark: #a3a097;     /* 深色區塊的次要文字 */
+  --bg: var(--paper);        /* 目前區塊底色（各區塊會自動切換） */
+  --text: var(--ink);        /* 目前區塊文字顏色 */
+  --muted: var(--muted-light); /* 目前區塊次要文字 */
+  --brand-text: var(--brand-deep); /* 目前區塊當作文字的品牌色 */
+  --line: color-mix(in srgb, var(--text) 16%, transparent); /* 細線、邊框顏色 */
+  --field: color-mix(in srgb, var(--text) 6%, transparent); /* 輸入框底色 */
+  --shadow: color-mix(in srgb, var(--ink) 22%, transparent); /* 浮動卡片陰影 */
+  --radius: 14px;            /* 圖片與卡片圓角 */
+  --radius-btn: 999px;       /* 按鈕圓角（膠囊形） */
+  --font-display: "Syne", "Noto Sans TC", system-ui, sans-serif; /* 大標題字型：個性怪誕體 */
+  --font-heading: "Syne", "Noto Sans TC", system-ui, sans-serif; /* 區塊標題字型 */
+  --font-body: "Manrope", "Noto Sans TC", "PingFang TC", system-ui, sans-serif; /* 內文字型 */
+  --pad: clamp(1rem, 4.5vw, 3.5rem); /* 左右留白 */
+  --max: 1360px;             /* 內容最大寬度 */
+  --header-h: 4rem;          /* 頁首高度 */
+  /* ---------- 動畫設定 ---------- */
+  --motion-speed: .9s;       /* 基本動畫時長：數字越小越快，例如 .6s 俐落、1.2s 從容 */
+  --motion-ease: cubic-bezier(.16, 1, .3, 1); /* 動畫緩動曲線：預設為快進慢停 */
+  --motion-distance: 48px;   /* 漸入動畫的位移距離：0 代表只淡入 */
+  /* 藝術佔位圖用色（換成圖片後可刪除） */
+  --art-pale: #f4cbbf;       /* 淡珊瑚 */
+  --art-stone: #cfcabd;      /* 石灰 */
+  --art-grey: #8c897f;       /* 中灰 */
+  --art-coal: #2a2926;       /* 炭灰 */
+}
+
+/* 區塊色調：每個 section 用 tone-light／tone-dark／tone-accent 決定底色與文字色 */
+.tone-light { --bg: var(--paper); --text: var(--ink); --muted: var(--muted-light); --brand-text: var(--brand-deep); }
+.tone-dark { --bg: var(--ink); --text: var(--paper); --muted: var(--muted-dark); --brand-text: var(--brand); }
+.tone-accent { --bg: var(--brand); --text: var(--ink); --muted: var(--ink); --brand-text: var(--ink); }
+/* 線條與輸入框顏色要跟著區塊文字色重新計算 */
+.tone-light, .tone-dark, .tone-accent, .site-header { --line: color-mix(in srgb, var(--text) 16%, transparent); --field: color-mix(in srgb, var(--text) 6%, transparent); }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; overflow-x: clip; scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 1rem); }
+body { background: var(--paper); color: var(--ink); font: 400 1rem/1.7 var(--font-body); -webkit-font-smoothing: antialiased; overflow-x: clip; }
+a { color: inherit; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; line-height: 1.05; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip { position: absolute; left: -999px; top: 0; z-index: 120; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; }
+.skip:focus { left: 1rem; top: 1rem; }
+.wrap { width: min(100% - 2 * var(--pad), var(--max)); margin-inline: auto; }
+section, .site-footer { background: var(--bg); color: var(--text); position: relative; }
+
+/* ---------- 區塊底色轉場：JS 啟用後，固定在背後的色層會淡入淡出 ---------- */
+.tone-layer { display: none; position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+.tone-layer i { position: absolute; inset: 0; opacity: 0; transition: opacity calc(var(--motion-speed) * .8) linear; }
+.tone-layer .tl-light { background: var(--paper); opacity: 1; }
+.tone-layer .tl-dark { background: var(--ink); }
+.tone-layer .tl-accent { background: var(--brand); }
+html.tones .tone-layer { display: block; }
+html.tones section, html.tones .site-footer { background: transparent; }
+html.tones section.mq { background: var(--bg); } /* 跑馬燈色帶保持實色 */
+html.tones[data-tone="dark"] .tl-dark, html.tones[data-tone="accent"] .tl-accent { opacity: 1; }
+
+/* ---------- 按鈕與連結 ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 3.25rem; padding: .8rem 1.6rem;
+  border-radius: var(--radius-btn); border: 1.5px solid transparent; font: 700 1rem/1 var(--font-body); text-decoration: none; cursor: pointer;
+  transition: transform calc(var(--motion-speed) * .6) var(--motion-ease), scale .2s var(--motion-ease), box-shadow .3s var(--motion-ease), opacity .2s;
+}
+.btn-brand { background: var(--brand); color: var(--brand-ink); }
+.btn-brand:hover { box-shadow: 0 10px 28px color-mix(in srgb, var(--brand) 40%, transparent); }
+.btn-line { border-color: currentColor; color: var(--text); background: transparent; }
+.btn-line:hover { box-shadow: inset 0 0 0 1px currentColor; }
+.btn:active { scale: .96; }
+.btn:disabled, .btn[aria-disabled="true"] { opacity: .5; cursor: not-allowed; box-shadow: none; }
+.btn:focus-visible { outline-offset: 4px; border-radius: var(--radius-btn); }
+.btn .btn-label { display: inline-block; pointer-events: none; }
+/* 連結底線：滑過時從左到右畫出 */
+.u-link { text-decoration: none; background: none; position: relative; display: inline-block; }
+.u-link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -.08em; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform calc(var(--motion-speed) * .6) var(--motion-ease); }
+.u-link:hover::after, .u-link:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+.u-link:active { opacity: .7; }
+
+/* ---------- 頁首 ---------- */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 60; height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0 var(--pad); color: var(--text); }
+.site-header::before { content: ""; position: absolute; inset: 0; z-index: -1; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); opacity: 0; transition: opacity .35s linear; }
+.site-header.scrolled::before { opacity: 1; }
+html[data-tone="dark"] .site-header { --bg: var(--ink); --text: var(--paper); --muted: var(--muted-dark); }
+html[data-tone="accent"] .site-header { --bg: var(--brand); --text: var(--ink); --muted: var(--ink); }
+.logo { font: 800 1.15rem/1 var(--font-display); text-decoration: none; display: inline-flex; gap: .5rem; align-items: baseline; }
+.logo small { font: 500 .85rem/1 var(--font-body); color: var(--muted); }
+.logo:hover small { color: var(--text); }
+.logo:active { opacity: .7; }
+.menu { display: flex; gap: clamp(1rem, 2vw, 2rem); font-size: .95rem; font-weight: 500; }
+.menu a { padding: .3rem 0; }
+.h-actions { display: flex; align-items: center; gap: .6rem; }
+.h-actions .btn { min-height: 2.6rem; padding: .55rem 1.15rem; font-size: .92rem; }
+.burger { display: none; width: 2.75rem; height: 2.75rem; border-radius: 50%; border: 1.5px solid var(--line); background: transparent; color: inherit; cursor: pointer; place-items: center; }
+.burger span, .burger span::before { display: block; width: 18px; height: 2px; background: currentColor; transition: transform .3s var(--motion-ease); }
+.burger span::before { content: ""; transform: translateY(6px); }
+.burger span { transform: translateY(-3px); }
+.burger[aria-expanded="true"] span { transform: rotate(45deg); }
+.burger[aria-expanded="true"] span::before { transform: rotate(-90deg); }
+.burger:hover { border-color: currentColor; }
+.burger:active { scale: .94; }
+@media (max-width: 760px) {
+  .h-actions .btn { display: none; }
+  /* 沒有 JavaScript 時，選單換行顯示在 logo 下方；有 JS 才收進漢堡選單 */
+  html:not(.js) .site-header { position: sticky; top: 0; height: auto; flex-wrap: wrap; padding-block: .8rem; background: var(--paper); border-bottom: 1px solid var(--line); }
+  html:not(.js) .menu { order: 3; flex: 1 1 100%; flex-wrap: wrap; gap: .2rem 1.1rem; }
+  html:not(.js) .hero { padding-top: 2rem; }
+  .js .burger { display: grid; }
+  .js .menu {
+    position: absolute; inset: 100% 0 auto; flex-direction: column; gap: 0; padding: .5rem var(--pad) 1.5rem;
+    background: var(--bg); border-bottom: 1px solid var(--line); font: 700 1.6rem/1.2 var(--font-display);
+    transform: translateY(-.75rem); opacity: 0; visibility: hidden;
+    transition: transform .35s var(--motion-ease), opacity .3s linear, visibility .35s;
+  }
+  .js .menu a { display: block; padding: .5rem 0; }
+  .js .menu.open { transform: none; opacity: 1; visibility: visible; }
+}
+/* ---------- 語言切換（頁首 lang-switch 與頁尾 foot-lang） ---------- */
+.lang-switch { display: flex; align-items: center; flex: none; font: 500 .8rem/1 var(--font-body); letter-spacing: 0; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 9%, transparent); text-decoration: none; }
+.lang-switch a:active { opacity: .7; }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .35em; }
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin-top: 1rem; }
+.foot-lang a { display: inline-flex; align-items: center; min-height: 32px; color: var(--muted); text-decoration: none; transition: color .2s; }
+.foot-lang a:hover { color: var(--text); }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-underline-offset: .3em; }
+@media (max-width: 760px) {
+  /* 沒有 JS 時：語言切換和 logo 同一行，選單換到下一行 */
+  html:not(.js) .site-header > nav { order: 3; flex: 1 1 100%; }
+  html:not(.js) .h-actions { order: 2; }
+}
+
+/* ---------- 首屏 ---------- */
+.hero { min-height: 100svh; display: grid; align-items: end; padding: calc(var(--header-h) + 2rem) 0 clamp(2rem, 5vh, 3.5rem); overflow: hidden; isolation: isolate; }
+/* 沒有 Canvas 或減少動態時的備案背景：細點陣 */
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -2; background: radial-gradient(color-mix(in srgb, var(--text) 18%, transparent) 1px, transparent 1.6px) 0 0 / 22px 22px; mask-image: linear-gradient(to bottom, transparent, var(--ink) 40%); -webkit-mask-image: linear-gradient(to bottom, transparent, var(--ink) 40%); }
+html.canvas-on .hero::before { opacity: 0; }
+.hero-canvas { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; display: block; }
+.hero-name { font-family: var(--font-display); font-weight: 800; letter-spacing: -.045em; line-height: .86; display: flex; flex-direction: column; }
+.hn-zh { font: 900 clamp(1.4rem, 3.2vw, 2.6rem)/1.1 var(--font-body); letter-spacing: .02em; margin-bottom: .6rem; }
+.hn-lat { font-size: clamp(3.4rem, min(15.5vw, 27vh), 15rem); }
+.hn-lat .w { display: inline-block; white-space: nowrap; }
+.hn-lat .ch { display: inline-block; overflow: clip; padding: 0 .02em .14em; margin-bottom: -.14em; vertical-align: bottom; }
+.hn-lat .ch > span { display: inline-block; will-change: transform; }
+.hero-foot { display: grid; gap: 1.4rem; margin-top: clamp(1.5rem, 4vh, 2.6rem); padding-top: 1.4rem; border-top: 1px solid var(--line); }
+.hero-tag { font-size: clamp(1.1rem, 1.6vw, 1.35rem); font-weight: 500; max-width: 34ch; line-height: 1.5; text-wrap: pretty; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: .75rem; }
+.hero-meta { color: var(--muted); font-size: .92rem; }
+@media (min-width: 900px) {
+  .hero-foot { grid-template-columns: minmax(0, 1.2fr) auto minmax(0, .8fr); align-items: center; }
+  .hero-meta { text-align: right; }
+}
+
+/* ---------- 區塊共用 ---------- */
+.sec { padding: clamp(5rem, 12vw, 9rem) 0; }
+.sec-head { display: grid; gap: 1rem; margin-bottom: clamp(2.5rem, 6vw, 4.5rem); }
+.sec-title { font-size: clamp(2.6rem, 7.5vw, 6.5rem); font-weight: 800; letter-spacing: -.035em; line-height: .95; }
+.sec-head p { color: var(--muted); max-width: 46ch; font-size: 1.05rem; }
+@media (min-width: 900px) { .sec-head { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); align-items: end; } }
+
+/* ---------- 藝術佔位圖 ----------
+   換成照片：.art-1 { background: url(images/work-1.jpg) center/cover; }
+   其他 .art-x、.art-g1～.art-g7、.art-portrait 都可以用同樣方式替換 */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); background: var(--art-coal); }
+.art { position: absolute; inset: 0; background-color: var(--art-coal); }
+.art-1 { background: radial-gradient(circle at 68% 42%, var(--brand) 0 24%, transparent 24.4%), repeating-linear-gradient(90deg, color-mix(in srgb, var(--paper) 14%, transparent) 0 1px, transparent 1px 18px), var(--ink); }
+.art-2 { background: conic-gradient(from 200deg at 30% 70%, var(--art-pale), var(--paper) 30%, var(--art-stone) 55%, var(--art-pale)); }
+.art-2::after { content: ""; position: absolute; inset: 18% 22%; border-radius: 50%; border: 2px solid var(--ink); box-shadow: 0 0 0 26px color-mix(in srgb, var(--ink) 8%, transparent), 0 0 0 60px color-mix(in srgb, var(--ink) 5%, transparent); }
+.art-3 { background: linear-gradient(180deg, transparent 58%, var(--ink) 58% 62%, transparent 62%), repeating-radial-gradient(circle at 50% 120%, var(--art-stone) 0 14px, var(--paper) 14px 28px); }
+.art-4 { background: linear-gradient(115deg, var(--ink) 0 46%, var(--brand) 46% 54%, var(--art-coal) 54%); }
+.art-4::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, color-mix(in srgb, var(--paper) 10%, transparent) 0 2px, transparent 2px 6px); }
+.art-5 { background: radial-gradient(ellipse 60% 40% at 50% 50%, var(--paper) 0 30%, transparent 31%), repeating-conic-gradient(from 0deg at 50% 50%, var(--art-grey) 0 6deg, var(--art-stone) 6deg 12deg); }
+.art-g1 { background: radial-gradient(circle at 30% 30%, var(--brand), transparent 55%), radial-gradient(circle at 75% 70%, var(--art-pale), transparent 50%), var(--ink); }
+.art-g2 { background: repeating-linear-gradient(45deg, var(--paper) 0 10px, var(--ink) 10px 20px); }
+.art-g2::after { content: ""; position: absolute; inset: 25%; background: var(--brand); border-radius: 50% 50% 0 50%; }
+.art-g3 { background: linear-gradient(var(--art-coal) 0 0) 50% 50% / 2px 100% no-repeat, conic-gradient(from 90deg at 50% 50%, var(--art-stone) 0 25%, var(--paper) 0 50%, var(--art-grey) 0 75%, var(--art-pale) 0); }
+.art-g4 { background: radial-gradient(circle at 50% 50%, transparent 0 18%, var(--brand) 18.5% 20%, transparent 20.5% 34%, color-mix(in srgb, var(--paper) 60%, transparent) 34.5% 35.2%, transparent 35.7%), var(--ink); }
+.art-g5 { background: linear-gradient(180deg, var(--art-pale), var(--brand)); }
+.art-g5::after { content: ""; position: absolute; inset: auto 0 0; height: 38%; background: repeating-linear-gradient(90deg, var(--ink) 0 3px, transparent 3px 11px); }
+.art-g6 { background: repeating-radial-gradient(circle at 0 100%, var(--ink) 0 8px, var(--art-coal) 8px 16px); }
+.art-g6::after { content: ""; position: absolute; width: 34%; aspect-ratio: 1; right: 14%; top: 16%; border-radius: 50%; background: var(--paper); }
+.art-g7 { background: linear-gradient(90deg, var(--art-stone) 0 33%, var(--paper) 33% 66%, var(--art-grey) 66%), var(--paper); }
+.art-g7::after { content: ""; position: absolute; inset: 20% 10%; background: linear-gradient(0deg, var(--brand) 0 0) 0 100% / 100% 30% no-repeat; mix-blend-mode: multiply; }
+.art-portrait { background: radial-gradient(ellipse 34% 26% at 50% 34%, var(--art-stone) 0 98%, transparent), radial-gradient(ellipse 58% 44% at 50% 100%, var(--art-grey) 0 98%, transparent), linear-gradient(160deg, var(--art-coal), var(--ink)); }
+.art-portrait::after { content: ""; position: absolute; left: 12%; bottom: 10%; width: 22%; aspect-ratio: 1; border-radius: 50%; background: var(--brand); }
+
+/* ---------- 精選作品 ---------- */
+.work-list { border-top: 1px solid var(--line); }
+.work-row { display: grid; gap: 1.2rem; padding: clamp(1.8rem, 4vw, 3rem) 0; border-bottom: 1px solid var(--line); position: relative; }
+.work-no { font-weight: 700; color: var(--brand-text); font-variant-numeric: tabular-nums; }
+.work-txt h3 { font-size: clamp(1.9rem, 4.4vw, 3.8rem); font-weight: 800; letter-spacing: -.03em; transition: transform calc(var(--motion-speed) * .7) var(--motion-ease); }
+.work-meta { color: var(--muted); margin-top: .7rem; }
+.work-media { aspect-ratio: 16 / 10; }
+.work-media .art { inset: -2%; }
+@media (hover: hover) and (pointer: fine) { .work-row:hover .work-txt h3 { transform: translateX(.35em); } }
+@media (min-width: 900px) {
+  .work-row { grid-template-columns: 4.5rem minmax(0, 1.05fr) minmax(0, .95fr); align-items: start; gap: 2rem; }
+  .work-row:nth-child(even) .work-media { order: -1; grid-column: 2; }
+  .work-row:nth-child(even) .work-txt { grid-column: 3; }
+  .work-row:nth-child(even) .work-no { grid-column: 1; grid-row: 1; }
+}
+/* 跟著滑鼠移動的預覽卡（只在桌機出現） */
+.peek { position: fixed; left: 0; top: 0; z-index: 70; width: clamp(200px, 17vw, 280px); aspect-ratio: 4 / 5; pointer-events: none; display: none; }
+.peek-in { position: absolute; inset: 0; margin: -62.5% 0 0 2.5rem; border-radius: var(--radius); overflow: hidden; box-shadow: 0 24px 60px var(--shadow); }
+html.js .peek-in { opacity: 0; transform: scale(.6) rotate(-6deg); transition: opacity .3s linear, transform calc(var(--motion-speed) * .7) var(--motion-ease); }
+.peek.on .peek-in { opacity: 1; transform: none; }
+.peek-in .art { transition: opacity .25s linear; }
+@media (hover: hover) and (pointer: fine) { html.peek-on .peek { display: block; } }
+
+/* 圖片遮罩展開：JS 啟用時先遮住，捲進畫面時從左往右擦開 */
+html.js .wipe { clip-path: inset(0 100% 0 0 round var(--radius)); transition: clip-path calc(var(--motion-speed) * 1.5) var(--motion-ease); }
+html.js .wipe.in { clip-path: inset(0 0 0 0 round var(--radius)); }
+html.js .wipe .art { transform: scale(1.22); transition: transform calc(var(--motion-speed) * 2) var(--motion-ease); }
+html.js .wipe.in .art { transform: scale(1.02); }
+
+/* ---------- 跑馬燈 ---------- */
+.mq { padding: clamp(2.5rem, 6vw, 4.5rem) 0; overflow: hidden; }
+.mq-row { overflow: hidden; }
+.mq-row + .mq-row { margin-top: .4rem; }
+.mq-track { display: flex; flex-wrap: wrap; width: max-content; max-width: none; font: 800 clamp(2.6rem, 8vw, 7rem)/1.1 var(--font-display); letter-spacing: -.03em; }
+.mq-track li { padding-right: .6em; white-space: nowrap; }
+.mq-track li:nth-child(even) { color: transparent; -webkit-text-stroke: 1.5px var(--text); }
+html:not(.mq-live) .mq-track { width: auto; padding-inline: var(--pad); }
+html.mq-live .mq-track { flex-wrap: nowrap; will-change: transform; }
+
+/* ---------- 水平捲動畫廊 ---------- */
+.gal { padding: clamp(5rem, 12vw, 9rem) 0; }
+.gal-track { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); width: min(100% - 2 * var(--pad), var(--max)); margin-inline: auto; }
+.gal-card .img { aspect-ratio: 4 / 5; }
+.gal-card figcaption { display: flex; justify-content: space-between; gap: 1rem; margin-top: .8rem; }
+.gal-card figcaption span { color: var(--muted); }
+.gal-bar { display: none; }
+/* 啟用水平捲動：區塊拉長，內層黏在畫面上，用垂直捲動推動橫向移動 */
+html.hscroll .gal { height: 340vh; padding: 0; view-timeline: --gal block; }
+html.hscroll .gal-sticky { position: sticky; inset-block-start: 0; height: 100vh; height: 100svh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; container-type: inline-size; padding-top: var(--header-h); }
+html.hscroll .gal .sec-head { margin-bottom: clamp(1.5rem, 4vh, 3rem); width: min(100% - 2 * var(--pad), var(--max)); margin-inline: auto; }
+html.hscroll .gal-track { display: flex; width: max-content; margin: 0; padding: 0 var(--pad); gap: clamp(1rem, 2vw, 2rem); will-change: transform; }
+html.hscroll .gal-card { width: clamp(220px, min(30vw, 42vh), 420px); flex: none; }
+html.hscroll .gal-card:nth-child(odd) { transform: translateY(clamp(.5rem, 3vh, 2.5rem)); }
+html.hscroll .gal-bar { display: block; width: min(100% - 2 * var(--pad), var(--max)); margin: clamp(1.5rem, 4vh, 3rem) auto 0; height: 2px; background: var(--line); overflow: hidden; }
+html.hscroll .gal-bar span { display: block; height: 100%; background: var(--brand); transform: scaleX(0); transform-origin: left; }
+
+/* ---------- 關於 ---------- */
+.about-grid { display: grid; gap: clamp(2rem, 5vw, 5rem); }
+.portrait { aspect-ratio: 4 / 5; max-width: 520px; }
+.portrait .art { inset: -10% 0; }
+.about-txt h2 { margin-bottom: 1.6rem; }
+.about-txt p { max-width: 58ch; color: var(--muted); }
+.about-txt p + p { margin-top: 1rem; }
+.about-txt .lead { color: var(--text); font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.55; font-weight: 500; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2.4rem; padding-top: 1.6rem; border-top: 1px solid var(--line); }
+.stats b { display: block; font-variant-numeric: tabular-nums; font: 800 clamp(2rem, 4.5vw, 3.4rem)/1 var(--font-display); letter-spacing: -.03em; }
+.stats span { color: var(--muted); font-size: .92rem; }
+@media (min-width: 900px) { .about-grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: center; } }
+
+/* ---------- 服務 ---------- */
+.svc-list { border-top: 1px solid var(--line); }
+.svc { display: grid; gap: .8rem; padding: clamp(1.6rem, 3.5vw, 2.6rem) 0; border-bottom: 1px solid var(--line); }
+.svc h3 { font-size: clamp(1.6rem, 3.4vw, 2.6rem); font-weight: 800; letter-spacing: -.02em; }
+.svc p { color: var(--muted); max-width: 52ch; }
+.svc .price { font-weight: 700; color: var(--brand-text); }
+@media (min-width: 900px) { .svc { grid-template-columns: 4.5rem minmax(0, 1.1fr) minmax(0, 1fr) 10rem; align-items: baseline; gap: 2rem; } .svc .price { text-align: right; } }
+.svc-no { font-weight: 700; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* ---------- 流程 ---------- */
+.steps { display: grid; gap: 2rem; position: relative; padding-top: 2.4rem; }
+.steps::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--brand); transform-origin: left; }
+html.js .steps::before { transform: scaleX(0); transition: transform calc(var(--motion-speed) * 2.4) var(--motion-ease); }
+html.js .steps.in::before { transform: scaleX(1); }
+.step b { display: block; font: 800 clamp(2.6rem, 5vw, 4rem)/1 var(--font-display); color: var(--brand-text); margin-bottom: 1rem; }
+.step h3 { font-size: 1.5rem; margin-bottom: .6rem; }
+.step p { color: var(--muted); }
+@media (min-width: 760px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* ---------- 獎項與報導 ---------- */
+.table-wrap { overflow-x: auto; border-top: 1px solid var(--line); }
+.awards { width: 100%; min-width: 560px; border-collapse: collapse; }
+.awards th, .awards td { text-align: left; padding: 1.15rem 1rem 1.15rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.awards th { font-size: .9rem; font-weight: 500; color: var(--muted); }
+.awards td:first-child { font-weight: 700; font-variant-numeric: tabular-nums; width: 6rem; }
+.awards td:nth-child(2) { font: 700 clamp(1.1rem, 1.8vw, 1.45rem)/1.3 var(--font-heading); }
+.awards td:last-child { color: var(--muted); }
+.awards tbody tr { transition: transform .4s var(--motion-ease); }
+@media (hover: hover) { .awards tbody tr:hover { transform: translateX(.5rem); } }
+
+/* ---------- 聯絡 ---------- */
+.contact-grid { display: grid; gap: clamp(2.5rem, 6vw, 5rem); }
+.mail-big { font: 800 clamp(1.1rem, 5.2vw, 2.2rem)/1.15 var(--font-display); letter-spacing: -.03em; overflow-wrap: anywhere; }
+.contact-info p { color: var(--muted); margin-top: 1.4rem; max-width: 44ch; }
+.c-links { display: grid; gap: .2rem; margin-top: 2rem; }
+.c-links a { display: flex; justify-content: space-between; gap: 1rem; padding: .9rem 0; border-bottom: 1px solid var(--line); text-decoration: none; transition: transform .4s var(--motion-ease); }
+.c-links a span:last-child { color: var(--muted); }
+.c-links a:hover { transform: translateX(.4rem); }
+.c-links a:active { opacity: .7; }
+.form { display: grid; gap: 1.1rem; }
+.field { display: grid; gap: .4rem; min-width: 0; }
+.field label { font-size: .92rem; color: var(--muted); }
+.field input, .field select, .field textarea { font: inherit; color: var(--text); background: var(--field); border: 1px solid var(--line); border-radius: 10px; padding: .85rem 1rem; width: 100%; }
+.field select option { color: var(--ink); background: var(--paper); }
+.field textarea { min-height: 9rem; resize: vertical; }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; border-color: transparent; }
+.form-note { color: var(--muted); font-size: .88rem; }
+@media (min-width: 640px) { .form { grid-template-columns: repeat(2, minmax(0, 1fr)); } .form .full { grid-column: 1 / -1; } }
+@media (min-width: 1000px) { .contact-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+
+/* ---------- 頁尾 ---------- */
+.site-footer { padding: 4rem 0 6rem; border-top: 1px solid var(--line); }
+.foot { display: grid; gap: 2rem; }
+.foot h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: .6rem; }
+.foot p { color: var(--muted); }
+.foot p a { color: var(--text); }
+.social { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+.copy { margin-top: 3rem; color: var(--muted); font-size: .88rem; }
+@media (min-width: 900px) { .foot { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) auto; } .site-footer { padding-bottom: 4rem; } }
+
+/* ---------- 手機固定按鈕 ---------- */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 55; padding: .65rem var(--pad) calc(.65rem + env(safe-area-inset-bottom)); }
+.sticky-cta .btn { width: 100%; box-shadow: 0 8px 24px var(--shadow); }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+@media (max-width: 760px) { .hero { padding-bottom: 5.5rem; } }
+
+/* ---------- 捲動漸入 ---------- */
+html.js .rv { opacity: 0; transform: translate3d(0, var(--motion-distance), 0); transition: opacity var(--motion-speed) var(--motion-ease), transform calc(var(--motion-speed) * 1.2) var(--motion-ease); }
+html.js .rv.in { opacity: 1; transform: none; }
+/* 標題遮罩上升 */
+html.js .sec-title.rv { opacity: 1; clip-path: inset(0 0 100% 0); transform: translate3d(0, .35em, 0); transition: clip-path calc(var(--motion-speed) * 1.2) var(--motion-ease), transform calc(var(--motion-speed) * 1.2) var(--motion-ease); }
+html.js .sec-title.rv.in { clip-path: inset(-.1em -.1em -.2em -.1em); transform: none; }
+
+/* ---------- 捲動驅動動畫：瀏覽器支援時，直接跟著捲動位置播放 ---------- */
+@supports (animation-timeline: view()) {
+  html.js .wipe { animation: wipe linear both; animation-timeline: view(); animation-range: entry 5% cover 42%; }
+  html.js .wipe .art { animation: settle linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
+  html.js .portrait .art { animation: drift linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
+  html.js .steps::before { animation: grow linear both; animation-timeline: view(); animation-range: entry 40% cover 55%; }
+  html.hscroll .gal-track { animation: gal-x linear both; animation-timeline: --gal; animation-range: contain 0% contain 100%; }
+  html.hscroll .gal-bar span { animation: grow linear both; animation-timeline: --gal; animation-range: contain 0% contain 100%; }
+  html.js .hero-name { animation: lift linear both; animation-timeline: view(); animation-range: exit 0% exit 100%; }
+}
+@keyframes wipe { from { clip-path: inset(0 100% 0 0 round var(--radius)); } to { clip-path: inset(0 0 0 0 round var(--radius)); } }
+@keyframes settle { from { transform: scale(1.25) translate3d(0, -3%, 0); } to { transform: scale(1.02) translate3d(0, 3%, 0); } }
+@keyframes drift { from { transform: translate3d(0, -8%, 0); } to { transform: translate3d(0, 8%, 0); } }
+@keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes gal-x { to { transform: translate3d(calc(-100% + 100cqw), 0, 0); } }
+@keyframes lift { to { transform: translate3d(0, -14%, 0); opacity: .25; } }
+
+/* ---------- 減少動態：關掉所有動畫，內容直接呈現 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html.js .rv, html.js .sec-title.rv, html.js .wipe { opacity: 1; transform: none; clip-path: none; }
+  html.js .wipe .art { transform: none; }
+  html.js .steps::before { transform: none; }
+  .peek { display: none !important; }
+}
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "沈墨 Mo Shen",
+  "alternateName": "Mo Shen",
+  "jobTitle": "視覺設計師與動態導演",
+  "description": "台北視覺設計師與動態導演，提供品牌識別、動態設計、片頭動畫與展覽影像。",
+  "url": "https://example.com/",
+  "email": "mailto:studio@moshen.studio",
+  "telephone": "+886-2-1234-5678",
+  "address": { "@type": "PostalAddress", "streetAddress": "赤峰街 28 號 3 樓", "addressLocality": "中山區", "addressRegion": "台北市", "addressCountry": "TW" },
+  "knowsAbout": ["品牌識別", "動態設計", "片頭動畫", "展覽影像", "字體排印", "藝術指導"],
+  "contactPoint": { "@type": "ContactPoint", "contactType": "合作洽談", "email": "studio@moshen.studio", "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "19:00" } },
+  "sameAs": ["https://www.instagram.com/your-id", "https://vimeo.com/your-id", "https://www.behance.net/your-id"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<!-- 區塊底色轉場用的固定色層（JS 控制，可不用改） -->
+<div class="tone-layer" aria-hidden="true"><i class="tl-light"></i><i class="tl-dark"></i><i class="tl-accent"></i></div>
+
+<!-- ==================== 區塊：頁首 ==================== -->
+<header class="site-header">
+  <a class="logo" href="#top" aria-label="沈墨 Mo Shen 回到頂端">沈墨<small>Mo Shen</small></a>
+  <nav aria-label="主選單">
+    <ul class="menu" id="menu">
+      <li><a class="u-link" href="#work">作品</a></li>
+      <li><a class="u-link" href="#lab">實驗室</a></li>
+      <li><a class="u-link" href="#about">關於</a></li>
+      <li><a class="u-link" href="#services">服務</a></li>
+      <li><a class="u-link" href="#process">流程</a></li>
+      <li><a class="u-link" href="#awards">獎項</a></li>
+      <li><a class="u-link" href="#contact">聯絡</a></li>
+    </ul>
+  </nav>
+  <div class="h-actions">
+    <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="zh-Hant">繁</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+    <a class="btn btn-brand magnetic" href="#contact"><span class="btn-label">聊聊合作</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="開啟選單"><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<!-- ==================== 區塊：首屏 ==================== -->
+<section class="hero tone-light" id="top" data-tone="light">
+  <canvas class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <h1 class="hero-name"><span class="hn-zh">沈墨</span><span class="hn-lat" data-split>Mo Shen</span></h1>
+    <div class="hero-foot">
+      <p class="hero-tag">視覺設計與動態導演。把品牌變成會呼吸的畫面。</p>
+      <div class="hero-ctas">
+        <a class="btn btn-brand magnetic" href="#work"><span class="btn-label">看精選作品</span></a>
+        <a class="btn btn-line magnetic" href="#contact"><span class="btn-label">聊聊合作</span></a>
+      </div>
+      <p class="hero-meta">台北工作室，2027 年春季檔期開放預約</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：精選作品 ==================== -->
+<section class="sec tone-light" id="work" data-tone="light">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title rv">精選作品</h2>
+      <p class="rv">近兩年的品牌、片頭與展覽案子。每一件都從一個畫面開始想，再讓它動起來。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <ol class="work-list">
+      <li class="work-row" data-art="1">
+        <span class="work-no">01</span>
+        <div class="work-txt"><h3>潮聲音樂祭 2026</h3><p class="work-meta">主視覺、片頭動畫、舞台影像，2026</p></div>
+        <div class="img work-media wipe"><div class="art art-1" role="img" aria-label="潮聲音樂祭主視覺示意：墨黑底上的紅色圓形與細直線"></div></div>
+      </li>
+      <li class="work-row" data-art="2">
+        <span class="work-no">02</span>
+        <div class="work-txt"><h3>光年美術館「慢速宇宙」</h3><p class="work-meta">展覽識別、投影影像，2026</p></div>
+        <div class="img work-media wipe"><div class="art art-2" role="img" aria-label="慢速宇宙展覽影像示意：淡珊瑚色漸層與同心圓軌道"></div></div>
+      </li>
+      <li class="work-row" data-art="3">
+        <span class="work-no">03</span>
+        <div class="work-txt"><h3>霧島茶業品牌重塑</h3><p class="work-meta">識別系統、包裝、品牌影片，2025</p></div>
+        <div class="img work-media wipe"><div class="art art-3" role="img" aria-label="霧島茶業包裝示意：石灰色的層疊山形紋"></div></div>
+      </li>
+      <li class="work-row" data-art="4">
+        <span class="work-no">04</span>
+        <div class="work-txt"><h3>北線影展片頭</h3><p class="work-meta">片頭設計、預告剪輯，2025</p></div>
+        <div class="img work-media wipe"><div class="art art-4" role="img" aria-label="北線影展片頭示意：斜切的紅色光帶與掃描線"></div></div>
+      </li>
+      <li class="work-row" data-art="5">
+        <span class="work-no">05</span>
+        <div class="work-txt"><h3>Kinetic Type 字體實驗</h3><p class="work-meta">個人計畫、可變字體動畫，2024</p></div>
+        <div class="img work-media wipe"><div class="art art-5" role="img" aria-label="字體實驗示意：放射狀灰階條紋中央的橢圓"></div></div>
+      </li>
+    </ol>
+  </div>
+  <div class="peek" aria-hidden="true"><div class="peek-in"><div class="art art-1"></div></div></div>
+</section>
+
+<!-- ==================== 區塊：擅長領域跑馬燈 ==================== -->
+<section class="mq tone-accent" id="capabilities" data-tone="accent">
+  <h2 class="sr-only">擅長領域與合作對象</h2>
+  <div class="mq-row" data-dir="1">
+    <ul class="mq-track">
+      <li>品牌識別</li><li>動態設計</li><li>片頭動畫</li><li>展覽影像</li><li>字體排印</li><li>藝術指導</li>
+    </ul>
+  </div>
+  <div class="mq-row" data-dir="-1">
+    <ul class="mq-track">
+      <li>音樂祭</li><li>美術館</li><li>影展</li><li>獨立品牌</li><li>出版社</li><li>科技新創</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== 區塊：動態實驗室（水平捲動畫廊） ==================== -->
+<section class="gal tone-dark" id="lab" data-tone="dark">
+  <div class="gal-sticky">
+    <div class="sec-head wrap">
+      <h2 class="sec-title rv">動態實驗室</h2>
+      <p class="rv">每週一個小練習，測試新的節奏、材質與轉場。很多正式案子的點子都從這裡長出來。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="gal-track">
+      <figure class="gal-card"><div class="img"><div class="art art-g1" role="img" aria-label="粒子潮汐：紅色與淡珊瑚色的光暈"></div></div><figcaption><b>粒子潮汐</b><span>No. 41</span></figcaption></figure>
+      <figure class="gal-card"><div class="img"><div class="art art-g2" role="img" aria-label="斜紋與紅色水滴形"></div></div><figcaption><b>斜紋節拍</b><span>No. 38</span></figcaption></figure>
+      <figure class="gal-card"><div class="img"><div class="art art-g3" role="img" aria-label="四分色塊與中央細線"></div></div><figcaption><b>四象限轉場</b><span>No. 35</span></figcaption></figure>
+      <figure class="gal-card"><div class="img"><div class="art art-g4" role="img" aria-label="黑底上的紅色細圓環"></div></div><figcaption><b>軌道</b><span>No. 31</span></figcaption></figure>
+      <figure class="gal-card"><div class="img"><div class="art art-g5" role="img" aria-label="珊瑚到紅的漸層與黑色條碼紋"></div></div><figcaption><b>落日條碼</b><span>No. 27</span></figcaption></figure>
+      <figure class="gal-card"><div class="img"><div class="art art-g6" role="img" aria-label="深色同心圓與米白圓點"></div></div><figcaption><b>月相</b><span>No. 22</span></figcaption></figure>
+      <figure class="gal-card"><div class="img"><div class="art art-g7" role="img" aria-label="三段灰階直條與紅色色帶"></div></div><figcaption><b>三聯畫</b><span>No. 18</span></figcaption></figure>
+    </div>
+    <div class="gal-bar" aria-hidden="true"><span></span></div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：關於 ==================== -->
+<section class="sec tone-light" id="about" data-tone="light">
+  <div class="wrap about-grid">
+    <div class="img portrait rv"><div class="art art-portrait" role="img" aria-label="沈墨的形象照"></div></div>
+    <div class="about-txt">
+      <h2 class="sec-title rv">關於沈墨</h2>
+      <p class="lead rv">我相信好的動態不是特效，而是節奏。一個字落下的速度，就能決定品牌說話的語氣。</p>
+      <p class="rv">在廣告製作公司擔任動態設計師六年後，2020 年成立個人工作室。現在和攝影師、聲音設計師、工程師組成彈性小隊，從概念、分鏡到最後一格輸出都親自把關。</p>
+      <p class="rv">也在大學兼任動態設計課程，喜歡收集舊招牌字體和夜市燈箱。</p>
+      <!-- 範例內容：上線前請換成真實資料 -->
+      <div class="stats rv">
+        <div><b>11 年</b><span>動態設計經驗</span></div>
+        <div><b>140+</b><span>完成作品</span></div>
+        <div><b>9 座</b><span>設計獎項</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：服務 ==================== -->
+<section class="sec tone-dark" id="services" data-tone="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title rv">合作項目</h2>
+      <p class="rv">價格皆為起價，實際報價依片長、交付格式與時程調整。</p>
+    </div>
+    <ol class="svc-list">
+      <li class="svc rv"><span class="svc-no">01</span><h3>品牌識別與視覺系統</h3><p>標誌、字體、色彩與動態規範，讓品牌在螢幕上也有一致的個性。</p><span class="price">NT$ 120,000 起</span></li>
+      <li class="svc rv"><span class="svc-no">02</span><h3>動態設計與片頭</h3><p>影展片頭、節目包裝、產品發表影片，從分鏡到 4K 輸出。</p><span class="price">NT$ 80,000 起</span></li>
+      <li class="svc rv"><span class="svc-no">03</span><h3>展覽與互動影像</h3><p>投影、LED 牆與感應互動，和策展團隊一起規劃觀眾的動線。</p><span class="price">NT$ 150,000 起</span></li>
+      <li class="svc rv"><span class="svc-no">04</span><h3>藝術指導</h3><p>為你的團隊訂定視覺方向，審稿、帶工作坊，按月計費。</p><span class="price">NT$ 45,000 起／月</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== 區塊：合作流程 ==================== -->
+<section class="sec tone-light" id="process" data-tone="light">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title rv">合作流程</h2>
+      <p class="rv">一般片頭案約六到八週，每個階段都有明確的產出，你隨時知道進度。</p>
+    </div>
+    <ol class="steps rv">
+      <li class="step"><b>01</b><h3>對話</h3><p>聊目標、受眾與播放情境，確認預算與時程。第一次通話免費。</p></li>
+      <li class="step"><b>02</b><h3>概念</h3><p>提出兩到三個方向，附情緒板與關鍵畫面，選定後才往下走。</p></li>
+      <li class="step"><b>03</b><h3>製作</h3><p>分鏡、動態測試、配樂整合，每週一次線上看片。</p></li>
+      <li class="step"><b>04</b><h3>交付</h3><p>輸出各平台規格與原始檔，附上使用規範與一次免費微調。</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== 區塊：獎項與報導 ==================== -->
+<section class="sec tone-light" id="awards" data-tone="light">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title rv">獎項與報導</h2>
+      <p class="rv">感謝每一位願意冒險的客戶，這些肯定屬於整個團隊。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="table-wrap rv">
+      <table class="awards">
+        <thead><tr><th scope="col">年份</th><th scope="col">獎項與媒體</th><th scope="col">作品</th></tr></thead>
+        <tbody>
+          <tr><td>2026</td><td>亞洲動態影像獎　金獎</td><td>潮聲音樂祭 2026 片頭</td></tr>
+          <tr><td>2026</td><td>《設計日常》雜誌專訪</td><td>「節奏就是語氣」</td></tr>
+          <tr><td>2025</td><td>金格設計獎　品牌識別類入圍</td><td>霧島茶業品牌重塑</td></tr>
+          <tr><td>2025</td><td>城市字體雙年展　入選</td><td>Kinetic Type 字體實驗</td></tr>
+          <tr><td>2024</td><td>北線影展　年度最佳片頭</td><td>北線影展片頭</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：聯絡 ==================== -->
+<section class="sec tone-dark" id="contact" data-tone="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title rv">有個畫面想動起來？</h2>
+      <p class="rv">簡單描述你的案子，我會在兩個工作天內回覆。</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info rv">
+        <a class="mail-big u-link" href="mailto:studio@moshen.studio">studio@moshen.studio</a>
+        <p>週一到週五 10:00–19:00 回覆訊息。也歡迎來赤峰街的工作室喝杯茶，請先預約。</p>
+        <div class="c-links">
+          <a href="tel:02-1234-5678"><span>電話</span><span>02-1234-5678</span></a>
+          <a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener"><span>LINE</span><span>@yourlineid</span></a>
+          <a href="https://maps.google.com/?q=台北市中山區赤峰街28號" target="_blank" rel="noopener"><span>工作室地圖</span><span>台北市中山區</span></a>
+          <a href="https://vimeo.com/your-id" target="_blank" rel="noopener"><span>Vimeo</span><span>/your-id</span></a>
+        </div>
+      </div>
+      <!--
+        表單使用 Formspree（免費方案每月 50 筆）：
+        1. 到 https://formspree.io 註冊並建立新表單
+        2. 把下方 action 裡的 your-form-id 換成你拿到的表單 ID
+        3. 第一次送出時，Formspree 會寄信請你確認信箱
+      -->
+      <form class="form rv" action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="field"><label for="f-name">姓名</label><input id="f-name" name="姓名" autocomplete="name" required></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="f-type">專案類型</label>
+          <select id="f-type" name="專案類型"><option>品牌識別</option><option>動態設計與片頭</option><option>展覽與互動影像</option><option>藝術指導</option><option>其他</option></select></div>
+        <div class="field"><label for="f-budget">預算</label>
+          <select id="f-budget" name="預算"><option>NT$ 10 萬以下</option><option>NT$ 10 至 30 萬</option><option>NT$ 30 至 60 萬</option><option>NT$ 60 萬以上</option><option>還不確定</option></select></div>
+        <div class="field full"><label for="f-msg">案子說明</label><textarea id="f-msg" name="說明" placeholder="品牌、用途、上線日期，有參考影片也可以貼上" required></textarea></div>
+        <div class="full"><button class="btn btn-brand magnetic" type="submit"><span class="btn-label">送出</span></button></div>
+        <p class="form-note full">資料只用於回覆這次的詢問，不會轉給第三方。</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<footer class="site-footer tone-dark" data-tone="dark">
+  <div class="wrap">
+    <div class="foot">
+      <div><h2>沈墨 Mo Shen</h2><p>視覺設計與動態導演</p><p>台北市中山區赤峰街 28 號 3 樓</p></div>
+      <div><p>電話：<a class="u-link" href="tel:02-1234-5678">02-1234-5678</a></p><p>Email：<a class="u-link" href="mailto:studio@moshen.studio">studio@moshen.studio</a></p><p>工作時間：週一至週五 10:00–19:00</p></div>
+      <ul class="social">
+        <li><a class="u-link" href="#">Instagram</a></li><li><a class="u-link" href="#">Vimeo</a></li><li><a class="u-link" href="#">Behance</a></li><li><a class="u-link" href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+    <!-- 頁尾語言切換：和頁首的 lang-switch 同一組連結 -->
+    <nav class="foot-lang" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
+    <p class="copy">© <span id="y"></span> 沈墨 Mo Shen</p>
+  </div>
+</footer>
+
+<!-- ==================== 區塊：手機固定按鈕 ==================== -->
+<div class="sticky-cta"><a class="btn btn-brand" href="#contact">聊聊合作</a></div>
+
+<script>
+(function () {
+  var root = document.documentElement, $ = function (s, c) { return (c || document).querySelector(s); }, $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var css = getComputedStyle(root);
+  var SPEED = parseFloat(css.getPropertyValue('--motion-speed')) * 1000 || 900;
+  var EASE = css.getPropertyValue('--motion-ease').trim() || 'ease-out';
+  var hasIO = 'IntersectionObserver' in window;
+  function onView(els, cb, opts) {
+    if (!hasIO) { els.forEach(function (el) { cb(el, true); }); return; }
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { cb(e.target, e.isIntersecting, io); }); }, opts);
+    els.forEach(function (el) { io.observe(el); });
+  }
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // 頁首：捲動後出現背景；漢堡選單
+  var header = $('.site-header'), burger = $('.burger'), menu = document.getElementById('menu');
+  function onScroll() { header.classList.toggle('scrolled', scrollY > 24 || menu.classList.contains('open')); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  function setMenu(open) { menu.classList.toggle('open', open); burger.setAttribute('aria-expanded', open); burger.setAttribute('aria-label', open ? '關閉選單' : '開啟選單'); onScroll(); }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  $$('a', menu).forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // 首屏大字拆成字母（螢幕閱讀器讀取完整名字）
+  var nameEl = $('[data-split]'), nameTxt = nameEl.textContent;
+  nameEl.innerHTML = '<span class="sr-only">' + nameTxt + '</span><span aria-hidden="true">' + nameTxt.split(' ').map(function (w) {
+    return '<span class="w">' + w.split('').map(function (c) { return '<span class="ch"><span>' + c + '</span></span>'; }).join('') + '</span>';
+  }).join(' ') + '</span>';
+
+  // 捲動漸入、遮罩展開
+  var revealEls = $$('.rv, .wipe');
+  if (reduce) revealEls.forEach(function (el) { el.classList.add('in'); });
+  else {
+    // 觀察外層容器（被 clip-path 遮住的元素本身面積為 0，觀察不到）
+    var groups = new Map();
+    revealEls.forEach(function (el) { var p = el.parentNode; if (!groups.has(p)) groups.set(p, []); groups.get(p).push(el); });
+    onView(Array.from(groups.keys()), function (p, vis, io) {
+      if (!vis) return;
+      groups.get(p).forEach(function (el, i) { el.style.transitionDelay = i * 90 + 'ms'; el.classList.add('in'); });
+      if (io) io.unobserve(p);
+    }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
+  }
+
+  if (reduce) return; // 減少動態：以下動畫全部略過，內容已完整呈現
+
+  // 1. 開場：字母依序組合，接著標語與按鈕浮現（Web Animations API）
+  var letters = $$('.ch > span', nameEl);
+  letters.forEach(function (s, i) {
+    s.animate([{ transform: 'translate3d(0,110%,0) rotate(14deg)', opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: SPEED * 1.3, delay: 150 + i * 70, easing: EASE, fill: 'backwards' });
+  });
+  var after = 150 + letters.length * 70 + SPEED * .5;
+  $$('.hn-zh, .hero-tag, .hero-ctas, .hero-meta').forEach(function (el, i) {
+    el.animate([{ transform: 'translate3d(0,24px,0)', opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: SPEED, delay: (el.classList.contains('hn-zh') ? 80 : after + i * 110), easing: EASE, fill: 'backwards' });
+  });
+
+  // 2. 首屏 Canvas 流場線條：跟著游標輕微偏移，離開畫面就暫停
+  var hero = $('.hero'), cv = $('.hero-canvas'), ctx = cv.getContext && cv.getContext('2d');
+  if (ctx) {
+    root.classList.add('canvas-on');
+    var hs = getComputedStyle(hero), INK = hs.color, HOT = hs.getPropertyValue('--brand').trim();
+    var W, H, P = [], t = 0, mx = -1e4, my = -1e4, running = false, raf = 0;
+    var spawn = function (p) { p = p || {}; p.x = Math.random() * W; p.y = Math.random() * H; p.l = 80 + Math.random() * 180; p.h = Math.random() < .07; return p; };
+    var size = function () {
+      var dpr = Math.min(devicePixelRatio || 1, 2); W = cv.clientWidth; H = cv.clientHeight;
+      cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      P = []; for (var n = W < 760 ? 240 : 700; n--;) P.push(spawn());
+    };
+    var frame = function () {
+      t += .003;
+      ctx.globalCompositeOperation = 'destination-out'; ctx.globalAlpha = .06; ctx.fillRect(0, 0, W, H);
+      ctx.globalCompositeOperation = 'source-over'; ctx.lineWidth = 1;
+      var ink = new Path2D(), hot = new Path2D();
+      P.forEach(function (p) {
+        var a = (Math.sin(p.x * .0019 + t) + Math.cos(p.y * .0023 - t * 1.4)) * Math.PI, dx = p.x - mx, dy = p.y - my, d = dx * dx + dy * dy;
+        if (d < 32000) a += (1 - d / 32000) * 2.2;
+        var path = p.h ? hot : ink, nx = p.x + Math.cos(a) * 1.3, ny = p.y + Math.sin(a) * 1.3;
+        path.moveTo(p.x, p.y); path.lineTo(nx, ny); p.x = nx; p.y = ny;
+        if (--p.l < 0 || nx < 0 || ny < 0 || nx > W || ny > H) spawn(p);
+      });
+      ctx.globalAlpha = .32; ctx.strokeStyle = INK; ctx.stroke(ink);
+      ctx.globalAlpha = .9; ctx.strokeStyle = HOT; ctx.stroke(hot);
+      raf = running ? requestAnimationFrame(frame) : 0;
+    };
+    var play = function (on) { running = on && !document.hidden; if (running && !raf) raf = requestAnimationFrame(frame); };
+    size(); addEventListener('resize', size);
+    hero.addEventListener('pointermove', function (e) { var r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; });
+    hero.addEventListener('pointerleave', function () { mx = my = -1e4; });
+    var heroVis = true;
+    onView([hero], function (el, vis) { heroVis = vis; play(vis); });
+    document.addEventListener('visibilitychange', function () { play(heroVis); });
+  }
+
+  // 3. 區塊進入畫面中線時切換背景色
+  if (hasIO) {
+    root.classList.add('tones'); root.dataset.tone = 'light';
+    onView($$('[data-tone]'), function (el, vis) { if (vis) root.dataset.tone = el.dataset.tone; }, { rootMargin: '-59% 0px -40% 0px' });
+  }
+
+  // 4. 作品列：滑過時預覽卡以緩動跟隨游標
+  var peek = $('.peek');
+  if (fine && peek) {
+    root.classList.add('peek-on');
+    var art = $('.art', peek), px = 0, py = 0, tx = 0, ty = 0, on = false, pr = 0;
+    var follow = function () {
+      px += (tx - px) * .13; py += (ty - py) * .13;
+      var tilt = Math.max(-12, Math.min(12, (tx - px) * .08));
+      peek.style.transform = 'translate3d(' + px + 'px,' + py + 'px,0) rotate(' + tilt + 'deg)';
+      pr = (on || Math.abs(tx - px) + Math.abs(ty - py) > .5) ? requestAnimationFrame(follow) : 0;
+    };
+    addEventListener('pointermove', function (e) { tx = e.clientX; ty = e.clientY; }, { passive: true });
+    $$('.work-row').forEach(function (row) {
+      row.addEventListener('pointerenter', function (e) {
+        art.className = 'art art-' + row.dataset.art; tx = e.clientX; ty = e.clientY;
+        if (!on && !peek.classList.contains('on')) { px = tx; py = ty; }
+        on = true; peek.classList.add('on'); if (!pr) pr = requestAnimationFrame(follow);
+      });
+      row.addEventListener('pointerleave', function () { on = false; peek.classList.remove('on'); });
+    });
+  }
+
+  // 5. 水平捲動畫廊：支援 CSS 捲動時間軸就交給 CSS，否則用 rAF 計算
+  var gal = $('.gal'), track = $('.gal-track'), bar = $('.gal-bar span');
+  root.classList.add('hscroll');
+  if (!(window.CSS && CSS.supports('animation-timeline: view()'))) {
+    var gt = 0;
+    var galFrame = function () {
+      gt = 0; var r = gal.getBoundingClientRect(), p = Math.max(0, Math.min(1, -r.top / (r.height - innerHeight)));
+      track.style.transform = 'translate3d(' + (-p * (track.scrollWidth - track.parentNode.clientWidth)) + 'px,0,0)';
+      bar.style.transform = 'scaleX(' + p + ')';
+    };
+    addEventListener('scroll', function () { if (!gt) gt = requestAnimationFrame(galFrame); }, { passive: true }); galFrame();
+  }
+
+  // 6. 跑馬燈：基本速度加上捲動速度（有上限），離開畫面暫停
+  var rows = $$('.mq-row').map(function (row) {
+    var tr = $('.mq-track', row);
+    $$('li', tr).forEach(function (li) { var c = li.cloneNode(true); c.setAttribute('aria-hidden', 'true'); tr.appendChild(c); });
+    return { tr: tr, dir: +row.dataset.dir || 1, x: 0, w: 0 };
+  });
+  root.classList.add('mq-live');
+  var measure = function () { rows.forEach(function (r) { r.w = r.tr.scrollWidth / 2; }); };
+  measure(); addEventListener('resize', measure); if (document.fonts) document.fonts.ready.then(measure);
+  var lastY = scrollY, vel = 0, last = 0, mqRun = false, mqRaf = 0;
+  var marquee = function (now) {
+    var dt = Math.min(.05, (now - (last || now)) / 1000), y = scrollY; last = now;
+    vel += (Math.min(Math.abs(y - lastY), 90) - vel) * .12; lastY = y;
+    var speed = 60 * (1 + Math.min(vel * .35, 9));
+    rows.forEach(function (r) {
+      r.x -= speed * dt * r.dir;
+      if (r.x <= -r.w) r.x += r.w; if (r.x > 0) r.x -= r.w;
+      r.tr.style.transform = 'translate3d(' + r.x + 'px,0,0)';
+    });
+    mqRaf = mqRun ? requestAnimationFrame(marquee) : 0;
+  };
+  onView([$('.mq')], function (el, vis) { mqRun = vis; last = 0; lastY = scrollY; if (vis && !mqRaf) mqRaf = requestAnimationFrame(marquee); });
+
+  // 7. 磁吸按鈕：游標靠近時被輕輕吸過去
+  if (fine) $$('.magnetic').forEach(function (b) {
+    b.addEventListener('pointermove', function (e) {
+      var r = b.getBoundingClientRect();
+      b.style.transform = 'translate3d(' + (e.clientX - r.left - r.width / 2) * .3 + 'px,' + (e.clientY - r.top - r.height / 2) * .45 + 'px,0)';
+    });
+    b.addEventListener('pointerleave', function () { b.style.transform = ''; });
+  });
+})();
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

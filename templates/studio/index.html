@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumen Studio｜台北獨立設計工作室：品牌識別、網站與產品設計</title>
+<meta name="description" content="Lumen Studio 是位於台北的獨立設計工作室，由設計師與工程師組成，專注品牌識別、網站設計開發、產品介面與藝術指導。">
+<meta property="og:title" content="Lumen Studio｜設計，從安靜開始">
+<meta property="og:description" content="台北獨立設計工作室，為重視細節的品牌打造安靜卻有力量的視覺語言。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141412" media="(prefers-color-scheme: dark)">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+TC:wght@300;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #b0522d;          /* 品牌主色：赭紅，用於重點色、按鈕 */
+  --brand-ink: #ffffff;      /* 在 brand 色上的文字顏色（對比 AA） */
+  --bg: #f4f1ea;             /* 網頁底色：米白紙張 */
+  --surface: #ebe6db;        /* 次要區塊底色（服務區） */
+  --text: #1c1b19;           /* 主要文字顏色，也是聯絡區與頁尾的底色 */
+  --muted: #6a655b;          /* 次要文字顏色 */
+  --line: color-mix(in srgb, var(--text) 14%, transparent); /* 細線、邊框顏色 */
+  --radius: 2px;             /* 圓角大小（編輯風格建議極小圓角） */
+  --font-heading: "Cormorant Garamond", "Noto Serif TC", serif; /* 英文標題與數字字型 */
+  --font-heading-tc: "Noto Serif TC", "Cormorant Garamond", serif; /* 中文標題字型 */
+  --font-body: "Inter", "PingFang TC", "Noto Sans TC", system-ui, sans-serif; /* 內文字型 */
+  --pad: clamp(1.25rem, 5vw, 5rem); /* 左右留白 */
+  --ease: cubic-bezier(.2, .7, .1, 1); /* 動畫緩動曲線 */
+  --header-h: 4.5rem;        /* 頁首高度（手機選單從這裡展開） */
+  /* 作品藝術佔位圖用色（換成照片後可刪除） */
+  --art-1: #e9b48f;          /* 森栖茶室：蜜桃色月亮 */
+  --art-2: #2d3a35;          /* 森栖茶室：松綠 */
+  --art-3: #11201b;          /* 森栖茶室：深林綠 */
+  --art-4: #1c1b19;          /* 旅行誌、音樂平台：墨黑 */
+  --art-5: #b0522d;          /* 旅行誌、音樂平台：赭紅夕陽 */
+  --art-6: #d9b99a;          /* 旅行誌：沙色天空 */
+  --art-7: #cfc7b6;          /* 織 Weave：亞麻直紋 */
+  --art-8: #e7dfcf;          /* 織 Weave：奶油底色 */
+  --art-9: #bfb39b;          /* 織 Weave：卡其漸層 */
+  --art-10: #3a2f4a;         /* 音樂平台：夜紫 */
+}
+/* 深色模式：跟隨使用者系統設定自動切換 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand: #e08a5f;        /* 深色模式品牌色：較亮的赭橘 */
+    --brand-ink: #141412;    /* 深色模式 brand 色上的文字 */
+    --bg: #141412;           /* 深色底色 */
+    --surface: #1d1c19;      /* 深色次要區塊底色 */
+    --text: #ece7dc;         /* 深色模式主要文字 */
+    --muted: #a39d93;        /* 深色模式次要文字 */
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; scroll-padding-top: var(--header-h); }
+body { background: var(--bg); color: var(--text); font: 300 1rem/1.75 var(--font-body); -webkit-font-smoothing: antialiased; overflow-x: clip; }
+/* 細緻的紙張顆粒 */
+body::before {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 100; opacity: .05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+a { color: inherit; text-decoration: none; }
+a:active { opacity: .7; }
+ul { list-style: none; }
+h1, h2, h3, .big-link { overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+.skip { position: absolute; left: -999px; top: 0; z-index: 120; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; }
+.skip:focus { left: 1rem; }
+
+/* ---------- 按鈕 ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .7rem 1.5rem;
+  border: 1px solid currentColor; border-radius: 999px; font: 400 .95rem/1.2 var(--font-body); color: inherit; background: none; cursor: pointer;
+  transition: background-color .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease), transform .3s var(--ease);
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(1px) scale(.98); opacity: 1; }
+.btn-brand { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.btn-brand:hover { background: color-mix(in srgb, var(--brand) 85%, var(--text)); }
+
+/* ==================== 頁首 ==================== */
+.site-header {
+  position: fixed; inset: 0 0 auto; z-index: 50;
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  min-height: var(--header-h); padding: 0 var(--pad);
+  border-bottom: 1px solid transparent;
+  transition: background-color .5s var(--ease), border-color .5s var(--ease);
+}
+.site-header.scrolled {
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-color: var(--line);
+}
+.logo { font: italic 500 1.5rem/1 var(--font-heading); }
+.logo span { color: var(--brand); }
+.menu { display: flex; gap: clamp(1rem, 3vw, 2.5rem); font-size: .92rem; }
+.menu a { position: relative; padding-block: .35rem; }
+.menu a::after {
+  content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: currentColor;
+  transform: scaleX(0); transform-origin: right; transition: transform .5s var(--ease);
+}
+.menu a:hover::after, .menu a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+.burger { display: none; width: 44px; height: 44px; background: none; border: 1px solid var(--line); border-radius: 50%; color: inherit; cursor: pointer; }
+.burger:active { transform: scale(.94); }
+.burger span, .burger span::before, .burger span::after { display: block; width: 18px; height: 1px; background: currentColor; margin: auto; position: relative; transition: transform .35s var(--ease), background-color .35s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* 沒有 JavaScript 時，選單直接換行顯示在 logo 下方；有 JS 才收進漢堡選單 */
+  html:not(.js) .site-header { position: sticky; top: 0; flex-wrap: wrap; padding-block: 1rem; background: var(--bg); border-color: var(--line); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .25rem 1.25rem; }
+  html:not(.js) .hero { padding-top: 3rem; }
+  .js .burger { display: block; }
+  .js .menu {
+    position: absolute; inset: 100% 0 auto; flex-direction: column; gap: 0;
+    background: var(--bg); padding: .5rem var(--pad) 1.5rem; border-bottom: 1px solid var(--line);
+    transform: translateY(-.75rem); opacity: 0; visibility: hidden;
+    transition: transform .4s var(--ease), opacity .4s var(--ease), visibility .4s;
+  }
+  .js .menu.open { transform: none; opacity: 1; visibility: visible; }
+  .js .menu a { padding: 1rem 0; border-bottom: 1px solid var(--line); font: 400 1.25rem/1.3 var(--font-heading-tc); }
+  .js .menu a::after { display: none; }
+}
+
+/* ==================== Hero ==================== */
+.hero {
+  min-height: 100svh; display: grid; align-content: end; overflow: clip; position: relative; isolation: isolate;
+  padding: 8rem var(--pad) clamp(3rem, 8vh, 6rem);
+}
+.hero h1 { font: 300 clamp(3.2rem, 11vw, 10.5rem)/.95 var(--font-heading); letter-spacing: -.035em; margin-bottom: 3rem; }
+.hero h1 .line { display: block; overflow: hidden; padding-bottom: .06em; }
+.hero h1 .line > span { display: inline-block; transform: translateY(105%); animation: rise 1.4s var(--ease) forwards; }
+.hero h1 .line:nth-child(2) > span { animation-delay: .12s; }
+.hero h1 .line:nth-child(3) > span { animation-delay: .24s; }
+@keyframes rise { to { transform: none; } }
+.hero-foot {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: end;
+  border-top: 1px solid var(--line); padding-top: 1.75rem;
+  opacity: 0; animation: fade 1.2s .8s var(--ease) forwards;
+}
+.hero-foot p { max-width: 34rem; font: 300 1.05rem/1.85 var(--font-heading-tc); color: var(--muted); }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 1rem 1.75rem; }
+.scroll-cue { font-size: .85rem; color: var(--muted); display: flex; align-items: center; gap: .75rem; }
+.scroll-cue i { display: block; width: 1px; height: 3rem; background: var(--line); position: relative; overflow: hidden; }
+.scroll-cue i::after { content: ""; position: absolute; inset: 0; background: var(--text); animation: drip 2.2s var(--ease) infinite; }
+.scroll-cue:hover i::after, .scroll-cue:focus-visible i::after { animation-play-state: paused; }
+@keyframes drip { from { transform: translateY(-100%); } to { transform: translateY(100%); } }
+@keyframes fade { to { opacity: 1; } }
+.orb {
+  position: absolute; right: -10vw; top: 10vh; width: min(60vw, 46rem); aspect-ratio: 1; border-radius: 50%; z-index: -1;
+  background: radial-gradient(circle at 35% 35%, color-mix(in srgb, var(--brand) 38%, transparent), transparent 62%);
+  filter: blur(40px); animation: float 14s ease-in-out infinite alternate;
+}
+@keyframes float { to { transform: translate(-4vw, 6vh) scale(1.08); } }
+@media (max-width: 560px) { .hero-foot { grid-template-columns: minmax(0, 1fr); } .hero-actions { justify-content: flex-start; } .scroll-cue { display: none; } }
+
+/* ==================== 通用區塊 ==================== */
+main { counter-reset: sec; }
+section { padding: clamp(5rem, 14vh, 10rem) var(--pad); }
+.sec-head { display: grid; grid-template-columns: minmax(8rem, 1fr) minmax(0, 3fr); gap: 2rem; margin-bottom: clamp(3rem, 8vh, 5rem); }
+/* 區塊編號由 CSS 自動產生，刪掉區塊後會自動重新編號 */
+.sec-head::before { counter-increment: sec; content: "(" counter(sec, decimal-leading-zero) ")"; font: italic 400 1.1rem var(--font-heading); color: var(--muted); }
+.sec-title { font: 300 clamp(2.2rem, 5.5vw, 4.5rem)/1.12 var(--font-heading-tc); letter-spacing: -.02em; }
+@media (max-width: 760px) { .sec-head { grid-template-columns: minmax(0, 1fr); gap: .75rem; } }
+.js .reveal { opacity: 0; transform: translateY(2.5rem); transition: opacity 1.1s var(--ease), transform 1.1s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+
+/* ==================== 關於 ==================== */
+.about-body { display: grid; grid-template-columns: minmax(8rem, 1fr) minmax(0, 3fr); gap: 2rem; }
+.about-body > div { grid-column: 2; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 5vw, 5rem); }
+.lead { font: 300 clamp(1.25rem, 2.2vw, 1.65rem)/1.7 var(--font-heading-tc); }
+.about-body p + p { margin-top: 1.25rem; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); margin-top: clamp(4rem, 10vh, 7rem); }
+.stat { padding: 2rem 0 0; min-width: 0; }
+.stat + .stat { padding-left: clamp(1rem, 3vw, 3rem); border-left: 1px solid var(--line); }
+.stat b { display: block; font: 300 clamp(2.8rem, 7vw, 5.5rem)/1 var(--font-heading); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.stat span { font-size: .88rem; color: var(--muted); }
+@media (max-width: 760px) {
+  .about-body, .about-body > div { grid-template-columns: minmax(0, 1fr); }
+  .about-body > div { grid-column: 1; }
+}
+
+/* ==================== 服務 ==================== */
+.services { background: var(--surface); }
+.svc { border-top: 1px solid var(--line); counter-reset: svc; }
+.svc li {
+  display: grid; grid-template-columns: minmax(8rem, 1fr) minmax(0, 2fr) minmax(0, 1fr); gap: 2rem; align-items: baseline;
+  padding: clamp(1.75rem, 4vh, 2.75rem) 0; border-bottom: 1px solid var(--line);
+}
+.svc li::before { counter-increment: svc; content: counter(svc, lower-roman) "."; font: italic 1.1rem var(--font-heading); color: var(--muted); }
+.svc li > * { transition: transform .6s var(--ease), color .4s; }
+.svc li:hover > * { transform: translateX(1.25rem); }
+.svc li:hover h3 { color: var(--brand); }
+.svc h3 { font: 300 clamp(1.7rem, 3.6vw, 3rem)/1.15 var(--font-heading-tc); }
+.svc p { color: var(--muted); font-size: .95rem; }
+@media (max-width: 760px) { .svc li { grid-template-columns: minmax(0, 1fr); gap: .5rem; } .svc li:hover > * { transform: none; } }
+
+/* ==================== 作品 ==================== */
+.work-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 2rem); }
+.card { grid-column: span 6; min-width: 0; }
+.card:nth-child(1) { grid-column: 1 / span 7; }
+.card:nth-child(2) { grid-column: 9 / span 4; margin-top: 6rem; }
+.card:nth-child(3) { grid-column: 2 / span 4; }
+.card:nth-child(4) { grid-column: 7 / span 6; margin-top: 4rem; }
+.art { aspect-ratio: 4 / 5; overflow: hidden; border-radius: var(--radius); position: relative; }
+.card:nth-child(1) .art, .card:nth-child(4) .art { aspect-ratio: 4 / 3; }
+.art > .img { position: absolute; inset: 0; transition: transform 1.4s var(--ease); }
+.card:hover .art > .img { transform: scale(1.05); }
+/* ---------- 藝術佔位圖：全部用 CSS 繪製 ---------- */
+/* 換成照片：.img-forest { background: url(images/forest.jpg) center/cover; } */
+.img-forest { background: radial-gradient(circle at 30% 70%, var(--art-1) 0 18%, transparent 19%), linear-gradient(160deg, var(--art-2), var(--art-3)); }
+/* 換成照片：.img-horizon { background: url(images/horizon.jpg) center/cover; } */
+.img-horizon { background: linear-gradient(transparent 55%, var(--art-4) 55% 56%, transparent 56%), radial-gradient(ellipse at 50% 120%, var(--art-5), var(--art-6) 70%); }
+/* 換成照片：.img-weave { background: url(images/weave.jpg) center/cover; } */
+.img-weave { background: repeating-linear-gradient(90deg, var(--art-7) 0 2px, transparent 2px 22px), linear-gradient(var(--art-8), var(--art-9)); }
+/* 換成照片：.img-nocturne { background: url(images/nocturne.jpg) center/cover; } */
+.img-nocturne { background: conic-gradient(from 200deg at 70% 40%, var(--art-4), var(--art-10), var(--art-5), var(--art-4)); }
+.card figcaption { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .25rem 1rem; padding-top: 1rem; }
+.card h3 { font: 400 1.3rem/1.4 var(--font-heading-tc); }
+.card small { font-size: .85rem; color: var(--muted); }
+@media (max-width: 760px) { .card, .card:nth-child(n) { grid-column: 1 / -1; margin-top: 0; } }
+
+/* ==================== 客戶回饋 ==================== */
+.quote { text-align: center; }
+.quote blockquote { font: 300 clamp(1.6rem, 3.8vw, 3.1rem)/1.5 var(--font-heading-tc); max-width: 24ch; margin-inline: auto; letter-spacing: -.01em; text-wrap: balance; }
+.quote blockquote::before { content: "\201C"; display: block; font: 400 1.8em/.6 var(--font-heading); color: var(--brand); margin-bottom: .2em; }
+.quote figcaption { margin-top: 2rem; font-size: .9rem; color: var(--muted); }
+
+/* ==================== 聯絡 ==================== */
+.contact { background: var(--text); color: var(--bg); text-align: center; padding-block: clamp(7rem, 18vh, 12rem); }
+.contact .intro { max-width: 34rem; margin-inline: auto; font: 300 1.1rem/1.85 var(--font-heading-tc); color: color-mix(in srgb, var(--bg) 72%, transparent); }
+.big-link {
+  display: inline-block; margin-top: 2rem; position: relative; max-width: 100%;
+  font: 300 clamp(2.6rem, 9vw, 8rem)/1.05 var(--font-heading); letter-spacing: -.035em;
+}
+.big-link::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -.1em; height: 2px; background: var(--brand);
+  transform: scaleX(.15); transition: transform .9s var(--ease);
+}
+.big-link:hover::after, .big-link:focus-visible::after { transform: scaleX(1); }
+.contact-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: 3rem; }
+.contact .btn:not(.btn-brand) { border-color: color-mix(in srgb, var(--bg) 40%, transparent); }
+.contact .btn:not(.btn-brand):hover { border-color: var(--bg); background: color-mix(in srgb, var(--bg) 8%, transparent); }
+.form { max-width: 44rem; margin: clamp(4rem, 10vh, 6rem) auto 0; text-align: left; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; padding-top: 2.5rem; border-top: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); }
+.form .full { grid-column: 1 / -1; }
+.field { display: grid; gap: .4rem; min-width: 0; }
+.field label { font-size: .88rem; color: color-mix(in srgb, var(--bg) 75%, transparent); }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 48px; font: 300 1rem/1.5 var(--font-body); color: var(--bg); background: transparent;
+  border: 0; border-bottom: 1px solid color-mix(in srgb, var(--bg) 35%, transparent); border-radius: 0; padding: .6rem 0;
+  transition: border-color .3s var(--ease);
+}
+.field select option { color: var(--text); background: var(--bg); }
+.field textarea { min-height: 7rem; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { box-shadow: 0 2px 0 0 var(--brand); }
+.form .btn { justify-self: start; }
+.form-note { font-size: .85rem; color: color-mix(in srgb, var(--bg) 60%, transparent); }
+@media (max-width: 640px) { .form { grid-template-columns: minmax(0, 1fr); } .form .btn { justify-self: stretch; } }
+
+/* ==================== 頁尾 ==================== */
+.site-footer { background: var(--text); color: color-mix(in srgb, var(--bg) 62%, transparent); padding: 3rem var(--pad) 2rem; font-size: .9rem; border-top: 1px solid color-mix(in srgb, var(--bg) 12%, transparent); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) repeat(2, minmax(0, 1fr)); gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid color-mix(in srgb, var(--bg) 12%, transparent); }
+.site-footer .logo { color: var(--bg); display: inline-block; margin-bottom: .75rem; }
+.site-footer h2 { font: 500 1rem/1.4 var(--font-heading-tc); color: var(--bg); margin-bottom: .5rem; }
+.site-footer a:hover { color: var(--bg); }
+.site-footer address { font-style: normal; }
+.social { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1rem; }
+.social a { border-bottom: 1px solid color-mix(in srgb, var(--bg) 25%, transparent); }
+.copy { padding-top: 1.5rem; font-size: .85rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } .site-footer { padding-bottom: 6.5rem; } }
+
+/* ---------- 手機底部固定按鈕 ---------- */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 45; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid var(--line); }
+.sticky-cta .btn { width: 100%; }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- 減少動態 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .hero h1 .line > span, .hero-foot, .js .reveal { transform: none; opacity: 1; }
+}
+/* ==================== 語言切換 ==================== */
+/* 頁首的語言切換：字小、低調；目前的語言用粗體加底線標示（不只靠顏色） */
+.menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .6rem; border-left: 1px solid var(--line); font: 400 .8rem/1 var(--font-body); }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: var(--muted); border-radius: var(--radius); text-decoration: none; text-underline-offset: .4em; text-decoration-thickness: 1px; transition: color .25s, background-color .25s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 7%, transparent); }
+.lang-switch a:active { opacity: .7; }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 0; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 600; text-decoration-line: underline; }
+@media (max-width: 760px) {
+  /* 手機：語言切換放在漢堡按鈕左邊，一直看得到 */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .burger { order: 2; }
+  .menu { order: 3; }
+}
+/* 頁尾的語言文字連結 */
+.foot-lang { display: flex; flex-wrap: wrap; align-items: center; gap: 0 .5rem; margin-top: 1.25rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; min-height: 32px; padding-inline: .2rem; text-underline-offset: .35em; }
+.foot-lang a:hover { text-decoration-line: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { font-weight: 600; text-decoration-line: underline; }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<!-- JSON-LD 結構化資料：設計工作室使用 ProfessionalService，請換成真實資料 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Lumen Studio",
+  "description": "台北獨立設計工作室，提供品牌識別、網站設計與開發、產品介面與藝術指導。",
+  "telephone": "+886-2-1234-5678",
+  "email": "hello@lumenstudio.example",
+  "url": "https://www.example.com/",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "溫州街 18 巷 6 號 2 樓",
+    "addressLocality": "大安區",
+    "addressRegion": "台北市",
+    "postalCode": "106",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "19:00" }
+  ],
+  "areaServed": "台灣"
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<!-- ==================== 區塊：頁首導覽 ==================== -->
+<header class="site-header">
+  <a href="#top" class="logo" aria-label="Lumen Studio 回到頂端">Lumen<span>.</span></a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="開啟選單"><span></span></button>
+  <nav class="menu" id="menu" aria-label="主選單">
+    <a href="#about">關於</a>
+    <a href="#services">服務</a>
+    <a href="#work">作品</a>
+    <a href="#contact">聯絡</a>
+  </nav>
+  <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+  <nav class="lang-switch" aria-label="Language 語言">
+    <details class="lang-menu">
+      <summary lang="zh-Hant">繁</summary>
+      <div class="lang-list">
+        <a href="../en/" hreflang="en" lang="en">English</a>
+        <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a>
+        <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+        <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+      </div>
+    </details>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ==================== 區塊：主視覺 Hero ==================== -->
+<section class="hero" id="top">
+  <div class="orb" aria-hidden="true"></div>
+  <h1>
+    <span class="line"><span>Design that</span></span>
+    <span class="line"><span>breathes, slowly</span></span>
+    <span class="line"><span>&amp; stays.</span></span>
+  </h1>
+  <div class="hero-foot">
+    <p>Lumen Studio 是位於台北的獨立設計工作室。我們為重視細節的品牌，打造安靜卻有力量的視覺語言：從識別系統到數位體驗，每一處留白都經過思考。</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-brand">開始合作</a>
+      <a href="#about" class="scroll-cue"><i aria-hidden="true"></i>往下看</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：關於 ==================== -->
+<section id="about">
+  <div class="sec-head reveal">
+    <h2 class="sec-title">少一點喧嘩，<br>多一點意義。</h2>
+  </div>
+  <div class="about-body">
+    <div>
+      <p class="lead reveal">Lumen 成立於 2018 年，是一間由設計師與工程師組成的小型工作室。我們相信，好的設計不需要大聲說話。</p>
+      <div class="reveal">
+        <p>我們以研究為起點，以克制為方法。每個專案都從理解人開始：你的受眾在意什麼、你想被如何記住。</p>
+        <p>接著，我們把答案轉化為字體、色彩、節奏與互動，讓品牌在每個接觸點上，都說著同一種語言。</p>
+      </div>
+    </div>
+  </div>
+  <!-- 範例內容：上線前請換成真實資料 -->
+  <div class="stats reveal" aria-label="工作室實績">
+    <div class="stat"><b data-count="86">86</b><span>完成專案</span></div>
+    <div class="stat"><b data-count="12">12</b><span>設計獎項</span></div>
+    <div class="stat"><b data-count="8">8</b><span>年的實踐</span></div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：服務 ==================== -->
+<section class="services" id="services">
+  <div class="sec-head reveal">
+    <h2 class="sec-title">我們擅長的事。</h2>
+  </div>
+  <ul class="svc">
+    <li class="reveal"><h3>品牌識別</h3><p>Logo、字體系統、色彩規範與品牌手冊，建立一致且耐看的視覺基礎。</p></li>
+    <li class="reveal"><h3>網站設計與開發</h3><p>從資訊架構到動態細節，打造快速、易用、令人難忘的網站。</p></li>
+    <li class="reveal"><h3>產品介面</h3><p>為 App 與 SaaS 設計清晰的使用流程與可擴充的設計系統。</p></li>
+    <li class="reveal"><h3>藝術指導</h3><p>攝影、包裝與出版物的整體視覺策劃，讓故事有畫面。</p></li>
+  </ul>
+</section>
+
+<!-- ==================== 區塊：精選作品 ==================== -->
+<section id="work">
+  <div class="sec-head reveal">
+    <h2 class="sec-title">近期的作品。</h2>
+  </div>
+  <div class="work-grid">
+    <figure class="card reveal">
+      <div class="art"><div class="img img-forest" role="img" aria-label="森栖茶室品牌視覺：深綠森林中升起的蜜桃色月亮"></div></div>
+      <figcaption><h3>森栖茶室</h3><small>品牌識別，2026 年</small></figcaption>
+    </figure>
+    <figure class="card reveal">
+      <div class="art"><div class="img img-horizon" role="img" aria-label="Horizon 旅行誌封面：沙色天空下的赭紅夕陽與地平線"></div></div>
+      <figcaption><h3>Horizon 旅行誌</h3><small>出版設計，2025 年</small></figcaption>
+    </figure>
+    <figure class="card reveal">
+      <div class="art"><div class="img img-weave" role="img" aria-label="織 Weave 包裝：奶油色底上的亞麻直紋"></div></div>
+      <figcaption><h3>織 Weave</h3><small>包裝設計，2025 年</small></figcaption>
+    </figure>
+    <figure class="card reveal">
+      <div class="art"><div class="img img-nocturne" role="img" aria-label="Nocturne 音樂平台主視覺：墨黑、夜紫與赭紅交織的光暈"></div></div>
+      <figcaption><h3>Nocturne 音樂平台</h3><small>產品介面，2024 年</small></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ==================== 區塊：客戶回饋 ==================== -->
+<section class="quote" id="voice" aria-label="客戶回饋">
+  <!-- 範例內容：上線前請換成真實資料 -->
+  <figure>
+    <blockquote class="reveal">他們花最多時間的不是畫圖，而是聽我們說話。改版後，老客人走進店裡的第一句話是：這很像你們。</blockquote>
+    <figcaption class="reveal">森栖茶室 創辦人</figcaption>
+  </figure>
+</section>
+
+<!-- ==================== 區塊：聯絡 ==================== -->
+<section class="contact" id="contact">
+  <h2 class="reveal"><a href="mailto:hello@lumenstudio.example" class="big-link">Let’s talk.</a></h2>
+  <p class="intro reveal">手上有新專案，或只是想先聊聊方向？寫信、來電或傳 LINE 給我們，兩個工作天內一定回覆。</p>
+  <div class="contact-btns reveal">
+    <a href="tel:0212345678" class="btn btn-brand">來電 02-1234-5678</a>
+    <a href="https://line.me/R/ti/p/@yourlineid" class="btn" target="_blank" rel="noopener">LINE 聊聊</a>
+    <a href="https://maps.google.com/?q=台北市大安區溫州街18巷6號" class="btn" target="_blank" rel="noopener">Google 地圖</a>
+  </div>
+  <!--
+    表單使用 Formspree（免費方案每月 50 筆）：
+    1. 到 https://formspree.io 註冊並建立新表單
+    2. 把下方 action 裡的 your-form-id 換成你拿到的表單 ID
+    3. 第一次送出時，Formspree 會寄信請你確認信箱
+  -->
+  <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+    <div class="field"><label for="f-name">姓名</label><input id="f-name" name="姓名" autocomplete="name" required></div>
+    <div class="field"><label for="f-mail">Email</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
+    <div class="field full">
+      <label for="f-budget">預算</label>
+      <select id="f-budget" name="預算" required>
+        <option value="">請選擇</option>
+        <option>新台幣 15 萬以下</option>
+        <option>新台幣 15 至 30 萬</option>
+        <option>新台幣 30 至 60 萬</option>
+        <option>新台幣 60 萬以上</option>
+        <option>還不確定，想先聊聊</option>
+      </select>
+    </div>
+    <div class="field full"><label for="f-msg">專案說明</label><textarea id="f-msg" name="專案說明" placeholder="品牌現況、想解決的問題、預計上線時間" required></textarea></div>
+    <button type="submit" class="btn btn-brand full">送出</button>
+    <p class="form-note full">資料只用於回覆你的詢問，不會提供給第三方。</p>
+  </form>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<footer class="site-footer">
+  <div class="foot-grid">
+    <div>
+      <a href="#top" class="logo">Lumen<span>.</span></a>
+      <p>台北的獨立設計工作室，專注品牌、網站與產品設計。</p>
+      <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">Behance</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <div>
+      <h2>聯絡資訊</h2>
+      <address>
+        <a href="https://maps.google.com/?q=台北市大安區溫州街18巷6號" target="_blank" rel="noopener">台北市大安區溫州街 18 巷 6 號 2 樓</a><br>
+        電話 <a href="tel:0212345678">02-1234-5678</a><br>
+        <a href="mailto:hello@lumenstudio.example">hello@lumenstudio.example</a>
+      </address>
+    </div>
+    <div>
+      <h2>營業時間</h2>
+      <p>週一至週五 10:00–19:00<br>週末採預約制</p>
+    </div>
+  </div>
+  <!-- 頁尾語言連結：和頁首的 lang-switch 是同一組，新增語言時兩邊都要加 -->
+  <p class="foot-lang"><span>語言</span><a href="../en/" hreflang="en" lang="en">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="../ja/" hreflang="ja" lang="ja">日本語</a></p>
+  <p class="copy">© <span id="y"></span> Lumen Studio</p>
+</footer>
+
+<!-- 手機底部固定按鈕 -->
+<div class="sticky-cta"><a href="#contact" class="btn btn-brand">聯絡我們</a></div>
+
+<script>
+(function () {
+  var header = document.querySelector('.site-header');
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('menu');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 頁首捲動背景
+  function onScroll() { header.classList.toggle('scrolled', scrollY > 40 || menu.classList.contains('open')); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // 漢堡選單
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? '關閉選單' : '開啟選單');
+    onScroll();
+  }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // 數字跳動
+  function countUp(el) {
+    var end = +el.dataset.count;
+    if (reduce) { el.textContent = end; return; }
+    var t0 = performance.now();
+    (function tick(t) {
+      var p = Math.min((t - t0) / 1600, 1);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 4)));
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+
+  // 捲動漸入＋觸發數字
+  var targets = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        e.target.querySelectorAll('[data-count]').forEach(countUp);
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    targets.forEach(function (el, i) { el.style.transitionDelay = (i % 4) * 80 + 'ms'; io.observe(el); });
+  }
+
+  document.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

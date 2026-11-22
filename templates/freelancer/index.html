@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>陳以恩 Ian Chen｜自由接案前端工程師與 UI 設計師</title>
+<meta name="description" content="陳以恩 Ian Chen，台北自由接案前端工程師與 UI 設計師。從介面設計到上線開發一手包辦，協助新創與品牌做出好用、好維護的網站與產品。">
+<meta property="og:title" content="陳以恩 Ian Chen｜前端工程師與 UI 設計師">
+<meta property="og:description" content="從設計稿到上線一人搞定。網站設計開發、產品介面、前端技術顧問。">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#f5f4ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script>
+  // 先套用使用者上次選的主題，避免畫面閃爍
+  document.documentElement.classList.add('js');
+  try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #ff5a1f;          /* 品牌主色：電光橘，用於按鈕、色塊 */
+  --brand-ink: #1a0f08;      /* 在 brand 色上的文字顏色（深色字，對比 AA） */
+  --brand-text: #b83400;     /* 當作文字使用的品牌色（在淺底上對比 AA） */
+  --bg: #f5f4ef;             /* 網頁底色：微暖的米白 */
+  --surface: #fcfbf8;        /* 卡片底色：略帶暖調的白 */
+  --surface-2: #ecebe4;      /* 次要卡片／輸入框底色 */
+  --text: #16161a;           /* 主要文字顏色 */
+  --muted: #5b5b63;          /* 次要文字顏色 */
+  --line: color-mix(in srgb, var(--text) 13%, transparent); /* 細線、邊框顏色 */
+  --grid: color-mix(in srgb, var(--text) 6%, transparent);  /* 背景方格線顏色 */
+  --shadow: color-mix(in srgb, var(--text) 10%, transparent); /* 卡片陰影顏色 */
+  --radius: 18px;            /* 卡片圓角大小 */
+  --radius-sm: 10px;         /* 按鈕、標籤圓角大小 */
+  --font-heading: "Inter Tight", "Noto Sans TC", system-ui, sans-serif; /* 標題字型 */
+  --font-body: "Inter Tight", "Noto Sans TC", "PingFang TC", system-ui, sans-serif; /* 內文字型 */
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace; /* 等寬字型：小細節、數字 */
+  --pad: clamp(1rem, 4vw, 3rem); /* 左右留白 */
+  --max: 1240px;             /* 內容最大寬度 */
+  --header-h: 4.25rem;       /* 頁首高度 */
+  --ease: cubic-bezier(.2, .7, .1, 1); /* 動畫緩動曲線 */
+  /* 作品藝術佔位圖用色（換成圖片後可刪除） */
+  --art-1: #ff5a1f;          /* 電光橘 */
+  --art-2: #16161a;          /* 墨黑 */
+  --art-3: #ffd9c7;          /* 淡橘 */
+  --art-4: #2b3a67;          /* 夜藍 */
+  --art-5: #e8f0d8;          /* 淺萊姆 */
+  --art-6: #7a8c3a;          /* 橄欖綠 */
+  --art-7: #f2e6d0;          /* 奶油色 */
+  --art-8: #fcfbf8;          /* 暖白 */
+}
+/* 深色模式：預設跟隨系統設定；使用者按下切換鈕後以 data-theme 為準 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --brand: #ff6a33;        /* 深色模式品牌色：稍亮的橘 */
+    --brand-ink: #150a04;    /* 深色模式 brand 色上的文字 */
+    --brand-text: #ff8a5c;   /* 深色模式當作文字的品牌色 */
+    --bg: #111113;           /* 深色底色 */
+    --surface: #1a1a1d;      /* 深色卡片底色 */
+    --surface-2: #232327;    /* 深色次要底色 */
+    --text: #eeede8;         /* 深色模式主要文字 */
+    --muted: #a3a3ab;        /* 深色模式次要文字 */
+    --shadow: color-mix(in srgb, var(--bg) 60%, transparent); /* 深色模式陰影 */
+  }
+}
+:root[data-theme="dark"] {
+  --brand: #ff6a33;          /* 深色模式品牌色：稍亮的橘 */
+  --brand-ink: #150a04;      /* 深色模式 brand 色上的文字 */
+  --brand-text: #ff8a5c;     /* 深色模式當作文字的品牌色 */
+  --bg: #111113;             /* 深色底色 */
+  --surface: #1a1a1d;        /* 深色卡片底色 */
+  --surface-2: #232327;      /* 深色次要底色 */
+  --text: #eeede8;           /* 深色模式主要文字 */
+  --muted: #a3a3ab;          /* 深色模式次要文字 */
+  --shadow: color-mix(in srgb, var(--bg) 60%, transparent); /* 深色模式陰影 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; scroll-padding-top: calc(var(--header-h) + 1rem); color-scheme: light dark; }
+body {
+  background-color: var(--bg); color: var(--text); font: 400 1rem/1.7 var(--font-body); -webkit-font-smoothing: antialiased; overflow-x: clip;
+  /* 背景方格線 */
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px; background-attachment: fixed;
+  transition: background-color .3s var(--ease), color .3s var(--ease);
+}
+a { color: inherit; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
+.skip { position: absolute; left: -999px; top: 0; z-index: 120; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; }
+.skip:focus { left: 1rem; }
+.wrap { width: min(100% - 2 * var(--pad), var(--max)); margin-inline: auto; }
+.mono { font-family: var(--font-mono); font-size: .82rem; }
+
+/* ---------- 按鈕 ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 48px; padding: .7rem 1.35rem;
+  border: 1.5px solid var(--text); border-radius: var(--radius-sm); font: 600 .97rem/1.2 var(--font-body); color: var(--text);
+  background: var(--surface); text-decoration: none; cursor: pointer;
+  box-shadow: 3px 3px 0 var(--text);
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease), background-color .2s var(--ease);
+}
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--text); }
+.btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--text); }
+.btn-brand { background: var(--brand); color: var(--brand-ink); }
+.btn-ghost { background: transparent; }
+.btn:disabled { opacity: .5; cursor: not-allowed; transform: none; box-shadow: none; }
+.btn-brand:hover { background: color-mix(in srgb, var(--brand) 88%, var(--text)); }
+.btn svg { width: 18px; height: 18px; flex: none; }
+
+/* ==================== 頁首 ==================== */
+.site-header {
+  position: fixed; inset: 0 0 auto; z-index: 50; min-height: var(--header-h);
+  display: flex; align-items: center; gap: 1rem; padding: .5rem var(--pad);
+  border-bottom: 1px solid transparent;
+  transition: background-color .3s var(--ease), border-color .3s var(--ease);
+}
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-color: var(--line); }
+.logo { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; font: 700 1.1rem/1 var(--font-heading); margin-right: auto; }
+.logo-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px; background: var(--text); color: var(--bg); font: 500 .8rem/1 var(--font-mono); }
+.logo:hover .logo-mark { background: var(--brand); color: var(--brand-ink); }
+.logo:active { opacity: .7; }
+.menu { display: flex; gap: clamp(.75rem, 2vw, 1.6rem); font-size: .93rem; }
+.menu a { text-decoration: none; padding: .35rem 0; color: var(--muted); transition: color .2s var(--ease); }
+.menu a:hover, .menu a:focus-visible { color: var(--text); }
+.menu a:active { color: var(--brand-text); }
+.actions { display: flex; align-items: center; gap: .5rem; }
+.actions .btn { min-height: 40px; padding: .45rem 1rem; font-size: .9rem; box-shadow: 2px 2px 0 var(--text); }
+.icon-btn {
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: var(--radius-sm); border: 1.5px solid var(--line);
+  background: var(--surface); color: var(--text); cursor: pointer; transition: border-color .2s var(--ease), transform .2s var(--ease);
+}
+.icon-btn:hover { border-color: var(--text); }
+.icon-btn:active { transform: scale(.94); }
+.icon-btn svg { width: 18px; height: 18px; }
+/* 主題切換鈕：淺色時顯示月亮，深色時顯示太陽 */
+.theme-toggle .sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .moon { display: none; }
+}
+html:not(.js) .theme-toggle { display: none; }
+.burger { display: none; }
+.burger span, .burger span::before, .burger span::after { display: block; width: 18px; height: 2px; border-radius: 2px; background: currentColor; position: relative; transition: transform .3s var(--ease), background-color .3s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 960px) { .actions .btn { display: none; } }
+@media (max-width: 760px) {
+  /* 沒有 JavaScript 時，選單換行顯示在 logo 下方；有 JS 才收進漢堡選單 */
+  html:not(.js) .site-header { position: sticky; top: 0; flex-wrap: wrap; background: var(--bg); border-color: var(--line); }
+  html:not(.js) .menu { order: 3; flex: 1 1 100%; flex-wrap: wrap; gap: .1rem 1.1rem; padding-bottom: .4rem; }
+  html:not(.js) .hero { padding-top: 1.5rem; }
+  .js .burger { display: grid; }
+  .js .menu {
+    position: absolute; inset: 100% 0 auto; flex-direction: column; gap: 0; padding: .25rem var(--pad) 1.25rem;
+    background: var(--bg); box-shadow: 0 16px 30px var(--shadow);
+    transform: translateY(-.5rem); opacity: 0; visibility: hidden;
+    transition: transform .3s var(--ease), opacity .3s var(--ease), visibility .3s;
+  }
+  .js .menu.open { transform: none; opacity: 1; visibility: visible; }
+  .js .menu a { display: block; padding: .9rem 0; border-bottom: 1px solid var(--line); font-size: 1.1rem; color: var(--text); }
+}
+/* ---------- 語言切換（頁首 .lang-switch、頁尾 .foot-lang）：小巧低調，目前語言用粗體＋底線標示，不只靠顏色 ---------- */
+.lang-switch { display: flex; align-items: center; flex: none; gap: 2px; }
+.lang-switch a:not(.btn) { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 6px; font: 500 .78rem/1 var(--font-mono); color: var(--muted); text-decoration: none; white-space: nowrap; transition: color .2s, background-color .2s; }
+.lang-switch a:not(.btn):hover { color: var(--text); background: color-mix(in srgb, var(--text) 8%, transparent); }
+.lang-switch a:not(.btn):active { background: color-mix(in srgb, var(--text) 15%, transparent); opacity: 1; }
+.lang-switch a:not(.btn):focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.menu .lang-item { order: 99; display: flex; align-items: center; padding-left: clamp(.4rem, 1vw, .8rem); border-left: 1px solid var(--line); }
+@media (max-width: 760px) {
+  /* 手機：語言切換放在展開選單的最上方 */
+  .js .menu .lang-item { order: 0; padding: .25rem 0 .5rem; border-left: 0; border-bottom: 1px solid var(--line); }
+  .js .menu .lang-switch a:not(.btn) { display: inline-grid; min-width: 44px; min-height: 40px; padding: 0 .5rem; border-bottom: 0; font-size: .9rem; color: var(--muted); }
+  .js .menu .lang-switch a[aria-current="page"] { color: var(--text); }
+  html:not(.js) .menu .lang-item { padding-left: 0; border-left: 0; margin-left: -.3rem; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: 0 .25rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; color: var(--muted); text-decoration: none; transition: color .2s; }
+.foot-lang a:hover { color: var(--text); text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.foot-lang { margin-top: .5rem; margin-left: -.3rem; font-size: .9rem; }
+
+/* ==================== 共用：區塊與卡片 ==================== */
+section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+.sec-head { display: grid; gap: .75rem 3rem; margin-bottom: clamp(1.75rem, 4vw, 2.75rem); }
+.sec-head h2 { font-size: clamp(1.9rem, 4.2vw, 3rem); line-height: 1.12; font-weight: 800; letter-spacing: -.02em; }
+.sec-head p { color: var(--muted); max-width: 36rem; }
+@media (min-width: 900px) { .sec-head { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: end; } .sec-head p { justify-self: end; } }
+.card {
+  background: var(--surface); border: 1.5px solid var(--line); border-radius: var(--radius); padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  min-width: 0; transition: border-color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.tag { display: inline-flex; align-items: center; padding: .2rem .6rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface-2); font: 500 .8rem/1.4 var(--font-body); color: var(--muted); }
+
+/* ==================== Hero ==================== */
+.hero { padding-top: calc(var(--header-h) + clamp(1rem, 3vw, 2rem)); padding-bottom: clamp(2.5rem, 6vw, 4rem); }
+.hero-grid { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+.hero-main { padding: clamp(1.5rem, 4vw, 3rem); display: flex; flex-direction: column; gap: 1.1rem; }
+.hero-meta { color: var(--muted); font-size: .9rem; }
+.hero h1 { font-size: clamp(2.5rem, 7.2vw, 5.4rem); line-height: 1; font-weight: 800; letter-spacing: -.035em; }
+.hero .role { font: 500 clamp(1.05rem, 2vw, 1.3rem)/1.4 var(--font-body); }
+.hero .lead { color: var(--muted); max-width: 34rem; font-size: 1.05rem; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: .35rem; }
+.hero-side { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.hero-side .img { min-height: 180px; border-radius: var(--radius); border: 1.5px solid var(--line); }
+.avail { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; }
+.avail strong { font: 700 clamp(1.05rem, 2.2vw, 1.35rem)/1.25 var(--font-heading); }
+.avail .mono { opacity: .85; }
+.stats { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; }
+.stats b { display: block; font: 700 clamp(1.5rem, 3vw, 2.1rem)/1.1 var(--font-heading); letter-spacing: -.02em; }
+.stats span { color: var(--muted); font-size: .85rem; font-variant-numeric: tabular-nums; }
+.stats b, .price b, .metric b { font-variant-numeric: tabular-nums; }
+@media (min-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); }
+  .hero-main { justify-content: center; }
+  .hero-side { grid-template-rows: minmax(0, 1fr) auto; }
+}
+
+/* ---------- 藝術佔位圖（作品與形象照） ---------- */
+/* 換成照片：.img-portrait { background: url(images/portrait.jpg) center/cover; } */
+.img { position: relative; overflow: hidden; background-color: var(--art-7); }
+.img-portrait {
+  background:
+    radial-gradient(circle at 50% 40%, var(--art-3) 0 17%, transparent 17.5%),
+    radial-gradient(ellipse 42% 30% at 50% 100%, var(--art-1) 0 98%, transparent 100%),
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--art-2) 8%, transparent) 0 1px, transparent 1px 14px),
+    var(--art-7);
+  background-repeat: no-repeat;
+}
+/* 換成作品圖：.img-w1 { background: url(images/work-1.jpg) center/cover; } 其餘 .img-w2 到 .img-w6 依此類推 */
+.img-w1 { /* 記帳 App：手機介面 */
+  background:
+    linear-gradient(var(--art-1), var(--art-1)) 50% 30% / 26% 18% no-repeat,
+    repeating-linear-gradient(0deg, transparent 0 12px, color-mix(in srgb, var(--art-2) 14%, transparent) 12px 20px) 50% 82% / 26% 34% no-repeat,
+    linear-gradient(var(--art-8), var(--art-8)) 50% 62% / 34% 76% no-repeat,
+    radial-gradient(circle at 80% 20%, var(--art-1) 0 12%, transparent 12.5%),
+    var(--art-2);
+}
+.img-w2 { /* 咖啡電商：同心圓 */
+  background:
+    repeating-radial-gradient(circle at 30% 70%, var(--art-1) 0 14px, var(--art-3) 14px 28px),
+    var(--art-3);
+}
+.img-w3 { /* SaaS 後台：長條圖 */
+  background:
+    linear-gradient(0deg, var(--art-4) 0 100%) 18% 100% / 10% 55% no-repeat,
+    linear-gradient(0deg, var(--art-4) 0 100%) 36% 100% / 10% 75% no-repeat,
+    linear-gradient(0deg, var(--art-1) 0 100%) 54% 100% / 10% 90% no-repeat,
+    linear-gradient(0deg, var(--art-4) 0 100%) 72% 100% / 10% 62% no-repeat,
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--art-4) 14%, transparent) 0 1px, transparent 1px 24px),
+    var(--art-5);
+}
+.img-w4 { /* 選物官網：棋盤格 */
+  background: conic-gradient(var(--art-6) 25%, var(--art-7) 0 50%, var(--art-6) 0 75%, var(--art-7) 0) 0 0 / 56px 56px;
+}
+.img-w5 { /* 健康預約：日曆格點 */
+  background:
+    radial-gradient(circle, var(--art-1) 0 9px, transparent 10px) 62px 34px / 168px 102px,
+    radial-gradient(circle, color-mix(in srgb, var(--art-8) 75%, transparent) 0 5px, transparent 6px) 0 0 / 28px 34px,
+    var(--art-4);
+}
+.img-w6 { /* 開放資料：斜線與折線 */
+  background:
+    linear-gradient(160deg, transparent 0 48%, var(--art-1) 48% 51%, transparent 51%),
+    linear-gradient(20deg, transparent 0 60%, var(--art-6) 60% 62%, transparent 62%),
+    repeating-linear-gradient(45deg, color-mix(in srgb, var(--art-2) 10%, transparent) 0 2px, transparent 2px 12px),
+    var(--art-8);
+}
+
+/* ==================== 服務 ==================== */
+.svc-grid { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 820px) { .svc-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.svc { display: flex; flex-direction: column; gap: 1rem; }
+.svc:hover { border-color: var(--text); transform: translateY(-3px); box-shadow: 0 14px 30px var(--shadow); }
+.svc-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--surface-2); color: var(--brand-text); }
+.svc-icon svg { width: 24px; height: 24px; }
+.svc h3 { font-size: 1.3rem; font-weight: 700; }
+.svc p { color: var(--muted); }
+.svc ul { display: grid; gap: .4rem; font-size: .93rem; }
+.svc li { padding-left: 1.3rem; position: relative; }
+.svc li::before { content: ""; position: absolute; left: 0; top: .62em; width: .7rem; height: 2px; background: var(--brand); }
+.price { margin-top: auto; padding-top: 1rem; border-top: 1px dashed var(--line); display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.price b { font: 700 1.4rem/1.2 var(--font-heading); }
+.price span { color: var(--muted); font-size: .88rem; font-variant-numeric: tabular-nums; }
+
+/* ==================== 精選作品（Bento） ==================== */
+.bento { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); } .w-a { grid-column: 1 / -1; } }
+@media (min-width: 1024px) {
+  .bento { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .w-a { grid-column: span 4; grid-row: span 2; }
+  .w-b, .w-c, .w-d, .w-e, .w-f { grid-column: span 2; }
+}
+.work { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.work:hover { transform: translateY(-3px); border-color: var(--text); box-shadow: 0 14px 30px var(--shadow); }
+.work .img { aspect-ratio: 16 / 10; border-bottom: 1.5px solid var(--line); }
+.w-a .img { flex: 1; min-height: 240px; aspect-ratio: auto; }
+.work-body { padding: 1.1rem 1.25rem 1.3rem; display: grid; gap: .5rem; }
+.work h3 { font-size: 1.15rem; font-weight: 700; }
+.w-a h3 { font-size: clamp(1.25rem, 2.4vw, 1.6rem); }
+.work .role { color: var(--muted); font-size: .9rem; }
+.metric { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; }
+.metric b { font: 700 1.5rem/1.1 var(--font-heading); color: var(--brand-text); letter-spacing: -.02em; }
+.metric span { font-size: .9rem; }
+.metric .tag { margin-left: auto; }
+
+/* ==================== 技能 ==================== */
+.skill-grid { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 720px) { .skill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .skill-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.skill-top { display: flex; justify-content: space-between; align-items: baseline; gap: .5rem; margin-bottom: .9rem; }
+.skill h3 { font-size: 1.1rem; }
+.skill .mono { color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+.chips li { padding: .3rem .7rem; border-radius: 8px; background: var(--surface-2); font-size: .9rem; }
+.skill.dark { background: var(--text); color: var(--bg); border-color: var(--text); }
+.skill.dark .mono { color: color-mix(in srgb, var(--bg) 70%, transparent); }
+.skill.dark .chips li { background: color-mix(in srgb, var(--bg) 12%, transparent); }
+
+/* ==================== 經歷 ==================== */
+.cv-grid { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .cv-grid { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); } }
+.cv h3 { font-size: 1.2rem; margin-bottom: 1.25rem; }
+.timeline { position: relative; display: grid; gap: 1.5rem; padding-left: 1.5rem; }
+.timeline::before { content: ""; position: absolute; left: 5px; top: .4rem; bottom: .4rem; width: 2px; background: var(--line); }
+.timeline li { position: relative; display: grid; gap: .2rem; }
+.timeline li::before { content: ""; position: absolute; left: calc(-1.5rem + 1px); top: .45rem; width: 10px; height: 10px; border-radius: 3px; background: var(--surface); border: 2px solid var(--brand); }
+.timeline .mono { color: var(--muted); }
+.timeline h4 { font: 700 1.05rem/1.35 var(--font-heading); }
+.timeline p { color: var(--muted); font-size: .94rem; }
+
+/* ==================== 合作流程 ==================== */
+.steps { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); counter-reset: step; }
+@media (min-width: 640px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.step { display: grid; gap: .6rem; align-content: start; }
+.step-no { font: 500 .85rem/1 var(--font-mono); display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; border: 1.5px solid var(--text); background: var(--bg); }
+.step:nth-child(1) .step-no { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
+.step h3 { font-size: 1.15rem; }
+.step p { color: var(--muted); font-size: .95rem; }
+.step .tag { justify-self: start; }
+
+/* ==================== 客戶評價 ==================== */
+.quotes { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .quotes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.quote { display: flex; flex-direction: column; gap: 1.25rem; }
+.quote blockquote { font-size: 1.04rem; line-height: 1.75; }
+.quote figcaption { margin-top: auto; display: flex; align-items: center; gap: .75rem; }
+.quote figcaption b { display: block; font-weight: 600; }
+.quote figcaption span { color: var(--muted); font-size: .88rem; }
+.avatar { flex: none; width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; font: 500 .85rem/1 var(--font-mono); background: var(--surface-2); border: 1.5px solid var(--line); }
+.quote:nth-child(2) { background: var(--surface-2); }
+
+/* ==================== 常見問題 ==================== */
+.faq-list { display: grid; gap: .75rem; max-width: 52rem; }
+.faq-list details { background: var(--surface); border: 1.5px solid var(--line); border-radius: var(--radius-sm); transition: border-color .2s var(--ease); }
+.faq-list details[open] { border-color: var(--text); }
+.faq-list summary { cursor: pointer; list-style: none; padding: 1.05rem 3rem 1.05rem 1.25rem; font-weight: 600; position: relative; border-radius: var(--radius-sm); }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: "+"; position: absolute; right: 1.25rem; top: 50%; transform: translateY(-50%); font: 500 1.25rem/1 var(--font-mono); color: var(--brand-text); transition: transform .25s var(--ease); }
+.faq-list details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+.faq-list summary:hover { color: var(--brand-text); }
+.faq-list summary:active { opacity: .7; }
+.faq-list details p { padding: 0 1.25rem 1.2rem; color: var(--muted); }
+
+/* ==================== 聯絡 ==================== */
+.contact-grid { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 960px) { .contact-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); } }
+.contact-info { background: var(--text); color: var(--bg); border-color: var(--text); display: flex; flex-direction: column; gap: 1.25rem; }
+.contact-info h3 { font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.2; }
+.contact-info p { color: color-mix(in srgb, var(--bg) 75%, transparent); }
+.links { display: grid; gap: .5rem; }
+.links a {
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .8rem 1rem; border-radius: var(--radius-sm);
+  border: 1px solid color-mix(in srgb, var(--bg) 22%, transparent); text-decoration: none; min-width: 0;
+  transition: background-color .2s var(--ease), border-color .2s var(--ease);
+}
+.links a:hover { background: color-mix(in srgb, var(--bg) 10%, transparent); border-color: var(--brand); }
+.links a:active { background: color-mix(in srgb, var(--bg) 18%, transparent); }
+.links a:focus-visible { outline-color: var(--brand); }
+.links .mono { color: color-mix(in srgb, var(--bg) 70%, transparent); overflow-wrap: anywhere; text-align: right; }
+.form { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 620px) { .form { grid-template-columns: repeat(2, minmax(0, 1fr)); } .form .full { grid-column: 1 / -1; } }
+.field { display: grid; gap: .4rem; min-width: 0; }
+.field label { font-weight: 600; font-size: .93rem; }
+.field input, .field select, .field textarea {
+  width: 100%; font: inherit; color: var(--text); background: var(--surface-2); border: 1.5px solid var(--line); border-radius: var(--radius-sm);
+  padding: .75rem .9rem; min-height: 48px; transition: border-color .2s var(--ease);
+}
+.field textarea { min-height: 140px; resize: vertical; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: color-mix(in srgb, var(--text) 40%, transparent); }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; border-color: var(--text); }
+.form-note { color: var(--muted); font-size: .88rem; }
+
+/* ==================== 頁尾 ==================== */
+.site-footer { border-top: 1.5px solid var(--line); padding: 2.5rem 0 calc(2.5rem + 72px); background: var(--bg); font-size: .93rem; }
+@media (min-width: 761px) { .site-footer { padding-bottom: 2.5rem; } }
+.foot { display: grid; gap: 1.5rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 820px) { .foot { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); } }
+.foot h2 { font-size: 1.15rem; margin-bottom: .4rem; }
+.foot p, .foot li { color: var(--muted); }
+.foot a { text-decoration: none; color: var(--muted); }
+.foot a:hover { color: var(--text); text-decoration: underline; }
+.foot a:active { color: var(--brand-text); }
+.social { display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; }
+.copy { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); }
+
+/* ---------- 手機固定行動按鈕 ---------- */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 45; padding: .65rem var(--pad) calc(.65rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid var(--line); }
+.sticky-cta .btn { width: 100%; }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- 捲動漸入 ---------- */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "陳以恩 Ian Chen",
+  "jobTitle": "自由接案前端工程師與 UI 設計師",
+  "description": "台北自由接案前端工程師與 UI 設計師，提供網站設計開發、產品介面設計與前端技術顧問。",
+  "url": "https://example.com/",
+  "email": "mailto:hello@ianchen.dev",
+  "telephone": "+886-2-1234-5678",
+  "address": { "@type": "PostalAddress", "streetAddress": "復興南路一段 100 號 8 樓", "addressLocality": "大安區", "addressRegion": "台北市", "addressCountry": "TW" },
+  "knowsAbout": ["前端開發", "UI 設計", "設計系統", "React", "TypeScript", "無障礙設計"],
+  "contactPoint": { "@type": "ContactPoint", "contactType": "合作洽談", "email": "hello@ianchen.dev", "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "18:00" } },
+  "sameAs": ["https://www.linkedin.com/in/your-id", "https://github.com/your-id", "https://www.behance.net/your-id"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<!-- ==================== 區塊：頁首 ==================== -->
+<header class="site-header">
+  <a class="logo" href="#top" aria-label="陳以恩 Ian Chen 回到頂端"><span class="logo-mark">IC</span>陳以恩</a>
+  <nav aria-label="主選單">
+    <ul class="menu" id="menu">
+      <li class="lang-item">
+        <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+        <nav class="lang-switch" aria-label="Language 語言">
+          <details class="lang-menu">
+            <summary lang="zh-Hant">繁</summary>
+            <div class="lang-list">
+              <a href="../en/" hreflang="en" lang="en">English</a>
+              <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a>
+              <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+              <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+            </div>
+          </details>
+        </nav>
+      </li>
+      <li><a href="#services">服務</a></li>
+      <li><a href="#work">作品</a></li>
+      <li><a href="#skills">技能</a></li>
+      <li><a href="#resume">經歷</a></li>
+      <li><a href="#process">流程</a></li>
+      <li><a href="#faq">問答</a></li>
+      <li><a href="#contact">聯絡</a></li>
+    </ul>
+  </nav>
+  <div class="actions">
+    <button class="icon-btn theme-toggle" type="button" aria-label="切換深色模式" aria-pressed="false">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <a class="btn btn-brand" href="#contact">合作洽談</a>
+    <button class="icon-btn burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="開啟選單"><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<!-- ==================== 區塊：首屏 Hero ==================== -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="card hero-main">
+      <h1>陳以恩 Ian Chen</h1>
+      <p class="role">自由接案前端工程師與 UI 設計師</p>
+      <p class="lead">從設計稿到上線一人搞定，幫你把產品做得好看、好用，也好維護。</p>
+      <div class="hero-ctas">
+        <a class="btn btn-brand" href="#contact">合作洽談</a>
+        <!-- 履歷檔：把 PDF 放到 files/ 資料夾並改成你的檔名 -->
+        <a class="btn btn-ghost" href="files/resume-ian-chen.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>下載履歷
+        </a>
+      </div>
+      <p class="hero-meta">台北工作，接受遠端合作</p>
+    </div>
+    <div class="hero-side">
+      <div class="img img-portrait" role="img" aria-label="陳以恩的形象照"></div>
+      <div class="card avail">
+        <span class="mono">接案狀態</span>
+        <strong>2027 年 1 月起可接新專案</strong>
+      </div>
+      <!-- 範例內容：上線前請換成真實資料 -->
+      <div class="card stats">
+        <div><b>8 年</b><span>產業經驗</span></div>
+        <div><b>60+</b><span>完成專案</span></div>
+        <div><b>4.9</b><span>客戶評分</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：服務 ==================== -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>我能幫你做什麼</h2>
+      <p>三種合作方式，價格皆為起價，實際報價依需求範圍與時程調整。</p>
+    </div>
+    <div class="svc-grid">
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14l-2 2 2 2M16 14l2 2-2 2"/></svg></div>
+        <h3>網站設計與開發</h3>
+        <p>品牌官網、活動頁、電商前台，從視覺設計到上線部署。</p>
+        <ul><li>響應式設計，手機優先</li><li>SEO 與速度優化</li><li>後台可自行更新內容</li></ul>
+        <div class="price"><b>NT$ 60,000 起</b><span>約 4–6 週</span></div>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><circle cx="17.5" cy="17.5" r="3.5"/></svg></div>
+        <h3>產品 UI／UX 設計</h3>
+        <p>App 與 SaaS 介面、設計系統，交付可以直接開發的 Figma 檔。</p>
+        <ul><li>使用者流程與線框圖</li><li>互動原型與易用性測試</li><li>元件庫與設計規範</li></ul>
+        <div class="price"><b>NT$ 40,000 起</b><span>約 3–5 週</span></div>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/><circle cx="18" cy="16" r="3"/><path d="M20.2 18.2 22 20"/></svg></div>
+        <h3>前端技術顧問</h3>
+        <p>程式碼健檢、效能與無障礙改善，或陪你的團隊建立前端流程。</p>
+        <ul><li>架構與程式碼審查</li><li>Core Web Vitals 改善</li><li>團隊工作坊</li></ul>
+        <div class="price"><b>NT$ 3,000 起</b><span>每小時</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：精選作品 ==================== -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>精選作品</h2>
+      <p>近三年參與的案子，每一件都從問題出發，用數據檢驗成果。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="bento">
+      <article class="card work w-a reveal">
+        <div class="img img-w1" role="img" aria-label="潮汐記帳 App 介面示意圖"></div>
+        <div class="work-body">
+          <h3>潮汐記帳 App 全面改版</h3>
+          <p class="role">UI 設計、前端開發</p>
+          <div class="metric"><b>+32%</b><span>三十日留存率</span><span class="tag">範例數據</span></div>
+        </div>
+      </article>
+      <article class="card work w-b reveal">
+        <div class="img img-w2" role="img" aria-label="山嵐咖啡電商網站示意圖"></div>
+        <div class="work-body">
+          <h3>山嵐咖啡電商網站</h3>
+          <p class="role">網站設計、開發</p>
+          <div class="metric"><b>2.1 倍</b><span>結帳轉換率</span><span class="tag">範例數據</span></div>
+        </div>
+      </article>
+      <article class="card work w-c reveal">
+        <div class="img img-w3" role="img" aria-label="綠點 SaaS 後台儀表板示意圖"></div>
+        <div class="work-body">
+          <h3>綠點 SaaS 設計系統</h3>
+          <p class="role">設計系統、元件開發</p>
+          <div class="metric"><b>-40%</b><span>新頁面開發時間</span><span class="tag">範例數據</span></div>
+        </div>
+      </article>
+      <article class="card work w-d reveal">
+        <div class="img img-w4" role="img" aria-label="拾光選物品牌官網示意圖"></div>
+        <div class="work-body">
+          <h3>拾光選物品牌官網</h3>
+          <p class="role">前端開發</p>
+          <div class="metric"><b>98 分</b><span>Lighthouse 效能</span><span class="tag">範例數據</span></div>
+        </div>
+      </article>
+      <article class="card work w-e reveal">
+        <div class="img img-w5" role="img" aria-label="步步健康預約系統示意圖"></div>
+        <div class="work-body">
+          <h3>步步健康線上預約</h3>
+          <p class="role">UX 研究、介面設計</p>
+          <div class="metric"><b>+27%</b><span>預約完成率</span><span class="tag">範例數據</span></div>
+        </div>
+      </article>
+      <article class="card work w-f reveal">
+        <div class="img img-w6" role="img" aria-label="城市開放資料視覺化網站示意圖"></div>
+        <div class="work-body">
+          <h3>城市開放資料視覺化</h3>
+          <p class="role">資料視覺化、前端開發</p>
+          <div class="metric"><b>12 萬</b><span>每月訪客</span><span class="tag">範例數據</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：技能 ==================== -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>技能與工具</h2>
+      <p>設計和工程兩邊都懂，溝通少一層轉譯，成品更接近原本的想像。</p>
+    </div>
+    <div class="skill-grid">
+      <div class="card skill reveal"><div class="skill-top"><h3>設計</h3><span class="mono">8 年</span></div>
+        <ul class="chips"><li>UI 設計</li><li>設計系統</li><li>互動原型</li><li>資訊架構</li><li>易用性測試</li><li>Figma</li></ul></div>
+      <div class="card skill dark reveal"><div class="skill-top"><h3>前端</h3><span class="mono">7 年</span></div>
+        <ul class="chips"><li>HTML／CSS</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Astro</li><li>無障礙 WCAG</li></ul></div>
+      <div class="card skill reveal"><div class="skill-top"><h3>工具與部署</h3><span class="mono">日常</span></div>
+        <ul class="chips"><li>Git</li><li>Storybook</li><li>Vercel</li><li>Headless CMS</li><li>GA4</li></ul></div>
+      <div class="card skill reveal"><div class="skill-top"><h3>語言</h3><span class="mono">溝通</span></div>
+        <ul class="chips"><li>中文母語</li><li>英文商務流利</li><li>台語日常會話</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：經歷 ==================== -->
+<section id="resume">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>經歷與學歷</h2>
+      <p>待過新創、設計公司與產品團隊，現在專心接案。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="cv-grid">
+      <div class="card cv reveal">
+        <h3>工作經歷</h3>
+        <ol class="timeline">
+          <li><span class="mono">2021–現在</span><h4>自由接案工作者</h4><p>與 30 多個品牌與新創合作網站、App 與設計系統。</p></li>
+          <li><span class="mono">2018–2021</span><h4>方格科技　資深前端工程師</h4><p>負責 SaaS 產品前端架構，帶領四人小組導入元件庫。</p></li>
+          <li><span class="mono">2016–2018</span><h4>森設計工作室　UI 設計師</h4><p>參與品牌官網與活動網站設計，開始自學前端開發。</p></li>
+        </ol>
+      </div>
+      <div class="card cv reveal">
+        <h3>學歷與社群</h3>
+        <ol class="timeline">
+          <li><span class="mono">2012–2016</span><h4>北城大學　資訊傳播學系</h4><p>學士，主修互動設計。</p></li>
+          <li><span class="mono">2022–現在</span><h4>前端小聚　社群講者</h4><p>分享設計系統與無障礙實作，累計十場以上。</p></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：合作流程 ==================== -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>合作流程</h2>
+      <p>每一步都有清楚的產出與時間點，你隨時知道專案進度。</p>
+    </div>
+    <ol class="steps">
+      <li class="card step reveal"><span class="step-no">01</span><h3>初步通話</h3><p>聊聊你的目標、預算與時程，確認我們適不適合。</p><span class="tag">30 分鐘，免費</span></li>
+      <li class="card step reveal"><span class="step-no">02</span><h3>提案與報價</h3><p>提供工作範圍、時程與分期報價，雙方確認後簽約。</p><span class="tag">3 個工作天內</span></li>
+      <li class="card step reveal"><span class="step-no">03</span><h3>設計與開發</h3><p>每週固定同步進度，你可以隨時在測試網址看到最新版本。</p><span class="tag">依專案規模</span></li>
+      <li class="card step reveal"><span class="step-no">04</span><h3>上線與交接</h3><p>協助部署上線，附上操作說明，並提供免費維護期。</p><span class="tag">30 天保固</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== 區塊：客戶評價 ==================== -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>合作過的人怎麼說</h2>
+      <p>多數客戶都會回頭找我做下一個案子。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="quotes">
+      <figure class="card quote reveal">
+        <blockquote>以恩同時懂設計和工程，討論時不用再來回翻譯。改版上線後，客服收到的操作問題明顯變少了。</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">LW</span><div><b>林雯琪</b><span>潮汐記帳　產品經理</span></div></figcaption>
+      </figure>
+      <figure class="card quote reveal">
+        <blockquote>時程抓得很準，每週的進度報告很清楚。我們沒有工程背景，也能放心把整個網站交給他。</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">CH</span><div><b>張浩宇</b><span>山嵐咖啡　創辦人</span></div></figcaption>
+      </figure>
+      <figure class="card quote reveal">
+        <blockquote>他建立的元件庫到現在還是團隊每天在用，新人上手速度快很多，是很值得的投資。</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">HY</span><div><b>黃郁婷</b><span>綠點科技　設計主管</span></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：常見問題 ==================== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>常見問題</h2>
+      <p>找不到答案的話，直接寫信問我也可以。</p>
+    </div>
+    <div class="faq-list reveal">
+      <details><summary>報價方式是什麼？</summary><p>依專案範圍報固定總價，不另外按時數加收。初步通話後三個工作天內提供報價單，列出每個項目與交付時間。顧問服務則以小時計費。</p></details>
+      <details><summary>付款方式與時程？</summary><p>一般分三期：簽約付 40%，設計確認付 30%，上線驗收付 30%。可開立發票，接受銀行轉帳。</p></details>
+      <details><summary>可以修改幾次？</summary><p>設計階段包含兩輪完整修改，開發階段的小幅文字與圖片調整不限次數。超出範圍的新需求會先報價，確認後才進行。</p></details>
+      <details><summary>專案大概需要多久？</summary><p>形象網站約四到六週，產品介面設計約三到五週。急件可以討論，但會依情況酌收加急費用。</p></details>
+      <details><summary>可以只做設計或只做開發嗎？</summary><p>可以。我常和其他設計師或工程團隊合作，也能接手既有的設計稿進行開發。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：聯絡 ==================== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>一起做點好東西</h2>
+      <p>簡單描述你的需求，我會在一個工作天內回覆。</p>
+    </div>
+    <div class="contact-grid">
+      <div class="card contact-info reveal">
+        <h3>想先聊聊？直接找我也行。</h3>
+        <p>週一到週五 10:00–18:00 回覆訊息，也歡迎約線上通話。</p>
+        <div class="links">
+          <a href="mailto:hello@ianchen.dev"><span>Email</span><span class="mono">hello@ianchen.dev</span></a>
+          <a href="tel:02-1234-5678"><span>電話</span><span class="mono">02-1234-5678</span></a>
+          <a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener"><span>LINE</span><span class="mono">@yourlineid</span></a>
+          <a href="https://www.linkedin.com/in/your-id" target="_blank" rel="noopener"><span>LinkedIn</span><span class="mono">/in/your-id</span></a>
+          <a href="https://github.com/your-id" target="_blank" rel="noopener"><span>GitHub</span><span class="mono">@your-id</span></a>
+          <a href="https://www.behance.net/your-id" target="_blank" rel="noopener"><span>Behance</span><span class="mono">/your-id</span></a>
+          <a href="https://maps.google.com/?q=台北市大安區復興南路一段100號" target="_blank" rel="noopener"><span>工作室地圖</span><span class="mono">台北市大安區</span></a>
+        </div>
+      </div>
+      <!--
+        表單使用 Formspree（免費方案每月 50 筆）：
+        1. 到 https://formspree.io 註冊並建立新表單
+        2. 把下方 action 裡的 your-form-id 換成你拿到的表單 ID
+        3. 第一次送出時，Formspree 會寄信請你確認信箱
+      -->
+      <form class="card form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="field"><label for="f-name">姓名</label><input id="f-name" name="姓名" autocomplete="name" required></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="f-budget">預算</label>
+          <select id="f-budget" name="預算">
+            <option>NT$ 5 萬以下</option><option>NT$ 5–10 萬</option><option>NT$ 10–20 萬</option><option>NT$ 20 萬以上</option><option>還不確定</option>
+          </select></div>
+        <div class="field"><label for="f-time">預計時程</label>
+          <select id="f-time" name="時程">
+            <option>一個月內</option><option>一到三個月</option><option>三個月以上</option><option>彈性</option>
+          </select></div>
+        <div class="field full"><label for="f-msg">需求說明</label><textarea id="f-msg" name="需求" placeholder="專案類型、目標、參考網站都可以寫" required></textarea></div>
+        <div class="full"><button class="btn btn-brand" type="submit">送出需求</button></div>
+        <p class="form-note full">資料只用於回覆這次的詢問，不會轉給第三方。</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div><h2>陳以恩 Ian Chen</h2><p>自由接案前端工程師與 UI 設計師</p><p>台北市大安區復興南路一段 100 號 8 樓（共享辦公室）</p></div>
+      <div><p>電話：<a href="tel:02-1234-5678">02-1234-5678</a></p><p>Email：<a href="mailto:hello@ianchen.dev">hello@ianchen.dev</a></p><p>回覆時間：週一至週五 10:00–18:00</p></div>
+      <ul class="social">
+        <li><a href="#">LinkedIn</a></li><li><a href="#">GitHub</a></li><li><a href="#">Behance</a></li><li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+    <p class="copy">© <span id="y"></span> 陳以恩 Ian Chen</p>
+    <!-- 頁尾語言連結：和頁首的語言切換相同 -->
+    <nav class="foot-lang" aria-label="頁尾語言 Language"><a href="../en/" hreflang="en" lang="en">EN</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a></nav>
+  </div>
+</footer>
+
+<!-- ==================== 區塊：手機固定按鈕 ==================== -->
+<div class="sticky-cta"><a class="btn btn-brand" href="#contact">合作洽談</a></div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var header = document.querySelector('.site-header');
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('menu');
+  var toggle = document.querySelector('.theme-toggle');
+  var dark = matchMedia('(prefers-color-scheme: dark)');
+
+  // 深淺主題切換：記住使用者的選擇
+  function isDark() { return root.dataset.theme ? root.dataset.theme === 'dark' : dark.matches; }
+  function syncToggle() {
+    toggle.setAttribute('aria-pressed', isDark());
+    toggle.setAttribute('aria-label', isDark() ? '切換淺色模式' : '切換深色模式');
+  }
+  toggle.addEventListener('click', function () {
+    var next = isDark() ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    syncToggle();
+  });
+  dark.addEventListener('change', syncToggle);
+  syncToggle();
+
+  // 頁首捲動背景
+  function onScroll() { header.classList.toggle('scrolled', scrollY > 20 || menu.classList.contains('open')); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // 漢堡選單
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? '關閉選單' : '開啟選單');
+    onScroll();
+  }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // 捲動漸入
+  var targets = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    targets.forEach(function (el, i) { el.style.transitionDelay = (i % 3) * 70 + 'ms'; io.observe(el); });
+  }
+
+  document.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

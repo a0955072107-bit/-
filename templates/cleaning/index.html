@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>淨日 CleanDay 居家清潔｜台北新北到府打掃、退租清潔、線上估價</title>
+<meta name="description" content="淨日 CleanDay 提供台北、新北到府居家清潔：定期清潔、大掃除、退租清潔、辦公室清潔與冷氣清洗。線上即時估價，人員自備清潔用品。">
+<meta property="og:title" content="淨日 CleanDay 居家清潔｜台北新北到府打掃">
+<meta property="og:description" content="輸入坪數與房型，30 秒看到預估價格與工時，再線上預約到府清潔。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2b7a3b">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="es" href="../es/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "淨日 CleanDay 居家清潔",
+  "telephone": "02-1234-5678",
+  "url": "https://example.com/",
+  "priceRange": "NT$600 起／小時",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "清和路 88 號 3 樓",
+    "addressLocality": "中山區",
+    "addressRegion": "台北市",
+    "postalCode": "104",
+    "addressCountry": "TW"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "台北市" },
+    { "@type": "City", "name": "新北市" }
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:30", "closes": "18:00" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #2b7a3b;          /* 品牌主色（清新葉綠）：按鈕、重點文字、勾選圖示 */
+  --brand-ink: #f8fcf5;      /* 在品牌色上的文字顏色 */
+  --brand-deep: #1d5a2b;     /* 品牌深色：按鈕 hover、深色區塊背景 */
+  --brand-soft: #e4f2df;     /* 品牌淺色：圖示底、標籤底 */
+  --lemon: #f7d84a;          /* 輔助色（檸檬黃）：亮點、星芒圖樣、重點色塊 */
+  --lemon-soft: #fdf6d3;     /* 淺檸檬黃：提示框、精選卡片底色 */
+  --sky: #d9ebf5;            /* 泡泡與窗景用的淡天藍 */
+  --bg: #f6f9f5;             /* 頁面背景（帶一點綠調的潔白） */
+  --surface: #fdfefb;        /* 卡片、表單表面顏色（不用純白） */
+  --text: #24344a;           /* 主要文字（深藍灰） */
+  --muted: #536276;          /* 次要文字 */
+  --line: #dbe5dc;           /* 分隔線、邊框 */
+  --shadow: 0 14px 34px -16px rgba(36, 52, 74, .22); /* 卡片柔和陰影 */
+  --radius: 22px;            /* 卡片圓角（圓潤親切） */
+  --radius-sm: 12px;         /* 小元件圓角 */
+  --font-heading: "Nunito", "Noto Sans TC", system-ui, sans-serif; /* 標題字型（圓潤無襯線） */
+  --font-body: "Noto Sans TC", "Nunito", system-ui, sans-serif;    /* 內文字型 */
+  --max: 1160px;             /* 內容最大寬度 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 800; line-height: 1.3; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 8px; }
+.wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+section { padding-block: clamp(4rem, 9vw, 6.5rem); }
+.sec-head { max-width: 40rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
+.sec-head h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: .6rem; }
+.sec-head p { color: var(--muted); }
+.num { font-variant-numeric: tabular-nums; }
+.spark { color: var(--lemon); }
+
+/* ---------- 按鈕 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .8rem 1.5rem; border-radius: 999px; font-weight: 700; font-family: var(--font-body); font-size: 1rem; border: 2px solid transparent; transition: background .25s, color .25s, transform .25s, border-color .25s; cursor: pointer; }
+.btn svg { width: 1.15rem; height: 1.15rem; flex: none; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: var(--brand-deep); transform: translateY(-2px); }
+.btn-ghost { border-color: color-mix(in srgb, var(--brand) 35%, transparent); color: var(--brand-deep); background: var(--surface); }
+.btn-ghost:hover { border-color: var(--brand); transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.97); }
+a:not(.btn):hover { color: var(--brand); }
+a:not(.btn):active { opacity: .7; }
+
+/* ---------- 頁首 ---------- */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .55rem; font: 800 1.15rem/1.1 var(--font-heading); }
+.logo small { display: block; font: 500 .75rem var(--font-body); color: var(--muted); }
+.logo-mark { width: 2.4rem; height: 2.4rem; border-radius: 50% 50% 50% 14px; background: var(--brand); color: var(--brand-ink); display: grid; place-items: center; position: relative; flex: none; }
+.logo-mark svg { width: 1.35rem; height: 1.35rem; }
+.logo-mark::after { content: ""; position: absolute; top: -3px; right: -3px; width: .7rem; height: .7rem; border-radius: 50%; background: var(--lemon); box-shadow: 0 0 0 2px var(--bg); }
+.nav-links { display: flex; align-items: center; gap: 1.5rem; font-size: .94rem; }
+.nav-links a:not(.btn) { color: var(--muted); transition: color .2s; }
+.nav-links .btn { padding: .6rem 1.2rem; font-size: .94rem; }
+.menu-btn { display: none; width: 44px; height: 44px; border: 0; border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); color: var(--text); cursor: pointer; }
+.menu-btn:hover { color: var(--brand); }
+.menu-btn:active { transform: scale(.95); }
+.menu-btn span { display: block; width: 20px; height: 2px; margin: 4px auto; background: currentColor; border-radius: 2px; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+@media (min-width: 761px) and (max-width: 1020px) { .nav-links .opt { display: none; } }
+/* ---------- 語言切換（lang-switch）：桌機在主要按鈕旁，手機在漢堡按鈕旁 ---------- */
+.nav-links { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .7rem; border-left: 1px solid color-mix(in srgb, currentColor 22%, transparent); font: 500 .82rem/1 var(--font-body); }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 6px; color: var(--muted); text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1.5px; text-underline-offset: .35em; transition: color .2s, background-color .2s, text-decoration-color .2s; }
+.lang-switch a::after { display: none; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, currentColor 10%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, currentColor 18%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid currentColor; outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: currentColor; }
+@media (max-width: 760px) {
+  .lang-switch { margin-left: auto; padding-left: 0; border-left: 0; }
+  .js .menu-btn { order: 1; flex: none; }
+  html:not(.js) .nav-links { order: 2; margin-left: 0; }
+}
+/* 很窄的手機：縮小頁首間距，讓 logo 不被語言切換擠到換行 */
+.nav > .logo { flex-shrink: 0; }
+@media (max-width: 400px) { .nav { gap: .5rem; } .lang-switch a { padding: 0; } }
+@media (max-width: 760px) {
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: 72px; left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .75rem; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: .8rem 1rem; border-radius: var(--radius-sm); }
+  .js .nav-links .btn { margin-top: .5rem; }
+  /* 沒有 JS 時：選單直接展開成可換行的連結列，頁首改成 sticky */
+  html:not(.js) .site-header { position: sticky; background: var(--surface); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: .75rem; }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: 2.5rem; }
+}
+
+/* ---------- 藝術佔位圖 ---------- */
+/* 換成照片：.img-hero { background: url(images/clean-room.jpg) center/cover; }（同時刪掉 .img-hero 的 ::before、::after） */
+/* 換成照片：.img-why { background: url(images/team.jpg) center/cover; } */
+/* 換成照片：.img-map { background: url(images/area-map.jpg) center/cover; } */
+.img { position: relative; overflow: hidden; background-color: var(--brand-soft); }
+.img-hero {
+  border-radius: 40px 40px 40px 120px; aspect-ratio: 5 / 4.6;
+  background:
+    radial-gradient(circle at 18% 78%, color-mix(in srgb, var(--surface) 70%, transparent) 0 7%, transparent 7.5%),
+    radial-gradient(circle at 30% 88%, color-mix(in srgb, var(--surface) 55%, transparent) 0 4%, transparent 4.5%),
+    radial-gradient(circle at 10% 92%, color-mix(in srgb, var(--surface) 60%, transparent) 0 3%, transparent 3.5%),
+    radial-gradient(70% 55% at 100% 100%, color-mix(in srgb, var(--brand) 55%, var(--brand-soft)) 0 60%, transparent 61%),
+    linear-gradient(170deg, var(--sky), color-mix(in srgb, var(--sky) 40%, var(--brand-soft)));
+}
+/* 窗戶與窗框 */
+.img-hero::before { content: ""; position: absolute; inset: 12% 22% 34% 30%; border-radius: 18px 18px 6px 6px; border: 10px solid var(--surface);
+  background:
+    linear-gradient(var(--surface), var(--surface)) center/8px 100% no-repeat,
+    linear-gradient(var(--surface), var(--surface)) center/100% 8px no-repeat,
+    linear-gradient(125deg, transparent 30%, color-mix(in srgb, var(--surface) 55%, transparent) 30% 40%, transparent 40% 52%, color-mix(in srgb, var(--surface) 40%, transparent) 52% 56%, transparent 56%),
+    linear-gradient(180deg, color-mix(in srgb, var(--lemon) 40%, var(--sky)), var(--sky));
+  box-shadow: 0 24px 0 -14px color-mix(in srgb, var(--surface) 80%, transparent); }
+/* 窗台上的盆栽 */
+.img-hero::after { content: ""; position: absolute; left: 62%; bottom: 25%; width: 15%; aspect-ratio: 1 / 1.3;
+  background:
+    radial-gradient(ellipse 30% 45% at 35% 30%, var(--brand) 98%, transparent) ,
+    radial-gradient(ellipse 30% 45% at 65% 28%, color-mix(in srgb, var(--brand) 70%, var(--lemon)) 98%, transparent),
+    linear-gradient(var(--lemon), var(--lemon)) bottom/70% 42% no-repeat;
+  border-radius: 0 0 10px 10px; }
+.img-why { border-radius: var(--radius); min-height: 15rem;
+  background:
+    radial-gradient(circle at 75% 30%, color-mix(in srgb, var(--surface) 80%, transparent) 0 12%, transparent 12.5%),
+    radial-gradient(circle at 62% 46%, color-mix(in srgb, var(--surface) 55%, transparent) 0 6%, transparent 6.5%),
+    radial-gradient(circle at 85% 55%, color-mix(in srgb, var(--surface) 50%, transparent) 0 4%, transparent 4.5%),
+    repeating-linear-gradient(90deg, transparent 0 46px, color-mix(in srgb, var(--surface) 25%, transparent) 46px 48px),
+    linear-gradient(150deg, var(--brand-soft), color-mix(in srgb, var(--brand) 45%, var(--sky))); }
+.img-map { border-radius: var(--radius); min-height: 18rem;
+  background:
+    radial-gradient(circle at 46% 44%, var(--brand) 0 3%, color-mix(in srgb, var(--brand) 25%, transparent) 3.2% 14%, transparent 14.5%),
+    linear-gradient(28deg, transparent 47%, color-mix(in srgb, var(--sky) 90%, var(--brand-soft)) 47% 53%, transparent 53%),
+    repeating-linear-gradient(0deg, transparent 0 38px, color-mix(in srgb, var(--surface) 70%, transparent) 38px 41px),
+    repeating-linear-gradient(90deg, transparent 0 52px, color-mix(in srgb, var(--surface) 70%, transparent) 52px 55px),
+    linear-gradient(160deg, var(--brand-soft), var(--lemon-soft)); }
+
+/* ---------- Hero ---------- */
+.hero { padding-top: calc(72px + clamp(1.5rem, 5vw, 3.5rem)); position: relative;
+  background: radial-gradient(50rem 26rem at 90% 0%, color-mix(in srgb, var(--lemon) 22%, transparent), transparent 70%), radial-gradient(40rem 30rem at 0% 100%, color-mix(in srgb, var(--sky) 60%, transparent), transparent 70%); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.hero h1 { font-size: clamp(2.2rem, 5.4vw, 3.7rem); line-height: 1.2; margin-bottom: 1.1rem; }
+.hero-sub { color: var(--muted); font-size: 1.1rem; max-width: 31rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.8rem; }
+.hero-facts { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.8rem; font-size: .9rem; }
+.hero-facts li { display: inline-flex; align-items: center; gap: .45rem; padding: .3rem .85rem .3rem .45rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); }
+.hero-art { position: relative; }
+.hero-art .spark { position: absolute; width: 2.6rem; height: 2.6rem; filter: drop-shadow(0 4px 6px color-mix(in srgb, var(--text) 18%, transparent)); }
+.hero-art .s1 { top: -1rem; right: 8%; width: 3.4rem; height: 3.4rem; }
+.hero-art .s2 { top: 30%; left: -1.2rem; width: 2rem; height: 2rem; }
+.hero-art .s3 { top: 8%; right: 30%; width: 1.4rem; height: 1.4rem; color: var(--surface); }
+.bubble { position: absolute; border-radius: 50%; border: 2px solid color-mix(in srgb, var(--surface) 90%, transparent); background: radial-gradient(circle at 32% 30%, color-mix(in srgb, var(--surface) 95%, transparent) 0 14%, color-mix(in srgb, var(--surface) 25%, transparent) 15%); }
+.bubble.b1 { width: 4rem; height: 4rem; right: 6%; bottom: 38%; }
+.bubble.b2 { width: 2.2rem; height: 2.2rem; right: 20%; bottom: 52%; }
+.js .bubble { animation: float 6s ease-in-out infinite; }
+.js .bubble.b2 { animation-delay: -2s; }
+@keyframes float { 50% { transform: translateY(-10px); } }
+.tick { flex: none; width: 1.35rem; height: 1.35rem; border-radius: 50%; background: var(--brand); display: grid; place-items: center; }
+.tick::before { content: ""; width: .32rem; height: .6rem; margin-top: -.12rem; border: solid var(--brand-ink); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); }
+.tick.todo { background: transparent; border: 2px solid var(--line); }
+.tick.todo::before { display: none; }
+.job-card { position: absolute; left: -2rem; bottom: 1.5rem; width: min(19rem, 82%); background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.15rem 1.25rem; }
+.job-title { display: flex; justify-content: space-between; align-items: baseline; gap: .5rem; font: 800 1rem var(--font-heading); }
+.job-title small { font: 500 .8rem var(--font-body); color: var(--muted); }
+.job-card ul { margin-block: .7rem .8rem; display: grid; gap: .45rem; font-size: .9rem; }
+.job-card li { display: flex; align-items: center; gap: .6rem; }
+.job-card li.done { color: var(--muted); }
+.bar { height: .5rem; border-radius: 999px; background: var(--brand-soft); overflow: hidden; }
+.bar i { display: block; width: 75%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--brand), color-mix(in srgb, var(--brand) 50%, var(--lemon))); }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .img-hero { aspect-ratio: 4 / 3; }
+  .job-card { position: relative; left: auto; bottom: auto; width: auto; margin: -3rem 1rem 0; }
+  .hero-art .s2 { left: .2rem; }
+}
+
+/* ---------- 卡片通用 ---------- */
+.card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); }
+
+/* ---------- 服務項目 ---------- */
+.svc-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.svc { padding: 1.6rem; display: flex; flex-direction: column; gap: .45rem; transition: transform .3s, box-shadow .3s; }
+.svc:hover { transform: translateY(-4px); }
+.svc-icon { width: 3.1rem; height: 3.1rem; border-radius: 50% 50% 50% 12px; display: grid; place-items: center; background: var(--brand-soft); color: var(--brand); margin-bottom: .5rem; }
+.svc-icon svg { width: 1.6rem; height: 1.6rem; }
+.svc h3 { font-size: 1.18rem; }
+.svc p { color: var(--muted); font-size: .95rem; }
+.svc .price { margin-top: auto; padding-top: .6rem; font-weight: 700; color: var(--brand-deep); font-variant-numeric: tabular-nums; }
+.svc-feature { grid-row: span 2; background: var(--lemon-soft); border-color: color-mix(in srgb, var(--lemon) 55%, var(--line)); position: relative; overflow: hidden; }
+.svc-feature .svc-icon { background: var(--lemon); color: var(--text); }
+.svc-feature h3 { font-size: 1.5rem; }
+.svc-feature ul { display: grid; gap: .5rem; margin-top: .6rem; font-size: .95rem; }
+.svc-feature li { display: flex; gap: .6rem; align-items: center; }
+.svc-feature .big-spark { position: absolute; right: -1.5rem; top: -1.5rem; width: 7rem; height: 7rem; color: color-mix(in srgb, var(--lemon) 70%, transparent); }
+.svc-feature .row { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+@media (max-width: 960px) { .svc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .svc-feature { grid-row: auto; grid-column: 1 / -1; } }
+@media (max-width: 600px) { .svc-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 線上估價 ---------- */
+.quote { background: var(--surface); }
+.calc { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 1.25rem; align-items: start; }
+.calc-in { padding: clamp(1.25rem, 4vw, 2rem); display: grid; gap: 1.5rem; background: var(--bg); box-shadow: none; }
+.calc fieldset { border: 0; min-width: 0; }
+.calc legend, .calc .lbl { display: flex; justify-content: space-between; gap: 1rem; width: 100%; font-weight: 700; margin-bottom: .6rem; }
+.calc output { color: var(--brand-deep); font-variant-numeric: tabular-nums; }
+.range { width: 100%; accent-color: var(--brand); height: 1.6rem; cursor: pointer; }
+.range-scale { display: flex; justify-content: space-between; font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.seg { display: flex; flex-wrap: wrap; gap: .5rem; }
+.seg label, .addons label { position: relative; cursor: pointer; }
+.seg input, .addons input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.seg span { display: grid; place-items: center; min-width: 3.4rem; padding: .5rem .9rem; border-radius: 999px; border: 2px solid var(--line); background: var(--surface); font-weight: 700; font-variant-numeric: tabular-nums; transition: background .2s, border-color .2s, color .2s; }
+.seg label:hover span, .addons label:hover span { border-color: var(--brand); }
+.seg input:checked + span { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.seg input:focus-visible + span, .addons input:focus-visible + span { outline: 3px solid var(--brand); outline-offset: 2px; }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+select, input[type="text"], input[type="tel"], input[type="date"], textarea { width: 100%; font: inherit; color: var(--text); background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius-sm); padding: .65rem .85rem; transition: border-color .2s; }
+select:hover, input:hover, textarea:hover { border-color: color-mix(in srgb, var(--brand) 45%, var(--line)); }
+select:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid color-mix(in srgb, var(--brand) 35%, transparent); outline-offset: 0; border-color: var(--brand); }
+.addons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; }
+.addons label > span { display: flex; align-items: center; gap: .55rem; padding: .7rem .8rem; border-radius: var(--radius-sm); border: 2px solid var(--line); background: var(--surface); font-size: .93rem; line-height: 1.35; transition: border-color .2s, background .2s; }
+.addons span small { display: block; color: var(--muted); font-size: .8rem; }
+.addons .box { flex: none; width: 1.25rem; height: 1.25rem; border-radius: 6px; border: 2px solid var(--line); display: grid; place-items: center; transition: background .2s, border-color .2s; }
+.addons input:checked + span { border-color: var(--brand); background: var(--brand-soft); }
+.addons input:checked + span .box { background: var(--brand); border-color: var(--brand); }
+.addons input:checked + span .box::before { content: ""; width: .28rem; height: .55rem; margin-top: -.1rem; border: solid var(--brand-ink); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.calc-out { position: sticky; top: 92px; padding: clamp(1.5rem, 4vw, 2rem); background: var(--brand-deep); color: var(--brand-ink); border: 0; overflow: hidden; }
+.calc-out .big-spark { position: absolute; right: -1.2rem; bottom: -1.2rem; width: 8rem; height: 8rem; color: color-mix(in srgb, var(--lemon) 35%, transparent); }
+.calc-out h3 { font-size: 1.05rem; font-weight: 700; opacity: .9; }
+.est { font: 800 clamp(2rem, 5vw, 2.6rem)/1.15 var(--font-heading); margin-block: .4rem .6rem; font-variant-numeric: tabular-nums; color: var(--lemon); }
+.est-hours { display: flex; align-items: center; gap: .5rem; font-weight: 500; }
+.est-hours svg { width: 1.2rem; height: 1.2rem; }
+.calc-note { margin-block: 1rem 1.25rem; padding: .8rem 1rem; border-radius: var(--radius-sm); background: color-mix(in srgb, var(--brand-ink) 10%, transparent); font-size: .88rem; line-height: 1.6; position: relative; }
+.calc-out .btn { width: 100%; background: var(--lemon); color: var(--text); position: relative; }
+.calc-out .btn:hover { background: var(--lemon-soft); }
+@media (max-width: 900px) { .calc { grid-template-columns: minmax(0, 1fr); } .calc-out { position: relative; top: auto; } }
+@media (max-width: 560px) { .addons, .two { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 清潔項目（依空間分類） ---------- */
+.rooms { display: grid; gap: .9rem; max-width: 52rem; }
+.room { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); transition: box-shadow .3s, border-color .3s; }
+.room[open] { box-shadow: var(--shadow); border-color: color-mix(in srgb, var(--brand) 30%, var(--line)); }
+.room summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; align-items: center; gap: 1rem; padding: 1rem 1.25rem; border-radius: var(--radius); }
+.room summary::-webkit-details-marker { display: none; }
+.room summary:hover h3 { color: var(--brand); }
+.room-icon { width: 2.8rem; height: 2.8rem; border-radius: 50%; background: var(--brand-soft); color: var(--brand); display: grid; place-items: center; }
+.room-icon svg { width: 1.45rem; height: 1.45rem; }
+.room summary h3 { font-size: 1.12rem; transition: color .2s; }
+.room-count { font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.room summary::after { content: ""; width: .6rem; height: .6rem; border: solid var(--muted); border-width: 0 2px 2px 0; transform: rotate(45deg) translateY(-3px); transition: transform .3s; }
+.room[open] summary::after { transform: rotate(225deg) translateY(-3px); }
+.room ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem 1.5rem; padding: .25rem 1.5rem 1.4rem 5.05rem; }
+.room li { display: flex; gap: .6rem; align-items: flex-start; font-size: .95rem; }
+.room li .tick { width: 1.2rem; height: 1.2rem; margin-top: .25rem; }
+.room-hint { margin-top: 1.25rem; color: var(--muted); font-size: .9rem; }
+@media (max-width: 600px) { .room ul { grid-template-columns: minmax(0, 1fr); padding-left: 1.25rem; } .room-count { display: none; } .room summary { grid-template-columns: auto minmax(0, 1fr) auto; } }
+
+/* ---------- 服務流程 ---------- */
+.process { background: var(--surface); }
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; counter-reset: s; position: relative; }
+.steps::before { content: ""; position: absolute; top: 1.6rem; left: 12%; right: 12%; border-top: 2px dashed color-mix(in srgb, var(--brand) 35%, transparent); }
+.step { position: relative; text-align: center; padding-inline: .5rem; }
+.step-n { width: 3.2rem; height: 3.2rem; margin: 0 auto 1rem; border-radius: 50%; background: var(--brand); color: var(--brand-ink); display: grid; place-items: center; font: 800 1.2rem var(--font-heading); box-shadow: 0 0 0 8px var(--surface); }
+.step:nth-child(4) .step-n { background: var(--lemon); color: var(--text); }
+.step h3 { font-size: 1.1rem; margin-bottom: .3rem; }
+.step p { color: var(--muted); font-size: .94rem; }
+@media (max-width: 860px) {
+  .steps { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .steps::before { top: 1.6rem; bottom: 1.6rem; left: 1.6rem; right: auto; border-top: 0; border-left: 2px dashed color-mix(in srgb, var(--brand) 35%, transparent); }
+  .step { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0 1rem; text-align: left; padding: 0; }
+  .step-n { grid-row: span 2; margin: 0; }
+}
+
+/* ---------- 為什麼選我們 ---------- */
+.why-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
+.why-art { display: grid; gap: 1rem; }
+.why-quote { padding: 1.4rem 1.5rem; background: var(--lemon-soft); border-color: color-mix(in srgb, var(--lemon) 55%, var(--line)); box-shadow: none; display: flex; gap: 1rem; align-items: flex-start; }
+.why-quote svg { flex: none; width: 2rem; height: 2rem; color: var(--brand); }
+.why-quote p { font-size: .95rem; }
+.why-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem 2rem; }
+.why-h { display: flex; align-items: center; gap: .7rem; margin-bottom: .4rem; }
+.why-h h3 { font-size: 1.12rem; }
+.why-ic { flex: none; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--brand-soft); color: var(--brand); display: grid; place-items: center; }
+.why-ic svg { width: 1.3rem; height: 1.3rem; }
+.why-item p { color: var(--muted); font-size: .95rem; }
+.fine { font-size: .82rem; color: var(--muted); margin-top: 1.5rem; }
+@media (max-width: 860px) { .why-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .why-list { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 評價 ---------- */
+.reviews { background: linear-gradient(180deg, var(--bg), var(--brand-soft)); }
+.rev-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1.5rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
+.rev-top .sec-head { margin: 0; }
+.score { display: flex; align-items: center; gap: 1rem; padding: .9rem 1.3rem; }
+.score b { font: 800 2.2rem/1 var(--font-heading); font-variant-numeric: tabular-nums; }
+.score small { display: block; color: var(--muted); font-size: .85rem; }
+.stars { display: flex; gap: 2px; color: var(--lemon); }
+.stars svg { width: 1.1rem; height: 1.1rem; filter: drop-shadow(0 0 1px color-mix(in srgb, var(--text) 45%, transparent)); }
+.rev-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.rev { padding: 1.6rem; display: flex; flex-direction: column; gap: 1rem; }
+.rev:nth-child(2) { transform: translateY(1.25rem); }
+.rev blockquote { font-size: 1rem; }
+.rev footer { margin-top: auto; display: flex; align-items: center; gap: .75rem; font-size: .9rem; }
+.avatar { width: 2.6rem; height: 2.6rem; border-radius: 50%; display: grid; place-items: center; background: var(--brand-soft); color: var(--brand-deep); font-weight: 700; }
+.rev footer small { display: block; color: var(--muted); }
+@media (max-width: 900px) { .rev-grid { grid-template-columns: minmax(0, 1fr); } .rev:nth-child(2) { transform: none; } }
+
+/* ---------- 常見問題 ---------- */
+.faq-wrap { max-width: 50rem; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 1rem; padding: 1.15rem .25rem; font-weight: 700; }
+.faq summary:hover { color: var(--brand); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--brand-soft); color: var(--brand); font-size: 1.25rem; line-height: 1; transition: transform .3s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 .25rem 1.2rem; color: var(--muted); }
+
+/* ---------- 預約表單 ---------- */
+.book { background: var(--surface); }
+.book-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+.contact-list { display: grid; gap: .8rem; margin-top: 1.5rem; }
+.contact-list .btn { justify-content: flex-start; }
+.form { padding: clamp(1.25rem, 4vw, 2rem); display: grid; gap: 1.1rem; background: var(--bg); box-shadow: none; }
+.field label, .field .lbl { display: block; font-weight: 700; font-size: .95rem; margin-bottom: .35rem; }
+.field label span, .field .lbl span { color: var(--brand); }
+.field small { display: block; color: var(--muted); font-size: .82rem; margin-top: .3rem; }
+.field fieldset { border: 0; min-width: 0; }
+textarea { min-height: 6rem; resize: vertical; }
+.form .btn { justify-self: start; }
+@media (max-width: 860px) { .book-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 服務區域 ---------- */
+.area-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; align-items: stretch; }
+.area-list { padding: clamp(1.5rem, 4vw, 2rem); display: grid; gap: 1.4rem; align-content: start; }
+.area-list h3 { font-size: 1.1rem; margin-bottom: .6rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+.chips li { font-size: .9rem; padding: .25rem .8rem; border-radius: 999px; background: var(--brand-soft); color: var(--brand-deep); }
+.area-list p { color: var(--muted); font-size: .92rem; }
+.map-box { position: relative; }
+.map-box .btn { position: absolute; left: 1rem; bottom: 1rem; }
+@media (max-width: 860px) { .area-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 頁尾 ---------- */
+.site-footer { background: var(--text); color: color-mix(in srgb, var(--surface) 80%, transparent); padding-block: 3.5rem 2rem; font-size: .92rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; }
+.site-footer .logo { color: var(--surface); margin-bottom: 1rem; }
+.site-footer .logo small { color: color-mix(in srgb, var(--surface) 70%, transparent); }
+.site-footer .logo-mark::after { box-shadow: 0 0 0 2px var(--text); }
+.site-footer h2 { color: var(--surface); font-size: .98rem; margin-bottom: .6rem; }
+.site-footer a:not(.btn):hover { color: var(--lemon); }
+.social { display: flex; gap: 1rem; margin-top: .8rem; }
+.social a { text-decoration: underline; text-underline-offset: 3px; }
+.foot-bottom { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid color-mix(in srgb, var(--surface) 15%, transparent); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .82rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 手機底部固定按鈕 ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 760px) {
+  .mobile-bar { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: .6rem; position: fixed; inset: auto 0 0; z-index: 60; padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 -1px 0 var(--line); }
+  .mobile-bar .btn { padding: .75rem 1rem; }
+  body { padding-bottom: 80px; }
+}
+
+/* ---------- 捲動漸入 ---------- */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+/* 頁尾語言連結 */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.foot-lang a:hover { color: var(--lemon); }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { font-weight: 700; text-decoration-color: currentColor; }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- 共用圖示：星芒（亮晶晶）圖樣，用 <use href="#i-spark"> 重複使用 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.5c.7 5.3 2.6 8 10.5 10.5-7.9 2.5-9.8 5.2-10.5 10.5-.7-5.3-2.6-8-10.5-10.5C9.4 9.5 11.3 6.8 12 1.5z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5-4.9-4.5 6.6-.8z"/></symbol>
+</svg>
+
+<!-- ==================== 區塊：頁首導覽 ==================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="淨日 CleanDay 居家清潔 回到頂端">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16M7 20l1-8h8l1 8M9 12V7a3 3 0 0 1 6 0v5"/></svg></span>
+      <span>淨日 CleanDay<small>居家清潔</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="開啟選單" data-open="開啟選單" data-close="關閉選單"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="主選單">
+      <a href="#services">服務項目</a>
+      <a href="#quote">線上估價</a>
+      <a href="#checklist" class="opt">清潔項目</a>
+      <a href="#faq">常見問題</a>
+      <a href="#areas" class="opt">服務區域</a>
+      <a href="#book" class="btn btn-primary">預約清潔</a>
+    </nav>
+    <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="zh-Hant">繁</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+          <a href="../es/" hreflang="es" lang="es">Español</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ==================== 區塊：主視覺 Hero ==================== -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <h1>下班回家，迎接一個清爽的家</h1>
+      <p class="hero-sub">台北、新北到府居家清潔。線上 30 秒估價，清潔人員準時到府，工具和清潔用品我們自己帶。</p>
+      <div class="hero-cta">
+        <a href="#quote" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7h7M8.5 11h1M12 11h1M15.5 11h0M8.5 15h1M12 15h1M15.5 15h0"/></svg>立即估價</a>
+        <a href="#services" class="btn btn-ghost">看方案</a>
+      </div>
+      <!-- 範例內容：上線前請換成真實資料 -->
+      <ul class="hero-facts">
+        <li><span class="tick" aria-hidden="true"></span>自備清潔用品</li>
+        <li><span class="tick" aria-hidden="true"></span>人員背景查核</li>
+        <li><span class="tick" aria-hidden="true"></span>週一至週六服務</li>
+      </ul>
+    </div>
+    <div class="hero-art reveal">
+      <div class="img img-hero" role="img" aria-label="陽光灑進乾淨窗戶的明亮客廳示意圖"></div>
+      <span class="bubble b1" aria-hidden="true"></span>
+      <span class="bubble b2" aria-hidden="true"></span>
+      <svg class="spark s1" aria-hidden="true"><use href="#i-spark"/></svg>
+      <svg class="spark s2" aria-hidden="true"><use href="#i-spark"/></svg>
+      <svg class="spark s3" aria-hidden="true"><use href="#i-spark"/></svg>
+      <!-- 範例內容：上線前請換成真實資料 -->
+      <aside class="job-card" aria-label="清潔進度範例">
+        <p class="job-title">今日清潔清單 <small>3 房 2 衛</small></p>
+        <ul>
+          <li class="done"><span class="tick" aria-hidden="true"></span>客廳除塵、拖地</li>
+          <li class="done"><span class="tick" aria-hidden="true"></span>廚房檯面與爐具去油</li>
+          <li class="done"><span class="tick" aria-hidden="true"></span>浴室除水垢</li>
+          <li><span class="tick todo" aria-hidden="true"></span>窗戶玻璃與軌道</li>
+        </ul>
+        <div class="bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="完成進度"><i></i></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：服務項目 ==================== -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>服務項目</h2>
+      <p>從每週固定打掃到搬家退租，依照空間大小與髒污程度安排人力，價格先估給你看。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料（價格） -->
+    <div class="svc-grid">
+      <article class="card svc svc-feature reveal">
+        <svg class="big-spark" aria-hidden="true"><use href="#i-spark"/></svg>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/></svg></div>
+        <h3>定期清潔</h3>
+        <p>每週或每兩週固定時段，盡量安排同一位清潔人員，熟悉你家的習慣與擺設。</p>
+        <ul>
+          <li><span class="tick" aria-hidden="true"></span>全室除塵、吸地、拖地</li>
+          <li><span class="tick" aria-hidden="true"></span>廚房、浴室基本清潔</li>
+          <li><span class="tick" aria-hidden="true"></span>垃圾分類、床鋪整理</li>
+        </ul>
+        <p class="price">NT$600／小時起，4 小時起訂</p>
+        <div class="row"><a href="#quote" class="btn btn-primary">試算價格</a></div>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3l7 7M17 6l-9 9M4 20l4-5 1 1-5 4zM12 10l2 2"/></svg></div>
+        <h3>大掃除</h3>
+        <p>年節前、換季或久未整理的家，細部處理油垢、水垢與死角。</p>
+        <p class="price">NT$750／小時起</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></div>
+        <h3>退租清潔</h3>
+        <p>搬出前恢復原狀，空屋全面清潔，方便和房東點交。</p>
+        <p class="price">NT$800／小時起</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M10 21v-4h4v4"/></svg></div>
+        <h3>辦公室清潔</h3>
+        <p>下班後或週末進場，不打擾上班，可簽月約。</p>
+        <p class="price">NT$650／小時起</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="8" rx="2"/><path d="M6 10h12M7 17c0 1.5-1 2-1 3M12 17v3M17 17c0 1.5 1 2 1 3"/></svg></div>
+        <h3>冷氣清洗</h3>
+        <p>分離式冷氣拆洗濾網、鰭片與出風口，減少異味與灰塵。</p>
+        <p class="price">每台 NT$2,200 起</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：線上估價（即時試算） ==================== -->
+<!-- 改價格：修改下方 data-rate（每小時價格）、data-mult（工時倍數）、data-h（加購工時）；
+     data-k 是每坪需要的基本工時，data-round 是價格取整單位 -->
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>線上即時估價</h2>
+      <p>拉一拉坪數、選好房型，馬上看到預估價格與工時。</p>
+    </div>
+    <div class="calc reveal" id="calc" data-k="0.1" data-cur="NT$" data-round="100" data-to="至" data-hrs="約 {h} 小時，{c} 位清潔人員" data-rb="{r} 房 {b} 衛">
+      <div class="card calc-in">
+        <div>
+          <label class="lbl" for="c-size">室內坪數 <output id="o-size" for="c-size">30 坪</output></label>
+          <input class="range" type="range" id="c-size" min="10" max="80" step="1" value="30" data-unit="坪">
+          <div class="range-scale num" aria-hidden="true"><span>10 坪</span><span>80 坪</span></div>
+        </div>
+        <div class="two">
+          <fieldset>
+            <legend>房間數</legend>
+            <div class="seg">
+              <label><input type="radio" name="rooms" value="1"><span>1</span></label>
+              <label><input type="radio" name="rooms" value="2" checked><span>2</span></label>
+              <label><input type="radio" name="rooms" value="3"><span>3</span></label>
+              <label><input type="radio" name="rooms" value="4"><span>4+</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>衛浴數</legend>
+            <div class="seg">
+              <label><input type="radio" name="baths" value="1" checked><span>1</span></label>
+              <label><input type="radio" name="baths" value="2"><span>2</span></label>
+              <label><input type="radio" name="baths" value="3"><span>3+</span></label>
+            </div>
+          </fieldset>
+        </div>
+        <div>
+          <label class="lbl" for="c-type">服務類型</label>
+          <select id="c-type">
+            <option value="定期清潔" data-rate="600" data-mult="1">定期清潔（NT$600／小時）</option>
+            <option value="大掃除" data-rate="750" data-mult="1.6">大掃除（NT$750／小時）</option>
+            <option value="退租清潔" data-rate="800" data-mult="1.8">退租清潔（NT$800／小時）</option>
+            <option value="辦公室清潔" data-rate="650" data-mult="0.8">辦公室清潔（NT$650／小時）</option>
+          </select>
+        </div>
+        <fieldset>
+          <legend>加購項目</legend>
+          <div class="addons">
+            <label><input type="checkbox" value="冰箱內部" data-h="0.75"><span><i class="box" aria-hidden="true"></i><span>冰箱內部<small>約加 45 分鐘</small></span></span></label>
+            <label><input type="checkbox" value="烤箱" data-h="0.5"><span><i class="box" aria-hidden="true"></i><span>烤箱內部<small>約加 30 分鐘</small></span></span></label>
+            <label><input type="checkbox" value="窗戶玻璃" data-h="1"><span><i class="box" aria-hidden="true"></i><span>窗戶玻璃<small>約加 1 小時</small></span></span></label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="card calc-out" aria-live="polite">
+        <svg class="big-spark" aria-hidden="true"><use href="#i-spark"/></svg>
+        <h3>預估費用</h3>
+        <p class="est" id="est-price">NT$2,200 至 NT$2,800</p>
+        <p class="est-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span id="est-hours">約 4 小時，1 位清潔人員</span></p>
+        <p class="calc-note">此為線上預估，實際費用依現場狀況（髒污程度、物品多寡、樓層搬運）由人員到府確認後再開始清潔，不會臨時加價。</p>
+        <a href="#book" class="btn">用這個估價預約</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：清潔項目（依空間分類） ==================== -->
+<section id="checklist">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>每個空間，我們清什麼</h2>
+      <p>以定期清潔為例，點開各空間看完整清單。大掃除與退租清潔會再加上細部項目。</p>
+    </div>
+    <div class="rooms reveal">
+      <details class="room" name="room" open>
+        <summary>
+          <span class="room-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18v-6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6M2 14h20v4H2zM6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3M5 18v2M19 18v2"/></svg></span>
+          <h3>客廳與臥室</h3><span class="room-count">6 項</span>
+        </summary>
+        <ul>
+          <li><span class="tick" aria-hidden="true"></span>桌面、櫃面、電器表面除塵</li>
+          <li><span class="tick" aria-hidden="true"></span>沙發吸塵與抱枕整理</li>
+          <li><span class="tick" aria-hidden="true"></span>床鋪整理，可協助換床單</li>
+          <li><span class="tick" aria-hidden="true"></span>開關、門把擦拭</li>
+          <li><span class="tick" aria-hidden="true"></span>全室吸地與拖地</li>
+          <li><span class="tick" aria-hidden="true"></span>垃圾清運與分類</li>
+        </ul>
+      </details>
+      <details class="room" name="room">
+        <summary>
+          <span class="room-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M3 14h18M8 6c0-1.5 1-2 1-3M12 6c0-1.5 1-2 1-3M16 6c0-1.5 1-2 1-3"/></svg></span>
+          <h3>廚房</h3><span class="room-count">6 項</span>
+        </summary>
+        <ul>
+          <li><span class="tick" aria-hidden="true"></span>檯面、水槽清潔消毒</li>
+          <li><span class="tick" aria-hidden="true"></span>瓦斯爐、電磁爐去油</li>
+          <li><span class="tick" aria-hidden="true"></span>抽油煙機外部擦拭</li>
+          <li><span class="tick" aria-hidden="true"></span>微波爐內外清潔</li>
+          <li><span class="tick" aria-hidden="true"></span>櫥櫃門片擦拭</li>
+          <li><span class="tick" aria-hidden="true"></span>冰箱內部（加購）</li>
+        </ul>
+      </details>
+      <details class="room" name="room">
+        <summary>
+          <span class="room-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM6 12V5a2 2 0 0 1 4 0M7 20l-1 2M17 20l1 2"/></svg></span>
+          <h3>浴室</h3><span class="room-count">6 項</span>
+        </summary>
+        <ul>
+          <li><span class="tick" aria-hidden="true"></span>馬桶內外與底座刷洗</li>
+          <li><span class="tick" aria-hidden="true"></span>洗手台、鏡面除水垢</li>
+          <li><span class="tick" aria-hidden="true"></span>淋浴間玻璃與拉門</li>
+          <li><span class="tick" aria-hidden="true"></span>浴缸刷洗</li>
+          <li><span class="tick" aria-hidden="true"></span>地板排水孔清理毛髮</li>
+          <li><span class="tick" aria-hidden="true"></span>毛巾、備品整理</li>
+        </ul>
+      </details>
+      <details class="room" name="room">
+        <summary>
+          <span class="room-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M12 3v18M4 12h16"/></svg></span>
+          <h3>陽台與窗戶</h3><span class="room-count">5 項</span>
+        </summary>
+        <ul>
+          <li><span class="tick" aria-hidden="true"></span>陽台地面刷洗</li>
+          <li><span class="tick" aria-hidden="true"></span>紗窗除塵</li>
+          <li><span class="tick" aria-hidden="true"></span>窗框與軌道清理</li>
+          <li><span class="tick" aria-hidden="true"></span>室內側玻璃擦拭</li>
+          <li><span class="tick" aria-hidden="true"></span>外側玻璃（安全可及範圍，加購）</li>
+        </ul>
+      </details>
+    </div>
+    <p class="room-hint reveal">有特別想加強的地方，預約時寫在備註欄，我們會先安排時間。</p>
+  </div>
+</section>
+
+<!-- ==================== 區塊：服務流程 ==================== -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>四個步驟，家就乾淨了</h2>
+      <p>從估價到驗收，每一步都先講清楚。</p>
+    </div>
+    <ol class="steps reveal">
+      <li class="step"><span class="step-n">1</span><h3>線上估價</h3><p>輸入坪數與房型，先看預估價格與工時。</p></li>
+      <li class="step"><span class="step-n">2</span><h3>預約時段</h3><p>選擇日期與時段，客服一個工作天內回電確認。</p></li>
+      <li class="step"><span class="step-n">3</span><h3>到府清潔</h3><p>人員帶齊工具準時抵達，確認價格後開始清潔。</p></li>
+      <li class="step"><span class="step-n">4</span><h3>一起驗收</h3><p>完成後陪你逐一檢查，滿意再付款。</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== 區塊：為什麼選我們 ==================== -->
+<section id="why">
+  <div class="wrap why-grid">
+    <div class="why-art reveal">
+      <div class="img img-why" role="img" aria-label="清潔人員整理好的工具箱示意圖"></div>
+      <div class="card why-quote">
+        <svg aria-hidden="true"><use href="#i-spark"/></svg>
+        <p>我們不敢說每次都完美，但我們會把該做的事做完，有沒清到的地方就回來補。</p>
+      </div>
+    </div>
+    <div>
+      <div class="sec-head reveal">
+        <h2>為什麼選淨日</h2>
+        <p>讓陌生人進家門需要信任，這是我們目前做到的事。</p>
+      </div>
+      <!-- 範例內容：上線前請換成真實資料（保險、查核方式請依實際情況修改） -->
+      <div class="why-list reveal">
+        <div class="why-item">
+          <div class="why-h"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>投保責任保險</h3></div>
+          <p>公司投保公共意外責任險，清潔過程若不慎造成損壞，依保單條款處理。</p>
+        </div>
+        <div class="why-item">
+          <div class="why-h"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="8" r="4"/><path d="M3 21c0-3.5 3-6 7-6 1.4 0 2.6.3 3.7.8M16 18l2 2 4-4"/></svg></span><h3>人員背景查核</h3></div>
+          <p>正職人員到職前查核良民證，並完成清潔與居家禮儀訓練。</p>
+        </div>
+        <div class="why-item">
+          <div class="why-h"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6v4H9zM8 7h8l1 4v9a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-9zM10 14h4"/></svg></span><h3>自備清潔用品</h3></div>
+          <p>工具與清潔劑由我們帶，盡量選用溫和配方；有指定用品也可以告訴我們。</p>
+        </div>
+        <div class="why-item">
+          <div class="why-h"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11v9H4v-9zM7 11l4-7a2 2 0 0 1 3 2l-1 4h5a2 2 0 0 1 2 2.3l-1.2 6A2 2 0 0 1 16.8 20H7"/></svg></span><h3>不滿意就補做</h3></div>
+          <p>清潔後 24 小時內回報沒做好的地方，我們會安排人員回來補強，不另收費。</p>
+        </div>
+      </div>
+      <p class="fine">保險理賠範圍與補做條件以服務條款為準。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：顧客評價 ==================== -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="rev-top">
+      <div class="sec-head reveal">
+        <h2>顧客怎麼說</h2>
+        <p>來自台北、新北的家庭與辦公室。</p>
+      </div>
+      <!-- 範例內容：上線前請換成真實資料 -->
+      <div class="card score reveal">
+        <b>4.8</b>
+        <div>
+          <div class="stars" role="img" aria-label="5 顆星"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <small>共 320 則服務評分</small>
+        </div>
+      </div>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="rev-grid">
+      <article class="card rev reveal">
+        <blockquote>每兩週固定請同一位阿姨來，她記得我們家貓砂盆要避開，地板也拖得很乾淨，週末終於可以休息。</blockquote>
+        <footer><span class="avatar" aria-hidden="true">林</span><div>林小姐<small>定期清潔，大安區</small></div></footer>
+      </article>
+      <article class="card rev reveal">
+        <blockquote>退租前一天才預約，隔天就來兩位人員。廚房油垢清得很徹底，房東點交時很快就退押金了。</blockquote>
+        <footer><span class="avatar" aria-hidden="true">陳</span><div>陳先生<small>退租清潔，板橋區</small></div></footer>
+      </article>
+      <article class="card rev reveal">
+        <blockquote>線上估的價格和現場確認的差不多，沒有被臨時加價。冷氣洗完出風真的沒有霉味了。</blockquote>
+        <footer><span class="avatar" aria-hidden="true">張</span><div>張太太<small>大掃除與冷氣清洗，新店區</small></div></footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：常見問題 ==================== -->
+<section class="faq" id="faq">
+  <div class="wrap faq-wrap">
+    <div class="sec-head reveal">
+      <h2>常見問題</h2>
+    </div>
+    <div class="reveal">
+      <details>
+        <summary>清潔時我一定要在家嗎？</summary>
+        <p>不一定。第一次服務建議在家，方便說明需求；之後可以留鑰匙或密碼，人員完成後會拍照回報。</p>
+      </details>
+      <details>
+        <summary>線上估價和實際價格會差很多嗎？</summary>
+        <p>多數情況差距不大。人員到府後會先看現場，確認價格與工時，你同意了才開始清潔，過程中不會臨時加價。</p>
+      </details>
+      <details>
+        <summary>需要準備清潔用品嗎？</summary>
+        <p>不用，工具與清潔劑由我們準備。若家中有大理石、實木地板等特殊材質，或希望使用指定產品，預約時請在備註告訴我們。</p>
+      </details>
+      <details>
+        <summary>如何改期或取消？</summary>
+        <p>服務前 48 小時可免費改期或取消；24 小時內取消會酌收車馬費 NT$300。</p>
+      </details>
+      <details>
+        <summary>可以開發票嗎？</summary>
+        <p>可以，提供電子發票與公司統編，辦公室月約也可以月結。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：預約表單 ==================== -->
+<section class="book" id="book">
+  <div class="wrap book-grid">
+    <div class="reveal">
+      <div class="sec-head">
+        <h2>預約到府清潔</h2>
+        <p>填好資料送出，客服會在一個工作天內與你聯繫確認時間與價格。想直接聊聊，也可以打電話或傳 LINE。</p>
+      </div>
+      <div class="contact-list">
+        <a href="tel:02-1234-5678" class="btn btn-ghost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>02-1234-5678</a>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4c5 0 9 3.1 9 7s-4 7-9 7c-.8 0-1.6-.1-2.3-.2L5 20l1-3.5C4.1 15.2 3 13.2 3 11c0-3.9 4-7 9-7z"/></svg>LINE 線上諮詢</a>
+      </div>
+    </div>
+    <!-- 表單使用 Formspree（免費方案每月 50 則）：
+         1. 到 https://formspree.io 註冊並建立新表單
+         2. 複製表單網址中的 ID（例如 xyzabcd）
+         3. 把下面 action 裡的 your-form-id 換成你的 ID，就能用 Email 收到預約 -->
+    <form class="card form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="two">
+        <div class="field"><label for="f-name">姓名 <span>*</span></label><input type="text" id="f-name" name="姓名" autocomplete="name" required></div>
+        <div class="field"><label for="f-tel">電話 <span>*</span></label><input type="tel" id="f-tel" name="電話" autocomplete="tel" inputmode="tel" placeholder="0912-345-678" required></div>
+      </div>
+      <div class="field">
+        <label for="f-area">地址區域 <span>*</span></label>
+        <select id="f-area" name="地址區域" required>
+          <option value="">請選擇行政區</option>
+          <optgroup label="台北市">
+            <option>大安區</option><option>信義區</option><option>中山區</option><option>松山區</option><option>內湖區</option><option>士林區</option><option>文山區</option><option>中正區</option>
+          </optgroup>
+          <optgroup label="新北市">
+            <option>板橋區</option><option>中和區</option><option>永和區</option><option>新店區</option><option>三重區</option><option>新莊區</option><option>汐止區</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="two">
+        <div class="field"><label for="f-date">希望日期 <span>*</span></label><input type="date" id="f-date" name="希望日期" required></div>
+        <div class="field">
+          <fieldset>
+            <legend class="lbl">時段 <span>*</span></legend>
+            <div class="seg">
+              <label><input type="radio" name="時段" value="上午 09:00–12:00" required checked><span>上午</span></label>
+              <label><input type="radio" name="時段" value="下午 13:30–17:30"><span>下午</span></label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-est">估價結果</label>
+        <input type="text" id="f-est" name="估價結果" placeholder="例如：定期清潔 30 坪 2 房 1 衛">
+        <small>使用上方估價工具會自動帶入，也可以留空，由人員到府確認。</small>
+      </div>
+      <div class="field"><label for="f-note">備註</label><textarea id="f-note" name="備註" placeholder="例如：有養寵物、需加強廚房、停車資訊"></textarea></div>
+      <button type="submit" class="btn btn-primary">送出預約</button>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== 區塊：服務區域 ==================== -->
+<section id="areas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>服務區域</h2>
+      <p>目前服務台北市與新北市大部分行政區，列表以外的地區歡迎來電詢問。</p>
+    </div>
+    <div class="area-grid">
+      <div class="card area-list reveal">
+        <div>
+          <h3>台北市</h3>
+          <ul class="chips"><li>大安區</li><li>信義區</li><li>中山區</li><li>松山區</li><li>內湖區</li><li>士林區</li><li>文山區</li><li>中正區</li><li>萬華區</li><li>北投區</li></ul>
+        </div>
+        <div>
+          <h3>新北市</h3>
+          <ul class="chips"><li>板橋區</li><li>中和區</li><li>永和區</li><li>新店區</li><li>三重區</li><li>新莊區</li><li>汐止區</li><li>土城區</li></ul>
+        </div>
+        <p>部分山區或偏遠地點會酌收交通費，預約時會先告知。</p>
+      </div>
+      <div class="map-box reveal">
+        <div class="img img-map" role="img" aria-label="台北新北服務範圍示意地圖"></div>
+        <a href="https://maps.google.com/?q=台北市中山區清和路88號" class="btn btn-primary" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>在 Google 地圖查看</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16M7 20l1-8h8l1 8M9 12V7a3 3 0 0 1 6 0v5"/></svg></span><span>淨日 CleanDay<small>居家清潔</small></span></a>
+        <p>台北、新北到府居家清潔、退租清潔與辦公室清潔。</p>
+      </div>
+      <div>
+        <h2>聯絡我們</h2>
+        <p>台北市中山區清和路 88 號 3 樓</p>
+        <p><a href="tel:02-1234-5678">02-1234-5678</a></p>
+        <p><a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE：@yourlineid</a></p>
+      </div>
+      <div>
+        <h2>客服時間</h2>
+        <p>週一至週六 08:30–18:00</p>
+        <p>週日與國定假日休息</p>
+        <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a></div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y"></span> 淨日 CleanDay 居家清潔</span>
+      <span>網站內容僅供參考，實際服務以現場確認為準</span>
+    </div>
+    <!-- 頁尾語言切換：和頁首同一組連結 -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja">日本語</a><a href="../es/" hreflang="es" lang="es">Español</a></p>
+  </div>
+</footer>
+
+<!-- ==================== 區塊：手機底部固定按鈕 ==================== -->
+<div class="mobile-bar">
+  <a href="#quote" class="btn btn-primary">立即估價</a>
+  <a href="tel:02-1234-5678" class="btn btn-ghost">撥打電話</a>
+</div>
+
+<script>
+// 年份
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// 頁首捲動背景
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+// 漢堡選單
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  links.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? menuBtn.dataset.close : menuBtn.dataset.open);
+};
+menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// 即時估價：工時 = 坪數 × k × 服務倍數 + 房間 × 0.3 + 衛浴 × 0.5 + 加購工時（最少 2 小時）
+const calc = document.getElementById('calc');
+const $ = s => calc.querySelector(s);
+const fmt = n => n.toLocaleString('en-US');
+const update = () => {
+  const d = calc.dataset, size = $('#c-size'), opt = $('#c-type').selectedOptions[0];
+  const rooms = +$('[name=rooms]:checked').value, baths = +$('[name=baths]:checked').value;
+  const extras = [...calc.querySelectorAll('.addons input:checked')];
+  let h = size.value * d.k * opt.dataset.mult + rooms * 0.3 + baths * 0.5;
+  h = Math.max(2, h + extras.reduce((s, x) => s + +x.dataset.h, 0));
+  const crew = h > 5 ? 2 : 1, price = h * opt.dataset.rate, r = +d.round;
+  const lo = Math.round(price * 0.9 / r) * r, hi = Math.round(price * 1.15 / r) * r;
+  const range = `${d.cur}${fmt(lo)} ${d.to} ${d.cur}${fmt(hi)}`;
+  const hrs = d.hrs.replace('{h}', Math.round(h / crew * 2) / 2).replace('{c}', crew);
+  $('#o-size').textContent = `${size.value} ${size.dataset.unit}`;
+  $('#est-price').textContent = range;
+  $('#est-hours').textContent = hrs;
+  const parts = [opt.value, `${size.value} ${size.dataset.unit}`, d.rb.replace('{r}', rooms).replace('{b}', baths), ...extras.map(x => x.value)];
+  document.getElementById('f-est').value = `${parts.join(' / ')}: ${range} (${hrs})`;
+};
+calc.addEventListener('input', update);
+update();
+
+// 捲動漸入
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => io.observe(el));
+} else reveals.forEach(el => el.classList.add('in'));
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

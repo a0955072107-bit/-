@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>息 Breathe 瑜珈皮拉提斯｜台北信義區小班瑜珈與器械皮拉提斯</title>
+<meta name="description" content="息 Breathe 瑜珈皮拉提斯位在台北市信義區，提供哈達、流動、陰瑜珈、器械皮拉提斯與孕婦瑜珈小班課程。第一次來，從一堂 NT$500 的體驗課開始。">
+<meta name="theme-color" content="#f8f2eb">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<meta property="og:title" content="息 Breathe 瑜珈皮拉提斯｜慢下來，好好呼吸">
+<meta property="og:description" content="信義區巷弄裡的小班瑜珈與器械皮拉提斯教室。每班最多 12 人，老師看得見你的每個動作。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "additionalType": "https://schema.org/SportsActivityLocation",
+  "name": "息 Breathe 瑜珈皮拉提斯",
+  "description": "台北信義區的小班瑜珈與器械皮拉提斯教室",
+  "telephone": "02-1234-5678",
+  "url": "https://example.com/",
+  "priceRange": "NT$500–4,200",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "松勤街 58 號 3 樓",
+    "addressLocality": "信義區",
+    "addressRegion": "台北市",
+    "postalCode": "110",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "06:45", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "08:30", "closes": "18:00" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #9b5443;          /* 品牌主色（陶土玫瑰）：按鈕、強調文字 */
+  --brand-ink: #fcf6f1;      /* 在 brand 色上的文字顏色 */
+  --bg: #f8f2eb;             /* 網頁底色（暖米白） */
+  --surface: #fdf9f5;        /* 卡片、表單等浮起區塊的底色（帶暖調的白） */
+  --text: #3a2621;           /* 主要文字（深可可色） */
+  --muted: #6d574f;          /* 次要文字、說明文字 */
+  --line: #e6d7ca;           /* 分隔線、邊框 */
+  --deep: #3d2924;           /* 深色區塊底色（頁尾） */
+  --sand: #ecdccb;           /* 輔助色（細沙）：次要區塊底色 */
+  --blush: #f2dacd;          /* 輔助色（霧杏粉）：裝飾、標籤底色 */
+  --apricot: #e8b398;        /* 藝術佔位圖：太陽、暖光（杏桃色） */
+  --clay: #c9846b;           /* 藝術佔位圖：陶土、近景沙丘 */
+  --dune: #dcbba3;           /* 藝術佔位圖：遠景沙丘 */
+  --wood: #caa585;           /* 藝術佔位圖：木地板 */
+  --shadow-soft: color-mix(in srgb, var(--text) 9%, transparent);   /* 淡陰影：卡片、選單 */
+  --shadow-deep: color-mix(in srgb, var(--text) 18%, transparent);  /* 較深陰影：浮動小卡 */
+  --radius: 22px;            /* 圓角大小 */
+  --font-heading: "Marcellus", "Noto Sans TC", "PingFang TC", serif;  /* 標題字型（拉丁字用 Marcellus，中文用細黑體） */
+  --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; /* 內文字型 */
+  --max: 1180px;             /* 內容最大寬度 */
+  --pad: clamp(1rem, 5vw, 3rem); /* 左右留白 */
+  --gap: clamp(1.25rem, 3vw, 2rem); /* 多欄區塊的欄距 */
+  --ease: cubic-bezier(.22, .61, .36, 1); /* 動畫曲線（緩慢、柔和） */
+}
+
+/* ---------- 基礎 ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.85 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 300; line-height: 1.3; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 8px; }
+::selection { background: var(--blush); color: var(--text); }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: clamp(4.5rem, 10vw, 8rem); position: relative; }
+.sec-head { max-width: 40rem; margin-bottom: clamp(2.2rem, 5vw, 3.5rem); }
+.sec-head.center { margin-inline: auto; text-align: center; }
+.sec-title { font-size: clamp(1.9rem, 4vw, 2.9rem); margin-bottom: .8rem; letter-spacing: .01em; }
+.sec-lead { color: var(--muted); }
+.tint { background: var(--sand); }
+.soft { background: color-mix(in srgb, var(--blush) 55%, var(--bg)); }
+html:not(.js) .js-only { display: none !important; }
+.js .nojs-only { display: none !important; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .9rem 1.7rem; border-radius: 999px; font: 500 1rem/1.2 var(--font-body); text-decoration: none; border: 1.5px solid var(--brand); cursor: pointer; transition: transform .25s var(--ease), background-color .25s, color .25s, border-color .25s, box-shadow .25s; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: color-mix(in srgb, var(--brand) 82%, var(--text)); border-color: color-mix(in srgb, var(--brand) 82%, var(--text)); box-shadow: 0 10px 24px var(--shadow-soft); }
+.btn-ghost { background: transparent; color: var(--brand); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.btn-light { background: var(--brand-ink); color: var(--brand); border-color: var(--brand-ink); }
+.btn-light:hover { background: var(--blush); border-color: var(--blush); }
+.btn:active { transform: translateY(1px) scale(.98); }
+.btn:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+a:not(.btn):hover { color: var(--brand); }
+a:not(.btn):active { opacity: .7; }
+
+/* 捲動漸入：只有 JS 啟用時才先隱藏，動作放慢，呼應呼吸的節奏 */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity 1.2s var(--ease), transform 1.2s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+.js .reveal.d2 { transition-delay: .15s; } .js .reveal.d3 { transition-delay: .3s; }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes breathe { 0%, 100% { transform: translate(-50%, -50%) scale(.86); opacity: .75; } 50% { transform: translate(-50%, -50%) scale(1.08); opacity: 1; } }
+@keyframes morph { 0% { border-radius: 58% 42% 55% 45% / 48% 58% 42% 52%; transform: rotate(0deg); } 100% { border-radius: 42% 58% 46% 54% / 56% 44% 56% 44%; transform: rotate(14deg); } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ==================== 頁首 ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .4s, box-shadow .4s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
+.logo-mark { width: 42px; height: 42px; flex: none; border-radius: 50%; display: grid; place-items: center; font: 300 1.25rem/1 var(--font-body); color: var(--text); background: radial-gradient(circle at 50% 120%, var(--apricot) 0 46%, var(--blush) 47%); }
+.logo b { display: block; font: 400 1.25rem/1.1 var(--font-heading); letter-spacing: .02em; }
+.logo small { display: block; font-size: .78rem; line-height: 1.3; color: var(--muted); }
+.nav-menu { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; font-size: .95rem; padding-block: .3rem; background: linear-gradient(var(--brand), var(--brand)) left bottom / 0 1px no-repeat; transition: background-size .4s var(--ease), color .25s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 1px; }
+.nav-menu .btn { padding: .6rem 1.25rem; }
+.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: 12px; }
+.nav-toggle:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.nav-toggle:active { transform: scale(.95); }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 1.5px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; border-radius: 2px; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (min-width: 761px) and (max-width: 1060px) { .nav-menu .nav-extra { display: none; } }
+/* ---------- 語言切換（lang-switch）：桌機在主要按鈕旁，手機在漢堡按鈕旁 ---------- */
+.nav-menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .7rem; border-left: 1px solid color-mix(in srgb, currentColor 22%, transparent); font: 500 .82rem/1 var(--font-body); }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 6px; color: var(--muted); text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1.5px; text-underline-offset: .35em; transition: color .2s, background-color .2s, text-decoration-color .2s; }
+.lang-switch a::after { display: none; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, currentColor 10%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, currentColor 18%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid currentColor; outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: currentColor; }
+@media (max-width: 760px) {
+  .lang-switch { margin-left: auto; padding-left: 0; border-left: 0; }
+  .js .nav-toggle { order: 1; flex: none; }
+  html:not(.js) .nav-menu { order: 2; margin-left: 0; }
+}
+@media (max-width: 760px) {
+  /* 沒有 JavaScript 時，選單直接換行顯示；有 JS 才收進漢堡選單 */
+  html:not(.js) .nav { flex-wrap: wrap; padding-block: .6rem; }
+  html:not(.js) .site-header { position: sticky; background: var(--bg); }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; gap: .3rem 1.1rem; }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: 76px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); box-shadow: 0 14px 28px var(--shadow-soft); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: .85rem 0; border-bottom: 1px solid var(--line); }
+  .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+  .js .site-header:has(.nav-menu.open) { background: var(--bg); }
+}
+
+/* ==================== 藝術佔位圖 ====================
+   每一個 .img-xx 都是用 CSS 漸層畫的「沙丘、暖陽、拱窗、木地板」氛圍圖。
+   換成照片：.img-xx { background: url(images/xxx.jpg) center/cover; }
+   （換照片後可把該 class 的 ::before / ::after 一起刪掉） */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; background-color: var(--sand); }
+.img::before, .img::after { content: ""; position: absolute; pointer-events: none; }
+.arch { border-radius: 999px 999px var(--radius) var(--radius); }
+
+/* 換成照片：.img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero { aspect-ratio: 4 / 5;
+  background:
+    radial-gradient(circle at 50% 44%, var(--apricot) 0 15%, transparent 15.4%),
+    linear-gradient(180deg, var(--blush), color-mix(in srgb, var(--blush) 60%, var(--sand)) 55%, var(--sand)); }
+.img-hero::before { inset: 0; z-index: 2;
+  background:
+    radial-gradient(ellipse 95% 26% at 22% 100%, var(--clay) 98%, transparent 100%),
+    radial-gradient(ellipse 85% 30% at 88% 96%, color-mix(in srgb, var(--clay) 55%, var(--dune)) 98%, transparent 100%),
+    radial-gradient(ellipse 120% 34% at 50% 92%, var(--dune) 98%, transparent 100%); }
+.img-hero::after { left: 50%; top: 44%; width: 58%; aspect-ratio: 1; border-radius: 50%; z-index: 1;
+  background: radial-gradient(circle, color-mix(in srgb, var(--apricot) 55%, transparent) 0 30%, color-mix(in srgb, var(--apricot) 18%, transparent) 52%, transparent 70%);
+  animation: breathe 9s ease-in-out infinite; }
+
+/* 課程卡片：拱形小圖，每種課一種圖樣 */
+/* 換成照片：.img-c1 ~ .img-c5 { background: url(images/class-1.jpg) center/cover; } */
+.img-class { aspect-ratio: 5 / 4; border-radius: 999px 999px 0 0; }
+.img-c1 { background: radial-gradient(circle at 50% 74%, var(--apricot) 0 20%, transparent 20.5%), linear-gradient(180deg, var(--blush), var(--sand)); }
+.img-c1::before { inset: 72% 0 0; background: linear-gradient(180deg, var(--dune), var(--clay)); }
+.img-c2 { background: repeating-radial-gradient(circle at 50% 135%, color-mix(in srgb, var(--clay) 55%, transparent) 0 2px, transparent 2px 20px), linear-gradient(180deg, var(--sand), var(--blush)); }
+.img-c3 { background: radial-gradient(circle at 63% 35%, color-mix(in srgb, var(--deep) 78%, var(--brand)) 0 12%, transparent 12.4%), radial-gradient(circle at 56% 40%, var(--blush) 0 13%, transparent 13.4%), color-mix(in srgb, var(--deep) 78%, var(--brand)); }
+.img-c3::before { inset: 76% 0 0; background: radial-gradient(ellipse 80% 100% at 30% 100%, color-mix(in srgb, var(--deep) 88%, var(--clay)) 98%, transparent 100%); }
+.img-c4 { background: repeating-linear-gradient(0deg, transparent 0 16px, color-mix(in srgb, var(--text) 14%, transparent) 16px 17px) bottom / 100% 44% no-repeat, linear-gradient(180deg, var(--surface), var(--sand)); }
+.img-c4::before { left: 16%; right: 16%; bottom: 20%; height: 15%; border-radius: 12px; background: var(--clay); box-shadow: 0 10px 18px var(--shadow-deep); }
+.img-c4::after { left: 12%; bottom: 35%; width: 9%; aspect-ratio: 1; border-radius: 50%; border: 3px solid var(--brand); box-shadow: 0 0 0 6px color-mix(in srgb, var(--brand) 18%, transparent); }
+.img-c5 { background: radial-gradient(circle at 58% 64%, var(--apricot) 0 13%, transparent 13.4%), radial-gradient(circle at 48% 56%, color-mix(in srgb, var(--clay) 45%, var(--blush)) 0 30%, transparent 30.4%), linear-gradient(180deg, var(--blush), var(--surface)); }
+
+/* 老師照片：抽象人像，用 --tone 換底色 */
+/* 換成照片：.img-t1 ~ .img-t3 { background: url(images/teacher-1.jpg) center/cover; } */
+.img-teacher { aspect-ratio: 4 / 5; --tone: var(--blush);
+  background:
+    radial-gradient(circle at 50% 50%, var(--dune) 0 14%, transparent 14.4%),
+    radial-gradient(ellipse 40% 28% at 50% 100%, var(--clay) 98%, transparent 100%),
+    linear-gradient(180deg, var(--tone), color-mix(in srgb, var(--tone) 70%, var(--surface))); }
+.img-teacher::before { left: 50%; top: 50%; width: 70%; aspect-ratio: 1; border-radius: 50%; transform: translate(-50%, -50%); border: 1px solid color-mix(in srgb, var(--brand) 30%, transparent); }
+.img-t2 { --tone: var(--sand); }
+.img-t3 { --tone: color-mix(in srgb, var(--apricot) 55%, var(--blush)); }
+
+/* 空間照片 */
+/* 換成照片：.img-s1 { background: url(images/space-1.jpg) center/cover; } */
+.img-s1 { background: repeating-linear-gradient(90deg, transparent 0 46px, color-mix(in srgb, var(--text) 10%, transparent) 46px 47px) bottom / 100% 30% no-repeat, linear-gradient(180deg, var(--wood), color-mix(in srgb, var(--wood) 80%, var(--clay))) bottom / 100% 30% no-repeat, linear-gradient(180deg, var(--surface), var(--sand)); }
+.img-s1::before { left: 32%; width: 36%; top: 12%; height: 52%; border-radius: 999px 999px 0 0; background: linear-gradient(180deg, var(--surface), var(--blush)); box-shadow: inset 0 0 0 8px color-mix(in srgb, var(--wood) 60%, var(--surface)); }
+.img-s1::after { left: 28%; width: 44%; bottom: 0; height: 30%; background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 60%, transparent), transparent); clip-path: polygon(18% 0, 82% 0, 100% 100%, 0 100%); }
+/* 換成照片：.img-s2 { background: url(images/space-2.jpg) center/cover; } */
+.img-s2 { background: linear-gradient(180deg, transparent 0 46%, var(--clay) 46% 54%, transparent 54% 76%, var(--clay) 76% 84%, transparent 84%) center / 70% 100% no-repeat, repeating-linear-gradient(0deg, transparent 0 22px, color-mix(in srgb, var(--text) 9%, transparent) 22px 23px), linear-gradient(180deg, var(--blush), var(--sand)); }
+/* 換成照片：.img-s3 { background: url(images/space-3.jpg) center/cover; } */
+.img-s3 { background: radial-gradient(ellipse 34% 12% at 50% 76%, var(--wood) 98%, transparent 100%), radial-gradient(circle at 50% 68%, var(--surface) 0 6%, transparent 6.4%), linear-gradient(180deg, var(--sand), var(--dune)); }
+.img-s3::before { right: -8%; top: 8%; width: 46%; aspect-ratio: 1; background: color-mix(in srgb, var(--clay) 50%, var(--dune)); animation: morph 18s ease-in-out infinite alternate; }
+/* 換成照片：.img-s4 { background: url(images/space-4.jpg) center/cover; } */
+.img-s4 { background: radial-gradient(circle at 50% 42%, var(--surface) 0 18%, var(--wood) 18.5% 20%, transparent 20.4%), repeating-linear-gradient(90deg, transparent 0 30px, color-mix(in srgb, var(--surface) 70%, transparent) 30px 32px), repeating-linear-gradient(0deg, transparent 0 30px, color-mix(in srgb, var(--surface) 70%, transparent) 30px 32px), var(--blush); }
+
+/* ==================== 首屏 ==================== */
+.hero { padding-top: calc(76px + clamp(1.5rem, 5vw, 3.5rem)); padding-bottom: clamp(3.5rem, 8vw, 6rem); overflow: hidden; }
+.hero-grid { display: grid; gap: clamp(2.5rem, 6vw, 5rem); align-items: center; }
+.hero h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1.18; letter-spacing: .02em; margin-bottom: 1.2rem; animation: rise 1.4s var(--ease) both; }
+.hero .lead { font-size: clamp(1.02rem, 1.6vw, 1.15rem); color: var(--muted); max-width: 30rem; margin-bottom: 2rem; animation: rise 1.4s .2s var(--ease) both; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; animation: rise 1.4s .35s var(--ease) both; }
+.hero-meta { margin-top: 2.2rem; color: var(--muted); font-size: .92rem; animation: rise 1.4s .5s var(--ease) both; }
+.hero-art { position: relative; max-width: 460px; width: 100%; justify-self: center; animation: rise 1.8s .2s var(--ease) both; }
+.blob { position: absolute; z-index: -1; background: var(--blush); animation: morph 20s ease-in-out infinite alternate; }
+.blob-1 { width: 78%; aspect-ratio: 1; right: -16%; top: -6%; background: var(--sand); }
+.blob-2 { width: 34%; aspect-ratio: 1; left: -10%; bottom: 6%; background: color-mix(in srgb, var(--apricot) 45%, var(--bg)); animation-duration: 24s; }
+.hero-note { position: absolute; left: -6%; bottom: 10%; z-index: 3; background: var(--surface); border-radius: 18px; padding: .9rem 1.15rem; box-shadow: 0 16px 36px var(--shadow-deep); font-size: .9rem; line-height: 1.5; max-width: 13rem; }
+.hero-note b { display: block; font: 400 1.5rem/1.2 var(--font-heading); color: var(--brand); }
+@media (min-width: 880px) { .hero-grid { grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); } .hero-art { justify-self: end; } }
+@media (max-width: 879px) { .hero-art { max-width: 340px; } .hero-note { left: 0; } }
+
+/* ==================== 課程類型 ==================== */
+.class-grid { display: grid; gap: var(--gap); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 620px) { .class-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 980px) { .class-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.class-card { background: var(--surface); border-radius: 999px 999px var(--radius) var(--radius); padding: .7rem .7rem 1.6rem; box-shadow: 0 1px 0 var(--line); display: flex; flex-direction: column; transition: transform .6s var(--ease), box-shadow .6s var(--ease); }
+.class-card:hover { transform: translateY(-4px); box-shadow: 0 22px 40px var(--shadow-soft); }
+.class-card .body { padding: 1.3rem 1rem 0; display: flex; flex-direction: column; flex: 1; }
+.class-card h3 { font-size: 1.45rem; margin-bottom: .45rem; }
+.class-card p { color: var(--muted); font-size: .96rem; flex: 1; }
+.meta { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.1rem; }
+.meta span { font-size: .86rem; padding: .3rem .8rem; border-radius: 999px; background: color-mix(in srgb, var(--blush) 70%, var(--surface)); }
+.class-card.help { background: var(--sand); border-radius: var(--radius); padding: clamp(1.6rem, 3vw, 2.2rem); justify-content: center; box-shadow: none; position: relative; overflow: hidden; isolation: isolate; }
+.class-card.help::before { content: ""; position: absolute; z-index: -1; width: 70%; aspect-ratio: 1; right: -20%; top: -18%; background: color-mix(in srgb, var(--apricot) 50%, var(--sand)); animation: morph 22s ease-in-out infinite alternate; }
+.class-card.help h3 { font-size: 1.6rem; }
+.class-card.help p { flex: 0; margin-bottom: 1.4rem; color: var(--text); }
+.class-card.help .btn { align-self: flex-start; }
+
+/* ==================== 每週課表 ==================== */
+.tabs { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .35rem; padding: .35rem; border-radius: 999px; background: var(--surface); box-shadow: 0 1px 0 var(--line); margin-bottom: 1.6rem; }
+.tab { position: relative; border: 0; background: transparent; color: var(--text); font: 400 .98rem/1 var(--font-body); padding: .85rem .2rem; border-radius: 999px; cursor: pointer; transition: background-color .35s, color .35s, transform .2s; }
+.tab:hover { background: color-mix(in srgb, var(--brand) 9%, transparent); }
+.tab:active { transform: scale(.96); }
+.tab[aria-selected="true"] { background: var(--brand); color: var(--brand-ink); }
+.tab.today::after { content: "今天"; position: absolute; left: 50%; top: calc(100% + .45rem); transform: translateX(-50%); font-size: .74rem; line-height: 1; color: var(--text); white-space: nowrap; }
+.day:focus-visible { border-radius: var(--radius); }
+.day-title { font-size: 1.4rem; margin: 2rem 0 .6rem; }
+.slots { list-style: none; background: var(--surface); border-radius: var(--radius); padding: .4rem clamp(1rem, 3vw, 2rem); box-shadow: 0 1px 0 var(--line); }
+.slot { display: grid; grid-template-columns: 4.6rem minmax(0, 1fr) auto; grid-template-areas: "time main book" "time info book"; column-gap: 1rem; align-items: center; padding: 1.05rem 0; border-bottom: 1px solid var(--line); }
+.slot:last-child { border-bottom: 0; }
+.slot time { grid-area: time; font: 400 1.3rem/1 var(--font-heading); align-self: start; padding-top: .2rem; }
+.slot time small { font: 400 .78rem/1 var(--font-body); color: var(--muted); margin-left: .2rem; }
+.slot-main { grid-area: main; font-weight: 500; }
+.slot-main small { font-weight: 400; color: var(--muted); font-size: .88rem; margin-left: .4rem; white-space: nowrap; display: inline-block; }
+.slot-info { grid-area: info; display: flex; flex-wrap: wrap; gap: .2rem 1.1rem; font-size: .9rem; color: var(--muted); }
+.slot-left.low { color: var(--brand); font-weight: 500; }
+.slot-left.full { color: var(--muted); text-decoration: line-through; }
+.slot-book { grid-area: book; font-size: .92rem; padding: .5rem 1rem; }
+@media (min-width: 760px) {
+  .slot { grid-template-columns: 5.6rem minmax(0, 1.4fr) minmax(0, 1fr) auto; grid-template-areas: "time main info book"; }
+  .slot time { align-self: center; padding-top: 0; }
+}
+.sched-note { margin-top: 1.2rem; font-size: .9rem; color: var(--muted); }
+
+/* ==================== 課程方案 ==================== */
+.price-grid { display: grid; gap: var(--gap); grid-template-columns: minmax(0, 1fr); align-items: stretch; }
+@media (min-width: 900px) { .price-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.plan { background: var(--surface); border-radius: var(--radius); padding: clamp(1.7rem, 3vw, 2.4rem); display: flex; flex-direction: column; box-shadow: 0 1px 0 var(--line); }
+.plan h3 { font-size: 1.5rem; }
+.plan .for { color: var(--muted); font-size: .94rem; margin-top: .2rem; }
+.price { font: 400 clamp(2.3rem, 4vw, 2.9rem)/1.1 var(--font-heading); margin: 1.4rem 0 .3rem; }
+.price small { font: 400 .95rem/1 var(--font-body); color: var(--muted); margin-left: .3rem; }
+.plan .per { font-size: .9rem; color: var(--muted); }
+.plan ul { list-style: none; margin: 1.4rem 0 1.8rem; display: grid; gap: .65rem; flex: 1; border-top: 1px solid var(--line); padding-top: 1.4rem; }
+.plan li { position: relative; padding-left: 1.6rem; font-size: .96rem; }
+.plan li::before { content: ""; position: absolute; left: 0; top: .62em; width: .75rem; height: .4rem; border-left: 1.5px solid var(--brand); border-bottom: 1.5px solid var(--brand); transform: rotate(-45deg); }
+.plan.featured { background: var(--brand); color: var(--brand-ink); box-shadow: 0 24px 48px var(--shadow-soft); position: relative; overflow: hidden; isolation: isolate; }
+.plan.featured::before { content: ""; position: absolute; z-index: -1; width: 80%; aspect-ratio: 1; right: -30%; top: -28%; border-radius: 50%; background: color-mix(in srgb, var(--apricot) 28%, transparent); }
+.plan.featured .for, .plan.featured .per, .plan.featured .price small { color: color-mix(in srgb, var(--brand-ink) 84%, var(--brand)); }
+.plan.featured ul { border-color: color-mix(in srgb, var(--brand-ink) 30%, transparent); }
+.plan.featured li::before { border-color: var(--brand-ink); }
+.tag { display: inline-block; align-self: flex-start; font-size: .82rem; padding: .25rem .8rem; border-radius: 999px; background: var(--brand-ink); color: var(--brand); margin-bottom: 1rem; }
+
+/* ==================== 老師介紹 ==================== */
+.team-grid { display: grid; gap: clamp(2rem, 4vw, 3rem) var(--gap); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 980px) { .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 639px) { .teacher .img-teacher { max-width: 260px; } }
+.teacher h3 { font-size: 1.5rem; margin-top: 1.4rem; }
+.teacher .role { color: color-mix(in srgb, var(--brand) 75%, var(--text)); font-size: .94rem; margin-bottom: .6rem; }
+.teacher p { color: var(--muted); font-size: .96rem; }
+.teacher .certs { margin-top: .8rem; font-size: .88rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: .8rem; }
+
+/* ==================== 空間介紹 ==================== */
+.gallery { display: grid; gap: var(--gap); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.gallery figure { min-width: 0; }
+.gallery .img { aspect-ratio: 1; }
+.gallery .g1, .gallery .g2 { grid-column: span 2; }
+.gallery .g2 .img { aspect-ratio: 2 / 1; }
+.gallery .g1 .img { aspect-ratio: 16 / 11; }
+figcaption { margin-top: .7rem; font-size: .92rem; color: var(--muted); }
+figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
+@media (min-width: 860px) {
+  .gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .gallery .g1 { grid-row: span 2; }
+  .gallery .g1 .img { aspect-ratio: auto; height: calc(100% - 2.6rem); min-height: 22rem; border-radius: 999px 999px var(--radius) var(--radius); }
+  .gallery .g2 { grid-column: span 2; }
+  .gallery .g2 .img { aspect-ratio: 2 / 1; }
+}
+
+/* ==================== 第一次來上課 ==================== */
+.first-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 900px) { .first-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); } }
+.steps { list-style: none; counter-reset: step; display: grid; gap: 1.6rem; }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 3.4rem minmax(0, 1fr); gap: 1rem; }
+.steps li::before { content: counter(step); width: 3.4rem; height: 3.4rem; border-radius: 50%; display: grid; place-items: center; font: 400 1.4rem/1 var(--font-heading); color: var(--text); border: 1px solid color-mix(in srgb, var(--brand) 40%, transparent); }
+.steps h3 { font-size: 1.3rem; margin-bottom: .25rem; }
+.steps p { color: var(--muted); }
+.bring { background: var(--surface); border-radius: 999px 999px var(--radius) var(--radius); padding: clamp(3.5rem, 7vw, 4.5rem) clamp(1.6rem, 3vw, 2.4rem) clamp(1.8rem, 3vw, 2.4rem); text-align: center; box-shadow: 0 1px 0 var(--line); }
+.bring h3 { font-size: 1.5rem; margin-bottom: 1.2rem; }
+.bring ul { list-style: none; text-align: left; display: grid; gap: .8rem; }
+.bring li { padding-bottom: .8rem; border-bottom: 1px solid var(--line); font-size: .96rem; }
+.bring li:last-child { border-bottom: 0; padding-bottom: 0; }
+.bring li b { font-weight: 500; display: block; }
+.bring li span { color: var(--muted); }
+
+/* ==================== 評價 ==================== */
+.review-grid { display: grid; gap: var(--gap); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .review-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.review { background: var(--surface); border-radius: var(--radius); padding: clamp(1.6rem, 3vw, 2.2rem); display: flex; flex-direction: column; gap: 1.2rem; }
+.review blockquote { font-size: 1.02rem; line-height: 1.9; flex: 1; }
+.review blockquote::before { content: "\201C"; display: block; font: 400 3.4rem/1 var(--font-heading); color: var(--clay); height: 2rem; }
+.review cite { font-style: normal; font-size: .9rem; color: var(--muted); }
+.review cite b { color: var(--text); font-weight: 500; display: block; }
+
+/* ==================== 常見問題 ==================== */
+.faq { max-width: 50rem; margin-inline: auto; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-child { border-top: 1px solid var(--line); }
+.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.25rem .25rem; font-size: 1.06rem; font-weight: 500; border-radius: 8px; transition: color .25s; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; font: 300 1.3rem/1 var(--font-body); color: var(--brand); border: 1px solid color-mix(in srgb, var(--brand) 35%, transparent); transition: transform .4s var(--ease); }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq summary:hover { color: var(--brand); }
+.faq summary:active { opacity: .75; }
+.faq details p { padding: 0 .25rem 1.4rem; color: var(--muted); max-width: 44rem; }
+
+/* ==================== 體驗課預約 ==================== */
+.book-grid { display: grid; gap: clamp(2.5rem, 5vw, 4rem); grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 940px) { .book-grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); } }
+.contact-list { list-style: none; display: grid; gap: 1rem; margin: 2rem 0; }
+.contact-list li { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: .8rem; font-size: .96rem; padding-bottom: 1rem; border-bottom: 1px solid color-mix(in srgb, var(--text) 12%, transparent); }
+.contact-list b { font-weight: 500; }
+.contact-cta { display: flex; flex-wrap: wrap; gap: .7rem; }
+.form { background: var(--surface); border-radius: var(--radius); padding: clamp(1.4rem, 4vw, 2.6rem); box-shadow: 0 24px 50px var(--shadow-soft); display: grid; gap: 1.1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 600px) { .form { grid-template-columns: repeat(2, minmax(0, 1fr)); } .form .full { grid-column: 1 / -1; } }
+.field { display: grid; gap: .4rem; min-width: 0; }
+.field label { font-size: .92rem; font-weight: 500; }
+.field label span { color: var(--brand); }
+.field input, .field select, .field textarea { width: 100%; font: 400 1rem/1.5 var(--font-body); color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: .75rem .95rem; transition: border-color .25s, box-shadow .25s; }
+.field textarea { min-height: 7rem; resize: vertical; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: color-mix(in srgb, var(--brand) 45%, var(--line)); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 18%, transparent); }
+.form .btn { grid-column: 1 / -1; width: 100%; }
+.form small { grid-column: 1 / -1; color: var(--muted); font-size: .86rem; text-align: center; }
+
+/* ==================== 頁尾 ==================== */
+.site-footer { background: var(--deep); color: var(--brand-ink); padding: clamp(3.5rem, 7vw, 5rem) 0 2rem; }
+.foot-grid { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); } }
+.site-footer h2 { font-size: 1.3rem; margin-bottom: .8rem; }
+.site-footer p { color: color-mix(in srgb, var(--brand-ink) 78%, var(--deep)); font-size: .94rem; }
+.site-footer a:hover { color: var(--apricot); }
+.social { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1rem; font-size: .94rem; }
+.copy { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid color-mix(in srgb, var(--brand-ink) 16%, transparent); font-size: .86rem; }
+.site-footer :focus-visible { outline-color: var(--apricot); }
+
+/* ==================== 手機底部固定按鈕 ==================== */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 80px; }
+  .sticky-cta { display: flex; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 -1px 0 var(--line); }
+  .sticky-cta .btn-primary { flex: 1; }
+  .sticky-cta .btn-ghost { padding-inline: 1.2rem; }
+}
+/* 頁尾語言連結 */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.foot-lang a:hover { color: var(--apricot); }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { font-weight: 700; text-decoration-color: currentColor; }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+</head>
+<body>
+
+<!-- ==================== 區塊：頁首導覽 ==================== -->
+<header class="site-header">
+  <nav class="wrap nav" aria-label="主選單">
+    <a class="logo" href="#top" aria-label="息 Breathe 瑜珈皮拉提斯 回到首頁">
+      <span class="logo-mark" aria-hidden="true">息</span>
+      <span><b>Breathe</b><small>瑜珈皮拉提斯</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-links" aria-label="開啟選單"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#classes">課程</a></li>
+      <li><a href="#schedule">課表</a></li>
+      <li><a href="#pricing">方案</a></li>
+      <li><a href="#teachers">老師</a></li>
+      <li class="nav-extra"><a href="#space">空間</a></li>
+      <li class="nav-extra"><a href="#faq">常見問題</a></li>
+      <li><a class="btn btn-primary" href="#book">預約體驗課</a></li>
+    </ul>
+    <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="zh-Hant">繁</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </nav>
+</header>
+
+<main>
+<!-- ==================== 區塊：首屏 ==================== -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>慢下來，<br>好好呼吸。</h1>
+      <p class="lead">信義區巷弄裡的小班瑜珈與器械皮拉提斯。每班最多 12 人，老師看得見你的每個動作。</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#book">預約體驗課</a>
+        <a class="btn btn-ghost" href="#schedule">看課表</a>
+      </div>
+      <p class="hero-meta">捷運象山站步行 6 分鐘，平日 07:00 開第一堂課</p>
+    </div>
+    <div class="hero-art">
+      <span class="blob blob-1" aria-hidden="true"></span>
+      <span class="blob blob-2" aria-hidden="true"></span>
+      <div class="img img-hero arch" role="img" aria-label="暖陽從沙丘後方升起的拱窗意象"></div>
+      <!-- 範例內容：上線前請換成真實資料 -->
+      <p class="hero-note"><b>NT$500</b>第一次體驗課，墊子和毛巾都幫你準備好</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：課程類型 ==================== -->
+<section id="classes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">找到適合你的練習</h2>
+      <p class="sec-lead">從第一次踩上瑜珈墊，到想要更深入核心訓練，五種課程照著你的身體和步調安排。</p>
+    </div>
+    <div class="class-grid">
+      <article class="class-card reveal">
+        <div class="img img-class img-c1" role="img" aria-label="地平線上的暖陽，象徵哈達瑜珈的穩定"></div>
+        <div class="body">
+          <h3>哈達瑜珈</h3>
+          <p>一個動作停留五個呼吸，把基本體位法做穩、做對。第一次上課最推薦從這裡開始。</p>
+          <div class="meta"><span>初階</span><span>60 分鐘</span></div>
+        </div>
+      </article>
+      <article class="class-card reveal d2">
+        <div class="img img-class img-c2" role="img" aria-label="一圈圈擴散的波紋，象徵流動瑜珈"></div>
+        <div class="body">
+          <h3>流動瑜珈</h3>
+          <p>動作跟著呼吸串連，節奏流暢、會流汗。適合已經有基礎，想提升肌力與專注的你。</p>
+          <div class="meta"><span>中階</span><span>75 分鐘</span></div>
+        </div>
+      </article>
+      <article class="class-card reveal d3">
+        <div class="img img-class img-c3" role="img" aria-label="夜空中的彎月，象徵陰瑜珈的沉靜"></div>
+        <div class="body">
+          <h3>陰瑜珈</h3>
+          <p>用抱枕和瑜珈磚支撐，每個姿勢停留三到五分鐘，伸展筋膜，讓緊繃了一天的身體放下來。</p>
+          <div class="meta"><span>全程度</span><span>75 分鐘</span></div>
+        </div>
+      </article>
+      <article class="class-card reveal">
+        <div class="img img-class img-c4" role="img" aria-label="器械床的滑軌與彈簧線條"></div>
+        <div class="body">
+          <h3>器械皮拉提斯</h3>
+          <p>使用核心床 Reformer，透過彈簧阻力訓練深層核心與體態。每班只開 6 台，老師逐一調整。</p>
+          <div class="meta"><span>初中階</span><span>55 分鐘</span><span>每班 6 人</span></div>
+        </div>
+      </article>
+      <article class="class-card reveal d2">
+        <div class="img img-class img-c5" role="img" aria-label="兩個相依的圓，象徵孕婦瑜珈"></div>
+        <div class="body">
+          <h3>孕婦瑜珈</h3>
+          <p>由具孕產認證的老師帶領，舒緩腰背痠痛、練習分娩呼吸。建議懷孕 14 週後，經醫師同意再參加。</p>
+          <div class="meta"><span>孕期 14 週以上</span><span>60 分鐘</span></div>
+        </div>
+      </article>
+      <article class="class-card help reveal d3">
+        <h3>還不知道選哪一堂？</h3>
+        <p>在預約表單寫下你的運動習慣和身體狀況，老師會幫你挑一堂最適合的體驗課。</p>
+        <a class="btn btn-primary" href="#book" data-class="還不確定，請老師推薦">請老師推薦</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：每週課表 ==================== -->
+<!-- 修改課表：每一天是一個 .day 區塊，每堂課是一個 <li class="slot">。
+     名額少於 3 位加上 class="slot-left low"，額滿用 class="slot-left full"。 -->
+<section id="schedule" class="tint">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">每週課表</h2>
+      <p class="sec-lead">點選星期查看當天課程，名額即時更新。看到想上的課，按預約就會帶入表單。</p>
+    </div>
+    <div class="reveal">
+      <div class="tabs js-only" role="tablist" aria-label="選擇星期">
+        <button class="tab" role="tab" id="d1" aria-controls="p1" aria-selected="false" tabindex="-1">週一</button>
+        <button class="tab" role="tab" id="d2" aria-controls="p2" aria-selected="false" tabindex="-1">週二</button>
+        <button class="tab" role="tab" id="d3" aria-controls="p3" aria-selected="false" tabindex="-1">週三</button>
+        <button class="tab" role="tab" id="d4" aria-controls="p4" aria-selected="false" tabindex="-1">週四</button>
+        <button class="tab" role="tab" id="d5" aria-controls="p5" aria-selected="false" tabindex="-1">週五</button>
+        <button class="tab" role="tab" id="d6" aria-controls="p6" aria-selected="false" tabindex="-1">週六</button>
+        <button class="tab" role="tab" id="d7" aria-controls="p7" aria-selected="false" tabindex="-1">週日</button>
+      </div>
+      <!-- 範例內容：上線前請換成真實資料 -->
+      <div class="day" role="tabpanel" id="p1" aria-labelledby="d1" tabindex="0">
+        <h3 class="day-title nojs-only">週一</h3>
+        <ul class="slots">
+          <li class="slot"><time>07:00</time><span class="slot-main">哈達瑜珈<small>60 分鐘</small></span><span class="slot-info"><span>以晴老師</span><span class="slot-left">剩 6 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="哈達瑜珈">預約</a></li>
+          <li class="slot"><time>12:15</time><span class="slot-main">器械皮拉提斯<small>55 分鐘</small></span><span class="slot-info"><span>采蓉老師</span><span class="slot-left low">剩 2 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="器械皮拉提斯">預約</a></li>
+          <li class="slot"><time>18:30</time><span class="slot-main">流動瑜珈<small>75 分鐘</small></span><span class="slot-info"><span>柏宇老師</span><span class="slot-left">剩 4 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="流動瑜珈">預約</a></li>
+          <li class="slot"><time>20:00</time><span class="slot-main">陰瑜珈<small>75 分鐘</small></span><span class="slot-info"><span>以晴老師</span><span class="slot-left">剩 8 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="陰瑜珈">預約</a></li>
+        </ul>
+      </div>
+      <div class="day" role="tabpanel" id="p2" aria-labelledby="d2" tabindex="0">
+        <h3 class="day-title nojs-only">週二</h3>
+        <ul class="slots">
+          <li class="slot"><time>07:00</time><span class="slot-main">器械皮拉提斯<small>55 分鐘</small></span><span class="slot-info"><span>采蓉老師</span><span class="slot-left full">額滿</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="器械皮拉提斯">候補</a></li>
+          <li class="slot"><time>10:00</time><span class="slot-main">孕婦瑜珈<small>60 分鐘</small></span><span class="slot-info"><span>采蓉老師</span><span class="slot-left">剩 5 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="孕婦瑜珈">預約</a></li>
+          <li class="slot"><time>19:00</time><span class="slot-main">哈達瑜珈<small>60 分鐘</small></span><span class="slot-info"><span>以晴老師</span><span class="slot-left">剩 3 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="哈達瑜珈">預約</a></li>
+          <li class="slot"><time>20:30</time><span class="slot-main">器械皮拉提斯<small>55 分鐘</small></span><span class="slot-info"><span>采蓉老師</span><span class="slot-left low">剩 1 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="器械皮拉提斯">預約</a></li>
+        </ul>
+      </div>
+      <div class="day" role="tabpanel" id="p3" aria-labelledby="d3" tabindex="0">
+        <h3 class="day-title nojs-only">週三</h3>
+        <ul class="slots">
+          <li class="slot"><time>07:00</time><span class="slot-main">流動瑜珈<small>75 分鐘</small></span><span class="slot-info"><span>柏宇老師</span><span class="slot-left">剩 7 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="流動瑜珈">預約</a></li>
+          <li class="slot"><time>12:15</time><span class="slot-main">哈達瑜珈<small>60 分鐘</small></span><span class="slot-info"><span>以晴老師</span><span class="slot-left">剩 9 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="哈達瑜珈">預約</a></li>
+          <li class="slot"><time>18:30</time><span class="slot-main">器械皮拉提斯<small>55 分鐘</small></span><span class="slot-info"><span>采蓉老師</span><span class="slot-left low">剩 2 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="器械皮拉提斯">預約</a></li>
+          <li class="slot"><time>20:00</time><span class="slot-main">陰瑜珈<small>75 分鐘</small></span><span class="slot-info"><span>柏宇老師</span><span class="slot-left">剩 6 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="陰瑜珈">預約</a></li>
+        </ul>
+      </div>
+      <div class="day" role="tabpanel" id="p4" aria-labelledby="d4" tabindex="0">
+        <h3 class="day-title nojs-only">週四</h3>
+        <ul class="slots">
+          <li class="slot"><time>07:00</time><span class="slot-main">器械皮拉提斯<small>55 分鐘</small></span><span class="slot-info"><span>采蓉老師</span><span class="slot-left">剩 3 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="器械皮拉提斯">預約</a></li>
+          <li class="slot"><time>10:00</time><span class="slot-main">孕婦瑜珈<small>60 分鐘</small></span><span class="slot-info"><span>采蓉老師</span><span class="slot-left">剩 4 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="孕婦瑜珈">預約</a></li>
+          <li class="slot"><time>19:00</time><span class="slot-main">流動瑜珈<small>75 分鐘</small></span><span class="slot-info"><span>柏宇老師</span><span class="slot-left full">額滿</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="流動瑜珈">候補</a></li>
+          <li class="slot"><time>20:30</time><span class="slot-main">陰瑜珈<small>75 分鐘</small></span><span class="slot-info"><span>以晴老師</span><span class="slot-left">剩 10 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="陰瑜珈">預約</a></li>
+        </ul>
+      </div>
+      <div class="day" role="tabpanel" id="p5" aria-labelledby="d5" tabindex="0">
+        <h3 class="day-title nojs-only">週五</h3>
+        <ul class="slots">
+          <li class="slot"><time>07:00</time><span class="slot-main">哈達瑜珈<small>60 分鐘</small></span><span class="slot-info"><span>以晴老師</span><span class="slot-left">剩 5 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="哈達瑜珈">預約</a></li>
+          <li class="slot"><time>12:15</time><span class="slot-main">器械皮拉提斯<small>55 分鐘</small></span><span class="slot-info"><span>采蓉老師</span><span class="slot-left">剩 4 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="器械皮拉提斯">預約</a></li>
+          <li class="slot"><time>19:00</time><span class="slot-main">流動瑜珈<small>75 分鐘</small></span><span class="slot-info"><span>柏宇老師</span><span class="slot-left low">剩 2 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="流動瑜珈">預約</a></li>
+        </ul>
+      </div>
+      <div class="day" role="tabpanel" id="p6" aria-labelledby="d6" tabindex="0">
+        <h3 class="day-title nojs-only">週六</h3>
+        <ul class="slots">
+          <li class="slot"><time>09:00</time><span class="slot-main">流動瑜珈<small>75 分鐘</small></span><span class="slot-info"><span>柏宇老師</span><span class="slot-left">剩 3 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="流動瑜珈">預約</a></li>
+          <li class="slot"><time>10:30</time><span class="slot-main">器械皮拉提斯<small>55 分鐘</small></span><span class="slot-info"><span>采蓉老師</span><span class="slot-left full">額滿</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="器械皮拉提斯">候補</a></li>
+          <li class="slot"><time>13:30</time><span class="slot-main">孕婦瑜珈<small>60 分鐘</small></span><span class="slot-info"><span>采蓉老師</span><span class="slot-left">剩 6 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="孕婦瑜珈">預約</a></li>
+          <li class="slot"><time>15:00</time><span class="slot-main">哈達瑜珈<small>60 分鐘</small></span><span class="slot-info"><span>以晴老師</span><span class="slot-left">剩 4 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="哈達瑜珈">預約</a></li>
+        </ul>
+      </div>
+      <div class="day" role="tabpanel" id="p7" aria-labelledby="d7" tabindex="0">
+        <h3 class="day-title nojs-only">週日</h3>
+        <ul class="slots">
+          <li class="slot"><time>09:00</time><span class="slot-main">哈達瑜珈<small>60 分鐘</small></span><span class="slot-info"><span>以晴老師</span><span class="slot-left">剩 7 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="哈達瑜珈">預約</a></li>
+          <li class="slot"><time>10:30</time><span class="slot-main">陰瑜珈<small>75 分鐘</small></span><span class="slot-info"><span>以晴老師</span><span class="slot-left">剩 5 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="陰瑜珈">預約</a></li>
+          <li class="slot"><time>16:00</time><span class="slot-main">器械皮拉提斯<small>55 分鐘</small></span><span class="slot-info"><span>采蓉老師</span><span class="slot-left low">剩 2 位</span></span><a class="btn btn-ghost slot-book" href="#book" data-class="器械皮拉提斯">預約</a></li>
+        </ul>
+      </div>
+      <p class="sched-note">課程開始前 4 小時可免費取消。國定假日課表另行公告於 LINE 官方帳號。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：課程方案 ==================== -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">從一堂體驗課開始</h2>
+      <p class="sec-lead">不用先綁約。上完體驗課再決定，7 天內購買課程卡還能折抵體驗費。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="price-grid">
+      <article class="plan featured reveal">
+        <span class="tag">第一次來</span>
+        <h3>體驗課</h3>
+        <p class="for">想先試試看的你</p>
+        <p class="price">NT$500<small>一堂</small></p>
+        <p class="per">7 天內購買課程卡可全額折抵</p>
+        <ul>
+          <li>任選一堂團體瑜珈或器械皮拉提斯</li>
+          <li>提供瑜珈墊、大毛巾與置物櫃</li>
+          <li>課前 10 分鐘和老師聊聊身體狀況</li>
+        </ul>
+        <a class="btn btn-light" href="#book" data-plan="體驗課">預約體驗課</a>
+      </article>
+      <article class="plan reveal d2">
+        <h3>10 堂卡</h3>
+        <p class="for">每週來一到兩次</p>
+        <p class="price">NT$6,800<small>10 堂</small></p>
+        <p class="per">平均每堂 NT$680，效期 6 個月</p>
+        <ul>
+          <li>所有瑜珈團體課通用</li>
+          <li>可用 2 堂兌換 1 堂器械皮拉提斯</li>
+          <li>線上預約，課前 4 小時免費取消</li>
+        </ul>
+        <a class="btn btn-ghost" href="#book" data-plan="10 堂卡">選擇 10 堂卡</a>
+      </article>
+      <article class="plan reveal d3">
+        <h3>月無限</h3>
+        <p class="for">想把練習變成習慣</p>
+        <p class="price">NT$4,200<small>每月</small></p>
+        <p class="per">最少 3 個月，之後按月續約</p>
+        <ul>
+          <li>瑜珈團體課不限堂數</li>
+          <li>每月含 4 堂器械皮拉提斯</li>
+          <li>出國或生病可暫停一次，最長 30 天</li>
+        </ul>
+        <a class="btn btn-ghost" href="#book" data-plan="月無限">選擇月無限</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：老師介紹 ==================== -->
+<section id="teachers" class="soft">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">陪你練習的老師</h2>
+      <p class="sec-lead">每位老師都有 500 小時以上的教學時數，比起把動作做漂亮，更在意你練得安全、舒服。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="team-grid">
+      <article class="teacher reveal">
+        <div class="img img-teacher img-t1 arch" role="img" aria-label="以晴老師的照片位置"></div>
+        <h3>林以晴</h3>
+        <p class="role">創辦人，哈達與陰瑜珈</p>
+        <p>前外商行銷，因為長年肩頸痠痛開始練瑜珈。上課節奏溫和，很會用口令帶你找到正確的發力位置。</p>
+        <p class="certs">RYT-500 認證，教學 9 年</p>
+      </article>
+      <article class="teacher reveal d2">
+        <div class="img img-teacher img-t2 arch" role="img" aria-label="柏宇老師的照片位置"></div>
+        <h3>陳柏宇</h3>
+        <p class="role">流動瑜珈</p>
+        <p>大學是田徑隊，喜歡把力量和柔軟結合。他的流動課音樂好聽、節奏明快，下課總是一身汗又很放鬆。</p>
+        <p class="certs">RYT-500 認證，運動傷害防護員</p>
+      </article>
+      <article class="teacher reveal d3">
+        <div class="img img-teacher img-t3 arch" role="img" aria-label="采蓉老師的照片位置"></div>
+        <h3>吳采蓉</h3>
+        <p class="role">器械皮拉提斯，孕婦瑜珈</p>
+        <p>物理治療背景，擅長處理下背痛與產後核心修復。觀察很細，一點點代償動作都逃不過她的眼睛。</p>
+        <p class="certs">國際皮拉提斯綜合認證，孕產瑜珈認證</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：空間介紹 ==================== -->
+<section id="space">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">安靜、明亮的練習空間</h2>
+      <p class="sec-lead">三樓整層，大片窗戶引進自然光。上課前後可以在茶席坐一下，喝杯溫熱的花草茶。</p>
+    </div>
+    <div class="gallery">
+      <figure class="g1 reveal">
+        <div class="img img-s1" role="img" aria-label="木地板瑜珈教室與拱形大窗"></div>
+        <figcaption><b>瑜珈教室</b>約 25 坪，實木地板與地暖</figcaption>
+      </figure>
+      <figure class="g2 reveal d2">
+        <div class="img img-s2" role="img" aria-label="整齊排列的器械皮拉提斯核心床"></div>
+        <figcaption><b>器械教室</b>6 台核心床，一人一台</figcaption>
+      </figure>
+      <figure class="reveal d2">
+        <div class="img img-s3" role="img" aria-label="放著茶杯的木頭小茶几"></div>
+        <figcaption><b>茶席</b>課後花草茶</figcaption>
+      </figure>
+      <figure class="reveal d3">
+        <div class="img img-s4" role="img" aria-label="磁磚牆面與圓鏡的更衣室"></div>
+        <figcaption><b>更衣淋浴</b>吹風機、保養品</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：第一次來上課 ==================== -->
+<section id="first" class="tint">
+  <div class="wrap first-grid">
+    <div>
+      <div class="sec-head reveal">
+        <h2 class="sec-title">第一次來上課</h2>
+        <p class="sec-lead">不用柔軟、不用有經驗。照著下面幾件事準備，就能輕鬆上完第一堂。</p>
+      </div>
+      <ol class="steps">
+        <li class="reveal"><div><h3>提早 15 分鐘到</h3><p>填寫簡單的健康問卷、換衣服，再和老師聊聊身體哪裡比較緊或有舊傷。</p></div></li>
+        <li class="reveal d2"><div><h3>上課前 2 小時不吃正餐</h3><p>空腹練習比較舒服。真的餓了，可以吃一根香蕉或喝點豆漿。</p></div></li>
+        <li class="reveal d3"><div><h3>跟著自己的呼吸</h3><p>做不到的動作就停在舒服的位置，老師會給你替代的做法，不用和旁邊的人比較。</p></div></li>
+        <li class="reveal"><div><h3>下課後多喝溫水</h3><p>練習後身體還在調整，當天早點休息，隔天會感覺肩頸鬆很多。</p></div></li>
+      </ol>
+    </div>
+    <aside class="bring reveal d2">
+      <h3>記得帶這些</h3>
+      <ul>
+        <li><b>好活動的衣服</b><span>貼身一點比較好，老師才看得到你的姿勢</span></li>
+        <li><b>水壺</b><span>教室有飲水機，可以隨時裝水</span></li>
+        <li><b>止滑襪</b><span>器械課必備，現場也有販售 NT$250</span></li>
+        <li><b>不用帶墊子</b><span>瑜珈墊、毛巾、輔具都由教室提供</span></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ==================== 區塊：學員評價 ==================== -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">學員怎麼說</h2>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="review-grid">
+      <figure class="review reveal">
+        <blockquote>原本以為自己身體太硬不適合瑜珈，以晴老師一直提醒我們不用勉強。上了三個月，久坐的腰痠真的少很多。</blockquote>
+        <figcaption><cite><b>Vivian，工程師</b>10 堂卡學員</cite></figcaption>
+      </figure>
+      <figure class="review reveal d2">
+        <blockquote>器械課一班只有六個人，采蓉老師每個人都會過來調整。產後半年開始上，核心慢慢找回來了。</blockquote>
+        <figcaption><cite><b>張小姐，新手媽媽</b>月無限學員</cite></figcaption>
+      </figure>
+      <figure class="review reveal d3">
+        <blockquote>下班直接從公司走過來，上完一堂陰瑜珈再回家，整個人安靜下來，那晚一定睡得特別好。</blockquote>
+        <figcaption><cite><b>Kevin，業務</b>上課一年</cite></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：常見問題 ==================== -->
+<section id="faq" class="soft">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">常見問題</h2>
+    </div>
+    <div class="faq reveal">
+      <details><summary>完全沒運動習慣，也可以上課嗎？</summary><p>可以。建議從哈達瑜珈或陰瑜珈開始，老師會提供輔具和替代動作。預約時寫下你的狀況，我們會幫你安排合適的班。</p></details>
+      <details><summary>瑜珈和器械皮拉提斯有什麼不同？</summary><p>瑜珈著重呼吸、柔軟度與身心放鬆；器械皮拉提斯透過彈簧阻力訓練深層核心，對改善體態和下背痛特別有幫助。兩者搭配練習效果很好。</p></details>
+      <details><summary>男生可以來上課嗎？</summary><p>當然可以。我們有男女分開的更衣淋浴間，流動瑜珈和器械課都有不少男學員。</p></details>
+      <details><summary>有舊傷或正在懷孕，需要注意什麼？</summary><p>請在預約表單詳細說明，並在課前告訴老師。懷孕期間建議參加孕婦瑜珈，並先取得醫師同意。</p></details>
+      <details><summary>課程卡可以轉讓或延期嗎？</summary><p>10 堂卡可以轉讓給家人朋友一次。效期到期前可申請延長 1 個月，月無限方案則可暫停一次，最長 30 天。</p></details>
+      <details><summary>附近好停車嗎？</summary><p>松勤街與信義路口有公有停車場，步行約 3 分鐘。也很推薦搭捷運到象山站，從 2 號出口出來就到了。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：體驗課預約 ==================== -->
+<section id="book" class="tint">
+  <div class="wrap book-grid">
+    <div class="reveal">
+      <h2 class="sec-title">預約你的第一堂課</h2>
+      <p class="sec-lead">填好表單，我們會在一個工作天內用電話或 LINE 和你確認上課時段。想更快，也可以直接傳訊息給我們。</p>
+      <ul class="contact-list">
+        <li><b>地址</b><span>台北市信義區松勤街 58 號 3 樓</span></li>
+        <li><b>電話</b><a href="tel:0212345678">02-1234-5678</a></li>
+        <li><b>平日</b><span>06:45–22:00</span></li>
+        <li><b>週末</b><span>08:30–18:00</span></li>
+      </ul>
+      <div class="contact-cta">
+        <a class="btn btn-ghost" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 詢問</a>
+        <a class="btn btn-ghost" href="tel:0212345678">撥打電話</a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?q=台北市信義區松勤街58號" target="_blank" rel="noopener">Google 地圖</a>
+      </div>
+    </div>
+    <!-- 表單使用 Formspree（免費）：到 https://formspree.io 註冊並建立表單，
+         把下面 action 網址中的 your-form-id 換成你的表單 ID，預約資料就會寄到你的信箱。 -->
+    <form class="form reveal d2" action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="hidden" name="_subject" value="新的體驗課預約">
+      <div class="field"><label for="f-name">姓名 <span>*</span></label><input id="f-name" name="姓名" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">手機 <span>*</span></label><input id="f-tel" name="手機" type="tel" autocomplete="tel" inputmode="tel" placeholder="0912-345-678" required></div>
+      <div class="field full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+      <div class="field"><label for="f-class">想上的課 <span>*</span></label>
+        <select id="f-class" name="想上的課" required>
+          <option value="">請選擇</option>
+          <option>哈達瑜珈</option><option>流動瑜珈</option><option>陰瑜珈</option><option>器械皮拉提斯</option><option>孕婦瑜珈</option><option>還不確定，請老師推薦</option>
+        </select></div>
+      <div class="field"><label for="f-plan">方案</label>
+        <select id="f-plan" name="方案">
+          <option>體驗課</option><option>10 堂卡</option><option>月無限</option>
+        </select></div>
+      <div class="field"><label for="f-date">希望日期 <span>*</span></label><input id="f-date" name="希望日期" type="date" required></div>
+      <div class="field"><label for="f-exp">運動經驗</label>
+        <select id="f-exp" name="運動經驗">
+          <option>第一次接觸</option><option>偶爾運動</option><option>有規律練習</option>
+        </select></div>
+      <div class="field full"><label for="f-note">想讓老師知道的事</label><textarea id="f-note" name="備註" placeholder="例如：下背容易痠、膝蓋曾經受傷、懷孕 20 週、偏好晚上的課…"></textarea></div>
+      <button class="btn btn-primary" type="submit">送出預約</button>
+      <small>送出後尚未完成預約，收到我們的確認訊息才算預約成功。</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>息 Breathe 瑜珈皮拉提斯</h2>
+        <p>台北市信義區松勤街 58 號 3 樓<br>電話 <a href="tel:0212345678">02-1234-5678</a></p>
+        <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="https://line.me/R/ti/p/@yourlineid">LINE</a></div>
+      </div>
+      <div>
+        <h2>營業時間</h2>
+        <p>週一至週五 06:45–22:00<br>週六、週日 08:30–18:00</p>
+      </div>
+      <div>
+        <h2>快速連結</h2>
+        <p><a href="#schedule">每週課表</a><br><a href="#pricing">課程方案</a><br><a href="#first">第一次來上課</a></p>
+      </div>
+    </div>
+    <p class="copy">© <span id="y"></span> 息 Breathe 瑜珈皮拉提斯</p>
+    <!-- 頁尾語言切換：和頁首同一組連結 -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja">日本語</a></p>
+  </div>
+</footer>
+
+<!-- ==================== 區塊：手機底部固定按鈕 ==================== -->
+<div class="sticky-cta">
+  <a href="#book" class="btn btn-primary">預約體驗課</a>
+  <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE</a>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+$('y').textContent = new Date().getFullYear();
+
+// 頁首捲動背景
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// 漢堡選單
+const toggle = document.querySelector('.nav-toggle'), menu = $('menu-links');
+const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? '關閉選單' : '開啟選單'); };
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// 捲動漸入
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// 課表星期分頁：自動選到今天，支援左右方向鍵
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+const pick = (i, focus) => {
+  tabs.forEach((t, j) => { const on = i === j; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; $(t.getAttribute('aria-controls')).hidden = !on; });
+  if (focus) tabs[i].focus();
+};
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => pick(i));
+  t.addEventListener('keydown', e => {
+    const n = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+    if (n !== undefined) { e.preventDefault(); pick((n + tabs.length) % tabs.length, true); }
+  });
+});
+const today = (new Date().getDay() + 6) % 7; // 0 = 週一
+tabs[today].classList.add('today'); pick(today);
+
+// 按課表或方案的預約按鈕，自動帶入表單
+document.querySelectorAll('[data-class], [data-plan]').forEach(a => a.addEventListener('click', () => {
+  if (a.dataset.class) $('f-class').value = a.dataset.class;
+  if (a.dataset.plan) $('f-plan').value = a.dataset.plan;
+}));
+
+// 希望日期：預設明天，不能選過去的日期
+const d = new Date(), iso = x => `${x.getFullYear()}-${String(x.getMonth() + 1).padStart(2, '0')}-${String(x.getDate()).padStart(2, '0')}`;
+$('f-date').min = iso(d); d.setDate(d.getDate() + 1); $('f-date').value = iso(d);
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

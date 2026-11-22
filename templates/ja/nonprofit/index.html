@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  ご購入者さまへ：NPO法人、地域の支援団体、教会向けのテンプレートです
+  1. 団体名、法人番号、登録情報はすべて架空のものです。公開前に実際の情報に書き換えてください。
+  2. 「認定NPO法人」の表記や寄附金控除（税額控除）の案内は、所轄庁から認定を受けている場合のみ載せてください。
+     認定を受けていない場合は、寄付の控除に関する文言を削除してください。
+  3. 教会で使う場合：
+     - 「活動内容」を「教会の働き」に変え、3枚のカードを教会学校、小グループ、訪問などに差し替えます。
+     - 「これからのイベント」を「礼拝のご案内」に変えます（例：主日礼拝 日曜 10:30、祈祷会 水曜 19:30、ユースの集い 土曜 15:00）。
+     - 「寄付する」を「献金する」に、ウィジェットの見出しを「オンライン献金」に変えます。
+     - JSON-LD の "@type" を ["Church", "LocalBusiness"] に変えます。
+-->
+<title>NPO法人 みなとあかり｜江東区の放課後学習支援と高齢者への配食</title>
+<meta name="description" content="NPO法人みなとあかりは、江東区の子どもたちに放課後の学習支援を、外出が難しい高齢者に温かいお弁当を届けています。1回または毎月のご寄付、ボランティアのご参加をお待ちしています。">
+<meta property="og:title" content="NPO法人 みなとあかり｜ひとりで勉強する子も、ひとりで食べる人もいないまちへ">
+<meta property="og:description" content="東京都江東区で放課後の学習支援、高齢者への配食、子育て家庭の訪問支援を行う地域のNPOです。寄付、ボランティア、事業報告書はこちら。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#c9432f">
+<!-- 多言語版（SEO）：公開後は各 href を完全な URL に置き換えてください（例：https://www.yourbusiness.com/en/） -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["NGO", "LocalBusiness"],
+  "name": "特定非営利活動法人 みなとあかり",
+  "alternateName": "NPO法人 みなとあかり",
+  "description": "東京都江東区で放課後の学習支援、高齢者への配食、子育て家庭の訪問支援を行う地域のNPO法人です。",
+  "url": "https://example.com/",
+  "telephone": "03-1234-5678",
+  "email": "hello@example.jp",
+  "areaServed": "東京都江東区",
+  "taxID": "0000000000000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "北砂3-12-7",
+    "addressLocality": "江東区",
+    "addressRegion": "東京都",
+    "postalCode": "136-0073",
+    "addressCountry": "JP"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "11:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "13:00" }
+  ],
+  "potentialAction": {
+    "@type": "DonateAction",
+    "name": "オンラインで寄付する",
+    "target": "https://example.com/donate",
+    "priceCurrency": "JPY",
+    "recipient": { "@type": "NGO", "name": "特定非営利活動法人 みなとあかり" }
+  }
+}
+</script>
+<style>
+/* ============================================================
+   テーマ設定：ここを変えるとサイト全体の配色とフォントが変わります
+   ============================================================ */
+:root {
+  --brand: #c9432f;          /* ブランドカラー（朝焼けのコーラル：ボタン、リンク、強調） */
+  --brand-ink: #fffaf3;      /* ブランドカラー上の文字色 */
+  --brand-deep: #9e2f20;     /* 濃いブランドカラー（ホバー、ボタン下の影） */
+  --brand-soft: #fbe4d8;     /* 淡いブランドカラー（イラストの背景、アイコンの下地） */
+  --brand-light: #f7a58f;    /* ごく淡いブランドカラー（ネイビーのセクションのアクセント文字） */
+  --sun: #f5c242;            /* ひだまりイエロー（唯一のアクセント。使いすぎに注意） */
+  --sun-ink: #3a2a00;        /* イエロー上の文字色 */
+  --sun-soft: #fdf0c8;       /* 淡いイエロー（インパクト欄、タグの背景） */
+  --bg: #fbf4ea;             /* ページ背景（やわらかいクリーム） */
+  --surface: #fffaf3;        /* カードとフォームの面（温かみのある白） */
+  --text: #1c2b4b;           /* メインの文字色（深いネイビー） */
+  --muted: #55607a;          /* 補足テキストの文字色 */
+  --line: #ecdfcc;           /* 区切り線と枠線 */
+  --night: #1c2b4b;          /* ダークセクションの背景（実績の数字、フッター） */
+  --night-ink: #fbf4ea;      /* ダークセクションの文字色 */
+  --night-muted: #c9cfdd;    /* ダークセクションの補足文字色 */
+  --skin: #f1c9a5;           /* イラストの肌の色 */
+  --hair: #c9cfdd;           /* イラストの白髪 */
+  --shadow: 0 16px 36px -18px color-mix(in srgb, var(--text) 32%, transparent); /* カードのやわらかい影 */
+  --radius: 22px;            /* カードの角丸 */
+  --radius-sm: 12px;         /* 小さな要素の角丸 */
+  --font-heading: "Zen Kaku Gothic New", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif; /* 見出しフォント（やわらかいゴシック体） */
+  --font-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;    /* 本文フォント */
+  --max: 1160px;             /* コンテンツの最大幅 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 800; line-height: 1.3; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 8px; }
+::selection { background: var(--sun); color: var(--sun-ink); }
+.wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+section { padding-block: clamp(4rem, 10vw, 6.5rem); }
+.sec-head { max-width: 40rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
+.sec-head.center { margin-inline: auto; text-align: center; }
+.sec-head h2 { font-size: clamp(1.6rem, 3.6vw, 2.3rem); line-height: 1.4; margin-bottom: .6rem; }
+.sec-head p { color: var(--muted); }
+.alt { background: var(--surface); }
+/* 手描き風の波線（セクション見出しの下） */
+.squiggle { display: block; width: 7rem; height: 12px; margin-top: .5rem; color: var(--sun); }
+.center .squiggle { margin-inline: auto; }
+
+/* ---------- ボタン ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .8rem 1.5rem; border-radius: 999px; font-weight: 700; font-size: 1rem; font-family: inherit; border: 2px solid transparent; transition: background .25s, color .25s, transform .25s, border-color .25s, box-shadow .25s; cursor: pointer; }
+.btn svg { width: 1.15rem; height: 1.15rem; flex: none; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); box-shadow: 0 4px 0 var(--brand-deep); }
+.btn-primary:hover { background: var(--brand-deep); transform: translateY(-2px); }
+.btn:active { transform: translateY(2px); box-shadow: none; }
+.btn-ghost { border-color: var(--text); color: var(--text); background: var(--surface); }
+.btn-ghost:hover { background: var(--sun-soft); transform: translateY(-2px); }
+.btn-sm { padding: .5rem 1.1rem; font-size: .92rem; }
+a:not(.btn):active { opacity: .7; }
+.text-link { color: var(--brand); font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; transition: color .2s, text-decoration-color .2s; }
+.text-link:hover { color: var(--brand-deep); text-decoration-color: var(--sun); }
+
+/* ---------- ヘッダー ---------- */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 93%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .6rem; font: 800 1.15rem/1.2 var(--font-heading); }
+.logo-mark { width: 2.5rem; height: 2.5rem; flex: none; }
+.logo-mark .m-sun { fill: var(--sun); }
+.logo-mark .m-roof { fill: var(--brand); }
+.logo-mark .m-ln { fill: none; stroke: var(--text); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.nav-links { display: flex; align-items: center; gap: 1.35rem; font-size: .95rem; }
+.nav-links a:not(.btn) { color: var(--muted); font-weight: 500; transition: color .2s; }
+.nav-links a:not(.btn):hover { color: var(--brand); }
+.menu-btn { display: none; width: 44px; height: 44px; border: 1.5px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--text); cursor: pointer; transition: background .2s, transform .2s; }
+.menu-btn:hover { background: var(--sun-soft); }
+.menu-btn:active { transform: scale(.94); }
+.menu-btn span { display: block; width: 18px; height: 2px; margin: 4px auto; background: currentColor; border-radius: 2px; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+@media (min-width: 761px) and (max-width: 1080px) { .nav-links .opt { display: none; } }
+@media (max-width: 760px) {
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: 72px; left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .75rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: .75rem 1rem; border-radius: var(--radius-sm); }
+  .js .nav-links .btn { margin-top: .5rem; }
+  /* JS がないとき：メニューはロゴの下に折り返し、ヘッダーは sticky になります */
+  html:not(.js) .site-header { position: sticky; background: var(--surface); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: .75rem; }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: 2.5rem; }
+}
+/* ---------- 言語切り替え（ヘッダーの .lang-switch、フッターの .foot-lang）：小さく控えめに。現在の言語は色だけでなく太字＋下線で示します ---------- */
+.lang-switch { display: flex; align-items: center; flex: none; gap: 2px; }
+.lang-switch a:not(.btn) { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: var(--radius-sm); font: 500 .85rem/1 var(--font-body); color: var(--muted); text-decoration: none; white-space: nowrap; transition: color .2s, background-color .2s; }
+.lang-switch a:not(.btn):hover { color: var(--text); background: color-mix(in srgb, var(--text) 8%, transparent); }
+.lang-switch a:not(.btn):active { background: color-mix(in srgb, var(--text) 15%, transparent); opacity: 1; }
+.lang-switch a:not(.btn):focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.nav-links .lang-switch { order: 99; margin-left: -.5rem; }
+.lang-switch a:not(.btn):hover { background: var(--sun-soft); }
+@media (max-width: 760px) {
+  /* スマホ：切り替えは開いたメニューの一番上に表示 */
+  .js .nav-links .lang-switch { order: 0; margin: 0 0 .25rem; padding: 0 .5rem .5rem; border-bottom: 1px solid var(--line); }
+  .js .nav-links .lang-switch a:not(.btn) { display: inline-grid; min-width: 44px; min-height: 40px; padding: 0 .5rem; }
+  html:not(.js) .nav-links .lang-switch { margin-left: -.3rem; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: 0 .25rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; color: var(--night-muted); text-decoration: none; transition: color .2s; }
+.foot-lang a:hover { color: var(--sun); text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--sun); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { color: var(--night-ink); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+
+/* ---------- 手描き風イラスト（インライン SVG。色はテーマ変数から取ります） ---------- */
+.ill .f-brand { fill: var(--brand); }
+.ill .f-deep { fill: var(--brand-deep); }
+.ill .f-soft { fill: var(--brand-soft); }
+.ill .f-sun { fill: var(--sun); }
+.ill .f-sunsoft { fill: var(--sun-soft); }
+.ill .f-surface { fill: var(--surface); }
+.ill .f-night { fill: var(--night); }
+.ill .f-skin { fill: var(--skin); }
+.ill .f-hair { fill: var(--hair); }
+.ill .f-none { fill: none; }
+.ill .ln { stroke: var(--text); stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+.ill .ln-sun { fill: none; stroke: var(--sun); stroke-width: 5; stroke-linecap: round; }
+.ill .ln-brand { fill: none; stroke: var(--brand); stroke-width: 3.5; stroke-linecap: round; }
+
+/* ---------- 仮イラスト（角丸の写真枠） ---------- */
+/* 写真に差し替え：.img-story1 { background: url(images/story-1.jpg) center/cover; }（.img-story2 も同様）。そのあと ::before の図形を削除してください */
+/* 写真に差し替え：.img-map の中に Google マップの iframe を入れる（共有 → 地図を埋め込む → コードをコピー）か、.img-map { background: url(images/map.png) center/cover; } にしてください */
+.img { position: relative; overflow: hidden; background-color: var(--brand-soft); }
+.frame { border-radius: 999px 999px var(--radius) var(--radius); aspect-ratio: 4 / 3.6; border: 3px solid var(--text); }
+.img-story1 {
+  background-image:
+    radial-gradient(circle at 68% 42%, var(--sun) 0 13%, transparent 13.5%),
+    repeating-conic-gradient(from 0deg at 68% 42%, color-mix(in srgb, var(--sun) 30%, transparent) 0 8deg, transparent 8deg 22deg),
+    linear-gradient(var(--sun-soft), var(--brand-soft));
+}
+.img-story2 {
+  background-image:
+    radial-gradient(circle at 30% 38%, var(--surface) 0 11%, transparent 11.5%),
+    repeating-linear-gradient(-35deg, color-mix(in srgb, var(--brand) 12%, transparent) 0 10px, transparent 10px 26px),
+    linear-gradient(var(--brand-soft), var(--sun-soft));
+}
+.img-story1::before, .img-story2::before { content: ""; position: absolute; inset: auto -10% -28% -10%; height: 55%; border-radius: 50% 50% 0 0; background: var(--brand); border-top: 3px solid var(--text); }
+.img-story2::before { background: var(--night); inset: auto 5% -30% -25%; }
+.img-map {
+  border-radius: var(--radius); border: 3px solid var(--text); min-height: 320px;
+  background-color: var(--surface);
+  background-image:
+    linear-gradient(90deg, transparent 46%, var(--sun-soft) 46% 54%, transparent 54%),
+    linear-gradient(transparent 58%, var(--sun-soft) 58% 64%, transparent 64%),
+    linear-gradient(115deg, transparent 30%, var(--brand-soft) 30% 34%, transparent 34%),
+    linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: auto, auto, auto, 32px 32px, 32px 32px;
+}
+.img-map svg { position: absolute; left: 50%; top: 61%; width: 64px; translate: -50% -100%; }
+
+/* ---------- ヒーロー ---------- */
+.hero { padding-top: calc(72px + clamp(1.5rem, 4vw, 3rem)); padding-bottom: clamp(3.5rem, 8vw, 5.5rem); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.hero h1 { font-size: clamp(1.8rem, 3.9vw, 2.8rem); line-height: 1.4; margin-bottom: 1.1rem; }
+.hero-sub { color: var(--muted); font-size: 1.12rem; max-width: 30rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 1.9rem; }
+.hero-note { margin-top: 1.4rem; font-size: .9rem; color: var(--muted); display: flex; align-items: center; gap: .5rem; }
+.hero-note svg { width: 1.2rem; height: 1.2rem; flex: none; color: var(--brand); }
+.hero-art { position: relative; }
+.hero-art .ill { display: block; width: 100%; height: auto; }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-art { max-width: 30rem; margin-inline: auto; width: 100%; }
+}
+
+/* ---------- 活動内容 ---------- */
+.prog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.prog { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem 1.6rem 1.8rem; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+.prog-ico { width: 100%; max-width: 8.5rem; aspect-ratio: 4 / 3; margin-bottom: 1rem; border-radius: 50% 50% 46% 54% / 56% 48% 52% 44%; background: var(--brand-soft); }
+.prog:nth-child(2) .prog-ico { background: var(--sun-soft); }
+.prog h3 { font-size: 1.3rem; margin-bottom: .45rem; }
+.prog p { color: var(--muted); }
+.impact-line { margin-top: auto; padding-top: 1.1rem; font-weight: 700; color: var(--text); display: flex; gap: .55rem; align-items: flex-start; }
+.impact-line svg { width: 1.3rem; height: 1.3rem; flex: none; color: var(--brand); margin-top: .2rem; }
+.prog > p:not(.impact-line) { margin-bottom: .2rem; }
+@media (max-width: 900px) { .prog-grid { grid-template-columns: minmax(0, 1fr); } .prog { display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); column-gap: 1.25rem; } .prog-ico { grid-row: span 3; } }
+@media (max-width: 480px) { .prog { grid-template-columns: minmax(0, 1fr); } .prog-ico { grid-row: auto; max-width: 7rem; } }
+
+/* ---------- 活動実績の数字 ---------- */
+.impact { background: var(--night); color: var(--night-ink); position: relative; }
+.impact .sec-head p { color: var(--night-muted); }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; }
+.stat { padding: 1.4rem 1.2rem; border-radius: var(--radius); border: 1.5px dashed color-mix(in srgb, var(--night-ink) 30%, transparent); text-align: center; }
+.stat b { display: block; font: 800 clamp(2.2rem, 5vw, 3.2rem)/1.1 var(--font-heading); color: var(--sun); font-variant-numeric: tabular-nums; }
+.stat span { display: block; margin-top: .5rem; color: var(--night-muted); font-size: .95rem; }
+.impact .sample-note { margin-top: 1.8rem; text-align: center; font-size: .85rem; color: var(--night-muted); }
+@media (max-width: 860px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---------- 寄付ウィジェット ---------- */
+.donate-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.covers { display: grid; gap: .9rem; margin-top: 1.5rem; }
+.covers li { display: flex; gap: .75rem; align-items: flex-start; }
+.covers svg { width: 1.6rem; height: 1.6rem; flex: none; color: var(--brand); }
+.give { background: var(--surface); border: 3px solid var(--text); border-radius: var(--radius); padding: clamp(1.25rem, 4vw, 2.25rem); box-shadow: 8px 8px 0 var(--sun); }
+.give h3 { font-size: 1.35rem; margin-bottom: 1.1rem; }
+.give fieldset { border: 0; margin-bottom: 1.25rem; min-width: 0; }
+.give legend { font-weight: 700; margin-bottom: .55rem; font-size: .95rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.freq { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: .3rem; border-radius: 999px; background: var(--bg); border: 1.5px solid var(--line); }
+.freq label { text-align: center; padding: .55rem .5rem; border-radius: 999px; font-weight: 700; cursor: pointer; transition: background .2s, color .2s; }
+.freq label:hover { color: var(--brand); }
+.freq input:checked + label { background: var(--text); color: var(--night-ink); }
+.amounts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6rem; }
+.amounts label { display: block; text-align: center; padding: .8rem .4rem; border-radius: var(--radius-sm); border: 2px solid var(--line); background: var(--surface); font: 800 1.05rem/1.2 var(--font-heading); cursor: pointer; transition: border-color .2s, background .2s, transform .2s; font-variant-numeric: tabular-nums; }
+.amounts label:hover { border-color: var(--brand); }
+.amounts label:active { transform: scale(.97); }
+.amounts input:checked + label { border-color: var(--brand); background: var(--brand-soft); }
+.give input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+.give input[type="radio"]:focus-visible + label { outline: 3px solid var(--brand); outline-offset: 2px; }
+.custom-field { margin-top: .8rem; }
+.custom-field label { display: block; font-size: .9rem; color: var(--muted); margin-bottom: .3rem; }
+.js .give:not(.is-custom) .custom-field { display: none; }
+.impact-box { display: flex; gap: .9rem; align-items: flex-start; padding: 1rem 1.1rem; border-radius: var(--radius-sm); background: var(--sun-soft); color: var(--sun-ink); margin-bottom: 1.25rem; }
+.impact-box svg { width: 2.4rem; height: 2.4rem; flex: none; }
+.impact-box strong { display: block; font-size: .9rem; }
+.give .btn { width: 100%; font-size: 1.1rem; padding-block: .95rem; }
+.give .btn[aria-disabled="true"] { opacity: .55; }
+.give-note { margin-top: .9rem; font-size: .85rem; color: var(--muted); text-align: center; }
+@media (max-width: 860px) { .donate-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 440px) { .amounts { grid-template-columns: repeat(2, minmax(0, 1fr)); } .give { box-shadow: 5px 5px 0 var(--sun); } }
+
+/* ---------- フォーム部品 ---------- */
+.field { display: grid; gap: .35rem; }
+.field label, .field legend { font-weight: 700; font-size: .95rem; }
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select, textarea { width: 100%; font: inherit; color: var(--text); background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius-sm); padding: .7rem .9rem; transition: border-color .2s; }
+input:hover, select:hover, textarea:hover { border-color: color-mix(in srgb, var(--text) 35%, transparent); }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent); }
+textarea { min-height: 7rem; resize: vertical; }
+
+/* ---------- 地域の声 ---------- */
+.story-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 3rem); }
+.story { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 1.5rem; align-items: center; }
+.story blockquote p { font-size: 1.08rem; line-height: 1.85; }
+.story blockquote p::before { content: "\300C"; } .story blockquote p::after { content: "\300D"; }
+.story figcaption { margin-top: .9rem; font-weight: 700; }
+.story figcaption span { display: block; font-weight: 400; font-size: .9rem; color: var(--muted); }
+.names-note { margin-top: 2rem; font-size: .88rem; color: var(--muted); }
+@media (max-width: 980px) { .story-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 520px) { .story { grid-template-columns: minmax(0, 1fr); } .story .frame { max-width: 15rem; } }
+
+/* ---------- ボランティア ---------- */
+.vol-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.vol-ill { width: min(16rem, 70%); height: auto; display: block; margin: 0 0 1.5rem; }
+.roles { display: grid; gap: 1rem; }
+.roles li { padding: 1rem 1.2rem; border-radius: var(--radius-sm); background: var(--bg); border: 1px solid var(--line); }
+.roles h3 { font-size: 1.08rem; }
+.roles p { color: var(--muted); font-size: .95rem; }
+.vol-form { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.25rem, 4vw, 2rem); display: grid; gap: 1rem; }
+.vol-form .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.vol-form fieldset { border: 0; min-width: 0; }
+.checks { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin-top: .4rem; }
+.checks label { display: inline-flex; align-items: center; gap: .45rem; font-weight: 400; cursor: pointer; }
+.checks input { width: 1.15rem; height: 1.15rem; accent-color: var(--brand); }
+.form-note { font-size: .85rem; color: var(--muted); }
+@media (max-width: 860px) { .vol-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 520px) { .vol-form .row { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- イベント ---------- */
+.events { display: grid; gap: 1rem; }
+.event { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr) auto; gap: 1.5rem; align-items: center; padding: 1.25rem 1.5rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.date { text-align: center; border-radius: var(--radius-sm); background: var(--brand); color: var(--brand-ink); padding: .55rem .3rem .7rem; line-height: 1.15; }
+.date span { display: block; font-size: .85rem; }
+.date b { display: block; font: 800 2rem/1.05 var(--font-heading); font-variant-numeric: tabular-nums; }
+.event:nth-child(2) .date { background: var(--sun); color: var(--sun-ink); }
+.event:nth-child(3) .date { background: var(--night); color: var(--night-ink); }
+.event h3 { font-size: 1.2rem; }
+.event-meta { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; font-size: .92rem; color: var(--muted); margin-block: .2rem .35rem; }
+.event-meta span { display: inline-flex; align-items: center; gap: .35rem; }
+.event-meta svg { width: 1rem; height: 1rem; color: var(--brand); }
+.event p { color: var(--muted); font-size: .95rem; }
+@media (max-width: 680px) { .event { grid-template-columns: 4.5rem minmax(0, 1fr); gap: 1rem; padding: 1.1rem; } .event .btn { grid-column: 1 / -1; } }
+
+/* ---------- 会計の公開 ---------- */
+.fin-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); }
+.fin-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.25rem, 4vw, 2rem); }
+.fin-card h3 { font-size: 1.2rem; margin-bottom: 1rem; }
+.bars { display: grid; gap: 1rem; }
+.bar-label { display: flex; justify-content: space-between; gap: 1rem; font-size: .95rem; margin-bottom: .35rem; }
+.bar-label b { font-variant-numeric: tabular-nums; }
+.bar { height: 14px; border-radius: 999px; background: var(--bg); border: 1.5px solid var(--line); overflow: hidden; }
+.bar i { display: block; height: 100%; width: var(--w); border-radius: 999px; background: var(--brand); }
+.bars li:nth-child(2) .bar i { background: var(--sun); }
+.bars li:nth-child(3) .bar i { background: var(--night); }
+.docs { display: grid; gap: .75rem; margin-bottom: 1.5rem; }
+.docs a { display: flex; align-items: center; gap: .8rem; padding: .8rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--line); font-weight: 700; transition: border-color .2s, background .2s; }
+.docs a:hover { border-color: var(--brand); background: var(--brand-soft); }
+.docs a:focus-visible { outline-offset: 2px; }
+.docs svg { width: 1.6rem; height: 1.6rem; flex: none; color: var(--brand); }
+.docs small { display: block; font-weight: 400; color: var(--muted); }
+.reg { display: grid; gap: .5rem; font-size: .92rem; }
+.reg div { display: grid; grid-template-columns: minmax(0, 7.5rem) minmax(0, 1fr); gap: .75rem; padding-top: .5rem; border-top: 1px dashed var(--line); }
+.reg dt { color: var(--muted); }
+@media (max-width: 860px) { .fin-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 協力団体 ---------- */
+.partner-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1rem; }
+.partner { display: grid; place-items: center; text-align: center; min-height: 5.5rem; padding: .75rem; border-radius: var(--radius-sm); border: 2px dashed color-mix(in srgb, var(--text) 25%, transparent); color: var(--muted); font-size: .9rem; font-weight: 500; }
+.partners-cta { margin-top: 1.75rem; text-align: center; color: var(--muted); }
+@media (max-width: 900px) { .partner-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .partner-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---------- お問い合わせ ---------- */
+.contact-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: stretch; }
+.info { display: grid; gap: 1.1rem; margin-bottom: 1.6rem; }
+.info li { display: flex; gap: .8rem; align-items: flex-start; }
+.info svg { width: 1.4rem; height: 1.4rem; flex: none; color: var(--brand); margin-top: .25rem; }
+.info b { display: block; }
+.contact-btns { display: flex; flex-wrap: wrap; gap: .75rem; }
+.map-wrap { display: grid; gap: .9rem; }
+@media (max-width: 860px) { .contact-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- フッター ---------- */
+.site-footer { background: var(--night); color: var(--night-muted); padding-block: 3.5rem 2rem; font-size: .95rem; }
+.site-footer .logo { color: var(--night-ink); margin-bottom: 1rem; }
+.site-footer .logo-mark .m-ln { stroke: var(--night-ink); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; }
+.site-footer h2 { color: var(--night-ink); font-size: 1rem; margin-bottom: .6rem; }
+.site-footer a:hover { color: var(--sun); }
+.social { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: .8rem; }
+.social a { text-decoration: underline; text-underline-offset: 3px; }
+.foot-bottom { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid color-mix(in srgb, var(--night-ink) 15%, transparent); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .82rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- スマホ用の固定バー ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 760px) {
+  .mobile-bar { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: .6rem; position: fixed; inset: auto 0 0; z-index: 60; padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 -1px 0 var(--line); }
+  .mobile-bar .btn { padding: .75rem .8rem; }
+  body { padding-bottom: 80px; }
+}
+
+/* ---------- スクロール時のフェードイン ---------- */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ---------- 日本語の組版 ---------- */
+body { line-break: strict; overflow-wrap: break-word; }
+h1, h2, h3, h4 { letter-spacing: normal; text-wrap: balance; }
+/* 見出しやリード文は文節で改行し、1文字だけの行を防ぎます（対応ブラウザのみ） */
+h1, h2, h3, h4, summary, .hero-sub { word-break: auto-phrase; }
+.nb { display: inline-block; }
+.nav-links a, .logo { white-space: nowrap; }
+@media (min-width: 761px) and (max-width: 1180px) { .nav-links .opt { display: none; } .nav-links { gap: 1rem; } }
+@media (min-width: 761px) and (max-width: 860px) { .nav-links { gap: .7rem; font-size: .9rem; } }
+
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ==================== Section: Header ==================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="みなとあかり、ページの先頭へ">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle class="m-sun" cx="27" cy="13" r="8"/><path class="m-roof m-ln" d="M5 21 Q12 14 19 9 Q26 14 33 21 Z"/><path class="m-ln" d="M9 20 V33 H29 V20 M17 33 V26 Q19 24 21 26 V33"/></svg>
+      みなとあかり
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="メインメニュー">
+      <!-- lang-switch：言語切り替え。言語を追加するときは、ここにリンクを足して対応するフォルダを作成してください -->
+      <nav class="lang-switch" aria-label="Language 語言">
+        <details class="lang-menu">
+          <summary lang="ja">JA</summary>
+          <div class="lang-list">
+            <a href="../en/" hreflang="en" lang="en">English</a>
+            <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+            <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+            <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a>
+          </div>
+        </details>
+      </nav>
+      <a href="#programs">活動内容</a>
+      <a href="#impact" class="opt">活動実績</a>
+      <a href="#stories">地域の声</a>
+      <a href="#volunteer">ボランティア</a>
+      <a href="#events">イベント</a>
+      <a href="#transparency" class="opt">会計報告</a>
+      <a href="#contact" class="opt">お問い合わせ</a>
+      <a href="#donate" class="btn btn-primary btn-sm">寄付する</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <h1><span class="nb">ひとりで勉強する子も、</span><wbr><span class="nb">ひとりで食べる人も</span><wbr><span class="nb">いないまちへ。</span></h1>
+      <p class="hero-sub">江東区の子どもたちに放課後の学習支援を、外出が難しい高齢の方に温かいお弁当を届けています。</p>
+      <div class="hero-cta">
+        <a href="#donate" class="btn btn-primary">寄付する</a>
+        <a href="#volunteer" class="btn btn-ghost">ボランティアに参加する</a>
+      </div>
+      <!-- 認定NPO法人でない場合は、この一文を「NPO法人です。」などに書き換えてください -->
+      <p class="hero-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>認定NPO法人です。ご寄付は寄附金控除の対象になります。</p>
+    </div>
+    <div class="hero-art">
+      <!-- 手描き風イラスト：色はテーマ変数から取ります。写真にする場合は <div class="img frame" role="img" aria-label="..."></div> に差し替えてください -->
+      <svg class="ill" viewBox="0 0 560 480" role="img" aria-label="手描きのイラスト：朝日の下、お弁当を持ったボランティアが子どもと一緒に高齢の方のもとへ歩いていく様子">
+        <path class="f-soft" d="M62 118 C86 40 224 18 304 38 C424 68 522 62 532 182 C542 302 502 420 362 440 C222 460 62 432 42 322 C28 242 44 172 62 118 Z"/>
+        <g class="ln-sun"><path d="M330 114 L311 103 M356 88 L345 69 M392 78 V56 M428 88 L439 69 M454 114 L473 103 M464 150 H486 M320 150 H298"/></g>
+        <circle class="f-sun ln" cx="392" cy="150" r="58"/>
+        <path class="f-surface ln" d="M36 334 C140 292 222 302 300 322 C380 342 452 300 528 312 L530 410 C470 446 124 452 48 404 Z"/>
+        <g class="ln">
+          <rect class="f-night" x="158" y="204" width="17" height="34" rx="3"/>
+          <path class="f-surface" d="M76 254 H186 V352 H76 Z"/>
+          <path class="f-brand" d="M58 258 Q95 222 131 194 Q168 224 204 258 Q131 252 58 258 Z"/>
+          <rect class="f-night" x="117" y="298" width="28" height="54" rx="13"/>
+          <rect class="f-sun" x="88" y="274" width="22" height="22" rx="3"/>
+          <path class="f-surface" d="M414 286 H506 V364 H414 Z"/>
+          <path class="f-night" d="M400 290 Q432 262 460 240 Q492 264 522 290 Q460 284 400 290 Z"/>
+          <rect class="f-sun" x="448" y="304" width="24" height="24" rx="3"/>
+          <path class="f-none" d="M460 304 V328 M448 316 H472"/>
+          <path class="f-none" d="M30 364 C150 352 400 358 540 366"/>
+        </g>
+        <path class="f-brand" d="M243 214 C243 204 255 202 258 212 C261 202 273 204 273 214 C273 224 258 232 258 238 C258 232 243 224 243 214 Z"/>
+        <path class="ln-brand" d="M222 196 q-6 -8 0 -16 M292 192 q6 -8 0 -16"/>
+        <g class="ln">
+          <path class="f-night" d="M188 338 Q215 322 242 338 L248 420 Q215 428 182 420 Z"/>
+          <circle class="f-skin" cx="215" cy="304" r="21"/>
+          <path class="f-hair" d="M194 300 Q196 280 215 281 Q234 280 236 300 Q224 290 215 292 Q204 290 194 300 Z"/>
+          <path class="f-none" d="M202 420 V440 M228 420 V440 M244 362 Q258 368 262 380 L268 440"/>
+          <path class="f-none" d="M208 312 Q215 318 222 312"/>
+          <path class="f-brand" d="M268 312 Q300 294 332 312 L340 420 Q300 430 260 420 Z"/>
+          <circle class="f-skin" cx="300" cy="270" r="23"/>
+          <path class="f-night" d="M277 266 Q280 244 300 245 Q322 244 324 266 Q312 256 300 258 Q286 256 277 266 Z"/>
+          <path class="f-none" d="M292 278 Q300 285 308 278 M285 422 V442 M315 422 V442"/>
+          <rect class="f-sun" x="276" y="342" width="46" height="32" rx="6"/>
+          <path class="f-none" d="M276 352 H322 M272 318 Q268 346 280 356 M330 320 Q342 352 352 372"/>
+          <path class="f-sun" d="M357 350 Q380 336 403 350 L408 414 Q380 422 352 414 Z"/>
+          <circle class="f-skin" cx="380" cy="320" r="18"/>
+          <path class="f-night" d="M362 318 Q362 300 380 301 Q398 300 398 318 Q388 310 380 311 Q370 310 362 318 Z"/>
+          <path class="f-none" d="M373 326 Q380 332 387 326 M368 414 V438 M392 414 V438"/>
+          <rect class="f-brand" x="396" y="356" width="20" height="36" rx="7"/>
+        </g>
+        <path class="ln-brand" d="M290 334 q-4 -8 0 -14 M306 334 q4 -8 0 -14"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Programs ==================== -->
+<!-- 教会で使う場合：「教会の働き」に名前を変え、カードを教会学校、小グループ、訪問などに差し替えてください -->
+<section class="alt" id="programs">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>活動内容</h2>
+      <svg class="squiggle" viewBox="0 0 112 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M3 7 Q 12 1 21 7 T 39 7 T 57 7 T 75 7 T 93 7 T 109 7"/></svg>
+      <p>1年を通して続けている3つの活動は、どれも地域の声から生まれました。子どもたちや高齢の方、一人ひとりの名前と顔がわかる距離で関わっています。</p>
+    </div>
+    <!-- サンプル内容です。公開前に実際の内容に差し替えてください -->
+    <div class="prog-grid">
+      <article class="prog reveal">
+        <svg class="prog-ico ill" viewBox="0 0 120 90" aria-hidden="true">
+          <g class="ln">
+            <path class="f-surface" d="M16 28 Q38 20 60 30 L60 74 Q38 66 16 72 Z"/>
+            <path class="f-surface" d="M104 28 Q82 20 60 30 L60 74 Q82 66 104 72 Z"/>
+            <path class="f-none" d="M26 40 Q38 36 50 41 M26 50 Q38 46 50 51 M70 41 Q82 36 94 40"/>
+            <path class="f-sun" d="M86 12 L96 18 L76 54 L68 56 L66 48 Z"/>
+          </g>
+        </svg>
+        <h3>放課後の学習支援</h3>
+        <p>平日の放課後、大学生や元教員のボランティアが子どもたちの宿題を見守り、一緒に本を読み、おやつを食べます。</p>
+        <p class="impact-line"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.4-9.3C1.2 8.2 3.5 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.7 0 6 3.7 4.6 7.2C19.5 16.4 12 21 12 21Z"/></svg>毎週48人の小学生が参加</p>
+      </article>
+      <article class="prog reveal">
+        <svg class="prog-ico ill" viewBox="0 0 120 90" aria-hidden="true">
+          <path class="ln-brand" d="M46 26 q-6 -7 0 -14 M60 24 q6 -7 0 -14 M74 26 q-6 -7 0 -14"/>
+          <g class="ln">
+            <rect class="f-brand" x="24" y="44" width="72" height="32" rx="8"/>
+            <rect class="f-sun" x="18" y="34" width="84" height="14" rx="7"/>
+            <path class="f-none" d="M60 50 V74"/>
+          </g>
+        </svg>
+        <h3>高齢者への配食サービス</h3>
+        <p>毎朝キッチンで手作りしたお弁当を、ボランティアが外出の難しい高齢の方のご自宅へ届け、玄関先で声をかけて見守ります。</p>
+        <p class="impact-line"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.4-9.3C1.2 8.2 3.5 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.7 0 6 3.7 4.6 7.2C19.5 16.4 12 21 12 21Z"/></svg>平日は毎日70食をお届け</p>
+      </article>
+      <article class="prog reveal">
+        <svg class="prog-ico ill" viewBox="0 0 120 90" aria-hidden="true">
+          <g class="ln">
+            <path class="f-surface" d="M34 42 H86 V78 H34 Z"/>
+            <path class="f-brand" d="M24 46 Q42 30 60 16 Q78 30 96 46 Q60 40 24 46 Z"/>
+          </g>
+          <path class="f-brand" d="M50 56 C50 50 58 48 60 54 C62 48 70 50 70 56 C70 62 60 68 60 72 C60 68 50 62 50 56 Z"/>
+        </svg>
+        <h3>子育て家庭の訪問支援</h3>
+        <p>相談員がご家庭を訪ね、就学援助や各種手当の申請、医療や仕事の窓口探しをお手伝いします。ひとりで抱え込まなくて大丈夫です。</p>
+        <p class="impact-line"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.4-9.3C1.2 8.2 3.5 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.7 0 6 3.7 4.6 7.2C19.5 16.4 12 21 12 21Z"/></svg>1年を通して36世帯を支援</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Impact numbers ==================== -->
+<section class="impact" id="impact">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2>昨年度、<wbr>みなさまのご支援でできたこと</h2>
+      <svg class="squiggle" viewBox="0 0 112 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M3 7 Q 12 1 21 7 T 39 7 T 57 7 T 75 7 T 93 7 T 109 7"/></svg>
+    </div>
+    <!-- サンプル内容です。公開前に実際のデータに差し替えてください -->
+    <div class="stats reveal">
+      <div class="stat"><b>17,800</b><span>高齢者に届けたお弁当（食）</span></div>
+      <div class="stat"><b>9,200</b><span>放課後の学習支援（時間）</span></div>
+      <div class="stat"><b>164</b><span>定期的に活動するボランティア（人）</span></div>
+      <div class="stat"><b>82%</b><span>ご寄付のうち事業に使われた割合</span></div>
+    </div>
+    <p class="sample-note">2025年度の数字です。詳しくは下の事業報告書をご覧ください。</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Donate ==================== -->
+<section id="donate">
+  <div class="wrap donate-grid">
+    <div class="reveal">
+      <div class="sec-head">
+        <h2>やさしい気持ちを、<wbr>確かな支えに</h2>
+        <svg class="squiggle" viewBox="0 0 112 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M3 7 Q 12 1 21 7 T 39 7 T 57 7 T 75 7 T 93 7 T 109 7"/></svg>
+        <p>毎月のご寄付があると、ボランティアの予定や食材の発注を前もって計画できるので、いちばん効果的に使えます。1回のご寄付も、もちろん大きな力になります。</p>
+      </div>
+      <ul class="covers">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>確定申告に使える領収書を、翌年1月にまとめてお送りします。</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>毎月のご寄付は、メールやお電話でいつでも金額の変更や停止ができます。</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>銀行振込や郵便振替をご希望の方は、<a class="text-link" href="#contact">お問い合わせ</a>ください。手順をご案内します。</span></li>
+      </ul>
+    </div>
+
+    <!--
+      寄付ウィジェット：
+      ボタンは data-pay の URL に ?amount=金額&frequency=once または monthly を付けてリンクします。
+      次のいずれかとつないでください：
+      - Stripe の Payment Links：Stripe の管理画面で支払いリンクを作成し（金額を寄付者が選べる設定も可能）、その URL を data-pay に貼ります。
+      - PayPal：寄付ボタンを作成し、そのリンクを data-pay に貼ります。
+      - Syncable、CONGRANT などの寄付ページ：ページの URL を data-pay に貼ります。
+      金額と説明文は、各 input の value と data-impact で編集できます。
+    -->
+    <div class="give reveal" id="give" data-pay="https://example.com/donate" data-cur="¥" data-locale="ja-JP" data-unit="500"
+      data-small="ご寄付はすべて、子どもたちと高齢の方のために使われます。"
+      data-monthly="毎月のご寄付なら、1年で{y}の継続した支えになります。"
+      data-label-once="{a}を寄付する" data-label-month="毎月{a}を寄付する">
+      <h3>オンラインで寄付する</h3>
+      <fieldset>
+        <legend>寄付の方法</legend>
+        <div class="freq">
+          <input type="radio" name="freq" id="f-once" value="once" checked><label for="f-once">今回のみ</label>
+          <input type="radio" name="freq" id="f-month" value="monthly"><label for="f-month">毎月</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>金額</legend>
+        <div class="amounts">
+          <input type="radio" name="amount" id="a1" value="3000" data-impact="外出が難しい高齢の方に、温かいお弁当を6食届けられます。"><label for="a1">¥3,000</label>
+          <input type="radio" name="amount" id="a2" value="5000" checked data-impact="子ども1人の1か月分のおやつと学用品をまかなえます。"><label for="a2">¥5,000</label>
+          <input type="radio" name="amount" id="a3" value="10000" data-impact="高齢の方1人に、1か月分の平日のお弁当と見守りを届けられます。"><label for="a3">¥10,000</label>
+          <input type="radio" name="amount" id="a4" value="custom" data-impact="地域の高齢の方に、温かいお弁当を{n}食届けられます。"><label for="a4">金額を指定</label>
+        </div>
+        <div class="custom-field">
+          <label for="give-custom">ご寄付の金額（円）</label>
+          <input type="number" id="give-custom" min="500" step="100" inputmode="numeric" placeholder="例：8000">
+        </div>
+      </fieldset>
+      <div class="impact-box" aria-live="polite">
+        <svg class="ill" viewBox="0 0 48 48" aria-hidden="true"><g class="ln"><rect class="f-brand" x="8" y="22" width="32" height="18" rx="5"/><rect class="f-sun" x="5" y="16" width="38" height="9" rx="4.5"/></g><path class="ln-brand" d="M18 12 q-3 -4 0 -8 M30 12 q3 -4 0 -8"/></svg>
+        <p><strong>あなたのご寄付でできること：</strong><span id="give-impact">子ども1人の1か月分のおやつと学用品をまかなえます。</span></p>
+      </div>
+      <a class="btn btn-primary" id="give-btn" href="https://example.com/donate">¥5,000を寄付する</a>
+      <p class="give-note">決済は提携する決済サービスで安全に処理されます。カード情報を当法人が保存することはありません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Stories ==================== -->
+<section class="alt" id="stories">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>地域のみなさんの声</h2>
+      <svg class="squiggle" viewBox="0 0 112 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M3 7 Q 12 1 21 7 T 39 7 T 57 7 T 75 7 T 93 7 T 109 7"/></svg>
+      <p>数字の向こうには、少しだけよくなった、いつもの一日があります。</p>
+    </div>
+    <!-- サンプル内容です。公開前に差し替えてください（掲載前に、ご本人または保護者から書面で同意を得てください） -->
+    <div class="story-grid">
+      <figure class="story reveal">
+        <div class="img img-story1 frame" role="img" aria-label="学習支援の教室で宿題をする子どもの写真"></div>
+        <div>
+          <blockquote><p>前は家に帰ってひとりでテレビを見ていました。今は教室に行くのが楽しみです。算数のテストも空欄がなくなって、先生にいちばん伸びたねって言われました。</p></blockquote>
+          <figcaption>ゆいさん<span>小学4年生、参加して2年</span></figcaption>
+        </div>
+      </figure>
+      <figure class="story reveal">
+        <div class="img img-story2 frame" role="img" aria-label="ボランティアが高齢の方の玄関先にお弁当を届ける写真"></div>
+        <div>
+          <blockquote><p>子どもたちは遠くに住んでいて、誰とも話さない日もあります。お昼に車の音が聞こえると、ああ来てくれたと思うんです。それだけで一日がんばれます。</p></blockquote>
+          <figcaption>たか子さん<span>82歳、配食を利用して3年</span></figcaption>
+        </div>
+      </figure>
+    </div>
+    <p class="names-note">ご本人のプライバシーを守るため、お名前は変えています。</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Volunteer ==================== -->
+<section id="volunteer">
+  <div class="wrap vol-grid">
+    <div class="reveal">
+      <svg class="vol-ill ill" viewBox="0 0 240 170" aria-hidden="true">
+        <circle class="f-sunsoft" cx="120" cy="86" r="80"/>
+        <path class="f-brand ln" d="M88 62 C88 40 114 36 120 56 C126 36 152 40 152 62 C152 86 120 104 120 116 C120 104 88 86 88 62 Z"/>
+        <g class="ln">
+          <path class="f-skin" d="M24 108 Q34 98 48 106 Q70 120 96 124 Q112 126 120 140 L120 158 Q78 160 46 144 Q30 136 24 108 Z"/>
+          <path class="f-skin" d="M216 108 Q206 98 192 106 Q170 120 144 124 Q128 126 120 140 L120 158 Q162 160 194 144 Q210 136 216 108 Z"/>
+        </g>
+        <path class="ln-sun" d="M60 40 l-10 -10 M180 40 l10 -10 M120 14 v-10"/>
+      </svg>
+      <div class="sec-head">
+        <h2>週に2時間で、<wbr>誰かの一日が明るくなる</h2>
+        <p>特別なスキルはいりません。続けて来てくださる気持ちがあれば十分です。お申し込みのあと、説明会と簡単な研修にご案内します。</p>
+      </div>
+      <ul class="roles">
+        <li><h3>学習サポーター</h3><p>平日 16:00〜18:00。小学生の宿題や読書のお手伝いをします。大学生や元教員の方に人気です。</p></li>
+        <li><h3>お弁当の配達ドライバー</h3><p>平日 10:30〜12:30。ご自身の車で、約10軒のルートを回ります。</p></li>
+        <li><h3>イベントスタッフ</h3><p>バザーや年末の食事会、チャリティーイベントのお手伝い。時間は相談して決められます。</p></li>
+      </ul>
+    </div>
+    <!--
+      フォームを Formspree につなぐ（無料プランで月50件まで受信できます）：
+      1. https://formspree.io に登録して、新しいフォームを作成します。
+      2. 下の action にある your-form-id を、ご自身のフォーム ID に書き換えます。
+      3. 最初の送信時に Formspree から確認メールが届きます。確認すると、申し込みがメールで届くようになります。
+    -->
+    <form class="vol-form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="hidden" name="_subject" value="ボランティアの新しいお申し込み">
+      <div class="row">
+        <div class="field"><label for="v-name">お名前</label><input type="text" id="v-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="v-phone">電話番号</label><input type="tel" id="v-phone" name="phone" autocomplete="tel" placeholder="090-1234-5678" required></div>
+      </div>
+      <div class="field"><label for="v-email">メールアドレス</label><input type="email" id="v-email" name="email" autocomplete="email" required></div>
+      <div class="field">
+        <label for="v-role">参加したい活動</label>
+        <select id="v-role" name="role">
+          <option>学習サポーター</option>
+          <option>お弁当の配達ドライバー</option>
+          <option>イベントスタッフ</option>
+          <option>どれでも（おまかせ）</option>
+        </select>
+      </div>
+      <fieldset class="field">
+        <legend>参加できる時間帯（複数選択可）</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="time" value="平日の午前"> 平日の午前</label>
+          <label><input type="checkbox" name="time" value="平日の午後"> 平日の午後</label>
+          <label><input type="checkbox" name="time" value="土日"> 土日</label>
+        </div>
+      </fieldset>
+      <div class="field"><label for="v-msg">そのほか伝えたいこと（任意）</label><textarea id="v-msg" name="message" placeholder="例：これまでのボランティア経験、話せる言語、回れる地域など"></textarea></div>
+      <button type="submit" class="btn btn-primary">申し込む</button>
+      <p class="form-note">3営業日以内にご連絡します。いただいた情報はボランティアの調整にのみ使用し、第三者に提供することはありません。</p>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== Section: Events ==================== -->
+<!-- 教会で使う場合：「礼拝のご案内」に変えてください（例：主日礼拝 日曜 10:30、祈祷会 水曜 19:30） -->
+<section class="alt" id="events">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>これからのイベント</h2>
+      <svg class="squiggle" viewBox="0 0 112 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M3 7 Q 12 1 21 7 T 39 7 T 57 7 T 75 7 T 93 7 T 109 7"/></svg>
+      <p>ご家族でどうぞ。私たちを知っていただくには、直接会いに来ていただくのがいちばんです。</p>
+    </div>
+    <!-- サンプル内容です。公開前に実際の内容に差し替えてください -->
+    <ul class="events">
+      <li class="event reveal">
+        <div class="date"><span>12月</span><b>6</b></div>
+        <div>
+          <h3>年末チャリティーバザー</h3>
+          <div class="event-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>日曜 10:00〜16:00</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11Z"/><circle cx="12" cy="10" r="2"/></svg>北砂中央公園</span>
+          </div>
+          <p>子どもたちが作ったクッキーや手作り雑貨を販売します。売上はすべて冬休みの学習支援に使います。</p>
+        </div>
+        <a href="#contact" class="btn btn-ghost btn-sm">詳しく見る</a>
+      </li>
+      <li class="event reveal">
+        <div class="date"><span>12月</span><b>20</b></div>
+        <div>
+          <h3>高齢者のための冬の食事会</h3>
+          <div class="event-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>日曜 11:00〜14:00</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11Z"/><circle cx="12" cy="10" r="2"/></svg>みなとあかりセンター</span>
+          </div>
+          <p>配食でお会いしている方々を招いて、温かい食事と懐かしい歌のピアノ演奏を楽しみます。送迎と配膳のボランティアを20名募集中です。</p>
+        </div>
+        <a href="#volunteer" class="btn btn-ghost btn-sm">手伝う</a>
+      </li>
+      <li class="event reveal">
+        <div class="date"><span>1月</span><b>10</b></div>
+        <div>
+          <h3>新規ボランティア説明会</h3>
+          <div class="event-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>土曜 14:00〜16:30</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11Z"/><circle cx="12" cy="10" r="2"/></svg>みなとあかりセンター</span>
+          </div>
+          <p>活動内容、安全のための基本、シフトの組み方をご説明します。翌週から活動に参加できます。</p>
+        </div>
+        <a href="#volunteer" class="btn btn-ghost btn-sm">参加を申し込む</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== Section: Financial transparency ==================== -->
+<section id="transparency">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>ご寄付の使いみち</h2>
+      <svg class="squiggle" viewBox="0 0 112 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M3 7 Q 12 1 21 7 T 39 7 T 57 7 T 75 7 T 93 7 T 109 7"/></svg>
+      <p>毎年、事業報告書と活動計算書を公開しています。ご寄付をくださった方からのご質問にも、いつでもお答えします。</p>
+    </div>
+    <div class="fin-grid">
+      <div class="fin-card reveal">
+        <h3>2025年度の支出内訳</h3>
+        <!-- サンプル内容です。公開前に差し替えてください（棒の長さは各 style の --w の割合で変えられます） -->
+        <ul class="bars">
+          <li><div class="bar-label"><span>事業費（配食、学習支援、訪問）</span><b>82%</b></div><div class="bar"><i style="--w: 82%"></i></div></li>
+          <li><div class="bar-label"><span>管理費と人件費</span><b>12%</b></div><div class="bar"><i style="--w: 12%"></i></div></li>
+          <li><div class="bar-label"><span>寄付集めの費用</span><b>6%</b></div><div class="bar"><i style="--w: 6%"></i></div></li>
+        </ul>
+      </div>
+      <div class="fin-card reveal">
+        <h3>公開資料</h3>
+        <!-- 各 href をアップロードした PDF に向けてください（例：files/annual-report-2025.pdf） -->
+        <div class="docs">
+          <a href="files/annual-report-2025.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7l-4-4Z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></svg><span>2025年度 事業報告書<small>活動の成果と会計をまとめた PDF</small></span></a>
+          <a href="files/financial-statement-2025.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7l-4-4Z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></svg><span>活動計算書と貸借対照表<small>所轄庁に提出した最新の書類（PDF）</small></span></a>
+        </div>
+        <dl class="reg">
+          <div><dt>法人格</dt><dd>特定非営利活動法人（認定 NPO 法人の場合はその旨に書き換え）</dd></div>
+          <div><dt>法人番号</dt><dd>0000000000000（実際の番号に書き換え）</dd></div>
+          <div><dt>所轄庁</dt><dd>東京都（実際の所轄庁に書き換え）</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Partners ==================== -->
+<!-- 各 .partner をロゴに差し替え：<div class="partner"><img src="images/partner-1.png" alt="団体名" width="120"></div>（掲載前に許可を得てください） -->
+<section class="alt" id="partners">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2>活動を支えてくださる<wbr>パートナー</h2>
+      <svg class="squiggle" viewBox="0 0 112 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M3 7 Q 12 1 21 7 T 39 7 T 57 7 T 75 7 T 93 7 T 109 7"/></svg>
+    </div>
+    <div class="partner-grid reveal">
+      <div class="partner">協賛企業のロゴ</div>
+      <div class="partner">地域の学校のロゴ</div>
+      <div class="partner">助成財団のロゴ</div>
+      <div class="partner">地域の診療所のロゴ</div>
+      <div class="partner">商店街の飲食店のロゴ</div>
+      <div class="partner">大学サークルのロゴ</div>
+    </div>
+    <p class="partners-cta">社員のボランティア活動や物品のご寄付をお考えですか？ <a class="text-link" href="#contact">ぜひご相談ください</a>。</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Contact ==================== -->
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <div class="sec-head">
+        <h2>気軽に<wbr>遊びに来てください</h2>
+        <p>物品のお届け、学習支援の見学、活動について知りたいだけの方も大歓迎です。先にお電話いただければ、お茶を用意してお待ちしています。</p>
+      </div>
+      <ul class="info">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11Z"/><circle cx="12" cy="10" r="2"/></svg><span><b>所在地</b>〒136-0073 東京都江東区北砂3-12-7</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>事務所の開所時間</b>月〜金 11:00〜19:00<br>土曜 10:00〜13:00</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span><b>メール</b><a class="text-link" href="mailto:hello@example.jp">hello@example.jp</a></span></li>
+      </ul>
+      <!-- LINE ボタン：@yourlineid をご自身の LINE 公式アカウント ID に書き換えてください。Instagram（https://ig.me/m/yourhandle）などに変えることもできます -->
+      <div class="contact-btns">
+        <a href="tel:0312345678" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>03-1234-5678</a>
+        <a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener" class="btn btn-ghost">LINEで問い合わせる</a>
+      </div>
+    </div>
+    <div class="map-wrap reveal">
+      <div class="img img-map" role="img" aria-label="事務所の場所を示す地図">
+        <svg class="ill" viewBox="0 0 64 80" aria-hidden="true"><path class="f-brand ln" d="M32 76 C32 76 6 48 6 30 A26 26 0 0 1 58 30 C58 48 32 76 32 76 Z"/><circle class="f-sun ln" cx="32" cy="30" r="9"/></svg>
+      </div>
+      <a class="text-link" href="https://maps.google.com/?q=東京都江東区北砂3-12-7" target="_blank" rel="noopener">Googleマップで開く</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle class="m-sun" cx="27" cy="13" r="8"/><path class="m-roof m-ln" d="M5 21 Q12 14 19 9 Q26 14 33 21 Z"/><path class="m-ln" d="M9 20 V33 H29 V20 M17 33 V26 Q19 24 21 26 V33"/></svg>NPO法人 みなとあかり</div>
+        <p>〒136-0073 東京都江東区北砂3-12-7<br>電話：<a href="tel:0312345678">03-1234-5678</a></p>
+        <div class="social"><a href="#">Instagram</a><a href="#">X</a><a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE</a></div>
+      </div>
+      <div>
+        <h2>開所時間</h2>
+        <p>月〜金 11:00〜19:00<br>土曜 10:00〜13:00<br>日曜・祝日は休み</p>
+      </div>
+      <div>
+        <h2>リンク</h2>
+        <p><a href="#donate">寄付する</a><br><a href="#volunteer">ボランティア</a><br><a href="#events">これからのイベント</a><br><a href="#transparency">会計報告</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y"></span> 特定非営利活動法人 みなとあかり</span>
+      <!-- フッターの言語リンク：ヘッダーの言語切り替えと同じ内容です -->
+      <nav class="foot-lang" aria-label="フッターの言語切り替え"><a href="../en/" hreflang="en" lang="en">EN</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a></nav>
+      <span>法人番号 0000000000000（実際の番号に書き換えてください）</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== Section: Mobile sticky bar ==================== -->
+<div class="mobile-bar">
+  <a href="#volunteer" class="btn btn-ghost">ボランティア</a>
+  <a href="#donate" class="btn btn-primary">今すぐ寄付する</a>
+</div>
+
+<script>
+// フッターの年
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// スクロールするとヘッダーに背景を表示
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+// スマホ用メニュー
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  links.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+};
+menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// 寄付ウィジェット：1回／毎月の切り替えと金額の選択に合わせて、説明文と決済リンクをその場で更新します
+const give = document.getElementById('give');
+const d = give.dataset, custom = document.getElementById('give-custom');
+const out = document.getElementById('give-impact'), payBtn = document.getElementById('give-btn');
+const money = n => d.cur + n.toLocaleString(d.locale);
+const update = () => {
+  const freq = give.querySelector('[name="freq"]:checked').value;
+  const pick = give.querySelector('[name="amount"]:checked');
+  const isCustom = pick.value === 'custom';
+  give.classList.toggle('is-custom', isCustom);
+  const amt = isCustom ? Math.max(0, Math.floor(Number(custom.value) || 0)) : Number(pick.value);
+  const n = Math.floor(amt / Number(d.unit));
+  let text = isCustom && n < 1 ? d.small : pick.dataset.impact.replace('{n}', n);
+  if (freq === 'monthly' && amt > 0) text += d.monthly.replace('{y}', money(amt * 12));
+  out.textContent = text;
+  payBtn.textContent = (freq === 'monthly' ? d.labelMonth : d.labelOnce).replace('{a}', money(amt));
+  payBtn.href = d.pay + '?amount=' + amt + '&frequency=' + freq;
+  payBtn.setAttribute('aria-disabled', amt <= 0);
+};
+give.addEventListener('change', update);
+custom.addEventListener('input', update);
+payBtn.addEventListener('click', e => { if (payBtn.getAttribute('aria-disabled') === 'true') { e.preventDefault(); custom.focus(); } });
+update();
+
+// スクロール時のフェードイン
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => io.observe(el));
+} else reveals.forEach(el => el.classList.add('in'));
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>
