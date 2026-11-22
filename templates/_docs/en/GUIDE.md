@@ -115,7 +115,17 @@ Buy a domain from a registrar (Cloudflare, Namecheap, Porkbun…), then follow t
 1. Add and verify your site in [Google Search Console](https://search.google.com/search-console).
 2. Create a [Google Business Profile](https://business.google.com/) and add your website. For local businesses this is the single most effective step.
 
-## 9. FAQ
+## 9. Privacy and EU visitors (GDPR)
+
+- **Maps**: the templates link to Google Maps instead of embedding it, so nothing loads from Google until a visitor clicks.
+- **Fonts**: fonts load from Google Fonts. For strict GDPR compliance (recommended for German businesses), host them yourself:
+  1. Go to [gwfh.mranftl.com/fonts](https://gwfh.mranftl.com/fonts) (google-webfonts-helper) and pick the fonts named in the `fonts.googleapis.com` link near the top of `index.html`.
+  2. Download the `woff2` files into a `fonts/` folder next to `index.html` and copy the generated CSS into the `<style>` block.
+  3. Delete the `<link>` tags that point to `fonts.googleapis.com` and `fonts.gstatic.com`.
+- **Privacy policy**: adapt `PRIVACY-TEMPLATE.md`, save it as `privacy.html` and link it in the footer. Businesses in Germany and Austria also need an **Impressum** page (legal business details).
+- **Forms**: Formspree stores submissions. Mention it in your privacy policy.
+
+## 10. FAQ
 
 **The fonts look different on my phone.**
 The template loads Google Fonts online. On a slow connection the browser shows a system font first; this is normal.

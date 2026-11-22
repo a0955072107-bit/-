@@ -70,8 +70,8 @@ for entry in "${SLUGS[@]}"; do
     cp "$en" "$dir/en/index.html"
     echo "Put your photos in this folder. See GUIDE.md, section 5." > "$dir/en/images/README.txt"
   fi
-  cp templates/_docs/使用說明.md templates/_docs/授權條款.md "$dir/"
-  cp templates/_docs/en/GUIDE.md templates/_docs/en/LICENSE.md "$dir/"
+  cp templates/_docs/使用說明.md templates/_docs/授權條款.md templates/_docs/隱私權政策範本.md "$dir/"
+  cp templates/_docs/en/GUIDE.md templates/_docs/en/LICENSE.md templates/_docs/en/PRIVACY-TEMPLATE.md "$dir/"
   cp templates/_docs/START-HERE.html "$dir/"
   (cd "$OUT/build" && zip -qr "../$name.zip" "$name")
   echo "✓ $OUT/$name.zip"

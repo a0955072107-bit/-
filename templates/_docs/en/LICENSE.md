@@ -9,6 +9,16 @@ By purchasing this template you agree to the following terms.
 
 Building several sites? Buy one licence per site, or the Extended licence / Bundle.
 
+### Licence tiers
+| Tier | Websites |
+|---|---|
+| Standard | 1 |
+| Extended | Up to 10 with the same template |
+| Bundle | 1 per template |
+| Studio (Bundle add-on) | **Unlimited** client websites with every template |
+
+The Studio licence covers the purchasing person or company only. It cannot be transferred, and the template files themselves still may not be resold.
+
 ## You may not ❌
 - Resell, share or give away the source files or a modified version, paid or free.
 - Sell it as a template, theme or site builder, or upload it to another template marketplace.

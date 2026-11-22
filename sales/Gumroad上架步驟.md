@@ -97,7 +97,7 @@ Questions or custom work? / 有問題或想客製：[你的品牌 Email]
 ```
 
 > **聯絡方式的原則**：只放品牌 Email，不放個人 LINE 或電話。請另外申請一個品牌專用信箱。
-> Etsy 禁止放站外聯絡方式，所以在 Etsy 上架時，要把上面這行 Email 拿掉。
+> Etsy 目前不支援台灣賣家收款，所以不上 Etsy，全部集中在 Gumroad。
 
 ---
 
@@ -1158,6 +1158,8 @@ Perfect for freelancers who build sites for local businesses: one licence per te
 - [ ] 自己用最低價測試購買一次（可以先設 100% 折扣碼），確認收得到 zip
 - [ ] 把商店網址放到 IG、Threads、FB 接案社團、Dcard
 - [ ] 第一個月可以用折扣碼（例如 `LAUNCH30`，打 7 折）衝第一批評價
+- [ ] **Settings → Payments** 打開 **Purchasing power parity（購買力平價）**：拉美、東南亞、印度的買家會自動看到較低價格，歐美維持原價
+- [ ] **Settings → Payments** 確認收款方式（PayPal 或銀行帳戶）已設定並驗證，第一筆款項才撥得下來
 
 ---
 
@@ -1182,3 +1184,104 @@ Motion 動態版：只用瀏覽器內建技術做的高級動畫網站，不依�
 每款說明：共用開頭 → Demo 網址（`…/templates/motion/<款式>/en/`、`…/templates/motion/<款式>/zh-TW/`）→ 上表的動畫清單（用條列）→ What you get → 共用文字。
 
 **Motion 全套組合包**：Name `All 5 Motion Edition Templates Bundle`，URL `motion-bundle`，Price `199`，Content 上傳 `dist/motion-bundle.zip`。
+
+---
+
+## 8. 三語店家網站代製（海外華人、新馬，12/3 上架）
+
+研究結果：海外華人店家（美加澳的餐廳、診所、補習班，以及新加坡、馬來西亞的小店）天生需要「繁體＋簡體＋英文」網站，而市面上很少有人專做這件事。我們的模板本來就是三語，所以成本最低、最有優勢。
+
+| 欄位 | 填入 |
+|---|---|
+| 商品類型 | Digital product（有 **Commission** 類型就用 Commission，先收 50% 訂金） |
+| Name | `Trilingual Business Website (English + 繁體 + 简体) — Done For You 三語店家網站代製` |
+| URL | `trilingual-website-service` |
+| Price | `299`，另外用 **Versions** 加 `Pro $549` |
+| Cover | 用 `sales/covers/en/restaurant-cover.png`，之後再做專屬封面 |
+| Summary | `A ready-to-launch website in English, Traditional and Simplified Chinese, with a language switcher. Delivered in 7 days.` |
+
+**Versions（方案）**
+
+| 名稱 | 價格 | 說明 |
+|---|---|---|
+| Standard | $299 | One-page site in 3 languages with switcher, your content and photos, booking/WhatsApp/WeChat/LINE buttons, contact form, published on a free host. 1 revision round. |
+| Pro | $549 | Everything in Standard, plus custom domain, Google Business Profile setup, up to 2 extra sections, Motion animation option and 2 revision rounds. |
+
+**Description**
+```
+Serve every customer in their own language. We build your business a website in English, Traditional Chinese and Simplified Chinese, with a one-tap language switcher. No monthly fees, no website builder subscription.
+
+Made for restaurants, clinics, tutoring centres, salons, travel agencies and shops serving Chinese-speaking and English-speaking customers in the US, Canada, Australia, the UK, Singapore and Malaysia.
+
+How it works
+1. Buy the service and pick any of our templates.
+2. We email you a short form. Send us your text in any one language.
+3. We translate and adapt it into all three languages, build the site and publish it within 7 days.
+4. You review it and request changes.
+
+What's included
+- English, 繁體中文 and 简体中文 versions with a language switcher
+- Your text, photos, brand colours and opening hours
+- Call, WhatsApp, WeChat, LINE, map and booking buttons
+- Contact form sent to your email
+- Published on a free host; you own all the files
+- Pro: custom domain, Google Business Profile, Motion animation option
+
+Not included: domain purchase fees, photography, legal review of medical or financial claims.
+
+──────────
+三語店家網站代製：一次做好英文、繁體、簡體三種語言，訪客點一下就能切換。沒有月費，檔案全部歸你。
+
+適合：美國、加拿大、澳洲、英國、新加坡、馬來西亞的華人餐廳、診所、補習班、美容院、旅行社、商店。
+
+流程：購買後選一款模板 → 填寫表單，只要給我們一種語言的文字 → 我們翻成三語，7 天內完成上線 → 你確認並提出修改。
+
+包含：三語版本與切換按鈕；你的文字、照片、品牌色、營業時間；電話、WhatsApp、微信、LINE、地圖、預約按鈕；表單寄到你的 Email；部署到免費主機。Pro 方案另含自訂網域、Google 商家檔案設定、動態效果。
+不包含：網域費用、拍攝照片、醫療或金融宣傳用語的法律審查。
+
+[貼上「共用文字」]
+```
+
+**Receipt**
+```
+Thanks! Within 1 business day we'll email you a short form. Your site goes live within 7 days after we receive your content.
+感謝購買！我們會在 1 個工作天內寄表單給你，收到資料後 7 天內上線。
+```
+
+> **翻譯品質**：簡體版用 OpenCC 轉換後，要人工檢查用詞（例如「影片→视频」「網路→网络」「軟體→软件」）。新馬客人常用簡體，美加澳的老一輩客人常用繁體，所以兩種都要給。
+
+### 在哪裡曝光
+| 管道 | 怎麼做 |
+|---|---|
+| 小紅書 | 帳號簡介寫「幫海外華人店家做繁簡英三語網站」，每週 2～3 篇：前後對比、省月費計算、各行業範例。先經營 3 個月自然內容。 |
+| Facebook 社團 | 多倫多、溫哥華、西雅圖、灣區、雪梨、墨爾本的華人商家社團，用「分享案例」的方式發文，不要直接貼廣告。 |
+| 華人分類廣告 | 51.ca、溫哥華港灣、華人生活網、Carousell（新馬）。 |
+| Google 地圖主動開發 | 搜尋「Chinese restaurant Toronto」等，找有評價、沒網站的店，私訊附上用他們店名做好的三語 Demo。 |
+
+---
+
+## 9. 工作室無限授權（Studio License）
+
+給接案者和小型設計公司：同一款模板可以做**不限數量**的客戶網站。研究顯示這類買家願意付較高價格，而且會重複購買。
+
+- 在**全套組合包**加一個 Version：`Studio license — unlimited client websites`，價格 `$399`（上市優惠 $299）。
+- 單款模板不用加 Studio 版，維持 Standard $39／Extended $119。
+- Motion 全套組合包也加一個 Version：`Studio license — unlimited client websites`，價格 `$349`。
+- 條款寫在 `LICENSE.md`／`授權條款.md` 的「工作室授權」段落，已更新。
+
+說明裡加一段：
+```
+Studio license: build unlimited client websites with every template in the bundle. Ideal for freelancers and small agencies. You still may not resell the template files themselves.
+工作室授權：組合包裡的每一款，都可以用在不限數量的客戶網站。適合接案者和小型設計公司。仍然不可轉售模板檔案本身。
+```
+
+---
+
+## 10. 稅務與法規提醒
+
+- **Gumroad 是代收代付的賣方（merchant of record）**：歐盟增值稅、英國 VAT、美國各州銷售稅、澳洲 GST 都由 Gumroad 代收代繳，你不用另外申報這些國家的稅。
+- **台灣的所得稅**：Gumroad 撥給你的錢是你的收入。金額變大後，請詢問會計師要用個人執行業務所得申報，或是辦理商業登記。
+- **買家網站的法規**：模板已經做到下列幾點，說明文件也有教買家怎麼處理：
+  - 地圖用「開啟 Google 地圖」連結，不內嵌 iframe，所以不會在訪客同意前載入 Google 的追蹤。
+  - 想完全符合 GDPR 的歐洲買家，可以把 Google Fonts 改成自架字型（GUIDE.md 第 10 節有步驟）。
+  - 附上一份隱私權政策範本（`PRIVACY-TEMPLATE.md`／`隱私權政策範本.md`）。德國買家需要另外加上 Impressum（業者資訊頁）。
