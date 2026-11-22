@@ -511,7 +511,7 @@ html:not(.js) .mode { display: none; }
    The header shows the current language; click it to choose another.
    Uses <details>, so it works with JS off. Colours come from the theme tokens. */
 .lang-switch { position: relative; }
-.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: var(--text); font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
 .lang-menu > summary::-webkit-details-marker { display: none; }
 .lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
 .lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
