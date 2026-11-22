@@ -433,6 +433,11 @@ h1, h2, h3, .logo small { word-break: auto-phrase; }
 .logo b { white-space: nowrap; }
 /* 幅の狭いスマホでは、ヘッダーのロゴの補足文を隠して1行に収めます */
 @media (max-width: 400px) { .site-header .logo small { display: none; } }
+/* 日本語のメニューは1語の途中で折り返さないようにし、タブレット幅では項目を減らして1行に収めます */
+.menu a, .logo b { white-space: nowrap; }
+@media (min-width: 761px) and (max-width: 1000px) {
+  .menu a[href="#results"], .menu a[href="#process"], .site-header .logo small { display: none; }
+}
 </style>
 <!-- JSON-LD 構造化データ：種類は RealEstateAgent です。会社名、電話番号、住所、営業時間をご自身の情報に書き換えてください -->
 <script type="application/ld+json">

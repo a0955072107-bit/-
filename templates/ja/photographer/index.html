@@ -454,6 +454,11 @@ html:not(.js) .filters { display: none; }
 
 /* 日本語の改行：見出しは文節単位で折り返します（対応ブラウザのみ） */
 h1, h2, h3, .hero p { word-break: auto-phrase; }
+/* 日本語のメニューは1語の途中で折り返さないようにし、タブレット幅では項目を減らして1行に収めます */
+.menu a, .logo { white-space: nowrap; }
+@media (min-width: 761px) and (max-width: 1000px) {
+  .menu a[href="#process"], .menu a[href="#reviews"], .site-header .logo small { display: none; }
+}
 </style>
 <!-- JSON-LD 構造化データ：フォトグラファーは ProfessionalService と Person を使います。実際の情報に書き換えてください -->
 <script type="application/ld+json">
