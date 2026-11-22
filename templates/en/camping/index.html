@@ -150,6 +150,9 @@ h1, h2, h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; font-f
 /* Very narrow phones: keep the logo on one line and hide its subtitle so the language switcher and menu button fit */
 .site-header .logo { white-space: nowrap; }
 @media (max-width: 400px) { .site-header .logo small { display: none; } }
+/* Tablet: keep the menu on one line; the map and rules sections stay reachable by scrolling */
+@media (min-width: 761px) and (max-width: 1100px) { .menu a { white-space: nowrap; } .menu a[href="#map"], .menu a[href="#rules"] { display: none; } }
+@media (min-width: 761px) and (max-width: 900px) { .menu a[href="#access"] { display: none; } }
 @media (max-width: 760px) {
   /* Without JavaScript the menu wraps below the logo; with JS it folds into the burger menu */
   html:not(.js) .site-header { position: sticky; top: 0; flex-wrap: wrap; padding-block: 1rem; background: var(--night); }
