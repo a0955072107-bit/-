@@ -161,6 +161,11 @@ html[data-tone="accent"] .site-header { --bg: var(--brand); --text: var(--ink); 
 .foot-lang a:hover { color: var(--text); }
 .foot-lang a:active { opacity: .7; }
 .foot-lang a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-underline-offset: .3em; }
+@media (max-width: 760px) {
+  /* Without JS: the switcher shares the logo row and the menu wraps below */
+  html:not(.js) .site-header > nav { order: 3; flex: 1 1 100%; }
+  html:not(.js) .h-actions { order: 2; }
+}
 
 /* ---------- Hero ---------- */
 .hero { min-height: 100svh; display: grid; align-items: end; padding: calc(var(--header-h) + 2rem) 0 clamp(2rem, 5vh, 3.5rem); overflow: hidden; isolation: isolate; }

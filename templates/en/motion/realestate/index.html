@@ -151,6 +151,10 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
   .site-header .menu { order: 3; }
   .nav { gap: .5rem; }
 }
+@media (max-width: 380px) {
+  /* Very narrow phones (380px and below): tighten the gap so the logo, switcher and menu button stay on one row */
+  .nav { gap: .25rem; }
+}
 
 /* ---------- Hero ---------- */
 .hero { padding-block: 1rem 3rem; }

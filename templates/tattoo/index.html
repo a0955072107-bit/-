@@ -127,6 +127,17 @@ h1, h2, h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; font-f
   .js .menu .lang-switch { order: -1; align-self: flex-start; border-left: 0; padding: 0 0 .4rem; margin-left: -.3rem; font-size: .92rem; }
   .js .menu .lang-switch a[hreflang] { padding: 0 .3rem; border-bottom: 0; min-width: 40px; min-height: 40px; }
 }
+/* 平板寬度：縮小選單間距，讓語言切換放得下、頁首不換行 */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .menu { gap: clamp(.55rem, 1.1vw, .9rem); font-size: .88rem; }
+  .menu a { white-space: nowrap; }
+  .lang-switch { padding-left: .25rem; }
+  .menu .lang-switch a[hreflang] { padding: 0; }
+}
+@media (min-width: 761px) and (max-width: 860px) {
+  /* 平板寬度空間不夠：暫時隱藏次要連結（class="opt"），手機選單與桌機仍會顯示 */
+  .menu .opt { display: none; }
+}
 
 /* ==================== Hero ==================== */
 .hero { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--gap) clamp(2rem, 5vw, 5rem); align-items: center; padding: calc(var(--header-h) + clamp(1.5rem, 5vh, 3.5rem)) var(--pad) clamp(2.5rem, 7vh, 4.5rem); }
@@ -496,7 +507,7 @@ html:not(.js) .filters, html:not(.js) .count { display: none; }
     <a href="#flash">現貨 Flash</a>
     <a href="#pricing">價格</a>
     <a href="#process">流程</a>
-    <a href="#care">須知</a>
+    <a class="opt" href="#care">須知</a>
     <a href="#booking" class="btn btn-brand">預約諮詢</a>
     <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
     <nav class="lang-switch" aria-label="Language 語言">

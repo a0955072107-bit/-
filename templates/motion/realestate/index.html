@@ -151,6 +151,10 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
   .site-header .menu { order: 3; }
   .nav { gap: .5rem; }
 }
+@media (max-width: 380px) {
+  /* 很窄的手機（380px 以下）再收緊一點間距，讓 logo、語言切換和漢堡按鈕維持同一行 */
+  .nav { gap: .25rem; }
+}
 
 /* ---------- 首屏 ---------- */
 .hero { padding-block: 1rem 3rem; }

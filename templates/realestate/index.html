@@ -418,6 +418,8 @@ section { padding-block: clamp(4rem, 9vw, 7rem); }
   .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
   .burger { order: 2; }
   .menu { order: 3; }
+  /* 沒有 JS 時 logo 可以縮窄換行，讓語言切換留在同一列 */
+  html:not(.js) .logo { flex: 1 1 0; min-width: 0; }
 }
 /* 頁尾的語言文字連結 */
 .foot-lang { display: flex; flex-wrap: wrap; align-items: center; gap: 0 .5rem; margin-top: 1.25rem; font-size: .85rem; }

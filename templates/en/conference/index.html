@@ -140,6 +140,14 @@ section { padding-block: clamp(4rem, 9vw, 7rem); }
   .js .menu .lang-switch { order: -1; align-self: flex-start; border-left: 0; padding: 0 0 .4rem; margin-left: -.3rem; font-size: .92rem; }
   .js .menu .lang-switch a[hreflang] { padding: 0 .3rem; border-bottom: 0; min-width: 40px; min-height: 40px; }
 }
+/* Tablet widths: tighten the menu so the switcher fits without wrapping the header */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .menu { gap: clamp(.55rem, 1.1vw, .9rem); font-size: .88rem; }
+  .menu a { white-space: nowrap; }
+  .lang-switch { padding-left: .25rem; }
+  .menu .lang-switch a[hreflang] { padding: 0; }
+  .menu .opt { display: none; }
+}
 
 /* ==================== Hero ==================== */
 .hero { padding-top: calc(var(--head-h) + clamp(1.5rem, 3.5vw, 2.5rem)); padding-bottom: clamp(3.5rem, 7vw, 5rem); position: relative; }

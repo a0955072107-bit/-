@@ -127,6 +127,17 @@ h1, h2, h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; font-f
   .js .menu .lang-switch { order: -1; align-self: flex-start; border-left: 0; padding: 0 0 .4rem; margin-left: -.3rem; font-size: .92rem; }
   .js .menu .lang-switch a[hreflang] { padding: 0 .3rem; border-bottom: 0; min-width: 40px; min-height: 40px; }
 }
+/* Tablet widths: tighten the menu so the switcher fits without wrapping the header */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .menu { gap: clamp(.55rem, 1.1vw, .9rem); font-size: .88rem; }
+  .menu a { white-space: nowrap; }
+  .lang-switch { padding-left: .25rem; }
+  .menu .lang-switch a[hreflang] { padding: 0; }
+}
+@media (min-width: 761px) and (max-width: 860px) {
+  /* Not enough room at tablet widths: hide the secondary link (class="opt"); it still shows on desktop and in the mobile menu */
+  .menu .opt { display: none; }
+}
 
 /* ==================== Hero ==================== */
 .hero { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--gap) clamp(2rem, 5vw, 5rem); align-items: center; padding: calc(var(--header-h) + clamp(1.5rem, 5vh, 3.5rem)) var(--pad) clamp(2.5rem, 7vh, 4.5rem); }
@@ -496,7 +507,7 @@ html:not(.js) .filters, html:not(.js) .count { display: none; }
     <a href="#flash">Flash</a>
     <a href="#pricing">Pricing</a>
     <a href="#process">Process</a>
-    <a href="#care">Aftercare</a>
+    <a class="opt" href="#care">Aftercare</a>
     <a href="#booking" class="btn btn-brand">Book a consult</a>
     <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
     <nav class="lang-switch" aria-label="Language 語言">
