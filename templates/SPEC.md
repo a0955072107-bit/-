@@ -80,3 +80,12 @@
 ## 驗收補充
 - lint：把檔案複製到 scratchpad，執行 `node /home/user/nutlope/hallmark/skills/hallmark/scripts/sloplint.mjs <副本>`。第 20 條（戳記）可以忽略，第 19 條如果是時間範圍也可以忽略，其他 FAIL 都要修掉。
 - 截圖和所有暫存檔都只能放在 scratchpad 裡，不要寫進 repo。
+
+## Motion 動態系列（高價款）額外規格
+- 檔案放在：中文 `templates/motion/<slug>/index.html`，英文 `templates/en/motion/<slug>/index.html`。
+- **不使用任何第三方動畫函式庫**（包含 GSAP、Lottie、Three.js），以避免授權風險。只用瀏覽器內建的技術：CSS 動畫、CSS 捲動驅動動畫（`animation-timeline: view()／scroll()`，並用 `@supports` 提供備案）、Web Animations API、IntersectionObserver、requestAnimationFrame、Canvas 2D 或手寫 WebGL。
+- 動畫要「精緻、有記憶點」，至少包含 4 種：捲動視差、跟著捲動播放的進度動畫、文字逐字或逐行浮現、圖片或區塊遮罩展開、磁吸按鈕或游標互動、首屏 Canvas 或 WebGL 背景、數字或圖表動畫、水平捲動區塊。
+- 效能：只對 transform 和 opacity 做動畫；不在 scroll 事件裡改版面；Canvas 或 WebGL 在畫面外時要暫停，裝置像素比上限設為 2，手機上要降低粒子數；WebGL 不可用時退回 CSS 漸層。
+- 無障礙：`prefers-reduced-motion: reduce` 時關掉所有動畫，內容直接呈現；關掉 JS 時內容也要完整可見。
+- 主題設定區要多一組「動畫設定」變數：`--motion-speed`、`--motion-ease`、`--motion-distance`，並加中文或英文註解。
+- 其餘規格（主題設定、區塊註解、SEO、表單、手機版、Hallmark 規則、英文版規則、驗收）照舊。
