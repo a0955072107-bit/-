@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  ⚠ 给买家的提醒：医疗广告法规
+  台湾《医疗法》第 84–87 条对医疗广告有严格限制。修改文案时请避免：
+  「最好」「第一」「保证」「无痛」「根治」「百分百」等夸大或保证疗效的字眼，
+  也不要放疗程前后对比、病患见证或优惠折扣。内容以客观、事实描述为主，
+  上线前建议请卫生局或熟悉法规的人员确认。
+-->
+<title>安和牙医诊所｜高雄苓雅区 牙科门诊</title>
+<meta name="description" content="安和牙医诊所位于高雄市苓雅区，提供一般治疗、儿童牙科、牙周病、植牙、矫正与美白等诊疗项目，可在线或电话预约挂号。">
+<meta property="og:title" content="安和牙医诊所｜高雄苓雅区 牙科门诊">
+<meta property="og:description" content="一般治疗、儿童牙科、牙周病、植牙、矫正与美白。查找门诊时间、医师团队与交通信息。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f766e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "安和牙医诊所",
+  "telephone": "07-1234-5678",
+  "url": "https://example.com/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "安和路 123 号 1 楼",
+    "addressLocality": "苓雅区",
+    "addressRegion": "高雄市",
+    "postalCode": "802",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "14:00", "closes": "17:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "18:30", "closes": "21:00" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   主题设置：改这里就能换整站配色与字体
+   ============================================================ */
+:root {
+  --brand: #0f766e;          /* 品牌主色（按钮、重点文本），换科别可改成医疗蓝 #1d4ed8 */
+  --brand-ink: #f7fdfc;      /* 在品牌色上的文本颜色 */
+  --brand-deep: #134e4a;     /* 品牌深色（hover、深色区块背景） */
+  --brand-soft: #e3f3f1;     /* 品牌浅色（图标底、标签底） */
+  --aqua: #8fd9cf;           /* 艺术占位图用的水蓝色 */
+  --sky: #cfe9f7;            /* 艺术占位图用的浅天蓝 */
+  --bg: #f5f8fa;             /* 页面背景（极浅冷灰） */
+  --surface: #fcfefe;        /* 卡片、表格等表面颜色 */
+  --text: #1e293b;           /* 主要文本（石板深灰） */
+  --muted: #526073;          /* 次要文本 */
+  --line: #dfe6ec;           /* 分隔线、边框 */
+  --closed: #8a5a12;         /* 「休诊」文本颜色 */
+  --shadow: 0 10px 30px -12px rgba(15, 50, 70, .18); /* 卡片柔和阴影 */
+  --radius: 18px;            /* 卡片圆角 */
+  --radius-sm: 10px;         /* 小组件圆角 */
+  --font-heading: "Plus Jakarta Sans", "Noto Sans SC", system-ui, sans-serif; /* 标题字体 */
+  --font-body: "Noto Sans SC", "Plus Jakarta Sans", system-ui, sans-serif;    /* 内文本型 */
+  --max: 1160px;             /* 内容最大宽度 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); line-height: 1.3; letter-spacing: -.01em; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+.wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+section { padding-block: clamp(4rem, 10vw, 7rem); }
+.sec-head { max-width: 40rem; margin-bottom: clamp(2rem, 5vw, 3.25rem); }
+.sec-head h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: .6rem; }
+.sec-head p { color: var(--muted); }
+
+/* ---------- 按钮 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .8rem 1.5rem; border-radius: 999px; font-weight: 500; border: 1.5px solid transparent; transition: background .25s, color .25s, transform .25s, border-color .25s; cursor: pointer; }
+.btn svg { width: 1.1rem; height: 1.1rem; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: var(--brand-deep); transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.97); }
+a:not(.btn):active { opacity: .7; }
+.btn-ghost { border-color: color-mix(in srgb, var(--brand) 40%, transparent); color: var(--brand); background: var(--surface); }
+.btn-ghost:hover { border-color: var(--brand); transform: translateY(-2px); }
+
+/* ---------- 页眉 ---------- */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 90%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .6rem; font: 700 1.15rem/1 var(--font-heading); }
+.logo-mark { width: 2.2rem; height: 2.2rem; border-radius: 12px; background: var(--brand); color: var(--brand-ink); display: grid; place-items: center; }
+.logo-mark svg { width: 1.3rem; height: 1.3rem; }
+.nav-links { display: flex; align-items: center; gap: 1.75rem; font-size: .95rem; }
+.nav-links a:not(.btn) { color: var(--muted); transition: color .2s; }
+.nav-links a:not(.btn):hover { color: var(--brand); }
+.nav-links .btn { padding: .6rem 1.2rem; }
+.menu-btn { display: none; width: 44px; height: 44px; border: 0; border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); color: var(--text); cursor: pointer; }
+.menu-btn span { display: block; width: 20px; height: 2px; margin: 4px auto; background: currentColor; border-radius: 2px; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: 72px; left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .75rem; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: .8rem 1rem; border-radius: var(--radius-sm); }
+  .js .nav-links .btn { margin-top: .5rem; }
+  /* 没有 JS 时：菜单直接展开成可换行的链接列 */
+  html:not(.js) .site-header { background: var(--surface); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: .75rem; }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: 11rem; }
+}
+
+/* ---------- 艺术占位图 ---------- */
+/* 换成照片：.img-hero { background: url(images/clinic.jpg) center/cover; } */
+/* 换成照片：.img-doc1 { background: url(images/doctor-1.jpg) center/cover; }（.img-doc2、.img-doc3 同理） */
+.img { position: relative; overflow: hidden; background-color: var(--brand-soft); }
+.img-hero {
+  border-radius: 32px; aspect-ratio: 4 / 4.4;
+  background:
+    radial-gradient(circle at 78% 18%, color-mix(in srgb, var(--surface) 85%, transparent) 0 9%, transparent 9.5%),
+    radial-gradient(circle at 20% 85%, color-mix(in srgb, var(--aqua) 70%, transparent) 0 22%, transparent 22.5%),
+    radial-gradient(circle at 85% 90%, color-mix(in srgb, var(--sky) 90%, transparent) 0 30%, transparent 30.5%),
+    linear-gradient(155deg, var(--sky), var(--aqua) 55%, color-mix(in srgb, var(--brand) 55%, var(--aqua)));
+}
+/* 置中的牙齿曲线与十字图样 */
+.img-hero::before { content: ""; position: absolute; inset: 22% 24% 26%; border-radius: 46% 46% 40% 40% / 38% 38% 62% 62%; border: 3px solid color-mix(in srgb, var(--surface) 75%, transparent); background: color-mix(in srgb, var(--surface) 22%, transparent); }
+.img-hero::after { content: ""; position: absolute; left: 50%; top: 42%; width: 64px; height: 64px; translate: -50% -50%;
+  background: linear-gradient(var(--surface), var(--surface)) center/20px 64px no-repeat, linear-gradient(var(--surface), var(--surface)) center/64px 20px no-repeat; opacity: .9; border-radius: 6px; }
+.img-doc { aspect-ratio: 4 / 3.4; }
+.img-doc::before { content: ""; position: absolute; left: 50%; bottom: -18%; width: 64%; aspect-ratio: 1; translate: -50% 0; border-radius: 50% 50% 0 0; background: color-mix(in srgb, var(--surface) 70%, transparent); }
+.img-doc::after { content: ""; position: absolute; left: 50%; top: 20%; width: 28%; aspect-ratio: 1; translate: -50% 0; border-radius: 50%; background: color-mix(in srgb, var(--surface) 85%, transparent); }
+.img-doc1 { background: radial-gradient(circle at 15% 15%, var(--sky) 0 18%, transparent 18.5%), linear-gradient(160deg, var(--brand-soft), var(--aqua)); }
+.img-doc2 { background: radial-gradient(circle at 88% 20%, var(--aqua) 0 16%, transparent 16.5%), linear-gradient(160deg, var(--sky), color-mix(in srgb, var(--aqua) 60%, var(--sky))); }
+.img-doc3 { background: radial-gradient(circle at 80% 85%, var(--sky) 0 22%, transparent 22.5%), linear-gradient(200deg, color-mix(in srgb, var(--brand) 30%, var(--aqua)), var(--brand-soft)); }
+
+/* ---------- Hero ---------- */
+.hero { padding-top: calc(72px + clamp(2rem, 6vw, 4.5rem)); background: radial-gradient(60rem 30rem at 85% 0%, color-mix(in srgb, var(--aqua) 22%, transparent), transparent 70%); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.hero h1 { font-size: clamp(2.1rem, 5.2vw, 3.5rem); margin-bottom: 1.1rem; }
+.hero-sub { color: var(--muted); font-size: 1.08rem; max-width: 32rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+.hero-facts { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-top: 2rem; color: var(--muted); font-size: .92rem; }
+.hero-facts li::before { content: "✓"; color: var(--brand); font-weight: 700; margin-right: .4rem; }
+.hero-art { position: relative; }
+.today-card { position: absolute; left: -2rem; bottom: 2rem; width: min(20rem, 85%); background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.2rem 1.3rem; }
+.today-card h2 { font-size: 1rem; display: flex; justify-content: space-between; align-items: baseline; }
+.today-card h2 small { font: 500 .82rem var(--font-body); color: var(--muted); }
+.today-card ul { margin-top: .7rem; display: grid; gap: .45rem; }
+.today-card li { display: grid; grid-template-columns: auto 1fr auto; gap: .6rem; align-items: center; font-size: .88rem; padding: .5rem .7rem; border-radius: var(--radius-sm); background: var(--bg); }
+.today-card li b { font: 600 .82rem var(--font-heading); color: var(--brand); }
+.today-card li span { color: var(--muted); line-height: 1.45; font-size: .84rem; }
+.today-card .tag { font-style: normal; white-space: nowrap; font-size: .75rem; padding: .1rem .55rem; border-radius: 999px; background: var(--brand-soft); color: var(--brand-deep); }
+.today-card li.off b, .today-card li.off .tag { color: var(--closed); }
+.today-card li.off .tag { background: color-mix(in srgb, var(--closed) 10%, transparent); }
+.today-card li.now { background: var(--brand-soft); }
+.today-card li.now .tag { background: var(--brand); color: var(--brand-ink); }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .img-hero { aspect-ratio: 4 / 3; }
+  .today-card { position: relative; left: auto; bottom: auto; width: auto; margin: -3.5rem 1rem 0; }
+}
+
+/* ---------- 卡片通用 ---------- */
+.card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); }
+
+/* ---------- 诊疗项目 ---------- */
+.svc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.svc { padding: 1.75rem; transition: transform .3s, box-shadow .3s; }
+.svc:hover { transform: translateY(-4px); }
+.svc-icon { width: 3.25rem; height: 3.25rem; border-radius: 14px; display: grid; place-items: center; background: var(--brand-soft); color: var(--brand); margin-bottom: 1.1rem; }
+.svc-icon svg { width: 1.75rem; height: 1.75rem; }
+.svc h3 { font-size: 1.15rem; margin-bottom: .4rem; }
+.svc p { color: var(--muted); font-size: .95rem; }
+@media (max-width: 960px) { .svc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .svc-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 医师团队 ---------- */
+.team { background: var(--surface); }
+.doc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.doc { overflow: hidden; background: var(--bg); box-shadow: none; }
+.doc-body { padding: 1.4rem 1.5rem 1.6rem; }
+.doc-role { font-size: .85rem; color: var(--brand); font-weight: 500; }
+.doc h3 { font-size: 1.25rem; margin-block: .15rem .8rem; }
+.doc dl { display: grid; grid-template-columns: auto 1fr; gap: .35rem .9rem; font-size: .92rem; }
+.doc dt { color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.chips span { font-size: .8rem; padding: .15rem .6rem; border-radius: 999px; background: var(--brand-soft); color: var(--brand-deep); }
+@media (max-width: 960px) { .doc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .doc-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 门诊时间表 ---------- */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius); }
+.schedule { width: 100%; min-width: 720px; border-collapse: separate; border-spacing: 0; text-align: center; font-size: .95rem; }
+.schedule th, .schedule td { padding: 1rem .6rem; border-bottom: 1px solid var(--line); }
+.schedule thead th { font: 600 .95rem var(--font-heading); background: var(--brand-soft); color: var(--brand-deep); }
+.schedule tbody th { text-align: left; padding-left: 1.25rem; white-space: nowrap; }
+.schedule tbody th small { display: block; font: 400 .8rem var(--font-body); color: var(--muted); }
+.schedule tbody tr:last-child > * { border-bottom: 0; }
+.schedule .off { color: var(--closed); font-size: .88rem; }
+.schedule .today { background: color-mix(in srgb, var(--brand) 9%, var(--surface)); font-weight: 500; }
+.schedule thead .today { background: var(--brand); color: var(--brand-ink); }
+.schedule thead .today::after { content: "今天"; display: block; font: 500 .72rem var(--font-body); opacity: .9; }
+.table-note { margin-top: 1rem; font-size: .88rem; color: var(--muted); }
+.scroll-hint { display: none; font-size: .82rem; color: var(--muted); margin-bottom: .5rem; }
+@media (max-width: 760px) { .scroll-hint { display: block; } }
+
+/* ---------- 就诊须知 + 常见问题 ---------- */
+.guide { background: var(--surface); }
+.guide-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.checklist { padding: 1.75rem; background: var(--bg); box-shadow: none; }
+.checklist h3, .faq h3 { font-size: 1.2rem; margin-bottom: 1rem; }
+.checklist li { display: flex; gap: .8rem; padding-block: .7rem; border-bottom: 1px dashed var(--line); }
+.checklist li:last-child { border-bottom: 0; }
+.checklist li::before { content: ""; flex: none; width: 1.3rem; height: 1.3rem; margin-top: .25rem; border-radius: 6px; border: 2px solid var(--brand); background: linear-gradient(var(--brand), var(--brand)) center/50% 50% no-repeat; }
+.checklist small { display: block; color: var(--muted); font-size: .88rem; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 1rem; padding: 1.1rem .25rem; font-weight: 500; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; display: grid; place-items: center; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--brand-soft); color: var(--brand); font-size: 1.2rem; line-height: 1; transition: transform .3s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 .25rem 1.2rem; color: var(--muted); }
+@media (max-width: 860px) { .guide-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 交通信息 ---------- */
+.access-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 1.5rem; }
+.access-info { padding: clamp(1.5rem, 4vw, 2.25rem); display: grid; gap: 1.4rem; }
+.access-info h3 { font-size: 1rem; color: var(--brand); margin-bottom: .2rem; }
+.access-info p { color: var(--muted); }
+.access-info p strong { color: var(--text); font-weight: 500; }
+.access-cta { padding: clamp(1.5rem, 4vw, 2.25rem); background: var(--brand-deep); color: var(--brand-ink); border: 0; display: flex; flex-direction: column; justify-content: center; gap: 1rem; position: relative; overflow: hidden; }
+.access-cta::after { content: ""; position: absolute; right: -4rem; top: -4rem; width: 14rem; aspect-ratio: 1; border-radius: 50%; border: 2.5rem solid color-mix(in srgb, var(--brand-ink) 8%, transparent); }
+.access-cta h3 { font-size: 1.5rem; }
+.access-cta p { opacity: .9; }
+.access-cta .btn-primary { background: var(--brand-ink); color: var(--brand-deep); }
+.access-cta .btn-ghost { background: transparent; color: var(--brand-ink); border-color: color-mix(in srgb, var(--brand-ink) 50%, transparent); }
+.access-cta .row { display: flex; flex-wrap: wrap; gap: .7rem; position: relative; z-index: 1; }
+@media (max-width: 860px) { .access-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 页脚 ---------- */
+.site-footer { background: var(--text); color: color-mix(in srgb, var(--surface) 78%, transparent); padding-block: 3.5rem 2rem; font-size: .92rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; }
+.site-footer .logo { color: var(--surface); margin-bottom: 1rem; }
+.site-footer h2 { color: var(--surface); font-size: .95rem; margin-bottom: .6rem; }
+.site-footer a:hover { color: var(--surface); }
+.social { display: flex; gap: 1rem; margin-top: .8rem; }
+.social a { text-decoration: underline; text-underline-offset: 3px; }
+.foot-bottom { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid color-mix(in srgb, var(--surface) 15%, transparent); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .82rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 手机底部固定按钮 ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 760px) {
+  .mobile-bar { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 60; padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 -1px 0 var(--line); }
+  .mobile-bar .btn { padding: .75rem 1rem; }
+  body { padding-bottom: 76px; }
+}
+
+/* ---------- 卷动渐入 ---------- */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ==================== 区块：页眉导览 ==================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="安和牙医诊所 回到顶端">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c-2.5 0-4 2-4 4.5 0 3 1.5 5 2 8 .4 2.5 1 5.5 2.5 5.5S9.5 17 12 17s3 4 4.5 4 2.1-3 2.5-5.5c.5-3 2-5 2-8C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3Z"/></svg></span>
+      安和牙医诊所
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="打开菜单"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="主菜单">
+      <a href="#services">诊疗项目</a>
+      <a href="#team">医师团队</a>
+      <a href="#schedule">门诊时间</a>
+      <a href="#guide">就诊须知</a>
+      <a href="#access">交通信息</a>
+      <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-primary" target="_blank" rel="noopener">预约挂号</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ==================== 区块：主视觉 Hero ==================== -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <h1>陪你好好照顾每一颗牙齿</h1>
+      <p class="hero-sub">安和牙医位于高雄苓雅区，看诊前先说明检查结果与治疗选项，让你清楚了解再决定。</p>
+      <div class="hero-cta">
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-primary" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>预约挂号</a>
+        <a href="tel:07-1234-5678" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>拨打电话 07-1234-5678</a>
+      </div>
+      <!-- 范例内容：上线前请换成真实数据 -->
+      <ul class="hero-facts">
+        <li>健保特约</li>
+        <li>器械依规范消毒</li>
+        <li>周一至周六看诊</li>
+      </ul>
+    </div>
+    <div class="hero-art reveal">
+      <div class="img img-hero" role="img" aria-label="诊所明亮的诊疗空间示意图"></div>
+      <!-- 今日门诊卡片：由 JS 读取下方「门诊时间表」自动产生，改表格即可 -->
+      <aside class="today-card" aria-live="polite">
+        <h2>今日门诊 <small id="today-label">请见门诊时间表</small></h2>
+        <ul id="today-list"><li><b>门诊</b><span>请参考下方门诊时间表</span></li></ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：诊疗项目 ==================== -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>诊疗项目</h2>
+      <p>依照你的口腔状况与需求，由医师评估后说明适合的治疗方式与费用。</p>
+    </div>
+    <div class="svc-grid">
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c-2.5 0-4 2-4 4.5 0 3 1.5 5 2 8 .4 2.5 1 5.5 2.5 5.5S9.5 17 12 17s3 4 4.5 4 2.1-3 2.5-5.5c.5-3 2-5 2-8C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3Z"/></svg></div>
+        <h3>一般治疗</h3>
+        <p>定期检查、洗牙、蛀牙填补与根管治疗，从日常保健开始维护口腔健康。</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5a4.5 4.5 0 0 0 7 0M9 9.5h.01M15 9.5h.01"/></svg></div>
+        <h3>儿童牙科</h3>
+        <p>乳牙检查、涂氟与窝沟封填，用孩子听得懂的方式说明，慢慢熟悉看牙环境。</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9c3-3 6 2 9-1s6 2 9-1"/><path d="M6 12v5a2 2 0 0 0 4 0v-4M14 13v4a2 2 0 0 0 4 0v-5"/></svg></div>
+        <h3>牙周病</h3>
+        <p>牙龈出血、牙齿松动时可安排牙周检查，依程度进行牙周治疗与后续追踪。</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10c1.5 0 2.5 1.5 2 3l-1 3H6L5 6c-.5-1.5.5-3 2-3Z"/><path d="M9 9v3l1 1v2l2 1 2-1v-2l1-1V9M10 17l2 4 2-4"/></svg></div>
+        <h3>植牙</h3>
+        <p>术前以影像检查评估骨量与健康状况，说明流程、时程与照护方式后再安排。</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="4" height="6" rx="1"/><rect x="10" y="9" width="4" height="6" rx="1"/><rect x="17" y="9" width="4" height="6" rx="1"/><path d="M2 12h20"/></svg></div>
+        <h3>矫正</h3>
+        <p>提供传统矫正与透明牙套咨询，依齿列状况讨论可行方案与预估疗程。</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg></div>
+        <h3>美白</h3>
+        <p>先检查牙齿与牙龈状况，再说明诊间美白与居家美白的差异及注意事项。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：医师团队 ==================== -->
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>医师团队</h2>
+      <p>每位医师皆领有牙医师证书，并持续参与专业进修课程。</p>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="doc-grid">
+      <article class="card doc reveal">
+        <div class="img img-doc img-doc1" role="img" aria-label="林医师照片占位图"></div>
+        <div class="doc-body">
+          <span class="doc-role">院长</span>
+          <h3>林安和 医师</h3>
+          <dl>
+            <dt>学历</dt><dd>高雄医学大学 牙医学系</dd>
+            <dt>专长</dt><dd class="chips"><span>植牙</span><span>假牙重建</span><span>根管治疗</span></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card doc reveal">
+        <div class="img img-doc img-doc2" role="img" aria-label="陈医师照片占位图"></div>
+        <div class="doc-body">
+          <span class="doc-role">主治医师</span>
+          <h3>陈宜蓁 医师</h3>
+          <dl>
+            <dt>学历</dt><dd>台北医学大学 牙医学系</dd>
+            <dt>专长</dt><dd class="chips"><span>儿童牙科</span><span>齿列矫正</span><span>预防保健</span></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card doc reveal">
+        <div class="img img-doc img-doc3" role="img" aria-label="王医师照片占位图"></div>
+        <div class="doc-body">
+          <span class="doc-role">主治医师</span>
+          <h3>王志远 医师</h3>
+          <dl>
+            <dt>学历</dt><dd>中山医学大学 牙医学系</dd>
+            <dt>专长</dt><dd class="chips"><span>牙周病治疗</span><span>美白</span><span>一般治疗</span></dd>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：门诊时间表 ==================== -->
+<!-- 修改方式：直接改表格内的医师名字或「休诊」，上方的「今日门诊」卡片会自动跟着变。
+     时段时间请写在每列的 data-time="开始-结束"（24 小时制）。 -->
+<section id="schedule">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>门诊时间表</h2>
+      <p>建议事先预约，现场挂号依序看诊。国定假日门诊另行公告。</p>
+    </div>
+    <p class="scroll-hint">左右滑动可查看完整时间表</p>
+    <div class="table-scroll card reveal">
+      <table class="schedule" id="schedule-table">
+        <thead>
+          <tr><th scope="col">时段</th><th scope="col">周一</th><th scope="col">周二</th><th scope="col">周三</th><th scope="col">周四</th><th scope="col">周五</th><th scope="col">周六</th><th scope="col">周日</th></tr>
+        </thead>
+        <tbody>
+          <tr data-name="早诊" data-time="09:00-12:00"><th scope="row">早诊<small>09:00–12:00</small></th><td>林安和</td><td>陈宜蓁</td><td>林安和</td><td>王志远</td><td>林安和</td><td>陈宜蓁</td><td class="off">休诊</td></tr>
+          <tr data-name="午诊" data-time="14:00-17:30"><th scope="row">午诊<small>14:00–17:30</small></th><td>王志远</td><td>林安和</td><td>陈宜蓁</td><td>林安和</td><td>王志远</td><td class="off">休诊</td><td class="off">休诊</td></tr>
+          <tr data-name="晚诊" data-time="18:30-21:00"><th scope="row">晚诊<small>18:30–21:00</small></th><td>陈宜蓁</td><td>王志远</td><td>王志远</td><td>陈宜蓁</td><td class="off">休诊</td><td class="off">休诊</td><td class="off">休诊</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">＊ 挂号时间至各时段结束前 30 分钟。医师如有异动，以诊所公告为准。</p>
+  </div>
+</section>
+
+<!-- ==================== 区块：就诊须知＋常见问题 ==================== -->
+<section class="guide" id="guide">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>就诊须知与常见问题</h2>
+      <p>第一次来看诊？以下信息可以让流程更顺利。</p>
+    </div>
+    <div class="guide-grid">
+      <div class="card checklist reveal">
+        <h3>初诊请准备</h3>
+        <ul>
+          <li><div>健保卡<small>每次看诊皆需过卡，未带需先自费，可于规定期限内退费。</small></div></li>
+          <li><div>身分证件<small>初诊建档使用；儿童可携带户口名簿或健保卡。</small></div></li>
+          <li><div>目前使用的药物清单<small>如抗凝血剂、骨质疏松药物等，请主动告知医师。</small></div></li>
+          <li><div>过往病史与过敏纪录<small>心血管疾病、糖尿病、怀孕或药物过敏等。</small></div></li>
+          <li><div>提早 10 分钟报到<small>填写初诊数据表，方便医师了解你的状况。</small></div></li>
+        </ul>
+      </div>
+      <div class="faq reveal">
+        <h3>常见问题</h3>
+        <details open>
+          <summary>需要预约吗？可以现场挂号吗？</summary>
+          <p>可以现场挂号，但建议先通过电话或 LINE 预约，能缩短等候时间。现场挂号依报到顺序看诊。</p>
+        </details>
+        <details>
+          <summary>洗牙多久可以做一次？健保有给付吗？</summary>
+          <p>一般成人健保给付每半年一次洗牙，实际频率仍依医师检查口腔状况后建议。</p>
+        </details>
+        <details>
+          <summary>小朋友几岁可以开始看牙？</summary>
+          <p>建议长出第一颗乳牙后就可以开始定期检查。未满 6 岁儿童健保提供每半年一次涂氟。</p>
+        </details>
+        <details>
+          <summary>植牙、矫正的费用大概多少？</summary>
+          <p>费用会依个人口腔状况与治疗方式而不同，医师检查评估后会说明治疗计划与费用明细，确认后再开始。</p>
+        </details>
+        <details>
+          <summary>无法准时赴约怎么办？</summary>
+          <p>请尽早来电或通过 LINE 告知，我们会协助改约，也让其他需要的患者能够安排看诊。</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：交通信息 ==================== -->
+<section id="access">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>交通信息</h2>
+    </div>
+    <div class="access-grid">
+      <div class="card access-info reveal">
+        <div><h3>地址</h3><p><strong>高雄市苓雅区安和路 123 号 1 楼</strong></p></div>
+        <div><h3>捷运</h3><p>高雄捷运红线「三多商圈站」2 号出口，步行约 8 分钟。</p></div>
+        <div><h3>公车</h3><p>搭乘 72、100、248 路至「安和路口」站下车，步行约 2 分钟。</p></div>
+        <div><h3>停车</h3><p>诊所旁巷内有路边停车格；附近「安和公有停车场」步行约 3 分钟。机车可停放于骑楼指定区。</p></div>
+      </div>
+      <div class="card access-cta reveal">
+        <h3>预约或询问</h3>
+        <p>电话：07-1234-5678<br>看诊时段内有专人接听，也可以通过 LINE 留言预约。</p>
+        <div class="row">
+          <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-primary" target="_blank" rel="noopener">LINE 预约</a>
+          <a href="https://maps.google.com/?q=高雄市苓雅区安和路123号" class="btn btn-ghost" target="_blank" rel="noopener">打开 Google 地图</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 区块：页脚 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c-2.5 0-4 2-4 4.5 0 3 1.5 5 2 8 .4 2.5 1 5.5 2.5 5.5S9.5 17 12 17s3 4 4.5 4 2.1-3 2.5-5.5c.5-3 2-5 2-8C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3Z"/></svg></span>安和牙医诊所</div>
+        <p>高雄市苓雅区安和路 123 号 1 楼<br>电话：<a href="tel:07-1234-5678">07-1234-5678</a></p>
+        <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE</a></div>
+      </div>
+      <div>
+        <h2>门诊时间</h2>
+        <p>周一至周六 早诊 09:00–12:00<br>周一至周五 午诊 14:00–17:30<br>周一至周四 晚诊 18:30–21:00<br>周日休诊</p>
+      </div>
+      <div>
+        <h2>快速链接</h2>
+        <p><a href="#services">诊疗项目</a><br><a href="#team">医师团队</a><br><a href="#schedule">门诊时间表</a><br><a href="#access">交通信息</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y"></span> 安和牙医诊所</span>
+      <span>本网站内容仅供参考，实际诊疗请依医师评估</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== 区块：手机底部固定按钮 ==================== -->
+<div class="mobile-bar">
+  <a href="tel:07-1234-5678" class="btn btn-ghost">拨打电话</a>
+  <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-primary" target="_blank" rel="noopener">在线预约</a>
+</div>
+
+<script>
+// 年份
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// 页眉卷动背景
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+// 汉堡菜单
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  links.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
+};
+menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// 门诊表：标示今天字段，并产生「今日门诊」卡片
+const now = new Date();
+const col = (now.getDay() + 6) % 7 + 1; // 周一 = 1 … 周日 = 7
+const days = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'];
+const toMin = t => { const [h, m] = t.split(':'); return h * 60 + +m; };
+const nowMin = now.getHours() * 60 + now.getMinutes();
+const table = document.getElementById('schedule-table');
+table.querySelectorAll('tr').forEach(tr => tr.children[col] && tr.children[col].classList.add('today'));
+const items = [...table.tBodies[0].rows].map(tr => {
+  const cell = tr.cells[col];
+  const off = cell.classList.contains('off');
+  const [s, e] = tr.dataset.time.split('-');
+  let tag = off ? '休诊' : nowMin < toMin(s) ? '尚未开始' : nowMin < toMin(e) ? '看诊中' : '已结束';
+  const cls = off ? 'off' : tag === '看诊中' ? 'now' : '';
+  const who = off ? '本时段休诊' : cell.textContent.trim() + ' 医师';
+  return `<li class="${cls}"><b>${tr.dataset.name}</b><span>${s}–${e}<br>${who}</span><em class="tag">${tag}</em></li>`;
+});
+document.getElementById('today-list').innerHTML = items.join('');
+document.getElementById('today-label').textContent = `${now.getMonth() + 1}/${now.getDate()}（${days[col - 1]}）`;
+
+// 卷动渐入
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => io.observe(el));
+} else reveals.forEach(el => el.classList.add('in'));
+</script>
+</body>
+</html>

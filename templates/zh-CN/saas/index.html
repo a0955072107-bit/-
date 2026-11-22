@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>排排 Paipai 预约管理｜美发、诊所、健身、顾问的在线预约与排班系统</title>
+<meta name="description" content="排排 Paipai 是给小店家的在线预约系统：顾客自己挑时段，系统自动发短信与 LINE 提醒，员工排班、订金收款和营运报表都在同一个周历里。免费试用 14 天。">
+<meta property="og:title" content="排排 Paipai 预约管理｜预约、提醒、排班一个画面搞定">
+<meta property="og:description" content="在线预约页、自动提醒、员工排班、订金收款与报表。美发沙龙、诊所、健身教室与顾问都适用，免费试用 14 天。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b7a4b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Geist+Mono:wght@500&family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   主题设置：改这里就能换整站配色与字体
+   ============================================================ */
+:root {
+  --brand: #0b7a4b;          /* 品牌主色（祖母绿）：主要按钮、选取状态、重点文本 */
+  --brand-ink: #f4faf6;      /* 在 brand 色上的文本颜色（带绿调的白，对比 AA） */
+  --brand-deep: #075c38;     /* 深绿：按钮滑过、按下时的颜色 */
+  --brand-soft: #86d9ad;     /* 浅绿：深色区块上的强调文本（对比 AA） */
+  --staff-a: #0b7a4b;        /* 接口示意：员工 A 的代表色 */
+  --staff-b: #b25d0a;        /* 接口示意：员工 B 的代表色（琥珀） */
+  --staff-c: #2f5e8c;        /* 接口示意：员工 C 的代表色（钢蓝） */
+  --ink: #0e1914;            /* 深色区块背景（墨绿黑） */
+  --ink-2: #17251e;          /* 深色区块里的卡片底色 */
+  --on-ink: #edf4f0;         /* 深色区块上的主要文本 */
+  --on-ink-muted: #a7b7ae;   /* 深色区块上的次要文本 */
+  --bg: #f7f9f8;             /* 网页底色：带一点绿调的近白 */
+  --surface: #fcfdfc;        /* 卡片、表单、接口示意的底色（不用纯白） */
+  --text: #111814;           /* 主要文本颜色：深墨色 */
+  --muted: #4d5a53;          /* 次要文本颜色 */
+  --line: #dde4e0;           /* 细线、边框颜色 */
+  --radius: 12px;            /* 大圆角：卡片、接口外框 */
+  --radius-sm: 7px;          /* 小圆角：按钮、输入框、标签 */
+  --font-heading: "Geist", "Noto Sans SC", system-ui, sans-serif;   /* 标题字体 */
+  --font-body: "Geist", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; /* 内文本型 */
+  --font-mono: "Geist Mono", ui-monospace, monospace;              /* 数字字体：时间、价格、步骤编号 */
+  --maxw: 1200px;            /* 内容最大宽度 */
+  --pad: clamp(1rem, 4.5vw, 2.5rem); /* 左右留白 */
+  --head-h: 4rem;            /* 页眉高度 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; scrollbar-color: color-mix(in srgb, var(--text) 30%, transparent) var(--bg); }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.7 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; caret-color: var(--brand); }
+::selection { background: color-mix(in srgb, var(--brand) 22%, transparent); color: var(--text); }
+[hidden] { display: none !important; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+button, input, textarea { font: inherit; color: inherit; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; line-height: 1.25; letter-spacing: -.015em; word-break: keep-all; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+p { text-wrap: pretty; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+.wrap { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 100; }
+.skip:focus { left: 1rem; }
+.num, .price-note { font-variant-numeric: tabular-nums; }
+.num { font-family: var(--font-mono); }
+
+/* ---------- 按钮 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 46px; padding: .65rem 1.25rem; border-radius: var(--radius-sm); font: 600 .95rem/1.2 var(--font-body); border: 1px solid transparent; transition: background-color .2s, color .2s, border-color .2s, transform .15s; cursor: pointer; white-space: nowrap; }
+.btn:active { transform: translateY(1px); }
+.btn:disabled, .ab:disabled { opacity: .5; cursor: not-allowed; }
+.btn-brand { background: var(--brand); color: var(--brand-ink); }
+.btn-brand:hover { background: var(--brand-deep); }
+.btn-brand:active { background: var(--brand-deep); }
+.btn-line { border-color: color-mix(in srgb, var(--text) 25%, transparent); color: var(--text); background: transparent; }
+.btn-line:hover { border-color: var(--text); }
+.btn-line:active { background: color-mix(in srgb, var(--text) 6%, transparent); }
+.btn-ghost { border-color: color-mix(in srgb, var(--on-ink) 35%, transparent); color: var(--on-ink); }
+.btn-ghost:hover { border-color: var(--on-ink); }
+.btn-ghost:active { background: color-mix(in srgb, var(--on-ink) 10%, transparent); }
+.link { color: var(--brand); font-weight: 600; white-space: nowrap; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; transition: color .2s; }
+.link:hover { color: var(--brand-deep); }
+.link:active { opacity: .8; }
+
+/* ---------- 通用区块 ---------- */
+section { padding-block: clamp(4rem, 9vw, 6.5rem); }
+.sec-head { display: grid; gap: .9rem; margin-bottom: clamp(2rem, 5vw, 3.25rem); max-width: 42rem; }
+.sec-head h2 { font-size: clamp(1.75rem, 3.6vw, 2.6rem); }
+.sec-head p { color: var(--muted); font-size: 1.05rem; }
+.alt { background: color-mix(in srgb, var(--brand) 4%, var(--bg)); border-block: 1px solid var(--line); }
+
+/* ==================== 页眉 ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: var(--head-h); }
+.logo { display: flex; align-items: center; gap: .6rem; font: 700 1.1rem/1 var(--font-heading); }
+.logo-mark { width: 1.75rem; height: 1.75rem; border-radius: 6px; background:
+  linear-gradient(var(--brand-ink), var(--brand-ink)) 5px 6px / 7px 4px no-repeat,
+  linear-gradient(var(--brand-ink), var(--brand-ink)) 5px 12px / 12px 4px no-repeat,
+  linear-gradient(var(--brand-ink), var(--brand-ink)) 5px 18px / 9px 4px no-repeat,
+  var(--brand); }
+.logo small { font: 500 .8rem/1 var(--font-body); color: var(--muted); margin-left: .1rem; }
+.menu { display: flex; align-items: center; gap: clamp(.9rem, 2vw, 1.75rem); font-size: .93rem; }
+.menu a:not(.btn) { padding-block: .35rem; color: var(--muted); transition: color .2s; }
+.menu a:not(.btn):hover { color: var(--text); }
+.menu a:not(.btn):active { color: var(--brand); }
+.menu .login { margin-left: clamp(0rem, 2vw, 1.5rem); color: var(--text); font-weight: 600; }
+.menu .btn { min-height: 40px; padding: .45rem 1rem; font-size: .9rem; }
+.burger { display: none; width: 44px; height: 44px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); color: var(--text); cursor: pointer; }
+.burger:hover { border-color: var(--text); }
+.burger:active { background: color-mix(in srgb, var(--text) 6%, var(--surface)); }
+.burger span, .burger span::before, .burger span::after { display: block; width: 18px; height: 2px; background: currentColor; margin: auto; position: relative; transition: transform .3s, background-color .3s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* 没有 JavaScript 时，菜单直接换行显示在 logo 下方；有 JS 才收进汉堡菜单 */
+  html:not(.js) .nav { flex-wrap: wrap; }
+  html:not(.js) .site-header { position: sticky; background: var(--bg); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .3rem 1rem; padding-bottom: .8rem; }
+  html:not(.js) .menu .login { margin-left: 0; }
+  html:not(.js) .hero { padding-top: 2rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: var(--head-h) 0 auto; flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); padding: .25rem var(--pad) 1.5rem; border-bottom: 1px solid var(--line); transform: translateY(-120%); visibility: hidden; transition: transform .3s, visibility .3s; }
+  .js .menu.open { transform: none; visibility: visible; }
+  .js .menu a:not(.btn) { padding: .85rem 0; border-bottom: 1px solid var(--line); color: var(--text); }
+  .js .menu .login { margin-left: 0; }
+  .js .menu .btn { margin-top: 1rem; min-height: 48px; }
+}
+
+/* ==================== 首屏与产品画面 ==================== */
+.hero { padding-top: calc(var(--head-h) + clamp(1.75rem, 4.5vw, 3.5rem)); padding-bottom: clamp(3.5rem, 7vw, 5.5rem); }
+.hero-copy { display: grid; gap: 1.25rem 3rem; align-items: end; }
+.hero h1 { font-size: clamp(1.9rem, 5.4vw, 4.1rem); line-height: 1.12; letter-spacing: -.03em; }
+.hero h1 .nb { display: inline-block; }
+.hero-lead { color: var(--muted); font-size: clamp(1.02rem, 1.4vw, 1.12rem); max-width: 30rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.4rem; }
+.hero-note { margin-top: .9rem; font-size: .87rem; color: var(--muted); }
+@media (min-width: 980px) { .hero-copy { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); } }
+
+/* 产品画面示意：全部用 HTML/CSS 做成，买家可以直接改文本。
+   换成截屏：把 .app 里面的内容换成 <img src="images/app.png" alt="排排周历画面" style="width:100%;display:block"> 即可 */
+.app { --cell: 22px; margin-top: clamp(2.25rem, 5vw, 3.5rem); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 1px 2px color-mix(in srgb, var(--text) 6%, transparent), 0 24px 48px -28px color-mix(in srgb, var(--text) 28%, transparent); font-size: .8rem; line-height: 1.4; overflow: hidden; }
+.app button { cursor: pointer; }
+.ab { display: inline-flex; align-items: center; justify-content: center; gap: .35rem; min-height: 32px; padding: .3rem .7rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); font-weight: 600; font-size: .78rem; transition: border-color .2s, background-color .2s; }
+.ab:hover { border-color: color-mix(in srgb, var(--text) 40%, transparent); }
+.ab:active { background: color-mix(in srgb, var(--text) 6%, var(--surface)); }
+.ab-brand { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.ab-brand:hover { background: var(--brand-deep); border-color: var(--brand-deep); }
+.ab-brand:active { background: var(--brand-deep); }
+.ab.sq { width: 32px; padding: 0; }
+.ab.sq::before { content: ""; width: 7px; height: 7px; border-left: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateX(1px) rotate(45deg); }
+.ab.next::before { transform: translateX(-1px) rotate(-135deg); }
+.app-top { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; padding: .7rem .9rem; border-bottom: 1px solid var(--line); }
+.app-range { display: flex; align-items: center; gap: .35rem; }
+.app-range strong { font-size: .9rem; margin-inline: .35rem; white-space: nowrap; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 2px; background: color-mix(in srgb, var(--text) 3%, var(--surface)); }
+.seg button { border: 0; background: none; min-height: 26px; padding: 0 .7rem; border-radius: 5px; font-weight: 600; font-size: .78rem; color: var(--muted); transition: background-color .2s, color .2s; }
+.seg button:hover { color: var(--text); }
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: 0 1px 2px color-mix(in srgb, var(--text) 14%, transparent); }
+.app-search { flex: 1 1 10rem; min-width: 0; }
+.app-search input { width: 100%; min-height: 32px; padding: .3rem .7rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--bg); font-size: .78rem; }
+.app-search input::placeholder { color: var(--muted); }
+.app-chips { display: flex; flex-wrap: wrap; gap: .4rem; padding: .6rem .9rem; border-bottom: 1px solid var(--line); }
+.chip { display: inline-flex; align-items: center; gap: .4rem; min-height: 28px; padding: .15rem .65rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: .78rem; font-weight: 600; color: var(--muted); transition: border-color .2s, color .2s, background-color .2s; }
+.chip:hover { color: var(--text); border-color: color-mix(in srgb, var(--text) 40%, transparent); }
+.chip:active { background: color-mix(in srgb, var(--text) 6%, var(--surface)); }
+.chip[aria-pressed="true"] { color: var(--text); border-color: var(--text); background: color-mix(in srgb, var(--text) 4%, var(--surface)); }
+.chip .cnt { font-size: .74rem; font-variant-numeric: tabular-nums; color: var(--muted); }
+.sw { width: 10px; height: 10px; border-radius: 3px; background: var(--sc); flex: none; }
+.s-a { --sc: var(--staff-a); } .s-b { --sc: var(--staff-b); } .s-c { --sc: var(--staff-c); }
+.app-body { display: grid; }
+.cal-scroll { overflow-x: auto; overscroll-behavior-x: contain; }
+.cal { min-width: 600px; padding: 0 .9rem .9rem 0; }
+.cal-head, .cal-grid { display: grid; grid-template-columns: 3.4rem repeat(6, minmax(0, 1fr)); }
+.cal-head { position: sticky; top: 0; border-bottom: 1px solid var(--line); }
+.cal-head span { padding: .55rem .5rem; font-size: .75rem; color: var(--muted); display: grid; }
+.cal-head b { font: 500 1.05rem/1.2 var(--font-mono); color: var(--text); }
+.cal-head .today b { color: var(--brand); }
+.cal-grid { grid-template-rows: repeat(18, var(--cell)); position: relative; }
+.cal-grid .t { grid-column: 1; grid-row: var(--s) / span 2; font: 500 .68rem/1 var(--font-mono); color: var(--muted); padding: .2rem .5rem 0 .6rem; text-align: right; }
+.cal-grid .col { grid-row: 1 / -1; grid-column: calc(var(--d) + 1); border-left: 1px solid var(--line); background: repeating-linear-gradient(180deg, color-mix(in srgb, var(--line) 70%, transparent) 0 1px, transparent 1px calc(var(--cell) * 2)); }
+.cal-grid .col.today { background-color: color-mix(in srgb, var(--brand) 4%, transparent); }
+.bk { grid-column: calc(var(--d) + 1); grid-row: var(--s) / span var(--l); margin: 2px 4px; padding: .25rem .4rem; border-radius: 5px; border-left: 3px solid var(--sc); background: color-mix(in srgb, var(--sc) 12%, var(--surface)); overflow: hidden; display: grid; align-content: start; transition: opacity .25s; z-index: 1; }
+.bk b { font-weight: 600; font-size: .74rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bk span { font-size: .68rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bk.sel { outline: 2px solid var(--sc); outline-offset: -1px; }
+.bk.hold { background: repeating-linear-gradient(135deg, color-mix(in srgb, var(--text) 5%, var(--surface)) 0 6px, var(--surface) 6px 12px); border-left-color: var(--line); }
+.now { grid-column: 4; grid-row: 12; align-self: start; height: 2px; background: var(--brand); position: relative; z-index: 2; margin-top: 8px; }
+.now::before { content: ""; position: absolute; left: -4px; top: -3px; width: 8px; height: 8px; border-radius: 50%; background: var(--brand); }
+.app[data-staff="a"] .bk:not(.s-a), .app[data-staff="b"] .bk:not(.s-b), .app[data-staff="c"] .bk:not(.s-c) { opacity: .15; }
+.app-panel { border-top: 1px solid var(--line); padding: .9rem; display: grid; gap: .8rem; align-content: start; background: color-mix(in srgb, var(--brand) 2%, var(--surface)); }
+.pn-top { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+.pn-top p { font-weight: 700; font-size: .88rem; }
+.badge { font-size: .7rem; font-weight: 600; padding: .1rem .5rem; border-radius: 999px; background: color-mix(in srgb, var(--brand) 12%, var(--surface)); color: var(--brand-deep); white-space: nowrap; }
+.pn-who { display: flex; align-items: center; gap: .6rem; }
+.av { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; flex: none; background: color-mix(in srgb, var(--staff-a) 14%, var(--surface)); color: var(--brand-deep); font-weight: 700; font-size: .8rem; }
+.pn-who b { display: block; font-size: .85rem; }
+.pn-who span { color: var(--muted); font: 500 .72rem/1.3 var(--font-mono); }
+.pn-dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .35rem .8rem; padding-block: .7rem; border-block: 1px solid var(--line); }
+.pn-dl dt { color: var(--muted); }
+.pn-dl dd { font-weight: 600; text-align: right; }
+.pn-rem { display: grid; gap: .35rem; }
+.pn-rem li { display: flex; justify-content: space-between; gap: .5rem; color: var(--muted); }
+.pn-rem li b { color: var(--text); font-weight: 600; }
+.pn-note { width: 100%; min-height: 54px; resize: none; padding: .45rem .6rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); font-size: .76rem; line-height: 1.5; }
+.pn-act { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .4rem; }
+@media (min-width: 900px) {
+  .app { --cell: 23px; }
+  .app-body { grid-template-columns: minmax(0, 1fr) 17rem; }
+  .app-panel { border-top: 0; border-left: 1px solid var(--line); }
+  .cal { min-width: 0; }
+}
+
+/* ==================== 适用对象 ==================== */
+.who-grid { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.who { background: var(--surface); padding: 1.6rem 1.4rem 1.5rem; display: grid; gap: .55rem; align-content: start; transition: background-color .2s; }
+.who:hover { background: color-mix(in srgb, var(--brand) 4%, var(--surface)); }
+.who h3 { font-size: 1.15rem; }
+.who p { color: var(--muted); font-size: .93rem; }
+.who .eg { margin-top: .5rem; padding-top: .8rem; border-top: 1px dashed var(--line); font-size: .82rem; color: var(--muted); }
+.who .eg b { display: block; color: var(--text); font-weight: 600; margin-bottom: .2rem; }
+@media (min-width: 640px) { .who-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1040px) { .who-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* ==================== 功能介绍 ==================== */
+.feats { display: grid; gap: clamp(3.5rem, 8vw, 6rem); }
+.feat { display: grid; gap: 2rem; align-items: center; }
+.feat-text h3 { font-size: clamp(1.4rem, 2.6vw, 1.85rem); }
+.feat-text > p { color: var(--muted); margin-top: .8rem; max-width: 30rem; }
+.ticks { margin-top: 1.2rem; display: grid; gap: .55rem; font-size: .95rem; }
+.ticks li { position: relative; padding-left: 1.6rem; }
+.ticks li::before { content: ""; position: absolute; left: .15rem; top: .5em; width: .7rem; height: .38rem; border-left: 2px solid var(--brand); border-bottom: 2px solid var(--brand); transform: rotate(-45deg); }
+.feat-art { background: color-mix(in srgb, var(--brand) 6%, var(--bg)); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1rem, 4vw, 2.5rem); display: grid; place-items: center; min-width: 0; }
+@media (min-width: 900px) {
+  .feat { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 4rem; }
+  .feat:nth-child(even) .feat-text { order: 2; }
+}
+/* 小型接口示意（纯装饰，aria-hidden） */
+.mock { width: 100%; max-width: 25rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 18px 36px -24px color-mix(in srgb, var(--text) 30%, transparent); padding: 1rem; font-size: .8rem; line-height: 1.45; display: grid; gap: .6rem; }
+.mk-h { display: flex; align-items: center; justify-content: space-between; gap: .5rem; font-weight: 700; font-size: .88rem; }
+.mk-l { color: var(--muted); font-size: .74rem; margin-top: .2rem; }
+.mk-btn { display: flex; align-items: center; justify-content: center; min-height: 36px; border-radius: var(--radius-sm); background: var(--brand); color: var(--brand-ink); font-weight: 600; }
+.mk-row { display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding: .55rem .7rem; border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.mk-row.on { border-color: var(--brand); background: color-mix(in srgb, var(--brand) 6%, var(--surface)); }
+.mk-row small { color: var(--muted); font-size: .72rem; display: block; }
+.mk-row .num { font-size: .78rem; }
+.shop { display: flex; gap: .65rem; align-items: center; padding-bottom: .7rem; border-bottom: 1px solid var(--line); }
+.shop i { width: 36px; height: 36px; border-radius: 9px; flex: none; background: linear-gradient(135deg, var(--staff-b), color-mix(in srgb, var(--staff-b) 50%, var(--surface))); }
+.shop b { display: block; font-size: .9rem; }
+.shop small { color: var(--muted); }
+.slots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .35rem; }
+.slots span { text-align: center; padding: .4rem 0; border: 1px solid var(--line); border-radius: var(--radius-sm); font: 500 .76rem/1.2 var(--font-mono); }
+.slots .on { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.slots .off { color: color-mix(in srgb, var(--muted) 70%, transparent); text-decoration: line-through; background: color-mix(in srgb, var(--text) 3%, var(--surface)); }
+.msg { padding: .7rem .8rem; border-radius: 4px 12px 12px 12px; background: color-mix(in srgb, var(--brand) 9%, var(--surface)); font-size: .78rem; }
+.msg-act { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .35rem; margin-top: .55rem; }
+.msg-act span { text-align: center; padding: .35rem; border-radius: var(--radius-sm); background: var(--surface); border: 1px solid var(--line); font-weight: 600; color: var(--brand-deep); }
+.tg { width: 32px; height: 18px; border-radius: 999px; background: var(--line); position: relative; flex: none; }
+.tg::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: var(--surface); }
+.tg.on { background: var(--brand); }
+.tg.on::after { left: 16px; }
+.roster { display: grid; grid-template-columns: 3.2rem repeat(7, minmax(0, 1fr)); gap: 4px; font-size: .7rem; }
+.roster > span { text-align: center; color: var(--muted); padding: .2rem 0; }
+.roster > b { font-weight: 600; align-self: center; white-space: nowrap; }
+.roster i { font-style: normal; text-align: center; padding: .45rem 0; border-radius: 4px; background: color-mix(in srgb, var(--sc) 16%, var(--surface)); color: var(--text); }
+.roster i.x { background: repeating-linear-gradient(135deg, color-mix(in srgb, var(--text) 5%, var(--surface)) 0 4px, var(--surface) 4px 8px); color: var(--muted); }
+.amount { font: 500 1.6rem/1.1 var(--font-mono); font-variant-numeric: tabular-nums; }
+.pills { display: flex; flex-wrap: wrap; gap: .35rem; }
+.pills span { padding: .2rem .6rem; border: 1px solid var(--line); border-radius: 999px; font-size: .74rem; }
+.pills .on { border-color: var(--brand); color: var(--brand-deep); background: color-mix(in srgb, var(--brand) 7%, var(--surface)); }
+.kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .4rem; }
+.kpis div { padding: .55rem .6rem; border: 1px solid var(--line); border-radius: var(--radius-sm); min-width: 0; }
+.kpis small { display: block; color: var(--muted); font-size: .7rem; }
+.kpis b { font: 500 1rem/1.3 var(--font-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bars { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .45rem; align-items: end; height: 120px; padding-top: .5rem; border-bottom: 1px solid var(--line); }
+.bars span { height: var(--h); border-radius: 4px 4px 0 0; background: color-mix(in srgb, var(--brand) 30%, var(--surface)); }
+.bars .hi { background: var(--brand); }
+.bar-x { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .45rem; text-align: center; color: var(--muted); font-size: .7rem; }
+
+/* ==================== 使用流程 ==================== */
+.steps { display: grid; gap: 1rem; counter-reset: s; }
+.step { padding: 1.5rem 1.4rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.step::before { counter-increment: s; content: "0" counter(s); display: block; font: 500 .9rem/1 var(--font-mono); color: var(--brand); padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--line); }
+.step h3 { font-size: 1.15rem; margin-bottom: .45rem; }
+.step p { color: var(--muted); font-size: .94rem; }
+.step .time { margin-top: .9rem; font-size: .82rem; color: var(--text); font-weight: 600; }
+@media (min-width: 820px) { .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== 方案价格 ==================== */
+.price-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1.25rem 2rem; margin-bottom: clamp(2rem, 4vw, 2.75rem); }
+.price-head .sec-head { margin-bottom: 0; }
+.bill { display: inline-flex; padding: 4px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+.bill button { border: 0; background: none; min-height: 40px; padding: 0 1.1rem; border-radius: 999px; font-weight: 600; font-size: .9rem; color: var(--muted); cursor: pointer; transition: background-color .2s, color .2s; }
+.bill button:hover { color: var(--text); }
+.bill button:active { background: color-mix(in srgb, var(--text) 6%, transparent); }
+.bill button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+.bill small { font-size: .78rem; font-weight: 600; }
+.plans { display: grid; gap: 1rem; align-items: stretch; }
+.plan { display: flex; flex-direction: column; gap: 1rem; padding: 1.75rem 1.5rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.plan.pick { border: 2px solid var(--brand); box-shadow: 0 20px 40px -28px color-mix(in srgb, var(--brand) 60%, transparent); }
+.plan-top { display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
+.plan h3 { font-size: 1.2rem; }
+.plan .badge { font-size: .76rem; }
+.plan > p { color: var(--muted); font-size: .92rem; }
+.plan .amt { color: var(--text); }
+.amt { display: flex; align-items: baseline; gap: .35rem; flex-wrap: wrap; }
+.amt .cur { font-weight: 600; font-size: 1rem; }
+.amt b { font: 700 2.6rem/1 var(--font-heading); font-variant-numeric: tabular-nums; letter-spacing: -.03em; }
+.amt span { color: var(--muted); font-size: .9rem; }
+.per { font-size: .82rem; color: var(--muted); margin-top: -.5rem; min-height: 1lh; }
+.plan .btn { width: 100%; }
+.plan ul { display: grid; gap: .5rem; font-size: .92rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.plan ul.ticks li::before { top: .5em; }
+.price-note { margin-top: 1.25rem; font-size: .87rem; color: var(--muted); }
+@media (min-width: 900px) { .plans { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== 功能比较表 ==================== */
+.table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.cmp { width: 100%; min-width: 560px; border-collapse: collapse; font-size: .92rem; }
+.cmp th, .cmp td { padding: .8rem 1.2rem; border-bottom: 1px solid var(--line); text-align: center; }
+.cmp thead th { font-weight: 700; font-size: .95rem; background: color-mix(in srgb, var(--brand) 4%, var(--surface)); }
+.cmp tbody th, .cmp thead th:first-child { text-align: left; }
+.cmp tbody th { font-weight: 500; }
+.cmp tbody tr:last-child > * { border-bottom: 0; }
+.cmp .grp th { background: color-mix(in srgb, var(--text) 3%, var(--surface)); font-weight: 700; font-size: .85rem; color: var(--muted); }
+.cmp .hl { background: color-mix(in srgb, var(--brand) 5%, transparent); }
+.cmp td { font-size: .88rem; }
+.y, .n { display: inline-block; width: 1.1rem; height: 1.1rem; position: relative; vertical-align: middle; }
+.y::before { content: ""; position: absolute; left: .2rem; top: .25rem; width: .7rem; height: .38rem; border-left: 2px solid var(--brand); border-bottom: 2px solid var(--brand); transform: rotate(-45deg); }
+.n::before { content: ""; position: absolute; left: .3rem; right: .3rem; top: 50%; height: 1.5px; background: color-mix(in srgb, var(--muted) 60%, transparent); }
+
+/* ==================== 客户见证（深色区块） ==================== */
+.dark { background: var(--ink); color: var(--on-ink); }
+.dark .sec-head p { color: var(--on-ink-muted); }
+.quotes { display: grid; gap: 1rem; }
+.quote { display: flex; flex-direction: column; gap: 1.5rem; justify-content: space-between; padding: 1.75rem 1.5rem; border-radius: var(--radius); background: var(--ink-2); border: 1px solid color-mix(in srgb, var(--on-ink) 10%, transparent); }
+.quote blockquote { font-size: 1.05rem; line-height: 1.75; }
+.quote figcaption { display: flex; align-items: center; gap: .75rem; font-size: .88rem; }
+.quote figcaption .av { background: color-mix(in srgb, var(--brand-soft) 18%, var(--ink-2)); color: var(--brand-soft); width: 40px; height: 40px; }
+.quote cite { font-style: normal; font-weight: 600; display: block; }
+.quote figcaption span { color: var(--on-ink-muted); }
+.quote .res { font: 600 .9rem/1.4 var(--font-body); color: var(--brand-soft); padding-top: 1rem; border-top: 1px solid color-mix(in srgb, var(--on-ink) 12%, transparent); }
+@media (min-width: 900px) { .quotes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== 常见问题 ==================== */
+.faq-grid { display: grid; gap: 2rem; }
+.faq-grid .sec-head { align-content: start; margin-bottom: 0; }
+.faq { border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.15rem 0; font-weight: 600; font-size: 1.02rem; transition: color .2s; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:hover { color: var(--brand); }
+.faq summary:active { opacity: .8; }
+.faq summary::after { content: ""; flex: none; width: .55rem; height: .55rem; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-25%) rotate(45deg); transition: transform .25s; }
+.faq details[open] summary::after { transform: translateY(15%) rotate(-135deg); }
+.faq details p { color: var(--muted); padding-bottom: 1.2rem; max-width: 46rem; }
+@media (min-width: 900px) { .faq-grid { grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 4rem; } }
+
+/* ==================== 最后行动区块 ==================== */
+.cta-sec { padding-top: 0; }
+.cta-band { display: grid; gap: 2rem; padding: clamp(2rem, 6vw, 3.5rem); border-radius: calc(var(--radius) + 4px); background: var(--brand); color: var(--brand-ink); }
+.cta-band h2 { font-size: clamp(1.75rem, 3.6vw, 2.5rem); }
+.cta-band > div > p { margin-top: .8rem; color: color-mix(in srgb, var(--brand-ink) 86%, transparent); max-width: 30rem; }
+.signup { display: grid; gap: .5rem; align-content: start; }
+.signup label { font-weight: 600; font-size: .9rem; }
+.signup .row { display: flex; flex-wrap: wrap; gap: .5rem; }
+.signup input { flex: 1 1 14rem; min-width: 0; min-height: 50px; padding: .6rem .95rem; border-radius: var(--radius-sm); border: 1px solid transparent; background: var(--surface); color: var(--text); font-size: 1rem; }
+.signup input:focus-visible { outline: 2px solid var(--brand-ink); outline-offset: 2px; }
+.signup .btn { min-height: 50px; background: var(--ink); color: var(--on-ink); }
+.signup .btn:hover { background: var(--ink-2); }
+.signup .btn:active { background: var(--ink-2); }
+.signup .btn:focus-visible { outline-color: var(--brand-ink); }
+.signup small { font-size: .82rem; color: color-mix(in srgb, var(--brand-ink) 86%, transparent); }
+.cta-alt { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin-top: 1.4rem; font-size: .92rem; }
+.cta-alt a { font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; transition: opacity .2s; }
+.cta-alt a:hover { opacity: .8; }
+.cta-alt a:active { opacity: .65; }
+.cta-alt a:focus-visible, .cta-band .link:focus-visible { outline-color: var(--brand-ink); }
+@media (min-width: 900px) { .cta-band { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 3rem; } }
+
+/* ==================== 页脚 ==================== */
+.site-footer { border-top: 1px solid var(--line); padding-block: 3.5rem 2rem; font-size: .9rem; }
+.foot-grid { display: grid; gap: 2rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.foot-brand { grid-column: 1 / -1; display: grid; gap: .8rem; align-content: start; }
+.foot-brand p, .foot-brand address { color: var(--muted); font-style: normal; max-width: 22rem; }
+.foot-brand address a { color: var(--text); }
+.foot-col h2 { font-size: .9rem; font-family: var(--font-body); letter-spacing: 0; margin-bottom: .8rem; }
+.foot-col ul { display: grid; gap: .5rem; }
+.foot-col a, .foot-brand address a { color: var(--muted); transition: color .2s; }
+.foot-col a:hover, .foot-brand address a:hover { color: var(--text); }
+.foot-col a:active, .foot-brand address a:active { color: var(--brand); }
+.foot-bottom { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem 2rem; color: var(--muted); font-size: .84rem; }
+.social { display: flex; gap: 1.25rem; }
+.social a { transition: color .2s; }
+.social a:hover { color: var(--text); }
+.social a:active { color: var(--brand); }
+@media (min-width: 900px) {
+  .foot-grid { grid-template-columns: minmax(0, 1.6fr) repeat(4, minmax(0, 1fr)); }
+  .foot-brand { grid-column: auto; }
+}
+
+/* ==================== 手机底部固定按钮 ==================== */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 40; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem; padding: .6rem var(--pad) calc(.6rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 95%, transparent); border-top: 1px solid var(--line); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.sticky-cta .btn { min-height: 46px; }
+@media (max-width: 760px) { body { padding-bottom: 4.5rem; } }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- 卷动渐入（只在有 JS 时先隐藏） ---------- */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+</style>
+<!-- JSON-LD 结构化数据：类型为 SoftwareApplication（软件产品）。请换成真实名称、价格、电话、地址与客服时间。 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "排排 Paipai 预约管理",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, iOS, Android",
+  "description": "给美发、诊所、健身与顾问的在线预约、自动提醒、员工排班与订金收款系统。",
+  "offers": [
+    { "@type": "Offer", "name": "个人版", "price": "390", "priceCurrency": "TWD" },
+    { "@type": "Offer", "name": "团队版", "price": "990", "priceCurrency": "TWD" },
+    { "@type": "Offer", "name": "多分店版", "price": "2490", "priceCurrency": "TWD" }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "排排科技股份有限公司",
+    "telephone": "02-1234-5678",
+    "address": { "@type": "PostalAddress", "streetAddress": "复兴南路一段 100 号 8 楼", "addressLocality": "大安区", "addressRegion": "台北市", "postalCode": "106", "addressCountry": "TW" },
+    "contactPoint": {
+      "@type": "ContactPoint", "contactType": "customer support", "telephone": "02-1234-5678",
+      "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:30", "closes": "18:30" }
+    }
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<!-- ==================== 区块：页眉 ==================== -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="排排 Paipai 回到顶端"><span class="logo-mark" aria-hidden="true"></span>排排<small>Paipai</small></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="打开菜单"><span></span></button>
+    <nav class="menu" id="menu" aria-label="主菜单">
+      <a href="#who">适用对象</a>
+      <a href="#features">功能</a>
+      <a href="#how">使用流程</a>
+      <a href="#pricing">价格</a>
+      <a href="#faq">常见问题</a>
+      <a class="login" href="#">登录</a>
+      <a class="btn btn-brand" href="#start">免费试用</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ==================== 区块：首屏 ==================== -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1><span class="nb">预约、提醒、排班，</span><span class="nb">一个画面搞定。</span></h1>
+      <div>
+        <p class="hero-lead">给美发、诊所、健身和顾问的在线预约系统。顾客自己挑时段，提醒自动发送，你专心服务眼前的人。</p>
+        <div class="hero-cta">
+          <a class="btn btn-brand" href="#start">免费试用 14 天</a>
+          <a class="btn btn-line" href="#start">预约展示</a>
+        </div>
+        <p class="hero-note">不需要信用卡，3 分钟开好你的预约页。</p>
+      </div>
+    </div>
+
+    <!-- 产品画面示意：周历＋员工筛选＋预约详情。员工筛选按钮可以实际点击。 -->
+    <div class="app" data-slot="app-screen" data-alt="排排预约管理的周历画面：本周预约、员工筛选与预约详情" data-staff="all" role="group" aria-label="排排周历画面示意">
+      <div class="app-top">
+        <div class="app-range">
+          <button class="ab sq prev" type="button" aria-label="上一周"></button>
+          <button class="ab sq next" type="button" aria-label="下一周"></button>
+          <strong>11 月 17 日至 22 日</strong>
+          <button class="ab" type="button">今天</button>
+        </div>
+        <div class="seg" role="group" aria-label="查看方式">
+          <button type="button" aria-pressed="false">日</button>
+          <button type="button" aria-pressed="true">周</button>
+          <button type="button" aria-pressed="false">月</button>
+        </div>
+        <label class="app-search"><span class="sr">搜索顾客</span><input type="search" placeholder="搜索顾客姓名或电话"></label>
+        <button class="ab ab-brand" type="button">添加预约</button>
+      </div>
+      <div class="app-chips" role="group" aria-label="依员工筛选">
+        <button class="chip" type="button" data-staff="all" aria-pressed="true">全部 <span class="cnt">14</span></button>
+        <button class="chip" type="button" data-staff="a" aria-pressed="false"><i class="sw s-a"></i>小安 <span class="cnt">6</span></button>
+        <button class="chip" type="button" data-staff="b" aria-pressed="false"><i class="sw s-b"></i>阿哲 <span class="cnt">5</span></button>
+        <button class="chip" type="button" data-staff="c" aria-pressed="false"><i class="sw s-c"></i>Mia <span class="cnt">3</span></button>
+      </div>
+      <div class="app-body">
+        <div class="cal-scroll">
+          <div class="cal">
+            <div class="cal-head">
+              <span></span>
+              <span>周一 <b>17</b></span><span>周二 <b>18</b></span><span class="today">周三 <b>19</b></span><span>周四 <b>20</b></span><span>周五 <b>21</b></span><span>周六 <b>22</b></span>
+            </div>
+            <div class="cal-grid">
+              <span class="t" style="--s:1">10:00</span><span class="t" style="--s:3">11:00</span><span class="t" style="--s:5">12:00</span><span class="t" style="--s:7">13:00</span><span class="t" style="--s:9">14:00</span><span class="t" style="--s:11">15:00</span><span class="t" style="--s:13">16:00</span><span class="t" style="--s:15">17:00</span><span class="t" style="--s:17">18:00</span>
+              <i class="col" style="--d:1"></i><i class="col" style="--d:2"></i><i class="col today" style="--d:3"></i><i class="col" style="--d:4"></i><i class="col" style="--d:5"></i><i class="col" style="--d:6"></i>
+              <div class="bk s-a" style="--d:1;--s:1;--l:2"><b>陈先生</b><span>男士剪发</span></div>
+              <div class="bk s-b" style="--d:1;--s:6;--l:5"><b>黄小姐</b><span>染发＋护发</span></div>
+              <div class="bk s-c" style="--d:2;--s:3;--l:2"><b>吴小姐</b><span>头皮检测</span></div>
+              <div class="bk s-a" style="--d:2;--s:9;--l:3"><b>张小姐</b><span>烫发</span></div>
+              <div class="bk s-b" style="--d:3;--s:2;--l:2"><b>李先生</b><span>男士剪发</span></div>
+              <div class="bk s-a sel" style="--d:3;--s:9;--l:3"><b>林怡君</b><span>剪发＋护发</span></div>
+              <div class="bk hold" style="--d:3;--s:14;--l:3"><b>保留时段</b><span>教育训练</span></div>
+              <div class="bk s-c" style="--d:4;--s:1;--l:3"><b>周小姐</b><span>漂发</span></div>
+              <div class="bk s-b" style="--d:4;--s:11;--l:2"><b>许先生</b><span>修鬓角</span></div>
+              <div class="bk s-a" style="--d:5;--s:5;--l:4"><b>郭小姐</b><span>染发</span></div>
+              <div class="bk s-b" style="--d:5;--s:13;--l:2"><b>蔡小姐</b><span>洗发造型</span></div>
+              <div class="bk s-a" style="--d:6;--s:1;--l:2"><b>谢小姐</b><span>剪发</span></div>
+              <div class="bk s-c" style="--d:6;--s:4;--l:5"><b>杨小姐</b><span>结构式护发</span></div>
+              <div class="bk s-b" style="--d:6;--s:12;--l:3"><b>郑先生</b><span>烫发</span></div>
+              <i class="now" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="app-panel">
+          <div class="pn-top"><p>预约详情</p><span class="badge">已确认</span></div>
+          <div class="pn-who"><span class="av" aria-hidden="true">林</span><div><b>林怡君</b><span>0912-345-678</span></div></div>
+          <dl class="pn-dl">
+            <dt>服务</dt><dd>剪发＋深层护发</dd>
+            <dt>时间</dt><dd class="num">11/19 14:00–15:30</dd>
+            <dt>设计师</dt><dd>小安</dd>
+            <dt>订金</dt><dd>NT$300 已付</dd>
+          </dl>
+          <ul class="pn-rem">
+            <li>前一天 20:00 LINE 提醒 <b>已送出</b></li>
+            <li>2 小时前短信提醒 <b>调度中</b></li>
+          </ul>
+          <label><span class="sr">顾客备注</span><textarea class="pn-note" rows="2">头皮较敏感，洗发用温和款。</textarea></label>
+          <div class="pn-act">
+            <button class="ab" type="button">改期</button>
+            <button class="ab" type="button">取消</button>
+            <button class="ab ab-brand" type="button">报到</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：适用对象 ==================== -->
+<section class="alt" id="who">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>为一人工作室到十人小店设计</h2>
+      <p>只要你的生意是「顾客约时间来找你」，排排就帮得上忙。服务时长、员工专长和收费方式都能照你的习惯设置。</p>
+    </div>
+    <div class="who-grid reveal">
+      <article class="who">
+        <h3>美发与美甲</h3>
+        <p>每位设计师有自己的熟客和时段，顾客可以指定人，也可以让系统排第一个有空的。</p>
+        <p class="eg"><b>常见设置</b>剪发 60 分、染发 150 分，染烫收订金</p>
+      </article>
+      <article class="who">
+        <h3>诊所与治疗所</h3>
+        <p>疗程一次排好多次回诊，初诊填问卷，挂号时段和治疗室一起管理。</p>
+        <p class="eg"><b>常见设置</b>物理治疗 40 分，每周固定回诊 8 次</p>
+      </article>
+      <article class="who">
+        <h3>健身与瑜伽教室</h3>
+        <p>一对一教练课和团体课都能开，额满自动开候补，有人取消就通知下一位。</p>
+        <p class="eg"><b>常见设置</b>团课上限 12 人，堂数方案扣抵</p>
+      </article>
+      <article class="who">
+        <h3>顾问与家教</h3>
+        <p>把预约页链接贴在名片和信件签名档，顾客直接挑你方便的时间，在线会议链接自动附上。</p>
+        <p class="eg"><b>常见设置</b>咨询 30 分免费，正式会谈预先付款</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：功能介绍 ==================== -->
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>每天会用到的五件事，都在这里</h2>
+      <p>不用另外买短信系统、排班表和收款工具。设置一次，之后就让它自己跑。</p>
+    </div>
+    <div class="feats">
+
+      <div class="feat reveal">
+        <div class="feat-text">
+          <h3>在线预约页，顾客半夜也能约</h3>
+          <p>每家店都有一个专属预约网址。顾客选服务、选设计师、选时段，30 秒完成，不用加好友也不用等你回消息。</p>
+          <ul class="ticks">
+            <li>只显示真的有空的时段，不会重复预约</li>
+            <li>可以设置最晚几小时前预约、最多提前几周</li>
+            <li>换成你的店名、颜色和服务照片</li>
+          </ul>
+        </div>
+        <div class="feat-art">
+          <div class="mock" aria-hidden="true">
+            <div class="shop"><i></i><div><b>发室 Hair Lab</b><small>台北市大安区</small></div></div>
+            <p class="mk-l">选择服务</p>
+            <div class="mk-row on"><div>剪发＋洗发<small>60 分钟</small></div><span class="num">NT$800</span></div>
+            <div class="mk-row"><div>单色染发<small>150 分钟</small></div><span class="num">NT$2,400</span></div>
+            <p class="mk-l">11 月 20 日（四）可预约时段</p>
+            <div class="slots"><span>10:00</span><span class="off">11:00</span><span>13:30</span><span class="on">14:00</span><span>15:30</span><span class="off">17:00</span></div>
+            <span class="mk-btn">确认预约</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="feat reveal">
+        <div class="feat-text">
+          <h3>自动提醒短信与 LINE，爽约变少</h3>
+          <p>预约成功、前一天、出发前，系统照你设置的时间自动发送。顾客按一下就能确认或改期，空出来的时段马上重新开放。</p>
+          <ul class="ticks">
+            <li>短信和 LINE 官方帐号都能发</li>
+            <li>提醒文本可以自己改，附上地址和停车信息</li>
+            <li>没回复确认的预约，会在周历上标出来</li>
+          </ul>
+        </div>
+        <div class="feat-art">
+          <div class="mock" aria-hidden="true">
+            <div class="mk-h">提醒调度</div>
+            <div class="mk-row"><div>预约成功通知<small>立即，LINE</small></div><span class="tg on"></span></div>
+            <div class="mk-row"><div>前一天提醒<small>20:00，LINE＋短信</small></div><span class="tg on"></span></div>
+            <div class="mk-row"><div>出发前提醒<small>2 小时前，短信</small></div><span class="tg"></span></div>
+            <p class="mk-l">消息预览</p>
+            <div class="msg">林小姐您好，提醒您明天 11/19 14:00 在发室 Hair Lab 有预约（剪发＋护发，设计师小安）。
+              <div class="msg-act"><span>确认出席</span><span>我要改期</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feat reveal">
+        <div class="feat-text">
+          <h3>员工排班，谁有空一眼就知道</h3>
+          <p>每个人设置自己的上班时段和可做的服务，请假或临时调班只要拖一下，预约页会自动更新可约时间。</p>
+          <ul class="ticks">
+            <li>早晚班、轮休和店休都能设置</li>
+            <li>员工用手机看自己的班表和当天预约</li>
+            <li>依服务指定可以接的人，避免排错</li>
+          </ul>
+        </div>
+        <div class="feat-art">
+          <div class="mock" aria-hidden="true">
+            <div class="mk-h">本周班表<span class="badge">已发布</span></div>
+            <div class="roster">
+              <span></span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span>
+              <b>小安</b><i class="s-a">早</i><i class="s-a">早</i><i class="s-a">晚</i><i class="x">休</i><i class="s-a">早</i><i class="s-a">全</i><i class="x">休</i>
+              <b>阿哲</b><i class="s-b">晚</i><i class="x">休</i><i class="s-b">早</i><i class="s-b">晚</i><i class="s-b">晚</i><i class="s-b">全</i><i class="x">休</i>
+              <b>Mia</b><i class="x">休</i><i class="s-c">早</i><i class="s-c">早</i><i class="s-c">早</i><i class="x">休</i><i class="s-c">全</i><i class="s-c">早</i>
+            </div>
+            <div class="mk-row"><div>早班 10:00–15:00<small>晚班 14:00–20:00</small></div><span class="mk-l">共 3 人</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feat reveal">
+        <div class="feat-text">
+          <h3>金流与订金，长时段不再被放鸟</h3>
+          <p>染烫、疗程这类长时间服务，可以要求预约时先付订金。顾客用信用卡或行动支付付款，来店时自动扣抵。</p>
+          <ul class="ticks">
+            <li>依服务设置订金金额或全额预付</li>
+            <li>取消规则写清楚，退款一键处理</li>
+            <li>每笔收款都对得到预约和顾客</li>
+          </ul>
+        </div>
+        <div class="feat-art">
+          <div class="mock" aria-hidden="true">
+            <div class="mk-h">订金设置<span class="tg on"></span></div>
+            <p class="mk-l">单色染发的订金</p>
+            <p class="amount">NT$300</p>
+            <div class="pills"><span class="on">信用卡</span><span class="on">行动支付</span><span>ATM 转帐</span></div>
+            <div class="mk-row"><div>取消规则<small>预约前 24 小时内取消，订金不退</small></div></div>
+            <p class="mk-l">最新收款</p>
+            <div class="mk-row on"><div>林怡君<small>11/18 21:04 信用卡</small></div><span class="num">NT$300</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feat reveal">
+        <div class="feat-text">
+          <h3>报表，看懂哪个时段最好卖</h3>
+          <p>预约数、营收、爽约率和每位员工的业绩自动整理好。月底不用再对 Excel，该加人还是该开新服务，数字会告诉你。</p>
+          <ul class="ticks">
+            <li>依日、周、月和员工切换</li>
+            <li>回客率与新客来源分析</li>
+            <li>一键导出给会计</li>
+          </ul>
+        </div>
+        <div class="feat-art">
+          <!-- 范例内容：上线前请换成真实数据 -->
+          <div class="mock" aria-hidden="true">
+            <div class="mk-h">11 月营运概况<span class="mk-l">本月至今</span></div>
+            <div class="kpis">
+              <div><small>预约数</small><b>312</b></div>
+              <div><small>爽约率</small><b>3.1%</b></div>
+              <div><small>营收</small><b>18.6 万</b></div>
+            </div>
+            <p class="mk-l">每日预约数</p>
+            <div class="bars"><span style="--h:42%"></span><span style="--h:55%"></span><span style="--h:48%"></span><span style="--h:63%"></span><span style="--h:78%"></span><span class="hi" style="--h:96%"></span><span style="--h:70%"></span></div>
+            <div class="bar-x"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：使用流程 ==================== -->
+<section class="alt" id="how">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>今天下午设置，明天就能收预约</h2>
+      <p>不用安装软件，也不用懂电脑。卡关的话，客服会陪你一起设置。</p>
+    </div>
+    <ol class="steps reveal">
+      <li class="step">
+        <h3>创建服务与员工</h3>
+        <p>输入服务项目、时长和价格，邀请员工加入，设置每个人的上班时段。</p>
+        <p class="time">大约 10 分钟</p>
+      </li>
+      <li class="step">
+        <h3>分享你的预约链接</h3>
+        <p>把链接贴到 LINE 官方帐号菜单、社群简介或地图店家页，也可以印成 QR Code 放在柜台。</p>
+        <p class="time">大约 2 分钟</p>
+      </li>
+      <li class="step">
+        <h3>顾客预约，你只管上班</h3>
+        <p>新预约即时通知，提醒自动发送。每天早上打开周历，就知道今天要忙什么。</p>
+        <p class="time">之后每天自动进行</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== 区块：方案价格 ==================== -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="price-head reveal">
+      <div class="sec-head">
+        <h2>简单的价格，依店的规模选</h2>
+        <p>每个方案都能免费试用 14 天，试用期间所有功能全开。</p>
+      </div>
+      <!-- 月缴／年缴切换：价格写在下方每个 data-m（月缴）与 data-y（年缴）属性里 -->
+      <div class="bill" role="group" aria-label="计费方式">
+        <button type="button" data-bill="m" aria-pressed="true">月缴</button>
+        <button type="button" data-bill="y" aria-pressed="false">年缴 <small>省 2 个月</small></button>
+      </div>
+    </div>
+    <div class="plans reveal">
+      <article class="plan">
+        <div class="plan-top"><h3>个人版</h3></div>
+        <p>一人工作室、个人教练或顾问。</p>
+        <p class="amt"><span class="cur">NT$</span><b data-m="390" data-y="325">390</b><span>／月</span></p>
+        <p class="per" data-m="按月计费，随时可取消" data-y="年缴一次付 NT$3,900">按月计费，随时可取消</p>
+        <a class="btn btn-line" href="#start">免费试用 14 天</a>
+        <ul class="ticks">
+          <li>1 位员工帐号</li>
+          <li>在线预约页与周历</li>
+          <li>每月 100 则短信提醒</li>
+          <li>LINE 提醒不限则数</li>
+        </ul>
+      </article>
+      <article class="plan pick">
+        <div class="plan-top"><h3>团队版</h3><span class="badge">推荐</span></div>
+        <p>2 到 10 人的沙龙、诊所和教室。</p>
+        <p class="amt"><span class="cur">NT$</span><b data-m="990" data-y="825">990</b><span>／月</span></p>
+        <p class="per" data-m="按月计费，随时可取消" data-y="年缴一次付 NT$9,900">按月计费，随时可取消</p>
+        <a class="btn btn-brand" href="#start">免费试用 14 天</a>
+        <ul class="ticks">
+          <li>最多 10 位员工帐号</li>
+          <li>员工排班与候补名单</li>
+          <li>订金与在线付款</li>
+          <li>每月 500 则短信提醒</li>
+        </ul>
+      </article>
+      <article class="plan">
+        <div class="plan-top"><h3>多分店版</h3></div>
+        <p>两家以上分店或需要高端报表。</p>
+        <p class="amt"><span class="cur">NT$</span><b data-m="2,490" data-y="2,075">2,490</b><span>／月</span></p>
+        <p class="per" data-m="按月计费，随时可取消" data-y="年缴一次付 NT$24,900">按月计费，随时可取消</p>
+        <a class="btn btn-line" href="#start">预约展示</a>
+        <ul class="ticks">
+          <li>员工帐号不限</li>
+          <li>多分店集中管理</li>
+          <li>高端报表与数据导出</li>
+          <li>专人导入与教育训练</li>
+        </ul>
+      </article>
+    </div>
+    <p class="price-note">以上价格均为含税价。短信用完可另外加购，每则 NT$1.2。</p>
+  </div>
+</section>
+
+<!-- ==================== 区块：功能比较表 ==================== -->
+<section class="alt" id="compare">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>方案功能比较</h2>
+      <p>想知道差在哪里，看这张表就好。手机上可以左右滑动。</p>
+    </div>
+    <div class="table-scroll reveal">
+      <table class="cmp">
+        <thead>
+          <tr><th scope="col">功能</th><th scope="col">个人版</th><th scope="col" class="hl">团队版</th><th scope="col">多分店版</th></tr>
+        </thead>
+        <tbody>
+          <tr class="grp"><th scope="rowgroup" colspan="4">预约</th></tr>
+          <tr><th scope="row">在线预约页</th><td><span class="y"><span class="sr">包含</span></span></td><td class="hl"><span class="y"><span class="sr">包含</span></span></td><td><span class="y"><span class="sr">包含</span></span></td></tr>
+          <tr><th scope="row">候补名单</th><td><span class="n"><span class="sr">不含</span></span></td><td class="hl"><span class="y"><span class="sr">包含</span></span></td><td><span class="y"><span class="sr">包含</span></span></td></tr>
+          <tr><th scope="row">手机行事历同步</th><td><span class="y"><span class="sr">包含</span></span></td><td class="hl"><span class="y"><span class="sr">包含</span></span></td><td><span class="y"><span class="sr">包含</span></span></td></tr>
+          <tr class="grp"><th scope="rowgroup" colspan="4">提醒</th></tr>
+          <tr><th scope="row">每月短信则数</th><td class="num">100</td><td class="hl num">500</td><td class="num">2,000</td></tr>
+          <tr><th scope="row">LINE 提醒</th><td><span class="y"><span class="sr">包含</span></span></td><td class="hl"><span class="y"><span class="sr">包含</span></span></td><td><span class="y"><span class="sr">包含</span></span></td></tr>
+          <tr class="grp"><th scope="rowgroup" colspan="4">团队与收款</th></tr>
+          <tr><th scope="row">员工帐号</th><td>1 位</td><td class="hl">10 位</td><td>不限</td></tr>
+          <tr><th scope="row">员工排班</th><td><span class="n"><span class="sr">不含</span></span></td><td class="hl"><span class="y"><span class="sr">包含</span></span></td><td><span class="y"><span class="sr">包含</span></span></td></tr>
+          <tr><th scope="row">订金与在线付款</th><td><span class="n"><span class="sr">不含</span></span></td><td class="hl"><span class="y"><span class="sr">包含</span></span></td><td><span class="y"><span class="sr">包含</span></span></td></tr>
+          <tr><th scope="row">多分店管理</th><td><span class="n"><span class="sr">不含</span></span></td><td class="hl"><span class="n"><span class="sr">不含</span></span></td><td><span class="y"><span class="sr">包含</span></span></td></tr>
+          <tr class="grp"><th scope="rowgroup" colspan="4">报表与支持</th></tr>
+          <tr><th scope="row">营运报表</th><td>基本</td><td class="hl">基本</td><td>高端＋导出</td></tr>
+          <tr><th scope="row">客服</th><td>在线</td><td class="hl">在线＋电话</td><td>专属窗口</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="price-note">需要的功能不在表上？打电话 <a class="link" href="tel:0212345678">02-1234-5678</a> 问我们，多数需求都有解法。</p>
+  </div>
+</section>
+
+<!-- ==================== 区块：客户见证 ==================== -->
+<section class="dark" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>店家用了之后怎么说</h2>
+      <p>他们原本也是用纸本、Excel 和一支手机在接预约。</p>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="quotes reveal">
+      <figure class="quote">
+        <blockquote>「以前晚上十点还在回消息乔时间，现在顾客自己点一点就约好了。我终于可以下班就下班。」</blockquote>
+        <div>
+          <p class="res">爽约从每周 5 次降到 1 次</p>
+        </div>
+        <figcaption><span class="av" aria-hidden="true">王</span><div><cite>王美玲</cite><span>发室 Hair Lab 店长，台北大安</span></div></figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote>「复健疗程一次要约八周，以前柜台手写常常排错。现在系统一次排好，回诊提醒也自动发。」</blockquote>
+        <div>
+          <p class="res">柜台电话量少了一半</p>
+        </div>
+        <figcaption><span class="av" aria-hidden="true">陈</span><div><cite>陈志明</cite><span>安和物理治疗所 院长，新北板桥</span></div></figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote>「三位老师的课终于不会撞期，团课额满还会自动开候补，有人取消就补上。」</blockquote>
+        <div>
+          <p class="res">团课平均满班率提高到九成</p>
+        </div>
+        <figcaption><span class="av" aria-hidden="true">林</span><div><cite>林佳蓉</cite><span>木日瑜伽 负责人，台中西区</span></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：常见问题 ==================== -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head reveal">
+      <h2>常见问题</h2>
+      <p>找不到答案的话，周一到周五 09:30–18:30 打 <a class="link" href="tel:0212345678">02-1234-5678</a>，或 <a class="link" href="https://line.me/R/ti/p/@yourlineid">LINE 问我们</a>。</p>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>试用期结束后会自动扣款吗？</summary>
+        <p>不会。试用不需要绑信用卡，14 天到期前会提醒你，确定要用再选方案付款。没有付款的话，帐号会暂停但数据保留 30 天。</p>
+      </details>
+      <details>
+        <summary>顾客需要下载 App 才能预约吗？</summary>
+        <p>不需要。顾客用手机浏览器打开你的预约链接就能预约，只要填姓名和手机号码。</p>
+      </details>
+      <details>
+        <summary>可以把现在 Excel 或纸本的预约搬过来吗？</summary>
+        <p>可以。顾客名单可以用 Excel 一次导入，已经约好的预约也能批量创建。团队版以上可以请客服协助搬移。</p>
+      </details>
+      <details>
+        <summary>短信额度用完了怎么办？</summary>
+        <p>可以在后台加购短信，每则 NT$1.2，加购的额度不会过期。LINE 提醒不限则数，也可以改用 LINE 为主。</p>
+      </details>
+      <details>
+        <summary>订金退款要怎么处理？</summary>
+        <p>在预约详情按「退款」就会原路退回顾客的付款方式。是否退款、退多少，可以依你设置的取消规则自动判断。</p>
+      </details>
+      <details>
+        <summary>顾客数据安全吗？</summary>
+        <p>所有数据都经过加密传输与保存，每天自动备份。员工只看得到你开放给他的数据，离职时一键停用帐号。</p>
+      </details>
+      <details>
+        <summary>可以随时取消或换方案吗？</summary>
+        <p>可以。月缴随时取消，下个月就不再收费；升级方案立即生效，差额依天数计算。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：最后行动（Email 注册） ==================== -->
+<section class="cta-sec" id="start">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <div>
+        <h2>这周就让顾客自己预约</h2>
+        <p>留下 Email，我们把试用帐号和 5 分钟设置教学寄给你。想先看实际操作，也可以预约 20 分钟的在线展示。</p>
+        <div class="cta-alt">
+          <a href="tel:0212345678">电话 02-1234-5678</a>
+          <a href="https://line.me/R/ti/p/@yourlineid">LINE 询问</a>
+          <a href="https://maps.google.com/?q=台北市大安区复兴南路一段100号">公司地图</a>
+        </div>
+      </div>
+      <!-- 表单：到 https://formspree.io 免费注册，创建表单后把 your-form-id 换成你的表单 ID，送出的数据就会寄到你的信箱 -->
+      <form class="signup" action="https://formspree.io/f/your-form-id" method="POST">
+        <label for="email">你的 Email</label>
+        <div class="row">
+          <input id="email" type="email" name="email" placeholder="name@example.com" autocomplete="email" required>
+          <button class="btn" type="submit">开始免费试用</button>
+        </div>
+        <input type="hidden" name="_subject" value="排排 Paipai 新试用申请">
+        <small>试用不需要信用卡，我们不会寄广告信。</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ==================== 区块：页脚 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"></span>排排<small>Paipai</small></a>
+        <p>给小店家的预约管理系统，由排排科技股份有限公司开发。</p>
+        <address>
+          <a href="https://maps.google.com/?q=台北市大安区复兴南路一段100号">台北市大安区复兴南路一段 100 号 8 楼</a><br>
+          <a href="tel:0212345678">02-1234-5678</a><br>
+          客服时间：周一至周五 09:30–18:30
+        </address>
+      </div>
+      <div class="foot-col">
+        <h2>产品</h2>
+        <ul><li><a href="#features">功能介绍</a></li><li><a href="#pricing">方案价格</a></li><li><a href="#compare">功能比较</a></li><li><a href="#">更新纪录</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h2>适用产业</h2>
+        <ul><li><a href="#who">美发与美甲</a></li><li><a href="#who">诊所与治疗所</a></li><li><a href="#who">健身与瑜伽</a></li><li><a href="#who">顾问与家教</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h2>支持</h2>
+        <ul><li><a href="#faq">常见问题</a></li><li><a href="#">说明中心</a></li><li><a href="#">系统状态</a></li><li><a href="https://line.me/R/ti/p/@yourlineid">LINE 客服</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h2>公司</h2>
+        <ul><li><a href="#">关于我们</a></li><li><a href="#">征才</a></li><li><a href="#">服务条款</a></li><li><a href="#">隐私权政策</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© <span id="y"></span> 排排科技股份有限公司</p>
+      <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">YouTube</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== 区块：手机底部固定按钮 ==================== -->
+<div class="sticky-cta">
+  <a class="btn btn-brand" href="#start">免费试用 14 天</a>
+  <a class="btn btn-line" href="https://line.me/R/ti/p/@yourlineid">LINE 询问</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function () {
+  var header = document.querySelector('.site-header');
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('menu');
+
+  // 页眉卷动背景
+  function onScroll() { header.classList.toggle('scrolled', menu.classList.contains('open') || scrollY > 10); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // 汉堡菜单
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
+    onScroll();
+  }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // 方案价格：月缴／年缴切换
+  var bills = document.querySelectorAll('.bill button');
+  bills.forEach(function (b) {
+    b.addEventListener('click', function () {
+      bills.forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+      document.querySelectorAll('.plans [data-m]').forEach(function (el) { el.textContent = el.dataset[b.dataset.bill]; });
+    });
+  });
+
+  // 产品画面示意：依员工筛选预约
+  var app = document.querySelector('.app');
+  var chips = app.querySelectorAll('.chip');
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      chips.forEach(function (x) { x.setAttribute('aria-pressed', x === c); });
+      app.dataset.staff = c.dataset.staff;
+    });
+  });
+  app.querySelectorAll('.seg button').forEach(function (s, i, all) {
+    s.addEventListener('click', function () { all.forEach(function (x) { x.setAttribute('aria-pressed', x === s); }); });
+  });
+
+  // 卷动渐入
+  var targets = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12 });
+    targets.forEach(function (el) { io.observe(el); });
+  } else {
+    targets.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  document.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

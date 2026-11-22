@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日和食堂 Hiyori Kitchen｜大安区的温暖小食堂</title>
+<meta name="description" content="日和食堂 Hiyori Kitchen 是藏在台北大安区巷弄里的小食堂，供应当季家常料理、手冲咖啡与每日现烤甜点。在线即可订位。">
+<meta name="theme-color" content="#b4532a">
+<meta property="og:title" content="日和食堂 Hiyori Kitchen｜大安区温暖小食堂">
+<meta property="og:description" content="当季食材、慢火家常料理、手冲咖啡与现烤甜点。欢迎来巷子里吃顿好饭。">
+<meta property="og:type" content="restaurant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Noto+Serif+SC:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "日和食堂 Hiyori Kitchen",
+  "telephone": "02-1234-5678",
+  "url": "https://example.com/",
+  "servesCuisine": ["日式家常料理", "早午餐", "咖啡", "甜点"],
+  "priceRange": "NT$300–600",
+  "acceptsReservations": "True",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "和光路 88 巷 6 号 1 楼",
+    "addressLocality": "大安区",
+    "addressRegion": "台北市",
+    "postalCode": "106",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "11:30", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "10:00", "closes": "21:30" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   主题设置：改这里就能换整站配色与字体
+   ============================================================ */
+:root {
+  --brand: #b4532a;          /* 品牌主色（赤陶色）：按钮、强调文本 */
+  --brand-ink: #fffaf2;      /* 在 brand 色上的文本颜色 */
+  --bg: #f6efe3;             /* 网页底色（燕麦奶油色） */
+  --surface: #fffaf2;        /* 卡片、表单等浮起区块的底色 */
+  --text: #2b1d14;           /* 主要文本（深浓缩咖啡色） */
+  --muted: #6b5444;          /* 次要文本、说明文本 */
+  --line: #e2d4c0;           /* 分隔线、边框 */
+  --accent: #6f7d3c;         /* 辅助色（香草绿）：素食标签 */
+  --open: #3f6b2a;           /* 「营业中」状态颜色 */
+  --wood: #a8744a;           /* 艺术占位图：木纹桌面 */
+  --plate: #fbf6ee;          /* 艺术占位图：盘子 */
+  --sauce: #d9853b;          /* 艺术占位图：料理主色（酱汁、蛋黄） */
+  --herb: #7d8f45;           /* 艺术占位图：香草、蔬菜 */
+  --berry: #9e3a3a;          /* 艺术占位图：莓果、果酱 */
+  --shadow-soft: color-mix(in srgb, var(--text) 14%, transparent);  /* 淡阴影：卡片、菜单 */
+  --shadow-deep: color-mix(in srgb, var(--text) 32%, transparent);  /* 深阴影：占位图中的盘子 */
+  --radius: 18px;            /* 圆角大小 */
+  --font-heading: "Fraunces", "Noto Serif SC", "Songti TC", serif;   /* 标题字体 */
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; /* 内文本型 */
+  --max: 1180px;             /* 内容最大宽度 */
+  --pad: clamp(1rem, 5vw, 3rem); /* 左右留白 */
+}
+
+/* ---------- 基础 ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 72px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img { max-width: 100%; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.25; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: clamp(4.5rem, 10vw, 7.5rem); }
+.sec-title { font-size: clamp(1.9rem, 4.2vw, 2.9rem); margin-bottom: 1rem; }
+.sec-lead { color: var(--muted); max-width: 36rem; }
+.sec-head { margin-bottom: clamp(2.2rem, 5vw, 3.5rem); }
+.sec-head.center { text-align: center; } .sec-head.center .sec-lead { margin-inline: auto; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .85rem 1.6rem; border-radius: 999px; font: 700 1rem/1.2 var(--font-body); text-decoration: none; border: 2px solid var(--brand); cursor: pointer; transition: transform .2s, background .2s, color .2s; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: color-mix(in srgb, var(--brand) 85%, var(--text)); border-color: color-mix(in srgb, var(--brand) 85%, var(--text)); }
+.btn-ghost { background: transparent; color: var(--brand); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.btn:active { transform: translateY(1px) scale(.98); }
+a:not(.btn):active { opacity: .7; }
+.tab:active { transform: scale(.97); }
+
+/* 卷动渐入：只有 JS 激活时才先隐藏 */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ==================== 页眉 ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+.logo-mark { width: 38px; height: 38px; border-radius: 50%; background: radial-gradient(circle at 50% 50%, var(--brand-ink) 0 30%, var(--brand) 31%); display: grid; place-items: center; }
+.logo b { font: 700 1.2rem/1.1 var(--font-heading); display: block; }
+.logo small { font: italic .78rem/1 var(--font-heading); color: var(--muted); }
+.nav-menu { display: flex; align-items: center; gap: 1.6rem; list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; font-weight: 500; padding-block: .3rem; background: linear-gradient(var(--brand), var(--brand)) left bottom / 0 2px no-repeat; transition: background-size .3s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 2px; }
+.nav-menu .btn { padding: .55rem 1.2rem; }
+.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: 10px; }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 2px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background .3s; border-radius: 2px; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* 没有 JavaScript 时，菜单直接换行显示；有 JS 才收进汉堡菜单 */
+  html:not(.js) *:has(> .nav-menu) { flex-wrap: wrap; }
+  html:not(.js) header:has(.nav-menu) { position: sticky; }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; justify-content: flex-start; gap: .4rem 1rem; }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); box-shadow: 0 12px 24px var(--shadow-soft); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: .85rem 0; border-bottom: 1px solid var(--line); }
+  .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+  .js .site-header:has(.nav-menu.open) { background: var(--bg); }
+}
+
+/* ==================== 艺术占位图 ====================
+   每一个 .img-xx 都是用 CSS 渐层画的「料理摄影」氛围图。
+   换成照片：.img-xx { background: url(images/xxx.jpg) center/cover; }
+   （换照片后可把该 class 的 ::before / ::after 一起删掉） */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; }
+.img::before, .img::after { content: ""; position: absolute; pointer-events: none; }
+/* 木纹桌面底 */
+.wood { background:
+  linear-gradient(160deg, color-mix(in srgb, var(--sauce) 18%, transparent), transparent 55%),
+  repeating-linear-gradient(92deg, transparent 0 34px, color-mix(in srgb, var(--text) 10%, transparent) 34px 36px, transparent 36px 70px),
+  repeating-linear-gradient(88deg, color-mix(in srgb, var(--wood) 92%, var(--text)) 0 3px, var(--wood) 3px 11px),
+  var(--wood); }
+/* 换成照片：.img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero { aspect-ratio: 1 / 1.05; border-radius: 48% 48% var(--radius) var(--radius) / 36% 36% var(--radius) var(--radius); }
+.img-hero::before { inset: 14% 10% 10%; border-radius: 50%; box-shadow: 0 30px 50px var(--shadow-deep);
+  background:
+    radial-gradient(circle at 42% 44%, var(--brand-ink) 0 6%, var(--sauce) 6.5% 11%, transparent 11.5%),
+    radial-gradient(circle at 60% 58%, var(--herb) 0 4%, transparent 4.5%),
+    radial-gradient(circle at 36% 62%, var(--herb) 0 3%, transparent 3.5%),
+    radial-gradient(circle at 63% 38%, var(--berry) 0 3.5%, transparent 4%),
+    radial-gradient(ellipse 34% 30% at 50% 52%, color-mix(in srgb, var(--sauce) 70%, var(--wood)) 0 60%, color-mix(in srgb, var(--sauce) 40%, var(--plate)) 61% 100%, transparent 101%),
+    radial-gradient(circle, var(--plate) 0 60%, color-mix(in srgb, var(--plate) 88%, var(--text)) 61% 62%, var(--plate) 63% 69%, color-mix(in srgb, var(--plate) 80%, var(--text)) 70%); }
+.img-hero::after { width: 28%; height: 45%; left: 36%; top: -2%; filter: blur(14px); opacity: .55;
+  background: radial-gradient(ellipse 30% 50% at 40% 70%, var(--brand-ink), transparent), radial-gradient(ellipse 25% 40% at 65% 40%, var(--brand-ink), transparent);
+  animation: steam 5s ease-in-out infinite alternate; }
+@keyframes steam { from { transform: translateY(10px) scaleY(.9); opacity: .35; } to { transform: translateY(-14px) scaleY(1.1); opacity: .65; } }
+/* 换成照片：.img-about { background: url(images/about.jpg) center/cover; } */
+.img-about { aspect-ratio: 4 / 5; }
+.img-about::before { width: 52%; aspect-ratio: 1; left: 12%; top: 18%; border-radius: 50%; box-shadow: 0 20px 30px var(--shadow-deep);
+  background: radial-gradient(circle, color-mix(in srgb, var(--text) 85%, var(--wood)) 0 52%, color-mix(in srgb, var(--wood) 60%, var(--text)) 53% 55%, var(--plate) 56% 72%, color-mix(in srgb, var(--plate) 80%, var(--text)) 73% 74%, var(--plate) 75%); }
+.img-about::after { width: 46%; aspect-ratio: 1; right: 6%; bottom: 10%; border-radius: 50%; box-shadow: 0 20px 30px var(--shadow-deep);
+  background: radial-gradient(circle at 50% 50%, var(--berry) 0 10%, transparent 11%), radial-gradient(circle, color-mix(in srgb, var(--sauce) 55%, var(--plate)) 0 50%, var(--plate) 51% 70%, color-mix(in srgb, var(--plate) 82%, var(--text)) 71%); }
+/* 换成照片：.img-g1 ~ .img-g5 { background: url(images/gallery-1.jpg) center/cover; } */
+.img-g1 { background: linear-gradient(180deg, color-mix(in srgb, var(--sauce) 45%, var(--plate)) 0 55%, var(--wood) 55%); }
+.img-g1::before { inset: 10% 14% 45%; border-radius: 50% 50% 0 0; background: radial-gradient(ellipse at 50% 100%, color-mix(in srgb, var(--brand-ink) 90%, transparent), transparent 70%); opacity: .7; }
+.img-g1::after { left: 0; right: 0; bottom: 18%; height: 14%; background: repeating-linear-gradient(90deg, var(--text) 0 8px, transparent 8px 22%), transparent; opacity: .55; }
+.img-g2 { background: radial-gradient(circle at 70% 30%, color-mix(in srgb, var(--plate) 70%, transparent), transparent 40%), var(--herb); }
+.img-g2::before { inset: 20% 25%; border-radius: 30% 30% 45% 45%; background: linear-gradient(180deg, transparent 0 18%, color-mix(in srgb, var(--wood) 55%, var(--text)) 18% 30%, var(--plate) 30%); box-shadow: 0 18px 24px var(--shadow-deep); }
+.img-g2::after { width: 30%; height: 30%; right: 8%; top: 8%; background: radial-gradient(circle, var(--brand-ink), transparent 65%); filter: blur(10px); animation: steam 4s ease-in-out infinite alternate; }
+.img-g3 { background: repeating-linear-gradient(45deg, var(--plate) 0 14px, color-mix(in srgb, var(--brand) 22%, var(--plate)) 14px 28px); }
+.img-g3::before { inset: 18%; border-radius: 50%; background: radial-gradient(circle, var(--berry) 0 12%, color-mix(in srgb, var(--sauce) 50%, var(--plate)) 13% 50%, var(--plate) 51% 70%, color-mix(in srgb, var(--plate) 82%, var(--text)) 71%); box-shadow: 0 16px 26px var(--shadow-deep); }
+.img-g4 { background: linear-gradient(135deg, color-mix(in srgb, var(--text) 85%, var(--wood)), var(--text)); }
+.img-g4::before { width: 26%; aspect-ratio: 1; left: 18%; top: 30%; border-radius: 50%; background: radial-gradient(circle, var(--sauce), transparent 70%); filter: blur(6px); box-shadow: 140px 30px 50px color-mix(in srgb, var(--sauce) 50%, transparent); opacity: .85; }
+.img-g4::after { inset: auto 0 0; height: 30%; background: var(--wood); opacity: .7; }
+.img-g5 { background: var(--plate); }
+.img-g5::before { inset: 0; background: radial-gradient(circle at 30% 40%, var(--sauce) 0 9%, transparent 9.5%), radial-gradient(circle at 55% 55%, var(--berry) 0 7%, transparent 7.5%), radial-gradient(circle at 75% 35%, var(--herb) 0 8%, transparent 8.5%), radial-gradient(circle at 45% 75%, color-mix(in srgb, var(--wood) 70%, var(--plate)) 0 10%, transparent 10.5%); }
+.img-g5::after { inset: 0; background: linear-gradient(180deg, transparent 60%, color-mix(in srgb, var(--text) 18%, transparent)); }
+
+/* ==================== 主视觉 ==================== */
+.hero { padding-top: calc(72px + clamp(2rem, 6vw, 4rem)); padding-bottom: clamp(3.5rem, 8vw, 6rem); background: radial-gradient(ellipse 60% 50% at 85% 20%, color-mix(in srgb, var(--sauce) 20%, transparent), transparent 70%); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.status { display: inline-block; padding: .4rem .95rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-size: .9rem; font-weight: 500; margin-bottom: 1.4rem; }
+.status.is-open b { color: var(--open); }
+.hero h1 { font-size: clamp(2.4rem, 6.4vw, 4.6rem); line-height: 1.15; margin-bottom: 1.3rem; }
+.hero p.lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--muted); max-width: 30rem; margin-bottom: 2rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2.2rem; font-size: .92rem; color: var(--muted); }
+.hero-meta b { display: block; font: 600 1.35rem/1.2 var(--font-heading); color: var(--text); }
+.hero-art { position: relative; }
+.hero-art .tag { position: absolute; left: -4%; bottom: 10%; background: var(--surface); padding: .8rem 1.1rem; border-radius: 14px; box-shadow: 0 14px 30px var(--shadow-soft); font-size: .9rem; max-width: 13rem; }
+.hero-art .tag b { display: block; font-family: var(--font-heading); color: var(--brand); }
+@media (max-width: 860px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } .hero-art { max-width: 420px; width: 100%; margin-inline: auto; } .hero-art .tag { left: 0; } }
+
+/* ==================== 关于我们 ==================== */
+.about-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.about-text p { color: var(--muted); margin-bottom: 1rem; }
+.about-text p.lead { font: 500 1.2rem/1.8 var(--font-heading); color: var(--text); }
+.highlights { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; list-style: none; }
+.highlights li { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem; }
+.highlights .ico { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: color-mix(in srgb, var(--brand) 12%, transparent); color: var(--brand); margin-bottom: .7rem; }
+.highlights h3 { font-size: 1.08rem; margin-bottom: .25rem; }
+.highlights p { font-size: .9rem; color: var(--muted); margin: 0; line-height: 1.6; }
+@media (max-width: 860px) { .about-grid { grid-template-columns: minmax(0, 1fr); } .img-about { aspect-ratio: 16 / 11; } }
+@media (max-width: 560px) { .highlights { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 菜单 ==================== */
+.menu { background: var(--surface); }
+.tabs { display: flex; justify-content: center; gap: .5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+.tab { font: 700 1rem/1 var(--font-body); padding: .8rem 1.5rem; border-radius: 999px; border: 2px solid var(--line); background: transparent; color: var(--text); cursor: pointer; transition: background .2s, border-color .2s, color .2s; }
+.tab:hover { border-color: var(--brand); }
+.tab[aria-selected="true"] { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.menu-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(2rem, 5vw, 4rem); list-style: none; }
+.menu-list li { padding-block: 1.25rem; border-bottom: 1px dashed var(--line); }
+.mi-head { display: flex; align-items: baseline; gap: .6rem; }
+.mi-head h3 { font-size: 1.15rem; }
+.mi-head .dots { flex: 1; border-bottom: 2px dotted color-mix(in srgb, var(--muted) 45%, transparent); transform: translateY(-.3rem); min-width: 1rem; }
+.price { font: 600 1.1rem/1 var(--font-heading); color: var(--brand); white-space: nowrap; }
+.menu-list p { color: var(--muted); font-size: .93rem; margin-top: .3rem; }
+.badge { display: inline-block; font-size: .72rem; font-weight: 700; padding: .12rem .55rem; border-radius: 999px; margin-left: .3rem; vertical-align: .15rem; font-family: var(--font-body); }
+.b-sig { background: color-mix(in srgb, var(--brand) 14%, transparent); color: var(--brand); }
+.b-veg { background: color-mix(in srgb, var(--accent) 16%, transparent); color: var(--open); }
+.menu-note { text-align: center; color: var(--muted); font-size: .88rem; margin-top: 2rem; }
+@media (max-width: 760px) { .menu-list { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 环境 ==================== */
+.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: clamp(140px, 17vw, 230px); gap: clamp(.6rem, 1.5vw, 1rem); }
+.gallery .img:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.gallery .img:nth-child(4) { grid-row: span 2; }
+.gallery .img:nth-child(5) { grid-column: span 2; }
+@media (max-width: 760px) {
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 150px; }
+  .gallery .img:nth-child(4) { grid-row: span 1; }
+  .gallery .img:nth-child(1), .gallery .img:nth-child(5) { grid-column: span 2; }
+}
+
+/* ==================== 顾客好评 ==================== */
+.reviews { background: color-mix(in srgb, var(--sauce) 10%, var(--bg)); }
+.review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.review { background: var(--surface); border-radius: var(--radius); padding: 1.75rem; border: 1px solid var(--line); display: flex; flex-direction: column; gap: 1rem; }
+.stars { color: var(--brand); font-size: 1.1rem; }
+.review blockquote { font: 400 1.05rem/1.8 var(--font-heading); flex: 1; }
+.review figcaption { font-size: .9rem; color: var(--muted); }
+.review figcaption b { color: var(--text); }
+@media (max-width: 860px) { .review-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 营业时间与位置 ==================== */
+.visit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.25rem, 4vw, 2.5rem); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2.2rem); }
+.card h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+.table-scroll { overflow-x: auto; }
+.hours { width: 100%; border-collapse: collapse; min-width: 260px; }
+.hours th, .hours td { text-align: left; padding: .7rem .5rem; border-bottom: 1px solid var(--line); }
+.hours th { font-weight: 500; }
+.hours td { text-align: right; font-variant-numeric: tabular-nums; }
+.hours tr.today { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.hours tr.today th::after { content: "今天"; font-size: .72rem; font-weight: 700; margin-left: .5rem; padding: .1rem .5rem; border-radius: 999px; background: var(--brand); color: var(--brand-ink); }
+.hours .closed { color: var(--muted); }
+.addr { font: 600 1.15rem/1.6 var(--font-heading); margin-bottom: .3rem; }
+.visit-list { list-style: none; margin: 1.2rem 0 1.5rem; display: grid; gap: .7rem; }
+.visit-list li { display: flex; gap: .7rem; color: var(--muted); font-size: .95rem; }
+.visit-list b { color: var(--text); white-space: nowrap; }
+.small-note { font-size: .88rem; color: var(--muted); margin-top: 1rem; }
+@media (max-width: 760px) { .visit-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 订位 ==================== */
+.reserve { background: var(--text); color: var(--bg); }
+.reserve .sec-lead { color: color-mix(in srgb, var(--bg) 80%, transparent); }
+.reserve-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.quick { display: grid; gap: .8rem; margin-top: 2rem; }
+.quick .btn { justify-content: flex-start; }
+.btn-light { background: transparent; color: var(--bg); border-color: color-mix(in srgb, var(--bg) 40%, transparent); }
+.btn-light:hover { background: color-mix(in srgb, var(--bg) 10%, transparent); }
+.form { background: var(--surface); color: var(--text); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.4rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.1rem; }
+.field { display: grid; gap: .35rem; min-width: 0; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-weight: 500; font-size: .92rem; }
+.field label span { color: var(--brand); }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1.5px solid var(--line); border-radius: 12px; padding: .7rem .85rem; min-height: 48px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 22%, transparent); }
+.field textarea { min-height: 96px; resize: vertical; }
+.form .btn { grid-column: 1 / -1; width: 100%; }
+.form small { grid-column: 1 / -1; color: var(--muted); font-size: .85rem; text-align: center; }
+@media (max-width: 860px) { .reserve-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .form { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 页脚 ==================== */
+.site-footer { background: color-mix(in srgb, var(--text) 92%, var(--brand)); color: color-mix(in srgb, var(--bg) 82%, transparent); padding-block: 3.5rem 2rem; font-size: .93rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: 2rem; }
+.site-footer h2 { color: var(--bg); font-size: 1.1rem; margin-bottom: .8rem; }
+.site-footer a { text-decoration: none; } .site-footer a:hover { text-decoration: underline; }
+.social { display: flex; gap: 1rem; margin-top: 1rem; }
+.copy { border-top: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); margin-top: 2.5rem; padding-top: 1.5rem; font-size: .85rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 手机底部固定按钮 ==================== */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 76px; }
+  .sticky-cta { display: flex; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -1px 0 var(--line); }
+  .sticky-cta .btn-primary { flex: 1; }
+  .sticky-cta .btn-ghost { padding-inline: 1.1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== 区块：页眉导览 ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav wrap" aria-label="主菜单">
+    <a href="#hero" class="logo" aria-label="日和食堂 回到顶端">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span><b>日和食堂</b><small>Hiyori Kitchen</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-links" aria-label="打开菜单"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#about">关于我们</a></li>
+      <li><a href="#menu">菜单</a></li>
+      <li><a href="#space">环境</a></li>
+      <li><a href="#reviews">好评</a></li>
+      <li><a href="#visit">交通</a></li>
+      <li><a href="#reserve" class="btn btn-primary">立即订位</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- ==================== 区块：主视觉 ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="status" id="status" aria-live="polite"><span>营业时间：周二至周日</span></p>
+      <h1>巷子里的<br>好日子食堂</h1>
+      <p class="lead">当季小农食材慢火炖煮的家常料理，配一杯手冲咖啡，在大安区好好吃顿饭。</p>
+      <div class="hero-cta">
+        <a href="#reserve" class="btn btn-primary">立即订位</a>
+        <a href="#menu" class="btn btn-ghost">查看菜单</a>
+      </div>
+      <!-- 范例内容：上线前请换成真实评价／数据 -->
+      <div class="hero-meta">
+        <div><b>2016</b>开业至今</div>
+        <div><b>4.8 ★</b>千则评价</div>
+        <div><b>NT$300+</b>人均消费</div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="img img-hero wood" role="img" aria-label="木桌上一盘冒着热气的蛋包饭与香草"></div>
+      <p class="tag"><b>本周主厨推荐</b>慢炖番茄牛肉烩饭</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：关于我们 ==================== -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="img img-about wood reveal" role="img" aria-label="桌上的手冲咖啡与一盘莓果塔"></div>
+    <div class="about-text reveal">
+      <h2 class="sec-title">像回家一样的一顿饭</h2>
+      <p class="lead">「日和」是日文里风和日丽的好天气。我们希望每一位走进门的客人，都能在这里过上一个舒服的好日子。</p>
+      <p>2016 年，主厨阿和和太太小晴把老公寓一楼改成十二张桌子的小食堂。菜单跟着季节走，酱汁自己熬、甜点每天现烤，咖啡豆则来自合作十年的在地烘豆师。</p>
+      <ul class="highlights">
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22V12M12 12C12 7 8 4 3 4c0 5 4 8 9 8Zm0 0c0-4 3-7 8-7 0 4-3 7-8 7Z"/></svg></span>
+          <h3>当季小农食材</h3><p>与台湾十多位小农合作，菜单每季更新。</p>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10h13v4a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6v-4Zm13 1h1.5a2.5 2.5 0 0 1 0 5H17M8 3v3m4-3v3"/></svg></span>
+          <h3>单品手冲咖啡</h3><p>在地烘焙豆，浅中深焙每日轮替。</p>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/></svg></span>
+          <h3>亲子宠物友善</h3><p>备有儿童椅，户外座位欢迎毛孩同行。</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：菜单 ==================== -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">今天想吃点什么？</h2>
+      <p class="sec-lead">午晚餐皆可点用，套餐加 NT$120 附汤品、小菜与饮品。</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="菜单分类">
+      <button class="tab" role="tab" id="tab-food" aria-controls="panel-food" aria-selected="true">餐点</button>
+      <button class="tab" role="tab" id="tab-drink" aria-controls="panel-drink" aria-selected="false" tabindex="-1">饮品</button>
+      <button class="tab" role="tab" id="tab-dessert" aria-controls="panel-dessert" aria-selected="false" tabindex="-1">甜点</button>
+    </div>
+    <div role="tabpanel" id="panel-food" aria-labelledby="tab-food" tabindex="0">
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>慢炖番茄牛肉烩饭<span class="badge b-sig">招牌</span></h3><span class="dots"></span><span class="price">NT$320</span></div><p>牛肋条与牛番茄炖煮六小时，淋上半熟蛋。</p></li>
+        <li><div class="mi-head"><h3>日和蛋包饭</h3><span class="dots"></span><span class="price">NT$280</span></div><p>滑嫩欧姆蛋包裹鸡肉炒饭，佐自制多蜜酱。</p></li>
+        <li><div class="mi-head"><h3>味噌鲑鱼定食</h3><span class="dots"></span><span class="price">NT$360</span></div><p>西京味噌腌渍鲑鱼，附季节小菜三品与味噌汤。</p></li>
+        <li><div class="mi-head"><h3>季节野菜咖喱<span class="badge b-veg">素食</span></h3><span class="dots"></span><span class="price">NT$290</span></div><p>十种香料慢炒，搭配烤南瓜、秋葵与糙米饭。</p></li>
+        <li><div class="mi-head"><h3>炙烧鸡腿排沙拉碗</h3><span class="dots"></span><span class="price">NT$310</span></div><p>舒肥鸡腿炙烧上桌，配藜麦、温泉蛋与柚子酱。</p></li>
+        <li><div class="mi-head"><h3>早午餐拼盘<span class="badge b-sig">招牌</span></h3><span class="dots"></span><span class="price">NT$340</span></div><p>班尼迪克蛋、烤蘑菇、酸种面包与小沙拉（假日限定）。</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-drink" aria-labelledby="tab-drink" tabindex="0" hidden>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>今日单品手冲<span class="badge b-sig">招牌</span></h3><span class="dots"></span><span class="price">NT$180</span></div><p>每日轮替产区，欢迎询问咖啡师今日风味。</p></li>
+        <li><div class="mi-head"><h3>日和拿铁</h3><span class="dots"></span><span class="price">NT$150</span></div><p>中深焙配方豆与鲜奶，可换燕麦奶 +NT$20。</p></li>
+        <li><div class="mi-head"><h3>黑糖焙茶欧蕾<span class="badge b-veg">素食</span></h3><span class="dots"></span><span class="price">NT$160</span></div><p>京都焙茶、冲绳黑糖与燕麦奶，暖暖的焦香。</p></li>
+        <li><div class="mi-head"><h3>冷萃柚香气泡</h3><span class="dots"></span><span class="price">NT$170</span></div><p>冷萃咖啡加上文旦柚皮糖浆与气泡水。</p></li>
+        <li><div class="mi-head"><h3>季节水果茶</h3><span class="dots"></span><span class="price">NT$140</span></div><p>当季鲜果现切，搭配阿里山乌龙冷泡。</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-dessert" aria-labelledby="tab-dessert" tabindex="0" hidden>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>焦糖布丁<span class="badge b-sig">招牌</span></h3><span class="dots"></span><span class="price">NT$120</span></div><p>偏硬派的古早味口感，微苦焦糖刚刚好。</p></li>
+        <li><div class="mi-head"><h3>季节莓果塔</h3><span class="dots"></span><span class="price">NT$160</span></div><p>杏仁奶油馅、香草卡士达与满满新鲜莓果。</p></li>
+        <li><div class="mi-head"><h3>抹茶巴斯克奶酪</h3><span class="dots"></span><span class="price">NT$150</span></div><p>表面焦香、内心湿润，使用宇治抹茶。</p></li>
+        <li><div class="mi-head"><h3>伯爵茶戚风</h3><span class="dots"></span><span class="price">NT$130</span></div><p>每日现烤，附无糖鲜奶油。</p></li>
+        <li><div class="mi-head"><h3>豆乳黑芝麻奶酪<span class="badge b-veg">素食</span></h3><span class="dots"></span><span class="price">NT$130</span></div><p>无蛋无奶，香浓芝麻与嫩豆乳的温柔组合。</p></li>
+      </ul>
+    </div>
+    <p class="menu-note">价格皆含税，另收一成服务费。如有食物过敏，请于点餐时告知。</p>
+  </div>
+</section>
+
+<!-- ==================== 区块：环境 ==================== -->
+<section id="space">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">午后的光，洒在木桌上</h2>
+      <p class="sec-lead">室内 36 席、户外 8 席，大片落地窗与老件木桌椅，适合一个人慢慢吃，也适合三五好友聚餐。</p>
+    </div>
+    <div class="gallery reveal">
+      <div class="img img-g1" role="img" aria-label="午后阳光透进落地窗的用餐区"></div>
+      <div class="img img-g2" role="img" aria-label="香草绿背景前的一杯热拿铁"></div>
+      <div class="img img-g3" role="img" aria-label="格纹桌巾上的莓果塔"></div>
+      <div class="img img-g4" role="img" aria-label="夜晚吧台的暖黄灯光"></div>
+      <div class="img img-g5" role="img" aria-label="俯拍的多彩季节小菜"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：顾客好评 ==================== -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">客人们这样说</h2>
+    </div>
+    <!-- 范例内容：上线前请换成真实评价／数据 -->
+    <div class="review-grid">
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 颗星，满分 5 颗星">★★★★★</div>
+        <blockquote>番茄牛肉烩饭真的是会想念的味道，牛肉炖到筷子一夹就散开。店员很亲切，像回到朋友家吃饭。</blockquote>
+        <figcaption><b>林小姐</b><br>附近上班族</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 颗星，满分 5 颗星">★★★★★</div>
+        <blockquote>周末带小孩来吃早午餐，有儿童椅、空间也不拥挤。焦糖布丁每次都要外带两个回家。</blockquote>
+        <figcaption><b>陈先生</b><br>两个孩子的爸</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 颗星，满分 5 颗星">★★★★★</div>
+        <blockquote>手冲咖啡水准很高，咖啡师会依喜好推荐豆子。素食咖喱香料层次丰富，吃素的朋友也很推。</blockquote>
+        <figcaption><b>Amy</b><br>咖啡爱好者</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：营业时间与位置 ==================== -->
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">营业时间与位置</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="card reveal">
+        <h3>营业时间</h3>
+        <!-- 修改营业时间时，也要同步修改最下方 JS 的 HOURS 与 head 的 JSON-LD -->
+        <div class="table-scroll">
+          <table class="hours" aria-label="每周营业时间">
+            <tbody>
+              <tr data-day="1"><th scope="row">星期一</th><td class="closed">公休</td></tr>
+              <tr data-day="2"><th scope="row">星期二</th><td>11:30 – 21:00</td></tr>
+              <tr data-day="3"><th scope="row">星期三</th><td>11:30 – 21:00</td></tr>
+              <tr data-day="4"><th scope="row">星期四</th><td>11:30 – 21:00</td></tr>
+              <tr data-day="5"><th scope="row">星期五</th><td>11:30 – 21:00</td></tr>
+              <tr data-day="6"><th scope="row">星期六</th><td>10:00 – 21:30</td></tr>
+              <tr data-day="0"><th scope="row">星期日</th><td>10:00 – 21:30</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small-note">最后点餐为打烊前 45 分钟；国定假日照常营业。</p>
+      </div>
+      <div class="card reveal">
+        <h3>怎么来</h3>
+        <p class="addr">台北市大安区和光路 88 巷 6 号 1 楼</p>
+        <p class="small-note" style="margin-top:0">电话 <a href="tel:0212345678">02-1234-5678</a></p>
+        <ul class="visit-list">
+          <li><b>捷运</b>大安站 5 号出口，步行约 6 分钟</li>
+          <li><b>公车</b>「和光路口」站下车，步行 2 分钟</li>
+          <li><b>停车</b>巷口有付费停车场，店门口可停机车</li>
+        </ul>
+        <a class="btn btn-primary" href="https://maps.google.com/?q=台北市大安区和光路88巷6号" target="_blank" rel="noopener">在 Google 地图打开</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：订位 ==================== -->
+<section class="reserve" id="reserve">
+  <div class="wrap reserve-grid">
+    <div class="reveal">
+      <h2 class="sec-title">替您留一张好位子</h2>
+      <p class="sec-lead">填写表单后，我们会在营业时间内以电话或短信确认。6 位以上或包场需求，欢迎直接来电。</p>
+      <div class="quick">
+        <a class="btn btn-light" href="tel:0212345678">电话订位 02-1234-5678</a>
+        <a class="btn btn-light" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 订位 @yourlineid</a>
+      </div>
+    </div>
+    <!-- 表单使用 Formspree（免费方案每月 50 则）：
+         1. 到 https://formspree.io 注册并创建新表单
+         2. 拷贝表单网址中的 ID（例如 xyzabcd）
+         3. 把下面 action 里的 your-form-id 换成你的 ID 即可收到 Email 通知 -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="field"><label for="f-name">姓名 <span>*</span></label><input id="f-name" name="姓名" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">电话 <span>*</span></label><input id="f-tel" name="电话" type="tel" autocomplete="tel" inputmode="tel" placeholder="0912-345-678" required></div>
+      <div class="field"><label for="f-date">日期 <span>*</span></label><input id="f-date" name="日期" type="date" required></div>
+      <div class="field"><label for="f-time">时间 <span>*</span></label>
+        <select id="f-time" name="时间" required>
+          <option value="">请选择</option>
+          <option>10:00（仅周末）</option><option>11:30</option><option>12:30</option><option>13:30</option>
+          <option>17:30</option><option>18:30</option><option>19:30</option>
+        </select></div>
+      <div class="field full"><label for="f-people">人数 <span>*</span></label>
+        <select id="f-people" name="人数" required>
+          <option value="">请选择</option>
+          <option>1 位</option><option>2 位</option><option>3 位</option><option>4 位</option><option>5 位</option><option>6 位以上（将来电确认）</option>
+        </select></div>
+      <div class="field full"><label for="f-note">备注</label><textarea id="f-note" name="备注" placeholder="例如：需要儿童椅、庆生、食物过敏…"></textarea></div>
+      <button class="btn btn-primary" type="submit">送出订位</button>
+      <small>订位保留 10 分钟，若需更改请来电告知，谢谢！</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 区块：页脚 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>日和食堂 Hiyori Kitchen</h2>
+        <p>台北市大安区和光路 88 巷 6 号 1 楼<br>电话 <a href="tel:0212345678">02-1234-5678</a></p>
+        <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="https://line.me/R/ti/p/@yourlineid">LINE</a></div>
+      </div>
+      <div>
+        <h2>营业时间</h2>
+        <p>周二至周五 11:30 – 21:00<br>周六、周日 10:00 – 21:30<br>周一公休</p>
+      </div>
+      <div>
+        <h2>快速链接</h2>
+        <p><a href="#menu">菜单</a><br><a href="#reserve">在线订位</a><br><a href="#visit">交通信息</a></p>
+      </div>
+    </div>
+    <p class="copy">© <span id="y"></span> 日和食堂 Hiyori Kitchen</p>
+  </div>
+</footer>
+
+<!-- ==================== 区块：手机底部固定按钮 ==================== -->
+<div class="sticky-cta">
+  <a href="#reserve" class="btn btn-primary">立即订位</a>
+  <a href="tel:0212345678" class="btn btn-ghost" aria-label="拨打电话 02-1234-5678">来电</a>
+</div>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// 页眉卷动背景
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// 汉堡菜单
+const toggle = document.querySelector('.nav-toggle'), menu = document.getElementById('menu-links');
+const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单'); };
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// 卷动渐入
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// 菜单分页（支持方向键）
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+const select = t => {
+  tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+  t.focus();
+};
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => select(t));
+  t.addEventListener('keydown', e => {
+    const k = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+    if (k) { e.preventDefault(); select(tabs[(i + k + tabs.length) % tabs.length]); }
+    if (e.key === 'Home') { e.preventDefault(); select(tabs[0]); }
+    if (e.key === 'End') { e.preventDefault(); select(tabs[tabs.length - 1]); }
+  });
+});
+
+// 营业中／休息中（以台北时间计算）。格式：星期（0=日）: [开门, 打烊]，null 为公休
+const HOURS = { 0: ['10:00', '21:30'], 1: null, 2: ['11:30', '21:00'], 3: ['11:30', '21:00'], 4: ['11:30', '21:00'], 5: ['11:30', '21:00'], 6: ['10:00', '21:30'] };
+const DAYS = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+const toMin = s => { const [h, m] = s.split(':'); return h * 60 + +m; };
+const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Taipei' }));
+const day = now.getDay(), mins = now.getHours() * 60 + now.getMinutes(), today = HOURS[day];
+const status = document.getElementById('status');
+let text;
+if (today && mins >= toMin(today[0]) && mins < toMin(today[1])) {
+  status.classList.add('is-open');
+  text = `<b>营业中</b>，今天 ${today[1]} 打烊`;
+} else {
+  let d = 0;
+  if (today && mins < toMin(today[0])) d = 0;
+  else do { d++; } while (!HOURS[(day + d) % 7]);
+  const nd = (day + d) % 7, when = d === 0 ? '今天' : d === 1 ? '明天' : DAYS[nd];
+  text = `<b>休息中</b>，${when} ${HOURS[nd][0]} 开门`;
+}
+status.querySelector('span').innerHTML = text;
+const row = document.querySelector(`.hours tr[data-day="${day}"]`); if (row) row.classList.add('today');
+
+// 订位日期不能选过去
+const pad = n => String(n).padStart(2, '0');
+document.getElementById('f-date').min = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+</script>
+</body>
+</html>

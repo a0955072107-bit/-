@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小店数字转型论坛 2027｜4 月 17 日台中，一天学会把小店搬上网络</title>
+<meta name="description" content="小店数字转型论坛 2027 于 4 月 17 日在台中光点会议中心举行。8 位讲者、12 场议程与实作工作坊，从 LINE 会员、在线预约到金流与电子发票，给中部小店老板的一日实战课。早鸟票限时开卖。">
+<meta property="og:title" content="小店数字转型论坛 2027｜4/17 台中">
+<meta property="og:description" content="8 位讲者、12 场议程、3 堂小班工作坊。给想把店搬上网络的小店老板，一天带走能马上用的做法。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1ed06f">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   主题设置：改这里就能换整站配色与字体
+   ============================================================ */
+:root {
+  --brand: #1ed06f;          /* 品牌主色（信号绿）：按钮、几何图形、选取状态，只当底色使用 */
+  --brand-ink: #0c0e0b;      /* 在 brand 色上的文本颜色（近黑，对比 AA） */
+  --brand-deep: #0b6b39;     /* 深绿：浅底上需要绿色文本或线条时使用（对比 AA） */
+  --ink: #0c0e0b;            /* 黑色区块底色、粗线条、几何图形 */
+  --on-ink: #eef0ea;         /* 黑色区块上的主要文本 */
+  --on-ink-muted: #a9ada4;   /* 黑色区块上的次要文本 */
+  --bg: #f1f1ec;             /* 网页底色：海报纸般的米白 */
+  --surface: #f9f9f5;        /* 卡片、表单、对话框底色（不用纯白） */
+  --paper-2: #e3e4dc;        /* 交错区块、图片占位的浅灰底 */
+  --text: #0c0e0b;           /* 主要文本颜色 */
+  --muted: #4a4d46;          /* 次要文本颜色 */
+  --line: #cdd0c6;           /* 细线、格线颜色 */
+  --radius: 0px;             /* 圆角：瑞士海报风格缺省为直角，想柔和一点可改 6px */
+  --font-display: "Archivo", "Noto Sans SC", system-ui, sans-serif; /* 大数字与标题字体 */
+  --font-heading: "Archivo", "Noto Sans SC", system-ui, sans-serif; /* 标题字体 */
+  --font-body: "Archivo", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; /* 内文本型 */
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;           /* 等宽字体：时间、场地、价格细节 */
+  --maxw: 1240px;            /* 内容最大宽度 */
+  --pad: clamp(1rem, 4.5vw, 2.5rem); /* 左右留白 */
+  --head-h: 4rem;            /* 页眉高度 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.7 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+[hidden] { display: none !important; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+button, input, select, textarea { font: inherit; color: inherit; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 800; line-height: 1.15; letter-spacing: -.02em; word-break: keep-all; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+p { text-wrap: pretty; }
+:focus-visible { outline: 3px solid var(--brand-deep); outline-offset: 3px; }
+.wrap { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--ink); color: var(--on-ink); padding: .5rem 1rem; z-index: 100; }
+.skip:focus { left: 1rem; }
+.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* ---------- 按钮 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 50px; padding: .7rem 1.4rem; border-radius: var(--radius); font: 700 1rem/1.2 var(--font-body); border: 2px solid var(--ink); transition: background-color .2s, color .2s, border-color .2s, transform .15s; cursor: pointer; white-space: nowrap; }
+.btn:active { transform: translateY(2px); }
+.btn:disabled, .btn[aria-disabled="true"], .form input:disabled, .form select:disabled { opacity: .55; cursor: not-allowed; }
+.btn-brand { background: var(--brand); color: var(--brand-ink); }
+.btn-brand:hover { background: var(--ink); color: var(--brand); }
+.btn-brand:active { background: var(--ink); color: var(--on-ink); }
+.btn-line { background: transparent; color: var(--text); }
+.btn-line:hover { background: var(--ink); color: var(--on-ink); }
+.btn-line:active { background: color-mix(in srgb, var(--ink) 85%, var(--brand)); color: var(--on-ink); }
+.btn-ghost { background: transparent; color: var(--on-ink); border-color: var(--on-ink); }
+.btn-ghost:hover { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
+.btn-ghost:active { background: var(--on-ink); color: var(--ink); }
+.link { font-weight: 600; text-decoration: underline; text-decoration-color: var(--brand-deep); text-decoration-thickness: 2px; text-underline-offset: .22em; transition: color .2s, text-decoration-color .2s; }
+.link:hover { color: var(--brand-deep); }
+.link:active { text-decoration-color: var(--text); }
+
+/* ---------- 通用区块：每个区块上方一条粗黑线，左栏放序号 ---------- */
+section { padding-block: clamp(4rem, 9vw, 7rem); }
+.sec-head { display: grid; gap: 1rem 2rem; border-top: 3px solid currentColor; padding-top: 1.25rem; margin-bottom: clamp(2.25rem, 5vw, 3.5rem); }
+.sec-no { font: 500 .95rem/1.4 var(--font-mono); }
+.sec-head h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+.sec-head p { color: var(--muted); font-size: 1.06rem; max-width: 38rem; margin-top: .9rem; }
+@media (min-width: 900px) { .sec-head { grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); } }
+.alt { background: var(--paper-2); }
+.dark { background: var(--ink); color: var(--on-ink); }
+.dark .sec-head p { color: var(--on-ink-muted); }
+
+/* ==================== 页眉 ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 2px 0 var(--ink); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: var(--head-h); }
+.logo { display: flex; align-items: center; gap: .6rem; font: 800 1rem/1.1 var(--font-heading); }
+.logo-mark { flex: none; width: 1.9rem; height: 1.9rem; background:
+  radial-gradient(circle at 68% 32%, var(--brand) 0 31%, transparent 32%),
+  linear-gradient(var(--ink), var(--ink)) 0 100% / 55% 55% no-repeat; }
+.logo .num { font-weight: 500; font-size: .85rem; font-variant-numeric: tabular-nums; }
+.menu { display: flex; align-items: center; gap: clamp(.7rem, 1.6vw, 1.6rem); font-size: .92rem; }
+.menu a:not(.btn) { padding-block: .35rem; border-bottom: 2px solid transparent; transition: border-color .2s, color .2s; }
+.menu a:not(.btn):hover { border-color: var(--ink); }
+.menu a:not(.btn):active { color: var(--brand-deep); }
+.menu .btn { min-height: 42px; padding: .45rem 1.1rem; font-size: .92rem; }
+.burger { display: none; width: 46px; height: 46px; background: var(--surface); border: 2px solid var(--ink); border-radius: var(--radius); cursor: pointer; }
+.burger:hover { background: var(--brand); }
+.burger:active { background: var(--ink); color: var(--on-ink); }
+.burger span, .burger span::before, .burger span::after { display: block; width: 20px; height: 2px; background: currentColor; margin: auto; position: relative; transition: transform .3s, background-color .3s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 960px) { .menu .opt { display: none; } }
+@media (max-width: 760px) {
+  /* 没有 JavaScript 时，菜单直接换行显示在 logo 下方；有 JS 才收进汉堡菜单 */
+  html:not(.js) .nav { flex-wrap: wrap; }
+  html:not(.js) .site-header { position: sticky; background: var(--bg); box-shadow: 0 2px 0 var(--ink); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .2rem 1rem; padding-bottom: .8rem; }
+  html:not(.js) .menu .opt { display: inline; }
+  html:not(.js) .hero { padding-top: 2rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: var(--head-h) 0 auto; flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); padding: .25rem var(--pad) 1.5rem; border-bottom: 3px solid var(--ink); transform: translateY(-120%); visibility: hidden; transition: transform .3s, visibility .3s; }
+  .js .menu.open { transform: none; visibility: visible; }
+  .js .menu .opt { display: block; }
+  .js .menu a:not(.btn) { padding: .85rem 0; border-bottom: 1px solid var(--line); }
+  .js .menu .btn { margin-top: 1rem; min-height: 50px; }
+}
+
+/* ==================== 首屏 ==================== */
+.hero { padding-top: calc(var(--head-h) + clamp(1.5rem, 3.5vw, 2.5rem)); padding-bottom: clamp(3.5rem, 7vw, 5rem); position: relative; }
+/* 背景的 12 栏瑞士格线 */
+.hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; z-index: -1; background: repeating-linear-gradient(90deg, var(--line) 0 1px, transparent 1px calc(100% / 12)); width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; opacity: .7; }
+.hero-grid { display: grid; gap: 2.5rem 3rem; }
+.hero h1 { font-size: clamp(2.6rem, 6.2vw, 5.4rem); font-weight: 900; line-height: 1.02; letter-spacing: -.035em; }
+.hero h1 .yr { display: block; font-family: var(--font-display); font-stretch: 110%; }
+.hero-lead { font-size: clamp(1.05rem, 1.5vw, 1.2rem); max-width: 34rem; margin-top: 1.1rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.6rem; }
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 2px solid var(--ink); margin-top: 2rem; }
+.facts div { padding: .7rem .8rem .7rem 0; border-bottom: 1px solid var(--line); }
+.facts dt { font-size: .85rem; color: var(--muted); }
+.facts dd { font: 500 .98rem/1.4 var(--font-mono); }
+@media (min-width: 640px) { .facts { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+/* 倒数计时：没有 JS 时隐藏，改看下方日期 */
+.cd { display: flex; gap: 0; margin-top: 1.6rem; border: 2px solid var(--ink); width: fit-content; max-width: 100%; }
+html:not(.js) .cd { display: none; }
+.cd > span { padding: .45rem .85rem; border-left: 1px solid var(--ink); font-size: .85rem; display: grid; }
+.cd > span:first-child { border-left: 0; background: var(--ink); color: var(--on-ink); align-content: center; }
+.cd b { font: 500 clamp(1.3rem, 2.4vw, 1.7rem)/1.1 var(--font-mono); }
+.cd-done { margin-top: 1.6rem; font-weight: 700; }
+@media (min-width: 980px) { .hero-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: start; } }
+
+/* 首屏海报：大日期数字＋几何图形，全部是 CSS 画的。
+   换成照片：.img-hero { background: url(images/hero.jpg) center/cover; } 并删掉里面的数字 */
+.img-hero { position: relative; aspect-ratio: 4 / 5; max-height: 640px; width: 100%; container-type: inline-size; overflow: hidden; border: 2px solid var(--ink); background:
+  radial-gradient(circle at 74% 30%, var(--brand) 0 34%, transparent 34.3%),
+  linear-gradient(var(--ink), var(--ink)) 0 100% / 30% 26% no-repeat,
+  repeating-linear-gradient(0deg, var(--line) 0 1px, transparent 1px 12.5%),
+  var(--surface); }
+.img-hero::after { content: ""; position: absolute; left: 9%; top: 47%; width: 26%; aspect-ratio: 1; border: 2px solid var(--ink); border-radius: 50%; }
+.img-hero .d { position: absolute; font: 900 50cqw/.8 var(--font-display); letter-spacing: -.06em; }
+.img-hero .d1 { left: 5%; top: 5%; }
+.img-hero .d2 { right: 4%; bottom: 3%; }
+.img-hero .tag { position: absolute; font: 600 4cqw/1.3 var(--font-body); font-variant-numeric: tabular-nums; }
+.img-hero .t1 { right: 5%; top: 4.5%; }
+.img-hero .t2 { left: 3%; bottom: 3%; color: var(--on-ink); width: 25%; }
+@media (max-width: 979px) { .img-hero { aspect-ratio: 5 / 4; } .img-hero .d { font-size: 40cqw; } .img-hero .t2 { width: 26%; } }
+
+/* ==================== 适合谁 ==================== */
+.who-grid { display: grid; gap: 0; border-top: 2px solid var(--ink); }
+.who-grid article { padding: 1.5rem 0 1.75rem; border-bottom: 1px solid var(--ink); display: grid; gap: .6rem; align-content: start; }
+.who-grid .n { font: 900 3.4rem/1 var(--font-display); }
+.who-grid h3 { font-size: 1.3rem; }
+.who-grid p { color: var(--muted); }
+@media (min-width: 700px) { .who-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .who-grid article { padding-right: 2rem; } .who-grid article:nth-child(even) { padding-left: 2rem; border-left: 1px solid var(--ink); } }
+@media (min-width: 1100px) { .who-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } .who-grid article { padding: 1.5rem 1.5rem 2rem; border-left: 1px solid var(--ink); } .who-grid article:first-child { border-left: 0; padding-left: 0; } }
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+.stats div { display: grid; font-variant-numeric: tabular-nums; }
+.stats b { font: 900 clamp(2.6rem, 6vw, 4.4rem)/1 var(--font-display); }
+.stats span { color: var(--muted); font-size: .95rem; font-variant-numeric: tabular-nums; }
+@media (min-width: 800px) { .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* ==================== 讲者 ==================== */
+.sp-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1rem; }
+@media (min-width: 800px) { .sp-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2.5rem 1.5rem; } }
+.sp { display: grid; gap: .35rem; align-content: start; }
+.sp h3 { font-size: 1.2rem; margin-top: .6rem; }
+.sp-role { color: var(--muted); font-size: .9rem; line-height: 1.5; }
+.sp-talk { font-weight: 600; line-height: 1.5; border-top: 1px solid var(--ink); padding-top: .55rem; margin-top: .3rem; }
+.sp-more { white-space: nowrap; justify-self: start; margin-top: .4rem; background: none; border: 0; border-bottom: 2px solid var(--brand-deep); padding: .2rem 0; font-weight: 700; font-size: .92rem; cursor: pointer; transition: color .2s, border-color .2s; }
+.sp-more:hover { color: var(--brand-deep); }
+.sp-more:active { border-color: var(--ink); }
+html:not(.js) .sp-more { display: none; }
+.js .sp .bio { display: none; }
+.bio { color: var(--muted); font-size: .93rem; }
+
+/* 讲者照片占位：用头＋肩膀的几何图形，每位讲者换一种配色。
+   换成照片：.pt.p1 { background: url(images/speaker-1.jpg) center/cover; } */
+.pt { --bgc: var(--surface); --head: var(--ink); --body: var(--ink); --deco: transparent; aspect-ratio: 4 / 5; border: 2px solid var(--ink); background:
+  radial-gradient(circle at 50% 40%, var(--head) 0 17%, transparent 17.4%),
+  radial-gradient(ellipse 40% 30% at 50% 100%, var(--body) 0 98%, transparent 100%),
+  var(--deco-img, none),
+  var(--bgc); }
+.p1 { --bgc: var(--brand); }
+.p2 { --bgc: var(--surface); --deco-img: repeating-linear-gradient(90deg, var(--line) 0 2px, transparent 2px 14px); }
+.p3 { --bgc: var(--ink); --head: var(--brand); --body: var(--on-ink); }
+.p4 { --bgc: var(--paper-2); --deco-img: radial-gradient(circle at 88% 12%, var(--brand) 0 16%, transparent 16.5%); }
+.p5 { --bgc: var(--surface); --head: var(--brand); --body: var(--ink); --deco-img: linear-gradient(var(--paper-2), var(--paper-2)) 0 0 / 100% 50% no-repeat; }
+.p6 { --bgc: var(--brand); --head: var(--surface); --body: var(--ink); --deco-img: repeating-linear-gradient(0deg, color-mix(in srgb, var(--ink) 18%, transparent) 0 2px, transparent 2px 16px); }
+.p7 { --bgc: var(--ink); --head: var(--on-ink); --body: var(--brand); }
+.p8 { --bgc: var(--paper-2); --head: var(--ink); --body: var(--brand); --deco-img: linear-gradient(135deg, transparent 0 60%, var(--surface) 60%); }
+
+/* 讲者介绍对话框 */
+.dlg { width: min(44rem, 100% - 2rem); max-height: calc(100% - 2rem); margin: auto; border: 3px solid var(--ink); border-radius: var(--radius); background: var(--surface); color: var(--text); padding: 0; }
+.dlg::backdrop { background: color-mix(in srgb, var(--ink) 70%, transparent); }
+.dlg-in { display: grid; gap: 1.25rem; padding: clamp(1.25rem, 4vw, 2rem); }
+.dlg-top { display: grid; grid-template-columns: 6rem minmax(0, 1fr) auto; gap: 1rem; align-items: start; }
+.dlg-top .pt { width: 6rem; }
+.dlg h2 { font-size: clamp(1.4rem, 4vw, 1.9rem); }
+.dlg-role { color: var(--muted); font-size: .92rem; margin-top: .3rem; }
+.dlg-talk { font-weight: 700; border-top: 2px solid var(--ink); padding-top: .8rem; }
+.dlg-body p + p { margin-top: .7rem; }
+.dlg-in .btn { justify-self: start; }
+.dlg-close { width: 44px; height: 44px; border: 2px solid var(--ink); background: transparent; font-size: 1.4rem; line-height: 1; cursor: pointer; transition: background-color .2s; }
+.dlg-close:hover { background: var(--brand); }
+.dlg-close:active { background: var(--ink); color: var(--on-ink); }
+@media (max-width: 480px) { .dlg-top { grid-template-columns: 4.5rem minmax(0, 1fr) auto; } .dlg-top .pt { width: 4.5rem; } }
+
+/* ==================== 议程 ==================== */
+.ag-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+html:not(.js) .ics { display: none; }
+.tabs { display: flex; flex-wrap: wrap; border: 2px solid var(--on-ink); width: fit-content; max-width: 100%; }
+html:not(.js) .tabs { display: none; }
+.tabs button { background: transparent; border: 0; border-left: 2px solid var(--on-ink); color: var(--on-ink); padding: .75rem 1.2rem; font-weight: 700; cursor: pointer; transition: background-color .2s, color .2s; }
+.tabs button:first-child { border-left: 0; }
+.tabs button:hover { background: color-mix(in srgb, var(--on-ink) 14%, transparent); }
+.tabs button:active { background: color-mix(in srgb, var(--on-ink) 24%, transparent); }
+.tabs button[aria-selected="true"] { background: var(--brand); color: var(--brand-ink); }
+.panel + .panel { margin-top: 3rem; }
+.js .panel + .panel { margin-top: 0; }
+.panel-h { font-size: 1.35rem; margin-bottom: .5rem; display: flex; flex-wrap: wrap; gap: .25rem 1rem; align-items: baseline; }
+.panel-h small { font: 400 .9rem/1.4 var(--font-body); color: var(--on-ink-muted); }
+.sched { border-top: 2px solid var(--on-ink); }
+.sched li { display: grid; gap: .25rem 1.5rem; padding: 1.1rem 0; border-bottom: 1px solid color-mix(in srgb, var(--on-ink) 25%, transparent); }
+.sched .t { font: 500 1rem/1.4 var(--font-mono); color: var(--brand); }
+.sched b { display: block; font-size: 1.12rem; line-height: 1.45; }
+.sched .who { color: var(--on-ink-muted); font-size: .93rem; }
+.sched .room { font: 400 .88rem/1.4 var(--font-mono); color: var(--on-ink-muted); }
+.sched .brk b { font-weight: 500; color: var(--on-ink-muted); }
+@media (min-width: 760px) { .sched li { grid-template-columns: 9.5rem minmax(0, 1fr) 9rem; align-items: baseline; } .sched .room { text-align: right; } }
+
+/* ==================== 票种 ==================== */
+.tk-grid { display: grid; gap: 1.25rem; }
+@media (min-width: 900px) { .tk-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; } .tk + .tk { border-left: 0; } }
+.tk { position: relative; display: grid; gap: 1rem; align-content: start; padding: 1.75rem 1.5rem; border: 2px solid var(--ink); background: var(--surface); }
+.tk.hot { background: var(--brand); }
+.tk-state { justify-self: start; font: 500 .88rem/1.3 var(--font-mono); border: 2px solid var(--ink); padding: .25rem .6rem; }
+.tk h3 { font-size: 1.5rem; }
+.tk-price { font: 900 clamp(2.8rem, 5vw, 3.8rem)/1 var(--font-display); letter-spacing: -.03em; }
+.tk-price small { font: 500 1rem/1 var(--font-mono); letter-spacing: 0; }
+.tk ul { display: grid; gap: .45rem; border-top: 1px solid var(--ink); padding-top: 1rem; }
+.tk li { padding-left: 1.2rem; position: relative; }
+.tk li::before { content: ""; position: absolute; left: 0; top: .62em; width: .6rem; height: 2px; background: currentColor; }
+.tk .btn { margin-top: .5rem; }
+.tk.hot .btn-brand { background: var(--ink); color: var(--on-ink); }
+.tk.hot .btn-brand:hover { background: var(--surface); color: var(--text); }
+/* 早鸟截止后：卡片变灰、按钮停用 */
+.tk.closed { background: var(--paper-2); color: var(--muted); }
+.tk.closed .tk-price { text-decoration: line-through; text-decoration-thickness: 4px; }
+.tk.closed .btn { pointer-events: none; background: transparent; color: var(--muted); border-color: var(--muted); }
+.tk.closed .tk-state { background: var(--ink); color: var(--on-ink); }
+.tk-note { color: var(--muted); font-size: .92rem; margin-top: 1.25rem; }
+
+/* ==================== 场地交通 ==================== */
+.venue-grid { display: grid; gap: 2rem 3rem; }
+@media (min-width: 900px) { .venue-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); } }
+/* 地图占位：抽象街廓与位置记号。
+   换成真实地图：把这个 div 换成 Google 地图「分享 > 嵌入地图」的 iframe，或 .img-map { background: url(images/map.png) center/cover; } */
+.img-map { position: relative; aspect-ratio: 4 / 3; border: 2px solid var(--ink); background:
+  radial-gradient(circle at 58% 46%, var(--ink) 0 3.2%, transparent 3.5%),
+  radial-gradient(circle at 58% 46%, transparent 0 9%, var(--ink) 9.3% 10%, transparent 10.3%),
+  linear-gradient(28deg, transparent 0 47%, var(--brand) 47% 53%, transparent 53%),
+  linear-gradient(var(--ink), var(--ink)) 0 70% / 100% 6px no-repeat,
+  linear-gradient(var(--ink), var(--ink)) 30% 0 / 6px 100% no-repeat,
+  repeating-linear-gradient(0deg, var(--line) 0 1px, transparent 1px 9%),
+  repeating-linear-gradient(90deg, var(--line) 0 1px, transparent 1px 9%),
+  var(--surface); }
+.img-map span { position: absolute; left: 63%; top: 34%; font: 500 .85rem/1.3 var(--font-mono); background: var(--ink); color: var(--on-ink); padding: .25rem .5rem; }
+.venue h3 { font-size: 1.5rem; }
+.venue address { font-style: normal; margin-top: .4rem; }
+.transit { display: grid; margin-top: 1.5rem; border-top: 2px solid var(--ink); }
+.transit li { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1rem; padding: .9rem 0; border-bottom: 1px solid var(--line); }
+.transit b { font-size: .95rem; }
+.transit span { color: var(--muted); }
+.venue-cta { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.5rem; }
+
+/* ==================== 赞助方案 ==================== */
+.sp-tiers { display: grid; gap: 0; border-top: 2px solid var(--ink); }
+.sp-tiers article { display: grid; gap: .5rem 2rem; padding: 1.4rem 0; border-bottom: 1px solid var(--ink); }
+.sp-tiers h3 { font-size: 1.3rem; }
+.sp-tiers .price { font: 500 1.05rem/1.4 var(--font-mono); }
+.sp-tiers p { color: var(--muted); }
+@media (min-width: 800px) { .sp-tiers article { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr) minmax(0, 7fr); align-items: baseline; } }
+.logos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+@media (min-width: 700px) { .logos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .logos { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+/* 赞助商 Logo 占位。换成真实 Logo：把 div 换成 <img src="images/sponsor-1.svg" alt="赞助商名称"> */
+.logo-slot { display: grid; place-items: center; aspect-ratio: 3 / 2; border: 2px dashed var(--muted); color: var(--muted); font: 500 .85rem/1.2 var(--font-mono); background: radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--ink) 14%, transparent) 0 14%, transparent 14.5%); padding-top: 2.6rem; }
+.sp-cta { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1.5rem; margin-top: 2rem; }
+
+/* ==================== 常见问题 ==================== */
+.faq { border-top: 2px solid var(--ink); max-width: 56rem; }
+.faq details { border-bottom: 1px solid var(--ink); }
+.faq summary { display: flex; justify-content: space-between; gap: 1rem; padding: 1.15rem 0; font-weight: 700; font-size: 1.08rem; cursor: pointer; list-style: none; transition: color .2s; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font: 500 1.4rem/1 var(--font-mono); flex: none; transition: transform .25s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq summary:hover { color: var(--brand-deep); }
+.faq summary:active { color: var(--muted); }
+.faq details p { padding: 0 0 1.25rem; color: var(--muted); max-width: 46rem; }
+
+/* ==================== 报名 ==================== */
+.reg-grid { display: grid; gap: 2.5rem 3rem; }
+@media (min-width: 900px) { .reg-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); } }
+.reg-side p { color: var(--on-ink-muted); margin-top: 1rem; }
+.reg-side .alts { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.5rem; }
+.form { display: grid; gap: 1rem; background: var(--surface); color: var(--text); padding: clamp(1.25rem, 4vw, 2rem); border: 2px solid var(--brand); }
+.form .row { display: grid; gap: 1rem; }
+@media (min-width: 600px) { .form .row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.form label { display: grid; gap: .35rem; font-size: .92rem; font-weight: 600; }
+.form input, .form select { width: 100%; min-height: 48px; padding: .6rem .8rem; border: 2px solid var(--ink); border-radius: var(--radius); background: var(--bg); font-weight: 400; }
+.form input:focus-visible, .form select:focus-visible { outline: 3px solid var(--brand-deep); outline-offset: 1px; }
+.form small { color: var(--muted); }
+.form .btn { justify-self: start; }
+
+/* ==================== 页脚 ==================== */
+.site-footer { padding-block: 3.5rem 2rem; font-size: .92rem; }
+.foot-top { display: grid; gap: 2rem; border-top: 3px solid var(--ink); padding-top: 1.5rem; }
+@media (min-width: 800px) { .foot-top { grid-template-columns: minmax(0, 5fr) minmax(0, 4fr) minmax(0, 3fr); } }
+.foot-top address { font-style: normal; color: var(--muted); }
+.foot-top address a, .foot-links a { transition: color .2s; }
+.foot-top address a:hover, .foot-links a:hover { color: var(--brand-deep); }
+.foot-top address a:active, .foot-links a:active { color: var(--text); }
+.foot-top h2 { font-size: .95rem; margin-bottom: .6rem; letter-spacing: 0; }
+.foot-links { display: grid; gap: .4rem; }
+.foot-big { font: 900 clamp(3rem, 13vw, 11rem)/.85 var(--font-display); letter-spacing: -.05em; margin-top: 3rem; overflow-wrap: break-word; }
+.foot-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem 2rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); }
+.social { display: flex; gap: 1.25rem; }
+
+/* ---------- 手机底部固定按钮 ---------- */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 40; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem; padding: .6rem var(--pad) calc(.6rem + env(safe-area-inset-bottom)); background: var(--bg); border-top: 2px solid var(--ink); }
+.sticky-cta .btn { min-height: 48px; }
+@media (max-width: 760px) { body { padding-bottom: 4.6rem; } }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- 卷动渐入（只在有 JS 时先隐藏） ---------- */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+</style>
+
+<!-- JSON-LD 结构化数据：类型为 Event（活动）。请换成真实的活动名称、日期、场地、票价与讲者。 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "小店数字转型论坛 2027",
+  "description": "给中部小店老板的一日数字转型论坛，8 位讲者、12 场议程与实作工作坊。",
+  "startDate": "2027-04-17T09:00:00+08:00",
+  "endDate": "2027-04-17T17:30:00+08:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "光点会议中心",
+    "address": { "@type": "PostalAddress", "streetAddress": "西区民权路 312 号 3 楼", "addressLocality": "台中市", "postalCode": "403", "addressCountry": "TW" }
+  },
+  "organizer": { "@type": "Organization", "name": "中城小店数字协会", "telephone": "04-2345-6789", "url": "https://example.com" },
+  "offers": [
+    { "@type": "Offer", "name": "早鸟票", "price": "1200", "priceCurrency": "TWD", "validThrough": "2027-02-28T23:59:59+08:00", "availability": "https://schema.org/InStock", "url": "https://example.com/#register" },
+    { "@type": "Offer", "name": "一般票", "price": "1800", "priceCurrency": "TWD", "availability": "https://schema.org/InStock", "url": "https://example.com/#register" },
+    { "@type": "Offer", "name": "团体票（每人）", "price": "1500", "priceCurrency": "TWD", "availability": "https://schema.org/InStock", "url": "https://example.com/#register" }
+  ],
+  "performer": [
+    { "@type": "Person", "name": "林佳蓉" }, { "@type": "Person", "name": "陈柏翰" },
+    { "@type": "Person", "name": "黄怡君" }, { "@type": "Person", "name": "张志明" },
+    { "@type": "Person", "name": "吴欣怡" }, { "@type": "Person", "name": "蔡宗翰" },
+    { "@type": "Person", "name": "李美玲" }, { "@type": "Person", "name": "王俊杰" }
+  ]
+}
+</script>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到主要内容</a>
+
+<!-- ==================== 区块：页眉 ==================== -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"></span><span>小店数字转型论坛 <span class="num">2027</span></span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="打开菜单"><span></span></button>
+    <nav class="menu" id="menu" aria-label="主要菜单">
+      <a href="#who">适合谁</a>
+      <a href="#speakers">讲者</a>
+      <a href="#agenda">议程</a>
+      <a href="#tickets">票种</a>
+      <a href="#venue">交通</a>
+      <a class="opt" href="#sponsors">赞助</a>
+      <a class="opt" href="#faq">常见问题</a>
+      <a class="btn btn-brand" href="#register">报名</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ==================== 区块：首屏 ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>小店数字转型论坛<span class="yr">2027</span></h1>
+      <p class="hero-lead">一天、八位讲者、三堂小班工作坊，带走明天就能在店里用的做法。</p>
+      <div class="hero-cta">
+        <a class="btn btn-brand" href="#register">立即报名</a>
+        <a class="btn btn-line" href="#agenda">看议程</a>
+      </div>
+      <div class="cd" role="timer" aria-label="距离开场倒数">
+        <span>距离开场</span>
+        <span><b class="num">--</b>天</span>
+        <span><b class="num">--</b>时</span>
+        <span><b class="num">--</b>分</span>
+        <span><b class="num">--</b>秒</span>
+      </div>
+      <p class="cd-done" hidden>本届论坛已圆满结束，谢谢每一位来参加的店家。</p>
+      <dl class="facts">
+        <div><dt>日期</dt><dd>2027.04.17（六）</dd></div>
+        <div><dt>时间</dt><dd>09:00–17:30</dd></div>
+        <div><dt>地点</dt><dd>台中 光点会议中心</dd></div>
+        <div><dt>名额</dt><dd>400 位</dd></div>
+      </dl>
+    </div>
+    <div class="img img-hero" role="img" aria-label="海报式几何图形，写着 4 月 17 日">
+      <span class="d d1" aria-hidden="true">04</span>
+      <span class="d d2" aria-hidden="true">17</span>
+      <span class="tag t1" aria-hidden="true">2027</span>
+      <span class="tag t2" aria-hidden="true">周六 09:00 台中</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：这场活动适合谁 ==================== -->
+<section class="alt" id="who">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-no" aria-hidden="true">01／07</span>
+      <div>
+        <h2>这场活动适合谁</h2>
+        <p>不讲大企业的转型理论，只谈小店真的做得到的事。讲者都是自己开店、或天天陪小店解决问题的人。</p>
+      </div>
+    </div>
+    <div class="who-grid reveal">
+      <article>
+        <span class="n" aria-hidden="true">01</span>
+        <h3>想开始在线接单的实体店</h3>
+        <p>客人一直问能不能先订，但你还在用电话和纸本记。这一天帮你选出第一套工具。</p>
+      </article>
+      <article>
+        <span class="n" aria-hidden="true">02</span>
+        <h3>有粉专但营收卡关的品牌</h3>
+        <p>贴文有人按赞，却很少变成订单。学会用 LINE 会员和短影音把熟客留下来。</p>
+      </article>
+      <article>
+        <span class="n" aria-hidden="true">03</span>
+        <h3>想把库存、会员搬上线的老店</h3>
+        <p>帐本写了二十年，不知道从哪里开始改。听听同样是老店的人怎么一步一步换。</p>
+      </article>
+      <article>
+        <span class="n" aria-hidden="true">04</span>
+        <h3>刚接手家业的第二代</h3>
+        <p>想改变又怕和长辈起冲突。现场有同样处境的店主分享，也能认识一起奋斗的伙伴。</p>
+      </article>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="stats reveal">
+      <div><b>8</b><span>位实战讲者</span></div>
+      <div><b>12</b><span>场议程与工作坊</span></div>
+      <div><b>400</b><span>个现场名额</span></div>
+      <div><b>92%</b><span>去年参加者愿意推荐</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：讲者 ==================== -->
+<section id="speakers">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-no" aria-hidden="true">02／07</span>
+      <div>
+        <h2>八位讲者，都在第一线</h2>
+        <p>点「讲者介绍」看完整经历。讲者与讲题可能微调，以活动当天公告为准。</p>
+      </div>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="sp-grid">
+      <article class="sp reveal">
+        <div class="img pt p1" role="img" aria-label="林佳蓉的照片预留位置"></div>
+        <h3>林佳蓉</h3>
+        <p class="sp-role">巷口咖啡 共同创办人</p>
+        <p class="sp-talk">12 坪咖啡店，怎么靠 LINE 会员做到七成回客</p>
+        <button class="sp-more" type="button" aria-haspopup="dialog">讲者介绍<span class="sr">：林佳蓉</span></button>
+        <div class="bio"><p>2016 年和大学同学在台中巷弄开了第一间咖啡店，三年内开到三家。她把集点卡全部改成 LINE 会员，现在每月的营收有七成来自回头客。</p><p>这场会分享会员分级、推播频率与优惠设计的实际数字。</p></div>
+      </article>
+      <article class="sp reveal">
+        <div class="img pt p2" role="img" aria-label="陈柏翰的照片预留位置"></div>
+        <h3>陈柏翰</h3>
+        <p class="sp-role">零售顾问，前连锁超市数字长</p>
+        <p class="sp-talk">小店的库存数字化：先别急着买系统</p>
+        <button class="sp-more" type="button" aria-haspopup="dialog">讲者介绍<span class="sr">：陈柏翰</span></button>
+        <div class="bio"><p>在连锁通路做了十二年数字化，离开后专门陪小店导入工具。他最常说的一句话是：流程没想清楚，买什么系统都一样乱。</p><p>这场会用三间店的实例，说明盘点、进货与报表该怎么起步。</p></div>
+      </article>
+      <article class="sp reveal">
+        <div class="img pt p3" role="img" aria-label="黄怡君的照片预留位置"></div>
+        <h3>黄怡君</h3>
+        <p class="sp-role">社群行销讲师</p>
+        <p class="sp-talk">不追流量也能卖：在地小店的短影音脚本</p>
+        <button class="sp-more" type="button" aria-haspopup="dialog">讲者介绍<span class="sr">：黄怡君</span></button>
+        <div class="bio"><p>帮超过两百家小吃店、美发院与花店拍过短影音。她的方法不靠跳舞和热门音乐，而是把老板最自然的一面拍出来。</p><p>下午另开一堂小班实作，带你用手机写出第一支脚本。</p></div>
+      </article>
+      <article class="sp reveal">
+        <div class="img pt p4" role="img" aria-label="张志明的照片预留位置"></div>
+        <h3>张志明</h3>
+        <p class="sp-role">老张五金 第二代经营者</p>
+        <p class="sp-talk">五金行上电商三年，我们做错的五件事</p>
+        <button class="sp-more" type="button" aria-haspopup="dialog">讲者介绍<span class="sr">：张志明</span></button>
+        <div class="bio"><p>三十年的社区五金行，在他接手后开始经营电商平台。第一年赔钱、第二年打平、第三年在线营收追上门市。</p><p>他会很诚实地说出那些花钱买到的教训。</p></div>
+      </article>
+      <article class="sp reveal">
+        <div class="img pt p5" role="img" aria-label="吴欣怡的照片预留位置"></div>
+        <h3>吴欣怡</h3>
+        <p class="sp-role">电商营运经理</p>
+        <p class="sp-talk">官网、平台、团购：三种通路怎么分配心力</p>
+        <button class="sp-more" type="button" aria-haspopup="dialog">讲者介绍<span class="sr">：吴欣怡</span></button>
+        <div class="bio"><p>负责过食品、选物与保养品牌的在线通路，擅长用简单的试算表算出每个通路真正赚多少。</p><p>这场会给你一张可以带回去填的通路评估表。</p></div>
+      </article>
+      <article class="sp reveal">
+        <div class="img pt p6" role="img" aria-label="蔡宗翰的照片预留位置"></div>
+        <h3>蔡宗翰</h3>
+        <p class="sp-role">金流与支付系统工程师</p>
+        <p class="sp-talk">行动支付、电子发票，一次弄懂不踩雷</p>
+        <button class="sp-more" type="button" aria-haspopup="dialog">讲者介绍<span class="sr">：蔡宗翰</span></button>
+        <div class="bio"><p>在支付公司负责商家串接八年，看过最多小店卡在手续费、对帐和发票设置。</p><p>他会用白话比较常见的收款方式，并开放现场提问。</p></div>
+      </article>
+      <article class="sp reveal">
+        <div class="img pt p7" role="img" aria-label="李美玲的照片预留位置"></div>
+        <h3>李美玲</h3>
+        <p class="sp-role">日日花事 主理人</p>
+        <p class="sp-talk">预约制花店：用一张表单取代整天的电话</p>
+        <button class="sp-more" type="button" aria-haspopup="dialog">讲者介绍<span class="sr">：李美玲</span></button>
+        <div class="bio"><p>一个人经营的花店，曾经一天接四十通电话。改成在线预约后，她终于有时间好好包花。</p><p>工作坊会带大家现场做出自己的预约表单。</p></div>
+      </article>
+      <article class="sp reveal">
+        <div class="img pt p8" role="img" aria-label="王俊杰的照片预留位置"></div>
+        <h3>王俊杰</h3>
+        <p class="sp-role">数据分析师</p>
+        <p class="sp-talk">一张试算表，看懂你的回购率</p>
+        <button class="sp-more" type="button" aria-haspopup="dialog">讲者介绍<span class="sr">：王俊杰</span></button>
+        <div class="bio"><p>白天替零售品牌做数据分析，晚上在社区大学教小店老板用试算表。他相信不用昂贵的工具，也能看懂自己的生意。</p><p>请携带笔电，现场附范本文件。</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 讲者介绍对话框（由 JS 填入内容；Esc 或关闭键可关闭） -->
+<dialog class="dlg" id="bio-dlg" aria-labelledby="dlg-title">
+  <div class="dlg-in">
+    <div class="dlg-top">
+      <div class="img pt dlg-art" role="img" aria-label=""></div>
+      <div>
+        <h2 id="dlg-title">讲者</h2>
+        <p class="dlg-role"></p>
+      </div>
+      <button class="dlg-close" type="button" aria-label="关闭讲者介绍">×</button>
+    </div>
+    <p class="dlg-talk"></p>
+    <div class="dlg-body"></div>
+    <a class="btn btn-brand" href="#register" data-close>报名听这场</a>
+  </div>
+</dialog>
+
+<!-- ==================== 区块：议程 ==================== -->
+<section class="dark" id="agenda">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-no" aria-hidden="true">03／07</span>
+      <div>
+        <h2>议程</h2>
+        <p>主讲堂与工作坊同时进行，可以自由移动。工作坊每堂限 40 人，当天依序入座。</p>
+      </div>
+    </div>
+    <div class="ag-bar">
+      <div class="tabs" role="tablist" aria-label="议程分轨">
+        <button type="button" role="tab" id="t-main" aria-controls="p-main" aria-selected="true">主讲堂</button>
+        <button type="button" role="tab" id="t-ws" aria-controls="p-ws" aria-selected="false" tabindex="-1">工作坊</button>
+        <button type="button" role="tab" id="t-net" aria-controls="p-net" aria-selected="false" tabindex="-1">报到与交流</button>
+      </div>
+      <!-- 行事历文件由 JS 依照活动时间自动产生，改活动时间请改 script 里的 START、END -->
+      <a class="btn btn-ghost ics" href="#agenda" download="small-shop-forum-2027.ics">加入行事历</a>
+    </div>
+
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="panel" id="p-main" role="tabpanel" aria-labelledby="t-main" tabindex="0">
+      <h3 class="panel-h">主讲堂<small>3F 大厅，400 席</small></h3>
+      <ol class="sched">
+        <li><span class="t">09:00–09:20</span><div><b>开幕：今年小店最该做的三件事</b><span class="who">中城小店数字协会</span></div><span class="room">3F 主讲堂</span></li>
+        <li><span class="t">09:20–10:00</span><div><b>12 坪咖啡店，怎么靠 LINE 会员做到七成回客</b><span class="who">林佳蓉</span></div><span class="room">3F 主讲堂</span></li>
+        <li><span class="t">10:10–10:50</span><div><b>小店的库存数字化：先别急着买系统</b><span class="who">陈柏翰</span></div><span class="room">3F 主讲堂</span></li>
+        <li><span class="t">11:00–11:40</span><div><b>五金行上电商三年，我们做错的五件事</b><span class="who">张志明</span></div><span class="room">3F 主讲堂</span></li>
+        <li class="brk"><span class="t">11:40–13:00</span><div><b>午餐与摊位交流</b></div><span class="room">2F 展区</span></li>
+        <li><span class="t">13:00–13:40</span><div><b>官网、平台、团购：三种通路怎么分配心力</b><span class="who">吴欣怡</span></div><span class="room">3F 主讲堂</span></li>
+        <li><span class="t">13:50–14:30</span><div><b>不追流量也能卖：在地小店的短影音脚本</b><span class="who">黄怡君</span></div><span class="room">3F 主讲堂</span></li>
+        <li><span class="t">14:40–15:30</span><div><b>圆桌座谈：第一套系统该怎么选</b><span class="who">林佳蓉、陈柏翰、吴欣怡</span></div><span class="room">3F 主讲堂</span></li>
+        <li><span class="t">15:40–16:20</span><div><b>行动支付、电子发票，一次弄懂不踩雷</b><span class="who">蔡宗翰</span></div><span class="room">3F 主讲堂</span></li>
+        <li><span class="t">16:30–17:30</span><div><b>闭幕、抽奖与自由交流</b><span class="who">全体讲者</span></div><span class="room">3F 主讲堂</span></li>
+      </ol>
+    </div>
+    <div class="panel" id="p-ws" role="tabpanel" aria-labelledby="t-ws" tabindex="0">
+      <h3 class="panel-h">工作坊<small>5F 教室，每堂 40 席</small></h3>
+      <ol class="sched">
+        <li><span class="t">10:10–11:40</span><div><b>预约表单实作：一小时做出你的在线预约</b><span class="who">李美玲</span></div><span class="room">5F 教室 A</span></li>
+        <li><span class="t">10:10–11:40</span><div><b>收款设置诊疗室：带着你的问题来</b><span class="who">蔡宗翰</span></div><span class="room">5F 教室 B</span></li>
+        <li><span class="t">13:00–14:30</span><div><b>回购率试算表实作（请带笔电）</b><span class="who">王俊杰</span></div><span class="room">5F 教室 A</span></li>
+        <li><span class="t">14:40–16:10</span><div><b>手机拍短影音：写出你的第一支脚本</b><span class="who">黄怡君</span></div><span class="room">5F 教室 B</span></li>
+      </ol>
+    </div>
+    <div class="panel" id="p-net" role="tabpanel" aria-labelledby="t-net" tabindex="0">
+      <h3 class="panel-h">报到与交流<small>全天开放</small></h3>
+      <ol class="sched">
+        <li class="brk"><span class="t">08:30–09:00</span><div><b>报到、领取名牌与讲义</b></div><span class="room">1F 大厅</span></li>
+        <li class="brk"><span class="t">11:40–13:00</span><div><b>午餐便当与服务商摊位</b></div><span class="room">2F 展区</span></li>
+        <li><span class="t">12:00–13:00</span><div><b>一对一咨询（团体票优先预约）</b><span class="who">讲者与顾问轮值</span></div><span class="room">2F 咨询区</span></li>
+        <li class="brk"><span class="t">15:30–16:00</span><div><b>下午茶与名片交换</b></div><span class="room">2F 展区</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：票种 ==================== -->
+<section id="tickets">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-no" aria-hidden="true">04／07</span>
+      <div>
+        <h2>票种</h2>
+        <p>所有票种都包含全天议程、工作坊入座资格、午餐与讲义。早鸟票会在截止时间后自动关闭。</p>
+      </div>
+    </div>
+    <div class="tk-grid reveal">
+      <!-- 早鸟票：data-until 是截止时间（台湾时间 +08:00），过了这个时间会自动显示「已截止」 -->
+      <article class="tk hot" data-until="2027-02-28T23:59:59+08:00">
+        <span class="tk-state">早鸟优惠至 2/28</span>
+        <h3>早鸟票</h3>
+        <p class="tk-price"><small>NT$</small>1,200</p>
+        <ul><li>全天议程与工作坊</li><li>午餐便当与下午茶</li><li>讲者演示文稿电子档</li></ul>
+        <a class="btn btn-brand" href="#register">抢早鸟票</a>
+      </article>
+      <article class="tk">
+        <span class="tk-state">开卖中</span>
+        <h3>一般票</h3>
+        <p class="tk-price"><small>NT$</small>1,800</p>
+        <ul><li>全天议程与工作坊</li><li>午餐便当与下午茶</li><li>讲者演示文稿电子档</li></ul>
+        <a class="btn btn-line" href="#register">购买一般票</a>
+      </article>
+      <article class="tk">
+        <span class="tk-state">3 人以上</span>
+        <h3>团体票</h3>
+        <p class="tk-price"><small>NT$</small>1,500<small>／人</small></p>
+        <ul><li>一般票的所有内容</li><li>优先预约一对一咨询</li><li>同桌座位安排</li></ul>
+        <a class="btn btn-line" href="#register">团体报名</a>
+      </article>
+    </div>
+    <p class="tk-note">需要统一编号收据，或想用公司名义包场 10 人以上，请来电 <a class="link" href="tel:0423456789">04-2345-6789</a>。</p>
+  </div>
+</section>
+
+<!-- ==================== 区块：场地交通 ==================== -->
+<section class="alt" id="venue">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-no" aria-hidden="true">05／07</span>
+      <div>
+        <h2>场地交通</h2>
+        <p>会场在台中火车站附近，搭大众运输最方便。周边停车位有限，建议提早出门。</p>
+      </div>
+    </div>
+    <div class="venue-grid">
+      <div class="img img-map reveal" role="img" aria-label="光点会议中心位置示意地图"><span aria-hidden="true">光点会议中心</span></div>
+      <div class="venue reveal">
+        <h3>光点会议中心 3 楼</h3>
+        <address>台中市西区民权路 312 号</address>
+        <ul class="transit">
+          <li><b>台铁</b><span>台中车站下车，步行约 12 分钟。</span></li>
+          <li><b>高铁</b><span>高铁台中站转搭台铁区间车到台中车站，约 15 分钟。</span></li>
+          <li><b>公车</b><span>搭到「民权路口」站下车，步行 2 分钟。</span></li>
+          <li><b>开车</b><span>地下停车场 80 格，凭报名序号折抵 3 小时。</span></li>
+        </ul>
+        <div class="venue-cta">
+          <a class="btn btn-brand" href="https://maps.google.com/?q=台中市西区民权路312号" target="_blank" rel="noopener">在 Google 地图打开</a>
+          <a class="btn btn-line" href="tel:0423456789">来电询问</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：赞助方案 ==================== -->
+<section id="sponsors">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-no" aria-hidden="true">06／07</span>
+      <div>
+        <h2>赞助方案</h2>
+        <p>现场有 400 位正在找工具的小店老板。欢迎服务商、在地品牌与单位一起支持。</p>
+      </div>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="sp-tiers reveal">
+      <article><h3>主力伙伴</h3><span class="price">NT$120,000，限 2 名</span><p>主讲堂冠名一场议程、2F 大型摊位、主视觉与网站 Logo、10 张活动票券。</p></article>
+      <article><h3>协办伙伴</h3><span class="price">NT$60,000，限 6 名</span><p>2F 标准摊位、网站与手册 Logo、会后参加者问卷摘要、5 张活动票券。</p></article>
+      <article><h3>摊位伙伴</h3><span class="price">NT$20,000</span><p>2F 小型摊位一桌、网站 Logo、2 张活动票券。</p></article>
+    </div>
+    <div class="logos reveal">
+      <div class="img logo-slot" role="img" aria-label="赞助商 Logo 预留位置">你的 Logo</div>
+      <div class="img logo-slot" role="img" aria-label="赞助商 Logo 预留位置">你的 Logo</div>
+      <div class="img logo-slot" role="img" aria-label="赞助商 Logo 预留位置">你的 Logo</div>
+      <div class="img logo-slot" role="img" aria-label="赞助商 Logo 预留位置">你的 Logo</div>
+      <div class="img logo-slot" role="img" aria-label="赞助商 Logo 预留位置">你的 Logo</div>
+      <div class="img logo-slot" role="img" aria-label="赞助商 Logo 预留位置">你的 Logo</div>
+    </div>
+    <div class="sp-cta reveal">
+      <a class="btn btn-line" href="mailto:sponsor@example.com">索取赞助企划书</a>
+      <a class="link" href="https://line.me/R/ti/p/@yourlineid">用 LINE 联系我们</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：常见问题 ==================== -->
+<section class="alt" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-no" aria-hidden="true">07／07</span>
+      <div>
+        <h2>常见问题</h2>
+        <p>其他问题可以在周一至周五 10:00–18:00 来电 <a class="link" href="tel:0423456789">04-2345-6789</a>，或用 <a class="link" href="https://line.me/R/ti/p/@yourlineid">LINE 询问</a>。</p>
+      </div>
+    </div>
+    <div class="faq reveal">
+      <details><summary>工作坊要另外付费或报名吗？</summary><p>不用。所有票种都能参加工作坊，每堂限 40 人，当天开场前 10 分钟依序入座，额满就关门。</p></details>
+      <details><summary>可以开立统一编号的收据吗？</summary><p>可以。报名时在备注填写公司擡头与统一编号，电子收据会在活动结束后 7 天内寄到你的信箱。</p></details>
+      <details><summary>报名后不能去，可以退票吗？</summary><p>活动 14 天前申请可全额退费，7 至 13 天前退费八成，7 天内不退费，但可以免费转让给同事或朋友。</p></details>
+      <details><summary>会有录像或演示文稿下载吗？</summary><p>主讲堂的议程会录像，活动后两周寄给所有参加者观看。讲者同意公开的演示文稿，会在当天晚上寄出。</p></details>
+      <details><summary>会场有提供午餐吗？素食可以吗？</summary><p>有，所有票种都含午餐便当与下午茶。报名表可以选择荤食或素食。</p></details>
+      <details><summary>可以带小孩或推婴儿车进场吗？</summary><p>可以。会场有电梯与哺乳室，12 岁以下孩童陪同入场免费，但不另外提供座位。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：报名 ==================== -->
+<section class="dark" id="register">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-no" aria-hidden="true">报名</span>
+      <div>
+        <h2>报名小店数字转型论坛 2027</h2>
+      </div>
+    </div>
+    <div class="reg-grid">
+      <div class="reg-side reveal">
+        <p>填好表单后，我们会在 3 个工作天内寄出付款链接与报名序号。付款完成才算保留座位。</p>
+        <p>团体报名请在备注写下同行者姓名，我们会安排同桌。</p>
+        <div class="alts">
+          <a class="btn btn-ghost" href="tel:0423456789">电话 04-2345-6789</a>
+          <a class="btn btn-ghost" href="https://line.me/R/ti/p/@yourlineid">LINE 询问</a>
+        </div>
+      </div>
+      <!-- 报名表单：到 https://formspree.io 免费注册，创建表单后把 your-form-id 换成你的表单 ID，报名数据就会寄到你的信箱。
+           如果你用 Accupass 活动通或 KKTIX 售票，可以把整个 <form> 换成一颗按钮：
+           <a class="btn btn-brand" href="https://你的活动页网址">前往售票页</a>，上面所有「立即报名」链接也一起改成这个网址。 -->
+      <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="row">
+          <label>姓名<input name="name" autocomplete="name" required></label>
+          <label>手机<input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="0912-345-678" required></label>
+        </div>
+        <label>Email<input name="email" type="email" autocomplete="email" placeholder="name@example.com" required></label>
+        <div class="row">
+          <label>店家名称（选填）<input name="shop" autocomplete="organization"></label>
+          <label>产业
+            <select name="industry">
+              <option>餐饮、咖啡</option><option>零售、选物</option><option>美容、美发</option><option>工作室、服务业</option><option>其他</option>
+            </select>
+          </label>
+        </div>
+        <div class="row">
+          <label>票种
+            <select name="ticket" required>
+              <option value="early" data-until="2027-02-28T23:59:59+08:00">早鸟票 NT$1,200</option>
+              <option value="general">一般票 NT$1,800</option>
+              <option value="group">团体票 NT$1,500／人（3 人以上）</option>
+            </select>
+          </label>
+          <label>人数<input name="qty" type="number" min="1" max="20" value="1" inputmode="numeric"></label>
+        </div>
+        <label>备注（统一编号、素食、同行者）<input name="note"></label>
+        <input type="hidden" name="_subject" value="小店数字转型论坛 2027 新报名">
+        <button class="btn btn-brand" type="submit">送出报名</button>
+        <small>送出即表示同意我们用这些数据联系你活动相关事宜，不会寄广告信。</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ==================== 区块：页脚 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"></span><span>小店数字转型论坛 <span class="num">2027</span></span></a>
+        <p style="margin-top:.8rem">主办：中城小店数字协会</p>
+        <address>
+          <a href="https://maps.google.com/?q=台中市西区民权路312号">会场：台中市西区民权路 312 号 3 楼</a><br>
+          <a href="tel:0423456789">04-2345-6789</a><br>
+          服务时间：周一至周五 10:00–18:00
+        </address>
+      </div>
+      <div>
+        <h2>活动信息</h2>
+        <div class="foot-links"><a href="#speakers">讲者</a><a href="#agenda">议程</a><a href="#tickets">票种</a><a href="#venue">场地交通</a></div>
+      </div>
+      <div>
+        <h2>联系</h2>
+        <div class="foot-links"><a href="#sponsors">赞助合作</a><a href="#faq">常见问题</a><a href="https://line.me/R/ti/p/@yourlineid">LINE 官方帐号</a></div>
+      </div>
+    </div>
+    <p class="foot-big" aria-hidden="true">04.17</p>
+    <div class="foot-bottom">
+      <p>© <span id="y"></span> 中城小店数字协会</p>
+      <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">YouTube</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== 区块：手机底部固定按钮 ==================== -->
+<div class="sticky-cta">
+  <a class="btn btn-brand" href="#register">立即报名</a>
+  <a class="btn btn-line" href="https://line.me/R/ti/p/@yourlineid">LINE 询问</a>
+</div>
+
+<script>
+(function () {
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return [].slice.call((c || document).querySelectorAll(s)); };
+  var header = $('.site-header'), burger = $('.burger'), menu = $('#menu'), now = Date.now();
+
+  // 页眉卷动背景与汉堡菜单
+  function onScroll() { header.classList.toggle('scrolled', menu.classList.contains('open') || scrollY > 10); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  function setMenu(open) { menu.classList.toggle('open', open); burger.setAttribute('aria-expanded', open); burger.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单'); onScroll(); }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  $$('a', menu).forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // 活动时间：改这里（台湾时间 +08:00），倒数与行事历文件都会跟着变
+  var START = new Date('2027-04-17T09:00:00+08:00'), END = new Date('2027-04-17T17:30:00+08:00');
+  var cells = $$('.cd b'), timer;
+  function tick() {
+    var t = Math.max(0, START - Date.now());
+    [Math.floor(t / 864e5), Math.floor(t / 36e5) % 24, Math.floor(t / 6e4) % 60, Math.floor(t / 1e3) % 60]
+      .forEach(function (v, i) { cells[i].textContent = String(v).padStart(2, '0'); });
+    if (!t) { clearInterval(timer); $('.cd').hidden = true; $('.cd-done').hidden = Date.now() < END; }
+  }
+  tick(); timer = setInterval(tick, 1000);
+
+  // 早鸟截止：过了 data-until 的时间就自动标示已截止
+  $$('[data-until]').forEach(function (el) {
+    if (now <= new Date(el.dataset.until)) return;
+    if (el.tagName === 'OPTION') { el.disabled = true; el.textContent += '（已截止）'; if (el.selected) el.nextElementSibling.selected = true; return; }
+    el.classList.remove('hot'); el.classList.add('closed');
+    $('.tk-state', el).textContent = '已截止';
+    var b = $('.btn', el); b.textContent = '早鸟已截止'; b.removeAttribute('href'); b.setAttribute('aria-disabled', 'true');
+  });
+
+  // 议程分页（左右方向键可切换）
+  var tabs = $$('[role="tab"]');
+  function show(tab, focus) {
+    tabs.forEach(function (t) { var on = t === tab; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; $('#' + t.getAttribute('aria-controls')).hidden = !on; });
+    if (focus) tab.focus();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { show(t); });
+    t.addEventListener('keydown', function (e) { var d = { ArrowRight: 1, ArrowLeft: -1 }[e.key]; if (d) show(tabs[(i + d + tabs.length) % tabs.length], true); });
+  });
+  show(tabs[0]);
+
+  // 加入行事历：产生整天活动的 .ics 档
+  var f = function (d) { return d.toISOString().replace(/[-:]|\.\d{3}/g, ''); };
+  var ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//conference-template//ZH', 'BEGIN:VEVENT', 'UID:forum-2027@example.com', 'DTSTAMP:' + f(new Date()),
+    'DTSTART:' + f(START), 'DTEND:' + f(END), 'SUMMARY:小店数字转型论坛 2027', 'LOCATION:光点会议中心 3 楼 台中市西区民权路 312 号',
+    'DESCRIPTION:议程与交通信息请见活动网站', 'URL:' + location.href.split('#')[0], 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+  $$('.ics').forEach(function (a) { a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' })); });
+
+  // 讲者介绍对话框：Esc 关闭、Tab 键锁在框内、关闭后焦点回到原按钮
+  var dlg = $('#bio-dlg'), art = $('.dlg-art', dlg), last;
+  $$('.sp-more').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var card = b.closest('.sp'), pic = $('.pt', card);
+      $('#dlg-title').textContent = $('h3', card).textContent;
+      $('.dlg-role', dlg).textContent = $('.sp-role', card).textContent;
+      $('.dlg-talk', dlg).textContent = $('.sp-talk', card).textContent;
+      $('.dlg-body', dlg).innerHTML = $('.bio', card).innerHTML;
+      art.className = pic.className + ' dlg-art'; art.setAttribute('aria-label', pic.getAttribute('aria-label'));
+      last = b; dlg.showModal(); $('.dlg-close', dlg).focus();
+    });
+  });
+  $$('.dlg-close, [data-close]', dlg).forEach(function (b) { b.addEventListener('click', function () { if (b.dataset.close != null) last = null; dlg.close(); }); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('close', function () { if (last) last.focus(); });
+  dlg.addEventListener('keydown', function (e) {
+    if (e.key !== 'Tab') return;
+    var items = $$('button, a[href]', dlg), first = items[0], end = items[items.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); end.focus(); }
+    else if (!e.shiftKey && document.activeElement === end) { e.preventDefault(); first.focus(); }
+  });
+
+  // 卷动渐入
+  var targets = $$('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) { entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+    targets.forEach(function (el) { io.observe(el); });
+  } else { targets.forEach(function (el) { el.classList.add('in'); }); }
+
+  $('#y').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

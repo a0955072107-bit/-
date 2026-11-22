@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>霧光 Atelier｜台中西區預約制美髮美甲沙龍</title>
+<meta name="description" content="霧光 Atelier 是台中西區美村路上的預約制美髮美甲沙龍。剪髮、染髮、燙髮、護髮與凝膠美甲，一次只服務少數客人，把時間留給自己。">
+<meta property="og:title" content="霧光 Atelier｜把時間留給自己。">
+<meta property="og:description" content="台中西區預約制美髮美甲沙龍。剪髮、染髮、護髮與美甲，LINE 或線上表單預約。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f3eee6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400&family=Noto+Sans+TC:wght@300;400&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #2c2420;          /* 品牌主色（濃縮咖啡墨色），用於主要按鈕 */
+  --brand-ink: #faf7f2;      /* 在品牌色上的文字顏色（暖象牙白） */
+  --accent: #8a5c49;         /* 唯一的點綴色（霧感陶土），用於小面積重點 */
+  --bg: #f3eee6;             /* 整站背景（暖象牙） */
+  --surface: #faf7f2;        /* 卡片、表單表面色（帶暖調的白） */
+  --surface-2: #ebe4d9;      /* 次要區塊背景（燕麥色） */
+  --text: #2c2420;           /* 主要文字（濃縮咖啡色） */
+  --muted: #6b5f56;          /* 次要文字、圖說 */
+  --line: #d8cec1;           /* 細分隔線、邊框 */
+  --film-light: #f7ecdc;     /* 佔位圖用：窗光、高光 */
+  --oat: #e6dacb;            /* 佔位圖用：燕麥、亞麻 */
+  --greige: #cbbfb0;         /* 佔位圖用：灰米色牆面 */
+  --taupe: #a39282;          /* 佔位圖用：柔和灰褐 */
+  --umber: #6e5a4c;          /* 佔位圖用：陰影、枝條 */
+  --hair: #4a3a30;           /* 佔位圖用：深棕髮色 */
+  --hair-milk: #8b7462;      /* 佔位圖用：奶茶髮色 */
+  --skin: #d9bca5;           /* 佔位圖用：膚色 */
+  --clay-soft: #b88a74;      /* 佔位圖用：淡陶土色（指甲油、乾燥花） */
+  --film-deep: #2e2520;      /* 佔位圖用：暗角、動態檢視器背景 */
+  --shadow: color-mix(in srgb, var(--film-deep) 14%, transparent); /* 陰影色 */
+  --radius: 2px;             /* 按鈕與卡片的圓角（高級感用小圓角） */
+  --font-heading: "Cormorant Garamond", "Noto Serif TC", "Songti TC", serif; /* 標題字型（細襯線） */
+  --font-body: "Jost", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; /* 內文字型（細無襯線） */
+  --pad: clamp(1.25rem, 5vw, 6rem); /* 區塊左右留白 */
+  --max: 1240px;             /* 內容最大寬度 */
+  --ease: cubic-bezier(.22, .61, .2, 1); /* 動畫曲線（緩慢、克制） */
+  --story-time: 6s;          /* 限時動態每一張停留的秒數 */
+  /* 底片顆粒材質（SVG 雜訊），不需要改 */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; overflow-x: clip; -webkit-text-size-adjust: 100%; }
+html.lock { overflow: hidden; }
+body { background: var(--bg); color: var(--text); font: 300 .95rem/1.85 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-weight: 300; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+:focus-visible { outline: 1px solid var(--text); outline-offset: 4px; }
+.wrap { max-width: var(--max); margin-inline: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 200; }
+.skip:focus { left: 1rem; top: 1rem; }
+.cap { font-size: .78rem; color: var(--muted); line-height: 1.6; }
+
+/* ---------- 按鈕與文字連結 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; min-height: 3rem; padding: .8rem 1.9rem; border-radius: var(--radius); font: 400 .88rem/1 var(--font-body); border: 1px solid var(--brand); cursor: pointer; transition: background .5s var(--ease), color .5s var(--ease), transform .5s var(--ease); }
+.btn svg { width: 1.05em; height: 1.05em; fill: currentColor; flex: none; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: color-mix(in srgb, var(--brand) 84%, var(--accent)); }
+.btn-ghost { background: transparent; color: var(--text); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--text) 6%, transparent); }
+.btn:active { transform: scale(.98); }
+.tlink { font-size: .88rem; padding-bottom: .2rem; border-bottom: 1px solid var(--line); transition: border-color .4s var(--ease), color .4s var(--ease); }
+.tlink:hover { border-color: var(--text); }
+.tlink:active { color: var(--accent); }
+
+/* ---------- 區塊：頁首 ---------- */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; padding: 1.2rem var(--pad); border-bottom: 1px solid transparent; transition: background .6s var(--ease), border-color .6s var(--ease), padding .6s var(--ease); }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-color: var(--line); padding-block: .75rem; }
+.nav { max-width: var(--max); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.logo { display: inline-flex; align-items: baseline; gap: .7rem; font: 400 1.2rem/1 var(--font-heading); white-space: nowrap; }
+.logo span { font: 300 1.05rem/1 var(--font-heading); letter-spacing: .28em; color: var(--muted); }
+.logo:hover span { color: var(--text); }
+.menu { display: flex; align-items: center; gap: clamp(1.1rem, 2.4vw, 2.2rem); font-size: .85rem; }
+.menu a:not(.btn) { position: relative; padding-block: .3rem; color: var(--muted); transition: color .4s var(--ease); }
+.menu a:not(.btn):hover, .menu a:not(.btn):focus-visible { color: var(--text); }
+.menu a:not(.btn):active { color: var(--accent); }
+.menu .btn { min-height: 2.5rem; padding: .55rem 1.3rem; font-size: .82rem; }
+.burger { display: none; width: 2.75rem; height: 2.75rem; border: 0; background: transparent; cursor: pointer; position: relative; }
+.burger span, .burger::before, .burger::after { content: ""; position: absolute; left: 28%; right: 28%; height: 1px; background: var(--text); transition: transform .45s var(--ease), opacity .3s; }
+.burger::before { top: 40%; } .burger span { top: 50%; } .burger::after { top: 60%; }
+.burger[aria-expanded="true"]::before { transform: translateY(.275rem) rotate(45deg); }
+.burger[aria-expanded="true"] span { opacity: 0; }
+.burger[aria-expanded="true"]::after { transform: translateY(-.275rem) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* 沒有 JavaScript 時，選單直接換行顯示；有 JS 才收進漢堡選單 */
+  html:not(.js) *:has(> .menu) { flex-wrap: wrap; }
+  html:not(.js) header:has(.menu) { position: sticky; background: var(--bg); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .3rem 1.1rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: 0 0 auto; padding: 5.5rem var(--pad) 2rem; flex-direction: column; align-items: stretch; gap: 0; background: var(--surface); border-bottom: 1px solid var(--line); box-shadow: 0 30px 60px var(--shadow); transform: translateY(-105%); visibility: hidden; transition: transform .6s var(--ease), visibility 0s .6s; z-index: -1; font-size: 1rem; }
+  .js .menu.open { transform: none; visibility: visible; transition: transform .6s var(--ease); }
+  .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line); color: var(--text); }
+  .js .menu .btn { margin-top: 1.4rem; min-height: 3rem; }
+}
+
+/* ---------- 通用區塊 ---------- */
+section { padding: clamp(5rem, 14vh, 10rem) var(--pad); }
+.h2 { font: 300 clamp(2.1rem, 4.8vw, 3.7rem)/1.2 var(--font-heading); }
+.lede { color: var(--muted); max-width: 30rem; margin-top: 1.2rem; }
+.oat { background: var(--surface-2); }
+.rule { border-top: 1px solid var(--line); }
+
+/* ---------- 底片感佔位圖 ----------
+   每個 .img-xx 都用漸層組成柔焦靜物，再疊上暖色濾鏡、暗角（::before）與底片顆粒（::after）。
+   換成真實照片時，只要改 background 那一行；濾鏡、暗角與顆粒會自動保留，讓整站色調一致。 */
+.img { display: block; position: relative; overflow: hidden; background-color: var(--oat); isolation: isolate; filter: saturate(.86) contrast(.97); }
+.img::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(125% 100% at 50% 42%, transparent 52%, color-mix(in srgb, var(--film-deep) 34%, transparent)), color-mix(in srgb, var(--clay-soft) 9%, transparent); mix-blend-mode: multiply; }
+.img::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: var(--grain); opacity: .32; mix-blend-mode: multiply; }
+/* 換成照片：.img-shoulder { background: url(images/hero.jpg) center/cover; }（背影、髮絲與肩線，4:5 直式） */
+.img-shoulder { --h: var(--hair); background:
+  radial-gradient(40% 30% at 12% 8%, color-mix(in srgb, var(--film-light) 95%, transparent), transparent 72%),
+  radial-gradient(5% 9% at 45% 30%, color-mix(in srgb, var(--film-light) 26%, transparent), transparent 80%),
+  radial-gradient(12% 10.5% at 50% 23%, var(--h) 0 62%, transparent 92%),
+  radial-gradient(17% 22% at 50% 40%, var(--h) 0 58%, transparent 90%),
+  radial-gradient(21% 11% at 50% 57%, var(--h) 0 38%, color-mix(in srgb, var(--h) 40%, transparent) 62%, transparent 88%),
+  radial-gradient(34% 16% at 50% 104%, var(--oat) 0 70%, transparent 86%),
+  radial-gradient(56% 40% at 50% 102%, var(--skin) 0 80%, transparent 94%),
+  radial-gradient(70% 50% at 50% 106%, color-mix(in srgb, var(--umber) 30%, transparent), transparent 80%),
+  linear-gradient(172deg, var(--oat), var(--greige)); }
+.tone-milk { --h: var(--hair-milk); }
+.tone-taupe { --h: var(--taupe); }
+.tone-umber { --h: var(--umber); }
+/* 換成照片：.img-mirror { background: url(images/mirror.jpg) center/cover; }（化妝鏡與窗光） */
+.img-mirror { background:
+  radial-gradient(12% 9% at 40% 28%, var(--film-light), transparent 75%),
+  radial-gradient(34% 24% at 40% 30%, color-mix(in srgb, var(--film-light) 70%, transparent), transparent 72%),
+  radial-gradient(circle closest-side at 50% 38%, var(--oat) 0 62%, var(--taupe) 63.5% 65.5%, color-mix(in srgb, var(--umber) 30%, transparent) 67%, transparent 74%),
+  radial-gradient(4% 8% at 28% 74%, var(--clay-soft) 0 60%, transparent 78%),
+  radial-gradient(2.4% 4% at 28% 66%, var(--film-deep) 0 60%, transparent 80%),
+  radial-gradient(5% 5% at 72% 77%, var(--film-light) 0 60%, transparent 80%),
+  linear-gradient(to top, var(--taupe) 0 20%, color-mix(in srgb, var(--umber) 45%, transparent) 20.5% 21.2%, transparent 22.5%),
+  linear-gradient(180deg, var(--greige), var(--oat) 80%); }
+/* 換成照片：.img-polish { background: url(images/polish.jpg) center/cover; }（亞麻布上的指甲油） */
+.img-polish { background:
+  radial-gradient(2.4% 5% at 27% 57%, color-mix(in srgb, var(--film-light) 85%, transparent), transparent 80%),
+  radial-gradient(2.4% 5% at 51% 61%, color-mix(in srgb, var(--film-light) 85%, transparent), transparent 80%),
+  radial-gradient(2.4% 5% at 73% 55%, color-mix(in srgb, var(--film-light) 85%, transparent), transparent 80%),
+  radial-gradient(3.6% 8% at 30% 50%, var(--film-deep) 0 66%, transparent 80%),
+  radial-gradient(3.6% 8% at 54% 54%, var(--hair) 0 66%, transparent 80%),
+  radial-gradient(3.6% 8% at 76% 48%, var(--film-deep) 0 66%, transparent 80%),
+  radial-gradient(11% 12% at 30% 62%, var(--clay-soft) 0 68%, transparent 80%),
+  radial-gradient(11% 12% at 54% 66%, var(--skin) 0 68%, transparent 80%),
+  radial-gradient(11% 12% at 76% 60%, var(--taupe) 0 68%, transparent 80%),
+  radial-gradient(16% 4% at 36% 75%, color-mix(in srgb, var(--umber) 38%, transparent), transparent 80%),
+  radial-gradient(16% 4% at 60% 79%, color-mix(in srgb, var(--umber) 38%, transparent), transparent 80%),
+  radial-gradient(16% 4% at 82% 73%, color-mix(in srgb, var(--umber) 38%, transparent), transparent 80%),
+  repeating-linear-gradient(90deg, color-mix(in srgb, var(--umber) 5%, transparent) 0 1px, transparent 1px 4px),
+  radial-gradient(70% 50% at 20% 10%, var(--film-light), transparent 70%),
+  linear-gradient(180deg, var(--oat), var(--greige)); }
+/* 換成照片：.img-linen { background: url(images/linen.jpg) center/cover; }（亞麻布與乾燥花） */
+.img-linen { background:
+  radial-gradient(4% 3.4% at 27% 22%, var(--clay-soft) 0 55%, transparent 80%),
+  radial-gradient(3.4% 3% at 32% 17%, var(--taupe) 0 55%, transparent 80%),
+  radial-gradient(3% 2.6% at 23% 28%, var(--clay-soft) 0 55%, transparent 80%),
+  radial-gradient(3% 2.6% at 35% 25%, color-mix(in srgb, var(--accent) 70%, transparent) 0 50%, transparent 80%),
+  radial-gradient(16% 11% at 29% 22%, color-mix(in srgb, var(--film-light) 80%, transparent), transparent 75%),
+  linear-gradient(122deg, transparent 33.4%, color-mix(in srgb, var(--umber) 80%, transparent) 33.6% 33.9%, transparent 34.1%),
+  linear-gradient(116deg, transparent 37.6%, color-mix(in srgb, var(--umber) 60%, transparent) 37.8% 38%, transparent 38.2%),
+  linear-gradient(115deg, transparent 30%, color-mix(in srgb, var(--umber) 12%, transparent) 40%, transparent 50%, color-mix(in srgb, var(--film-light) 60%, transparent) 58%, transparent 66%, color-mix(in srgb, var(--umber) 10%, transparent) 76%, transparent 86%),
+  repeating-linear-gradient(0deg, color-mix(in srgb, var(--umber) 5%, transparent) 0 1px, transparent 1px 3px),
+  repeating-linear-gradient(90deg, color-mix(in srgb, var(--umber) 4%, transparent) 0 1px, transparent 1px 3px),
+  linear-gradient(160deg, var(--film-light), var(--oat)); }
+/* 換成照片：.img-window { background: url(images/space.jpg) center/cover; }（牆上的窗光） */
+.img-window { background:
+  linear-gradient(118deg, transparent 47%, color-mix(in srgb, var(--umber) 16%, transparent) 48.5% 50%, transparent 51.5%),
+  linear-gradient(28deg, transparent 54%, color-mix(in srgb, var(--umber) 14%, transparent) 55.5% 56.8%, transparent 58.3%),
+  radial-gradient(42% 34% at 62% 38%, color-mix(in srgb, var(--film-light) 90%, transparent), transparent 70%),
+  radial-gradient(9% 4% at 20% 66%, color-mix(in srgb, var(--umber) 26%, transparent), transparent 80%),
+  radial-gradient(6% 5% at 28% 60%, color-mix(in srgb, var(--umber) 22%, transparent), transparent 80%),
+  radial-gradient(7% 3% at 15% 58%, color-mix(in srgb, var(--umber) 20%, transparent), transparent 80%),
+  linear-gradient(to top, color-mix(in srgb, var(--taupe) 75%, transparent) 0 15%, transparent 16.5%),
+  linear-gradient(200deg, var(--oat), var(--greige)); }
+/* 換成照片：.img-vase { background: url(images/vase.jpg) center/cover; }（陶瓶與蒲葦） */
+.img-vase { background:
+  radial-gradient(15% 13% at 44% 24%, color-mix(in srgb, var(--film-light) 92%, transparent), color-mix(in srgb, var(--oat) 60%, transparent) 55%, transparent 76%),
+  radial-gradient(11% 15% at 60% 20%, color-mix(in srgb, var(--oat) 95%, transparent), transparent 76%),
+  radial-gradient(10% 11% at 35% 34%, color-mix(in srgb, var(--clay-soft) 55%, transparent), transparent 76%),
+  radial-gradient(.6% 22% at 47% 45%, var(--umber) 0 40%, transparent 92%),
+  radial-gradient(.6% 24% at 56% 42%, var(--umber) 0 40%, transparent 92%),
+  radial-gradient(.5% 18% at 40% 50%, var(--umber) 0 40%, transparent 92%),
+  radial-gradient(5% 6% at 45% 68%, color-mix(in srgb, var(--film-light) 80%, transparent), transparent 80%),
+  radial-gradient(6% 6% at 50% 59%, var(--greige) 0 60%, transparent 80%),
+  radial-gradient(17% 15% at 50% 72%, var(--oat) 0 38%, var(--greige) 66%, transparent 78%),
+  radial-gradient(26% 4% at 57% 86%, color-mix(in srgb, var(--umber) 32%, transparent), transparent 80%),
+  linear-gradient(to top, var(--taupe) 0 13%, color-mix(in srgb, var(--umber) 50%, transparent) 13.3% 13.8%, transparent 15%),
+  linear-gradient(180deg, var(--greige), var(--oat)); }
+/* 換成照片：.img-waves { background: url(images/color-1.jpg) center/cover; }（髮色特寫） */
+.img-waves { --h1: var(--hair-milk); --h2: var(--taupe); background:
+  radial-gradient(45% 30% at 30% 18%, color-mix(in srgb, var(--film-light) 55%, transparent), transparent 70%),
+  repeating-radial-gradient(110% 90% at 112% 30%, transparent 0 7%, color-mix(in srgb, var(--film-light) 22%, transparent) 9.5%, transparent 12%),
+  repeating-radial-gradient(120% 80% at -12% 52%, var(--h1) 0 5%, var(--h2) 8.5%, var(--h1) 12%),
+  var(--h1); }
+.img-waves.tone-umber { --h1: var(--umber); --h2: var(--hair-milk); }
+.img-waves.tone-dark { --h1: var(--hair); --h2: var(--umber); }
+/* 換成照片：.img-nails { background: url(images/nails-1.jpg) center/cover; }（指尖與裸色凝膠） */
+.img-nails { --n: var(--clay-soft); background:
+  radial-gradient(1.6% 3% at 24% 60%, color-mix(in srgb, var(--film-light) 80%, transparent), transparent 80%),
+  radial-gradient(1.6% 3% at 40% 54%, color-mix(in srgb, var(--film-light) 80%, transparent), transparent 80%),
+  radial-gradient(1.6% 3% at 56% 58%, color-mix(in srgb, var(--film-light) 80%, transparent), transparent 80%),
+  radial-gradient(1.6% 3% at 72% 66%, color-mix(in srgb, var(--film-light) 80%, transparent), transparent 80%),
+  radial-gradient(4.4% 8% at 26% 63%, var(--n) 0 68%, transparent 80%),
+  radial-gradient(4.6% 8.4% at 42% 57%, var(--n) 0 68%, transparent 80%),
+  radial-gradient(4.4% 8% at 58% 61%, var(--n) 0 68%, transparent 80%),
+  radial-gradient(3.8% 7% at 74% 69%, var(--n) 0 68%, transparent 80%),
+  radial-gradient(7.5% 44% at 26% 102%, var(--skin) 0 82%, transparent 90%),
+  radial-gradient(7.8% 50% at 42% 102%, var(--skin) 0 82%, transparent 90%),
+  radial-gradient(7.5% 46% at 58% 102%, var(--skin) 0 82%, transparent 90%),
+  radial-gradient(6.6% 38% at 74% 102%, var(--skin) 0 82%, transparent 90%),
+  radial-gradient(40% 56% at 50% 104%, color-mix(in srgb, var(--umber) 40%, transparent), transparent 80%),
+  repeating-linear-gradient(90deg, color-mix(in srgb, var(--umber) 5%, transparent) 0 1px, transparent 1px 4px),
+  linear-gradient(160deg, var(--film-light), var(--oat)); }
+.img-nails.tone-pearl { --n: var(--film-light); }
+.img-nails.tone-nude { --n: var(--greige); }
+/* 換成照片：.img-towels { background: url(images/spa.jpg) center/cover; }（摺好的毛巾與陶杯） */
+.img-towels { background:
+  radial-gradient(40% 30% at 80% 10%, color-mix(in srgb, var(--film-light) 90%, transparent), transparent 70%),
+  radial-gradient(8% 7% at 76% 70%, var(--greige) 0 62%, transparent 78%),
+  radial-gradient(8% 2.4% at 76% 63%, color-mix(in srgb, var(--umber) 40%, transparent) 0 55%, transparent 80%),
+  radial-gradient(30% 6% at 40% 44%, var(--film-light) 0 72%, transparent 88%),
+  radial-gradient(31% 6% at 40% 52%, var(--oat) 0 72%, transparent 88%),
+  radial-gradient(32% 6% at 40% 60%, var(--film-light) 0 72%, transparent 88%),
+  radial-gradient(33% 6.5% at 40% 68.5%, var(--oat) 0 72%, transparent 88%),
+  radial-gradient(38% 5% at 44% 80%, color-mix(in srgb, var(--umber) 34%, transparent), transparent 80%),
+  linear-gradient(to top, var(--taupe) 0 20%, color-mix(in srgb, var(--umber) 40%, transparent) 20.4% 21%, transparent 22.5%),
+  linear-gradient(180deg, var(--greige), var(--oat)); }
+/* 換成照片：.img-chair { background: url(images/interior.jpg) center/cover; }（拱形鏡與座椅） */
+.img-chair { background:
+  radial-gradient(30% 24% at 8% 18%, color-mix(in srgb, var(--film-light) 90%, transparent), transparent 70%),
+  radial-gradient(10% 2% at 50% 93%, var(--film-deep) 0 60%, transparent 90%),
+  radial-gradient(1.4% 7% at 50% 87%, var(--film-deep) 0 60%, transparent 90%),
+  radial-gradient(18% 5% at 50% 79%, var(--hair) 0 70%, transparent 85%),
+  radial-gradient(14% 13% at 50% 69%, var(--umber) 0 70%, transparent 82%),
+  radial-gradient(21% 40% at 50% 38%, color-mix(in srgb, var(--film-light) 75%, transparent) 0 72%, var(--taupe) 73% 75%, transparent 77%),
+  linear-gradient(to top, var(--taupe) 0 15%, color-mix(in srgb, var(--umber) 40%, transparent) 15.3% 15.8%, transparent 17%),
+  linear-gradient(180deg, var(--greige), var(--oat)); }
+
+/* 進場動畫：只在有 JS 時先隱藏，慢慢浮現 */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 1.4s var(--ease), transform 1.6s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } }
+
+/* ---------- 區塊：主視覺 ---------- */
+.hero { min-height: 100svh; padding-top: clamp(6rem, 13vh, 8rem); padding-bottom: clamp(3rem, 8vh, 5rem); display: grid; align-items: center; }
+.hero .wrap { width: 100%; display: grid; gap: 2.5rem; align-items: end; }
+.hero-text { animation: rise 1.6s var(--ease) both; }
+.hero h1 { font: 300 clamp(2.9rem, 8.4vw, 6.4rem)/1.1 var(--font-heading); }
+.hero .lede { font-size: 1rem; max-width: 27rem; margin-top: 1.6rem; }
+.ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.8rem; margin-top: 2.4rem; }
+.hero-photo { position: relative; margin: 0; animation: rise 2s .2s var(--ease) both; }
+.hero-photo .frame { position: relative; overflow: hidden; aspect-ratio: 4 / 5; }
+.hero-photo .img { position: absolute; inset: -6% 0; }
+.hero-photo figcaption { display: flex; justify-content: space-between; gap: 1rem; margin-top: .8rem; }
+@media (min-width: 900px) {
+  .hero .wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(3rem, 7vw, 7rem); }
+  .hero-text { padding-bottom: 3.5rem; }
+  .hero-photo .frame { height: min(calc(100svh - 11rem), 44rem); width: auto; margin-left: auto; }
+  .hero-photo figcaption { width: min(100%, calc((min(100svh - 11rem, 44rem)) * .8)); margin-left: auto; }
+}
+/* 很輕的視差：只用 CSS 捲動時間軸，不支援的瀏覽器就是靜止照片 */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-photo .img { animation: drift linear both; animation-timeline: scroll(root); animation-range: 0 100svh; }
+    @keyframes drift { from { transform: translateY(-3%); } to { transform: translateY(5%); } }
+  }
+}
+
+/* ---------- 區塊：精選動態（圓形 Highlights） ---------- */
+.profile { padding-block: clamp(2.5rem, 6vh, 4rem); }
+.profile .wrap { display: grid; gap: 1.6rem 3rem; align-items: center; }
+.handle { display: flex; align-items: center; gap: 1rem; }
+.avatar { width: 3.4rem; aspect-ratio: 1; border-radius: 50%; flex: none; }
+.handle b { display: block; font: 400 1.05rem/1.3 var(--font-body); }
+.hl-row { display: flex; gap: clamp(1rem, 3vw, 2.2rem); overflow-x: auto; scrollbar-width: none; padding: .4rem .2rem .6rem; margin-inline: -.2rem; }
+.hl-row::-webkit-scrollbar { display: none; }
+.hl { flex: none; display: grid; justify-items: center; gap: .55rem; width: 4.6rem; font-size: .78rem; color: var(--muted); text-align: center; transition: color .4s var(--ease); }
+.hl .ring { display: block; width: 4.4rem; aspect-ratio: 1; border-radius: 50%; padding: 3px; border: 1px solid var(--taupe); transition: border-color .5s var(--ease), transform .6s var(--ease); }
+.hl .ring .img { width: 100%; height: 100%; border-radius: 50%; }
+.hl:hover { color: var(--text); }
+.hl:hover .ring { border-color: var(--text); transform: scale(1.04); }
+.hl:active .ring { transform: scale(.97); }
+.hl:focus-visible { outline: none; color: var(--text); }
+.hl:focus-visible .ring { outline: 1px solid var(--text); outline-offset: 3px; }
+@media (min-width: 900px) { .profile .wrap { grid-template-columns: minmax(0, 1fr) auto; } }
+
+/* ---------- 區塊：限時動態檢視器 ----------
+   沒有 JS 時是一般區塊（每組三張直式卡片）；有 JS 時變成全螢幕檢視器。 */
+.stories h2 { margin-bottom: 2.5rem; }
+.story { margin-bottom: 3rem; }
+.story h3 { font: 400 .9rem/1.4 var(--font-body); margin-bottom: .9rem; }
+.slides { display: grid; grid-template-columns: repeat(3, minmax(0, 12rem)); gap: .6rem; }
+.slide { position: relative; aspect-ratio: 9 / 16; overflow: hidden; margin: 0; color: var(--brand-ink); }
+.slide .img { position: absolute; inset: 0; }
+.slide figcaption { position: absolute; inset: auto 0 0; padding: 3rem 1rem 1.2rem; background: linear-gradient(transparent, color-mix(in srgb, var(--film-deep) 82%, transparent) 60%); font-size: .78rem; line-height: 1.6; }
+.slide figcaption b { display: block; font: 300 1.15rem/1.35 var(--font-heading); margin-bottom: .3rem; }
+.slide figcaption a { display: inline-block; margin-top: .7rem; padding-bottom: .15rem; border-bottom: 1px solid currentColor; position: relative; z-index: 4; }
+.slide figcaption a:hover { opacity: .8; }
+.slide figcaption a:active { opacity: .6; }
+.bars, .v-btn, .v-tap, .v-head .avatar { display: none; }
+.js .stories { display: none; }
+.js .stories.open { display: grid; place-items: center; position: fixed; inset: 0; z-index: 100; padding: 0; background: color-mix(in srgb, var(--film-deep) 95%, transparent); animation: rise .6s var(--ease); }
+.js .stories h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.js .v-frame { position: relative; width: min(100vw, calc((100svh - 2rem) * 9 / 16)); aspect-ratio: 9 / 16; max-height: 100svh; }
+.js .story { display: none; position: absolute; inset: 0; margin: 0; }
+.js .story.on { display: block; }
+.js .slides { display: block; position: absolute; inset: 0; }
+.js .slide { display: none; position: absolute; inset: 0; aspect-ratio: auto; }
+.js .slide.on { display: block; animation: fade .5s var(--ease); }
+@keyframes fade { from { opacity: .3; } }
+.js .slide figcaption { padding: 6rem 1.6rem 2.4rem; font-size: .9rem; }
+.js .slide figcaption b { font-size: clamp(1.5rem, 5vw, 1.9rem); }
+.js .v-head { position: absolute; inset: 0 0 auto; z-index: 4; padding: .8rem .8rem 0; display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; align-items: center; gap: .3rem .6rem; color: var(--brand-ink); background: linear-gradient(color-mix(in srgb, var(--film-deep) 55%, transparent), transparent); padding-bottom: 2rem; }
+.js .v-head .bars { grid-column: 1 / -1; display: flex; gap: 3px; margin-bottom: .5rem; }
+.bars i { flex: 1; height: 2px; background: color-mix(in srgb, var(--brand-ink) 35%, transparent); overflow: hidden; }
+.bars i::after { content: ""; display: block; height: 100%; background: var(--brand-ink); transform: scaleX(0); transform-origin: left; }
+.bars i.done::after { transform: none; }
+.bars i.now::after { animation: fill var(--story-time) linear forwards; }
+.stories.paused .bars i.now::after { animation-play-state: paused; }
+@keyframes fill { to { transform: none; } }
+.js .v-head .avatar { display: block; width: 2rem; }
+.js .v-head h3 { margin: 0; font-size: .85rem; }
+.js .v-btn { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border: 0; background: transparent; color: var(--brand-ink); cursor: pointer; border-radius: 50%; transition: background .3s; }
+.v-btn svg { width: 1.2rem; height: 1.2rem; stroke: currentColor; fill: none; stroke-width: 1.3; }
+.v-btn:hover { background: color-mix(in srgb, var(--brand-ink) 14%, transparent); }
+.v-btn:active { background: color-mix(in srgb, var(--brand-ink) 24%, transparent); }
+.v-btn:focus-visible, .v-tap:focus-visible { outline: 1px solid var(--brand-ink); outline-offset: -4px; }
+.v-pause .play, .v-pause[aria-pressed="true"] .pause { display: none; }
+.v-pause[aria-pressed="true"] .play { display: inline; }
+.js .v-tap { display: block; position: absolute; top: 0; bottom: 0; z-index: 3; border: 0; background: transparent; cursor: pointer; }
+.v-prev { left: 0; width: 35%; }
+.v-next { right: 0; width: 65%; }
+.v-tap:active { background: color-mix(in srgb, var(--brand-ink) 5%, transparent); }
+@media (max-width: 600px) { .js .v-frame { width: 100vw; height: 100svh; aspect-ratio: auto; } }
+
+/* ---------- 區塊：本季推薦（可滑動輪播） ---------- */
+.season { padding-inline: 0; overflow: clip; }
+.season-head { max-width: var(--max); margin: 0 auto 2.8rem; padding-inline: var(--pad); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1.5rem; }
+@media (min-width: 1440px) { .season-head { padding-inline: 0; } }
+.car-ctrl { display: flex; gap: .6rem; }
+.car-btn { width: 3rem; height: 3rem; border-radius: 50%; border: 1px solid var(--line); background: transparent; color: var(--text); cursor: pointer; display: grid; place-items: center; transition: border-color .4s var(--ease), background .4s var(--ease); }
+.car-btn svg { width: 1rem; height: 1rem; stroke: currentColor; fill: none; stroke-width: 1.2; }
+.car-btn:hover:not(:disabled) { border-color: var(--text); }
+.car-btn:active:not(:disabled) { background: color-mix(in srgb, var(--text) 6%, transparent); }
+.car-btn:disabled { opacity: .35; cursor: default; }
+html:not(.js) .car-ctrl, html:not(.js) .car-dots { display: none; }
+.car-track { display: flex; gap: clamp(1rem, 2vw, 1.75rem); overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain; padding: 0 var(--pad) 1rem; scroll-padding-inline: var(--pad); scrollbar-width: none; }
+.car-track::-webkit-scrollbar { display: none; }
+.car-track:focus-visible { outline-offset: -2px; }
+@media (min-width: 1440px) { .car-track { padding-inline: calc((100vw - var(--max)) / 2); scroll-padding-inline: calc((100vw - var(--max)) / 2); } }
+.car-item { flex: 0 0 min(76vw, 22rem); scroll-snap-align: start; }
+.car-item .img { aspect-ratio: 4 / 5; margin-bottom: 1.2rem; }
+.car-item h3 { font: 300 1.45rem/1.3 var(--font-heading); }
+.car-item p { color: var(--muted); font-size: .88rem; margin-top: .35rem; }
+.car-item .price { display: block; margin-top: .6rem; font: 400 1.05rem/1 var(--font-heading); color: var(--text); }
+.car-dots { display: flex; justify-content: center; gap: .2rem; margin-top: 1.6rem; }
+.car-dots button { width: 1.75rem; height: 1.75rem; border: 0; background: transparent; cursor: pointer; display: grid; place-items: center; }
+.car-dots button::before { content: ""; width: 1.2rem; height: 1px; background: var(--line); transition: background .4s var(--ease); }
+.car-dots button[aria-current="true"]::before { background: var(--text); }
+.car-dots button:hover::before { background: var(--muted); }
+.car-dots button:active::before { background: var(--accent); }
+
+/* ---------- 區塊：品牌理念 ---------- */
+.about .wrap { display: grid; gap: 3rem; align-items: center; }
+.about-pics { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 1rem; align-items: start; }
+.about-pics figure { margin: 0; }
+.about-pics .tall .img { aspect-ratio: 9 / 16; }
+.about-pics .sq { margin-top: 30%; }
+.about-pics .sq .img { aspect-ratio: 1; }
+.about-pics figcaption { margin-top: .6rem; }
+.about-text p { max-width: 27rem; }
+.about-text p + p { margin-top: 1rem; }
+@media (min-width: 900px) { .about .wrap { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(4rem, 9vw, 9rem); } .about-text { order: -1; } }
+
+/* ---------- 區塊：服務價目 ---------- */
+.split { display: grid; gap: 3rem; }
+@media (min-width: 900px) { .split { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(3rem, 7vw, 7rem); } .split > :first-child { position: sticky; top: 7rem; align-self: start; } }
+.menu-list { display: grid; gap: 3.2rem clamp(2.5rem, 5vw, 4.5rem); }
+@media (min-width: 640px) { .menu-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.menu-list h3 { font: 300 1.6rem/1.3 var(--font-heading); margin-bottom: .8rem; }
+.row { display: flex; justify-content: space-between; align-items: baseline; gap: 1.2rem; padding-block: .85rem; border-top: 1px solid var(--line); }
+.row small { display: block; color: var(--muted); font-size: .76rem; line-height: 1.5; }
+.row .p { font: 400 1.1rem/1 var(--font-heading); white-space: nowrap; }
+.row .p sub { font: 300 .72rem/1 var(--font-body); color: var(--muted); vertical-align: baseline; margin-left: .2rem; }
+
+/* ---------- 區塊：設計師 ---------- */
+.team-head { margin-bottom: clamp(3rem, 7vh, 5rem); }
+.team { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem 1rem; }
+.stylist { margin: 0; }
+.stylist .img { aspect-ratio: 4 / 5; margin-bottom: 1.1rem; }
+.stylist h3 { font: 300 1.5rem/1.25 var(--font-heading); }
+.stylist p { font-size: .84rem; color: var(--muted); margin-top: .25rem; }
+.stylist .tlink { display: inline-block; margin-top: .9rem; font-size: .84rem; }
+@media (min-width: 900px) { .team { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; } .stylist:nth-child(even) { margin-top: 5rem; } }
+
+/* ---------- 區塊：作品（IG 格狀牆） ---------- */
+.feed-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; max-width: 62rem; margin: 0 auto 2.4rem; }
+.feed-head .handle .avatar { width: 4.2rem; }
+.feed { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; max-width: 62rem; margin-inline: auto; }
+.post { position: relative; margin: 0; aspect-ratio: 1; overflow: hidden; }
+.post .img { position: absolute; inset: 0; transition: transform 1.2s var(--ease); }
+.post figcaption { position: absolute; inset: 0; display: grid; place-content: center; gap: .4rem; padding: 1rem; text-align: center; background: color-mix(in srgb, var(--film-deep) 66%, transparent); color: var(--brand-ink); font-size: .82rem; line-height: 1.5; opacity: 0; transition: opacity .7s var(--ease); }
+.post figcaption b { font: 300 1.25rem/1.3 var(--font-heading); }
+.post figcaption svg { width: 1.1rem; height: 1.1rem; margin-inline: auto; stroke: currentColor; fill: none; stroke-width: 1.2; }
+.post:hover figcaption { opacity: 1; }
+.post:hover .img { transform: scale(1.03); }
+.feed-note { text-align: center; margin-top: 1.4rem; }
+@media (max-width: 600px) { .feed { gap: 2px; margin-inline: calc(var(--pad) * -1); } .post figcaption b { font-size: 1rem; } .post figcaption span { display: none; } }
+
+/* ---------- 區塊：預約 ---------- */
+.book-text .ctas { margin-top: 2rem; }
+.book-text dl { margin-top: 2.4rem; font-size: .88rem; }
+.book-text dt { color: var(--muted); font-size: .78rem; }
+.book-text dd + dt { margin-top: .9rem; }
+.form { display: grid; gap: 1.6rem 1.5rem; background: var(--surface); border: 1px solid var(--line); padding: clamp(1.5rem, 4vw, 3rem); }
+@media (min-width: 640px) { .form { grid-template-columns: repeat(2, minmax(0, 1fr)); } .form .full { grid-column: 1 / -1; } }
+.field label { display: block; font-size: .78rem; color: var(--muted); margin-bottom: .3rem; }
+.field input, .field select, .field textarea { width: 100%; font: 300 .95rem/1.5 var(--font-body); color: var(--text); background: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: .55rem 0; transition: border-color .4s var(--ease); }
+.field textarea { resize: vertical; min-height: 5.5rem; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: var(--muted); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--text); }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 1px solid var(--text); outline-offset: 4px; }
+.form .btn { justify-self: start; }
+.form .cap { align-self: center; }
+
+/* ---------- 區塊：常見問題 ---------- */
+.faq details { border-top: 1px solid var(--line); }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; gap: 1.5rem; padding: 1.4rem 0; font: 300 1.3rem/1.45 var(--font-heading); transition: color .4s var(--ease); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; flex: none; width: .7rem; height: .7rem; background: linear-gradient(var(--text), var(--text)) center / 100% 1px no-repeat, linear-gradient(var(--text), var(--text)) center / 1px 100% no-repeat; transition: transform .5s var(--ease); }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq summary:hover { color: var(--accent); }
+.faq summary:active { opacity: .7; }
+.faq details p { color: var(--muted); padding-bottom: 1.5rem; max-width: 40rem; }
+
+/* ---------- 區塊：店家資訊 ---------- */
+.visit .wrap { display: grid; gap: 3rem; align-items: end; }
+.visit figure { margin: 0; }
+.visit .img { aspect-ratio: 4 / 5; }
+.visit figcaption { margin-top: .6rem; }
+.addr { font: 300 clamp(1.5rem, 3vw, 2.1rem)/1.4 var(--font-heading); margin-top: 1.6rem; }
+.hours { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .7rem 2rem; margin-top: 2rem; font-size: .9rem; }
+.hours dt { color: var(--muted); }
+@media (min-width: 900px) { .visit .wrap { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(4rem, 8vw, 8rem); } }
+
+/* ---------- 區塊：頁尾 ---------- */
+.site-footer { background: var(--surface-2); padding: clamp(4rem, 10vh, 6rem) var(--pad) 2rem; font-size: .85rem; }
+.foot { display: grid; gap: 2.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); }
+.foot-mark { font: 300 clamp(2.4rem, 8vw, 5.5rem)/1 var(--font-heading); margin-bottom: 3.5rem; }
+.foot h2 { font: 400 .85rem/1.4 var(--font-body); margin-bottom: .7rem; }
+.foot li { color: var(--muted); }
+.foot a { transition: color .4s var(--ease); }
+.foot a:hover { color: var(--text); }
+.foot a:active { color: var(--accent); }
+.copy { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .78rem; }
+
+/* ---------- 手機底部固定預約按鈕 ---------- */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  .sticky-cta { display: flex; position: fixed; left: 1rem; right: 1rem; bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 40; box-shadow: 0 14px 30px var(--shadow); }
+  .site-footer { padding-bottom: 6rem; }
+}
+
+/* 減少動態：關掉所有移動與自動播放 */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+  .car-track { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; }
+  .bars i.now::after { transform: none; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "霧光 Atelier",
+  "telephone": "04-2345-6789",
+  "priceRange": "NT$300–NT$3800",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "美村路一段 123 號 1 樓",
+    "addressLocality": "西區",
+    "addressRegion": "台中市",
+    "postalCode": "403",
+    "addressCountry": "TW"
+  },
+  "sameAs": ["https://www.instagram.com/"],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "11:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "10:00", "closes": "19:00" }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- ============================================================
+  照片拍攝建議（把佔位圖換成真實照片時參考）
+  1. 用窗邊的自然光拍，關掉頂燈、不要開閃光燈；下午兩點到四點的側光最柔和。
+  2. 背景保持單純：米白牆面、亞麻布、木頭桌面，一張照片裡不要超過三種顏色。
+  3. 裁切比例：作品與輪播用 4:5 直式（IG 貼文比例），格狀牆用 1:1，限時動態用 9:16。
+  4. 全部照片套用同一組暖色調修圖：飽和度略降、暗部稍微提亮、色溫偏暖，整站才會一致。
+  5. 人像多拍背影、側臉、髮尾與指尖特寫，比正臉更有質感。
+  6. 檔案寬度約 1600px，存成 WebP 或 JPG（品質 80），放進 images/ 資料夾。
+  ============================================================ -->
+<a class="skip" href="#main">跳到主要內容</a>
+
+<!-- ==================== 區塊：頁首導覽 ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav" aria-label="主選單">
+    <a class="logo" href="#top" aria-label="霧光 Atelier 回到頂端">霧光<span>Atelier</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="開啟選單"><span></span></button>
+    <div class="menu" id="menu">
+      <a href="#season">本季推薦</a>
+      <a href="#services">價目</a>
+      <a href="#team">設計師</a>
+      <a href="#works">作品</a>
+      <a href="#faq">常見問題</a>
+      <a href="#visit">店家資訊</a>
+      <a class="btn btn-primary" href="#book">預約</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ==================== 區塊：主視覺 Hero ==================== -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-text">
+      <h1>把時間<br>留給自己。</h1>
+      <p class="lede">美村路巷子裡的預約制沙龍。剪髮、染髮與美甲，慢慢來。</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#book">預約時段</a>
+        <a class="tlink" href="#services">看價目</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <div class="frame"><div class="img img-shoulder" role="img" aria-label="窗邊自然光下，及肩長髮的背影"></div></div>
+      <figcaption class="cap"><span>窗邊的午後光線</span><span>台中西區</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ==================== 區塊：精選動態 Highlights ==================== -->
+<section class="profile rule" id="highlights" aria-labelledby="hl-title">
+  <div class="wrap">
+    <div class="handle">
+      <div class="img img-vase avatar" role="img" aria-label="霧光 Atelier 的頭像：陶瓶與乾燥蒲葦"></div>
+      <div>
+        <h2 class="sr-only" id="hl-title">精選限時動態</h2>
+        <b>@mist.atelier</b>
+        <span class="cap">預約制美髮美甲，在美村路的一扇窗邊。</span>
+      </div>
+    </div>
+    <!-- 點圓圈會開啟全螢幕限時動態；沒有 JS 時會跳到下方對應的卡片 -->
+    <div class="hl-row">
+      <a class="hl" href="#story-new" data-story="0"><span class="ring"><span class="img img-chair"></span></span>新客必看</a>
+      <a class="hl" href="#story-color" data-story="1"><span class="ring"><span class="img img-waves"></span></span>染髮作品</a>
+      <a class="hl" href="#story-nail" data-story="2"><span class="ring"><span class="img img-nails"></span></span>美甲</a>
+      <a class="hl" href="#story-price" data-story="3"><span class="ring"><span class="img img-linen"></span></span>價目</a>
+      <a class="hl" href="#story-space" data-story="4"><span class="ring"><span class="img img-window"></span></span>店內</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：限時動態內容（全螢幕檢視器） ==================== -->
+<!-- 每一組 .story 是一個圓圈的內容，每組三張 .slide。要新增一組，複製整段 .story，並在上方加一個 data-story 編號對應的圓圈。 -->
+<section class="stories" id="stories" aria-labelledby="st-title">
+  <div class="wrap v-frame">
+    <h2 class="h2" id="st-title">限時動態</h2>
+    <div class="story" id="story-new">
+      <div class="v-head">
+        <div class="bars" aria-hidden="true"><i></i><i></i><i></i></div>
+        <span class="img img-chair avatar"></span>
+        <h3>新客必看</h3>
+        <button class="v-btn v-pause" type="button" aria-pressed="false" aria-label="暫停"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="pause" d="M9 6v12M15 6v12"/><path class="play" d="M8 5.5v13l10-6.5z"/></svg></button>
+        <button class="v-btn v-close" type="button" aria-label="關閉限時動態"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="slides">
+        <figure class="slide"><div class="img img-chair" role="img" aria-label="拱形鏡前的一張座椅"></div><figcaption><b>第一次來嗎？</b>先坐下，喝杯熱茶。每位新客都有十分鐘的諮詢時間。</figcaption></figure>
+        <figure class="slide"><div class="img img-mirror" role="img" aria-label="化妝鏡映著窗光"></div><figcaption><b>帶一張喜歡的照片</b>或是說說你平常怎麼整理頭髮，我們從那裡開始。</figcaption></figure>
+        <!-- 範例內容：上線前請換成真實資料 -->
+        <figure class="slide"><div class="img img-towels" role="img" aria-label="摺好的毛巾與陶杯"></div><figcaption><b>首次到店，護髮九折</b>預約時告訴我們是第一次來就可以。<br><a href="#book">預約時段</a></figcaption></figure>
+      </div>
+    </div>
+    <div class="story" id="story-color">
+      <div class="v-head">
+        <div class="bars" aria-hidden="true"><i></i><i></i><i></i></div>
+        <span class="img img-waves avatar"></span>
+        <h3>染髮作品</h3>
+        <button class="v-btn v-pause" type="button" aria-pressed="false" aria-label="暫停"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="pause" d="M9 6v12M15 6v12"/><path class="play" d="M8 5.5v13l10-6.5z"/></svg></button>
+        <button class="v-btn v-close" type="button" aria-label="關閉限時動態"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="slides">
+        <figure class="slide"><div class="img img-waves" role="img" aria-label="奶茶米色的長髮特寫"></div><figcaption><b>奶茶米漸層</b>髮尾留一點透光感，褪色後也好看。</figcaption></figure>
+        <figure class="slide"><div class="img img-waves tone-umber" role="img" aria-label="霧感灰棕色的波浪髮"></div><figcaption><b>霧感灰棕</b>壓掉黃光，室內看起來沉穩，陽光下帶一點灰。</figcaption></figure>
+        <figure class="slide"><div class="img img-waves tone-dark" role="img" aria-label="深焦糖棕色的髮絲"></div><figcaption><b>焦糖深棕</b>上班也自在的顏色，適合第一次染髮。</figcaption></figure>
+      </div>
+    </div>
+    <div class="story" id="story-nail">
+      <div class="v-head">
+        <div class="bars" aria-hidden="true"><i></i><i></i><i></i></div>
+        <span class="img img-nails avatar"></span>
+        <h3>美甲</h3>
+        <button class="v-btn v-pause" type="button" aria-pressed="false" aria-label="暫停"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="pause" d="M9 6v12M15 6v12"/><path class="play" d="M8 5.5v13l10-6.5z"/></svg></button>
+        <button class="v-btn v-close" type="button" aria-label="關閉限時動態"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="slides">
+        <figure class="slide"><div class="img img-nails" role="img" aria-label="陶土色凝膠指甲特寫"></div><figcaption><b>陶土色單色</b>秋冬最常被指定的顏色，配毛衣剛好。</figcaption></figure>
+        <figure class="slide"><div class="img img-polish" role="img" aria-label="亞麻布上的三瓶指甲油"></div><figcaption><b>裸色系色票</b>店裡常備的大地色，現場比對膚色再挑。</figcaption></figure>
+        <figure class="slide"><div class="img img-nails tone-pearl" role="img" aria-label="珍珠光澤的淡色指甲"></div><figcaption><b>珍珠光澤</b>一層薄薄的光，乾淨不張揚。</figcaption></figure>
+      </div>
+    </div>
+    <div class="story" id="story-price">
+      <div class="v-head">
+        <div class="bars" aria-hidden="true"><i></i><i></i><i></i></div>
+        <span class="img img-linen avatar"></span>
+        <h3>價目</h3>
+        <button class="v-btn v-pause" type="button" aria-pressed="false" aria-label="暫停"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="pause" d="M9 6v12M15 6v12"/><path class="play" d="M8 5.5v13l10-6.5z"/></svg></button>
+        <button class="v-btn v-close" type="button" aria-label="關閉限時動態"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="slides">
+        <figure class="slide"><div class="img img-linen" role="img" aria-label="亞麻布上的乾燥花"></div><figcaption><b>設計剪髮 NT$800 起</b>含洗髮與造型吹整。</figcaption></figure>
+        <figure class="slide"><div class="img img-shoulder tone-milk" role="img" aria-label="奶茶色長髮的背影"></div><figcaption><b>染髮 NT$2,200 起</b>依髮長與漂髮次數調整，諮詢後先報價。</figcaption></figure>
+        <figure class="slide"><div class="img img-polish" role="img" aria-label="幾瓶大地色指甲油"></div><figcaption><b>凝膠美甲 NT$900 起</b>含基礎保養，本店施作免費卸甲。<br><a href="#services">看完整價目</a></figcaption></figure>
+      </div>
+    </div>
+    <div class="story" id="story-space">
+      <div class="v-head">
+        <div class="bars" aria-hidden="true"><i></i><i></i><i></i></div>
+        <span class="img img-window avatar"></span>
+        <h3>店內</h3>
+        <button class="v-btn v-pause" type="button" aria-pressed="false" aria-label="暫停"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="pause" d="M9 6v12M15 6v12"/><path class="play" d="M8 5.5v13l10-6.5z"/></svg></button>
+        <button class="v-btn v-close" type="button" aria-label="關閉限時動態"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="slides">
+        <figure class="slide"><div class="img img-window" role="img" aria-label="午後窗光落在米色牆上"></div><figcaption><b>午後的窗光</b>店裡大部分時間不開頂燈。</figcaption></figure>
+        <figure class="slide"><div class="img img-vase" role="img" aria-label="層架上的陶瓶與蒲葦"></div><figcaption><b>乾燥花與木質香</b>每個月換一次花，香氛是店裡自己調的。</figcaption></figure>
+        <figure class="slide"><div class="img img-chair" role="img" aria-label="安靜的座位區"></div><figcaption><b>只有四個座位</b>不趕場，也不推銷。<br><a href="#visit">怎麼來店裡</a></figcaption></figure>
+      </div>
+    </div>
+    <button class="v-tap v-prev" type="button" aria-label="上一則"></button>
+    <button class="v-tap v-next" type="button" aria-label="下一則"></button>
+  </div>
+</section>
+
+<!-- ==================== 區塊：本季推薦（輪播） ==================== -->
+<section class="season oat" id="season">
+  <div class="season-head">
+    <div>
+      <h2 class="h2">本季推薦</h2>
+      <p class="lede">天氣轉涼，頭髮和指尖也換上溫柔一點的顏色。</p>
+    </div>
+    <div class="car-ctrl">
+      <button class="car-btn" type="button" data-dir="-1" aria-label="上一張"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="car-btn" type="button" data-dir="1" aria-label="下一張"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <ul class="car-track" tabindex="0" aria-label="本季推薦，可左右滑動">
+    <li class="car-item">
+      <div class="img img-waves tone-umber" role="img" aria-label="霧感灰棕色的長髮"></div>
+      <h3>霧感奶茶灰</h3>
+      <p>壓掉黃光的低彩度棕，室內柔和，陽光下透出灰。</p>
+      <span class="price">NT$2,800 起</span>
+    </li>
+    <li class="car-item">
+      <div class="img img-shoulder tone-milk" role="img" aria-label="空氣感微捲的長髮背影"></div>
+      <h3>空氣感微捲</h3>
+      <p>髮尾輕輕的弧度，早上用手抓一抓就成形。</p>
+      <span class="price">NT$3,200 起</span>
+    </li>
+    <li class="car-item">
+      <div class="img img-nails tone-nude" role="img" aria-label="燕麥裸色的凝膠指甲"></div>
+      <h3>燕麥裸色凝膠</h3>
+      <p>貼近膚色的米褐，指尖看起來修長乾淨。</p>
+      <span class="price">NT$1,100</span>
+    </li>
+    <li class="car-item">
+      <div class="img img-towels" role="img" aria-label="摺好的毛巾與陶杯"></div>
+      <h3>頭皮淨化 SPA</h3>
+      <p>約 50 分鐘的深層清潔與按摩，換季最需要。</p>
+      <span class="price">NT$1,500</span>
+    </li>
+    <li class="car-item">
+      <div class="img img-linen" role="img" aria-label="亞麻布上的乾燥花"></div>
+      <h3>結構重建護髮</h3>
+      <p>染燙後的乾澀與毛躁，一次就摸得出差別。</p>
+      <span class="price">NT$2,400 起</span>
+    </li>
+  </ul>
+  <div class="car-dots">
+    <button type="button" aria-label="第 1 張"></button>
+    <button type="button" aria-label="第 2 張"></button>
+    <button type="button" aria-label="第 3 張"></button>
+    <button type="button" aria-label="第 4 張"></button>
+    <button type="button" aria-label="第 5 張"></button>
+  </div>
+</section>
+
+<!-- ==================== 區塊：品牌理念 ==================== -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-pics reveal">
+      <figure class="tall"><div class="img img-window" role="img" aria-label="窗光斜斜落在牆面上"></div><figcaption class="cap">下午三點的店裡</figcaption></figure>
+      <figure class="sq"><div class="img img-mirror" role="img" aria-label="圓形化妝鏡與桌上的小瓶子"></div><figcaption class="cap">每個座位都有自己的鏡子</figcaption></figure>
+    </div>
+    <div class="about-text reveal">
+      <h2 class="h2">慢一點，<br>會更好看。</h2>
+      <p class="lede">每一位客人都從十分鐘的聊天開始。你的作息、平常怎麼吹整、想成為什麼樣子，聽完了才拿起剪刀。</p>
+      <p class="lede">店裡只有四個座位，沒有趕場，也沒有推銷。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：服務價目 ==================== -->
+<section class="oat" id="services">
+  <div class="wrap split">
+    <div class="reveal">
+      <h2 class="h2">服務與價目</h2>
+      <p class="lede">價格依髮長與髮況調整，諮詢後會先確認金額再開始。單位為新台幣，標示「起」的項目會另外報價。</p>
+    </div>
+    <div class="menu-list">
+      <div class="reveal">
+        <h3>剪髮</h3>
+        <ul>
+          <li class="row"><span>設計剪髮<small>含洗髮、造型吹整</small></span><span class="p">800<sub>起</sub></span></li>
+          <li class="row"><span>瀏海修剪</span><span class="p">200</span></li>
+          <li class="row"><span>洗髮與造型</span><span class="p">500<sub>起</sub></span></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3>染髮</h3>
+        <ul>
+          <li class="row"><span>單色染髮</span><span class="p">2,200<sub>起</sub></span></li>
+          <li class="row"><span>霧感挑染、漸層<small>依漂髮次數調整</small></span><span class="p">3,800<sub>起</sub></span></li>
+          <li class="row"><span>髮根補染<small>3 公分內</small></span><span class="p">1,600<sub>起</sub></span></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3>燙髮</h3>
+        <ul>
+          <li class="row"><span>空氣感微捲</span><span class="p">3,200<sub>起</sub></span></li>
+          <li class="row"><span>縮毛矯正</span><span class="p">3,600<sub>起</sub></span></li>
+          <li class="row"><span>局部燙<small>瀏海或髮根蓬鬆</small></span><span class="p">1,500<sub>起</sub></span></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3>護髮</h3>
+        <ul>
+          <li class="row"><span>深層修護</span><span class="p">1,200<sub>起</sub></span></li>
+          <li class="row"><span>頭皮淨化 SPA<small>約 50 分鐘</small></span><span class="p">1,500</span></li>
+          <li class="row"><span>結構重建護髮</span><span class="p">2,400<sub>起</sub></span></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3>美甲</h3>
+        <ul>
+          <li class="row"><span>單色凝膠<small>含基礎保養</small></span><span class="p">900</span></li>
+          <li class="row"><span>設計款凝膠</span><span class="p">1,300<sub>起</sub></span></li>
+          <li class="row"><span>卸甲<small>本店施作免費</small></span><span class="p">300</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：設計師 ==================== -->
+<section id="team">
+  <div class="wrap">
+    <div class="team-head reveal">
+      <h2 class="h2">設計師</h2>
+      <p class="lede">四個人，各有擅長的方向。可以指定，也可以讓我們幫你配對。</p>
+    </div>
+    <!-- 範例內容：上線前請換成真實資料 -->
+    <div class="team">
+      <figure class="stylist reveal">
+        <div class="img img-shoulder" role="img" aria-label="設計總監 Mia 的側影"></div>
+        <figcaption>
+          <h3>Mia 米亞</h3>
+          <p>設計總監，入行十二年。擅長霧感染髮與韓系層次。</p>
+          <a class="tlink" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">指定 Mia</a>
+        </figcaption>
+      </figure>
+      <figure class="stylist reveal">
+        <div class="img img-shoulder tone-milk" role="img" aria-label="資深設計師 Rina 的背影"></div>
+        <figcaption>
+          <h3>Rina 芮娜</h3>
+          <p>資深設計師，入行八年。空氣感燙與短髮剪裁。</p>
+          <a class="tlink" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">指定 Rina</a>
+        </figcaption>
+      </figure>
+      <figure class="stylist reveal">
+        <div class="img img-shoulder tone-umber" role="img" aria-label="設計師 Kai 的側影"></div>
+        <figcaption>
+          <h3>Kai 凱</h3>
+          <p>設計師，入行六年。男士剪髮與頭皮護理。</p>
+          <a class="tlink" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">指定 Kai</a>
+        </figcaption>
+      </figure>
+      <figure class="stylist reveal">
+        <div class="img img-nails tone-nude" role="img" aria-label="美甲師 Yuki 的作品指尖"></div>
+        <figcaption>
+          <h3>Yuki 小雪</h3>
+          <p>美甲師，入行七年。手繪暈染與極簡法式。</p>
+          <a class="tlink" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">指定 Yuki</a>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：作品（IG 格狀牆） ==================== -->
+<section class="oat" id="works">
+  <div class="feed-head reveal">
+    <div class="handle">
+      <div class="img img-vase avatar" role="img" aria-label="霧光 Atelier 的頭像"></div>
+      <div>
+        <h2 class="h2">作品</h2>
+        <span class="cap">@mist.atelier</span>
+      </div>
+    </div>
+    <!-- 把 href="#" 換成你的 Instagram 網址，例如 https://www.instagram.com/你的帳號/ -->
+    <a class="btn btn-ghost" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 1.6A3.4 3.4 0 0 0 3.6 7v10A3.4 3.4 0 0 0 7 20.4h10a3.4 3.4 0 0 0 3.4-3.4V7A3.4 3.4 0 0 0 17 3.6Zm5 3.9a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 1.6a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8Zm5.2-2.9a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/></svg>在 Instagram 追蹤我們</a>
+  </div>
+  <div class="feed reveal">
+    <figure class="post"><div class="img img-waves" role="img" aria-label="奶茶米色漸層長髮"></div><figcaption><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg><b>奶茶米漸層</b><span>髮尾留一點透光</span></figcaption></figure>
+    <figure class="post"><div class="img img-nails" role="img" aria-label="陶土色凝膠指甲"></div><figcaption><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg><b>陶土色指尖</b><span>秋冬最常被指定</span></figcaption></figure>
+    <figure class="post"><div class="img img-window" role="img" aria-label="窗光落在店內牆面"></div><figcaption><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg><b>下午三點</b><span>店裡最安靜的時候</span></figcaption></figure>
+    <figure class="post"><div class="img img-shoulder tone-umber" role="img" aria-label="灰棕色長髮的背影"></div><figcaption><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg><b>霧感灰棕</b><span>壓掉黃光的低彩度</span></figcaption></figure>
+    <figure class="post"><div class="img img-polish" role="img" aria-label="三瓶大地色指甲油"></div><figcaption><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg><b>本季色票</b><span>三個大地色</span></figcaption></figure>
+    <figure class="post"><div class="img img-vase" role="img" aria-label="陶瓶裡的乾燥蒲葦"></div><figcaption><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg><b>這個月的花</b><span>乾燥蒲葦</span></figcaption></figure>
+    <figure class="post"><div class="img img-mirror" role="img" aria-label="化妝鏡與窗光"></div><figcaption><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg><b>鏡子前</b><span>先聊十分鐘</span></figcaption></figure>
+    <figure class="post"><div class="img img-waves tone-dark" role="img" aria-label="焦糖深棕色髮絲"></div><figcaption><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg><b>焦糖深棕</b><span>第一次染髮也自在</span></figcaption></figure>
+    <figure class="post"><div class="img img-nails tone-pearl" role="img" aria-label="珍珠光澤的淡色指甲"></div><figcaption><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg><b>珍珠光澤</b><span>乾淨不張揚</span></figcaption></figure>
+  </div>
+  <p class="feed-note cap">更多日常與作品，都在我們的 Instagram。</p>
+</section>
+
+<!-- ==================== 區塊：預約 ==================== -->
+<section id="book">
+  <div class="wrap split">
+    <div class="book-text reveal">
+      <h2 class="h2">預約，從一則訊息開始。</h2>
+      <p class="lede">LINE 最快，平日下午最好約。也可以留下表單，我們會在營業時間內回覆。</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.5s5.9-3.5 8-6C21.4 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8Z"/></svg>LINE 預約</a>
+        <a class="tlink" href="tel:04-2345-6789">04-2345-6789</a>
+      </div>
+      <dl>
+        <dt>LINE 帳號</dt><dd>@yourlineid</dd>
+        <dt>回覆時間</dt><dd>營業時間內，通常一小時內</dd>
+      </dl>
+    </div>
+    <!-- 表單送出：到 https://formspree.io 免費註冊，建立表單後會拿到一組代碼，
+         把下面 action 網址最後的 your-form-id 換成那組代碼，客人送出的資料就會寄到你的信箱。 -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="field"><label for="f-name">姓名</label><input id="f-name" name="姓名" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">手機</label><input id="f-tel" name="手機" type="tel" autocomplete="tel" required></div>
+      <div class="field"><label for="f-svc">想做的項目</label>
+        <select id="f-svc" name="項目"><option>剪髮</option><option>染髮</option><option>燙髮</option><option>護髮</option><option>美甲</option><option>還不確定，想先諮詢</option></select></div>
+      <div class="field"><label for="f-who">指定設計師</label>
+        <select id="f-who" name="設計師"><option>不指定</option><option>Mia</option><option>Rina</option><option>Kai</option><option>Yuki（美甲）</option></select></div>
+      <div class="field full"><label for="f-date">希望日期</label><input id="f-date" name="希望日期" type="date"></div>
+      <div class="field full"><label for="f-msg">想說的話</label><textarea id="f-msg" name="備註" placeholder="目前的髮況、想要的感覺，或是可以來的時段"></textarea></div>
+      <button class="btn btn-primary" type="submit">送出預約需求</button>
+      <p class="cap">收到後我們會傳訊息確認，確認後才算預約成功。</p>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== 區塊：常見問題 ==================== -->
+<section class="oat" id="faq">
+  <div class="wrap split">
+    <div class="reveal"><h2 class="h2">常見問題</h2></div>
+    <div class="faq reveal">
+      <details>
+        <summary>如果會遲到怎麼辦？</summary>
+        <p>請盡早用 LINE 或電話告訴我們。遲到 15 分鐘內會盡量保留時段；超過的話，可能需要調整服務內容或改約，以免影響下一位客人。</p>
+      </details>
+      <details>
+        <summary>要取消或改期，需要提前多久？</summary>
+        <p>請至少在預約前 24 小時通知。臨時取消或未到兩次以上，之後的預約可能需要先付訂金，謝謝體諒。</p>
+      </details>
+      <details>
+        <summary>附近好停車嗎？</summary>
+        <p>店門口有機車停車格；汽車可停美村路與大隱街口的收費停車場，步行約兩分鐘。</p>
+      </details>
+      <details>
+        <summary>可以用哪些方式付款？</summary>
+        <p>現金、信用卡、LINE Pay 與街口支付都可以。</p>
+      </details>
+      <details>
+        <summary>不知道自己適合什麼，也可以預約嗎？</summary>
+        <p>當然可以。設計師會先依照你的臉型、髮質與平常整理的習慣給建議，討論到你滿意再開始。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：店家資訊 ==================== -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <figure class="reveal">
+      <div class="img img-chair" role="img" aria-label="店內的拱形鏡與座椅"></div>
+      <figcaption class="cap">美村路一段，一樓的白色門</figcaption>
+    </figure>
+    <div class="reveal">
+      <h2 class="h2">來店裡坐坐</h2>
+      <p class="addr">台中市西區美村路一段 123 號 1 樓</p>
+      <dl class="hours">
+        <dt>週二至週五</dt><dd>11:00–20:00</dd>
+        <dt>週六、週日</dt><dd>10:00–19:00</dd>
+        <dt>公休</dt><dd>每週一</dd>
+        <dt>電話</dt><dd><a class="tlink" href="tel:04-2345-6789">04-2345-6789</a></dd>
+      </dl>
+      <div class="ctas">
+        <a class="btn btn-ghost" href="https://maps.google.com/?q=台中市西區美村路一段123號" target="_blank" rel="noopener">在 Google 地圖開啟</a>
+        <a class="tlink" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 詢問</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="foot-mark">霧光 Atelier</p>
+    <div class="foot">
+      <div>
+        <h2>地址</h2>
+        <ul><li>台中市西區美村路一段 123 號 1 樓</li></ul>
+      </div>
+      <div>
+        <h2>聯絡</h2>
+        <ul>
+          <li><a href="tel:04-2345-6789">04-2345-6789</a></li>
+          <li><a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE：@yourlineid</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>營業時間</h2>
+        <ul><li>週二至週五 11:00–20:00</li><li>週六、週日 10:00–19:00</li><li>每週一公休</li></ul>
+      </div>
+      <div>
+        <h2>追蹤</h2>
+        <ul><li><a href="#">Instagram</a></li><li><a href="#">Threads</a></li><li><a href="#">Facebook</a></li></ul>
+      </div>
+    </div>
+    <p class="copy">© <span id="y"></span> 霧光 Atelier</p>
+  </div>
+</footer>
+
+<!-- ==================== 區塊：手機底部固定按鈕 ==================== -->
+<a class="btn btn-primary sticky-cta" href="#book">預約</a>
+
+<script>
+(() => {
+  const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  // 頁首：捲動後出現背景
+  const header = $('.site-header');
+  const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  // 漢堡選單
+  const burger = $('.burger'), menu = $('#menu');
+  const setMenu = open => { burger.setAttribute('aria-expanded', open); burger.setAttribute('aria-label', open ? '關閉選單' : '開啟選單'); menu.classList.toggle('open', open); };
+  burger.addEventListener('click', () => setMenu(burger.getAttribute('aria-expanded') !== 'true'));
+  $$('a', menu).forEach(a => a.addEventListener('click', () => setMenu(false)));
+  // 捲動漸入
+  const io = 'IntersectionObserver' in window && new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  $$('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+  // 限時動態檢視器：點左側上一則、右側下一則，方向鍵切換，Esc 關閉
+  const v = $('#stories'), groups = $$('.story', v);
+  let g = 0, s = 0, opener = null;
+  v.setAttribute('role', 'dialog'); v.setAttribute('aria-modal', 'true');
+  const slidesOf = k => $$('.slide', groups[k]);
+  const show = () => {
+    groups.forEach((el, k) => el.classList.toggle('on', k === g));
+    slidesOf(g).forEach((el, k) => el.classList.toggle('on', k === s));
+    $$('.bars i', groups[g]).forEach((b, k) => { b.className = ''; void b.offsetWidth; b.className = k < s ? 'done' : k === s ? 'now' : ''; });
+  };
+  const close = () => { v.classList.remove('open'); document.documentElement.classList.remove('lock'); if (opener) opener.focus(); };
+  const go = d => {
+    s += d;
+    if (s >= slidesOf(g).length) { if (g === groups.length - 1) return close(); g++; s = 0; }
+    if (s < 0) s = g ? slidesOf(--g).length - 1 : 0;
+    show();
+  };
+  const open = k => { opener = document.activeElement; g = k; s = 0; v.classList.add('open'); document.documentElement.classList.add('lock'); show(); $('.v-close', groups[g]).focus(); };
+  $$('[data-story]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); open(+a.dataset.story); }));
+  $('.v-prev', v).addEventListener('click', () => go(-1));
+  $('.v-next', v).addEventListener('click', () => go(1));
+  $$('.v-close', v).forEach(b => b.addEventListener('click', close));
+  $$('.v-pause', v).forEach(b => b.addEventListener('click', () => {
+    const p = v.classList.toggle('paused');
+    $$('.v-pause', v).forEach(x => { x.setAttribute('aria-pressed', p); x.setAttribute('aria-label', p ? '繼續播放' : '暫停'); });
+  }));
+  v.addEventListener('animationend', e => { if (e.target.matches('.bars i')) go(1); });
+  $$('.slide a', v).forEach(a => a.addEventListener('click', close));
+  addEventListener('keydown', e => {
+    if (e.key === 'Escape') setMenu(false);
+    if (!v.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowRight') go(1);
+    if (e.key === 'ArrowLeft') go(-1);
+    if (e.key === 'Tab') {
+      const f = $$('button, a[href]', v).filter(x => x.offsetParent), i = f.indexOf(document.activeElement);
+      if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus(); }
+      else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); f[0].focus(); }
+    }
+  });
+  // 本季推薦輪播：按鈕、圓點，以及觸控滑動（瀏覽器原生 scroll-snap）
+  const track = $('.car-track'), items = $$('.car-item', track), dots = $$('.car-dots button'), [prev, next] = $$('.car-btn');
+  const step = () => items[1].offsetLeft - items[0].offsetLeft;
+  const atEnd = () => track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+  const index = () => atEnd() ? items.length - 1 : Math.round(track.scrollLeft / step());
+  const to = i => track.scrollTo({ left: Math.max(0, i) * step() });
+  const sync = () => { const i = index(); dots.forEach((d, k) => d.setAttribute('aria-current', k === i)); prev.disabled = track.scrollLeft < 4; next.disabled = atEnd(); };
+  dots.forEach((d, k) => d.addEventListener('click', () => to(k)));
+  [prev, next].forEach(b => b.addEventListener('click', () => to(Math.round(track.scrollLeft / step()) + +b.dataset.dir)));
+  track.addEventListener('scroll', sync, { passive: true }); sync();
+  // 頁尾年份
+  $('#y').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>极光车研 Aurora Auto Care｜新庄汽车保养、镀膜、内装清洁与板金</title>
+<meta name="description" content="极光车研位于新北市新庄区，提供定期保养、镀膜、内装清洁、轮胎、冷气与板金服务。原厂料件、施工前书面报价、12 个月保固，在线即可预约。">
+<meta property="og:title" content="极光车研 Aurora Auto Care｜新庄汽车保养与美容">
+<meta property="og:description" content="定期保养、镀膜、内装清洁、轮胎、冷气与板金。原厂料件、透明报价、12 个月保固。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#eceef1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Rajdhani:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "极光车研 Aurora Auto Care",
+  "telephone": "02-1234-5678",
+  "url": "https://example.com/",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "思源路 168 号",
+    "addressLocality": "新庄区",
+    "addressRegion": "新北市",
+    "postalCode": "242",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
+  ]
+}
+</script>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ============================================================
+   主题设置：改这里就能换整站配色与字体
+   ============================================================ */
+:root {
+  --brand: #c41f2a;            /* 品牌主色（信号红）：按钮、价格、重点线条 */
+  --brand-deep: #9e1720;       /* 品牌深色：按钮滑过时的颜色 */
+  --brand-bright: #ff5c62;     /* 亮红：深色区块上的强调文本（对比 AA） */
+  --brand-ink: #f6f7f9;        /* 在 brand 色上的文本颜色（带冷调的白） */
+  --bg: #eceef1;               /* 网页底色（浅钢灰） */
+  --surface: #f7f8fa;          /* 卡片、表单、交错区块底色 */
+  --surface-2: #e1e4e8;        /* 次一层底色（表头、输入框、页脚） */
+  --text: #1a1e23;             /* 主要文本（石墨黑） */
+  --muted: #5a626c;            /* 次要说明文本（钢灰） */
+  --line: #c9ced5;             /* 细分隔线、边框 */
+  --line-strong: #9aa2ac;      /* 量测刻度线、较明显的边框 */
+  --steel-1: #f2f4f6;          /* 金属反光：亮部 */
+  --steel-2: #b4bbc4;          /* 金属反光：中间调 */
+  --steel-3: #5f6873;          /* 金属反光：暗部 */
+  --cabin: #8c8072;            /* 占位图：内装皮革色 */
+  --dust: #6d5b48;             /* 占位图：煞车粉尘、脏污色 */
+  --dark-bg: #15181c;          /* 深色区块底色（里程提醒） */
+  --dark-surface: #1f2328;     /* 深色区块内的面板底色 */
+  --dark-text: #eef0f3;        /* 深色区块文本 */
+  --dark-muted: #a3abb5;       /* 深色区块次要文本 */
+  --dark-line: #343a42;        /* 深色区块分隔线 */
+  --ok: #5fd38d;               /* 里程状态：良好（用于深色底） */
+  --warn: #f2b33d;             /* 里程状态：即将到期（用于深色底） */
+  --shade: #0b0d10;            /* 阴影基准色 */
+  --radius: 3px;               /* 圆角大小（技术感建议小圆角） */
+  --font-heading: "Barlow Condensed", "Noto Sans SC", "PingFang SC", sans-serif; /* 标题字体（窄体无衬线） */
+  --font-num: "Rajdhani", "Barlow Condensed", "Noto Sans SC", sans-serif;          /* 数字、仪表字体 */
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; /* 内文本型 */
+  --pad: clamp(1rem, 5vw, 4rem); /* 页面左右留白 */
+  --max: 1200px;               /* 内容最大宽度 */
+  --ease: cubic-bezier(.2, .7, .1, 1); /* 动画曲线 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; -webkit-text-size-adjust: 100%; scroll-padding-top: 4.5rem; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.7 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 2px; }
+.wrap { max-width: var(--max); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: .5rem; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 99; }
+.skip:focus { left: .5rem; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+h1, h2, h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+
+/* ---------- 按钮 ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  padding: .85rem 1.5rem; font: 700 1rem/1.2 var(--font-body);
+  border: 1px solid var(--brand); border-radius: var(--radius); cursor: pointer;
+  background: var(--brand); color: var(--brand-ink);
+  box-shadow: 0 10px 24px -14px color-mix(in srgb, var(--brand) 80%, transparent);
+  transition: transform .2s var(--ease), background-color .2s, color .2s, border-color .2s;
+}
+.btn:hover { background: var(--brand-deep); border-color: var(--brand-deep); transform: translateY(-2px); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled, .form :disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.btn.ghost { background: transparent; color: var(--text); border-color: var(--line-strong); box-shadow: none; }
+.btn.ghost:hover { background: var(--text); color: var(--surface); border-color: var(--text); }
+a:not(.btn):hover { color: var(--brand); }
+a:not(.btn):active { opacity: .7; }
+
+/* ---------- 区块与标题（标题下方的量测刻度线） ---------- */
+section { padding: clamp(4rem, 10vw, 7rem) var(--pad); position: relative; }
+.alt { background: var(--surface); }
+.sec-head { display: grid; gap: 1rem; margin-bottom: clamp(2.25rem, 5vw, 3.5rem); padding-bottom: 1.25rem; position: relative; }
+.sec-head::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 9px;
+  background:
+    linear-gradient(var(--line-strong), var(--line-strong)) left bottom / 100% 1px no-repeat,
+    repeating-linear-gradient(90deg, var(--line-strong) 0 1px, transparent 1px 10px) left bottom / 100% 5px no-repeat,
+    repeating-linear-gradient(90deg, var(--text) 0 1px, transparent 1px 100px) left bottom / 100% 9px no-repeat;
+}
+.sec-head::before { content: ""; position: absolute; left: 0; bottom: 0; width: 4.5rem; height: 3px; background: var(--brand); z-index: 1; }
+@media (min-width: 860px) { .sec-head { grid-template-columns: minmax(0, 1fr) minmax(0, 26rem); align-items: end; column-gap: 3rem; } }
+.sec-head h2 { font: 700 clamp(2.1rem, 5.5vw, 3.4rem)/1.05 var(--font-heading); }
+.sec-head p { color: var(--muted); }
+
+/* ==================== 艺术占位图 ====================
+   以下为不用照片的 CSS 渐层占位图（金属反光、轮框、内装）。
+   换成照片：.img-hero { background: url(images/hero.jpg) center/cover; }
+   换成照片：.img-paint-a { background: url(images/paint-before.jpg) center/cover; }（paint-b、cabin-a、cabin-b、rim-a、rim-b 同理）
+   换成照片：.img-tech1 { background: url(images/tech1.jpg) center/cover; }（tech2～4 同理）
+   换成照片：.img-map { background: url(images/shop.jpg) center/cover; }
+   ===================================================== */
+.img { position: relative; overflow: hidden; background-color: var(--surface-2); isolation: isolate; }
+/* Hero 背后的反光金属面板 */
+.img-hero {
+  background:
+    linear-gradient(104deg, transparent 0 22%, color-mix(in srgb, var(--steel-1) 90%, transparent) 22.4% 27%, transparent 27.4%),
+    linear-gradient(104deg, transparent 0 31%, color-mix(in srgb, var(--steel-1) 55%, transparent) 31.2% 32.4%, transparent 32.6%),
+    linear-gradient(104deg, transparent 0 68%, color-mix(in srgb, var(--steel-1) 70%, transparent) 68.3% 71%, transparent 71.3%),
+    linear-gradient(180deg, var(--steel-1) 0%, var(--steel-2) 58%, var(--steel-3) 58.2%, var(--steel-2) 62%, var(--surface-2) 100%);
+}
+.img-hero::after { /* 细网格，像工程图纸 */
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background:
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--text) 6%, transparent) 0 1px, transparent 1px 32px),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--text) 6%, transparent) 0 1px, transparent 1px 32px);
+}
+/* 施工前后：漆面 */
+.img-paint-a {
+  background:
+    repeating-radial-gradient(circle at 30% 40%, color-mix(in srgb, var(--steel-1) 22%, transparent) 0 1px, transparent 1px 7px),
+    repeating-radial-gradient(circle at 75% 70%, color-mix(in srgb, var(--steel-1) 18%, transparent) 0 1px, transparent 1px 9px),
+    radial-gradient(ellipse at 60% 20%, color-mix(in srgb, var(--dust) 35%, transparent), transparent 70%),
+    linear-gradient(170deg, var(--steel-2), var(--steel-3));
+}
+.img-paint-b {
+  background:
+    linear-gradient(118deg, transparent 0 34%, color-mix(in srgb, var(--steel-1) 85%, transparent) 34.5% 37%, transparent 37.5%),
+    linear-gradient(118deg, transparent 0 41%, color-mix(in srgb, var(--steel-1) 45%, transparent) 41.3% 42.2%, transparent 42.5%),
+    radial-gradient(ellipse 70% 40% at 50% 0%, color-mix(in srgb, var(--steel-1) 35%, transparent), transparent 70%),
+    linear-gradient(170deg, var(--steel-3), var(--dark-bg));
+}
+/* 施工前后：内装座椅 */
+.img-cabin-a {
+  background:
+    radial-gradient(circle at 28% 62%, color-mix(in srgb, var(--dust) 70%, transparent) 0 8%, transparent 14%),
+    radial-gradient(circle at 70% 38%, color-mix(in srgb, var(--dust) 55%, transparent) 0 6%, transparent 11%),
+    repeating-linear-gradient(90deg, transparent 0 46px, color-mix(in srgb, var(--shade) 25%, transparent) 46px 48px),
+    linear-gradient(180deg, color-mix(in srgb, var(--cabin) 70%, var(--steel-3)), var(--cabin));
+}
+.img-cabin-b {
+  background:
+    linear-gradient(100deg, transparent 0 55%, color-mix(in srgb, var(--steel-1) 30%, transparent) 55.5% 60%, transparent 60.5%),
+    repeating-linear-gradient(90deg, transparent 0 46px, color-mix(in srgb, var(--steel-1) 40%, transparent) 46px 47px, color-mix(in srgb, var(--shade) 30%, transparent) 47px 48px),
+    linear-gradient(180deg, var(--cabin), color-mix(in srgb, var(--cabin) 75%, var(--shade)));
+}
+/* 施工前后：轮框（用 conic 渐层画出轮辐） */
+.img-rim-a, .img-rim-b { --rim: var(--steel-1); --bed: var(--steel-2); }
+.img-rim-a { --rim: color-mix(in srgb, var(--steel-2) 60%, var(--dust)); --bed: color-mix(in srgb, var(--steel-3) 70%, var(--dust)); }
+.img-rim-a, .img-rim-b {
+  background:
+    radial-gradient(circle at 50% 50%, var(--brand) 0 3%, var(--steel-3) 3.5% 8%, var(--rim) 8.5% 11%, transparent 11.5%),
+    radial-gradient(circle at 50% 50%, transparent 0 33%, var(--rim) 33.5% 36%, var(--shade) 36.5% 47%, var(--steel-3) 47.5% 48.5%, transparent 49%),
+    radial-gradient(circle at 50% 50%, transparent 0 49%, var(--bed) 49.5%),
+    repeating-conic-gradient(from 0deg at 50% 50%, color-mix(in srgb, var(--shade) 70%, transparent) 0 1deg, transparent 1deg 3deg),
+    repeating-conic-gradient(from 10deg at 50% 50%, var(--rim) 0 9deg, color-mix(in srgb, var(--shade) 85%, var(--steel-3)) 9deg 36deg),
+    linear-gradient(160deg, var(--bed), var(--steel-3));
+}
+.img-rim-a::after, .img-rim-b::after { content: ""; position: absolute; inset: 0; }
+.img-rim-a::after { background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--dust) 45%, transparent) 0 34%, transparent 35%); }
+.img-rim-b::after { background: linear-gradient(130deg, transparent 30%, color-mix(in srgb, var(--steel-1) 40%, transparent) 46%, transparent 60%); }
+/* 技师形象图：工作灯下的金属面板与轮框剪影 */
+.img-tech1, .img-tech2, .img-tech3, .img-tech4 { aspect-ratio: 4 / 3; }
+.img-tech1 { --spot: 30% 30%; } .img-tech2 { --spot: 70% 25%; } .img-tech3 { --spot: 40% 70%; } .img-tech4 { --spot: 65% 60%; }
+.img-tech1, .img-tech2, .img-tech3, .img-tech4 {
+  background:
+    radial-gradient(circle at 50% 44%, var(--text) 0 14%, transparent 14.5%),
+    radial-gradient(ellipse 36% 30% at 50% 100%, var(--text) 0 99%, transparent 100%),
+    radial-gradient(circle at 51.5% 43.5%, var(--brand) 0 14.6%, transparent 15.1%),
+    radial-gradient(ellipse 36.6% 30.6% at 51% 99.4%, var(--brand) 0 99%, transparent 100%),
+    radial-gradient(ellipse at var(--spot), color-mix(in srgb, var(--steel-1) 55%, transparent), transparent 60%),
+    linear-gradient(104deg, transparent 0 60%, color-mix(in srgb, var(--steel-1) 30%, transparent) 60.5% 64%, transparent 64.5%),
+    linear-gradient(170deg, var(--steel-2), var(--steel-3));
+}
+/* 地图 */
+.img-map {
+  min-height: 300px;
+  background:
+    radial-gradient(circle at 56% 46%, var(--brand) 0 8px, color-mix(in srgb, var(--brand) 25%, transparent) 9px 24px, transparent 25px),
+    linear-gradient(32deg, transparent 47%, var(--surface) 47.4% 50.6%, transparent 51%),
+    linear-gradient(-58deg, transparent 62%, var(--surface) 62.3% 64%, transparent 64.3%),
+    linear-gradient(90deg, transparent 28%, var(--surface) 28.3% 29.6%, transparent 29.9%),
+    linear-gradient(0deg, transparent 70%, var(--surface) 70.3% 71.6%, transparent 71.9%),
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--text) 5%, transparent) 0 1px, transparent 1px 40px),
+    var(--surface-2);
+}
+
+/* ---------- 轮胎胎纹分隔带 ---------- */
+.tread { height: 28px; background:
+  linear-gradient(135deg, var(--text) 25%, transparent 25%) -14px 0 / 28px 28px,
+  linear-gradient(225deg, var(--text) 25%, transparent 25%) -14px 0 / 28px 28px,
+  linear-gradient(315deg, var(--text) 25%, transparent 25%) 0 0 / 28px 28px,
+  linear-gradient(45deg, var(--text) 25%, transparent 25%) 0 0 / 28px 28px,
+  var(--steel-3); }
+
+/* ==================== 页眉 ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .3s, border-color .3s; border-bottom: 1px solid transparent; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 90%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-color: var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .85rem var(--pad); max-width: calc(var(--max) + 2 * var(--pad)); margin-inline: auto; }
+.logo { display: flex; align-items: center; gap: .6rem; color: var(--text); }
+.logo svg { width: 38px; height: 38px; flex: none; }
+.logo .mk-ring { fill: none; stroke: var(--text); stroke-width: 2; }
+.logo .mk-arc { fill: none; stroke: var(--brand); stroke-width: 3; stroke-linecap: round; }
+.logo strong { display: block; font: 700 1.15rem/1.1 var(--font-body); }
+.logo small { display: block; font: 600 .85rem/1.1 var(--font-heading); color: var(--muted); }
+.nav-links { display: flex; align-items: center; gap: clamp(.9rem, 2vw, 1.8rem); font-weight: 500; font-size: .95rem; }
+.nav-links a:not(.btn) { position: relative; padding-block: .3rem; }
+.nav-links a:not(.btn)::after { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 100%; background: var(--brand); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease); }
+.nav-links a:not(.btn):hover::after, .nav-links a:not(.btn):focus-visible::after { transform: scaleX(1); }
+.nav-links .btn { padding: .6rem 1.1rem; font-size: .92rem; }
+.menu-btn { display: none; width: 44px; height: 44px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--text); cursor: pointer; }
+.menu-btn:hover { border-color: var(--text); }
+.menu-btn:active { transform: scale(.94); }
+.menu-btn span { display: block; width: 20px; height: 2px; background: currentColor; margin: 4px auto; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* 没有 JavaScript 时，菜单直接换行显示在 logo 下方；有 JS 才收进汉堡菜单 */
+  html:not(.js) .nav { flex-wrap: wrap; }
+  html:not(.js) .site-header { position: sticky; background: var(--surface); border-color: var(--line); }
+  html:not(.js) .nav-links { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: 3rem; }
+  .js .menu-btn { display: block; }
+  .js .nav-links {
+    position: fixed; inset: 4.4rem 0 auto; flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--surface); border-bottom: 1px solid var(--line); padding: .5rem var(--pad) 1.5rem;
+    box-shadow: 0 20px 40px -20px color-mix(in srgb, var(--shade) 40%, transparent);
+    transform: translateY(-120%); visibility: hidden; transition: transform .35s var(--ease), visibility .35s; z-index: -1;
+  }
+  .js .nav-links.open { transform: none; visibility: visible; }
+  .js .nav-links a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+  .js .nav-links .btn { margin-top: 1rem; padding: .9rem; }
+}
+
+/* ==================== Hero ==================== */
+.hero { padding-top: clamp(6rem, 12vw, 7.5rem); padding-bottom: clamp(3rem, 7vw, 5rem); overflow: clip; }
+.hero-grid { display: grid; gap: 2.5rem; grid-template-columns: minmax(0, 1fr); align-items: center; }
+@media (min-width: 960px) { .hero-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 3rem; } }
+.hero h1 { font: 700 clamp(2.6rem, 7vw, 4.6rem)/1.06 var(--font-heading); margin-bottom: 1.1rem; }
+.hero-lead { max-width: 32rem; font-size: clamp(1rem, 2vw, 1.12rem); color: var(--muted); }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.75rem; }
+.hero-specs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 2.25rem; border-top: 1px solid var(--line-strong); }
+.hero-specs div { padding: .9rem .75rem 0 0; }
+.hero-specs div + div { padding-left: .75rem; border-left: 1px solid var(--line); }
+.hero-specs strong { display: block; font: 700 clamp(1.6rem, 4vw, 2.2rem)/1 var(--font-num); }
+.hero-specs span { font-size: .85rem; color: var(--muted); }
+.car-fig { position: relative; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 30px 60px -40px color-mix(in srgb, var(--shade) 60%, transparent); }
+.car-fig .img-hero { position: absolute; inset: 0; z-index: -1; }
+.car { display: block; width: 100%; height: auto; padding: 1rem .5rem .5rem; }
+.car .body { fill: url(#paint); stroke: var(--text); stroke-width: 1.5; stroke-linejoin: round; }
+.car .s1 { stop-color: var(--steel-1); } .car .s2 { stop-color: var(--steel-2); } .car .s3 { stop-color: var(--steel-3); }
+.car .glass { fill: var(--text); opacity: .82; }
+.car .glare { fill: none; stroke: var(--steel-1); stroke-width: 3; stroke-linecap: round; opacity: .9; }
+.car .stripe { fill: none; stroke: var(--brand); stroke-width: 3; }
+.car .tire { fill: var(--text); }
+.car .tread-ring { fill: none; stroke: var(--steel-3); stroke-width: 4; stroke-dasharray: 3 4; }
+.car .rim { fill: var(--steel-2); stroke: var(--steel-1); stroke-width: 1.5; }
+.car .spokes { stroke: var(--steel-3); stroke-width: 4; stroke-linecap: round; }
+.car .hub { fill: var(--brand); }
+.car .ground { stroke: var(--text); stroke-width: 1; }
+.car .dim { stroke: var(--muted); stroke-width: 1; fill: none; }
+.car .dim-txt { fill: var(--muted); font: 700 13px var(--font-num); }
+.car .call { stroke: var(--brand); stroke-width: 1; fill: none; }
+.car .call-dot { fill: var(--brand); }
+.car .call-txt { fill: var(--text); font: 500 13px var(--font-body); }
+@media (max-width: 600px) { .car .call-txt, .car .dim-txt { font-size: 19px; } }
+
+/* ==================== 服务项目 ==================== */
+.svc-grid, .team, .reviews, .why-grid, .ba-grid { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .svc-grid, .team { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .svc-grid, .reviews, .why-grid, .ba-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1080px) { .team { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.svc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; position: relative; transition: border-color .25s, transform .25s var(--ease); }
+.svc:hover { border-color: var(--text); transform: translateY(-3px); }
+.svc::before { content: ""; position: absolute; left: -1px; top: -1px; width: 2.5rem; height: 3px; background: var(--brand); }
+.svc svg { width: 44px; height: 44px; margin-bottom: 1rem; fill: none; stroke: var(--text); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.svc svg .hl { stroke: var(--brand); }
+.svc h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: .45rem; }
+.svc p { color: var(--muted); font-size: .95rem; }
+.spec { margin-top: 1.1rem; border-top: 1px solid var(--line); font-size: .88rem; }
+.spec div { display: flex; justify-content: space-between; gap: 1rem; padding: .5rem 0; border-bottom: 1px dashed var(--line); }
+.spec dt { color: var(--muted); }
+.spec dd { font-weight: 700; text-align: right; }
+
+/* ==================== 价目表 ==================== */
+.tabs { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--bg); margin-bottom: 1.25rem; }
+.tabs button { border: 0; background: transparent; color: var(--muted); font: 700 .98rem/1 var(--font-body); padding: .75rem 1.2rem; border-radius: 2px; cursor: pointer; transition: background-color .2s, color .2s; }
+.tabs button:hover { color: var(--text); background: var(--surface-2); }
+.tabs button:active { transform: scale(.97); }
+.tabs button[aria-selected="true"] { background: var(--text); color: var(--surface); }
+.table-scroll { overflow-x: auto; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--surface); -webkit-overflow-scrolling: touch; }
+.price-panel + .price-panel { margin-top: 1.5rem; }
+.js .price-panel:not(.on) { display: none; }
+.js .price-panel + .price-panel { margin-top: 0; }
+.price-panel h3 { font: 600 1.3rem/1.2 var(--font-heading); margin-bottom: .6rem; }
+.js .price-panel h3 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.sheet { width: 100%; min-width: 600px; border-collapse: collapse; font-size: .95rem; }
+.sheet th, .sheet td { padding: .9rem 1rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.sheet thead th { background: var(--surface-2); font-weight: 700; font-size: .88rem; color: var(--muted); border-bottom: 1px solid var(--line-strong); }
+.sheet tbody th { font-weight: 700; white-space: nowrap; }
+.sheet td.t { font: 600 1.05rem/1.4 var(--font-num); white-space: nowrap; color: var(--muted); }
+.sheet td.p { font: 700 1.25rem/1.3 var(--font-num); color: var(--brand); white-space: nowrap; text-align: right; }
+.sheet thead th:last-child { text-align: right; }
+.sheet tbody tr:last-child > * { border-bottom: 0; }
+.sheet tbody tr:hover { background: color-mix(in srgb, var(--brand) 4%, transparent); }
+.note { color: var(--muted); font-size: .85rem; margin-top: .9rem; }
+.hint { color: var(--muted); font-size: .85rem; margin-top: .6rem; }
+@media (min-width: 680px) { .hint { display: none; } }
+
+/* ==================== 里程提醒（深色区块） ==================== */
+.dark { background: var(--dark-bg); color: var(--dark-text); }
+.dark .sec-head p, .dark .muted { color: var(--dark-muted); }
+.dark .sec-head::after { background:
+    linear-gradient(var(--dark-line), var(--dark-line)) left bottom / 100% 1px no-repeat,
+    repeating-linear-gradient(90deg, var(--dark-line) 0 1px, transparent 1px 10px) left bottom / 100% 5px no-repeat,
+    repeating-linear-gradient(90deg, var(--dark-muted) 0 1px, transparent 1px 100px) left bottom / 100% 9px no-repeat; }
+.dark :focus-visible { outline-color: var(--brand-bright); }
+.gauge-grid { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .gauge-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; } }
+.gauge-copy ul { display: grid; gap: .8rem; margin-top: 1.5rem; }
+.gauge-copy li { padding-left: 1.4rem; position: relative; color: var(--dark-muted); }
+.gauge-copy li::before { content: ""; position: absolute; left: 0; top: .75em; width: .8rem; height: 1px; background: var(--brand-bright); }
+.gauge-copy li strong { color: var(--dark-text); }
+.gauge { background: var(--dark-surface); border: 1px solid var(--dark-line); border-radius: var(--radius); padding: clamp(1.25rem, 4vw, 2rem); display: grid; gap: 1.25rem; }
+.gauge .row { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 520px) { .gauge .row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.gauge label { display: grid; gap: .4rem; font-weight: 500; font-size: .92rem; color: var(--dark-muted); }
+.gauge input { width: 100%; font: 700 1.5rem/1.2 var(--font-num); color: var(--dark-text); background: var(--dark-bg); border: 1px solid var(--dark-line); border-radius: var(--radius); padding: .7rem .9rem; }
+.gauge input:hover { border-color: var(--dark-muted); }
+.gauge input:focus-visible { outline: 2px solid var(--brand-bright); outline-offset: 1px; }
+.readout { border-top: 1px solid var(--dark-line); padding-top: 1.25rem; }
+.readout .lbl { font-size: .9rem; color: var(--dark-muted); }
+.readout .big { font: 700 clamp(2.8rem, 10vw, 4.4rem)/1 var(--font-num); margin: .3rem 0 .9rem; font-variant-numeric: tabular-nums; }
+.readout .big small { font-size: .4em; color: var(--dark-muted); margin-left: .35rem; }
+.bar { height: 10px; background: repeating-linear-gradient(90deg, var(--dark-line) 0 2px, transparent 2px 10%), var(--dark-bg); border: 1px solid var(--dark-line); border-radius: 2px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--st, var(--dark-muted)); transform-origin: left; transform: scaleX(var(--fill, 0)); transition: transform .5s var(--ease), background-color .3s; }
+.status { margin-top: .9rem; font-weight: 700; color: var(--st, var(--dark-muted)); }
+.status.ok { --st: var(--ok); } .status.warn { --st: var(--warn); } .status.over { --st: var(--brand-bright); }
+.gauge .btn { justify-self: start; }
+
+/* ==================== 施工前后 ==================== */
+.ba { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.ba-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--text); }
+.ba-pair > div { position: relative; }
+.ba-pair .img { aspect-ratio: 1 / 1; }
+.ba-pair span { position: absolute; left: .6rem; bottom: .6rem; z-index: 1; font-size: .8rem; font-weight: 700; background: var(--surface); color: var(--text); padding: .2rem .55rem; border-radius: 2px; }
+.ba-pair div + div span { background: var(--brand); color: var(--brand-ink); }
+.ba-body { padding: 1.25rem 1.4rem 1.5rem; }
+.ba-body h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: .35rem; }
+.ba-body p { color: var(--muted); font-size: .92rem; }
+
+/* ==================== 为什么选我们 ==================== */
+.why { border-top: 3px solid var(--text); padding-top: 1.4rem; }
+.why .num { font: 700 3rem/1 var(--font-num); color: var(--brand); }
+.why h3 { font: 700 1.6rem/1.2 var(--font-heading); margin: .5rem 0 .5rem; }
+.why p { color: var(--muted); }
+
+/* ==================== 技师团队 ==================== */
+.tech { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.tech .img { border-bottom: 3px solid var(--brand); }
+.tech-body { padding: 1.2rem 1.25rem 1.4rem; }
+.tech h3 { font-size: 1.2rem; font-weight: 700; }
+.tech .role { color: var(--brand); font-weight: 700; font-size: .9rem; margin-bottom: .5rem; }
+.tech p { color: var(--muted); font-size: .92rem; }
+.certs { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
+.certs li { font-size: .78rem; font-weight: 500; padding: .2rem .55rem; background: var(--bg); border: 1px solid var(--line); border-radius: 2px; }
+
+/* ==================== 顾客评价 ==================== */
+.review { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; display: flex; flex-direction: column; gap: 1rem; }
+.score { display: flex; align-items: baseline; gap: .5rem; }
+.score b { font: 700 2.2rem/1 var(--font-num); color: var(--brand); }
+.score span { color: var(--muted); font-size: .88rem; }
+.review blockquote { flex: 1; }
+.review footer { color: var(--muted); font-size: .88rem; border-top: 1px solid var(--line); padding-top: .8rem; }
+.review footer strong { color: var(--text); }
+
+/* ==================== 常见问题 ==================== */
+.faq { max-width: 860px; border-top: 1px solid var(--line-strong); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.15rem 0; font-weight: 700; font-size: 1.05rem; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:hover { color: var(--brand); }
+.faq summary::after { content: ""; flex: none; width: 14px; height: 14px; background: linear-gradient(currentColor, currentColor) center / 100% 2px no-repeat, linear-gradient(currentColor, currentColor) center / 2px 100% no-repeat; transition: transform .25s var(--ease); }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { color: var(--muted); padding: 0 2rem 1.25rem 0; }
+
+/* ==================== 在线预约表单 ==================== */
+.book-grid, .loc { display: grid; gap: 2.5rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 920px) { .book-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); } .loc { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.book-copy h2 { font: 700 clamp(2.1rem, 5.5vw, 3.4rem)/1.05 var(--font-heading); margin-bottom: 1rem; }
+.book-copy > p { color: var(--muted); max-width: 28rem; }
+.steps { margin-top: 1.75rem; display: grid; gap: 1rem; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 2.6rem minmax(0, 1fr); gap: .75rem; align-items: baseline; counter-increment: s; }
+.steps li::before { content: "0" counter(s); font: 700 1.5rem/1 var(--font-num); color: var(--brand); }
+.contact-btns { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+.form { background: var(--bg); padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--line-strong); border-radius: var(--radius); display: grid; gap: 1rem; }
+.form label { display: grid; gap: .35rem; font-weight: 500; font-size: .92rem; }
+.form input, .form select { width: 100%; font: 400 1rem/1.4 var(--font-body); color: var(--text); background: var(--surface); border: 1px solid var(--line-strong); border-radius: var(--radius); padding: .75rem .85rem; min-height: 48px; }
+.form input:hover, .form select:hover { border-color: var(--text); }
+.form input:focus-visible, .form select:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.form .row { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 500px) { .form .row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.form .small { color: var(--muted); font-size: .8rem; }
+
+/* ==================== 营业时间与地图 ==================== */
+.loc .img-map { border-radius: var(--radius); border: 1px solid var(--line-strong); }
+.hours { width: 100%; border-collapse: collapse; margin-top: 1.25rem; font-size: .98rem; }
+.hours th, .hours td { padding: .75rem 0; border-bottom: 1px solid var(--line); text-align: left; }
+.hours td { text-align: right; font: 700 1.1rem/1.3 var(--font-num); }
+.hours tr.off td { color: var(--muted); font: 500 .95rem/1.3 var(--font-body); }
+.addr { margin-top: 1.25rem; display: grid; gap: .3rem; }
+.addr a { font-weight: 700; }
+
+/* ==================== 页脚 ==================== */
+.site-footer { background: var(--surface-2); border-top: 3px solid var(--text); padding: 3.5rem var(--pad) 2rem; color: var(--muted); font-size: .92rem; }
+.foot-grid { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .foot-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.site-footer h2 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: .7rem; }
+.site-footer li + li { margin-top: .3rem; }
+.social { display: flex; gap: .5rem; }
+.social a { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid var(--line-strong); border-radius: var(--radius); font: 700 .85rem/1 var(--font-heading); color: var(--text); transition: background-color .2s, color .2s; }
+.social a:hover { background: var(--text); color: var(--surface); }
+.social a:active { transform: scale(.95); }
+.copy { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line-strong); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .85rem; }
+
+/* ---------- 手机底部固定按钮 ---------- */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  .sticky-cta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .6rem var(--pad) calc(.6rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--line-strong); }
+  body { padding-bottom: 4.6rem; }
+}
+
+/* ---------- 卷动渐入动画 ---------- */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<!-- ==================== 区块：页眉导览 ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav" aria-label="主菜单">
+    <a href="#top" class="logo" aria-label="极光车研 回到顶端">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle class="mk-ring" cx="20" cy="20" r="17"/><path class="mk-arc" d="M8 25 Q20 6 32 25"/><circle class="mk-ring" cx="20" cy="25" r="3"/></svg>
+      <span><strong>极光车研</strong><small>Aurora Auto Care</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="打开菜单"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links">
+      <a href="#services">服务</a>
+      <a href="#pricing">价目</a>
+      <a href="#reminder">里程提醒</a>
+      <a href="#gallery">案例</a>
+      <a href="#faq">问答</a>
+      <a href="#location">地点</a>
+      <a href="#booking" class="btn">在线预约</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ==================== 区块：Hero 主视觉 ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>每一公里，都照原厂规格照顾</h1>
+      <p class="hero-lead">新庄在地保养厂与美容工作室。从机油到镀膜，施工前先给你书面报价，完工附上检查纪录。</p>
+      <div class="hero-cta">
+        <a href="#booking" class="btn">在线预约</a>
+        <a href="#pricing" class="btn ghost">看价目</a>
+      </div>
+      <!-- 范例内容：上线前请换成真实数据 -->
+      <div class="hero-specs">
+        <div><strong>12</strong><span>个月施工保固</span></div>
+        <div><strong>4.9</strong><span>顾客平均评分</span></div>
+        <div><strong>3,800+</strong><span>台次服务纪录</span></div>
+      </div>
+    </div>
+    <figure class="car-fig">
+      <div class="img img-hero" role="img" aria-label="反光金属面板背景"></div>
+      <svg class="car" viewBox="0 0 680 300" role="img" aria-label="轿车侧面线稿，标示车长、轴距与施工重点">
+        <defs><linearGradient id="paint" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="s1"/><stop offset=".45" class="s2"/><stop offset=".46" class="s3"/><stop offset="1" class="s2"/></linearGradient></defs>
+        <path class="body" d="M52 196 L52 172 Q54 152 84 146 L188 130 Q222 96 276 82 L404 78 Q452 80 494 118 L582 134 Q620 142 624 170 L624 194 Q624 202 616 202 L566 202 A50 50 0 0 0 466 202 L216 202 A50 50 0 0 0 116 202 L60 202 Q52 202 52 196 Z"/>
+        <path class="glass" d="M212 130 Q240 100 280 92 L350 90 L354 130 Z"/>
+        <path class="glass" d="M368 90 L404 90 Q440 94 470 126 L372 130 Z"/>
+        <path class="glare" d="M96 156 Q300 136 600 150"/>
+        <path class="stripe" d="M60 180 L616 180"/>
+        <g><circle class="tire" cx="166" cy="202" r="42"/><circle class="tread-ring" cx="166" cy="202" r="38"/><circle class="rim" cx="166" cy="202" r="27"/>
+          <path class="spokes" d="M166 180 V224 M144 202 H188 M150 186 L182 218 M182 186 L150 218"/><circle class="hub" cx="166" cy="202" r="6"/></g>
+        <g><circle class="tire" cx="516" cy="202" r="42"/><circle class="tread-ring" cx="516" cy="202" r="38"/><circle class="rim" cx="516" cy="202" r="27"/>
+          <path class="spokes" d="M516 180 V224 M494 202 H538 M500 186 L532 218 M532 186 L500 218"/><circle class="hub" cx="516" cy="202" r="6"/></g>
+        <line class="ground" x1="20" y1="244" x2="640" y2="244"/>
+        <path class="dim" d="M52 266 V288 M624 266 V288 M52 278 H624 M166 250 V258 M516 250 V258 M166 254 H516"/>
+        <text class="dim-txt" x="338" y="297" text-anchor="middle">4,690 mm</text>
+        <text class="dim-txt" x="341" y="271" text-anchor="middle">2,700 mm</text>
+        <path class="dim" d="M642 78 H652 M642 244 H652 M647 78 V244"/>
+        <text class="dim-txt" x="0" y="0" text-anchor="middle" transform="translate(671 161) rotate(-90)">1,445 mm</text>
+        <path class="call" d="M560 140 L590 60 H640"/><circle class="call-dot" cx="560" cy="140" r="4"/><text class="call-txt" x="640" y="52" text-anchor="end">镀膜 9H</text>
+        <path class="call" d="M300 84 L270 34 H200"/><circle class="call-dot" cx="300" cy="84" r="4"/><text class="call-txt" x="200" y="26">冷气 滤网</text>
+        <path class="call" d="M140 176 L96 104 H40"/><circle class="call-dot" cx="140" cy="176" r="4"/><text class="call-txt" x="40" y="96">胎压 36 psi</text>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<div class="tread" aria-hidden="true"></div>
+
+<!-- ==================== 区块：服务项目 ==================== -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>服务项目</h2>
+      <p>保养与美容在同一个厂区完成，一次交车就把该做的事做好，不用两头跑。</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 18h20l4 6v14H10V24z"/><path class="hl" d="M24 6v8M20 10h8"/><path d="M16 30h16"/></svg>
+        <h3>定期保养</h3>
+        <p>机油、机油芯、空气芯与煞车油依原厂周期更换，附 40 项检查表。</p>
+        <dl class="spec"><div><dt>建议周期</dt><dd>每 5,000 km</dd></div><div><dt>施工时间</dt><dd>约 60 分钟</dd></div></dl>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 32c6-10 30-10 36 0"/><path class="hl" d="M12 22l4-6M24 18V10M36 22l-4-6"/><path d="M6 38h36"/></svg>
+        <h3>镀膜与抛光</h3>
+        <p>三道研磨去除细纹与水痕，再上陶瓷镀膜，拨水效果与亮度可维持一年以上。</p>
+        <dl class="spec"><div><dt>硬度</dt><dd>9H 陶瓷</dd></div><div><dt>施工时间</dt><dd>1～2 天</dd></div></dl>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 40V20a6 6 0 0 1 6-6h6a6 6 0 0 1 6 6v8H18"/><path d="M12 40h24"/><path class="hl" d="M34 8l4 4M40 6v4"/></svg>
+        <h3>内装清洁</h3>
+        <p>座椅、地毯与顶棚深层清洗，蒸气除菌加上冷气出风口除臭，车内回到新车味道。</p>
+        <dl class="spec"><div><dt>项目</dt><dd>椅布、皮革、地毯</dd></div><div><dt>施工时间</dt><dd>约 4 小时</dd></div></dl>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="8"/><path class="hl" d="M24 7v6M24 35v6M7 24h6M35 24h6"/></svg>
+        <h3>轮胎与定位</h3>
+        <p>换胎、平衡、四轮定位一次完成，附胎纹深度与胎压纪录，跑高速更稳定。</p>
+        <dl class="spec"><div><dt>定位精度</dt><dd>±0.05°</dd></div><div><dt>施工时间</dt><dd>约 90 分钟</dd></div></dl>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6v36M8 15l32 18M8 33l32-18"/><path class="hl" d="M20 8l4 4 4-4M20 40l4-4 4 4"/></svg>
+        <h3>冷气系统</h3>
+        <p>冷媒压力检测与回收充填，清洗蒸发器并更换滤网，夏天出风口很快就凉。</p>
+        <dl class="spec"><div><dt>冷媒</dt><dd>R134a／R1234yf</dd></div><div><dt>施工时间</dt><dd>约 2 小时</dd></div></dl>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 34l10-10 6 6 16-16"/><path class="hl" d="M32 14h8v8"/><path d="M8 40h32"/></svg>
+        <h3>板金烤漆</h3>
+        <p>凹痕整形、局部或全车烤漆，电脑调色比对原车漆号，修补后几乎看不出色差。</p>
+        <dl class="spec"><div><dt>调色方式</dt><dd>电脑配色</dd></div><div><dt>施工时间</dt><dd>2～5 天</dd></div></dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：价目表 ==================== -->
+<section id="pricing" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>价目表</h2>
+      <p>依车型大小分级计价，价格已含工资与料件。实际金额以施工前书面估价单为准。</p>
+    </div>
+    <!-- 修改价格：直接改下方三个表格的数字。tabs 的 data-tab 要对应 panel 的 id -->
+    <div class="tabs reveal" role="tablist" aria-label="选择车型">
+      <button type="button" role="tab" id="tab-sedan" aria-controls="p-sedan" aria-selected="true" data-tab="p-sedan">轿车</button>
+      <button type="button" role="tab" id="tab-suv" aria-controls="p-suv" aria-selected="false" tabindex="-1" data-tab="p-suv">休旅车</button>
+      <button type="button" role="tab" id="tab-large" aria-controls="p-large" aria-selected="false" tabindex="-1" data-tab="p-large">大型车</button>
+    </div>
+    <div class="reveal">
+    <div class="price-panel on" id="p-sedan" role="tabpanel" aria-labelledby="tab-sedan">
+      <h3>轿车</h3>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="轿车价目（可左右卷动）">
+        <table class="sheet">
+          <thead><tr><th scope="col">项目</th><th scope="col">内容</th><th scope="col">工时</th><th scope="col">价格</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">基本保养</th><td>全合成机油 4L、机油芯、40 项检查</td><td class="t">1 hr</td><td class="p">NT$2,400</td></tr>
+            <tr><th scope="row">陶瓷镀膜</th><td>三道研磨、9H 镀膜、一年保固</td><td class="t">1.5 天</td><td class="p">NT$12,800</td></tr>
+            <tr><th scope="row">内装深层清洁</th><td>座椅、地毯、顶棚、蒸气除菌</td><td class="t">4 hr</td><td class="p">NT$4,500</td></tr>
+            <tr><th scope="row">轮胎平衡定位</th><td>四轮平衡、四轮定位、胎压校正</td><td class="t">1.5 hr</td><td class="p">NT$1,800</td></tr>
+            <tr><th scope="row">冷气保养</th><td>冷媒回收充填、蒸发器清洗、滤网</td><td class="t">2 hr</td><td class="p">NT$3,200</td></tr>
+            <tr><th scope="row">板金烤漆</th><td>单片凹痕整形与烤漆</td><td class="t">2 天</td><td class="p">NT$5,500 起</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="price-panel" id="p-suv" role="tabpanel" aria-labelledby="tab-suv">
+      <h3>休旅车</h3>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="休旅车价目（可左右卷动）">
+        <table class="sheet">
+          <thead><tr><th scope="col">项目</th><th scope="col">内容</th><th scope="col">工时</th><th scope="col">价格</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">基本保养</th><td>全合成机油 5L、机油芯、40 项检查</td><td class="t">1 hr</td><td class="p">NT$2,900</td></tr>
+            <tr><th scope="row">陶瓷镀膜</th><td>三道研磨、9H 镀膜、一年保固</td><td class="t">2 天</td><td class="p">NT$15,800</td></tr>
+            <tr><th scope="row">内装深层清洁</th><td>三排座椅、地毯、顶棚、蒸气除菌</td><td class="t">5 hr</td><td class="p">NT$5,500</td></tr>
+            <tr><th scope="row">轮胎平衡定位</th><td>四轮平衡、四轮定位、胎压校正</td><td class="t">1.5 hr</td><td class="p">NT$2,200</td></tr>
+            <tr><th scope="row">冷气保养</th><td>冷媒回收充填、前后蒸发器清洗、滤网</td><td class="t">2.5 hr</td><td class="p">NT$3,800</td></tr>
+            <tr><th scope="row">板金烤漆</th><td>单片凹痕整形与烤漆</td><td class="t">2 天</td><td class="p">NT$6,500 起</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="price-panel" id="p-large" role="tabpanel" aria-labelledby="tab-large">
+      <h3>大型车</h3>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="大型车价目（可左右卷动）">
+        <table class="sheet">
+          <thead><tr><th scope="col">项目</th><th scope="col">内容</th><th scope="col">工时</th><th scope="col">价格</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">基本保养</th><td>全合成机油 7L、机油芯、40 项检查</td><td class="t">1.5 hr</td><td class="p">NT$3,600</td></tr>
+            <tr><th scope="row">陶瓷镀膜</th><td>三道研磨、9H 镀膜、一年保固</td><td class="t">2.5 天</td><td class="p">NT$19,800</td></tr>
+            <tr><th scope="row">内装深层清洁</th><td>多排座椅、地毯、顶棚、蒸气除菌</td><td class="t">6 hr</td><td class="p">NT$6,800</td></tr>
+            <tr><th scope="row">轮胎平衡定位</th><td>四轮平衡、四轮定位、胎压校正</td><td class="t">2 hr</td><td class="p">NT$2,800</td></tr>
+            <tr><th scope="row">冷气保养</th><td>冷媒回收充填、前后蒸发器清洗、滤网</td><td class="t">3 hr</td><td class="p">NT$4,600</td></tr>
+            <tr><th scope="row">板金烤漆</th><td>单片凹痕整形与烤漆</td><td class="t">3 天</td><td class="p">NT$8,000 起</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+    <p class="hint">手机上可左右滑动表格，查看工时与价格。</p>
+    <p class="note">轿车指一般四门房车与掀背车；休旅车含跨界休旅与中型 SUV；大型车含七人座、厢型车与皮卡。</p>
+  </div>
+</section>
+
+<!-- ==================== 区块：保养里程提醒（深色区块） ==================== -->
+<section id="reminder" class="dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>保养里程提醒</h2>
+      <p>输入目前里程与上次保养时的里程，马上算出距离下次保养还有多远。</p>
+    </div>
+    <div class="gauge-grid">
+      <div class="gauge-copy reveal">
+        <p class="muted">多数车款建议每 5,000 公里或半年做一次基本保养，以先到者为准。常跑山路、短程或高温环境，可以再提早一些。</p>
+        <ul>
+          <li><strong>每 5,000 km</strong>　机油与机油芯</li>
+          <li><strong>每 10,000 km</strong>　空气芯、冷气滤网</li>
+          <li><strong>每 40,000 km</strong>　煞车油、变速箱油</li>
+        </ul>
+      </div>
+      <!-- 保养间隔：改 data-interval 的数字即可（单位 km） -->
+      <form class="gauge reveal" id="gauge" data-interval="5000" data-unit="km" novalidate>
+        <div class="row">
+          <label>目前里程（km）<input type="number" id="now" inputmode="numeric" min="0" step="1" placeholder="例：48200"></label>
+          <label>上次保养里程（km）<input type="number" id="last" inputmode="numeric" min="0" step="1" placeholder="例：45000"></label>
+        </div>
+        <button type="submit" class="btn">计算下次保养</button>
+        <div class="readout" aria-live="polite">
+          <p class="lbl">距离下次保养</p>
+          <p class="big"><span id="left">0</span><small>km</small></p>
+          <div class="bar" aria-hidden="true"><i id="fill"></i></div>
+          <p class="status" id="status">输入两个里程数后即可计算。</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：施工前后 ==================== -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>施工前后</h2>
+      <p>每台车施工前后都会在同一个灯光位置拍照存盘，交车时一起给你看。</p>
+    </div>
+    <div class="ba-grid">
+      <article class="ba reveal">
+        <div class="ba-pair">
+          <div><div class="img img-paint-a" role="img" aria-label="施工前：漆面布满细纹与水痕"></div><span>施工前</span></div>
+          <div><div class="img img-paint-b" role="img" aria-label="施工后：漆面深邃有镜面反光"></div><span>施工后</span></div>
+        </div>
+        <div class="ba-body"><h3>漆面研磨与镀膜</h3><p>六年车龄的深灰色轿车，去除洗车纹后上 9H 镀膜。</p></div>
+      </article>
+      <article class="ba reveal">
+        <div class="ba-pair">
+          <div><div class="img img-cabin-a" role="img" aria-label="施工前：座椅有明显污渍"></div><span>施工前</span></div>
+          <div><div class="img img-cabin-b" role="img" aria-label="施工后：座椅干净，车缝线清楚"></div><span>施工后</span></div>
+        </div>
+        <div class="ba-body"><h3>内装深层清洁</h3><p>有小孩与宠物的家庭休旅，椅布污渍与异味一次处理。</p></div>
+      </article>
+      <article class="ba reveal">
+        <div class="ba-pair">
+          <div><div class="img img-rim-a" role="img" aria-label="施工前：轮框覆盖煞车粉尘"></div><span>施工前</span></div>
+          <div><div class="img img-rim-b" role="img" aria-label="施工后：轮框恢复金属光泽"></div><span>施工后</span></div>
+        </div>
+        <div class="ba-body"><h3>轮框除铁粉</h3><p>铁粉去除剂浸润分解煞车粉尘，再上轮框专用镀膜。</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：为什么选我们 ==================== -->
+<section id="why" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>为什么选我们</h2>
+      <p>保养最怕的是不知道换了什么、花了多少。我们把每一步都写清楚。</p>
+    </div>
+    <div class="why-grid">
+      <article class="why reveal">
+        <p class="num">01</p>
+        <h3>原厂料件</h3>
+        <p>机油、滤芯与煞车零件使用原厂或同等 OEM 认证料件，旧件可以现场确认后再丢。</p>
+      </article>
+      <article class="why reveal">
+        <p class="num">02</p>
+        <h3>透明报价</h3>
+        <p>施工前提供书面估价，追加项目一定先拍照说明，经你同意才会动工。</p>
+      </article>
+      <article class="why reveal">
+        <p class="num">03</p>
+        <h3>施工保固</h3>
+        <p>保养与维修享 12 个月或 10,000 公里保固，镀膜另附一年回厂检查。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：技师团队 ==================== -->
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>技师团队</h2>
+      <p>四位技师都有原厂或专业认证，平均年资超过十年。</p>
+    </div>
+    <div class="team">
+      <article class="tech reveal">
+        <div class="img img-tech1" role="img" aria-label="厂长陈建宏形象图"></div>
+        <div class="tech-body"><h3>陈建宏</h3><p class="role">厂长，引擎与底盘</p><p>前原厂服务厂技术主任，擅长疑难杂症诊断。</p><ul class="certs"><li>汽车修护乙级</li><li>18 年资历</li></ul></div>
+      </article>
+      <article class="tech reveal">
+        <div class="img img-tech2" role="img" aria-label="美容主任林佳颖形象图"></div>
+        <div class="tech-body"><h3>林佳颖</h3><p class="role">美容主任，镀膜与抛光</p><p>对漆面要求近乎洁癖，负责所有镀膜案件验收。</p><ul class="certs"><li>镀膜认证讲师</li><li>11 年资历</li></ul></div>
+      </article>
+      <article class="tech reveal">
+        <div class="img img-tech3" role="img" aria-label="技师王志豪形象图"></div>
+        <div class="tech-body"><h3>王志豪</h3><p class="role">技师，冷气与电系</p><p>冷气与电系专长，油电车高压系统也能处理。</p><ul class="certs"><li>汽车冷冻空调</li><li>9 年资历</li></ul></div>
+      </article>
+      <article class="tech reveal">
+        <div class="img img-tech4" role="img" aria-label="技师张育诚形象图"></div>
+        <div class="tech-body"><h3>张育诚</h3><p class="role">技师，板金烤漆</p><p>负责板金整形与调色，色差比对一律在自然光下确认。</p><ul class="certs"><li>烤漆丙级</li><li>12 年资历</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：顾客评价 ==================== -->
+<section id="reviews" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>顾客评价</h2>
+      <p>大部分新客人都是朋友介绍来的，这是我们最在意的评分。</p>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="reviews">
+      <figure class="review reveal">
+        <div class="score"><b>5.0</b><span>定期保养，轿车</span></div>
+        <blockquote>第一次遇到保养前会先给估价单的店，换下来的机油芯还拿给我看。价格跟原厂差不多，但等待时间短很多。</blockquote>
+        <footer><strong>李先生</strong>，新庄，固定回厂三年</footer>
+      </figure>
+      <figure class="review reveal">
+        <div class="score"><b>5.0</b><span>陶瓷镀膜，休旅车</span></div>
+        <blockquote>镀膜完下雨天开出去，水珠直接滚掉。半年回厂检查也很仔细，还顺便帮我处理了一道小刮痕。</blockquote>
+        <footer><strong>Vivian</strong>，三重，镀膜客户</footer>
+      </figure>
+      <figure class="review reveal">
+        <div class="score"><b>4.8</b><span>冷气保养，大型车</span></div>
+        <blockquote>七人座后座一直不冷，其他店都说要换压缩机。这里检查后只是膨胀阀问题，省了一大笔钱。</blockquote>
+        <footer><strong>黄太太</strong>，泰山，冷气维修</footer>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：常见问题 ==================== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>常见问题</h2>
+      <p>找不到答案的话，直接打电话或传 LINE 问我们。</p>
+    </div>
+    <div class="faq reveal">
+      <details><summary>在这里保养，会影响原厂保固吗？</summary><p>不会。只要使用符合原厂规格的料件并留下保养纪录，原厂保固依然有效。我们每次都会开立纪录并盖章。</p></details>
+      <details><summary>保养需要等多久？可以在现场等吗？</summary><p>基本保养约 60 分钟，现场有休息区、Wi-Fi 与咖啡。镀膜与板金需要留车，我们会在完工前一小时通知你。</p></details>
+      <details><summary>可以自备机油或零件吗？</summary><p>可以，但自备料件无法提供料件保固，只保固施工。建议先拍照或传型号给我们确认规格。</p></details>
+      <details><summary>镀膜后多久可以洗车？</summary><p>镀膜完成后一周内避免洗车与淋雨，之后建议使用中性洗车精手洗，并避免自动洗车机。</p></details>
+      <details><summary>付款方式有哪些？</summary><p>可使用现金、信用卡、LINE Pay 与街口支付，镀膜与板金案件可分期付款。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：在线预约 ==================== -->
+<section id="booking" class="alt">
+  <div class="wrap book-grid">
+    <div class="book-copy reveal">
+      <h2>在线预约</h2>
+      <p>填好数据后，我们会在营业时间内一小时内来电确认。急件请直接打电话。</p>
+      <ol class="steps">
+        <li><span>送出预约，选好想要的日期与时段。</span></li>
+        <li><span>技师来电确认车况，先给你预估金额。</span></li>
+        <li><span>到厂施工，完工附检查纪录与照片。</span></li>
+      </ol>
+      <div class="contact-btns">
+        <a class="btn ghost" href="tel:0212345678">拨打 02-1234-5678</a>
+        <a class="btn ghost" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 询问</a>
+      </div>
+    </div>
+    <!--
+      表单送出设置（Formspree，免费方案每月 50 则）：
+      1. 到 https://formspree.io 用 Email 注册免费帐号
+      2. 创建一个新表单，拷贝表单 ID（像 xyzabcd 这样的一串字）
+      3. 把下方 action 里的 your-form-id 换成你的表单 ID，预约数据就会寄到你的信箱
+    -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="row">
+        <label>姓名<input type="text" name="name" autocomplete="name" required></label>
+        <label>电话<input type="tel" name="phone" autocomplete="tel" inputmode="tel" required></label>
+      </div>
+      <div class="row">
+        <label>车牌<input type="text" name="plate" placeholder="例：ABC-1234" required></label>
+        <label>车型
+          <select name="car_size" required>
+            <option value="">请选择</option><option>轿车</option><option>休旅车</option><option>大型车</option>
+          </select>
+        </label>
+      </div>
+      <label>服务项目
+        <select name="service" required>
+          <option value="">请选择</option><option>定期保养</option><option>镀膜与抛光</option><option>内装清洁</option><option>轮胎与定位</option><option>冷气系统</option><option>板金烤漆</option><option>其他／不确定</option>
+        </select>
+      </label>
+      <div class="row">
+        <label>日期<input type="date" name="date" required></label>
+        <label>时段
+          <select name="time" required>
+            <option value="">请选择</option><option>09:00–11:00</option><option>11:00–13:00</option><option>13:00–15:00</option><option>15:00–17:00</option><option>17:00–19:00</option>
+          </select>
+        </label>
+      </div>
+      <button type="submit" class="btn">送出预约</button>
+      <p class="small">送出即表示同意我们以电话或 LINE 联系你，数据只用于确认预约。</p>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== 区块：营业时间与地图 ==================== -->
+<section id="location">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>营业时间与地点</h2>
+      <p>新庄思源路上，近新北产业园区站。厂区有 8 个停车位，到店不用找车位。</p>
+    </div>
+    <div class="loc">
+      <div class="reveal">
+        <table class="hours">
+          <caption class="sr">营业时间</caption>
+          <tbody>
+            <tr><th scope="row">周一至周五</th><td>09:00–19:00</td></tr>
+            <tr><th scope="row">周六</th><td>09:00–17:00</td></tr>
+            <tr class="off"><th scope="row">周日与国定假日</th><td>公休</td></tr>
+          </tbody>
+        </table>
+        <div class="addr">
+          <p>新北市新庄区思源路 168 号</p>
+          <p><a href="tel:0212345678">02-1234-5678</a></p>
+        </div>
+        <div class="contact-btns">
+          <a class="btn" href="https://maps.google.com/?q=新北市新庄区思源路168号" target="_blank" rel="noopener">Google 地图导航</a>
+          <a class="btn ghost" href="tel:0212345678">拨打电话</a>
+        </div>
+      </div>
+      <div class="img img-map reveal" role="img" aria-label="极光车研位置示意地图"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 区块：页脚 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h2>极光车研 Aurora Auto Care</h2><p>新庄在地汽车保养与美容工作室，原厂料件与透明报价。</p></div>
+      <div><h2>联系信息</h2><ul><li>新北市新庄区思源路 168 号</li><li><a href="tel:0212345678">02-1234-5678</a></li><li><a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 官方帐号</a></li></ul></div>
+      <div><h2>营业时间</h2><ul><li>周一至周五 09:00–19:00</li><li>周六 09:00–17:00</li><li>周日与国定假日公休</li></ul></div>
+      <div><h2>追踪我们</h2><div class="social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="YouTube">YT</a></div></div>
+    </div>
+    <div class="copy"><span>© <span id="y"></span> 极光车研 Aurora Auto Care</span><span>新北市新庄区</span></div>
+  </div>
+</footer>
+
+<!-- 手机底部固定按钮 -->
+<div class="sticky-cta">
+  <a href="tel:0212345678" class="btn ghost">拨打电话</a>
+  <a href="#booking" class="btn">在线预约</a>
+</div>
+
+<script>
+// 年份
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// 卷动后页眉出现背景
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+onScroll();
+addEventListener('scroll', onScroll, { passive: true });
+
+// 汉堡菜单
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
+  links.classList.toggle('open', open);
+};
+menuBtn.addEventListener('click', () => setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+// 价目表分页（支持左右方向键）
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+const selectTab = tab => tabs.forEach(t => {
+  const on = t === tab;
+  t.setAttribute('aria-selected', on);
+  t.tabIndex = on ? 0 : -1;
+  document.getElementById(t.dataset.tab).classList.toggle('on', on);
+});
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => selectTab(t));
+  t.addEventListener('keydown', e => {
+    const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+    if (d) { const n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); selectTab(n); }
+  });
+});
+
+// 保养里程提醒
+const gauge = document.getElementById('gauge');
+const fmt = n => n.toLocaleString('zh-TW');
+const calc = () => {
+  const now = parseFloat(gauge.now.value), last = parseFloat(gauge.last.value);
+  const step = +gauge.dataset.interval, unit = gauge.dataset.unit;
+  const status = document.getElementById('status'), left = document.getElementById('left'), fill = document.getElementById('fill');
+  let msg = '输入两个里程数后即可计算。', cls = '', rest = 0, ratio = 0;
+  if (!isNaN(now) && !isNaN(last)) {
+    if (now < last) { msg = '目前里程不能小于上次保养里程，请再确认一次。'; cls = 'over'; }
+    else {
+      rest = last + step - now; ratio = Math.min((now - last) / step, 1);
+      if (rest > 1000) { msg = `状态良好，下次保养在 ${fmt(last + step)} ${unit}。`; cls = 'ok'; }
+      else if (rest > 0) { msg = `快到保养里程了，建议这两周内预约。`; cls = 'warn'; }
+      else { msg = `已超过保养里程 ${fmt(-rest)} ${unit}，请尽快安排保养。`; cls = 'over'; }
+    }
+  }
+  left.textContent = fmt(Math.max(rest, 0));
+  fill.style.setProperty('--fill', ratio);
+  status.textContent = msg; status.className = 'status ' + cls;
+  fill.parentElement.style.setProperty('--st', cls ? `var(--${cls === 'over' ? 'brand-bright' : cls})` : '');
+};
+gauge.addEventListener('input', calc);
+gauge.addEventListener('submit', e => { e.preventDefault(); calc(); });
+
+// 卷动渐入
+const items = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  items.forEach(el => io.observe(el));
+} else {
+  items.forEach(el => el.classList.add('in'));
+}
+</script>
+</body>
+</html>

@@ -89,3 +89,27 @@
 - 無障礙：`prefers-reduced-motion: reduce` 時關掉所有動畫，內容直接呈現；關掉 JS 時內容也要完整可見。
 - 主題設定區要多一組「動畫設定」變數：`--motion-speed`、`--motion-ease`、`--motion-distance`，並加中文或英文註解。
 - 其餘規格（主題設定、區塊註解、SEO、表單、手機版、Hallmark 規則、英文版規則、驗收）照舊。
+
+## 語言切換（每款的每個語言版本都要有）
+上線時的資料夾結構是 `en/`、`zh-TW/`、`zh-CN/` 三個並排的資料夾，所以連結一律用 `../<語言>/`。
+
+1. `<head>` 裡加入下面這段（含註解，買家上線後要換成完整網址）：
+```html
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+```
+2. 頁首放語言切換，標記固定如下（目前所在的語言加上 `aria-current="page"`）：
+```html
+<!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+<nav class="lang-switch" aria-label="Language 語言">
+  <a href="../en/" hreflang="en" lang="en">EN</a>
+  <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+  <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+</nav>
+```
+3. 位置：桌機放在頁首主要按鈕旁邊；手機放在漢堡按鈕旁邊，保持可見，或放在展開選單的最上方。沒有 JS 時也要看得到、點得到。
+4. 樣式：用該模板自己的主題變數，小巧低調。目前語言要用字重或底線標示，不能只靠顏色。點擊範圍至少 32×32px，要有 :hover、:active、:focus-visible。不要讓頁首換行或擠壓到 logo；360px 寬度也不能出現水平捲軸。
+5. 頁尾也放同一組連結（可以更簡單，例如文字連結）。
