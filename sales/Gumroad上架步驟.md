@@ -181,9 +181,9 @@ Thanks! We'll email you within 1 business day with a short form to collect your 
 
 **共用 Receipt**
 ```
-Thanks for your purchase! Unzip the file and open GUIDE.md (English) or 使用說明.md (中文) to get started.
+Thanks for your purchase! Unzip the file and double-click START-HERE.html to get started (full guides: GUIDE.md / 使用說明.md).
 Want us to set it up for you? See our Website Customization Service.
-感謝購買！解壓縮後，打開 使用說明.md（中文）或 GUIDE.md（英文）開始使用。需要我們幫你改好嗎？歡迎參考「網站客製服務」。
+感謝購買！解壓縮後雙擊 START-HERE.html 就能開始（完整教學：使用說明.md）。需要我們幫你改好嗎？歡迎參考「網站客製服務」。
 ```
 
 **共用 Summary（You'll get）**

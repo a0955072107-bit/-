@@ -65,6 +65,7 @@ for entry in "${SLUGS[@]}"; do
   fi
   cp templates/_docs/使用說明.md templates/_docs/授權條款.md "$dir/"
   cp templates/_docs/en/GUIDE.md templates/_docs/en/LICENSE.md "$dir/"
+  cp templates/_docs/START-HERE.html "$dir/"
   (cd "$OUT/build" && zip -qr "../$name.zip" "$name")
   echo "✓ $OUT/$name.zip"
 done
