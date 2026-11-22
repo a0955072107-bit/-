@@ -164,6 +164,8 @@ a:not(.btn):active { opacity: .7; }
 .lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .2s, background-color .2s; }
 .lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 9%, transparent); text-decoration: none; }
 .lang-switch a:active { opacity: .7; }
+/* 桌機：主選單靠右，語言切換緊接在主要按鈕後面 */
+.site-header .nav-menu { margin-left: auto; }
 .lang-switch a:focus-visible { outline: 2px solid var(--ember-hot); outline-offset: 1px; }
 .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .35em; }
 .foot-lang { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin-top: 1.5rem; }
