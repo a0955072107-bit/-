@@ -6,6 +6,11 @@
 <title>息 Breathe 瑜珈皮拉提斯｜台北信义区小班瑜珈与器械皮拉提斯</title>
 <meta name="description" content="息 Breathe 瑜珈皮拉提斯位在台北市信义区，提供哈达、流动、阴瑜珈、器械皮拉提斯与孕妇瑜珈小班课程。第一次来，从一堂 NT$500 的体验课开始。">
 <meta name="theme-color" content="#f8f2eb">
+<!-- 多语版本（SEO）：上线后把 href 换成完整网址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <meta property="og:title" content="息 Breathe 瑜珈皮拉提斯｜慢下来，好好呼吸">
 <meta property="og:description" content="信义区巷弄里的小班瑜珈与器械皮拉提斯教室。每班最多 12 人，老师看得见你的每个动作。">
 <meta property="og:type" content="website">
@@ -133,6 +138,20 @@ a:not(.btn):active { opacity: .7; }
 .nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
 @media (min-width: 761px) and (max-width: 1060px) { .nav-menu .nav-extra { display: none; } }
+/* ---------- 语言切换（lang-switch）：桌机在主要按钮旁，手机在汉堡按钮旁 ---------- */
+.nav-menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .7rem; border-left: 1px solid color-mix(in srgb, currentColor 22%, transparent); font: 500 .82rem/1 var(--font-body); }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 6px; color: var(--muted); text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1.5px; text-underline-offset: .35em; transition: color .2s, background-color .2s, text-decoration-color .2s; }
+.lang-switch a::after { display: none; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, currentColor 10%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, currentColor 18%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid currentColor; outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: currentColor; }
+@media (max-width: 760px) {
+  .lang-switch { margin-left: auto; padding-left: 0; border-left: 0; }
+  .js .nav-toggle { order: 1; flex: none; }
+  html:not(.js) .nav-menu { order: 2; margin-left: 0; }
+}
 @media (max-width: 760px) {
   /* 没有 JavaScript 时，菜单直接换行显示；有 JS 才收进汉堡菜单 */
   html:not(.js) .nav { flex-wrap: wrap; padding-block: .6rem; }
@@ -385,6 +404,12 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
   .sticky-cta .btn-primary { flex: 1; }
   .sticky-cta .btn-ghost { padding-inline: 1.2rem; }
 }
+/* 页脚语言链接 */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.foot-lang a:hover { color: var(--apricot); }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { font-weight: 700; text-decoration-color: currentColor; }
 </style>
 </head>
 <body>
@@ -406,6 +431,12 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
       <li class="nav-extra"><a href="#faq">常见问题</a></li>
       <li><a class="btn btn-primary" href="#book">预约体验课</a></li>
     </ul>
+    <!-- lang-switch：语言切换。要添加语言时，在这里加一个链接，并添加对应的文件夹 -->
+    <nav class="lang-switch" aria-label="Language 语言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+    </nav>
   </nav>
 </header>
 
@@ -821,6 +852,12 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
       </div>
     </div>
     <p class="copy">© <span id="y"></span> 息 Breathe 瑜珈皮拉提斯</p>
+    <!-- 页脚语言切换：和页眉同一组链接 -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+    </p>
   </div>
 </footer>
 

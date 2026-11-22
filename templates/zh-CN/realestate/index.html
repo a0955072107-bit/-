@@ -9,6 +9,11 @@
 <meta property="og:description" content="精选台中西屯、南屯、北屯对象，免费估价、陪同带看、履约保证，交屋前每一步都清楚透明。">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#1f3d99">
+<!-- 多语版本（SEO）：上线后把 href 换成完整网址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -399,6 +404,29 @@ section { padding-block: clamp(4rem, 9vw, 7rem); }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+/* ==================== 语言切换 ==================== */
+/* 页眉的语言切换：字小、低调；目前的语言用粗体加底线标示（不只靠颜色） */
+.menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .6rem; border-left: 1px solid var(--line); font: 400 .8rem/1 var(--font-body); }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: var(--muted); border-radius: var(--radius); text-decoration: none; text-underline-offset: .4em; text-decoration-thickness: 1px; transition: color .25s, background-color .25s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 7%, transparent); }
+.lang-switch a:active { opacity: .7; }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 0; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 600; text-decoration-line: underline; }
+@media (max-width: 760px) {
+  /* 手机：语言切换放在汉堡按钮左边，一直看得到 */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .burger { order: 2; }
+  .menu { order: 3; }
+  /* 没有 JS 时 logo 可以缩窄换行，让语言切换留在同一列 */
+  html:not(.js) .logo { flex: 1 1 0; min-width: 0; }
+}
+/* 页脚的语言文本链接 */
+.foot-lang { display: flex; flex-wrap: wrap; align-items: center; gap: 0 .5rem; margin-top: 1.25rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; min-height: 32px; padding-inline: .2rem; text-underline-offset: .35em; }
+.foot-lang a:hover { text-decoration-line: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { font-weight: 600; text-decoration-line: underline; }
 </style>
 <!-- JSON-LD 结构化数据：类型为 RealEstateAgent（不动产经纪）。请换成真实名称、电话、地址与营业时间。 -->
 <script type="application/ld+json">
@@ -444,6 +472,12 @@ section { padding-block: clamp(4rem, 9vw, 7rem); }
       <a href="#agent">经纪人</a>
       <a href="#process">买房流程</a>
       <a href="#contact" class="btn btn-brand">预约看屋</a>
+    </nav>
+    <!-- lang-switch：语言切换。要添加语言时，在这里加一个链接，并添加对应的文件夹 -->
+    <nav class="lang-switch" aria-label="Language 语言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
     </nav>
   </div>
 </header>
@@ -795,6 +829,8 @@ section { padding-block: clamp(4rem, 9vw, 7rem); }
         <p>经纪人：林品妤 (000) 中市经字第 000000 号</p>
       </div>
     </div>
+    <!-- 页脚语言链接：和页眉的 lang-switch 是同一组，添加语言时两边都要加 -->
+    <p class="foot-lang"><span>语言</span><a href="../en/" hreflang="en" lang="en">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁体中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a></p>
     <div class="copy"><span>© <span id="y"></span> 安居不动产</span><span>对象信息以现场及权状为准，价格可能随时调整。</span></div>
   </div>
 </footer>

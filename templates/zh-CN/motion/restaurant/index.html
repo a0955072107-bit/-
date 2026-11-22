@@ -9,6 +9,11 @@
 <meta property="og:title" content="焰 Homura 炭火割烹｜六道备长炭主厨套餐">
 <meta property="og:description" content="十二席吧台，一盆炭火，六道当季料理与餐酒搭配。台北中山区，每晚两轮入席。">
 <meta property="og:type" content="restaurant">
+<!-- 多语版本（SEO）：上线后把 href 换成完整网址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Serif+SC:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -153,6 +158,27 @@ a:not(.btn):active { opacity: .7; }
   .js .nav-menu.open { opacity: 1; transform: none; visibility: visible; transition: opacity .3s, transform .3s; }
   .js .nav-menu li a:not(.btn) { display: block; padding: .9rem 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
   .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+}
+/* ---------- 语言切换（页眉 lang-switch 与页脚 foot-lang） ---------- */
+.lang-switch { display: flex; align-items: center; flex: none; font: 500 .8rem/1 var(--font-body); letter-spacing: 0; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 9%, transparent); text-decoration: none; }
+.lang-switch a:active { opacity: .7; }
+/* 桌机：主菜单靠右，语言切换紧接在主要按钮后面 */
+.site-header .nav-menu { margin-left: auto; }
+.lang-switch a:focus-visible { outline: 2px solid var(--ember-hot); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .35em; }
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin-top: 1.5rem; }
+.foot-lang a { display: inline-flex; align-items: center; min-height: 32px; color: var(--muted); text-decoration: none; transition: color .2s; }
+.foot-lang a:hover { color: var(--text); }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-underline-offset: .3em; }
+@media (max-width: 760px) {
+  /* 手机：语言切换留在汉堡按钮左边，保持可见；没有 JS 时和 logo 同一行，菜单换到下一行 */
+  .site-header .lang-switch { order: 1; margin-left: auto; }
+  .site-header .nav-toggle { order: 2; }
+  .site-header .nav-menu { order: 3; }
+  .nav { gap: .75rem; }
 }
 
 /* ==================== 主视觉：炭火烤台 + Canvas 火星 ==================== */
@@ -559,6 +585,12 @@ h1, h2, h3, .addr, .stats b, .chip b, .menu-foot b, .numeral { font-variant-nume
       <li><a href="#visit">交通</a></li>
       <li><a href="#reserve" class="btn btn-primary">订位</a></li>
     </ul>
+    <!-- lang-switch：语言切换。要添加语言时，在这里加一个链接，并添加对应的文件夹 -->
+    <nav class="lang-switch" aria-label="Language 语言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+    </nav>
   </nav>
 </header>
 
@@ -899,6 +931,12 @@ h1, h2, h3, .addr, .stats b, .chip b, .menu-foot b, .numeral { font-variant-nume
         <p><a href="#menu">今晚套餐</a><br><a href="#private">包厢预订</a><br><a href="#reserve">在线订位</a></p>
       </div>
     </div>
+    <!-- 页脚语言切换：和页眉的 lang-switch 同一组链接 -->
+    <nav class="foot-lang" aria-label="Language 语言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+    </nav>
     <p class="copy">© <span id="y"></span> 焰 Homura 炭火割烹</p>
   </div>
 </footer>

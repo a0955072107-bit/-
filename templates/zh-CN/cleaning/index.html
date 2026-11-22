@@ -9,6 +9,11 @@
 <meta property="og:description" content="输入坪数与房型，30 秒看到预估价格与工时，再在线预约到府清洁。">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#2b7a3b">
+<!-- 多语版本（SEO）：上线后把 href 换成完整网址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -108,6 +113,23 @@ a:not(.btn):active { opacity: .7; }
 .menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 @media (min-width: 761px) and (max-width: 1020px) { .nav-links .opt { display: none; } }
+/* ---------- 语言切换（lang-switch）：桌机在主要按钮旁，手机在汉堡按钮旁 ---------- */
+.nav-links { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .7rem; border-left: 1px solid color-mix(in srgb, currentColor 22%, transparent); font: 500 .82rem/1 var(--font-body); }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 6px; color: var(--muted); text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1.5px; text-underline-offset: .35em; transition: color .2s, background-color .2s, text-decoration-color .2s; }
+.lang-switch a::after { display: none; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, currentColor 10%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, currentColor 18%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid currentColor; outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: currentColor; }
+@media (max-width: 760px) {
+  .lang-switch { margin-left: auto; padding-left: 0; border-left: 0; }
+  .js .menu-btn { order: 1; flex: none; }
+  html:not(.js) .nav-links { order: 2; margin-left: 0; }
+}
+/* 很窄的手机：缩小页眉间距，让 logo 不被语言切换挤到换行 */
+.nav > .logo { flex-shrink: 0; }
+@media (max-width: 400px) { .nav { gap: .5rem; } .lang-switch a { padding: 0; } }
 @media (max-width: 760px) {
   .js .menu-btn { display: block; }
   .js .nav-links { position: absolute; top: 72px; left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .75rem; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
@@ -398,6 +420,12 @@ textarea { min-height: 6rem; resize: vertical; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+/* 页脚语言链接 */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.foot-lang a:hover { color: var(--lemon); }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { font-weight: 700; text-decoration-color: currentColor; }
 </style>
 <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -424,6 +452,12 @@ textarea { min-height: 6rem; resize: vertical; }
       <a href="#faq">常见问题</a>
       <a href="#areas" class="opt">服务区域</a>
       <a href="#book" class="btn btn-primary">预约清洁</a>
+    </nav>
+    <!-- lang-switch：语言切换。要添加语言时，在这里加一个链接，并添加对应的文件夹 -->
+    <nav class="lang-switch" aria-label="Language 语言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
     </nav>
   </div>
 </header>
@@ -883,6 +917,12 @@ textarea { min-height: 6rem; resize: vertical; }
       <span>© <span id="y"></span> 净日 CleanDay 居家清洁</span>
       <span>网站内容仅供参考，实际服务以现场确认为准</span>
     </div>
+    <!-- 页脚语言切换：和页眉同一组链接 -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+    </p>
   </div>
 </footer>
 

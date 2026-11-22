@@ -9,6 +9,11 @@
 <meta property="og:description" content="洗澡、美容造型、SPA、安亲、住宿。即时监视器与猫咪独立空间，LINE 在线预约。">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#fdf6e7">
+<!-- 多语版本（SEO）：上线后把 href 换成完整网址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -358,6 +363,36 @@ textarea { resize: vertical; min-height: 6rem; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ==================== 语言切换（页眉 lang-switch 与页脚 foot-lang） ==================== */
+.nav > .menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; padding-left: .5rem; border-left: 2px dashed var(--line); font: 700 .85rem/1 var(--font-body); }
+.lang-switch a { display: grid; place-items: center; min-width: 2rem; min-height: 2rem; padding-inline: .3rem; border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: var(--surface-2); }
+.lang-switch a:active { background: var(--line); }
+.lang-switch a:focus-visible { outline-offset: 1px; border-radius: 999px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 800; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 3px; text-underline-offset: 4px; }
+/* 平板宽度：加上语言切换后空间较紧，先隐藏 .opt 的次要链接，避免菜单换行或挤到 logo */
+@media (min-width: 761px) and (max-width: 1060px) { .menu .opt { display: none; } }
+/* 最窄的平板宽度：再收紧一点间距 */
+@media (min-width: 761px) and (max-width: 860px) { .menu .opt-sm { display: none; } .menu { gap: .7rem; } .lang-switch { padding-left: 0; border-left: 0; } }
+@media (max-width: 760px) {
+  /* 手机：语言切换固定在汉堡按钮左边；没有 JS 时和 logo 同一行，菜单换到下一行 */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .burger { order: 2; flex: none; }
+  /* 页眉在手机上的间距缩小一点，避免挤到 logo */
+  .nav { gap: .75rem; }
+  .menu { order: 3; }
+}
+/* 很窄的手机（380px 以下）：页眉放不下时，语言切换改到展开菜单的最上方 */
+@media (max-width: 380px) {
+  .js .lang-switch { display: none; position: fixed; top: 5.25rem; left: var(--pad); }
+  .js .menu { padding-top: 8rem; }
+  .js .menu.open ~ .lang-switch { display: flex; }
+}
+.foot-lang { max-width: var(--max); margin: .75rem auto 0; display: flex; flex-wrap: wrap; gap: .25rem .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; color: color-mix(in srgb, var(--bg) 85%, transparent); }
+.foot-lang a[aria-current="page"] { color: var(--bg); font-weight: 800; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 </style>
 
 <script type="application/ld+json">
@@ -453,12 +488,18 @@ textarea { resize: vertical; min-height: 6rem; }
     <div class="menu" id="menu">
       <a href="#services">服务项目</a>
       <a href="#prices">价目表</a>
-      <a href="#care">环境</a>
+      <a class="opt-sm" href="#care">环境</a>
       <a class="opt" href="#team">美容师</a>
       <a class="opt" href="#notice">预约须知</a>
       <a href="#visit">交通</a>
       <a class="btn btn-primary" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 预约</a>
     </div>
+    <!-- lang-switch：语言切换。要添加语言时，在这里加一个链接，并添加对应的文件夹 -->
+    <nav class="lang-switch" aria-label="Language 语言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+    </nav>
   </nav>
 </header>
 
@@ -913,6 +954,12 @@ textarea { resize: vertical; min-height: 6rem; }
     </div>
   </div>
   <p class="copy">© <span id="y"></span> 毛日子 Furday 宠物美容</p>
+  <!-- 页脚语言链接：和页眉的 lang-switch 相同 -->
+  <p class="foot-lang">
+    <a href="../en/" hreflang="en" lang="en">EN</a>
+    <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+    <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+  </p>
 </footer>
 
 <!-- ==================== 区块：手机底部固定按钮 ==================== -->

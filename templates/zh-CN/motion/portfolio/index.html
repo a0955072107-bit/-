@@ -9,6 +9,11 @@
 <meta property="og:description" content="识别系统、片头动画、展览影像。把品牌变成会呼吸的画面。">
 <meta property="og:type" content="profile">
 <meta name="theme-color" content="#f1efe9">
+<!-- 多语版本（SEO）：上线后把 href 换成完整网址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Manrope:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -143,6 +148,23 @@ html[data-tone="accent"] .site-header { --bg: var(--brand); --text: var(--ink); 
   }
   .js .menu a { display: block; padding: .5rem 0; }
   .js .menu.open { transform: none; opacity: 1; visibility: visible; }
+}
+/* ---------- 语言切换（页眉 lang-switch 与页脚 foot-lang） ---------- */
+.lang-switch { display: flex; align-items: center; flex: none; font: 500 .8rem/1 var(--font-body); letter-spacing: 0; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 9%, transparent); text-decoration: none; }
+.lang-switch a:active { opacity: .7; }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .35em; }
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin-top: 1rem; }
+.foot-lang a { display: inline-flex; align-items: center; min-height: 32px; color: var(--muted); text-decoration: none; transition: color .2s; }
+.foot-lang a:hover { color: var(--text); }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-underline-offset: .3em; }
+@media (max-width: 760px) {
+  /* 没有 JS 时：语言切换和 logo 同一行，菜单换到下一行 */
+  html:not(.js) .site-header > nav { order: 3; flex: 1 1 100%; }
+  html:not(.js) .h-actions { order: 2; }
 }
 
 /* ---------- 首屏 ---------- */
@@ -407,6 +429,12 @@ html.js .sec-title.rv.in { clip-path: inset(-.1em -.1em -.2em -.1em); transform:
     </ul>
   </nav>
   <div class="h-actions">
+    <!-- lang-switch：语言切换。要添加语言时，在这里加一个链接，并添加对应的文件夹 -->
+    <nav class="lang-switch" aria-label="Language 语言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+    </nav>
     <a class="btn btn-brand magnetic" href="#contact"><span class="btn-label">聊聊合作</span></a>
     <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="打开菜单"><span></span></button>
   </div>
@@ -628,6 +656,12 @@ html.js .sec-title.rv.in { clip-path: inset(-.1em -.1em -.2em -.1em); transform:
         <li><a class="u-link" href="#">Instagram</a></li><li><a class="u-link" href="#">Vimeo</a></li><li><a class="u-link" href="#">Behance</a></li><li><a class="u-link" href="#">LinkedIn</a></li>
       </ul>
     </div>
+    <!-- 页脚语言切换：和页眉的 lang-switch 同一组链接 -->
+    <nav class="foot-lang" aria-label="Language 语言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+    </nav>
     <p class="copy">© <span id="y"></span> 沈墨 Mo Shen</p>
   </div>
 </footer>

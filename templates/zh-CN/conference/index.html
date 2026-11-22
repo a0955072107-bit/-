@@ -9,6 +9,11 @@
 <meta property="og:description" content="8 位讲者、12 场议程、3 堂小班工作坊。给想把店搬上网络的小店老板，一天带走能马上用的做法。">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#1ed06f">
+<!-- 多语版本（SEO）：上线后把 href 换成完整网址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -122,6 +127,26 @@ section { padding-block: clamp(4rem, 9vw, 7rem); }
   .js .menu .opt { display: block; }
   .js .menu a:not(.btn) { padding: .85rem 0; border-bottom: 1px solid var(--line); }
   .js .menu .btn { margin-top: 1rem; min-height: 50px; }
+}
+/* 语言切换：桌机在主要按钮右边，手机（有 JS）在展开菜单的最上方；没有 JS 时跟着菜单换行显示 */
+.lang-switch { display: flex; align-items: center; gap: .1rem; padding-left: clamp(.4rem, 1vw, .9rem); border-left: 1px solid var(--line); font-size: .8rem; line-height: 1; white-space: nowrap; }
+.menu .lang-switch a[hreflang] { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border: 0; color: var(--muted); font-weight: 400; text-decoration: underline 1px transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.menu .lang-switch a[hreflang]:hover { color: var(--text); text-decoration-color: currentColor; }
+.menu .lang-switch a[hreflang]:active { opacity: .7; }
+.menu .lang-switch a[hreflang]:focus-visible { outline-offset: 0; }
+.menu .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: var(--ink); text-decoration-thickness: 2px; }
+@media (max-width: 760px) {
+  html:not(.js) .lang-switch { border-left: 0; padding-left: 0; margin-left: -.3rem; }
+  .js .menu .lang-switch { order: -1; align-self: flex-start; border-left: 0; padding: 0 0 .4rem; margin-left: -.3rem; font-size: .92rem; }
+  .js .menu .lang-switch a[hreflang] { padding: 0 .3rem; border-bottom: 0; min-width: 40px; min-height: 40px; }
+}
+/* 平板宽度：缩小菜单间距，让语言切换放得下、页眉不换行 */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .menu { gap: clamp(.55rem, 1.1vw, .9rem); font-size: .88rem; }
+  .menu a { white-space: nowrap; }
+  .lang-switch { padding-left: .25rem; }
+  .menu .lang-switch a[hreflang] { padding: 0; }
+  .menu .opt { display: none; }
 }
 
 /* ==================== 首屏 ==================== */
@@ -331,6 +356,12 @@ html:not(.js) .tabs { display: none; }
 .form .btn { justify-self: start; }
 
 /* ==================== 页脚 ==================== */
+/* 页脚语言链接 */
+.f-lang { display: flex; flex-wrap: wrap; gap: 0 .9rem; margin-block: -6px; }
+.f-lang a { display: inline-flex; align-items: center; min-height: 32px; color: var(--muted); text-decoration: underline 1px transparent; text-underline-offset: .3em; transition: color .2s, text-decoration-color .2s; }
+.f-lang a:hover { color: var(--brand-deep); text-decoration-color: currentColor; }
+.f-lang a:active { opacity: .7; }
+.f-lang a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: currentColor; }
 .site-footer { padding-block: 3.5rem 2rem; font-size: .92rem; }
 .foot-top { display: grid; gap: 2rem; border-top: 3px solid var(--ink); padding-top: 1.5rem; }
 @media (min-width: 800px) { .foot-top { grid-template-columns: minmax(0, 5fr) minmax(0, 4fr) minmax(0, 3fr); } }
@@ -408,6 +439,12 @@ html:not(.js) .tabs { display: none; }
       <a class="opt" href="#sponsors">赞助</a>
       <a class="opt" href="#faq">常见问题</a>
       <a class="btn btn-brand" href="#register">报名</a>
+      <!-- lang-switch：语言切换。要添加语言时，在这里加一个链接，并添加对应的文件夹 -->
+      <nav class="lang-switch" aria-label="Language 语言">
+        <a href="../en/" hreflang="en" lang="en">EN</a>
+        <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+        <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+      </nav>
     </nav>
   </div>
 </header>
@@ -845,6 +882,7 @@ html:not(.js) .tabs { display: none; }
     <p class="foot-big" aria-hidden="true">04.17</p>
     <div class="foot-bottom">
       <p>© <span id="y"></span> 中城小店数字协会</p>
+      <p class="f-lang"><a href="../en/" hreflang="en" lang="en">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁体中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a></p>
       <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">YouTube</a></div>
     </div>
   </div>

@@ -4,7 +4,7 @@
 import sys, re, pathlib, opencc
 root = pathlib.Path(__file__).resolve().parent.parent / 'templates'
 conv = opencc.OpenCC('tw2sp')   # 台灣正體 → 大陸簡體，含常用詞轉換
-skip = {'en', 'zh-CN', '_docs', 'motion'}
+skip = {'en', 'zh-CN', 'ja', 'es', '_docs', 'motion', 'luxe'}
 slugs = sys.argv[1:] or sorted([p.name for p in root.iterdir() if p.is_dir() and p.name not in skip and (p / 'index.html').exists()]
                                + ['motion/' + p.name for p in (root / 'motion').iterdir() if (p / 'index.html').exists()])
 FONT = [('Noto+Sans+TC', 'Noto+Sans+SC'), ('Noto+Serif+TC', 'Noto+Serif+SC'), ('Noto Sans TC', 'Noto Sans SC'),

@@ -9,6 +9,11 @@
 <meta property="og:description" content="高雄盐埕的预约制刺青工作室。细线、传统、日式到黑灰写实，每一张都从你的故事开始画。">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#ece5d6">
+<!-- 多语版本（SEO）：上线后把 href 换成完整网址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Archivo+Narrow:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -109,6 +114,29 @@ h1, h2, h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; font-f
   .js .menu.open { transform: none; opacity: 1; visibility: visible; }
   .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line-soft); font-size: 1.1rem; }
   .js .menu .btn { margin-top: 1.25rem; min-height: 48px; }
+}
+/* 语言切换：桌机在主要按钮右边，手机（有 JS）在展开菜单的最上方；没有 JS 时跟着菜单换行显示 */
+.lang-switch { display: flex; align-items: center; gap: .1rem; padding-left: clamp(.4rem, 1vw, .9rem); border-left: 1px solid var(--line-soft); font-size: .8rem; line-height: 1; white-space: nowrap; }
+.menu .lang-switch a[hreflang] { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border: 0; color: var(--muted); font-weight: 400; text-decoration: underline 1px transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.menu .lang-switch a[hreflang]:hover { color: var(--brand); text-decoration-color: currentColor; }
+.menu .lang-switch a[hreflang]:active { opacity: .7; }
+.menu .lang-switch a[hreflang]:focus-visible { outline-offset: 0; }
+.menu .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: var(--brand); text-decoration-thickness: 2px; }
+@media (max-width: 760px) {
+  html:not(.js) .lang-switch { border-left: 0; padding-left: 0; margin-left: -.3rem; }
+  .js .menu .lang-switch { order: -1; align-self: flex-start; border-left: 0; padding: 0 0 .4rem; margin-left: -.3rem; font-size: .92rem; }
+  .js .menu .lang-switch a[hreflang] { padding: 0 .3rem; border-bottom: 0; min-width: 40px; min-height: 40px; }
+}
+/* 平板宽度：缩小菜单间距，让语言切换放得下、页眉不换行 */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .menu { gap: clamp(.55rem, 1.1vw, .9rem); font-size: .88rem; }
+  .menu a { white-space: nowrap; }
+  .lang-switch { padding-left: .25rem; }
+  .menu .lang-switch a[hreflang] { padding: 0; }
+}
+@media (min-width: 761px) and (max-width: 860px) {
+  /* 平板宽度空间不够：暂时隐藏次要链接（class="opt"），手机菜单与桌机仍会显示 */
+  .menu .opt { display: none; }
 }
 
 /* ==================== Hero ==================== */
@@ -332,6 +360,12 @@ html:not(.js) .filters, html:not(.js) .count { display: none; }
 @media (max-width: 560px) { .form { grid-template-columns: minmax(0, 1fr); box-shadow: 5px 5px 0 var(--shadow); } .form .btn { justify-self: stretch; } }
 
 /* ==================== 页脚 ==================== */
+/* 页脚语言链接 */
+.f-lang { display: flex; flex-wrap: wrap; gap: 0 .9rem; padding-top: .6rem; font-size: .86rem; }
+.f-lang a { display: inline-flex; align-items: center; min-height: 32px; color: color-mix(in srgb, var(--paper) 78%, var(--text)); text-decoration: underline 1px transparent; text-underline-offset: .3em; transition: color .2s, text-decoration-color .2s; }
+.f-lang a:hover { color: var(--paper); text-decoration-color: currentColor; }
+.f-lang a:active { opacity: .7; }
+.f-lang a[aria-current="page"] { color: var(--paper); font-weight: 700; text-decoration-color: currentColor; }
 .site-footer { background: var(--text); color: var(--paper); padding: 3.5rem var(--pad) 2rem; font-size: .95rem; }
 .foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: var(--gap) clamp(2rem, 5vw, 4rem); padding-bottom: 2rem; border-bottom: 1px solid color-mix(in srgb, var(--paper) 25%, transparent); }
 .site-footer .logo b { font-size: 2.2rem; }
@@ -473,8 +507,14 @@ html:not(.js) .filters, html:not(.js) .count { display: none; }
     <a href="#flash">现货 Flash</a>
     <a href="#pricing">价格</a>
     <a href="#process">流程</a>
-    <a href="#care">须知</a>
+    <a class="opt" href="#care">须知</a>
     <a href="#booking" class="btn btn-brand">预约咨询</a>
+    <!-- lang-switch：语言切换。要添加语言时，在这里加一个链接，并添加对应的文件夹 -->
+    <nav class="lang-switch" aria-label="Language 语言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+    </nav>
   </nav>
 </header>
 
@@ -914,6 +954,7 @@ html:not(.js) .filters, html:not(.js) .count { display: none; }
     </div>
   </div>
   <p class="copy">© <span id="y"></span> 墨岛 Ink Isle Tattoo</p>
+  <p class="f-lang"><a href="../en/" hreflang="en" lang="en">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁体中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a></p>
 </footer>
 
 <!-- 手机底部固定按钮 -->
