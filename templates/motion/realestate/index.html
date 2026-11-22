@@ -210,7 +210,7 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
 .step p:last-child { color: var(--muted); max-width: 30rem; }
 .js .step { opacity: .35; }
 .js .step.on { opacity: 1; }
-@media (max-width: 899px) { .rm-name { font-size: 20px; } .rm-name { transform: translateY(4px); } .rm-size { display: none; } .js .step { min-height: 52svh; } }
+@media (max-width: 899px) { .rm-name { font-size: 22px; } .uplan .rm-name { font-size: 24px; } .rm-size { display: none; } .js .step { min-height: 52svh; } }
 @media (min-width: 900px) {
   .scrolly { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: clamp(2rem, 6vw, 6rem); }
   .plan-fig { top: calc(var(--head-h) + 2rem); padding: 0; }
@@ -248,6 +248,7 @@ td small { font: 400 .85rem var(--font-body); color: var(--muted); }
 /* ---------- 公共設施（水平捲動） ---------- */
 .amen { background: var(--ink); color: var(--on-ink); padding-block: 0; }
 .amen-sticky { padding-block: clamp(4.5rem, 10vw, 8rem); }
+.amen-head { max-width: none; }
 .amen-head p { color: var(--on-ink-muted); }
 .amen-track { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 1.5rem; }
 .amen-card { display: grid; gap: .6rem; align-content: start; }
@@ -275,7 +276,7 @@ td small { font: 400 .85rem var(--font-body); color: var(--muted); }
 .pin-dot { fill: var(--surface); }
 .pin-lbl text { font: 500 14px var(--font-body); fill: var(--text); paint-order: stroke; stroke: var(--map-land); stroke-width: 5px; stroke-linejoin: round; }
 .pl-dist { font-weight: 400; fill: var(--muted); }
-@media (max-width: 640px) { .pin-lbl text { font-size: 19px; } .ring-lbl { font-size: 17px; } }
+@media (max-width: 640px) { .pin-lbl text { font-size: 22px; } .ring-lbl { font-size: 17px; } }
 .places { display: grid; gap: 0; align-content: start; }
 .places li { display: flex; justify-content: space-between; gap: 1rem; padding-block: .95rem; border-bottom: 1px solid var(--line); }
 .places li:first-child { border-top: 1px solid var(--line); }
@@ -286,6 +287,7 @@ td small { font: 400 .85rem var(--font-body); color: var(--muted); }
 /* ---------- 品牌故事 ---------- */
 .story-sec { background: var(--surface); --mask-bg: var(--surface); }
 .story { display: grid; gap: clamp(3rem, 7vw, 6rem); }
+.story .sec-head { margin-bottom: 0; }
 .story-row { display: grid; gap: 2rem; align-items: center; }
 .story-row .img { aspect-ratio: 4 / 3; }
 .story-text { display: grid; gap: 1rem; }
@@ -437,6 +439,7 @@ td small { font: 400 .85rem var(--font-body); color: var(--muted); }
 
   /* 地圖：標記依序落下彈跳、距離標籤浮現 */
   .js .map .pin, .js .map .pin-lbl, .js .map .ring, .js .map .ring-lbl { opacity: 0; }
+  .js .map.in .pin-lbl, .js .map.in .ring-lbl { opacity: 1; }
   .js .map.in .pin { animation: drop calc(.9s * var(--motion-speed)) var(--motion-ease) calc((.5s + var(--i) * 180ms) * var(--motion-speed)) both; }
   .js .map.in .pin-lbl { animation: fade .6s ease-out calc((1.1s + var(--i) * 180ms) * var(--motion-speed)) both; }
   .js .map.in .ring { animation: ring calc(1.2s * var(--motion-speed)) var(--motion-ease) both; }
