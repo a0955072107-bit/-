@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>木と光 設計室｜京都のインテリアデザイン・リノベーション・店舗設計</title>
+<meta name="description" content="木と光 設計室は、京都の住宅・店舗・古い家のリノベーションを手がけるインテリアデザイン事務所です。わかりやすい予算、誠実なスケジュール、すべての工事に2年間の保証。">
+<meta property="og:title" content="木と光 設計室">
+<meta property="og:description" content="オーク、リネン、自然光でつくる、穏やかで長く愛せる空間。京都で住宅設計、店舗デザイン、リノベーションを手がけています。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ece5db">
+<!-- 多言語版（SEO）：公開後、href を完全な URL に置き換えてください（例：https://www.yourshop.com/en/） -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   テーマ設定：ここを変えるだけでサイト全体の配色とフォントが変わります
+   ============================================================ */
+:root {
+  --brand: #8a5b3d;          /* ブランドカラー：ウォルナットのような土色。ボタンとアクセントに使用 */
+  --brand-ink: #faf6f0;      /* ブランドカラー上の文字色 */
+  --brand-deep: #6c4530;     /* 濃いウォルナット：ボタンのホバー、明るい背景上の強調文字 */
+  --bg: #ece5db;             /* ページ背景：温かみのあるグレージュ */
+  --surface: #f7f3ec;        /* カードとフォームの背景（温かみのあるオフホワイト） */
+  --sand: #e2d8ca;           /* 交互のセクション背景：淡いオーク色 */
+  --text: #2a2723;           /* 本文：チャコール */
+  --muted: #5d564e;          /* 補足テキスト */
+  --line: #cfc3b3;           /* 細い罫線と枠線 */
+  --dark: #2a2723;           /* 濃色セクションの背景：チャコール */
+  --on-dark: #efe8de;        /* 濃色セクションの本文 */
+  --on-dark-muted: #bdb2a4;  /* 濃色セクションの補足テキスト */
+  --oak: #c4a079;            /* イラスト：オーク */
+  --oak-light: #dcc3a2;      /* イラスト：明るいオーク */
+  --walnut: #6f4c37;         /* イラスト：ウォルナット */
+  --linen: #e6dccd;          /* イラスト：リネンの壁 */
+  --glow: #f4e2bf;           /* イラスト：照明の温かい光 */
+  --stone: #a9a59c;          /* イラスト：ビフォー画像の冷たいグレー */
+  --stone-deep: #7d7a73;     /* イラスト：ビフォー画像の濃いグレー */
+  --radius: 2px;             /* 角の丸み（ジャパンディはほぼ直角がきれいです） */
+  --font-heading: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif; /* 見出しフォント */
+  --font-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif; /* 本文フォント */
+  --maxw: 1240px;            /* コンテンツの最大幅 */
+  --pad: clamp(1.25rem, 5vw, 3rem); /* 左右の余白 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.85 var(--font-body); font-variant-numeric: tabular-nums; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; line-height: 1.25; letter-spacing: .01em; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+.wrap { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 100; }
+.skip:focus { left: 1rem; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* ---------- ボタン ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .75rem 1.6rem; border-radius: var(--radius); border: 1px solid transparent; font: 500 .95rem/1.2 var(--font-body); letter-spacing: .05em; cursor: pointer; transition: background .25s, color .25s, border-color .25s, transform .25s; }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+a:active { opacity: .8; }
+.btn-main { background: var(--brand); color: var(--brand-ink); }
+.btn-main:hover { background: var(--brand-deep); }
+.btn-line { border-color: var(--text); color: var(--text); }
+.btn-line:hover { background: var(--text); color: var(--surface); }
+.btn-light { border-color: color-mix(in srgb, var(--on-dark) 45%, transparent); color: var(--on-dark); }
+.btn-light:hover { background: var(--on-dark); color: var(--dark); }
+.link { border-bottom: 1px solid var(--brand); color: var(--brand-deep); transition: color .25s, border-color .25s; }
+.link:hover { color: var(--text); border-color: var(--text); }
+
+/* ---------- セクション共通スタイル ---------- */
+section { padding-block: clamp(4.5rem, 10vw, 8.5rem); }
+.sec-head { display: grid; gap: 1.1rem; margin-bottom: clamp(2.5rem, 6vw, 4.5rem); max-width: 40rem; }
+.sec-head h2 { font-size: clamp(1.8rem, 4vw, 2.75rem); font-weight: 300; }
+.sec-head p { color: var(--muted); }
+.alt { background: var(--sand); }
+.dark { background: var(--dark); color: var(--on-dark); }
+.dark .sec-head p { color: var(--on-dark-muted); }
+
+/* ==================== イラストの仮画像 ==================== */
+/* .img はすべて CSS で描いたインテリアのイラストです。写真に差し替えるときは、該当するクラスを
+   .img-xx { background: url(images/xxx.jpg) center/cover; } に変更し、s-slat や s-shelf などのシーン用クラスを削除してください */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); background: linear-gradient(180deg, var(--linen), color-mix(in srgb, var(--linen) 80%, var(--oak))); isolation: isolate; }
+.img::before, .img::after { content: ""; position: absolute; inset: 0; z-index: -1; }
+/* リネンの質感：すべてのシーン共通の細かな織り目 */
+.img { background-image:
+  repeating-linear-gradient(0deg, color-mix(in srgb, var(--walnut) 4%, transparent) 0 1px, transparent 1px 3px),
+  repeating-linear-gradient(90deg, color-mix(in srgb, var(--walnut) 3%, transparent) 0 1px, transparent 1px 4px),
+  linear-gradient(180deg, var(--linen), color-mix(in srgb, var(--linen) 80%, var(--oak))); }
+
+/* 写真に差し替え：.img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero { aspect-ratio: 4 / 3; }
+.img-hero::before, .s-arch::before { /* アーチ型の開口と、奥の木製ルーバー壁 */
+  inset: 16% 24% 14% 30%; border-radius: 999px 999px 0 0;
+  background:
+    radial-gradient(ellipse 70% 40% at 50% 0%, color-mix(in srgb, var(--glow) 70%, transparent), transparent 70%),
+    repeating-linear-gradient(90deg, var(--oak) 0 9px, color-mix(in srgb, var(--walnut) 55%, var(--oak)) 9px 11px);
+  box-shadow: inset 0 0 0 10px var(--oak-light), inset 0 0 0 11px color-mix(in srgb, var(--walnut) 40%, transparent), 0 30px 50px -30px color-mix(in srgb, var(--walnut) 60%, transparent);
+}
+.img-hero::after, .s-arch::after { /* ペンダントライト、木の床、低いベンチ */
+  background:
+    linear-gradient(var(--text), var(--text)) 82% 0 / 1px 30% no-repeat,
+    radial-gradient(ellipse 50% 100% at 50% 100%, var(--walnut) 0 98%, transparent 100%) 83.4% 30% / 12% 6% no-repeat,
+    radial-gradient(circle at 82.5% 38%, color-mix(in srgb, var(--glow) 90%, transparent), transparent 16%),
+    linear-gradient(var(--walnut), var(--walnut)) 12% 82% / 18% 3% no-repeat,
+    linear-gradient(var(--walnut), var(--walnut)) 13.5% 86% / 1.2% 4% no-repeat,
+    linear-gradient(var(--walnut), var(--walnut)) 26.5% 86% / 1.2% 4% no-repeat,
+    linear-gradient(to top, color-mix(in srgb, var(--oak) 85%, var(--walnut)) 0 14%, transparent 14%),
+    repeating-linear-gradient(90deg, transparent 0 15%, color-mix(in srgb, var(--walnut) 18%, transparent) 15% calc(15% + 1px)) 0 100% / 100% 14% no-repeat;
+}
+/* 木製ルーバー壁、低いサイドボード、丸い鏡 */
+.s-slat::before {
+  inset: 0 0 18% 46%;
+  background: repeating-linear-gradient(90deg, var(--oak) 0 12px, color-mix(in srgb, var(--walnut) 60%, var(--oak)) 12px 15px);
+}
+.s-slat::after {
+  background:
+    radial-gradient(circle at 24% 38%, transparent 0 13%, var(--walnut) 13% 14%, transparent 14.5%),
+    radial-gradient(circle at 24% 38%, color-mix(in srgb, var(--glow) 60%, transparent) 0 13%, transparent 13.5%),
+    linear-gradient(var(--walnut), var(--walnut)) 8% 74% / 52% 12% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--oak-light) 70%, var(--surface)), color-mix(in srgb, var(--oak-light) 70%, var(--surface))) 8% 72% / 52% 2% no-repeat,
+    linear-gradient(to top, color-mix(in srgb, var(--oak) 80%, var(--walnut)) 0 18%, transparent 18%);
+}
+/* オープン棚 */
+.s-shelf::before {
+  inset: 12% 14% 26%;
+  background:
+    linear-gradient(var(--oak-light), var(--oak-light)) 30% 8% / 8% 14% no-repeat,
+    linear-gradient(var(--walnut), var(--walnut)) 40% 10% / 4% 12% no-repeat,
+    radial-gradient(circle, var(--stone-deep) 0 60%, transparent 62%) 75% 12% / 12% 18% no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 15% 44% / 18% 10% no-repeat,
+    radial-gradient(ellipse 50% 50% at 50% 50%, var(--oak) 0 98%, transparent 100%) 66% 44% / 14% 12% no-repeat,
+    linear-gradient(var(--walnut), var(--walnut)) 55% 78% / 26% 12% no-repeat,
+    repeating-linear-gradient(180deg, transparent 0 calc(33.3% - 6px), var(--oak) calc(33.3% - 6px) 33.3%);
+  border-inline: 6px solid var(--oak);
+}
+.s-shelf::after { background: linear-gradient(to top, color-mix(in srgb, var(--oak) 70%, var(--walnut)) 0 18%, transparent 18%), radial-gradient(ellipse at 80% 0%, color-mix(in srgb, var(--glow) 70%, transparent), transparent 50%); }
+/* カウンター上の3灯のペンダント（店舗向け） */
+.s-pendant::before {
+  background:
+    linear-gradient(var(--text), var(--text)) 25% 0 / 1px 34% no-repeat,
+    linear-gradient(var(--text), var(--text)) 50% 0 / 1px 26% no-repeat,
+    linear-gradient(var(--text), var(--text)) 75% 0 / 1px 34% no-repeat,
+    radial-gradient(circle at 50% 100%, var(--walnut) 0 70%, transparent 72%) 23% 34% / 12% 8% no-repeat,
+    radial-gradient(circle at 50% 100%, var(--walnut) 0 70%, transparent 72%) 50% 26% / 12% 8% no-repeat,
+    radial-gradient(circle at 50% 100%, var(--walnut) 0 70%, transparent 72%) 77% 34% / 12% 8% no-repeat,
+    radial-gradient(circle at 25% 45%, color-mix(in srgb, var(--glow) 85%, transparent), transparent 18%),
+    radial-gradient(circle at 50% 36%, color-mix(in srgb, var(--glow) 85%, transparent), transparent 18%),
+    radial-gradient(circle at 75% 45%, color-mix(in srgb, var(--glow) 85%, transparent), transparent 18%);
+}
+.s-pendant::after {
+  background:
+    linear-gradient(var(--walnut), var(--walnut)) 50% 68% / 80% 4% no-repeat,
+    repeating-linear-gradient(90deg, var(--oak) 0 8px, color-mix(in srgb, var(--walnut) 50%, var(--oak)) 8px 10px) 50% 100% / 76% 28% no-repeat,
+    linear-gradient(to top, var(--stone-deep) 0 6%, transparent 6%);
+}
+/* 斜めに光が差し込む大きな窓 */
+.s-window::before {
+  inset: 10% 18% 30% 18%;
+  background:
+    linear-gradient(90deg, transparent calc(50% - 2px), var(--oak) calc(50% - 2px) calc(50% + 2px), transparent calc(50% + 2px)),
+    linear-gradient(transparent calc(40% - 2px), var(--oak) calc(40% - 2px) calc(40% + 2px), transparent calc(40% + 2px)),
+    linear-gradient(180deg, color-mix(in srgb, var(--glow) 80%, var(--surface)), var(--glow));
+  border: 6px solid var(--oak);
+}
+.s-window::after {
+  background:
+    linear-gradient(160deg, transparent 40%, color-mix(in srgb, var(--glow) 55%, transparent) 40% 70%, transparent 70%) 0 100% / 100% 30% no-repeat,
+    linear-gradient(to top, color-mix(in srgb, var(--oak) 80%, var(--walnut)) 0 30%, transparent 30%);
+}
+/* リネンのカーテンとヘッドボード */
+.s-linen::before {
+  inset: 0 8% 40% 8%;
+  background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--surface) 70%, var(--linen)) 0 6%, color-mix(in srgb, var(--linen) 80%, var(--oak)) 6% 12%);
+  box-shadow: inset 0 -20px 30px -20px color-mix(in srgb, var(--walnut) 30%, transparent);
+}
+.s-linen::after {
+  background:
+    linear-gradient(var(--walnut), var(--walnut)) 50% 68% / 70% 10% no-repeat,
+    linear-gradient(var(--surface), var(--surface)) 50% 80% / 74% 10% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--brand) 70%, var(--linen)), color-mix(in srgb, var(--brand) 70%, var(--linen))) 70% 80% / 26% 10% no-repeat,
+    linear-gradient(to top, color-mix(in srgb, var(--oak) 80%, var(--walnut)) 0 15%, transparent 15%);
+}
+/* 写真に差し替え：.img-before { background: url(images/before.jpg) center/cover; }（ビフォー） */
+.img-before { background: linear-gradient(180deg, var(--stone), var(--stone-deep)); }
+.img-before::before { /* 古いタイルの壁 */
+  inset: 30% 0 22%;
+  background:
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--stone-deep) 70%, transparent) 0 1px, transparent 1px 26px),
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--stone-deep) 70%, transparent) 0 1px, transparent 1px 26px),
+    color-mix(in srgb, var(--stone) 70%, var(--surface));
+}
+.img-before::after { /* 蛍光灯、古いアルミのドア、コンクリートの床 */
+  background:
+    linear-gradient(var(--surface), var(--surface)) 50% 10% / 34% 2% no-repeat,
+    linear-gradient(var(--stone-deep), var(--stone-deep)) 18% 30% / 22% 48% no-repeat,
+    linear-gradient(to top, color-mix(in srgb, var(--stone-deep) 80%, var(--text)) 0 22%, transparent 22%);
+}
+/* 写真に差し替え：.img-after { background: url(images/after.jpg) center/cover; }（アフター） */
+.img-after { position: absolute; inset: 0; clip-path: inset(0 0 0 var(--pos, 50%)); }
+
+/* 写真に差し替え：.img-t1〜.img-t3 { background: url(images/team-1.jpg) center/cover; } */
+.img-person { aspect-ratio: 4 / 5; }
+.img-person::before { /* 抽象的な人物像 */
+  background:
+    radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--walnut) 45%, transparent) 0 14%, transparent calc(14% + 1px)),
+    radial-gradient(ellipse 40% 30% at 50% 100%, color-mix(in srgb, var(--walnut) 40%, transparent) 0 99%, transparent 100%);
+}
+.img-person::after { inset: 0 0 0 auto; width: 30%; background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--oak) 50%, transparent) 0 6px, transparent 6px 9px); }
+.img-t2::after { inset: 0 auto 0 0; }
+.img-t3 { background-image: linear-gradient(180deg, var(--oak-light), color-mix(in srgb, var(--oak-light) 70%, var(--linen))); }
+.img-t3::after { inset: auto 0 0; width: auto; height: 30%; background: color-mix(in srgb, var(--oak) 45%, transparent); }
+
+/* ==================== ヘッダー ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .35s, box-shadow .35s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4.5rem; }
+.logo { display: flex; align-items: center; gap: .75rem; line-height: 1.2; }
+.logo-mark { width: 1.6rem; height: 2.1rem; border: 1.5px solid var(--brand); border-bottom-width: 3px; border-radius: 999px 999px 0 0; flex: none; }
+.logo b { font: 500 1.05rem/1.2 var(--font-heading); letter-spacing: .12em; display: block; }
+.logo small { font: 400 .78rem/1.2 var(--font-heading); color: var(--muted); letter-spacing: .02em; }
+.menu { display: flex; align-items: center; gap: clamp(1rem, 2.2vw, 2rem); font-size: .92rem; }
+.menu a:not(.btn) { position: relative; padding-block: .3rem; }
+.menu a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--brand); transform: scaleX(0); transition: transform .3s; }
+.menu a:not(.btn):hover::after { transform: scaleX(1); }
+.menu .btn { min-height: 42px; padding: .5rem 1.2rem; }
+.burger { display: none; width: 44px; height: 44px; background: none; border: 1px solid var(--line); border-radius: var(--radius); color: inherit; cursor: pointer; }
+.burger:hover { border-color: var(--text); }
+.burger span, .burger span::before, .burger span::after { display: block; width: 18px; height: 1.5px; background: currentColor; margin: auto; position: relative; transition: transform .3s, background .3s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* JavaScript がないときはメニューをロゴの下に折り返し、JS があるときはハンバーガーメニューにまとめます */
+  html:not(.js) .nav { flex-wrap: wrap; padding-bottom: .75rem; }
+  html:not(.js) .site-header { position: sticky; background: var(--bg); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1.1rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: 4.5rem 0 auto; flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); padding: .5rem var(--pad) 1.5rem; border-top: 1px solid var(--line); box-shadow: 0 20px 30px -20px color-mix(in srgb, var(--text) 25%, transparent); transform: translateY(-130%); visibility: hidden; transition: transform .35s, visibility .35s; }
+  .js .menu.open { transform: none; visibility: visible; }
+  .js .menu a:not(.btn) { padding: .95rem 0; border-bottom: 1px solid var(--line); }
+  .js .menu .btn { margin-top: 1rem; min-height: 48px; }
+}
+
+/* ==================== ファーストビュー ==================== */
+.hero { padding-top: clamp(6.5rem, 11vw, 8rem); padding-bottom: clamp(3rem, 6vw, 4.5rem); }
+.hero-grid { display: grid; gap: clamp(2.5rem, 5vw, 5rem); align-items: center; }
+.hero h1 { font-size: clamp(2.1rem, 4.6vw, 3.9rem); font-weight: 300; line-height: 1.3; letter-spacing: .01em; }
+.hero-lead { color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.1rem); max-width: 30rem; margin-top: 1.5rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 2.25rem; }
+.hero-art { position: relative; }
+.hero-art figcaption { margin-top: .9rem; font-size: .85rem; color: var(--muted); display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--line); padding-top: .75rem; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(3rem, 6vw, 4.5rem); border-block: 1px solid var(--line); }
+.facts div { padding: 1.4rem .75rem; text-align: center; }
+.facts div + div { border-left: 1px solid var(--line); }
+.facts strong { display: block; font: 300 clamp(1.7rem, 4vw, 2.6rem)/1.1 var(--font-heading); }
+.facts span { font-size: .85rem; color: var(--muted); }
+@media (min-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
+  .img-hero { aspect-ratio: 1 / 1; max-height: 34rem; width: 100%; }
+}
+
+/* ==================== デザインスタイル ==================== */
+.style-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); }
+.tags { display: flex; flex-wrap: wrap; gap: .6rem; }
+.tags li { border: 1px solid var(--line); background: var(--surface); padding: .45rem 1.1rem; border-radius: 999px; font-size: .92rem; }
+.swatches { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .75rem; margin-top: 2.5rem; }
+.swatches li { font-size: .8rem; color: var(--muted); text-align: center; }
+.swatches li::before { content: ""; display: block; aspect-ratio: 1; border-radius: 50%; margin-bottom: .5rem; background: var(--c); border: 1px solid var(--line); }
+.sw-oak { --c: repeating-linear-gradient(100deg, var(--oak) 0 5px, var(--oak-light) 5px 8px); }
+.sw-walnut { --c: repeating-linear-gradient(100deg, var(--walnut) 0 4px, color-mix(in srgb, var(--walnut) 80%, var(--oak)) 4px 7px); }
+.sw-linen { --c: repeating-linear-gradient(0deg, var(--linen) 0 2px, var(--surface) 2px 3px); }
+.sw-lime { --c: radial-gradient(circle at 30% 30%, var(--surface), var(--sand)); }
+.sw-stone { --c: radial-gradient(circle at 70% 30%, var(--stone), var(--stone-deep)); }
+.style-copy p { color: var(--muted); margin-bottom: 1.75rem; max-width: 32rem; }
+@media (min-width: 900px) { .style-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: end; } }
+
+/* ==================== 施工事例 ==================== */
+.filters { display: none; flex-wrap: wrap; gap: .5rem; margin-bottom: 2rem; }
+.js .filters { display: flex; }
+.filters button { font: 400 .92rem/1 var(--font-body); background: none; border: 1px solid var(--line); color: var(--text); padding: .7rem 1.2rem; border-radius: 999px; cursor: pointer; min-height: 44px; transition: background .25s, color .25s, border-color .25s; }
+.filters button:hover { border-color: var(--text); }
+.filters button:active { transform: translateY(1px); }
+.filters button[aria-pressed="true"] { background: var(--text); color: var(--surface); border-color: var(--text); }
+.projects { display: grid; gap: clamp(1.75rem, 3vw, 2.5rem) clamp(1.25rem, 2.5vw, 2rem); }
+.project[hidden] { display: none; }
+.project .img { aspect-ratio: 4 / 3; }
+.project h3 { font-size: 1.2rem; margin-top: 1rem; }
+.meta { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; margin-top: .75rem; padding-top: .75rem; border-top: 1px solid var(--line); font-size: .87rem; }
+.meta dt { color: var(--muted); font-size: .8rem; }
+.featured { display: grid; gap: 1.5rem clamp(1.5rem, 4vw, 3.5rem); align-items: center; padding-bottom: clamp(1.75rem, 3vw, 2.5rem); border-bottom: 1px solid var(--line); }
+.featured h3 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 300; margin-top: 0; }
+.featured p { color: var(--muted); margin-top: .75rem; }
+.ba { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius); --pos: 50%; }
+.ba > .img { position: absolute; inset: 0; aspect-ratio: auto; }
+.ba-label { position: absolute; bottom: .75rem; z-index: 2; background: color-mix(in srgb, var(--surface) 90%, transparent); color: var(--text); font-size: .8rem; padding: .2rem .65rem; border-radius: var(--radius); pointer-events: none; }
+.ba-label.l { left: .75rem; } .ba-label.r { right: .75rem; }
+.ba-handle { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: var(--surface); z-index: 2; pointer-events: none; }
+.ba-handle::after { content: ""; position: absolute; top: 50%; left: 50%; width: 2.75rem; height: 2.75rem; transform: translate(-50%, -50%); border-radius: 50%; background: var(--surface); box-shadow: 0 4px 14px color-mix(in srgb, var(--text) 30%, transparent); background-image: linear-gradient(90deg, transparent 35%, var(--brand) 35% 40%, transparent 40% 60%, var(--brand) 60% 65%, transparent 65%); background-size: 100% 40%; background-repeat: no-repeat; background-position: center; }
+.ba input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 3; margin: 0; }
+html:not(.js) .ba input, html:not(.js) .ba-handle { display: none; }
+.ba:has(input:focus-visible) { outline: 2px solid var(--brand); outline-offset: 4px; }
+.ba-hint { font-size: .82rem; color: var(--muted); margin-top: .6rem; }
+.count { font-size: .85rem; color: var(--muted); margin-bottom: 1.25rem; }
+@media (min-width: 640px) { .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); } .featured { grid-column: 1 / -1; } }
+@media (min-width: 1000px) { .projects { grid-template-columns: repeat(3, minmax(0, 1fr)); } .featured { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); } }
+
+/* ==================== 家づくりの流れ ==================== */
+.steps { display: grid; counter-reset: s; border-top: 1px solid var(--line); }
+.step { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); gap: .25rem 1rem; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+.step::before { counter-increment: s; content: "0" counter(s); font: 300 1.6rem/1.2 var(--font-heading); color: var(--brand-deep); grid-row: span 3; }
+.step h3 { font-size: 1.2rem; }
+.step p { color: var(--muted); font-size: .93rem; }
+.step small { font-size: .82rem; color: var(--brand-deep); }
+@media (min-width: 760px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 3rem; } }
+@media (min-width: 1100px) {
+  .steps { grid-template-columns: repeat(6, minmax(0, 1fr)); column-gap: 0; border-bottom: 1px solid var(--line); }
+  .step { grid-template-columns: minmax(0, 1fr); padding: 1.75rem 1.25rem 2rem; border-bottom: 0; align-content: start; }
+  .step + .step { border-left: 1px solid var(--line); }
+  .step::before { grid-row: auto; margin-bottom: 1.25rem; }
+}
+
+/* ==================== 料金 ==================== */
+.plans { display: grid; gap: 1.25rem; }
+.plan { background: var(--surface); border: 1px solid var(--line); padding: clamp(1.75rem, 3vw, 2.5rem); display: flex; flex-direction: column; gap: .9rem; border-radius: var(--radius); }
+.plan.pick { border-color: var(--brand); box-shadow: inset 0 3px 0 var(--brand); }
+.plan h3 { font-size: 1.25rem; }
+.plan .price { font: 300 clamp(1.6rem, 3vw, 2.1rem)/1.2 var(--font-heading); }
+.plan .price small { font: 400 .88rem/1 var(--font-body); color: var(--muted); }
+.plan ul { display: grid; gap: .45rem; font-size: .93rem; color: var(--muted); flex: 1; padding-top: .9rem; border-top: 1px solid var(--line); }
+.plan li { padding-left: 1.1rem; position: relative; }
+.plan li::before { content: ""; position: absolute; left: 0; top: .8em; width: .5rem; height: 1px; background: var(--brand); }
+.plan .note { font-size: .82rem; color: var(--brand-deep); }
+.sample { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+.sample h3 { font-size: 1.2rem; margin-bottom: .4rem; }
+.sample > p { color: var(--muted); font-size: .93rem; margin-bottom: 1.25rem; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius); }
+table { width: 100%; min-width: 34rem; border-collapse: collapse; font-size: .92rem; }
+th, td { text-align: left; padding: .85rem 1.1rem; border-bottom: 1px solid var(--line); }
+th { font-weight: 500; font-size: .85rem; color: var(--muted); background: color-mix(in srgb, var(--sand) 50%, var(--surface)); }
+td:last-child, th:last-child { text-align: right; white-space: nowrap; }
+td:first-child { white-space: nowrap; }
+tfoot td { font-weight: 500; border-bottom: 0; }
+@media (min-width: 900px) { .plans { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== チーム ==================== */
+.team { display: grid; gap: clamp(1.75rem, 3vw, 2.5rem); }
+.member h3 { font-size: 1.2rem; margin-top: 1.1rem; }
+.member .en { font: 400 .85rem/1.4 var(--font-heading); color: var(--muted); letter-spacing: .02em; }
+.member .role { color: var(--brand-deep); font-size: .9rem; }
+.member p:last-child { color: var(--muted); font-size: .92rem; margin-top: .6rem; padding-top: .6rem; border-top: 1px solid var(--line); }
+@media (min-width: 640px) { .team { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 639px) {
+  .member { display: grid; grid-template-columns: minmax(0, 7.5rem) minmax(0, 1fr); gap: 0 1.1rem; align-items: start; }
+  .member .img { grid-row: span 4; }
+  .member h3 { margin-top: 0; }
+}
+
+/* ==================== お客様の声 ==================== */
+.quotes { display: grid; gap: clamp(1.25rem, 3vw, 2rem); }
+.quote { border-top: 1px solid color-mix(in srgb, var(--on-dark) 30%, transparent); padding-top: 1.75rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.quote blockquote { font: 300 1.08rem/1.95 var(--font-body); }
+.quote figcaption { font-size: .88rem; color: var(--on-dark-muted); }
+.quote figcaption b { color: var(--on-dark); font-weight: 500; display: block; }
+@media (min-width: 900px) { .quotes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== よくある質問 ==================== */
+.faq-grid { display: grid; gap: 2.5rem; }
+.faq details { border-top: 1px solid var(--line); }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; padding: 1.35rem 2.5rem 1.35rem 0; position: relative; font: 500 1.05rem/1.6 var(--font-body); transition: color .25s; }
+.faq summary:hover { color: var(--brand-deep); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; position: absolute; right: .4rem; top: calc(50% - 7px); width: 14px; height: 14px; background: linear-gradient(var(--brand), var(--brand)) center / 100% 1.5px no-repeat, linear-gradient(var(--brand), var(--brand)) center / 1.5px 100% no-repeat; transition: transform .3s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { color: var(--muted); padding: 0 2.5rem 1.5rem 0; }
+@media (min-width: 900px) { .faq-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 4rem; } .faq-grid .sec-head { position: sticky; top: 7rem; align-self: start; } }
+
+/* ==================== ご相談予約 ==================== */
+.contact-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); }
+.form { background: var(--surface); padding: clamp(1.5rem, 4vw, 2.75rem); border: 1px solid var(--line); border-radius: var(--radius); display: grid; gap: 1.1rem; }
+.form .row { display: grid; gap: 1.1rem; }
+.field { display: grid; gap: .4rem; min-width: 0; }
+.field label { font-size: .88rem; font-weight: 500; }
+.field label i { color: var(--brand-deep); font-style: normal; }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .75rem .9rem; min-height: 48px; }
+.field textarea { min-height: 7.5rem; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent); }
+.agree { display: flex; gap: .6rem; align-items: flex-start; font-size: .87rem; color: var(--muted); }
+.agree input { width: 1.15rem; height: 1.15rem; margin-top: .35rem; accent-color: var(--brand); flex: none; }
+.agree a { text-decoration: underline; }
+.agree a:hover { color: var(--text); }
+.form .btn { width: 100%; }
+.form-note { font-size: .8rem; color: var(--muted); text-align: center; }
+.info { display: grid; gap: 1.75rem; align-content: start; }
+.info dl { display: grid; gap: 1.1rem; }
+.info dt { font-size: .85rem; color: var(--muted); }
+.info dd a { border-bottom: 1px solid var(--brand); transition: color .25s; }
+.info dd a:hover { color: var(--brand-deep); }
+.info .btns { display: flex; flex-wrap: wrap; gap: .75rem; }
+.info .btn { min-height: 44px; padding: .55rem 1.1rem; font-size: .88rem; }
+@media (min-width: 640px) { .form .row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+@media (min-width: 960px) { .contact-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); } }
+
+/* ==================== フッター ==================== */
+.site-footer { background: var(--dark); color: var(--on-dark-muted); padding: 4rem 0 6.5rem; font-size: .9rem; }
+.foot-grid { display: grid; gap: 2rem; padding-bottom: 2.5rem; border-bottom: 1px solid color-mix(in srgb, var(--on-dark) 15%, transparent); }
+.site-footer .logo { color: var(--on-dark); }
+.site-footer .logo small { color: var(--on-dark-muted); }
+.site-footer .logo-mark { border-color: var(--oak); }
+.site-footer h2 { color: var(--on-dark); font: 500 1rem/1.4 var(--font-body); margin-bottom: .8rem; letter-spacing: .02em; }
+.site-footer a { transition: color .25s; }
+.site-footer a:hover { color: var(--on-dark); }
+.social { display: flex; gap: .75rem; margin-top: 1rem; }
+.social a { min-width: 44px; height: 44px; padding-inline: .6rem; display: grid; place-items: center; border: 1px solid color-mix(in srgb, var(--on-dark) 25%, transparent); border-radius: 999px; font-size: .78rem; }
+.copy { padding-top: 1.5rem; font-size: .8rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; }
+@media (min-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); } .site-footer { padding-bottom: 3rem; } }
+
+/* ---------- スマホ用の固定ボタン ---------- */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 40; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .6rem; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 96%, transparent); border-top: 1px solid var(--line); }
+.sticky-cta .btn { min-height: 46px; }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- スクロールでフェードイン ---------- */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== 言語切り替え（ヘッダーの lang-switch とフッターの foot-lang） ==================== */
+.nav > .menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; padding-left: .6rem; border-left: 1px solid var(--line); font: 400 .82rem/1 var(--font-heading); }
+.lang-switch a { display: grid; place-items: center; min-width: 2rem; min-height: 2rem; padding-inline: .3rem; border-radius: var(--radius); color: var(--muted); transition: color .25s, background-color .25s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 6%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--text) 12%, transparent); }
+.lang-switch a:focus-visible { outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 500; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+/* タブレット幅：言語切り替えがあるため、補助的な .opt リンクを隠して、メニューの折り返しやロゴの圧迫を防ぎます */
+@media (min-width: 761px) and (max-width: 1000px) { .menu .opt { display: none; } }
+/* いちばん狭いタブレット幅：間隔をもう少し詰めます */
+@media (min-width: 761px) and (max-width: 860px) { .menu { gap: .9rem; } .lang-switch { padding-left: 0; border-left: 0; } }
+@media (max-width: 760px) {
+  /* スマホ：言語切り替えはメニューボタンの左。JS がないときはロゴの横に残り、メニューはその下に折り返します */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .burger { order: 2; flex: none; }
+  /* スマホではヘッダーの間隔を少し詰め、ロゴが圧迫されないようにします */
+  .nav { gap: .75rem; }
+  .menu { order: 3; }
+}
+/* とても狭いスマホ（380px 以下）：言語切り替えは開いたメニューの上部に移動します */
+@media (max-width: 380px) {
+  .js .lang-switch { display: none; position: fixed; top: 5rem; left: var(--pad); }
+  .js .menu { padding-top: 3rem; }
+  .js .menu.open ~ .lang-switch { display: flex; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem .75rem; padding-top: 1rem; font-size: .8rem; }
+.foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline-color: var(--oak); }
+.foot-lang a[aria-current="page"] { color: var(--on-dark); font-weight: 500; text-decoration: underline; text-decoration-color: var(--oak); text-underline-offset: 5px; }
+/* ---------- 日本語の組版：禁則処理を厳密にし、見出しは文節で改行 ---------- */
+body { line-break: strict; }
+h1, h2, h3 { letter-spacing: normal; word-break: auto-phrase; }
+.hero h1 { font-size: clamp(2rem, 4.4vw, 3.5rem); line-height: 1.45; letter-spacing: normal; }
+.btn { letter-spacing: .02em; }
+.menu, .logo b, .logo small { white-space: nowrap; }
+.logo b { letter-spacing: .08em; }
+p, li, dd, blockquote { text-wrap-style: pretty; }
+summary, .meta dd, .step small, .hero-art figcaption span { word-break: auto-phrase; }
+</style>
+<!--
+  JSON-LD 構造化データ：HomeAndConstructionBusiness と ProfessionalService を併記しています。
+  設計のみで施工を行わない事務所は "ProfessionalService" だけを残してください。
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["HomeAndConstructionBusiness", "ProfessionalService"],
+  "name": "木と光 設計室",
+  "description": "京都のインテリアデザイン事務所。住宅設計、店舗の内装、古い住宅のリノベーション、設計施工。",
+  "telephone": "+81-75-123-4567",
+  "email": "hello@kitohikari.example",
+  "url": "https://www.example.com/",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "下鴨松ノ木町21-4",
+    "addressLocality": "京都市左京区",
+    "addressRegion": "京都府",
+    "postalCode": "606-0802",
+    "addressCountry": "JP"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "19:00" }
+  ],
+  "areaServed": "京都市とその近郊"
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<!-- ==================== セクション：ヘッダーとナビゲーション ==================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="木と光 設計室、ページの先頭へ">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span><b>木と光 設計室</b><small>インテリアデザイン事務所</small></span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="メニューを開く"><span></span></button>
+    <nav class="menu" id="menu" aria-label="メインメニュー">
+      <a href="#styles">スタイル</a>
+      <a href="#projects">施工事例</a>
+      <a href="#process">流れ</a>
+      <a href="#pricing">料金</a>
+      <a class="opt" href="#team">チーム</a>
+      <a class="opt" href="#faq">よくある質問</a>
+      <a href="#contact" class="btn btn-main">相談を予約</a>
+    </nav>
+    <!-- lang-switch：言語切り替え。言語を追加するときは、ここにリンクを追加し、対応するフォルダを作成してください -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ==================== セクション：ファーストビュー ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="reveal">
+        <h1>余白を残し、<br>光を招き入れる。</h1>
+        <p class="hero-lead">オーク、リネン、そして自然光。穏やかで、長く愛せる空間をつくります。</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-main">無料相談を予約</a>
+          <a href="#projects" class="btn btn-line">施工事例を見る</a>
+        </div>
+      </div>
+      <figure class="hero-art reveal">
+        <div class="img img-hero" role="img" aria-label="アーチ型のオークのルーバー壁と温かなペンダントライトのある玄関"></div>
+        <figcaption><span>下鴨の木造住宅リノベーション</span><span>93㎡</span></figcaption>
+      </figure>
+    </div>
+    <!-- サンプル内容：公開前に実際の数値に差し替えてください -->
+    <div class="facts" aria-label="事務所の実績">
+      <div><strong>14</strong><span>年の実績</span></div>
+      <div><strong>260+</strong><span>件の施工実績</span></div>
+      <div><strong>2年</strong><span>の工事保証</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：デザインスタイル ==================== -->
+<section class="alt" id="styles">
+  <div class="wrap style-grid">
+    <div class="style-copy reveal">
+      <div class="sec-head" style="margin-bottom:1.5rem">
+        <h2>デザインスタイル</h2>
+      </div>
+      <p>流行を追うのではなく、年月とともに味わいが増す素材とプロポーションを選びます。すべては、実際の暮らし方を知ることから。スタイルはその先に自然と決まっていきます。</p>
+      <ul class="tags" aria-label="得意なスタイル">
+        <li>ジャパンディ</li><li>侘び寂び</li><li>北欧ナチュラル</li><li>モダンミニマル</li><li>無垢材の家</li><li>和洋折衷</li><li>インダストリアル</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <ul class="swatches" aria-label="好んで使う素材">
+        <li class="sw-oak">ホワイトオーク</li>
+        <li class="sw-walnut">ウォルナット</li>
+        <li class="sw-linen">リネン</li>
+        <li class="sw-lime">漆喰</li>
+        <li class="sw-stone">石</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：施工事例 ==================== -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>施工事例</h2>
+      <p>60㎡の街角のカフェから、172㎡の京町家まで。空間の種類で絞り込んで、ご自身の住まいに近い事例をご覧ください。</p>
+    </div>
+    <div class="filters" role="group" aria-label="空間の種類で絞り込む">
+      <button type="button" data-filter="all" aria-pressed="true">すべて</button>
+      <button type="button" data-filter="home" aria-pressed="false">住宅</button>
+      <button type="button" data-filter="shop" aria-pressed="false">店舗・オフィス</button>
+      <button type="button" data-filter="old" aria-pressed="false">リノベーション</button>
+    </div>
+    <p class="count" id="count" aria-live="polite">6件の事例を表示中</p>
+    <!-- サンプル内容：公開前に実際の施工事例に差し替えてください -->
+    <div class="projects">
+      <article class="project featured reveal" data-type="old">
+        <div>
+          <div class="ba" id="ba">
+            <div class="img img-before" role="img" aria-label="ビフォー：グレーのタイル壁、蛍光灯、古いアルミのドア"></div>
+            <!-- 写真に差し替えるときも、比較スライダーが動くように「アフター」の画像には img-after クラスを残してください -->
+            <div class="img img-after s-arch" role="img" aria-label="アフター：アーチ型のオークのルーバー壁、ペンダントライト、木の床"></div>
+            <span class="ba-label l">ビフォー</span><span class="ba-label r">アフター</span>
+            <span class="ba-handle" aria-hidden="true"></span>
+            <label class="sr" for="ba-range">ビフォーとアフターを比較します。左に動かすとアフターの写真が広く見えます</label>
+            <input type="range" id="ba-range" min="0" max="100" value="50" aria-valuetext="ビフォーとアフターが半分ずつ">
+          </div>
+          <p class="ba-hint">ハンドルをドラッグするか矢印キーで、ビフォーとアフターを見比べられます。</p>
+        </div>
+        <div>
+          <h3>下鴨の木造住宅（築60年）</h3>
+          <p>壁を3枚取り払ってリビングに光を通し、配管と配線をすべて更新。古いタイルは漆喰とオークのルーバーに張り替えました。4人家族がこれからも伸びやかに暮らせる住まいです。</p>
+          <dl class="meta">
+            <div><dt>広さ</dt><dd>93㎡</dd></div>
+            <div><dt>スタイル</dt><dd>侘び寂び</dd></div>
+            <div><dt>予算</dt><dd>1,600万〜1,850万円</dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="project reveal" data-type="home">
+        <!-- 写真に差し替え：.img-p2 { background: url(images/project-2.jpg) center/cover; } -->
+        <div class="img img-p2 s-slat" role="img" aria-label="烏丸御池のマンション：オークのルーバー壁、ウォルナットのサイドボード、丸い鏡"></div>
+        <h3>烏丸御池のマンション</h3>
+        <dl class="meta">
+          <div><dt>広さ</dt><dd>120㎡</dd></div>
+          <div><dt>スタイル</dt><dd>モダンミニマル</dd></div>
+          <div><dt>予算</dt><dd>1,900万〜2,200万円</dd></div>
+        </dl>
+      </article>
+      <article class="project reveal" data-type="shop">
+        <!-- 写真に差し替え：.img-p3 { background: url(images/project-3.jpg) center/cover; } -->
+        <div class="img img-p3 s-pendant" role="img" aria-label="出町柳のコーヒースタンド：3灯のペンダントライトの下の木のカウンター"></div>
+        <h3>出町柳のコーヒースタンド</h3>
+        <dl class="meta">
+          <div><dt>広さ</dt><dd>60㎡</dd></div>
+          <div><dt>スタイル</dt><dd>インダストリアル</dd></div>
+          <div><dt>予算</dt><dd>750万〜900万円</dd></div>
+        </dl>
+      </article>
+      <article class="project reveal" data-type="home">
+        <!-- 写真に差し替え：.img-p4 { background: url(images/project-4.jpg) center/cover; } -->
+        <div class="img img-p4 s-linen" role="img" aria-label="北白川の戸建て：主寝室のリネンのカーテンとウォルナットのヘッドボード"></div>
+        <h3>北白川の戸建て</h3>
+        <dl class="meta">
+          <div><dt>広さ</dt><dd>86㎡</dd></div>
+          <div><dt>スタイル</dt><dd>北欧ナチュラル</dd></div>
+          <div><dt>予算</dt><dd>950万〜1,100万円</dd></div>
+        </dl>
+      </article>
+      <article class="project reveal" data-type="shop">
+        <!-- 写真に差し替え：.img-p5 { background: url(images/project-5.jpg) center/cover; } -->
+        <div class="img img-p5 s-shelf" role="img" aria-label="四条烏丸の歯科医院：待合室のオークのオープン棚"></div>
+        <h3>四条烏丸の歯科医院</h3>
+        <dl class="meta">
+          <div><dt>広さ</dt><dd>116㎡</dd></div>
+          <div><dt>スタイル</dt><dd>無垢材の家</dd></div>
+          <div><dt>予算</dt><dd>1,600万〜1,900万円</dd></div>
+        </dl>
+      </article>
+      <article class="project reveal" data-type="old">
+        <!-- 写真に差し替え：.img-p6 { background: url(images/project-6.jpg) center/cover; } -->
+        <div class="img img-p6 s-window" role="img" aria-label="西陣の京町家：木枠の大きな窓から差し込む午後の光"></div>
+        <h3>西陣の京町家</h3>
+        <dl class="meta">
+          <div><dt>広さ</dt><dd>172㎡</dd></div>
+          <div><dt>スタイル</dt><dd>和洋折衷</dd></div>
+          <div><dt>予算</dt><dd>2,500万〜2,900万円</dd></div>
+        </dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：家づくりの流れ ==================== -->
+<section class="alt" id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>家づくりの流れ</h2>
+      <p>6つのステップごとに記録とスケジュールを書面でお渡しするので、いまどの段階にいるのかがいつでもわかります。</p>
+    </div>
+    <ol class="steps reveal">
+      <li class="step"><h3>ご相談</h3><p>住む方のこと、空間の使い方、ご予算についてお話を伺います。</p><small>無料、約60分</small></li>
+      <li class="step"><h3>現地調査</h3><p>採寸と撮影を行い、雨漏り、配線、構造の状態を確認します。</p><small>京都市内は無料、1週間以内</small></li>
+      <li class="step"><h3>プランのご提案</h3><p>間取り図、3D パース、概算見積もりをご提示し、納得いくまで調整します。</p><small>約2〜3週間</small></li>
+      <li class="step"><h3>ご契約</h3><p>最終図面、項目別の工事範囲、お支払いの時期をすべて書面で確認します。</p><small>分割でのお支払い</small></li>
+      <li class="step"><h3>施工</h3><p>担当デザイナーが現場を監理し、毎週、進捗の写真と報告をお送りします。</p><small>約6〜14週間</small></li>
+      <li class="step"><h3>お引き渡し</h3><p>一部屋ずつ一緒に確認し、クリーニング、保証書、お手入れガイドをお渡しします。</p><small>2年間の保証</small></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== セクション：料金 ==================== -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>料金</h2>
+      <p>どこまでお任せいただくかに合わせて、3つのプランをご用意しています。ご契約前に費用が発生することはありません。</p>
+    </div>
+    <!-- サンプル内容：公開前に実際の料金に差し替えてください -->
+    <div class="plans reveal">
+      <article class="plan">
+        <h3>設計のみ</h3>
+        <p class="price">¥12,000 <small>/㎡（税込）</small></p>
+        <ul><li>空間プランと 3D パース</li><li>施工図一式と仕上げ仕様書</li><li>施工会社はお客様がお選びください</li></ul>
+        <p class="note">信頼できる工務店がすでにある方におすすめ</p>
+      </article>
+      <article class="plan pick">
+        <h3>設計＋監理</h3>
+        <p class="price">10% <small>（工事費に対して）</small></p>
+        <ul><li>「設計のみ」の内容すべて</li><li>担当デザイナーが現場で品質を確認</li><li>毎週の進捗報告と検査</li></ul>
+        <p class="note">設計料は別途。いちばん人気のプランです</p>
+      </article>
+      <article class="plan">
+        <h3>設計施工</h3>
+        <p class="price">¥200,000〜 <small>/㎡（税込）</small></p>
+        <ul><li>設計、施工、監理をひとつの契約で</li><li>窓口がひとつで、工期も短く</li><li>ご契約時に金額を確定</li></ul>
+        <p class="note">古い住宅のリノベーションにいちばんのおすすめ</p>
+      </article>
+    </div>
+    <div class="sample reveal">
+      <h3>見積もり例：93㎡のマンションリノベーション</h3>
+      <p>「設計＋監理」プランでの試算です。実際の金額は、現地調査のあとに書面のお見積もりでご提示します。</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">項目</th><th scope="col">内容</th><th scope="col">金額（税込）</th></tr></thead>
+          <tbody>
+            <tr><td>設計料</td><td>93㎡ × ¥12,000</td><td>¥1,116,000</td></tr>
+            <tr><td>基礎工事</td><td>解体、給排水、電気、防水</td><td>¥5,800,000</td></tr>
+            <tr><td>仕上げ工事</td><td>造作、塗装、床、造り付け収納</td><td>¥7,600,000</td></tr>
+            <tr><td>監理料</td><td>工事費 ¥13,400,000 の10%</td><td>¥1,340,000</td></tr>
+          </tbody>
+          <tfoot><tr><td>合計</td><td></td><td>約 ¥15,856,000</td></tr></tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：チーム ==================== -->
+<section class="alt" id="team">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>チーム紹介</h2>
+      <p>役割の明確な3人のデザイナーです。最初のご相談からお引き渡しの日まで、同じメンバーが担当します。</p>
+    </div>
+    <!-- サンプル内容：公開前に名前、役職、紹介文を実際のチームに差し替えてください -->
+    <div class="team reveal">
+      <article class="member">
+        <div class="img img-person img-t1" role="img" aria-label="代表デザイナー 林 真弓の写真（仮）"></div>
+        <h3>林 真弓</h3>
+        <p class="en">代表</p>
+        <p class="role">代表デザイナー、一級建築士</p>
+        <p>建築を学び、コペンハーゲンの設計事務所で4年間経験を積みました。光の取り入れ方と動線計画が得意です。</p>
+      </article>
+      <article class="member">
+        <div class="img img-person img-t2" role="img" aria-label="施工責任者 山口 修の写真（仮）"></div>
+        <h3>山口 修</h3>
+        <p class="en">一級建築施工管理技士</p>
+        <p class="role">施工責任者</p>
+        <p>現場経験20年。古い家の雨漏り、古い配線、傷んだ配管といった難題を解くのが得意です。</p>
+      </article>
+      <article class="member">
+        <div class="img img-person img-t3" role="img" aria-label="家具デザイナー 佐藤 花の写真（仮）"></div>
+        <h3>佐藤 花</h3>
+        <p class="en">スタイリングと家具選び</p>
+        <p class="role">家具・ファブリック担当</p>
+        <p>家具、照明、ファブリックを選び、引き渡しの日から暮らしになじむ空間に仕上げます。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：お客様の声 ==================== -->
+<section class="dark" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>お客様の声</h2>
+    </div>
+    <!-- サンプル内容：公開前に実際のお客様の声に差し替えてください -->
+    <div class="quotes reveal">
+      <figure class="quote">
+        <blockquote>古い家なので予算が膨らむのは覚悟していました。でも追加は自分たちでお願いした本棚だけ。毎週届く写真のおかげで、最後まで安心していられました。</blockquote>
+        <figcaption><b>野村さま</b>下鴨の住宅リノベーション、93㎡</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote>林さんは午後いっぱいかけて、私たちの暮らし方を聞いてくれました。収納は以前の倍になったのに、なぜか前よりすっきり広く感じます。</blockquote>
+        <figcaption><b>吉田さまご家族</b>北白川の戸建て、86㎡</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote>フリーレント期間内に開店する必要がありました。7週間で仕上げてくださり、今でもお客さまに照明はどこのものかと聞かれます。</blockquote>
+        <figcaption><b>店主 中西さま</b>出町柳のコーヒースタンド、60㎡</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：よくある質問 ==================== -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head reveal">
+      <h2>よくある質問</h2>
+      <p>知りたいことが見つからないときは、お電話か LINE でお気軽にお尋ねください。</p>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>予算はどのくらい見ておけばいいですか？</summary>
+        <p>京都の築年数の古い住宅の場合、部分的な改装で1㎡あたり10万〜15万円、配管や配線も一新するフルリノベーションで20万〜28万円が目安です。現地調査のあとに項目別のお見積もりをお出しするので、仕上げや工事範囲を調整してご予算に合わせられます。</p>
+      </details>
+      <details>
+        <summary>最初のご相談から入居まで、どのくらいかかりますか？</summary>
+        <p>広さと工事範囲によりますが、設計に約4〜6週間、施工に約6〜14週間かかります。90㎡前後のフルリノベーションなら、全体でおよそ4か月をみておいてください。</p>
+      </details>
+      <details>
+        <summary>工事に保証はありますか？</summary>
+        <p>はい。造作、家具、塗装、給排水、電気は2年間、防水は5年間の保証があります。不具合があれば、3営業日以内に現場へ伺います。</p>
+      </details>
+      <details>
+        <summary>古い家をリノベーションするときの注意点は？</summary>
+        <p>築30年を超える住宅では、配管と配線の更新、防水工事をおすすめしています。現地調査のときに湿気と電気の安全性を点検し、見えない部分をきちんと直してから、見た目を整えていきます。</p>
+      </details>
+      <details>
+        <summary>現地調査は有料ですか？</summary>
+        <p>京都市内の現地調査は無料です。市外は交通費として ¥5,500（税込）をいただきますが、ご契約時に設計料から全額差し引きます。</p>
+      </details>
+      <details>
+        <summary>店舗やオフィスの一部だけの改装もできますか？</summary>
+        <p>もちろんです。物販店、飲食店、クリニックの場合は、できるだけ夜間や休業日に工事を行い、営業を続けながら改装できるよう調整します。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：ご相談予約 ==================== -->
+<section class="alt" id="contact">
+  <div class="wrap contact-grid">
+    <div class="info reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <h2>ご相談の予約</h2>
+        <p>お住まいや空間のことを少しお聞かせください。1営業日以内にお電話して、現地調査の日程を調整します。</p>
+      </div>
+      <dl>
+        <div><dt>電話</dt><dd><a href="tel:+81751234567">075-123-4567</a></dd></div>
+        <div><dt>事務所</dt><dd><a href="https://maps.google.com/?q=京都府京都市左京区下鴨松ノ木町21-4" target="_blank" rel="noopener">〒606-0802<br>京都府京都市左京区下鴨松ノ木町21-4</a></dd></div>
+        <div><dt>営業時間</dt><dd>火〜土 10:00〜19:00<br>日・月はご予約制</dd></div>
+      </dl>
+      <!--
+        メッセージボタン：下は LINE の設定です。@yourlineid をご自身の LINE 公式アカウントの ID に書き換えてください。
+        ほかの連絡手段に差し替えることもできます。例：
+          Instagram：https://ig.me/m/yourusername
+          WhatsApp： https://wa.me/81751234567（国番号付き、数字のみ）
+      -->
+      <div class="btns">
+        <a href="tel:+81751234567" class="btn btn-main">電話する</a>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-line" target="_blank" rel="noopener">LINE で相談</a>
+        <a href="https://maps.google.com/?q=京都府京都市左京区下鴨松ノ木町21-4" class="btn btn-line" target="_blank" rel="noopener">Google マップ</a>
+      </div>
+    </div>
+    <!--
+      このフォームは Formspree を使っています（無料プランで月50件まで送信できます）：
+      1. https://formspree.io で登録し、新しいフォームを作成します
+      2. 下の action の your-form-id を、ご自身のフォーム ID に置き換えます
+      3. 初回の送信時に、Formspree からメールアドレス確認のメールが届きます
+    -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="row">
+        <div class="field"><label for="f-name">お名前 <i>*</i></label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-tel">電話番号 <i>*</i></label><input id="f-tel" name="phone" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="f-type">空間の種類 <i>*</i></label>
+          <select id="f-type" name="space_type" required>
+            <option value="">選択してください</option>
+            <option>新築住宅</option>
+            <option>中古住宅のリノベーション</option>
+            <option>店舗・オフィス</option>
+            <option>その他</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-size">広さ（㎡）</label><input id="f-size" name="square_meters" type="number" min="1" inputmode="numeric" placeholder="例：90"></div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="f-budget">ご予算 <i>*</i></label>
+          <select id="f-budget" name="budget" required>
+            <option value="">選択してください</option>
+            <option>500万円未満</option>
+            <option>500万〜1,000万円</option>
+            <option>1,000万〜2,000万円</option>
+            <option>2,000万円以上</option>
+            <option>まだ決めていない</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-when">着工のご希望時期</label>
+          <select id="f-when" name="start_date">
+            <option>3か月以内</option>
+            <option>3〜6か月後</option>
+            <option>6か月以上先</option>
+            <option>まだ検討中</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label for="f-msg">ご相談内容</label><textarea id="f-msg" name="message" placeholder="住む方のこと、好きなスタイル、いちばん変えたいところなど"></textarea></div>
+      <label class="agree"><input type="checkbox" name="privacy_consent" value="yes" required> <span><a href="#">プライバシーポリシー</a>を読み、同意します。木と光 設計室がこのお問い合わせに関する連絡のために、私の情報を利用することを承諾します。</span></label>
+      <button type="submit" class="btn btn-main">送信する</button>
+      <p class="form-note">いただいた情報は現地調査の日程調整にのみ使用し、第三者に提供することはありません。</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== セクション：フッター ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark" aria-hidden="true"></span><span><b>木と光 設計室</b><small>インテリアデザイン事務所</small></span></a>
+        <p style="margin-top:1rem;max-width:22rem">京都市とその近郊で、住宅設計、店舗の内装、古い住宅のリノベーションを手がけています。</p>
+        <div class="social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="https://line.me/R/ti/p/@yourlineid" aria-label="LINE">LINE</a>
+          <a href="#" aria-label="Pinterest">Pin</a>
+        </div>
+      </div>
+      <div>
+        <h2>お問い合わせ</h2>
+        <p>〒606-0802<br>京都府京都市左京区下鴨松ノ木町21-4<br>電話 <a href="tel:+81751234567">075-123-4567</a><br>hello@kitohikari.example</p>
+      </div>
+      <div>
+        <h2>営業時間</h2>
+        <p>火〜土 10:00〜19:00<br>日・月はご予約制</p>
+      </div>
+    </div>
+    <div class="copy"><span>© <span id="y"></span> 木と光 設計室</span><span>事例の画像はイメージです</span></div>
+    <!-- フッターの言語リンク：ヘッダーの lang-switch と同じ内容です -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </p>
+  </div>
+</footer>
+
+<!-- スマホ用の固定ボタン -->
+<div class="sticky-cta">
+  <a href="tel:+81751234567" class="btn btn-line" aria-label="電話をかける">電話</a>
+  <a href="#contact" class="btn btn-main">無料相談を予約</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function () {
+  var header = document.querySelector('.site-header');
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('menu');
+
+  // スクロールしたらヘッダーに背景を付ける
+  function onScroll() { header.classList.toggle('scrolled', scrollY > 20); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // ハンバーガーメニュー
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    header.classList.toggle('scrolled', open || scrollY > 20);
+  }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // 施工事例の絞り込み
+  var buttons = document.querySelectorAll('.filters button');
+  var cards = document.querySelectorAll('.project');
+  var count = document.getElementById('count');
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = b.dataset.filter, n = 0;
+      buttons.forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+      cards.forEach(function (c) {
+        var show = f === 'all' || c.dataset.type === f;
+        c.hidden = !show; if (show) { n++; c.classList.add('in'); }
+      });
+      count.textContent = n + '件の事例を表示中';
+    });
+  });
+
+  // ビフォーアフターの比較スライダー
+  var ba = document.getElementById('ba');
+  var range = document.getElementById('ba-range');
+  range.addEventListener('input', function () {
+    var v = +range.value;
+    ba.style.setProperty('--pos', v + '%');
+    range.setAttribute('aria-valuetext', 'ビフォー ' + v + '%、アフター ' + (100 - v) + '%');
+  });
+
+  // スクロールでフェードイン
+  var targets = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12 });
+    targets.forEach(function (el) { io.observe(el); });
+  }
+
+  document.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

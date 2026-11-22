@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>麦と日々｜学芸大学のパン屋・ケーキとギフトの予約</title>
+<meta name="description" content="麦と日々は東京・学芸大学の小さなパン屋です。カンパーニュ、バタークロワッサン、季節のケーキを毎朝焼いています。バースデーケーキやギフトボックスは Web で予約して、店頭でお受け取りいただけます。">
+<meta name="theme-color" content="#b3312b">
+<!-- 多言語版（SEO）：公開後、href を完全な URL に置き換えてください（例：https://www.yourshop.com/en/） -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<meta property="og:title" content="麦と日々｜学芸大学のパン屋">
+<meta property="og:description" content="朝8時に最初のパンが焼き上がります。カンパーニュ、発酵バターのクロワッサン、季節のケーキ、ギフトボックス。予約して店頭で受け取れます。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "麦と日々",
+  "telephone": "+81-3-1234-5678",
+  "url": "https://example.com/",
+  "priceRange": "¥220〜¥7,800",
+  "servesCuisine": ["パン", "ケーキ", "焼き菓子"],
+  "acceptsReservations": "True",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "鷹番2-14-6",
+    "addressLocality": "目黒区",
+    "addressRegion": "東京都",
+    "postalCode": "152-0004",
+    "addressCountry": "JP"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "08:00", "closes": "18:00" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   テーマ設定：ここを変えるだけでサイト全体の配色とフォントが変わります
+   ============================================================ */
+:root {
+  --brand: #b3312b;          /* ブランドカラー（チェリーレッド）：ボタン、価格、強調文字 */
+  --brand-ink: #fffaf0;      /* ブランドカラー上の文字色 */
+  --bg: #fffaf0;             /* ページ背景（バターのような温かい白） */
+  --surface: #fffdf7;        /* カードとフォームの背景 */
+  --text: #3b2418;           /* 本文（ダークチョコレート色） */
+  --muted: #6b4c3b;          /* 補足テキスト、キャプション */
+  --line: #ecdcbc;           /* 区切り線、枠線 */
+  --butter: #f7e3a1;         /* バターイエロー：セクション背景、バッジ */
+  --butter-soft: #fcf1cf;    /* 淡いバター色：セクション背景 */
+  --pistachio: #c5d59c;      /* ピスタチオグリーン：背景、装飾 */
+  --pistachio-soft: #edf2dc; /* 淡いピスタチオ：セクション背景 */
+  --leaf: #46602a;           /* 濃いピスタチオ：「要予約」ラベルの文字 */
+  --crust: #b9742f;          /* イラスト：パンの皮 */
+  --golden: #e2a54d;         /* イラスト：こんがりクロワッサン */
+  --sponge: #f1cf8b;         /* イラスト：スポンジ生地 */
+  --cream: #fff6e4;          /* イラスト：クリームとアイシング */
+  --cocoa: #6a3a22;          /* イラスト：チョコレート */
+  --shadow-soft: color-mix(in srgb, var(--text) 12%, transparent);  /* やわらかい影：カード、メニュー */
+  --shadow-deep: color-mix(in srgb, var(--text) 28%, transparent);  /* 濃い影：イラストのケーキやパン */
+  --radius: 22px;            /* 角の丸み */
+  --scallop: 14px;           /* スカラップ（波形の縁）の半径 */
+  --font-heading: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;   /* 見出しフォント（明朝体） */
+  --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif; /* 本文フォント */
+  --max: 1180px;             /* コンテンツの最大幅 */
+  --pad: clamp(1rem, 5vw, 3rem); /* 左右の余白 */
+  --gap: clamp(1.25rem, 4vw, 3rem); /* 複数列セクションの列間 */
+}
+
+/* ---------- 基本 ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 72px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.25; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 8px; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: clamp(4.5rem, 10vw, 7rem); position: relative; background: var(--sec-bg, var(--bg)); }
+.sec-title { font-size: clamp(1.9rem, 4.2vw, 2.8rem); margin-bottom: .9rem; }
+.sec-lead { color: var(--muted); max-width: 36rem; }
+.sec-head { margin-bottom: clamp(2rem, 5vw, 3.2rem); }
+.sec-head.center { text-align: center; } .sec-head.center .sec-lead { margin-inline: auto; }
+
+/* スカラップの縁：セクション上端に並ぶ半円。色はそのセクションの --sec-bg を使います */
+.scallop::before { content: ""; position: absolute; left: 0; right: 0; top: calc(var(--scallop) * -1 + 1px); height: var(--scallop);
+  background: radial-gradient(circle at 50% 100%, var(--sec-bg) calc(var(--scallop) - .5px), transparent var(--scallop)) 50% 0 / calc(var(--scallop) * 2) var(--scallop) repeat-x; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .85rem 1.6rem; border-radius: 999px; font: 700 1rem/1.2 var(--font-body); text-decoration: none; border: 2px solid var(--brand); cursor: pointer; transition: transform .2s, background-color .2s, color .2s, box-shadow .2s; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); box-shadow: 0 4px 0 color-mix(in srgb, var(--brand) 60%, var(--text)); }
+.btn-primary:hover { background: color-mix(in srgb, var(--brand) 86%, var(--text)); }
+.btn-ghost { background: transparent; color: var(--brand); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--brand) 9%, transparent); }
+.btn:active { transform: translateY(2px); box-shadow: none; }
+a:not(.btn):hover { color: var(--brand); }
+a:not(.btn):active { opacity: .7; }
+button:disabled { opacity: .4; cursor: not-allowed; }
+
+/* スクロールでフェードイン：JS が動いているときだけ最初に隠します */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+/* JS があるときだけ／ないときだけ表示する内容 */
+html:not(.js) .js-only { display: none !important; }
+.js .nojs-only { display: none !important; }
+
+/* ==================== ヘッダー ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 93%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+.logo-mark { width: 40px; height: 40px; flex: none; border-radius: 50%; background: radial-gradient(circle, var(--brand) 0 22%, var(--butter) 23% 58%, var(--brand) 59%); outline: 2px dotted var(--brand); outline-offset: 2px; }
+.logo b { font: 700 1.2rem/1.1 var(--font-heading); display: block; }
+.logo small { font: 600 .8rem/1 var(--font-body); color: var(--muted); }
+.nav-menu { display: flex; align-items: center; gap: 1.4rem; list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; font-weight: 600; padding-block: .3rem; background: linear-gradient(var(--brand), var(--brand)) left bottom / 0 2px no-repeat; transition: background-size .3s, color .2s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 2px; }
+.nav-menu .btn { padding: .55rem 1.2rem; }
+.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: 12px; }
+.nav-toggle:hover { background: color-mix(in srgb, var(--butter) 60%, transparent); }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 2px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; border-radius: 2px; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 900px) and (min-width: 761px) { .nav-menu { gap: .9rem; font-size: .93rem; } }
+@media (max-width: 760px) {
+  /* JavaScript がないときはメニューを次の行に折り返し、JS があるときはハンバーガーメニューにまとめます */
+  html:not(.js) .nav { flex-wrap: wrap; height: auto; padding-block: .8rem; }
+  html:not(.js) .site-header { position: sticky; background: var(--bg); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: clamp(2rem, 6vw, 4rem); }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); box-shadow: 0 12px 24px var(--shadow-soft); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: .85rem 0; border-bottom: 1px dashed var(--line); }
+  .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+  .js .site-header:has(.nav-menu.open) { background: var(--bg); }
+}
+
+/* ==================== イラストの仮画像 ====================
+   .img-xx はすべて CSS グラデーションで描いたベーカリーのイラストです（ケーキ、クロワッサン、パン、ギフトボックス、スプリンクル）。
+   写真に差し替え：.img-xx { background: url(images/xxx.jpg) center/cover; }
+   （写真に替えたら、そのクラスの ::before／::after のルールも削除してかまいません） */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; background-color: var(--butter-soft); }
+.img::before, .img::after { content: ""; position: absolute; pointer-events: none; }
+/* スプリンクル模様（どのイラストの下にも敷けます） */
+.sprinkles { background-image:
+  radial-gradient(ellipse 7px 2.5px at 18% 22%, var(--brand) 98%, transparent),
+  radial-gradient(ellipse 2.5px 7px at 62% 14%, var(--leaf) 98%, transparent),
+  radial-gradient(ellipse 7px 2.5px at 78% 58%, var(--cocoa) 98%, transparent),
+  radial-gradient(ellipse 2.5px 7px at 34% 70%, var(--golden) 98%, transparent),
+  radial-gradient(circle at 48% 44%, var(--brand) 0 2.5px, transparent 3px),
+  radial-gradient(circle at 88% 88%, var(--leaf) 0 2.5px, transparent 3px),
+  radial-gradient(circle at 8% 90%, var(--cocoa) 0 2px, transparent 2.5px);
+  background-size: 96px 96px; }
+.t-butter { background-color: var(--butter); }
+.t-pist { background-color: var(--pistachio); }
+.t-cream { background-color: var(--butter-soft); }
+
+/* 写真に差し替え：.img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero { aspect-ratio: 1 / 1; border-radius: 50%; background-color: var(--pistachio); box-shadow: inset 0 0 0 12px var(--pistachio-soft); }
+/* ケーキ：アイシング、クリームの層、ジャム、スポンジ */
+.img-hero::before { left: 22%; right: 22%; bottom: 25%; height: 40%; border-radius: 26px 26px 10px 10px;
+  background:
+    radial-gradient(circle at 50% 0, var(--cream) 0 11px, transparent 12px) 0 22px / 30px 30px repeat-x,
+    linear-gradient(var(--cream) 0 24px, transparent 24px),
+    linear-gradient(transparent 0 46%, var(--brand) 46% 53%, var(--cream) 53% 60%, transparent 60% 76%, var(--cream) 76% 82%, transparent 82%),
+    var(--sponge);
+  box-shadow: 0 14px 0 -2px var(--surface), 0 16px 0 0 var(--line), 0 34px 40px var(--shadow-deep); }
+/* てっぺんのさくらんぼ */
+.img-hero::after { width: 15%; aspect-ratio: 1; left: 42.5%; top: 26%; border-radius: 50%;
+  background: radial-gradient(circle at 34% 32%, var(--cream) 0 10%, transparent 14%), radial-gradient(circle at 50% 50%, var(--brand) 0 69%, transparent 70%);
+  animation: bob 4s ease-in-out infinite alternate; }
+@keyframes bob { from { transform: translateY(0); } to { transform: translateY(-6px); } }
+
+/* 写真に差し替え：.img-croissant { background: url(images/croissant.jpg) center/cover; } */
+/* クロワッサン：層を重ねた大きな楕円と、左右の小さな楕円で両端を表現 */
+.img-croissant::before { left: 26%; right: 26%; top: 33%; height: 34%; border-radius: 50% 50% 42% 42% / 64% 64% 36% 36%; z-index: 1;
+  background: radial-gradient(ellipse 60% 40% at 50% 26%, color-mix(in srgb, var(--cream) 55%, transparent), transparent 70%),
+    repeating-linear-gradient(90deg, var(--golden) 0 15%, color-mix(in srgb, var(--crust) 85%, var(--text)) 15% 17.5%);
+  box-shadow: 0 16px 22px var(--shadow-deep); }
+.img-croissant::after { left: 12%; right: 12%; top: 40%; height: 34%;
+  background: radial-gradient(ellipse 17% 30% at 24% 42%, var(--golden) 0 96%, transparent 100%), radial-gradient(ellipse 17% 30% at 76% 42%, var(--golden) 0 96%, transparent 100%),
+    radial-gradient(ellipse 13% 24% at 14% 58%, var(--crust) 0 96%, transparent 100%), radial-gradient(ellipse 13% 24% at 86% 58%, var(--crust) 0 96%, transparent 100%),
+    radial-gradient(ellipse 8% 16% at 8% 74%, color-mix(in srgb, var(--crust) 75%, var(--text)) 0 95%, transparent 100%), radial-gradient(ellipse 8% 16% at 92% 74%, color-mix(in srgb, var(--crust) 75%, var(--text)) 0 95%, transparent 100%); }
+
+/* 写真に差し替え：.img-loaf { background: url(images/loaf.jpg) center/cover; } */
+/* パン：ふくらんだ皮、斜めのクープ、打ち粉 */
+.img-loaf::before { left: 18%; right: 18%; top: 30%; height: 42%; border-radius: 50% 50% 30% 30% / 72% 72% 28% 28%;
+  background: repeating-linear-gradient(118deg, transparent 0 17%, color-mix(in srgb, var(--sponge) 80%, var(--cream)) 17% 21%, transparent 21% 34%),
+    radial-gradient(ellipse 70% 60% at 50% 30%, var(--crust), color-mix(in srgb, var(--crust) 70%, var(--text)));
+  box-shadow: 0 16px 22px var(--shadow-deep); }
+.img-loaf::after { inset: 0; background: radial-gradient(circle at 34% 34%, var(--cream) 0 1.5px, transparent 2px) 0 0 / 22px 18px, linear-gradient(transparent 76%, color-mix(in srgb, var(--crust) 35%, var(--sponge)) 76%); opacity: .9; z-index: -1; }
+
+/* 写真に差し替え：.img-cake { background: url(images/cake.jpg) center/cover; } */
+/* ホールケーキ：層になった側面と、ベリーをのせた楕円の上面 */
+.img-cake::before { left: 22%; right: 22%; top: 42%; height: 34%; border-radius: 0 0 50% 50% / 0 0 22% 22%;
+  background: linear-gradient(transparent 0 34%, var(--cake-fill, var(--brand)) 34% 42%, var(--cream) 42% 50%, transparent 50% 72%, var(--cream) 72% 78%, transparent 78%), var(--cake-body, var(--sponge));
+  box-shadow: 0 18px 22px var(--shadow-deep); }
+.img-cake::after { left: 22%; right: 22%; top: 32%; height: 22%; border-radius: 50%;
+  background: radial-gradient(circle at 30% 50%, var(--cake-fill, var(--brand)) 0 6%, transparent 7%), radial-gradient(circle at 50% 38%, var(--cake-fill, var(--brand)) 0 6%, transparent 7%), radial-gradient(circle at 70% 52%, var(--cake-fill, var(--brand)) 0 6%, transparent 7%), var(--cake-top, var(--cream));
+  box-shadow: inset 0 -4px 0 color-mix(in srgb, var(--text) 10%, transparent); }
+.cake-choco { --cake-body: var(--cocoa); --cake-top: color-mix(in srgb, var(--cocoa) 80%, var(--text)); --cake-fill: var(--sponge); }
+.cake-pist { --cake-body: var(--pistachio); --cake-top: var(--pistachio-soft); }
+.cake-basque { --cake-body: var(--sponge); --cake-top: color-mix(in srgb, var(--crust) 75%, var(--text)); --cake-fill: var(--golden); }
+
+/* 写真に差し替え：.img-box { background: url(images/giftbox.jpg) center/cover; } */
+/* ギフトボックス：箱、ふた、十字のリボンとちょう結び */
+.img-box::before { left: 24%; right: 24%; top: 38%; height: 40%; border-radius: 8px;
+  background: linear-gradient(90deg, transparent 44%, var(--brand) 44% 56%, transparent 56%), linear-gradient(transparent 0 22%, color-mix(in srgb, var(--text) 12%, transparent) 22% 25%, transparent 25%), var(--surface);
+  box-shadow: 0 18px 22px var(--shadow-deep); }
+.img-box::after { width: 30%; height: 15%; left: 35%; top: 26%;
+  background: radial-gradient(ellipse 30% 46% at 28% 50%, transparent 0 40%, var(--brand) 42% 98%, transparent), radial-gradient(ellipse 30% 46% at 72% 50%, transparent 0 40%, var(--brand) 42% 98%, transparent), radial-gradient(circle at 50% 70%, var(--brand) 0 14%, transparent 15%); }
+
+/* ==================== ファーストビュー ==================== */
+.hero { --sec-bg: var(--bg); padding-top: calc(72px + clamp(2rem, 5vw, 3.5rem)); padding-bottom: clamp(4rem, 8vw, 6rem); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--gap); align-items: center; }
+.hero h1 { font-size: clamp(2.5rem, 6.4vw, 4.6rem); line-height: 1.12; margin-bottom: 1.2rem; }
+.hero p.lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--muted); max-width: 30rem; margin-bottom: 2rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; }
+.hero-note { margin-top: 1.8rem; font-size: .95rem; color: var(--muted); }
+.hero-note b { color: var(--text); font-variant-numeric: tabular-nums; }
+.hero-art { position: relative; max-width: 460px; width: 100%; justify-self: center; }
+.hero-art .tag { position: absolute; right: 0; bottom: 6%; background: var(--surface); padding: .75rem 1.1rem; border-radius: 16px; box-shadow: 0 14px 30px var(--shadow-soft); font-size: .9rem; max-width: 13rem; border: 2px solid var(--butter); }
+.hero-art .tag b { display: block; font-family: var(--font-heading); color: var(--brand); }
+@media (max-width: 860px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } .hero-art { max-width: 340px; } }
+
+/* ==================== 今週のパン ==================== */
+.bake { --sec-bg: var(--butter-soft); }
+.week-scroll { overflow-x: auto; scroll-snap-type: x proximity; padding: .4rem .2rem 1rem; margin-inline: -.2rem; }
+.week { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .8rem; list-style: none; }
+.week > li { background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1rem 1.2rem; scroll-snap-align: start; position: relative; }
+.week h3 { font-size: 1.2rem; margin-bottom: .5rem; }
+.week ul { list-style: none; font-size: .92rem; color: var(--muted); display: grid; gap: .35rem; }
+.week li.off { background: transparent; border-style: dashed; }
+.week li.today { border-color: var(--brand); box-shadow: 0 8px 0 -2px var(--butter), 0 8px 0 0 var(--brand); }
+.week li.today h3::after { content: "今日"; font: 700 .72rem/1 var(--font-body); margin-left: .45rem; padding: .25rem .55rem; border-radius: 999px; background: var(--brand); color: var(--brand-ink); vertical-align: .2rem; }
+.bake-note { margin-top: 1.4rem; color: var(--muted); font-size: .92rem; }
+@media (max-width: 1020px) { .week { grid-template-columns: repeat(7, 10.5rem); } }
+
+/* ==================== 商品 ==================== */
+.products { --sec-bg: var(--bg); }
+.tabs { display: flex; justify-content: center; gap: .5rem; margin-bottom: 2.4rem; flex-wrap: wrap; }
+.tab { font: 700 1rem/1 var(--font-body); padding: .8rem 1.5rem; border-radius: 999px; border: 2px solid var(--line); background: var(--surface); color: var(--text); cursor: pointer; transition: background-color .2s, border-color .2s, color .2s, transform .2s; }
+.tab:hover { border-color: var(--brand); }
+.tab:active { transform: scale(.97); }
+.tab[aria-selected="true"] { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.panel + .panel { margin-top: 2.5rem; }
+.js .panel + .panel { margin-top: 0; }
+.panel-title { font: 600 1.3rem/1.3 var(--font-heading); margin-bottom: 1rem; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; list-style: none; }
+.item { background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.item .img { aspect-ratio: 4 / 3; border-radius: 0; }
+.item-body { padding: 1.1rem 1.2rem 1.3rem; display: grid; gap: .35rem; }
+.item-head { display: flex; justify-content: space-between; align-items: baseline; gap: .8rem; }
+.item h3 { font-size: 1.15rem; }
+.price { font: 700 1.1rem/1 var(--font-heading); color: var(--brand); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.item p { color: var(--muted); font-size: .93rem; line-height: 1.6; }
+.tags { display: flex; flex-wrap: wrap; gap: .35rem; list-style: none; margin-top: .3rem; }
+.tags li { font-size: .78rem; font-weight: 700; padding: .15rem .6rem; border-radius: 999px; }
+.tg-limit { background: color-mix(in srgb, var(--brand) 12%, transparent); color: var(--brand); }
+.tg-pre { background: var(--pistachio-soft); color: var(--leaf); }
+.prod-note { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 2rem; }
+@media (max-width: 960px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .grid { grid-template-columns: minmax(0, 1fr); gap: .9rem; }
+  .item { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); }
+  .item .img { aspect-ratio: auto; min-height: 7.5rem; }
+  .item-body { padding: .9rem 1rem 1rem; }
+  .item-head { flex-direction: column; gap: .3rem; }
+}
+
+/* ==================== オーダーケーキ ==================== */
+.custom { --sec-bg: var(--pistachio-soft); }
+.custom-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: var(--gap); align-items: start; }
+.sizes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; list-style: none; }
+.size { background: var(--surface); border-radius: var(--radius); padding: 1.2rem 1rem; text-align: center; border: 2px solid var(--pistachio); }
+.size .dish { display: grid; place-items: center; margin: 0 auto .8rem; width: 88%; aspect-ratio: 1; }
+.size .dish::before { content: ""; width: var(--d); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, var(--cream) 0 52%, var(--sponge) 53% 64%, var(--cream) 65%); box-shadow: 0 0 0 4px var(--surface), 0 0 0 6px var(--pistachio); }
+.size h3 { font-size: 1.15rem; }
+.size p { font-size: .9rem; color: var(--muted); }
+.size .price { display: block; margin-top: .5rem; }
+.flavours { margin-top: 2rem; }
+.flavours h3, .lead-time h3 { font-size: 1.25rem; margin-bottom: .8rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; }
+.chips li { background: var(--surface); border: 1.5px solid var(--pistachio); padding: .4rem .9rem; border-radius: 999px; font-size: .92rem; font-weight: 600; }
+.lead-time { background: var(--surface); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2rem); border: 2px solid var(--pistachio); }
+.steps { list-style: none; counter-reset: s; display: grid; gap: 1rem; margin-bottom: 1.4rem; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: .8rem; align-items: start; color: var(--muted); font-size: .95rem; }
+.steps li::before { content: counter(s); width: 2.4rem; height: 2.4rem; border-radius: 50%; display: grid; place-items: center; background: var(--butter); color: var(--text); font: 700 1.05rem/1 var(--font-heading); }
+.steps b { display: block; color: var(--text); }
+@media (max-width: 860px) { .custom-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .sizes { gap: .5rem; } .size { padding: 1rem .5rem; } }
+
+/* ==================== お客様の声 ==================== */
+.reviews { --sec-bg: var(--butter-soft); }
+.review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
+.review { background: var(--surface); border-radius: var(--radius); padding: 1.7rem; display: flex; flex-direction: column; gap: 1rem; box-shadow: 0 6px 0 var(--butter); }
+.stars { color: var(--brand); font-size: 1.05rem; letter-spacing: 0; }
+.review blockquote { font: 500 1.05rem/1.8 var(--font-heading); flex: 1; }
+.review figcaption { font-size: .9rem; color: var(--muted); }
+.review figcaption b { color: var(--text); }
+@media (max-width: 860px) { .review-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== 店舗案内 ==================== */
+.visit { --sec-bg: var(--bg); }
+.visit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.card { background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2.2rem); }
+.card h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+.table-scroll { overflow-x: auto; }
+.hours { width: 100%; border-collapse: collapse; min-width: 260px; }
+.hours th, .hours td { text-align: left; padding: .65rem .5rem; border-bottom: 1px dashed var(--line); }
+.hours th { font-weight: 600; }
+.hours td { text-align: right; font-variant-numeric: tabular-nums; }
+.hours tr.today { background: var(--butter-soft); }
+.hours tr.today th::after { content: "今日"; font-size: .72rem; font-weight: 700; margin-left: .5rem; padding: .1rem .5rem; border-radius: 999px; background: var(--brand); color: var(--brand-ink); }
+.hours .closed { color: var(--muted); }
+.addr { font: 600 1.15rem/1.6 var(--font-heading); margin-bottom: .3rem; }
+.visit-list { list-style: none; margin: 1.2rem 0 1.5rem; display: grid; gap: .7rem; }
+.visit-list li { display: flex; gap: .7rem; color: var(--muted); font-size: .95rem; }
+.visit-list b { color: var(--text); white-space: nowrap; }
+.card-cta { display: flex; flex-wrap: wrap; gap: .6rem; }
+.small-note { font-size: .88rem; color: var(--muted); margin-top: 1rem; }
+@media (max-width: 760px) { .visit-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== よくある質問 ==================== */
+.faq { --sec-bg: var(--pistachio-soft); }
+.faq-list { max-width: 48rem; margin-inline: auto; display: grid; gap: .8rem; }
+.faq details { background: var(--surface); border-radius: 18px; border: 2px solid var(--pistachio); }
+.faq summary { cursor: pointer; list-style: none; padding: 1.1rem 3.2rem 1.1rem 1.3rem; font-weight: 700; position: relative; border-radius: 16px; transition: background-color .2s; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 1.2rem; top: 50%; translate: 0 -50%; font: 600 1.5rem/1 var(--font-heading); color: var(--brand); transition: rotate .25s; }
+.faq details[open] summary::after { rotate: 45deg; }
+.faq summary:hover { background: color-mix(in srgb, var(--pistachio) 30%, transparent); }
+.faq summary:active { background: color-mix(in srgb, var(--pistachio) 50%, transparent); }
+.faq details p { padding: 0 1.3rem 1.2rem; color: var(--muted); }
+
+/* ==================== ご予約 ==================== */
+.order { --sec-bg: var(--butter-soft); }
+.order-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap); align-items: start; }
+.picker { background: var(--surface); border-radius: var(--radius); padding: clamp(1.2rem, 3vw, 1.8rem); border: 2px solid var(--butter); }
+.picker h3 { font-size: 1.25rem; margin-bottom: .6rem; }
+.picks { list-style: none; }
+.pick { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .4rem 1rem; align-items: center; padding-block: .85rem; border-bottom: 1px dashed var(--line); }
+.pick b { display: block; font-weight: 700; }
+.pick span { font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.step { display: inline-flex; align-items: center; border: 2px solid var(--line); border-radius: 999px; background: var(--bg); }
+.step button { width: 40px; height: 40px; border: 0; border-radius: 50%; background: transparent; color: var(--brand); font: 700 1.25rem/1 var(--font-body); cursor: pointer; transition: background-color .2s, transform .2s; }
+.step button:hover:not(:disabled) { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.step button:active:not(:disabled) { transform: scale(.92); }
+.step input { width: 2.6rem; text-align: center; border: 0; background: transparent; font: 700 1rem/1 var(--font-body); color: var(--text); -moz-appearance: textfield; appearance: textfield; }
+.step input::-webkit-inner-spin-button, .step input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.total { display: flex; justify-content: space-between; align-items: baseline; margin-top: 1.1rem; font-weight: 700; }
+.total output { font: 700 1.6rem/1 var(--font-heading); color: var(--brand); font-variant-numeric: tabular-nums; }
+.picker .small-note { margin-top: .6rem; }
+.quick { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.4rem; }
+.form { background: var(--surface); color: var(--text); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.2rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.1rem; border: 2px solid var(--butter); }
+.form h3 { grid-column: 1 / -1; font-size: 1.25rem; }
+.field { display: grid; gap: .35rem; min-width: 0; align-content: start; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-weight: 700; font-size: .92rem; }
+.field label span { color: var(--brand); }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1.5px solid var(--line); border-radius: 14px; padding: .7rem .85rem; min-height: 48px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 22%, transparent); }
+.field textarea { min-height: 96px; resize: vertical; }
+.field small { font-size: .82rem; color: var(--muted); }
+.form .btn { grid-column: 1 / -1; width: 100%; }
+.form > small { grid-column: 1 / -1; color: var(--muted); font-size: .85rem; text-align: center; }
+@media (max-width: 860px) { .order-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .form { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== フッター ==================== */
+.site-footer { --sec-bg: var(--text); position: relative; background: var(--sec-bg); color: color-mix(in srgb, var(--bg) 82%, transparent); padding-block: 3.5rem 2rem; font-size: .93rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: 2rem; }
+.site-footer h2 { color: var(--bg); font-size: 1.1rem; margin-bottom: .8rem; }
+.site-footer a { text-decoration: none; } .site-footer a:hover { text-decoration: underline; color: var(--butter); }
+.social { display: flex; gap: 1rem; margin-top: 1rem; }
+.copy { border-top: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); margin-top: 2.5rem; padding-top: 1.5rem; font-size: .85rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== スマホ用の固定ボタン ==================== */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 76px; }
+  .sticky-cta { display: flex; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -1px 0 var(--line); }
+  .sticky-cta .btn-primary { flex: 1; }
+  .sticky-cta .btn-ghost { padding-inline: 1.1rem; }
+}
+
+/* ==================== 言語切り替え（ヘッダーの lang-switch とフッターの foot-lang） ==================== */
+.nav > .nav-menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; padding-left: .5rem; border-left: 2px dotted var(--line); font: 700 .85rem/1 var(--font-body); }
+.lang-switch a { display: grid; place-items: center; min-width: 2rem; min-height: 2rem; padding-inline: .3rem; border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--butter) 60%, transparent); }
+.lang-switch a:active { background: var(--butter); }
+.lang-switch a:focus-visible { outline-offset: 1px; border-radius: 999px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 800; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+/* タブレット幅：言語切り替えがあるため、補助的な .opt リンクを隠して、メニューの折り返しやロゴの圧迫を防ぎます */
+@media (min-width: 761px) and (max-width: 940px) { .nav-menu .opt { display: none; } }
+/* いちばん狭いタブレット幅：間隔をもう少し詰めます */
+@media (min-width: 761px) and (max-width: 860px) { .nav-menu .opt-sm { display: none; } .nav-menu { gap: .75rem; } .lang-switch { padding-left: 0; border-left: 0; } }
+@media (max-width: 760px) {
+  /* スマホ：言語切り替えはメニューボタンの左。JS がないときはロゴの横に残り、メニューはその下に折り返します */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .nav-toggle { order: 2; flex: none; }
+  /* スマホではヘッダーの間隔を少し詰め、ロゴが圧迫されないようにします */
+  .nav { gap: .5rem; }
+  .nav-menu { order: 3; }
+}
+/* とても狭いスマホ（380px 以下）：言語切り替えは開いたメニューの上部に移動します */
+@media (max-width: 380px) {
+  .js .lang-switch { display: none; position: absolute; top: calc(72px + .6rem); left: var(--pad); }
+  .js .nav-menu { padding-top: 3rem; }
+  .js .nav-menu.open ~ .lang-switch { display: flex; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem .75rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline-color: var(--butter); }
+.foot-lang a[aria-current="page"] { color: var(--bg); font-weight: 800; text-decoration: underline; text-decoration-color: var(--butter); text-underline-offset: 4px; }
+/* ---------- 日本語の組版：禁則処理を厳密にし、見出しは文節で改行 ---------- */
+body { line-break: strict; }
+h1, h2, h3 { letter-spacing: normal; word-break: auto-phrase; }
+.hero h1 { font-size: clamp(2.2rem, 5.6vw, 4rem); line-height: 1.3; }
+.sec-title { line-height: 1.4; }
+.nav-menu, .logo b, .tab { white-space: nowrap; }
+p, li, dd, blockquote { text-wrap-style: pretty; }
+summary, .steps b, .item h3, .chips li, .hero-art .tag { word-break: auto-phrase; }
+.week li.today h3::after { vertical-align: .15rem; }
+</style>
+</head>
+<body>
+
+<!-- ==================== セクション：ヘッダー ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav wrap" aria-label="メインメニュー">
+    <a href="#hero" class="logo" aria-label="麦と日々、ページの先頭へ">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span><b>麦と日々</b><small>ベーカリー</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-links" aria-label="メニューを開く"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#bake">今週のパン</a></li>
+      <li><a href="#products">商品</a></li>
+      <li><a href="#custom">オーダーケーキ</a></li>
+      <li class="opt-sm"><a href="#visit">店舗案内</a></li>
+      <li class="opt"><a href="#faq">よくある質問</a></li>
+      <li><a href="#order" class="btn btn-primary">予約する</a></li>
+    </ul>
+    <!-- lang-switch：言語切り替え。言語を追加するときは、ここにリンクを追加し、対応するフォルダを作成してください -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
+  </nav>
+</header>
+
+<main>
+<!-- ==================== セクション：ファーストビュー ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>毎朝8時、<wbr>焼きたてを<wbr>どうぞ</h1>
+      <p class="lead">カンパーニュ、バタークロワッサン、季節のケーキ。Web で予約して、焼きたてを受け取れます。</p>
+      <div class="hero-cta">
+        <a href="#order" class="btn btn-primary">予約する</a>
+        <a href="#bake" class="btn btn-ghost">今週のパンを見る</a>
+      </div>
+      <p class="hero-note">ケーキとギフトボックスは<b>3日前まで</b>にご予約ください。月曜定休。</p>
+    </div>
+    <div class="hero-art">
+      <div class="img img-hero sprinkles" role="img" aria-label="ピスタチオグリーンの背景に、苺ジャムをはさみ、さくらんぼをのせたクリームケーキ"></div>
+      <p class="tag"><b>今月限定</b>ピスタチオとフランボワーズのムース</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：今週のパン ==================== -->
+<section class="bake scallop" id="bake">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">今週焼くパン</h2>
+      <p class="sec-lead">曜日ごとにラインナップが変わります。お気に入りのパンが並ぶ日をチェックしてください。</p>
+    </div>
+    <!-- スケジュールの編集：data-day は曜日です（0＝日曜、1＝月曜…6＝土曜）。今日の曜日は JS が自動で強調します -->
+    <div class="week-scroll reveal" role="region" aria-label="1週間の焼き上がりスケジュール（横にスクロールできます）" tabindex="0">
+      <ol class="week">
+        <li data-day="1" class="off"><h3>月</h3><ul><li>定休日。酵母もひと休み</li></ul></li>
+        <li data-day="2"><h3>火</h3><ul><li>バタークロワッサン</li><li>カンパーニュ</li><li>塩パン</li></ul></li>
+        <li data-day="3"><h3>水</h3><ul><li>はちみつオーツ食パン</li><li>赤ワインとくるみのパン</li><li>バタークロワッサン</li></ul></li>
+        <li data-day="4"><h3>木</h3><ul><li>ピスタチオのうずまき</li><li>全粒粉とくるみのパン</li><li>シナモンロール</li></ul></li>
+        <li data-day="5"><h3>金</h3><ul><li>バタークロワッサン</li><li>カンパーニュ</li><li>チョコレートブリオッシュ</li></ul></li>
+        <li data-day="6"><h3>土</h3><ul><li>全種類そろいます</li><li>苺のデニッシュ</li></ul></li>
+        <li data-day="0"><h3>日</h3><ul><li>はちみつオーツ食パン</li><li>シナモンロール</li><li>塩パン</li></ul></li>
+      </ol>
+    </div>
+    <p class="bake-note">1回目の焼き上がりは8:00、2回目は11:30です。人気のパンはお昼前に売り切れることが多いので、お電話いただければお取り置きします。</p>
+  </div>
+</section>
+
+<!-- ==================== セクション：商品 ==================== -->
+<section class="products scallop" id="products">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">今日は、<wbr>なにを連れて帰りますか？</h2>
+      <p class="sec-lead">パンは店頭販売のみ、なくなり次第終了です。ケーキとギフトボックスはご予約がおすすめです。</p>
+    </div>
+    <div class="tabs js-only" role="tablist" aria-label="商品カテゴリー">
+      <button class="tab" role="tab" id="tab-bread" aria-controls="panel-bread" aria-selected="true">パン</button>
+      <button class="tab" role="tab" id="tab-cake" aria-controls="panel-cake" aria-selected="false" tabindex="-1">ケーキ</button>
+      <button class="tab" role="tab" id="tab-gift" aria-controls="panel-gift" aria-selected="false" tabindex="-1">ギフト</button>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-bread" aria-labelledby="tab-bread" tabindex="0">
+      <p class="panel-title nojs-only">パン</p>
+      <ul class="grid">
+        <li class="item"><div class="img img-croissant t-butter" role="img" aria-label="こんがり焼けたサクサクのクロワッサン"></div><div class="item-body"><div class="item-head"><h3>バタークロワッサン</h3><span class="price">¥380</span></div><p>フランス産の発酵バターを折り込み、27層のサクサク食感に。</p><ul class="tags"><li class="tg-limit">数量限定</li></ul></div></li>
+        <li class="item"><div class="img img-loaf t-cream" role="img" aria-label="クープの入ったまるいカンパーニュ"></div><div class="item-body"><div class="item-head"><h3>カンパーニュ</h3><span class="price">¥1,200</span></div><p>48時間かけて低温発酵。パリッとした皮と、もっちりした中身。</p></div></li>
+        <li class="item"><div class="img img-loaf t-pist" role="img" aria-label="オーツをのせた食パン"></div><div class="item-body"><div class="item-head"><h3>はちみつオーツ食パン</h3><span class="price">¥680</span></div><p>百花蜜とオーツ麦入り。トーストにぴったりです。</p></div></li>
+        <li class="item"><div class="img img-croissant t-pist" role="img" aria-label="緑の背景にピスタチオのうずまきデニッシュ"></div><div class="item-body"><div class="item-head"><h3>ピスタチオのうずまき</h3><span class="price">¥450</span></div><p>シチリア産ピスタチオのクリームを、デニッシュ生地で巻きました。</p><ul class="tags"><li class="tg-limit">数量限定</li></ul></div></li>
+        <li class="item"><div class="img img-loaf t-butter" role="img" aria-label="皮の色が濃いくるみのパン"></div><div class="item-body"><div class="item-head"><h3>赤ワインとくるみのパン</h3><span class="price">¥980</span></div><p>ひと晩赤ワインに漬けたレーズンと、ローストしたくるみ入り。</p></div></li>
+        <li class="item"><div class="img img-croissant t-cream" role="img" aria-label="小さな塩パン"></div><div class="item-body"><div class="item-head"><h3>塩パン</h3><span class="price">¥220</span></div><p>バターがしみた香ばしい底と、ひとつまみの海塩。</p></div></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-cake" aria-labelledby="tab-cake" tabindex="0">
+      <p class="panel-title nojs-only">ケーキ</p>
+      <ul class="grid">
+        <li class="item"><div class="img img-cake t-butter" role="img" aria-label="苺ジャムをはさんだクリームケーキ"></div><div class="item-body"><div class="item-head"><h3>苺のショートケーキ5号</h3><span class="price">¥5,800</span></div><p>新鮮な苺と軽い生クリーム。甘さ控えめです。</p><ul class="tags"><li class="tg-pre">3日前までに予約</li></ul></div></li>
+        <li class="item"><div class="img img-cake cake-pist t-cream" role="img" aria-label="フランボワーズをのせたピスタチオグリーンのムースケーキ"></div><div class="item-body"><div class="item-head"><h3>ピスタチオとフランボワーズのムース5号</h3><span class="price">¥6,800</span></div><p>甘酸っぱいフランボワーズを、ピスタチオのムースで包みました。</p><ul class="tags"><li class="tg-limit">数量限定</li><li class="tg-pre">3日前までに予約</li></ul></div></li>
+        <li class="item"><div class="img img-cake cake-choco t-pist" role="img" aria-label="ダークチョコレートのケーキ"></div><div class="item-body"><div class="item-head"><h3>カカオ70% チョコレートケーキ5号</h3><span class="price">¥6,200</span></div><p>シングルオリジンのダークチョコレート。トリュフのようになめらかです。</p><ul class="tags"><li class="tg-pre">3日前までに予約</li></ul></div></li>
+        <li class="item"><div class="img img-cake cake-basque t-butter" role="img" aria-label="表面をこんがり焼いたバスクチーズケーキ"></div><div class="item-body"><div class="item-head"><h3>バスクチーズケーキ5号</h3><span class="price">¥4,800</span></div><p>外はしっかり焦がして香ばしく、中はとろりとクリーミー。</p></div></li>
+        <li class="item"><div class="img img-loaf t-cream" role="img" aria-label="アイシングをかけたレモンのパウンドケーキ"></div><div class="item-body"><div class="item-head"><h3>レモンのパウンドケーキ</h3><span class="price">¥2,400</span></div><p>まるごと1本。午後のお茶の時間にどうぞ。</p></div></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-gift" aria-labelledby="tab-gift" tabindex="0">
+      <p class="panel-title nojs-only">ギフト</p>
+      <ul class="grid">
+        <li class="item"><div class="img img-box t-butter" role="img" aria-label="赤いリボンをかけたクッキーのギフトボックス"></div><div class="item-body"><div class="item-head"><h3>クッキー詰め合わせ12枚入り</h3><span class="price">¥3,240</span></div><p>ショートブレッド、ココアのサブレなど、人気の4種類を詰め合わせました。</p></div></li>
+        <li class="item"><div class="img img-box t-pist" role="img" aria-label="緑の背景にパウンドケーキのギフトボックス"></div><div class="item-body"><div class="item-head"><h3>季節のパウンドケーキ詰め合わせ</h3><span class="price">¥4,860</span></div><p>季節の3種類をスライスして、手書きのカードを添えて。</p><ul class="tags"><li class="tg-pre">3日前までに予約</li></ul></div></li>
+        <li class="item"><div class="img img-box t-cream sprinkles" role="img" aria-label="カラフルなスプリンクルで飾ったギフトボックス"></div><div class="item-body"><div class="item-head"><h3>出産内祝いボックス</h3><span class="price">¥3,780</span></div><p>10個以上のご注文で10%オフ。赤ちゃんのお名前も入れられます。</p><ul class="tags"><li class="tg-pre">3日前までに予約</li></ul></div></li>
+        <li class="item"><div class="img img-croissant t-butter sprinkles" role="img" aria-label="クロワッサンとロールパンのバスケット"></div><div class="item-body"><div class="item-head"><h3>週末の朝ごはんバスケット</h3><span class="price">¥3,980</span></div><p>クロワッサン、ロールパン、食パン、自家製ジャム。4人分です。</p><ul class="tags"><li class="tg-limit">数量限定</li></ul></div></li>
+      </ul>
+    </div>
+    <p class="prod-note">価格はすべて税込です。季節によってラインナップが変わるため、店頭の商品と異なる場合があります。</p>
+  </div>
+</section>
+
+<!-- ==================== セクション：オーダーケーキ ==================== -->
+<section class="custom scallop" id="custom">
+  <div class="wrap custom-grid">
+    <div class="reveal">
+      <div class="sec-head">
+        <h2 class="sec-title">バースデーケーキを<wbr>オーダーメイドで</h2>
+        <p class="sec-lead">サイズと味を選んで、プレートに入れるメッセージを教えてください。ろうそくとケーキトッパーはサービスでお付けします。</p>
+      </div>
+      <ul class="sizes">
+        <li class="size"><span class="dish" style="--d: 52%" aria-hidden="true"></span><h3>4号</h3><p>12cm、2〜3名</p><span class="price">¥3,800〜</span></li>
+        <li class="size"><span class="dish" style="--d: 72%" aria-hidden="true"></span><h3>5号</h3><p>15cm、4〜6名</p><span class="price">¥5,800〜</span></li>
+        <li class="size"><span class="dish" style="--d: 92%" aria-hidden="true"></span><h3>6号</h3><p>18cm、8〜10名</p><span class="price">¥7,800〜</span></li>
+      </ul>
+      <div class="flavours">
+        <h3>味</h3>
+        <ul class="chips">
+          <li>苺のショートケーキ</li><li>ピスタチオとフランボワーズ</li><li>カカオ70% チョコレート</li><li>アールグレイとはちみつ</li><li>マンゴーとパッションフルーツ（夏）</li><li>和栗のモンブラン（秋冬）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="lead-time reveal">
+      <h3>ご予約の流れ</h3>
+      <ol class="steps">
+        <li><span><b>7日前まで</b>予約フォームを送るか、LINE で参考写真をお送りください。</span></li>
+        <li><span><b>3日前まで</b>味とメッセージを確定し、内金として代金の50%をお支払いいただくと予約完了です。</span></li>
+        <li><span><b>お受け取り日</b>保冷バッグと保冷剤でお包みして、店頭でお渡しします。</span></li>
+      </ol>
+      <a class="btn btn-primary" href="#order">予約をはじめる</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：お客様の声 ==================== -->
+<section class="reviews scallop" id="reviews">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">ご近所さんの声</h2>
+    </div>
+    <!-- サンプル内容：公開前に実際のお客様の声に差し替えてください -->
+    <div class="review-grid">
+      <figure class="review reveal">
+        <div class="stars" aria-label="5段階中5つ星">★★★★★</div>
+        <blockquote>娘の誕生日に苺のショートケーキをお願いしました。甘すぎず、家族みんながおかわり。プレートの文字までかわいく仕上げてくれました。</blockquote>
+        <figcaption><b>佐々木さま</b><br>ご近所に住んで3年</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5段階中5つ星">★★★★★</div>
+        <blockquote>火曜日のクロワッサンは欠かせません。テーブルにパラパラこぼれるほどサクサク。カンパーニュは2、3日たってもトーストするとおいしいです。</blockquote>
+        <figcaption><b>田村さま</b><br>クロワッサンの常連さん</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5段階中5つ星">★★★★★</div>
+        <blockquote>年末の社内イベント用にクッキーボックスを40個注文しました。包装がとてもきれいで、時間どおりに受け取れて、みんなにどこのお店かと聞かれました。</blockquote>
+        <figcaption><b>工藤さま</b><br>総務ご担当</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：店舗案内 ==================== -->
+<section class="visit scallop" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">店舗案内</h2>
+      <p class="sec-lead">店内に小さな席が4つあります。コーヒーと一緒にゆっくりどうぞ。</p>
+    </div>
+    <div class="visit-grid">
+      <div class="card reveal">
+        <h3>営業時間</h3>
+        <!-- 営業時間を変えたときは、head 内の JSON-LD も更新してください -->
+        <div class="table-scroll">
+          <table class="hours" aria-label="曜日ごとの営業時間">
+            <tbody>
+              <tr data-day="1"><th scope="row">月曜日</th><td class="closed">定休日</td></tr>
+              <tr data-day="2"><th scope="row">火曜日</th><td>8:00〜19:00</td></tr>
+              <tr data-day="3"><th scope="row">水曜日</th><td>8:00〜19:00</td></tr>
+              <tr data-day="4"><th scope="row">木曜日</th><td>8:00〜19:00</td></tr>
+              <tr data-day="5"><th scope="row">金曜日</th><td>8:00〜19:00</td></tr>
+              <tr data-day="6"><th scope="row">土曜日</th><td>8:00〜18:00</td></tr>
+              <tr data-day="0"><th scope="row">日曜日</th><td>8:00〜18:00</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small-note">早めに売り切れたときは、Instagram のストーリーズでお知らせします。</p>
+      </div>
+      <div class="card reveal">
+        <h3>アクセス</h3>
+        <p class="addr">〒152-0004東京都目黒区鷹番2-14-6</p>
+        <p class="small-note" style="margin-top:0">電話 <a href="tel:+81312345678">03-1234-5678</a></p>
+        <ul class="visit-list">
+          <li><b>電車</b>東急東横線「学芸大学駅」東口から徒歩4分</li>
+          <li><b>自転車</b>店の前に駐輪スペースがあります</li>
+          <li><b>駐車場</b>専用駐車場はありません。近隣のコインパーキングをご利用ください</li>
+        </ul>
+        <div class="card-cta">
+          <a class="btn btn-primary" href="https://maps.google.com/?q=東京都目黒区鷹番2-14-6" target="_blank" rel="noopener">Google マップで開く</a>
+          <a class="btn btn-ghost" href="tel:+81312345678">電話する</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：よくある質問 ==================== -->
+<section class="faq scallop" id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">よくある質問</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary>パンやケーキの日持ちは？</summary>
+        <p>パンは常温で2日が目安です。食べきれない分はスライスして冷凍し、凍ったままトーストしてください。生クリームのケーキは冷蔵庫で保存し、当日中にお召し上がりください。バスクチーズケーキは冷蔵で3日もちます。</p>
+      </details>
+      <details>
+        <summary>アレルギー表示はありますか？</summary>
+        <p>ほとんどの商品に小麦、卵、乳、ナッツ類を使用しており、同じ厨房で製造しているため、混入の可能性を完全には否定できません。ご注文時に備考欄でお知らせいただければ、原材料をご説明します。</p>
+      </details>
+      <details>
+        <summary>配送はできますか？</summary>
+        <p>クッキーとパウンドケーキの詰め合わせは全国へ発送できます。¥8,000以上のご注文で送料無料です。生クリームのケーキとムースは品質を保つため店頭受け取りのみですが、目黒区内であれば配達のご相談も承ります。</p>
+      </details>
+      <details>
+        <summary>予約の変更やキャンセルはできますか？</summary>
+        <p>お受け取りの3日前までは、無料で変更やキャンセルができます。3日前を過ぎると材料の仕入れが済んでいるため内金の返金はできませんが、日にちの変更は1回まで承ります。</p>
+      </details>
+      <details>
+        <summary>支払い方法は？</summary>
+        <p>ご予約を受け付けたあと、お電話か LINE で内容を確認し、お支払い用のリンクをお送りします。店頭では現金、クレジットカード、交通系 IC、PayPay がご利用いただけます。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：ご予約 ==================== -->
+<section class="order scallop" id="order">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">予約して、<wbr>お店で受け取る</h2>
+      <p class="sec-lead">ケーキやギフトを選ぶと、注文内容が自動で入力されます。ご予約は1営業日以内に確認のご連絡をいたします。</p>
+    </div>
+    <div class="order-grid">
+      <div class="picker reveal">
+        <h3>商品を選ぶ</h3>
+        <!-- 商品の編集：data-name は注文内容に表示される名前、data-price は単価（数字のみ）です -->
+        <ul class="picks">
+          <li class="pick" data-name="苺のショートケーキ5号" data-price="5800"><div><b>苺のショートケーキ5号</b><span>¥5,800</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="苺のショートケーキを1つ減らす">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="苺のショートケーキの数量"><button type="button" data-d="1" aria-label="苺のショートケーキを1つ増やす">+</button></div></li>
+          <li class="pick" data-name="ピスタチオとフランボワーズのムース5号" data-price="6800"><div><b>ピスタチオとフランボワーズのムース5号</b><span>¥6,800</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="ピスタチオのムースを1つ減らす">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="ピスタチオのムースの数量"><button type="button" data-d="1" aria-label="ピスタチオのムースを1つ増やす">+</button></div></li>
+          <li class="pick" data-name="カカオ70% チョコレートケーキ5号" data-price="6200"><div><b>カカオ70% チョコレートケーキ5号</b><span>¥6,200</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="チョコレートケーキを1つ減らす">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="チョコレートケーキの数量"><button type="button" data-d="1" aria-label="チョコレートケーキを1つ増やす">+</button></div></li>
+          <li class="pick" data-name="バスクチーズケーキ5号" data-price="4800"><div><b>バスクチーズケーキ5号</b><span>¥4,800</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="バスクチーズケーキを1つ減らす">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="バスクチーズケーキの数量"><button type="button" data-d="1" aria-label="バスクチーズケーキを1つ増やす">+</button></div></li>
+          <li class="pick" data-name="クッキー詰め合わせ12枚入り" data-price="3240"><div><b>クッキー詰め合わせ12枚入り</b><span>¥3,240</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="クッキー詰め合わせを1つ減らす">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="クッキー詰め合わせの数量"><button type="button" data-d="1" aria-label="クッキー詰め合わせを1つ増やす">+</button></div></li>
+          <li class="pick" data-name="季節のパウンドケーキ詰め合わせ" data-price="4860"><div><b>季節のパウンドケーキ詰め合わせ</b><span>¥4,860</span></div><div class="step js-only"><button type="button" data-d="-1" aria-label="パウンドケーキ詰め合わせを1つ減らす">−</button><input type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="パウンドケーキ詰め合わせの数量"><button type="button" data-d="1" aria-label="パウンドケーキ詰め合わせを1つ増やす">+</button></div></li>
+        </ul>
+        <p class="total js-only"><span>合計の目安（税込）</span><output id="total" for="f-summary" aria-live="polite">¥0</output></p>
+        <p class="small-note js-only">数量を変えると、フォームの注文内容が自動で書き換わります。最終的な金額は確認のご連絡でお伝えします。</p>
+        <p class="small-note nojs-only">ご希望の商品と数量を、フォームの「注文内容」欄にご記入ください。</p>
+        <div class="quick">
+          <a class="btn btn-ghost" href="tel:+81312345678">電話 03-1234-5678</a>
+          <!-- メッセージボタン：LINE のリンクは https://line.me/R/ti/p/@ のあとにご自身の LINE 公式アカウントの ID を入れます。
+               Instagram（https://ig.me/m/yourhandle）などにも差し替えられます。フッターのリンクも一緒に変更してください。 -->
+          <a class="btn btn-ghost" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE で予約</a>
+        </div>
+      </div>
+      <!-- このフォームは Formspree を使っています（無料プランで月50件まで送信できます）：
+           1. https://formspree.io で登録し、新しいフォームを作成します
+           2. エンドポイント URL にあるフォーム ID（例：xyzabcd）をコピーします
+           3. 下の action の your-form-id をその ID に置き換えると、新しいご予約がメールで届きます -->
+      <form class="form reveal" id="order-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <h3>お受け取りの情報</h3>
+        <div class="field"><label for="f-name">お名前 <span>*</span></label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-tel">電話番号 <span>*</span></label><input id="f-tel" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="090-1234-5678" required></div>
+        <div class="field"><label for="f-date">お受け取り日 <span>*</span></label><input id="f-date" name="pickup_date" type="date" required><small>ケーキとギフトは3日前までにご予約ください</small></div>
+        <div class="field"><label for="f-time">お受け取り時間 <span>*</span></label>
+          <select id="f-time" name="pickup_time" required>
+            <option value="">選択してください</option>
+            <option>朝 8:00〜11:00</option><option>昼 11:00〜14:00</option><option>午後 14:00〜17:00</option><option>夕方 17:00〜19:00（土日は18:00まで）</option>
+          </select></div>
+        <div class="field full"><label for="f-summary">注文内容 <span>*</span></label><textarea id="f-summary" name="order_summary" required placeholder="例：苺のショートケーキ5号 × 1"></textarea></div>
+        <input type="hidden" id="f-total" name="estimated_total" value="">
+        <div class="field full"><label for="f-note">ご要望</label><textarea id="f-note" name="notes" placeholder="例：プレートに「はるとくん おたんじょうび おめでとう」、ろうそく希望、アレルギーについてなど"></textarea></div>
+        <button class="btn btn-primary" type="submit">予約を送信する</button>
+        <small>当店から確認とお支払いのご案内をお送りした時点で、ご予約確定となります。</small>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== セクション：フッター ==================== -->
+<footer class="site-footer scallop">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>麦と日々</h2>
+        <p>〒152-0004東京都目黒区鷹番2-14-6<br>電話 <a href="tel:+81312345678">03-1234-5678</a></p>
+        <div class="social"><a href="#">Instagram</a><a href="https://line.me/R/ti/p/@yourlineid">LINE</a><a href="#">X</a></div>
+      </div>
+      <div>
+        <h2>営業時間</h2>
+        <p>火〜金 8:00〜19:00<br>土・日 8:00〜18:00<br>月曜定休</p>
+      </div>
+      <div>
+        <h2>メニュー</h2>
+        <p><a href="#bake">今週のパン</a><br><a href="#custom">オーダーケーキ</a><br><a href="#order">ご予約</a></p>
+      </div>
+    </div>
+    <p class="copy">© <span id="y"></span> 麦と日々</p>
+    <!-- フッターの言語リンク：ヘッダーの lang-switch と同じ内容です -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </p>
+  </div>
+</footer>
+
+<!-- ==================== セクション：スマホ用の固定ボタン ==================== -->
+<div class="sticky-cta">
+  <a href="#order" class="btn btn-primary">予約する</a>
+  <a href="tel:+81312345678" class="btn btn-ghost" aria-label="03-1234-5678に電話する">電話</a>
+</div>
+
+<script>
+// 言語とタイムゾーンの設定（ほかの言語にするときは、この行だけ変更します）
+const T = { cur: '¥', sum: '合計', open: 'メニューを閉じる', closed: 'メニューを開く', tz: 'Asia/Tokyo', locale: 'ja-JP' };
+const $ = (s, el = document) => el.querySelector(s), $$ = (s, el = document) => [...el.querySelectorAll(s)];
+$('#y').textContent = new Date().getFullYear();
+
+// スクロールしたらヘッダーに背景を付ける
+const header = $('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// ハンバーガーメニュー
+const toggle = $('.nav-toggle'), menu = $('#menu-links');
+const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? T.open : T.closed); };
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+$$('a', menu).forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// スクロールでフェードイン
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+$$('.reveal').forEach(el => io.observe(el));
+
+// 商品タブ（矢印キー、Home、End にも対応）
+const tabs = $$('[role="tab"]');
+const select = (t, focus = true) => {
+  tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+  if (focus) t.focus();
+};
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => select(t));
+  t.addEventListener('keydown', e => {
+    const k = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+    if (k !== undefined) { e.preventDefault(); select(tabs[(k + tabs.length) % tabs.length]); }
+  });
+});
+select(tabs[0], false);
+
+// 今日の曜日を強調（焼き上がりスケジュールと営業時間）
+const now = new Date(new Date().toLocaleString('en-US', { timeZone: T.tz })), day = now.getDay();
+$$(`[data-day="${day}"]`).forEach(el => el.classList.add('today'));
+const todayCard = $(`.week li[data-day="${day}"]`), scroller = $('.week-scroll');
+if (todayCard && scroller.scrollWidth > scroller.clientWidth) scroller.scrollLeft = todayCard.offsetLeft - scroller.offsetLeft - 8;
+
+// 予約の組み立て：数量の増減、合計の計算、注文内容の自動入力
+const picks = $$('.pick'), summary = $('#f-summary'), totalOut = $('#total'), totalField = $('#f-total');
+const money = n => T.cur + n.toLocaleString(T.locale);
+const calc = () => {
+  let total = 0; const lines = [];
+  picks.forEach(p => {
+    const input = $('input', p), q = Math.min(20, Math.max(0, parseInt(input.value, 10) || 0));
+    input.value = q; $('[data-d="-1"]', p).disabled = q === 0;
+    if (q) { total += q * p.dataset.price; lines.push(`${p.dataset.name} × ${q}（${money(q * p.dataset.price)}）`); }
+  });
+  totalOut.textContent = money(total); totalField.value = total ? money(total) : '';
+  summary.value = lines.length ? `${lines.join('\n')}\n${T.sum} ${money(total)}` : '';
+};
+picks.forEach(p => {
+  $$('button', p).forEach(b => b.addEventListener('click', () => { const i = $('input', p); i.value = (+i.value || 0) + +b.dataset.d; calc(); }));
+  $('input', p).addEventListener('change', calc);
+});
+calc();
+
+// 受け取り日は今日から3日後以降
+const min = new Date(now); min.setDate(min.getDate() + 3);
+const pad = n => String(n).padStart(2, '0');
+$('#f-date').min = `${min.getFullYear()}-${pad(min.getMonth() + 1)}-${pad(min.getDate())}`;
+</script>
+</body>
+</html>
