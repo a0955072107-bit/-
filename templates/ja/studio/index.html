@@ -316,6 +316,9 @@ section { padding: clamp(5rem, 14vh, 10rem) var(--pad); }
 .foot-lang a:hover { text-decoration-line: underline; }
 .foot-lang a:active { opacity: .7; }
 .foot-lang a[aria-current="page"] { font-weight: 600; text-decoration-line: underline; }
+
+/* 日本語の改行：見出しは文節単位で折り返します（対応ブラウザのみ） */
+h1, h2, h3 { word-break: auto-phrase; }
 </style>
 <!-- JSON-LD 構造化データ：デザインスタジオは ProfessionalService を使います。実際の情報に書き換えてください -->
 <script type="application/ld+json">

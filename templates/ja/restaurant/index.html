@@ -189,7 +189,7 @@ a:not(.btn):active { opacity: .7; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
 .status { display: inline-block; padding: .4rem .95rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-size: .9rem; font-weight: 500; margin-bottom: 1.4rem; }
 .status.is-open b { color: var(--open); }
-.hero h1 { font-size: clamp(2.4rem, 6.4vw, 4.6rem); line-height: 1.15; margin-bottom: 1.3rem; }
+.hero h1 { font-size: clamp(2.1rem, 5.2vw, 3.6rem); line-height: 1.15; margin-bottom: 1.3rem; }
 .hero p.lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--muted); max-width: 30rem; margin-bottom: 2rem; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2.2rem; font-size: .92rem; color: var(--muted); }
@@ -355,6 +355,10 @@ a:not(.btn):active { opacity: .7; }
 html { line-break: strict; }
 body { line-break: strict; word-break: normal; }
 h1, h2, h3, h4 { letter-spacing: normal; word-break: auto-phrase; }
+/* 日本語のナビは単語の途中で折り返さないようにします */
+header nav a { white-space: nowrap; }
+/* 大きな見出しは約物（、。）の余白を詰めて組みます */
+h1 { font-feature-settings: "palt"; }
 </style>
 </head>
 <body>
@@ -405,7 +409,7 @@ h1, h2, h3, h4 { letter-spacing: normal; word-break: auto-phrase; }
     </div>
     <div class="hero-art">
       <div class="img img-hero wood" role="img" aria-label="木のテーブルに置かれた、湯気の立つオムライスとハーブ"></div>
-      <p class="tag"><b>今週のおすすめ</b>牛肉とトマトの煮込みごはん</p>
+      <p class="tag"><b>今週のおすすめ</b>牛肉とトマトの煮込み</p>
     </div>
   </div>
 </section>

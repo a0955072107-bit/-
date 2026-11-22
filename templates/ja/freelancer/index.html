@@ -440,7 +440,15 @@ section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
 
 /* ---------- 日本語の組版 ---------- */
 body { line-break: strict; overflow-wrap: break-word; }
-h1, h2, h3, h4 { letter-spacing: normal; line-break: strict; text-wrap: balance; }
+h1, h2, h3, h4 { letter-spacing: normal; text-wrap: balance; }
+/* 見出しやリード文は文節で改行し、1文字だけの行を防ぎます（対応ブラウザのみ） */
+h1, h2, h3, h4, summary, strong, .lead, .role { word-break: auto-phrase; }
+.menu a, .logo { white-space: nowrap; }
+/* タブレット幅：日本語のメニューが1行に収まるよう少し詰めます */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .menu { gap: .75rem; font-size: .86rem; }
+  .logo-text { display: none; }
+}
 
 </style>
 <script type="application/ld+json">
@@ -465,7 +473,7 @@ h1, h2, h3, h4 { letter-spacing: normal; line-break: strict; text-wrap: balance;
 
 <!-- ==================== Section: Header ==================== -->
 <header class="site-header">
-  <a class="logo" href="#top" aria-label="森下 結衣、ページの先頭へ"><span class="logo-mark">YM</span>森下 結衣</a>
+  <a class="logo" href="#top" aria-label="森下 結衣、ページの先頭へ"><span class="logo-mark">YM</span><span class="logo-text">森下 結衣</span></a>
   <nav aria-label="メインメニュー">
     <ul class="menu" id="menu">
       <li class="lang-item">
