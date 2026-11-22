@@ -378,6 +378,8 @@ html:not(.js) .js-only { display: none !important; }
 .lang-switch a:active { background: color-mix(in srgb, var(--brand-ink) 22%, transparent); }
 .lang-switch a:focus-visible { outline-offset: 1px; }
 .lang-switch a[aria-current="page"] { color: var(--brand-ink); font-weight: 800; text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 3px; text-underline-offset: 4px; }
+/* Tablet widths: with the language switcher added, hide the secondary .opt links so the menu never wraps or squeezes the logo */
+@media (min-width: 761px) and (max-width: 1040px) { .nav-menu .opt { display: none; } }
 @media (max-width: 760px) {
   /* Mobile: the switcher sits left of the menu button; without JS it stays beside the logo and the menu wraps below */
   .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
@@ -410,8 +412,8 @@ html:not(.js) .js-only { display: none !important; }
       <li><a href="#menu">Menu</a></li>
       <li><a href="#custom">Build yours</a></li>
       <li><a href="#stores">Locations</a></li>
-      <li><a href="#member">Rewards</a></li>
-      <li><a href="#franchise">Franchise</a></li>
+      <li class="opt"><a href="#member">Rewards</a></li>
+      <li class="opt"><a href="#franchise">Franchise</a></li>
       <li><a href="#order" class="btn btn-primary">Order online</a></li>
     </ul>
     <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->

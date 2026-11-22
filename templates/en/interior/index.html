@@ -446,6 +446,10 @@ tfoot td { font-weight: 500; border-bottom: 0; }
 .lang-switch a:active { background: color-mix(in srgb, var(--text) 12%, transparent); }
 .lang-switch a:focus-visible { outline-offset: 1px; }
 .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 500; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+/* Tablet widths: with the language switcher added, hide the secondary .opt links so the menu never wraps or squeezes the logo */
+@media (min-width: 761px) and (max-width: 1000px) { .menu .opt { display: none; } }
+/* Narrowest tablet widths: tighten the spacing a little more */
+@media (min-width: 761px) and (max-width: 860px) { .menu { gap: .9rem; } .lang-switch { padding-left: 0; border-left: 0; } }
 @media (max-width: 760px) {
   /* Mobile: the switcher sits left of the menu button; without JS it stays beside the logo and the menu wraps below */
   .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
@@ -511,8 +515,8 @@ tfoot td { font-weight: 500; border-bottom: 0; }
       <a href="#projects">Projects</a>
       <a href="#process">Process</a>
       <a href="#pricing">Pricing</a>
-      <a href="#team">Team</a>
-      <a href="#faq">FAQ</a>
+      <a class="opt" href="#team">Team</a>
+      <a class="opt" href="#faq">FAQ</a>
       <a href="#contact" class="btn btn-main">Book a visit</a>
     </nav>
     <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->

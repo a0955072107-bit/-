@@ -409,6 +409,10 @@ html:not(.js) .js-only { display: none !important; }
 .lang-switch a:active { background: var(--butter); }
 .lang-switch a:focus-visible { outline-offset: 1px; border-radius: 999px; }
 .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 800; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+/* Tablet widths: with the language switcher added, hide the secondary .opt links so the menu never wraps or squeezes the logo */
+@media (min-width: 761px) and (max-width: 940px) { .nav-menu .opt { display: none; } }
+/* Narrowest tablet widths: tighten the spacing a little more */
+@media (min-width: 761px) and (max-width: 860px) { .nav-menu .opt-sm { display: none; } .nav-menu { gap: .75rem; } .lang-switch { padding-left: 0; border-left: 0; } }
 @media (max-width: 760px) {
   /* Mobile: the switcher sits left of the menu button; without JS it stays beside the logo and the menu wraps below */
   .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
@@ -444,8 +448,8 @@ html:not(.js) .js-only { display: none !important; }
       <li><a href="#bake">This week</a></li>
       <li><a href="#products">Shop</a></li>
       <li><a href="#custom">Custom cakes</a></li>
-      <li><a href="#visit">Visit</a></li>
-      <li><a href="#faq">FAQ</a></li>
+      <li class="opt-sm"><a href="#visit">Visit</a></li>
+      <li class="opt"><a href="#faq">FAQ</a></li>
       <li><a href="#order" class="btn btn-primary">Order ahead</a></li>
     </ul>
     <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->

@@ -372,6 +372,10 @@ textarea { resize: vertical; min-height: 6rem; }
 .lang-switch a:active { background: var(--line); }
 .lang-switch a:focus-visible { outline-offset: 1px; border-radius: 999px; }
 .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 800; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 3px; text-underline-offset: 4px; }
+/* Tablet widths: with the language switcher added, hide the secondary .opt links so the menu never wraps or squeezes the logo */
+@media (min-width: 761px) and (max-width: 1060px) { .menu .opt { display: none; } }
+/* Narrowest tablet widths: tighten the spacing a little more */
+@media (min-width: 761px) and (max-width: 860px) { .menu .opt-sm { display: none; } .menu { gap: .7rem; } .lang-switch { padding-left: 0; border-left: 0; } }
 @media (max-width: 760px) {
   /* Mobile: the switcher sits left of the menu button; without JS it stays beside the logo and the menu wraps below */
   .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
@@ -487,7 +491,7 @@ textarea { resize: vertical; min-height: 6rem; }
     <div class="menu" id="menu">
       <a href="#services">Services</a>
       <a href="#prices">Prices</a>
-      <a href="#care">Facilities</a>
+      <a class="opt-sm" href="#care">Facilities</a>
       <a class="opt" href="#team">Groomers</a>
       <a class="opt" href="#notice">Policies</a>
       <a href="#visit">Visit</a>
