@@ -2,7 +2,7 @@
 
 *Subtitle: Most shops don't need a website builder. They need one good page, a domain, and ten minutes.*
 
-A café owner I spoke to was paying $29 a month for a website builder. Over three years that's more than $1,000, for a site with a menu, opening hours, a map and a phone number. It hadn't changed since the day it went live.
+Plenty of cafés pay around $29 a month for a website builder. Over three years that's more than $1,000, for a site with a menu, opening hours, a map and a phone number, which often hasn't changed since the day it went live.
 
 That's the most common small-business website there is, and it doesn't need a subscription.
 
