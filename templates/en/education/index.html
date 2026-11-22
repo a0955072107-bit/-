@@ -17,6 +17,11 @@
 <meta property="og:description" content="Math, English and science tutoring for grades 1 to 12, plus Scratch, Python and robotics. See classes, the weekly timetable and our teachers, then book a free trial class.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#1d4ed8">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.yourshop.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -400,6 +405,26 @@ html:not(.js) .panel-title { display: block; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ==================== Language switcher (header lang-switch and footer foot-lang) ==================== */
+.nav > .nav-links { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .6rem; border-left: 1px solid var(--line); font: 500 .85rem/1 var(--font-heading); }
+.lang-switch a { display: grid; place-items: center; min-width: 2rem; min-height: 2rem; padding-inline: .3rem; border-radius: 8px; color: var(--muted); transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--brand); background: var(--brand-soft); }
+.lang-switch a:active { opacity: 1; background: color-mix(in srgb, var(--brand) 18%, transparent); }
+.lang-switch a:focus-visible { outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+@media (max-width: 760px) {
+  /* Mobile: the switcher sits left of the menu button; without JS it stays beside the logo and the menu wraps below */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .menu-btn { order: 2; }
+  .nav-links { order: 3; }
+  html:not(.js) .nav-links { flex: 1 1 100%; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem .75rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; }
+.foot-lang a[aria-current="page"] { color: var(--surface); font-weight: 700; text-decoration: underline; text-decoration-color: var(--sun); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.foot-lang a:focus-visible { outline-color: var(--sun); }
 </style>
 <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -422,6 +447,12 @@ html:not(.js) .panel-title { display: block; }
       <a href="#faq" class="opt">FAQ</a>
       <a href="#contact">Visit</a>
       <a href="#trial" class="btn btn-primary">Book a free trial</a>
+    </nav>
+    <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
     </nav>
   </div>
 </header>
@@ -943,6 +974,12 @@ html:not(.js) .panel-title { display: block; }
       <span>© <span id="y"></span> Brightpath Learning Center</span>
       <span>Business license no. 0000000 (replace with your own)</span>
     </div>
+    <!-- Footer language links: same as the lang-switch in the header -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </p>
   </div>
 </footer>
 

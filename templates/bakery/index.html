@@ -6,6 +6,11 @@
 <title>小麥日常 Wheat & Days｜台中南屯的手作烘焙坊</title>
 <meta name="description" content="小麥日常 Wheat & Days 是台中南屯的社區烘焙坊，每天現烤酸種麵包、可頌與季節蛋糕，生日蛋糕與禮盒可線上預訂、門市取貨。">
 <meta name="theme-color" content="#b3312b">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <meta property="og:title" content="小麥日常 Wheat & Days｜台中南屯手作烘焙坊">
 <meta property="og:description" content="每天早上八點第一爐出爐。酸種麵包、發酵奶油可頌、季節蛋糕與禮盒，線上預訂、門市取貨。">
 <meta property="og:type" content="website">
@@ -395,6 +400,26 @@ html:not(.js) .js-only { display: none !important; }
   .sticky-cta .btn-primary { flex: 1; }
   .sticky-cta .btn-ghost { padding-inline: 1.1rem; }
 }
+
+/* ==================== 語言切換（頁首 lang-switch 與頁尾 foot-lang） ==================== */
+.nav > .nav-menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; padding-left: .5rem; border-left: 2px dotted var(--line); font: 700 .85rem/1 var(--font-body); }
+.lang-switch a { display: grid; place-items: center; min-width: 2rem; min-height: 2rem; padding-inline: .3rem; border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--butter) 60%, transparent); }
+.lang-switch a:active { background: var(--butter); }
+.lang-switch a:focus-visible { outline-offset: 1px; border-radius: 999px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 800; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+@media (max-width: 760px) {
+  /* 手機：語言切換固定在漢堡按鈕左邊；沒有 JS 時和 logo 同一行，選單換到下一行 */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .nav-toggle { order: 2; }
+  .nav-menu { order: 3; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem .75rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline-color: var(--butter); }
+.foot-lang a[aria-current="page"] { color: var(--bg); font-weight: 800; text-decoration: underline; text-decoration-color: var(--butter); text-underline-offset: 4px; }
 </style>
 </head>
 <body>
@@ -415,6 +440,12 @@ html:not(.js) .js-only { display: none !important; }
       <li><a href="#faq">常見問題</a></li>
       <li><a href="#order" class="btn btn-primary">線上預訂</a></li>
     </ul>
+    <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
   </nav>
 </header>
 
@@ -712,6 +743,12 @@ html:not(.js) .js-only { display: none !important; }
       </div>
     </div>
     <p class="copy">© <span id="y"></span> 小麥日常 Wheat &amp; Days</p>
+    <!-- 頁尾語言連結：和頁首的 lang-switch 相同 -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </p>
   </div>
 </footer>
 

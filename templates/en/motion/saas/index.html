@@ -9,6 +9,11 @@
 <meta property="og:description" content="Booking page, automatic reminders, staff scheduling, deposits and reports. Hand the front desk to Slotwise.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#110d0a">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.your-site.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -166,6 +171,25 @@ html:not(.js) .site-header::before, .site-header.scrolled::before { opacity: 1; 
   html.js .menu .btn { margin-top: 1rem; min-height: 48px; }
 }
 @keyframes drop { from { opacity: 0; transform: translateY(-8px); } }
+/* ---------- Language switcher (header lang-switch and footer foot-lang) ---------- */
+.lang-switch { display: flex; align-items: center; flex: none; font: 500 .8rem/1 var(--font-body); letter-spacing: 0; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 999px; color: var(--on-ink-muted); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--on-ink); background: color-mix(in srgb, var(--on-ink) 9%, transparent); text-decoration: none; }
+.lang-switch a:active { opacity: .7; }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--on-ink); font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .35em; }
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+.foot-lang a { display: inline-flex; align-items: center; min-height: 32px; color: var(--on-ink-muted); text-decoration: none; transition: color .2s; }
+.foot-lang a:hover { color: var(--on-ink); }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { color: var(--on-ink); font-weight: 700; text-decoration: underline; text-underline-offset: .3em; }
+@media (max-width: 760px) {
+  /* Mobile: the switcher stays visible to the left of the menu button; without JS it shares the logo row and the menu wraps below */
+  .site-header .lang-switch { order: 1; margin-left: auto; }
+  .site-header .burger { order: 2; }
+  .site-header .menu { order: 3; }
+  .nav { gap: .75rem; }
+}
 
 /* ==================== Hero ==================== */
 .hero { position: relative; isolation: isolate; overflow: clip; background: var(--ink); color: var(--on-ink); padding-block: calc(var(--head-h) + clamp(2rem, 6vh, 4.5rem)) clamp(6rem, 14vh, 9rem); }
@@ -625,6 +649,12 @@ html:not(.js) .bill { display: none; }
       <a href="#faq">FAQ</a>
       <a class="btn btn-brand" href="#start">Start free</a>
     </nav>
+    <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
   </div>
 </header>
 
@@ -1022,6 +1052,12 @@ html:not(.js) .bill { display: none; }
       </div>
     </div>
     <div class="foot-bottom">
+      <!-- Footer language links: same set as the header lang-switch -->
+      <nav class="foot-lang" aria-label="Language 語言">
+        <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+        <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+        <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+      </nav>
       <p>© <span id="y"></span> Slotwise Inc.</p>
       <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">YouTube</a></div>
     </div>

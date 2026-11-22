@@ -9,6 +9,11 @@
 <meta property="og:description" content="A creekside mountain camp with five ways to stay, dogs welcome, and the Milky Way overhead.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#10173a">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.yourshop.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -127,6 +132,20 @@ h1, h2, h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; font-f
 .burger[aria-expanded="true"] span { background: transparent; }
 .burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
 .burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+/* ---------- Language switcher (lang-switch): beside the main button on desktop, beside the menu button on mobile ---------- */
+.menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .7rem; border-left: 1px solid color-mix(in srgb, currentColor 22%, transparent); font: 500 .82rem/1 var(--font-body); }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 6px; color: var(--star-muted); text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1.5px; text-underline-offset: .35em; transition: color .2s, background-color .2s, text-decoration-color .2s; }
+.lang-switch a::after { display: none; }
+.lang-switch a:hover { color: var(--star); background: color-mix(in srgb, currentColor 10%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, currentColor 18%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid currentColor; outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--star); font-weight: 700; text-decoration-color: currentColor; }
+@media (max-width: 760px) {
+  .lang-switch { margin-left: auto; padding-left: 0; border-left: 0; }
+  .js .burger { order: 1; flex: none; }
+  html:not(.js) .menu { order: 2; margin-left: 0; }
+}
 @media (max-width: 760px) {
   /* Without JavaScript the menu wraps below the logo; with JS it folds into the burger menu */
   html:not(.js) .site-header { position: sticky; top: 0; flex-wrap: wrap; padding-block: 1rem; background: var(--night); }
@@ -432,6 +451,12 @@ tbody tr:last-child > * { border-bottom: 0; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal, .hero-inner { transform: none; opacity: 1; }
 }
+/* Footer language links */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.foot-lang a:hover { color: var(--brand); }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { font-weight: 700; text-decoration-color: currentColor; }
 </style>
 <script type="application/ld+json">
 {
@@ -496,6 +521,12 @@ tbody tr:last-child > * { border-bottom: 0; }
     <a href="#rules">Camp rules</a>
     <a href="#access">Getting here</a>
     <a href="#reserve" class="btn btn-brand">Reserve a site</a>
+  </nav>
+  <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+  <nav class="lang-switch" aria-label="Language 語言">
+    <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+    <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+    <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
   </nav>
 </header>
 
@@ -973,6 +1004,12 @@ tbody tr:last-child > * { border-bottom: 0; }
     </div>
   </div>
   <p class="copy">© <span id="y"></span> Starfield Camp</p>
+  <!-- Footer language links: same set as the header -->
+  <p class="foot-lang">
+    <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+    <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+    <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+  </p>
 </footer>
 
 <!-- Mobile sticky button -->

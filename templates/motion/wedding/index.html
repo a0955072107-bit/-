@@ -9,6 +9,11 @@
 <meta property="og:description" content="你收到一封邀請函。秋天的黃昏，想請你來見證我們說好的一輩子。">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#f6f1e7">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Pinyon+Script&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
@@ -198,6 +203,25 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; overflow-wrap: 
   .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line); }
   .js .menu a:not(.btn)::after { display: none; }
   .js .menu .btn { margin-top: 1.25rem; min-height: 3rem; }
+}
+/* ---------- 語言切換（頁首 lang-switch 與頁尾 foot-lang） ---------- */
+.lang-switch { display: flex; align-items: center; flex: none; font: 500 .8rem/1 var(--font-body); letter-spacing: 0; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 9%, transparent); text-decoration: none; }
+.lang-switch a:active { opacity: .7; }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .35em; }
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem 1rem; justify-content: center; margin-top: 2rem; }
+.foot-lang a { display: inline-flex; align-items: center; min-height: 32px; color: var(--muted); text-decoration: none; transition: color .2s; }
+.foot-lang a:hover { color: var(--text); }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-underline-offset: .3em; }
+@media (max-width: 760px) {
+  /* 手機：語言切換留在漢堡按鈕左邊，保持可見；沒有 JS 時和 logo 同一行，選單換到下一行 */
+  .site-header .lang-switch { order: 1; margin-left: auto; }
+  .site-header .burger { order: 2; }
+  .site-header .menu { order: 3; }
+  .nav { gap: .75rem; }
 }
 
 /* ---------- 通用區塊 ---------- */
@@ -510,6 +534,12 @@ html:not(.js) .tl::before { content: ""; position: absolute; top: 0; bottom: 0; 
       <a href="#faq">常見問題</a>
       <a class="btn btn-primary" href="#rsvp">回覆出席</a>
     </div>
+    <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
   </nav>
 </header>
 
@@ -883,6 +913,12 @@ html:not(.js) .tl::before { content: ""; position: absolute; top: 0; bottom: 0; 
       </ul>
     </div>
   </div>
+  <!-- 頁尾語言切換：和頁首的 lang-switch 同一組連結 -->
+  <nav class="foot-lang" aria-label="Language 語言">
+    <a href="../en/" hreflang="en" lang="en">EN</a>
+    <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+    <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+  </nav>
   <p class="copy">© <span id="y"></span> 語彤 &amp; 承恩</p>
 </footer>
 

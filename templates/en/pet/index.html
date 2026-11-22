@@ -9,6 +9,11 @@
 <meta property="og:description" content="Baths, grooming, spa, daycare and boarding. Live cameras and a cat-only suite. Easy booking on WhatsApp.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#fdf6e7">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.yourshop.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -358,6 +363,24 @@ textarea { resize: vertical; min-height: 6rem; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ==================== Language switcher (header lang-switch and footer foot-lang) ==================== */
+.nav > .menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; padding-left: .5rem; border-left: 2px dashed var(--line); font: 700 .85rem/1 var(--font-body); }
+.lang-switch a { display: grid; place-items: center; min-width: 2rem; min-height: 2rem; padding-inline: .3rem; border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: var(--surface-2); }
+.lang-switch a:active { background: var(--line); }
+.lang-switch a:focus-visible { outline-offset: 1px; border-radius: 999px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 800; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 3px; text-underline-offset: 4px; }
+@media (max-width: 760px) {
+  /* Mobile: the switcher sits left of the menu button; without JS it stays beside the logo and the menu wraps below */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .burger { order: 2; }
+  .menu { order: 3; }
+}
+.foot-lang { max-width: var(--max); margin: .75rem auto 0; display: flex; flex-wrap: wrap; gap: .25rem .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; color: color-mix(in srgb, var(--bg) 85%, transparent); }
+.foot-lang a[aria-current="page"] { color: var(--bg); font-weight: 800; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 </style>
 
 <script type="application/ld+json">
@@ -462,6 +485,12 @@ textarea { resize: vertical; min-height: 6rem; }
       <a href="#visit">Visit</a>
       <a class="btn btn-primary" href="https://wa.me/15550123456" target="_blank" rel="noopener">Book on WhatsApp</a>
     </div>
+    <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
   </nav>
 </header>
 
@@ -916,6 +945,12 @@ textarea { resize: vertical; min-height: 6rem; }
     </div>
   </div>
   <p class="copy">© <span id="y"></span> Furday Pet Spa</p>
+  <!-- Footer language links: same as the lang-switch in the header -->
+  <p class="foot-lang">
+    <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+    <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+    <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+  </p>
 </footer>
 
 <!-- ==================== Section: Mobile sticky button ==================== -->

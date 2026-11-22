@@ -15,6 +15,11 @@
 <meta property="og:description" content="國小到高中數學、英文、自然小班授課，另有兒童程式與電子積木課程。查看課程、課表與師資，預約免費試聽。">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#1d4ed8">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -398,6 +403,26 @@ html:not(.js) .panel-title { display: block; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ==================== 語言切換（頁首 lang-switch 與頁尾 foot-lang） ==================== */
+.nav > .nav-links { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .6rem; border-left: 1px solid var(--line); font: 500 .85rem/1 var(--font-heading); }
+.lang-switch a { display: grid; place-items: center; min-width: 2rem; min-height: 2rem; padding-inline: .3rem; border-radius: 8px; color: var(--muted); transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--brand); background: var(--brand-soft); }
+.lang-switch a:active { opacity: 1; background: color-mix(in srgb, var(--brand) 18%, transparent); }
+.lang-switch a:focus-visible { outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+@media (max-width: 760px) {
+  /* 手機：語言切換固定在漢堡按鈕左邊；沒有 JS 時和 logo 同一行，選單換到下一行 */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .menu-btn { order: 2; }
+  .nav-links { order: 3; }
+  html:not(.js) .nav-links { flex: 1 1 100%; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem .75rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; }
+.foot-lang a[aria-current="page"] { color: var(--surface); font-weight: 700; text-decoration: underline; text-decoration-color: var(--sun); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.foot-lang a:focus-visible { outline-color: var(--sun); }
 </style>
 <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -419,6 +444,12 @@ html:not(.js) .panel-title { display: block; }
       <a href="#faq" class="opt">常見問題</a>
       <a href="#contact">交通</a>
       <a href="#trial" class="btn btn-primary">預約免費試聽</a>
+    </nav>
+    <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
     </nav>
   </div>
 </header>
@@ -940,6 +971,12 @@ html:not(.js) .panel-title { display: block; }
       <span>© <span id="y"></span> 青禾學苑</span>
       <span>立案字號：府教終字第 0000000 號（請換成實際字號）</span>
     </div>
+    <!-- 頁尾語言連結：和頁首的 lang-switch 相同 -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </p>
   </div>
 </footer>
 

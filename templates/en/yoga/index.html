@@ -6,6 +6,11 @@
 <title>Breathe Yoga &amp; Pilates | Small-Group Yoga and Reformer Pilates in Austin</title>
 <meta name="description" content="Breathe Yoga &amp; Pilates is a small-group studio in Austin offering Hatha, Vinyasa Flow, Yin, Reformer Pilates and Prenatal Yoga. New here? Start with a $25 intro class.">
 <meta name="theme-color" content="#f8f2eb">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.yourshop.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <meta property="og:title" content="Breathe Yoga &amp; Pilates | Slow down and breathe">
 <meta property="og:description" content="A quiet neighborhood studio for small-group yoga and reformer Pilates. Twelve people per class at most, so your teacher sees every move you make.">
 <meta property="og:type" content="website">
@@ -133,6 +138,20 @@ a:not(.btn):active { opacity: .7; }
 .nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
 @media (min-width: 761px) and (max-width: 1060px) { .nav-menu .nav-extra { display: none; } }
+/* ---------- Language switcher (lang-switch): beside the main button on desktop, beside the menu button on mobile ---------- */
+.nav-menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .7rem; border-left: 1px solid color-mix(in srgb, currentColor 22%, transparent); font: 500 .82rem/1 var(--font-body); }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 6px; color: var(--muted); text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1.5px; text-underline-offset: .35em; transition: color .2s, background-color .2s, text-decoration-color .2s; }
+.lang-switch a::after { display: none; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, currentColor 10%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, currentColor 18%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid currentColor; outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: currentColor; }
+@media (max-width: 760px) {
+  .lang-switch { margin-left: auto; padding-left: 0; border-left: 0; }
+  .js .nav-toggle { order: 1; flex: none; }
+  html:not(.js) .nav-menu { order: 2; margin-left: 0; }
+}
 @media (max-width: 760px) {
   /* Without JavaScript the menu wraps below the logo; with JS it collapses into the hamburger */
   html:not(.js) .nav { flex-wrap: wrap; padding-block: .6rem; }
@@ -385,6 +404,12 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
   .sticky-cta .btn-primary { flex: 1; }
   .sticky-cta .btn-ghost { padding-inline: 1.2rem; }
 }
+/* Footer language links */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.foot-lang a:hover { color: var(--apricot); }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { font-weight: 700; text-decoration-color: currentColor; }
 </style>
 </head>
 <body>
@@ -406,6 +431,12 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
       <li class="nav-extra"><a href="#faq">FAQ</a></li>
       <li><a class="btn btn-primary" href="#book">Book an intro class</a></li>
     </ul>
+    <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
   </nav>
 </header>
 
@@ -822,6 +853,12 @@ figcaption b { color: var(--text); font-weight: 500; margin-right: .5rem; }
       </div>
     </div>
     <p class="copy">© <span id="y"></span> Breathe Yoga &amp; Pilates</p>
+    <!-- Footer language links: same set as the header -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </p>
   </div>
 </footer>
 

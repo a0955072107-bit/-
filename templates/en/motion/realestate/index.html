@@ -9,6 +9,11 @@
 <meta property="og:description" content="Live inside a forest that was left standing. Two to four bedrooms, viewings by appointment.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#2e4a3b">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.your-site.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
@@ -126,6 +131,25 @@ section { padding-block: clamp(4.5rem, 10vw, 8rem); }
   html.js .menu .btn { margin-top: 1rem; }
   html.menu-open .menu { opacity: 1; visibility: visible; transform: none; transition: opacity .3s, transform .3s var(--motion-ease); }
   html.menu-open .site-header { background: var(--bg); }
+}
+/* ---------- Language switcher (header lang-switch and footer foot-lang) ---------- */
+.lang-switch { display: flex; align-items: center; flex: none; font: 500 .8rem/1 var(--font-body); letter-spacing: 0; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: var(--radius); color: var(--muted); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 9%, transparent); text-decoration: none; }
+.lang-switch a:active { opacity: .7; }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .35em; }
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin-bottom: .75rem; }
+.foot-lang a { display: inline-flex; align-items: center; min-height: 32px; color: var(--on-ink-muted); text-decoration: none; transition: color .2s; }
+.foot-lang a:hover { color: var(--on-ink); }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { color: var(--on-ink); font-weight: 700; text-decoration: underline; text-underline-offset: .3em; }
+@media (max-width: 760px) {
+  /* Mobile: the switcher stays visible to the left of the menu button; without JS it shares the logo row and the menu wraps below */
+  .site-header .lang-switch { order: 1; margin-left: auto; }
+  .site-header .burger { order: 2; }
+  .site-header .menu { order: 3; }
+  .nav { gap: .5rem; }
 }
 
 /* ---------- Hero ---------- */
@@ -572,6 +596,12 @@ td small { font: 400 .85rem var(--font-body); color: var(--muted); }
       <a href="#story">Our story</a>
       <a href="#visit" class="btn btn-brand">Book a viewing</a>
     </nav>
+    <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
   </div>
 </header>
 
@@ -936,6 +966,12 @@ td small { font: 400 .85rem var(--font-body); color: var(--muted); }
     </div>
     <div class="legal">
       <p>All images are renderings. Prices and sizes are indicative and subject to the purchase agreement.</p>
+      <!-- Footer language links: same set as the header lang-switch -->
+      <nav class="foot-lang" aria-label="Language 語言">
+        <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+        <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+        <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+      </nav>
       <p>© <span id="y"></span> The Grove Residences</p>
     </div>
   </div>

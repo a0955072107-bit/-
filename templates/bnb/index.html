@@ -9,6 +9,11 @@
 <meta property="og:title" content="山嵐民宿 Lanshan Inn｜礁溪山腳下的慢旅宿">
 <meta property="og:description" content="推開窗就是晨霧和山稜線。泡一池礁溪溫泉，吃一份在地小農早餐，在宜蘭慢慢住幾晚。">
 <meta property="og:type" content="website">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Noto+Serif+TC:wght@500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -389,6 +394,27 @@ a:not(.btn):active { opacity: .7; }
   .sticky-cta .btn-primary { flex: 1; }
   .sticky-cta .btn-ghost { padding-inline: 1.1rem; }
 }
+/* ==================== 語言切換 ==================== */
+/* 頁首的語言切換：字小、低調；目前的語言用粗體加底線標示（不只靠顏色） */
+.nav-menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .6rem; border-left: 1px solid var(--line); font: 400 .8rem/1 var(--font-body); }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: var(--muted); border-radius: var(--radius); text-decoration: none; text-underline-offset: .4em; text-decoration-thickness: 1px; transition: color .25s, background-color .25s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 7%, transparent); }
+.lang-switch a:active { opacity: .7; }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 0; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 600; text-decoration-line: underline; }
+@media (max-width: 760px) {
+  /* 手機：語言切換放在漢堡按鈕左邊，一直看得到 */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .nav-toggle { order: 2; }
+  .nav-menu { order: 3; }
+}
+/* 頁尾的語言文字連結 */
+.foot-lang { display: flex; flex-wrap: wrap; align-items: center; gap: 0 .5rem; margin-top: 1.25rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; min-height: 32px; padding-inline: .2rem; text-underline-offset: .35em; }
+.foot-lang a:hover { text-decoration-line: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { font-weight: 600; text-decoration-line: underline; }
 </style>
 </head>
 <body>
@@ -410,6 +436,12 @@ a:not(.btn):active { opacity: .7; }
       <li><a href="#access">交通</a></li>
       <li><a href="#book" class="btn btn-primary">立即訂房</a></li>
     </ul>
+    <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
   </nav>
 </header>
 
@@ -748,6 +780,8 @@ a:not(.btn):active { opacity: .7; }
         <p><a href="#rooms">房型與房價</a><br><a href="#rules">入住須知</a><br><a href="#book">線上訂房</a></p>
       </div>
     </div>
+    <!-- 頁尾語言連結：和頁首的 lang-switch 是同一組，新增語言時兩邊都要加 -->
+    <p class="foot-lang"><span>語言</span><a href="../en/" hreflang="en" lang="en">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></p>
     <p class="copy">© <span id="y"></span> 山嵐民宿 Lanshan Inn</p>
   </div>
 </footer>

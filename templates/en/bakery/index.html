@@ -6,6 +6,11 @@
 <title>Wheat &amp; Days Bakery | Neighborhood Bakery in Portland</title>
 <meta name="description" content="Wheat &amp; Days is a neighborhood bakery in Portland, baking sourdough, butter croissants and seasonal cakes every morning. Order birthday cakes and gift boxes online and pick them up in store.">
 <meta name="theme-color" content="#b3312b">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.yourshop.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <meta property="og:title" content="Wheat &amp; Days Bakery | Neighborhood Bakery in Portland">
 <meta property="og:description" content="First batch out of the oven at 8 a.m. Sourdough, cultured-butter croissants, seasonal cakes and gift boxes. Order ahead, pick up in store.">
 <meta property="og:type" content="website">
@@ -395,6 +400,26 @@ html:not(.js) .js-only { display: none !important; }
   .sticky-cta .btn-primary { flex: 1; }
   .sticky-cta .btn-ghost { padding-inline: 1.1rem; }
 }
+
+/* ==================== Language switcher (header lang-switch and footer foot-lang) ==================== */
+.nav > .nav-menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; padding-left: .5rem; border-left: 2px dotted var(--line); font: 700 .85rem/1 var(--font-body); }
+.lang-switch a { display: grid; place-items: center; min-width: 2rem; min-height: 2rem; padding-inline: .3rem; border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--butter) 60%, transparent); }
+.lang-switch a:active { background: var(--butter); }
+.lang-switch a:focus-visible { outline-offset: 1px; border-radius: 999px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 800; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+@media (max-width: 760px) {
+  /* Mobile: the switcher sits left of the menu button; without JS it stays beside the logo and the menu wraps below */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .nav-toggle { order: 2; }
+  .nav-menu { order: 3; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem .75rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline-color: var(--butter); }
+.foot-lang a[aria-current="page"] { color: var(--bg); font-weight: 800; text-decoration: underline; text-decoration-color: var(--butter); text-underline-offset: 4px; }
 </style>
 </head>
 <body>
@@ -415,6 +440,12 @@ html:not(.js) .js-only { display: none !important; }
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#order" class="btn btn-primary">Order ahead</a></li>
     </ul>
+    <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
   </nav>
 </header>
 
@@ -715,6 +746,12 @@ html:not(.js) .js-only { display: none !important; }
       </div>
     </div>
     <p class="copy">© <span id="y"></span> Wheat &amp; Days Bakery</p>
+    <!-- Footer language links: same as the lang-switch in the header -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </p>
   </div>
 </footer>
 

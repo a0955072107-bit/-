@@ -6,6 +6,11 @@
 <title>沐茶 Muu Tea｜高雄現萃手搖茶飲，三家門市線上點餐</title>
 <meta name="description" content="沐茶 Muu Tea 是高雄在地的手搖茶飲品牌，台灣茶葉每 4 小時現萃、珍珠每天現煮。新興、左營、苓雅三家門市，Uber Eats、foodpanda 線上點餐，歡迎加盟洽詢。">
 <meta name="theme-color" content="#1d5c3a">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <meta property="og:title" content="沐茶 Muu Tea｜高雄現萃手搖茶飲">
 <meta property="og:description" content="台灣茶葉每 4 小時現萃，珍珠每天現煮。甜度冰塊自己調，三家門市線上點、到店取。">
 <meta property="og:type" content="website">
@@ -364,6 +369,25 @@ html:not(.js) .js-only { display: none !important; }
   .sticky-cta { display: flex; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: var(--brand-deep); color: var(--brand-ink); border-top: var(--stroke) solid var(--text); }
   .sticky-cta .btn-primary { flex: 1; }
 }
+
+/* ==================== 語言切換（頁首 lang-switch 與頁尾 foot-lang） ==================== */
+.nav > .nav-menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; padding-left: .5rem; border-left: 2px solid color-mix(in srgb, var(--brand-ink) 25%, transparent); font: 700 .85rem/1 var(--font-body); }
+.lang-switch a { display: grid; place-items: center; min-width: 2rem; min-height: 2rem; padding-inline: .3rem; border-radius: 10px; color: color-mix(in srgb, var(--brand-ink) 80%, transparent); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--brand-ink); background: color-mix(in srgb, var(--brand-ink) 12%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--brand-ink) 22%, transparent); }
+.lang-switch a:focus-visible { outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--brand-ink); font-weight: 800; text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 3px; text-underline-offset: 4px; }
+@media (max-width: 760px) {
+  /* 手機：語言切換固定在漢堡按鈕左邊；沒有 JS 時和 logo 同一行，選單換到下一行 */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .nav-toggle { order: 2; }
+  .nav-menu { order: 3; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem .75rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { color: var(--brand-ink); font-weight: 800; text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 </style>
 </head>
 <body>
@@ -382,6 +406,12 @@ html:not(.js) .js-only { display: none !important; }
       <li><a href="#franchise">加盟</a></li>
       <li><a href="#order" class="btn btn-primary">線上點餐</a></li>
     </ul>
+    <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
   </nav>
 </header>
 
@@ -695,6 +725,12 @@ html:not(.js) .js-only { display: none !important; }
       </div>
     </div>
     <p class="copy">© <span id="y"></span> 沐茶 Muu Tea</p>
+    <!-- 頁尾語言連結：和頁首的 lang-switch 相同 -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </p>
   </div>
 </footer>
 

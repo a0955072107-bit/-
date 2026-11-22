@@ -9,6 +9,11 @@
 <meta property="og:description" content="Maintenance, ceramic coating, detailing, tires, A/C and body work. OEM parts, clear pricing, 12-month warranty.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#eceef1">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.yourshop.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
@@ -241,6 +246,20 @@ section { padding: clamp(4rem, 10vw, 7rem) var(--pad); position: relative; }
 .menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 .menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+/* ---------- Language switcher (lang-switch): beside the main button on desktop, beside the menu button on mobile ---------- */
+.nav-links { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .7rem; border-left: 1px solid color-mix(in srgb, currentColor 22%, transparent); font: 500 .82rem/1 var(--font-body); }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 6px; color: var(--muted); text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1.5px; text-underline-offset: .35em; transition: color .2s, background-color .2s, text-decoration-color .2s; }
+.lang-switch a::after { display: none; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, currentColor 10%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, currentColor 18%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid currentColor; outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: currentColor; }
+@media (max-width: 760px) {
+  .lang-switch { margin-left: auto; padding-left: 0; border-left: 0; }
+  .js .menu-btn { order: 1; flex: none; }
+  html:not(.js) .nav-links { order: 2; margin-left: 0; }
+}
 @media (max-width: 760px) {
   /* Without JavaScript the menu wraps below the logo; with JS it collapses into the hamburger */
   html:not(.js) .nav { flex-wrap: wrap; }
@@ -466,6 +485,12 @@ section { padding: clamp(4rem, 10vw, 7rem) var(--pad); position: relative; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+/* Footer language links */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.foot-lang a:hover { color: var(--brand); }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { font-weight: 700; text-decoration-color: currentColor; }
 </style>
 </head>
 <body>
@@ -488,6 +513,12 @@ section { padding: clamp(4rem, 10vw, 7rem) var(--pad); position: relative; }
       <a href="#location">Visit</a>
       <a href="#booking" class="btn">Book a service</a>
     </div>
+    <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
   </nav>
 </header>
 
@@ -918,6 +949,12 @@ section { padding: clamp(4rem, 10vw, 7rem) var(--pad); position: relative; }
       <div><h2>Follow us</h2><div class="social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="YouTube">YT</a></div></div>
     </div>
     <div class="copy"><span>© <span id="y"></span> Aurora Auto Care</span><span>Long Beach, California</span></div>
+    <!-- Footer language links: same set as the header -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </p>
   </div>
 </footer>
 
