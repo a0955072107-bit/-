@@ -40,6 +40,11 @@ SLUGS=(
   "conference:conference-event-template"
   "tattoo:tattoo-studio-template"
   "coworking:coworking-space-template"
+  "motion/saas:motion-saas-launch-template"
+  "motion/portfolio:motion-creative-portfolio-template"
+  "motion/restaurant:motion-fine-dining-template"
+  "motion/wedding:motion-wedding-template"
+  "motion/realestate:motion-luxury-residences-template"
 )
 
 for entry in "${SLUGS[@]}"; do
@@ -64,7 +69,9 @@ for entry in "${SLUGS[@]}"; do
   echo "✓ $OUT/$name.zip"
 done
 
-# 全套組合包
-(cd "$OUT/build" && zip -qr "../all-templates-bundle.zip" .)
+# 組合包：標準款全套、Motion 全套分開
+(cd "$OUT/build" && zip -qr "../all-templates-bundle.zip" . -x 'motion-*')
 echo "✓ $OUT/all-templates-bundle.zip"
+(cd "$OUT/build" && zip -qr "../motion-bundle.zip" motion-*)
+echo "✓ $OUT/motion-bundle.zip"
 rm -rf "$OUT/build"

@@ -1158,3 +1158,27 @@ Perfect for freelancers who build sites for local businesses: one licence per te
 - [ ] 自己用最低價測試購買一次（可以先設 100% 折扣碼），確認收得到 zip
 - [ ] 把商店網址放到 IG、Threads、FB 接案社團、Dcard
 - [ ] 第一個月可以用折扣碼（例如 `LAUNCH30`，打 7 折）衝第一批評價
+
+---
+
+## 7. Motion 動態系列（第 2 週上架）
+
+共用設定：Price `69`；Versions：`Standard license — 1 website`（$69）、`Extended license — up to 10 websites`（$189）；Cover／Thumbnail 用 `sales/covers/en/motion-<款式>-cover.png`／`-thumb.png`；Content 上傳 `dist/motion-*.zip`。
+
+**共用說明開頭**（貼在每款說明最前面）：
+```
+Motion Edition: a premium, animated version built with native browser animation only. No GSAP, no Three.js, no libraries to license or update. Smooth on phones, and every animation switches off automatically for visitors who prefer reduced motion.
+Motion 動態版：只用瀏覽器內建技術做的高級動畫網站，不依賴任何第三方函式庫，手機上也流暢；訪客開啟「減少動態效果」時會自動關閉動畫。
+```
+
+| 款式 | Name | URL | 主打動畫 |
+|---|---|---|---|
+| SaaS | `SaaS Launch Page — Motion Edition (English + 繁體中文)` | `motion-saas-launch-template` | 手寫 WebGL 背景、固定產品畫面的捲動故事、橫向用例帶、價格切換動畫 |
+| 作品集 | `Creative Portfolio — Motion Edition (English + 繁體中文)` | `motion-creative-portfolio-template` | 名字逐字組合、跟隨游標的作品預覽、流線背景、橫向畫廊 |
+| 餐廳 | `Fine Dining Restaurant — Motion Edition (English + 繁體中文)` | `motion-fine-dining-template` | 炭火火星粒子、六道菜捲動故事、圓形展開、訂位微互動 |
+| 婚禮 | `Wedding Website — Motion Edition with RSVP (English + 繁體中文)` | `motion-wedding-template` | 信封開場、花瓣光點、自動描繪的故事路徑、翻牌倒數 |
+| 豪宅 | `Luxury Residences — Motion Edition (English + 繁體中文)` | `motion-luxury-residences-template` | 建築線稿自動描繪、固定平面圖導覽、房型切換、地圖標記落下 |
+
+每款說明：共用開頭 → Demo 網址（`…/templates/en/motion/<款式>/`、`…/templates/motion/<款式>/`）→ 上表的動畫清單（用條列）→ What you get → 共用文字。
+
+**Motion 全套組合包**：Name `All 5 Motion Edition Templates Bundle`，URL `motion-bundle`，Price `199`，Content 上傳 `dist/motion-bundle.zip`。

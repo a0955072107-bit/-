@@ -358,5 +358,71 @@
    "Room estimator",
    "Book a tour"
   ]
+ },
+ {
+  "slug": "motion/saas",
+  "title": "SaaS Launch Page\nMotion Edition",
+  "sub": "Motion edition · No libraries · English + 中文",
+  "bg": "#14100d",
+  "ink": "#f6efe6",
+  "acc": "#ff7a2f",
+  "pills": [
+   "WebGL hero",
+   "Scroll story",
+   "Pricing animation"
+  ]
+ },
+ {
+  "slug": "motion/portfolio",
+  "title": "Creative Portfolio\nMotion Edition",
+  "sub": "Motion edition · No libraries · English + 中文",
+  "bg": "#efece6",
+  "ink": "#141414",
+  "acc": "#e8331d",
+  "pills": [
+   "Letter assembly",
+   "Cursor previews",
+   "Flow-field canvas"
+  ]
+ },
+ {
+  "slug": "motion/restaurant",
+  "title": "Fine Dining\nMotion Edition",
+  "sub": "Motion edition · No libraries · English + 中文",
+  "bg": "#14110f",
+  "ink": "#f2e8d8",
+  "acc": "#e8913f",
+  "pills": [
+   "Ember particles",
+   "Course scrollytelling",
+   "Iris reveals"
+  ]
+ },
+ {
+  "slug": "motion/wedding",
+  "title": "Wedding Website\nMotion Edition",
+  "sub": "Motion edition · No libraries · English + 中文",
+  "bg": "#1d2740",
+  "ink": "#f4ede1",
+  "acc": "#c9b48a",
+  "pills": [
+   "Envelope intro",
+   "Drawn story path",
+   "Flip countdown"
+  ],
+  "wait": 7000
+ },
+ {
+  "slug": "motion/realestate",
+  "title": "Luxury Residences\nMotion Edition",
+  "sub": "Motion edition · No libraries · English + 中文",
+  "bg": "#ebe5d9",
+  "ink": "#1d2420",
+  "acc": "#2f4a3a",
+  "pills": [
+   "Self-drawing facade",
+   "Pinned floor plan",
+   "Map pin drops"
+  ]
  }
 ]
