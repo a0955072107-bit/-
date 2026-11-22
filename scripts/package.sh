@@ -58,6 +58,13 @@ for entry in "${SLUGS[@]}"; do
   mkdir -p "$dir/zh-TW/images"
   cp "$zh" "$dir/zh-TW/index.html"
   echo "把你的照片放在這個資料夾，使用方式請看「使用說明.md」第 5 節。" > "$dir/zh-TW/images/README.txt"
+  cn="templates/zh-CN/$slug/index.html"
+  if [ -f "$cn" ]; then
+    mkdir -p "$dir/zh-CN/images"
+    cp "$cn" "$dir/zh-CN/index.html"
+    echo "把你的照片放在这个文件夹，使用方法请看「使用說明.md」第 5 节。" > "$dir/zh-CN/images/README.txt"
+  fi
+  cp templates/_docs/lang-index.html "$dir/index.html"
   if [ -f "$en" ]; then
     mkdir -p "$dir/en/images"
     cp "$en" "$dir/en/index.html"

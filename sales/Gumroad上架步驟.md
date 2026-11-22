@@ -14,38 +14,38 @@
 2. repo 的 **Settings → Pages → Source** 選 **GitHub Actions**。
 3. 幾分鐘後，Demo 網址如下（每個商品都要放）：
 
-| 模板 | 英文 Demo | 中文 Demo |
+| 模板 | 英文 Demo | 中文 Demo（簡體版把 zh-TW 換成 zh-CN） |
 |---|---|---|
-| 餐廳 | `https://a0955072107-bit.github.io/-/templates/en/restaurant/` | `https://a0955072107-bit.github.io/-/templates/restaurant/` |
-| 美容 | `…/templates/en/beauty/` | `…/templates/beauty/` |
-| 健身 | `…/templates/en/fitness/` | `…/templates/fitness/` |
-| 診所 | `…/templates/en/clinic/` | `…/templates/clinic/` |
-| 事務所 | `…/templates/en/consulting/` | `…/templates/consulting/` |
-| 工作室 | `…/templates/en/studio/` | `…/templates/studio/` |
-| 民宿 | `…/templates/en/bnb/` | `…/templates/bnb/` |
-| 房仲 | `…/templates/en/realestate/` | `…/templates/realestate/` |
-| 婚禮 | `…/templates/en/wedding/` | `…/templates/wedding/` |
-| 攝影師 | `…/templates/en/photographer/` | `…/templates/photographer/` |
-| 寵物 | `…/templates/en/pet/` | `…/templates/pet/` |
-| 補習班 | `…/templates/en/education/` | `…/templates/education/` |
-| 室內設計 | `…/templates/en/interior/` | `…/templates/interior/` |
-| 烘焙 | `…/templates/en/bakery/` | `…/templates/bakery/` |
-| 手搖飲 | `…/templates/en/tea/` | `…/templates/tea/` |
-| 汽車 | `…/templates/en/auto/` | `…/templates/auto/` |
-| 清潔 | `…/templates/en/cleaning/` | `…/templates/cleaning/` |
-| 花店 | `…/templates/en/florist/` | `…/templates/florist/` |
-| 瑜珈 | `…/templates/en/yoga/` | `…/templates/yoga/` |
-| 露營 | `…/templates/en/camping/` | `…/templates/camping/` |
-| 個人品牌 | `…/templates/en/freelancer/` | `…/templates/freelancer/` |
-| App／SaaS | `…/templates/en/saas/` | `…/templates/saas/` |
-| 諮商／教練 | `…/templates/en/coach/` | `…/templates/coach/` |
-| 水電修繕 | `…/templates/en/contractor/` | `…/templates/contractor/` |
-| 非營利 | `…/templates/en/nonprofit/` | `…/templates/nonprofit/` |
-| Link-in-bio | `…/templates/en/linkinbio/` | `…/templates/linkinbio/` |
-| 理髮廳 | `…/templates/en/barber/` | `…/templates/barber/` |
-| 研討會 | `…/templates/en/conference/` | `…/templates/conference/` |
-| 刺青 | `…/templates/en/tattoo/` | `…/templates/tattoo/` |
-| 共享辦公 | `…/templates/en/coworking/` | `…/templates/coworking/` |
+| 餐廳 | `https://a0955072107-bit.github.io/-/templates/restaurant/en/` | `https://a0955072107-bit.github.io/-/templates/restaurant/zh-TW/` |
+| 美容 | `…/templates/beauty/en/` | `…/templates/beauty/zh-TW/` |
+| 健身 | `…/templates/fitness/en/` | `…/templates/fitness/zh-TW/` |
+| 診所 | `…/templates/clinic/en/` | `…/templates/clinic/zh-TW/` |
+| 事務所 | `…/templates/consulting/en/` | `…/templates/consulting/zh-TW/` |
+| 工作室 | `…/templates/studio/en/` | `…/templates/studio/zh-TW/` |
+| 民宿 | `…/templates/bnb/en/` | `…/templates/bnb/zh-TW/` |
+| 房仲 | `…/templates/realestate/en/` | `…/templates/realestate/zh-TW/` |
+| 婚禮 | `…/templates/wedding/en/` | `…/templates/wedding/zh-TW/` |
+| 攝影師 | `…/templates/photographer/en/` | `…/templates/photographer/zh-TW/` |
+| 寵物 | `…/templates/pet/en/` | `…/templates/pet/zh-TW/` |
+| 補習班 | `…/templates/education/en/` | `…/templates/education/zh-TW/` |
+| 室內設計 | `…/templates/interior/en/` | `…/templates/interior/zh-TW/` |
+| 烘焙 | `…/templates/bakery/en/` | `…/templates/bakery/zh-TW/` |
+| 手搖飲 | `…/templates/tea/en/` | `…/templates/tea/zh-TW/` |
+| 汽車 | `…/templates/auto/en/` | `…/templates/auto/zh-TW/` |
+| 清潔 | `…/templates/cleaning/en/` | `…/templates/cleaning/zh-TW/` |
+| 花店 | `…/templates/florist/en/` | `…/templates/florist/zh-TW/` |
+| 瑜珈 | `…/templates/yoga/en/` | `…/templates/yoga/zh-TW/` |
+| 露營 | `…/templates/camping/en/` | `…/templates/camping/zh-TW/` |
+| 個人品牌 | `…/templates/freelancer/en/` | `…/templates/freelancer/zh-TW/` |
+| App／SaaS | `…/templates/saas/en/` | `…/templates/saas/zh-TW/` |
+| 諮商／教練 | `…/templates/coach/en/` | `…/templates/coach/zh-TW/` |
+| 水電修繕 | `…/templates/contractor/en/` | `…/templates/contractor/zh-TW/` |
+| 非營利 | `…/templates/nonprofit/en/` | `…/templates/nonprofit/zh-TW/` |
+| Link-in-bio | `…/templates/linkinbio/en/` | `…/templates/linkinbio/zh-TW/` |
+| 理髮廳 | `…/templates/barber/en/` | `…/templates/barber/zh-TW/` |
+| 研討會 | `…/templates/conference/en/` | `…/templates/conference/zh-TW/` |
+| 刺青 | `…/templates/tattoo/en/` | `…/templates/tattoo/zh-TW/` |
+| 共享辦公 | `…/templates/coworking/en/` | `…/templates/coworking/zh-TW/` |
 
 上架前每個連結都打開確認一次。
 
@@ -53,7 +53,7 @@
 - **Name**：取一個品牌名，例如 `Hearth Templates` 或你自己的工作室名稱。
 - **Bio**（直接貼上）：
   ```
-  Clean, fast one-page website templates for small businesses. Pure HTML, no monthly fees, English + 繁體中文 included. Need it customised? We can build it for you.
+  Clean, fast one-page website templates for small businesses. Pure HTML, no monthly fees, English + 繁體 + 简体 included. Need it customised? We can build it for you.
   給小店家的一頁式網站模板，純 HTML、免月費、附中英文版。需要客製？我們幫你做好。
   ```
 - **頭像**：用 Canva 做一個簡單的 logo。
@@ -175,7 +175,7 @@ Thanks! We'll email you within 1 business day with a short form to collect your 
 | Versions | `Standard license — 1 website`（$39）、`Extended license — up to 10 websites`（$119） |
 | Content | 上傳 `dist/` 裡對應的 zip |
 | Thumbnail | `sales/covers/en/<slug>-thumb.png`（1000×1000） |
-| Additional details | `Format: HTML/CSS/JS` · `Languages: English, 繁體中文` · `Pages: 1 (one-page)` · `Builder needed: None` |
+| Additional details | `Format: HTML/CSS/JS` · `Languages: English, 繁體中文, 简体中文 (switchable)` · `Pages: 1 (one-page)` · `Builder needed: None` |
 | Receipt | 見下方共用 Receipt |
 | Tags | 見各商品 |
 
@@ -188,12 +188,12 @@ Want us to set it up for you? See our Website Customization Service.
 
 **共用 Summary（You'll get）**
 ```
-A one-page HTML website template in English + 繁體中文, a step-by-step setup guide, and a commercial licence.
+A one-page HTML website template in English + 繁體 + 简体, a step-by-step setup guide, and a commercial licence.
 ```
 
 ### 4-1. 餐廳／咖啡廳
 
-- **Name**：`Restaurant & Café Website Template (English + 繁體中文) — One-Page HTML`
+- **Name**：`Restaurant & Café Website Template (English + 繁體 + 简体) — One-Page HTML`
 - **URL**：`restaurant-website-template`
 - **Cover**：`sales/covers/en/restaurant-cover.png`（英文）；台灣平台可用 `sales/covers/restaurant-cover.png`（中文）
 - **Tags**：`restaurant website`, `cafe website`, `html template`, `small business`, `website template`
@@ -214,7 +214,7 @@ Features
 - Change the whole colour scheme from one place
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide: edit text, add photos, connect the form, publish for free
 - Commercial licence (1 website with Standard)
 
@@ -229,7 +229,7 @@ What you get
 
 ### 4-2. 美容美髮／美甲
 
-- **Name**：`Hair & Nail Salon Website Template (English + 繁體中文) — One-Page HTML`
+- **Name**：`Hair & Nail Salon Website Template (English + 繁體 + 简体) — One-Page HTML`
 - **URL**：`salon-website-template`
 - **Cover**：`sales/covers/en/beauty-cover.png`（英文）；台灣平台可用 `sales/covers/beauty-cover.png`（中文）
 - **Tags**：`salon website`, `beauty website`, `nail salon`, `html template`, `website template`
@@ -250,18 +250,18 @@ Features
 - Change the whole colour scheme from one place
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-美容美髮／美甲一頁式網站模板。功能：分類價目表、設計師介紹與指定預約、可篩選作品集、預約流程、常見問題、LINE 預約按鈕、手機版底部預約列、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+美容美髮／美甲一頁式網站模板。功能：分類價目表、設計師介紹與指定預約、可篩選作品集、預約流程、常見問題、LINE 預約按鈕、手機版底部預約列、Google 結構化資料。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-3. 健身房／私人教練
 
-- **Name**：`Gym & Personal Training Website Template (English + 繁體中文) — One-Page HTML`
+- **Name**：`Gym & Personal Training Website Template (English + 繁體 + 简体) — One-Page HTML`
 - **URL**：`gym-website-template`
 - **Cover**：`sales/covers/en/fitness-cover.png`（英文）；台灣平台可用 `sales/covers/fitness-cover.png`（中文）
 - **Tags**：`gym website`, `fitness website`, `personal trainer`, `html template`, `website template`
@@ -282,18 +282,18 @@ Features
 - SEO-ready with schema.org ExerciseGym data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-健身工作室一頁式網站模板。功能：課程介紹、彩色每週課表、教練團隊、月繳／年繳切換方案價格、學員見證、免費體驗表單、手機版底部預約按鈕、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+健身工作室一頁式網站模板。功能：課程介紹、彩色每週課表、教練團隊、月繳／年繳切換方案價格、學員見證、免費體驗表單、手機版底部預約按鈕、Google 結構化資料。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-4. 診所（牙醫，可改其他科別）
 
-- **Name**：`Dental & Medical Clinic Website Template (English + 繁體中文) — One-Page HTML`
+- **Name**：`Dental & Medical Clinic Website Template (English + 繁體 + 简体) — One-Page HTML`
 - **URL**：`clinic-website-template`
 - **Cover**：`sales/covers/en/clinic-cover.png`（英文）；台灣平台可用 `sales/covers/clinic-cover.png`（中文）
 - **Tags**：`dental website`, `clinic website`, `medical website`, `html template`, `website template`
@@ -314,18 +314,18 @@ Features
 - SEO-ready with schema.org Dentist data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-診所一頁式網站模板（牙醫，可改其他科別）。功能：首屏自動顯示今日門診、門診時間表自動標示今天、診療項目、醫師團隊、就診須知與常見問題、手機版底部「撥打電話／線上預約」。文案遵守醫療廣告法、不誇大。附英文版與繁體中文版、中文教學、商業授權。
+診所一頁式網站模板（牙醫，可改其他科別）。功能：首屏自動顯示今日門診、門診時間表自動標示今天、診療項目、醫師團隊、就診須知與常見問題、手機版底部「撥打電話／線上預約」。文案遵守醫療廣告法、不誇大。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-5. 會計師／律師／顧問事務所
 
-- **Name**：`Law, Accounting & Consulting Firm Website Template (English + 繁體中文)`
+- **Name**：`Law, Accounting & Consulting Firm Website Template (English + 繁體 + 简体)`
 - **URL**：`consulting-firm-website-template`
 - **Cover**：`sales/covers/en/consulting-cover.png`（英文）；台灣平台可用 `sales/covers/consulting-cover.png`（中文）
 - **Tags**：`law firm website`, `accounting website`, `consulting website`, `html template`, `website template`
@@ -345,18 +345,18 @@ Features
 - SEO-ready with schema.org ProfessionalService data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-會計師／律師／顧問事務所一頁式網站模板。功能：服務領域、選擇我們的理由、服務流程、專業團隊、客戶見證、常見問題、預約諮詢表單、數字動畫、手機版底部預約按鈕、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+會計師／律師／顧問事務所一頁式網站模板。功能：服務領域、選擇我們的理由、服務流程、專業團隊、客戶見證、常見問題、預約諮詢表單、數字動畫、手機版底部預約按鈕、Google 結構化資料。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-6. 設計工作室／作品集
 
-- **Name**：`Design Studio & Portfolio Website Template (English + 繁體中文)`
+- **Name**：`Design Studio & Portfolio Website Template (English + 繁體 + 简体)`
 - **URL**：`studio-portfolio-template`
 - **Cover**：`sales/covers/en/studio-cover.png`
 - **Tags**：`portfolio website`, `design studio`, `agency website`, `html template`, `website template`
@@ -375,18 +375,18 @@ Features
 - SEO-ready with schema.org data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-設計工作室／作品集一頁式網站模板。功能：標題逐行浮現、捲動動畫、服務項目、精選作品、專案洽詢表單、自動深色模式。附英文版與繁體中文版、中文教學、商業授權。
+設計工作室／作品集一頁式網站模板。功能：標題逐行浮現、捲動動畫、服務項目、精選作品、專案洽詢表單、自動深色模式。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-7. 民宿／B&B
 
-- **Name**：`B&B & Guesthouse Website Template (English + 繁體中文) — One-Page HTML`
+- **Name**：`B&B & Guesthouse Website Template (English + 繁體 + 简体) — One-Page HTML`
 - **URL**：`bnb-guesthouse-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`bnb website`, `guesthouse website`, `hotel website`, `html template`, `website template`
@@ -406,18 +406,18 @@ Features
 - SEO-ready with schema.org LodgingBusiness data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-民宿／B&B 一頁式網站模板。功能：房型與平假日價格、自動計算住宿晚數的訂房表單、住宿特色、周邊景點、入住須知、住客評價、手機版底部訂房按鈕、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+民宿／B&B 一頁式網站模板。功能：房型與平假日價格、自動計算住宿晚數的訂房表單、住宿特色、周邊景點、入住須知、住客評價、手機版底部訂房按鈕、Google 結構化資料。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-8. 房仲／不動產
 
-- **Name**：`Real Estate Agent Website Template (English + 繁體中文) — One-Page HTML`
+- **Name**：`Real Estate Agent Website Template (English + 繁體 + 简体) — One-Page HTML`
 - **URL**：`real-estate-website-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`real estate website`, `realtor website`, `property listings`, `html template`, `website template`
@@ -437,18 +437,18 @@ Features
 - SEO-ready with schema.org RealEstateAgent data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-房仲／不動產一頁式網站模板。功能：可即時篩選的物件搜尋、物件卡片、服務項目、成交實績、經紀人介紹、買房流程、預約看屋表單、手機版底部預約按鈕、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+房仲／不動產一頁式網站模板。功能：可即時篩選的物件搜尋、物件卡片、服務項目、成交實績、經紀人介紹、買房流程、預約看屋表單、手機版底部預約按鈕、Google 結構化資料。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-9. 婚禮／活動
 
-- **Name**：`Wedding Website Template with RSVP & Countdown (English + 繁體中文)`
+- **Name**：`Wedding Website Template with RSVP & Countdown (English + 繁體 + 简体)`
 - **URL**：`wedding-website-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`wedding website`, `rsvp website`, `event website`, `wedding invitation`, `html template`
@@ -468,18 +468,18 @@ Features
 - SEO-ready with schema.org Event data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-婚禮網站模板（也適合活動）。功能：倒數計時、我們的故事、典禮與宴客資訊、當天流程、交通住宿、相簿、RSVP 出席回覆表單、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+婚禮網站模板（也適合活動）。功能：倒數計時、我們的故事、典禮與宴客資訊、當天流程、交通住宿、相簿、RSVP 出席回覆表單、Google 結構化資料。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-10. 攝影師
 
-- **Name**：`Photographer Portfolio Website Template (English + 繁體中文) — One-Page HTML`
+- **Name**：`Photographer Portfolio Website Template (English + 繁體 + 简体) — One-Page HTML`
 - **URL**：`photographer-portfolio-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`photography website`, `photographer portfolio`, `portfolio template`, `html template`, `website template`
@@ -499,18 +499,18 @@ Features
 - Sticky mobile "Book a session" button
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-攝影師作品集網站模板。功能：可篩選的作品集與燈箱看大圖、拍攝方案與價格、拍攝流程、關於我、客戶評價、預約表單、手機版底部預約按鈕。附英文版與繁體中文版、中文教學、商業授權。
+攝影師作品集網站模板。功能：可篩選的作品集與燈箱看大圖、拍攝方案與價格、拍攝流程、關於我、客戶評價、預約表單、手機版底部預約按鈕。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-11. 寵物美容／旅館
 
-- **Name**：`Pet Grooming & Daycare Website Template (English + 繁體中文)`
+- **Name**：`Pet Grooming & Daycare Website Template (English + 繁體 + 简体)`
 - **URL**：`pet-grooming-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`pet grooming website`, `dog grooming`, `pet daycare`, `html template`, `website template`
@@ -530,18 +530,18 @@ Features
 - SEO-ready with schema.org LocalBusiness data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-寵物美容／旅館網站模板。功能：依體型分頁的價目表、服務項目、安心措施、美容師介紹、美容前後對比、預約須知、預約表單、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+寵物美容／旅館網站模板。功能：依體型分頁的價目表、服務項目、安心措施、美容師介紹、美容前後對比、預約須知、預約表單、Google 結構化資料。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-12. 補習班／才藝教室
 
-- **Name**：`Tutoring Center & Classes Website Template (English + 繁體中文)`
+- **Name**：`Tutoring Center & Classes Website Template (English + 繁體 + 简体)`
 - **URL**：`tutoring-school-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`tutoring website`, `school website`, `education template`, `html template`, `website template`
@@ -561,18 +561,18 @@ Features
 - SEO-ready with schema.org EducationalOrganization data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-補習班／才藝教室網站模板。功能：依年級分頁的課程、教學特色、師資介紹、每週課表、學生成果、家長評價、免費試聽預約表單、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+補習班／才藝教室網站模板。功能：依年級分頁的課程、教學特色、師資介紹、每週課表、學生成果、家長評價、免費試聽預約表單、Google 結構化資料。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-13. 室內設計
 
-- **Name**：`Interior Design Studio Website Template (English + 繁體中文)`
+- **Name**：`Interior Design Studio Website Template (English + 繁體 + 简体)`
 - **URL**：`interior-design-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`interior design website`, `renovation website`, `architect portfolio`, `html template`, `website template`
@@ -592,18 +592,18 @@ Features
 - SEO-ready with schema.org data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-室內設計網站模板。功能：可篩選的案例、裝修前後對比滑桿、服務流程、收費方式、設計團隊、客戶評價、預約丈量表單、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+室內設計網站模板。功能：可篩選的案例、裝修前後對比滑桿、服務流程、收費方式、設計團隊、客戶評價、預約丈量表單、Google 結構化資料。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-14. 烘焙／甜點店
 
-- **Name**：`Bakery & Dessert Shop Website Template with Pre-orders (English + 繁體中文)`
+- **Name**：`Bakery & Dessert Shop Website Template with Pre-orders (English + 繁體 + 简体)`
 - **URL**：`bakery-website-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`bakery website`, `cake shop website`, `pre-order form`, `html template`, `website template`
@@ -623,18 +623,18 @@ Features
 - SEO-ready with schema.org Bakery data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-烘焙／甜點店網站模板。功能：本週出爐表、麵包／蛋糕／禮盒分頁、自動計算金額的預訂、客製蛋糕說明、取貨預訂表單、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+烘焙／甜點店網站模板。功能：本週出爐表、麵包／蛋糕／禮盒分頁、自動計算金額的預訂、客製蛋糕說明、取貨預訂表單、Google 結構化資料。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-15. 手搖飲／茶飲店
 
-- **Name**：`Bubble Tea Shop Website Template (English + 繁體中文) — One-Page HTML`
+- **Name**：`Bubble Tea Shop Website Template (English + 繁體 + 简体) — One-Page HTML`
 - **URL**：`bubble-tea-shop-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`bubble tea website`, `cafe website`, `drink menu`, `html template`, `website template`
@@ -654,18 +654,18 @@ Features
 - SEO-ready with schema.org data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-手搖飲／茶飲店網站模板。功能：分頁菜單、甜度冰塊配料客製試算、多門市據點、外送平台按鈕、集點說明、加盟洽詢表單。附英文版與繁體中文版、中文教學、商業授權。
+手搖飲／茶飲店網站模板。功能：分頁菜單、甜度冰塊配料客製試算、多門市據點、外送平台按鈕、集點說明、加盟洽詢表單。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-16. 汽車美容／保養廠
 
-- **Name**：`Car Detailing & Auto Repair Website Template (English + 繁體中文)`
+- **Name**：`Car Detailing & Auto Repair Website Template (English + 繁體 + 简体)`
 - **URL**：`auto-care-garage-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`auto repair website`, `car detailing`, `garage website`, `html template`, `website template`
@@ -685,18 +685,18 @@ Features
 - SEO-ready with schema.org AutoRepair data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-汽車美容／保養廠網站模板。功能：依車型分頁的價目表、保養里程提醒、施工前後對比、技師團隊、線上預約表單、Google 結構化資料。附英文版與繁體中文版、中文教學、商業授權。
+汽車美容／保養廠網站模板。功能：依車型分頁的價目表、保養里程提醒、施工前後對比、技師團隊、線上預約表單、Google 結構化資料。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-17. 居家清潔
 
-- **Name**：`Home Cleaning Service Website Template with Instant Quote (English + 繁體中文)`
+- **Name**：`Home Cleaning Service Website Template with Instant Quote (English + 繁體 + 简体)`
 - **URL**：`home-cleaning-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`cleaning website`, `maid service`, `home services`, `html template`, `website template`
@@ -716,18 +716,18 @@ Features
 - SEO-ready with schema.org data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-居家清潔網站模板。功能：即時估價計算機、各空間清潔項目、服務流程、服務區域、評價、自動帶入估價的預約表單。附英文版與繁體中文版、中文教學、商業授權。
+居家清潔網站模板。功能：即時估價計算機、各空間清潔項目、服務流程、服務區域、評價、自動帶入估價的預約表單。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-18. 花店
 
-- **Name**：`Florist Website Template (English + 繁體中文) — One-Page HTML`
+- **Name**：`Florist Website Template (English + 繁體 + 简体) — One-Page HTML`
 - **URL**：`florist-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`florist website`, `flower shop`, `flower delivery`, `html template`, `website template`
@@ -747,18 +747,18 @@ Features
 - SEO-ready with schema.org Florist data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-花店網站模板。功能：花束分頁與價格、配送日期判斷（當日截止時間）、每月訂花方案、婚禮活動花藝、花卡字數提示、訂購表單。附英文版與繁體中文版、中文教學、商業授權。
+花店網站模板。功能：花束分頁與價格、配送日期判斷（當日截止時間）、每月訂花方案、婚禮活動花藝、花卡字數提示、訂購表單。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-19. 瑜珈／皮拉提斯
 
-- **Name**：`Yoga & Pilates Studio Website Template (English + 繁體中文)`
+- **Name**：`Yoga & Pilates Studio Website Template (English + 繁體 + 简体)`
 - **URL**：`yoga-pilates-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`yoga website`, `pilates studio`, `wellness website`, `html template`, `website template`
@@ -778,18 +778,18 @@ Features
 - SEO-ready with schema.org data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-瑜珈／皮拉提斯網站模板。功能：依星期切換的課表（自動選今天）、課程類型、體驗與課程方案、老師介紹、空間介紹、體驗課預約。附英文版與繁體中文版、中文教學、商業授權。
+瑜珈／皮拉提斯網站模板。功能：依星期切換的課表（自動選今天）、課程類型、體驗與課程方案、老師介紹、空間介紹、體驗課預約。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-20. 露營區／豪華露營
 
-- **Name**：`Campsite & Glamping Website Template (English + 繁體中文)`
+- **Name**：`Campsite & Glamping Website Template (English + 繁體 + 简体)`
 - **URL**：`campsite-glamping-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`campground website`, `glamping website`, `outdoor website`, `html template`, `website template`
@@ -809,18 +809,18 @@ Features
 - SEO-ready with schema.org Campground data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-露營區／豪華露營網站模板。功能：營位類型與平假日價格、可點選的營地地圖、住宿費用試算、營地設施、營地規範、裝備建議、訂位表單。附英文版與繁體中文版、中文教學、商業授權。
+露營區／豪華露營網站模板。功能：營位類型與平假日價格、可點選的營地地圖、住宿費用試算、營地設施、營地規範、裝備建議、訂位表單。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-21. 個人品牌／自由工作者
 
-- **Name**：`Freelancer Portfolio & Résumé Website Template (English + 繁體中文)`
+- **Name**：`Freelancer Portfolio & Résumé Website Template (English + 繁體 + 简体)`
 - **URL**：`freelancer-portfolio-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`portfolio website`, `resume website`, `freelancer`, `personal website`, `html template`
@@ -840,18 +840,18 @@ Features
 - SEO-ready with schema.org Person data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-個人品牌／自由工作者網站模板。功能：作品集、服務與起價、技能與經歷、履歷下載、合作流程、深淺色模式切換、合作洽談表單。附英文版與繁體中文版、中文教學、商業授權。
+個人品牌／自由工作者網站模板。功能：作品集、服務與起價、技能與經歷、履歷下載、合作流程、深淺色模式切換、合作洽談表單。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-22. App／軟體產品登陸頁
 
-- **Name**：`SaaS & App Landing Page Template (English + 繁體中文) — One-Page HTML`
+- **Name**：`SaaS & App Landing Page Template (English + 繁體 + 简体) — One-Page HTML`
 - **URL**：`app-saas-landing-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
 - **Tags**：`saas landing page`, `app landing page`, `startup website`, `html template`, `landing page`
@@ -871,18 +871,18 @@ Features
 - SEO-ready with schema.org SoftwareApplication data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-App／軟體產品登陸頁模板。功能：產品介面展示、功能介紹、使用流程、月繳／年繳切換的方案價格、功能比較表、Email 訂閱。附英文版與繁體中文版、中文教學、商業授權。
+App／軟體產品登陸頁模板。功能：產品介面展示、功能介紹、使用流程、月繳／年繳切換的方案價格、功能比較表、Email 訂閱。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-23. 心理諮商／教練
 
-- **Name**：`Therapist & Coach Website Template (English + 繁體中文) — One-Page HTML`
+- **Name**：`Therapist & Coach Website Template (English + 繁體 + 简体) — One-Page HTML`
 - **URL**：`therapist-coach-template`
 - **Cover**：`sales/covers/en/coach-cover.png`
 - **Tags**：`therapist website`, `counseling website`, `coach website`, `html template`, `website template`
@@ -902,18 +902,18 @@ Features
 - SEO-ready with schema.org data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-心理諮商／教練網站模板。功能：服務與費用、諮商取向、關於我、初談流程、保密與取消政策、預約表單、危機專線提醒。附英文版與繁體中文版、中文教學、商業授權。
+心理諮商／教練網站模板。功能：服務與費用、諮商取向、關於我、初談流程、保密與取消政策、預約表單、危機專線提醒。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-24. 水電修繕／工程行
 
-- **Name**：`Contractor & Handyman Website Template (English + 繁體中文)`
+- **Name**：`Contractor & Handyman Website Template (English + 繁體 + 简体)`
 - **URL**：`contractor-handyman-template`
 - **Cover**：`sales/covers/en/contractor-cover.png`
 - **Tags**：`contractor website`, `plumber website`, `handyman website`, `html template`, `website template`
@@ -933,18 +933,18 @@ Features
 - SEO-ready with schema.org data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-水電修繕網站模板。功能：大型撥號按鈕、急修／預約切換、參考價目、服務區域、施工前後對比、估價表單。附英文版與繁體中文版、中文教學、商業授權。
+水電修繕網站模板。功能：大型撥號按鈕、急修／預約切換、參考價目、服務區域、施工前後對比、估價表單。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-25. 非營利／教會
 
-- **Name**：`Nonprofit & Church Website Template with Donation Widget (English + 繁體中文)`
+- **Name**：`Nonprofit & Church Website Template with Donation Widget (English + 繁體 + 简体)`
 - **URL**：`nonprofit-charity-template`
 - **Cover**：`sales/covers/en/nonprofit-cover.png`
 - **Tags**：`nonprofit website`, `charity website`, `church website`, `donation page`, `html template`
@@ -964,18 +964,18 @@ Features
 - SEO-ready with schema.org NGO data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-非營利／教會網站模板。功能：捐款小工具（單次／定期、影響力說明）、服務計畫、受助者故事、志工招募、活動行事曆、財務透明。附英文版與繁體中文版、中文教學、商業授權。
+非營利／教會網站模板。功能：捐款小工具（單次／定期、影響力說明）、服務計畫、受助者故事、志工招募、活動行事曆、財務透明。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-26. Link-in-bio 個人連結頁
 
-- **Name**：`Link-in-Bio Page Template — Linktree Alternative (English + 繁體中文)`
+- **Name**：`Link-in-Bio Page Template — Linktree Alternative (English + 繁體 + 简体)`
 - **URL**：`link-in-bio-template`
 - **Cover**：`sales/covers/en/linkinbio-cover.png`
 - **Tags**：`link in bio`, `linktree alternative`, `creator page`, `html template`, `bio link`
@@ -995,18 +995,18 @@ Features
 - SEO-ready with schema.org Person data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-Link-in-bio 個人連結頁模板（Linktree 替代品）。功能：三種主題切換、社群連結、連結按鈕、精選商品、最新影片、Email 訂閱、分享按鈕。附英文版與繁體中文版、中文教學、商業授權。
+Link-in-bio 個人連結頁模板（Linktree 替代品）。功能：三種主題切換、社群連結、連結按鈕、精選商品、最新影片、Email 訂閱、分享按鈕。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-27. 男士理髮廳
 
-- **Name**：`Barbershop Website Template (English + 繁體中文) — One-Page HTML`
+- **Name**：`Barbershop Website Template (English + 繁體 + 简体) — One-Page HTML`
 - **URL**：`barbershop-template`
 - **Cover**：`sales/covers/en/barber-cover.png`
 - **Tags**：`barbershop website`, `barber website`, `mens grooming`, `html template`, `website template`
@@ -1026,18 +1026,18 @@ Features
 - SEO-ready with schema.org data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-男士理髮廳網站模板。功能：價目表、理髮師介紹（點選自動帶入預約）、營業中與候位提示、作品集、預約表單。附英文版與繁體中文版、中文教學、商業授權。
+男士理髮廳網站模板。功能：價目表、理髮師介紹（點選自動帶入預約）、營業中與候位提示、作品集、預約表單。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-28. 研討會／講座活動
 
-- **Name**：`Conference & Workshop Event Landing Page (English + 繁體中文)`
+- **Name**：`Conference & Workshop Event Landing Page (English + 繁體 + 简体)`
 - **URL**：`conference-event-template`
 - **Cover**：`sales/covers/en/conference-cover.png`
 - **Tags**：`conference website`, `event landing page`, `workshop page`, `html template`, `event template`
@@ -1057,18 +1057,18 @@ Features
 - SEO-ready with schema.org Event data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-研討會／講座活動頁模板。功能：倒數計時、講者介紹、分軌議程、加入行事曆、票種與早鳥自動截止、場地交通、贊助方案。附英文版與繁體中文版、中文教學、商業授權。
+研討會／講座活動頁模板。功能：倒數計時、講者介紹、分軌議程、加入行事曆、票種與早鳥自動截止、場地交通、贊助方案。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-29. 刺青工作室
 
-- **Name**：`Tattoo Studio Website Template (English + 繁體中文) — One-Page HTML`
+- **Name**：`Tattoo Studio Website Template (English + 繁體 + 简体) — One-Page HTML`
 - **URL**：`tattoo-studio-template`
 - **Cover**：`sales/covers/en/tattoo-cover.png`
 - **Tags**：`tattoo website`, `tattoo studio`, `artist portfolio`, `html template`, `website template`
@@ -1088,18 +1088,18 @@ Features
 - SEO-ready with schema.org data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-刺青工作室網站模板。功能：依刺青師與風格篩選的作品集、現貨 Flash 圖、價格說明、刺青流程、照護須知、預約表單。附英文版與繁體中文版、中文教學、商業授權。
+刺青工作室網站模板。功能：依刺青師與風格篩選的作品集、現貨 Flash 圖、價格說明、刺青流程、照護須知、預約表單。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
 
 ### 4-30. 共享辦公室
 
-- **Name**：`Coworking Space Website Template (English + 繁體中文) — One-Page HTML`
+- **Name**：`Coworking Space Website Template (English + 繁體 + 简体) — One-Page HTML`
 - **URL**：`coworking-space-template`
 - **Cover**：`sales/covers/en/coworking-cover.png`
 - **Tags**：`coworking website`, `office space`, `meeting rooms`, `html template`, `website template`
@@ -1119,11 +1119,11 @@ Features
 - SEO-ready with schema.org data
 
 What you get
-- English and Traditional Chinese versions
+- English, Traditional Chinese and Simplified Chinese versions with a built-in language switcher
 - Step-by-step guide and commercial licence
 
 ──────────
-共享辦公室網站模板。功能：空間類型、日租／月租切換、會議室即時估價、設施介紹、社群活動、預約參觀。附英文版與繁體中文版、中文教學、商業授權。
+共享辦公室網站模板。功能：空間類型、日租／月租切換、會議室即時估價、設施介紹、社群活動、預約參觀。附英文、繁體、簡體三種語言（網站內建語言切換）、中文教學、商業授權。
 
 [貼上「共用文字」]
 ```
@@ -1134,7 +1134,7 @@ What you get
 
 Gumroad 可以建立 **Bundle**，把已上架的商品組合起來賣。如果後台沒有 Bundle，就另外上一個商品，上傳 `all-templates-bundle.zip`。
 
-- **Name**：`All 30 Business Website Templates Bundle (English + 繁體中文)`
+- **Name**：`All 30 Business Website Templates Bundle (English + 繁體 + 简体)`
 - **URL**：`website-templates-bundle`
 - **Price**：`249`（單買合計 $1,170，約打 2 折；上市優惠 $199）
 - **Cover**：用 Canva 把多張封面拼成一張
@@ -1173,12 +1173,12 @@ Motion 動態版：只用瀏覽器內建技術做的高級動畫網站，不依�
 
 | 款式 | Name | URL | 主打動畫 |
 |---|---|---|---|
-| SaaS | `SaaS Launch Page — Motion Edition (English + 繁體中文)` | `motion-saas-launch-template` | 手寫 WebGL 背景、固定產品畫面的捲動故事、橫向用例帶、價格切換動畫 |
-| 作品集 | `Creative Portfolio — Motion Edition (English + 繁體中文)` | `motion-creative-portfolio-template` | 名字逐字組合、跟隨游標的作品預覽、流線背景、橫向畫廊 |
-| 餐廳 | `Fine Dining Restaurant — Motion Edition (English + 繁體中文)` | `motion-fine-dining-template` | 炭火火星粒子、六道菜捲動故事、圓形展開、訂位微互動 |
-| 婚禮 | `Wedding Website — Motion Edition with RSVP (English + 繁體中文)` | `motion-wedding-template` | 信封開場、花瓣光點、自動描繪的故事路徑、翻牌倒數 |
-| 豪宅 | `Luxury Residences — Motion Edition (English + 繁體中文)` | `motion-luxury-residences-template` | 建築線稿自動描繪、固定平面圖導覽、房型切換、地圖標記落下 |
+| SaaS | `SaaS Launch Page — Motion Edition (English + 繁體 + 简体)` | `motion-saas-launch-template` | 手寫 WebGL 背景、固定產品畫面的捲動故事、橫向用例帶、價格切換動畫 |
+| 作品集 | `Creative Portfolio — Motion Edition (English + 繁體 + 简体)` | `motion-creative-portfolio-template` | 名字逐字組合、跟隨游標的作品預覽、流線背景、橫向畫廊 |
+| 餐廳 | `Fine Dining Restaurant — Motion Edition (English + 繁體 + 简体)` | `motion-fine-dining-template` | 炭火火星粒子、六道菜捲動故事、圓形展開、訂位微互動 |
+| 婚禮 | `Wedding Website — Motion Edition with RSVP (English + 繁體 + 简体)` | `motion-wedding-template` | 信封開場、花瓣光點、自動描繪的故事路徑、翻牌倒數 |
+| 豪宅 | `Luxury Residences — Motion Edition (English + 繁體 + 简体)` | `motion-luxury-residences-template` | 建築線稿自動描繪、固定平面圖導覽、房型切換、地圖標記落下 |
 
-每款說明：共用開頭 → Demo 網址（`…/templates/en/motion/<款式>/`、`…/templates/motion/<款式>/`）→ 上表的動畫清單（用條列）→ What you get → 共用文字。
+每款說明：共用開頭 → Demo 網址（`…/templates/motion/<款式>/en/`、`…/templates/motion/<款式>/zh-TW/`）→ 上表的動畫清單（用條列）→ What you get → 共用文字。
 
 **Motion 全套組合包**：Name `All 5 Motion Edition Templates Bundle`，URL `motion-bundle`，Price `199`，Content 上傳 `dist/motion-bundle.zip`。

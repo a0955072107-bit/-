@@ -7,15 +7,18 @@ Thanks for your purchase! This guide gets your site customised and online in abo
 ## 1. What's inside
 
 ```
+index.html           ← language entry: sends visitors to their language
 en/index.html        ← English version (the whole site is this one file)
-en/images/           ← put your photos here when using the English version
 zh-TW/index.html     ← Traditional Chinese version
-zh-TW/images/        ← photos for the Chinese version
+zh-CN/index.html     ← Simplified Chinese version
+*/images/            ← photos, one folder per language
 GUIDE.md             ← this guide (使用說明.md is the Chinese guide)
 LICENSE.md           ← what you can and can't do
 ```
 
-Use whichever language version you need, or both. To publish, upload the contents of that one folder (`en/` or `zh-TW/`).
+Every page has an EN / 繁 / 简 switcher in the header. Want all three languages? Upload the whole folder. Only need one? Upload that language's folder and remove the unused links from the switcher (search for `lang-switch`).
+
+**If you change text in one language, remember to update the others too.**
 
 ## 2. Tools you need (all free)
 
@@ -92,7 +95,7 @@ Submissions now arrive in your inbox. The free plan covers 50 submissions a mont
 
 ### A. Netlify Drop (easiest, ~3 minutes)
 1. Go to [app.netlify.com/drop](https://app.netlify.com/drop).
-2. Drag your language folder (`en/`, containing `index.html` and `images/`) onto the page.
+2. Drag the whole folder (all languages go live) or a single language folder onto the page.
 3. Done. You get a `xxx.netlify.app` address; create a free account to keep the site and rename it.
 
 ### B. GitHub Pages
