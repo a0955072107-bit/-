@@ -87,13 +87,13 @@ bash scripts/package.sh
 ──────────
 ✨ Want it set up for your business?
 Don't have time to edit it yourself? We'll customise this template with your text, photos, colours, booking links and domain, ready to launch.
-👉 See our Website Customization Service: [貼上客製服務商品網址]
+👉 See our Website Customization Service: https://polyglotpages.gumroad.com/l/website-customization
 
 ✨ 想要直接幫你改好？
 沒時間自己改嗎？我們可以把這個模板改成你店家專屬的網站：換上你的文字、照片、品牌色、預約連結，並設定好網域，直接上線。
-👉 網站客製服務：[貼上客製服務商品網址]
+👉 網站客製服務：https://polyglotpages.gumroad.com/l/website-customization
 
-Questions or custom work? / 有問題或想客製：[你的品牌 Email]
+Questions or custom work? / 有問題或想客製：polyglotpages.studio@gmail.com
 ```
 
 > **聯絡方式的原則**：只放品牌 Email，不放個人 LINE 或電話。請另外申請一個品牌專用信箱。
@@ -138,7 +138,7 @@ What's included
 
 Not included: copywriting from scratch, photography, domain purchase fees.
 
-Questions before buying? Message us through Gumroad.
+Questions before buying? Email polyglotpages.studio@gmail.com
 
 ──────────
 網站客製服務：喜歡我們的模板，但沒時間自己改？交給我們。
@@ -152,7 +152,7 @@ Questions before buying? Message us through Gumroad.
 包含：換上你的內容、照片、品牌色；電話、LINE、地圖、預約按鈕串接；表單串接到你的 Email；部署到免費主機。Plus 方案另外包含自訂網域設定，以及多做一個區塊或頁面。
 不包含：從零撰寫文案、拍攝照片、網域購買費用。
 
-購買前有問題，歡迎透過 Gumroad 私訊。
+購買前有問題，歡迎寫信到 polyglotpages.studio@gmail.com
 ```
 
 **Receipt（購買後訊息）**

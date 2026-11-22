@@ -147,3 +147,5 @@ Guarde una copia del original antes de editar, o vuelva a descargar su compra.
 ## ¿Quiere que lo personalicemos por usted?
 
 ¿No tiene tiempo de editarlo? Podemos convertir esta plantilla en un sitio listo para publicar para su negocio: sus textos, fotos, colores, enlaces de reserva y dominio, todo configurado. Escríbanos por Gumroad o vea nuestro **Servicio de personalización de sitios web**.
+
+Correo: polyglotpages.studio@gmail.com · Servicio: https://polyglotpages.gumroad.com/l/website-customization

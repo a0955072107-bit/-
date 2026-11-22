@@ -145,3 +145,5 @@ Keep a backup of the original before editing, or re-download your purchase.
 ## Want us to customise it for you?
 
 Don't have time to edit it yourself? We can turn this template into a ready-to-launch site for your business: your text, photos, colours, booking links and domain set up for you. Message us through Gumroad or see our **Website Customization Service** listing.
+
+Email: polyglotpages.studio@gmail.com · Service: https://polyglotpages.gumroad.com/l/website-customization
