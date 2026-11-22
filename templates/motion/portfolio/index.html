@@ -58,6 +58,8 @@
 .tone-light { --bg: var(--paper); --text: var(--ink); --muted: var(--muted-light); --brand-text: var(--brand-deep); }
 .tone-dark { --bg: var(--ink); --text: var(--paper); --muted: var(--muted-dark); --brand-text: var(--brand); }
 .tone-accent { --bg: var(--brand); --text: var(--ink); --muted: var(--ink); --brand-text: var(--ink); }
+/* 線條與輸入框顏色要跟著區塊文字色重新計算 */
+.tone-light, .tone-dark, .tone-accent, .site-header { --line: color-mix(in srgb, var(--text) 16%, transparent); --field: color-mix(in srgb, var(--text) 6%, transparent); }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; overflow-x: clip; scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 1rem); }
@@ -81,6 +83,7 @@ section, .site-footer { background: var(--bg); color: var(--text); position: rel
 .tone-layer .tl-accent { background: var(--brand); }
 html.tones .tone-layer { display: block; }
 html.tones section, html.tones .site-footer { background: transparent; }
+html.tones section.mq { background: var(--bg); } /* 跑馬燈色帶保持實色 */
 html.tones[data-tone="dark"] .tl-dark, html.tones[data-tone="accent"] .tl-accent { opacity: 1; }
 
 /* ---------- 按鈕與連結 ---------- */
@@ -94,6 +97,7 @@ html.tones[data-tone="dark"] .tl-dark, html.tones[data-tone="accent"] .tl-accent
 .btn-line { border-color: currentColor; color: var(--text); background: transparent; }
 .btn-line:hover { box-shadow: inset 0 0 0 1px currentColor; }
 .btn:active { scale: .96; }
+.btn:disabled, .btn[aria-disabled="true"] { opacity: .5; cursor: not-allowed; box-shadow: none; }
 .btn:focus-visible { outline-offset: 4px; border-radius: var(--radius-btn); }
 .btn .btn-label { display: inline-block; pointer-events: none; }
 /* 連結底線：滑過時從左到右畫出 */
@@ -154,7 +158,7 @@ html.canvas-on .hero::before { opacity: 0; }
 .hn-lat .ch { display: inline-block; overflow: clip; padding: 0 .02em .14em; margin-bottom: -.14em; vertical-align: bottom; }
 .hn-lat .ch > span { display: inline-block; will-change: transform; }
 .hero-foot { display: grid; gap: 1.4rem; margin-top: clamp(1.5rem, 4vh, 2.6rem); padding-top: 1.4rem; border-top: 1px solid var(--line); }
-.hero-tag { font-size: clamp(1.1rem, 1.6vw, 1.35rem); font-weight: 500; max-width: 30ch; line-height: 1.5; }
+.hero-tag { font-size: clamp(1.1rem, 1.6vw, 1.35rem); font-weight: 500; max-width: 34ch; line-height: 1.5; text-wrap: pretty; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: .75rem; }
 .hero-meta { color: var(--muted); font-size: .92rem; }
 @media (min-width: 900px) {
@@ -212,7 +216,8 @@ html.canvas-on .hero::before { opacity: 0; }
 }
 /* 跟著滑鼠移動的預覽卡（只在桌機出現） */
 .peek { position: fixed; left: 0; top: 0; z-index: 70; width: clamp(200px, 17vw, 280px); aspect-ratio: 4 / 5; pointer-events: none; display: none; }
-.peek-in { position: absolute; inset: 0; margin: -62.5% 0 0 -50%; border-radius: var(--radius); overflow: hidden; box-shadow: 0 24px 60px var(--shadow); opacity: 0; transform: scale(.6) rotate(-6deg); transition: opacity .3s linear, transform calc(var(--motion-speed) * .7) var(--motion-ease); }
+.peek-in { position: absolute; inset: 0; margin: -62.5% 0 0 2.5rem; border-radius: var(--radius); overflow: hidden; box-shadow: 0 24px 60px var(--shadow); }
+html.js .peek-in { opacity: 0; transform: scale(.6) rotate(-6deg); transition: opacity .3s linear, transform calc(var(--motion-speed) * .7) var(--motion-ease); }
 .peek.on .peek-in { opacity: 1; transform: none; }
 .peek-in .art { transition: opacity .25s linear; }
 @media (hover: hover) and (pointer: fine) { html.peek-on .peek { display: block; } }
@@ -242,7 +247,7 @@ html.mq-live .mq-track { flex-wrap: nowrap; will-change: transform; }
 .gal-bar { display: none; }
 /* 啟用水平捲動：區塊拉長，內層黏在畫面上，用垂直捲動推動橫向移動 */
 html.hscroll .gal { height: 340vh; padding: 0; view-timeline: --gal block; }
-html.hscroll .gal-sticky { position: sticky; top: 0; height: 100vh; height: 100svh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; container-type: inline-size; padding-top: var(--header-h); }
+html.hscroll .gal-sticky { position: sticky; inset-block-start: 0; height: 100vh; height: 100svh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; container-type: inline-size; padding-top: var(--header-h); }
 html.hscroll .gal .sec-head { margin-bottom: clamp(1.5rem, 4vh, 3rem); width: min(100% - 2 * var(--pad), var(--max)); margin-inline: auto; }
 html.hscroll .gal-track { display: flex; width: max-content; margin: 0; padding: 0 var(--pad); gap: clamp(1rem, 2vw, 2rem); will-change: transform; }
 html.hscroll .gal-card { width: clamp(220px, min(30vw, 42vh), 420px); flex: none; }
@@ -259,7 +264,7 @@ html.hscroll .gal-bar span { display: block; height: 100%; background: var(--bra
 .about-txt p + p { margin-top: 1rem; }
 .about-txt .lead { color: var(--text); font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.55; font-weight: 500; }
 .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2.4rem; padding-top: 1.6rem; border-top: 1px solid var(--line); }
-.stats b { display: block; font: 800 clamp(2rem, 4.5vw, 3.4rem)/1 var(--font-display); letter-spacing: -.03em; }
+.stats b { display: block; font-variant-numeric: tabular-nums; font: 800 clamp(2rem, 4.5vw, 3.4rem)/1 var(--font-display); letter-spacing: -.03em; }
 .stats span { color: var(--muted); font-size: .92rem; }
 @media (min-width: 900px) { .about-grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: center; } }
 
@@ -296,7 +301,7 @@ html.js .steps.in::before { transform: scaleX(1); }
 
 /* ---------- 聯絡 ---------- */
 .contact-grid { display: grid; gap: clamp(2.5rem, 6vw, 5rem); }
-.mail-big { font: 800 clamp(1.7rem, 5.4vw, 4.4rem)/1.1 var(--font-display); letter-spacing: -.03em; overflow-wrap: anywhere; }
+.mail-big { font: 800 clamp(1.1rem, 5.2vw, 2.2rem)/1.15 var(--font-display); letter-spacing: -.03em; overflow-wrap: anywhere; }
 .contact-info p { color: var(--muted); margin-top: 1.4rem; max-width: 44ch; }
 .c-links { display: grid; gap: .2rem; margin-top: 2rem; }
 .c-links a { display: flex; justify-content: space-between; gap: 1rem; padding: .9rem 0; border-bottom: 1px solid var(--line); text-decoration: none; transition: transform .4s var(--motion-ease); }
@@ -328,6 +333,7 @@ html.js .steps.in::before { transform: scaleX(1); }
 .sticky-cta { position: fixed; inset: auto 0 0; z-index: 55; padding: .65rem var(--pad) calc(.65rem + env(safe-area-inset-bottom)); }
 .sticky-cta .btn { width: 100%; box-shadow: 0 8px 24px var(--shadow); }
 @media (min-width: 761px) { .sticky-cta { display: none; } }
+@media (max-width: 760px) { .hero { padding-bottom: 5.5rem; } }
 
 /* ---------- 捲動漸入 ---------- */
 html.js .rv { opacity: 0; transform: translate3d(0, var(--motion-distance), 0); transition: opacity var(--motion-speed) var(--motion-ease), transform calc(var(--motion-speed) * 1.2) var(--motion-ease); }
@@ -602,7 +608,7 @@ html.js .sec-title.rv.in { clip-path: inset(-.1em -.1em -.2em -.1em); transform:
         <div class="field"><label for="f-type">專案類型</label>
           <select id="f-type" name="專案類型"><option>品牌識別</option><option>動態設計與片頭</option><option>展覽與互動影像</option><option>藝術指導</option><option>其他</option></select></div>
         <div class="field"><label for="f-budget">預算</label>
-          <select id="f-budget" name="預算"><option>NT$ 10 萬以下</option><option>NT$ 10–30 萬</option><option>NT$ 30–60 萬</option><option>NT$ 60 萬以上</option><option>還不確定</option></select></div>
+          <select id="f-budget" name="預算"><option>NT$ 10 萬以下</option><option>NT$ 10 至 30 萬</option><option>NT$ 30 至 60 萬</option><option>NT$ 60 萬以上</option><option>還不確定</option></select></div>
         <div class="field full"><label for="f-msg">案子說明</label><textarea id="f-msg" name="說明" placeholder="品牌、用途、上線日期，有參考影片也可以貼上" required></textarea></div>
         <div class="full"><button class="btn btn-brand magnetic" type="submit"><span class="btn-label">送出</span></button></div>
         <p class="form-note full">資料只用於回覆這次的詢問，不會轉給第三方。</p>
@@ -663,7 +669,16 @@ html.js .sec-title.rv.in { clip-path: inset(-.1em -.1em -.2em -.1em); transform:
   // 捲動漸入、遮罩展開
   var revealEls = $$('.rv, .wipe');
   if (reduce) revealEls.forEach(function (el) { el.classList.add('in'); });
-  else onView(revealEls, function (el, vis, io) { if (vis) { el.classList.add('in'); if (io) io.unobserve(el); } }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+  else {
+    // 觀察外層容器（被 clip-path 遮住的元素本身面積為 0，觀察不到）
+    var groups = new Map();
+    revealEls.forEach(function (el) { var p = el.parentNode; if (!groups.has(p)) groups.set(p, []); groups.get(p).push(el); });
+    onView(Array.from(groups.keys()), function (p, vis, io) {
+      if (!vis) return;
+      groups.get(p).forEach(function (el, i) { el.style.transitionDelay = i * 90 + 'ms'; el.classList.add('in'); });
+      if (io) io.unobserve(p);
+    }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
+  }
 
   if (reduce) return; // 減少動態：以下動畫全部略過，內容已完整呈現
 
@@ -717,7 +732,7 @@ html.js .sec-title.rv.in { clip-path: inset(-.1em -.1em -.2em -.1em); transform:
   // 3. 區塊進入畫面中線時切換背景色
   if (hasIO) {
     root.classList.add('tones'); root.dataset.tone = 'light';
-    onView($$('[data-tone]'), function (el, vis) { if (vis) root.dataset.tone = el.dataset.tone; }, { rootMargin: '-49% 0px -50% 0px' });
+    onView($$('[data-tone]'), function (el, vis) { if (vis) root.dataset.tone = el.dataset.tone; }, { rootMargin: '-59% 0px -40% 0px' });
   }
 
   // 4. 作品列：滑過時預覽卡以緩動跟隨游標

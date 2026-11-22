@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Grove Residences | New 2 to 4 bedroom homes in Alder Hollow</title>
+<meta name="description" content="168 two, three and four bedroom residences in Alder Hollow, with 62% of the site left to trees, a rooftop sky garden and a 25 m heated pool. Book a viewing at our sales center, open daily 10:00–19:00.">
+<meta property="og:title" content="The Grove Residences | Alder Hollow, Oregon">
+<meta property="og:description" content="Live inside a forest that was left standing. Two to four bedrooms, viewings by appointment.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2e4a3b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ============================================================
+   THEME SETTINGS: change these to restyle the whole site
+   ============================================================ */
+:root {
+  --brand: #2e4a3b;          /* Brand colour (forest green): buttons, key lines */
+  --brand-ink: #f1eee6;      /* Text on the brand colour (AA contrast) */
+  --brand-deep: #213729;     /* Deeper green: button hover */
+  --accent: #7f5629;         /* Bronze: numbers and small highlights (AA on bg) */
+  --accent-soft: #c9a06a;    /* Soft bronze: highlights on dark sections */
+  --bg: #ebe6dc;             /* Page background: limestone */
+  --surface: #f4f1ea;        /* Cards and forms (warm, never pure white) */
+  --stone: #ddd5c6;          /* Deeper stone: alternate section background */
+  --text: #22241f;           /* Main text: charcoal */
+  --muted: #56574e;          /* Secondary text */
+  --line: #c6bcaa;           /* Hairlines and borders */
+  --ink: #1b201c;            /* Dark section background */
+  --ink-2: #262d28;          /* Cards inside dark sections */
+  --on-ink: #ebe6dc;         /* Main text on dark sections */
+  --on-ink-muted: #aeb0a4;   /* Secondary text on dark sections */
+  --sky-day: #dfe4dc;        /* Hero art: daytime sky */
+  --sky-haze: #efe7d8;       /* Hero art: horizon haze */
+  --dusk-top: #232a3a;       /* Hero art: dusk sky, top */
+  --dusk-mid: #5b4b55;       /* Hero art: dusk sky, middle */
+  --dusk-low: #c48a5a;       /* Hero art: dusk horizon */
+  --sun: #f3d9a8;            /* Sun and stars */
+  --glow: #f2c27b;           /* Warm light in lit windows */
+  --map-land: #efeae0;       /* Map: land */
+  --map-park: #c3cfb6;       /* Map: parks */
+  --map-water: #b4c6c9;      /* Map: river */
+  --map-road: #faf8f2;       /* Map: main roads */
+  --shadow: #1b201c29;       /* Shadow colour (with alpha) */
+  --radius: 2px;             /* Corner radius (crisp and architectural; try 8px for softer) */
+  --font-display: "Italiana", Georgia, serif;   /* Display font (fine, wide letterforms) */
+  --font-body: "Jost", "Helvetica Neue", Arial, sans-serif; /* Body font */
+  --maxw: 1240px;            /* Max content width */
+  --pad: clamp(1rem, 5vw, 3rem); /* Side padding */
+  --head-h: 4.5rem;          /* Header height */
+
+  /* ---------- MOTION SETTINGS ---------- */
+  --motion-speed: 1;         /* Speed multiplier: 1 is standard, 1.5 slower and calmer, 0.7 snappier */
+  --motion-ease: cubic-bezier(.22, .8, .2, 1);   /* Main easing curve (quick out, gentle settle) */
+  --motion-bounce: cubic-bezier(.34, 1.56, .64, 1); /* Bounce curve for map pins */
+  --motion-distance: 28px;   /* Travel distance for reveal animations */
+  --dur: calc(900ms * var(--motion-speed)); /* Base duration (scaled by the speed multiplier) */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+svg { display: block; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.2; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+h2 { font-size: clamp(2rem, 4.4vw, 3.4rem); letter-spacing: 0; }
+h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); }
+p { text-wrap: pretty; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+.wrap { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 100; }
+.skip:focus { left: 1rem; }
+section { padding-block: clamp(4.5rem, 10vw, 8rem); }
+.sec-head { display: grid; gap: 1rem; max-width: 46rem; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.sec-head p { color: var(--muted); font-size: 1.05rem; }
+
+/* ---------- Buttons ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .75rem 1.5rem; border-radius: var(--radius); font: 500 .98rem/1.2 var(--font-body); border: 1px solid transparent; cursor: pointer; transition: background-color .25s, color .25s, border-color .25s, transform .25s var(--motion-ease); }
+.btn:active { transform: translateY(1px) scale(.98); }
+.btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.btn-brand { background: var(--brand); color: var(--brand-ink); }
+.btn-brand:hover { background: var(--brand-deep); transform: translateY(-2px); }
+.btn-line { border-color: var(--text); color: var(--text); }
+.btn-line:hover { background: var(--text); color: var(--bg); }
+.btn-ghost { border-color: color-mix(in srgb, var(--on-ink) 50%, transparent); color: var(--on-ink); }
+.btn-ghost:hover { border-color: var(--on-ink); background: color-mix(in srgb, var(--on-ink) 10%, transparent); }
+.btn-ghost:focus-visible { outline-color: var(--accent-soft); }
+.link { color: var(--brand); border-bottom: 1px solid currentColor; padding-bottom: .1rem; transition: color .2s, border-color .2s; }
+.link:hover { color: var(--accent); }
+.link:active, a:active { opacity: .8; }
+
+/* ---------- Header and navigation ---------- */
+.site-header { position: sticky; top: 0; z-index: 50; transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 92%, transparent); box-shadow: 0 1px 0 var(--line); backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: var(--head-h); flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: .65rem; }
+.logo svg { width: 30px; height: 30px; stroke: var(--brand); stroke-width: 1.6; fill: none; }
+.logo b { display: block; font: 400 1.35rem/1 var(--font-display); letter-spacing: .02em; }
+.logo small { display: block; font-size: .78rem; color: var(--muted); line-height: 1.3; }
+.menu { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.4rem; font-size: .95rem; }
+.menu a:not(.btn) { padding-block: .4rem; background: linear-gradient(currentColor, currentColor) left bottom / 100% 1px no-repeat; background-size: 0 1px; transition: background-size .35s var(--motion-ease), color .2s; }
+.menu a:not(.btn):hover { background-size: 100% 1px; color: var(--brand); }
+.menu .btn { min-height: 42px; padding: .55rem 1.1rem; }
+.burger { display: none; }
+@media (max-width: 760px) {
+  html.js .burger { display: grid; place-items: center; width: 48px; height: 48px; background: none; border: 1px solid var(--line); border-radius: var(--radius); cursor: pointer; transition: border-color .2s, background-color .2s; }
+  html.js .burger:hover { border-color: var(--text); }
+  html.js .burger:active { background: var(--stone); }
+  .burger span, .burger span::before, .burger span::after { display: block; width: 20px; height: 1.5px; background: var(--text); transition: transform .3s var(--motion-ease), opacity .2s; }
+  .burger span { position: relative; }
+  .burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+  .burger span::before { transform: translateY(-6px); }
+  .burger span::after { transform: translateY(6px); }
+  .burger[aria-expanded="true"] span { background: transparent; }
+  .burger[aria-expanded="true"] span::before { transform: rotate(45deg); background: var(--text); }
+  .burger[aria-expanded="true"] span::after { transform: rotate(-45deg); background: var(--text); }
+  html:not(.js) .menu { width: 100%; padding-bottom: .75rem; }
+  html.js .menu { position: absolute; inset: 100% 0 auto; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); box-shadow: 0 12px 24px var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .3s, transform .3s var(--motion-ease), visibility 0s .3s; }
+  html.js .menu a:not(.btn) { padding-block: .85rem; border-bottom: 1px solid var(--line); background: none; }
+  html.js .menu .btn { margin-top: 1rem; }
+  html.menu-open .menu { opacity: 1; visibility: visible; transform: none; transition: opacity .3s, transform .3s var(--motion-ease); }
+  html.menu-open .site-header { background: var(--bg); }
+}
+
+/* ---------- Hero ---------- */
+.hero { padding-block: 1rem 3rem; }
+.hero-grid { display: grid; gap: 2rem; align-items: center; }
+.hero-copy { display: grid; gap: 1.25rem; justify-items: start; }
+.hero h1 { font-size: clamp(2.5rem, 6.2vw, 5rem); line-height: 1.12; letter-spacing: -.005em; }
+.lines > span { display: block; overflow: hidden; padding-bottom: .08em; }
+.lines > span > span { display: block; }
+.hero-lead { font-size: clamp(1.02rem, 1.4vw, 1.15rem); color: var(--muted); max-width: 30rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .75rem; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: .5rem 2rem; padding-top: 1rem; border-top: 1px solid var(--line); width: 100%; max-width: 30rem; font-size: .9rem; }
+.hero-meta dt { color: var(--muted); font-size: .82rem; }
+.hero-meta dd { font-weight: 500; }
+.hero-art { position: relative; aspect-ratio: 5 / 5.4; overflow: hidden; border-radius: var(--radius); isolation: isolate; }
+.sky, .sky-dusk { position: absolute; inset: 0; z-index: -2; }
+.sky { background: linear-gradient(180deg, var(--sky-day), var(--sky-haze) 75%); }
+.sky-dusk { opacity: 0; background:
+  radial-gradient(1.4px 1.4px at 18% 16%, var(--sun), transparent),
+  radial-gradient(1.2px 1.2px at 72% 10%, var(--sun), transparent),
+  radial-gradient(1px 1px at 86% 26%, var(--sun), transparent),
+  radial-gradient(1.2px 1.2px at 34% 8%, var(--sun), transparent),
+  radial-gradient(1px 1px at 56% 22%, var(--sun), transparent),
+  linear-gradient(180deg, var(--dusk-top), var(--dusk-mid) 58%, var(--dusk-low)); }
+.sun { position: absolute; z-index: -1; top: 12%; right: 14%; width: 18%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, var(--sun) 55%, color-mix(in srgb, var(--sun) 0%, transparent) 70%); }
+.facade { position: absolute; inset: auto 0 0; width: 100%; height: 100%; }
+.facade .bfill rect { fill: var(--surface); }
+.facade .tint rect { fill: var(--ink); opacity: 0; }
+.facade .halo rect { fill: var(--glow); opacity: 0; }
+.facade .win-off rect { fill: none; stroke: var(--line); stroke-width: 1; }
+.facade .wins rect { fill: var(--glow); }
+.facade .ln { stroke: var(--text); stroke-width: 1.3; stroke-linecap: round; stroke-dasharray: 1; }
+.hero-art figcaption { position: absolute; left: 1rem; bottom: .75rem; font-size: .78rem; color: var(--muted); }
+@media (min-width: 900px) {
+  .hero { padding-block: 1.5rem 4rem; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); min-height: calc(100svh - var(--head-h) - 3rem); }
+  .hero-art { aspect-ratio: auto; height: min(calc(100svh - var(--head-h) - 4rem), 720px); }
+}
+
+/* ---------- Key facts and price range ---------- */
+.facts-sec { background: var(--surface); }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 2rem 1.5rem; }
+.fact { border-top: 1px solid var(--line); padding-top: 1.1rem; }
+.num { font: 400 clamp(2.6rem, 5vw, 3.6rem)/1 var(--font-display); color: var(--accent); font-variant-numeric: tabular-nums; }
+.num small { font: 500 1rem/1 var(--font-body); color: var(--text); margin-left: .25rem; }
+.fact p:last-child { color: var(--muted); font-size: .92rem; margin-top: .5rem; }
+.range { margin-top: clamp(3rem, 6vw, 4.5rem); padding: clamp(1.25rem, 3vw, 2.25rem); background: var(--bg); border-radius: var(--radius); }
+.range-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 2rem; align-items: baseline; margin-bottom: 3.25rem; }
+.range-head h3 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
+.range-head p { color: var(--muted); font-size: .92rem; }
+.range-track { position: relative; height: 10px; background: var(--stone); border-radius: 5px; margin-block: 2.5rem 3.5rem; }
+.range-fill { position: absolute; top: 0; bottom: 0; left: var(--a); width: calc(var(--b) - var(--a)); background: linear-gradient(90deg, var(--brand), var(--accent)); border-radius: 5px; transform-origin: left; }
+.range-mark { position: absolute; left: var(--p); bottom: 18px; transform: translateX(-50%); font-size: .82rem; line-height: 1.3; text-align: center; white-space: nowrap; }
+.range-mark::after { content: ""; position: absolute; left: 50%; top: calc(100% + 2px); width: 1px; height: 14px; background: var(--text); }
+.range-mark.low { bottom: auto; top: 18px; }
+.range-mark.low::after { top: auto; bottom: calc(100% + 2px); }
+.range-mark b { display: block; font-weight: 500; }
+.range-scale { display: flex; justify-content: space-between; font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* ---------- Floor plan scrollytelling ---------- */
+.scrolly { display: grid; gap: 2rem; }
+.plan-fig { position: sticky; top: var(--head-h); z-index: 2; background: var(--bg); padding-block: .5rem 1rem; align-self: start; }
+.plan-frame { background: var(--surface); border-radius: var(--radius); padding: clamp(.5rem, 2vw, 1.5rem); overflow: hidden; }
+.splan { width: 100%; height: auto; max-height: 34svh; margin-inline: auto; }
+.plan-zoom { transform-box: view-box; transform-origin: 0 0; transition: transform calc(1.1s * var(--motion-speed)) var(--motion-ease); }
+.wall { fill: none; stroke: var(--text); stroke-width: 5; }
+.rm-box { fill: none; stroke: var(--text); stroke-width: 1.5; }
+.rm-hl { fill: var(--brand); opacity: 0; transition: opacity .5s var(--motion-ease); }
+.rm.on .rm-hl { opacity: .16; }
+.fur { fill: none; stroke: var(--muted); stroke-width: 1; }
+.rm-name { font: 500 15px var(--font-body); fill: var(--text); }
+.rm-size { font: 400 12px var(--font-body); fill: var(--muted); }
+.rm.on .rm-name { fill: var(--brand); }
+.compass { fill: none; stroke: var(--muted); stroke-width: 1.2; }
+.plan-cap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: .75rem; font-size: .9rem; color: var(--muted); }
+.plan-prog { flex: 1; max-width: 12rem; height: 2px; background: var(--line); overflow: hidden; }
+.plan-prog span { display: block; height: 100%; background: var(--brand); transform: scaleX(.17); transform-origin: left; transition: transform .6s var(--motion-ease); }
+.steps { display: grid; }
+.step { min-height: 62svh; display: grid; align-content: center; gap: .6rem; padding-block: 2rem; border-top: 1px solid var(--line); transition: opacity .5s; }
+.step-no { font: 400 1.1rem/1 var(--font-display); color: var(--accent); }
+.step-size { font-weight: 500; }
+.step p:last-child { color: var(--muted); max-width: 30rem; }
+.js .step { opacity: .35; }
+.js .step.on { opacity: 1; }
+@media (max-width: 899px) { .rm-name { font-size: 20px; } .rm-name { transform: translateY(4px); } .rm-size { display: none; } .js .step { min-height: 52svh; } }
+@media (min-width: 900px) {
+  .scrolly { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: clamp(2rem, 6vw, 6rem); }
+  .plan-fig { top: calc(var(--head-h) + 2rem); padding: 0; }
+  .splan { max-height: 62svh; }
+  .step { min-height: 78svh; }
+}
+
+/* ---------- Residence types ---------- */
+.units-sec { background: var(--stone); }
+.tabs { display: inline-flex; gap: .25rem; padding: .3rem; background: var(--bg); border-radius: calc(var(--radius) + 4px); margin-bottom: 2rem; }
+.tabs button { min-height: 44px; min-width: 5.5rem; padding: .5rem 1.25rem; border: 0; background: none; border-radius: var(--radius); font: 500 1rem var(--font-body); color: var(--muted); cursor: pointer; transition: background-color .3s, color .3s; }
+.tabs button:hover { color: var(--text); }
+.tabs button:active { transform: scale(.97); }
+.tabs button[aria-selected="true"] { background: var(--brand); color: var(--brand-ink); }
+html:not(.js) .tabs { display: none; }
+.units { display: grid; gap: 4rem; }
+.unit { display: grid; gap: 2rem; align-items: center; }
+.unit-plan { background: var(--surface); border-radius: var(--radius); padding: clamp(.75rem, 2vw, 1.75rem); }
+.uplan { width: 100%; height: auto; }
+.uplan .rm-hl { opacity: 0; }
+.unit-info { display: grid; gap: 1.1rem; justify-items: start; }
+.unit-info > p { color: var(--muted); }
+.tbl-wrap { width: 100%; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: .7rem 0; border-bottom: 1px solid var(--line); }
+th { font-weight: 400; color: var(--muted); font-size: .92rem; }
+td { text-align: right; font: 400 1.35rem/1.2 var(--font-display); }
+td small { font: 400 .85rem var(--font-body); color: var(--muted); }
+.tr-price td { color: var(--accent); }
+.js .units { grid-template-areas: "u"; }
+.js .unit { grid-area: u; transition: opacity calc(.6s * var(--motion-speed)) var(--motion-ease), transform calc(.7s * var(--motion-speed)) var(--motion-ease), visibility 0s; }
+.js .unit.off { opacity: 0; transform: scale(.96); visibility: hidden; pointer-events: none; transition: opacity .35s, transform .5s, visibility 0s .5s; }
+@media (min-width: 900px) { .unit { grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr); gap: clamp(2rem, 5vw, 5rem); } }
+
+/* ---------- Amenities (horizontal scroll) ---------- */
+.amen { background: var(--ink); color: var(--on-ink); padding-block: 0; }
+.amen-sticky { padding-block: clamp(4.5rem, 10vw, 8rem); }
+.amen-head p { color: var(--on-ink-muted); }
+.amen-track { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 1.5rem; }
+.amen-card { display: grid; gap: .6rem; align-content: start; }
+.amen-card .img { aspect-ratio: 4 / 3; border-radius: var(--radius); margin-bottom: .6rem; }
+.amen-card p { color: var(--on-ink-muted); font-size: .95rem; }
+.amen-card small { color: var(--accent-soft); font-size: .85rem; }
+.amen-bar { display: none; }
+
+/* ---------- Neighbourhood map ---------- */
+.loc-grid { display: grid; gap: 2.5rem; }
+.map { background: var(--surface); border-radius: var(--radius); overflow: hidden; }
+.map-svg { width: 100%; height: auto; }
+.m-land { fill: var(--map-land); }
+.m-park { fill: var(--map-park); }
+.m-river { fill: none; stroke: var(--map-water); stroke-width: 22; stroke-linecap: round; }
+.m-roads { fill: none; stroke: var(--map-road); stroke-width: 9; }
+.m-minor { fill: none; stroke: var(--map-road); stroke-width: 3; }
+.m-rail { fill: none; stroke: var(--muted); stroke-width: 2; stroke-dasharray: 10 6; }
+.ring { fill: none; stroke: var(--brand); stroke-width: 1.2; stroke-dasharray: 3 5; transform-box: fill-box; transform-origin: center; }
+.ring-lbl { font: 400 12px var(--font-body); fill: var(--brand); }
+.site rect { fill: var(--brand); }
+.site text { font: 400 20px var(--font-display); fill: var(--text); paint-order: stroke; stroke: var(--map-land); stroke-width: 5px; }
+.pin { transform-box: fill-box; transform-origin: 50% 100%; }
+.pin-body { fill: var(--accent); }
+.pin-dot { fill: var(--surface); }
+.pin-lbl text { font: 500 14px var(--font-body); fill: var(--text); paint-order: stroke; stroke: var(--map-land); stroke-width: 5px; stroke-linejoin: round; }
+.pl-dist { font-weight: 400; fill: var(--muted); }
+@media (max-width: 640px) { .pin-lbl text { font-size: 19px; } .ring-lbl { font-size: 17px; } }
+.places { display: grid; gap: 0; align-content: start; }
+.places li { display: flex; justify-content: space-between; gap: 1rem; padding-block: .95rem; border-bottom: 1px solid var(--line); }
+.places li:first-child { border-top: 1px solid var(--line); }
+.places span { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.loc-links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+@media (min-width: 900px) { .loc-grid { grid-template-columns: minmax(0, 1.5fr) minmax(0, .8fr); align-items: start; } }
+
+/* ---------- Developer and architect ---------- */
+.story-sec { background: var(--surface); --mask-bg: var(--surface); }
+.story { display: grid; gap: clamp(3rem, 7vw, 6rem); }
+.story-row { display: grid; gap: 2rem; align-items: center; }
+.story-row .img { aspect-ratio: 4 / 3; }
+.story-text { display: grid; gap: 1rem; }
+.story-text p { color: var(--muted); }
+.story-text .who { color: var(--text); font-weight: 500; }
+.quote { font: 400 clamp(1.5rem, 3vw, 2.2rem)/1.45 var(--font-display); max-width: 44rem; text-wrap: balance; border-left: 2px solid var(--accent); padding-left: 1.25rem; }
+.quote footer { font: 400 .92rem var(--font-body); color: var(--muted); margin-top: .75rem; }
+@media (min-width: 900px) {
+  .story-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(3rem, 6vw, 6rem); }
+  .story-row.flip .mask { order: 2; }
+}
+
+/* ---------- Art placeholders ---------- */
+/* When you swap in a photo, set the background as shown and delete the ::before / ::after pattern. */
+.img { position: relative; overflow: hidden; background: var(--stone); }
+.img::before, .img::after { content: ""; position: absolute; }
+/* Replace with a photo: .img-night { background: url(images/exterior-night.jpg) center/cover; } */
+.img-night { background: linear-gradient(180deg, var(--dusk-top), var(--dusk-mid) 62%, var(--dusk-low)); }
+.img-night::before { left: 34%; right: 30%; top: 16%; bottom: 0; background: repeating-linear-gradient(0deg, var(--ink) 0 7px, transparent 7px 22px), repeating-linear-gradient(90deg, color-mix(in srgb, var(--glow) 85%, transparent) 0 18px, var(--ink) 18px 26px); }
+.img-night::after { left: 0; right: 0; bottom: 0; height: 14%; background: radial-gradient(40px 30px at 12% 0, var(--ink) 98%, transparent), radial-gradient(56px 40px at 88% 10%, var(--ink) 98%, transparent), var(--ink); }
+/* Replace with a photo: .img-lobby { background: url(images/lobby.jpg) center/cover; } */
+.img-lobby { background: radial-gradient(ellipse 60% 40% at 50% 100%, color-mix(in srgb, var(--glow) 55%, transparent), transparent), repeating-linear-gradient(90deg, var(--stone) 0 46px, color-mix(in srgb, var(--stone) 85%, var(--text)) 46px 47px), var(--sky-haze); }
+.img-lobby::before { left: 30%; right: 30%; top: 18%; bottom: 0; border-radius: 999px 999px 0 0; background: linear-gradient(180deg, var(--surface), color-mix(in srgb, var(--glow) 40%, var(--surface))); box-shadow: inset 0 0 0 10px color-mix(in srgb, var(--accent) 35%, var(--stone)); }
+/* Replace with a photo: .img-living { background: url(images/living.jpg) center/cover; } */
+.img-living { background: linear-gradient(180deg, var(--sky-haze) 0 66%, color-mix(in srgb, var(--accent) 30%, var(--stone)) 66%); }
+.img-living::before { left: 10%; right: 40%; top: 10%; bottom: 34%; background: linear-gradient(90deg, var(--sky-day) 0 48%, transparent 48% 52%, var(--sky-day) 52%); box-shadow: 0 0 0 8px var(--surface); }
+.img-living::after { left: 46%; right: 8%; bottom: 22%; height: 18%; border-radius: 6px 6px 0 0; background: var(--brand); box-shadow: 0 30px 0 -6px color-mix(in srgb, var(--brand) 70%, var(--ink)); }
+/* Replace with a photo: .img-bed { background: url(images/bedroom.jpg) center/cover; } */
+.img-bed { background: linear-gradient(180deg, var(--surface) 0 58%, var(--stone) 58%); }
+.img-bed::before { left: 18%; right: 18%; top: 38%; bottom: 18%; border-radius: 4px; background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 55%, var(--stone)) 0 22%, var(--sky-haze) 22% 38%, var(--surface) 38%); }
+.img-bed::after { right: 8%; top: 12%; width: 22%; height: 34%; background: radial-gradient(circle at 50% 100%, color-mix(in srgb, var(--glow) 70%, transparent), transparent 70%); }
+/* Replace with a photo: .img-garden { background: url(images/garden.jpg) center/cover; } */
+.img-garden { background: radial-gradient(circle at 18% 78%, var(--brand) 0 18%, transparent 18.5%), radial-gradient(circle at 46% 70%, color-mix(in srgb, var(--brand) 70%, var(--map-park)) 0 22%, transparent 22.5%), radial-gradient(circle at 80% 80%, var(--brand-deep) 0 20%, transparent 20.5%), linear-gradient(180deg, var(--sky-day), var(--map-park)); }
+.img-garden::before { left: 0; right: 0; bottom: 0; height: 18%; background: var(--stone); }
+/* Replace with a photo: .img-pool { background: url(images/pool.jpg) center/cover; } */
+.img-pool { background: repeating-linear-gradient(90deg, transparent 0 calc(20% - 2px), var(--surface) calc(20% - 2px) 20%), repeating-linear-gradient(180deg, var(--map-water) 0 10px, color-mix(in srgb, var(--map-water) 75%, var(--brand)) 10px 13px); }
+.img-pool::before { left: 0; right: 0; top: 0; height: 22%; background: var(--stone); }
+/* Replace with a photo: .img-gym { background: url(images/gym.jpg) center/cover; } */
+.img-gym { background: linear-gradient(180deg, var(--ink-2) 0 70%, var(--stone) 70%); }
+.img-gym::before { inset: 14% 10% 36%; background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--map-park) 60%, var(--ink-2)) 0 22%, var(--ink) 22% 24%); }
+.img-gym::after { left: 22%; right: 22%; bottom: 20%; height: 6px; background: var(--accent-soft); box-shadow: -20px 0 0 6px var(--on-ink-muted), 20px 0 0 6px var(--on-ink-muted); }
+/* Replace with a photo: .img-reading { background: url(images/library.jpg) center/cover; } */
+.img-reading { background: repeating-linear-gradient(90deg, var(--accent) 0 10px, color-mix(in srgb, var(--accent) 60%, var(--stone)) 10px 16px, var(--brand) 16px 24px, var(--stone) 24px 30px); }
+.img-reading::before { left: 0; right: 0; top: 0; bottom: 0; background: repeating-linear-gradient(180deg, transparent 0 56px, var(--ink-2) 56px 62px); }
+.img-reading::after { left: 8%; right: 8%; bottom: 0; height: 26%; background: color-mix(in srgb, var(--accent) 40%, var(--ink-2)); }
+/* Replace with a photo: .img-dev { background: url(images/developer.jpg) center/cover; } */
+.img-dev { background: repeating-linear-gradient(180deg, var(--stone) 0 30px, color-mix(in srgb, var(--stone) 80%, var(--text)) 30px 31px), var(--stone); }
+.img-dev::before { left: 12%; bottom: 0; width: 34%; height: 70%; background: linear-gradient(180deg, var(--brand), var(--brand-deep)); }
+.img-dev::after { right: 14%; bottom: 0; width: 26%; height: 52%; background: color-mix(in srgb, var(--accent) 50%, var(--stone)); }
+/* Replace with a photo: .img-arch { background: url(images/architect.jpg) center/cover; } */
+.img-arch { background: repeating-linear-gradient(0deg, transparent 0 23px, color-mix(in srgb, var(--brand) 18%, transparent) 23px 24px), repeating-linear-gradient(90deg, transparent 0 23px, color-mix(in srgb, var(--brand) 18%, transparent) 23px 24px), var(--surface); }
+.img-arch::before { left: 24%; right: 24%; top: 16%; bottom: 16%; border: 1.5px solid var(--brand); background: repeating-linear-gradient(0deg, transparent 0 18px, color-mix(in srgb, var(--brand) 50%, transparent) 18px 19px); }
+.img-arch::after { left: 16%; right: 16%; bottom: 16%; height: 1.5px; background: var(--text); }
+
+/* ---------- Mask reveal (images) ---------- */
+.mask { position: relative; overflow: hidden; border-radius: var(--radius); }
+.mask::after { content: ""; position: absolute; inset: 0; background: var(--mask-bg, var(--bg)); transform: scaleX(0); transform-origin: right; pointer-events: none; }
+
+/* ---------- Gallery ---------- */
+.gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.75rem, 2vw, 1.5rem); }
+.gallery figure { display: grid; gap: .5rem; }
+.gallery figure.g-wide { grid-column: 1 / -1; }
+.gallery .mask { aspect-ratio: 4 / 3; }
+.gallery .g-wide .mask { aspect-ratio: 16 / 7; }
+.gallery .img { position: absolute; inset: 0; }
+.gallery figcaption { font-size: .88rem; color: var(--muted); }
+@media (min-width: 900px) { .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); } .gallery figure.g-wide { grid-column: span 2; } .gallery .g-wide .mask { aspect-ratio: auto; height: 100%; min-height: 0; } .gallery figure.g-wide { grid-template-rows: minmax(0, 1fr) auto; } }
+
+/* ---------- Book a viewing ---------- */
+.visit-sec { background: var(--stone); }
+.visit { display: grid; gap: 2.5rem; }
+.visit-info { display: grid; gap: 1.25rem; align-content: start; }
+.visit-info > p { color: var(--muted); }
+.visit-info dl { display: grid; gap: .9rem; }
+.visit-info dt { font-size: .85rem; color: var(--muted); }
+.visit-info dd { font-weight: 500; }
+.visit-links { display: flex; flex-wrap: wrap; gap: .75rem; }
+.form { background: var(--surface); padding: clamp(1.25rem, 3vw, 2.25rem); border-radius: var(--radius); display: grid; gap: 1.1rem; grid-template-columns: minmax(0, 1fr); }
+.field { display: grid; gap: .35rem; }
+.field label { font-size: .9rem; font-weight: 500; }
+.field input, .field select, .field textarea { width: 100%; min-height: 48px; padding: .7rem .85rem; font: 400 1rem var(--font-body); color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); transition: border-color .2s; }
+.field textarea { min-height: 6.5rem; resize: vertical; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: var(--muted); }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent); }
+.form-note { font-size: .85rem; color: var(--muted); }
+.form .btn { width: 100%; }
+@media (min-width: 640px) { .form { grid-template-columns: repeat(2, minmax(0, 1fr)); } .field.full, .form .btn, .form-note { grid-column: 1 / -1; } }
+@media (min-width: 900px) { .visit { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(3rem, 6vw, 6rem); } }
+
+/* ---------- FAQ ---------- */
+.faq { max-width: 52rem; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-child { border-top: 1px solid var(--line); }
+.faq summary { display: flex; justify-content: space-between; gap: 1rem; align-items: center; padding-block: 1.25rem; cursor: pointer; list-style: none; font-size: 1.08rem; font-weight: 500; transition: color .2s; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; flex: none; width: 12px; height: 12px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-3px); transition: transform .35s var(--motion-ease); }
+.faq details[open] summary::after { transform: rotate(225deg); }
+.faq summary:hover { color: var(--brand); }
+.faq summary:active { opacity: .8; }
+.faq details p { padding-bottom: 1.4rem; color: var(--muted); max-width: 44rem; }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--ink); color: var(--on-ink); padding-block: 4rem 2rem; font-size: .92rem; }
+.foot { display: grid; gap: 2.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.site-footer h2 { font-size: 1.6rem; margin-bottom: .75rem; }
+.site-footer h3 { font: 500 1rem var(--font-body); margin-bottom: .75rem; }
+.site-footer p, .site-footer dd, .site-footer li { color: var(--on-ink-muted); }
+.site-footer dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .35rem 1rem; }
+.site-footer dt { color: var(--on-ink); }
+.site-footer a:not(.btn) { transition: color .2s; }
+.site-footer a:not(.btn):hover { color: var(--accent-soft); }
+.site-footer a:focus-visible { outline-color: var(--accent-soft); }
+.social { display: flex; flex-wrap: wrap; gap: 1rem; }
+.legal { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid color-mix(in srgb, var(--on-ink) 18%, transparent); display: grid; gap: .5rem; font-size: .82rem; }
+
+/* ---------- Mobile sticky call to action ---------- */
+.mcta { position: fixed; inset: auto 0 0; z-index: 40; display: none; gap: .5rem; padding: .6rem var(--pad) calc(.6rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 94%, transparent); box-shadow: 0 -1px 0 var(--line); backdrop-filter: blur(8px); }
+.mcta .btn { flex: 1; }
+@media (max-width: 760px) { .mcta { display: flex; } body { padding-bottom: 4.6rem; } }
+
+/* ============================================================
+   MOTION: only when the visitor has not asked for reduced motion
+   ============================================================ */
+@media (prefers-reduced-motion: no-preference) {
+  /* Hero: facade draws itself, windows light up one by one, headline mask-reveals */
+  .facade .ln { animation: draw calc(1.3s * var(--motion-speed)) var(--motion-ease) calc(var(--d) * 55ms * var(--motion-speed)) both; }
+  .facade .wins rect { animation: light calc(.7s * var(--motion-speed)) ease-out calc((1.9s + var(--w) * 45ms) * var(--motion-speed)) both; }
+  .facade .win-off rect { animation: fade calc(.8s * var(--motion-speed)) ease-out calc(1.6s * var(--motion-speed)) both; }
+  .facade .bfill { animation: fade calc(1.2s * var(--motion-speed)) ease-out calc(1.2s * var(--motion-speed)) both; }
+  .lines > span > span { animation: rise calc(1.1s * var(--motion-speed)) var(--motion-ease) both; }
+  .lines > span:nth-child(2) > span { animation-delay: calc(.14s * var(--motion-speed)); }
+  .hero-lead, .hero-cta, .hero-meta { animation: up var(--dur) var(--motion-ease) calc(.35s * var(--motion-speed)) both; }
+  .hero-cta { animation-delay: calc(.5s * var(--motion-speed)); }
+  .hero-meta { animation-delay: calc(.65s * var(--motion-speed)); }
+
+  /* Scroll reveals (hidden first only when JS is on) */
+  .js .reveal { opacity: 0; transform: translateY(var(--motion-distance)); transition: opacity var(--dur) var(--motion-ease), transform var(--dur) var(--motion-ease); transition-delay: calc(var(--i, 0) * 90ms); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  .js .mask::after { transform: scaleX(1); transition: transform calc(1.2s * var(--motion-speed)) var(--motion-ease) calc(var(--i, 0) * 110ms); }
+  .js .mask .img { transform: scale(1.14); transition: transform calc(1.6s * var(--motion-speed)) var(--motion-ease) calc(var(--i, 0) * 110ms); }
+  .js .mask.in::after { transform: scaleX(0); }
+  .js .mask.in .img { transform: none; }
+
+  /* Price range bar */
+  .js .range .range-fill { transform: scaleX(0); transition: transform calc(1.4s * var(--motion-speed)) var(--motion-ease) .2s; }
+  .js .range .range-mark { opacity: 0; translate: 0 -12px; transition: opacity .5s, translate .7s var(--motion-bounce); transition-delay: calc(1s + var(--i) * 160ms); }
+  .js .range.in .range-fill { transform: none; }
+  .js .range.in .range-mark { opacity: 1; translate: 0 0; }
+
+  /* Map: pins drop in with a staggered bounce, then labels fade in */
+  .js .map .pin, .js .map .pin-lbl, .js .map .ring, .js .map .ring-lbl { opacity: 0; }
+  .js .map.in .pin { animation: drop calc(.9s * var(--motion-speed)) var(--motion-ease) calc((.5s + var(--i) * 180ms) * var(--motion-speed)) both; }
+  .js .map.in .pin-lbl { animation: fade .6s ease-out calc((1.1s + var(--i) * 180ms) * var(--motion-speed)) both; }
+  .js .map.in .ring { animation: ring calc(1.2s * var(--motion-speed)) var(--motion-ease) both; }
+  .js .map.in .ring.r2 { animation-delay: .2s; }
+  .js .map.in .ring-lbl { animation: fade .6s ease-out .9s both; }
+
+  /* Residence switcher: rooms fade in one by one */
+  .js .unit:not(.off) .uplan .rm { animation: fade calc(.6s * var(--motion-speed)) ease-out both; }
+  .js .unit:not(.off) .uplan .rm:nth-child(3n+1) { animation-delay: .08s; }
+  .js .unit:not(.off) .uplan .rm:nth-child(3n+2) { animation-delay: .18s; }
+  .js .unit:not(.off) .uplan .rm:nth-child(3n) { animation-delay: .28s; }
+
+  /* CSS scroll-driven animations: only where supported, otherwise the static layout stays */
+  @supports (animation-timeline: scroll()) {
+    .sky-dusk { animation: to-visible linear both; animation-timeline: scroll(root); animation-range: 0 85vh; }
+    .sun { animation: sunset linear both; animation-timeline: scroll(root); animation-range: 0 85vh; }
+    .facade .tint rect { animation: to-tint linear both; animation-timeline: scroll(root); animation-range: 0 85vh; }
+    .facade .halo rect { animation: to-glow linear both; animation-timeline: scroll(root); animation-range: 20vh 85vh; }
+    .hero-copy { animation: drift linear both; animation-timeline: scroll(root); animation-range: 0 100vh; }
+
+    .gallery .img { animation: plx linear both; animation-timeline: view(); }
+    .js .gallery .mask .img { transform: none; }
+
+    .amen-pin { height: 300vh; view-timeline-name: --amen; }
+    .amen-sticky { position: sticky; top: var(--head-h); height: calc(100svh - var(--head-h)); overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding-block: 1rem 2rem; }
+    .amen-head { margin-bottom: 2rem; }
+    .amen-track { display: flex; width: max-content; margin-left: var(--pad); gap: clamp(1rem, 2.5vw, 2rem); animation: slide linear both; animation-timeline: --amen; animation-range: contain 0% contain 100%; }
+    .amen-card { width: min(76vw, 400px); }
+    .amen-card .img { aspect-ratio: 16 / 10; }
+    .amen-bar { display: block; height: 2px; margin-top: 2rem; background: color-mix(in srgb, var(--on-ink) 20%, transparent); }
+    .amen-bar span { display: block; height: 100%; background: var(--accent-soft); transform-origin: left; animation: grow linear both; animation-timeline: --amen; animation-range: contain 0% contain 100%; }
+  }
+}
+@keyframes draw { from { stroke-dashoffset: 1; } }
+@keyframes light { 0% { opacity: 0; } 40% { opacity: .9; } 55% { opacity: .35; } 100% { opacity: 1; } }
+@keyframes fade { from { opacity: 0; } }
+@keyframes rise { from { transform: translateY(110%); } }
+@keyframes up { from { opacity: 0; transform: translateY(var(--motion-distance)); } }
+@keyframes drop { 0% { opacity: 0; transform: translateY(-70px); } 45% { opacity: 1; transform: translateY(0); } 62% { transform: translateY(-14px); } 78% { transform: translateY(0); } 90% { transform: translateY(-4px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes ring { from { opacity: 0; transform: scale(.4); } to { opacity: 1; transform: none; } }
+@keyframes to-visible { to { opacity: 1; } }
+@keyframes to-tint { to { opacity: .42; } }
+@keyframes to-glow { to { opacity: .45; } }
+@keyframes sunset { to { transform: translateY(260%); opacity: .25; } }
+@keyframes drift { to { transform: translateY(-48px); opacity: .5; } }
+@keyframes plx { from { transform: translateY(-5%) scale(1.12); } to { transform: translateY(5%) scale(1.12); } }
+@keyframes slide { to { transform: translateX(calc(-100% + 100vw - 2 * var(--pad))); } }
+@keyframes grow { from { transform: scaleX(0); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Residence",
+      "name": "The Grove Residences",
+      "description": "168 new two to four bedroom residences in Alder Hollow, Oregon, with 62% green cover, a rooftop sky garden and a heated lap pool.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "88 Grove Lane",
+        "addressLocality": "Alder Hollow",
+        "addressRegion": "OR",
+        "postalCode": "97035",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.4201,
+        "longitude": -122.7203
+      },
+      "url": "https://www.example.com/"
+    },
+    {
+      "@type": "RealEstateAgent",
+      "name": "The Grove Sales Center",
+      "telephone": "+1-555-012-3456",
+      "email": "hello@thegrove.example",
+      "url": "https://www.example.com/",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "88 Grove Lane",
+        "addressLocality": "Alder Hollow",
+        "addressRegion": "OR",
+        "postalCode": "97035",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "19:00"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="sentinel" aria-hidden="true"></div>
+
+<!-- ==================== Section: Header ==================== -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="The Grove Residences, back to top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 29V14a11 11 0 0 1 22 0v15M3 29h26M16 29V13M11 19l5-5 5 5M12 24l4-4 4 4"/></svg>
+      <span><b>The Grove</b><small>Residences</small></span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span></button>
+    <nav class="menu" id="menu" aria-label="Main menu">
+      <a href="#plan">Floor plan</a>
+      <a href="#units">Residences</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#location">Location</a>
+      <a href="#story">Our story</a>
+      <a href="#visit" class="btn btn-brand">Book a viewing</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="top" aria-labelledby="hero-h">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1 id="hero-h" class="lines"><span><span>Live inside</span></span><span><span>the forest we kept</span></span></h1>
+      <p class="hero-lead">168 homes on Grove Lane, with most of the land left to the trees.</p>
+      <div class="hero-cta">
+        <a href="#visit" class="btn btn-brand">Book a viewing</a>
+        <a href="#units" class="btn btn-line">See residences</a>
+      </div>
+      <!-- Sample content — replace before going live -->
+      <dl class="hero-meta">
+        <div><dt>Location</dt><dd>Alder Hollow, OR</dd></div>
+        <div><dt>Homes</dt><dd>2 to 4 bedrooms</dd></div>
+        <div><dt>Completion</dt><dd>2027</dd></div>
+      </dl>
+    </div>
+    <figure class="hero-art" role="img" aria-label="Line drawing of The Grove facade. Windows light up one by one and the sky turns from day to dusk as you scroll.">
+      <div class="sky"></div>
+      <div class="sky-dusk"></div>
+      <div class="sun"></div>
+      <svg class="facade" viewBox="0 0 480 560" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false">
+      <g class="bfill"><rect x="150" y="90" width="200" height="430"/><rect x="60" y="400" width="90" height="120"/><rect x="350" y="330" width="80" height="190"/><rect x="160" y="66" width="180" height="24"/></g>
+      <g class="tint"><rect x="150" y="90" width="200" height="430"/><rect x="60" y="400" width="90" height="120"/><rect x="350" y="330" width="80" height="190"/><rect x="160" y="66" width="180" height="24"/></g>
+      <g class="halo"><rect x="152" y="91" width="46" height="29" rx="6"/><rect x="202" y="91" width="46" height="29" rx="6"/><rect x="252" y="91" width="46" height="29" rx="6"/><rect x="302" y="91" width="46" height="29" rx="6"/><rect x="152" y="121" width="46" height="29" rx="6"/><rect x="202" y="121" width="46" height="29" rx="6"/><rect x="302" y="121" width="46" height="29" rx="6"/><rect x="152" y="151" width="46" height="29" rx="6"/><rect x="202" y="151" width="46" height="29" rx="6"/><rect x="252" y="151" width="46" height="29" rx="6"/><rect x="302" y="151" width="46" height="29" rx="6"/><rect x="202" y="181" width="46" height="29" rx="6"/><rect x="302" y="181" width="46" height="29" rx="6"/><rect x="152" y="211" width="46" height="29" rx="6"/><rect x="202" y="211" width="46" height="29" rx="6"/><rect x="302" y="211" width="46" height="29" rx="6"/><rect x="152" y="241" width="46" height="29" rx="6"/><rect x="202" y="241" width="46" height="29" rx="6"/><rect x="252" y="241" width="46" height="29" rx="6"/><rect x="302" y="241" width="46" height="29" rx="6"/><rect x="152" y="271" width="46" height="29" rx="6"/><rect x="202" y="271" width="46" height="29" rx="6"/><rect x="252" y="271" width="46" height="29" rx="6"/><rect x="202" y="301" width="46" height="29" rx="6"/><rect x="252" y="301" width="46" height="29" rx="6"/><rect x="302" y="301" width="46" height="29" rx="6"/><rect x="302" y="331" width="46" height="29" rx="6"/><rect x="152" y="361" width="46" height="29" rx="6"/><rect x="252" y="361" width="46" height="29" rx="6"/><rect x="302" y="361" width="46" height="29" rx="6"/><rect x="202" y="391" width="46" height="29" rx="6"/><rect x="202" y="451" width="46" height="29" rx="6"/><rect x="252" y="451" width="46" height="29" rx="6"/><rect x="302" y="451" width="46" height="29" rx="6"/><rect x="61" y="443" width="43" height="34" rx="6"/><rect x="106" y="443" width="43" height="34" rx="6"/><rect x="61" y="483" width="43" height="34" rx="6"/><rect x="106" y="483" width="43" height="34" rx="6"/><rect x="351" y="334" width="38" height="40" rx="6"/><rect x="391" y="334" width="38" height="40" rx="6"/><rect x="351" y="384" width="38" height="40" rx="6"/><rect x="351" y="434" width="38" height="40" rx="6"/><rect x="391" y="434" width="38" height="40" rx="6"/></g>
+      <g class="win-off"><rect x="257" y="126" width="36" height="19"/><rect x="157" y="186" width="36" height="19"/><rect x="257" y="186" width="36" height="19"/><rect x="257" y="216" width="36" height="19"/><rect x="307" y="276" width="36" height="19"/><rect x="157" y="306" width="36" height="19"/><rect x="157" y="336" width="36" height="19"/><rect x="207" y="336" width="36" height="19"/><rect x="257" y="336" width="36" height="19"/><rect x="207" y="366" width="36" height="19"/><rect x="157" y="396" width="36" height="19"/><rect x="257" y="396" width="36" height="19"/><rect x="307" y="396" width="36" height="19"/><rect x="157" y="426" width="36" height="19"/><rect x="207" y="426" width="36" height="19"/><rect x="257" y="426" width="36" height="19"/><rect x="307" y="426" width="36" height="19"/><rect x="157" y="456" width="36" height="19"/><rect x="66" y="408" width="33" height="24"/><rect x="111" y="408" width="33" height="24"/><rect x="396" y="389" width="28" height="30"/></g>
+      <g class="wins"><rect class="win" style="--w:22" x="157" y="96" width="36" height="19"/><rect class="win" style="--w:9" x="207" y="96" width="36" height="19"/><rect class="win" style="--w:20" x="257" y="96" width="36" height="19"/><rect class="win" style="--w:35" x="307" y="96" width="36" height="19"/><rect class="win" style="--w:16" x="157" y="126" width="36" height="19"/><rect class="win" style="--w:31" x="207" y="126" width="36" height="19"/><rect class="win" style="--w:19" x="307" y="126" width="36" height="19"/><rect class="win" style="--w:26" x="157" y="156" width="36" height="19"/><rect class="win" style="--w:22" x="207" y="156" width="36" height="19"/><rect class="win" style="--w:7" x="257" y="156" width="36" height="19"/><rect class="win" style="--w:37" x="307" y="156" width="36" height="19"/><rect class="win" style="--w:17" x="207" y="186" width="36" height="19"/><rect class="win" style="--w:16" x="307" y="186" width="36" height="19"/><rect class="win" style="--w:26" x="157" y="216" width="36" height="19"/><rect class="win" style="--w:6" x="207" y="216" width="36" height="19"/><rect class="win" style="--w:9" x="307" y="216" width="36" height="19"/><rect class="win" style="--w:13" x="157" y="246" width="36" height="19"/><rect class="win" style="--w:30" x="207" y="246" width="36" height="19"/><rect class="win" style="--w:14" x="257" y="246" width="36" height="19"/><rect class="win" style="--w:37" x="307" y="246" width="36" height="19"/><rect class="win" style="--w:35" x="157" y="276" width="36" height="19"/><rect class="win" style="--w:9" x="207" y="276" width="36" height="19"/><rect class="win" style="--w:16" x="257" y="276" width="36" height="19"/><rect class="win" style="--w:8" x="207" y="306" width="36" height="19"/><rect class="win" style="--w:3" x="257" y="306" width="36" height="19"/><rect class="win" style="--w:16" x="307" y="306" width="36" height="19"/><rect class="win" style="--w:17" x="307" y="336" width="36" height="19"/><rect class="win" style="--w:17" x="157" y="366" width="36" height="19"/><rect class="win" style="--w:17" x="257" y="366" width="36" height="19"/><rect class="win" style="--w:9" x="307" y="366" width="36" height="19"/><rect class="win" style="--w:10" x="207" y="396" width="36" height="19"/><rect class="win" style="--w:0" x="207" y="456" width="36" height="19"/><rect class="win" style="--w:14" x="257" y="456" width="36" height="19"/><rect class="win" style="--w:15" x="307" y="456" width="36" height="19"/><rect class="win" style="--w:38" x="66" y="448" width="33" height="24"/><rect class="win" style="--w:14" x="111" y="448" width="33" height="24"/><rect class="win" style="--w:17" x="66" y="488" width="33" height="24"/><rect class="win" style="--w:39" x="111" y="488" width="33" height="24"/><rect class="win" style="--w:34" x="356" y="339" width="28" height="30"/><rect class="win" style="--w:18" x="396" y="339" width="28" height="30"/><rect class="win" style="--w:31" x="356" y="389" width="28" height="30"/><rect class="win" style="--w:0" x="356" y="439" width="28" height="30"/><rect class="win" style="--w:28" x="396" y="439" width="28" height="30"/></g>
+      <g class="lines" fill="none"><path class="ln" pathLength="1" style="--d:0" d="M8 520H472"/><path class="ln" pathLength="1" style="--d:1" d="M150 520V90H350V520"/><path class="ln" pathLength="1" style="--d:2" d="M138 90H362"/><path class="ln" pathLength="1" style="--d:3" d="M160 90V66H340V90"/><path class="ln" pathLength="1" style="--d:4" d="M170 52H330M184 66V52M222 66V52M260 66V52M298 66V52"/><path class="ln" pathLength="1" style="--d:5" d="M156 400H60V520"/><path class="ln" pathLength="1" style="--d:6" d="M54 400H156M60 440H150M60 480H150"/><path class="ln" pathLength="1" style="--d:7" d="M344 330H430V520"/><path class="ln" pathLength="1" style="--d:8" d="M344 330H436M350 380H430M350 430H430M350 475H430"/><path class="ln" pathLength="1" style="--d:9" d="M144 490H356"/><path class="ln" pathLength="1" style="--d:10" d="M144 460H356"/><path class="ln" pathLength="1" style="--d:11" d="M144 430H356"/><path class="ln" pathLength="1" style="--d:12" d="M144 400H356"/><path class="ln" pathLength="1" style="--d:13" d="M144 370H356"/><path class="ln" pathLength="1" style="--d:14" d="M144 340H356"/><path class="ln" pathLength="1" style="--d:15" d="M144 310H356"/><path class="ln" pathLength="1" style="--d:16" d="M144 280H356"/><path class="ln" pathLength="1" style="--d:17" d="M144 250H356"/><path class="ln" pathLength="1" style="--d:18" d="M144 220H356"/><path class="ln" pathLength="1" style="--d:19" d="M144 190H356"/><path class="ln" pathLength="1" style="--d:20" d="M144 160H356"/><path class="ln" pathLength="1" style="--d:21" d="M144 130H356"/><path class="ln" pathLength="1" style="--d:22" d="M200 90V490M250 90V490M300 90V490"/><path class="ln" pathLength="1" style="--d:23" d="M226 520V498H274V520M250 498V520"/><path class="ln" pathLength="1" style="--d:24" d="M8 470a20 20 0 1 0 40 0a20 20 0 1 0 -40 0M28 490V520"/><path class="ln" pathLength="1" style="--d:25" d="M82 360a22 22 0 1 0 44 0a22 22 0 1 0 -44 0M104 382V520"/><path class="ln" pathLength="1" style="--d:26" d="M430 464a22 22 0 1 0 44 0a22 22 0 1 0 -44 0M452 486V520"/><path class="ln" pathLength="1" style="--d:27" d="M361 306a11 11 0 1 0 22 0a11 11 0 1 0 -22 0M372 317V520"/><path class="ln" pathLength="1" style="--d:28" d="M396 300a14 14 0 1 0 28 0a14 14 0 1 0 -28 0M410 314V520"/></g>
+    </svg>
+    </figure>
+  </div>
+</section>
+
+<!-- ==================== Section: Key facts and price range ==================== -->
+<section class="facts-sec" id="facts" aria-labelledby="facts-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="facts-h">More room for trees than for cars</h2>
+      <p>One 22-storey tower covers less than half the site. The rest is woodland, walking paths and a small creek.</p>
+    </div>
+    <!-- Sample content — replace before going live -->
+    <div class="facts">
+      <div class="fact"><p class="num"><span data-count="168">168</span><small>homes</small></p><p>In total, eight per floor</p></div>
+      <div class="fact"><p class="num"><span data-count="62">62</span><small>%</small></p><p>Green cover across the site</p></div>
+      <div class="fact"><p class="num"><span data-count="2.4" data-dec="1">2.4</span><small>acres</small></p><p>Site area</p></div>
+      <div class="fact"><p class="num"><span data-count="40">40</span><small>trees</small></p><p>Mature native trees kept in place</p></div>
+      <div class="fact"><p class="num"><span data-count="7">7</span><small>min</small></p><p>Walk to the metro</p></div>
+    </div>
+    <!-- Sample content — replace before going live -->
+    <div class="range" role="group" aria-labelledby="range-h">
+      <div class="range-head">
+        <h3 id="range-h">$980 to $1,240 per sq ft</h3>
+        <p>Depending on floor, outlook and layout, from $1.18M</p>
+      </div>
+      <div class="range-track">
+        <div class="range-fill" style="--a:30%;--b:73.3%"></div>
+        <span class="range-mark" style="--p:35%;--i:0"><b>2BR</b>avg $1,010</span>
+        <span class="range-mark low" style="--p:48.3%;--i:1"><b>3BR</b>avg $1,090</span>
+        <span class="range-mark" style="--p:68.3%;--i:2"><b>4BR</b>avg $1,210</span>
+      </div>
+      <div class="range-scale" aria-hidden="true"><span>$800</span><span>$950</span><span>$1,100</span><span>$1,250</span><span>$1,400</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Floor plan walkthrough (plan stays pinned while rooms are introduced) ==================== -->
+<section id="plan" aria-labelledby="plan-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="plan-h">Walk through Residence B</h2>
+      <p>Scroll down to walk from the front door to the balcony. Every room is shown with its size.</p>
+    </div>
+    <div class="scrolly">
+      <figure class="plan-fig">
+        <div class="plan-frame"><svg class="splan" viewBox="0 0 600 420" aria-hidden="true" focusable="false"><g class="plan-zoom"><rect class="wall" x="20" y="20" width="560" height="380"/><g class="rm" data-g="master"><rect class="rm-hl" x="20" y="20" width="210" height="170"/><rect class="rm-box" x="20" y="20" width="210" height="170"/><g class="fur"><rect x="90" y="101.8" width="70" height="78.2" rx="3"/><path d="M96 117.8H154"/></g><text class="rm-name" x="32" y="46">Primary</text><text class="rm-size" x="32" y="64">17×14 ft</text></g><g class="rm" data-g="master"><rect class="rm-hl" x="230" y="20" width="80" height="100"/><rect class="rm-box" x="230" y="20" width="80" height="100"/><g class="fur"><rect x="240" y="86" width="56" height="24" rx="11"/></g><text class="rm-name" x="242" y="46">Bath</text></g><g class="rm" data-g="master"><rect class="rm-hl" x="230" y="120" width="80" height="70"/><rect class="rm-box" x="230" y="120" width="80" height="70"/><g class="fur"></g><text class="rm-name" x="242" y="146">Closet</text></g><g class="rm" data-g="bedrooms"><rect class="rm-hl" x="310" y="20" width="140" height="170"/><rect class="rm-box" x="310" y="20" width="140" height="170"/><g class="fur"><rect x="345" y="101.8" width="70" height="78.2" rx="3"/><path d="M351 117.8H409"/></g><text class="rm-name" x="322" y="46">Bedroom 2</text><text class="rm-size" x="322" y="64">11×14 ft</text></g><g class="rm" data-g="bedrooms"><rect class="rm-hl" x="450" y="20" width="130" height="170"/><rect class="rm-box" x="450" y="20" width="130" height="170"/><g class="fur"><rect x="482.5" y="101.8" width="65" height="78.2" rx="3"/><path d="M488.5 117.8H541.5"/></g><text class="rm-name" x="462" y="46">Study</text><text class="rm-size" x="462" y="64">10×14 ft</text></g><g class="rm" data-g="living"><rect class="rm-hl" x="20" y="190" width="280" height="150"/><rect class="rm-box" x="20" y="190" width="280" height="150"/><g class="fur"><path d="M36 276h126v14H50v44H36Z"/><rect x="68" y="300" width="61.6" height="22" rx="3"/></g><text class="rm-name" x="32" y="216">Living</text><text class="rm-size" x="32" y="234">22×12 ft</text></g><g class="rm" data-g="balcony"><rect class="rm-hl" x="20" y="340" width="280" height="60"/><rect class="rm-box" x="20" y="340" width="280" height="60"/><g class="fur"><path d="M30 390H290" stroke-dasharray="4 5"/></g><text class="rm-name" x="32" y="366">Balcony</text><text class="rm-size" x="32" y="384">22×5 ft</text></g><g class="rm" data-g="kitchen"><rect class="rm-hl" x="300" y="190" width="170" height="210"/><rect class="rm-box" x="300" y="190" width="170" height="210"/><g class="fur"><rect x="355" y="344" width="60" height="36" rx="3"/><rect x="440" y="204" width="18" height="94.5" rx="2"/></g><text class="rm-name" x="312" y="216">Kitchen</text><text class="rm-size" x="312" y="234">14×17 ft</text></g><g class="rm" data-g="bedrooms"><rect class="rm-hl" x="470" y="190" width="110" height="100"/><rect class="rm-box" x="470" y="190" width="110" height="100"/><g class="fur"><rect x="480" y="256" width="56" height="24" rx="11"/></g><text class="rm-name" x="482" y="216">Bath</text></g><g class="rm" data-g="entry"><rect class="rm-hl" x="470" y="290" width="110" height="110"/><rect class="rm-box" x="470" y="290" width="110" height="110"/><g class="fur"></g><text class="rm-name" x="482" y="316">Entry</text><text class="rm-size" x="482" y="334">9×9 ft</text></g><path class="compass" d="M560 398v-14m-4 6l4-6 4 6"/></g></svg></div>
+        <figcaption class="plan-cap"><span>Residence B, 1,620 sq ft<span class="sr">, </span> <b class="plan-now" aria-live="polite"></b></span><span class="plan-prog" aria-hidden="true"><span></span></span></figcaption>
+      </figure>
+      <ol class="steps">
+        <li class="step" data-g="entry"><span class="step-no">01</span><h3>Entry</h3><p class="step-size">9 × 9 ft</p><p>A two-sided storage wall and a drop zone keep umbrellas, sneakers and the stroller out of sight. Sensor lights come on as the door opens.</p></li>
+        <li class="step" data-g="living"><span class="step-no">02</span><h3>Living room</h3><p class="step-size">22 × 12 ft</p><p>A 14 ft wall of glass faces southeast, so morning light reaches all the way past the sofa. Ceilings sit at 10 ft 6 in.</p></li>
+        <li class="step" data-g="kitchen"><span class="step-no">03</span><h3>Kitchen and dining</h3><p class="step-size">14 × 17 ft</p><p>The island and dining table line up, so whoever cooks can still see the living room and the balcony. Three-burner range and built-in steam oven included.</p></li>
+        <li class="step" data-g="master"><span class="step-no">04</span><h3>Primary suite</h3><p class="step-size">17 × 14 ft, plus bath and walk-in</p><p>Soaking tub with a separate shower, a walk-in closet, and an 8 ft headboard wall.</p></li>
+        <li class="step" data-g="bedrooms"><span class="step-no">05</span><h3>Bedrooms two and three</h3><p class="step-size">About 11 × 14 ft each</p><p>Both fit a queen bed, and the third works just as well as a study or playroom. The hall bath has a separate wet zone.</p></li>
+        <li class="step" data-g="balcony"><span class="step-no">06</span><h3>Balcony</h3><p class="step-size">22 × 5 ft</p><p>Five feet deep, room for two loungers and a planter run, with drip irrigation already plumbed in.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Residence types ==================== -->
+<section class="units-sec" id="units" aria-labelledby="units-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="units-h">Three layouts, one forest</h2>
+      <p>Every residence has light from two sides and at least one balcony. Prices are indicative; the sales center has the current list.</p>
+    </div>
+    <!-- Sample content — replace before going live -->
+    <div class="tabs" role="tablist" aria-label="Choose a residence">
+      <button role="tab" id="t-u2" aria-controls="u2" aria-selected="false" tabindex="-1">2BR</button>
+      <button role="tab" id="t-u3" aria-controls="u3" aria-selected="true">3BR</button>
+      <button role="tab" id="t-u4" aria-controls="u4" aria-selected="false" tabindex="-1">4BR</button>
+    </div>
+    <div class="units">
+      <article class="unit" id="u2" role="tabpanel" aria-labelledby="t-u2">
+        <div class="unit-plan"><svg class="uplan" viewBox="0 0 600 420" aria-hidden="true" focusable="false"><g class="plan-zoom"><rect class="wall" x="20" y="20" width="560" height="380"/><g class="rm" data-g="a"><rect class="rm-hl" x="20" y="20" width="230" height="180"/><rect class="rm-box" x="20" y="20" width="230" height="180"/><g class="fur"><rect x="100" y="110" width="70" height="80" rx="3"/><path d="M106 126H164"/></g><text class="rm-name" x="32" y="46">Primary</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="250" y="20" width="100" height="110"/><rect class="rm-box" x="250" y="20" width="100" height="110"/><g class="fur"><rect x="260" y="96" width="56" height="24" rx="11"/></g><text class="rm-name" x="262" y="46">Bath</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="250" y="130" width="100" height="70"/><rect class="rm-box" x="250" y="130" width="100" height="70"/><g class="fur"></g><text class="rm-name" x="262" y="156">Storage</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="350" y="20" width="230" height="180"/><rect class="rm-box" x="350" y="20" width="230" height="180"/><g class="fur"><rect x="430" y="110" width="70" height="80" rx="3"/><path d="M436 126H494"/></g><text class="rm-name" x="362" y="46">Bedroom 2</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="20" y="200" width="330" height="140"/><rect class="rm-box" x="20" y="200" width="330" height="140"/><g class="fur"><path d="M36 276h148.5v14H50v44H36Z"/><rect x="68" y="300" width="72.6" height="22" rx="3"/></g><text class="rm-name" x="32" y="226">Living</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="20" y="340" width="330" height="60"/><rect class="rm-box" x="20" y="340" width="330" height="60"/><g class="fur"><path d="M30 390H340" stroke-dasharray="4 5"/></g><text class="rm-name" x="32" y="366">Balcony</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="350" y="200" width="130" height="200"/><rect class="rm-box" x="350" y="200" width="130" height="200"/><g class="fur"><rect x="385" y="344" width="60" height="36" rx="3"/><rect x="450" y="214" width="18" height="90" rx="2"/></g><text class="rm-name" x="362" y="226">Kitchen</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="480" y="200" width="100" height="200"/><rect class="rm-box" x="480" y="200" width="100" height="200"/><g class="fur"></g><text class="rm-name" x="492" y="226">Entry</text></g><path class="compass" d="M560 398v-14m-4 6l4-6 4 6"/></g></svg></div>
+        <div class="unit-info">
+          <h3>Residence A, two bedrooms</h3>
+          <p>A first proper home for two, or a small family. One open living space, with the bedrooms on opposite sides for quiet.</p>
+          <div class="tbl-wrap">
+            <table>
+              <caption class="sr">Residence A, two bedrooms</caption>
+              <tbody>
+                <tr><th scope="row">Interior</th><td><span data-n="1120">1,120</span> <small>sq ft</small></td></tr>
+                <tr><th scope="row">Balcony</th><td><span data-n="110">110</span> <small>sq ft</small></td></tr>
+                <tr><th scope="row">Bedrooms</th><td><span data-n="2">2</span></td></tr>
+                <tr><th scope="row">Bathrooms</th><td><span data-n="2">2</span></td></tr>
+                <tr><th scope="row">Ceiling height</th><td><span data-n="10.5" data-dec="1">10.5</span> <small>ft</small></td></tr>
+                <tr><th scope="row">Parking</th><td><span data-n="1">1</span> <small>space</small></td></tr>
+                <tr class="tr-price"><th scope="row">Price range</th><td>$<span data-n="1.18" data-dec="2">1.18</span>M to $<span data-n="1.39" data-dec="2">1.39</span>M</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="#visit" class="btn btn-brand" data-unit="2BR">Book a 2BR viewing</a>
+        </div>
+      </article>
+      <article class="unit" id="u3" role="tabpanel" aria-labelledby="t-u3">
+        <div class="unit-plan"><svg class="uplan" viewBox="0 0 600 420" aria-hidden="true" focusable="false"><g class="plan-zoom"><rect class="wall" x="20" y="20" width="560" height="380"/><g class="rm" data-g="master"><rect class="rm-hl" x="20" y="20" width="210" height="170"/><rect class="rm-box" x="20" y="20" width="210" height="170"/><g class="fur"><rect x="90" y="101.8" width="70" height="78.2" rx="3"/><path d="M96 117.8H154"/></g><text class="rm-name" x="32" y="46">Primary</text></g><g class="rm" data-g="master"><rect class="rm-hl" x="230" y="20" width="80" height="100"/><rect class="rm-box" x="230" y="20" width="80" height="100"/><g class="fur"><rect x="240" y="86" width="56" height="24" rx="11"/></g><text class="rm-name" x="242" y="46">Bath</text></g><g class="rm" data-g="master"><rect class="rm-hl" x="230" y="120" width="80" height="70"/><rect class="rm-box" x="230" y="120" width="80" height="70"/><g class="fur"></g><text class="rm-name" x="242" y="146">Closet</text></g><g class="rm" data-g="bedrooms"><rect class="rm-hl" x="310" y="20" width="140" height="170"/><rect class="rm-box" x="310" y="20" width="140" height="170"/><g class="fur"><rect x="345" y="101.8" width="70" height="78.2" rx="3"/><path d="M351 117.8H409"/></g><text class="rm-name" x="322" y="46">Bedroom 2</text></g><g class="rm" data-g="bedrooms"><rect class="rm-hl" x="450" y="20" width="130" height="170"/><rect class="rm-box" x="450" y="20" width="130" height="170"/><g class="fur"><rect x="482.5" y="101.8" width="65" height="78.2" rx="3"/><path d="M488.5 117.8H541.5"/></g><text class="rm-name" x="462" y="46">Study</text></g><g class="rm" data-g="living"><rect class="rm-hl" x="20" y="190" width="280" height="150"/><rect class="rm-box" x="20" y="190" width="280" height="150"/><g class="fur"><path d="M36 276h126v14H50v44H36Z"/><rect x="68" y="300" width="61.6" height="22" rx="3"/></g><text class="rm-name" x="32" y="216">Living</text></g><g class="rm" data-g="balcony"><rect class="rm-hl" x="20" y="340" width="280" height="60"/><rect class="rm-box" x="20" y="340" width="280" height="60"/><g class="fur"><path d="M30 390H290" stroke-dasharray="4 5"/></g><text class="rm-name" x="32" y="366">Balcony</text></g><g class="rm" data-g="kitchen"><rect class="rm-hl" x="300" y="190" width="170" height="210"/><rect class="rm-box" x="300" y="190" width="170" height="210"/><g class="fur"><rect x="355" y="344" width="60" height="36" rx="3"/><rect x="440" y="204" width="18" height="94.5" rx="2"/></g><text class="rm-name" x="312" y="216">Kitchen</text></g><g class="rm" data-g="bedrooms"><rect class="rm-hl" x="470" y="190" width="110" height="100"/><rect class="rm-box" x="470" y="190" width="110" height="100"/><g class="fur"><rect x="480" y="256" width="56" height="24" rx="11"/></g><text class="rm-name" x="482" y="216">Bath</text></g><g class="rm" data-g="entry"><rect class="rm-hl" x="470" y="290" width="110" height="110"/><rect class="rm-box" x="470" y="290" width="110" height="110"/><g class="fur"></g><text class="rm-name" x="482" y="316">Entry</text></g><path class="compass" d="M560 398v-14m-4 6l4-6 4 6"/></g></svg></div>
+        <div class="unit-info">
+          <h3>Residence B, three bedrooms</h3>
+          <p>Our most requested layout. The primary suite has its own wing and the kitchen opens to the living room, so it grows with the family.</p>
+          <div class="tbl-wrap">
+            <table>
+              <caption class="sr">Residence B, three bedrooms</caption>
+              <tbody>
+                <tr><th scope="row">Interior</th><td><span data-n="1620">1,620</span> <small>sq ft</small></td></tr>
+                <tr><th scope="row">Balcony</th><td><span data-n="160">160</span> <small>sq ft</small></td></tr>
+                <tr><th scope="row">Bedrooms</th><td><span data-n="3">3</span></td></tr>
+                <tr><th scope="row">Bathrooms</th><td><span data-n="2">2</span></td></tr>
+                <tr><th scope="row">Ceiling height</th><td><span data-n="10.5" data-dec="1">10.5</span> <small>ft</small></td></tr>
+                <tr><th scope="row">Parking</th><td><span data-n="1">1</span> <small>space</small></td></tr>
+                <tr class="tr-price"><th scope="row">Price range</th><td>$<span data-n="1.64" data-dec="2">1.64</span>M to $<span data-n="1.92" data-dec="2">1.92</span>M</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="#visit" class="btn btn-brand" data-unit="3BR">Book a 3BR viewing</a>
+        </div>
+      </article>
+      <article class="unit" id="u4" role="tabpanel" aria-labelledby="t-u4">
+        <div class="unit-plan"><svg class="uplan" viewBox="0 0 600 420" aria-hidden="true" focusable="false"><g class="plan-zoom"><rect class="wall" x="20" y="20" width="560" height="380"/><g class="rm" data-g="a"><rect class="rm-hl" x="20" y="20" width="200" height="170"/><rect class="rm-box" x="20" y="20" width="200" height="170"/><g class="fur"><rect x="85" y="101.8" width="70" height="78.2" rx="3"/><path d="M91 117.8H149"/></g><text class="rm-name" x="32" y="46">Primary</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="220" y="20" width="90" height="95"/><rect class="rm-box" x="220" y="20" width="90" height="95"/><g class="fur"><rect x="230" y="81" width="56" height="24" rx="11"/></g><text class="rm-name" x="232" y="46">Bath</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="220" y="115" width="90" height="75"/><rect class="rm-box" x="220" y="115" width="90" height="75"/><g class="fur"></g><text class="rm-name" x="232" y="141">Closet</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="310" y="20" width="135" height="140"/><rect class="rm-box" x="310" y="20" width="135" height="140"/><g class="fur"><rect x="343.75" y="85.6" width="67.5" height="64.4" rx="3"/><path d="M349.75 101.6H405.25"/></g><text class="rm-name" x="322" y="46">Bedroom 2</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="445" y="20" width="135" height="140"/><rect class="rm-box" x="445" y="20" width="135" height="140"/><g class="fur"><rect x="478.75" y="85.6" width="67.5" height="64.4" rx="3"/><path d="M484.75 101.6H540.25"/></g><text class="rm-name" x="457" y="46">Bedroom 3</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="445" y="160" width="135" height="120"/><rect class="rm-box" x="445" y="160" width="135" height="120"/><g class="fur"><rect x="478.75" y="214.8" width="67.5" height="55.2" rx="3"/><path d="M484.75 230.8H540.25"/></g><text class="rm-name" x="457" y="186">Bedroom 4</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="310" y="160" width="135" height="70"/><rect class="rm-box" x="310" y="160" width="135" height="70"/><g class="fur"></g><text class="rm-name" x="322" y="186">Bath</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="20" y="190" width="290" height="150"/><rect class="rm-box" x="20" y="190" width="290" height="150"/><g class="fur"><path d="M36 276h130.5v14H50v44H36Z"/><rect x="68" y="300" width="63.8" height="22" rx="3"/></g><text class="rm-name" x="32" y="216">Living</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="20" y="340" width="425" height="60"/><rect class="rm-box" x="20" y="340" width="425" height="60"/><g class="fur"><path d="M30 390H435" stroke-dasharray="4 5"/></g><text class="rm-name" x="32" y="366">Balcony</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="310" y="230" width="135" height="110"/><rect class="rm-box" x="310" y="230" width="135" height="110"/><g class="fur"></g><text class="rm-name" x="322" y="256">Kitchen</text></g><g class="rm" data-g="a"><rect class="rm-hl" x="445" y="280" width="135" height="120"/><rect class="rm-box" x="445" y="280" width="135" height="120"/><g class="fur"></g><text class="rm-name" x="457" y="306">Entry</text></g><path class="compass" d="M560 398v-14m-4 6l4-6 4 6"/></g></svg></div>
+        <div class="unit-info">
+          <h3>Residence C, four bedrooms</h3>
+          <p>Corner homes with light on two sides, only two per floor. A long balcony runs from the living room to the kitchen, with space for three generations.</p>
+          <div class="tbl-wrap">
+            <table>
+              <caption class="sr">Residence C, four bedrooms</caption>
+              <tbody>
+                <tr><th scope="row">Interior</th><td><span data-n="2260">2,260</span> <small>sq ft</small></td></tr>
+                <tr><th scope="row">Balcony</th><td><span data-n="240">240</span> <small>sq ft</small></td></tr>
+                <tr><th scope="row">Bedrooms</th><td><span data-n="4">4</span></td></tr>
+                <tr><th scope="row">Bathrooms</th><td><span data-n="3">3</span></td></tr>
+                <tr><th scope="row">Ceiling height</th><td><span data-n="10.5" data-dec="1">10.5</span> <small>ft</small></td></tr>
+                <tr><th scope="row">Parking</th><td><span data-n="2">2</span> <small>spaces</small></td></tr>
+                <tr class="tr-price"><th scope="row">Price range</th><td>$<span data-n="2.28" data-dec="2">2.28</span>M to $<span data-n="2.71" data-dec="2">2.71</span>M</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="#visit" class="btn btn-brand" data-unit="4BR">Book a 4BR viewing</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Amenities (moves sideways as you scroll; a grid where unsupported) ==================== -->
+<section class="amen" id="amenities" aria-labelledby="amen-h">
+  <div class="amen-pin">
+    <div class="amen-sticky">
+      <div class="wrap amen-head sec-head">
+        <h2 id="amen-h">Shared spaces worth staying home for</h2>
+        <p>Pool, fitness studio, sky garden and library, all for residents only.</p>
+      </div>
+      <div class="amen-track">
+        <article class="amen-card"><div class="img img-pool" role="img" aria-label="25 m heated lap pool"></div><h3>25 m heated lap pool</h3><p>Double-height and kept at 82°F all year, with a sauna and steam room alongside.</p><small>Level B1, 06:00–22:00</small></article>
+        <article class="amen-card"><div class="img img-gym" role="img" aria-label="Fitness studio"></div><h3>Fitness studio</h3><p>Separate zones for cardio, weights and cycling, with a glass wall onto the courtyard camphor trees.</p><small>Level 2, open 24 hours</small></article>
+        <article class="amen-card"><div class="img img-garden" role="img" aria-label="Sky garden"></div><h3>Sky garden</h3><p>A 4,000 sq ft rooftop planted with 40 native trees, and a long view of the city lights at dusk.</p><small>Rooftop, residents only</small></article>
+        <article class="amen-card"><div class="img img-lobby" role="img" aria-label="Arrival lobby"></div><h3>Arrival lobby</h3><p>A 30 ft lobby wrapped in limestone, with a concierge who handles parcels and guests all day.</p><small>Ground floor, 24/7 concierge</small></article>
+        <article class="amen-card"><div class="img img-reading" role="img" aria-label="Library lounge"></div><h3>Library lounge</h3><p>Three walls of books and a 20 ft table. This is where the remote workers end up.</p><small>Level 2, 07:00–23:00</small></article>
+      </div>
+      <div class="wrap"><div class="amen-bar" aria-hidden="true"><span></span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Neighbourhood map ==================== -->
+<section id="location" aria-labelledby="loc-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="loc-h">School, work and a walk in the park, all close by</h2>
+      <p>Distances are approximate and for reference only.</p>
+    </div>
+    <div class="loc-grid">
+      <figure class="map"><svg class="map-svg" viewBox="0 0 640 440" role="img" aria-labelledby="map-t">
+      <title id="map-t">Map of what is near The Grove</title>
+      <rect class="m-land" width="640" height="440"/>
+      <path class="m-park" d="M60 70C120 40 210 60 230 110S200 200 130 196 30 150 60 70Z"/>
+      <path class="m-park" d="M420 380C460 360 540 372 560 400L560 440H400Z"/>
+      <path class="m-river" d="M-10 250C80 230 120 280 200 268S320 180 380 130 520 40 650 20"/>
+      <g class="m-roads"><path d="M0 230H640M330 0V440M0 400L640 120"/></g>
+      <g class="m-minor"><path d="M120 0V440M470 0V440M0 330H640M0 110H640M220 160L420 300"/></g>
+      <path class="m-rail" d="M560 0L520 440"/>
+      <g class="rings"><circle class="ring" cx="330" cy="230" r="80"/><circle class="ring r2" cx="330" cy="230" r="160"/></g>
+      <text class="ring-lbl" x="330" y="142" text-anchor="middle">5 min walk</text>
+      <g class="site"><rect x="318" y="218" width="24" height="24" rx="3"/><text x="352" y="262">The Grove</text></g>
+      <g transform="translate(150 132)"><g class="pin" style="--i:0"><path class="pin-body" d="M0 0C-4-10-13-16-13-27A13 13 0 1 1 13-27C13-16 4-10 0 0Z"/><circle class="pin-dot" cx="0" cy="-27" r="4.5"/></g><g class="pin-lbl" style="--i:0"><text x="20" y="-30" text-anchor="start"><tspan class="pl-name">Alder Creek Park</tspan><tspan class="pl-dist" x="20" dy="1.25em">0.2 mi</tspan></text></g></g><g transform="translate(206 326)"><g class="pin" style="--i:1"><path class="pin-body" d="M0 0C-4-10-13-16-13-27A13 13 0 1 1 13-27C13-16 4-10 0 0Z"/><circle class="pin-dot" cx="0" cy="-27" r="4.5"/></g><g class="pin-lbl" style="--i:1"><text x="20" y="-30" text-anchor="start"><tspan class="pl-name">Willow Elementary</tspan><tspan class="pl-dist" x="20" dy="1.25em">6 min walk</tspan></text></g></g><g transform="translate(540 84)"><g class="pin" style="--i:2"><path class="pin-body" d="M0 0C-4-10-13-16-13-27A13 13 0 1 1 13-27C13-16 4-10 0 0Z"/><circle class="pin-dot" cx="0" cy="-27" r="4.5"/></g><g class="pin-lbl" style="--i:2"><text x="-20" y="-30" text-anchor="end"><tspan class="pl-name">Grove St. Metro</tspan><tspan class="pl-dist" x="-20" dy="1.25em">0.5 mi</tspan></text></g></g><g transform="translate(470 344)"><g class="pin" style="--i:3"><path class="pin-body" d="M0 0C-4-10-13-16-13-27A13 13 0 1 1 13-27C13-16 4-10 0 0Z"/><circle class="pin-dot" cx="0" cy="-27" r="4.5"/></g><g class="pin-lbl" style="--i:3"><text x="20" y="-30" text-anchor="start"><tspan class="pl-name">Market Hall</tspan><tspan class="pl-dist" x="20" dy="1.25em">0.5 mi</tspan></text></g></g><g transform="translate(588 236)"><g class="pin" style="--i:4"><path class="pin-body" d="M0 0C-4-10-13-16-13-27A13 13 0 1 1 13-27C13-16 4-10 0 0Z"/><circle class="pin-dot" cx="0" cy="-27" r="4.5"/></g><g class="pin-lbl" style="--i:4"><text x="-20" y="-30" text-anchor="end"><tspan class="pl-name">Tech campus</tspan><tspan class="pl-dist" x="-20" dy="1.25em">12 min drive</tspan></text></g></g>
+    </svg></figure>
+      <div>
+        <ul class="places">
+          <li class="reveal" style="--i:0">Alder Creek Park<span>0.2 mi</span></li>
+          <li class="reveal" style="--i:1">Willow Elementary<span>6 min walk</span></li>
+          <li class="reveal" style="--i:2">Grove St. Metro<span>0.5 mi</span></li>
+          <li class="reveal" style="--i:3">Market Hall<span>0.5 mi</span></li>
+          <li class="reveal" style="--i:4">Tech campus<span>12 min drive</span></li>
+        </ul>
+        <div class="loc-links">
+          <a class="btn btn-line" href="https://maps.google.com/?q=88%20Grove%20Lane%2C%20Alder%20Hollow%2C%20OR%2097035" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Our story: developer and architect ==================== -->
+<section class="story-sec" id="story" aria-labelledby="story-h">
+  <div class="wrap story">
+    <div class="sec-head reveal">
+      <h2 id="story-h">Before we drew a single wall, we counted the trees</h2>
+    </div>
+    <div class="story-row">
+      <div class="mask"><div class="img img-dev" role="img" aria-label="Illustration of a past residence by Grove Land"></div></div>
+      <div class="story-text reveal">
+        <h3>Grove Land Company</h3>
+        <p class="who">28 years building in the region, 14 completed communities</p>
+        <p>We always start with the land itself. This site had 40 camphor and chinaberry trees, so we pushed the tower north and pulled the basement back to keep every one of them where it stood.</p>
+        <p>For ten years after you move in, structural and waterproofing issues are ours to fix.</p>
+      </div>
+    </div>
+    <div class="story-row flip">
+      <div class="mask"><div class="img img-arch" role="img" aria-label="Illustration of the architect’s facade sketch"></div></div>
+      <div class="story-text reveal">
+        <h3>Linden Hale Architects</h3>
+        <p class="who">Principal architect Linden Hale</p>
+        <p>The facade uses three shades of stone, each floor a little lighter than the one below, so from a distance it reads like a trunk dissolving into sky. Every balcony is five feet deep to keep summer sun out of the living room.</p>
+      </div>
+    </div>
+    <!-- Sample content — replace before going live -->
+    <blockquote class="quote reveal">
+      <p>A good building doesn’t need to be the loudest thing on the street. It should make the tree outside your window feel more important than the building itself.</p>
+      <footer>Linden Hale, principal architect</footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ==================== Section: Gallery ==================== -->
+<section id="gallery" aria-labelledby="gal-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="gal-h">Inside the model home</h2>
+      <p>Renderings and model home views. The contract drawings take precedence.</p>
+    </div>
+    <div class="gallery">
+      <figure class="g-wide"><div class="mask" style="--i:0"><div class="img img-night" role="img" aria-label="Exterior at dusk, rendering"></div></div><figcaption>Exterior at dusk, rendering</figcaption></figure>
+      <figure class=""><div class="mask" style="--i:1"><div class="img img-lobby" role="img" aria-label="Arrival lobby"></div></div><figcaption>Arrival lobby</figcaption></figure>
+      <figure class=""><div class="mask" style="--i:2"><div class="img img-living" role="img" aria-label="Residence B living room"></div></div><figcaption>Residence B living room</figcaption></figure>
+      <figure class=""><div class="mask" style="--i:0"><div class="img img-bed" role="img" aria-label="Primary suite"></div></div><figcaption>Primary suite</figcaption></figure>
+      <figure class=""><div class="mask" style="--i:1"><div class="img img-garden" role="img" aria-label="Rooftop sky garden"></div></div><figcaption>Rooftop sky garden</figcaption></figure>
+      <figure class="g-wide"><div class="mask" style="--i:2"><div class="img img-pool" role="img" aria-label="Lap pool"></div></div><figcaption>Lap pool</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Booking form ==================== -->
+<section class="visit-sec" id="visit" aria-labelledby="visit-h">
+  <div class="wrap visit">
+    <div class="visit-info reveal">
+      <h2 id="visit-h">Come and walk the model home</h2>
+      <p>Leave your details and a time that suits you, and we will confirm within one business day. You can walk the site on the same visit.</p>
+      <dl>
+        <div><dt>Sales center</dt><dd>88 Grove Lane, Alder Hollow, OR 97035</dd></div>
+        <div><dt>Hours</dt><dd>Daily 10:00–19:00</dd></div>
+        <div><dt>Phone</dt><dd><a class="link" href="tel:+15550123456">(555) 012-3456</a></dd></div>
+      </dl>
+      <div class="visit-links">
+        <a class="btn btn-brand" href="tel:+15550123456">Call the sales team</a>
+        <!-- Swap for LINE (https://line.me/R/ti/p/@yourlineid), Messenger (https://m.me/yourpage) or Instagram (https://ig.me/m/yourhandle) if you prefer. -->
+<a class="btn btn-line" href="https://wa.me/15550123456" target="_blank" rel="noopener">WhatsApp us</a>
+        <a class="btn btn-line" href="https://maps.google.com/?q=88%20Grove%20Lane%2C%20Alder%20Hollow%2C%20OR%2097035" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+    <!-- The form posts to Formspree (free): sign up at https://formspree.io, create a form, and replace your-form-id in the action with your form ID. Submissions arrive in your inbox. -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">Phone</label><input id="f-tel" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+      <div class="field"><label for="f-date">Preferred date</label><input id="f-date" name="date" type="date"></div>
+      <div class="field"><label for="f-time">Preferred time</label><select id="f-time" name="time"><option>Morning, 10:00–12:00</option><option>Afternoon, 13:00–16:00</option><option>Evening, 16:00–19:00</option></select></div>
+      <div class="field full"><label for="f-unit">Residence type</label><select id="f-unit" name="unit"><option>2BR</option><option>3BR</option><option>4BR</option><option>Not sure yet</option></select></div>
+      <div class="field full"><label for="f-msg">Anything we should know? (optional)</label><textarea id="f-msg" name="message"></textarea></div>
+      <button class="btn btn-brand" type="submit">Request a viewing</button>
+      <p class="form-note">We only use your details to arrange the viewing and never share them.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== Section: FAQ ==================== -->
+<section id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2 id="faq-h">Questions buyers ask us most</h2></div>
+    <div class="faq">
+      <details><summary>How does the payment schedule work?</summary><p>You pay a deposit at reservation, a second amount at contract, then staged payments as construction milestones are reached, with the balance at closing. Our sales team can run the numbers for any residence.</p></details>
+      <details><summary>When will homes be ready?</summary><p>We expect the certificate of occupancy in the fourth quarter of 2027, with closings over the following three months. Construction updates are posted monthly in the buyer portal.</p></details>
+      <details><summary>Can I customize my layout?</summary><p>Yes. Until the structure tops out you can adjust walls, outlets and selected finishes. The first round of changes is free.</p></details>
+      <details><summary>Are deposits protected?</summary><p>Yes. All deposits are held in a third-party escrow account and released only as construction milestones are certified.</p></details>
+      <details><summary>Is there a model home?</summary><p>A fully furnished Residence B model and a finishes gallery are in the sales center. Viewings run seven days a week, and you can walk the site too.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer and project information ==================== -->
+<!-- Pre-construction advertising is regulated: confirm project disclosures and licence numbers with your broker and counsel before going live. -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h2>The Grove</h2>
+        <p>88 Grove Lane, Alder Hollow, OR 97035</p>
+        <p><a href="tel:+15550123456">(555) 012-3456</a></p>
+        <p>Sales center open daily 10:00–19:00</p>
+      </div>
+      <div>
+        <h3>Project information</h3>
+        <dl>
+          <dt>Developer</dt><dd>Grove Land Company</dd>
+          <dt>Architect</dt><dd>Linden Hale Architects</dd>
+          <dt>Contractor</dt><dd>Builder name here</dd>
+          <dt>Permit no.</dt><dd>BLD-0000-00000</dd>
+          <dt>Broker</dt><dd>Broker name, licence no. 000000</dd>
+        </dl>
+      </div>
+      <div>
+        <h3>Follow us</h3>
+        <ul class="social">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+        <p style="margin-top:1rem"><a href="#faq">FAQ</a></p>
+      </div>
+    </div>
+    <div class="legal">
+      <p>All images are renderings. Prices and sizes are indicative and subject to the purchase agreement.</p>
+      <p>© <span id="y"></span> The Grove Residences</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== Section: Mobile sticky buttons ==================== -->
+<div class="mcta">
+  <a class="btn btn-line" href="tel:+15550123456">Call</a>
+  <a class="btn btn-brand" href="#visit">Book a viewing</a>
+</div>
+
+<script>
+(function () {
+  var d = document, root = d.documentElement;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var locale = 'en-US';
+
+  // Mobile menu: closes after a link is tapped
+  var burger = d.querySelector('.burger'), menu = d.getElementById('menu');
+  function setMenu(open) { burger.setAttribute('aria-expanded', open); root.classList.toggle('menu-open', open); }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+
+  // Header: gains a background once you leave the top (IntersectionObserver, no scroll listener)
+  var head = d.querySelector('.site-header');
+  new IntersectionObserver(function (e) { head.classList.toggle('scrolled', !e[0].isIntersecting); }).observe(d.getElementById('sentinel'));
+
+  // Number tween (requestAnimationFrame)
+  function fmt(v, dec) { return v.toLocaleString(locale, { minimumFractionDigits: dec, maximumFractionDigits: dec }); }
+  function tween(el, from, to, dur) {
+    var dec = +(el.dataset.dec || 0), t0 = performance.now();
+    if (reduce) { el.textContent = fmt(to, dec); return; }
+    (function f(t) {
+      var p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 4);
+      el.textContent = fmt(from + (to - from) * e, dec);
+      if (p < 1) requestAnimationFrame(f);
+    })(t0);
+  }
+  var counters = d.querySelectorAll('[data-count]');
+  if (!reduce) counters.forEach(function (c) { c.textContent = fmt(0, +(c.dataset.dec || 0)); });
+
+  // Scroll reveals: add .in and start the counters
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in');
+      e.target.querySelectorAll('[data-count]').forEach(function (c) { tween(c, 0, +c.dataset.count, 1800); });
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.2, rootMargin: '0px 0px -6% 0px' });
+  d.querySelectorAll('.reveal, .mask, .map, .range, .facts').forEach(function (el) { io.observe(el); });
+
+  // Floor plan: the room for the step in view lights up and the camera eases toward it
+  var fig = d.querySelector('.plan-fig');
+  if (fig) {
+    var zoom = fig.querySelector('.plan-zoom'), rooms = fig.querySelectorAll('.rm'), steps = d.querySelectorAll('.step');
+    var cap = fig.querySelector('.plan-now'), bar = fig.querySelector('.plan-prog span');
+    var setStep = function (s) {
+      var k = [].indexOf.call(steps, s), x0 = 1e9, y0 = 1e9, x1 = 0, y1 = 0;
+      steps.forEach(function (x) { x.classList.toggle('on', x === s); });
+      rooms.forEach(function (r) {
+        var on = r.dataset.g === s.dataset.g, b;
+        r.classList.toggle('on', on);
+        if (on) { b = r.querySelector('.rm-box').getBBox(); x0 = Math.min(x0, b.x); y0 = Math.min(y0, b.y); x1 = Math.max(x1, b.x + b.width); y1 = Math.max(y1, b.y + b.height); }
+      });
+      cap.textContent = s.querySelector('h3').textContent;
+      bar.style.transform = 'scaleX(' + (k + 1) / steps.length + ')';
+      var sc = 1.3, tx = Math.min(0, Math.max(600 - 600 * sc, 300 - sc * (x0 + x1) / 2)), ty = Math.min(0, Math.max(420 - 420 * sc, 210 - sc * (y0 + y1) / 2));
+      zoom.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + sc + ')';
+    };
+    var sio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) setStep(e.target); }); }, { rootMargin: '-45% 0px -45% 0px' });
+    steps.forEach(function (s) { sio.observe(s); });
+  }
+
+  // Residence switcher: crossfade and scale, spec numbers roll from the previous residence
+  var tabs = d.querySelectorAll('[role="tab"]'), panels = d.querySelectorAll('.unit');
+  function show(i, focus) {
+    var cur = d.querySelector('.unit:not(.off)'), next = panels[i];
+    var old = cur ? [].map.call(cur.querySelectorAll('[data-n]'), function (n) { return +n.dataset.n; }) : [];
+    tabs.forEach(function (t, j) { t.setAttribute('aria-selected', j === i); t.tabIndex = j === i ? 0 : -1; });
+    panels.forEach(function (p, j) { p.classList.toggle('off', j !== i); });
+    if (focus) tabs[i].focus();
+    if (cur && cur !== next) next.querySelectorAll('[data-n]').forEach(function (n, k) { tween(n, old[k] || 0, +n.dataset.n, 900); });
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { show(i); });
+    t.addEventListener('keydown', function (e) {
+      var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (k) { e.preventDefault(); show((i + k + tabs.length) % tabs.length, true); }
+    });
+  });
+  show(1);
+
+  // Booking buttons pre-fill the residence type in the form
+  d.querySelectorAll('[data-unit]').forEach(function (a) {
+    a.addEventListener('click', function () { d.getElementById('f-unit').value = a.dataset.unit; });
+  });
+
+  d.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
