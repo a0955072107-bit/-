@@ -35,8 +35,13 @@ for p in sorted(root.rglob("index.html")):
     # head alternate: insert before x-default
     html = re.sub(r'(<link rel="alternate" hreflang="x-default")',
                   f'<link rel="alternate" hreflang="{code}" href="{href}">\n\\1', html, count=1)
-    # header switcher: insert before closing </nav> of lang-switch
-    html = re.sub(r'(<nav class="lang-switch"[^>]*>.*?)(\n\s*</nav>)',
+    # header switcher: dropdown list (lang-menu.py) gets the full name; old link row gets SHORT
+    if 'class="lang-list"' in html:
+        html = re.sub(r'(<div class="lang-list">.*?)(\n\s*</div>)',
+                      lambda m: m.group(1) + f'\n          <a href="{href}" hreflang="{code}" lang="{code}"{cur}>{full}</a>' + m.group(2),
+                      html, count=1, flags=re.S)
+    else:
+      html = re.sub(r'(<nav class="lang-switch"[^>]*>.*?)(\n\s*</nav>)',
                   lambda m: m.group(1) + f'\n      <a href="{href}" hreflang="{code}" lang="{code}"{cur}>{short}</a>' + m.group(2),
                   html, count=1, flags=re.S)
     # footer links

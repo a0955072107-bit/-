@@ -23,7 +23,12 @@ def fix_lang(html):
         elif 'href="../zh-CN/"' in t and 'aria-current' not in t:
             t = t[:-1] + ' aria-current="page">'
         return t
-    return re.sub(r'<a\b[^>]*>', tag, html)
+    html = re.sub(r'<a\b[^>]*>', tag, html)
+    # 頁首語言下拉：目前語言顯示「简」；「繁體中文」這個語言名稱保持繁體
+    html = html.replace('<summary lang="zh-Hant">繁</summary>', '<summary lang="zh-Hans">简</summary>')
+    html = re.sub(r'(hreflang="zh-Hant" lang="zh-Hant"[^>]*>)繁体中文<', r'\1繁體中文<', html)
+    html = re.sub(r'(hreflang="ja" lang="ja"[^>]*>)日本语<', r'\1日本語<', html)
+    return html
 for slug in slugs:
     src = (root / slug / 'index.html').read_text(encoding='utf-8')
     out = conv.convert(src)
