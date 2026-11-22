@@ -115,3 +115,13 @@
 3. 位置：桌機放在頁首主要按鈕旁邊；手機放在漢堡按鈕旁邊，保持可見，或放在展開選單的最上方。沒有 JS 時也要看得到、點得到。
 4. 樣式：用該模板自己的主題變數，小巧低調。目前語言要用字重或底線標示，不能只靠顏色。點擊範圍至少 32×32px，要有 :hover、:active、:focus-visible。不要讓頁首換行或擠壓到 logo；360px 寬度也不能出現水平捲軸。
 5. 頁尾也放同一組連結（可以更簡單，例如文字連結）。
+
+## 日本語版（templates/ja/<款式>/index.html）
+
+- 從英文版複製後翻譯成自然的日文（です・ます調），不要逐字直譯。`<html lang="ja">`。
+- 字型：內文 `Noto Sans JP` 或 `Zen Kaku Gothic New`，標題可用 `Noto Serif JP`／`Shippori Mincho`，透過 Google Fonts 載入，並保留系統字型備援（`"Hiragino Sans", "Yu Gothic", sans-serif`）。
+- 日文排版：`line-break: strict;`，標題不要加字距（letter-spacing 保持 0 或 normal），長標題用 `<wbr>` 或 `text-wrap: balance` 避免單字斷行。
+- 在地化範例資料：店名、東京或大阪的地址、`03-1234-5678` 格式電話、`¥` 價格（含稅表示「税込」）、營業時間「11:00〜21:00」、聯絡方式以 LINE、電話、Instagram 為主。
+- JSON-LD 的地址、電話、`priceCurrency: "JPY"` 都要改。
+- 語言切換：不要自己加 JA 連結，也不要保留 EN 連結上的 `aria-current`；全部日文頁做完後，統一執行一次 `python3 scripts/add-lang.py ja JA 日本語`，它會在所有語言版本加上 JA 連結，並在日文頁標記目前語言。
+- 驗收和其他語言相同，並且必須通過 Hallmark（`bash scripts/lint-all.sh` 為 0 頁 FAIL）。

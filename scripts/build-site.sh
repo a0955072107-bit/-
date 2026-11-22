@@ -7,19 +7,19 @@ cd "$(dirname "$0")/.."
 rm -rf _site && mkdir -p _site/templates
 cp index.html _site/
 python3 - <<'PY'
-import pathlib, re, shutil
+import pathlib, re, shutil, subprocess
 T = pathlib.Path('templates'); S = pathlib.Path('_site/templates')
-skip = {'en', 'zh-CN', '_docs', 'motion', 'luxe'}
+skip = {'en', 'zh-CN', 'ja', 'es', '_docs', 'motion', 'luxe'}
 slugs = [p.name for p in T.iterdir() if p.is_dir() and p.name not in skip and (p / 'index.html').exists()]
 for group in ('motion', 'luxe'):
     if (T / group).exists():
         slugs += [f'{group}/{p.name}' for p in (T / group).iterdir() if (p / 'index.html').exists()]
 for s in slugs:
-    for lang, src in (('zh-TW', T / s), ('en', T / 'en' / s), ('zh-CN', T / 'zh-CN' / s)):
+    for lang, src in (('zh-TW', T / s), ('en', T / 'en' / s), ('zh-CN', T / 'zh-CN' / s), ('ja', T / 'ja' / s), ('es', T / 'es' / s)):
         f = src / 'index.html'
         if f.exists():
             d = S / s / lang; d.mkdir(parents=True, exist_ok=True); shutil.copy(f, d / 'index.html')
-    shutil.copy(T / '_docs' / 'lang-index.html', S / s / 'index.html')
+    subprocess.run(['python3', 'scripts/lang-index.py', str(S / s)], check=True)
 # 展示頁：連結改成新結構
 def fix(text, prefix, lang):
     return re.sub(r"href: '([a-z0-9/-]+)/'", lambda m: f"href: '{prefix}{m.group(1)}/{lang}/'", text)

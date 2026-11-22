@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Choose language · 選擇語言 · 选择语言</title>
+<title>Choose language · 選擇語言 · 言語を選択</title>
 <!-- 語言入口：訪客打開網站根目錄時，依瀏覽器語言自動前往 en/、zh-TW/ 或 zh-CN/。
      Language entry: sends visitors to en/, zh-TW/ or zh-CN/ based on their browser language.
      想固定預設語言：把下面 script 刪掉，改成 <meta http-equiv="refresh" content="0; url=zh-TW/">。 -->
@@ -15,10 +15,14 @@
 (function () {
   var langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en']).map(function (l) { return String(l).toLowerCase(); });
   var pick = 'en/';
+  // Only languages this template ships with (listed in the links below) are chosen.
+  function has(code) { return !!document.querySelector('a[hreflang="' + code + '"]'); }
   for (var i = 0; i < langs.length; i++) {
     var l = langs[i];
     if (/^zh-(cn|sg|my|hans)/.test(l)) { pick = 'zh-CN/'; break; }
     if (/^zh/.test(l)) { pick = 'zh-TW/'; break; }
+    if (/^ja/.test(l) && has('ja')) { pick = 'ja/'; break; }
+    if (/^es/.test(l) && has('es')) { pick = 'es/'; break; }
     if (/^en/.test(l)) { pick = 'en/'; break; }
   }
   location.replace(pick + location.hash);
@@ -38,6 +42,7 @@ a:hover,a:focus-visible{border-color:#1d1f22}
   <a href="en/" hreflang="en" lang="en">English</a>
   <a href="zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
   <a href="zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+  <!-- extra languages -->
 </nav>
 </body>
 </html>
