@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ember &amp; Salt | Wood-Fired Tasting Menu in Portland</title>
+<meta name="description" content="Ember &amp; Salt is a twelve-seat, wood-fired tasting counter in Portland. Six seasonal courses cooked over live coals, with an optional wine pairing. Two seatings nightly, reserve online.">
+<meta name="theme-color" content="#121010">
+<meta property="og:title" content="Ember &amp; Salt | Six Courses Over Live Fire">
+<meta property="og:description" content="Twelve seats, one hearth, six seasonal courses with wine pairings. Two seatings nightly in Portland.">
+<meta property="og:type" content="restaurant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+  // Add .js when scripts run, and .motion only when the visitor has not asked for reduced motion. Every animation hangs off .motion
+  document.documentElement.classList.add('js');
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Ember & Salt",
+  "telephone": "(555) 012-3456",
+  "url": "https://example.com/",
+  "servesCuisine": ["Wood-fired", "New American", "Tasting menu"],
+  "priceRange": "$165–$260",
+  "acceptsReservations": "True",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "128 Maple Street",
+    "addressLocality": "Portland",
+    "addressRegion": "OR",
+    "postalCode": "97205",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Sunday"], "opens": "17:30", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "17:30", "closes": "23:30" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   THEME SETTINGS: change these to restyle colors and fonts site-wide
+   ============================================================ */
+:root {
+  --brand: #e3893f;          /* Brand color (ember amber): buttons, highlights */
+  --brand-ink: #1b110a;      /* Text color on top of the brand color */
+  --bg: #121010;             /* Page background (charcoal black) */
+  --surface: #1a1715;        /* Raised surfaces: cards, forms */
+  --surface-2: #231f1b;      /* Second raised layer (inputs, chips) */
+  --text: #f2e8d8;           /* Main text (candlelight cream) */
+  --muted: #b5a690;          /* Secondary and helper text */
+  --line: #3a332c;           /* Dividers and borders */
+  --open: #b4d993;           /* "Open now" status text color */
+  --ember: #ff8f3a;          /* Ember color: particles, glow */
+  --ember-hot: #ffd59a;      /* Hottest ember core */
+  --ember-deep: #a8381a;     /* Deep red coals: coal bed, glaze drip */
+  --coal: #0a0807;           /* Charcoal, deepest shadows */
+  --smoke: #8a8177;          /* Smoke, plate speckles */
+  --glaze: #2a2522;          /* Art placeholder: plate glaze */
+  --rim: #4b4139;            /* Art placeholder: plate rim, grill grate */
+  --wood: #5d3f28;           /* Art placeholder: wood, skewers */
+  --sea: #1d3033;            /* Art placeholder: early-morning sea */
+  --lacquer: #3a1512;        /* Art placeholder: lacquer bowl */
+  --broth: #b98a4b;          /* Art placeholder: broth */
+  --food-cream: #efe1c6;     /* Art placeholder: cream, fish, custard */
+  --food-pink: #e49a83;      /* Art placeholder: crudo, medium-rare center */
+  --food-red: #b8432e;       /* Art placeholder: shellfish, beef */
+  --food-gold: #dca54a;      /* Art placeholder: honey, caramel, citrus */
+  --food-green: #7d9150;     /* Art placeholder: herbs, greens */
+  --food-plum: #6e3b46;      /* Art placeholder: plum skin */
+  --shadow: color-mix(in srgb, var(--coal) 72%, transparent); /* Shadow */
+  --radius: 14px;            /* Corner radius */
+  --font-heading: "Cormorant Garamond", "Bodoni Moda", Georgia, serif;  /* Heading font */
+  --font-body: "Figtree", "Helvetica Neue", Arial, system-ui, sans-serif; /* Body font */
+  --max: 1200px;             /* Max content width */
+  --pad: clamp(1rem, 5vw, 3rem); /* Side padding */
+  --header-h: 68px;          /* Header height */
+
+  /* ---------- MOTION SETTINGS ---------- */
+  --motion-speed: 900ms;     /* Base animation duration: higher is slower, scales every animation on the site */
+  --motion-ease: cubic-bezier(.2, .7, .2, 1); /* Easing curve: fast start, soft landing */
+  --motion-distance: 28px;   /* Travel distance for rise-in animations */
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: var(--header-h); -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.8 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.2; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--ember-hot); outline-offset: 3px; border-radius: 6px; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: clamp(4.5rem, 10vw, 8rem); position: relative; }
+.sec-title { font-size: clamp(2rem, 4.6vw, 3.4rem); margin-bottom: 1rem; }
+.sec-lead { color: var(--muted); max-width: 36rem; }
+.sec-head { margin-bottom: clamp(2.2rem, 5vw, 3.5rem); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .8rem 1.6rem; border-radius: 999px; font: 500 1rem/1.2 var(--font-body); text-decoration: none; border: 1px solid var(--brand); cursor: pointer; transition: transform .25s var(--motion-ease), background-color .25s, color .25s, box-shadow .25s; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); box-shadow: 0 0 0 0 color-mix(in srgb, var(--ember) 0%, transparent); }
+.btn-primary:hover { background: var(--ember-hot); border-color: var(--ember-hot); box-shadow: 0 8px 32px color-mix(in srgb, var(--ember) 35%, transparent); }
+.btn-ghost { background: transparent; color: var(--text); border-color: color-mix(in srgb, var(--text) 35%, transparent); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--text) 8%, transparent); border-color: var(--text); }
+.btn:active { transform: scale(.97); }
+a:not(.btn):hover { color: var(--ember-hot); }
+a:not(.btn):active { opacity: .7; }
+
+/* ---------- Motion: elements start hidden only under .motion (JS on, no reduced-motion request) ---------- */
+.js.motion .reveal { opacity: 0; transform: translateY(var(--motion-distance)); transition: opacity var(--motion-speed) var(--motion-ease), transform var(--motion-speed) var(--motion-ease); transition-delay: var(--d, 0ms); }
+.js.motion .reveal.in { opacity: 1; transform: none; }
+/* Headings rise line by line */
+.ln { display: block; overflow: hidden; padding-bottom: .1em; margin-bottom: -.1em; }
+.ln > span { display: inline-block; }
+.js.motion .lines .ln > span { transform: translateY(110%); transition: transform calc(var(--motion-speed) * 1.1) var(--motion-ease); }
+.js.motion .lines .ln:nth-child(2) > span { transition-delay: 120ms; }
+.js.motion .lines.in .ln > span { transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ==================== Header ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .4s, box-shadow .4s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; min-height: var(--header-h); gap: 1rem; }
+.logo { display: flex; align-items: baseline; gap: .6rem; text-decoration: none; }
+.logo b { font: 600 1.5rem/1 var(--font-heading); color: var(--ember-hot); }
+.logo span { font: 500 1.25rem/1 var(--font-heading); letter-spacing: .02em; }
+.nav-menu { display: flex; align-items: center; gap: 1.6rem; list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; font-size: .95rem; color: var(--muted); transition: color .2s; }
+.nav-menu a:not(.btn):hover { color: var(--text); }
+.nav-menu .btn { min-height: 42px; padding: .55rem 1.2rem; }
+.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: 10px; }
+.nav-toggle:hover { background: color-mix(in srgb, var(--text) 8%, transparent); }
+.nav-toggle:active { transform: scale(.94); }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 2px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; border-radius: 2px; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 760px) {
+  html:not(.js) .site-header { position: sticky; background: var(--bg); }
+  html:not(.js) .nav { flex-wrap: wrap; padding-block: .6rem; }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1.1rem; }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: fixed; inset: var(--header-h) 0 auto; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.4rem; background: var(--bg); box-shadow: 0 1px 0 var(--line), 0 24px 40px var(--shadow); opacity: 0; transform: translateY(-12px); visibility: hidden; transition: opacity .3s, transform .3s, visibility 0s .3s; }
+  .js .nav-menu.open { opacity: 1; transform: none; visibility: visible; transition: opacity .3s, transform .3s; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: .9rem 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+  .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+}
+
+/* ==================== Hero: charcoal grill + canvas embers ==================== */
+.hero { min-height: max(640px, 100svh); display: flex; align-items: center; padding-block: calc(var(--header-h) + 3rem) 9rem; overflow: hidden; isolation: isolate;
+  background: radial-gradient(120% 70% at 50% 108%, color-mix(in srgb, var(--ember-deep) 55%, var(--bg)) 0%, color-mix(in srgb, var(--ember-deep) 18%, var(--bg)) 38%, var(--bg) 70%); }
+/* CSS-drawn grill: coal bed, grate, smoke */
+.grill { position: absolute; inset: auto 0 0; height: 40%; z-index: -2; pointer-events: none; }
+.coals { position: absolute; inset: 38% -5% 0; border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+  background:
+    radial-gradient(18% 34% at 18% 40%, var(--ember) 0, color-mix(in srgb, var(--ember-deep) 70%, transparent) 40%, transparent 72%),
+    radial-gradient(14% 30% at 42% 30%, var(--ember-hot) 0, color-mix(in srgb, var(--ember) 60%, transparent) 30%, transparent 70%),
+    radial-gradient(20% 36% at 66% 44%, var(--ember) 0, color-mix(in srgb, var(--ember-deep) 70%, transparent) 42%, transparent 74%),
+    radial-gradient(12% 26% at 86% 34%, var(--ember-hot) 0, color-mix(in srgb, var(--ember) 50%, transparent) 32%, transparent 70%),
+    radial-gradient(9% 16% at 30% 62%, var(--coal) 0 60%, transparent 64%),
+    radial-gradient(11% 18% at 55% 66%, var(--coal) 0 60%, transparent 64%),
+    radial-gradient(8% 15% at 78% 64%, var(--coal) 0 60%, transparent 64%),
+    linear-gradient(var(--ember-deep), var(--coal) 70%); }
+.coals::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: radial-gradient(40% 60% at 50% 40%, color-mix(in srgb, var(--ember-hot) 55%, transparent), transparent 70%); opacity: .35; }
+.js.motion .coals::after { animation: flicker calc(var(--motion-speed) * 3.2) steps(1, end) infinite; }
+@keyframes flicker { 0% { opacity: .3; } 12% { opacity: .55; } 20% { opacity: .38; } 36% { opacity: .6; } 52% { opacity: .34; } 70% { opacity: .5; } 86% { opacity: .42; } }
+.grate { position: absolute; inset: 0 -20% 26%; transform: perspective(520px) rotateX(64deg); transform-origin: 50% 100%;
+  background: repeating-linear-gradient(90deg, transparent 0 34px, var(--rim) 34px 40px, color-mix(in srgb, var(--ember) 45%, var(--rim)) 40px 41px, transparent 41px 75px);
+  -webkit-mask-image: linear-gradient(to top, var(--text) 30%, transparent 95%); mask-image: linear-gradient(to top, var(--text) 30%, transparent 95%); opacity: .85; }
+.smoke { position: absolute; bottom: 30%; width: 46vmax; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(closest-side, color-mix(in srgb, var(--smoke) 18%, transparent), transparent); opacity: .6; }
+.smoke.s1 { left: 5%; } .smoke.s2 { right: 0; bottom: 40%; width: 36vmax; }
+.js.motion .smoke { animation: smoke calc(var(--motion-speed) * 14) linear infinite; }
+.js.motion .smoke.s2 { animation-delay: calc(var(--motion-speed) * -7); }
+@keyframes smoke { 0% { transform: translate3d(0, 20%, 0) scale(.8); opacity: 0; } 30% { opacity: .55; } 100% { transform: translate3d(8%, -70%, 0) scale(1.3); opacity: 0; } }
+#embers { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(80% 70% at 30% 40%, transparent, color-mix(in srgb, var(--bg) 60%, transparent)); pointer-events: none; }
+.hero-inner { width: 100%; }
+.status { display: inline-flex; align-items: center; min-height: 34px; padding: .3rem 1rem; border: 1px solid var(--line); border-radius: 999px; font-size: .9rem; color: var(--muted); background: color-mix(in srgb, var(--bg) 60%, transparent); }
+.status b { font-weight: 500; color: var(--text); margin-inline-end: .35rem; }
+.status.is-open { border-color: color-mix(in srgb, var(--open) 45%, transparent); }
+.status.is-open b { color: var(--open); }
+.hero h1 { font-size: clamp(2.9rem, 8.4vw, 6.4rem); line-height: 1.08; margin: 1.4rem 0 1.3rem; max-width: 12ch; font-weight: 500; }
+.hero h1 .line { display: block; }
+.hero h1 .word { display: inline-block; white-space: nowrap; }
+.hero h1 .ch { display: inline-block; }
+.js.motion .hero h1 .ch { opacity: 0; transform: translateY(.45em) rotate(4deg); animation: chIn calc(var(--motion-speed) * 1.1) var(--motion-ease) forwards; animation-delay: calc(var(--i) * 55ms + 250ms); }
+@keyframes chIn { to { opacity: 1; transform: none; } }
+.hero .lead { font-size: clamp(1.02rem, 1.6vw, 1.2rem); color: var(--muted); max-width: 30rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+.js.motion .hero .rise { opacity: 0; transform: translateY(var(--motion-distance)); animation: chIn var(--motion-speed) var(--motion-ease) forwards; animation-delay: calc(var(--chars, 10) * 55ms + 300ms + var(--d, 0ms)); }
+.hero-note { position: absolute; left: var(--pad); right: var(--pad); bottom: 2rem; display: flex; justify-content: space-between; gap: 1rem; font-size: .88rem; color: var(--muted); }
+.js.motion .hero-note .cue { display: inline-block; animation: cue calc(var(--motion-speed) * 2.4) var(--motion-ease) infinite; }
+@keyframes cue { 0%, 100% { transform: translateY(0); opacity: .6; } 50% { transform: translateY(6px); opacity: 1; } }
+@media (max-width: 560px) { .hero-note { display: none; } .hero { padding-bottom: 7rem; } }
+
+/* ==================== Tasting menu: scrollytelling ==================== */
+.courses { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+.course-list { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+.course { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 1.2rem; align-items: start; padding: 1.4rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.mini { width: 112px; height: 112px; }
+.course h3 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); font-weight: 600; }
+.c-meta { font-size: .9rem; color: var(--brand); margin: .2rem 0 .6rem; }
+.c-ing { color: var(--muted); font-size: .98rem; }
+.c-pair { margin-top: .9rem; padding-top: .8rem; border-top: 1px solid var(--line); font-size: .95rem; }
+.c-pair span { color: var(--muted); margin-inline-end: .5rem; }
+.menu-foot { margin-top: 2.5rem; display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; color: var(--muted); }
+.menu-foot b { font: 600 1.8rem/1 var(--font-heading); color: var(--text); margin-inline-end: .3rem; }
+.stage { display: none; }
+@media (max-width: 760px) { .course-list { grid-template-columns: minmax(0, 1fr); } .course { grid-template-columns: 84px minmax(0, 1fr); padding: 1.1rem; } .mini { width: 84px; height: 84px; } }
+
+/* With motion: a pinned plate on the left, six courses scroll past on the right */
+.js.motion .courses { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); }
+.js.motion .course-list { grid-template-columns: minmax(0, 1fr); gap: 0; }
+.js.motion .course { display: flex; align-items: center; min-height: 78svh; padding: 0; border: 0; background: none; opacity: .28; transition: opacity calc(var(--motion-speed) * .6); }
+.js.motion .course.active { opacity: 1; }
+.js.motion .course .mini { display: none; }
+.js.motion .stage { display: block; position: sticky; top: calc(var(--header-h) + 4svh); height: calc(100svh - var(--header-h) - 8svh); align-self: start; }
+.stage-inner { position: absolute; inset: 0 0 0 3.5rem; display: grid; place-items: center; }
+.plate-box { position: relative; width: min(100%, 72svh, 560px); aspect-ratio: 1; }
+.plate-box svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.halo { position: absolute; inset: -26%; border-radius: 50%; background: radial-gradient(closest-side, color-mix(in srgb, var(--ember) 30%, transparent) 40%, transparent 92%); }
+.js.motion .halo { animation: halo calc(var(--motion-speed) * 4) ease-in-out infinite alternate; }
+@keyframes halo { from { opacity: .55; transform: scale(.94); } to { opacity: 1; transform: scale(1.04); } }
+.plate { transform: rotate(calc(var(--step, 1) * 52deg)); transition: transform calc(var(--motion-speed) * 1.5) var(--motion-ease); }
+.js.motion .dish { opacity: 0; transform: rotate(-28deg) scale(.72); transition: opacity calc(var(--motion-speed) * .8) var(--motion-ease), transform calc(var(--motion-speed) * 1.3) var(--motion-ease); }
+.js.motion .dish.on { opacity: 1; transform: none; transition-delay: calc(var(--motion-speed) * .25); }
+.js.motion .dish.out { transform: rotate(24deg) scale(1.12); }
+.numeral { position: absolute; left: 0; bottom: 4%; font: 500 clamp(3rem, 7vw, 5.5rem)/1 var(--font-heading); color: color-mix(in srgb, var(--text) 16%, transparent); }
+.js.motion .numeral span { position: absolute; left: 0; bottom: 0; opacity: 0; transform: translateY(30%); transition: opacity calc(var(--motion-speed) * .6), transform calc(var(--motion-speed) * .8) var(--motion-ease); }
+.js.motion .numeral span.on { opacity: 1; transform: none; }
+/* Vertical progress rail */
+.rail { position: absolute; left: 0; top: 12%; bottom: 26%; width: 2.2rem; }
+.rail-track, .rail-fill { position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: var(--line); border-radius: 2px; }
+.rail-fill { background: linear-gradient(var(--ember-hot), var(--brand)); transform-origin: 50% 0; transform: scaleY(calc(var(--step, 0) / 6)); transition: transform calc(var(--motion-speed) * .8) var(--motion-ease); }
+.ticks { position: absolute; inset: 0; list-style: none; display: flex; flex-direction: column; justify-content: space-between; align-items: center; }
+.ticks li { width: 14px; height: 2px; background: var(--line); transition: background-color .4s, transform .4s var(--motion-ease); }
+.ticks li.on { background: var(--ember-hot); transform: scaleX(1.6); }
+@supports (animation-timeline: view()) {
+  .js.motion .courses { view-timeline: --courses block; }
+  .js.motion .rail-fill { transition: none; animation: railFill linear both; animation-timeline: --courses; animation-range: contain 0% contain 100%; }
+  @keyframes railFill { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+}
+@media (max-width: 900px) {
+  .js.motion .courses { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .js.motion .stage { top: var(--header-h); height: 44svh; z-index: 2; background: linear-gradient(var(--bg) 82%, transparent); }
+  .stage-inner { inset: 0 2.6rem 1rem 0; }
+  .plate-box { width: min(100%, 38svh); }
+  .rail { left: auto; right: 0; top: 8%; bottom: 14%; }
+  .numeral { bottom: 8%; font-size: 2.6rem; }
+  .halo { inset: -6%; }
+  .js.motion .course { min-height: 66svh; align-items: flex-end; padding-bottom: 16svh; }
+}
+
+/* ==================== Ingredients: layered parallax ==================== */
+.source { overflow: hidden; background: linear-gradient(var(--bg), var(--surface) 50%, var(--bg)); }
+.drifts { position: absolute; inset: 0; pointer-events: none; }
+.drift { position: absolute; transform: translate3d(0, 0, 0) rotate(var(--r, 0deg)); }
+.leaf { width: 90px; height: 150px; border-radius: 0 100% 0 100%; background: linear-gradient(135deg, var(--food-green), color-mix(in srgb, var(--food-green) 50%, var(--coal))); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--food-green) 60%, var(--text)); opacity: .55; }
+.citrus { width: 120px; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, var(--food-cream) 0 10%, transparent 11%), repeating-conic-gradient(var(--food-gold) 0 26deg, var(--food-cream) 26deg 30deg); box-shadow: 0 0 0 7px var(--food-gold), 0 0 0 10px var(--food-cream); opacity: .5; }
+.salt { width: 22px; aspect-ratio: 1; background: var(--food-cream); border-radius: 3px; opacity: .55; box-shadow: 34px 20px 0 -4px var(--food-cream), 14px 52px 0 -7px var(--food-cream), 58px -10px 0 -8px var(--food-cream); }
+.chili { width: 26px; height: 130px; border-radius: 50% 50% 50% 50% / 20% 20% 80% 80%; background: linear-gradient(90deg, var(--food-red), var(--ember-deep)); opacity: .55; }
+.stick { width: 34px; height: 210px; border-radius: 6px; background: repeating-linear-gradient(0deg, var(--coal) 0 18px, color-mix(in srgb, var(--rim) 60%, var(--coal)) 18px 20px); box-shadow: 0 0 30px color-mix(in srgb, var(--ember) 30%, transparent), inset 0 -16px 18px color-mix(in srgb, var(--ember) 60%, transparent); opacity: .8; }
+.d1 { --depth: 1.4; --r: -24deg; left: 4%; top: 8%; }
+.d2 { --depth: .6; --r: 18deg; right: 6%; top: 12%; }
+.d3 { --depth: 2; left: 46%; top: 4%; }
+.d4 { --depth: 1; --r: 34deg; right: 12%; bottom: 10%; }
+.d5 { --depth: .4; --r: -14deg; left: 10%; bottom: 6%; }
+.d6 { --depth: 1.7; --r: 140deg; right: 34%; bottom: 30%; }
+@supports (animation-timeline: view()) {
+  .js.motion .drift { animation: drift linear both; animation-timeline: view(); animation-range: cover; }
+  @keyframes drift { from { transform: translate3d(0, calc(var(--depth) * 90px), 0) rotate(var(--r, 0deg)); } to { transform: translate3d(0, calc(var(--depth) * -140px), 0) rotate(calc(var(--r, 0deg) + var(--depth) * 25deg)); } }
+}
+@supports not (animation-timeline: view()) {
+  .js.motion .drift { animation: bob calc(var(--motion-speed) * 7) ease-in-out infinite alternate; animation-delay: calc(var(--depth) * -2s); }
+  @keyframes bob { from { transform: translate3d(0, -12px, 0) rotate(var(--r, 0deg)); } to { transform: translate3d(0, 12px, 0) rotate(var(--r, 0deg)); } }
+}
+.source .wrap { position: relative; }
+.source-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 2rem); }
+.source-card h3 { font-size: 1.6rem; margin: 1.1rem 0 .4rem; }
+.source-card p { color: var(--muted); }
+.source-card:nth-child(2) { margin-top: 3rem; }
+.source-card:nth-child(3) { margin-top: 6rem; }
+@media (max-width: 860px) { .source-grid { grid-template-columns: minmax(0, 1fr); } .source-card:nth-child(n) { margin-top: 0; } }
+
+/* ==================== Art placeholders + circular iris reveal ==================== */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); aspect-ratio: 4 / 5; background: var(--surface-2); }
+.img::before { content: ""; position: absolute; inset: 0; background: inherit; transform: scale(1); transition: transform calc(var(--motion-speed) * 2) var(--motion-ease); }
+.js.motion .iris { clip-path: circle(0% at 50% 55%); transition: clip-path calc(var(--motion-speed) * 1.7) var(--motion-ease); }
+.js.motion .iris::before { transform: scale(1.18); }
+.js.motion .iris.in { clip-path: circle(80% at 50% 50%); }
+.js.motion .iris.in::before { transform: none; }
+.iris::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 55%, transparent 30%, color-mix(in srgb, var(--ember) 32%, transparent) 55%, transparent 75%); opacity: 0; pointer-events: none; }
+.js.motion .iris.in::after { animation: ring calc(var(--motion-speed) * 1.9) var(--motion-ease); }
+@keyframes ring { 0% { opacity: 0; transform: scale(.4); } 40% { opacity: 1; } 100% { opacity: 0; transform: scale(1.3); } }
+/* Replace with a photo: .img-sea { background: url(images/sea.jpg) center/cover; } */
+.img-sea { background:
+  radial-gradient(30% 10% at 60% 62%, var(--food-cream) 0 30%, transparent 70%),
+  radial-gradient(60% 40% at 30% 10%, color-mix(in srgb, var(--ember) 30%, transparent), transparent 70%),
+  repeating-radial-gradient(120% 60% at 50% 120%, var(--sea) 0 14px, color-mix(in srgb, var(--sea) 70%, var(--text)) 14px 15px, var(--sea) 15px 30px),
+  var(--sea); }
+/* Replace with a photo: .img-coal { background: url(images/charcoal.jpg) center/cover; } */
+.img-coal { background:
+  radial-gradient(70% 30% at 50% 100%, color-mix(in srgb, var(--ember) 70%, transparent), transparent 70%),
+  repeating-linear-gradient(100deg, var(--coal) 0 26px, color-mix(in srgb, var(--rim) 70%, var(--coal)) 26px 29px, var(--coal) 29px 44px, color-mix(in srgb, var(--ember-deep) 40%, var(--coal)) 44px 46px),
+  var(--coal); }
+/* Replace with a photo: .img-salt { background: url(images/salt.jpg) center/cover; } */
+.img-salt { background:
+  radial-gradient(circle at 20% 30%, var(--food-cream) 0 3px, transparent 4px) 0 0 / 38px 34px,
+  radial-gradient(circle at 60% 70%, color-mix(in srgb, var(--food-cream) 70%, transparent) 0 2px, transparent 3px) 0 0 / 26px 30px,
+  radial-gradient(60% 50% at 50% 50%, color-mix(in srgb, var(--food-cream) 20%, var(--surface-2)), var(--surface-2)); }
+/* Replace with a photo: .img-chef { background: url(images/chef.jpg) center/cover; } */
+.img-chef { aspect-ratio: 4 / 5; background:
+  linear-gradient(118deg, transparent 0 47%, color-mix(in srgb, var(--text) 75%, transparent) 47.5%, var(--smoke) 49%, transparent 49.5%),
+  radial-gradient(34% 22% at 50% 82%, var(--ember-hot), var(--ember) 30%, color-mix(in srgb, var(--ember-deep) 60%, transparent) 60%, transparent 75%),
+  radial-gradient(80% 60% at 50% 100%, color-mix(in srgb, var(--ember-deep) 50%, transparent), transparent),
+  var(--coal); }
+/* Replace with a photo: .img-room { background: url(images/private-room.jpg) center/cover; } */
+.img-room { aspect-ratio: 16 / 11; background:
+  linear-gradient(transparent 70%, var(--coal) 70% 74%, color-mix(in srgb, var(--wood) 60%, var(--coal)) 74%),
+  radial-gradient(14% 22% at 50% 30%, var(--ember-hot), color-mix(in srgb, var(--ember) 50%, transparent) 50%, transparent 100%),
+  radial-gradient(50% 50% at 50% 34%, color-mix(in srgb, var(--ember) 25%, transparent), transparent),
+  repeating-linear-gradient(90deg, var(--wood) 0 18px, color-mix(in srgb, var(--wood) 55%, var(--coal)) 18px 22px),
+  var(--wood); }
+
+/* ==================== Chef ==================== */
+.chef-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+.chef-text p { color: var(--muted); margin-bottom: 1rem; max-width: 34rem; }
+.chef-text .quote { font: 500 clamp(1.4rem, 2.4vw, 1.9rem)/1.5 var(--font-heading); color: var(--text); margin-block: 1.6rem; padding-inline-start: 1.2rem; border-inline-start: 2px solid var(--brand); }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; padding-top: 1.6rem; border-top: 1px solid var(--line); }
+.stats b { display: block; font: 600 clamp(2.2rem, 4vw, 3.2rem)/1 var(--font-heading); color: var(--ember-hot); }
+.stats span { font-size: .9rem; color: var(--muted); }
+@media (max-width: 860px) { .chef-grid { grid-template-columns: minmax(0, 1fr); } .img-chef { aspect-ratio: 4 / 3.4; } }
+
+/* ==================== Private dining ==================== */
+.private { background: var(--surface); }
+.private-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.facts { list-style: none; margin: 1.6rem 0 2rem; display: grid; gap: .1rem; }
+.facts li { display: flex; justify-content: space-between; gap: 1rem; padding: .8rem 0; border-bottom: 1px solid var(--line); }
+.facts li span:first-child { color: var(--muted); }
+@media (max-width: 860px) { .private-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Reviews ==================== */
+.reviews-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
+.review { padding: 1.8rem; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(160deg, var(--surface), var(--bg)); display: flex; flex-direction: column; gap: 1.2rem; }
+.review blockquote { font: 500 1.2rem/1.6 var(--font-heading); }
+.review figcaption { margin-top: auto; font-size: .9rem; color: var(--muted); }
+.stars { color: var(--brand); letter-spacing: .1em; }
+@media (max-width: 860px) { .reviews-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Hours and location ==================== */
+.visit-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); }
+.table-wrap { overflow-x: auto; margin-top: 1.2rem; }
+.hours { width: 100%; border-collapse: collapse; min-width: 280px; }
+.hours th, .hours td { text-align: start; padding: .75rem .2rem; border-bottom: 1px solid var(--line); font-weight: 400; }
+.hours td { text-align: end; font-variant-numeric: tabular-nums; }
+.hours .closed { color: var(--muted); }
+.hours tr.today th, .hours tr.today td { color: var(--ember-hot); font-weight: 500; }
+.addr { font: 500 1.5rem/1.5 var(--font-heading); margin: 1rem 0 .6rem; }
+.visit-links { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.6rem; }
+.map-art { margin-top: 1.6rem; aspect-ratio: 16 / 9; border-radius: var(--radius); border: 1px solid var(--line); background:
+  radial-gradient(circle at 58% 46%, var(--ember-hot) 0 5px, color-mix(in srgb, var(--ember) 40%, transparent) 6px 14px, transparent 15px),
+  linear-gradient(28deg, transparent 0 48%, var(--rim) 48% 50%, transparent 50%),
+  linear-gradient(-62deg, transparent 0 60%, var(--line) 60% 61%, transparent 61%),
+  repeating-linear-gradient(0deg, var(--surface) 0 38px, var(--line) 38px 39px),
+  repeating-linear-gradient(90deg, var(--surface) 0 52px, var(--line) 52px 53px); }
+@media (max-width: 860px) { .visit-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Reservations ==================== */
+.reserve { background: radial-gradient(90% 60% at 80% 0%, color-mix(in srgb, var(--ember-deep) 22%, var(--bg)), var(--bg) 70%); }
+.reserve-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.quick { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.6rem; }
+.form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem 1rem; padding: clamp(1.3rem, 3vw, 2.2rem); border: 1px solid var(--line); border-radius: calc(var(--radius) + 4px); background: color-mix(in srgb, var(--surface) 92%, transparent); box-shadow: 0 30px 60px var(--shadow); }
+.field { display: grid; gap: .4rem; min-width: 0; }
+.field.full, .form > .full { grid-column: 1 / -1; }
+.field > label, .legend { font-size: .92rem; color: var(--muted); }
+.field label span[aria-hidden] { color: var(--brand); }
+input, select, textarea { font: inherit; color: var(--text); background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: .75rem .9rem; min-height: 48px; width: 100%; min-width: 0; color-scheme: dark; transition: border-color .2s; }
+input:hover, select:hover, textarea:hover { border-color: var(--smoke); }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 30%, transparent); }
+textarea { min-height: 96px; resize: vertical; }
+fieldset { border: 0; min-width: 0; }
+/* Quick date chips */
+.chips { display: flex; gap: .5rem; overflow-x: auto; padding: .2rem .1rem .6rem; scrollbar-width: thin; }
+.chip { flex: 0 0 auto; display: grid; justify-items: center; gap: .1rem; min-width: 64px; padding: .55rem .6rem; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); color: var(--text); font: inherit; cursor: pointer; transition: border-color .25s, background-color .25s, transform .25s var(--motion-ease); }
+.chip small { font-size: .78rem; color: var(--muted); }
+.chip b { font: 600 1.35rem/1.1 var(--font-heading); }
+.chip:hover { border-color: var(--smoke); transform: translateY(-2px); }
+.chip:active { transform: scale(.95); }
+.chip[aria-pressed="true"] { border-color: var(--brand); background: color-mix(in srgb, var(--brand) 18%, var(--surface-2)); }
+.chip[aria-pressed="true"] small { color: var(--ember-hot); }
+/* Seating times */
+.seg { display: flex; gap: .5rem; flex-wrap: wrap; }
+.seg label { flex: 1 1 120px; position: relative; }
+.seg input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.seg span { display: grid; gap: .1rem; place-items: center; min-height: 56px; padding: .5rem; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); transition: border-color .25s, background-color .25s; font-size: .95rem; }
+.seg span small { color: var(--muted); font-size: .8rem; }
+.seg label:hover span { border-color: var(--smoke); }
+.seg input:checked + span { border-color: var(--brand); background: color-mix(in srgb, var(--brand) 18%, var(--surface-2)); }
+.seg input:focus-visible + span { outline: 2px solid var(--ember-hot); outline-offset: 2px; }
+/* Party size stepper */
+.stepper { display: flex; align-items: center; gap: .6rem; }
+.stepper input { width: 4.5rem; text-align: center; font: 600 1.6rem/1 var(--font-heading); padding: .4rem; -moz-appearance: textfield; appearance: textfield; }
+.stepper input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.step-btn { position: relative; width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface-2); color: var(--text); font: 500 1.4rem/1 var(--font-body); cursor: pointer; overflow: hidden; transition: border-color .2s, transform .2s var(--motion-ease); }
+.step-btn::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: color-mix(in srgb, var(--ember) 40%, transparent); opacity: 0; }
+.step-btn:hover { border-color: var(--brand); }
+.step-btn:active { transform: scale(.9); }
+.step-btn:disabled { opacity: .35; cursor: not-allowed; }
+html:not(.js) .step-btn, html:not(.js) .seats, html:not(.js) .chips { display: none; }
+.seats { display: flex; gap: 4px; margin-inline-start: .6rem; }
+.seats i { width: 6px; height: 22px; border-radius: 3px; background: var(--line); transform: scaleY(.6); transition: background-color .3s, transform .35s var(--motion-ease); }
+.seats i.on { background: var(--brand); transform: none; }
+.hint { font-size: .85rem; color: var(--muted); min-height: 1.4em; }
+.form .btn-primary { grid-column: 1 / -1; min-height: 54px; font-size: 1.05rem; }
+.form > small { grid-column: 1 / -1; color: var(--muted); font-size: .85rem; }
+@media (max-width: 860px) { .reserve-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .form { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== FAQ ==================== */
+.faq-list { max-width: 820px; display: grid; gap: .2rem; }
+.faq-list details { border-bottom: 1px solid var(--line); }
+.faq-list summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.2rem 0; cursor: pointer; font: 500 1.25rem/1.4 var(--font-heading); }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: "+"; font: 400 1.6rem/1 var(--font-body); color: var(--brand); transition: transform .35s var(--motion-ease); }
+.faq-list details[open] summary::after { transform: rotate(45deg); }
+.faq-list summary:hover { color: var(--ember-hot); }
+.faq-list details p { color: var(--muted); padding: 0 0 1.3rem; max-width: 40rem; }
+.js.motion .faq-list details[open] p { animation: chIn calc(var(--motion-speed) * .7) var(--motion-ease) both; }
+
+/* ==================== Footer ==================== */
+.site-footer { border-top: 1px solid var(--line); padding-block: 4rem 2rem; background: var(--coal); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) repeat(2, minmax(0, 1fr)); gap: 2rem; }
+.foot-name { font: 600 1.6rem/1.3 var(--font-heading); margin-bottom: .6rem; }
+.foot-title { color: var(--text); font-weight: 500; margin-bottom: .4rem; }
+.site-footer p { color: var(--muted); font-size: .95rem; }
+.social { display: flex; gap: 1.2rem; margin-top: 1rem; }
+.copy { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--line); font-size: .85rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Mobile sticky button ==================== */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 80px; }
+  .sticky-cta { display: flex; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 -1px 0 var(--line); transition: transform .4s var(--motion-ease), opacity .4s; }
+  .js .sticky-cta.hide { transform: translateY(110%); opacity: 0; }
+  .sticky-cta .btn-primary { flex: 1; }
+}
+/* Use lining figures in the display font so numbers sit evenly */
+h1, h2, h3, .addr, .stats b, .chip b, .menu-foot b, .numeral { font-variant-numeric: lining-nums tabular-nums; }
+</style>
+</head>
+<body>
+
+<!-- Shared graphics: the plate and six courses (colored by CSS variables, change them in THEME SETTINGS) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="plate" viewBox="0 0 400 400">
+      <ellipse cx="200" cy="216" rx="170" ry="166" style="fill:var(--coal);opacity:.7"/>
+      <circle cx="200" cy="200" r="170" style="fill:var(--rim)"/>
+      <circle cx="200" cy="200" r="152" style="fill:var(--glaze)"/>
+      <circle cx="200" cy="200" r="122" style="fill:none;stroke:var(--rim);stroke-width:1.5;opacity:.7"/>
+      <path d="M186 31 q14 -2 26 2 q-2 22 -12 36 q-10 -14 -14 -38z" style="fill:var(--ember-deep);opacity:.85"/>
+      <g style="fill:var(--smoke);opacity:.35"><circle cx="96" cy="140" r="2.5"/><circle cx="300" cy="118" r="2"/><circle cx="318" cy="270" r="3"/><circle cx="112" cy="300" r="2"/><circle cx="250" cy="338" r="2.5"/><circle cx="70" cy="220" r="1.8"/></g>
+    </symbol>
+    <symbol id="dish1" viewBox="0 0 400 400">
+      <g transform="rotate(-12 200 200)">
+        <rect x="84" y="158" width="232" height="88" rx="10" style="fill:var(--coal)"/>
+        <rect x="102" y="176" width="54" height="52" rx="6" style="fill:var(--food-cream)"/>
+        <circle cx="118" cy="190" r="7" style="fill:var(--food-gold)"/><circle cx="136" cy="198" r="6" style="fill:var(--ember)"/><circle cx="124" cy="210" r="5" style="fill:var(--food-gold)"/>
+        <line x1="170" y1="232" x2="234" y2="170" style="stroke:var(--wood);stroke-width:3;stroke-linecap:round"/>
+        <circle cx="186" cy="216" r="10" style="fill:var(--food-green)"/><circle cx="201" cy="201" r="10" style="fill:var(--food-gold)"/><circle cx="216" cy="186" r="10" style="fill:var(--food-green)"/>
+        <circle cx="276" cy="202" r="27" style="fill:var(--food-cream)"/>
+        <circle cx="276" cy="202" r="17" style="fill:none;stroke:var(--food-gold);stroke-width:2;opacity:.7"/>
+        <path d="M266 196 l8 -4 M281 208 l7 3 M272 211 l-3 5" style="stroke:var(--food-gold);stroke-width:3;stroke-linecap:round"/>
+      </g>
+    </symbol>
+    <symbol id="dish2" viewBox="0 0 400 400">
+      <circle cx="200" cy="200" r="114" style="fill:var(--lacquer)"/>
+      <circle cx="200" cy="200" r="114" style="fill:none;stroke:var(--food-gold);stroke-width:2;opacity:.55"/>
+      <circle cx="200" cy="200" r="94" style="fill:var(--broth)"/>
+      <circle cx="184" cy="184" r="66" style="fill:var(--food-gold);opacity:.22"/>
+      <path d="M156 216 q42 -44 88 -8 q-8 28 -44 28 q-32 0 -44 -20z" style="fill:var(--food-cream)"/>
+      <path d="M170 212 q30 -24 62 -4" style="fill:none;stroke:var(--food-red);stroke-width:6;stroke-linecap:round"/>
+      <rect x="214" y="158" width="30" height="7" rx="3.5" transform="rotate(-25 229 161)" style="fill:var(--food-gold)"/>
+      <path d="M146 172 q22 -26 48 -6 q-24 20 -48 6z" style="fill:var(--food-green)"/>
+    </symbol>
+    <symbol id="dish3" viewBox="0 0 400 400">
+      <g style="fill:var(--food-pink)">
+        <g transform="rotate(-44 200 280)"><ellipse cx="200" cy="196" rx="24" ry="64"/></g>
+        <g transform="rotate(-22 200 280)"><ellipse cx="200" cy="196" rx="24" ry="64"/></g>
+        <g><ellipse cx="200" cy="196" rx="24" ry="64"/></g>
+        <g transform="rotate(22 200 280)"><ellipse cx="200" cy="196" rx="24" ry="64"/></g>
+        <g transform="rotate(44 200 280)"><ellipse cx="200" cy="196" rx="24" ry="64"/></g>
+      </g>
+      <g style="fill:var(--ember-deep);opacity:.7">
+        <g transform="rotate(-44 200 280)"><ellipse cx="200" cy="146" rx="16" ry="12"/></g>
+        <g transform="rotate(-22 200 280)"><ellipse cx="200" cy="146" rx="16" ry="12"/></g>
+        <ellipse cx="200" cy="146" rx="16" ry="12"/>
+        <g transform="rotate(22 200 280)"><ellipse cx="200" cy="146" rx="16" ry="12"/></g>
+        <g transform="rotate(44 200 280)"><ellipse cx="200" cy="146" rx="16" ry="12"/></g>
+      </g>
+      <path d="M132 292 q30 -40 78 -14 q-36 34 -78 14z" style="fill:var(--food-green)"/>
+      <circle cx="262" cy="286" r="13" style="fill:var(--food-green)"/><circle cx="270" cy="280" r="6" style="fill:var(--food-cream);opacity:.4"/>
+    </symbol>
+    <symbol id="dish4" viewBox="0 0 400 400">
+      <clipPath id="fillet"><rect x="104" y="156" width="192" height="88" rx="36"/></clipPath>
+      <g transform="rotate(-16 200 200)">
+        <rect x="104" y="156" width="192" height="88" rx="36" style="fill:var(--food-cream)"/>
+        <g clip-path="url(#fillet)">
+          <rect x="104" y="156" width="192" height="40" style="fill:var(--food-gold);opacity:.85"/>
+          <path d="M150 150 l-26 100 M192 150 l-26 100 M234 150 l-26 100 M276 150 l-26 100" style="stroke:var(--coal);stroke-width:8;stroke-linecap:round;opacity:.75"/>
+        </g>
+      </g>
+      <circle cx="292" cy="272" r="24" style="fill:var(--food-green)"/><circle cx="292" cy="272" r="17" style="fill:var(--food-cream);opacity:.8"/>
+      <rect x="110" y="262" width="74" height="8" rx="4" transform="rotate(20 147 266)" style="fill:var(--food-pink)"/>
+    </symbol>
+    <symbol id="dish5" viewBox="0 0 400 400">
+      <g transform="rotate(-22 200 200)">
+        <g transform="translate(110 140)"><rect width="42" height="124" rx="9" style="fill:var(--coal)"/><rect x="5" y="6" width="32" height="112" rx="7" style="fill:var(--food-red)"/><rect x="11" y="14" width="20" height="96" rx="6" style="fill:var(--food-pink)"/></g>
+        <g transform="translate(156 136)"><rect width="42" height="124" rx="9" style="fill:var(--coal)"/><rect x="5" y="6" width="32" height="112" rx="7" style="fill:var(--food-red)"/><rect x="11" y="14" width="20" height="96" rx="6" style="fill:var(--food-pink)"/></g>
+        <g transform="translate(202 132)"><rect width="42" height="124" rx="9" style="fill:var(--coal)"/><rect x="5" y="6" width="32" height="112" rx="7" style="fill:var(--food-red)"/><rect x="11" y="14" width="20" height="96" rx="6" style="fill:var(--food-pink)"/></g>
+        <g transform="translate(248 128)"><rect width="42" height="124" rx="9" style="fill:var(--coal)"/><rect x="5" y="6" width="32" height="112" rx="7" style="fill:var(--food-red)"/><rect x="11" y="14" width="20" height="96" rx="6" style="fill:var(--food-pink)"/></g>
+      </g>
+      <g style="fill:var(--food-cream)"><rect x="150" y="180" width="5" height="5"/><rect x="196" y="214" width="4" height="4"/><rect x="238" y="170" width="5" height="5"/><rect x="262" y="230" width="4" height="4"/></g>
+      <path d="M118 290 q24 -20 50 0 M128 302 q16 -12 32 0" style="fill:none;stroke:var(--food-gold);stroke-width:5;stroke-linecap:round"/>
+    </symbol>
+    <symbol id="dish6" viewBox="0 0 400 400">
+      <ellipse cx="196" cy="196" rx="70" ry="44" transform="rotate(-18 196 196)" style="fill:var(--food-cream)"/>
+      <ellipse cx="180" cy="184" rx="34" ry="14" transform="rotate(-18 180 184)" style="fill:var(--text);opacity:.35"/>
+      <path d="M110 250 q40 -30 80 0 t80 0 t40 -20" style="fill:none;stroke:var(--food-gold);stroke-width:6;stroke-linecap:round"/>
+      <path d="M252 132 q48 10 44 64 l-58 -14z" style="fill:var(--food-plum)"/><path d="M256 142 q34 12 32 46 l-42 -10z" style="fill:var(--food-gold)"/>
+      <g style="fill:var(--wood)"><circle cx="150" cy="276" r="5"/><circle cx="168" cy="286" r="4"/><circle cx="236" cy="270" r="5"/><circle cx="254" cy="282" r="3.5"/></g>
+      <path d="M148 138 q16 -20 36 -4 q-18 14 -36 4z" style="fill:var(--food-green)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<span id="sentinel" aria-hidden="true" style="position:absolute;top:0;height:1px;width:1px"></span>
+
+<!-- ==================== Section: Header ==================== -->
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Main menu">
+    <a href="#top" class="logo" aria-label="Ember and Salt, back to top"><b>Ember</b><span>&amp; Salt</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-links" aria-label="Open menu"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#menu">Tonight's menu</a></li>
+      <li><a href="#source">Sourcing</a></li>
+      <li><a href="#chef">Chef</a></li>
+      <li><a href="#private">Private dining</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a href="#reserve" class="btn btn-primary">Reserve</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="top">
+  <div class="grill" aria-hidden="true">
+    <div class="smoke s1"></div><div class="smoke s2"></div>
+    <div class="coals"></div>
+    <div class="grate"></div>
+  </div>
+  <canvas id="embers" aria-hidden="true"></canvas>
+  <div class="wrap hero-inner">
+    <p class="status rise" data-status aria-live="polite"><span>Two seatings nightly, 5:30 and 8:30 pm</span></p>
+    <h1 data-split><span class="line">Live fire,</span><span class="line">slow supper.</span></h1>
+    <p class="lead rise" style="--d:120ms">Twelve seats around an open hearth. Our chef cooks the season's catch and dry-aged beef over oak coals, one course at a time.</p>
+    <div class="hero-cta rise" style="--d:240ms">
+      <a href="#reserve" class="btn btn-primary magnet">Book tonight</a>
+      <a href="#menu" class="btn btn-ghost magnet">See the six courses</a>
+    </div>
+  </div>
+  <div class="hero-note" aria-hidden="true"><span>128 Maple Street, Portland</span><span class="cue">Scroll to take your seat</span></div>
+</section>
+
+<!-- ==================== Section: Tasting menu (scrollytelling) ==================== -->
+<section id="menu">
+  <div class="wrap sec-head">
+    <h2 class="sec-title lines"><span class="ln"><span>Six courses tonight</span></span></h2>
+    <p class="sec-lead reveal">The menu turns every month with what the boats and farms bring in, and every course comes with its own pour.</p>
+  </div>
+  <div class="wrap courses">
+    <div class="stage" aria-hidden="true">
+      <div class="rail"><div class="rail-track"></div><div class="rail-fill"></div><ol class="ticks"><li></li><li></li><li></li><li></li><li></li><li></li></ol></div>
+      <div class="stage-inner">
+        <div class="plate-box">
+          <div class="halo"></div>
+          <svg class="plate" viewBox="0 0 400 400"><use href="#plate"/></svg>
+          <svg class="dish" data-c="1" viewBox="0 0 400 400"><use href="#dish1"/></svg>
+          <svg class="dish" data-c="2" viewBox="0 0 400 400"><use href="#dish2"/></svg>
+          <svg class="dish" data-c="3" viewBox="0 0 400 400"><use href="#dish3"/></svg>
+          <svg class="dish" data-c="4" viewBox="0 0 400 400"><use href="#dish4"/></svg>
+          <svg class="dish" data-c="5" viewBox="0 0 400 400"><use href="#dish5"/></svg>
+          <svg class="dish" data-c="6" viewBox="0 0 400 400"><use href="#dish6"/></svg>
+        </div>
+        <p class="numeral"><span data-c="1">I</span><span data-c="2">II</span><span data-c="3">III</span><span data-c="4">IV</span><span data-c="5">V</span><span data-c="6">VI</span></p>
+      </div>
+    </div>
+    <ol class="course-list">
+      <li class="course" data-c="1">
+        <svg class="mini" viewBox="0 0 400 400" aria-hidden="true"><use href="#plate"/><use href="#dish1"/></svg>
+        <div>
+          <h3>Three bites from the hearth</h3>
+          <p class="c-meta">First course, to begin</p>
+          <p class="c-ing">Smoked trout toast with roe, charred grape and olive skewer, scallop with yuzu kosho</p>
+          <p class="c-pair"><span>Pairing</span>Grower Champagne, extra brut</p>
+        </div>
+      </li>
+      <li class="course" data-c="2">
+        <svg class="mini" viewBox="0 0 400 400" aria-hidden="true"><use href="#plate"/><use href="#dish2"/></svg>
+        <div>
+          <h3>Smoked crab broth</h3>
+          <p class="c-meta">Second course, the bowl</p>
+          <p class="c-ing">Dungeness crab, kombu and smoked bonito stock, charred leek, Meyer lemon peel, chervil</p>
+          <p class="c-pair"><span>Pairing</span>Willamette Valley Riesling, dry</p>
+        </div>
+      </li>
+      <li class="course" data-c="3">
+        <svg class="mini" viewBox="0 0 400 400" aria-hidden="true"><use href="#plate"/><use href="#dish3"/></svg>
+        <div>
+          <h3>Coal-kissed hamachi</h3>
+          <p class="c-meta">Third course, raw</p>
+          <p class="c-ing">Hamachi aged seven days, skin seared over coals, fresh wasabi, shiso</p>
+          <p class="c-pair"><span>Pairing</span>Chablis Premier Cru</p>
+        </div>
+      </li>
+      <li class="course" data-c="4">
+        <svg class="mini" viewBox="0 0 400 400" aria-hidden="true"><use href="#plate"/><use href="#dish4"/></svg>
+        <div>
+          <h3>Ember-roasted halibut</h3>
+          <p class="c-meta">Fourth course, from the grill</p>
+          <p class="c-ing">Crisp-skin halibut, brown butter and soy, charred lime, pickled young ginger</p>
+          <p class="c-pair"><span>Pairing</span>White Burgundy, Chardonnay</p>
+        </div>
+      </li>
+      <li class="course" data-c="5">
+        <svg class="mini" viewBox="0 0 400 400" aria-hidden="true"><use href="#plate"/><use href="#dish5"/></svg>
+        <div>
+          <h3>Dry-aged ribeye over oak</h3>
+          <p class="c-meta">Fifth course, the main</p>
+          <p class="c-ing">45-day dry-aged ribeye, flaky Oregon sea salt, coal-roasted onion, sansho pepper</p>
+          <p class="c-pair"><span>Pairing</span>Northern Rhône Syrah, 2018</p>
+        </div>
+      </li>
+      <li class="course" data-c="6">
+        <svg class="mini" viewBox="0 0 400 400" aria-hidden="true"><use href="#plate"/><use href="#dish6"/></svg>
+        <div>
+          <h3>Burnt honey ice cream</h3>
+          <p class="c-meta">Sixth course, something sweet</p>
+          <p class="c-ing">Fire-roasted plum, burnt honey caramel, hojicha crumble, mint</p>
+          <p class="c-pair"><span>Pairing</span>Sauternes, 2015</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+  <div class="wrap menu-foot reveal">
+    <p><b>$165</b>per guest, plus 20% service</p>
+    <p><b>$95</b>six-glass wine pairing, or a zero-proof pairing for $55</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Sourcing (layered parallax) ==================== -->
+<section class="source" id="source">
+  <div class="drifts" aria-hidden="true">
+    <div class="drift leaf d1"></div>
+    <div class="drift citrus d2"></div>
+    <div class="drift salt d3"></div>
+    <div class="drift chili d4"></div>
+    <div class="drift stick d5"></div>
+    <div class="drift leaf d6"></div>
+  </div>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title lines"><span class="ln"><span>Good fire starts with good wood</span></span></h2>
+      <p class="sec-lead reveal">We cook for twenty-four guests a night. Buying small means we can hand-pick every single thing.</p>
+    </div>
+    <div class="source-grid">
+      <article class="source-card reveal">
+        <div class="img img-sea iris" role="img" aria-label="Early-morning harbor water and a silver fish just off the boat"></div>
+        <h3>Dawn at the docks</h3>
+        <p>Three mornings a week we drive to Newport before sunrise and buy straight from the boats we know.</p>
+      </article>
+      <article class="source-card reveal" style="--d:120ms">
+        <div class="img img-coal iris" role="img" aria-label="A row of oak logs burning down to glowing coals"></div>
+        <h3>A bed of oak coals</h3>
+        <p>Seasoned Oregon white oak burns long, steady and clean. We light the hearth two hours before service.</p>
+      </article>
+      <article class="source-card reveal" style="--d:240ms">
+        <div class="img img-salt iris" role="img" aria-label="Coarse sea salt scattered on a dark ceramic plate"></div>
+        <h3>A pinch of sea salt</h3>
+        <p>Hand-harvested on the Oregon coast, coarse and faintly sweet. It goes on last, right before the plate reaches you.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Chef story ==================== -->
+<section id="chef">
+  <div class="wrap chef-grid">
+    <div class="img img-chef iris" role="img" aria-label="The glint of a chef's knife above glowing coals"></div>
+    <div class="chef-text">
+      <h2 class="sec-title lines"><span class="ln"><span>Chef Mara Quinlan</span></span></h2>
+      <p class="reveal">Mara spent nine years tending wood fires in Basque grill houses, starting as the cook who just kept the coals alive. Back home in Portland, she wanted a room that never rushes: guests at the counter, watching fish skin blister slowly over the embers.</p>
+      <p class="quote reveal">There is no recipe for fire. Every log and every fish is different, so I just keep watching.</p>
+      <p class="reveal">Two seatings a night, twelve guests each. Mara hands every course across the counter herself, and she is always happy to tell you where tonight's fish came from.</p>
+      <!-- Sample content: replace before going live -->
+      <div class="stats reveal">
+        <div><b data-count="14">14</b><span>years at the hearth</span></div>
+        <div><b data-count="12">12</b><span>counter seats</span></div>
+        <div><b data-count="48">48</b><span>seasonal ingredients</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Private dining ==================== -->
+<section class="private" id="private">
+  <div class="wrap private-grid">
+    <div class="img img-room iris" role="img" aria-label="A wood-slatted private room with a lantern glowing over a long table"></div>
+    <div>
+      <h2 class="sec-title lines"><span class="ln"><span>The Ash Room</span></span></h2>
+      <p class="sec-lead reveal">One private room with its own small hearth. Made for family dinners, client evenings and the occasional proposal, with a menu we can shape around you.</p>
+      <ul class="facts reveal">
+        <li><span>Guests</span><span>6 to 10</span></li>
+        <li><span>Minimum spend</span><span>From $2,400</span></li>
+        <li><span>Timing</span><span>One party nightly, 6:00 pm</span></li>
+        <li><span>Booking</span><span>Call or message 7 days ahead</span></li>
+      </ul>
+      <!-- WhatsApp link: swap for LINE, Messenger or an Instagram DM link if you prefer -->
+      <a class="btn btn-ghost magnet" href="https://wa.me/15550123456" target="_blank" rel="noopener">Ask about the room on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Reviews ==================== -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title lines"><span class="ln"><span>From the counter</span></span></h2>
+    </div>
+    <!-- Sample content: replace before going live -->
+    <div class="reviews-grid">
+      <figure class="review reveal">
+        <p class="stars" aria-label="Five stars">★★★★★</p>
+        <blockquote>The halibut skin shattered like glass. Mara talked us through every course, and the whole night felt like a quiet performance.</blockquote>
+        <figcaption>Jenna R., anniversary dinner</figcaption>
+      </figure>
+      <figure class="review reveal" style="--d:120ms">
+        <p class="stars" aria-label="Five stars">★★★★★</p>
+        <blockquote>The pairings are seriously considered. That Syrah with the oak-fired ribeye was the best match I have had all year.</blockquote>
+        <figcaption>Marcus T., food writer</figcaption>
+      </figure>
+      <figure class="review reveal" style="--d:240ms">
+        <p class="stars" aria-label="Five stars">★★★★★</p>
+        <blockquote>We took my parents to the Ash Room for a birthday. Attentive without hovering, and my mom is still asking about that honey ice cream.</blockquote>
+        <figcaption>Daniel K., private dinner</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Hours and location ==================== -->
+<section id="visit">
+  <div class="wrap visit-grid">
+    <div class="reveal">
+      <h2 class="sec-title">Hours</h2>
+      <p class="status" data-status aria-live="polite"><span>Dinner Tuesday through Sunday</span></p>
+      <div class="table-wrap">
+        <table class="hours" aria-label="Weekly opening hours">
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td class="closed">Closed</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>5:30–11:00 pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>5:30–11:00 pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>5:30–11:00 pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>5:30–11:30 pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>5:30–11:30 pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>5:30–11:00 pm</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="reveal" style="--d:120ms">
+      <h2 class="sec-title">Finding us</h2>
+      <p class="addr">128 Maple Street, Portland, OR 97205</p>
+      <p class="sec-lead">Two blocks from the Pioneer Square MAX stop. Look for the single red lantern and push open the wooden door. Street parking and a garage across the road.</p>
+      <div class="map-art" role="img" aria-label="Illustrated map showing the restaurant location"></div>
+      <div class="visit-links">
+        <a class="btn btn-primary" href="https://maps.google.com/?q=128+Maple+Street,+Portland,+OR+97205" target="_blank" rel="noopener">Open in Google Maps</a>
+        <a class="btn btn-ghost" href="tel:+15550123456">Call (555) 012-3456</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Reservations ==================== -->
+<section class="reserve" id="reserve">
+  <div class="wrap reserve-grid">
+    <div>
+      <h2 class="sec-title lines"><span class="ln"><span>Save me a seat</span></span><span class="ln"><span>at the counter</span></span></h2>
+      <p class="sec-lead reveal">Bookings open 30 days ahead. We confirm every request by phone or text within 24 hours, and your table is set once we do.</p>
+      <div class="quick reveal">
+        <a class="btn btn-ghost" href="tel:+15550123456">Book by phone</a>
+        <!-- WhatsApp link: swap for LINE, Messenger or an Instagram DM link if you prefer -->
+        <a class="btn btn-ghost" href="https://wa.me/15550123456" target="_blank" rel="noopener">Book on WhatsApp</a>
+      </div>
+    </div>
+    <!-- This form uses Formspree (the free plan includes 50 submissions a month):
+         1. Sign up at https://formspree.io and create a new form
+         2. Copy the form ID from its URL (for example xyzabcd)
+         3. Replace your-form-id in the action below with your ID to get booking requests by email -->
+    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="field full">
+        <label for="f-date">Date <span aria-hidden="true">*</span></label>
+        <div class="chips" id="chips" role="group" aria-label="Quick pick from the next open nights"></div>
+        <input id="f-date" name="date" type="date" required>
+      </div>
+      <fieldset class="field full">
+        <legend class="legend">Seating <span aria-hidden="true">*</span></legend>
+        <div class="seg">
+          <label><input type="radio" name="seating" value="5:30 pm first seating" required checked><span>5:30 pm<small>First seating</small></span></label>
+          <label><input type="radio" name="seating" value="8:30 pm second seating"><span>8:30 pm<small>Second seating</small></span></label>
+        </div>
+      </fieldset>
+      <div class="field full">
+        <label for="f-guests">Party size <span aria-hidden="true">*</span></label>
+        <div class="stepper">
+          <button type="button" class="step-btn" data-step="-1" aria-label="One fewer guest">−</button>
+          <input id="f-guests" name="guests" type="number" min="1" max="8" value="2" inputmode="numeric" required>
+          <button type="button" class="step-btn" data-step="1" aria-label="One more guest">+</button>
+          <span class="seats" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        </div>
+        <p class="hint" id="guest-hint" aria-live="polite">The counter seats up to 8. For 9 or more, ask about the Ash Room.</p>
+      </div>
+      <div class="field"><label for="f-name">Name <span aria-hidden="true">*</span></label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">Phone <span aria-hidden="true">*</span></label><input id="f-tel" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(555) 012-3456" required></div>
+      <div class="field full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+      <div class="field full"><label for="f-note">Allergies or preferences</label><textarea id="f-note" name="notes" placeholder="For example: no raw fish, shellfish allergy, celebrating a birthday"></textarea></div>
+      <button class="btn btn-primary magnet" type="submit">Request my seats</button>
+      <small>We hold seats for 15 minutes. Cancel by the day before at no charge; same-day cancellations are $50 per guest.</small>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== Section: FAQ ==================== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title lines"><span class="ln"><span>Before you sit down</span></span></h2>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary>Can you work around allergies or things I don't eat?</summary>
+        <p>Absolutely. Add a note when you book and the kitchen will swap in something else from the season. For fully plant-based menus or severe allergies, please give us three days' notice.</p>
+      </details>
+      <details>
+        <summary>Can I bring my own wine?</summary>
+        <p>Please do. Corkage is $35 a bottle, two bottles per party, and we waive one bottle when you add the wine pairing.</p>
+      </details>
+      <details>
+        <summary>Are children welcome?</summary>
+        <p>Counter seats are best for guests 12 and older. Families with younger kids are welcome in the Ash Room, where we can prepare a children's menu.</p>
+      </details>
+      <details>
+        <summary>What happens if we run late?</summary>
+        <p>Each seating is served together, so we hold seats for 15 minutes. Late guests join at the current course, and we are not able to bring back courses already served.</p>
+      </details>
+      <details>
+        <summary>Is there a dress code?</summary>
+        <p>No dress code, just come comfortable. We do ask that you skip strong perfume so everyone can enjoy the aromas from the hearth.</p>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-name">Ember &amp; Salt</p>
+        <p>128 Maple Street, Portland, OR 97205<br>Phone <a href="tel:+15550123456">(555) 012-3456</a></p>
+        <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="https://wa.me/15550123456" target="_blank" rel="noopener">WhatsApp</a></div>
+      </div>
+      <div>
+        <p class="foot-title">Hours</p>
+        <p>Tuesday to Thursday and Sunday, 5:30–11:00 pm<br>Friday and Saturday, 5:30–11:30 pm<br>Closed Mondays</p>
+      </div>
+      <div>
+        <p class="foot-title">Quick links</p>
+        <p><a href="#menu">Tonight's menu</a><br><a href="#private">Private dining</a><br><a href="#reserve">Reserve online</a></p>
+      </div>
+    </div>
+    <p class="copy">© <span id="y"></span> Ember &amp; Salt</p>
+  </div>
+</footer>
+
+<!-- ==================== Section: Mobile sticky button ==================== -->
+<div class="sticky-cta">
+  <a href="#reserve" class="btn btn-primary">Reserve</a>
+  <a href="tel:+15550123456" class="btn btn-ghost" aria-label="Call (555) 012-3456">Call</a>
+</div>
+
+<script>
+(() => {
+  const root = document.documentElement, motion = root.classList.contains('motion');
+  const $ = (s, c = document) => c.querySelector(s), $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const css = getComputedStyle(root), cssVar = n => css.getPropertyValue(n).trim();
+  const SPEED = parseFloat(cssVar('--motion-speed')) || 900, EASE = cssVar('--motion-ease') || 'ease-out';
+  $('#y').textContent = new Date().getFullYear();
+
+  // Header: gains a background once you leave the top (IntersectionObserver, no scroll listener)
+  const header = $('.site-header');
+  new IntersectionObserver(([e]) => header.classList.toggle('scrolled', !e.isIntersecting)).observe($('#sentinel'));
+
+  // Hamburger menu
+  const toggle = $('.nav-toggle'), menu = $('#menu-links');
+  const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); };
+  toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+  $$('a', menu).forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  // Hero headline rises letter by letter: each letter gets a span, screen readers read the aria-label
+  const h1 = $('[data-split]');
+  if (motion) {
+    let i = 0;
+    h1.setAttribute('aria-label', $$('.line', h1).map(l => l.textContent.trim()).join(' '));
+    $$('.line', h1).forEach(line => {
+      const parts = line.textContent.split(/(\s+)/); line.textContent = ''; line.setAttribute('aria-hidden', 'true');
+      parts.forEach(w => {
+        if (!w) return; if (/^\s+$/.test(w)) { line.append(' '); return; }
+        const word = document.createElement('span'); word.className = 'word';
+        [...w].forEach(c => { const s = document.createElement('span'); s.className = 'ch'; s.textContent = c; s.style.setProperty('--i', i++); word.append(s); });
+        line.append(word);
+      });
+    });
+    root.style.setProperty('--chars', i);
+  }
+
+  // Scroll reveals, iris reveals and count-up numbers
+  const countUp = el => {
+    const end = +el.dataset.count, t0 = performance.now(), dur = SPEED * 1.8;
+    const tick = t => { const p = Math.min(1, (t - t0) / dur); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  };
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in'); io.unobserve(e.target);
+    $$('.iris', e.target).forEach(x => x.classList.add('in'));
+    if (motion) $$('[data-count]', e.target).forEach(countUp);
+  }), { threshold: .15, rootMargin: '0px 0px -8% 0px' });
+  if (motion) $$('[data-count]').forEach(el => el.textContent = '0');
+  // An iris clipped to 0 never reports an intersection, so observe its parent instead
+  $$('.reveal, .lines').forEach(el => io.observe(el));
+  $$('.iris').forEach(el => io.observe(el.parentElement));
+
+  // Tasting-menu scrollytelling: whichever course crosses the reading line takes over the plate
+  const stage = $('.stage'), courses = $$('.course');
+  if (motion && stage) {
+    let cur = 0;
+    const show = n => {
+      if (n === cur) return;
+      $$('.dish', stage).forEach(d => { const c = +d.dataset.c; d.classList.toggle('on', c === n); d.classList.toggle('out', c < n); });
+      $$('.numeral span', stage).forEach(s => s.classList.toggle('on', +s.dataset.c === n));
+      $$('.ticks li', stage).forEach((t, i) => t.classList.toggle('on', i < n));
+      courses.forEach(c => c.classList.toggle('active', +c.dataset.c === n));
+      stage.style.setProperty('--step', n); cur = n;
+    };
+    const cio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) show(+e.target.dataset.c); }), { rootMargin: innerWidth <= 900 ? '-62% 0px -37% 0px' : '-55% 0px -44% 0px' });
+    courses.forEach(c => cio.observe(c)); show(1);
+  }
+
+  // Hero canvas embers: rise slowly and flicker; paused offscreen or in a hidden tab, DPR capped at 2, fewer particles on phones
+  const cv = $('#embers');
+  if (motion && cv.getContext) {
+    const ctx = cv.getContext('2d'), hero = $('.hero');
+    const sprites = ['--ember', '--ember-hot', '--brand'].map(v => {
+      const s = document.createElement('canvas'); s.width = s.height = 64; const g = s.getContext('2d');
+      const gr = g.createRadialGradient(32, 32, 0, 32, 32, 32); gr.addColorStop(0, cssVar(v)); gr.addColorStop(.18, cssVar(v)); gr.addColorStop(1, cssVar('--coal'));
+      g.fillStyle = gr; g.beginPath(); g.arc(32, 32, 32, 0, 7); g.fill(); return s;
+    });
+    let W = 0, H = 0, parts = [], raf = 0, last = 0, visible = true;
+    const spawn = (p, init) => Object.assign(p, { x: Math.random() * W, y: init ? Math.random() * H : H * (.72 + Math.random() * .3), vy: 12 + Math.random() * 34, r: 2 + Math.random() * 7, ph: Math.random() * 6.3, sw: 6 + Math.random() * 18, life: 0, max: 4 + Math.random() * 7, s: sprites[Math.random() * 3 | 0] });
+    const resize = () => {
+      const dpr = Math.min(2, devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight;
+      cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const n = W < 760 ? 34 : 96; parts = Array.from({ length: n }, () => spawn({}, true));
+    };
+    const frame = t => {
+      const dt = Math.min(.05, (t - last) / 1000 || 0); last = t;
+      ctx.globalCompositeOperation = 'source-over'; ctx.clearRect(0, 0, W, H); ctx.globalCompositeOperation = 'lighter';
+      for (const p of parts) {
+        p.life += dt; p.y -= p.vy * dt; const x = p.x + Math.sin(p.life * 1.3 + p.ph) * p.sw;
+        const fade = Math.min(1, p.life / .8) * Math.max(0, 1 - p.life / p.max), flick = .55 + .45 * Math.sin(t / 90 + p.ph * 7);
+        ctx.globalAlpha = Math.max(0, fade * flick * (p.y / H + .2));
+        ctx.drawImage(p.s, x - p.r * 2, p.y - p.r * 2, p.r * 4, p.r * 4);
+        if (p.life > p.max || p.y < -20) spawn(p, false);
+      }
+      raf = requestAnimationFrame(frame);
+    };
+    const run = on => { cancelAnimationFrame(raf); if (on) { last = performance.now(); raf = requestAnimationFrame(frame); } };
+    resize(); let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(resize, 200); });
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; run(visible && !document.hidden); }).observe(hero);
+    document.addEventListener('visibilitychange', () => run(visible && !document.hidden));
+  }
+
+  // Magnetic buttons (mouse and trackpad only)
+  if (motion && matchMedia('(pointer: fine)').matches) $$('.magnet').forEach(b => {
+    let r;
+    b.addEventListener('pointerenter', () => { r = b.getBoundingClientRect(); });
+    b.addEventListener('pointermove', e => { if (r) b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .22}px, ${(e.clientY - r.top - r.height / 2) * .32}px)`; });
+    b.addEventListener('pointerleave', () => { b.style.transform = ''; });
+  });
+
+  // Open now / closed, in Portland time. Format: weekday (0 = Sunday): [open, close] in 24h, null = closed
+  const HOURS = { 0: ['17:30', '23:00'], 1: null, 2: ['17:30', '23:00'], 3: ['17:30', '23:00'], 4: ['17:30', '23:00'], 5: ['17:30', '23:30'], 6: ['17:30', '23:30'] };
+  const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const t12 = s => { const [h, m] = s.split(':').map(Number); return `${h % 12 || 12}:${String(m).padStart(2, '0')} ${h < 12 ? 'am' : 'pm'}`; };
+  const toMin = s => { const [h, m] = s.split(':'); return h * 60 + +m; };
+  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
+  const day = now.getDay(), mins = now.getHours() * 60 + now.getMinutes(), today = HOURS[day];
+  let text, open = false;
+  if (today && mins >= toMin(today[0]) && mins < toMin(today[1])) { open = true; text = `<b>Open now</b>until ${t12(today[1])}`; }
+  else {
+    let d = 0;
+    if (!(today && mins < toMin(today[0]))) do { d++; } while (!HOURS[(day + d) % 7]);
+    const nd = (day + d) % 7; text = `<b>Closed</b>first seating ${t12(HOURS[nd][0])} ${d === 0 ? 'today' : d === 1 ? 'tomorrow' : DAYS[nd]}`;
+  }
+  $$('[data-status]').forEach(s => { s.classList.toggle('is-open', open); s.querySelector('span').innerHTML = text; });
+  const row = $(`.hours tr[data-day="${day}"]`); if (row) row.classList.add('today');
+
+  // Quick date chips: the next 10 open nights, one tap fills the date field
+  const pad = n => String(n).padStart(2, '0'), iso = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  const dateIn = $('#f-date'), chips = $('#chips');
+  dateIn.min = iso(now); const maxD = new Date(now); maxD.setDate(maxD.getDate() + 30); dateIn.max = iso(maxD);
+  for (let d = new Date(now), n = 0; n < 10; d.setDate(d.getDate() + 1)) {
+    if (!HOURS[d.getDay()]) continue; n++;
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'chip'; b.dataset.v = iso(d); b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<small>${DAYS[d.getDay()].slice(0, 3)}</small><b>${d.getDate()}</b><small>${MONTHS[d.getMonth()]}</small>`;
+    b.setAttribute('aria-label', `${DAYS[d.getDay()]}, ${MONTHS[d.getMonth()]} ${d.getDate()}`);
+    chips.append(b);
+  }
+  const syncChips = () => $$('.chip', chips).forEach(c => c.setAttribute('aria-pressed', c.dataset.v === dateIn.value));
+  chips.addEventListener('click', e => {
+    const c = e.target.closest('.chip'); if (!c) return;
+    dateIn.value = c.dataset.v; syncChips();
+    if (motion) c.animate([{ transform: 'scale(.9)' }, { transform: 'scale(1.08)' }, { transform: 'none' }], { duration: SPEED * .5, easing: EASE });
+  });
+  dateIn.addEventListener('change', syncChips);
+  if (motion) new IntersectionObserver(([e], o) => {
+    if (!e.isIntersecting) return; o.disconnect();
+    $$('.chip', chips).forEach((c, i) => c.animate([{ opacity: 0, transform: 'translateY(16px) scale(.92)' }, { opacity: 1, transform: 'none' }], { duration: SPEED * .7, delay: i * 55, easing: EASE, fill: 'backwards' }));
+  }, { threshold: .4 }).observe(chips);
+
+  // Party size stepper: number slides in, button ripple, seat markers light up
+  const g = $('#f-guests'), hint = $('#guest-hint'), seats = $$('.seats i'), hintText = hint.textContent;
+  const setGuests = (v, dir) => {
+    v = Math.max(+g.min, Math.min(+g.max, v || 1)); g.value = v;
+    $$('.step-btn').forEach(b => b.disabled = (+b.dataset.step < 0 && v <= +g.min) || (+b.dataset.step > 0 && v >= +g.max));
+    seats.forEach((s, i) => s.classList.toggle('on', i < v));
+    hint.textContent = v >= +g.max ? 'That is a full counter. For 9 or more, book the Ash Room.' : hintText;
+    if (motion && dir) g.animate([{ transform: `translateY(${dir * 40}%)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: SPEED * .45, easing: EASE });
+  };
+  $$('.step-btn').forEach(b => b.addEventListener('click', () => {
+    const dir = +b.dataset.step; setGuests(+g.value + dir, dir);
+    if (motion) b.animate([{ opacity: .9, transform: 'scale(.3)' }, { opacity: 0, transform: 'scale(1.4)' }], { duration: SPEED * .6, easing: EASE, pseudoElement: '::after' });
+  }));
+  g.addEventListener('change', () => setGuests(+g.value, 0)); setGuests(+g.value, 0);
+
+  // Mobile sticky button: tucks away over the booking form so it never covers it
+  const bar = $('.sticky-cta');
+  new IntersectionObserver(([e]) => bar.classList.toggle('hide', e.isIntersecting), { threshold: .15 }).observe($('#reserve'));
+})();
+</script>
+</body>
+</html>
