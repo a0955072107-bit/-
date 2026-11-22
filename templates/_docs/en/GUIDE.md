@@ -11,10 +11,14 @@ index.html           ← language entry: sends visitors to their language
 en/index.html        ← English version (the whole site is this one file)
 zh-TW/index.html     ← Traditional Chinese version
 zh-CN/index.html     ← Simplified Chinese version
+ja/index.html        ← Japanese version
+es/index.html        ← Spanish version (selected templates)
 */images/            ← photos, one folder per language
 GUIDE.md             ← this guide (使用說明.md is the Chinese guide)
 LICENSE.md           ← what you can and can't do
 ```
+
+Templates that include a `ja/` or `es/` version also come with docs in that language (Japanese: `ガイド.md`, `利用規約・ライセンス.md`, `プライバシーポリシー雛形.md`).
 
 Every page has an EN / 繁 / 简 switcher in the header. Want all three languages? Upload the whole folder. Only need one? Upload that language's folder and remove the unused links from the switcher (search for `lang-switch`).
 

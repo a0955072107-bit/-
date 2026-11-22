@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Start here · 從這裡開始</title>
+<title>Start here · 從這裡開始 · はじめに</title>
 <style>
 :root{--bg:#f6f5f1;--card:#fffefb;--ink:#1d1f22;--muted:#5f636a;--line:#dfddd6;--accent:#2b59c3;--soft:#e9eefb;
   --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Microsoft JhengHei","Noto Sans TC",sans-serif}
@@ -28,6 +28,7 @@ code{background:var(--soft);padding:1px 6px;border-radius:6px;font-size:.92em}
 .help{margin-top:28px;padding:20px 22px;border-radius:14px;background:var(--soft)}
 .help h2{margin:0 0 6px;font-size:18px}
 a{color:var(--accent)}
+main:lang(ja){font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo","Noto Sans JP",sans-serif}
 [hidden]{display:none!important}
 </style>
 </head>
@@ -38,6 +39,7 @@ a{color:var(--accent)}
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-l="en" aria-pressed="true">English</button>
       <button type="button" data-l="zh" aria-pressed="false">繁體中文</button>
+      <button type="button" data-l="ja" aria-pressed="false">日本語</button>
     </div>
   </div>
 
@@ -50,12 +52,14 @@ a{color:var(--accent)}
       <div class="num">1</div>
       <div>
         <h2>Look at what's inside</h2>
-        <p>Double-click <code>en/index.html</code> to see your website in the browser. Every page has an <b>EN / 繁 / 简</b> switcher in the header. Only need one language? Just use that folder and delete the others (also remove their links from the switcher).</p>
+        <p>Double-click <code>en/index.html</code> to see your website in the browser. Every page has an <b>EN / 繁 / 简</b> switcher in the header (plus <b>JA</b> / <b>ES</b> where included). Only need one language? Just use that folder and delete the others (also remove their links from the switcher).</p>
       </div>
       <div class="tree">index.html           language entry (sends visitors to their language)
 en/index.html        English website
 zh-TW/index.html     Traditional Chinese website
 zh-CN/index.html     Simplified Chinese website
+ja/index.html        Japanese website
+es/index.html        Spanish website (some templates only)
 */images/            your photos, one folder per language
 GUIDE.md             full guide (English)
 LICENSE.md           what you can do with it</div>
@@ -100,12 +104,14 @@ LICENSE.md           what you can do with it</div>
       <div class="num">1</div>
       <div>
         <h2>先看看裡面有什麼</h2>
-        <p>雙擊 <code>zh-TW/index.html</code>，瀏覽器就會顯示你的網站。每一頁的頁首都有 <b>EN／繁／简</b> 語言切換。只需要一種語言的話，用那個資料夾就好，其他資料夾可以刪掉，並記得把切換按鈕裡對應的連結也刪掉。</p>
+        <p>雙擊 <code>zh-TW/index.html</code>，瀏覽器就會顯示你的網站。每一頁的頁首都有 <b>EN／繁／简</b> 語言切換（有日文、西班牙文版的款式另有 <b>JA</b>／<b>ES</b>）。只需要一種語言的話，用那個資料夾就好，其他資料夾可以刪掉，並記得把切換按鈕裡對應的連結也刪掉。</p>
       </div>
       <div class="tree">index.html           語言入口（自動帶訪客到對應語言）
 zh-TW/index.html     繁體中文版網站
 zh-CN/index.html     簡體中文版網站
 en/index.html        英文版網站
+ja/index.html        日文版網站
+es/index.html        西班牙文版網站（部分款式）
 */images/            放照片（每個語言各一個資料夾）
 使用說明.md          完整教學
 授權條款.md          使用範圍</div>
@@ -140,12 +146,64 @@ en/index.html        英文版網站
       <p>我們可以幫你把模板換成你的文字、照片、品牌色，並設定好網域，直接上線。請看我們 Gumroad 商店的「網站客製服務」，或直接回覆購買通知信。</p>
     </div>
   </main>
+  <!-- ===== 日本語 ===== -->
+  <main data-lang="ja" lang="ja" hidden>
+    <h1>3 ステップでサイトを公開</h1>
+    <p class="lead">ご購入ありがとうございます。ソフトのインストールもプログラミングも不要です。ほとんどの方が 30 分ほどで完了します。</p>
+
+    <section class="step">
+      <div class="num">1</div>
+      <div>
+        <h2>中身を確認する</h2>
+        <p><code>ja/index.html</code> をダブルクリックすると、ブラウザでサイトが表示されます。各ページのヘッダーには <b>EN / 繁 / 简 / JA</b> の言語切り替えがあります。日本語だけでよい場合は <code>ja/</code> フォルダだけを使い、他の言語フォルダと切り替えボタンのリンクを削除してください。</p>
+      </div>
+      <div class="tree">index.html           言語の入口（訪問者の言語へ自動で移動）
+ja/index.html        日本語版サイト
+en/index.html        英語版サイト
+zh-TW/index.html     繁体字中国語版サイト
+zh-CN/index.html     簡体字中国語版サイト
+es/index.html        スペイン語版サイト（一部のテンプレートのみ）
+*/images/            写真用フォルダ（言語ごとに 1 つ）
+ガイド.md            詳しいガイド（日本語）
+利用規約・ライセンス.md
+プライバシーポリシー雛形.md</div>
+    </section>
+
+    <section class="step">
+      <div class="num">2</div>
+      <div>
+        <h2>あなたのお店仕様にする</h2>
+        <ul>
+          <li><b>文章：</b>テキストエディタ（無料の <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a> がおすすめ）で <code>index.html</code> を開き、<code>Ctrl/⌘ + F</code> でサンプルの文章を探して上書きします。</li>
+          <li><b>色：</b>上部の <code>THEME SETTINGS</code> にあるカラーコードを変えると、サイト全体の色が変わります。</li>
+          <li><b>写真：</b>写真を <code>images/</code> に入れ、<code>Replace with a photo</code> を検索してコメントの手順に従います。</li>
+          <li><b>フォーム：</b><a href="https://formspree.io/" target="_blank" rel="noopener">formspree.io</a> で無料のフォームを作り、<code>your-form-id</code> を置き換えます。</li>
+        </ul>
+        <p>保存してブラウザを再読み込みすると、変更が反映されます。</p>
+      </div>
+      <p class="tip">必ず変更する項目：店名、電話番号、LINE 公式アカウントのリンク、住所、フォーム ID。詳しくはガイド.md 第 3 章をご覧ください。</p>
+    </section>
+
+    <section class="step">
+      <div class="num">3</div>
+      <div>
+        <h2>無料で公開する</h2>
+        <p><a href="https://app.netlify.com/drop" target="_blank" rel="noopener">app.netlify.com/drop</a> を開き、<b>フォルダ全体</b>をページにドラッグします。すべての言語が一度に公開され、訪問者は自動で自分の言語のページに案内されます。</p>
+        <p><code>www.yourshop.jp</code> のような独自ドメインを使いたい場合は、ガイド.md 第 7 章をご覧ください。</p>
+      </div>
+    </section>
+
+    <div class="help">
+      <h2>制作をおまかせしたい方へ</h2>
+      <p>文章・写真・色・ドメインの設定まで、すぐ公開できる状態に仕上げます。Gumroad ストアの <b>Website Customization Service</b> をご覧いただくか、購入確認メールにご返信ください。</p>
+    </div>
+  </main>
 </div>
 <script>
 const btns=document.querySelectorAll('.lang button'),pages=document.querySelectorAll('main[data-lang]');
-function set(l){btns.forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));pages.forEach(p=>p.hidden=p.dataset.lang!==l);document.documentElement.lang=l==='zh'?'zh-Hant':'en';}
+function set(l){btns.forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));pages.forEach(p=>p.hidden=p.dataset.lang!==l);document.documentElement.lang=l==='zh'?'zh-Hant':l==='ja'?'ja':'en';}
 btns.forEach(b=>b.addEventListener('click',()=>set(b.dataset.l)));
-if((navigator.language||'').toLowerCase().startsWith('zh'))set('zh');
+const nl=(navigator.language||'').toLowerCase();if(nl.startsWith('zh'))set('zh');else if(nl.startsWith('ja'))set('ja');
 </script>
 </body>
 </html>
