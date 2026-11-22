@@ -146,6 +146,9 @@ h1, h2, h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; font-f
   .js .burger { order: 1; flex: none; }
   html:not(.js) .menu { order: 2; margin-left: 0; }
 }
+/* 很窄的手機：logo 不換行，英文副名先收起來，讓語言切換和漢堡按鈕放得下 */
+.site-header .logo { white-space: nowrap; }
+@media (max-width: 400px) { .site-header .logo small { display: none; } }
 @media (max-width: 760px) {
   /* 沒有 JavaScript 時，選單直接換行顯示在 logo 下方；有 JS 才收進漢堡選單 */
   html:not(.js) .site-header { position: sticky; top: 0; flex-wrap: wrap; padding-block: 1rem; background: var(--night); }

@@ -260,6 +260,9 @@ section { padding: clamp(4rem, 10vw, 7rem) var(--pad); position: relative; }
   .js .menu-btn { order: 1; flex: none; }
   html:not(.js) .nav-links { order: 2; margin-left: 0; }
 }
+/* 很窄的手機：縮小頁首間距，讓 logo 不被語言切換擠到換行 */
+.nav > .logo { flex-shrink: 0; }
+@media (max-width: 400px) { .nav { gap: .5rem; } .lang-switch a { padding: 0; } }
 @media (max-width: 760px) {
   /* 沒有 JavaScript 時，選單直接換行顯示在 logo 下方；有 JS 才收進漢堡選單 */
   html:not(.js) .nav { flex-wrap: wrap; }

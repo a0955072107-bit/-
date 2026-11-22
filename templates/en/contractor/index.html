@@ -9,6 +9,11 @@
 <meta property="og:description" content="Leaks, breakers, clogs, water heaters and repiping. Quote first, then work. 24/7 emergency service.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#17222f">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.yourbusiness.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Slab:wght@500;700;800&family=Archivo:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -243,6 +248,29 @@ section { padding: clamp(4rem, 10vw, 7rem) var(--pad); position: relative; }
   .js .nav-links a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--dark-line); font-size: 1.05rem; }
   .js .nav-links .btn { margin-top: 1rem; padding: .9rem; }
 }
+/* ---------- Language switcher (header .lang-switch, footer .foot-lang): small and quiet; the current language is bold + underlined, not colour alone ---------- */
+.lang-switch { display: flex; align-items: center; flex: none; gap: 2px; }
+.lang-switch a:not(.btn) { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: var(--radius); font: 500 .85rem/1 var(--font-body); color: var(--dark-muted); text-decoration: none; white-space: nowrap; transition: color .2s, background-color .2s; }
+.lang-switch a:not(.btn):hover { color: var(--dark-text); background: color-mix(in srgb, var(--dark-text) 8%, transparent); }
+.lang-switch a:not(.btn):active { background: color-mix(in srgb, var(--dark-text) 15%, transparent); opacity: 1; }
+.lang-switch a:not(.btn):focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--dark-text); font-weight: 700; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.nav-links .lang-switch { order: 99; margin-left: -.4rem; }
+@media (max-width: 760px) {
+  /* Mobile: switcher sits at the top of the open menu */
+  .js .nav-links .lang-switch { order: 0; margin: 0; padding: .25rem 0 .5rem; border-bottom: 1px solid var(--dark-line); }
+  .js .nav-links .lang-switch a:not(.btn) { display: inline-grid; min-width: 44px; min-height: 40px; padding: 0 .5rem; border-bottom: 0; font-size: .9rem; }
+  html:not(.js) .nav-links .lang-switch { margin-left: -.3rem; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: 0 .25rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; color: var(--dark-muted); text-decoration: none; transition: color .2s; }
+.foot-lang a:hover { color: var(--brand); text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { color: var(--dark-text); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.site-footer .foot-lang a:not(.btn) { color: var(--dark-muted); }
+.site-footer .foot-lang a:not(.btn):hover { color: var(--brand); }
+.site-footer .foot-lang a[aria-current="page"] { color: var(--dark-text); }
 
 /* ==================== Hero ==================== */
 .hero { padding-top: clamp(6rem, 11vw, 7rem); padding-bottom: clamp(3rem, 6vw, 4.5rem); overflow: clip; }
@@ -496,6 +524,12 @@ html:not(.js) .mode { display: none; }
     </a>
     <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
     <div class="nav-links" id="nav-links">
+      <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+      <nav class="lang-switch" aria-label="Language 語言">
+        <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+        <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+        <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+      </nav>
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
       <a href="#area">Area</a>
@@ -932,6 +966,8 @@ html:not(.js) .mode { display: none; }
     </div>
     <div class="copy">
       <span>© <span id="y"></span> Sturdy &amp; Sons Home Repair</span>
+      <!-- Footer language links: same as the header language switcher -->
+      <nav class="foot-lang" aria-label="Footer language"><a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a></nav>
       <a href="#top">Back to top</a>
     </div>
   </div>

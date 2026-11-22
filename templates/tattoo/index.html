@@ -9,6 +9,11 @@
 <meta property="og:description" content="高雄鹽埕的預約制刺青工作室。細線、傳統、日式到黑灰寫實，每一張都從你的故事開始畫。">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#ece5d6">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Archivo+Narrow:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -109,6 +114,18 @@ h1, h2, h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; font-f
   .js .menu.open { transform: none; opacity: 1; visibility: visible; }
   .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line-soft); font-size: 1.1rem; }
   .js .menu .btn { margin-top: 1.25rem; min-height: 48px; }
+}
+/* 語言切換：桌機在主要按鈕右邊，手機（有 JS）在展開選單的最上方；沒有 JS 時跟著選單換行顯示 */
+.lang-switch { display: flex; align-items: center; gap: .1rem; padding-left: clamp(.4rem, 1vw, .9rem); border-left: 1px solid var(--line-soft); font-size: .8rem; line-height: 1; white-space: nowrap; }
+.menu .lang-switch a[hreflang] { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border: 0; color: var(--muted); font-weight: 400; text-decoration: underline 1px transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.menu .lang-switch a[hreflang]:hover { color: var(--brand); text-decoration-color: currentColor; }
+.menu .lang-switch a[hreflang]:active { opacity: .7; }
+.menu .lang-switch a[hreflang]:focus-visible { outline-offset: 0; }
+.menu .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: var(--brand); text-decoration-thickness: 2px; }
+@media (max-width: 760px) {
+  html:not(.js) .lang-switch { border-left: 0; padding-left: 0; margin-left: -.3rem; }
+  .js .menu .lang-switch { order: -1; align-self: flex-start; border-left: 0; padding: 0 0 .4rem; margin-left: -.3rem; font-size: .92rem; }
+  .js .menu .lang-switch a[hreflang] { padding: 0 .3rem; border-bottom: 0; min-width: 40px; min-height: 40px; }
 }
 
 /* ==================== Hero ==================== */
@@ -332,6 +349,12 @@ html:not(.js) .filters, html:not(.js) .count { display: none; }
 @media (max-width: 560px) { .form { grid-template-columns: minmax(0, 1fr); box-shadow: 5px 5px 0 var(--shadow); } .form .btn { justify-self: stretch; } }
 
 /* ==================== 頁尾 ==================== */
+/* 頁尾語言連結 */
+.f-lang { display: flex; flex-wrap: wrap; gap: 0 .9rem; padding-top: .6rem; font-size: .86rem; }
+.f-lang a { display: inline-flex; align-items: center; min-height: 32px; color: color-mix(in srgb, var(--paper) 78%, var(--text)); text-decoration: underline 1px transparent; text-underline-offset: .3em; transition: color .2s, text-decoration-color .2s; }
+.f-lang a:hover { color: var(--paper); text-decoration-color: currentColor; }
+.f-lang a:active { opacity: .7; }
+.f-lang a[aria-current="page"] { color: var(--paper); font-weight: 700; text-decoration-color: currentColor; }
 .site-footer { background: var(--text); color: var(--paper); padding: 3.5rem var(--pad) 2rem; font-size: .95rem; }
 .foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: var(--gap) clamp(2rem, 5vw, 4rem); padding-bottom: 2rem; border-bottom: 1px solid color-mix(in srgb, var(--paper) 25%, transparent); }
 .site-footer .logo b { font-size: 2.2rem; }
@@ -475,6 +498,12 @@ html:not(.js) .filters, html:not(.js) .count { display: none; }
     <a href="#process">流程</a>
     <a href="#care">須知</a>
     <a href="#booking" class="btn btn-brand">預約諮詢</a>
+    <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
   </nav>
 </header>
 
@@ -914,6 +943,7 @@ html:not(.js) .filters, html:not(.js) .count { display: none; }
     </div>
   </div>
   <p class="copy">© <span id="y"></span> 墨島 Ink Isle Tattoo</p>
+  <p class="f-lang"><a href="../en/" hreflang="en" lang="en">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></p>
 </footer>
 
 <!-- 手機底部固定按鈕 -->

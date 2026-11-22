@@ -10,6 +10,11 @@
 <meta property="og:type" content="profile">
 <meta name="theme-color" content="#f5f4ef" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -171,6 +176,21 @@ html:not(.js) .theme-toggle { display: none; }
   .js .menu.open { transform: none; opacity: 1; visibility: visible; }
   .js .menu a { padding: .9rem 0; border-bottom: 1px solid var(--line); font-size: 1.1rem; color: var(--text); }
 }
+/* ---------- 語言切換（頁首 .lang-switch、頁尾 .foot-lang）：小巧低調，目前語言用粗體＋底線標示，不只靠顏色 ---------- */
+.lang-switch { display: flex; align-items: center; flex: none; gap: 2px; }
+.lang-switch a:not(.btn) { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 6px; font: 500 .78rem/1 var(--font-mono); color: var(--muted); text-decoration: none; white-space: nowrap; transition: color .2s, background-color .2s; }
+.lang-switch a:not(.btn):hover { color: var(--text); background: color-mix(in srgb, var(--text) 8%, transparent); }
+.lang-switch a:not(.btn):active { background: color-mix(in srgb, var(--text) 15%, transparent); opacity: 1; }
+.lang-switch a:not(.btn):focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+@media (max-width: 760px) { html:not(.js) .actions { margin-left: auto; } }
+.foot-lang { display: flex; flex-wrap: wrap; gap: 0 .25rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; color: var(--muted); text-decoration: none; transition: color .2s; }
+.foot-lang a:hover { color: var(--text); text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.foot-lang { margin-top: .5rem; margin-left: -.3rem; font-size: .9rem; }
 
 /* ==================== 共用：區塊與卡片 ==================== */
 section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
@@ -446,6 +466,12 @@ section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
     </ul>
   </nav>
   <div class="actions">
+    <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
     <button class="icon-btn theme-toggle" type="button" aria-label="切換深色模式" aria-pressed="false">
       <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
@@ -746,6 +772,8 @@ section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
       </ul>
     </div>
     <p class="copy">© <span id="y"></span> 陳以恩 Ian Chen</p>
+    <!-- 頁尾語言連結：和頁首的語言切換相同 -->
+    <nav class="foot-lang" aria-label="頁尾語言 Language"><a href="../en/" hreflang="en" lang="en">EN</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a></nav>
   </div>
 </footer>
 

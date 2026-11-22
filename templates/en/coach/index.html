@@ -9,6 +9,11 @@
 <meta property="og:title" content="Dr. Clara Reyes, Counseling &amp; Coaching | Say it out loud, at your own pace">
 <meta property="og:description" content="A small private practice in Millbrook Harbor, with online sessions too. A steady place to sort through feelings, relationships and work.">
 <meta property="og:type" content="website">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.yourbusiness.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -163,6 +168,27 @@ a:not(.btn):active { opacity: .7; }
   .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
   .js .site-header:has(.nav-menu.open) { background: var(--bg); }
 }
+/* ---------- Language switcher (header .lang-switch, footer .foot-lang): small and quiet; the current language is bold + underlined, not colour alone ---------- */
+.lang-switch { display: flex; align-items: center; flex: none; gap: 2px; }
+.lang-switch a:not(.btn) { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: 8px; font: 500 .92rem/1 var(--font-body); color: var(--muted); text-decoration: none; white-space: nowrap; transition: color .2s, background-color .2s; }
+.lang-switch a:not(.btn):hover { color: var(--text); background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.lang-switch a:not(.btn):active { background: color-mix(in srgb, var(--brand) 15%, transparent); opacity: 1; }
+.lang-switch a:not(.btn):focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-color: var(--ochre); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.nav-menu .lang-item { order: 99; margin-left: -.6rem; }
+@media (max-width: 760px) {
+  /* Mobile: switcher sits at the top of the open menu */
+  .js .nav-menu .lang-item { order: 0; margin: 0; padding: .25rem 0 .5rem; border-bottom: 1px solid var(--line); }
+  .js .nav-menu .lang-switch a:not(.btn) { display: inline-grid; min-width: 44px; min-height: 40px; padding: 0 .5rem; border-bottom: 0; }
+  html:not(.js) .nav-menu .lang-item { margin-left: -.4rem; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: 0 .25rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; color: color-mix(in srgb, var(--brand-ink) 80%, var(--deep)); text-decoration: none; transition: color .2s; }
+.foot-lang a:hover { color: var(--ochre-soft); text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--ochre-soft); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { color: var(--brand-ink); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.foot-lang { margin-top: .75rem; margin-left: -.3rem; font-size: .92rem; }
 
 /* ==================== Hand-drawn line illustrations (inline SVG) ====================
    Colors come from the classes below, so the drawings follow your theme.
@@ -380,6 +406,14 @@ a:not(.btn):active { opacity: .7; }
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-links" aria-label="Open menu"><span></span></button>
     <ul class="nav-menu" id="menu-links">
+      <li class="lang-item">
+        <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+        <nav class="lang-switch" aria-label="Language 語言">
+          <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+        </nav>
+      </li>
       <li><a href="#services">Services</a></li>
       <li><a href="#approach">Approach</a></li>
       <li><a href="#about">About</a></li>
@@ -717,6 +751,8 @@ a:not(.btn):active { opacity: .7; }
       </div>
     </div>
     <p class="copy">© <span id="y"></span> Dr. Clara Reyes, Counseling &amp; Coaching</p>
+    <!-- Footer language links: same as the header language switcher -->
+    <nav class="foot-lang" aria-label="Footer language"><a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a></nav>
   </div>
 </footer>
 

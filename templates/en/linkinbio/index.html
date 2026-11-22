@@ -14,6 +14,11 @@
 <meta property="og:description" content="Illustrations of islands, cats and small good days. Shop prints, watch new videos and book a commission.">
 <meta property="og:type" content="profile">
 <meta name="theme-color" content="#f4ecdc">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.yourshop.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
@@ -180,6 +185,15 @@ html:not(.js) .themes { display: none; } /* Without JS, hide the picker and show
 .themes label:active { transform: scale(.96); }
 .themes input:checked + label { background: var(--text); color: var(--bg); }
 .themes input:focus-visible + label { outline: 2.5px solid var(--text); outline-offset: 2px; }
+/* Language switcher: top of the column, left of the theme picker; visible without JS too */
+.top { justify-content: space-between; flex-wrap: wrap; }
+html:not(.js) .top { justify-content: flex-end; }
+.lang-switch { display: flex; gap: .1rem; padding: .25rem; border-radius: 999px; background: color-mix(in srgb, var(--surface) 80%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--text) 18%, transparent); }
+.lang-switch a { display: inline-flex; align-items: center; justify-content: center; min-width: 34px; min-height: 34px; padding: 0 .45rem; border-radius: 999px; font-size: .82rem; line-height: 1; color: var(--muted); text-decoration: underline 1px transparent; text-underline-offset: .3em; transition: background-color .2s var(--ease), color .2s var(--ease), text-decoration-color .2s var(--ease); }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 8%, transparent); text-decoration-color: currentColor; }
+.lang-switch a:active { transform: scale(.96); }
+.lang-switch a:focus-visible { outline-offset: 2px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: currentColor; text-decoration-thickness: 2px; }
 /* Swatch dots: each theme's colours (independent of the current theme) */
 .sw { width: 16px; height: 16px; border-radius: 50%; flex: none; box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--text) 35%, transparent); }
 .sw-paper { background: linear-gradient(135deg, var(--sw-paper-a) 50%, var(--sw-paper-b) 50%); }
@@ -332,6 +346,11 @@ html:not(.js) .share-row { display: none; }
 .foot a:hover { color: var(--text); }
 .foot a:active { opacity: .7; }
 .foot p + p { margin-top: .2rem; }
+/* Footer language links */
+.foot .f-lang { display: flex; justify-content: center; flex-wrap: wrap; gap: 0 .9rem; margin-top: .4rem; }
+.foot .f-lang a { display: inline-flex; align-items: center; min-height: 32px; text-decoration: underline 1px transparent; text-underline-offset: .3em; transition: color .2s, text-decoration-color .2s; }
+.foot .f-lang a:hover { text-decoration-color: currentColor; }
+.foot .f-lang a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: currentColor; }
 
 /* Scroll fade-in: only hidden first when JS is on */
 html.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s var(--ease), transform .5s var(--ease); }
@@ -381,6 +400,12 @@ html.js .reveal.in { opacity: 1; transform: none; }
 
   <!-- ==================== Section: Theme picker ==================== -->
   <div class="top">
+    <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
     <fieldset class="themes">
       <legend>Choose a page theme</legend>
       <input type="radio" name="theme" id="th-paper" value="paper" checked>
@@ -519,6 +544,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
   <footer class="foot">
     <p>Business enquiries: <a href="tel:+15550123456">(555) 012-3456</a> or <a href="mailto:hello@junopark.example">hello@junopark.example</a></p>
     <p>© <span id="y"></span> Juno Park</p>
+    <p class="f-lang"><a href="../en/" hreflang="en" lang="en" aria-current="page">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></p>
   </footer>
 </div>
 

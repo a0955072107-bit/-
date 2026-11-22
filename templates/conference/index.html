@@ -9,6 +9,11 @@
 <meta property="og:description" content="8 位講者、12 場議程、3 堂小班工作坊。給想把店搬上網路的小店老闆，一天帶走能馬上用的做法。">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#1ed06f">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -122,6 +127,18 @@ section { padding-block: clamp(4rem, 9vw, 7rem); }
   .js .menu .opt { display: block; }
   .js .menu a:not(.btn) { padding: .85rem 0; border-bottom: 1px solid var(--line); }
   .js .menu .btn { margin-top: 1rem; min-height: 50px; }
+}
+/* 語言切換：桌機在主要按鈕右邊，手機（有 JS）在展開選單的最上方；沒有 JS 時跟著選單換行顯示 */
+.lang-switch { display: flex; align-items: center; gap: .1rem; padding-left: clamp(.4rem, 1vw, .9rem); border-left: 1px solid var(--line); font-size: .8rem; line-height: 1; white-space: nowrap; }
+.menu .lang-switch a[hreflang] { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border: 0; color: var(--muted); font-weight: 400; text-decoration: underline 1px transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.menu .lang-switch a[hreflang]:hover { color: var(--text); text-decoration-color: currentColor; }
+.menu .lang-switch a[hreflang]:active { opacity: .7; }
+.menu .lang-switch a[hreflang]:focus-visible { outline-offset: 0; }
+.menu .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: var(--ink); text-decoration-thickness: 2px; }
+@media (max-width: 760px) {
+  html:not(.js) .lang-switch { border-left: 0; padding-left: 0; margin-left: -.3rem; }
+  .js .menu .lang-switch { order: -1; align-self: flex-start; border-left: 0; padding: 0 0 .4rem; margin-left: -.3rem; font-size: .92rem; }
+  .js .menu .lang-switch a[hreflang] { padding: 0 .3rem; border-bottom: 0; min-width: 40px; min-height: 40px; }
 }
 
 /* ==================== 首屏 ==================== */
@@ -331,6 +348,12 @@ html:not(.js) .tabs { display: none; }
 .form .btn { justify-self: start; }
 
 /* ==================== 頁尾 ==================== */
+/* 頁尾語言連結 */
+.f-lang { display: flex; flex-wrap: wrap; gap: 0 .9rem; }
+.f-lang a { display: inline-flex; align-items: center; min-height: 32px; color: var(--muted); text-decoration: underline 1px transparent; text-underline-offset: .3em; transition: color .2s, text-decoration-color .2s; }
+.f-lang a:hover { color: var(--brand-deep); text-decoration-color: currentColor; }
+.f-lang a:active { opacity: .7; }
+.f-lang a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: currentColor; }
 .site-footer { padding-block: 3.5rem 2rem; font-size: .92rem; }
 .foot-top { display: grid; gap: 2rem; border-top: 3px solid var(--ink); padding-top: 1.5rem; }
 @media (min-width: 800px) { .foot-top { grid-template-columns: minmax(0, 5fr) minmax(0, 4fr) minmax(0, 3fr); } }
@@ -408,6 +431,12 @@ html:not(.js) .tabs { display: none; }
       <a class="opt" href="#sponsors">贊助</a>
       <a class="opt" href="#faq">常見問題</a>
       <a class="btn btn-brand" href="#register">報名</a>
+      <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+      <nav class="lang-switch" aria-label="Language 語言">
+        <a href="../en/" hreflang="en" lang="en">EN</a>
+        <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+        <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+      </nav>
     </nav>
   </div>
 </header>
@@ -845,6 +874,7 @@ html:not(.js) .tabs { display: none; }
     <p class="foot-big" aria-hidden="true">04.17</p>
     <div class="foot-bottom">
       <p>© <span id="y"></span> 中城小店數位協會</p>
+      <p class="f-lang"><a href="../en/" hreflang="en" lang="en">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></p>
       <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">YouTube</a></div>
     </div>
   </div>

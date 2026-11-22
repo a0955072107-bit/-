@@ -9,6 +9,11 @@
 <meta property="og:description" content="線上預約頁、自動提醒、員工排班、訂金收款與報表。美髮沙龍、診所、健身教室與顧問都適用，免費試用 14 天。">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0b7a4b">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Geist+Mono:wght@500&family=Noto+Sans+TC:wght@400;600;700&display=swap" rel="stylesheet">
@@ -125,6 +130,26 @@ section { padding-block: clamp(4rem, 9vw, 6.5rem); }
   .js .menu .login { margin-left: 0; }
   .js .menu .btn { margin-top: 1rem; min-height: 48px; }
 }
+/* ---------- 語言切換（頁首 .lang-switch、頁尾 .foot-lang）：小巧低調，目前語言用粗體＋底線標示，不只靠顏色 ---------- */
+.lang-switch { display: flex; align-items: center; flex: none; gap: 2px; }
+.lang-switch a:not(.btn) { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border-radius: var(--radius-sm); font: 500 .82rem/1 var(--font-body); color: var(--muted); text-decoration: none; white-space: nowrap; transition: color .2s, background-color .2s; }
+.lang-switch a:not(.btn):hover { color: var(--text); background: color-mix(in srgb, var(--text) 8%, transparent); }
+.lang-switch a:not(.btn):active { background: color-mix(in srgb, var(--text) 15%, transparent); opacity: 1; }
+.lang-switch a:not(.btn):focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.nav > .lang-switch { margin-left: calc(-1rem + clamp(.1rem, 1vw, .6rem)); }
+@media (max-width: 760px) {
+  /* 手機：語言切換固定在漢堡按鈕左邊 */
+  .nav > .lang-switch { order: 1; margin-left: auto; margin-right: -.5rem; }
+  .burger { order: 2; }
+  .menu { order: 3; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: 0 .25rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; color: var(--muted); text-decoration: none; transition: color .2s; }
+.foot-lang a:hover { color: var(--text); text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
 
 /* ==================== 首屏與產品畫面 ==================== */
 .hero { padding-top: calc(var(--head-h) + clamp(1.75rem, 4.5vw, 3.5rem)); padding-bottom: clamp(3.5rem, 7vw, 5.5rem); }
@@ -456,6 +481,12 @@ section { padding-block: clamp(4rem, 9vw, 6.5rem); }
       <a href="#faq">常見問題</a>
       <a class="login" href="#">登入</a>
       <a class="btn btn-brand" href="#start">免費試用</a>
+    </nav>
+    <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
     </nav>
   </div>
 </header>
@@ -974,6 +1005,8 @@ section { padding-block: clamp(4rem, 9vw, 6.5rem); }
     </div>
     <div class="foot-bottom">
       <p>© <span id="y"></span> 排排科技股份有限公司</p>
+      <!-- 頁尾語言連結：和頁首的語言切換相同 -->
+      <nav class="foot-lang" aria-label="頁尾語言 Language"><a href="../en/" hreflang="en" lang="en">EN</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a></nav>
       <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">YouTube</a></div>
     </div>
   </div>

@@ -9,6 +9,11 @@
 <meta property="og:description" content="經典油頭、漸層推剪、熱毛巾刮臉。線上預約一張椅子，或直接走進來候位。">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#6b1d26">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -104,6 +109,18 @@ html:not(.js) .site-header { background: var(--night); }
   .js .menu.open { transform: none; visibility: visible; transition: transform .45s var(--ease); }
   .js .menu a:not(.btn) { padding: .85rem 0; border-bottom: 1px solid color-mix(in srgb, var(--on-night) 15%, transparent); }
   .js .menu .btn { margin-top: 1.2rem; min-height: 3rem; }
+}
+/* 語言切換：桌機在主要按鈕右邊，手機（有 JS）在展開選單的最上方；沒有 JS 時跟著選單換行顯示 */
+.lang-switch { display: flex; align-items: center; gap: .1rem; padding-left: clamp(.4rem, 1vw, .9rem); border-left: 1px solid color-mix(in srgb, var(--on-night) 28%, transparent); font-size: .8rem; line-height: 1; white-space: nowrap; }
+.menu .lang-switch a[hreflang] { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border: 0; color: color-mix(in srgb, var(--on-night) 78%, transparent); font-weight: 400; text-decoration: underline 1px transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.menu .lang-switch a[hreflang]:hover { color: var(--brass-lt); text-decoration-color: currentColor; }
+.menu .lang-switch a[hreflang]:active { opacity: .7; }
+.menu .lang-switch a[hreflang]:focus-visible { outline-offset: 0; }
+.menu .lang-switch a[aria-current="page"] { color: var(--on-night); font-weight: 700; text-decoration-color: var(--brass-lt); text-decoration-thickness: 2px; }
+@media (max-width: 760px) {
+  html:not(.js) .lang-switch { border-left: 0; padding-left: 0; margin-left: -.3rem; }
+  .js .menu .lang-switch { order: -1; align-self: flex-start; border-left: 0; padding: 0 0 .4rem; margin-left: -.3rem; font-size: .92rem; }
+  .js .menu .lang-switch a[hreflang] { padding: 0 .3rem; border-bottom: 0; min-width: 40px; min-height: 40px; }
 }
 
 /* ---------- 通用區塊 ---------- */
@@ -324,6 +341,12 @@ section { padding: clamp(4rem, 11vh, 7rem) var(--pad); }
   var(--surface-2); }
 
 /* ---------- 區塊：頁尾 ---------- */
+/* 頁尾語言連結 */
+.f-lang { display: flex; flex-wrap: wrap; gap: 0 .9rem; max-width: var(--max); margin: .6rem auto 0; font-size: .8rem; }
+.f-lang a { display: inline-flex; align-items: center; min-height: 32px; color: color-mix(in srgb, var(--on-night) 78%, transparent); text-decoration: underline 1px transparent; text-underline-offset: .3em; transition: color .2s, text-decoration-color .2s; }
+.f-lang a:hover { color: var(--brass-lt); text-decoration-color: currentColor; }
+.f-lang a:active { opacity: .7; }
+.f-lang a[aria-current="page"] { color: var(--on-night); font-weight: 700; text-decoration-color: currentColor; }
 .site-footer { background: var(--night); color: var(--on-night); padding: clamp(3rem, 8vh, 4.5rem) var(--pad) 6.5rem; border-top: 3px double var(--brass); }
 .site-footer .wrap { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
 .site-footer p, .site-footer li { font-size: .9rem; color: color-mix(in srgb, var(--on-night) 80%, transparent); }
@@ -389,6 +412,12 @@ section { padding: clamp(4rem, 11vh, 7rem) var(--pad); }
       <a href="#faq">常見問題</a>
       <a href="#visit">交通</a>
       <a class="btn btn-cream" href="#book">線上預約</a>
+      <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+      <nav class="lang-switch" aria-label="Language 語言">
+        <a href="../en/" hreflang="en" lang="en">EN</a>
+        <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+        <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+      </nav>
     </div>
   </nav>
 </header>
@@ -723,6 +752,7 @@ section { padding: clamp(4rem, 11vh, 7rem) var(--pad); }
     </div>
   </div>
   <p class="copy">© <span id="y"></span> 老派 Oldboy Barbershop</p>
+  <p class="f-lang"><a href="../en/" hreflang="en" lang="en">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></p>
 </footer>
 
 <!-- 手機版底部固定按鈕 -->

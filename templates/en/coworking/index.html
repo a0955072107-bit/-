@@ -9,6 +9,11 @@
 <meta property="og:description" content="Flexible desks, private offices and hourly meeting rooms one block from the streetcar. Get an instant quote and book a tour.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#f6f4ee">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.yourshop.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
@@ -117,6 +122,18 @@ section { padding-block: clamp(4rem, 9vw, 7.5rem); }
   .js .menu.open { transform: none; visibility: visible; }
   .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line); }
   .js .menu .btn { margin-top: 1rem; min-height: 48px; }
+}
+/* Language switcher: beside the main button on desktop; at the top of the open menu on mobile (with JS); wraps with the menu without JS */
+.lang-switch { display: flex; align-items: center; gap: .1rem; padding-left: clamp(.4rem, 1vw, .9rem); border-left: 1px solid var(--line); font-size: .8rem; line-height: 1; white-space: nowrap; }
+.menu .lang-switch a[hreflang] { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; padding: 0 .3rem; border: 0; color: var(--muted); font-weight: 400; text-decoration: underline 1px transparent; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.menu .lang-switch a[hreflang]:hover { color: var(--brand-deep); text-decoration-color: currentColor; }
+.menu .lang-switch a[hreflang]:active { opacity: .7; }
+.menu .lang-switch a[hreflang]:focus-visible { outline-offset: 0; }
+.menu .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-color: var(--brand-deep); text-decoration-thickness: 2px; }
+@media (max-width: 760px) {
+  html:not(.js) .lang-switch { border-left: 0; padding-left: 0; margin-left: -.3rem; }
+  .js .menu .lang-switch { order: -1; align-self: flex-start; border-left: 0; padding: 0 0 .4rem; margin-left: -.3rem; font-size: .92rem; }
+  .js .menu .lang-switch a[hreflang] { padding: 0 .3rem; border-bottom: 0; min-width: 40px; min-height: 40px; }
 }
 
 /* ==================== Art placeholders ==================== */
@@ -387,6 +404,12 @@ html:not(.js) .toggle { display: none; }
 @media (min-width: 960px) { .contact-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); } }
 
 /* ==================== Footer ==================== */
+/* Footer language links */
+.f-lang { display: flex; flex-wrap: wrap; gap: 0 .9rem; }
+.f-lang a { display: inline-flex; align-items: center; min-height: 32px; color: var(--on-ink-muted); text-decoration: underline 1px transparent; text-underline-offset: .3em; transition: color .2s, text-decoration-color .2s; }
+.f-lang a:hover { color: var(--brand); text-decoration-color: currentColor; }
+.f-lang a:active { opacity: .7; }
+.f-lang a[aria-current="page"] { color: var(--on-ink); font-weight: 700; text-decoration-color: currentColor; }
 .site-footer { background: var(--ink); color: var(--on-ink-muted); padding: 4rem 0 7rem; font-size: .92rem; }
 .foot-grid { display: grid; gap: 2rem; padding-bottom: 2.5rem; border-bottom: 1px solid color-mix(in srgb, var(--on-ink) 15%, transparent); }
 .site-footer .logo { color: var(--on-ink); }
@@ -469,6 +492,12 @@ html:not(.js) .toggle { display: none; }
       <a href="#location">Location</a>
       <a href="#faq">FAQ</a>
       <a href="#contact" class="btn btn-main">Book a tour</a>
+      <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+      <nav class="lang-switch" aria-label="Language 語言">
+        <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+        <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+        <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+      </nav>
     </nav>
   </div>
 </header>
@@ -891,7 +920,7 @@ html:not(.js) .toggle { display: none; }
         <p>Mon to Fri 8:00 am–8:00 pm<br>Sat 10:00 am–4:00 pm<br>24/7 access for monthly members</p>
       </div>
     </div>
-    <div class="copy"><span>© <span id="y"></span> Grid Commons Coworking</span><span>Illustrations are for reference only</span></div>
+    <div class="copy"><span>© <span id="y"></span> Grid Commons Coworking</span><span class="f-lang"><a href="../en/" hreflang="en" lang="en" aria-current="page">English</a><a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></span><span>Illustrations are for reference only</span></div>
   </div>
 </footer>
 
