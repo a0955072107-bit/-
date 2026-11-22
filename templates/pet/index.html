@@ -375,8 +375,16 @@ textarea { resize: vertical; min-height: 6rem; }
 @media (max-width: 760px) {
   /* 手機：語言切換固定在漢堡按鈕左邊；沒有 JS 時和 logo 同一行，選單換到下一行 */
   .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
-  .burger { order: 2; }
+  .burger { order: 2; flex: none; }
+  /* 頁首在手機上的間距縮小一點，避免擠到 logo */
+  .nav { gap: .75rem; }
   .menu { order: 3; }
+}
+/* 很窄的手機（380px 以下）：頁首放不下時，語言切換改到展開選單的最上方 */
+@media (max-width: 380px) {
+  .js .lang-switch { display: none; position: fixed; top: 5.25rem; left: var(--pad); }
+  .js .menu { padding-top: 8rem; }
+  .js .menu.open ~ .lang-switch { display: flex; }
 }
 .foot-lang { max-width: var(--max); margin: .75rem auto 0; display: flex; flex-wrap: wrap; gap: .25rem .75rem; font-size: .85rem; }
 .foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; color: color-mix(in srgb, var(--bg) 85%, transparent); }

@@ -381,8 +381,16 @@ html:not(.js) .js-only { display: none !important; }
 @media (max-width: 760px) {
   /* 手機：語言切換固定在漢堡按鈕左邊；沒有 JS 時和 logo 同一行，選單換到下一行 */
   .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
-  .nav-toggle { order: 2; }
+  .nav-toggle { order: 2; flex: none; }
+  /* 頁首在手機上的間距縮小一點，避免擠到 logo */
+  .nav { gap: .75rem; }
   .nav-menu { order: 3; }
+}
+/* 很窄的手機（380px 以下）：頁首放不下時，語言切換改到展開選單的最上方 */
+@media (max-width: 380px) {
+  .js .lang-switch { display: none; position: absolute; top: calc(72px + .6rem); left: var(--pad); }
+  .js .nav-menu { padding-top: 3rem; }
+  .js .nav-menu.open ~ .lang-switch { display: flex; }
 }
 .foot-lang { display: flex; flex-wrap: wrap; gap: .25rem .75rem; margin-top: .75rem; font-size: .85rem; }
 .foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; }

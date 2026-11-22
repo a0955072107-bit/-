@@ -412,8 +412,16 @@ html:not(.js) .js-only { display: none !important; }
 @media (max-width: 760px) {
   /* Mobile: the switcher sits left of the menu button; without JS it stays beside the logo and the menu wraps below */
   .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
-  .nav-toggle { order: 2; }
+  .nav-toggle { order: 2; flex: none; }
+  /* Slightly tighter header spacing on phones so the logo never gets squeezed */
+  .nav { gap: .5rem; }
   .nav-menu { order: 3; }
+}
+/* Very narrow phones (380px and below): the switcher moves to the top of the open menu */
+@media (max-width: 380px) {
+  .js .lang-switch { display: none; position: absolute; top: calc(72px + .6rem); left: var(--pad); }
+  .js .nav-menu { padding-top: 3rem; }
+  .js .nav-menu.open ~ .lang-switch { display: flex; }
 }
 .foot-lang { display: flex; flex-wrap: wrap; gap: .25rem .75rem; margin-top: .75rem; font-size: .85rem; }
 .foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; }
