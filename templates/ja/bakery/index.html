@@ -440,6 +440,8 @@ h1, h2, h3 { letter-spacing: normal; word-break: auto-phrase; }
 .nav-menu, .logo b, .tab { white-space: nowrap; }
 p, li, dd, blockquote { text-wrap-style: pretty; }
 summary, .steps b, .item h3, .chips li, .hero-art .tag { word-break: auto-phrase; }
+/* 週間スケジュールの商品名は <wbr> の位置でだけ改行します */
+.week ul li { word-break: keep-all; overflow-wrap: anywhere; }
 .week li.today h3::after { vertical-align: .15rem; }
 </style>
 </head>
@@ -500,13 +502,13 @@ summary, .steps b, .item h3, .chips li, .hero-art .tag { word-break: auto-phrase
     <!-- スケジュールの編集：data-day は曜日です（0＝日曜、1＝月曜…6＝土曜）。今日の曜日は JS が自動で強調します -->
     <div class="week-scroll reveal" role="region" aria-label="1週間の焼き上がりスケジュール（横にスクロールできます）" tabindex="0">
       <ol class="week">
-        <li data-day="1" class="off"><h3>月</h3><ul><li>定休日。酵母もひと休み</li></ul></li>
-        <li data-day="2"><h3>火</h3><ul><li>バタークロワッサン</li><li>カンパーニュ</li><li>塩パン</li></ul></li>
-        <li data-day="3"><h3>水</h3><ul><li>はちみつオーツ食パン</li><li>赤ワインとくるみのパン</li><li>バタークロワッサン</li></ul></li>
-        <li data-day="4"><h3>木</h3><ul><li>ピスタチオのうずまき</li><li>全粒粉とくるみのパン</li><li>シナモンロール</li></ul></li>
-        <li data-day="5"><h3>金</h3><ul><li>バタークロワッサン</li><li>カンパーニュ</li><li>チョコレートブリオッシュ</li></ul></li>
-        <li data-day="6"><h3>土</h3><ul><li>全種類そろいます</li><li>苺のデニッシュ</li></ul></li>
-        <li data-day="0"><h3>日</h3><ul><li>はちみつオーツ食パン</li><li>シナモンロール</li><li>塩パン</li></ul></li>
+        <li data-day="1" class="off"><h3>月</h3><ul><li>定休日。<wbr>酵母も<wbr>ひと休み</li></ul></li>
+        <li data-day="2"><h3>火</h3><ul><li>バター<wbr>クロワッサン</li><li>カンパーニュ</li><li>塩パン</li></ul></li>
+        <li data-day="3"><h3>水</h3><ul><li>はちみつ<wbr>オーツ食パン</li><li>赤ワインと<wbr>くるみのパン</li><li>バター<wbr>クロワッサン</li></ul></li>
+        <li data-day="4"><h3>木</h3><ul><li>ピスタチオの<wbr>うずまき</li><li>全粒粉と<wbr>くるみのパン</li><li>シナモン<wbr>ロール</li></ul></li>
+        <li data-day="5"><h3>金</h3><ul><li>バター<wbr>クロワッサン</li><li>カンパーニュ</li><li>チョコ<wbr>ブリオッシュ</li></ul></li>
+        <li data-day="6"><h3>土</h3><ul><li>全種類<wbr>そろいます</li><li>苺の<wbr>デニッシュ</li></ul></li>
+        <li data-day="0"><h3>日</h3><ul><li>はちみつ<wbr>オーツ食パン</li><li>シナモン<wbr>ロール</li><li>塩パン</li></ul></li>
       </ol>
     </div>
     <p class="bake-note">1回目の焼き上がりは8:00、2回目は11:30です。人気のパンはお昼前に売り切れることが多いので、お電話いただければお取り置きします。</p>
