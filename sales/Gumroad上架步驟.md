@@ -1285,3 +1285,40 @@ Studio license: build unlimited client websites with every template in the bundl
   - 地圖用「開啟 Google 地圖」連結，不內嵌 iframe，所以不會在訪客同意前載入 Google 的追蹤。
   - 想完全符合 GDPR 的歐洲買家，可以把 Google Fonts 改成自架字型（GUIDE.md 第 10 節有步驟）。
   - 附上一份隱私權政策範本（`PRIVACY-TEMPLATE.md`／`隱私權政策範本.md`）。德國買家需要另外加上 Impressum（業者資訊頁）。
+
+---
+
+## 11. 日文版與西班牙文版（已放進同一個 zip，不用另外上架）
+
+每款的 zip 已經包含 `ja/`（全部 35 款）和 `es/`（6 款：餐廳、美業、健身、房仲、清潔、水電）。不用新增商品，只要**修改既有商品**：
+
+### 名稱
+- 35 款全部：把名稱結尾的 `(English + 繁體 + 简体)` 改成 `(EN + 中文 + 日本語)`。
+- 有西文的 6 款：改成 `(EN + 中文 + 日本語 + Español)`。
+
+### 說明最前面加一段日文
+```
+日本語版つき：テキスト・住所・価格（税込表示）・LINE ボタンまで日本向けに作り直した日本語版が入っています。ガイドとライセンスも日本語で同梱。月額費用なし、買い切りです。
+```
+
+### 6 款加一段西文
+```
+Incluye versión en español: textos, precios, WhatsApp y datos de ejemplo adaptados para negocios en Latinoamérica y EE. UU. Guía y licencia en español. Pago único, sin mensualidades.
+```
+
+### 標籤（Tags）
+- 日文：`ホームページ テンプレート`、`LP テンプレート`、`HTML テンプレート`、`店舗 ホームページ`
+- 西文：`plantilla web`、`plantilla html`、`página web negocio`、`landing page español`
+
+### 日本市場在哪裡曝光
+| 管道 | 怎麼做 |
+|---|---|
+| ココナラ（coconala） | 開「ホームページ制作（テンプレート使用・日本語対応）」服務，¥30,000〜，連到 Gumroad 作品。這是日本小店家找人做網站最常用的平台。 |
+| note | 每月寫 1〜2 篇「個人店のホームページを月額0円で作る方法」，文末放 Gumroad 連結。 |
+| X（Twitter）／Instagram | 發 Demo 截圖與 15 秒滑動影片，hashtag `#ホームページ制作` `#個人店`。 |
+| Pinterest | 每款加 1 張日文直式圖。 |
+
+### 西語市場（測試 60 天）
+- 每週發 2 張西文 Pinterest 圖、1 支短影片（YouTube Shorts／Instagram Reels，西文字幕）。
+- Workana 開一個「Diseño de página web para negocios」服務，$199 起。
+- 60 天後看數據：6 款有西文的模板銷量如果比其他款高 30% 以上，再把其餘 29 款也做西文版。
