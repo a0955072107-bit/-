@@ -105,7 +105,7 @@ Questions or custom work? / 有問題或想客製：polyglotpages.studio@gmail.c
 
 | 欄位 | 填入 |
 |---|---|
-| 商品類型 | 一般 **Digital product**。若後台有 **Commission**（委託，先收訂金）或 **Call**（預約通話）類型，也可以改用 |
+| 商品類型 | **Commission**（委託）：買家下單時先付 **50% 訂金**，網站做好、買家確認後，Gumroad 再向買家收剩下 50%。後台沒有 Commission 類型時才用一般 Digital product |
 | Name | `Website Customization Service — We Build Your Business Site 網站客製服務` |
 | URL | `website-customization` |
 | Price | `249`（Basic），另外用 **Versions** 加 `Plus $449` |
@@ -135,6 +135,8 @@ What's included
 - Contact form connected to your email
 - Published on a free host (Netlify / GitHub Pages)
 - Plus: custom domain connected, one extra section or page
+
+Payment: 50% when you order, 50% after you've seen and approved your site. If we can't deliver, the deposit is refunded in full.
 
 Not included: copywriting from scratch, photography, domain purchase fees.
 
@@ -1193,7 +1195,7 @@ Motion 動態版：只用瀏覽器內建技術做的高級動畫網站，不依�
 
 | 欄位 | 填入 |
 |---|---|
-| 商品類型 | Digital product（有 **Commission** 類型就用 Commission，先收 50% 訂金） |
+| 商品類型 | **Commission**（委託），先收 **50% 訂金**，完成後收尾款 |
 | Name | `Trilingual Business Website (English + 繁體 + 简体) — Done For You 三語店家網站代製` |
 | URL | `trilingual-website-service` |
 | Price | `299`，另外用 **Versions** 加 `Pro $549` |
@@ -1226,6 +1228,8 @@ What's included
 - Contact form sent to your email
 - Published on a free host; you own all the files
 - Pro: custom domain, Google Business Profile, Motion animation option
+
+Payment: 50% to start, 50% after you approve the finished site. If we can't deliver, the deposit is refunded in full.
 
 Not included: domain purchase fees, photography, legal review of medical or financial claims.
 
@@ -1322,3 +1326,63 @@ Incluye versión en español: textos, precios, WhatsApp y datos de ejemplo adapt
 - 每週發 2 張西文 Pinterest 圖、1 支短影片（YouTube Shorts／Instagram Reels，西文字幕）。
 - Workana 開一個「Diseño de página web para negocios」服務，$199 起。
 - 60 天後看數據：6 款有西文的模板銷量如果比其他款高 30% 以上，再把其餘 29 款也做西文版。
+
+---
+
+## 12. 網站維護月費「Website Care」（第 2 個月上架，約 12/21）
+
+給已經做好網站的客人（客製案、三語代製），也賣給自己架好模板、但不想自己改的買家。這是**每月固定收入**的來源。
+
+| 欄位 | 填入 |
+|---|---|
+| 商品類型 | **Membership**（每月自動扣款，可隨時取消） |
+| Name | `Website Care — Monthly Updates & Hosting Help 網站維護月費` |
+| URL | `website-care` |
+| Price | Tiers：`Care $19/month`、`Care Plus $29/month` |
+
+**方案**
+| 方案 | 每月 | 包含 |
+|---|---|---|
+| Care | $19 | 每月最多 3 次小修改（營業時間、菜單、價格、文字、換照片）、網站上線狀態檢查、網域續約提醒 |
+| Care Plus | $29 | Care 全部，加上每月 1 個新區塊或活動頁、季節性更新（節日營業時間、新菜單）、Google 商家檔案同步更新 |
+
+**Description**
+```
+Your website, kept up to date, without you touching any code.
+
+Send us an email when something changes: new hours, a new dish, a price update, a holiday closure. We update your site, usually within 2 business days.
+
+Care ($19/month)
+- Up to 3 small updates a month (text, hours, menu, prices, photos)
+- Monthly check that your site is online and working
+- Domain renewal reminders
+
+Care Plus ($29/month)
+- Everything in Care
+- 1 new section or event page a month
+- Seasonal updates (holiday hours, new menus)
+- Keep your Google Business Profile in sync with your site
+
+Cancel any time. Your site and files always stay yours.
+
+──────────
+網站維護月費：有任何變動寄信給我們（營業時間、新菜色、價格、公休），通常 2 個工作天內更新。隨時可以取消，網站和檔案永遠是你的。
+```
+
+**規則**
+- 網域和主機都用**客人自己的帳號**，我們只當協作者。客人取消維護，網站照常運作。
+- 「小修改」＝ 15 分鐘內能完成的修改。超過的另外報價。
+- 當月沒用完的次數不累積。
+
+**怎麼賣**
+- 客製案、三語代製交件時，**第 1 個月免費**，之後客人自己決定要不要續。
+- 交件信裡附上維護月費連結（`sales/交付流程.md` 的交接範本已加上）。
+- 目標：每 3 個客製客人有 1 個續訂。
+
+---
+
+## 13. 介紹獎勵（口碑轉介紹）
+
+客人介紹別的店家來成交，**介紹人得到 $50**，或維護月費免費 3 個月（二選一）。
+- 交件信和維護月費的每月更新信裡都提一次。
+- 用 Gumroad **Affiliates** 功能：給介紹人一個專屬連結，成交後自動分潤。不想用連結的客人，就請新客人下單時寫上介紹人的店名，你手動發獎勵。
