@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>台湾茶スタンド ムウ｜下北沢・吉祥寺・中目黒のタピオカと台湾茶</title>
+<meta name="description" content="台湾茶スタンド ムウは、台湾の茶葉を4時間ごとに淹れ直し、タピオカを毎日店内で炊き上げています。東京に3店舗。ネット注文でテイクアウトやデリバリーも。フランチャイズのご相談も受付中です。">
+<meta name="theme-color" content="#1d5c3a">
+<!-- 多言語版（SEO）：公開後、href を完全な URL に置き換えてください（例：https://www.yourshop.com/en/） -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<meta property="og:title" content="台湾茶スタンド ムウ｜淹れたて台湾茶とタピオカ">
+<meta property="og:description" content="本場の台湾茶を4時間ごとに淹れたてで。タピオカは毎日手作り。甘さと氷を選んで、3店舗どこでも事前注文できます。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "台湾茶スタンド ムウ",
+  "url": "https://example.com/",
+  "telephone": "+81-3-1234-5678",
+  "priceRange": "¥480〜¥980",
+  "servesCuisine": ["タピオカドリンク", "台湾茶", "ミルクティー", "フルーツティー"],
+  "hasMap": "https://maps.google.com/?q=東京都世田谷区北沢2-12-8",
+  "address": { "@type": "PostalAddress", "streetAddress": "北沢2-12-8", "addressLocality": "世田谷区", "addressRegion": "東京都", "postalCode": "155-0031", "addressCountry": "JP" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:00", "closes": "23:00" }
+  ],
+  "department": [
+    { "@type": "CafeOrCoffeeShop", "name": "台湾茶スタンド ムウ 吉祥寺店", "telephone": "+81-422-12-3456", "hasMap": "https://maps.google.com/?q=東京都武蔵野市吉祥寺本町1-20-3",
+      "address": { "@type": "PostalAddress", "streetAddress": "吉祥寺本町1-20-3", "addressLocality": "武蔵野市", "addressRegion": "東京都", "postalCode": "180-0004", "addressCountry": "JP" },
+      "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:30", "closes": "22:00" }] },
+    { "@type": "CafeOrCoffeeShop", "name": "台湾茶スタンド ムウ 中目黒店", "telephone": "+81-3-1234-5680", "hasMap": "https://maps.google.com/?q=東京都目黒区上目黒1-8-15",
+      "address": { "@type": "PostalAddress", "streetAddress": "上目黒1-8-15", "addressLocality": "目黒区", "addressRegion": "東京都", "postalCode": "153-0051", "addressCountry": "JP" },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "11:00", "closes": "22:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "10:00", "closes": "22:30" }] }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   テーマ設定：ここを変えるだけでサイト全体の配色とフォントが変わります
+   ============================================================ */
+:root {
+  --brand: #1d5c3a;          /* ブランドカラー（深い茶葉の緑）：ファーストビューの背景、見出し、ボタン */
+  --brand-ink: #fbf1dc;      /* ブランドカラー上の文字色（ミルククリーム） */
+  --brand-deep: #123d26;     /* 濃い茶葉の緑：フッターとメニューの背景 */
+  --bg: #fbf1dc;             /* ページ背景（ミルククリーム） */
+  --surface: #fff8ea;        /* カード、フォームなどの面（ミルキーホワイト） */
+  --text: #2b170c;           /* 本文とステッカーの輪郭線（タピオカブラウン） */
+  --muted: #5e4232;          /* 補足テキスト */
+  --line: #e6d3ae;           /* 淡い区切り線、入力欄の枠線 */
+  --amber: #e8962a;          /* アクセント（烏龍茶のアンバー）：メインボタン、ステッカー */
+  --amber-ink: #2b170c;      /* アンバー上の文字色 */
+  --chili: #c4401f;          /* 「人気」ラベルの背景（チリレッド） */
+  --chili-ink: #fff8ea;      /* チリレッド上の文字色 */
+  --tapioca: #3a2214;        /* タピオカブラウン：スタンプカードのセクション背景 */
+  --pearl: #24110a;          /* イラスト：タピオカ */
+  --syrup: #8a4a1f;          /* イラスト：黒糖シロップ */
+  --milk: #f3e2c0;           /* イラスト：牛乳 */
+  --milktea: #c98d5a;        /* イラスト：ミルクティー */
+  --oolong: #c2701f;         /* イラスト：烏龍茶 */
+  --greentea: #c9b94a;       /* イラスト：緑茶 */
+  --passion: #f2b632;        /* イラスト：パッションフルーツ */
+  --matcha: #8fb84e;         /* イラスト：抹茶色の背景 */
+  --cap: #fff3d6;            /* イラスト：チーズフォーム */
+  --straw: #c4401f;          /* イラスト：ストロー */
+  --shadow: color-mix(in srgb, var(--text) 26%, transparent); /* やわらかい影 */
+  --radius: 20px;            /* 角の丸み */
+  --stroke: 3px;             /* ステッカーの輪郭線の太さ */
+  --pop: 5px;                /* ステッカーのくっきりした影のずれ幅 */
+  --font-heading: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif; /* 見出しフォント（太めのゴシック） */
+  --font-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;     /* 本文フォント */
+  --max: 1200px;             /* コンテンツの最大幅 */
+  --pad: clamp(1rem, 5vw, 3rem); /* 左右の余白 */
+  --gap: clamp(1.25rem, 3.5vw, 2.5rem); /* 複数列セクションの列間 */
+}
+
+/* ---------- 基本 ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.7 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 800; font-stretch: 78%; line-height: 1.08; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 10px; }
+::selection { background: var(--amber); color: var(--amber-ink); }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: clamp(4rem, 9vw, 6.5rem); position: relative; }
+.sec-title { font-size: clamp(2.3rem, 5.4vw, 3.8rem); margin-bottom: .8rem; color: var(--brand); }
+.sec-lead { color: var(--muted); max-width: 36rem; font-size: 1.05rem; }
+.sec-head { margin-bottom: clamp(2rem, 5vw, 3rem); }
+.sticker-box { background: var(--surface); border: var(--stroke) solid var(--text); border-radius: var(--radius); box-shadow: var(--pop) var(--pop) 0 var(--text); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .85rem 1.6rem; border-radius: 999px; font: 700 1.05rem/1.2 var(--font-body); text-decoration: none; border: var(--stroke) solid var(--text); cursor: pointer; transition: transform .15s, box-shadow .15s, background-color .2s, color .2s; }
+.btn-primary { background: var(--amber); color: var(--amber-ink); box-shadow: 4px 4px 0 var(--text); }
+.btn-primary:hover { background: color-mix(in srgb, var(--amber) 84%, var(--surface)); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--text); }
+.btn-ghost { background: var(--surface); color: var(--text); box-shadow: 4px 4px 0 var(--text); }
+.btn-ghost:hover { background: var(--milk); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--text); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--text); }
+a:not(.btn):hover { color: var(--brand); }
+a:not(.btn):active { opacity: .7; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+.hero .btn-ghost { background: transparent; color: var(--brand-ink); border-color: var(--brand-ink); box-shadow: none; }
+.hero .btn-ghost:hover { background: color-mix(in srgb, var(--brand-ink) 12%, transparent); box-shadow: none; }
+
+/* スクロールでフェードイン：JS が有効なときだけ最初に隠します */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+html:not(.js) .js-only { display: none !important; }
+.js .nojs-only { display: none !important; }
+
+/* ==================== ヘッダー ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; color: var(--brand-ink); transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled { background: var(--brand-deep); box-shadow: 0 var(--stroke) 0 var(--text); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+.logo-mark { width: 42px; height: 42px; flex: none; border-radius: 50%; border: var(--stroke) solid var(--text); box-shadow: 3px 3px 0 var(--text);
+  background: radial-gradient(circle closest-side, var(--pearl) 0 80%, transparent 88%) 30% 70% / 11px 11px no-repeat, radial-gradient(circle closest-side, var(--pearl) 0 80%, transparent 88%) 64% 76% / 11px 11px no-repeat, radial-gradient(circle closest-side, var(--pearl) 0 80%, transparent 88%) 48% 46% / 11px 11px no-repeat, var(--amber); }
+.logo b { font: 800 1.35rem/1 var(--font-heading); font-stretch: 80%; display: block; }
+.logo small { font: 600 .82rem/1.1 var(--font-body); opacity: .85; }
+.nav-menu { display: flex; align-items: center; gap: 1.2rem; list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; font-weight: 600; padding-block: .3rem; background: linear-gradient(var(--amber), var(--amber)) left bottom / 0 3px no-repeat; transition: background-size .25s, color .2s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 3px; color: var(--brand-ink); }
+.nav-menu .btn { padding: .55rem 1.15rem; font-size: .98rem; }
+.nav-toggle { display: none; width: 46px; height: 46px; border: var(--stroke) solid var(--text); background: var(--amber); color: var(--text); cursor: pointer; border-radius: 14px; box-shadow: 3px 3px 0 var(--text); transition: transform .15s, box-shadow .15s; }
+.nav-toggle:hover { background: color-mix(in srgb, var(--amber) 84%, var(--surface)); }
+.nav-toggle:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--text); }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 20px; height: 3px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; border-radius: 2px; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 1020px) and (min-width: 761px) { .nav-menu { gap: .8rem; font-size: .92rem; } .logo small { display: none; } }
+@media (max-width: 760px) {
+  /* JavaScript がないときはメニューをロゴの下に折り返し、JS があるときはハンバーガーメニューにまとめます */
+  html:not(.js) .nav { flex-wrap: wrap; height: auto; padding-block: .8rem; }
+  html:not(.js) .site-header { position: sticky; background: var(--brand-deep); }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: 2.5rem; }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--brand-deep); border-bottom: var(--stroke) solid var(--text); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: .8rem 0; border-bottom: 1px solid color-mix(in srgb, var(--brand-ink) 18%, transparent); }
+  .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+  .js .site-header:has(.nav-menu.open) { background: var(--brand-deep); }
+}
+
+/* ==================== イラストの仮画像 ====================
+   .img-cup はすべて CSS グラデーションで描いたドリンクのカップです（シール、ストロー、お茶、フォーム、タピオカ）。
+   変数でカップを変えられます：--tea（お茶の色）、--tea-top（上部の色）、--cap-h（フォームの高さ）。タピオカ入りは .has-pearl を付けます。
+   写真に差し替え：.img-xx { background: url(images/xxx.jpg) center/cover; }
+   （写真に替えたら、.img-cup の ::before／::after のルールも削除してください） */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; }
+.img-cup { --tea: var(--milktea); --tea-top: color-mix(in srgb, var(--milktea) 78%, var(--milk)); --cap-h: 0%; --pearl-img: none; --pearl-h: 0%; --stripes: none;
+  aspect-ratio: 4 / 5; border: var(--stroke) solid var(--text);
+  background:
+    linear-gradient(90deg, var(--straw) 0 58%, color-mix(in srgb, var(--straw) 60%, var(--surface)) 58% 78%, var(--straw) 78%) 58% 12.5% / 8% 36% no-repeat,
+    linear-gradient(var(--text), var(--text)) 50% 28.5% / 47% 4% no-repeat,
+    radial-gradient(ellipse 30% 4% at 52% 90%, var(--shadow) 0 70%, transparent 74%),
+    var(--art-pattern, radial-gradient(circle closest-side, color-mix(in srgb, var(--surface) 30%, transparent) 0 40%, transparent 46%) 0 0 / 30px 30px),
+    var(--art-bg, var(--amber)); }
+/* カップ本体：上からフォーム、お茶、黒糖の模様、タピオカの順に重なった、下すぼまりのカップ */
+.img-cup::before, .img-cup::after { content: ""; position: absolute; left: 30%; right: 30%; top: 30%; bottom: 12%; clip-path: polygon(0 0, 100% 0, 86% 100%, 14% 100%); pointer-events: none; }
+.img-cup::before { z-index: 1;
+  background:
+    linear-gradient(90deg, transparent 18%, color-mix(in srgb, var(--surface) 34%, transparent) 18% 27%, transparent 27%),
+    linear-gradient(var(--cap) 0 var(--cap-h), transparent 0),
+    var(--pearl-img) 0 100% / 20% 12% repeat-x,
+    var(--pearl-img) 10% 85% / 20% 12% repeat-x,
+    var(--stripes),
+    linear-gradient(to top, var(--syrup) 0 var(--pearl-h), transparent 0),
+    linear-gradient(var(--tea-top), var(--tea)); }
+/* ステッカー風に見せる、カップの後ろのくっきりした影 */
+.img-cup::after { background: var(--text); transform: translate(7%, 3%); }
+.has-pearl { --pearl-img: radial-gradient(circle closest-side, var(--pearl) 0 80%, transparent 88%); --pearl-h: 26%; }
+.has-cap { --cap-h: 22%; }
+.cup-brown, [data-tea="brown"] { --tea: var(--milk); --tea-top: var(--surface); --stripes: repeating-linear-gradient(-24deg, transparent 0 9%, color-mix(in srgb, var(--syrup) 78%, transparent) 9% 14%); }
+.cup-oolong, [data-tea="oolong"] { --tea: var(--oolong); --tea-top: color-mix(in srgb, var(--oolong) 70%, var(--passion)); }
+.cup-fruit, [data-tea="fruit"] { --tea: var(--passion); --tea-top: var(--greentea); --stripes: radial-gradient(circle closest-side, var(--pearl) 0 30%, transparent 40%) 0 0 / 22% 13%; }
+[data-tea="green"] { --tea: var(--greentea); --tea-top: color-mix(in srgb, var(--greentea) 70%, var(--milk)); }
+[data-tea="milk"] { --tea: var(--milktea); }
+.bg-amber { --art-bg: var(--amber); }
+.bg-matcha { --art-bg: var(--matcha); }
+.bg-milk { --art-bg: var(--milk); --art-pattern: radial-gradient(circle closest-side, color-mix(in srgb, var(--syrup) 18%, transparent) 0 40%, transparent 46%) 0 0 / 30px 30px; }
+
+/* 写真に差し替え：.img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero { aspect-ratio: 1 / 1; border-radius: 50%; border-width: 4px; box-shadow: 8px 8px 0 var(--text);
+  --art-pattern: repeating-conic-gradient(from 0deg at 50% 60%, color-mix(in srgb, var(--surface) 22%, transparent) 0 7deg, transparent 7deg 20deg); }
+
+/* ==================== ファーストビュー ==================== */
+.hero { background: var(--brand); color: var(--brand-ink); padding-block: calc(72px + clamp(1.5rem, 5vw, 3.5rem)) clamp(3rem, 7vw, 5rem); overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--gap); align-items: center; }
+.hero h1 { font-size: clamp(3rem, 7.4vw, 6.4rem); line-height: 1; margin-bottom: 1.2rem; }
+.hero .lead { font-size: clamp(1.05rem, 1.6vw, 1.25rem); max-width: 31rem; margin-bottom: 1.8rem; opacity: .95; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; }
+.hero-note { margin-top: 1.6rem; font-size: .95rem; opacity: .9; }
+.hero-note b { font-variant-numeric: tabular-nums; }
+.hero-art { position: relative; max-width: 500px; width: 100%; justify-self: center; }
+.sticker { position: absolute; z-index: 2; background: var(--amber); color: var(--amber-ink); border: var(--stroke) solid var(--text); box-shadow: 3px 3px 0 var(--text); font: 800 1.05rem/1.15 var(--font-body); padding: .55rem .95rem; border-radius: 14px; text-align: center; }
+.sticker.s1 { top: 8%; left: -4%; transform: rotate(-8deg); }
+.sticker.s2 { bottom: 10%; right: -3%; transform: rotate(6deg); background: var(--surface); }
+.sticker.s3 { top: 2%; right: 6%; width: 92px; height: 92px; border-radius: 50%; display: grid; place-content: center; background: var(--chili); color: var(--chili-ink); transform: rotate(12deg); font-size: .95rem; }
+.sticker big { display: block; font: 800 1.9rem/1 var(--font-heading); font-stretch: 80%; }
+.ticker { background: var(--text); color: var(--amber); border-block: var(--stroke) solid var(--text); overflow: hidden; transform: rotate(-1.2deg); margin: -1.2rem -1rem 0; position: relative; z-index: 2; }
+.ticker ul { display: flex; gap: 2.4rem; list-style: none; padding: .8rem 1rem; white-space: nowrap; font: 800 1.35rem/1 var(--font-heading); font-stretch: 80%; justify-content: center; }
+.ticker li:nth-child(even) { color: var(--brand-ink); }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-art { max-width: 340px; margin-top: 1rem; }
+  .ticker ul { justify-content: flex-start; font-size: 1.1rem; }
+}
+
+/* ==================== 看板ドリンク ==================== */
+.sig-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.sig { padding: 1rem 1rem 1.4rem; display: flex; flex-direction: column; gap: .7rem; transition: transform .2s; }
+.sig:nth-child(2) { transform: rotate(1deg); } .sig:nth-child(3) { transform: rotate(-1deg); }
+.sig .img { border-radius: calc(var(--radius) - 6px); }
+.sig h3 { font-size: 1.85rem; color: var(--brand); }
+.sig p { color: var(--muted); }
+.sig-foot { display: flex; align-items: center; justify-content: space-between; gap: .6rem; margin-top: auto; flex-wrap: wrap; }
+.price { font: 800 1.5rem/1 var(--font-heading); font-stretch: 80%; font-variant-numeric: tabular-nums; }
+.price small { font: 600 .9rem/1 var(--font-body); color: var(--muted); }
+@media (max-width: 860px) { .sig-grid { grid-template-columns: minmax(0, 1fr); max-width: 440px; margin-inline: auto; } .sig .img { width: 62%; justify-self: center; align-self: center; } }
+
+/* ラベル：人気／ホット可／カフェインレス */
+.tags { display: flex; flex-wrap: wrap; gap: .35rem; list-style: none; }
+.tag { font: 700 .82rem/1 var(--font-body); padding: .38rem .6rem; border-radius: 8px; border: 2px solid var(--text); background: var(--surface); color: var(--text); }
+.tag-hot { background: var(--chili); color: var(--chili-ink); }
+.tag-warm { background: var(--amber); color: var(--amber-ink); }
+.tag-free { background: var(--surface); color: var(--brand); border-color: var(--brand); }
+
+/* ==================== メニュー ==================== */
+.menu { background: var(--surface); border-block: var(--stroke) solid var(--text); }
+.tabs { display: flex; gap: .6rem; margin-bottom: 2rem; flex-wrap: wrap; }
+.tab { font: 700 1.05rem/1 var(--font-body); padding: .85rem 1.4rem; border-radius: 999px; border: var(--stroke) solid var(--text); background: var(--bg); color: var(--text); cursor: pointer; transition: transform .15s, box-shadow .15s, background-color .2s, color .2s; }
+.tab:hover { background: var(--milk); }
+.tab:active { transform: translate(2px, 2px); }
+.tab[aria-selected="true"] { background: var(--brand); color: var(--brand-ink); box-shadow: 4px 4px 0 var(--text); }
+.panel + .panel { margin-top: 2.5rem; }
+.js .panel + .panel { margin-top: 0; }
+.panel-title { font: 800 1.6rem/1.2 var(--font-heading); font-stretch: 80%; margin-bottom: 1rem; color: var(--brand); }
+.items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; list-style: none; }
+.item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem 1rem; align-items: start; padding: 1.1rem 1.2rem; background: var(--bg); border: 2px solid var(--text); border-radius: 16px; }
+.item h3 { font-size: 1.4rem; }
+.item p { grid-column: 1 / -1; color: var(--muted); font-size: .94rem; }
+.item .tags { grid-column: 1 / -1; }
+.ml { display: flex; gap: .4rem; font-variant-numeric: tabular-nums; }
+.ml span { display: grid; text-align: center; min-width: 3.4rem; padding: .3rem .4rem; border-radius: 10px; background: var(--surface); border: 2px solid var(--line); font: 800 1.15rem/1.1 var(--font-heading); font-stretch: 80%; }
+.ml small { font: 600 .75rem/1.2 var(--font-body); color: var(--muted); }
+.menu-note { margin-top: 1.6rem; color: var(--muted); font-size: .92rem; }
+@media (max-width: 760px) { .items { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== カスタマイズ ==================== */
+.custom { background: var(--brand); color: var(--brand-ink); }
+.custom .sec-title { color: var(--brand-ink); }
+.custom .sec-lead { color: color-mix(in srgb, var(--brand-ink) 86%, transparent); }
+.mix-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .9fr); gap: var(--gap); align-items: start; }
+.mix { padding: clamp(1.2rem, 3vw, 2rem); color: var(--text); display: grid; gap: 1.4rem; }
+.mix fieldset { border: 0; min-width: 0; }
+.mix legend, .mix .lbl { font: 800 1.25rem/1.2 var(--font-heading); font-stretch: 80%; margin-bottom: .6rem; display: block; }
+.mix select { width: 100%; font: 600 1rem var(--font-body); color: var(--text); background: var(--bg); border: 2px solid var(--text); border-radius: 12px; padding: .75rem .8rem; min-height: 50px; }
+.pills { display: flex; flex-wrap: wrap; gap: .5rem; }
+.pill { position: relative; cursor: pointer; }
+.pill input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.pill span { display: inline-block; padding: .6rem .95rem; border: 2px solid var(--text); border-radius: 999px; background: var(--bg); font-weight: 700; font-size: .95rem; transition: transform .15s, background-color .2s, box-shadow .15s; }
+.pill:hover span { background: var(--milk); }
+.pill:active span { transform: translate(2px, 2px); }
+.pill input:checked + span { background: var(--amber); box-shadow: 3px 3px 0 var(--text); }
+.pill input:focus-visible + span { outline: 3px solid var(--brand); outline-offset: 2px; }
+.pill small { font-weight: 600; color: var(--muted); }
+.receipt { padding: 1.2rem; color: var(--text); position: sticky; top: 92px; display: grid; gap: 1rem; }
+.receipt .img { max-width: 240px; width: 70%; justify-self: center; }
+.receipt h3 { font-size: 1.5rem; }
+.receipt output { display: block; }
+#mix-sum { font-weight: 600; font-size: 1.08rem; min-height: 3.4em; }
+.total { display: flex; align-items: baseline; justify-content: space-between; border-top: 2px dashed var(--text); padding-top: .9rem; }
+#mix-price { font: 800 2.3rem/1 var(--font-heading); font-stretch: 80%; color: var(--brand); font-variant-numeric: tabular-nums; }
+.receipt .btn { width: 100%; }
+.small-note { font-size: .88rem; color: var(--muted); }
+@media (max-width: 860px) { .mix-grid { grid-template-columns: minmax(0, 1fr); } .receipt { position: static; } }
+
+/* ==================== 店舗 ==================== */
+.store-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.store { padding: 1.5rem; display: flex; flex-direction: column; gap: .8rem; position: relative; }
+.store h3 { font-size: 1.8rem; color: var(--brand); padding-right: 4.5rem; }
+.store .flag { position: absolute; top: -14px; right: 16px; background: var(--chili); color: var(--chili-ink); border: 2px solid var(--text); border-radius: 10px; padding: .3rem .65rem; font-weight: 800; font-size: .88rem; transform: rotate(5deg); }
+.store dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .3rem .9rem; font-size: .96rem; }
+.store dt { font-weight: 700; color: var(--muted); }
+.store dd { font-variant-numeric: tabular-nums; }
+.store-actions { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: auto; padding-top: .4rem; }
+.store-actions .btn { padding: .65rem 1.1rem; font-size: .95rem; flex: 1 1 auto; }
+@media (max-width: 960px) { .store-grid { grid-template-columns: minmax(0, 1fr); max-width: 560px; } }
+
+/* ==================== デリバリー ==================== */
+.order { background: var(--amber); border-block: var(--stroke) solid var(--text); }
+.order .sec-title { color: var(--text); }
+.order .sec-lead { color: var(--text); }
+.order-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--gap); align-items: center; }
+.order-grid .sec-head { margin-bottom: 0; }
+.platforms { display: grid; gap: .8rem; min-width: min(100%, 340px); }
+.platforms .btn { justify-content: space-between; padding: 1rem 1.4rem; font-size: 1.15rem; border-radius: 16px; }
+.platforms .btn small { font: 600 .85rem/1 var(--font-body); color: var(--muted); }
+@media (max-width: 760px) { .order-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== スタンプカード ==================== */
+.member { background: var(--tapioca); color: var(--brand-ink); }
+.member .sec-title { color: var(--amber); }
+.member .sec-lead { color: color-mix(in srgb, var(--brand-ink) 86%, transparent); }
+.member-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap); align-items: center; }
+.stamp-card { color: var(--text); padding: clamp(1.2rem, 3vw, 1.8rem); transform: rotate(-2deg); background: var(--milk); }
+.stamp-card h3 { font-size: 1.6rem; margin-bottom: 1rem; }
+.stamps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .6rem; list-style: none; }
+.stamps li { aspect-ratio: 1; border-radius: 50%; border: 2px dashed var(--text); background: var(--surface); }
+.stamps li.on { border-style: solid; background: radial-gradient(circle closest-side, var(--pearl) 0 46%, transparent 52%), var(--amber); }
+.stamps li:last-child { background: var(--chili); border-style: solid; }
+.stamp-card p { margin-top: 1rem; font-size: .92rem; color: var(--muted); }
+.perks { list-style: none; display: grid; gap: 1rem; margin-bottom: 1.6rem; }
+.perks li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem; align-items: start; }
+.perks b { font: 800 1.7rem/1 var(--font-heading); font-stretch: 80%; color: var(--amber); min-width: 3.2rem; }
+.perks h3 { font-size: 1.3rem; margin-bottom: .2rem; }
+.perks p { color: color-mix(in srgb, var(--brand-ink) 84%, transparent); font-size: .96rem; }
+@media (max-width: 860px) { .member-grid { grid-template-columns: minmax(0, 1fr); } .stamp-card { max-width: 440px; } }
+
+/* ==================== フランチャイズ ==================== */
+.fr-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap); align-items: start; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin-top: 1.8rem; list-style: none; }
+.facts li { background: var(--surface); border: 2px solid var(--text); border-radius: 16px; padding: 1rem; }
+.facts b { display: block; font: 800 2rem/1 var(--font-heading); font-stretch: 80%; color: var(--brand); margin-bottom: .3rem; }
+.facts span { font-size: .9rem; color: var(--muted); }
+.form { padding: clamp(1.3rem, 3.5vw, 2rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.form h3 { grid-column: 1 / -1; font-size: 1.6rem; color: var(--brand); }
+.field { display: grid; gap: .35rem; min-width: 0; align-content: start; }
+.field.full, .form .btn, .form > small { grid-column: 1 / -1; }
+.field label { font-weight: 700; font-size: .92rem; }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 2px solid var(--line); border-radius: 12px; padding: .7rem .85rem; min-height: 48px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--text); box-shadow: 3px 3px 0 var(--amber); }
+.field textarea { min-height: 96px; resize: vertical; }
+.form > small { color: var(--muted); font-size: .85rem; }
+@media (max-width: 860px) { .fr-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .form { grid-template-columns: minmax(0, 1fr); } .facts li { padding: .8rem .7rem; } .facts b { font-size: 1.6rem; } }
+
+/* ==================== フッター ==================== */
+.site-footer { background: var(--brand-deep); color: color-mix(in srgb, var(--brand-ink) 86%, transparent); padding-block: 3.5rem 2rem; font-size: .95rem; border-top: var(--stroke) solid var(--text); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.site-footer h2 { color: var(--amber); font-size: 1.5rem; margin-bottom: .7rem; }
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; color: var(--amber); }
+.social { display: flex; gap: 1rem; margin-top: .8rem; flex-wrap: wrap; }
+.copy { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid color-mix(in srgb, var(--brand-ink) 18%, transparent); font-size: .85rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* スマホ用の固定ボタン */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 80px; }
+  .sticky-cta { display: flex; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: var(--brand-deep); color: var(--brand-ink); border-top: var(--stroke) solid var(--text); }
+  .sticky-cta .btn-primary { flex: 1; }
+}
+
+/* ==================== 言語切り替え（ヘッダーの lang-switch とフッターの foot-lang） ==================== */
+.nav > .nav-menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; padding-left: .5rem; border-left: 2px solid color-mix(in srgb, var(--brand-ink) 25%, transparent); font: 700 .85rem/1 var(--font-body); }
+.lang-switch a { display: grid; place-items: center; min-width: 2rem; min-height: 2rem; padding-inline: .3rem; border-radius: 10px; color: color-mix(in srgb, var(--brand-ink) 80%, transparent); text-decoration: none; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--brand-ink); background: color-mix(in srgb, var(--brand-ink) 12%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--brand-ink) 22%, transparent); }
+.lang-switch a:focus-visible { outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--brand-ink); font-weight: 800; text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 3px; text-underline-offset: 4px; }
+/* タブレット幅：言語切り替えがあるため、補助的な .opt リンクを隠して、メニューの折り返しやロゴの圧迫を防ぎます */
+@media (min-width: 761px) and (max-width: 1040px) { .nav-menu .opt { display: none; } }
+@media (max-width: 760px) {
+  /* スマホ：言語切り替えはメニューボタンの左。JS がないときはロゴの横に残り、メニューはその下に折り返します */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .nav-toggle { order: 2; flex: none; }
+  /* スマホではヘッダーの間隔を少し詰め、ロゴが圧迫されないようにします */
+  .nav { gap: .75rem; }
+  .nav-menu { order: 3; }
+}
+/* とても狭いスマホ（380px 以下）：言語切り替えは開いたメニューの上部に移動します */
+@media (max-width: 380px) {
+  .js .lang-switch { display: none; position: absolute; top: calc(72px + .6rem); left: var(--pad); }
+  .js .nav-menu { padding-top: 3rem; }
+  .js .nav-menu.open ~ .lang-switch { display: flex; }
+}
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem .75rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { color: var(--brand-ink); font-weight: 800; text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+/* ---------- 日本語の組版：禁則処理を厳密にし、見出しは文節で改行 ---------- */
+body { line-break: strict; }
+h1, h2, h3 { letter-spacing: normal; word-break: auto-phrase; line-height: 1.3; font-weight: 900; }
+.hero h1 { font-size: clamp(2.4rem, 5.8vw, 4.6rem); line-height: 1.2; }
+.sec-title { font-size: clamp(1.9rem, 4.4vw, 3rem); line-height: 1.3; }
+.sig h3, .store h3 { font-size: 1.5rem; }
+.item h3 { font-size: 1.15rem; }
+.nav-menu, .logo b, .logo small, .tab, .pill span, .tag, .ticker li { white-space: nowrap; }
+p, dd, blockquote { text-wrap-style: pretty; }
+.perks h3, .sticker { word-break: auto-phrase; }
+.sticker.s3 { font-size: .8rem; }
+.sticker big { font-size: 1.6rem; }
+.perks b { font-size: 1.4rem; }
+.facts b { font-size: 1.6rem; }
+</style>
+</head>
+<body>
+
+<!-- ==================== セクション：ヘッダー ==================== -->
+<header class="site-header">
+  <nav class="wrap nav" aria-label="メインメニュー">
+    <a href="#hero" class="logo"><span class="logo-mark" aria-hidden="true"></span><span><b>ムウ</b><small>台湾茶スタンド</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-links" aria-label="メニューを開く"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#signature">人気ドリンク</a></li>
+      <li><a href="#menu">メニュー</a></li>
+      <li><a href="#custom">カスタム</a></li>
+      <li><a href="#stores">店舗</a></li>
+      <li class="opt"><a href="#member">スタンプカード</a></li>
+      <li class="opt"><a href="#franchise">加盟店募集</a></li>
+      <li><a href="#order" class="btn btn-primary">ネット注文</a></li>
+    </ul>
+    <!-- lang-switch：言語切り替え。言語を追加するときは、ここにリンクを追加し、対応するフォルダを作成してください -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+      <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">JA</a>
+    </nav>
+  </nav>
+</header>
+
+<main>
+<!-- ==================== セクション：ファーストビュー ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>お茶もタピオカも、<wbr>毎日できたて。</h1>
+      <p class="lead">台湾の茶葉を4時間ごとに淹れ直しています。甘さも氷も、お好みで。</p>
+      <div class="hero-cta">
+        <a href="#order" class="btn btn-primary">ネット注文</a>
+        <a href="#menu" class="btn btn-ghost">メニューを見る</a>
+      </div>
+      <p class="hero-note">東京に3店舗、毎日<b>23:00</b>まで営業</p>
+    </div>
+    <div class="hero-art">
+      <div class="img img-cup img-hero cup-brown has-pearl bg-amber" role="img" aria-label="アンバー色の放射模様を背景にした、虎柄の黒糖タピオカミルクと赤いストロー"></div>
+      <p class="sticker s1" aria-hidden="true">タピオカは毎日手作り</p>
+      <p class="sticker s2" aria-hidden="true">台湾茶100%</p>
+      <p class="sticker s3" aria-hidden="true"><span><big>4時間</big>ごとに抽出</span></p>
+    </div>
+  </div>
+</section>
+<div class="ticker" aria-hidden="true">
+  <ul><li>黒糖タピオカミルク</li><li>金萱チーズフォーム</li><li>パッションフルーツ緑茶</li><li>自家製烏龍ミルクティー</li><li>冬瓜レモネード</li><li>ほうじ茶ラテ</li></ul>
+</div>
+
+<!-- ==================== セクション：看板ドリンク ==================== -->
+<section id="signature">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">まずはこの3杯から</h2>
+      <p class="sec-lead">はじめての方へ、スタッフがいちばんおすすめする3杯です。どれも甘さと氷の量を調整できます。</p>
+    </div>
+    <div class="sig-grid">
+      <article class="sig sticker-box reveal">
+        <div class="img img-cup cup-brown has-pearl bg-amber" role="img" aria-label="黒糖の虎柄が入った牛乳と、底にたっぷりのタピオカ"></div>
+        <h3>黒糖タピオカミルク</h3>
+        <p>じっくり煮詰めた黒糖シロップがカップを伝い、毎朝炊き上げるもちもちのタピオカと合わさります。お茶を使わないので夜でも安心。</p>
+        <div class="sig-foot"><span class="price">¥750<small>〜</small></span><ul class="tags"><li class="tag tag-hot">人気</li><li class="tag tag-free">カフェインレス</li></ul></div>
+      </article>
+      <article class="sig sticker-box reveal">
+        <div class="img img-cup cup-oolong has-cap bg-matcha" role="img" aria-label="抹茶色の背景に、厚いチーズフォームをのせたアンバー色の金萱烏龍茶"></div>
+        <h3>金萱チーズフォーム</h3>
+        <p>ミルキーな香りの金萱烏龍茶に、ほんのり塩気のあるクリームをのせて。まずはフォームを、それからお茶をどうぞ。</p>
+        <div class="sig-foot"><span class="price">¥680<small>〜</small></span><ul class="tags"><li class="tag tag-hot">人気</li></ul></div>
+      </article>
+      <article class="sig sticker-box reveal">
+        <div class="img img-cup cup-fruit bg-milk" role="img" aria-label="クリーム色の背景に、種の入った黄緑色のパッションフルーツ緑茶"></div>
+        <h3>パッションフルーツ緑茶</h3>
+        <p>注文ごとにパッションフルーツをまるごとカットし、四季春茶とシェイク。夏は夕方には売り切れることも。</p>
+        <div class="sig-foot"><span class="price">¥650<small>〜</small></span><ul class="tags"><li class="tag tag-warm">ホット可</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：メニュー ==================== -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">メニュー</h2>
+      <p class="sec-lead">M は 500ml、L は 700ml です。価格はテイクアウトの税込価格で、店舗によって多少異なる場合があります。</p>
+    </div>
+    <div class="tabs js-only" role="tablist" aria-label="メニューのカテゴリー">
+      <button class="tab" type="button" role="tab" id="tab-tea" aria-controls="panel-tea" aria-selected="true">ストレートティー</button>
+      <button class="tab" type="button" role="tab" id="tab-milk" aria-controls="panel-milk" aria-selected="false" tabindex="-1">ミルクティー</button>
+      <button class="tab" type="button" role="tab" id="tab-fruit" aria-controls="panel-fruit" aria-selected="false" tabindex="-1">フルーツティー</button>
+      <button class="tab" type="button" role="tab" id="tab-season" aria-controls="panel-season" aria-selected="false" tabindex="-1">季節限定</button>
+    </div>
+    <!-- 商品の追加：<li class="item"> を1つコピーし、名前、説明、M／L の価格、ラベルを変更してください -->
+    <div class="panel" role="tabpanel" id="panel-tea" aria-labelledby="tab-tea" tabindex="0">
+      <p class="panel-title nojs-only">ストレートティー</p>
+      <ul class="items">
+        <li class="item"><h3>金萱烏龍茶</h3><div class="ml"><span><small>M</small>¥480</span><span><small>L</small>¥550</span></div><p>軽やかで、ミルクのような自然な香り。ストレートティーの入門にぴったりです。</p><ul class="tags"><li class="tag tag-hot">人気</li><li class="tag tag-warm">ホット可</li></ul></li>
+        <li class="item"><h3>四季春茶</h3><div class="ml"><span><small>M</small>¥480</span><span><small>L</small>¥550</span></div><p>華やかな花の香りと、甘い余韻。フルーツとの相性が抜群です。</p><ul class="tags"><li class="tag tag-warm">ホット可</li></ul></li>
+        <li class="item"><h3>焙煎鉄観音</h3><div class="ml"><span><small>M</small>¥550</span><span><small>L</small>¥620</span></div><p>しっかり焙煎した、ウッディな香り。濃いめが好きな方に。</p><ul class="tags"><li class="tag tag-warm">ホット可</li></ul></li>
+        <li class="item"><h3>蜜香紅茶</h3><div class="ml"><span><small>M</small>¥480</span><span><small>L</small>¥550</span></div><p>小葉種の紅茶で、はちみつのような自然な香り。無糖でもおいしく飲めます。</p><ul class="tags"><li class="tag tag-warm">ホット可</li></ul></li>
+        <li class="item"><h3>韃靼そば茶</h3><div class="ml"><span><small>M</small>¥480</span><span><small>L</small>¥550</span></div><p>香ばしくナッツのような風味。お子さまや妊娠中の方にもおすすめです。</p><ul class="tags"><li class="tag tag-free">カフェインレス</li><li class="tag tag-warm">ホット可</li></ul></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-milk" aria-labelledby="tab-milk" tabindex="0">
+      <p class="panel-title nojs-only">ミルクティー</p>
+      <ul class="items">
+        <li class="item"><h3>自家製烏龍ミルクティー</h3><div class="ml"><span><small>M</small>¥620</span><span><small>L</small>¥700</span></div><p>焙煎烏龍茶と牛乳。お茶の香りが主役です。</p><ul class="tags"><li class="tag tag-hot">人気</li><li class="tag tag-warm">ホット可</li></ul></li>
+        <li class="item"><h3>黒糖タピオカミルク</h3><div class="ml"><span><small>M</small>¥750</span><span><small>L</small>¥850</span></div><p>自家製の黒糖シロップと炊きたてタピオカ。虎柄もそのままに。</p><ul class="tags"><li class="tag tag-hot">人気</li><li class="tag tag-free">カフェインレス</li></ul></li>
+        <li class="item"><h3>金萱チーズフォーム</h3><div class="ml"><span><small>M</small>¥680</span><span><small>L</small>¥760</span></div><p>金萱烏龍茶に塩気のあるクリームをのせて。混ぜずにどうぞ。</p><ul class="tags"><li class="tag tag-hot">人気</li></ul></li>
+        <li class="item"><h3>ほうじ茶ラテ</h3><div class="ml"><span><small>M</small>¥680</span><span><small>L</small>¥760</span></div><p>点てたほうじ茶でつくるラテ。まろやかで、カフェインも控えめです。</p><ul class="tags"><li class="tag tag-warm">ホット可</li></ul></li>
+        <li class="item"><h3>タロイモミルク</h3><div class="ml"><span><small>M</small>¥780</span><span><small>L</small>¥880</span></div><p>毎日蒸してつぶすタロイモ入り。ごろっとした食感も楽しめます。</p><ul class="tags"><li class="tag tag-free">カフェインレス</li><li class="tag tag-warm">ホット可</li></ul></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-fruit" aria-labelledby="tab-fruit" tabindex="0">
+      <p class="panel-title nojs-only">フルーツティー</p>
+      <ul class="items">
+        <li class="item"><h3>パッションフルーツ緑茶</h3><div class="ml"><span><small>M</small>¥650</span><span><small>L</small>¥730</span></div><p>注文ごとにまるごとカット。甘酸っぱく、種のプチプチ感も。</p><ul class="tags"><li class="tag tag-hot">人気</li><li class="tag tag-warm">ホット可</li></ul></li>
+        <li class="item"><h3>冬瓜レモネード</h3><div class="ml"><span><small>M</small>¥560</span><span><small>L</small>¥640</span></div><p>昔ながらの冬瓜シロップに、搾りたてのレモンを合わせて。</p><ul class="tags"><li class="tag tag-free">カフェインレス</li></ul></li>
+        <li class="item"><h3>オレンジ烏龍</h3><div class="ml"><span><small>M</small>¥680</span><span><small>L</small>¥760</span></div><p>搾りたてのオレンジを、軽やかな金萱烏龍茶に。</p><ul class="tags"><li class="tag">毎日搾りたて</li></ul></li>
+        <li class="item"><h3>グレープフルーツ緑茶</h3><div class="ml"><span><small>M</small>¥720</span><span><small>L</small>¥800</span></div><p>ルビーグレープフルーツの果肉がたっぷり。ほろ苦く、とても爽やかです。</p><ul class="tags"><li class="tag tag-hot">人気</li></ul></li>
+        <li class="item"><h3>パイナップル四季春</h3><div class="ml"><span><small>M</small>¥680</span><span><small>L</small>¥760</span></div><p>じっくり煮たパイナップルジャムを、香り高い四季春茶とシェイク。</p><ul class="tags"><li class="tag tag-warm">ホット可</li></ul></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-season" aria-labelledby="tab-season" tabindex="0">
+      <p class="panel-title nojs-only">季節限定</p>
+      <ul class="items">
+        <li class="item"><h3>生姜黒糖ミルク</h3><div class="ml"><span><small>M</small>¥750</span><span><small>L</small>¥850</span></div><p>生の生姜と黒糖で、体の芯から温まります。</p><ul class="tags"><li class="tag tag-warm">ホット可</li><li class="tag tag-free">カフェインレス</li></ul></li>
+        <li class="item"><h3>龍眼となつめの烏龍茶</h3><div class="ml"><span><small>M</small>¥680</span><span><small>L</small>¥760</span></div><p>干し龍眼となつめを、焙煎烏龍茶でことこと煮出しました。</p><ul class="tags"><li class="tag tag-warm">ホット可</li></ul></li>
+        <li class="item"><h3>いちごミルク</h3><div class="ml"><span><small>M</small>¥880</span><span><small>L</small>¥980</span></div><p>毎日つぶす生のいちご入り。シーズンが終わるまでの限定です。</p><ul class="tags"><li class="tag tag-hot">人気</li><li class="tag tag-free">カフェインレス</li></ul></li>
+        <li class="item"><h3>クレームブリュレミルクティー</h3><div class="ml"><span><small>M</small>¥780</span><span><small>L</small>¥880</span></div><p>烏龍ミルクティーに、カラメルプリンをまるごとひとつ。</p><ul class="tags"><li class="tag tag-warm">ホット可</li></ul></li>
+      </ul>
+    </div>
+    <p class="menu-note">トッピング：タピオカ、ナタデココ、仙草ゼリーは各 ¥100、チーズフォーム、プリンは各 ¥150。ホットは M サイズのみです。</p>
+  </div>
+</section>
+
+<!-- ==================== セクション：カスタマイズ ==================== -->
+<section class="custom" id="custom">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">自分だけの1杯をつくる</h2>
+      <p class="sec-lead">ドリンク、甘さ、氷、トッピングを選ぶと、注文内容が1行にまとまります。店頭で読み上げたり、デリバリーの備考欄に貼り付けたりできます。</p>
+    </div>
+    <div class="mix-grid">
+      <!-- 選択肢の編集：data-m／data-l は M／L の価格、data-tea はカップの色（milk、oolong、fruit、brown、green）、data-pearl／data-cap はタピオカ／チーズフォームが最初から入っていることを示します。トッピングの data-p は追加料金です -->
+      <form class="mix sticker-box reveal" id="mix" onsubmit="return false">
+        <div>
+          <label class="lbl" for="mix-drink">ドリンク</label>
+          <select id="mix-drink" name="drink">
+            <option data-m="620" data-l="700" data-tea="milk" selected>自家製烏龍ミルクティー</option>
+            <option data-m="750" data-l="850" data-tea="brown" data-pearl="1">黒糖タピオカミルク</option>
+            <option data-m="680" data-l="760" data-tea="oolong" data-cap="1">金萱チーズフォーム</option>
+            <option data-m="480" data-l="550" data-tea="green">金萱烏龍茶</option>
+            <option data-m="650" data-l="730" data-tea="fruit">パッションフルーツ緑茶</option>
+            <option data-m="560" data-l="640" data-tea="fruit">冬瓜レモネード</option>
+          </select>
+        </div>
+        <fieldset><legend>サイズ</legend><div class="pills">
+          <label class="pill"><input type="radio" name="size" value="M" checked><span>M 500ml</span></label>
+          <label class="pill"><input type="radio" name="size" value="L"><span>L 700ml</span></label>
+        </div></fieldset>
+        <fieldset><legend>甘さ</legend><div class="pills">
+          <label class="pill"><input type="radio" name="sugar" value="甘さ0%"><span>0%</span></label>
+          <label class="pill"><input type="radio" name="sugar" value="甘さ30%"><span>30%</span></label>
+          <label class="pill"><input type="radio" name="sugar" value="甘さ50%" checked><span>50%</span></label>
+          <label class="pill"><input type="radio" name="sugar" value="甘さ70%"><span>70%</span></label>
+          <label class="pill"><input type="radio" name="sugar" value="甘さ100%"><span>100%</span></label>
+        </div></fieldset>
+        <fieldset><legend>氷</legend><div class="pills">
+          <label class="pill"><input type="radio" name="ice" value="氷なし"><span>なし</span></label>
+          <label class="pill"><input type="radio" name="ice" value="氷ほんの少し"><span>ほんの少し</span></label>
+          <label class="pill"><input type="radio" name="ice" value="氷少なめ" checked><span>少なめ</span></label>
+          <label class="pill"><input type="radio" name="ice" value="氷ふつう"><span>ふつう</span></label>
+        </div></fieldset>
+        <fieldset><legend>トッピング</legend><div class="pills">
+          <label class="pill"><input type="checkbox" name="top" value="タピオカ" data-p="100" data-k="pearl"><span>タピオカ <small>+¥100</small></span></label>
+          <label class="pill"><input type="checkbox" name="top" value="ナタデココ" data-p="100"><span>ナタデココ <small>+¥100</small></span></label>
+          <label class="pill"><input type="checkbox" name="top" value="仙草ゼリー" data-p="100"><span>仙草ゼリー <small>+¥100</small></span></label>
+          <label class="pill"><input type="checkbox" name="top" value="チーズフォーム" data-p="150" data-k="cap"><span>チーズフォーム <small>+¥150</small></span></label>
+          <label class="pill"><input type="checkbox" name="top" value="プリン" data-p="150"><span>プリン <small>+¥150</small></span></label>
+        </div></fieldset>
+      </form>
+      <aside class="receipt sticker-box reveal" aria-labelledby="mix-title">
+        <div class="img img-cup bg-matcha" id="mix-art" data-tea="milk" role="img" aria-label="選んだ内容に合わせて変わるドリンクのイラスト"></div>
+        <h3 id="mix-title">あなたの1杯</h3>
+        <output id="mix-sum" for="mix" aria-live="polite">M 自家製烏龍ミルクティー、甘さ50%、氷少なめ</output>
+        <p class="total"><span>小計（税込）</span><output id="mix-price" for="mix">¥620</output></p>
+        <a href="#order" class="btn btn-primary">この1杯を注文する</a>
+        <p class="small-note nojs-only">選んだ内容を店頭でスタッフに伝えるか、デリバリーの備考欄にご記入ください。</p>
+        <p class="small-note js-only">金額は目安です。最終的な価格は店頭やデリバリーアプリでご確認ください。</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：店舗 ==================== -->
+<section id="stores">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">東京に3店舗</h2>
+      <p class="sec-lead">ふらっと立ち寄っても、電話やネットで事前注文しても、どの店舗でも受け取れます。店舗を増やすときは、店舗カードをコピーしてください。</p>
+    </div>
+    <div class="store-grid">
+      <article class="store sticker-box reveal">
+        <span class="flag">本店</span>
+        <h3>下北沢本店</h3>
+        <dl>
+          <dt>住所</dt><dd>東京都世田谷区北沢2-12-8</dd>
+          <dt>営業時間</dt><dd>毎日 10:00〜23:00</dd>
+          <dt>電話</dt><dd>03-1234-5678</dd>
+        </dl>
+        <div class="store-actions">
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=東京都世田谷区北沢2-12-8" target="_blank" rel="noopener">Google マップ</a>
+          <a class="btn btn-ghost" href="tel:+81312345678">電話する</a>
+        </div>
+      </article>
+      <article class="store sticker-box reveal">
+        <h3>吉祥寺店</h3>
+        <dl>
+          <dt>住所</dt><dd>東京都武蔵野市吉祥寺本町1-20-3</dd>
+          <dt>営業時間</dt><dd>毎日 10:30〜22:00</dd>
+          <dt>電話</dt><dd>0422-12-3456</dd>
+        </dl>
+        <div class="store-actions">
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=東京都武蔵野市吉祥寺本町1-20-3" target="_blank" rel="noopener">Google マップ</a>
+          <a class="btn btn-ghost" href="tel:+81422123456">電話する</a>
+        </div>
+      </article>
+      <article class="store sticker-box reveal">
+        <h3>中目黒店</h3>
+        <dl>
+          <dt>住所</dt><dd>東京都目黒区上目黒1-8-15</dd>
+          <dt>営業時間</dt><dd>月〜金 11:00〜22:00<br>土・日 10:00〜22:30</dd>
+          <dt>電話</dt><dd>03-1234-5680</dd>
+        </dl>
+        <div class="store-actions">
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=東京都目黒区上目黒1-8-15" target="_blank" rel="noopener">Google マップ</a>
+          <a class="btn btn-ghost" href="tel:+81312345680">電話する</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：ネット注文・デリバリー ==================== -->
+<section class="order" id="order">
+  <div class="wrap order-grid">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">おうちにも、<wbr>お届けします。</h2>
+      <p class="sec-lead">デリバリーアプリで「台湾茶スタンド ムウ」と検索してください。ご来店の方は LINE で事前注文すれば、並ばずに受け取れます。</p>
+    </div>
+    <!-- href="#" を、各デリバリーサービスのお店のページの URL に置き換えてください。
+         LINE（@yourlineid をご自身の ID に）は、Instagram の DM リンクなどにも差し替えられます。 -->
+    <div class="platforms reveal">
+      <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Uber Eats で注文 <small>約30分</small></a>
+      <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">出前館で注文 <small>約30分</small></a>
+      <a class="btn btn-ghost" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE で事前注文 <small>並ばずに受け取り</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：スタンプカード ==================== -->
+<section class="member" id="member">
+  <div class="wrap member-grid">
+    <div class="stamp-card sticker-box reveal">
+      <h3>ムウ スタンプカード</h3>
+      <ul class="stamps" aria-label="スタンプカードの例：10個中7個たまった状態">
+        <li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li>
+        <li class="on"></li><li class="on"></li><li></li><li></li><li></li>
+      </ul>
+      <p>10個たまったら、次の M サイズ1杯が無料になります。</p>
+    </div>
+    <div class="reveal">
+      <h2 class="sec-title">スタンプをためて、<wbr>1杯無料に</h2>
+      <!-- サンプル内容：公開前に実際の情報に差し替えてください -->
+      <ul class="perks">
+        <li><b>1</b><div><h3>1杯につきスタンプ1個</h3><p>3店舗どこでも、事前注文の受け取りでも、ドリンク1杯ごとにスタンプを1個押します。</p></div></li>
+        <li><b>10</b><div><h3>M サイズ1杯無料</h3><p>スタンプ10個で、お好きな M サイズのドリンク1杯と交換できます。トッピングは別料金です。</p></div></li>
+        <li><b>誕生月</b><div><h3>バースデー特典</h3><p>誕生月にカードを見せていただくと、自家製ミルクティーの L サイズを1杯プレゼントします。</p></div></li>
+      </ul>
+      <a class="btn btn-primary" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE で会員登録</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：フランチャイズ ==================== -->
+<section id="franchise">
+  <div class="wrap fr-grid">
+    <div class="reveal">
+      <h2 class="sec-title">ムウのお店を<wbr>開きませんか</h2>
+      <p class="sec-lead">お茶のレシピ、設備のプラン、研修、オープン時の販促まで、私たちがサポートします。あなたの街でお店を開きたい方は、ご連絡先をお送りください。3営業日以内に担当者からご連絡します。</p>
+      <!-- サンプル内容：公開前に実際の情報に差し替えてください -->
+      <ul class="facts">
+        <li><b>3</b><span>直営店</span></li>
+        <li><b>8坪〜</b><span>必要な広さ</span></li>
+        <li><b>30日</b><span>の実地研修</span></li>
+      </ul>
+    </div>
+    <!-- このフォームは Formspree を使っています（無料プランで月50件まで送信できます）：
+         1. https://formspree.io で登録し、新しいフォームを作成します
+         2. フォームの URL にある ID（例：xyzabcd）をコピーします
+         3. 下の action の your-form-id を置き換えると、お問い合わせがメールで届きます -->
+    <form class="form sticker-box reveal" action="https://formspree.io/f/your-form-id" method="POST">
+      <h3>加盟のお問い合わせ</h3>
+      <div class="field"><label for="f-name">お名前</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">電話番号</label><input id="f-tel" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="090-1234-5678" required></div>
+      <div class="field"><label for="f-mail">メールアドレス</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="f-area">出店希望エリア</label><input id="f-area" name="city" placeholder="例：福岡市"></div>
+      <div class="field full"><label for="f-msg">ご質問</label><textarea id="f-msg" name="message" placeholder="例：物件はお決まりですか？ご予算は？オープン希望時期は？"></textarea></div>
+      <button class="btn btn-primary" type="submit">問い合わせる</button>
+      <small>いただいた情報は加盟に関するご連絡にのみ使用し、第三者には提供しません。</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== セクション：フッター ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>台湾茶スタンド ムウ</h2>
+        <p>本店：東京都世田谷区北沢2-12-8<br>電話 <a href="tel:+81312345678">03-1234-5678</a></p>
+        <div class="social"><a href="#">Instagram</a><a href="https://line.me/R/ti/p/@yourlineid">LINE</a><a href="#">TikTok</a></div>
+      </div>
+      <div>
+        <h2>営業時間</h2>
+        <p>下北沢本店：毎日 10:00〜23:00<br>吉祥寺店：毎日 10:30〜22:00<br>中目黒店：10:00〜22:30（平日は11:00から）</p>
+      </div>
+      <div>
+        <h2>メニュー</h2>
+        <p><a href="#menu">ドリンクメニュー</a><br><a href="#stores">店舗</a><br><a href="#order">ネット注文</a><br><a href="#franchise">加盟店募集</a></p>
+      </div>
+    </div>
+    <p class="copy">© <span id="y"></span> 台湾茶スタンド ムウ</p>
+    <!-- フッターの言語リンク：ヘッダーの lang-switch と同じ内容です -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a></p>
+  </div>
+</footer>
+
+<!-- スマホ用の固定ボタン -->
+<div class="sticky-cta">
+  <a href="#order" class="btn btn-primary">ネット注文</a>
+  <a href="#stores" class="btn btn-ghost">店舗を探す</a>
+</div>
+
+<script>
+// 言語の設定（ほかの言語にするときは、この行だけ変更します）
+const T = { cur: '¥', dec: 0, locale: 'ja-JP', open: 'メニューを閉じる', closed: 'メニューを開く', size: { M: 'M', L: 'L' }, add: 'トッピング：', sep: '、', list: '・' };
+const $ = (s, el = document) => el.querySelector(s), $$ = (s, el = document) => [...el.querySelectorAll(s)];
+$('#y').textContent = new Date().getFullYear();
+
+// スクロールしたらヘッダーに背景を付ける
+const header = $('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// ハンバーガーメニュー
+const toggle = $('.nav-toggle'), menu = $('#menu-links');
+const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? T.open : T.closed); };
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+$$('a', menu).forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// スクロールでフェードイン
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+$$('.reveal').forEach(el => io.observe(el));
+
+// メニューのタブ（矢印キー、Home、End にも対応）
+const tabs = $$('[role="tab"]');
+const select = (t, focus = true) => {
+  tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+  if (focus) t.focus();
+};
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => select(t));
+  t.addEventListener('keydown', e => {
+    const k = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+    if (k !== undefined) { e.preventDefault(); select(tabs[(k + tabs.length) % tabs.length]); }
+  });
+});
+select(tabs[0], false);
+
+// カスタマイズ：注文内容を1行にまとめ、合計金額を計算
+const mix = $('#mix'), sum = $('#mix-sum'), price = $('#mix-price'), art = $('#mix-art');
+const calc = () => {
+  const d = mix.drink.selectedOptions[0], size = mix.size.value, tops = $$('[name="top"]:checked', mix);
+  const total = +d.dataset[size.toLowerCase()] + tops.reduce((n, t) => n + +t.dataset.p, 0);
+  const parts = [`${T.size[size]} ${d.textContent}`, mix.sugar.value, mix.ice.value];
+  if (tops.length) parts.push(T.add + tops.map(t => t.value).join(T.list));
+  sum.textContent = parts.join(T.sep);
+  price.textContent = T.cur + total.toLocaleString(T.locale, { minimumFractionDigits: T.dec, maximumFractionDigits: T.dec });
+  art.dataset.tea = d.dataset.tea;
+  art.classList.toggle('has-pearl', d.dataset.pearl || tops.some(t => t.dataset.k === 'pearl'));
+  art.classList.toggle('has-cap', d.dataset.cap || tops.some(t => t.dataset.k === 'cap'));
+};
+mix.addEventListener('change', calc); calc();
+</script>
+</body>
+</html>
