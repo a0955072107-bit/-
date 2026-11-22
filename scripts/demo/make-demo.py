@@ -47,7 +47,8 @@ KIND = {  # for JSON-LD description when the lead has no notes
 CLOSED_WORD = {'clinic': '休診'}
 SCROLL_PAD = {'restaurant': '72px', 'clinic': '80px', 'education': '80px', 'beauty': '5rem'}
 EXTRA_CSS = {  # per-template fixes for the banner offset
-    'beauty': """@media (max-width: 760px) {
+    'beauty': """.sec-head .demo-note { margin-inline: auto; }
+@media (max-width: 760px) {
   .js .menu { padding-top: calc(5.5rem + var(--demo-h)); }
   .js .site-header.scrolled .menu { padding-top: 5.5rem; }
 }
@@ -268,7 +269,13 @@ def hours_tokens(week, lang, slug):
     for a, b, r in gs:
         lab = day_label(a, b, lang)
         lines.append((lab, fmt_ranges(r, lang) if r else closed))
-    open_groups = [(a, b) for a, b, r in gs if r]
+    open_groups = []   # runs of open days, whatever their hours (Mon-Fri 9-6 + Sat 9-2 -> Mon to Sat)
+    for d in range(7):
+        if week[d]:
+            if open_groups and open_groups[-1][1] == d - 1:
+                open_groups[-1][1] = d
+            else:
+                open_groups.append([d, d])
     short = ('7 days' if not zh else '每天') if all(week.values()) else (', ' if not zh else '、').join(day_label(a, b, lang) for a, b in open_groups)
     fact = ('Open 7 days' if not zh else '每天營業') if all(week.values()) else (f'Open {short}' if not zh else f'{short}營業')
     if slug == 'clinic' and zh:
@@ -412,6 +419,8 @@ def prepare(row, notes_zh_arg=None):
     notes_en, notes_zh = split_notes(row.get('notes', ''))
     if notes_zh_arg:
         notes_zh = notes_zh_arg.strip()
+    if notes_zh and notes_zh[-1] not in '。！？.!?':
+        notes_zh += '。'
     address = ' '.join((row.get('address') or '').split())
     lead = dict(name_en=name_en, name_zh=name_zh, street=street, city=city, state=state or '', zip=zipc, address=address,
                 phone=phone, tel=tel, notes_en=notes_en, notes_zh=notes_zh, week=parse_hours(row.get('hours', '')),

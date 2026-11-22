@@ -13,7 +13,8 @@ FONT = [('Noto+Sans+TC', 'Noto+Sans+SC'), ('Noto+Serif+TC', 'Noto+Serif+SC'), ('
         ('Noto Serif TC', 'Noto Serif SC'), ('PingFang TC', 'PingFang SC'), ('Microsoft JhengHei', 'Microsoft YaHei'),
         ('Songti TC', 'Songti SC'), ('zh_TW', 'zh_CN'), ("toLocaleDateString('zh-TW'", "toLocaleDateString('zh-CN'")]
 # tw2sp 轉完之後，美國華人簡體用語的微調（左：tw2sp 的結果，右：想要的寫法）
-WORDS = []
+WORDS = [('过敏纪录', '过敏记录'), ('范例文本', '示例文字'), ('范例', '示例'), ('查找给付范围', '查询保险覆盖范围'),
+         ('有给付针灸', '涵盖针灸'), ('帮您查找', '帮您查询'), ('俐落', '利落')]
 
 
 def fix_lang(html):
