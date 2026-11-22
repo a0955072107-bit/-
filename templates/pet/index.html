@@ -372,6 +372,10 @@ textarea { resize: vertical; min-height: 6rem; }
 .lang-switch a:active { background: var(--line); }
 .lang-switch a:focus-visible { outline-offset: 1px; border-radius: 999px; }
 .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 800; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 3px; text-underline-offset: 4px; }
+/* 平板寬度：加上語言切換後空間較緊，先隱藏 .opt 的次要連結，避免選單換行或擠到 logo */
+@media (min-width: 761px) and (max-width: 1060px) { .menu .opt { display: none; } }
+/* 最窄的平板寬度：再收緊一點間距 */
+@media (min-width: 761px) and (max-width: 860px) { .menu .opt-sm { display: none; } .menu { gap: .7rem; } .lang-switch { padding-left: 0; border-left: 0; } }
 @media (max-width: 760px) {
   /* 手機：語言切換固定在漢堡按鈕左邊；沒有 JS 時和 logo 同一行，選單換到下一行 */
   .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
@@ -484,7 +488,7 @@ textarea { resize: vertical; min-height: 6rem; }
     <div class="menu" id="menu">
       <a href="#services">服務項目</a>
       <a href="#prices">價目表</a>
-      <a href="#care">環境</a>
+      <a class="opt-sm" href="#care">環境</a>
       <a class="opt" href="#team">美容師</a>
       <a class="opt" href="#notice">預約須知</a>
       <a href="#visit">交通</a>

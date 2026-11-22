@@ -378,6 +378,8 @@ html:not(.js) .js-only { display: none !important; }
 .lang-switch a:active { background: color-mix(in srgb, var(--brand-ink) 22%, transparent); }
 .lang-switch a:focus-visible { outline-offset: 1px; }
 .lang-switch a[aria-current="page"] { color: var(--brand-ink); font-weight: 800; text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 3px; text-underline-offset: 4px; }
+/* 平板寬度：加上語言切換後空間較緊，先隱藏 .opt 的次要連結，避免選單換行或擠到 logo */
+@media (min-width: 761px) and (max-width: 1040px) { .nav-menu .opt { display: none; } }
 @media (max-width: 760px) {
   /* 手機：語言切換固定在漢堡按鈕左邊；沒有 JS 時和 logo 同一行，選單換到下一行 */
   .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
@@ -410,8 +412,8 @@ html:not(.js) .js-only { display: none !important; }
       <li><a href="#menu">菜單</a></li>
       <li><a href="#custom">客製</a></li>
       <li><a href="#stores">門市</a></li>
-      <li><a href="#member">集點</a></li>
-      <li><a href="#franchise">加盟</a></li>
+      <li class="opt"><a href="#member">集點</a></li>
+      <li class="opt"><a href="#franchise">加盟</a></li>
       <li><a href="#order" class="btn btn-primary">線上點餐</a></li>
     </ul>
     <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->

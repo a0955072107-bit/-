@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bruma Cabello &amp; Uñas | Salón de belleza en Bogotá</title>
+<meta name="description" content="Bruma Cabello & Uñas es un pequeño salón de belleza en Bogotá: cortes, color, permanentes, tratamientos capilares y uñas en gel. Asesoría personalizada y sin afán, para que salgas con la mejor versión de ti. Reserva por WhatsApp.">
+<meta property="og:title" content="Bruma Cabello &amp; Uñas | Salón de belleza en Bogotá">
+<meta property="og:description" content="Cortes, color, permanentes, tratamientos y uñas. Asesoría personalizada y reservas fáciles por WhatsApp.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f8eeeb">
+<!-- Versiones de idioma (SEO): al publicar, cambia cada href por la URL completa, por ejemplo https://www.tunegocio.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ============================================================
+   CONFIGURACIÓN DEL TEMA: cambia estos valores para cambiar los colores y fuentes de todo el sitio
+   ============================================================ */
+:root {
+  --brand: #8e4f5c;          /* Color de marca (rosa empolvado): botones, textos clave */
+  --brand-ink: #fff8f6;         /* Color del texto sobre el color de marca */
+  --bg: #f8eeeb;             /* Fondo de la página (nude rosado suave) */
+  --surface: #fffaf8;        /* Superficies de tarjetas y paneles */
+  --surface-2: #f1e1dc;      /* Fondo alterno de secciones (nude rosado más intenso) */
+  --text: #2e292a;           /* Texto principal (carbón) */
+  --muted: #6c5c5f;          /* Texto secundario, pies de foto */
+  --line: #e3cfca;           /* Separadores y bordes */
+  --blush: #e9b8b6;          /* Imagen de muestra: rosa rubor */
+  --rosewood: #cf9a95;       /* Imagen de muestra: palo de rosa intenso */
+  --peach: #f0c9ad;          /* Imagen de muestra: durazno champaña */
+  --sand: #e3c9ae;           /* Imagen de muestra: arena cálida */
+  --pearl: #fdf6f2;          /* Imagen de muestra: brillo perlado */
+  --shadow: color-mix(in srgb, var(--text) 10%, transparent);       /* Color de sombra por defecto */
+  --shadow-brand: color-mix(in srgb, var(--brand) 30%, transparent); /* Sombra con tono de la marca */
+  --radius: 22px;            /* Radio de las esquinas de las tarjetas */
+  --arch: 999px 999px var(--radius) var(--radius); /* Radio de los marcos de imagen en arco */
+  --font-heading: "Cormorant Garamond", "Garamond", Georgia, serif; /* Fuente de los títulos (serif fina) */
+  --font-body: "Jost", "Avenir Next", "Segoe UI", system-ui, sans-serif; /* Fuente del texto */
+  --pad: clamp(1.25rem, 5vw, 5rem); /* Margen lateral de las secciones */
+  --max: 1180px;             /* Ancho máximo del contenido */
+  --ease: cubic-bezier(.2, .7, .1, 1); /* Curva de aceleración de las animaciones */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 300 1rem/1.8 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+h1, h2, h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+.btn:active { transform: scale(.97); }
+a:active, .filters button:active { opacity: .75; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: var(--max); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 99; }
+.skip:focus { left: 1rem; top: 1rem; }
+
+/* ---------- Botones ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 3rem; padding: .7rem 1.6rem; border-radius: 999px; font: 400 .95rem/1 var(--font-body); letter-spacing: normal; border: 1px solid var(--brand); transition: transform .4s var(--ease), background .3s, color .3s; cursor: pointer; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { transform: translateY(-2px); background: color-mix(in srgb, var(--brand) 88%, var(--text)); }
+.btn-ghost { background: transparent; color: var(--brand); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.btn svg { width: 1.1em; height: 1.1em; fill: currentColor; }
+
+/* ---------- Section: Encabezado ---------- */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; border-bottom: 1px solid transparent; transition: background .4s, border-color .4s, padding .4s; padding: 1.1rem var(--pad); }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-color: var(--line); padding-block: .7rem; }
+.nav { max-width: var(--max); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.logo { display: flex; align-items: baseline; gap: .55rem; font-family: var(--font-heading); font-weight: 500; font-size: 1.6rem; letter-spacing: normal; }
+.logo small { font: italic 400 1rem/1 var(--font-heading); letter-spacing: normal; color: var(--brand); }
+.menu { display: flex; align-items: center; gap: clamp(1rem, 2.4vw, 2rem); font-size: .9rem; letter-spacing: normal; }
+.menu a:not(.btn) { position: relative; padding-block: .3rem; }
+.menu a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--brand); transform: scaleX(0); transition: transform .4s var(--ease); }
+.menu a:not(.btn):hover::after { transform: scaleX(1); }
+.menu .btn { min-height: 2.5rem; padding: .5rem 1.2rem; font-size: .85rem; }
+.burger { display: none; width: 2.75rem; height: 2.75rem; border: 0; background: transparent; cursor: pointer; position: relative; border-radius: 50%; }
+.burger span, .burger::before, .burger::after { content: ""; position: absolute; left: 25%; right: 25%; height: 1.5px; background: var(--text); transition: transform .35s var(--ease), opacity .3s; }
+.burger::before { top: 35%; } .burger span { top: 50%; } .burger::after { top: 65%; }
+.burger[aria-expanded="true"]::before { transform: translateY(.41rem) rotate(45deg); }
+.burger[aria-expanded="true"] span { opacity: 0; }
+.burger[aria-expanded="true"]::after { transform: translateY(-.41rem) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* Sin JavaScript el menú pasa a su propia línea; con JS se pliega en el botón de hamburguesa */
+  html:not(.js) *:has(> .menu) { flex-wrap: wrap; }
+  html:not(.js) header:has(.menu) { position: sticky; }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; justify-content: flex-start; gap: .4rem 1rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: 0 0 auto; top: 0; padding: 5.5rem var(--pad) 2rem; flex-direction: column; align-items: stretch; gap: 0; background: var(--surface); border-bottom: 1px solid var(--line); box-shadow: 0 20px 40px var(--shadow); transform: translateY(-105%); visibility: hidden; transition: transform .45s var(--ease), visibility 0s .45s; z-index: -1; font-size: 1.05rem; }
+  .js .menu.open { transform: none; visibility: visible; transition: transform .45s var(--ease); }
+  .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line); }
+  .js .menu a:not(.btn)::after { display: none; }
+  .js .menu .btn { margin-top: 1.25rem; min-height: 3rem; }
+}
+
+/* ---------- Estilos comunes de las secciones ---------- */
+section { padding: clamp(4.5rem, 12vh, 8rem) var(--pad); }
+.sec-head { text-align: center; max-width: 40rem; margin: 0 auto clamp(2.5rem, 6vh, 4rem); }
+.sec-head h2 { font: 300 clamp(2.2rem, 5vw, 3.2rem)/1.2 var(--font-heading); letter-spacing: normal; margin: 0; }
+.sec-head p { color: var(--muted); margin-top: .9rem; }
+.alt { background: var(--surface-2); }
+
+/* ---------- Imágenes de muestra ----------
+   Cada .img-xx es una imagen de muestra pintada con degradados. Cámbiala por tus propias fotos cuando quieras. */
+.img { position: relative; overflow: hidden; background-color: var(--surface-2); isolation: isolate; }
+.img::after { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(120% 60% at 30% 0%, color-mix(in srgb, var(--pearl) 70%, transparent), transparent 60%); mix-blend-mode: soft-light; }
+.arch { border-radius: var(--arch); }
+/* Cambiar por una foto: .img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero {
+  background:
+    radial-gradient(40% 32% at 70% 28%, color-mix(in srgb, var(--pearl) 85%, transparent), transparent 70%),
+    radial-gradient(55% 45% at 20% 75%, color-mix(in srgb, var(--rosewood) 75%, transparent), transparent 70%),
+    repeating-radial-gradient(140% 90% at 110% 120%, color-mix(in srgb, var(--blush) 90%, transparent) 0 18px, color-mix(in srgb, var(--sand) 60%, transparent) 26px 40px, color-mix(in srgb, var(--pearl) 40%, transparent) 46px 52px),
+    linear-gradient(160deg, var(--blush), var(--sand));
+}
+/* Cambiar por una foto: .img-hero2 { background: url(images/hero-2.jpg) center/cover; } */
+.img-hero2 {
+  background:
+    radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--pearl) 90%, transparent) 0 18%, transparent 19%),
+    radial-gradient(70% 50% at 50% 100%, color-mix(in srgb, var(--brand) 45%, transparent), transparent 70%),
+    linear-gradient(200deg, var(--blush), var(--peach));
+}
+/* Cambiar por una foto: .img-stylist-1 { background: url(images/stylist-1.jpg) center/cover; } (igual para .img-stylist-2 a 4) */
+.img-stylist-1 { background: radial-gradient(45% 30% at 50% 36%, color-mix(in srgb, var(--pearl) 80%, transparent), transparent 70%), repeating-linear-gradient(115deg, color-mix(in srgb, var(--blush) 80%, transparent) 0 14px, color-mix(in srgb, var(--sand) 70%, transparent) 14px 30px), linear-gradient(var(--blush), var(--sand)); }
+.img-stylist-2 { background: radial-gradient(45% 30% at 50% 36%, color-mix(in srgb, var(--pearl) 80%, transparent), transparent 70%), repeating-radial-gradient(circle at 0% 100%, color-mix(in srgb, var(--rosewood) 80%, transparent) 0 16px, color-mix(in srgb, var(--blush) 70%, transparent) 16px 34px), var(--rosewood); }
+.img-stylist-3 { background: radial-gradient(45% 30% at 50% 36%, color-mix(in srgb, var(--pearl) 80%, transparent), transparent 70%), conic-gradient(from 200deg at 50% 110%, var(--sand), var(--blush), var(--rosewood), var(--sand)); }
+.img-stylist-4 { background: radial-gradient(45% 30% at 50% 36%, color-mix(in srgb, var(--pearl) 80%, transparent), transparent 70%), repeating-linear-gradient(65deg, color-mix(in srgb, var(--sand) 85%, transparent) 0 12px, color-mix(in srgb, var(--pearl) 60%, transparent) 12px 20px, color-mix(in srgb, var(--blush) 70%, transparent) 20px 34px), var(--sand); }
+/* Cambiar por una foto: .img-w1 { background: url(images/work-1.jpg) center/cover; } (igual para .img-w2 a w8) */
+.img-w1 { background: repeating-radial-gradient(160% 100% at -20% 50%, var(--blush) 0 14px, var(--sand) 22px 34px, var(--pearl) 40px 44px); }
+.img-w2 { background: radial-gradient(60% 50% at 70% 30%, color-mix(in srgb, var(--pearl) 80%, transparent), transparent 70%), linear-gradient(135deg, var(--brand), var(--rosewood) 45%, var(--sand)); }
+.img-w3 { background: radial-gradient(circle at 30% 30%, var(--pearl) 0 9%, transparent 10%), radial-gradient(circle at 62% 46%, var(--blush) 0 12%, transparent 13%), radial-gradient(circle at 42% 72%, var(--rosewood) 0 10%, transparent 11%), linear-gradient(var(--surface-2), var(--sand)); }
+.img-w4 { background: repeating-linear-gradient(170deg, color-mix(in srgb, var(--sand) 90%, transparent) 0 10px, color-mix(in srgb, var(--blush) 80%, transparent) 10px 24px, color-mix(in srgb, var(--pearl) 60%, transparent) 24px 28px), var(--sand); }
+.img-w5 { background: repeating-radial-gradient(circle at 50% 120%, var(--rosewood) 0 12px, var(--blush) 12px 26px, var(--pearl) 26px 30px); }
+.img-w6 { background: radial-gradient(40% 60% at 25% 50%, var(--blush) 0 60%, transparent 61%), radial-gradient(40% 60% at 75% 50%, var(--sand) 0 60%, transparent 61%), linear-gradient(var(--pearl), var(--surface-2)); }
+.img-w7 { background: radial-gradient(80% 60% at 20% 20%, color-mix(in srgb, var(--pearl) 85%, transparent), transparent 60%), conic-gradient(from 90deg at 60% 60%, var(--sand), var(--brand), var(--rosewood), var(--sand)); }
+.img-w8 { background: repeating-linear-gradient(90deg, var(--blush) 0 8px, var(--pearl) 8px 12px, var(--rosewood) 12px 22px, var(--pearl) 22px 26px); }
+/* Manchas de luz suaves flotando (decorativas) */
+.blob { position: absolute; border-radius: 50%; filter: blur(50px); z-index: -1; pointer-events: none; animation: drift 16s ease-in-out infinite alternate; }
+@keyframes drift { to { transform: translate(3vw, 4vh) scale(1.1); } }
+
+/* ---------- Section: Portada ---------- */
+.hero { position: relative; min-height: 100svh; display: grid; align-items: center; padding-top: 7.5rem; overflow: clip; isolation: isolate; }
+.hero .wrap { display: grid; gap: clamp(2.5rem, 6vw, 5rem); align-items: center; width: 100%; }
+.hero h1 { font: 300 clamp(2.8rem, 8vw, 5.2rem)/1.1 var(--font-heading); letter-spacing: normal; margin-block: 1.2rem 1.4rem; }
+.hero p.lead { color: var(--muted); max-width: 30rem; font-size: 1.05rem; }
+.hero .ctas { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2.2rem; }
+.hero .meta { display: flex; flex-wrap: wrap; gap: .4rem 1.6rem; margin-top: 2.2rem; color: var(--muted); font-size: .88rem; letter-spacing: normal; }
+.hero .meta b { font: 400 1.6rem/1 var(--font-heading); color: var(--text); margin-right: .35rem; }
+.hero-art { position: relative; justify-self: center; width: min(100%, 26rem); }
+.hero-art .main { aspect-ratio: 3 / 4; box-shadow: 0 30px 60px var(--shadow-brand); }
+.hero-art .sub { position: absolute; width: 42%; aspect-ratio: 3 / 4; left: -14%; bottom: -8%; border: 6px solid var(--bg); }
+.hero-art .badge { position: absolute; right: -4%; top: 12%; width: 6.5rem; aspect-ratio: 1; border-radius: 50%; background: var(--surface); display: grid; place-items: center; text-align: center; font: italic 400 1rem/1.2 var(--font-heading); color: var(--brand); box-shadow: 0 10px 30px var(--shadow); }
+.hero-art .badge span { display: block; font: 400 .72rem/1.4 var(--font-body); color: var(--muted); letter-spacing: normal; font-style: normal; }
+@media (min-width: 900px) { .hero .wrap { grid-template-columns: 1.1fr .9fr; } }
+@media (max-width: 899px) { .hero-art { width: min(78%, 22rem); margin-left: 12%; } }
+
+/* ---------- Section: Servicios y precios ---------- */
+.price-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); }
+.price-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.5rem, 3vw, 2.2rem); }
+.price-card h3 { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; font: 500 1.55rem/1.3 var(--font-heading); letter-spacing: normal; padding-bottom: .9rem; margin-bottom: .6rem; border-bottom: 1px solid var(--line); }
+.price-row { display: flex; align-items: baseline; gap: .6rem; padding-block: .55rem; }
+.price-row .name { flex: 0 1 auto; }
+.price-row .name small { display: block; color: var(--muted); font-size: .8rem; line-height: 1.5; }
+.price-row .dots { flex: 1 1 1.5rem; min-width: 1.5rem; border-bottom: 1.5px dotted color-mix(in srgb, var(--muted) 55%, transparent); transform: translateY(-.3rem); align-self: flex-end; margin-bottom: .55rem; }
+.price-row .price { font: 400 1.25rem/1 var(--font-heading); white-space: nowrap; }
+.price-row .price sub { font: 300 .75rem/1 var(--font-body); color: var(--muted); vertical-align: baseline; margin-left: .15rem; }
+.price-note { margin-top: 2rem; text-align: center; color: var(--muted); font-size: .88rem; }
+
+/* ---------- Section: Nuestro equipo ---------- */
+.team { display: grid; gap: clamp(1.5rem, 3vw, 2.2rem); grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
+.stylist { text-align: center; }
+@media (max-width: 559px) { .team { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1rem; } .stylist h3 { font-size: 1.3rem; letter-spacing: normal; } .tags li { font-size: .72rem; padding: .15rem .55rem; } }
+.stylist .img { aspect-ratio: 4 / 5; margin-bottom: 1.3rem; transition: transform .6s var(--ease); }
+.stylist:hover .img { transform: translateY(-6px); }
+.stylist h3 { font: 500 1.5rem/1.3 var(--font-heading); letter-spacing: normal; }
+.stylist .en { display: block; font: italic 400 1rem/1.5 var(--font-heading); color: var(--brand); letter-spacing: normal; }
+.stylist .role { color: var(--muted); font-size: .88rem; margin-top: .2rem; }
+.tags { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem; margin: .9rem 0 1.1rem; }
+.tags li { font-size: .78rem; padding: .2rem .75rem; border-radius: 999px; background: color-mix(in srgb, var(--brand) 9%, transparent); color: var(--brand); letter-spacing: normal; }
+.link-arrow { color: var(--brand); font-size: .9rem; letter-spacing: normal; border-bottom: 1px solid color-mix(in srgb, var(--brand) 40%, transparent); padding-bottom: .15rem; transition: border-color .3s; }
+.link-arrow:hover { border-color: var(--brand); }
+
+/* ---------- Section: Nuestros trabajos ---------- */
+.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin-bottom: 2.2rem; }
+.filters button { font: 400 .9rem/1 var(--font-body); letter-spacing: normal; padding: .7rem 1.3rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); cursor: pointer; transition: background .3s, color .3s, border-color .3s; }
+.filters button:hover { border-color: var(--brand); }
+.filters button[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.gallery { display: grid; gap: clamp(.75rem, 1.6vw, 1.25rem); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 760px) { .gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.work { margin: 0; animation: pop .5s var(--ease); }
+.work[hidden] { display: none; }
+.work .img { aspect-ratio: 3 / 4; border-radius: var(--radius); }
+.work:nth-child(4n+1) .img, .work:nth-child(4n+4) .img { border-radius: var(--arch); }
+.work figcaption { font-size: .85rem; color: var(--muted); margin-top: .6rem; letter-spacing: normal; }
+.work figcaption b { color: var(--brand); font-weight: 400; margin-right: .4rem; }
+@keyframes pop { from { opacity: 0; transform: scale(.97); } }
+
+/* ---------- Section: Cómo reservar ---------- */
+.steps { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); counter-reset: s; list-style: none; }
+.step { position: relative; padding: 2rem 1.6rem 1.8rem; background: var(--surface); border-radius: var(--radius); border: 1px solid var(--line); }
+.step::before { counter-increment: s; content: "0" counter(s); display: block; font: italic 300 3rem/1 var(--font-heading); color: var(--brand); margin-bottom: .9rem; }
+.step h3 { font: 500 1.35rem/1.35 var(--font-heading); letter-spacing: normal; margin-bottom: .4rem; }
+.step p { color: var(--muted); font-size: .92rem; }
+
+/* ---------- Section: Preguntas frecuentes ---------- */
+.faq { max-width: 48rem; margin-inline: auto; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-child { border-top: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.3rem .2rem; font: 500 1.25rem/1.45 var(--font-heading); letter-spacing: normal; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--line); color: var(--brand); font: 300 1.3rem/1 var(--font-body); transition: transform .4s var(--ease), background .3s; }
+.faq details[open] summary::after { transform: rotate(45deg); background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.faq details p { color: var(--muted); padding: 0 3rem 1.4rem .2rem; }
+
+/* ---------- Section: Llamado a reservar e información del salón ---------- */
+.cta-band { position: relative; overflow: clip; isolation: isolate; text-align: center; border-radius: calc(var(--radius) * 2); padding: clamp(3rem, 8vw, 5.5rem) clamp(1.25rem, 5vw, 4rem); background: linear-gradient(135deg, color-mix(in srgb, var(--blush) 60%, var(--surface)), color-mix(in srgb, var(--peach) 55%, var(--surface))); max-width: var(--max); margin: 0 auto clamp(3rem, 8vh, 5rem); }
+.cta-band h2 { font: 300 clamp(2.1rem, 5vw, 3.1rem)/1.2 var(--font-heading); letter-spacing: normal; }
+.cta-band p { color: var(--text); margin: .9rem auto 2rem; max-width: 32rem; }
+.cta-band .ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem; }
+.info { display: grid; gap: clamp(1.5rem, 4vw, 3rem); grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); max-width: var(--max); margin-inline: auto; }
+.info-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.5rem, 3vw, 2.2rem); }
+.info-card h3 { font: 500 1.4rem/1.4 var(--font-heading); letter-spacing: normal; margin-bottom: 1rem; }
+.info-card dl { display: grid; grid-template-columns: auto 1fr; gap: .55rem 1.4rem; }
+.info-card dt { color: var(--muted); font-size: .9rem; }
+.info-card .link-arrow { display: inline-block; margin-top: 1.2rem; }
+.map-art { min-height: 15rem; border-radius: var(--radius); background:
+  radial-gradient(circle at 56% 46%, var(--brand) 0 .5rem, color-mix(in srgb, var(--brand) 25%, transparent) .55rem 1.6rem, transparent 1.65rem),
+  linear-gradient(28deg, transparent 47%, color-mix(in srgb, var(--pearl) 90%, transparent) 47% 50%, transparent 50%),
+  linear-gradient(-62deg, transparent 58%, color-mix(in srgb, var(--pearl) 90%, transparent) 58% 61%, transparent 61%),
+  repeating-linear-gradient(0deg, transparent 0 46px, color-mix(in srgb, var(--pearl) 60%, transparent) 46px 48px),
+  repeating-linear-gradient(90deg, transparent 0 46px, color-mix(in srgb, var(--pearl) 60%, transparent) 46px 48px),
+  linear-gradient(var(--surface-2), color-mix(in srgb, var(--sand) 60%, var(--surface-2))); }
+
+/* ---------- Section: Pie de página ---------- */
+.site-footer { background: var(--text); color: var(--bg); padding: clamp(3rem, 8vh, 4.5rem) var(--pad) 6.5rem; }
+.site-footer .wrap { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.site-footer .logo small { color: var(--blush); }
+.site-footer p, .site-footer li { font-size: .9rem; color: color-mix(in srgb, var(--bg) 82%, transparent); }
+.site-footer .f-h { font: 400 .8rem/1 var(--font-body); letter-spacing: normal; margin-bottom: 1rem; color: var(--bg); }
+.site-footer a:hover { color: var(--blush); }
+.social { display: flex; gap: 1rem; }
+.copy { max-width: var(--max); margin: 2.5rem auto 0; padding-top: 1.5rem; border-top: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); font-size: .8rem; color: color-mix(in srgb, var(--bg) 75%, transparent); }
+@media (min-width: 761px) { .site-footer { padding-bottom: 3rem; } }
+
+/* ---------- Botón fijo en móvil ---------- */
+.sticky-cta { position: fixed; left: 1rem; right: 1rem; bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 40; box-shadow: 0 12px 30px var(--shadow-brand); }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- Aparición al hacer scroll (el contenido solo se oculta cuando JS está activo) ---------- */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity 1s var(--ease), transform 1s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== Selector de idioma (lang-switch) ==================== */
+.nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
+.lang-switch { display: flex; align-items: center; gap: .1rem; flex: none; margin-inline-start: .5rem; padding-inline-start: .6rem; border-inline-start: 1px solid var(--line); font: 400 .8rem/1 var(--font-body); letter-spacing: normal; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; border-radius: 999px; color: var(--muted); font-weight: 400; text-decoration: none; text-underline-offset: 5px; text-decoration-thickness: 1.5px; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-line: underline; text-decoration-color: var(--brand); }
+@media (max-width: 760px) {
+  /* Móvil: queda a la izquierda del botón del menú y siempre visible; sin JS se queda en la fila del logo */
+  .nav > .lang-switch { order: 1; margin-inline: 0 0; padding-inline-start: 0; border: 0; }
+  .nav > .burger { order: 2; }
+  .nav > .menu { order: 3; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  /* Tabletas: compacta el menú para que el selector y el logo quepan sin que el encabezado salte de línea */
+  .nav > .menu { gap: .9rem; font-size: .85rem; }
+  .nav > .menu .btn { padding-inline: .9rem; }
+  .nav > .lang-switch { margin-inline-start: 0; padding-inline-start: .3rem; }
+  .lang-switch a { padding-inline: .15rem; }
+}
+@media (min-width: 761px) and (max-width: 960px) {
+  /* Tabletas angostas: compacta un paso más */
+  .nav > .menu { gap: .6rem; font-size: .8rem; }
+  .nav > .menu .btn { padding-inline: .7rem; }
+  .nav > .logo small { display: none; }
+  /* Los textos en español son más largos: que ningún enlace se parta en dos líneas */
+  .nav > .menu a { white-space: nowrap; }
+  .nav > .menu { gap: .5rem; font-size: .78rem; }
+  .nav > .menu .btn { padding-inline: .6rem; }
+}
+@media (max-width: 400px) {
+  /* Teléfonos de menos de 400px: reduce espacios para que el logo quede en una línea */
+  .nav { gap: .5rem; }
+  .js .burger { margin-inline-end: -.5rem; }
+}
+/* Enlaces de idioma en el pie de página */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: 999px; }
+.foot-lang a:hover { text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { font-weight: 700; text-decoration: underline; text-decoration-color: var(--brand); }
+.site-footer > .foot-lang { max-width: var(--max); margin-inline: auto; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Bruma Cabello & Uñas",
+  "telephone": "+57-300-123-4567",
+  "priceRange": "COP 20.000–380.000",
+  "currenciesAccepted": "COP",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle 85 # 12-34, Local 1",
+    "addressLocality": "Bogotá",
+    "addressRegion": "Bogotá D.C.",
+    "postalCode": "110221",
+    "addressCountry": "CO"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "11:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "10:00", "closes": "19:00" }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido principal</a>
+
+<!-- ==================== Section: Encabezado y navegación ==================== -->
+<!-- Botones de reserva: los enlaces de WhatsApp usan https://wa.me/ seguido de tu número completo con código de país (solo dígitos).
+     También puedes usar Messenger (https://m.me/tupagina), Instagram (https://ig.me/m/tuusuario)
+     o LINE (https://line.me/R/ti/p/@tuid). Busca wa.me en este archivo para encontrar todos los enlaces. -->
+<header class="site-header" id="top">
+  <nav class="nav" aria-label="Menú principal">
+    <a class="logo" href="#top">Bruma<small>Cabello &amp; Uñas</small></a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
+    <div class="menu" id="menu">
+      <a href="#services">Servicios</a>
+      <a href="#team">Equipo</a>
+      <a href="#works">Trabajos</a>
+      <a href="#flow">Cómo reservar</a>
+      <a href="#faq">Preguntas</a>
+      <a href="#visit">Ubicación</a>
+      <a class="btn btn-primary" href="https://wa.me/573001234567" target="_blank" rel="noopener">Reserva por WhatsApp</a>
+    </div>
+    <!-- lang-switch: selector de idioma. Para agregar un idioma, añade un enlace aquí y crea la carpeta correspondiente -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </nav>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ==================== Section: Portada ==================== -->
+<section class="hero" id="home">
+  <div class="blob" style="width:28rem;height:28rem;left:-8rem;top:10%;background:var(--blush);opacity:.55"></div>
+  <div class="blob" style="width:22rem;height:22rem;right:-6rem;bottom:5%;background:var(--rosewood);opacity:.4"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <h1>Que tu cabello<br>atrape la luz</h1>
+      <p class="lead">Un salón pequeño en una calle tranquila de Bogotá. Primero te escuchamos y luego, con el corte, un color suave y unas uñas nuevas, sacamos un look que se siente tuyo.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://wa.me/573001234567" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5ZM8 10.8a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Zm4 0a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Zm4 0a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z"/></svg>
+          Reserva por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#services">Ver precios</a>
+      </div>
+      <!-- Contenido de ejemplo: cámbialo por tus reseñas y cifras reales antes de publicar -->
+      <div class="meta">
+        <span><b>12</b>años en el salón</span>
+        <span><b>4</b>estilistas expertos</span>
+        <span><b>4.9</b>calificación promedio</span>
+      </div>
+    </div>
+    <div class="hero-art reveal">
+      <div class="img img-hero main arch" role="img" aria-label="Cabello largo peinado en un rosa suave y difuminado"></div>
+      <div class="img img-hero2 sub arch" role="img" aria-label="Manicure en gel color rosa nude"></div>
+      <div class="badge">Desde<br>2014<span>Bogotá</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Servicios y precios ==================== -->
+<section class="alt" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Servicios y precios</h2>
+      <p>El precio depende del largo y el grosor del cabello y del detalle del look. Confirmamos el total durante la asesoría, así que nunca hay sorpresas.</p>
+    </div>
+    <div class="price-grid">
+      <article class="price-card reveal">
+        <h3>Cortes</h3>
+        <ul>
+          <li class="price-row"><span class="name">Corte de autor<small>Incluye lavado y secado</small></span><span class="dots"></span><span class="price">$85.000<sub>+</sub></span></li>
+          <li class="price-row"><span class="name">Retoque de flequillo</span><span class="dots"></span><span class="price">$20.000</span></li>
+          <li class="price-row"><span class="name">Corte infantil<small>Hasta 12 años</small></span><span class="dots"></span><span class="price">$45.000</span></li>
+          <li class="price-row"><span class="name">Lavado y cepillado</span><span class="dots"></span><span class="price">$55.000<sub>+</sub></span></li>
+        </ul>
+      </article>
+      <article class="price-card reveal">
+        <h3>Color</h3>
+        <ul>
+          <li class="price-row"><span class="name">Tinte de un solo tono</span><span class="dots"></span><span class="price">$180.000<sub>+</sub></span></li>
+          <li class="price-row"><span class="name">Balayage u ombré suave<small>Según cuánto haya que aclarar</small></span><span class="dots"></span><span class="price">$350.000<sub>+</sub></span></li>
+          <li class="price-row"><span class="name">Retoque de raíz<small>Hasta 2 cm de crecimiento</small></span><span class="dots"></span><span class="price">$140.000<sub>+</sub></span></li>
+          <li class="price-row"><span class="name">Protector de enlaces adicional</span><span class="dots"></span><span class="price">+$60.000</span></li>
+        </ul>
+      </article>
+      <article class="price-card reveal">
+        <h3>Permanentes y alisados</h3>
+        <ul>
+          <li class="price-row"><span class="name">Permanente digital u ondas ligeras</span><span class="dots"></span><span class="price">$280.000<sub>+</sub></span></li>
+          <li class="price-row"><span class="name">Alisado japonés</span><span class="dots"></span><span class="price">$380.000<sub>+</sub></span></li>
+          <li class="price-row"><span class="name">Permanente parcial<small>Flequillo o volumen en raíz</small></span><span class="dots"></span><span class="price">$130.000<sub>+</sub></span></li>
+        </ul>
+      </article>
+      <article class="price-card reveal">
+        <h3>Tratamientos</h3>
+        <ul>
+          <li class="price-row"><span class="name">Tratamiento de reparación profunda</span><span class="dots"></span><span class="price">$110.000<sub>+</sub></span></li>
+          <li class="price-row"><span class="name">Spa detox de cuero cabelludo<small>Unos 50 minutos</small></span><span class="dots"></span><span class="price">$120.000</span></li>
+          <li class="price-row"><span class="name">Reconstrucción de enlaces</span><span class="dots"></span><span class="price">$200.000<sub>+</sub></span></li>
+        </ul>
+      </article>
+      <article class="price-card reveal">
+        <h3>Uñas</h3>
+        <ul>
+          <li class="price-row"><span class="name">Manicure en gel, un color<small>Incluye cuidado básico de cutícula</small></span><span class="dots"></span><span class="price">$65.000</span></li>
+          <li class="price-row"><span class="name">Diseño en gel</span><span class="dots"></span><span class="price">$95.000<sub>+</sub></span></li>
+          <li class="price-row"><span class="name">Manicure tradicional</span><span class="dots"></span><span class="price">$35.000</span></li>
+          <li class="price-row"><span class="name">Retiro de gel<small>Gratis si el gel lo pusimos nosotros</small></span><span class="dots"></span><span class="price">$20.000</span></li>
+        </ul>
+      </article>
+    </div>
+    <p class="price-note">* Precios en pesos colombianos (COP), IVA incluido. El signo + indica el precio desde el que parte el servicio; te confirmamos el valor final según el largo y el estado de tu cabello.</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Nuestro equipo ==================== -->
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Conoce al equipo</h2>
+      <p>Cada estilista tiene su especialidad, así que puedes reservar con quien mejor se ajuste al look que buscas.</p>
+    </div>
+    <div class="team">
+      <article class="stylist reveal">
+        <div class="img img-stylist-1 arch" role="img" aria-label="Retrato de Mía, directora creativa"></div>
+        <h3>Mía Restrepo</h3>
+        <p class="en">Directora creativa</p>
+        <p class="role">12 años de experiencia</p>
+        <ul class="tags"><li>Color difuminado</li><li>Capas estilo coreano</li></ul>
+        <a class="link-arrow" href="https://wa.me/573001234567" target="_blank" rel="noopener">Reservar con Mía</a>
+      </article>
+      <article class="stylist reveal">
+        <div class="img img-stylist-2 arch" role="img" aria-label="Retrato de Valentina, estilista sénior"></div>
+        <h3>Valentina Ortiz</h3>
+        <p class="en">Estilista sénior</p>
+        <p class="role">8 años de experiencia</p>
+        <ul class="tags"><li>Permanentes ligeras</li><li>Cortes cortos</li></ul>
+        <a class="link-arrow" href="https://wa.me/573001234567" target="_blank" rel="noopener">Reservar con Valentina</a>
+      </article>
+      <article class="stylist reveal">
+        <div class="img img-stylist-3 arch" role="img" aria-label="Retrato de Camilo, estilista"></div>
+        <h3>Camilo Rojas</h3>
+        <p class="en">Estilista</p>
+        <p class="role">6 años de experiencia</p>
+        <ul class="tags"><li>Cortes masculinos</li><li>Cuidado del cuero cabelludo</li></ul>
+        <a class="link-arrow" href="https://wa.me/573001234567" target="_blank" rel="noopener">Reservar con Camilo</a>
+      </article>
+      <article class="stylist reveal">
+        <div class="img img-stylist-4 arch" role="img" aria-label="Retrato de Laura, artista de uñas"></div>
+        <h3>Laura Gómez</h3>
+        <p class="en">Artista de uñas</p>
+        <p class="role">7 años en diseño de uñas</p>
+        <ul class="tags"><li>Degradados a mano</li><li>Francesa minimalista</li></ul>
+        <a class="link-arrow" href="https://wa.me/573001234567" target="_blank" rel="noopener">Reservar con Laura</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Nuestros trabajos ==================== -->
+<section class="alt" id="works">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Nuestros trabajos</h2>
+    </div>
+    <div class="filters" role="group" aria-label="Filtrar trabajos por categoría">
+      <button type="button" data-filter="all" aria-pressed="true">Todos</button>
+      <button type="button" data-filter="cut" aria-pressed="false">Cortes</button>
+      <button type="button" data-filter="color" aria-pressed="false">Color</button>
+      <button type="button" data-filter="nail" aria-pressed="false">Uñas</button>
+    </div>
+    <div class="gallery" aria-live="polite">
+      <figure class="work" data-cat="color"><div class="img img-w1" role="img" aria-label="Ombré beige té con leche"></div><figcaption><b>Color</b>Ombré té con leche</figcaption></figure>
+      <figure class="work" data-cat="color"><div class="img img-w2" role="img" aria-label="Color lila ahumado"></div><figcaption><b>Color</b>Lila ahumado</figcaption></figure>
+      <figure class="work" data-cat="nail"><div class="img img-w3" role="img" aria-label="Uñas con detalles de perla"></div><figcaption><b>Uñas</b>Detalles de perla</figcaption></figure>
+      <figure class="work" data-cat="cut"><div class="img img-w4" role="img" aria-label="Corte largo en capas estilo coreano"></div><figcaption><b>Corte</b>Capas largas coreanas</figcaption></figure>
+      <figure class="work" data-cat="cut"><div class="img img-w5" role="img" aria-label="Bob francés"></div><figcaption><b>Corte</b>Bob francés</figcaption></figure>
+      <figure class="work" data-cat="nail"><div class="img img-w6" role="img" aria-label="Uñas con degradado en dos tonos"></div><figcaption><b>Uñas</b>Degradado en dos tonos</figcaption></figure>
+      <figure class="work" data-cat="color"><div class="img img-w7" role="img" aria-label="Mechas castaño rosado"></div><figcaption><b>Color</b>Mechas castaño rosado</figcaption></figure>
+      <figure class="work" data-cat="nail"><div class="img img-w8" role="img" aria-label="Manicure francesa de línea fina"></div><figcaption><b>Uñas</b>Francesa de línea fina</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Cómo reservar ==================== -->
+<section id="flow">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Cómo reservar</h2>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><h3>Escríbenos por WhatsApp</h3><p>Toca “Reserva por WhatsApp” y cuéntanos qué te quieres hacer y qué días te quedan bien.</p></li>
+      <li class="step reveal"><h3>Envía fotos y elige la hora</h3><p>Mándanos una foto de cómo tienes el cabello hoy y alguna imagen de inspiración. Te respondemos con horarios disponibles y un precio estimado.</p></li>
+      <li class="step reveal"><h3>Un recordatorio el día anterior</h3><p>Te enviamos un recordatorio el día antes. Si se te presenta algo, solo avísanos por WhatsApp.</p></li>
+      <li class="step reveal"><h3>Conversamos y te relajas</h3><p>Empezamos con 10 minutos de charla sobre tu rutina y lo que quieres. Después, solo tienes que relajarte.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== Section: Preguntas frecuentes ==================== -->
+<section class="alt" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Preguntas frecuentes</h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>¿Qué pasa si voy a llegar tarde?</summary>
+        <p>Avísanos lo antes posible por WhatsApp o por teléfono. Haremos lo posible por guardarte el turno hasta 15 minutos. Después de eso, quizás tengamos que acortar el servicio o reprogramarlo para no hacer esperar a la siguiente persona.</p>
+      </details>
+      <details>
+        <summary>¿Con cuánta anticipación debo cancelar o cambiar mi cita?</summary>
+        <p>Por favor avísanos con al menos 24 horas de anticipación. Después de dos cancelaciones el mismo día o inasistencias, podríamos pedirte un anticipo para tus próximas reservas. Gracias por tu comprensión.</p>
+      </details>
+      <details>
+        <summary>¿Hay parqueadero cerca?</summary>
+        <p>Hay un parqueadero público en la esquina, a unos 2 minutos a pie. Si tu servicio es de $250.000 o más, te pagamos una hora de parqueadero.</p>
+      </details>
+      <details>
+        <summary>¿Qué medios de pago aceptan?</summary>
+        <p>Aceptamos efectivo, tarjetas de débito y crédito, y transferencias bancarias. Para servicios grandes como color y permanentes, también puedes comprar un paquete prepagado y ahorrar un poco más.</p>
+      </details>
+      <details>
+        <summary>Es mi primera vez y no sé qué estilo me queda bien. ¿Está bien?</summary>
+        <p>¡Claro que sí! Tu estilista te dará ideas según la forma de tu cara, tu tipo de cabello y cómo te peinas a diario, y solo empezamos cuando estés feliz con el plan. Sin ninguna presión.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Llamado a reservar e información del salón ==================== -->
+<section id="visit">
+  <div class="cta-band reveal">
+    <div class="blob" style="width:18rem;height:18rem;right:-4rem;top:-6rem;background:var(--pearl);opacity:.7"></div>
+    <h2>Regálate una hora solo para ti</h2>
+    <p>Las tardes entre semana son las más fáciles de reservar. Escríbenos por WhatsApp y recibe 10% de descuento en un tratamiento capilar en tu primera visita.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="https://wa.me/573001234567" target="_blank" rel="noopener">Reserva por WhatsApp</a>
+      <a class="btn btn-ghost" href="tel:+576012345678">Llamar al 601 234 5678</a>
+    </div>
+  </div>
+  <div class="info">
+    <div class="info-card reveal">
+      <h3>Información del salón</h3>
+      <dl>
+        <dt>Dirección</dt><dd>Calle 85 # 12-34, Local 1, Bogotá</dd>
+        <dt>Teléfono</dt><dd><a href="tel:+576012345678">601 234 5678</a></dd>
+        <dt>Mar. a vie.</dt><dd>11:00–20:00</dd>
+        <dt>Sáb. y dom.</dt><dd>10:00–19:00</dd>
+        <dt>Cerrado</dt><dd>Lunes</dd>
+      </dl>
+      <a class="link-arrow" href="https://maps.google.com/?q=Calle+85+%2312-34,+Bogot%C3%A1,+Colombia" target="_blank" rel="noopener">Abrir en Google Maps</a>
+    </div>
+    <a class="map-art reveal" href="https://maps.google.com/?q=Calle+85+%2312-34,+Bogot%C3%A1,+Colombia" target="_blank" rel="noopener" aria-label="Ver Bruma Cabello &amp; Uñas en Google Maps"></a>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Pie de página ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#top">Bruma<small>Cabello &amp; Uñas</small></a>
+      <p style="margin-top:1rem">Un pequeño salón de cabello y uñas en Bogotá,<br>donde te consentimos sin afán.</p>
+    </div>
+    <div>
+      <h2 class="f-h">Contacto</h2>
+      <ul>
+        <li>Calle 85 # 12-34, Local 1, Bogotá</li>
+        <li><a href="tel:+576012345678">601 234 5678</a></li>
+        <li><a href="https://wa.me/573001234567" target="_blank" rel="noopener">WhatsApp: 300 123 4567</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="f-h">Horario</h2>
+      <ul>
+        <li>Martes a viernes 11:00–20:00</li>
+        <li>Sábado y domingo 10:00–19:00</li>
+        <li>Lunes cerrado</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="f-h">Síguenos</h2>
+      <ul class="social">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">TikTok</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="copy">© <span id="y"></span> Bruma Cabello &amp; Uñas</p>
+  <!-- Enlaces de idioma del pie de página: el mismo grupo que el lang-switch del encabezado -->
+  <p class="foot-lang">
+    <a href="../en/" hreflang="en" lang="en">EN</a>
+    <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+    <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+  </p>
+</footer>
+
+<!-- ==================== Section: Botón fijo en móvil ==================== -->
+<a class="btn btn-primary sticky-cta" href="https://wa.me/573001234567" target="_blank" rel="noopener">Reserva por WhatsApp</a>
+
+<script>
+(() => {
+  // Encabezado: muestra un fondo al hacer scroll
+  const header = document.querySelector('.site-header');
+  const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Menú de hamburguesa
+  const burger = document.querySelector('.burger');
+  const menu = document.getElementById('menu');
+  const setMenu = open => {
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    menu.classList.toggle('open', open);
+  };
+  burger.addEventListener('click', () => setMenu(burger.getAttribute('aria-expanded') !== 'true'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+  // Filtros de la galería de trabajos
+  const buttons = document.querySelectorAll('.filters button');
+  const works = document.querySelectorAll('.work');
+  buttons.forEach(btn => btn.addEventListener('click', () => {
+    const f = btn.dataset.filter;
+    buttons.forEach(b => b.setAttribute('aria-pressed', b === btn));
+    works.forEach(w => { w.hidden = f !== 'all' && w.dataset.cat !== f; });
+  }));
+
+  // Aparición al hacer scroll
+  const items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(el => io.observe(el));
+  } else {
+    items.forEach(el => el.classList.add('in'));
+  }
+
+  // Año del pie de página
+  document.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

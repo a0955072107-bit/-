@@ -409,6 +409,10 @@ html:not(.js) .js-only { display: none !important; }
 .lang-switch a:active { background: var(--butter); }
 .lang-switch a:focus-visible { outline-offset: 1px; border-radius: 999px; }
 .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 800; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+/* 平板寬度：加上語言切換後空間較緊，先隱藏 .opt 的次要連結，避免選單換行或擠到 logo */
+@media (min-width: 761px) and (max-width: 940px) { .nav-menu .opt { display: none; } }
+/* 最窄的平板寬度：再收緊一點間距 */
+@media (min-width: 761px) and (max-width: 860px) { .nav-menu .opt-sm { display: none; } .nav-menu { gap: .75rem; } .lang-switch { padding-left: 0; border-left: 0; } }
 @media (max-width: 760px) {
   /* 手機：語言切換固定在漢堡按鈕左邊；沒有 JS 時和 logo 同一行，選單換到下一行 */
   .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
@@ -444,8 +448,8 @@ html:not(.js) .js-only { display: none !important; }
       <li><a href="#bake">本週出爐</a></li>
       <li><a href="#products">商品</a></li>
       <li><a href="#custom">客製蛋糕</a></li>
-      <li><a href="#visit">門市資訊</a></li>
-      <li><a href="#faq">常見問題</a></li>
+      <li class="opt-sm"><a href="#visit">門市資訊</a></li>
+      <li class="opt"><a href="#faq">常見問題</a></li>
       <li><a href="#order" class="btn btn-primary">線上預訂</a></li>
     </ul>
     <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
