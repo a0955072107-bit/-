@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Demo base page (Polyglot Pages outreach). Not a sellable template.
+     scripts/demo/make-demo.py fills every placeholder in double curly braces from a row in sales/outreach/leads.csv.
+     A placeholder with a | inside means: use the lead's value, or the text after the | when the lead has none. -->
+<title>{{NAME}} | Chinese Restaurant in {{CITY}}, {{STATE}}</title>
+<meta name="description" content="{{NAME}} is a Chinese restaurant in {{CITY}}, {{STATE}}. {{NOTES|Home-style Chinese cooking for dine-in and takeout.}} Hours, address, phone and directions.">
+<meta name="theme-color" content="#b4532a">
+<meta property="og:title" content="{{NAME}} | Chinese Restaurant in {{CITY}}, {{STATE}}">
+<meta property="og:description" content="{{NOTES|Home-style Chinese cooking in {{CITY}}.}} See hours, address and directions.">
+<meta property="og:type" content="restaurant">
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": {{J_NAME}},{{J_ALT}}
+  "description": {{J_DESC}},
+  "telephone": {{J_TEL}},
+  "servesCuisine": "Chinese",
+  "hasMap": {{J_MAP}},
+  "address": {{J_ADDRESS}}{{J_HOURS}}
+}
+</script>
+<style>
+/* ============================================================
+   THEME SETTINGS — change these to restyle the whole site
+   ============================================================ */
+:root {
+  --brand: #b4532a;          /* Brand color (terracotta): buttons, accent text */
+  --brand-ink: #fffaf2;      /* Text color on top of the brand color */
+  --bg: #f6efe3;             /* Page background (oat cream) */
+  --surface: #fffaf2;        /* Raised surfaces: cards, forms */
+  --text: #2b1d14;           /* Main text (deep espresso) */
+  --muted: #6b5444;          /* Secondary text, captions */
+  --line: #e2d4c0;           /* Dividers and borders */
+  --accent: #6f7d3c;         /* Secondary color (herb green): vegetarian tags */
+  --open: #3f6b2a;           /* "Open now" status color */
+  --wood: #a8744a;           /* Art placeholder: wooden tabletop */
+  --plate: #fbf6ee;          /* Art placeholder: plates */
+  --sauce: #d9853b;          /* Art placeholder: main food color (sauce, yolk) */
+  --herb: #7d8f45;           /* Art placeholder: herbs and greens */
+  --berry: #9e3a3a;          /* Art placeholder: berries and jam */
+  --shadow-soft: color-mix(in srgb, var(--text) 14%, transparent);  /* Soft shadow: cards, menus */
+  --shadow-deep: color-mix(in srgb, var(--text) 32%, transparent);  /* Deep shadow: plates in the placeholders */
+  --radius: 18px;            /* Corner radius */
+  --font-heading: "Fraunces", Georgia, "Times New Roman", serif;   /* Heading font */
+  --font-body: "DM Sans", "Segoe UI", system-ui, sans-serif; /* Body font */
+  --max: 1180px;             /* Maximum content width */
+  --pad: clamp(1rem, 5vw, 3rem); /* Side padding */
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 72px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img { max-width: 100%; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.25; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: clamp(4.5rem, 10vw, 7.5rem); }
+.sec-title { font-size: clamp(1.9rem, 4.2vw, 2.9rem); margin-bottom: 1rem; }
+.sec-lead { color: var(--muted); max-width: 36rem; }
+.sec-head { margin-bottom: clamp(2.2rem, 5vw, 3.5rem); }
+.sec-head.center { text-align: center; } .sec-head.center .sec-lead { margin-inline: auto; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .85rem 1.6rem; border-radius: 999px; font: 700 1rem/1.2 var(--font-body); text-decoration: none; border: 2px solid var(--brand); cursor: pointer; transition: transform .2s, background .2s, color .2s; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: color-mix(in srgb, var(--brand) 85%, var(--text)); border-color: color-mix(in srgb, var(--brand) 85%, var(--text)); }
+.btn-ghost { background: transparent; color: var(--brand); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.btn:active { transform: translateY(1px) scale(.98); }
+a:not(.btn):active { opacity: .7; }
+.tab:active { transform: scale(.97); }
+
+/* Fade in on scroll: content is only hidden when JS is running */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ==================== Header ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+.logo-mark { width: 38px; height: 38px; border-radius: 50%; background: radial-gradient(circle at 50% 50%, var(--brand-ink) 0 30%, var(--brand) 31%); display: grid; place-items: center; }
+.logo b { font: 700 1.2rem/1.1 var(--font-heading); display: block; }
+.logo small { font: italic .78rem/1 var(--font-heading); color: var(--muted); }
+.nav-menu { display: flex; align-items: center; gap: 1.6rem; list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; font-weight: 500; padding-block: .3rem; background: linear-gradient(var(--brand), var(--brand)) left bottom / 0 2px no-repeat; transition: background-size .3s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 2px; }
+.nav-menu .btn { padding: .55rem 1.2rem; }
+.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: 10px; }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 2px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background .3s; border-radius: 2px; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* Without JavaScript the menu simply wraps onto its own line; with JS it folds into the hamburger */
+  html:not(.js) *:has(> .nav-menu) { flex-wrap: wrap; }
+  html:not(.js) header:has(.nav-menu) { position: sticky; }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; justify-content: flex-start; gap: .4rem 1rem; }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); box-shadow: 0 12px 24px var(--shadow-soft); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: .85rem 0; border-bottom: 1px solid var(--line); }
+  .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+  .js .site-header:has(.nav-menu.open) { background: var(--bg); }
+}
+
+/* ==================== Art placeholders ====================
+   Each .img-xx is a "food photography" mood image painted with CSS gradients.
+   Replace with a photo: .img-xx { background: url(images/xxx.jpg) center/cover; }
+   (Once you use a photo, you can delete that class's ::before / ::after rules too) */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; }
+.img::before, .img::after { content: ""; position: absolute; pointer-events: none; }
+/* Wooden tabletop base */
+.wood { background:
+  linear-gradient(160deg, color-mix(in srgb, var(--sauce) 18%, transparent), transparent 55%),
+  repeating-linear-gradient(92deg, transparent 0 34px, color-mix(in srgb, var(--text) 10%, transparent) 34px 36px, transparent 36px 70px),
+  repeating-linear-gradient(88deg, color-mix(in srgb, var(--wood) 92%, var(--text)) 0 3px, var(--wood) 3px 11px),
+  var(--wood); }
+/* Replace with a photo: .img-hero { background: url(images/hero.jpg) center/cover; } */
+.img-hero { aspect-ratio: 1 / 1.05; border-radius: 48% 48% var(--radius) var(--radius) / 36% 36% var(--radius) var(--radius); }
+.img-hero::before { inset: 14% 10% 10%; border-radius: 50%; box-shadow: 0 30px 50px var(--shadow-deep);
+  background:
+    radial-gradient(circle at 42% 44%, var(--brand-ink) 0 6%, var(--sauce) 6.5% 11%, transparent 11.5%),
+    radial-gradient(circle at 60% 58%, var(--herb) 0 4%, transparent 4.5%),
+    radial-gradient(circle at 36% 62%, var(--herb) 0 3%, transparent 3.5%),
+    radial-gradient(circle at 63% 38%, var(--berry) 0 3.5%, transparent 4%),
+    radial-gradient(ellipse 34% 30% at 50% 52%, color-mix(in srgb, var(--sauce) 70%, var(--wood)) 0 60%, color-mix(in srgb, var(--sauce) 40%, var(--plate)) 61% 100%, transparent 101%),
+    radial-gradient(circle, var(--plate) 0 60%, color-mix(in srgb, var(--plate) 88%, var(--text)) 61% 62%, var(--plate) 63% 69%, color-mix(in srgb, var(--plate) 80%, var(--text)) 70%); }
+.img-hero::after { width: 28%; height: 45%; left: 36%; top: -2%; filter: blur(14px); opacity: .55;
+  background: radial-gradient(ellipse 30% 50% at 40% 70%, var(--brand-ink), transparent), radial-gradient(ellipse 25% 40% at 65% 40%, var(--brand-ink), transparent);
+  animation: steam 5s ease-in-out infinite alternate; }
+@keyframes steam { from { transform: translateY(10px) scaleY(.9); opacity: .35; } to { transform: translateY(-14px) scaleY(1.1); opacity: .65; } }
+/* Replace with a photo: .img-about { background: url(images/about.jpg) center/cover; } */
+.img-about { aspect-ratio: 4 / 5; }
+.img-about::before { width: 52%; aspect-ratio: 1; left: 12%; top: 18%; border-radius: 50%; box-shadow: 0 20px 30px var(--shadow-deep);
+  background: radial-gradient(circle, color-mix(in srgb, var(--text) 85%, var(--wood)) 0 52%, color-mix(in srgb, var(--wood) 60%, var(--text)) 53% 55%, var(--plate) 56% 72%, color-mix(in srgb, var(--plate) 80%, var(--text)) 73% 74%, var(--plate) 75%); }
+.img-about::after { width: 46%; aspect-ratio: 1; right: 6%; bottom: 10%; border-radius: 50%; box-shadow: 0 20px 30px var(--shadow-deep);
+  background: radial-gradient(circle at 50% 50%, var(--berry) 0 10%, transparent 11%), radial-gradient(circle, color-mix(in srgb, var(--sauce) 55%, var(--plate)) 0 50%, var(--plate) 51% 70%, color-mix(in srgb, var(--plate) 82%, var(--text)) 71%); }
+/* Replace with a photo: .img-g1 to .img-g5 { background: url(images/gallery-1.jpg) center/cover; } */
+.img-g1 { background: linear-gradient(180deg, color-mix(in srgb, var(--sauce) 45%, var(--plate)) 0 55%, var(--wood) 55%); }
+.img-g1::before { inset: 10% 14% 45%; border-radius: 50% 50% 0 0; background: radial-gradient(ellipse at 50% 100%, color-mix(in srgb, var(--brand-ink) 90%, transparent), transparent 70%); opacity: .7; }
+.img-g1::after { left: 0; right: 0; bottom: 18%; height: 14%; background: repeating-linear-gradient(90deg, var(--text) 0 8px, transparent 8px 22%), transparent; opacity: .55; }
+.img-g2 { background: radial-gradient(circle at 70% 30%, color-mix(in srgb, var(--plate) 70%, transparent), transparent 40%), var(--herb); }
+.img-g2::before { inset: 20% 25%; border-radius: 30% 30% 45% 45%; background: linear-gradient(180deg, transparent 0 18%, color-mix(in srgb, var(--wood) 55%, var(--text)) 18% 30%, var(--plate) 30%); box-shadow: 0 18px 24px var(--shadow-deep); }
+.img-g2::after { width: 30%; height: 30%; right: 8%; top: 8%; background: radial-gradient(circle, var(--brand-ink), transparent 65%); filter: blur(10px); animation: steam 4s ease-in-out infinite alternate; }
+.img-g3 { background: repeating-linear-gradient(45deg, var(--plate) 0 14px, color-mix(in srgb, var(--brand) 22%, var(--plate)) 14px 28px); }
+.img-g3::before { inset: 18%; border-radius: 50%; background: radial-gradient(circle, var(--berry) 0 12%, color-mix(in srgb, var(--sauce) 50%, var(--plate)) 13% 50%, var(--plate) 51% 70%, color-mix(in srgb, var(--plate) 82%, var(--text)) 71%); box-shadow: 0 16px 26px var(--shadow-deep); }
+.img-g4 { background: linear-gradient(135deg, color-mix(in srgb, var(--text) 85%, var(--wood)), var(--text)); }
+.img-g4::before { width: 26%; aspect-ratio: 1; left: 18%; top: 30%; border-radius: 50%; background: radial-gradient(circle, var(--sauce), transparent 70%); filter: blur(6px); box-shadow: 140px 30px 50px color-mix(in srgb, var(--sauce) 50%, transparent); opacity: .85; }
+.img-g4::after { inset: auto 0 0; height: 30%; background: var(--wood); opacity: .7; }
+.img-g5 { background: var(--plate); }
+.img-g5::before { inset: 0; background: radial-gradient(circle at 30% 40%, var(--sauce) 0 9%, transparent 9.5%), radial-gradient(circle at 55% 55%, var(--berry) 0 7%, transparent 7.5%), radial-gradient(circle at 75% 35%, var(--herb) 0 8%, transparent 8.5%), radial-gradient(circle at 45% 75%, color-mix(in srgb, var(--wood) 70%, var(--plate)) 0 10%, transparent 10.5%); }
+.img-g5::after { inset: 0; background: linear-gradient(180deg, transparent 60%, color-mix(in srgb, var(--text) 18%, transparent)); }
+
+/* ==================== Hero ==================== */
+.hero { padding-top: calc(72px + clamp(2rem, 6vw, 4rem)); padding-bottom: clamp(3.5rem, 8vw, 6rem); background: radial-gradient(ellipse 60% 50% at 85% 20%, color-mix(in srgb, var(--sauce) 20%, transparent), transparent 70%); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.status { display: inline-block; padding: .4rem .95rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-size: .9rem; font-weight: 500; margin-bottom: 1.4rem; }
+.status.is-open b { color: var(--open); }
+.hero h1 { font-size: clamp(2.4rem, 6.4vw, 4.6rem); line-height: 1.15; margin-bottom: 1.3rem; }
+.hero p.lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--muted); max-width: 30rem; margin-bottom: 2rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2.2rem; font-size: .92rem; color: var(--muted); }
+.hero-meta b { display: block; font: 600 1.35rem/1.2 var(--font-heading); color: var(--text); }
+.hero-art { position: relative; }
+.hero-art .tag { position: absolute; left: -4%; bottom: 10%; background: var(--surface); padding: .8rem 1.1rem; border-radius: 14px; box-shadow: 0 14px 30px var(--shadow-soft); font-size: .9rem; max-width: 13rem; }
+.hero-art .tag b { display: block; font-family: var(--font-heading); color: var(--brand); }
+@media (max-width: 860px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } .hero-art { max-width: 420px; width: 100%; margin-inline: auto; } .hero-art .tag { left: 0; } }
+
+/* ==================== About ==================== */
+.about-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.about-text p { color: var(--muted); margin-bottom: 1rem; }
+.about-text p.lead { font: 500 1.2rem/1.8 var(--font-heading); color: var(--text); }
+.highlights { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; list-style: none; }
+.highlights li { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem; }
+.highlights .ico { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: color-mix(in srgb, var(--brand) 12%, transparent); color: var(--brand); margin-bottom: .7rem; }
+.highlights h3 { font-size: 1.08rem; margin-bottom: .25rem; }
+.highlights p { font-size: .9rem; color: var(--muted); margin: 0; line-height: 1.6; }
+@media (max-width: 860px) { .about-grid { grid-template-columns: minmax(0, 1fr); } .img-about { aspect-ratio: 16 / 11; } }
+@media (max-width: 560px) { .highlights { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Menu ==================== */
+.menu { background: var(--surface); }
+.tabs { display: flex; justify-content: center; gap: .5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+.tab { font: 700 1rem/1 var(--font-body); padding: .8rem 1.5rem; border-radius: 999px; border: 2px solid var(--line); background: transparent; color: var(--text); cursor: pointer; transition: background .2s, border-color .2s, color .2s; }
+.tab:hover { border-color: var(--brand); }
+.tab[aria-selected="true"] { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.menu-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(2rem, 5vw, 4rem); list-style: none; }
+.menu-list li { padding-block: 1.25rem; border-bottom: 1px dashed var(--line); }
+.mi-head { display: flex; align-items: baseline; gap: .6rem; }
+.mi-head h3 { font-size: 1.15rem; }
+.mi-head .dots { flex: 1; border-bottom: 2px dotted color-mix(in srgb, var(--muted) 45%, transparent); transform: translateY(-.3rem); min-width: 1rem; }
+.price { font: 600 1.1rem/1 var(--font-heading); color: var(--brand); white-space: nowrap; }
+.menu-list p { color: var(--muted); font-size: .93rem; margin-top: .3rem; }
+.badge { display: inline-block; font-size: .72rem; font-weight: 700; padding: .12rem .55rem; border-radius: 999px; margin-left: .3rem; vertical-align: .15rem; font-family: var(--font-body); }
+.b-sig { background: color-mix(in srgb, var(--brand) 14%, transparent); color: var(--brand); }
+.b-veg { background: color-mix(in srgb, var(--accent) 16%, transparent); color: var(--open); }
+.menu-note { text-align: center; color: var(--muted); font-size: .88rem; margin-top: 2rem; }
+@media (max-width: 760px) { .menu-list { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== The space ==================== */
+.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: clamp(140px, 17vw, 230px); gap: clamp(.6rem, 1.5vw, 1rem); }
+.gallery .img:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.gallery .img:nth-child(4) { grid-row: span 2; }
+.gallery .img:nth-child(5) { grid-column: span 2; }
+@media (max-width: 760px) {
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 150px; }
+  .gallery .img:nth-child(4) { grid-row: span 1; }
+  .gallery .img:nth-child(1), .gallery .img:nth-child(5) { grid-column: span 2; }
+}
+
+/* ==================== Reviews ==================== */
+.reviews { background: color-mix(in srgb, var(--sauce) 10%, var(--bg)); }
+.review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.review { background: var(--surface); border-radius: var(--radius); padding: 1.75rem; border: 1px solid var(--line); display: flex; flex-direction: column; gap: 1rem; }
+.stars { color: var(--brand); font-size: 1.1rem; }
+.review blockquote { font: 400 1.05rem/1.8 var(--font-heading); flex: 1; }
+.review figcaption { font-size: .9rem; color: var(--muted); }
+.review figcaption b { color: var(--text); }
+@media (max-width: 860px) { .review-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Hours & location ==================== */
+.visit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.25rem, 4vw, 2.5rem); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2.2rem); }
+.card h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+.table-scroll { overflow-x: auto; }
+.hours { width: 100%; border-collapse: collapse; min-width: 260px; }
+.hours th, .hours td { text-align: left; padding: .7rem .5rem; border-bottom: 1px solid var(--line); }
+.hours th { font-weight: 500; }
+.hours td { text-align: right; font-variant-numeric: tabular-nums; }
+.hours tr.today { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.hours tr.today th::after { content: "Today"; font-size: .72rem; font-weight: 700; margin-left: .5rem; padding: .1rem .5rem; border-radius: 999px; background: var(--brand); color: var(--brand-ink); }
+.hours .closed { color: var(--muted); }
+.addr { font: 600 1.15rem/1.6 var(--font-heading); margin-bottom: .3rem; }
+.visit-list { list-style: none; margin: 1.2rem 0 1.5rem; display: grid; gap: .7rem; }
+.visit-list li { display: flex; gap: .7rem; color: var(--muted); font-size: .95rem; }
+.visit-list b { color: var(--text); white-space: nowrap; }
+.small-note { font-size: .88rem; color: var(--muted); margin-top: 1rem; }
+@media (max-width: 760px) { .visit-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Reservations ==================== */
+.reserve { background: var(--text); color: var(--bg); }
+.reserve .sec-lead { color: color-mix(in srgb, var(--bg) 80%, transparent); }
+.reserve-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.quick { display: grid; gap: .8rem; margin-top: 2rem; }
+.quick .btn { justify-content: flex-start; }
+.btn-light { background: transparent; color: var(--bg); border-color: color-mix(in srgb, var(--bg) 40%, transparent); }
+.btn-light:hover { background: color-mix(in srgb, var(--bg) 10%, transparent); }
+.form { background: var(--surface); color: var(--text); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.4rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.1rem; }
+.field { display: grid; gap: .35rem; min-width: 0; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-weight: 500; font-size: .92rem; }
+.field label span { color: var(--brand); }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1.5px solid var(--line); border-radius: 12px; padding: .7rem .85rem; min-height: 48px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 22%, transparent); }
+.field textarea { min-height: 96px; resize: vertical; }
+.form .btn { grid-column: 1 / -1; width: 100%; }
+.form small { grid-column: 1 / -1; color: var(--muted); font-size: .85rem; text-align: center; }
+@media (max-width: 860px) { .reserve-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .form { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Footer ==================== */
+.site-footer { background: color-mix(in srgb, var(--text) 92%, var(--brand)); color: color-mix(in srgb, var(--bg) 82%, transparent); padding-block: 3.5rem 2rem; font-size: .93rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: 2rem; }
+.site-footer h2 { color: var(--bg); font-size: 1.1rem; margin-bottom: .8rem; }
+.site-footer a { text-decoration: none; } .site-footer a:hover { text-decoration: underline; }
+.social { display: flex; gap: 1rem; margin-top: 1rem; }
+.copy { border-top: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); margin-top: 2.5rem; padding-top: 1.5rem; font-size: .85rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==================== Mobile sticky buttons ==================== */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 76px; }
+  .sticky-cta { display: flex; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -1px 0 var(--line); }
+  .sticky-cta .btn-primary { flex: 1; }
+  .sticky-cta .btn-ghost { padding-inline: 1.1rem; }
+}
+
+/* ==================== Language switcher (lang-switch) ==================== */
+.nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
+.lang-switch { display: flex; align-items: center; gap: .1rem; flex: none; margin-inline-start: 1.5rem; padding-inline-start: .6rem; border-inline-start: 1px solid var(--line); font: 400 .8rem/1 var(--font-body); letter-spacing: normal; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; border-radius: 10px; color: var(--muted); font-weight: 500; text-decoration: none; text-underline-offset: 5px; text-decoration-thickness: 1.5px; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--brand) 18%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-line: underline; text-decoration-color: var(--brand); }
+@media (max-width: 760px) {
+  /* Mobile: sits left of the menu button and stays visible; with JS off it stays on the logo row */
+  .nav > .lang-switch { order: 1; margin-inline: 0 .35rem; padding-inline-start: 0; border: 0; }
+  .nav > .nav-toggle { order: 2; }
+  .nav > .nav-menu { order: 3; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  /* Tablet widths: tighten the menu so the switcher and logo fit without wrapping the header */
+  .nav > .nav-menu { gap: .9rem; font-size: .85rem; }
+  .nav > .nav-menu .btn { padding-inline: .9rem; }
+  .nav > .lang-switch { margin-inline-start: 0; padding-inline-start: .3rem; }
+  .lang-switch a { padding-inline: .15rem; }
+}
+@media (min-width: 761px) and (max-width: 960px) {
+  /* Narrow tablets: tighten one more step */
+  .nav > .nav-menu { gap: .6rem; font-size: .8rem; }
+  .nav > .nav-menu .btn { padding-inline: .7rem; }
+}
+@media (max-width: 400px) {
+  /* Phones narrower than 400px: tighten spacing so the logo stays on one line */
+  .nav > .lang-switch { margin-inline-end: 0; }
+  .logo { gap: .45rem; }
+  .logo-mark { width: 32px; height: 32px; }
+  .js .nav-toggle { margin-inline-end: -8px; }
+}
+/* Footer language links */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: 10px; }
+.foot-lang a:hover { text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { font-weight: 700; text-decoration: underline; text-decoration-color: var(--brand); }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+
+/* ==================== Demo additions ==================== */
+.nav > .logo { min-width: 0; flex-shrink: 1; }
+.logo > span:last-child { min-width: 0; display: grid; }
+.nav > .logo { white-space: normal; }
+.logo b { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-height: 1.15; overflow-wrap: anywhere; }
+.logo small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; margin-top: .15rem; }
+@media (max-width: 760px) { .logo b { font-size: 1.05rem; } }
+.hero h1 { font-size: clamp(2.2rem, 5.6vw, 4.2rem); }
+.visit-cta { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.4rem; }
+.review-links .review { gap: .6rem; }
+.review-links .review h3 { font-size: 1.25rem; }
+.review-links .review p { color: var(--muted); }
+.review-links .btn { align-self: flex-start; margin-top: auto; }
+.reserve-grid { align-items: center; }
+</style>
+</head>
+<body>
+
+<!-- ==================== Section: Header & navigation ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav wrap" aria-label="Main menu">
+    <a href="#hero" class="logo" aria-label="{{NAME}}, back to top">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span><b>{{NAME}}</b><small>{{ALT_NAME|Chinese kitchen in {{CITY}}}}</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-links" aria-label="Open menu"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#visit">Hours</a></li>
+      <li><a href="tel:{{TEL}}" class="btn btn-primary">Call {{PHONE}}</a></li>
+    </ul>
+    <!-- lang-switch: language switcher -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="en">EN</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en" aria-current="page">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+        </div>
+      </details>
+    </nav>
+  </nav>
+</header>
+
+<main>
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="status" id="status" aria-live="polite"><span>{{HOURS_FACT}}</span></p>
+      <h1>{{NAME}}</h1>
+      <p class="lead">{{NOTES|Home-style Chinese cooking in {{CITY}}, for a sit-down meal or takeout on the way home.}}</p>
+      <div class="hero-cta">
+        <a href="tel:{{TEL}}" class="btn btn-primary">Call {{PHONE}}</a>
+        <a href="{{MAPS}}" class="btn btn-ghost" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <div class="hero-meta">
+        <div><b>{{CITY}}</b>{{STATE}}</div>
+        <div><b>{{HOURS_SHORT}}</b>Opening days</div>
+        <div><b>{{PHONE}}</b>Phone</div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="img img-hero wood" role="img" aria-label="Illustration of a plate of food on a wooden table"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: About ==================== -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="img img-about wood reveal" role="img" aria-label="Illustration of a tea cup and a small dessert"></div>
+    <div class="about-text reveal">
+      <h2 class="sec-title">Your neighborhood Chinese kitchen in {{CITY}}</h2>
+      <p class="lead">Good food, fair prices and a menu everyone at the table can read.</p>
+      <p class="demo-note">Sample text: this is where your own story goes, such as when you opened, the dishes you are proud of and who is in the kitchen. We write it together with you.</p>
+      <ul class="highlights">
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+          <h3>Call ahead</h3><p>Questions about takeout, a big order or a table for a group? Call <a href="tel:{{TEL}}">{{PHONE}}</a>.</p>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+          <h3>Easy to find</h3><p>{{ADDR_L1}}, {{CITY}}. <a href="{{MAPS}}" target="_blank" rel="noopener">Open in Google Maps</a>.</p>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9Z"/></svg></span>
+          <h3>Read our reviews</h3><p>See what diners say about us on <a href="{{MAPS}}" target="_blank" rel="noopener">Google Maps</a> and <a href="{{YELP}}" target="_blank" rel="noopener">Yelp</a>.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Menu (sample) ==================== -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">Menu</h2>
+      <p class="sec-lead demo-note">Sample menu: the dishes and prices below only show the layout. Your real menu and prices go here.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Menu categories">
+      <button class="tab" role="tab" id="tab-food" aria-controls="panel-food" aria-selected="true">Dumplings and small plates</button>
+      <button class="tab" role="tab" id="tab-drink" aria-controls="panel-drink" aria-selected="false" tabindex="-1">Noodles and rice</button>
+      <button class="tab" role="tab" id="tab-dessert" aria-controls="panel-dessert" aria-selected="false" tabindex="-1">Drinks</button>
+    </div>
+    <!-- Sample content: replace with the real menu before going live -->
+    <div role="tabpanel" id="panel-food" aria-labelledby="tab-food" tabindex="0">
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>Pork and chive dumplings<span class="badge b-sig">Sample</span></h3><span class="dots"></span><span class="price">$12</span></div><p>Boiled or pan-fried, 12 pieces.</p></li>
+        <li><div class="mi-head"><h3>Vegetable dumplings<span class="badge b-veg">Vegetarian</span></h3><span class="dots"></span><span class="price">$11</span></div><p>Bok choy, mushroom and tofu, 12 pieces.</p></li>
+        <li><div class="mi-head"><h3>Scallion pancake</h3><span class="dots"></span><span class="price">$8</span></div><p>Flaky and crisp, cut into wedges.</p></li>
+        <li><div class="mi-head"><h3>Cucumber salad<span class="badge b-veg">Vegetarian</span></h3><span class="dots"></span><span class="price">$7</span></div><p>Smashed cucumber with garlic and black vinegar.</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-drink" aria-labelledby="tab-drink" tabindex="0" hidden>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>Beef noodle soup<span class="badge b-sig">Sample</span></h3><span class="dots"></span><span class="price">$15</span></div><p>Braised beef shank in a rich broth.</p></li>
+        <li><div class="mi-head"><h3>Dan dan noodles</h3><span class="dots"></span><span class="price">$13</span></div><p>Sesame, chili oil and minced pork.</p></li>
+        <li><div class="mi-head"><h3>Yangzhou fried rice</h3><span class="dots"></span><span class="price">$13</span></div><p>Egg, shrimp, char siu and scallions.</p></li>
+        <li><div class="mi-head"><h3>Mapo tofu over rice</h3><span class="dots"></span><span class="price">$14</span></div><p>Silken tofu in a spicy bean sauce.</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-dessert" aria-labelledby="tab-dessert" tabindex="0" hidden>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>Hot soy milk</h3><span class="dots"></span><span class="price">$3.50</span></div><p>Sweetened or unsweetened.</p></li>
+        <li><div class="mi-head"><h3>Iced lemon tea</h3><span class="dots"></span><span class="price">$4.50</span></div><p>Hong Kong style.</p></li>
+        <li><div class="mi-head"><h3>Hot jasmine tea</h3><span class="dots"></span><span class="price">$2</span></div><p>Per person.</p></li>
+      </ul>
+    </div>
+    <p class="menu-note">Prices do not include sales tax. Please tell us about any food allergies when you order.</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Photos (placeholder art) ==================== -->
+<section id="space">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">Come in and sit down</h2>
+      <p class="sec-lead demo-note">These are drawn placeholders. Your own photos of the dining room and dishes go here.</p>
+    </div>
+    <div class="gallery reveal">
+      <div class="img img-g1" role="img" aria-label="Placeholder illustration of a dining room"></div>
+      <div class="img img-g2" role="img" aria-label="Placeholder illustration of a hot drink"></div>
+      <div class="img img-g3" role="img" aria-label="Placeholder illustration of a small dish"></div>
+      <div class="img img-g4" role="img" aria-label="Placeholder illustration of warm lights at night"></div>
+      <div class="img img-g5" role="img" aria-label="Placeholder illustration of colorful side dishes"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Reviews (links only, no made-up quotes) ==================== -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="sec-title">What our guests say</h2>
+      <p class="sec-lead">Read real reviews from our guests, or leave one after your meal.</p>
+    </div>
+    <div class="review-grid review-links">
+      <div class="review reveal">
+        <h3>Google Maps</h3>
+        <p>Reviews, photos from guests and directions.</p>
+        <a class="btn btn-ghost" href="{{MAPS}}" target="_blank" rel="noopener">Read reviews on Google</a>
+      </div>
+      <div class="review reveal">
+        <h3>Yelp</h3>
+        <p>See what Yelp reviewers in {{CITY}} say.</p>
+        <a class="btn btn-ghost" href="{{YELP}}" target="_blank" rel="noopener">Find us on Yelp</a>
+      </div>
+      <div class="review reveal">
+        <h3>WeChat</h3>
+        <p class="demo-note">Sample: your WeChat ID or QR code can go here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Hours & location ==================== -->
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">Hours and location</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="card reveal">
+        <h3>Opening hours</h3>
+        <div class="table-scroll">
+          <table class="hours" aria-label="Weekly opening hours">
+            <tbody>
+{{HOURS_ROWS}}
+            </tbody>
+          </table>
+        </div>
+        <p class="small-note">Holiday hours may change. Please call to confirm.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Getting here</h3>
+        <p class="addr">{{ADDR}}</p>
+        <p class="small-note" style="margin-top:0">Phone <a href="tel:{{TEL}}">{{PHONE}}</a></p>
+        <div class="visit-cta">
+          <a class="btn btn-primary" href="{{MAPS}}" target="_blank" rel="noopener">Open in Google Maps</a>
+          <a class="btn btn-ghost" href="tel:{{TEL}}">Call us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Call to order ==================== -->
+<section class="reserve" id="reserve">
+  <div class="wrap reserve-grid">
+    <div class="reveal">
+      <h2 class="sec-title">Hungry? Give us a call</h2>
+      <p class="sec-lead">For takeout, a table for a group or any question about the menu, call us during opening hours.</p>
+    </div>
+    <div class="quick reveal">
+      <a class="btn btn-light" href="tel:{{TEL}}">Call {{PHONE}}</a>
+      <a class="btn btn-light" href="{{MAPS}}" target="_blank" rel="noopener">Directions to {{ADDR_L1}}</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>{{NAME}}</h2>
+        <p>{{ADDR_L1}}<br>{{ADDR_L2}}<br>Phone <a href="tel:{{TEL}}">{{PHONE}}</a></p>
+        <div class="social"><a href="{{MAPS}}" target="_blank" rel="noopener">Google Maps</a><a href="{{YELP}}" target="_blank" rel="noopener">Yelp</a></div>
+      </div>
+      <div>
+        <h2>Opening hours</h2>
+        <p>{{HOURS_LINES}}</p>
+      </div>
+      <div>
+        <h2>Quick links</h2>
+        <p><a href="#menu">Menu</a><br><a href="#reviews">Reviews</a><br><a href="#visit">Getting here</a></p>
+      </div>
+    </div>
+    <p class="copy">© <span id="y"></span> {{NAME}}</p>
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </p>
+  </div>
+</footer>
+
+<!-- ==================== Section: Mobile sticky buttons ==================== -->
+<div class="sticky-cta">
+  <a href="tel:{{TEL}}" class="btn btn-primary">Call {{PHONE}}</a>
+  <a href="{{MAPS}}" class="btn btn-ghost" target="_blank" rel="noopener">Map</a>
+</div>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// Header background on scroll
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// Hamburger menu
+const toggle = document.querySelector('.nav-toggle'), menu = document.getElementById('menu-links');
+const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); };
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// Fade in on scroll
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Menu tabs (arrow keys supported)
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+const select = t => {
+  tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+  t.focus();
+};
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => select(t));
+  t.addEventListener('keydown', e => {
+    const k = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+    if (k) { e.preventDefault(); select(tabs[(i + k + tabs.length) % tabs.length]); }
+    if (e.key === 'Home') { e.preventDefault(); select(tabs[0]); }
+    if (e.key === 'End') { e.preventDefault(); select(tabs[tabs.length - 1]); }
+  });
+});
+
+// Open / closed badge in the restaurant's local time zone.
+// HOURS: weekday (0 = Sunday) -> list of [opens, closes] in 24-hour time, null = closed. null overall = unknown.
+const TZ = {{TZ}};
+const HOURS = {{HOURS_JS}};
+const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const toMin = s => { const [h, m] = s.split(':'); return h * 60 + +m; };
+const fmt = s => { const [h, m] = s.split(':').map(Number); return new Date(2000, 0, 1, h % 24, m).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }); };
+const now = new Date(new Date().toLocaleString('en-US', { timeZone: TZ }));
+const day = now.getDay(), mins = now.getHours() * 60 + now.getMinutes();
+if (HOURS) {
+  const end = r => toMin(r[1]) <= toMin(r[0]) ? toMin(r[1]) + 1440 : toMin(r[1]);
+  const cur = (HOURS[day] || []).find(r => mins >= toMin(r[0]) && mins < end(r));
+  const status = document.getElementById('status');
+  let text;
+  if (cur) { status.classList.add('is-open'); text = `<b>Open now</b>, closes ${fmt(cur[1])}`; }
+  else {
+    const later = (HOURS[day] || []).find(r => mins < toMin(r[0]));
+    let d = 1; while (d < 8 && !HOURS[(day + d) % 7]) d++;
+    if (later) text = `<b>Closed now</b>, opens today at ${fmt(later[0])}`;
+    else if (d < 8) { const nd = (day + d) % 7; text = `<b>Closed now</b>, opens ${d === 1 ? 'tomorrow' : DAYS[nd]} at ${fmt(HOURS[nd][0][0])}`; }
+  }
+  if (text) status.querySelector('span').innerHTML = text;
+  const row = document.querySelector(`.hours tr[data-day="${day}"]`); if (row) row.classList.add('today');
+}
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

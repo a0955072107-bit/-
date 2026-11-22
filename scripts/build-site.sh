@@ -36,4 +36,11 @@ except ImportError:
     print('（沒有安裝 opencc，略過簡體展示頁）')
 print('✓', len(slugs), '款')
 PY
+# 主動開發用的示範站：demos/<店> → _site/demo/<店>/（每頁都有 noindex，robots.txt 也擋掉 /demo/）
+if [ -d demos ]; then
+  mkdir -p _site/demo
+  cp -R demos/. _site/demo/
+  echo "✓ 示範站 $(find demos -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ') 個 → _site/demo/"
+fi
+printf 'User-agent: *\nDisallow: /demo/\n' > _site/robots.txt
 echo "✓ _site/ 建置完成"
