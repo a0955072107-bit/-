@@ -1,0 +1,568 @@
+[
+ {
+  "slug": "restaurant",
+  "title": "Restaurant & Café\nWebsite Template",
+  "bg": "#f6efe3",
+  "ink": "#2b1d14",
+  "acc": "#b4532a",
+  "pills": [
+   "Tabbed menu",
+   "Live open/closed badge",
+   "Reservation form"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/restaurant-website-template",
+  "ja": "飲食店・カフェ",
+  "es": true,
+  "cat": "Restaurant & Café"
+ },
+ {
+  "slug": "beauty",
+  "title": "Hair & Nail Salon\nWebsite Template",
+  "bg": "#f8eeeb",
+  "ink": "#2e292a",
+  "acc": "#8e4f5c",
+  "pills": [
+   "Price list",
+   "Filterable portfolio",
+   "Chat booking"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/salon-website-template",
+  "ja": "美容室・ネイルサロン",
+  "es": true,
+  "cat": "Hair & Nail Salon"
+ },
+ {
+  "slug": "fitness",
+  "title": "Gym & Personal\nTraining Template",
+  "bg": "#0e0f0c",
+  "ink": "#f3f3ee",
+  "acc": "#c6ff3d",
+  "pills": [
+   "Weekly timetable",
+   "Pricing toggle",
+   "Free-trial form"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/gym-website-template",
+  "ja": "ジム・パーソナルトレーニング",
+  "es": true,
+  "cat": "Gym & Personal Training"
+ },
+ {
+  "slug": "clinic",
+  "title": "Dental & Medical\nClinic Template",
+  "bg": "#f5f8fa",
+  "ink": "#1e293b",
+  "acc": "#0f766e",
+  "pills": [
+   "Today's hours",
+   "Clinic schedule",
+   "Online booking"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/clinic-website-template",
+  "ja": "歯科・クリニック",
+  "es": false,
+  "cat": "Dental & Medical Clinic"
+ },
+ {
+  "slug": "consulting",
+  "title": "Law, Accounting &\nConsulting Template",
+  "bg": "#14213d",
+  "ink": "#f7f3ea",
+  "acc": "#d4b67a",
+  "pills": [
+   "Practice areas",
+   "Team profiles",
+   "Consultation form"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/consulting-firm-website-template",
+  "ja": "士業・コンサル事務所",
+  "es": false,
+  "cat": "Law, Accounting & Consulting"
+ },
+ {
+  "slug": "studio",
+  "title": "Design Studio &\nPortfolio Template",
+  "bg": "#f4f1ea",
+  "ink": "#1c1b19",
+  "acc": "#b0522d",
+  "pills": [
+   "Editorial layout",
+   "Selected work",
+   "Dark mode"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/studio-portfolio-template",
+  "ja": "デザイン事務所",
+  "es": false,
+  "cat": "Design Studio & Portfolio"
+ },
+ {
+  "slug": "bnb",
+  "title": "B&B & Guesthouse\nWebsite Template",
+  "bg": "#f3eee3",
+  "ink": "#1f2b23",
+  "acc": "#4a6648",
+  "pills": [
+   "Room rates",
+   "Nights calculator",
+   "Booking form"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/bnb-guesthouse-template",
+  "ja": "民泊・小さな宿",
+  "es": false,
+  "cat": "B&B & Guesthouse"
+ },
+ {
+  "slug": "realestate",
+  "title": "Real Estate Agent\nWebsite Template",
+  "bg": "#f6f5f1",
+  "ink": "#1d1f23",
+  "acc": "#1f3d99",
+  "pills": [
+   "Listing search",
+   "Agent profile",
+   "Viewing requests"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/real-estate-website-template",
+  "ja": "不動産会社",
+  "es": true,
+  "cat": "Real Estate Agent"
+ },
+ {
+  "slug": "wedding",
+  "title": "Wedding Website\nwith RSVP",
+  "bg": "#f5efe3",
+  "ink": "#1e2420",
+  "acc": "#56653f",
+  "pills": [
+   "Live countdown",
+   "Event details",
+   "RSVP form"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/wedding-website-template",
+  "ja": "結婚式・イベント",
+  "es": false,
+  "cat": "Wedding Website with RSVP"
+ },
+ {
+  "slug": "photographer",
+  "title": "Photographer\nPortfolio Template",
+  "bg": "#121110",
+  "ink": "#ede6da",
+  "acc": "#e8923a",
+  "pills": [
+   "Filter + lightbox",
+   "Session packages",
+   "Booking form"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/photographer-portfolio-template",
+  "ja": "フォトグラファー",
+  "es": false,
+  "cat": "Photographer Portfolio"
+ },
+ {
+  "slug": "pet",
+  "title": "Pet Grooming &\nDaycare Template",
+  "bg": "#fdf6e7",
+  "ink": "#1c2541",
+  "acc": "#1c2541",
+  "pills": [
+   "Prices by size",
+   "Before & after",
+   "Booking form"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/pet-grooming-template",
+  "ja": "ペットサロン",
+  "es": false,
+  "cat": "Pet Grooming & Daycare"
+ },
+ {
+  "slug": "education",
+  "title": "Tutoring Center\nWebsite Template",
+  "bg": "#f7f9fe",
+  "ink": "#16203a",
+  "acc": "#1d4ed8",
+  "pills": [
+   "Courses by grade",
+   "Timetable",
+   "Free trial booking"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/tutoring-school-template",
+  "ja": "学習塾・教室",
+  "es": false,
+  "cat": "Tutoring Center"
+ },
+ {
+  "slug": "interior",
+  "title": "Interior Design\nStudio Template",
+  "bg": "#ece5db",
+  "ink": "#2a2723",
+  "acc": "#8a5b3d",
+  "pills": [
+   "Project filter",
+   "Before/after slider",
+   "Consult booking"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/interior-design-template",
+  "ja": "インテリア・設計事務所",
+  "es": false,
+  "cat": "Interior Design Studio"
+ },
+ {
+  "slug": "bakery",
+  "title": "Bakery & Dessert\nShop Template",
+  "bg": "#fffaf0",
+  "ink": "#3b2418",
+  "acc": "#b3312b",
+  "pills": [
+   "This week's bakes",
+   "Order builder",
+   "Pickup form"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/bakery-website-template",
+  "ja": "パン屋・洋菓子店",
+  "es": false,
+  "cat": "Bakery & Dessert Shop"
+ },
+ {
+  "slug": "tea",
+  "title": "Bubble Tea Shop\nWebsite Template",
+  "bg": "#1d5c3a",
+  "ink": "#fbf1dc",
+  "acc": "#f0a63a",
+  "pills": [
+   "Drink customiser",
+   "Menu tabs",
+   "Branch locator"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/bubble-tea-shop-template",
+  "ja": "カフェ・ドリンクスタンド",
+  "es": false,
+  "cat": "Bubble Tea Shop"
+ },
+ {
+  "slug": "auto",
+  "title": "Car Care & Garage\nWebsite Template",
+  "bg": "#eceef1",
+  "ink": "#1a1e23",
+  "acc": "#c41f2a",
+  "pills": [
+   "Prices by vehicle",
+   "Mileage reminder",
+   "Service booking"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/auto-care-garage-template",
+  "ja": "自動車整備・カーケア",
+  "es": false,
+  "cat": "Car Care & Garage"
+ },
+ {
+  "slug": "cleaning",
+  "title": "Home Cleaning\nService Template",
+  "bg": "#f6f9f5",
+  "ink": "#24344a",
+  "acc": "#2b7a3b",
+  "pills": [
+   "Instant quote",
+   "Room checklist",
+   "Booking form"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/home-cleaning-template",
+  "ja": "ハウスクリーニング",
+  "es": true,
+  "cat": "Home Cleaning Service"
+ },
+ {
+  "slug": "florist",
+  "title": "Florist & Flower\nShop Template",
+  "bg": "#173326",
+  "ink": "#f3ead8",
+  "acc": "#f2a93b",
+  "pills": [
+   "Bouquet shop",
+   "Delivery dates",
+   "Subscriptions"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/florist-template",
+  "ja": "花屋",
+  "es": false,
+  "cat": "Florist & Flower Shop"
+ },
+ {
+  "slug": "yoga",
+  "title": "Yoga & Pilates\nStudio Template",
+  "bg": "#f8f2eb",
+  "ink": "#3a2621",
+  "acc": "#9b5443",
+  "pills": [
+   "Daily timetable",
+   "Class packs",
+   "Intro booking"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/yoga-pilates-template",
+  "ja": "ヨガ・ピラティス",
+  "es": false,
+  "cat": "Yoga & Pilates Studio"
+ },
+ {
+  "slug": "camping",
+  "title": "Campsite & Glamping\nWebsite Template",
+  "bg": "#111833",
+  "ink": "#f3ead6",
+  "acc": "#f47b2a",
+  "pills": [
+   "Site rates",
+   "Clickable camp map",
+   "Stay estimate"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/campsite-glamping-template",
+  "ja": "キャンプ場・グランピング",
+  "es": false,
+  "cat": "Campsite & Glamping"
+ },
+ {
+  "slug": "freelancer",
+  "title": "Freelancer Portfolio\n& Résumé Template",
+  "bg": "#f5f4ef",
+  "ink": "#16161a",
+  "acc": "#e24a12",
+  "pills": [
+   "Bento portfolio",
+   "Light/dark mode",
+   "Enquiry form"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/freelancer-portfolio-template",
+  "ja": "フリーランス",
+  "es": false,
+  "cat": "Freelancer Portfolio & Résumé"
+ },
+ {
+  "slug": "saas",
+  "title": "SaaS & App\nLanding Page",
+  "bg": "#f7f9f8",
+  "ink": "#111814",
+  "acc": "#0b7a4b",
+  "pills": [
+   "Product UI mock",
+   "Pricing toggle",
+   "Comparison table"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/app-saas-landing-template",
+  "ja": "アプリ・SaaS",
+  "es": false,
+  "cat": "SaaS & App Landing Page"
+ },
+ {
+  "slug": "coach",
+  "title": "Therapist & Coach\nWebsite Template",
+  "bg": "#f3eee4",
+  "ink": "#24323f",
+  "acc": "#3f5a73",
+  "pills": [
+   "Services & fees",
+   "First-session steps",
+   "Private booking"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/therapist-coach-template",
+  "ja": "カウンセリング・コーチング",
+  "es": false,
+  "cat": "Therapist & Coach"
+ },
+ {
+  "slug": "contractor",
+  "title": "Contractor & Handyman\nWebsite Template",
+  "bg": "#1f2630",
+  "ink": "#f2efe6",
+  "acc": "#f5b301",
+  "pills": [
+   "Emergency toggle",
+   "Price guide",
+   "Quote form"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/contractor-handyman-template",
+  "ja": "リフォーム・設備工事",
+  "es": true,
+  "cat": "Contractor & Handyman"
+ },
+ {
+  "slug": "nonprofit",
+  "title": "Nonprofit & Church\nWebsite Template",
+  "bg": "#fbf5ec",
+  "ink": "#1d2a44",
+  "acc": "#d9503f",
+  "pills": [
+   "Donation widget",
+   "Volunteer signup",
+   "Events"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/nonprofit-charity-template",
+  "ja": "NPO・非営利団体",
+  "es": false,
+  "cat": "Nonprofit & Church"
+ },
+ {
+  "slug": "linkinbio",
+  "title": "Link-in-Bio\nPage Template",
+  "bg": "#f6efe2",
+  "ink": "#1b1b1b",
+  "acc": "#d8462b",
+  "pills": [
+   "3 themes",
+   "Share button",
+   "Featured product"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/link-in-bio-template",
+  "ja": "リンクまとめページ",
+  "es": false,
+  "cat": "Link-in-Bio Page"
+ },
+ {
+  "slug": "barber",
+  "title": "Barbershop\nWebsite Template",
+  "bg": "#1b1714",
+  "ink": "#f2e8d8",
+  "acc": "#c59a4b",
+  "pills": [
+   "Price list",
+   "Book a barber",
+   "Open-now badge"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/barbershop-template",
+  "ja": "理容室・バーバー",
+  "es": false,
+  "cat": "Barbershop"
+ },
+ {
+  "slug": "conference",
+  "title": "Conference & Event\nLanding Page",
+  "bg": "#f5f3ee",
+  "ink": "#111111",
+  "acc": "#13874a",
+  "pills": [
+   "Agenda tabs",
+   "Speakers",
+   "Add to calendar"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/conference-event-template",
+  "ja": "カンファレンス・イベント",
+  "es": false,
+  "cat": "Conference & Event Landing Page"
+ },
+ {
+  "slug": "tattoo",
+  "title": "Tattoo Studio\nWebsite Template",
+  "bg": "#f1ece2",
+  "ink": "#121212",
+  "acc": "#c8281e",
+  "pills": [
+   "Artist filter",
+   "Flash sheet",
+   "Consult booking"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/tattoo-studio-template",
+  "ja": "タトゥースタジオ",
+  "es": false,
+  "cat": "Tattoo Studio"
+ },
+ {
+  "slug": "coworking",
+  "title": "Coworking Space\nWebsite Template",
+  "bg": "#f7f5ef",
+  "ink": "#1c2a22",
+  "acc": "#2f5d46",
+  "pills": [
+   "Day/month pricing",
+   "Room estimator",
+   "Book a tour"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/coworking-space-template",
+  "ja": "コワーキングスペース",
+  "es": false,
+  "cat": "Coworking Space"
+ },
+ {
+  "slug": "motion/saas",
+  "title": "SaaS Launch Page\nMotion Edition",
+  "sub": "Motion edition · No libraries · EN · 中文 · 日本語",
+  "bg": "#14100d",
+  "ink": "#f6efe6",
+  "acc": "#ff7a2f",
+  "pills": [
+   "WebGL hero",
+   "Scroll story",
+   "Pricing animation"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/motion-saas-launch-template",
+  "ja": "SaaS（アニメーション版）",
+  "es": false,
+  "cat": "SaaS Launch Page Motion Edition"
+ },
+ {
+  "slug": "motion/portfolio",
+  "title": "Creative Portfolio\nMotion Edition",
+  "sub": "Motion edition · No libraries · EN · 中文 · 日本語",
+  "bg": "#efece6",
+  "ink": "#141414",
+  "acc": "#e8331d",
+  "pills": [
+   "Letter assembly",
+   "Cursor previews",
+   "Flow-field canvas"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/motion-creative-portfolio-template",
+  "ja": "ポートフォリオ（アニメーション版）",
+  "es": false,
+  "cat": "Creative Portfolio Motion Edition"
+ },
+ {
+  "slug": "motion/restaurant",
+  "title": "Fine Dining\nMotion Edition",
+  "sub": "Motion edition · No libraries · EN · 中文 · 日本語",
+  "bg": "#14110f",
+  "ink": "#f2e8d8",
+  "acc": "#e8913f",
+  "pills": [
+   "Ember particles",
+   "Course scrollytelling",
+   "Iris reveals"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/motion-fine-dining-template",
+  "ja": "レストラン（アニメーション版）",
+  "es": false,
+  "cat": "Fine Dining Motion Edition"
+ },
+ {
+  "slug": "motion/wedding",
+  "title": "Wedding Website\nMotion Edition",
+  "sub": "Motion edition · No libraries · EN · 中文 · 日本語",
+  "bg": "#1d2740",
+  "ink": "#f4ede1",
+  "acc": "#c9b48a",
+  "pills": [
+   "Envelope intro",
+   "Drawn story path",
+   "Flip countdown"
+  ],
+  "wait": 7000,
+  "url": "https://polyglotpages.gumroad.com/l/motion-wedding-template",
+  "ja": "結婚式（アニメーション版）",
+  "es": false,
+  "cat": "Wedding Website Motion Edition"
+ },
+ {
+  "slug": "motion/realestate",
+  "title": "Luxury Residences\nMotion Edition",
+  "sub": "Motion edition · No libraries · EN · 中文 · 日本語",
+  "bg": "#ebe5d9",
+  "ink": "#1d2420",
+  "acc": "#2f4a3a",
+  "pills": [
+   "Self-drawing facade",
+   "Pinned floor plan",
+   "Map pin drops"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/motion-luxury-residences-template",
+  "ja": "高級住宅（アニメーション版）",
+  "es": false,
+  "cat": "Luxury Residences Motion Edition"
+ }
+]
