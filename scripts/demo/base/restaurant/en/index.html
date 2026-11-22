@@ -357,7 +357,10 @@ a:not(.btn):active { opacity: .7; }
 /* ==================== Demo additions ==================== */
 .nav > .logo { min-width: 0; flex-shrink: 1; }
 .logo > span:last-child { min-width: 0; display: grid; }
-.logo b, .logo small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nav > .logo { white-space: normal; }
+.logo b { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-height: 1.15; overflow-wrap: anywhere; }
+.logo small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; margin-top: .15rem; }
+@media (max-width: 760px) { .logo b { font-size: 1.05rem; } }
 .hero h1 { font-size: clamp(2.2rem, 5.6vw, 4.2rem); }
 .visit-cta { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.4rem; }
 .review-links .review { gap: .6rem; }

@@ -329,9 +329,10 @@ section { padding: clamp(4.5rem, 12vh, 8rem) var(--pad); }
 @media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
 
 /* ---------- Demo additions ---------- */
-.nav > .logo { min-width: 0; flex-shrink: 1; }
 
-.logo-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nav > .logo { min-width: 0; flex-shrink: 1; white-space: normal; }
+.logo-text { min-width: 0; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-height: 1.15; overflow-wrap: anywhere; }
+@media (max-width: 760px) { .site-header .logo-text { font-size: .92em; } }
 .logo small { white-space: nowrap; }
 .btn svg.ico-stroke { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 </style>

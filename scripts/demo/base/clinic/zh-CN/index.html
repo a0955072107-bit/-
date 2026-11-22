@@ -8,7 +8,7 @@
      标记 IF:dental 的区块给牙医用，标记 IF:tcm 的区块给中医针灸用。
      医疗广告：不放病患评价，不写「最好」「无痛」「保证」，不放价格或优惠。 -->
 <title>{{NAME}}｜{{CITY_ZH}}<!--IF:dental-->牙医诊所 Dentist<!--/IF:dental--><!--IF:tcm-->中医针灸 Acupuncture<!--/IF:tcm--></title>
-<meta name="description" content="{{NAME}}是位于 {{CITY_ZH}}（{{STATE}}）的<!--IF:dental-->牙医诊所<!--/IF:dental--><!--IF:tcm-->中医针灸诊所<!--/IF:tcm-->。{{NOTES_ZH|欢迎来电预约。}}看诊时间、地址与交通信息。">
+<meta name="description" content="{{NAME}}是位于{{CITY_ZH}}（{{STATE}}）的<!--IF:dental-->牙医诊所<!--/IF:dental--><!--IF:tcm-->中医针灸诊所<!--/IF:tcm-->。{{NOTES_ZH|欢迎来电预约。}}看诊时间、地址与交通信息。">
 <meta property="og:title" content="{{NAME}}｜{{CITY_ZH}}<!--IF:dental-->牙医诊所<!--/IF:dental--><!--IF:tcm-->中医针灸<!--/IF:tcm-->">
 <meta property="og:description" content="{{NOTES_ZH|欢迎来电预约。}}查看看诊时间、地址与路线。">
 <meta property="og:type" content="website">
@@ -316,9 +316,10 @@ a:not(.btn):active { opacity: .7; }
 @media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
 
 /* ---------- Demo additions ---------- */
-.nav > .logo { min-width: 0; }
 
-.logo-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nav > .logo { min-width: 0; flex-shrink: 1; white-space: normal; }
+.logo-text { min-width: 0; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-height: 1.15; overflow-wrap: anywhere; }
+@media (max-width: 760px) { .site-header .logo-text { font-size: .92em; } }
 .hours-card { max-width: 40rem; }
 .hours { width: 100%; border-collapse: collapse; font-size: .98rem; }
 .hours th, .hours td { padding: .85rem 1.25rem; border-bottom: 1px solid var(--line); text-align: left; }

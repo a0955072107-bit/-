@@ -7,7 +7,7 @@
      scripts/demo/make-demo.py 會用 sales/outreach/leads.csv 的資料填入每個雙大括號的欄位。
      欄位裡有 | 的意思是：有資料就用店家的資料，沒有就用 | 後面的文字。 -->
 <title>{{NAME}}｜{{CITY_ZH}}中餐館 Chinese Restaurant</title>
-<meta name="description" content="{{NAME}}位於 {{CITY_ZH}}（{{STATE}}），{{NOTES_ZH|道地家常中菜，可內用也可外帶。}}營業時間、地址、電話與交通資訊。">
+<meta name="description" content="{{NAME}}位於{{CITY_ZH}}（{{STATE}}），{{NOTES_ZH|道地家常中菜，可內用也可外帶。}}營業時間、地址、電話與交通資訊。">
 <meta name="theme-color" content="#b4532a">
 <meta property="og:title" content="{{NAME}}｜{{CITY_ZH}}中餐館">
 <meta property="og:description" content="{{NOTES_ZH|{{CITY_ZH}}的家常中菜館。}}查看營業時間、地址與路線。">
@@ -358,7 +358,10 @@ a:not(.btn):active { opacity: .7; }
 /* ==================== Demo additions ==================== */
 .nav > .logo { min-width: 0; flex-shrink: 1; }
 .logo > span:last-child { min-width: 0; display: grid; }
-.logo b, .logo small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nav > .logo { white-space: normal; }
+.logo b { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-height: 1.15; overflow-wrap: anywhere; }
+.logo small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; margin-top: .15rem; }
+@media (max-width: 760px) { .logo b { font-size: 1.05rem; } }
 .hero h1 { font-size: clamp(2.2rem, 5.6vw, 4.2rem); }
 .visit-cta { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.4rem; }
 .review-links .review { gap: .6rem; }
@@ -521,7 +524,7 @@ a:not(.btn):active { opacity: .7; }
       </div>
       <div class="review reveal">
         <h3>Yelp</h3>
-        <p>看看 {{CITY_ZH}} 的 Yelp 用戶怎麼說。</p>
+        <p>看看{{CITY_ZH}}的 Yelp 用戶怎麼說。</p>
         <a class="btn btn-ghost" href="{{YELP}}" target="_blank" rel="noopener">到 Yelp 找我們</a>
       </div>
       <div class="review reveal">

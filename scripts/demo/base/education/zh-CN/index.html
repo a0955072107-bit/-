@@ -7,7 +7,7 @@
      scripts/demo/make-demo.py 会用 sales/outreach/leads.csv 的数据填入每个双大括号的字段。
      教育广告：不保证成绩，不放编造的学生成绩或家长评价。 -->
 <title>{{NAME}}｜{{CITY_ZH}}补习班 Tutoring Center</title>
-<meta name="description" content="{{NAME}}是位于 {{CITY_ZH}}（{{STATE}}）的补习班。{{NOTES_ZH|提供 K-12 数学、英文和才艺课程。}}上课时间、地址和联系方式。">
+<meta name="description" content="{{NAME}}是位于{{CITY_ZH}}（{{STATE}}）的补习班。{{NOTES_ZH|提供 K-12 数学、英文和才艺课程。}}上课时间、地址和联系方式。">
 <meta property="og:title" content="{{NAME}}｜{{CITY_ZH}}补习班">
 <meta property="og:description" content="{{NOTES_ZH|提供 K-12 数学、英文和才艺课程。}}查看时间、地址与路线。">
 <meta property="og:type" content="website">
@@ -426,9 +426,10 @@ html:not(.js) .panel-title { display: block; }
 @media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
 
 /* ---------- Demo additions ---------- */
-.nav > .logo { min-width: 0; }
 
-.logo-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nav > .logo { min-width: 0; flex-shrink: 1; white-space: normal; }
+.logo-text { min-width: 0; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-height: 1.15; overflow-wrap: anywhere; }
+@media (max-width: 760px) { .site-header .logo-text { font-size: .92em; } }
 .review-links .review::before { content: none; }
 .review-links .review h3 { font-size: 1.15rem; }
 .review-links .review p { color: var(--muted); }
@@ -676,7 +677,7 @@ html:not(.js) .panel-title { display: block; }
       </div>
       <div class="card review reveal">
         <h3>Yelp</h3>
-        <p>看看 {{CITY_ZH}} 的家长怎么说。</p>
+        <p>看看{{CITY_ZH}}的家长怎么说。</p>
         <a class="btn btn-ghost" href="{{YELP}}" target="_blank" rel="noopener">到 Yelp 找我们</a>
       </div>
       <div class="card review reveal">

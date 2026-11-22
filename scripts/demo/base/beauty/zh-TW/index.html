@@ -6,7 +6,7 @@
 <!-- 示範用底稿（Polyglot Pages 主動開發用），不是販售的模板。
      scripts/demo/make-demo.py 會用 sales/outreach/leads.csv 的資料填入每個雙大括號的欄位。 -->
 <title>{{NAME}}｜{{CITY_ZH}}美髮店 Hair Salon</title>
-<meta name="description" content="{{NAME}}是位於 {{CITY_ZH}}（{{STATE}}）的美髮店。{{NOTES_ZH|剪髮、染髮、燙髮和護髮。}}營業時間、地址與預約方式。">
+<meta name="description" content="{{NAME}}是位於{{CITY_ZH}}（{{STATE}}）的美髮店。{{NOTES_ZH|剪髮、染髮、燙髮和護髮。}}營業時間、地址與預約方式。">
 <meta property="og:title" content="{{NAME}}｜{{CITY_ZH}}美髮店">
 <meta property="og:description" content="{{NOTES_ZH|剪髮、染髮、燙髮和護髮。}}歡迎來電預約。">
 <meta property="og:type" content="website">
@@ -331,9 +331,10 @@ section { padding: clamp(4.5rem, 12vh, 8rem) var(--pad); }
 @media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
 
 /* ---------- Demo additions ---------- */
-.nav > .logo { min-width: 0; flex-shrink: 1; }
 
-.logo-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nav > .logo { min-width: 0; flex-shrink: 1; white-space: normal; }
+.logo-text { min-width: 0; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-height: 1.15; overflow-wrap: anywhere; }
+@media (max-width: 760px) { .site-header .logo-text { font-size: .92em; } }
 .logo small { white-space: nowrap; }
 .btn svg.ico-stroke { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 </style>
@@ -516,7 +517,7 @@ section { padding: clamp(4.5rem, 12vh, 8rem) var(--pad); }
   <div class="cta-band reveal">
     <div class="blob" style="width:18rem;height:18rem;right:-4rem;top:-6rem;background:var(--pearl);opacity:.7"></div>
     <h2>想換個新造型嗎？</h2>
-    <p>來電預約，或用地圖導航到我們在 {{CITY_ZH}} 的店。</p>
+    <p>來電預約，或用地圖導航到我們在{{CITY_ZH}}的店。</p>
     <div class="ctas">
       <a class="btn btn-primary" href="tel:{{TEL}}">來電 {{PHONE}}</a>
       <a class="btn btn-ghost" href="{{MAPS}}" target="_blank" rel="noopener">Google 地圖導航</a>

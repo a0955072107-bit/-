@@ -8,7 +8,7 @@
      標記 IF:dental 的區塊給牙醫用，標記 IF:tcm 的區塊給中醫針灸用。
      醫療廣告：不放病患評價，不寫「最好」「無痛」「保證」，不放價格或優惠。 -->
 <title>{{NAME}}｜{{CITY_ZH}}<!--IF:dental-->牙醫診所 Dentist<!--/IF:dental--><!--IF:tcm-->中醫針灸 Acupuncture<!--/IF:tcm--></title>
-<meta name="description" content="{{NAME}}是位於 {{CITY_ZH}}（{{STATE}}）的<!--IF:dental-->牙醫診所<!--/IF:dental--><!--IF:tcm-->中醫針灸診所<!--/IF:tcm-->。{{NOTES_ZH|歡迎來電預約。}}看診時間、地址與交通資訊。">
+<meta name="description" content="{{NAME}}是位於{{CITY_ZH}}（{{STATE}}）的<!--IF:dental-->牙醫診所<!--/IF:dental--><!--IF:tcm-->中醫針灸診所<!--/IF:tcm-->。{{NOTES_ZH|歡迎來電預約。}}看診時間、地址與交通資訊。">
 <meta property="og:title" content="{{NAME}}｜{{CITY_ZH}}<!--IF:dental-->牙醫診所<!--/IF:dental--><!--IF:tcm-->中醫針灸<!--/IF:tcm-->">
 <meta property="og:description" content="{{NOTES_ZH|歡迎來電預約。}}查看看診時間、地址與路線。">
 <meta property="og:type" content="website">
@@ -316,9 +316,10 @@ a:not(.btn):active { opacity: .7; }
 @media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
 
 /* ---------- Demo additions ---------- */
-.nav > .logo { min-width: 0; }
 
-.logo-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nav > .logo { min-width: 0; flex-shrink: 1; white-space: normal; }
+.logo-text { min-width: 0; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-height: 1.15; overflow-wrap: anywhere; }
+@media (max-width: 760px) { .site-header .logo-text { font-size: .92em; } }
 .hours-card { max-width: 40rem; }
 .hours { width: 100%; border-collapse: collapse; font-size: .98rem; }
 .hours th, .hours td { padding: .85rem 1.25rem; border-bottom: 1px solid var(--line); text-align: left; }
