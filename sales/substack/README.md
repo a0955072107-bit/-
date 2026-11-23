@@ -4,7 +4,7 @@
 1. 用 polyglotpages.studio@gmail.com 到 substack.com 註冊。
 2. 建立 Publication：
    - **Name**：`Polyglot Pages Notes`
-   - **Subdomain**：`polyglotpages`（網址 polyglotpages.substack.com）
+   - **Subdomain**：`polyglotpages`（網址 polyglotpagesnotes.substack.com）
    - **Short description**：`Practical notes on building small-business websites that need no monthly fees, in several languages.`
    - **Logo**：`sales/brand/avatar.png`
    - **Cover image**：`sales/covers/en/restaurant-cover.png`（之後再換）
