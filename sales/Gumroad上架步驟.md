@@ -93,7 +93,7 @@ Don't have time to edit it yourself? We'll customise this template with your tex
 沒時間自己改嗎？我們可以把這個模板改成你店家專屬的網站：換上你的文字、照片、品牌色、預約連結，並設定好網域，直接上線。
 👉 網站客製服務：https://polyglotpages.gumroad.com/l/website-customization
 
-Questions or custom work? / 有問題或想客製：polyglotpages.studio@gmail.com
+Questions or custom work? / 有問題或想客製： polyglotpages.studio@gmail.com
 ```
 
 > **聯絡方式的原則**：只放品牌 Email，不放個人 LINE 或電話。請另外申請一個品牌專用信箱。
@@ -102,6 +102,17 @@ Questions or custom work? / 有問題或想客製：polyglotpages.studio@gmail.c
 ---
 
 ## 3. 網站客製服務（先上這個）
+
+> **11/23 更新：Commission 類型要帳號滿 30 天才能用。** 在那之前改用「訂金＋尾款」兩個 Digital product：
+> - 三語店家網站代製（訂金）：URL `trilingual-website-service`，Standard deposit $150／Pro deposit $275
+> - 網站客製服務（訂金）：URL `website-customization`，Basic deposit $125／Plus deposit $225
+> - 網站尾款（Unlisted 不公開）：URL `final-payment`，Trilingual Standard $149／Pro $274／Customization Basic $124／Plus $224。網站做好、客人確認後才寄這個連結。
+> 帳號滿 30 天（約 12/23）後，改回 Commission 一個商品。
+> **Content 頁（買家付款後看到的頁面）不能空白。** 訂金商品貼：
+> 「Thank you! Your deposit is confirmed. What happens next: 1. Within 1 business day we'll email you a short form… 2. Your site is ready for review within 7 days… 3. You only pay the remaining 50% after you've approved your finished site.」（中英對照全文見 `sales/交付流程.md` 第六節）
+> **尾款商品先不發布**，第一個客人確認網站時才發布並寄連結。
+
+
 
 | 欄位 | 填入 |
 |---|---|

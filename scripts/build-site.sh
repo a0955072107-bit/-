@@ -42,5 +42,10 @@ if [ -d demos ]; then
   cp -R demos/. _site/demo/
   echo "✓ 示範站 $(find demos -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ') 個 → _site/demo/"
 fi
+# Pinterest 批次上傳用的圖片：sales/pins/*.jpg → _site/pins/（Pinterest 依網址抓圖）
+if [ -d sales/pins ]; then
+  mkdir -p _site/pins && cp sales/pins/*.jpg _site/pins/
+  echo "✓ Pinterest 圖 $(ls sales/pins/*.jpg | wc -l | tr -d ' ') 張 → _site/pins/"
+fi
 printf 'User-agent: *\nDisallow: /demo/\n' > _site/robots.txt
 echo "✓ _site/ 建置完成"
