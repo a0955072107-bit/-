@@ -103,6 +103,13 @@ Questions or custom work? / 有問題或想客製：polyglotpages.studio@gmail.c
 
 ## 3. 網站客製服務（先上這個）
 
+> **11/23 更新：Commission 類型要帳號滿 30 天才能用。** 在那之前改用「訂金＋尾款」兩個 Digital product：
+> - 三語店家網站代製（訂金）：URL `trilingual-website-service`，Standard deposit $150／Pro deposit $275
+> - 網站客製服務（訂金）：URL `website-customization`，Basic deposit $125／Plus deposit $225
+> - 網站尾款（Unlisted 不公開）：URL `final-payment`，Trilingual Standard $149／Pro $274／Customization Basic $124／Plus $224。網站做好、客人確認後才寄這個連結。
+> 帳號滿 30 天（約 12/23）後，改回 Commission 一個商品。
+
+
 | 欄位 | 填入 |
 |---|---|
 | 商品類型 | **Commission**（委託）：買家下單時先付 **50% 訂金**，網站做好、買家確認後，Gumroad 再向買家收剩下 50%。後台沒有 Commission 類型時才用一般 Digital product |
