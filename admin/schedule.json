@@ -1,0 +1,3154 @@
+{
+ "generated": "2026-11-23 09:00",
+ "tz": "Asia/Taipei",
+ "range": [
+  "2026-11-23",
+  "2027-02-28"
+ ],
+ "gumroad": {
+  "before": 9,
+  "beforeDate": "2026-11-23",
+  "total": 39
+ },
+ "pinsPlan": [
+  {
+   "date": "2026-11-23",
+   "n": 21,
+   "label": "11/23 立即發布"
+  },
+  {
+   "date": "2026-11-24",
+   "n": 19,
+   "id": "2026-11-24-pins",
+   "label": "Pinterest 上傳 19 張（上架 10 款之後）"
+  },
+  {
+   "date": "2026-11-25",
+   "n": 19,
+   "id": "2026-11-25-pins",
+   "label": "Pinterest 上傳 19 張（上架 10 款之後）"
+  },
+  {
+   "at": "2026-11-26T09:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-26T10:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-26T11:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-26T12:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-26T13:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-26T14:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-26T15:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-26T16:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-26T17:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-26T18:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-26T19:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-26T20:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-26T21:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-26T22:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-26T23:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-27T09:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-27T10:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-27T11:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-27T12:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-27T13:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-27T14:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-27T15:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-27T16:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-27T17:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-27T18:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-27T19:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-27T20:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-27T21:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-27T22:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-27T23:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-28T09:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-28T10:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-28T11:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-28T12:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-28T13:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-28T14:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-28T15:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-28T16:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-28T17:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-28T18:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-28T19:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-28T20:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-28T21:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-28T22:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-28T23:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-29T09:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-29T10:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-29T11:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-29T12:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-29T13:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-29T14:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-29T15:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-29T16:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-29T17:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-29T18:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-29T19:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-29T20:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-29T21:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-29T22:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-29T23:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-30T09:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-30T10:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-30T11:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-30T12:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-30T13:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-30T14:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-30T15:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-30T16:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-30T17:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-30T18:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-30T19:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-30T20:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-30T21:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-30T22:00",
+   "n": 1
+  },
+  {
+   "at": "2026-11-30T23:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-01T09:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-01T10:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-01T11:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-01T12:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-01T13:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-01T14:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-01T15:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-01T16:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-01T17:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-01T18:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-01T19:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-01T20:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-01T21:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-01T22:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-01T23:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-02T09:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-02T10:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-02T11:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-02T12:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-02T13:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-02T14:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-02T15:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-02T16:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-02T17:00",
+   "n": 1
+  },
+  {
+   "at": "2026-12-02T18:00",
+   "n": 1
+  }
+ ],
+ "videos": [
+  {
+   "date": "2026-11-24",
+   "time": "08:00",
+   "file": "01-five-languages.mp4",
+   "what": "五種語言切換"
+  },
+  {
+   "date": "2026-11-25",
+   "time": "08:00",
+   "file": "t-saas.mp4",
+   "what": "SaaS & App Landing Page 模板展示"
+  },
+  {
+   "date": "2026-11-26",
+   "time": "08:00",
+   "file": "t-freelancer.mp4",
+   "what": "Freelancer Portfolio & Résumé 模板展示"
+  },
+  {
+   "date": "2026-11-27",
+   "time": "08:00",
+   "file": "02-ten-templates.mp4",
+   "what": "10 款模板輪播"
+  },
+  {
+   "date": "2026-11-28",
+   "time": "08:00",
+   "file": "t-restaurant.mp4",
+   "what": "Restaurant & Café 模板展示"
+  },
+  {
+   "date": "2026-11-29",
+   "time": "08:00",
+   "file": "t-wedding.mp4",
+   "what": "Wedding Website with RSVP 模板展示"
+  },
+  {
+   "date": "2026-11-30",
+   "time": "08:00",
+   "file": "03-motion-edition.mp4",
+   "what": "Motion 動畫版"
+  },
+  {
+   "date": "2026-12-01",
+   "time": "08:00",
+   "file": "t-realestate.mp4",
+   "what": "Real Estate Agent 模板展示"
+  },
+  {
+   "date": "2026-12-02",
+   "time": "08:00",
+   "file": "t-fitness.mp4",
+   "what": "Gym & Personal Training 模板展示"
+  },
+  {
+   "date": "2026-12-03",
+   "time": "19:00",
+   "file": "04-japanese.mp4",
+   "what": "日文版（日本市場）"
+  },
+  {
+   "date": "2026-12-04",
+   "time": "08:00",
+   "file": "t-beauty.mp4",
+   "what": "Hair & Nail Salon 模板展示"
+  },
+  {
+   "date": "2026-12-05",
+   "time": "08:00",
+   "file": "t-clinic.mp4",
+   "what": "Dental & Medical Clinic 模板展示"
+  },
+  {
+   "date": "2026-12-06",
+   "time": "08:00",
+   "file": "t-consulting.mp4",
+   "what": "Law, Accounting & Consulting 模板展示"
+  },
+  {
+   "date": "2026-12-07",
+   "time": "08:00",
+   "file": "t-studio.mp4",
+   "what": "Design Studio & Portfolio 模板展示"
+  },
+  {
+   "date": "2026-12-08",
+   "time": "08:00",
+   "file": "t-bnb.mp4",
+   "what": "B&B & Guesthouse 模板展示"
+  },
+  {
+   "date": "2026-12-09",
+   "time": "08:00",
+   "file": "t-photographer.mp4",
+   "what": "Photographer Portfolio 模板展示"
+  },
+  {
+   "date": "2026-12-10",
+   "time": "08:00",
+   "file": "t-pet.mp4",
+   "what": "Pet Grooming & Daycare 模板展示"
+  },
+  {
+   "date": "2026-12-11",
+   "time": "08:00",
+   "file": "t-education.mp4",
+   "what": "Tutoring Center 模板展示"
+  },
+  {
+   "date": "2026-12-12",
+   "time": "08:00",
+   "file": "t-interior.mp4",
+   "what": "Interior Design Studio 模板展示"
+  },
+  {
+   "date": "2026-12-13",
+   "time": "08:00",
+   "file": "t-bakery.mp4",
+   "what": "Bakery & Dessert Shop 模板展示"
+  },
+  {
+   "date": "2026-12-14",
+   "time": "08:00",
+   "file": "t-tea.mp4",
+   "what": "Bubble Tea Shop 模板展示"
+  },
+  {
+   "date": "2026-12-15",
+   "time": "08:00",
+   "file": "t-auto.mp4",
+   "what": "Car Care & Garage 模板展示"
+  },
+  {
+   "date": "2026-12-16",
+   "time": "08:00",
+   "file": "t-cleaning.mp4",
+   "what": "Home Cleaning Service 模板展示"
+  },
+  {
+   "date": "2026-12-17",
+   "time": "08:00",
+   "file": "t-florist.mp4",
+   "what": "Florist & Flower Shop 模板展示"
+  },
+  {
+   "date": "2026-12-18",
+   "time": "08:00",
+   "file": "t-yoga.mp4",
+   "what": "Yoga & Pilates Studio 模板展示"
+  },
+  {
+   "date": "2026-12-19",
+   "time": "08:00",
+   "file": "t-camping.mp4",
+   "what": "Campsite & Glamping 模板展示"
+  },
+  {
+   "date": "2026-12-20",
+   "time": "08:00",
+   "file": "t-coach.mp4",
+   "what": "Therapist & Coach 模板展示"
+  },
+  {
+   "date": "2026-12-21",
+   "time": "08:00",
+   "file": "t-contractor.mp4",
+   "what": "Contractor & Handyman 模板展示"
+  },
+  {
+   "date": "2026-12-22",
+   "time": "08:00",
+   "file": "t-nonprofit.mp4",
+   "what": "Nonprofit & Church 模板展示"
+  },
+  {
+   "date": "2026-12-23",
+   "time": "08:00",
+   "file": "t-linkinbio.mp4",
+   "what": "Link-in-Bio Page 模板展示"
+  },
+  {
+   "date": "2026-12-24",
+   "time": "08:00",
+   "file": "t-barber.mp4",
+   "what": "Barbershop 模板展示"
+  },
+  {
+   "date": "2026-12-25",
+   "time": "08:00",
+   "file": "t-conference.mp4",
+   "what": "Conference & Event Landing Page 模板展示"
+  },
+  {
+   "date": "2026-12-26",
+   "time": "08:00",
+   "file": "t-tattoo.mp4",
+   "what": "Tattoo Studio 模板展示"
+  },
+  {
+   "date": "2026-12-27",
+   "time": "08:00",
+   "file": "t-coworking.mp4",
+   "what": "Coworking Space 模板展示"
+  },
+  {
+   "date": "2026-12-28",
+   "time": "08:00",
+   "file": "t-motion-saas.mp4",
+   "what": "SaaS Launch Page Motion Edition 模板展示"
+  },
+  {
+   "date": "2026-12-29",
+   "time": "08:00",
+   "file": "t-motion-portfolio.mp4",
+   "what": "Creative Portfolio Motion Edition 模板展示"
+  },
+  {
+   "date": "2026-12-30",
+   "time": "08:00",
+   "file": "t-motion-restaurant.mp4",
+   "what": "Fine Dining Motion Edition 模板展示"
+  },
+  {
+   "date": "2026-12-31",
+   "time": "08:00",
+   "file": "t-motion-wedding.mp4",
+   "what": "Wedding Website Motion Edition 模板展示"
+  },
+  {
+   "date": "2027-01-01",
+   "time": "08:00",
+   "file": "t-motion-realestate.mp4",
+   "what": "Luxury Residences Motion Edition 模板展示"
+  }
+ ],
+ "outreachSeed": {
+  "sent": 7,
+  "replied": 0,
+  "demo": 0,
+  "won": 0,
+  "lost": 0
+ },
+ "milestones": [
+  [
+   "2026-11-24",
+   "第 1 支短影片、第 1 則 Substack Note"
+  ],
+  [
+   "2026-11-24",
+   "Gumroad 上架 10 款（到 19/39）"
+  ],
+  [
+   "2026-11-25",
+   "Gumroad 上架 10 款（到 29/39）"
+  ],
+  [
+   "2026-11-26",
+   "Gumroad 39 款全部上架；Pinterest 預排開始每天自動發"
+  ],
+  [
+   "2026-11-30",
+   "第 1 週：開 Fiverr／Upwork，開發信每天 20 家"
+  ],
+  [
+   "2026-12-01",
+   "Substack 第 2 篇（之後每週二 1 篇）"
+  ],
+  [
+   "2026-12-03",
+   "日文版短影片（19:00 發）"
+  ],
+  [
+   "2026-12-20",
+   "Substack Notes 28 則發完（之後請 Claude 寫下一批）"
+  ],
+  [
+   "2026-12-21",
+   "Website Care 維護月費上架"
+  ],
+  [
+   "2026-12-23",
+   "Gumroad 滿 30 天：改用 Commission；第 1 次成長檢查"
+  ],
+  [
+   "2026-12-28",
+   "評估要不要開 LinkedIn"
+  ],
+  [
+   "2027-01-01",
+   "最後 1 支已做好的短影片"
+  ],
+  [
+   "2027-01-22",
+   "第 2 次成長檢查"
+  ],
+  [
+   "2027-02-21",
+   "第 3 次成長檢查"
+  ]
+ ],
+ "items": [
+  {
+   "id": "2026-11-24-daily",
+   "date": "2026-11-24",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 1 週第 2 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（01-five-languages.mp4，五種語言切換），留言貼上下面這段，然後把這則留言置頂：\nTemplates & live demos: polyglotpages.gumroad.com\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 1 週第 2 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nThe four questions every local business site has to answer: Are you open? Where are you? What do you sell? How do I contact you? Everything else is optional.",
+   "files": [
+    "sales/videos/01-five-languages.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "五種語言切換"
+  },
+  {
+   "id": "2026-11-24-ig",
+   "date": "2026-11-24",
+   "time": "09:13",
+   "title": "開 Instagram 私訊專用帳號",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/帳號註冊.md",
+    "sales/outreach/README.md",
+    "sales/brand/avatar.png"
+   ],
+   "note": "只用來私訊店家、不發文；放 3 張 Pinterest 圖當門面。新帳號第一週一天最多 5 則私訊"
+  },
+  {
+   "id": "2026-11-24-gumroad",
+   "date": "2026-11-24",
+   "time": "11:15",
+   "title": "Gumroad 上架 10 款（牙醫／診所、律師／會計／顧問、設計工作室…）",
+   "who": "擴充功能",
+   "cat": "上架",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/擴充功能上架.md 的規則上架，今天做下面 10 款，內容照 sales/Gumroad上架步驟.md 對應段落一字不改。zip 照 sales/擴充功能GoogleDrive交付.md 放進 Content 頁。只存草稿，不要按 Publish；每做完一款回報一行。\n\n1. clinic（牙醫／診所）：第 4 節「牙醫／診所」；封面 https://a0955072107-bit.github.io/-/covers/clinic-cover.png\n2. consulting（律師／會計／顧問）：第 4 節「律師／會計／顧問」；封面 https://a0955072107-bit.github.io/-/covers/consulting-cover.png\n3. studio（設計工作室）：第 4 節「設計工作室」；封面 https://a0955072107-bit.github.io/-/covers/studio-cover.png\n4. bnb（民宿 B&B）：第 4 節「民宿 B&B」；封面 https://a0955072107-bit.github.io/-/covers/bnb-cover.png\n5. photographer（攝影師）：第 4 節「攝影師」；封面 https://a0955072107-bit.github.io/-/covers/photographer-cover.png\n6. pet（寵物美容）：第 4 節「寵物美容」；封面 https://a0955072107-bit.github.io/-/covers/pet-cover.png\n7. education（補習班）：第 4 節「補習班」；封面 https://a0955072107-bit.github.io/-/covers/education-cover.png\n8. interior（室內設計）：第 4 節「室內設計」；封面 https://a0955072107-bit.github.io/-/covers/interior-cover.png\n9. bakery（烘焙甜點）：第 4 節「烘焙甜點」；封面 https://a0955072107-bit.github.io/-/covers/bakery-cover.png\n10. tea（手搖飲）：第 4 節「手搖飲」；封面 https://a0955072107-bit.github.io/-/covers/tea-cover.png",
+   "files": [
+    "sales/擴充功能上架.md",
+    "sales/今天上架總表.md",
+    "sales/Gumroad上架步驟.md"
+   ],
+   "note": "擴充功能存好草稿後，你逐一打開檢查再按 Publish",
+   "listing": 10,
+   "products": [
+    "牙醫／診所",
+    "律師／會計／顧問",
+    "設計工作室",
+    "民宿 B&B",
+    "攝影師",
+    "寵物美容",
+    "補習班",
+    "室內設計",
+    "烘焙甜點",
+    "手搖飲"
+   ]
+  },
+  {
+   "id": "2026-11-24-outreach",
+   "date": "2026-11-24",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 10 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-11-24.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-11-24.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-11-24-pins",
+   "date": "2026-11-24",
+   "time": "15:07",
+   "title": "Pinterest 上傳 19 張（上架 10 款之後）",
+   "who": "你",
+   "cat": "Pinterest",
+   "files": [
+    "sales/pins/pinterest-now2-2026-11-24.csv",
+    "sales/Pinterest批次上傳.md"
+   ],
+   "note": "Pinterest → 建立 → 批次建立 Pin → 上傳 CSV。Publish date 留空＝立即發布；有錯誤的列截圖給 Claude",
+   "pins": 19
+  },
+  {
+   "id": "2026-11-25-daily",
+   "date": "2026-11-25",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 1 週第 3 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-saas.mp4，SaaS & App Landing Page 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/app-saas-landing-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 1 週第 3 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nSmall detail that matters most on restaurant sites: an \"Open now / Closed now\" badge that reads your real hours. It's the first thing people look for.",
+   "files": [
+    "sales/videos/t-saas.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "SaaS & App Landing Page 模板展示"
+  },
+  {
+   "id": "2026-11-25-gumroad",
+   "date": "2026-11-25",
+   "time": "11:15",
+   "title": "Gumroad 上架 10 款（汽車美容／保養、居家清潔、花店…）",
+   "who": "擴充功能",
+   "cat": "上架",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/擴充功能上架.md 的規則上架，今天做下面 10 款，內容照 sales/Gumroad上架步驟.md 對應段落一字不改。zip 照 sales/擴充功能GoogleDrive交付.md 放進 Content 頁。只存草稿，不要按 Publish；每做完一款回報一行。\n\n1. auto（汽車美容／保養）：第 4 節「汽車美容／保養」；封面 https://a0955072107-bit.github.io/-/covers/auto-cover.png\n2. cleaning（居家清潔）：第 4 節「居家清潔」；封面 https://a0955072107-bit.github.io/-/covers/cleaning-cover.png\n3. florist（花店）：第 4 節「花店」；封面 https://a0955072107-bit.github.io/-/covers/florist-cover.png\n4. yoga（瑜珈／皮拉提斯）：第 4 節「瑜珈／皮拉提斯」；封面 https://a0955072107-bit.github.io/-/covers/yoga-cover.png\n5. camping（露營區）：第 4 節「露營區」；封面 https://a0955072107-bit.github.io/-/covers/camping-cover.png\n6. coach（諮商／教練）：第 4 節「諮商／教練」；封面 https://a0955072107-bit.github.io/-/covers/coach-cover.png\n7. contractor（水電修繕）：第 4 節「水電修繕」；封面 https://a0955072107-bit.github.io/-/covers/contractor-cover.png\n8. nonprofit（非營利／教會）：第 4 節「非營利／教會」；封面 https://a0955072107-bit.github.io/-/covers/nonprofit-cover.png\n9. linkinbio（Link-in-bio）：第 4 節「Link-in-bio」；封面 https://a0955072107-bit.github.io/-/covers/linkinbio-cover.png\n10. barber（男士理髮）：第 4 節「男士理髮」；封面 https://a0955072107-bit.github.io/-/covers/barber-cover.png",
+   "files": [
+    "sales/擴充功能上架.md",
+    "sales/今天上架總表.md",
+    "sales/Gumroad上架步驟.md"
+   ],
+   "note": "擴充功能存好草稿後，你逐一打開檢查再按 Publish",
+   "listing": 10,
+   "products": [
+    "汽車美容／保養",
+    "居家清潔",
+    "花店",
+    "瑜珈／皮拉提斯",
+    "露營區",
+    "諮商／教練",
+    "水電修繕",
+    "非營利／教會",
+    "Link-in-bio",
+    "男士理髮"
+   ]
+  },
+  {
+   "id": "2026-11-25-outreach",
+   "date": "2026-11-25",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 10 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-11-25.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-11-25.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-11-25-pins",
+   "date": "2026-11-25",
+   "time": "15:07",
+   "title": "Pinterest 上傳 19 張（上架 10 款之後）",
+   "who": "你",
+   "cat": "Pinterest",
+   "files": [
+    "sales/pins/pinterest-now2-2026-11-25.csv",
+    "sales/Pinterest批次上傳.md"
+   ],
+   "note": "Pinterest → 建立 → 批次建立 Pin → 上傳 CSV。Publish date 留空＝立即發布；有錯誤的列截圖給 Claude",
+   "pins": 19
+  },
+  {
+   "id": "2026-11-26-daily",
+   "date": "2026-11-26",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 1 週第 4 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-freelancer.mp4，Freelancer Portfolio & Résumé 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/freelancer-portfolio-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 1 週第 4 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nFree hosting for a one-page business site: Netlify Drop. Drag the folder onto the page, done, HTTPS included. Your only recurring cost is the domain.",
+   "files": [
+    "sales/videos/t-freelancer.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Freelancer Portfolio & Résumé 模板展示"
+  },
+  {
+   "id": "2026-11-26-gumroad",
+   "date": "2026-11-26",
+   "time": "11:15",
+   "title": "Gumroad 上架 10 款（研討會活動、刺青工作室、共享辦公室…）",
+   "who": "擴充功能",
+   "cat": "上架",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/擴充功能上架.md 的規則上架，今天做下面 10 款，內容照 sales/Gumroad上架步驟.md 對應段落一字不改。zip 照 sales/擴充功能GoogleDrive交付.md 放進 Content 頁。只存草稿，不要按 Publish；每做完一款回報一行。\n\n1. conference（研討會活動）：第 4 節「研討會活動」；封面 https://a0955072107-bit.github.io/-/covers/conference-cover.png\n2. tattoo（刺青工作室）：第 4 節「刺青工作室」；封面 https://a0955072107-bit.github.io/-/covers/tattoo-cover.png\n3. coworking（共享辦公室）：第 4 節「共享辦公室」；封面 https://a0955072107-bit.github.io/-/covers/coworking-cover.png\n4. motion/saas（Motion SaaS）：第 7 節 Motion；封面 https://a0955072107-bit.github.io/-/covers/motion-saas-cover.png\n5. motion/portfolio（Motion 作品集）：第 7 節 Motion；封面 https://a0955072107-bit.github.io/-/covers/motion-portfolio-cover.png\n6. motion/restaurant（Motion 餐廳）：第 7 節 Motion；封面 https://a0955072107-bit.github.io/-/covers/motion-restaurant-cover.png\n7. motion/wedding（Motion 婚禮）：第 7 節 Motion；封面 https://a0955072107-bit.github.io/-/covers/motion-wedding-cover.png\n8. motion/realestate（Motion 豪宅）：第 7 節 Motion；封面 https://a0955072107-bit.github.io/-/covers/motion-realestate-cover.png\n9. bundle-all（全套組合包）：第 5 節＋第 9 節 Studio 版本；封面 https://a0955072107-bit.github.io/-/covers/restaurant-cover.png\n10. bundle-motion（Motion 組合包）：第 7 節 Motion 全套組合包；封面 https://a0955072107-bit.github.io/-/covers/motion-wedding-cover.png",
+   "files": [
+    "sales/擴充功能上架.md",
+    "sales/今天上架總表.md",
+    "sales/Gumroad上架步驟.md"
+   ],
+   "note": "擴充功能存好草稿後，你逐一打開檢查再按 Publish",
+   "listing": 10,
+   "products": [
+    "研討會活動",
+    "刺青工作室",
+    "共享辦公室",
+    "Motion SaaS",
+    "Motion 作品集",
+    "Motion 餐廳",
+    "Motion 婚禮",
+    "Motion 豪宅",
+    "全套組合包",
+    "Motion 組合包"
+   ]
+  },
+  {
+   "id": "2026-11-26-outreach",
+   "date": "2026-11-26",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 10 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-11-26.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-11-26.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-11-26-pinfix",
+   "date": "2026-11-26",
+   "time": "15:13",
+   "title": "修正 17 張 Pin 的連結（改連到商品頁）",
+   "who": "擴充功能",
+   "cat": "Pinterest",
+   "prompt": "11/23 發的這 17 張 Pinterest Pin 原本連到商店首頁，今天商品都上架了，請在 Pinterest 逐張打開 → 編輯 → 把「連結」改成下面對應的網址，其他欄位不要動。改完每張回報一行。遇到驗證就停下來問。\n\n1. motion-restaurant-c.jpg「レストラン（アニメーション版）向けホームページテンプレート｜月額0円・買い切り」→ https://polyglotpages.gumroad.com/l/motion-fine-dining-template\n2. motion-wedding-b.jpg「Wedding Website Motion Edition Website in Four Languages — One-Tap Language Switcher」→ https://polyglotpages.gumroad.com/l/motion-wedding-template\n3. motion-wedding-c.jpg「結婚式（アニメーション版）向けホームページテンプレート｜月額0円・買い切り」→ https://polyglotpages.gumroad.com/l/motion-wedding-template\n4. motion-realestate-b.jpg「Luxury Residences Motion Edition Website in Four Languages — One-Tap Language Switcher」→ https://polyglotpages.gumroad.com/l/motion-luxury-residences-template\n5. motion-realestate-c.jpg「高級住宅（アニメーション版）向けホームページテンプレート｜月額0円・買い切り」→ https://polyglotpages.gumroad.com/l/motion-luxury-residences-template\n6. conference-d.jpg「Conference & Event Landing Page Website Template — See the Whole Page」→ https://polyglotpages.gumroad.com/l/conference-event-template\n7. tattoo-d.jpg「Tattoo Studio Website Template — See the Whole Page」→ https://polyglotpages.gumroad.com/l/tattoo-studio-template\n8. tattoo-e.jpg「Tattoo Studio: From a Map Listing to a Real Website」→ https://polyglotpages.gumroad.com/l/tattoo-studio-template\n9. coworking-d.jpg「Coworking Space Website Template — See the Whole Page」→ https://polyglotpages.gumroad.com/l/coworking-space-template\n10. coworking-e.jpg「Coworking Space: From a Map Listing to a Real Website」→ https://polyglotpages.gumroad.com/l/coworking-space-template\n11. motion-saas-d.jpg「SaaS Launch Page Motion Edition Website Template — See the Whole Page」→ https://polyglotpages.gumroad.com/l/motion-saas-launch-template\n12. motion-restaurant-d.jpg「Fine Dining Motion Edition Website Template — See the Whole Page」→ https://polyglotpages.gumroad.com/l/motion-fine-dining-template\n13. motion-restaurant-e.jpg「Fine Dining Motion Edition: From a Map Listing to a Real Website」→ https://polyglotpages.gumroad.com/l/motion-fine-dining-template\n14. motion-wedding-d.jpg「Wedding Website Motion Edition Website Template — See the Whole Page」→ https://polyglotpages.gumroad.com/l/motion-wedding-template\n15. motion-wedding-e.jpg「Wedding Website Motion Edition: From a Map Listing to a Real Website」→ https://polyglotpages.gumroad.com/l/motion-wedding-template\n16. motion-realestate-d.jpg「Luxury Residences Motion Edition Website Template — See the Whole Page」→ https://polyglotpages.gumroad.com/l/motion-luxury-residences-template\n17. motion-realestate-e.jpg「Luxury Residences Motion Edition: From a Map Listing to a Real Website」→ https://polyglotpages.gumroad.com/l/motion-luxury-residences-template",
+   "files": [
+    "sales/pins/pinterest-now-2026-11-23-extra.csv"
+   ]
+  },
+  {
+   "id": "2026-11-27-daily",
+   "date": "2026-11-27",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 1 週第 5 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（02-ten-templates.mp4，10 款模板輪播），留言貼上下面這段，然後把這則留言置頂：\nTemplates & live demos: polyglotpages.gumroad.com\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 1 週第 5 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nGoogle Business Profile matters more than the website for most local shops. Fill it in first, then link your site from it.",
+   "files": [
+    "sales/videos/02-ten-templates.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "10 款模板輪播"
+  },
+  {
+   "id": "2026-11-27-followup",
+   "date": "2026-11-27",
+   "time": "10:21",
+   "title": "追問 11/23 寄出、還沒回覆的店家",
+   "who": "你",
+   "cat": "開發",
+   "prompt": "照 sales/outreach/README.md「4 天沒回覆追問一次」：把 leads.csv 裡 11/23 寄出、status 還是 sent 的店家，依 sales/outreach/訊息範本.md 寫好追問訊息，放進今天的 outbox，寄完我再把 status 改成 followup。",
+   "files": [
+    "sales/outreach/README.md",
+    "sales/outreach/訊息範本.md"
+   ],
+   "note": "把提示貼給 Claude 準備追問訊息，你再複製寄出；追問只做一次"
+  },
+  {
+   "id": "2026-11-27-tiktok",
+   "date": "2026-11-27",
+   "time": "10:37",
+   "title": "TikTok 預排下週 7 支（11/30（一）～12/6（日））",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/videos/發片時程.md，在電腦版 TikTok Studio 預排下面 7 支影片（台灣時間）。影片檔要我拖進上傳框，每支開始前告訴我檔名，等我說好再填。說明文字一字不改貼上，加一首平台內建音樂並把音量調低。不要改帳號設定，遇到驗證就停下來問。每排好一支回報一行。\n\n1. 11/30（一） 08:00　03-motion-edition.mp4（Motion 動畫版）\n說明文字：\nAnimated websites with no libraries. The Motion editions use native CSS scroll-driven animations and a little vanilla JS: an envelope intro for weddings, a live booking calendar for SaaS, a course-by-course tasting menu for restaurants. Zero dependencies, fast to load, and they respect reduced-motion settings.\n\n#webdesign #cssanimation #scrollanimation #websitetemplate #weddingwebsite #frontend #htmlcss #nomonthlyfees\n\nTemplates: polyglotpages.gumroad.com\n\n2. 12/1（二） 08:00　t-realestate.mp4（Real Estate Agent 模板展示）\n說明文字：\nReal Estate Agent website template with listing search, agent profile and viewing requests built in.\nShips in English, Chinese (Traditional & Simplified), Japanese and Spanish, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #realestatewebsite #realtor #realestateagent #propertymarketing #multilingualwebsite\n\n3. 12/2（三） 08:00　t-fitness.mp4（Gym & Personal Training 模板展示）\n說明文字：\nGym & Personal Training website template with weekly timetable, pricing toggle and free-trial form built in.\nShips in English, Chinese (Traditional & Simplified), Japanese and Spanish, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #gymwebsite #personaltrainer #fitnessbusiness #gymowner #multilingualwebsite\n\n4. 12/3（四） 19:00　04-japanese.mp4（日文版（日本市場））\n說明文字：\nお店のホームページ、月額0円。飲食店・美容室・民泊・花屋など、買い切りのHTMLテンプレートです。日本語・英語・中国語（繁体字・簡体字）にワンタップで切り替えできるので、インバウンドのお客様にもそのまま対応できます。テンプレートはプロフィールのリンクから。\n\n#ホームページ制作 #ホームページテンプレート #個人店 #飲食店 #美容室 #民泊 #インバウンド対策 #多言語サイト\n\nTemplates: polyglotpages.gumroad.com\n\n5. 12/4（五） 08:00　t-beauty.mp4（Hair & Nail Salon 模板展示）\n說明文字：\nHair & Nail Salon website template with price list, filterable portfolio and chat booking built in.\nShips in English, Chinese (Traditional & Simplified), Japanese and Spanish, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #salonwebsite #hairsalon #nailsalon #beautybusiness #multilingualwebsite\n\n6. 12/5（六） 08:00　t-clinic.mp4（Dental & Medical Clinic 模板展示）\n說明文字：\nDental & Medical Clinic website template with today's hours, clinic schedule and online booking built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #dentalwebsite #clinicwebsite #dentistry #healthcaremarketing #multilingualwebsite\n\n7. 12/6（日） 08:00　t-consulting.mp4（Law, Accounting & Consulting 模板展示）\n說明文字：\nLaw, Accounting & Consulting website template with practice areas, team profiles and consultation form built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #lawfirmwebsite #accountingfirm #consultingbusiness #professionalservices #multilingualwebsite",
+   "files": [
+    "sales/videos/03-motion-edition.mp4",
+    "sales/videos/t-realestate.mp4",
+    "sales/videos/t-fitness.mp4",
+    "sales/videos/04-japanese.mp4",
+    "sales/videos/t-beauty.mp4",
+    "sales/videos/t-clinic.mp4",
+    "sales/videos/t-consulting.mp4"
+   ]
+  },
+  {
+   "id": "2026-11-27-outreach",
+   "date": "2026-11-27",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 10 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-11-27.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-11-27.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-11-28-daily",
+   "date": "2026-11-28",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 1 週第 6 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-restaurant.mp4，Restaurant & Café 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/restaurant-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 1 週第 6 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nA sticky \"Call\" and \"Book\" bar at the bottom of the phone screen does more for a small business site than any hero animation.",
+   "files": [
+    "sales/videos/t-restaurant.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Restaurant & Café 模板展示"
+  },
+  {
+   "id": "2026-11-28-outreach",
+   "date": "2026-11-28",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 10 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-11-28.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-11-28.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-11-29-daily",
+   "date": "2026-11-29",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 1 週第 7 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-wedding.mp4，Wedding Website with RSVP 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/wedding-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 1 週第 7 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nThings a one-page site doesn't need: a blog nobody updates, a slider, a newsletter popup on first visit. Things it does: hours, a map link, a phone number you can tap.",
+   "files": [
+    "sales/videos/t-wedding.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Wedding Website with RSVP 模板展示"
+  },
+  {
+   "id": "2026-11-29-followup",
+   "date": "2026-11-29",
+   "time": "10:21",
+   "title": "追問 11/24、11/25 寄出、還沒回覆的店家",
+   "who": "你",
+   "cat": "開發",
+   "prompt": "照 sales/outreach/README.md「4 天沒回覆追問一次」：把 leads.csv 裡 11/24、11/25 寄出、status 還是 sent 的店家，依 sales/outreach/訊息範本.md 寫好追問訊息，放進今天的 outbox，寄完我再把 status 改成 followup。",
+   "files": [
+    "sales/outreach/README.md",
+    "sales/outreach/訊息範本.md"
+   ],
+   "note": "把提示貼給 Claude 準備追問訊息，你再複製寄出；追問只做一次"
+  },
+  {
+   "id": "2026-11-29-outreach",
+   "date": "2026-11-29",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 10 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-11-29.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-11-29.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-11-29-template",
+   "date": "2026-11-29",
+   "time": "14:17",
+   "title": "本週新模板（Claude 做好開 PR，你看過合併）",
+   "who": "Claude",
+   "cat": "上架",
+   "prompt": "照 sales/營運流程.md「每款新模板的製作流程」做本週的新模板：先看 Gumroad 與 Pinterest 數據挑行業，做中英文版、封面、zip、上架文案（加進 sales/Gumroad上架步驟.md），再做 3 張 Pinterest 圖和一份小 CSV。跑 bash scripts/lint-all.sh 確認 0 個 FAIL，然後開 PR 給我。",
+   "files": [
+    "sales/營運流程.md",
+    "templates/SPEC.md"
+   ],
+   "note": "PR 合併後，週一照上架文案上架這 1 款"
+  },
+  {
+   "id": "2026-11-30-daily",
+   "date": "2026-11-30",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 2 週第 1 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（03-motion-edition.mp4，Motion 動畫版），留言貼上下面這段，然後把這則留言置頂：\nTemplates & live demos: polyglotpages.gumroad.com\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 2 週第 1 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nWalk down Main Street in Flushing and the menus are in English, 繁體 and 简体. The shops speak three languages. Their websites usually speak one.",
+   "files": [
+    "sales/videos/03-motion-edition.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Motion 動畫版"
+  },
+  {
+   "id": "2026-11-30-weekly",
+   "date": "2026-11-30",
+   "time": "09:07",
+   "title": "記上週數字（Pinterest、TikTok、YouTube、Substack、Gumroad）",
+   "who": "你",
+   "cat": "檢查",
+   "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
+  },
+  {
+   "id": "2026-11-30-fiverr",
+   "date": "2026-11-30",
+   "time": "10:43",
+   "title": "開 Fiverr 服務與 Upwork 個人檔案",
+   "who": "你",
+   "cat": "開發",
+   "prompt": "照 sales/營運流程.md 第 1 週：幫我準備 Fiverr 服務「I will build a modern business website」的標題、說明、3 個方案價格和作品集（6 款 Demo 網址），以及 Upwork 個人檔案文字。",
+   "files": [
+    "sales/營運流程.md",
+    "sales/行銷計畫.md"
+   ]
+  },
+  {
+   "id": "2026-11-30-outreach",
+   "date": "2026-11-30",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 20 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-11-30.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-11-30.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-01-daily",
+   "date": "2026-12-01",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 2 週第 2 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-realestate.mp4，Real Estate Agent 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/real-estate-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 2 週第 2 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nWe replaced a row of language links (EN · 繁 · 简 · JA · ES) with one button that opens a list. Five links didn't fit next to the logo on phones. Built with <details>, so it works without JavaScript.",
+   "files": [
+    "sales/videos/t-realestate.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Real Estate Agent 模板展示"
+  },
+  {
+   "id": "2026-12-01-post",
+   "date": "2026-12-01",
+   "time": "09:43",
+   "title": "Substack 第 2 篇：One website, five languages: how we built a language switcher for small shops",
+   "who": "擴充功能",
+   "cat": "Substack",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 把第 2 篇存成 Substack 草稿。",
+   "files": [
+    "sales/substack/posts/02-one-site-five-languages.md"
+   ],
+   "note": "擴充功能存好草稿後，你看過再按發布"
+  },
+  {
+   "id": "2026-12-01-outreach",
+   "date": "2026-12-01",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 20 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-01.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-01.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-02-daily",
+   "date": "2026-12-02",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 2 週第 3 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-fitness.mp4，Gym & Personal Training 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/gym-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 2 週第 3 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nTranslation vs localisation: the Japanese version of our restaurant template isn't just translated. Prices are in yen with tax included, the contact button is LINE, and hours use 〜.",
+   "files": [
+    "sales/videos/t-fitness.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Gym & Personal Training 模板展示"
+  },
+  {
+   "id": "2026-12-02-outreach",
+   "date": "2026-12-02",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 20 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-02.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-02.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-03-note",
+   "date": "2026-12-03",
+   "time": "08:31",
+   "title": "Substack Note 第 2 週第 4 天",
+   "who": "擴充功能",
+   "cat": "Substack",
+   "prompt": "1. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 2 週第 4 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nEach language is its own page, not a translation layer in JavaScript. Google indexes each one, and the owner can edit the Chinese menu without touching the English one.",
+   "files": [
+    "sales/substack/notes.md"
+   ]
+  },
+  {
+   "id": "2026-12-03-outreach",
+   "date": "2026-12-03",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 20 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-03.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-03.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-03-video",
+   "date": "2026-12-03",
+   "time": "19:31",
+   "title": "影片置頂留言：日文版（日本市場）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 19:00 發出的影片（04-japanese.mp4，日文版（日本市場）），留言貼上下面這段，然後把這則留言置頂：\nテンプレートとデモはこちら：polyglotpages.gumroad.com",
+   "files": [
+    "sales/videos/04-japanese.txt"
+   ]
+  },
+  {
+   "id": "2026-12-04-daily",
+   "date": "2026-12-04",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 2 週第 5 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-beauty.mp4，Hair & Nail Salon 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/salon-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 2 週第 5 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nOpenCC converts Traditional to Simplified Chinese with regional vocabulary (影片 → 视频, 軟體 → 软件). We still fix a few things by hand: the link to the Traditional page keeps saying 繁體中文.",
+   "files": [
+    "sales/videos/t-beauty.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Hair & Nail Salon 模板展示"
+  },
+  {
+   "id": "2026-12-04-tiktok",
+   "date": "2026-12-04",
+   "time": "10:37",
+   "title": "TikTok 預排下週 7 支（12/7（一）～12/13（日））",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/videos/發片時程.md，在電腦版 TikTok Studio 預排下面 7 支影片（台灣時間）。影片檔要我拖進上傳框，每支開始前告訴我檔名，等我說好再填。說明文字一字不改貼上，加一首平台內建音樂並把音量調低。不要改帳號設定，遇到驗證就停下來問。每排好一支回報一行。\n\n1. 12/7（一） 08:00　t-studio.mp4（Design Studio & Portfolio 模板展示）\n說明文字：\nDesign Studio & Portfolio website template with editorial layout, selected work and dark mode built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #designstudio #portfoliowebsite #graphicdesign #creativeagency #multilingualwebsite\n\n2. 12/8（二） 08:00　t-bnb.mp4（B&B & Guesthouse 模板展示）\n說明文字：\nB&B & Guesthouse website template with room rates, nights calculator and booking form built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #bnbwebsite #guesthouse #bedandbreakfast #hospitalitymarketing #multilingualwebsite\n\n3. 12/9（三） 08:00　t-photographer.mp4（Photographer Portfolio 模板展示）\n說明文字：\nPhotographer Portfolio website template with filter + lightbox, session packages and booking form built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #photographerwebsite #photographyportfolio #photographybusiness #portfoliowebsite #multilingualwebsite\n\n4. 12/10（四） 08:00　t-pet.mp4（Pet Grooming & Daycare 模板展示）\n說明文字：\nPet Grooming & Daycare website template with prices by size, before & after and booking form built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #petgrooming #doggrooming #dogdaycare #petbusiness #multilingualwebsite\n\n5. 12/11（五） 08:00　t-education.mp4（Tutoring Center 模板展示）\n說明文字：\nTutoring Center website template with courses by grade, timetable and free trial booking built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #tutoringcenter #tutoringbusiness #educationbusiness #schoolwebsite #multilingualwebsite\n\n6. 12/12（六） 08:00　t-interior.mp4（Interior Design Studio 模板展示）\n說明文字：\nInterior Design Studio website template with project filter, before/after slider and consult booking built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #interiordesign #interiordesigner #interiordesignstudio #homerenovation #multilingualwebsite\n\n7. 12/13（日） 08:00　t-bakery.mp4（Bakery & Dessert Shop 模板展示）\n說明文字：\nBakery & Dessert Shop website template with this week's bakes, order builder and pickup form built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #bakerywebsite #bakerybusiness #dessertshop #cakeorders #multilingualwebsite",
+   "files": [
+    "sales/videos/t-studio.mp4",
+    "sales/videos/t-bnb.mp4",
+    "sales/videos/t-photographer.mp4",
+    "sales/videos/t-pet.mp4",
+    "sales/videos/t-education.mp4",
+    "sales/videos/t-interior.mp4",
+    "sales/videos/t-bakery.mp4"
+   ]
+  },
+  {
+   "id": "2026-12-04-outreach",
+   "date": "2026-12-04",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 20 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-04.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-04.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-05-daily",
+   "date": "2026-12-05",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 2 週第 6 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-clinic.mp4，Dental & Medical Clinic 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/clinic-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 2 週第 6 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nJapanese headings need different line-break rules, or a single character ends up alone on the last line. `word-break: auto-phrase` fixes most of it.",
+   "files": [
+    "sales/videos/t-clinic.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Dental & Medical Clinic 模板展示"
+  },
+  {
+   "id": "2026-12-05-outreach",
+   "date": "2026-12-05",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 20 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-05.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-05.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-06-daily",
+   "date": "2026-12-06",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 2 週第 7 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-consulting.mp4，Law, Accounting & Consulting 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/consulting-firm-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 2 週第 7 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nThe root index.html of each template checks the browser language and sends visitors to the right folder. Taiwan → 繁體, Singapore → 简体, everyone else → English.",
+   "files": [
+    "sales/videos/t-consulting.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Law, Accounting & Consulting 模板展示"
+  },
+  {
+   "id": "2026-12-06-outreach",
+   "date": "2026-12-06",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 20 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-06.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-06.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-06-template",
+   "date": "2026-12-06",
+   "time": "14:17",
+   "title": "本週新模板（Claude 做好開 PR，你看過合併）",
+   "who": "Claude",
+   "cat": "上架",
+   "prompt": "照 sales/營運流程.md「每款新模板的製作流程」做本週的新模板：先看 Gumroad 與 Pinterest 數據挑行業，做中英文版、封面、zip、上架文案（加進 sales/Gumroad上架步驟.md），再做 3 張 Pinterest 圖和一份小 CSV。跑 bash scripts/lint-all.sh 確認 0 個 FAIL，然後開 PR 給我。",
+   "files": [
+    "sales/營運流程.md",
+    "templates/SPEC.md"
+   ],
+   "note": "PR 合併後，週一照上架文案上架這 1 款"
+  },
+  {
+   "id": "2026-12-07-daily",
+   "date": "2026-12-07",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 3 週第 1 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-studio.mp4，Design Studio & Portfolio 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/studio-portfolio-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 3 週第 1 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nWe built five animated templates without GSAP or any library. CSS scroll-driven animations + the Web Animations API cover almost everything now.",
+   "files": [
+    "sales/videos/t-studio.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Design Studio & Portfolio 模板展示"
+  },
+  {
+   "id": "2026-12-07-weekly",
+   "date": "2026-12-07",
+   "time": "09:07",
+   "title": "記上週數字（Pinterest、TikTok、YouTube、Substack、Gumroad）",
+   "who": "你",
+   "cat": "檢查",
+   "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
+  },
+  {
+   "id": "2026-12-07-buyers",
+   "date": "2026-12-07",
+   "time": "10:07",
+   "title": "寄信給買過的人（附舊客優惠碼）",
+   "who": "你",
+   "cat": "上架",
+   "files": [
+    "sales/營運流程.md"
+   ],
+   "note": "Gumroad → Emails，介紹 Motion 系列；營運流程第 2～3 週"
+  },
+  {
+   "id": "2026-12-07-outreach",
+   "date": "2026-12-07",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-07.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-07.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-08-daily",
+   "date": "2026-12-08",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 3 週第 2 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-bnb.mp4，B&B & Guesthouse 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/bnb-guesthouse-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 3 週第 2 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nRule for every animated template: if a visitor turns on \"reduce motion\", every animation switches off and the content is simply there.",
+   "files": [
+    "sales/videos/t-bnb.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "B&B & Guesthouse 模板展示"
+  },
+  {
+   "id": "2026-12-08-post",
+   "date": "2026-12-08",
+   "time": "09:43",
+   "title": "Substack 第 3 篇：Animated websites with zero libraries",
+   "who": "擴充功能",
+   "cat": "Substack",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 把第 3 篇存成 Substack 草稿。",
+   "files": [
+    "sales/substack/posts/03-motion-without-libraries.md"
+   ],
+   "note": "擴充功能存好草稿後，你看過再按發布"
+  },
+  {
+   "id": "2026-12-08-outreach",
+   "date": "2026-12-08",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-08.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-08.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-09-daily",
+   "date": "2026-12-09",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 3 週第 3 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-photographer.mp4，Photographer Portfolio 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/photographer-portfolio-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 3 週第 3 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\n`animation-timeline: view()` is the most useful CSS property I've learned this year. Scroll reveals with zero JavaScript.",
+   "files": [
+    "sales/videos/t-photographer.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Photographer Portfolio 模板展示"
+  },
+  {
+   "id": "2026-12-09-outreach",
+   "date": "2026-12-09",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-09.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-09.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-10-daily",
+   "date": "2026-12-10",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 3 週第 4 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-pet.mp4，Pet Grooming & Daycare 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/pet-grooming-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 3 週第 4 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nNothing should be hidden behind an animation. With JavaScript off, every section of our templates is still visible and every button works.",
+   "files": [
+    "sales/videos/t-pet.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Pet Grooming & Daycare 模板展示"
+  },
+  {
+   "id": "2026-12-10-outreach",
+   "date": "2026-12-10",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-10.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-10.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-11-daily",
+   "date": "2026-12-11",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 3 週第 5 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-education.mp4，Tutoring Center 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/tutoring-school-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 3 週第 5 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nA shader background can be a few dozen lines of plain WebGL. No library, nothing to update, nothing to license.",
+   "files": [
+    "sales/videos/t-education.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Tutoring Center 模板展示"
+  },
+  {
+   "id": "2026-12-11-tiktok",
+   "date": "2026-12-11",
+   "time": "10:37",
+   "title": "TikTok 預排下週 7 支（12/14（一）～12/20（日））",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/videos/發片時程.md，在電腦版 TikTok Studio 預排下面 7 支影片（台灣時間）。影片檔要我拖進上傳框，每支開始前告訴我檔名，等我說好再填。說明文字一字不改貼上，加一首平台內建音樂並把音量調低。不要改帳號設定，遇到驗證就停下來問。每排好一支回報一行。\n\n1. 12/14（一） 08:00　t-tea.mp4（Bubble Tea Shop 模板展示）\n說明文字：\nBubble Tea Shop website template with drink customiser, menu tabs and branch locator built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #bubbletea #bobashop #bubbleteashop #cafebusiness #multilingualwebsite\n\n2. 12/15（二） 08:00　t-auto.mp4（Car Care & Garage 模板展示）\n說明文字：\nCar Care & Garage website template with prices by vehicle, mileage reminder and service booking built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #autorepair #carcare #autoshop #mechanicshop #multilingualwebsite\n\n3. 12/16（三） 08:00　t-cleaning.mp4（Home Cleaning Service 模板展示）\n說明文字：\nHome Cleaning Service website template with instant quote, room checklist and booking form built in.\nShips in English, Chinese (Traditional & Simplified), Japanese and Spanish, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #cleaningbusiness #housecleaning #cleaningservice #homecleaning #multilingualwebsite\n\n4. 12/17（四） 08:00　t-florist.mp4（Florist & Flower Shop 模板展示）\n說明文字：\nFlorist & Flower Shop website template with bouquet shop, delivery dates and subscriptions built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #florist #flowershop #floristbusiness #flowerdelivery #multilingualwebsite\n\n5. 12/18（五） 08:00　t-yoga.mp4（Yoga & Pilates Studio 模板展示）\n說明文字：\nYoga & Pilates Studio website template with daily timetable, class packs and intro booking built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #yogastudio #pilatesstudio #yogabusiness #yogateacher #multilingualwebsite\n\n6. 12/19（六） 08:00　t-camping.mp4（Campsite & Glamping 模板展示）\n說明文字：\nCampsite & Glamping website template with site rates, clickable camp map and stay estimate built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #campsite #glamping #campground #outdoorbusiness #multilingualwebsite\n\n7. 12/20（日） 08:00　t-coach.mp4（Therapist & Coach 模板展示）\n說明文字：\nTherapist & Coach website template with services & fees, first-session steps and private booking built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #therapistwebsite #lifecoach #privatepractice #coachingbusiness #multilingualwebsite",
+   "files": [
+    "sales/videos/t-tea.mp4",
+    "sales/videos/t-auto.mp4",
+    "sales/videos/t-cleaning.mp4",
+    "sales/videos/t-florist.mp4",
+    "sales/videos/t-yoga.mp4",
+    "sales/videos/t-camping.mp4",
+    "sales/videos/t-coach.mp4"
+   ]
+  },
+  {
+   "id": "2026-12-11-outreach",
+   "date": "2026-12-11",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-11.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-11.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-12-daily",
+   "date": "2026-12-12",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 3 週第 6 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-interior.mp4，Interior Design Studio 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/interior-design-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 3 週第 6 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nAnimate transform and opacity only. Anything else causes layout shift, and on a cheap phone you can feel it.",
+   "files": [
+    "sales/videos/t-interior.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Interior Design Studio 模板展示"
+  },
+  {
+   "id": "2026-12-12-outreach",
+   "date": "2026-12-12",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-12.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-12.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-13-daily",
+   "date": "2026-12-13",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 3 週第 7 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-bakery.mp4，Bakery & Dessert Shop 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/bakery-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 3 週第 7 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nIf a browser doesn't support scroll-driven animations, elements just appear without the effect. For a business website that's the right way to fail.",
+   "files": [
+    "sales/videos/t-bakery.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Bakery & Dessert Shop 模板展示"
+  },
+  {
+   "id": "2026-12-13-outreach",
+   "date": "2026-12-13",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-13.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-13.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-13-template",
+   "date": "2026-12-13",
+   "time": "14:17",
+   "title": "本週新模板（Claude 做好開 PR，你看過合併）",
+   "who": "Claude",
+   "cat": "上架",
+   "prompt": "照 sales/營運流程.md「每款新模板的製作流程」做本週的新模板：先看 Gumroad 與 Pinterest 數據挑行業，做中英文版、封面、zip、上架文案（加進 sales/Gumroad上架步驟.md），再做 3 張 Pinterest 圖和一份小 CSV。跑 bash scripts/lint-all.sh 確認 0 個 FAIL，然後開 PR 給我。",
+   "files": [
+    "sales/營運流程.md",
+    "templates/SPEC.md"
+   ],
+   "note": "PR 合併後，週一照上架文案上架這 1 款"
+  },
+  {
+   "id": "2026-12-14-daily",
+   "date": "2026-12-14",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 4 週第 1 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-tea.mp4，Bubble Tea Shop 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/bubble-tea-shop-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 4 週第 1 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nNew template: a restaurant site that knows when you're open. Live badge, menu tabs, reservation form, five languages.",
+   "files": [
+    "sales/videos/t-tea.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Bubble Tea Shop 模板展示"
+  },
+  {
+   "id": "2026-12-14-weekly",
+   "date": "2026-12-14",
+   "time": "09:07",
+   "title": "記上週數字（Pinterest、TikTok、YouTube、Substack、Gumroad）",
+   "who": "你",
+   "cat": "檢查",
+   "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
+  },
+  {
+   "id": "2026-12-14-outreach",
+   "date": "2026-12-14",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-14.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-14.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-15-daily",
+   "date": "2026-12-15",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 4 週第 2 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-auto.mp4，Car Care & Garage 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/auto-care-garage-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 4 週第 2 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nWhy one HTML file? You can open it, edit it in any text editor, and move it to any host. No account to lose, no platform to shut down.",
+   "files": [
+    "sales/videos/t-auto.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Car Care & Garage 模板展示"
+  },
+  {
+   "id": "2026-12-15-post",
+   "date": "2026-12-15",
+   "time": "09:43",
+   "title": "Substack 第 4 篇：New template: a restaurant site that knows when you're open",
+   "who": "擴充功能",
+   "cat": "Substack",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 把第 4 篇存成 Substack 草稿。",
+   "files": [
+    "sales/substack/posts/04-template-drop-restaurant.md"
+   ],
+   "note": "擴充功能存好草稿後，你看過再按發布"
+  },
+  {
+   "id": "2026-12-15-outreach",
+   "date": "2026-12-15",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-15.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-15.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-16-daily",
+   "date": "2026-12-16",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 4 週第 3 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-cleaning.mp4，Home Cleaning Service 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/home-cleaning-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 4 週第 3 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nChange your brand colour in one place at the top of the file and the whole site follows. That's what CSS custom properties are for.",
+   "files": [
+    "sales/videos/t-cleaning.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Home Cleaning Service 模板展示"
+  },
+  {
+   "id": "2026-12-16-outreach",
+   "date": "2026-12-16",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-16.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-16.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-17-daily",
+   "date": "2026-12-17",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 4 週第 4 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-florist.mp4，Florist & Flower Shop 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/florist-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 4 週第 4 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nBefore buying a website builder subscription, ask: will I update this site more than once a month? If not, you're paying for an editor you won't use.",
+   "files": [
+    "sales/videos/t-florist.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Florist & Flower Shop 模板展示"
+  },
+  {
+   "id": "2026-12-17-outreach",
+   "date": "2026-12-17",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-17.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-17.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-18-daily",
+   "date": "2026-12-18",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 4 週第 5 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-yoga.mp4，Yoga & Pilates Studio 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/yoga-pilates-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 4 週第 5 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nA contact form doesn't need a backend. Formspree's free plan sends submissions straight to your inbox.",
+   "files": [
+    "sales/videos/t-yoga.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Yoga & Pilates Studio 模板展示"
+  },
+  {
+   "id": "2026-12-18-tiktok",
+   "date": "2026-12-18",
+   "time": "10:37",
+   "title": "TikTok 預排下週 7 支（12/21（一）～12/27（日））",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/videos/發片時程.md，在電腦版 TikTok Studio 預排下面 7 支影片（台灣時間）。影片檔要我拖進上傳框，每支開始前告訴我檔名，等我說好再填。說明文字一字不改貼上，加一首平台內建音樂並把音量調低。不要改帳號設定，遇到驗證就停下來問。每排好一支回報一行。\n\n1. 12/21（一） 08:00　t-contractor.mp4（Contractor & Handyman 模板展示）\n說明文字：\nContractor & Handyman website template with emergency toggle, price guide and quote form built in.\nShips in English, Chinese (Traditional & Simplified), Japanese and Spanish, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #contractor #handyman #plumber #tradesbusiness #multilingualwebsite\n\n2. 12/22（二） 08:00　t-nonprofit.mp4（Nonprofit & Church 模板展示）\n說明文字：\nNonprofit & Church website template with donation widget, volunteer signup and events built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #nonprofit #churchwebsite #charity #donations #multilingualwebsite\n\n3. 12/23（三） 08:00　t-linkinbio.mp4（Link-in-Bio Page 模板展示）\n說明文字：\nLink-in-bio page template with 3 themes, share button and featured product built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #linkinbio #creatortools #contentcreator #personalbrand #multilingualwebsite\n\n4. 12/24（四） 08:00　t-barber.mp4（Barbershop 模板展示）\n說明文字：\nBarbershop website template with price list, book a barber and open-now badge built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #barbershop #barber #barberlife #barberbusiness #multilingualwebsite\n\n5. 12/25（五） 08:00　t-conference.mp4（Conference & Event Landing Page 模板展示）\n說明文字：\nConference & event landing page template with agenda tabs, speakers and add to calendar built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #conference #eventwebsite #eventplanning #landingpage #multilingualwebsite\n\n6. 12/26（六） 08:00　t-tattoo.mp4（Tattoo Studio 模板展示）\n說明文字：\nTattoo Studio website template with artist filter, flash sheet and consult booking built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #tattoostudio #tattooartist #tattooshop #flashtattoo #multilingualwebsite\n\n7. 12/27（日） 08:00　t-coworking.mp4（Coworking Space 模板展示）\n說明文字：\nCoworking Space website template with day/month pricing, room estimator and book a tour built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #coworking #coworkingspace #sharedoffice #workspace #multilingualwebsite",
+   "files": [
+    "sales/videos/t-contractor.mp4",
+    "sales/videos/t-nonprofit.mp4",
+    "sales/videos/t-linkinbio.mp4",
+    "sales/videos/t-barber.mp4",
+    "sales/videos/t-conference.mp4",
+    "sales/videos/t-tattoo.mp4",
+    "sales/videos/t-coworking.mp4"
+   ]
+  },
+  {
+   "id": "2026-12-18-outreach",
+   "date": "2026-12-18",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-18.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-18.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-19-daily",
+   "date": "2026-12-19",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 4 週第 6 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-camping.mp4，Campsite & Glamping 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/campsite-glamping-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 4 週第 6 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nYour domain is the one thing to keep in your own name. Hosts can change; the domain is how customers find you.",
+   "files": [
+    "sales/videos/t-camping.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Campsite & Glamping 模板展示"
+  },
+  {
+   "id": "2026-12-19-outreach",
+   "date": "2026-12-19",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-19.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-19.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-20-daily",
+   "date": "2026-12-20",
+   "time": "08:31",
+   "title": "影片置頂留言＋Substack Note（第 4 週第 7 天）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-coach.mp4，Therapist & Coach 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/therapist-coach-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 4 週第 7 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nSmall shops don't need more features. They need the four basics done well, on a phone, in the languages their customers read.",
+   "files": [
+    "sales/videos/t-coach.txt",
+    "sales/substack/notes.md"
+   ],
+   "sub": "Therapist & Coach 模板展示"
+  },
+  {
+   "id": "2026-12-20-outreach",
+   "date": "2026-12-20",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-20.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-20.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-20-template",
+   "date": "2026-12-20",
+   "time": "14:17",
+   "title": "本週新模板（Claude 做好開 PR，你看過合併）",
+   "who": "Claude",
+   "cat": "上架",
+   "prompt": "照 sales/營運流程.md「每款新模板的製作流程」做本週的新模板：先看 Gumroad 與 Pinterest 數據挑行業，做中英文版、封面、zip、上架文案（加進 sales/Gumroad上架步驟.md），再做 3 張 Pinterest 圖和一份小 CSV。跑 bash scripts/lint-all.sh 確認 0 個 FAIL，然後開 PR 給我。",
+   "files": [
+    "sales/營運流程.md",
+    "templates/SPEC.md"
+   ],
+   "note": "PR 合併後，週一照上架文案上架這 1 款"
+  },
+  {
+   "id": "2026-12-21-daily",
+   "date": "2026-12-21",
+   "time": "08:31",
+   "title": "影片置頂留言",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-contractor.mp4，Contractor & Handyman 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/contractor-handyman-template",
+   "files": [
+    "sales/videos/t-contractor.txt"
+   ],
+   "sub": "Contractor & Handyman 模板展示"
+  },
+  {
+   "id": "2026-12-21-weekly",
+   "date": "2026-12-21",
+   "time": "09:07",
+   "title": "記上週數字（Pinterest、TikTok、YouTube、Substack、Gumroad）",
+   "who": "你",
+   "cat": "檢查",
+   "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
+  },
+  {
+   "id": "2026-12-21-care",
+   "date": "2026-12-21",
+   "time": "11:15",
+   "title": "上架 Website Care 維護月費（$19／$29）",
+   "who": "擴充功能",
+   "cat": "上架",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/擴充功能上架.md 的規則，把 sales/Gumroad上架步驟.md 第 12 節「Website Care」建成 Membership 商品草稿：Name、URL website-care、兩個方案 Care $19/month、Care Plus $29/month、Description 一字不改。不要按 Publish。",
+   "files": [
+    "sales/Gumroad上架步驟.md"
+   ]
+  },
+  {
+   "id": "2026-12-21-outreach",
+   "date": "2026-12-21",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-21.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-21.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-22-daily",
+   "date": "2026-12-22",
+   "time": "08:31",
+   "title": "影片置頂留言",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-nonprofit.mp4，Nonprofit & Church 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/nonprofit-charity-template",
+   "files": [
+    "sales/videos/t-nonprofit.txt"
+   ],
+   "sub": "Nonprofit & Church 模板展示"
+  },
+  {
+   "id": "2026-12-22-outreach",
+   "date": "2026-12-22",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-22.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-22.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-23-daily",
+   "date": "2026-12-23",
+   "time": "08:31",
+   "title": "影片置頂留言",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-linkinbio.mp4，Link-in-Bio Page 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/link-in-bio-template",
+   "files": [
+    "sales/videos/t-linkinbio.txt"
+   ],
+   "sub": "Link-in-Bio Page 模板展示"
+  },
+  {
+   "id": "2026-12-23-commission",
+   "date": "2026-12-23",
+   "time": "11:15",
+   "title": "Commission 可以用了：把訂金商品改回 Commission",
+   "who": "擴充功能",
+   "cat": "上架",
+   "prompt": "Gumroad 帳號滿 30 天，Commission 類型應該可以用了。照 sales/Gumroad上架步驟.md 第 3 節與第 8 節：先確認新增商品時有沒有 Commission 類型，沒有就停下來告訴我。有的話把「網站客製服務」和「三語店家網站代製」各建一個 Commission 草稿（50% 訂金），內容照原本的商品。不要刪除或下架舊的訂金商品，我確認後自己處理。",
+   "files": [
+    "sales/Gumroad上架步驟.md",
+    "sales/交付流程.md"
+   ],
+   "note": "新的發布後，把舊的訂金商品設成不公開，交付流程的連結也要換"
+  },
+  {
+   "id": "2026-12-23-outreach",
+   "date": "2026-12-23",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-23.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-23.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-23-growth",
+   "date": "2026-12-23",
+   "time": "14:43",
+   "title": "成長檢查（第 1 個月）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 第 1 個月的成長檢查。下面是我後台的數字，請照 sales/營運流程.md「要追蹤的數字」看：哪個管道帶來最多瀏覽和銷售、哪幾款瀏覽多但賣不好（要不要調價或換封面）、開發信回覆率要怎麼改，給我下個月最該做的 3 件事。\n\n{{summary}}",
+   "files": [
+    "sales/營運流程.md",
+    "sales/行銷計畫.md"
+   ],
+   "note": "按「複製」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2026-12-24-daily",
+   "date": "2026-12-24",
+   "time": "08:31",
+   "title": "影片置頂留言",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-barber.mp4，Barbershop 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/barbershop-template",
+   "files": [
+    "sales/videos/t-barber.txt"
+   ],
+   "sub": "Barbershop 模板展示"
+  },
+  {
+   "id": "2026-12-24-outreach",
+   "date": "2026-12-24",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-24.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-24.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-25-daily",
+   "date": "2026-12-25",
+   "time": "08:31",
+   "title": "影片置頂留言",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-conference.mp4，Conference & Event Landing Page 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/conference-event-template",
+   "files": [
+    "sales/videos/t-conference.txt"
+   ],
+   "sub": "Conference & Event Landing Page 模板展示"
+  },
+  {
+   "id": "2026-12-25-tiktok",
+   "date": "2026-12-25",
+   "time": "10:37",
+   "title": "TikTok 預排下週 5 支（12/28（一）～1/1（五））",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/videos/發片時程.md，在電腦版 TikTok Studio 預排下面 5 支影片（台灣時間）。影片檔要我拖進上傳框，每支開始前告訴我檔名，等我說好再填。說明文字一字不改貼上，加一首平台內建音樂並把音量調低。不要改帳號設定，遇到驗證就停下來問。每排好一支回報一行。\n\n1. 12/28（一） 08:00　t-motion-saas.mp4（SaaS Launch Page Motion Edition 模板展示）\n說明文字：\nAnimated SaaS launch page template with WebGL hero, scroll story and pricing animation built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. Pure HTML/CSS/JS, no libraries. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #saas #landingpage #webanimation #webgl #multilingualwebsite\n\n2. 12/29（二） 08:00　t-motion-portfolio.mp4（Creative Portfolio Motion Edition 模板展示）\n說明文字：\nAnimated creative portfolio template with letter assembly, cursor previews and flow-field canvas built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. Pure HTML/CSS/JS, no libraries. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #portfoliowebsite #creativeportfolio #webanimation #motiondesign #multilingualwebsite\n\n3. 12/30（三） 08:00　t-motion-restaurant.mp4（Fine Dining Motion Edition 模板展示）\n說明文字：\nAnimated fine-dining website template with ember particles, course scrollytelling and iris reveals built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. Pure HTML/CSS/JS, no libraries. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #finedining #restaurantwebsite #webanimation #chefsofinstagram #multilingualwebsite\n\n4. 12/31（四） 08:00　t-motion-wedding.mp4（Wedding Website Motion Edition 模板展示）\n說明文字：\nAnimated wedding website template with envelope intro, drawn story path and flip countdown built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. Pure HTML/CSS/JS, no libraries. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #weddingwebsite #weddingrsvp #webanimation #weddinginvitation #multilingualwebsite\n\n5. 1/1（五） 08:00　t-motion-realestate.mp4（Luxury Residences Motion Edition 模板展示）\n說明文字：\nAnimated luxury-residences website template with self-drawing facade, pinned floor plan and map pin drops built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. Pure HTML/CSS/JS, no libraries. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #luxuryrealestate #realestatewebsite #webanimation #propertymarketing #multilingualwebsite",
+   "files": [
+    "sales/videos/t-motion-saas.mp4",
+    "sales/videos/t-motion-portfolio.mp4",
+    "sales/videos/t-motion-restaurant.mp4",
+    "sales/videos/t-motion-wedding.mp4",
+    "sales/videos/t-motion-realestate.mp4"
+   ]
+  },
+  {
+   "id": "2026-12-25-outreach",
+   "date": "2026-12-25",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-25.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-25.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-26-daily",
+   "date": "2026-12-26",
+   "time": "08:31",
+   "title": "影片置頂留言",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-tattoo.mp4，Tattoo Studio 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/tattoo-studio-template",
+   "files": [
+    "sales/videos/t-tattoo.txt"
+   ],
+   "sub": "Tattoo Studio 模板展示"
+  },
+  {
+   "id": "2026-12-26-outreach",
+   "date": "2026-12-26",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-26.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-26.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-27-daily",
+   "date": "2026-12-27",
+   "time": "08:31",
+   "title": "影片置頂留言",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-coworking.mp4，Coworking Space 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/coworking-space-template",
+   "files": [
+    "sales/videos/t-coworking.txt"
+   ],
+   "sub": "Coworking Space 模板展示"
+  },
+  {
+   "id": "2026-12-27-outreach",
+   "date": "2026-12-27",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-27.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-27.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-27-template",
+   "date": "2026-12-27",
+   "time": "14:17",
+   "title": "本週新模板（Claude 做好開 PR，你看過合併）",
+   "who": "Claude",
+   "cat": "上架",
+   "prompt": "照 sales/營運流程.md「每款新模板的製作流程」做本週的新模板：先看 Gumroad 與 Pinterest 數據挑行業，做中英文版、封面、zip、上架文案（加進 sales/Gumroad上架步驟.md），再做 3 張 Pinterest 圖和一份小 CSV。跑 bash scripts/lint-all.sh 確認 0 個 FAIL，然後開 PR 給我。",
+   "files": [
+    "sales/營運流程.md",
+    "templates/SPEC.md"
+   ],
+   "note": "PR 合併後，週一照上架文案上架這 1 款"
+  },
+  {
+   "id": "2026-12-28-daily",
+   "date": "2026-12-28",
+   "time": "08:31",
+   "title": "影片置頂留言",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-motion-saas.mp4，SaaS Launch Page Motion Edition 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/motion-saas-launch-template",
+   "files": [
+    "sales/videos/t-motion-saas.txt"
+   ],
+   "sub": "SaaS Launch Page Motion Edition 模板展示"
+  },
+  {
+   "id": "2026-12-28-weekly",
+   "date": "2026-12-28",
+   "time": "09:07",
+   "title": "記上週數字（Pinterest、TikTok、YouTube、Substack、Gumroad）",
+   "who": "你",
+   "cat": "檢查",
+   "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
+  },
+  {
+   "id": "2026-12-28-outreach",
+   "date": "2026-12-28",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-28.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-28.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-28-linkedin",
+   "date": "2026-12-28",
+   "time": "14:13",
+   "title": "評估要不要開 LinkedIn",
+   "who": "你",
+   "cat": "檢查",
+   "prompt": "照 sales/行銷計畫.md 第 9 節評估 LinkedIn：工作室授權有沒有開始賣、客製案有沒有 5 個以上、有沒有想接美國中小企業案。任一個成立就幫我準備個人檔案文字和前 2 篇貼文。\n\n{{summary}}",
+   "files": [
+    "sales/行銷計畫.md"
+   ]
+  },
+  {
+   "id": "2026-12-29-daily",
+   "date": "2026-12-29",
+   "time": "08:31",
+   "title": "影片置頂留言",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-motion-portfolio.mp4，Creative Portfolio Motion Edition 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/motion-creative-portfolio-template",
+   "files": [
+    "sales/videos/t-motion-portfolio.txt"
+   ],
+   "sub": "Creative Portfolio Motion Edition 模板展示"
+  },
+  {
+   "id": "2026-12-29-outreach",
+   "date": "2026-12-29",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-29.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-29.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-30-daily",
+   "date": "2026-12-30",
+   "time": "08:31",
+   "title": "影片置頂留言",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-motion-restaurant.mp4，Fine Dining Motion Edition 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/motion-fine-dining-template",
+   "files": [
+    "sales/videos/t-motion-restaurant.txt"
+   ],
+   "sub": "Fine Dining Motion Edition 模板展示"
+  },
+  {
+   "id": "2026-12-30-outreach",
+   "date": "2026-12-30",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-30.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-30.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2026-12-31-daily",
+   "date": "2026-12-31",
+   "time": "08:31",
+   "title": "影片置頂留言",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-motion-wedding.mp4，Wedding Website Motion Edition 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/motion-wedding-template",
+   "files": [
+    "sales/videos/t-motion-wedding.txt"
+   ],
+   "sub": "Wedding Website Motion Edition 模板展示"
+  },
+  {
+   "id": "2026-12-31-outreach",
+   "date": "2026-12-31",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-31.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2026-12-31.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-01-daily",
+   "date": "2027-01-01",
+   "time": "08:31",
+   "title": "影片置頂留言",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-motion-realestate.mp4，Luxury Residences Motion Edition 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/motion-luxury-residences-template",
+   "files": [
+    "sales/videos/t-motion-realestate.txt"
+   ],
+   "sub": "Luxury Residences Motion Edition 模板展示"
+  },
+  {
+   "id": "2027-01-01-outreach",
+   "date": "2027-01-01",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-01.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-01.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-02-outreach",
+   "date": "2027-01-02",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-02.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-02.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-03-outreach",
+   "date": "2027-01-03",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-03.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-03.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-03-template",
+   "date": "2027-01-03",
+   "time": "14:17",
+   "title": "本週新模板（Claude 做好開 PR，你看過合併）",
+   "who": "Claude",
+   "cat": "上架",
+   "prompt": "照 sales/營運流程.md「每款新模板的製作流程」做本週的新模板：先看 Gumroad 與 Pinterest 數據挑行業，做中英文版、封面、zip、上架文案（加進 sales/Gumroad上架步驟.md），再做 3 張 Pinterest 圖和一份小 CSV。跑 bash scripts/lint-all.sh 確認 0 個 FAIL，然後開 PR 給我。",
+   "files": [
+    "sales/營運流程.md",
+    "templates/SPEC.md"
+   ],
+   "note": "PR 合併後，週一照上架文案上架這 1 款"
+  },
+  {
+   "id": "2027-01-04-weekly",
+   "date": "2027-01-04",
+   "time": "09:07",
+   "title": "記上週數字（Pinterest、TikTok、YouTube、Substack、Gumroad）",
+   "who": "你",
+   "cat": "檢查",
+   "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
+  },
+  {
+   "id": "2027-01-04-outreach",
+   "date": "2027-01-04",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-04.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-04.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-05-outreach",
+   "date": "2027-01-05",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-05.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-05.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-06-outreach",
+   "date": "2027-01-06",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-06.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-06.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-07-outreach",
+   "date": "2027-01-07",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-07.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-07.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-08-outreach",
+   "date": "2027-01-08",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-08.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-08.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-09-outreach",
+   "date": "2027-01-09",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-09.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-09.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-10-outreach",
+   "date": "2027-01-10",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-10.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-10.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-10-template",
+   "date": "2027-01-10",
+   "time": "14:17",
+   "title": "本週新模板（Claude 做好開 PR，你看過合併）",
+   "who": "Claude",
+   "cat": "上架",
+   "prompt": "照 sales/營運流程.md「每款新模板的製作流程」做本週的新模板：先看 Gumroad 與 Pinterest 數據挑行業，做中英文版、封面、zip、上架文案（加進 sales/Gumroad上架步驟.md），再做 3 張 Pinterest 圖和一份小 CSV。跑 bash scripts/lint-all.sh 確認 0 個 FAIL，然後開 PR 給我。",
+   "files": [
+    "sales/營運流程.md",
+    "templates/SPEC.md"
+   ],
+   "note": "PR 合併後，週一照上架文案上架這 1 款"
+  },
+  {
+   "id": "2027-01-11-weekly",
+   "date": "2027-01-11",
+   "time": "09:07",
+   "title": "記上週數字（Pinterest、TikTok、YouTube、Substack、Gumroad）",
+   "who": "你",
+   "cat": "檢查",
+   "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
+  },
+  {
+   "id": "2027-01-11-outreach",
+   "date": "2027-01-11",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-11.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-11.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-12-outreach",
+   "date": "2027-01-12",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-12.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-12.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-13-outreach",
+   "date": "2027-01-13",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-13.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-13.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-14-outreach",
+   "date": "2027-01-14",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-14.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-14.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-15-outreach",
+   "date": "2027-01-15",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-15.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-15.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-16-outreach",
+   "date": "2027-01-16",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-16.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-16.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-17-outreach",
+   "date": "2027-01-17",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-17.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-17.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-17-template",
+   "date": "2027-01-17",
+   "time": "14:17",
+   "title": "本週新模板（Claude 做好開 PR，你看過合併）",
+   "who": "Claude",
+   "cat": "上架",
+   "prompt": "照 sales/營運流程.md「每款新模板的製作流程」做本週的新模板：先看 Gumroad 與 Pinterest 數據挑行業，做中英文版、封面、zip、上架文案（加進 sales/Gumroad上架步驟.md），再做 3 張 Pinterest 圖和一份小 CSV。跑 bash scripts/lint-all.sh 確認 0 個 FAIL，然後開 PR 給我。",
+   "files": [
+    "sales/營運流程.md",
+    "templates/SPEC.md"
+   ],
+   "note": "PR 合併後，週一照上架文案上架這 1 款"
+  },
+  {
+   "id": "2027-01-18-weekly",
+   "date": "2027-01-18",
+   "time": "09:07",
+   "title": "記上週數字（Pinterest、TikTok、YouTube、Substack、Gumroad）",
+   "who": "你",
+   "cat": "檢查",
+   "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
+  },
+  {
+   "id": "2027-01-18-outreach",
+   "date": "2027-01-18",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-18.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-18.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-19-outreach",
+   "date": "2027-01-19",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-19.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-19.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-20-outreach",
+   "date": "2027-01-20",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-20.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-20.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-21-outreach",
+   "date": "2027-01-21",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-21.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-21.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-22-outreach",
+   "date": "2027-01-22",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-22.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-22.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-22-growth",
+   "date": "2027-01-22",
+   "time": "14:43",
+   "title": "成長檢查（第 2 個月）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 第 2 個月的成長檢查。下面是我後台的數字，請照 sales/營運流程.md「要追蹤的數字」看：哪個管道帶來最多瀏覽和銷售、哪幾款瀏覽多但賣不好（要不要調價或換封面）、開發信回覆率要怎麼改，給我下個月最該做的 3 件事。\n\n{{summary}}",
+   "files": [
+    "sales/營運流程.md",
+    "sales/行銷計畫.md"
+   ],
+   "note": "按「複製」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2027-01-23-outreach",
+   "date": "2027-01-23",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-23.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-23.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-24-outreach",
+   "date": "2027-01-24",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-24.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-24.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-24-template",
+   "date": "2027-01-24",
+   "time": "14:17",
+   "title": "本週新模板（Claude 做好開 PR，你看過合併）",
+   "who": "Claude",
+   "cat": "上架",
+   "prompt": "照 sales/營運流程.md「每款新模板的製作流程」做本週的新模板：先看 Gumroad 與 Pinterest 數據挑行業，做中英文版、封面、zip、上架文案（加進 sales/Gumroad上架步驟.md），再做 3 張 Pinterest 圖和一份小 CSV。跑 bash scripts/lint-all.sh 確認 0 個 FAIL，然後開 PR 給我。",
+   "files": [
+    "sales/營運流程.md",
+    "templates/SPEC.md"
+   ],
+   "note": "PR 合併後，週一照上架文案上架這 1 款"
+  },
+  {
+   "id": "2027-01-25-weekly",
+   "date": "2027-01-25",
+   "time": "09:07",
+   "title": "記上週數字（Pinterest、TikTok、YouTube、Substack、Gumroad）",
+   "who": "你",
+   "cat": "檢查",
+   "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
+  },
+  {
+   "id": "2027-01-25-outreach",
+   "date": "2027-01-25",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-25.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-25.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-26-outreach",
+   "date": "2027-01-26",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-26.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-26.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-27-outreach",
+   "date": "2027-01-27",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-27.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-27.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-28-outreach",
+   "date": "2027-01-28",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-28.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-28.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-29-outreach",
+   "date": "2027-01-29",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-29.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-29.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-30-outreach",
+   "date": "2027-01-30",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-30.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-30.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-31-outreach",
+   "date": "2027-01-31",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-01-31.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-01-31.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-01-31-template",
+   "date": "2027-01-31",
+   "time": "14:17",
+   "title": "本週新模板（Claude 做好開 PR，你看過合併）",
+   "who": "Claude",
+   "cat": "上架",
+   "prompt": "照 sales/營運流程.md「每款新模板的製作流程」做本週的新模板：先看 Gumroad 與 Pinterest 數據挑行業，做中英文版、封面、zip、上架文案（加進 sales/Gumroad上架步驟.md），再做 3 張 Pinterest 圖和一份小 CSV。跑 bash scripts/lint-all.sh 確認 0 個 FAIL，然後開 PR 給我。",
+   "files": [
+    "sales/營運流程.md",
+    "templates/SPEC.md"
+   ],
+   "note": "PR 合併後，週一照上架文案上架這 1 款"
+  },
+  {
+   "id": "2027-02-01-weekly",
+   "date": "2027-02-01",
+   "time": "09:07",
+   "title": "記上週數字（Pinterest、TikTok、YouTube、Substack、Gumroad）",
+   "who": "你",
+   "cat": "檢查",
+   "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
+  },
+  {
+   "id": "2027-02-01-outreach",
+   "date": "2027-02-01",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-01.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-01.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-02-outreach",
+   "date": "2027-02-02",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-02.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-02.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-03-outreach",
+   "date": "2027-02-03",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-03.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-03.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-04-outreach",
+   "date": "2027-02-04",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-04.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-04.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-05-outreach",
+   "date": "2027-02-05",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-05.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-05.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-06-outreach",
+   "date": "2027-02-06",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-06.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-06.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-07-outreach",
+   "date": "2027-02-07",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-07.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-07.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-07-template",
+   "date": "2027-02-07",
+   "time": "14:17",
+   "title": "本週新模板（Claude 做好開 PR，你看過合併）",
+   "who": "Claude",
+   "cat": "上架",
+   "prompt": "照 sales/營運流程.md「每款新模板的製作流程」做本週的新模板：先看 Gumroad 與 Pinterest 數據挑行業，做中英文版、封面、zip、上架文案（加進 sales/Gumroad上架步驟.md），再做 3 張 Pinterest 圖和一份小 CSV。跑 bash scripts/lint-all.sh 確認 0 個 FAIL，然後開 PR 給我。",
+   "files": [
+    "sales/營運流程.md",
+    "templates/SPEC.md"
+   ],
+   "note": "PR 合併後，週一照上架文案上架這 1 款"
+  },
+  {
+   "id": "2027-02-08-weekly",
+   "date": "2027-02-08",
+   "time": "09:07",
+   "title": "記上週數字（Pinterest、TikTok、YouTube、Substack、Gumroad）",
+   "who": "你",
+   "cat": "檢查",
+   "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
+  },
+  {
+   "id": "2027-02-08-outreach",
+   "date": "2027-02-08",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-08.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-08.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-09-outreach",
+   "date": "2027-02-09",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-09.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-09.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-10-outreach",
+   "date": "2027-02-10",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-10.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-10.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-11-outreach",
+   "date": "2027-02-11",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-11.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-11.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-12-outreach",
+   "date": "2027-02-12",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-12.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-12.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-13-outreach",
+   "date": "2027-02-13",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-13.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-13.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-14-outreach",
+   "date": "2027-02-14",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-14.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-14.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-14-template",
+   "date": "2027-02-14",
+   "time": "14:17",
+   "title": "本週新模板（Claude 做好開 PR，你看過合併）",
+   "who": "Claude",
+   "cat": "上架",
+   "prompt": "照 sales/營運流程.md「每款新模板的製作流程」做本週的新模板：先看 Gumroad 與 Pinterest 數據挑行業，做中英文版、封面、zip、上架文案（加進 sales/Gumroad上架步驟.md），再做 3 張 Pinterest 圖和一份小 CSV。跑 bash scripts/lint-all.sh 確認 0 個 FAIL，然後開 PR 給我。",
+   "files": [
+    "sales/營運流程.md",
+    "templates/SPEC.md"
+   ],
+   "note": "PR 合併後，週一照上架文案上架這 1 款"
+  },
+  {
+   "id": "2027-02-15-weekly",
+   "date": "2027-02-15",
+   "time": "09:07",
+   "title": "記上週數字（Pinterest、TikTok、YouTube、Substack、Gumroad）",
+   "who": "你",
+   "cat": "檢查",
+   "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
+  },
+  {
+   "id": "2027-02-15-outreach",
+   "date": "2027-02-15",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-15.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-15.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-16-outreach",
+   "date": "2027-02-16",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-16.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-16.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-17-outreach",
+   "date": "2027-02-17",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-17.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-17.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-18-outreach",
+   "date": "2027-02-18",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-18.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-18.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-19-outreach",
+   "date": "2027-02-19",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-19.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-19.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-20-outreach",
+   "date": "2027-02-20",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-20.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-20.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-21-outreach",
+   "date": "2027-02-21",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-21.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-21.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-21-template",
+   "date": "2027-02-21",
+   "time": "14:17",
+   "title": "本週新模板（Claude 做好開 PR，你看過合併）",
+   "who": "Claude",
+   "cat": "上架",
+   "prompt": "照 sales/營運流程.md「每款新模板的製作流程」做本週的新模板：先看 Gumroad 與 Pinterest 數據挑行業，做中英文版、封面、zip、上架文案（加進 sales/Gumroad上架步驟.md），再做 3 張 Pinterest 圖和一份小 CSV。跑 bash scripts/lint-all.sh 確認 0 個 FAIL，然後開 PR 給我。",
+   "files": [
+    "sales/營運流程.md",
+    "templates/SPEC.md"
+   ],
+   "note": "PR 合併後，週一照上架文案上架這 1 款"
+  },
+  {
+   "id": "2027-02-21-growth",
+   "date": "2027-02-21",
+   "time": "14:43",
+   "title": "成長檢查（第 3 個月）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 第 3 個月的成長檢查。下面是我後台的數字，請照 sales/營運流程.md「要追蹤的數字」看：哪個管道帶來最多瀏覽和銷售、哪幾款瀏覽多但賣不好（要不要調價或換封面）、開發信回覆率要怎麼改，給我下個月最該做的 3 件事。\n\n{{summary}}",
+   "files": [
+    "sales/營運流程.md",
+    "sales/行銷計畫.md"
+   ],
+   "note": "按「複製」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2027-02-22-weekly",
+   "date": "2027-02-22",
+   "time": "09:07",
+   "title": "記上週數字（Pinterest、TikTok、YouTube、Substack、Gumroad）",
+   "who": "你",
+   "cat": "檢查",
+   "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
+  },
+  {
+   "id": "2027-02-22-outreach",
+   "date": "2027-02-22",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-22.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-22.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-23-outreach",
+   "date": "2027-02-23",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-23.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-23.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-24-outreach",
+   "date": "2027-02-24",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-24.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-24.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-25-outreach",
+   "date": "2027-02-25",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-25.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-25.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-26-outreach",
+   "date": "2027-02-26",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-26.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-26.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-27-outreach",
+   "date": "2027-02-27",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-27.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-27.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-28-outreach",
+   "date": "2027-02-28",
+   "time": "13:07",
+   "title": "寄今天的開發信／私訊（約 30 家）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2027-02-28.md"
+   ],
+   "note": "Claude 放在 sales/outreach/outbox/2027-02-28.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+  },
+  {
+   "id": "2027-02-28-template",
+   "date": "2027-02-28",
+   "time": "14:17",
+   "title": "本週新模板（Claude 做好開 PR，你看過合併）",
+   "who": "Claude",
+   "cat": "上架",
+   "prompt": "照 sales/營運流程.md「每款新模板的製作流程」做本週的新模板：先看 Gumroad 與 Pinterest 數據挑行業，做中英文版、封面、zip、上架文案（加進 sales/Gumroad上架步驟.md），再做 3 張 Pinterest 圖和一份小 CSV。跑 bash scripts/lint-all.sh 確認 0 個 FAIL，然後開 PR 給我。",
+   "files": [
+    "sales/營運流程.md",
+    "templates/SPEC.md"
+   ],
+   "note": "PR 合併後，週一照上架文案上架這 1 款"
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Polyglot Pages｜後台</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#b4532a">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="description" content="Polyglot Pages 每天要做的事、上架進度、數據與收入。資料只存在這台裝置。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar"><div class="in">
+  <a class="brand" href="#overview" data-go="overview"><img src="avatar-96.png" alt="" width="32" height="32"><span><b>Polyglot Pages</b><small>後台｜每天要做的事</small></span></a>
+  <nav class="tabs" id="tabs" aria-label="分頁">
+    <div class="layer base">
+      <button data-page="overview">總覽 <span class="n" id="nToday"></span></button>
+      <button data-page="calendar">日曆</button>
+      <button data-page="stats">數據</button>
+      <button data-page="income">收入</button>
+      <button data-page="leads">開發</button>
+      <button data-page="record">紀錄</button>
+    </div>
+    <div class="pill" aria-hidden="true"><div class="layer top">
+      <span>總覽 <span class="n" id="nToday2"></span></span><span>日曆</span><span>數據</span><span>收入</span><span>開發</span><span>紀錄</span>
+    </div></div>
+  </nav>
+  <div class="meta" id="meta">載入中…</div>
+  <button class="iconbtn" id="installBtn" hidden title="安裝成 App" aria-label="安裝成 App">⤓</button>
+</div></div>
+
+<div class="wrap">
+
+<!-- ===== 總覽 ===== -->
+<section class="page" id="page-overview">
+  <div class="pagehead">
+    <h1 id="greet">早安<small id="todayLine"></small></h1>
+    <div class="row">
+      <a class="btn" href="#record" data-go="record">＋ 記數字／收入</a>
+      <a class="btn ghost" href="https://polyglotpages.gumroad.com" target="_blank" rel="noopener">Gumroad</a>
+      <a class="btn ghost" href="../" target="_blank" rel="noopener">Demo 網站</a>
+    </div>
+  </div>
+  <section class="kpis" id="kpisOverview"></section>
+  <div class="hero">
+    <div class="card"><h2>今天要做的<span class="tag" id="todayTag"></span></h2><div class="sub">打勾會存在這台裝置；有「複製提示」的，貼給 Chrome 擴充功能或 Claude</div>
+      <div class="progress" id="todayProg"></div>
+      <ul class="tasks" id="todayList"></ul>
+      <div id="lateWrap" hidden><div class="subhead">前幾天還沒打勾的</div><ul class="tasks" id="lateList"></ul></div>
+    </div>
+    <div class="card"><h2>重要日期</h2><div class="sub">上架、檔期與檢查日</div><ul class="list" id="dates"></ul></div>
+  </div>
+  <div class="grid">
+    <div class="card wide"><h2>接下來 7 天<a href="#calendar" data-go="calendar">看日曆 ↗</a></h2><div class="sub">每天固定的（影片留言、Note、開發信）沒有列出，到日曆點那一天看全部</div><ul class="list" id="upcoming"></ul></div>
+  </div>
+</section>
+
+<!-- ===== 日曆 ===== -->
+<section class="page" id="page-calendar">
+  <div class="pagehead">
+    <h1>日曆<small>點一天看那天要做的事</small></h1>
+    <div class="cal-nav">
+      <button class="iconbtn" id="calPrev" title="上個月" aria-label="上個月">‹</button>
+      <b id="calTitle"></b>
+      <button class="iconbtn" id="calNext" title="下個月" aria-label="下個月">›</button>
+      <button class="btn ghost sm" id="calToday">今天</button>
+    </div>
+  </div>
+  <div class="calwrap">
+    <div class="card">
+      <div class="legend" id="calLegend" style="margin-bottom:10px"></div>
+      <div class="cal" id="cal"></div>
+    </div>
+    <div class="card" id="dayCard"><h2 id="dayTitle"></h2><div class="sub" id="daySub"></div><ul class="tasks" id="dayList"></ul></div>
+  </div>
+</section>
+
+<!-- ===== 數據 ===== -->
+<section class="page" id="page-stats">
+  <div class="pagehead">
+    <h1>每週數據<small>每週一在「紀錄」填上週的數字</small></h1>
+    <div class="row"><a class="btn" href="#record" data-go="record">＋ 填這週數字</a></div>
+  </div>
+  <section class="kpis" id="kpisStats"></section>
+  <div class="grid" id="statCharts"></div>
+  <div class="grid" style="margin-top:12px"><div class="card wide"><h2>每週紀錄</h2><div class="sub">最新的在上面</div><div class="tbl" id="tblWeeks"></div></div></div>
+</section>
+
+<!-- ===== 收入 ===== -->
+<section class="page" id="page-income">
+  <div class="pagehead">
+    <h1>收入<small>美元（US$），記實際收到的金額</small></h1>
+    <div class="row"><a class="btn" href="#record" data-go="record">＋ 記一筆收入</a></div>
+  </div>
+  <section class="kpis" id="kpisIncome"></section>
+  <div class="grid">
+    <div class="card"><h2>每月收入</h2><div class="sub">依類型堆疊</div><div id="legType" class="legend"></div><div id="chMonthly"></div></div>
+    <div class="card"><h2>各類型累計</h2><div class="sub">模板、客製服務、Website Care</div><div id="chType"></div></div>
+    <div class="card wide"><h2>最近入帳</h2><div class="sub">最新 20 筆；要改或刪到「紀錄」</div><div class="tbl" id="tblIncome"></div></div>
+  </div>
+</section>
+
+<!-- ===== 開發 ===== -->
+<section class="page" id="page-leads">
+  <div class="pagehead">
+    <h1>開發<small>只記數量。店家名單在 repo 的 leads.csv，不放進後台</small></h1>
+  </div>
+  <div class="setup" id="seedNote" hidden></div>
+  <section class="stages" id="stages"></section>
+  <div class="grid">
+    <div class="card"><h2>轉換</h2><div class="sub">以「寄出」為 100%；預期回覆率 5～10%</div><div class="funnel" id="funnel"></div></div>
+    <div class="card"><h2>最近的變動</h2><div class="sub">按 ＋／－ 或直接改數字都會記一筆</div><ul class="list" id="leadLog"></ul></div>
+  </div>
+</section>
+
+<!-- ===== 紀錄 ===== -->
+<section class="page" id="page-record">
+  <div class="pagehead">
+    <h1>紀錄<small>資料只存在這台裝置的瀏覽器，記得定期匯出備份</small></h1>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h2>每週數字</h2><div class="sub">填上週（週一到週日）的數字；同一週再填一次會蓋掉</div>
+      <form id="fWeek" class="form" autocomplete="off">
+        <div class="editbar" id="wEdit" hidden><span id="wEditTxt"></span><button class="btn ghost sm" type="button" id="wCancel">取消修改</button></div>
+        <input type="hidden" name="id">
+        <label class="full">哪一週（填那週的週一）<input name="week" type="date" required></label>
+        <fieldset><legend>Pinterest</legend>
+          <label>曝光次數<input name="pinImpr" type="number" min="0" inputmode="numeric"></label>
+          <label>外連點擊<input name="pinClicks" type="number" min="0" inputmode="numeric"></label></fieldset>
+        <fieldset><legend>TikTok／YouTube</legend>
+          <label>TikTok 每支平均觀看<input name="ttAvg" type="number" min="0" inputmode="numeric"></label>
+          <label>YouTube 觀看<input name="ytViews" type="number" min="0" inputmode="numeric"></label>
+          <label>YouTube 訂閱（累計）<input name="ytSubs" type="number" min="0" inputmode="numeric"></label></fieldset>
+        <fieldset><legend>Substack／Gumroad</legend>
+          <label>Substack 訂閱（累計）<input name="ssSubs" type="number" min="0" inputmode="numeric"></label>
+          <label>Gumroad 瀏覽<input name="gumViews" type="number" min="0" inputmode="numeric"></label>
+          <label>Gumroad 銷售（筆）<input name="gumSales" type="number" min="0" inputmode="numeric"></label></fieldset>
+        <div class="full row"><button class="btn" type="submit">儲存</button><span class="hint" id="wHint"></span></div>
+      </form>
+    </div>
+    <div class="card">
+      <h2>一筆收入</h2><div class="sub">有入帳就記一筆；金額填實際收到的（美元）</div>
+      <form id="fIncome" class="form" autocomplete="off">
+        <div class="editbar" id="iEdit" hidden><span id="iEditTxt"></span><button class="btn ghost sm" type="button" id="iCancel">取消修改</button></div>
+        <input type="hidden" name="id">
+        <label>日期<input name="date" type="date" required></label>
+        <label>類型<select name="type"><option>模板</option><option>客製服務</option><option>Website Care</option><option>其他</option></select></label>
+        <label class="full">品項<input name="item" type="text" placeholder="例：Restaurant 模板、三語代製訂金"></label>
+        <label>金額 US$<input name="amount" type="number" min="0" step="0.01" inputmode="decimal" required></label>
+        <label>管道<select name="channel"><option value="">（不填）</option><option>Gumroad</option><option>Fiverr</option><option>Upwork</option><option>轉帳</option><option>其他</option></select></label>
+        <label class="full">備註<input name="note" type="text" placeholder="不要填客人的 Email 或電話"></label>
+        <div class="full row"><button class="btn" type="submit">儲存</button><span class="hint" id="iHint"></span></div>
+      </form>
+    </div>
+    <div class="card">
+      <h2>總覽數字校正</h2><div class="sub">留空＝照計畫自動算；實際數字不一樣時填這裡</div>
+      <form id="fOver" class="form" autocomplete="off">
+        <label>Gumroad 已上架<input name="gumroad" type="number" min="0" max="999" inputmode="numeric" placeholder="自動"></label>
+        <label>Pinterest 已發<input name="pins" type="number" min="0" inputmode="numeric" placeholder="自動"></label>
+        <label>影片已發<input name="videos" type="number" min="0" inputmode="numeric" placeholder="自動"></label>
+        <div class="full row"><button class="btn" type="submit">儲存</button><button class="btn ghost" type="button" id="overClear">全部改回自動</button><span class="hint" id="oHint"></span></div>
+      </form>
+    </div>
+    <div class="card">
+      <h2>備份</h2><div class="sub">打勾、數字、收入都只存在這台裝置。換手機或清除瀏覽器資料前先匯出</div>
+      <div class="row" style="margin-top:8px">
+        <button class="btn" type="button" id="exportBtn">匯出備份</button>
+        <button class="btn ghost" type="button" id="importBtn">匯入備份</button>
+        <button class="btn ghost danger" type="button" id="resetBtn">全部清除</button>
+      </div>
+      <input type="file" id="importFile" accept=".json,application/json" hidden>
+      <p class="hint" id="bHint" style="font-size:12.5px;color:var(--ink2);margin:10px 0 0"></p>
+    </div>
+    <div class="card wide"><h2>所有紀錄</h2><div class="sub">按「修改」會帶進上面的表單</div>
+      <div class="recfilter" id="recFilter" role="group" aria-label="篩選"><button aria-pressed="true" data-v="weekly">每週數字</button><button aria-pressed="false" data-v="income">收入</button></div>
+      <div class="tbl" id="tblRecords"></div></div>
+  </div>
+</section>
+
+<footer>Polyglot Pages 後台 · 排程來自 repo 的 sales/ 文件（scripts/admin/build-schedule.py 產生）· 資料只存在這台裝置</footer>
+</div>
+<div class="tip" id="tip"></div>
+<script src="app.js"></script>
+</body>
+</html>

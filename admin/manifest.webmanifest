@@ -1,0 +1,15 @@
+{
+  "name": "Polyglot Pages 後台",
+  "short_name": "PP 後台",
+  "description": "Polyglot Pages 每天要做的事、上架進度、數據與收入",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6efe3",
+  "theme_color": "#b4532a",
+  "lang": "zh-Hant",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
