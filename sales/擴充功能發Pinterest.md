@@ -5,7 +5,7 @@
 > 2. Chrome 登入 Pinterest **商業帳號**（Business account，免費；個人帳號可在設定裡免費轉換）。
 > 3. 打開 Claude 擴充功能，新對話貼上：
 >
-> 「照 https://github.com/a0955072107-bit/-/blob/ccr-df8b4ac9-ey0al4/sales/擴充功能發Pinterest.md 發 Pinterest，今天做第 1 天。」
+> 「照 https://github.com/a0955072107-bit/-/blob/main/sales/擴充功能發Pinterest.md 發 Pinterest，今天做第 1 天。」
 
 ---
 
@@ -14,7 +14,7 @@
 1. **每天最多 15 張**。新帳號一次發太多容易被 Pinterest 判定成垃圾帳號。照下面「每天的份量」做，做完就停。
 2. 圖片上傳要使用者做：每一張開始前，告訴使用者「請把 `檔名` 拖進上傳框」，等使用者說好了再填文字。
 3. 文字一律照 `pins.csv` 對應那一列，一字不改：
-   `https://github.com/a0955072107-bit/-/blob/ccr-df8b4ac9-ey0al4/sales/pins/pins.csv`
+   `https://github.com/a0955072107-bit/-/blob/main/sales/pins/pins.csv`
    - **標題**＝`title`、**說明**＝`description`、**連結**＝`link`、**看板**＝`board`
    - `keywords` 欄：在說明最後空一行，用 `#` 加上前 3 個關鍵字（去掉空格），例如 `#restaurantwebsitetemplate`
 4. 看板不存在就建立（名稱照 `board` 欄），設為公開。
