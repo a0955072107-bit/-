@@ -47,5 +47,10 @@ if [ -d sales/pins ]; then
   mkdir -p _site/pins && cp sales/pins/*.jpg _site/pins/
   echo "✓ Pinterest 圖 $(ls sales/pins/*.jpg | wc -l | tr -d ' ') 張 → _site/pins/"
 fi
+# Gumroad 封面（公開的宣傳圖，給擴充功能從網址抓）：sales/covers/en → _site/covers/
+if [ -d sales/covers/en ]; then
+  mkdir -p _site/covers && cp sales/covers/en/*.png _site/covers/
+  echo "✓ 封面 $(ls sales/covers/en/*.png | wc -l | tr -d ' ') 張 → _site/covers/"
+fi
 printf 'User-agent: *\nDisallow: /demo/\n' > _site/robots.txt
 echo "✓ _site/ 建置完成"
