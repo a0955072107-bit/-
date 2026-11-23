@@ -40,6 +40,8 @@ PY
 if [ -d demos ]; then
   mkdir -p _site/demo
   cp -R demos/. _site/demo/
+  # 舊訊息裡有 /demos/ 的連結（11/23 寫錯），兩個路徑都放，避免連結失效
+  mkdir -p _site/demos && cp -R demos/. _site/demos/
   echo "✓ 示範站 $(find demos -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ') 個 → _site/demo/"
 fi
 # Pinterest 批次上傳用的圖片：sales/pins/*.jpg → _site/pins/（Pinterest 依網址抓圖）
@@ -52,5 +54,5 @@ if [ -d sales/covers/en ]; then
   mkdir -p _site/covers && cp sales/covers/en/*.png _site/covers/
   echo "✓ 封面 $(ls sales/covers/en/*.png | wc -l | tr -d ' ') 張 → _site/covers/"
 fi
-printf 'User-agent: *\nDisallow: /demo/\n' > _site/robots.txt
+printf 'User-agent: *\nDisallow: /demo/\nDisallow: /demos/\n' > _site/robots.txt
 echo "✓ _site/ 建置完成"
