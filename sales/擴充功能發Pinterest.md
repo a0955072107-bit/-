@@ -1,5 +1,7 @@
 # 用 Chrome 擴充功能發 Pinterest（給 Claude in Chrome／Cowork 讀）
 
+> **11/23 起改用批次上傳**：照 `sales/Pinterest批次上傳.md` 上傳一個 CSV 就會自動排程 167 張，比較省事。這份指令留著當備用（批次上傳失敗時再用），以及請擴充功能幫忙**建立 5 個看板**。
+
 > **使用者怎麼用**：
 > 1. 在電腦把 `sales/pins/` 這個資料夾準備好（星期一會和上架包一起傳給你），裡面有 105 張圖和 `pins.csv`。
 > 2. Chrome 登入 Pinterest **商業帳號**（Business account，免費；個人帳號可在設定裡免費轉換）。
