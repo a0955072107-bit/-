@@ -7,6 +7,7 @@
 <title>Polyglot Pages｜後台</title>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#b4532a">
+<script>try{var th=localStorage.getItem("pp-theme");if(th)document.documentElement.setAttribute("data-theme",th);}catch(e){}</script>
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
 <meta name="description" content="Polyglot Pages 每天要做的事、上架進度、數據與收入。資料只存在這台裝置。">
@@ -29,6 +30,15 @@
     </div></div>
   </nav>
   <div class="meta" id="meta">載入中…</div>
+  <button class="themebtn" id="themeBtn" aria-haspopup="true" aria-expanded="false">🎨 顏色</button>
+  <div class="themepop" id="themePop" hidden>
+    <button data-th="" aria-pressed="false"><i style="background:#f6efe3"></i>米白</button>
+    <button data-th="white" aria-pressed="false"><i style="background:#ffffff"></i>純白</button>
+    <button data-th="sky" aria-pressed="false"><i style="background:#cfe0f3"></i>天藍</button>
+    <button data-th="sage" aria-pressed="false"><i style="background:#cfe3d6"></i>抹茶</button>
+    <button data-th="rose" aria-pressed="false"><i style="background:#f1d3dd"></i>玫瑰</button>
+    <button data-th="lavender" aria-pressed="false"><i style="background:#ddd6f2"></i>薰衣草</button>
+  </div>
   <button class="iconbtn" id="installBtn" hidden title="安裝成 App" aria-label="安裝成 App">⤓</button>
 </div></div>
 
@@ -185,5 +195,16 @@
 </div>
 <div class="tip" id="tip"></div>
 <script src="app.js"></script>
+<script>
+(function(){var b=document.getElementById('themeBtn'),p=document.getElementById('themePop');
+function cur(){return document.documentElement.getAttribute('data-theme')||'';}
+function mark(){p.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.th===cur()?'true':'false');});}
+b.addEventListener('click',function(e){e.stopPropagation();p.hidden=!p.hidden;b.setAttribute('aria-expanded',!p.hidden);mark();});
+p.addEventListener('click',function(e){var x=e.target.closest('button');if(!x)return;var th=x.dataset.th;
+ if(th)document.documentElement.setAttribute('data-theme',th);else document.documentElement.removeAttribute('data-theme');
+ try{localStorage.setItem('pp-theme',th);}catch(_){} mark();});
+document.addEventListener('click',function(e){if(!p.hidden&&!p.contains(e.target)&&e.target!==b){p.hidden=true;b.setAttribute('aria-expanded','false');}});
+})();
+</script>
 </body>
 </html>
