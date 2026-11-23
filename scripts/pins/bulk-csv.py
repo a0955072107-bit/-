@@ -2,7 +2,8 @@
 """產生 Pinterest「批次建立 Pin」用的 CSV（每個檔案最多 200 列）。
 用法：python3 scripts/pins/bulk-csv.py 2026-11-26 [每天張數，預設 15]
 圖片網址指向 GitHub Pages 上的 /pins/，所以要先合併到 main、部署完成後再上傳 CSV。
-發布時間分散在台灣時間 09:00～23:00（換成 UTC 寫進 CSV）。"""
+發布時間分散在台灣時間 09:00～23:00（換成 UTC 寫進 CSV）。
+每個 Link 都加上 utm 參數：Pinterest 批次上傳會跳過「連結重複」的 Pin，而且這樣 Gumroad 看得出每張圖帶來的流量。"""
 import csv, sys, datetime, pathlib
 root = pathlib.Path(__file__).resolve().parent.parent.parent
 start = datetime.date.fromisoformat(sys.argv[1]); per = int(sys.argv[2]) if len(sys.argv) > 2 else 15
@@ -18,7 +19,7 @@ for i, r in enumerate(rows):
     tags = [w.strip() for w in r['keywords'].split(',')][:3]
     desc = r['description'] + '\n\n' + ' '.join('#' + w.replace(' ', '') for w in tags)
     out.append({'Title': r['title'][:100], 'Media URL': BASE + r['file'], 'Pinterest board': r['board'],
-                'Thumbnail': '', 'Description': desc[:500], 'Link': r['link'],
+                'Thumbnail': '', 'Description': desc[:500], 'Link': r['link'] + '?utm_source=pinterest&utm_medium=pin&utm_content=' + r['file'].rsplit('.', 1)[0],
                 'Publish date': t.strftime('%Y-%m-%dT%H:%M:%S'), 'Keywords': r['keywords']})
 dst = root / 'sales/pins/pinterest-bulk.csv'
 with open(dst, 'w', encoding='utf-8', newline='') as f:
