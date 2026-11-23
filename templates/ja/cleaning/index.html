@@ -446,7 +446,7 @@ h1, h2, h3 { letter-spacing: normal; word-break: auto-phrase; }
 .lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
 .lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
 .lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
-.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+.lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
 </style>
 <script>document.documentElement.classList.add('js');</script>
