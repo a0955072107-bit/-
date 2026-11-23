@@ -14,6 +14,7 @@ const shots = [
   ['en-desk.jpg', 'templates/en', { width: 1440, height: 900 }, false],
   ['en-mob.jpg', 'templates/en', { width: 390, height: 844 }, true],
   ['zh-mob.jpg', 'templates', { width: 390, height: 844 }, true],
+  ['zh-desk.jpg', 'templates', { width: 1440, height: 900 }, false],
   ['ja-desk.jpg', 'templates/ja', { width: 1440, height: 900 }, false],
   ['ja-mob.jpg', 'templates/ja', { width: 390, height: 844 }, true],
 ];
