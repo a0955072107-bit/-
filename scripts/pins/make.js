@@ -6,6 +6,7 @@ const fs = require('fs'), path = require('path');
 const root = path.resolve(__dirname, '../..');
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'data.json'), 'utf8'));
 const only = process.argv.slice(2);
+const VARS = (process.env.VARIANTS || 'a,b,c').split(',');
 const out = path.join(root, 'sales/pins'); fs.mkdirSync(out, { recursive: true });
 const tmp = fs.mkdtempSync(path.join(require('os').tmpdir(), 'pins-'));
 
@@ -27,10 +28,19 @@ const shots = [
       const p = await c.newPage();
       await p.goto('file://' + path.join(root, base, d.slug, 'index.html'), { waitUntil: 'networkidle' });
       await p.waitForTimeout(d.wait || 1800);
-      await p.screenshot({ path: path.join(dir, file), type: 'jpeg', quality: 88 }); await c.close();
+      await p.screenshot({ path: path.join(dir, file), type: 'jpeg', quality: 88 });
+      if (file === 'en-mob.jpg' && VARS.includes('d')) {
+        // 整頁截圖：用「減少動態效果」讓捲動淡入的內容直接顯示
+        const c2 = await b.newContext({ viewport: vp, deviceScaleFactor: 2, isMobile: true, hasTouch: true, reducedMotion: 'reduce' });
+        const p2 = await c2.newPage(); await p2.goto('file://' + path.join(root, base, d.slug, 'index.html'), { waitUntil: 'networkidle' });
+        for (let y = 0; y < 20000; y += 600) { await p2.evaluate(y => window.scrollTo(0, y), y); await p2.waitForTimeout(60); }
+        await p2.evaluate(() => window.scrollTo(0, 0)); await p2.waitForTimeout(600);
+        await p2.screenshot({ path: path.join(dir, 'en-full.jpg'), type: 'jpeg', quality: 85, fullPage: true }); await c2.close();
+      }
+      await c.close();
     }
     fs.copyFileSync(path.join(__dirname, 'pin.html'), path.join(dir, 'pin.html'));
-    for (const v of ['a', 'b', 'c']) {
+    for (const v of VARS) {
       const c = await b.newContext({ viewport: { width: 1000, height: 1500 } });
       const p = await c.newPage();
       await p.goto('file://' + path.join(dir, 'pin.html') + '?v=' + v + '&d=' + encodeURIComponent(JSON.stringify(d)), { waitUntil: 'networkidle' });
@@ -61,6 +71,18 @@ const shots = [
       `${d.ja}のホームページがすぐ作れる HTML テンプレート。スマホ対応、LINE ボタン付き、日本語ガイド同梱。月額料金なしで、Netlify などに無料で公開できます。`,
       d.url, `ホームページ テンプレート, ${d.ja} ホームページ, HTML テンプレート, 個人店 ホームページ, LP テンプレート`]);
   }
-  fs.writeFileSync(path.join(out, 'pins.csv'), '﻿' + rows.map(r => r.map(q).join(',')).join('\n') + '\n');
+  const csvName = process.env.CSV || 'pins.csv';
+  if (process.env.CSV2) {
+    const r2 = [['file', 'board', 'title', 'description', 'link', 'keywords']];
+    for (const d of data) {
+      const name = d.slug.replace(/\//g, '-'), cat = d.cat, langs = d.es ? 'English, Chinese, Japanese and Spanish' : 'English, Chinese and Japanese';
+      const kw = `${cat.toLowerCase()} website template, html website template, small business website, one page website, mobile website template`;
+      r2.push([`${name}-d.jpg`, 'Small Business Website Templates', `${cat} Website Template — See the Whole Page`, `Every section of a ready-to-launch ${cat.toLowerCase()} website, shown on a phone. ${d.pills.join(' · ')}. Includes ${langs} versions. Buy once, no monthly fees.`, d.url, kw]);
+      r2.push([`${name}-e.jpg`, 'Small Business Website Ideas', `${cat}: From a Map Listing to a Real Website`, `Customers want more than hours and a phone number. Give your ${cat.toLowerCase()} business a real website with ${d.pills.slice(0,2).join(' and ').toLowerCase()}, in ${langs}. One-time price, you own it.`, d.url, `small business website ideas, website for local business, ${kw}`]);
+    }
+    fs.writeFileSync(path.join(out, process.env.CSV2), '\ufeff' + r2.map(r => r.map(q).join(',')).join('\n') + '\n');
+    console.log('✓', process.env.CSV2, r2.length - 1, 'pins'); return;
+  }
+  fs.writeFileSync(path.join(out, csvName), '﻿' + rows.map(r => r.map(q).join(',')).join('\n') + '\n');
   console.log('✓ pins.csv', rows.length - 1, 'pins');
 })();

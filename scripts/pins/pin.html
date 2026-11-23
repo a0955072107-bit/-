@@ -21,6 +21,13 @@ h1{font:700 92px/1.06 Fraunces,serif;letter-spacing:-.01em;white-space:pre-line}
 .phone img{display:block;width:100%;border-radius:34px}
 .phone::before{content:"";position:absolute;top:22px;left:50%;transform:translateX(-50%);width:80px;height:22px;background:#111;border-radius:12px;z-index:2}
 .tag{position:absolute;left:50%;transform:translateX(-50%);bottom:-62px;font-weight:700;font-size:30px;white-space:nowrap}
+.tall{position:absolute;left:50%;transform:translateX(-50%);background:#111;border-radius:44px;padding:12px;box-shadow:0 40px 70px -25px rgba(0,0,0,.5);overflow:hidden}
+.tall .clip{border-radius:32px;overflow:hidden;height:100%}
+.tall img{display:block;width:100%}
+.card{position:absolute;background:color-mix(in srgb,var(--ink) 6%,var(--bg));border:3px dashed color-mix(in srgb,var(--ink) 30%,transparent);border-radius:28px;padding:34px 30px;font-size:30px;line-height:1.5;color:color-mix(in srgb,var(--ink) 75%,transparent)}
+.card b{display:block;font-size:34px;color:var(--ink);margin-bottom:14px}
+.arrow{position:absolute;font:700 80px/1 Inter,sans-serif;color:var(--acc)}
+.lbl{position:absolute;font-weight:700;font-size:30px}
 </style></head><body>
 <div class="glow"></div>
 <div class="top" id="top"><h1 id="h"></h1><div class="sub" id="sub"></div><div class="pills" id="p"></div></div>
@@ -45,6 +52,23 @@ if(v==='a'){ // English feature pin
   phone('zh-mob.jpg',{left:'369px',top:'610px',width:'262px'},'中文');
   phone('ja-mob.jpg',{left:'668px',top:'640px',width:'262px'},'日本語');
   $('cta').textContent='See the demo →';
+} else if(v==='d'){ // every section: top / middle / bottom of the page on three phones
+  $('h').textContent='Every section,\nready to go'; $('sub').textContent=d.cat+' template · '+langs;
+  const im=new Image(); im.src='en-full.jpg';
+  im.onload=()=>{ const H=im.naturalHeight/im.naturalWidth; // page height in widths
+    [[70,640,.0,'Top'],[369,610,.38,'Middle'],[668,640,.76,'Bottom']].forEach(([x,y,f,t])=>{
+      const e=document.createElement('div');e.className='tall';Object.assign(e.style,{left:x+'px',top:y+'px',transform:'none',width:'262px',height:'540px'});
+      const shift=Math.max(0,Math.min(f*H*238, H*238-516));
+      e.innerHTML=`<div class="clip"><img src="en-full.jpg" style="transform:translateY(-${shift}px)"></div>`;stage.appendChild(e);});
+    document.body.dataset.imgs='1'; };
+  $('cta').textContent='Get the template →';
+} else if(v==='e'){ // listing only vs real website
+  $('h').textContent='From a map listing\nto a real website'; $('sub').textContent=d.cat+' · one-time price, no monthly fees';
+  const c=document.createElement('div');c.className='card';Object.assign(c.style,{left:'70px',top:'720px',width:'360px'});
+  c.innerHTML='<b>Without a website</b>Name, hours and a phone number.<br>No menu, no booking, no story.';stage.appendChild(c);
+  const a=document.createElement('div');a.className='arrow';a.textContent='→';Object.assign(a.style,{left:'448px',top:'880px'});stage.appendChild(a);
+  phone('en-mob.jpg',{left:'540px',top:'560px',width:'370px'});
+  $('cta').textContent='Get the template →';
 } else { // Japanese pin
   document.body.classList.add('ja');
   $('h').innerHTML=d.ja.replace(/・/g,'・<wbr>')+'向け<br>ホームページ<wbr>テンプレート'; $('sub').textContent='月額0円・買い切り・スマホ対応';
@@ -52,5 +76,5 @@ if(v==='a'){ // English feature pin
   laptop('ja-desk.jpg',{left:'150px',top:'790px',width:'790px'}); phone('ja-mob.jpg',{left:'70px',top:'860px',width:'250px'});
   $('cta').textContent='テンプレートを見る →';
 }
-const h=$('h'); document.fonts.ready.then(()=>{let f=parseFloat(getComputedStyle(h).fontSize);while((h.scrollWidth>840||$('top').getBoundingClientRect().bottom>(v==='b'?560:720))&&f>40){f-=2;h.style.fontSize=f+'px';}document.body.dataset.ready='1';});
+const h=$('h'); document.fonts.ready.then(()=>{let f=parseFloat(getComputedStyle(h).fontSize);while((h.scrollWidth>840||$('top').getBoundingClientRect().bottom>(v==='b'||v==='d'?440:(v==='e'?560:720)))&&f>40){f-=2;h.style.fontSize=f+'px';}if(v==='d'){const w=()=>document.body.dataset.imgs?document.body.dataset.ready='1':setTimeout(w,50);w();}else document.body.dataset.ready='1';});
 </script></body></html>
