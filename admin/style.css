@@ -6,13 +6,6 @@
   --k-shelf:#b4532a; --k-pin:#b8325a; --k-video:#5866b8; --k-sub:#c98a14; --k-lead:#3f7d5c; --k-check:#7d6a58;
   --on-accent:#fffaf3;
 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:#1b1410; --card:#251c16; --ink:#f3e9db; --ink2:#c4b29f; --ink3:#8f7d6b;
-  --line:#3a2d24; --grid:#2f241d; --accent:#e58c5f; --accent2:#b4532a; --accent3:#5a3624; --tint:#34241a; --pill:#f3e9db; --pill-ink:#1b1410;
-  --good:#6fb592; --warn:#e0a84a; --bad:#ec7a66;
-  --k-shelf:#e58c5f; --k-pin:#e46f93; --k-video:#8c98e6; --k-sub:#e3b04a; --k-lead:#6fb592; --k-check:#b8a48f;
-  --on-accent:#1b1410;
-}}
 :root[data-theme="dark"]{
   --bg:#1b1410; --card:#251c16; --ink:#f3e9db; --ink2:#c4b29f; --ink3:#8f7d6b;
   --line:#3a2d24; --grid:#2f241d; --accent:#e58c5f; --accent2:#b4532a; --accent3:#5a3624; --tint:#34241a; --pill:#f3e9db; --pill-ink:#1b1410;
@@ -20,6 +13,18 @@
   --k-shelf:#e58c5f; --k-pin:#e46f93; --k-video:#8c98e6; --k-sub:#e3b04a; --k-lead:#6fb592; --k-check:#b8a48f;
   --on-accent:#1b1410;
 }
+:root[data-theme="sky"]{--bg:#eef4fa;--card:#fbfdff;--ink:#1d2b3a;--ink2:#55687c;--ink3:#8a9bab;--line:#d6e2ee;--grid:#e5edf5;--accent:#2f6db5;--accent2:#6f9ad0;--accent3:#c4d8ef;--tint:#e1ecf8;--pill:#1d2b3a;--pill-ink:#eef4fa;--on-accent:#ffffff}
+:root[data-theme="sage"]{--bg:#eef3ee;--card:#fbfdfb;--ink:#1f2b22;--ink2:#56685a;--ink3:#8b9b8e;--line:#d5e1d7;--grid:#e4ece5;--accent:#3f7d5c;--accent2:#79a88d;--accent3:#c8dfd1;--tint:#e1eee6;--pill:#1f2b22;--pill-ink:#eef3ee;--on-accent:#ffffff}
+:root[data-theme="rose"]{--bg:#f8eef1;--card:#fffafb;--ink:#2e1d23;--ink2:#75596a;--ink3:#a48a98;--line:#ecd7de;--grid:#f2e4e9;--accent:#b8466b;--accent2:#d68aa3;--accent3:#efc9d6;--tint:#f6e1e8;--pill:#2e1d23;--pill-ink:#f8eef1;--on-accent:#ffffff}
+:root[data-theme="lavender"]{--bg:#f1eff8;--card:#fcfbff;--ink:#24203a;--ink2:#625b80;--ink3:#958faf;--line:#dedaee;--grid:#e9e6f4;--accent:#6a55b8;--accent2:#9c8dd3;--accent3:#d6cef0;--tint:#e8e3f7;--pill:#24203a;--pill-ink:#f1eff8;--on-accent:#ffffff}
+:root[data-theme="white"]{--bg:#f7f7f5;--card:#ffffff;--ink:#1f1f1f;--ink2:#5c5c5c;--ink3:#8f8f8f;--line:#e2e2df;--grid:#ececea;--accent:#b4532a;--accent2:#d08a5e;--accent3:#e9c6ab;--tint:#f6e3d3;--pill:#1f1f1f;--pill-ink:#f7f7f5;--on-accent:#ffffff}
+/* 換顏色 */
+.themebtn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;flex:none}
+.themepop{position:absolute;right:16px;top:58px;z-index:30;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;box-shadow:0 12px 32px color-mix(in srgb,var(--ink) 15%,transparent);display:grid;grid-template-columns:repeat(3,auto);gap:10px}
+.themepop button{display:grid;justify-items:center;gap:4px;border:0;background:none;font:inherit;font-size:12px;color:var(--ink2);cursor:pointer;padding:4px}
+.themepop i{width:34px;height:34px;border-radius:50%;border:2px solid var(--line);display:block}
+.themepop button[aria-pressed="true"] i{border-color:var(--ink)}
+.topbar .in{position:relative}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 "PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
