@@ -69,6 +69,17 @@ if(v==='a'){ // English feature pin
   const a=document.createElement('div');a.className='arrow';a.textContent='→';Object.assign(a.style,{left:'448px',top:'880px'});stage.appendChild(a);
   phone('en-mob.jpg',{left:'540px',top:'560px',width:'370px'});
   $('cta').textContent='Get the template →';
+} else if(v==='f'){ // Spanish pin
+  $('h').textContent='Plantilla web para\n'+(d.es_cat||d.cat); $('sub').textContent='Sin mensualidades · pago único · en español';
+  $('p').innerHTML=['Versión en español','Botón de WhatsApp','Guía en español'].map(x=>`<span>${x}</span>`).join('');
+  laptop('es-desk.jpg',{left:'150px',top:'790px',width:'790px'}); phone('es-mob.jpg',{left:'70px',top:'860px',width:'250px'});
+  $('cta').textContent='Ver la plantilla →';
+} else if(v==='s'){ // service pin: we build it for you
+  $('h').textContent=d.svc_title; $('sub').textContent=d.svc_sub;
+  phone('en-mob.jpg',{left:'70px',top:'640px',width:'262px'},'English');
+  phone('zh-mob.jpg',{left:'369px',top:'610px',width:'262px'},'繁體中文');
+  phone('cn-mob.jpg',{left:'668px',top:'640px',width:'262px'},'简体中文');
+  $('cta').textContent=d.svc_cta;
 } else { // Japanese pin
   document.body.classList.add('ja');
   $('h').innerHTML=d.ja.replace(/・/g,'・<wbr>')+'向け<br>ホームページ<wbr>テンプレート'; $('sub').textContent='月額0円・買い切り・スマホ対応';
@@ -76,5 +87,5 @@ if(v==='a'){ // English feature pin
   laptop('ja-desk.jpg',{left:'150px',top:'790px',width:'790px'}); phone('ja-mob.jpg',{left:'70px',top:'860px',width:'250px'});
   $('cta').textContent='テンプレートを見る →';
 }
-const h=$('h'); document.fonts.ready.then(()=>{let f=parseFloat(getComputedStyle(h).fontSize);while((h.scrollWidth>840||$('top').getBoundingClientRect().bottom>(v==='b'||v==='d'?440:(v==='e'?560:720)))&&f>40){f-=2;h.style.fontSize=f+'px';}if(v==='d'){const w=()=>document.body.dataset.imgs?document.body.dataset.ready='1':setTimeout(w,50);w();}else document.body.dataset.ready='1';});
+const h=$('h'); document.fonts.ready.then(()=>{let f=parseFloat(getComputedStyle(h).fontSize);while((h.scrollWidth>840||$('top').getBoundingClientRect().bottom>(v==='b'||v==='d'||v==='s'?440:(v==='e'?560:720)))&&f>40){f-=2;h.style.fontSize=f+'px';}if(v==='d'){const w=()=>document.body.dataset.imgs?document.body.dataset.ready='1':setTimeout(w,50);w();}else document.body.dataset.ready='1';});
 </script></body></html>
