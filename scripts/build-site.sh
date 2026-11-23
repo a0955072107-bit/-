@@ -54,5 +54,10 @@ if [ -d sales/covers/en ]; then
   mkdir -p _site/covers && cp sales/covers/en/*.png _site/covers/
   echo "✓ 封面 $(ls sales/covers/en/*.png | wc -l | tr -d ' ') 張 → _site/covers/"
 fi
-printf 'User-agent: *\nDisallow: /demo/\nDisallow: /demos/\n' > _site/robots.txt
+# 營運後台（PWA）：admin/ → _site/admin/（noindex，robots.txt 也擋掉；使用者資料只存在瀏覽器）
+if [ -d admin ]; then
+  mkdir -p _site/admin && cp -R admin/. _site/admin/
+  echo "✓ 後台 → _site/admin/"
+fi
+printf 'User-agent: *\nDisallow: /demo/\nDisallow: /demos/\nDisallow: /admin/\n' > _site/robots.txt
 echo "✓ _site/ 建置完成"
