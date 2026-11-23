@@ -13,7 +13,8 @@
   "url": "https://polyglotpages.gumroad.com/l/restaurant-website-template",
   "ja": "飲食店・カフェ",
   "es": true,
-  "cat": "Restaurant & Café"
+  "cat": "Restaurant & Café",
+  "zh": "餐廳・咖啡廳"
  },
  {
   "slug": "beauty",
@@ -29,7 +30,8 @@
   "url": "https://polyglotpages.gumroad.com/l/salon-website-template",
   "ja": "美容室・ネイルサロン",
   "es": true,
-  "cat": "Hair & Nail Salon"
+  "cat": "Hair & Nail Salon",
+  "zh": "美髮・美甲沙龍"
  },
  {
   "slug": "fitness",
@@ -45,7 +47,8 @@
   "url": "https://polyglotpages.gumroad.com/l/gym-website-template",
   "ja": "ジム・パーソナルトレーニング",
   "es": true,
-  "cat": "Gym & Personal Training"
+  "cat": "Gym & Personal Training",
+  "zh": "健身房・私人教練"
  },
  {
   "slug": "clinic",
@@ -61,7 +64,8 @@
   "url": "https://polyglotpages.gumroad.com/l/clinic-website-template",
   "ja": "歯科・クリニック",
   "es": false,
-  "cat": "Dental & Medical Clinic"
+  "cat": "Dental & Medical Clinic",
+  "zh": "牙醫・診所"
  },
  {
   "slug": "consulting",
@@ -77,7 +81,8 @@
   "url": "https://polyglotpages.gumroad.com/l/consulting-firm-website-template",
   "ja": "士業・コンサル事務所",
   "es": false,
-  "cat": "Law, Accounting & Consulting"
+  "cat": "Law, Accounting & Consulting",
+  "zh": "會計師・律師事務所"
  },
  {
   "slug": "studio",
@@ -93,7 +98,8 @@
   "url": "https://polyglotpages.gumroad.com/l/studio-portfolio-template",
   "ja": "デザイン事務所",
   "es": false,
-  "cat": "Design Studio & Portfolio"
+  "cat": "Design Studio & Portfolio",
+  "zh": "設計工作室"
  },
  {
   "slug": "bnb",
@@ -109,7 +115,8 @@
   "url": "https://polyglotpages.gumroad.com/l/bnb-guesthouse-template",
   "ja": "民泊・小さな宿",
   "es": false,
-  "cat": "B&B & Guesthouse"
+  "cat": "B&B & Guesthouse",
+  "zh": "民宿"
  },
  {
   "slug": "realestate",
@@ -125,7 +132,8 @@
   "url": "https://polyglotpages.gumroad.com/l/real-estate-website-template",
   "ja": "不動産会社",
   "es": true,
-  "cat": "Real Estate Agent"
+  "cat": "Real Estate Agent",
+  "zh": "房仲"
  },
  {
   "slug": "wedding",
@@ -141,7 +149,8 @@
   "url": "https://polyglotpages.gumroad.com/l/wedding-website-template",
   "ja": "結婚式・イベント",
   "es": false,
-  "cat": "Wedding Website with RSVP"
+  "cat": "Wedding Website with RSVP",
+  "zh": "婚禮"
  },
  {
   "slug": "photographer",
@@ -157,7 +166,8 @@
   "url": "https://polyglotpages.gumroad.com/l/photographer-portfolio-template",
   "ja": "フォトグラファー",
   "es": false,
-  "cat": "Photographer Portfolio"
+  "cat": "Photographer Portfolio",
+  "zh": "攝影師"
  },
  {
   "slug": "pet",
@@ -173,7 +183,8 @@
   "url": "https://polyglotpages.gumroad.com/l/pet-grooming-template",
   "ja": "ペットサロン",
   "es": false,
-  "cat": "Pet Grooming & Daycare"
+  "cat": "Pet Grooming & Daycare",
+  "zh": "寵物美容"
  },
  {
   "slug": "education",
@@ -189,7 +200,8 @@
   "url": "https://polyglotpages.gumroad.com/l/tutoring-school-template",
   "ja": "学習塾・教室",
   "es": false,
-  "cat": "Tutoring Center"
+  "cat": "Tutoring Center",
+  "zh": "補習班・教室"
  },
  {
   "slug": "interior",
@@ -205,7 +217,8 @@
   "url": "https://polyglotpages.gumroad.com/l/interior-design-template",
   "ja": "インテリア・設計事務所",
   "es": false,
-  "cat": "Interior Design Studio"
+  "cat": "Interior Design Studio",
+  "zh": "室內設計"
  },
  {
   "slug": "bakery",
@@ -221,7 +234,8 @@
   "url": "https://polyglotpages.gumroad.com/l/bakery-website-template",
   "ja": "パン屋・洋菓子店",
   "es": false,
-  "cat": "Bakery & Dessert Shop"
+  "cat": "Bakery & Dessert Shop",
+  "zh": "烘焙・甜點店"
  },
  {
   "slug": "tea",
@@ -237,7 +251,8 @@
   "url": "https://polyglotpages.gumroad.com/l/bubble-tea-shop-template",
   "ja": "カフェ・ドリンクスタンド",
   "es": false,
-  "cat": "Bubble Tea Shop"
+  "cat": "Bubble Tea Shop",
+  "zh": "手搖飲店"
  },
  {
   "slug": "auto",
@@ -253,7 +268,8 @@
   "url": "https://polyglotpages.gumroad.com/l/auto-care-garage-template",
   "ja": "自動車整備・カーケア",
   "es": false,
-  "cat": "Car Care & Garage"
+  "cat": "Car Care & Garage",
+  "zh": "汽車保養廠"
  },
  {
   "slug": "cleaning",
@@ -269,7 +285,8 @@
   "url": "https://polyglotpages.gumroad.com/l/home-cleaning-template",
   "ja": "ハウスクリーニング",
   "es": true,
-  "cat": "Home Cleaning Service"
+  "cat": "Home Cleaning Service",
+  "zh": "居家清潔"
  },
  {
   "slug": "florist",
@@ -285,7 +302,8 @@
   "url": "https://polyglotpages.gumroad.com/l/florist-template",
   "ja": "花屋",
   "es": false,
-  "cat": "Florist & Flower Shop"
+  "cat": "Florist & Flower Shop",
+  "zh": "花店"
  },
  {
   "slug": "yoga",
@@ -301,7 +319,8 @@
   "url": "https://polyglotpages.gumroad.com/l/yoga-pilates-template",
   "ja": "ヨガ・ピラティス",
   "es": false,
-  "cat": "Yoga & Pilates Studio"
+  "cat": "Yoga & Pilates Studio",
+  "zh": "瑜珈・皮拉提斯"
  },
  {
   "slug": "camping",
@@ -317,7 +336,8 @@
   "url": "https://polyglotpages.gumroad.com/l/campsite-glamping-template",
   "ja": "キャンプ場・グランピング",
   "es": false,
-  "cat": "Campsite & Glamping"
+  "cat": "Campsite & Glamping",
+  "zh": "露營區"
  },
  {
   "slug": "freelancer",
@@ -333,7 +353,8 @@
   "url": "https://polyglotpages.gumroad.com/l/freelancer-portfolio-template",
   "ja": "フリーランス",
   "es": false,
-  "cat": "Freelancer Portfolio & Résumé"
+  "cat": "Freelancer Portfolio & Résumé",
+  "zh": "接案者作品集"
  },
  {
   "slug": "saas",
@@ -349,7 +370,8 @@
   "url": "https://polyglotpages.gumroad.com/l/app-saas-landing-template",
   "ja": "アプリ・SaaS",
   "es": false,
-  "cat": "SaaS & App Landing Page"
+  "cat": "SaaS & App Landing Page",
+  "zh": "App・SaaS"
  },
  {
   "slug": "coach",
@@ -365,7 +387,8 @@
   "url": "https://polyglotpages.gumroad.com/l/therapist-coach-template",
   "ja": "カウンセリング・コーチング",
   "es": false,
-  "cat": "Therapist & Coach"
+  "cat": "Therapist & Coach",
+  "zh": "諮商・教練"
  },
  {
   "slug": "contractor",
@@ -381,7 +404,8 @@
   "url": "https://polyglotpages.gumroad.com/l/contractor-handyman-template",
   "ja": "リフォーム・設備工事",
   "es": true,
-  "cat": "Contractor & Handyman"
+  "cat": "Contractor & Handyman",
+  "zh": "水電・修繕"
  },
  {
   "slug": "nonprofit",
@@ -397,7 +421,8 @@
   "url": "https://polyglotpages.gumroad.com/l/nonprofit-charity-template",
   "ja": "NPO・非営利団体",
   "es": false,
-  "cat": "Nonprofit & Church"
+  "cat": "Nonprofit & Church",
+  "zh": "非營利組織・教會"
  },
  {
   "slug": "linkinbio",
@@ -413,7 +438,8 @@
   "url": "https://polyglotpages.gumroad.com/l/link-in-bio-template",
   "ja": "リンクまとめページ",
   "es": false,
-  "cat": "Link-in-Bio Page"
+  "cat": "Link-in-Bio Page",
+  "zh": "個人連結頁"
  },
  {
   "slug": "barber",
@@ -429,7 +455,8 @@
   "url": "https://polyglotpages.gumroad.com/l/barbershop-template",
   "ja": "理容室・バーバー",
   "es": false,
-  "cat": "Barbershop"
+  "cat": "Barbershop",
+  "zh": "理髮廳"
  },
  {
   "slug": "conference",
@@ -445,7 +472,8 @@
   "url": "https://polyglotpages.gumroad.com/l/conference-event-template",
   "ja": "カンファレンス・イベント",
   "es": false,
-  "cat": "Conference & Event Landing Page"
+  "cat": "Conference & Event Landing Page",
+  "zh": "活動・研討會"
  },
  {
   "slug": "tattoo",
@@ -461,7 +489,8 @@
   "url": "https://polyglotpages.gumroad.com/l/tattoo-studio-template",
   "ja": "タトゥースタジオ",
   "es": false,
-  "cat": "Tattoo Studio"
+  "cat": "Tattoo Studio",
+  "zh": "刺青工作室"
  },
  {
   "slug": "coworking",
@@ -477,7 +506,8 @@
   "url": "https://polyglotpages.gumroad.com/l/coworking-space-template",
   "ja": "コワーキングスペース",
   "es": false,
-  "cat": "Coworking Space"
+  "cat": "Coworking Space",
+  "zh": "共享空間"
  },
  {
   "slug": "motion/saas",
@@ -494,7 +524,8 @@
   "url": "https://polyglotpages.gumroad.com/l/motion-saas-launch-template",
   "ja": "SaaS（アニメーション版）",
   "es": false,
-  "cat": "SaaS Launch Page Motion Edition"
+  "cat": "SaaS Launch Page Motion Edition",
+  "zh": "SaaS 動態版"
  },
  {
   "slug": "motion/portfolio",
@@ -511,7 +542,8 @@
   "url": "https://polyglotpages.gumroad.com/l/motion-creative-portfolio-template",
   "ja": "ポートフォリオ（アニメーション版）",
   "es": false,
-  "cat": "Creative Portfolio Motion Edition"
+  "cat": "Creative Portfolio Motion Edition",
+  "zh": "作品集動態版"
  },
  {
   "slug": "motion/restaurant",
@@ -528,7 +560,8 @@
   "url": "https://polyglotpages.gumroad.com/l/motion-fine-dining-template",
   "ja": "レストラン（アニメーション版）",
   "es": false,
-  "cat": "Fine Dining Motion Edition"
+  "cat": "Fine Dining Motion Edition",
+  "zh": "餐廳動態版"
  },
  {
   "slug": "motion/wedding",
@@ -546,7 +579,8 @@
   "url": "https://polyglotpages.gumroad.com/l/motion-wedding-template",
   "ja": "結婚式（アニメーション版）",
   "es": false,
-  "cat": "Wedding Website Motion Edition"
+  "cat": "Wedding Website Motion Edition",
+  "zh": "婚禮動態版"
  },
  {
   "slug": "motion/realestate",
@@ -563,6 +597,7 @@
   "url": "https://polyglotpages.gumroad.com/l/motion-luxury-residences-template",
   "ja": "高級住宅（アニメーション版）",
   "es": false,
-  "cat": "Luxury Residences Motion Edition"
+  "cat": "Luxury Residences Motion Edition",
+  "zh": "豪宅動態版"
  }
 ]
