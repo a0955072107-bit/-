@@ -23,15 +23,16 @@
 | 日期 | 檔案 | 類型 |
 |---|---|---|
 | 11/23（一） | `posts/01-no-monthly-fee-website.md` | 教學（已發） |
-| 12/1（二） | `posts/02-one-site-five-languages.md` | 製作過程 |
-| 12/4（五） | `posts/05-chinese-speaking-customers.md` | 給店家：為什麼要中文網站 |
-| 12/8（二） | `posts/03-motion-without-libraries.md` | 製作過程（技術向） |
-| 12/11（五） | `posts/06-free-hosting-netlify.md` | 教學：免費架站 |
-| 12/15（二） | `posts/04-template-drop-restaurant.md` | 新模板發表 |
-| 12/18（五） | `posts/07-google-profile-and-website.md` | 給店家：Google 商家＋網站 |
-| 12/22（二） | `posts/08-make-a-template-yours.md` | 教學：改模板 |
+| 11/27（五） | `posts/02-one-site-five-languages.md` | 製作過程 |
+| 12/1（二） | `posts/05-chinese-speaking-customers.md` | 給店家：為什麼要中文網站 |
+| 12/4（五） | `posts/03-motion-without-libraries.md` | 製作過程（技術向） |
+| 12/8（二） | `posts/06-free-hosting-netlify.md` | 教學：免費架站 |
+| 12/11（五） | `posts/04-template-drop-restaurant.md` | 新模板發表 |
+| 12/15（二） | `posts/07-google-profile-and-website.md` | 給店家：Google 商家＋網站 |
+| 12/18（五） | `posts/08-make-a-template-yours.md` | 教學：改模板 |
+| 12/22（二） | （新文章，Claude 12/15 前起草） | |
 
-> 12/22 之後要寫新文章（Claude 起草）。4 週後（12/22）看訂閱數和取消訂閱數，取消變多就改回一週一篇。
+> 11/27 起排；12/22 那篇要寫新文章（Claude 12/15 前起草）。4 週後（12/22）看訂閱數和取消訂閱數，取消變多就改回一週一篇。
 
 ## 用擴充功能存草稿
 擴充功能新對話貼上：
