@@ -7,7 +7,7 @@ https://polyglotpages.gumroad.com/l/link-in-bio-template
 
 Use the code at checkout if it asks for a price: NOTES100. It's a complete one-page site in English, 中文 and 日本語. Open index.html in your browser to see it, and the guide inside shows how to put it online for free in about 10 minutes.
 
-Every week I'll send one short, practical note. Reply any time with questions; I read every email.
+Twice a week I'll send a short, practical note. Reply any time with questions; I read every email.
 
 Yang
 Polyglot Pages
