@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<!-- 示範用底稿（Polyglot Pages 主動開發用），不是販售的模板。
+     scripts/demo/make-demo.py 會用 sales/outreach/leads.csv 的資料填入每個雙大括號的欄位。
+     標記 IF:dental 的區塊給牙醫用，標記 IF:tcm 的區塊給中醫針灸用。
+     醫療廣告：不放病患評價，不寫「最好」「無痛」「保證」，不放價格或優惠。 -->
+<title>Irvine Meridian Health Center｜爾灣中醫針灸 Acupuncture</title>
+<meta name="description" content="Irvine Meridian Health Center是位於爾灣（CA）的中醫針灸診所。歡迎來電預約。看診時間、地址與交通資訊。">
+<meta property="og:title" content="Irvine Meridian Health Center｜爾灣中醫針灸">
+<meta property="og:description" content="歡迎來電預約。查看看診時間、地址與路線。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta name="theme-color" content="#0f766e">
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Irvine Meridian Health Center",
+  "description": "爾灣的中醫針灸診所。",
+  "telephone": "+19493298579",
+  "hasMap": "https://www.google.com/maps/place/Acupuncture+%7C+Irvine+Meridian+Health+Center+%7C+Dr.+Fu/@33.665759,-117.7646137,17z",
+  "address": {"@type": "PostalAddress", "streetAddress": "15785 Laguna Canyon Rd Ste 370", "addressLocality": "Irvine", "addressRegion": "CA", "postalCode": "92618", "addressCountry": "US"},
+  "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "17:00"}]
+}
+</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #0f766e;          /* 品牌主色（按鈕、重點文字），換科別可改成醫療藍 #1d4ed8 */
+  --brand-ink: #f7fdfc;      /* 在品牌色上的文字顏色 */
+  --brand-deep: #134e4a;     /* 品牌深色（hover、深色區塊背景） */
+  --brand-soft: #e3f3f1;     /* 品牌淺色（圖示底、標籤底） */
+  --aqua: #8fd9cf;           /* 藝術佔位圖用的水藍色 */
+  --sky: #cfe9f7;            /* 藝術佔位圖用的淺天藍 */
+  --bg: #f5f8fa;             /* 頁面背景（極淺冷灰） */
+  --surface: #fcfefe;        /* 卡片、表格等表面顏色 */
+  --text: #1e293b;           /* 主要文字（石板深灰） */
+  --muted: #526073;          /* 次要文字 */
+  --line: #dfe6ec;           /* 分隔線、邊框 */
+  --closed: #8a5a12;         /* 「休診」文字顏色 */
+  --shadow: 0 10px 30px -12px rgba(15, 50, 70, .18); /* 卡片柔和陰影 */
+  --radius: 18px;            /* 卡片圓角 */
+  --radius-sm: 10px;         /* 小元件圓角 */
+  --font-heading: "Plus Jakarta Sans", "Noto Sans TC", system-ui, sans-serif; /* 標題字型 */
+  --font-body: "Noto Sans TC", "Plus Jakarta Sans", system-ui, sans-serif;    /* 內文字型 */
+  --max: 1160px;             /* 內容最大寬度 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); line-height: 1.3; letter-spacing: -.01em; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+.wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+section { padding-block: clamp(4rem, 10vw, 7rem); }
+.sec-head { max-width: 40rem; margin-bottom: clamp(2rem, 5vw, 3.25rem); }
+.sec-head h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: .6rem; }
+.sec-head p { color: var(--muted); }
+
+/* ---------- 按鈕 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .8rem 1.5rem; border-radius: 999px; font-weight: 500; border: 1.5px solid transparent; transition: background .25s, color .25s, transform .25s, border-color .25s; cursor: pointer; }
+.btn svg { width: 1.1rem; height: 1.1rem; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: var(--brand-deep); transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.97); }
+a:not(.btn):active { opacity: .7; }
+.btn-ghost { border-color: color-mix(in srgb, var(--brand) 40%, transparent); color: var(--brand); background: var(--surface); }
+.btn-ghost:hover { border-color: var(--brand); transform: translateY(-2px); }
+
+/* ---------- 頁首 ---------- */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 90%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .6rem; font: 700 1.15rem/1 var(--font-heading); }
+.logo-mark { width: 2.2rem; height: 2.2rem; border-radius: 12px; background: var(--brand); color: var(--brand-ink); display: grid; place-items: center; }
+.logo-mark svg { width: 1.3rem; height: 1.3rem; }
+.nav-links { display: flex; align-items: center; gap: 1.75rem; font-size: .95rem; }
+.nav-links a:not(.btn) { color: var(--muted); transition: color .2s; }
+.nav-links a:not(.btn):hover { color: var(--brand); }
+.nav-links .btn { padding: .6rem 1.2rem; }
+.menu-btn { display: none; width: 44px; height: 44px; border: 0; border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); color: var(--text); cursor: pointer; }
+.menu-btn span { display: block; width: 20px; height: 2px; margin: 4px auto; background: currentColor; border-radius: 2px; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: 72px; left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .75rem; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: .8rem 1rem; border-radius: var(--radius-sm); }
+  .js .nav-links .btn { margin-top: .5rem; }
+  /* 沒有 JS 時：選單直接展開成可換行的連結列 */
+  html:not(.js) .site-header { background: var(--surface); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: .75rem; }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: .4rem 1rem; }
+  html:not(.js) .hero { padding-top: 11rem; }
+}
+
+/* ---------- 藝術佔位圖 ---------- */
+/* 換成照片：.img-hero { background: url(images/clinic.jpg) center/cover; } */
+/* 換成照片：.img-doc1 { background: url(images/doctor-1.jpg) center/cover; }（.img-doc2、.img-doc3 同理） */
+.img { position: relative; overflow: hidden; background-color: var(--brand-soft); }
+.img-hero {
+  border-radius: 32px; aspect-ratio: 4 / 4.4;
+  background:
+    radial-gradient(circle at 78% 18%, color-mix(in srgb, var(--surface) 85%, transparent) 0 9%, transparent 9.5%),
+    radial-gradient(circle at 20% 85%, color-mix(in srgb, var(--aqua) 70%, transparent) 0 22%, transparent 22.5%),
+    radial-gradient(circle at 85% 90%, color-mix(in srgb, var(--sky) 90%, transparent) 0 30%, transparent 30.5%),
+    linear-gradient(155deg, var(--sky), var(--aqua) 55%, color-mix(in srgb, var(--brand) 55%, var(--aqua)));
+}
+/* 置中的牙齒曲線與十字圖樣 */
+.img-hero::before { content: ""; position: absolute; inset: 22% 24% 26%; border-radius: 46% 46% 40% 40% / 38% 38% 62% 62%; border: 3px solid color-mix(in srgb, var(--surface) 75%, transparent); background: color-mix(in srgb, var(--surface) 22%, transparent); }
+.img-hero::after { content: ""; position: absolute; left: 50%; top: 42%; width: 64px; height: 64px; translate: -50% -50%;
+  background: linear-gradient(var(--surface), var(--surface)) center/20px 64px no-repeat, linear-gradient(var(--surface), var(--surface)) center/64px 20px no-repeat; opacity: .9; border-radius: 6px; }
+.img-doc { aspect-ratio: 4 / 3.4; }
+.img-doc::before { content: ""; position: absolute; left: 50%; bottom: -18%; width: 64%; aspect-ratio: 1; translate: -50% 0; border-radius: 50% 50% 0 0; background: color-mix(in srgb, var(--surface) 70%, transparent); }
+.img-doc::after { content: ""; position: absolute; left: 50%; top: 20%; width: 28%; aspect-ratio: 1; translate: -50% 0; border-radius: 50%; background: color-mix(in srgb, var(--surface) 85%, transparent); }
+.img-doc1 { background: radial-gradient(circle at 15% 15%, var(--sky) 0 18%, transparent 18.5%), linear-gradient(160deg, var(--brand-soft), var(--aqua)); }
+.img-doc2 { background: radial-gradient(circle at 88% 20%, var(--aqua) 0 16%, transparent 16.5%), linear-gradient(160deg, var(--sky), color-mix(in srgb, var(--aqua) 60%, var(--sky))); }
+.img-doc3 { background: radial-gradient(circle at 80% 85%, var(--sky) 0 22%, transparent 22.5%), linear-gradient(200deg, color-mix(in srgb, var(--brand) 30%, var(--aqua)), var(--brand-soft)); }
+
+/* ---------- Hero ---------- */
+.hero { padding-top: calc(72px + clamp(2rem, 6vw, 4.5rem)); background: radial-gradient(60rem 30rem at 85% 0%, color-mix(in srgb, var(--aqua) 22%, transparent), transparent 70%); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.hero h1 { font-size: clamp(2.1rem, 5.2vw, 3.5rem); margin-bottom: 1.1rem; }
+.hero-sub { color: var(--muted); font-size: 1.08rem; max-width: 32rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+.hero-facts { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-top: 2rem; color: var(--muted); font-size: .92rem; }
+.hero-facts li::before { content: "✓"; color: var(--brand); font-weight: 700; margin-right: .4rem; }
+.hero-art { position: relative; }
+.today-card { position: absolute; left: -2rem; bottom: 2rem; width: min(20rem, 85%); background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.2rem 1.3rem; }
+.today-card h2 { font-size: 1rem; display: flex; justify-content: space-between; align-items: baseline; }
+.today-card h2 small { font: 500 .82rem var(--font-body); color: var(--muted); }
+.today-card ul { margin-top: .7rem; display: grid; gap: .45rem; }
+.today-card li { display: grid; grid-template-columns: auto 1fr auto; gap: .6rem; align-items: center; font-size: .88rem; padding: .5rem .7rem; border-radius: var(--radius-sm); background: var(--bg); }
+.today-card li b { font: 600 .82rem var(--font-heading); color: var(--brand); }
+.today-card li span { color: var(--muted); line-height: 1.45; font-size: .84rem; }
+.today-card .tag { font-style: normal; white-space: nowrap; font-size: .75rem; padding: .1rem .55rem; border-radius: 999px; background: var(--brand-soft); color: var(--brand-deep); }
+.today-card li.off b, .today-card li.off .tag { color: var(--closed); }
+.today-card li.off .tag { background: color-mix(in srgb, var(--closed) 10%, transparent); }
+.today-card li.now { background: var(--brand-soft); }
+.today-card li.now .tag { background: var(--brand); color: var(--brand-ink); }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .img-hero { aspect-ratio: 4 / 3; }
+  .today-card { position: relative; left: auto; bottom: auto; width: auto; margin: -3.5rem 1rem 0; }
+}
+
+/* ---------- 卡片通用 ---------- */
+.card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); }
+
+/* ---------- 診療項目 ---------- */
+.svc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.svc { padding: 1.75rem; transition: transform .3s, box-shadow .3s; }
+.svc:hover { transform: translateY(-4px); }
+.svc-icon { width: 3.25rem; height: 3.25rem; border-radius: 14px; display: grid; place-items: center; background: var(--brand-soft); color: var(--brand); margin-bottom: 1.1rem; }
+.svc-icon svg { width: 1.75rem; height: 1.75rem; }
+.svc h3 { font-size: 1.15rem; margin-bottom: .4rem; }
+.svc p { color: var(--muted); font-size: .95rem; }
+@media (max-width: 960px) { .svc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .svc-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 醫師團隊 ---------- */
+.team { background: var(--surface); }
+.doc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.doc { overflow: hidden; background: var(--bg); box-shadow: none; }
+.doc-body { padding: 1.4rem 1.5rem 1.6rem; }
+.doc-role { font-size: .85rem; color: var(--brand); font-weight: 500; }
+.doc h3 { font-size: 1.25rem; margin-block: .15rem .8rem; }
+.doc dl { display: grid; grid-template-columns: auto 1fr; gap: .35rem .9rem; font-size: .92rem; }
+.doc dt { color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.chips span { font-size: .8rem; padding: .15rem .6rem; border-radius: 999px; background: var(--brand-soft); color: var(--brand-deep); }
+@media (max-width: 960px) { .doc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .doc-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 門診時間表 ---------- */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius); }
+.schedule { width: 100%; min-width: 720px; border-collapse: separate; border-spacing: 0; text-align: center; font-size: .95rem; }
+.schedule th, .schedule td { padding: 1rem .6rem; border-bottom: 1px solid var(--line); }
+.schedule thead th { font: 600 .95rem var(--font-heading); background: var(--brand-soft); color: var(--brand-deep); }
+.schedule tbody th { text-align: left; padding-left: 1.25rem; white-space: nowrap; }
+.schedule tbody th small { display: block; font: 400 .8rem var(--font-body); color: var(--muted); }
+.schedule tbody tr:last-child > * { border-bottom: 0; }
+.schedule .off { color: var(--closed); font-size: .88rem; }
+.schedule .today { background: color-mix(in srgb, var(--brand) 9%, var(--surface)); font-weight: 500; }
+.schedule thead .today { background: var(--brand); color: var(--brand-ink); }
+.schedule thead .today::after { content: "今天"; display: block; font: 500 .72rem var(--font-body); opacity: .9; }
+.table-note { margin-top: 1rem; font-size: .88rem; color: var(--muted); }
+.scroll-hint { display: none; font-size: .82rem; color: var(--muted); margin-bottom: .5rem; }
+@media (max-width: 760px) { .scroll-hint { display: block; } }
+
+/* ---------- 就診須知 + 常見問題 ---------- */
+.guide { background: var(--surface); }
+.guide-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.checklist { padding: 1.75rem; background: var(--bg); box-shadow: none; }
+.checklist h3, .faq h3 { font-size: 1.2rem; margin-bottom: 1rem; }
+.checklist li { display: flex; gap: .8rem; padding-block: .7rem; border-bottom: 1px dashed var(--line); }
+.checklist li:last-child { border-bottom: 0; }
+.checklist li::before { content: ""; flex: none; width: 1.3rem; height: 1.3rem; margin-top: .25rem; border-radius: 6px; border: 2px solid var(--brand); background: linear-gradient(var(--brand), var(--brand)) center/50% 50% no-repeat; }
+.checklist small { display: block; color: var(--muted); font-size: .88rem; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 1rem; padding: 1.1rem .25rem; font-weight: 500; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; display: grid; place-items: center; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--brand-soft); color: var(--brand); font-size: 1.2rem; line-height: 1; transition: transform .3s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 .25rem 1.2rem; color: var(--muted); }
+@media (max-width: 860px) { .guide-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 交通資訊 ---------- */
+.access-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 1.5rem; }
+.access-info { padding: clamp(1.5rem, 4vw, 2.25rem); display: grid; gap: 1.4rem; }
+.access-info h3 { font-size: 1rem; color: var(--brand); margin-bottom: .2rem; }
+.access-info p { color: var(--muted); }
+.access-info p strong { color: var(--text); font-weight: 500; }
+.access-cta { padding: clamp(1.5rem, 4vw, 2.25rem); background: var(--brand-deep); color: var(--brand-ink); border: 0; display: flex; flex-direction: column; justify-content: center; gap: 1rem; position: relative; overflow: hidden; }
+.access-cta::after { content: ""; position: absolute; right: -4rem; top: -4rem; width: 14rem; aspect-ratio: 1; border-radius: 50%; border: 2.5rem solid color-mix(in srgb, var(--brand-ink) 8%, transparent); }
+.access-cta h3 { font-size: 1.5rem; }
+.access-cta p { opacity: .9; }
+.access-cta .btn-primary { background: var(--brand-ink); color: var(--brand-deep); }
+.access-cta .btn-ghost { background: transparent; color: var(--brand-ink); border-color: color-mix(in srgb, var(--brand-ink) 50%, transparent); }
+.access-cta .row { display: flex; flex-wrap: wrap; gap: .7rem; position: relative; z-index: 1; }
+@media (max-width: 860px) { .access-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 頁尾 ---------- */
+.site-footer { background: var(--text); color: color-mix(in srgb, var(--surface) 78%, transparent); padding-block: 3.5rem 2rem; font-size: .92rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; }
+.site-footer .logo { color: var(--surface); margin-bottom: 1rem; }
+.site-footer h2 { color: var(--surface); font-size: .95rem; margin-bottom: .6rem; }
+.site-footer a:hover { color: var(--surface); }
+.social { display: flex; gap: 1rem; margin-top: .8rem; }
+.social a { text-decoration: underline; text-underline-offset: 3px; }
+.foot-bottom { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid color-mix(in srgb, var(--surface) 15%, transparent); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .82rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 手機底部固定按鈕 ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 760px) {
+  .mobile-bar { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 60; padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 -1px 0 var(--line); }
+  .mobile-bar .btn { padding: .75rem 1rem; }
+  body { padding-bottom: 76px; }
+}
+
+/* ---------- 捲動漸入 ---------- */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== 語言切換（lang-switch） ==================== */
+.nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
+.lang-switch { display: flex; align-items: center; gap: .1rem; flex: none; margin-inline-start: .5rem; padding-inline-start: .6rem; border-inline-start: 1px solid var(--line); font: 400 .8rem/1 var(--font-body); letter-spacing: normal; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; border-radius: var(--radius-sm); color: var(--muted); font-weight: 400; text-decoration: none; text-underline-offset: 5px; text-decoration-thickness: 1.5px; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-line: underline; text-decoration-color: var(--brand); }
+@media (max-width: 760px) {
+  /* 手機版：放在漢堡按鈕左邊，一直看得到；沒有 JS 時也留在 logo 同一列 */
+  .nav > .lang-switch { order: 1; margin-inline: 0 0; padding-inline-start: 0; border: 0; }
+  .nav > .menu-btn { order: 2; }
+  .nav > .nav-links { order: 3; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  /* 平板寬度：選單間距收緊一點，讓語言切換和 logo 都放得下，頁首不換行 */
+  .nav > .nav-links { gap: .9rem; font-size: .85rem; }
+  .nav > .nav-links .btn { padding-inline: .9rem; }
+  .nav > .lang-switch { margin-inline-start: 0; padding-inline-start: .3rem; }
+  .lang-switch a { padding-inline: .15rem; }
+}
+@media (min-width: 761px) and (max-width: 960px) {
+  /* 窄平板：再收緊一階 */
+  .nav > .nav-links { gap: .6rem; font-size: .8rem; }
+  .nav > .nav-links .btn { padding-inline: .7rem; }
+}
+@media (max-width: 400px) {
+  /* 400px 以下的窄手機：稍微收緊間距，logo 才不會換行 */
+  .nav { gap: .5rem; }
+}
+/* 頁尾語言連結 */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; font-size: .85rem; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius-sm); }
+.foot-lang a:hover { text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { font-weight: 700; text-decoration: underline; text-decoration-color: var(--brand); }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+
+/* ---------- Demo additions ---------- */
+
+.nav > .logo { min-width: 0; flex-shrink: 1; white-space: normal; }
+.logo-text { min-width: 0; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-height: 1.15; overflow-wrap: anywhere; }
+@media (max-width: 760px) { .site-header .logo-text { font-size: .92em; } }
+.hours-card { max-width: 40rem; }
+.hours { width: 100%; border-collapse: collapse; font-size: .98rem; }
+.hours th, .hours td { padding: .85rem 1.25rem; border-bottom: 1px solid var(--line); text-align: left; }
+.hours th { font-weight: 500; }
+.hours td { text-align: right; font-variant-numeric: tabular-nums; }
+.hours tr:last-child > * { border-bottom: 0; }
+.hours .closed { color: var(--closed); }
+.hours tr.today { background: color-mix(in srgb, var(--brand) 9%, var(--surface)); }
+.hours tr.today th::after { content: "今天"; margin-left: .5rem; padding: .1rem .55rem; border-radius: 999px; font-size: .72rem; font-weight: 600; background: var(--brand); color: var(--brand-ink); }
+.access-info a { color: var(--brand); }
+
+/* ==================== Demo banner (added by scripts/demo/make-demo.py) ==================== */
+:root { --demo-h: 2.6rem; }
+@media (max-width: 1100px) { :root { --demo-h: 3.8rem; } }
+@media (max-width: 760px) { :root { --demo-h: 5.2rem; } }
+html { scroll-padding-top: calc(80px + var(--demo-h)); }
+body { padding-top: var(--demo-h); }
+.site-header { top: var(--demo-h); }
+.demo-bar { position: fixed; inset: 0 0 auto; z-index: 100; display: flex; align-items: center; justify-content: center; height: var(--demo-h); overflow: hidden; padding: .4rem 1rem; background: var(--text); color: var(--bg); font: 400 .8rem/1.45 var(--font-body); letter-spacing: normal; text-align: center; }
+.js .demo-bar { height: auto; }
+.demo-bar p { max-width: 62rem; margin: 0; }
+.demo-bar b { font-weight: 700; }
+.demo-bar a { color: inherit; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+.demo-bar a:hover { text-decoration-thickness: 2px; }
+.demo-bar a:active { opacity: .75; }
+.demo-bar a:focus-visible { outline: 2px solid var(--bg); outline-offset: 2px; border-radius: 3px; }
+.demo-note { display: block; width: fit-content; max-width: 42rem; padding: .45rem .8rem; border: 1px dashed color-mix(in srgb, var(--muted) 55%, transparent); border-radius: 10px; color: var(--muted); font-size: .88rem; line-height: 1.6; }
+.center .demo-note, .sec-head.center .demo-note { margin-inline: auto; }
+.site-footer .demo-note, .reserve .demo-note, .trial .demo-note { color: inherit; border-color: currentColor; }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<!-- Demo banner: this page is a free preview, not the business's own website -->
+<div class="demo-bar" id="demo-bar" role="note"><p>這是 <b>Polyglot Pages</b> 免費製作的網站預覽，不是 Irvine Meridian Health Center 的官方網站。聯絡：<a href="mailto:polyglotpages.studio@gmail.com">polyglotpages.studio@gmail.com</a></p></div>
+<script>(function(){var b=document.getElementById('demo-bar'),r=document.documentElement;function s(){r.style.setProperty('--demo-h',b.offsetHeight+'px');}s();addEventListener('resize',s);addEventListener('load',s);if(window.ResizeObserver)new ResizeObserver(s).observe(b);})();</script>
+
+<!-- ==================== 區塊：頁首導覽 ==================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Irvine Meridian Health Center 回到頂端">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-14 15-15-1 10-7 15-15 15Z"/><path d="M5 19 13 11"/></svg></span>
+      <span class="logo-text">Irvine Meridian Health Center</span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="開啟選單"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="主選單">
+      <a href="#services">服務項目</a>
+      <a href="#schedule">看診時間</a>
+      <a href="#guide">初診須知</a>
+      <a href="#access">交通位置</a>
+      <a href="tel:+19493298579" class="btn btn-primary">電話預約</a>
+    </nav>
+    <!-- lang-switch：語言切換 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="zh-Hant">繁</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ==================== 區塊：主視覺 ==================== -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <h1>Irvine Meridian Health Center</h1>
+      <p class="hero-sub">爾灣的中醫針灸診所，想預約或有任何問題，歡迎來電。</p>
+      <div class="hero-cta">
+        <a href="tel:+19493298579" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>來電 (949) 329-8579</a>
+        <a href="https://www.google.com/maps/place/Acupuncture+%7C+Irvine+Meridian+Health+Center+%7C+Dr.+Fu/@33.665759,-117.7646137,17z" class="btn btn-ghost" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Google 地圖導航</a>
+      </div>
+      <ul class="hero-facts">
+        <li>爾灣，CA</li>
+        <li>週一至週五看診</li>
+        <li>電話預約</li>
+      </ul>
+    </div>
+    <div class="hero-art reveal">
+      <div class="img img-hero" role="img" aria-label="明亮安靜的診間插圖"></div>
+      <!-- 今日看診卡：由頁面最下方 script 裡的 HOURS 自動產生 -->
+      <aside class="today-card" aria-live="polite">
+        <h2>今日看診 <small id="today-label">請見時間表</small></h2>
+        <ul id="today-list"><li><b>時間</b><span>請見下方看診時間</span></li></ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：服務項目（範例） ==================== -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>服務項目</h2>
+      <p class="demo-note">範例清單：正式網站會換成貴診所實際提供的項目。</p>
+    </div>
+    <div class="svc-grid">
+
+
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v14M9 16h6l-3 6Z"/></svg></div>
+        <h3>針灸</h3>
+        <p>先問診了解身體狀況，再安排適合的療程。</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-14 15-15-1 10-7 15-15 15Z"/><path d="M5 19 13 11"/></svg></div>
+        <h3>中藥調理</h3>
+        <p>依個人體質開立處方，並清楚說明服用方式。</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="12" r="3"/><circle cx="17" cy="12" r="3"/><path d="M4 18h16"/></svg></div>
+        <h3>拔罐</h3>
+        <p>常和針灸或推拿安排在同一次療程。</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V6a2 2 0 0 1 4 0v5M11 10V4a2 2 0 0 1 4 0v6M15 10V6a2 2 0 0 1 4 0v7a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-3l-2-4a2 2 0 0 1 3-2l1 1"/></svg></div>
+        <h3>推拿</h3>
+        <p>舒緩肌肉緊繃和關節僵硬。</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h4l2-5 4 10 2-5h4"/></svg></div>
+        <h3>痠痛與運動傷害</h3>
+        <p>腰背、肩頸不適，納入整體療程一起照顧。</p>
+      </article>
+      <article class="card svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a4.5 4.5 0 0 1 0 9 4.5 4.5 0 0 0 0 9"/></svg></div>
+        <h3>日常養生</h3>
+        <p>從中醫角度給睡眠、飲食和作息的建議。</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：看診時間 ==================== -->
+<section id="schedule">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>看診時間</h2>
+      <p>請先來電預約。節日時間可能調整。</p>
+    </div>
+    <div class="table-scroll card reveal hours-card">
+      <table class="hours" aria-label="每週看診時間">
+        <tbody>
+              <tr data-day="1"><th scope="row">星期一</th><td>09:00–17:00</td></tr>
+              <tr data-day="2"><th scope="row">星期二</th><td>09:00–17:00</td></tr>
+              <tr data-day="3"><th scope="row">星期三</th><td>09:00–17:00</td></tr>
+              <tr data-day="4"><th scope="row">星期四</th><td>09:00–17:00</td></tr>
+              <tr data-day="5"><th scope="row">星期五</th><td>09:00–17:00</td></tr>
+              <tr data-day="6"><th scope="row">星期六</th><td class="closed">休診</td></tr>
+              <tr data-day="0"><th scope="row">星期日</th><td class="closed">休診</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：初診須知與常見問題 ==================== -->
+<section class="guide" id="guide">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>初診須知與常見問題</h2>
+      <p>第一次來看診？先準備好這些，看診會更順利。</p>
+    </div>
+    <div class="guide-grid">
+      <div class="card checklist reveal">
+        <h3>請攜帶</h3>
+        <ul>
+          <li><div>保險卡 Insurance card<small>有保險的話請帶來，方便我們先查詢給付範圍。</small></div></li>
+          <li><div>有照片的證件 Photo ID<small>小朋友請由家長或監護人陪同。</small></div></li>
+          <li><div>目前服用的藥物清單<small>包括抗凝血藥、保健食品和中草藥。</small></div></li>
+          <li><div>病史與過敏紀錄<small>心臟病、糖尿病、懷孕或藥物過敏。</small></div></li>
+          <li><div>提早 10 分鐘到<small>填寫新病人表格（new patient form）。</small></div></li>
+        </ul>
+      </div>
+      <div class="faq reveal">
+        <h3>常見問題</h3>
+
+
+        <details open>
+          <summary>保險有給付針灸嗎？</summary>
+          <p>有些保險計畫有給付針灸。請來電告訴我們計畫名稱，我們幫您查詢。</p>
+        </details>
+        <details>
+          <summary>看診要穿什麼？</summary>
+          <p>請穿寬鬆舒適、袖子和褲管可以捲起來的衣服。</p>
+        </details>
+        <details>
+          <summary>需要來幾次？</summary>
+          <p>要看身體狀況和療程反應，第一次問診後會跟您討論療程安排。</p>
+        </details>
+        <details>
+          <summary>可以繼續吃平常的藥嗎？</summary>
+          <p>請告訴我們您正在服用的所有藥物和保健食品，並繼續遵照您醫師的指示。</p>
+        </details>
+
+        <details>
+          <summary>臨時不能來怎麼辦？</summary>
+          <p>請儘早來電，我們會幫您改約時間。</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：交通位置 ==================== -->
+<section id="access">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>交通位置</h2>
+    </div>
+    <div class="access-grid">
+      <div class="card access-info reveal">
+        <div><h3>地址</h3><p><strong>15785 Laguna Canyon Rd Ste 370, Irvine, CA 92618</strong></p></div>
+        <div><h3>電話</h3><p><a href="tel:+19493298579">(949) 329-8579</a></p></div>
+        <div><h3>評價</h3><p>到 <a href="https://www.google.com/maps/place/Acupuncture+%7C+Irvine+Meridian+Health+Center+%7C+Dr.+Fu/@33.665759,-117.7646137,17z" target="_blank" rel="noopener">Google 地圖</a>和 <a href="https://www.yelp.com/search?find_desc=Irvine+Meridian+Health+Center&amp;find_loc=Irvine%2C+CA" target="_blank" rel="noopener">Yelp</a> 看看病人的評價。</p></div>
+        <div><h3>微信 WeChat</h3><p class="demo-note">範例：這裡可以放貴診所的微信號或 QR Code。</p></div>
+      </div>
+      <div class="card access-cta reveal">
+        <h3>預約或詢問</h3>
+        <p>看診時間內歡迎來電，櫃台會為您安排。</p>
+        <div class="row">
+          <a href="tel:+19493298579" class="btn btn-primary">來電 (949) 329-8579</a>
+          <a href="https://www.google.com/maps/place/Acupuncture+%7C+Irvine+Meridian+Health+Center+%7C+Dr.+Fu/@33.665759,-117.7646137,17z" class="btn btn-ghost" target="_blank" rel="noopener">用 Google 地圖開啟</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo"><span class="logo-text">Irvine Meridian Health Center</span></div>
+        <p>15785 Laguna Canyon Rd Ste 370<br>Irvine, CA 92618<br>電話：<a href="tel:+19493298579">(949) 329-8579</a></p>
+        <div class="social"><a href="https://www.google.com/maps/place/Acupuncture+%7C+Irvine+Meridian+Health+Center+%7C+Dr.+Fu/@33.665759,-117.7646137,17z" target="_blank" rel="noopener">Google 地圖</a><a href="https://www.yelp.com/search?find_desc=Irvine+Meridian+Health+Center&amp;find_loc=Irvine%2C+CA" target="_blank" rel="noopener">Yelp</a></div>
+      </div>
+      <div>
+        <h2>看診時間</h2>
+        <p>週一至週五 09:00–17:00<br>週六、週日 休診</p>
+      </div>
+      <div>
+        <h2>快速連結</h2>
+        <p><a href="#services">服務項目</a><br><a href="#schedule">看診時間</a><br><a href="#access">交通位置</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y"></span> Irvine Meridian Health Center</span>
+      <span>本網站內容僅供參考，實際治療以醫師評估為準。</span>
+    </div>
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    </p>
+  </div>
+</footer>
+
+<!-- ==================== 區塊：手機底部按鈕 ==================== -->
+<div class="mobile-bar">
+  <a href="https://www.google.com/maps/place/Acupuncture+%7C+Irvine+Meridian+Health+Center+%7C+Dr.+Fu/@33.665759,-117.7646137,17z" class="btn btn-ghost" target="_blank" rel="noopener">地圖導航</a>
+  <a href="tel:+19493298579" class="btn btn-primary">打電話</a>
+</div>
+
+<script>
+// 年份
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// 捲動後頁首出現背景
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+// 漢堡選單
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  links.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? '關閉選單' : '開啟選單');
+};
+menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// 看診時間：標出今天，並產生「今日看診」卡
+// HOURS：星期（0 = 週日）對應 [開始, 結束] 的清單，24 小時制；null = 休診；整個是 null = 時間不明
+const TZ = "America/Los_Angeles";
+const HOURS = {"1": [["09:00", "17:00"]], "2": [["09:00", "17:00"]], "3": [["09:00", "17:00"]], "4": [["09:00", "17:00"]], "5": [["09:00", "17:00"]], "6": null, "0": null};
+const now = new Date(new Date().toLocaleString('en-US', { timeZone: TZ }));
+const day = now.getDay(), nowMin = now.getHours() * 60 + now.getMinutes();
+const toMin = t => { const [h, m] = t.split(':'); return h * 60 + +m; };
+if (HOURS) {
+  const row = document.querySelector(`.hours tr[data-day="${day}"]`); if (row) row.classList.add('today');
+  const today = HOURS[day];
+  const items = today ? today.map(([s, e]) => {
+    const end = toMin(e) <= toMin(s) ? toMin(e) + 1440 : toMin(e);
+    const tag = nowMin < toMin(s) ? '稍後開診' : nowMin < end ? '看診中' : '已結束';
+    return `<li class="${tag === '看診中' ? 'now' : ''}"><b>看診</b><span>${s}–${e}</span><em class="tag">${tag}</em></li>`;
+  }) : ['<li class="off"><b>今天</b><span>今天休診</span><em class="tag">休診</em></li>'];
+  document.getElementById('today-list').innerHTML = items.join('');
+  document.getElementById('today-label').textContent = now.toLocaleDateString('zh-TW', { month: 'numeric', day: 'numeric', weekday: 'short' });
+}
+
+// 捲動漸入
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => io.observe(el));
+} else reveals.forEach(el => el.classList.add('in'));
+</script>
+<script>
+/* 語言選單：點外面或按 Esc 關閉 */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>
