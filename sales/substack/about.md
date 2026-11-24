@@ -2,7 +2,7 @@
 
 Every template is a single HTML file you own forever. No monthly fees, no website builder, no lock-in. Each one comes in English, Traditional Chinese, Simplified Chinese and Japanese (some in Spanish too), with a one-tap language switcher, because a lot of small businesses serve customers in more than one language.
 
-**In this newsletter** you'll get one short post a week:
+**In this newsletter** you'll get two short posts a week:
 
 - How to get a small business online without paying a monthly subscription
 - New templates as they're released, with live demos

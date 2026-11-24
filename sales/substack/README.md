@@ -16,14 +16,22 @@
 ## 每週節奏
 | 星期 | 做什麼 |
 |---|---|
-| 二 | 發本週文章（擴充功能貼進編輯器存草稿 → 你看過再發布） |
+| 二、五 | 發文章（11/24 改成一週兩篇，先試 4 週；每週五擴充功能把下週二、週五的文章用 Schedule 排在台灣 22:00＝美東早上 9 點） |
 | 每天 | 發 1 則 Notes（`notes.md` 已寫好 4 週份，28 則） |
 
-## 前 4 篇（依序）
-1. `posts/01-no-monthly-fee-website.md`：教學
-2. `posts/02-one-site-five-languages.md`：製作過程
-3. `posts/03-motion-without-libraries.md`：製作過程（技術向，吸引接案者）
-4. `posts/04-template-drop-restaurant.md`：新模板發表
+## 發文表（一週兩篇，台灣 22:00）
+| 日期 | 檔案 | 類型 |
+|---|---|---|
+| 11/23（一） | `posts/01-no-monthly-fee-website.md` | 教學（已發） |
+| 12/1（二） | `posts/02-one-site-five-languages.md` | 製作過程 |
+| 12/4（五） | `posts/05-chinese-speaking-customers.md` | 給店家：為什麼要中文網站 |
+| 12/8（二） | `posts/03-motion-without-libraries.md` | 製作過程（技術向） |
+| 12/11（五） | `posts/06-free-hosting-netlify.md` | 教學：免費架站 |
+| 12/15（二） | `posts/04-template-drop-restaurant.md` | 新模板發表 |
+| 12/18（五） | `posts/07-google-profile-and-website.md` | 給店家：Google 商家＋網站 |
+| 12/22（二） | `posts/08-make-a-template-yours.md` | 教學：改模板 |
+
+> 12/22 之後要寫新文章（Claude 起草）。4 週後（12/22）看訂閱數和取消訂閱數，取消變多就改回一週一篇。
 
 ## 用擴充功能存草稿
 擴充功能新對話貼上：
