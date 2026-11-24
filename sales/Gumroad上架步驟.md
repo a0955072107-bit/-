@@ -495,7 +495,7 @@ What you get
 - **Name**：`Photographer Portfolio Website Template (English + 繁體 + 简体) — One-Page HTML`
 - **URL**：`photographer-portfolio-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
-- **Tags**：`photography website`, `photographer portfolio`, `portfolio template`, `html template`, `website template`
+- **Tags**：`photography website`, `photographer website`, `portfolio template`, `html template`, `website template`
 - **Description**：
 ```
 A dark, gallery-first one-page website for portrait, wedding and commercial photographers. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
@@ -588,7 +588,7 @@ What you get
 - **Name**：`Interior Design Studio Website Template (English + 繁體 + 简体)`
 - **URL**：`interior-design-template`
 - **Cover**：`sales/covers/en/<slug>-cover.png`
-- **Tags**：`interior design website`, `renovation website`, `architect portfolio`, `html template`, `website template`
+- **Tags**：`interior designer`, `renovation website`, `architect portfolio`, `html template`, `website template`
 - **Description**：
 ```
 A warm, minimal one-page website for interior designers and renovation firms. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
