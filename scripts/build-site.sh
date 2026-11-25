@@ -20,6 +20,28 @@ for s in slugs:
         if f.exists():
             d = S / s / lang; d.mkdir(parents=True, exist_ok=True); shutil.copy(f, d / 'index.html')
     subprocess.run(['python3', 'scripts/lang-index.py', str(S / s)], check=True)
+# 線上預覽專用照片：previews/<款式>/ → _site/templates/<款式>/_preview/，各語言頁加上樣式與說明（商品 zip 不含）
+P = pathlib.Path('previews')
+NOTE = {'zh-TW': '預覽頁使用 AI 生成的示意照片；模板檔案不含照片，請換成您自己的照片。',
+        'zh-CN': '预览页使用 AI 生成的示意照片；模板文件不含照片，请换成您自己的照片。',
+        'en': 'Preview photos are AI-generated samples. Photos are not included in the template files; replace them with your own.',
+        'ja': 'プレビューの写真は AI 生成のサンプルです。テンプレートには含まれないため、ご自身の写真に差し替えてください。',
+        'es': 'Las fotos de esta vista previa son muestras generadas con IA. No se incluyen en la plantilla; reemplázalas por las tuyas.'}
+for s in slugs:
+    if not (P / s / 'photos.css').exists():
+        continue
+    shutil.copytree(P / s, S / s / '_preview', dirs_exist_ok=True)
+    shutil.copy(P / 'preview-note.css', S / s / '_preview' / 'preview-note.css')
+    for lang, note in NOTE.items():
+        f = S / s / lang / 'index.html'
+        if not f.exists():
+            continue
+        h = f.read_text(encoding='utf-8')
+        h = h.replace('</head>', '<link rel="stylesheet" href="../_preview/photos.css">\n<link rel="stylesheet" href="../_preview/preview-note.css">\n</head>', 1)
+        i = h.rfind('</body>')
+        h = h[:i] + f'<p class="preview-note">{note}</p>\n' + h[i:]
+        f.write_text(h, encoding='utf-8')
+    print('✓ 預覽照片', s)
 # 展示頁：連結改成新結構
 def fix(text, prefix, lang):
     return re.sub(r"href: '([a-z0-9/-]+)/'", lambda m: f"href: '{prefix}{m.group(1)}/{lang}/'", text)
