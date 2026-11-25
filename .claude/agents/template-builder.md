@@ -16,6 +16,7 @@ tools: Read, Grep, Glob, Bash, Edit, Write
 - 先做繁中 `templates/<slug>/index.html`，再做英文 `templates/en/<slug>/index.html`（規則見 SPEC「英文版」）。
 - 簡中用 `python3 scripts/make-zh-cn.py <slug>` 產生；語言選單用 `scripts/lang-menu.py`；日文、西文另依 SPEC 對應章節。
 - 每完成一個語言版本，自己跑一次 DESIGN.md 第 4 節截圖流程（截圖放 scratchpad，不進 repo），看過再交給審查部。
+- 每個圖片位置用獨立的 class（例如 .img-g1），CSS 註解寫建議比例；主工作階段會依設計總監的照片清單另做 `previews/<slug>/photos.css`，覆寫的就是這些 class，所以不要把佔位圖畫在 .img 以外的元素上。
 - 審查部回報問題後，逐條修正並在回報中標明「已修／不修（理由）」。
 
 ## 規則

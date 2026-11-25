@@ -1,0 +1,11 @@
+/* 線上預覽專用：把 CSS 藝術佔位圖換成示意照片（Canva AI 生成）。
+   只在 scripts/build-site.sh 建置預覽網站時加入，商品 zip 不含此檔與照片。 */
+.img-hero { background: url(photos/hero.webp) center / cover no-repeat !important; }
+.img-about { background: url(photos/about.webp) center / cover no-repeat !important; }
+.img-g1 { background: url(photos/gallery-1.webp) center / cover no-repeat !important; }
+.img-g2 { background: url(photos/gallery-2.webp) center / cover no-repeat !important; }
+.img-g3 { background: url(photos/gallery-3.webp) center / cover no-repeat !important; }
+.img-g4 { background: url(photos/gallery-4.webp) center / cover no-repeat !important; }
+.img-g5 { background: url(photos/gallery-5.webp) center / cover no-repeat !important; }
+/* 照片上不需要 CSS 畫的盤子、筷子與熱氣 */
+.img::before, .img::after, .hero-art::after { content: none !important; display: none !important; }
