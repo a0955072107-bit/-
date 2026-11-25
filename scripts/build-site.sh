@@ -22,11 +22,11 @@ for s in slugs:
     subprocess.run(['python3', 'scripts/lang-index.py', str(S / s)], check=True)
 # 線上預覽專用照片：previews/<款式>/ → _site/templates/<款式>/_preview/，各語言頁加上樣式與說明（商品 zip 不含）
 P = pathlib.Path('previews')
-NOTE = {'zh-TW': '預覽頁使用 AI 生成的示意照片；模板檔案不含照片，請換成您自己的照片。',
-        'zh-CN': '预览页使用 AI 生成的示意照片；模板文件不含照片，请换成您自己的照片。',
-        'en': 'Preview photos are AI-generated samples. Photos are not included in the template files; replace them with your own.',
-        'ja': 'プレビューの写真は AI 生成のサンプルです。テンプレートには含まれないため、ご自身の写真に差し替えてください。',
-        'es': 'Las fotos de esta vista previa son muestras generadas con IA. No se incluyen en la plantilla; reemplázalas por las tuyas.'}
+NOTE = {'zh-TW': '圖片為示意照片，可換成店家自己的照片（模板檔案不含照片）。',
+        'zh-CN': '图片为示意照片，可换成店家自己的照片（模板文件不含照片）。',
+        'en': 'Photos are for illustration only. Swap in your own business photos (photos are not included in the template files).',
+        'ja': '写真はイメージです。お店の写真に差し替えてご利用ください（テンプレートには写真は含まれません）。',
+        'es': 'Las fotos son solo ilustrativas. Reemplázalas por las fotos de tu negocio (la plantilla no incluye fotos).'}
 for s in slugs:
     if not (P / s / 'photos.css').exists():
         continue

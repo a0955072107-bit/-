@@ -27,7 +27,7 @@
   搭配符合該行業氛圍的 CSS 漸層／幾何圖樣當「藝術佔位圖」，要好看、有設計感，不能只是一塊灰。
 - 在圖片相關 CSS 上方加註解，說明怎麼換成真實照片：
   `/* 換成照片：.img-xx { background: url(images/xxx.jpg) center/cover; } */`
-- **線上預覽可以用示意照片（2026-11-25 起）**：照片放在 `previews/<slug>/photos/`，覆蓋樣式寫在 `previews/<slug>/photos.css`，只由 `scripts/build-site.sh` 在建置預覽網站時加入，頁尾自動加上「AI 生成示意照片、模板不含照片」說明。商品 zip（`scripts/package.sh`）不含任何照片。照片來源與授權寫在 `previews/README.md`；Canva AI 生成圖只能用在預覽，不可放進販售檔案。
+- **線上預覽可以用示意照片（2026-11-25 起）**：照片放在 `previews/<slug>/photos/`，覆蓋樣式寫在 `previews/<slug>/photos.css`，只由 `scripts/build-site.sh` 在建置預覽網站時加入，頁尾自動加上「示意照片，可換成店家照片（模板不含照片）」說明。商品 zip（`scripts/package.sh`）不含任何照片。照片來源與授權寫在 `previews/README.md`；Canva AI 生成圖只能用在預覽，不可放進販售檔案。
 
 ## 結構
 - 每個區塊前面加 `<!-- ==================== 區塊：名稱 ==================== -->`，讓買家好找、好刪。
