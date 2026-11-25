@@ -179,16 +179,16 @@ a:not(.btn):active { opacity: .7; }
   var(--grain),
   var(--wood); }
 /* 写真に差し替える場合：.img-hero { background: url(images/hero.jpg) center/cover; }（推奨比率 4:5） */
-.hero-art { container-type: size; }
+.hero-art { container-type: size; --oy: 0cqmin; }
 .img-hero { width: 100%; height: 100%; border-radius: 0; background:
   linear-gradient(128deg, color-mix(in srgb, var(--brand-ink) 42%, transparent) 0%, transparent 42%, transparent 58%, color-mix(in srgb, var(--text) 22%, transparent) 100%),
-  linear-gradient(to top right, transparent 44.7%, var(--frame) 45.2% 48.3%, transparent 48.8% 51.2%, var(--frame) 51.7% 54.8%, transparent 55.3%) calc(50% + 36cqmin) calc(50% + 1cqmin) / 16cqmin 70cqmin no-repeat,
-  radial-gradient(closest-side, color-mix(in srgb, var(--brand) 80%, var(--brand-ink)) 0 70%, transparent 100%) calc(50% + 41cqmin) calc(50% + 22cqmin) / 15cqmin 5cqmin no-repeat,
-  radial-gradient(closest-side, var(--accent) 0 38%, var(--plate) 42% 80%, color-mix(in srgb, var(--plate) 84%, var(--text)) 84% 88%, transparent 91%) calc(50% - 32cqmin) calc(50% - 36cqmin) / 24cqmin 24cqmin no-repeat,
-  radial-gradient(closest-side, var(--shadow) 60%, transparent 100%) calc(50% - 30cqmin) calc(50% - 33cqmin) / 27cqmin 27cqmin no-repeat,
+  linear-gradient(to top right, transparent 44.7%, var(--frame) 45.2% 48.3%, transparent 48.8% 51.2%, var(--frame) 51.7% 54.8%, transparent 55.3%) calc(50% + 36cqmin) calc(50% + 1cqmin + var(--oy)) / 16cqmin 70cqmin no-repeat,
+  radial-gradient(closest-side, color-mix(in srgb, var(--brand) 80%, var(--brand-ink)) 0 70%, transparent 100%) calc(50% + 41cqmin) calc(50% + 22cqmin + var(--oy)) / 15cqmin 5cqmin no-repeat,
+  radial-gradient(closest-side, var(--accent) 0 38%, var(--plate) 42% 80%, color-mix(in srgb, var(--plate) 84%, var(--text)) 84% 88%, transparent 91%) calc(50% - 32cqmin) calc(50% - 36cqmin + var(--oy)) / 24cqmin 24cqmin no-repeat,
+  radial-gradient(closest-side, var(--shadow) 60%, transparent 100%) calc(50% - 30cqmin) calc(50% - 33cqmin + var(--oy)) / 27cqmin 27cqmin no-repeat,
   var(--grain),
   var(--wood); }
-.img-hero::before { width: 68cqmin; aspect-ratio: 1; left: calc(50% - 38cqmin); top: calc(50% - 28cqmin); border-radius: 50%; box-shadow: 1.5cqmin 3cqmin 5cqmin var(--shadow);
+.img-hero::before { width: 68cqmin; aspect-ratio: 1; left: calc(50% - 38cqmin); top: calc(50% - 28cqmin + var(--oy)); border-radius: 50%; box-shadow: 1.5cqmin 3cqmin 5cqmin var(--shadow);
   background:
     linear-gradient(128deg, color-mix(in srgb, var(--brand-ink) 35%, transparent), transparent 45%),
     radial-gradient(ellipse 6% 6% at 58% 40%, var(--accent) 0 70%, transparent 78%),
@@ -197,13 +197,16 @@ a:not(.btn):active { opacity: .7; }
     radial-gradient(ellipse 2% 2% at 66% 60%, var(--herb) 0 60%, transparent 100%),
     radial-gradient(ellipse 24% 21% at 55% 52%, var(--sauce) 0 62%, transparent 100%),
     radial-gradient(closest-side, transparent 0 60%, color-mix(in srgb, var(--plate) 84%, var(--text)) 61% 62%, var(--plate) 63.5% 100%),
-    radial-gradient(circle, color-mix(in srgb, var(--plate) 72%, var(--wood)) 0 .3cqmin, transparent .45cqmin) 0 0 / 1.3cqmin 1.3cqmin,
-    radial-gradient(circle, color-mix(in srgb, var(--plate) 80%, var(--wood)) 0 .3cqmin, transparent .45cqmin) .65cqmin .65cqmin / 1.3cqmin 1.3cqmin;
+    radial-gradient(circle, color-mix(in srgb, var(--plate) 82%, var(--wood)) 0 .3cqmin, transparent .5cqmin) 0 0 / 1.7cqmin 1.3cqmin,
+    radial-gradient(ellipse, color-mix(in srgb, var(--plate) 86%, var(--wood)) 0 .35cqmin, transparent .55cqmin) .6cqmin .9cqmin / 2.3cqmin 1.9cqmin,
+    radial-gradient(circle, color-mix(in srgb, var(--plate) 88%, var(--wood)) 0 .25cqmin, transparent .45cqmin) 1.1cqmin .3cqmin / 1.3cqmin 2.9cqmin;
   background-color: color-mix(in srgb, var(--plate) 94%, var(--wood)); }
-.img-hero::after { width: 22cqmin; height: 32cqmin; left: calc(50% - 15cqmin); top: calc(50% - 52cqmin); filter: blur(.7cqmin);
-  background: radial-gradient(ellipse 20% 46% at 36% 62%, color-mix(in srgb, var(--text) 26%, transparent), transparent 72%), radial-gradient(ellipse 16% 40% at 64% 36%, color-mix(in srgb, var(--text) 22%, transparent), transparent 72%);
-  animation: steam 4.5s ease-in-out infinite alternate; }
-@keyframes steam { from { transform: translateY(2cqmin) scaleY(.92); opacity: .55; } to { transform: translateY(-3cqmin) scaleY(1.08); opacity: 1; } }
+.img-hero::after, .hero-art::after { content: ""; position: absolute; pointer-events: none; width: 22cqmin; height: 60cqmin; left: calc(50% - 10cqmin); top: calc(50% - 52cqmin + var(--oy)); transform-origin: 50% 100%; animation: steam 4.5s ease-in-out infinite alternate; }
+.img-hero::after { background: color-mix(in srgb, var(--text) 10%, transparent);
+  mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 100'><defs><filter id='b'><feGaussianBlur stdDeviation='1.6'/></filter><path id='w' d='M-4 100C-14 78 10 62-1 44C-10 30 6 20 0 8C8 20-6 30 3 44C14 62-6 78 4 100Z'/></defs><g filter='url(%23b)' fill='currentColor' stroke='currentColor' stroke-width='3.5'><use href='%23w' transform='translate(24 0) scale(1.3 1)'/><use href='%23w' transform='translate(36 16) scale(-.8 .84)'/><use href='%23w' transform='translate(12 30) scale(.62 .7)'/></g></svg>") center / 100% 100% no-repeat, linear-gradient(to top, transparent 22%, var(--text) 34%, var(--text) 88%, transparent); mask-composite: intersect; }
+.hero-art::after { background: color-mix(in srgb, var(--plate) 70%, transparent);
+  mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 100'><defs><filter id='b'><feGaussianBlur stdDeviation='1.6'/></filter><path id='w' d='M-4 100C-14 78 10 62-1 44C-10 30 6 20 0 8C8 20-6 30 3 44C14 62-6 78 4 100Z'/></defs><g filter='url(%23b)' fill='currentColor'><use href='%23w' transform='translate(24 0) scale(1.3 1)'/><use href='%23w' transform='translate(36 16) scale(-.8 .84)'/><use href='%23w' transform='translate(12 30) scale(.62 .7)'/></g></svg>") center / 100% 100% no-repeat, linear-gradient(to top, transparent, var(--text) 10%, var(--text) 84%, transparent); mask-composite: intersect; }
+@keyframes steam { from { transform: translateY(1cqmin) scaleY(.94); opacity: .6; } to { transform: translateY(-2.5cqmin) scaleY(1.06); opacity: 1; } }
 /* 写真に差し替える場合：.img-about { background: url(images/about.jpg) center/cover; }（推奨比率 4:5） */
 .img-about { aspect-ratio: 4 / 5; }
 .img-about::before { width: 44%; aspect-ratio: 1; left: 12%; top: 16%; border-radius: 50%; box-shadow: 0 18px 30px var(--shadow);
@@ -238,7 +241,7 @@ a:not(.btn):active { opacity: .7; }
 
 /* ==================== ファーストビュー ==================== */
 .hero-copy .status { display: inline-block; padding: var(--space-1) var(--space-4); border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-size: var(--fs-sm); margin-bottom: var(--space-5); }
-.status.is-open b { color: var(--open); box-shadow: inset 0 -.4em color-mix(in srgb, var(--accent) 28%, transparent); }
+.status.is-open b { color: var(--open); }
 .hero h1 { font-size: var(--fs-display); line-height: 1.2; margin-bottom: var(--space-5); }
 .hero p.lead { font-size: var(--fs-md); color: var(--muted); max-width: 28em; margin-bottom: var(--space-7); }
 .hero-cta { display: flex; flex-wrap: wrap; gap: var(--space-3); }
@@ -277,7 +280,9 @@ html:not(.js) .tabs { display: none; }
 .tab:hover { color: var(--text); border-bottom-color: var(--line); }
 .tab:active { opacity: .7; }
 .tab[aria-selected="true"] { color: var(--text); border-bottom-color: var(--brand); }
-html:not(.js) [role="tabpanel"] + [role="tabpanel"] { margin-top: var(--space-6); }
+html:not(.js) [role="tabpanel"] + [role="tabpanel"] { margin-top: var(--space-7); }
+.panel-title { display: none; }
+html:not(.js) .panel-title { display: block; font-size: var(--fs-lg); padding-bottom: var(--space-2); border-bottom: 1px solid var(--line); }
 .menu-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--gap-col); list-style: none; }
 .menu-list li { padding-block: var(--space-5); border-bottom: 1px solid var(--line); }
 .mi-head { display: flex; align-items: baseline; gap: var(--space-3); }
@@ -351,18 +356,24 @@ html:not(.js) [role="tabpanel"] + [role="tabpanel"] { margin-top: var(--space-6)
 .field input, .field select, .field textarea { width: 100%; min-width: 0; font: inherit; color: var(--text); background: var(--surface); border: 1px solid color-mix(in srgb, var(--muted) 72%, var(--line)); border-radius: var(--radius-sm); padding: var(--space-3); min-height: 48px; }
 .field ::placeholder { color: var(--muted); opacity: 1; }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 20%, transparent); }
+.field input, .field select { height: 48px; }
+.field input[type="date"] { padding-inline: var(--space-2); }
+.field input[type="date"]::-webkit-datetime-edit { padding: 0; }
+.field input[type="date"]::-webkit-calendar-picker-indicator { margin-inline-start: var(--space-1); padding: 0; width: 1em; }
 .field textarea { min-height: 96px; resize: vertical; }
 .form .btn { grid-column: 1 / -1; width: 100%; }
 .form small { grid-column: 1 / -1; color: var(--muted); font-size: var(--fs-sm); text-align: center; }
 @media (max-width: 860px) { .reserve-grid { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 480px) { .form .field { grid-column: 1 / -1; } .form .field.pair { grid-column: auto; } .form { column-gap: var(--space-3); } }
+@media (max-width: 400px) { .form { padding-inline: var(--space-4); } }
 @media (max-width: 359px) { .form .field.pair { grid-column: 1 / -1; } }
 
 @media (max-width: 560px) {
   .sec-head, .tabs { margin-bottom: var(--space-6); }
   .menu-list li { padding-block: var(--space-4); }
   .menu-note, .points, .quote-row { margin-top: var(--space-6); }
-  .hero-art { margin-top: var(--space-6); aspect-ratio: 1; }
+  .hero-art { margin-top: var(--space-6); aspect-ratio: 1; --oy: -9cqmin; }
+  .hero-art .tag { bottom: var(--space-3); padding: var(--space-2) var(--space-3); line-height: 1.5; max-width: calc(100% - 2 * var(--pad)); }
   .visit-grid { gap: var(--space-5); }
   .points li { padding-block: var(--space-3); }
   .quote-row { row-gap: var(--space-5); }
@@ -535,6 +546,7 @@ h1 { font-feature-settings: "palt"; }
       <button class="tab" role="tab" id="tab-dessert" aria-controls="panel-dessert" aria-selected="false" tabindex="-1">デザート</button>
     </div>
     <div role="tabpanel" id="panel-food" aria-labelledby="tab-food" tabindex="0">
+      <h3 class="panel-title">お料理</h3>
       <ul class="menu-list">
         <li><div class="mi-head"><h3>牛肉とトマトの煮込みごはん<span class="badge b-sig">看板メニュー</span></h3><span class="dots"></span><span class="price">¥1,480</span></div><p>牛すね肉と完熟トマトを6時間煮込み、半熟卵をのせました。</p></li>
         <li><div class="mi-head"><h3>ひよりのオムライス</h3><span class="dots"></span><span class="price">¥1,280</span></div><p>とろとろの卵でチキンライスを包み、自家製デミグラスソースをたっぷりと。</p></li>
@@ -545,6 +557,7 @@ h1 { font-feature-settings: "palt"; }
       </ul>
     </div>
     <div role="tabpanel" id="panel-drink" aria-labelledby="tab-drink" tabindex="0">
+      <h3 class="panel-title">ドリンク</h3>
       <ul class="menu-list">
         <li><div class="mi-head"><h3>本日のハンドドリップ<span class="badge b-sig">看板メニュー</span></h3><span class="dots"></span><span class="price">¥600</span></div><p>産地は日替わりです。今日の豆はスタッフにお尋ねください。</p></li>
         <li><div class="mi-head"><h3>ひよりラテ</h3><span class="dots"></span><span class="price">¥580</span></div><p>中深煎りのハウスブレンドと牛乳で。オーツミルクへの変更は＋¥50です。</p></li>
@@ -554,6 +567,7 @@ h1 { font-feature-settings: "palt"; }
       </ul>
     </div>
     <div role="tabpanel" id="panel-dessert" aria-labelledby="tab-dessert" tabindex="0">
+      <h3 class="panel-title">デザート</h3>
       <ul class="menu-list">
         <li><div class="mi-head"><h3>昔ながらのかためプリン<span class="badge b-sig">看板メニュー</span></h3><span class="dots"></span><span class="price">¥550</span></div><p>しっかりかためで、ほろ苦いカラメルが決め手です。</p></li>
         <li><div class="mi-head"><h3>季節のベリータルト</h3><span class="dots"></span><span class="price">¥680</span></div><p>アーモンドクリームとカスタードに、新鮮なベリーをたっぷりのせて。</p></li>
@@ -742,9 +756,10 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMen
 // ファーストビューの登場アニメーション（.reveal はファーストビューだけに使います）
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-// スマホ下部の固定ボタン：ファーストビューの予約ボタンが画面から外れたら表示します
-const sticky = document.querySelector('.sticky-cta');
-new IntersectionObserver(([e]) => sticky.classList.toggle('show', !e.isIntersecting)).observe(document.querySelector('.hero-cta'));
+// スマホ下部の固定ボタン：ファーストビューの予約ボタンが画面から外れたら表示し、ご予約セクションでは隠します
+const sticky = document.querySelector('.sticky-cta'), seen = new Map();
+const so = new IntersectionObserver(es => { es.forEach(e => seen.set(e.target, e.isIntersecting)); sticky.classList.toggle('show', ![...seen.values()].some(Boolean)); });
+['.hero-cta', '#reserve'].forEach(q => so.observe(document.querySelector(q)));
 
 // メニューのタブ（矢印キーにも対応）
 const tabs = [...document.querySelectorAll('[role="tab"]')];
