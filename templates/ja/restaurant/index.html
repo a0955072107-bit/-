@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ひより食堂｜学芸大学の路地裏にある、ちいさな街の食堂</title>
 <meta name="description" content="ひより食堂は、東京・学芸大学の静かな路地にあるちいさな食堂です。旬の野菜を使った家庭料理、ハンドドリップコーヒー、毎朝焼き上げる自家製デザートをご用意しています。ご予約はウェブから。">
-<meta name="theme-color" content="#b4532a">
+<meta name="theme-color" content="#2F4A3A">
 <meta property="og:title" content="ひより食堂｜学芸大学の路地裏にある、ちいさな街の食堂">
 <meta property="og:description" content="旬の食材をじっくり煮込んだ家庭料理と、ハンドドリップコーヒー、焼きたてのデザート。ゆっくり座って、きちんとごはんを食べに来てください。">
 <meta property="og:type" content="restaurant">
@@ -18,7 +18,7 @@
 <link rel="alternate" hreflang="x-default" href="../en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js');</script>
 <script type="application/ld+json">
 {
@@ -49,56 +49,59 @@
    テーマ設定：ここを変えるだけでサイト全体の配色とフォントが変わります
    ============================================================ */
 :root {
-  --brand: #b4532a;          /* ブランドカラー（テラコッタ）：ボタン、強調テキスト */
-  --brand-ink: #fffaf2;      /* ブランドカラーの上に置く文字色 */
-  --bg: #f6efe3;             /* ページ背景（オートミール色） */
-  --surface: #fffaf2;        /* 浮き上がる面：カード、フォーム */
-  --text: #2b1d14;           /* メインの文字色（深いエスプレッソ） */
-  --muted: #6b5444;          /* 補足テキスト、キャプション */
-  --line: #e2d4c0;           /* 区切り線と枠線 */
-  --accent: #6f7d3c;         /* サブカラー（ハーブグリーン）：ベジタリアン表示 */
-  --open: #3f6b2a;           /* 「営業中」表示の色 */
-  --wood: #a8744a;           /* 仮の画像：木のテーブル */
-  --plate: #fbf6ee;          /* 仮の画像：お皿 */
-  --sauce: #d9853b;          /* 仮の画像：料理のメインカラー（ソース、卵黄） */
-  --herb: #7d8f45;           /* 仮の画像：ハーブと青菜 */
-  --berry: #9e3a3a;          /* 仮の画像：ベリーとジャム */
-  --shadow-soft: color-mix(in srgb, var(--text) 14%, transparent);  /* やわらかい影：カード、メニュー */
-  --shadow-deep: color-mix(in srgb, var(--text) 32%, transparent);  /* 濃い影：仮の画像のお皿 */
-  --radius: 18px;            /* 角の丸み */
+  --brand: #2F4A3A;          /* ブランドカラー（深い抹茶色）：ボタン、アクセント */
+  --brand-ink: #F7F8F4;      /* ブランドカラーの上に置く文字色 */
+  --bg: #ECEEE8;             /* ページ背景（青磁がかった白、寒色寄り） */
+  --surface: #F7F8F4;        /* 面：メニュー欄、フォーム、情報パネル */
+  --text: #1F2420;           /* メインの文字色（墨色） */
+  --muted: #59605A;          /* 補足テキスト、キャプション */
+  --line: #D5D9D0;           /* 1px の細い線と枠線 */
+  --accent: #C99A1E;         /* 差し色（柚子の黄色）：塗りと線だけに使い、文字色には使いません（コントラスト不足）。面積は 5% 以下に */
+  --open: #2E6B3F;           /* 「営業中」とベジタリアン表示の文字色 */
+  --wood: #D9C8AA;           /* 仮の画像：白木（ホワイトオーク）のテーブル */
+  --plate: #F3F2EC;          /* 仮の画像：磁器のお皿 */
+  --sauce: #A9653F;          /* 仮の画像：料理のメインカラー（煮込み） */
+  --herb: #6F7C57;           /* 仮の画像：ハーブと青菜 */
+  --berry: #844848;          /* 仮の画像：ベリー */
+  --shadow: color-mix(in srgb, var(--text) 14%, transparent); /* 唯一の影の色：ドロップダウンと、仮の画像のお皿 */
+  --radius: 8px;             /* 画像・パネルの角の丸み */
+  --radius-sm: 6px;          /* ボタン・入力欄・小さなラベルの角の丸み */
   --font-heading: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;   /* 見出しフォント */
   --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif; /* 本文フォント */
   --max: 1180px;             /* コンテンツの最大幅 */
   --pad: clamp(1rem, 5vw, 3rem); /* 左右の余白 */
+  --section: clamp(5rem, 11vw, 8.5rem); /* 各セクションの上下の余白 */
 }
 
 /* ---------- ベース ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 72px; -webkit-text-size-adjust: 100%; }
-body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 80px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.8 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; touch-action: manipulation; }
 a { color: inherit; }
-img { max-width: 100%; }
-h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.25; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
-:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+b, strong { font-weight: 500; }
+p, li, blockquote, figcaption { text-wrap: pretty; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; line-height: 1.25; letter-spacing: 0; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
 ::selection { background: var(--brand); color: var(--brand-ink); }
 .wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
-section { padding-block: clamp(4.5rem, 10vw, 7.5rem); }
-.sec-title { font-size: clamp(1.9rem, 4.2vw, 2.9rem); margin-bottom: 1rem; }
-.sec-lead { color: var(--muted); max-width: 36rem; }
-.sec-head { margin-bottom: clamp(2.2rem, 5vw, 3.5rem); }
+section { padding-block: var(--section); }
+.sec-title { font-size: clamp(1.75rem, 3.6vw, 2.5rem); margin-bottom: 1rem; }
+.sec-lead { color: var(--muted); max-width: 36em; }
+.sec-head { margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
 .sec-head.center { text-align: center; } .sec-head.center .sec-lead { margin-inline: auto; }
+.skip { position: absolute; left: var(--pad); top: -100px; z-index: 100; padding: .75rem 1rem; background: var(--brand); color: var(--brand-ink); border-radius: var(--radius-sm); text-decoration: none; }
+.skip:focus-visible { top: .75rem; }
 
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .85rem 1.6rem; border-radius: 999px; font: 700 1rem/1.2 var(--font-body); text-decoration: none; border: 2px solid var(--brand); cursor: pointer; transition: transform .2s, background .2s, color .2s; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .75rem 1.5rem; border-radius: var(--radius-sm); font: 500 1rem/1.2 var(--font-body); text-decoration: none; border: 1px solid var(--brand); cursor: pointer; transition: transform .2s, background-color .2s, color .2s, border-color .2s; }
 .btn-primary { background: var(--brand); color: var(--brand-ink); }
 .btn-primary:hover { background: color-mix(in srgb, var(--brand) 85%, var(--text)); border-color: color-mix(in srgb, var(--brand) 85%, var(--text)); }
 .btn-ghost { background: transparent; color: var(--brand); }
-.btn-ghost:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
-.btn:active { transform: translateY(1px) scale(.98); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.btn:active { transform: translateY(1px); }
 a:not(.btn):active { opacity: .7; }
-.tab:active { transform: scale(.97); }
 
-/* スクロールでフェードイン：JS が動いているときだけ非表示にします */
-.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+/* 登場アニメーション：ファーストビューで一度だけ使います。JS が動いているときだけ非表示にします */
+.js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease-out, transform .6s ease-out; }
 .js .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -107,19 +110,20 @@ a:not(.btn):active { opacity: .7; }
 }
 
 /* ==================== ヘッダー ==================== */
-.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
-.site-header.scrolled { background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
 .logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
-.logo-mark { width: 38px; height: 38px; border-radius: 50%; background: radial-gradient(circle at 50% 50%, var(--brand-ink) 0 30%, var(--brand) 31%); display: grid; place-items: center; }
-.logo b { font: 700 1.2rem/1.1 var(--font-heading); display: block; }
-.logo small { font: .78rem/1 var(--font-heading); color: var(--muted); }
-.nav-menu { display: flex; align-items: center; gap: 1.6rem; list-style: none; }
-.nav-menu a:not(.btn) { text-decoration: none; font-weight: 500; padding-block: .3rem; background: linear-gradient(var(--brand), var(--brand)) left bottom / 0 2px no-repeat; transition: background-size .3s; }
-.nav-menu a:not(.btn):hover { background-size: 100% 2px; }
-.nav-menu .btn { padding: .55rem 1.2rem; }
-.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: 10px; }
-.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 2px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background .3s; border-radius: 2px; }
+.logo-mark { width: 34px; height: 34px; border-radius: 50%; background: radial-gradient(circle at 50% 50%, var(--brand-ink) 0 28%, var(--brand) 29%); }
+.logo b { font: 500 1.15rem/1.15 var(--font-heading); display: block; }
+.logo small { font: 400 .78rem/1 var(--font-body); color: var(--muted); }
+.nav-menu { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; padding-block: .3rem; background: linear-gradient(var(--brand), var(--brand)) left bottom / 0 1px no-repeat; transition: background-size .3s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 1px; }
+.nav-menu .btn { min-height: 40px; padding: .5rem 1.1rem; }
+.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: var(--radius-sm); }
+.nav-toggle:active { opacity: .7; }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 1.5px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; }
 .nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
 .nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
 .nav-toggle[aria-expanded="true"] span { background: transparent; }
@@ -131,162 +135,183 @@ a:not(.btn):active { opacity: .7; }
   html:not(.js) header:has(.nav-menu) { position: sticky; }
   html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; justify-content: flex-start; gap: .4rem 1rem; }
   .js .nav-toggle { display: block; }
-  .js .nav-menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); box-shadow: 0 12px 24px var(--shadow-soft); display: none; }
+  .js .nav-menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 16px 24px var(--shadow); display: none; }
   .js .nav-menu.open { display: flex; }
   .js .nav-menu li a:not(.btn) { display: block; padding: .85rem 0; border-bottom: 1px solid var(--line); }
-  .js .nav-menu .btn { margin-top: 1rem; width: 100%; }
+  .js .nav-menu .btn { margin-top: 1rem; width: 100%; min-height: 48px; }
   .js .site-header:has(.nav-menu.open) { background: var(--bg); }
 }
 
 /* ==================== アートプレースホルダー（仮の画像） ====================
-   各 .img-xx は、CSS グラデーションで描いた「料理写真」風のイメージです。
+   各 .img-xx は、CSS グラデーションで描いた料理写真の構図見本です（真上から、自然光）。
    写真に差し替える場合：.img-xx { background: url(images/xxx.jpg) center/cover; }
-   （写真に差し替えたら、そのクラスの ::before / ::after の指定も削除してかまいません） */
-.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; }
+   （写真に差し替えたら、そのクラスの ::before / ::after も削除してください。img タグを使う場合は width と height を指定し、
+   ファーストビューの画像には fetchpriority="high"、それ以外には loading="lazy" を付けてください） */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; background-color: var(--wood); }
 .img::before, .img::after { content: ""; position: absolute; pointer-events: none; }
-/* 木のテーブルの下地 */
+/* 白木のテーブル（淡い木目と斜めの光） */
 .wood { background:
-  linear-gradient(160deg, color-mix(in srgb, var(--sauce) 18%, transparent), transparent 55%),
-  repeating-linear-gradient(92deg, transparent 0 34px, color-mix(in srgb, var(--text) 10%, transparent) 34px 36px, transparent 36px 70px),
-  repeating-linear-gradient(88deg, color-mix(in srgb, var(--wood) 92%, var(--text)) 0 3px, var(--wood) 3px 11px),
+  linear-gradient(128deg, color-mix(in srgb, var(--brand-ink) 40%, transparent) 0%, transparent 45%, transparent 60%, color-mix(in srgb, var(--text) 16%, transparent) 100%),
+  repeating-linear-gradient(90deg, transparent 0 23px, color-mix(in srgb, var(--wood) 90%, var(--text)) 23px 24px, transparent 24px 61px, color-mix(in srgb, var(--wood) 94%, var(--text)) 61px 62px, transparent 62px 97px),
   var(--wood); }
-/* 写真に差し替える場合：.img-hero { background: url(images/hero.jpg) center/cover; } */
-.img-hero { aspect-ratio: 1 / 1.05; border-radius: 48% 48% var(--radius) var(--radius) / 36% 36% var(--radius) var(--radius); }
-.img-hero::before { inset: 14% 10% 10%; border-radius: 50%; box-shadow: 0 30px 50px var(--shadow-deep);
-  background:
-    radial-gradient(circle at 42% 44%, var(--brand-ink) 0 6%, var(--sauce) 6.5% 11%, transparent 11.5%),
-    radial-gradient(circle at 60% 58%, var(--herb) 0 4%, transparent 4.5%),
-    radial-gradient(circle at 36% 62%, var(--herb) 0 3%, transparent 3.5%),
-    radial-gradient(circle at 63% 38%, var(--berry) 0 3.5%, transparent 4%),
-    radial-gradient(ellipse 34% 30% at 50% 52%, color-mix(in srgb, var(--sauce) 70%, var(--wood)) 0 60%, color-mix(in srgb, var(--sauce) 40%, var(--plate)) 61% 100%, transparent 101%),
-    radial-gradient(circle, var(--plate) 0 60%, color-mix(in srgb, var(--plate) 88%, var(--text)) 61% 62%, var(--plate) 63% 69%, color-mix(in srgb, var(--plate) 80%, var(--text)) 70%); }
-.img-hero::after { width: 28%; height: 45%; left: 36%; top: -2%; filter: blur(14px); opacity: .55;
+/* 写真に差し替える場合：.img-hero { background: url(images/hero.jpg) center/cover; }（推奨比率 4:5） */
+.img-hero { aspect-ratio: 4 / 5; background:
+  /* お箸一膳（細長い長方形 2 本） */
+  linear-gradient(90deg, transparent 0 22%, color-mix(in srgb, var(--wood) 50%, var(--text)) 22% 36%, transparent 36% 62%, color-mix(in srgb, var(--wood) 50%, var(--text)) 62% 76%, transparent 76%) 91% 42% / 6% 58% no-repeat,
+  /* 小皿（香の物） */
+  radial-gradient(closest-side, color-mix(in srgb, var(--herb) 55%, var(--plate)) 0 38%, var(--plate) 42% 80%, color-mix(in srgb, var(--plate) 84%, var(--text)) 84% 88%, transparent 91%) 6% 5% / 26% 20.8% no-repeat,
+  radial-gradient(closest-side, var(--shadow) 60%, transparent 100%) 9% 8% / 28% 22.4% no-repeat,
+  repeating-linear-gradient(90deg, transparent 0 23px, color-mix(in srgb, var(--wood) 90%, var(--text)) 23px 24px, transparent 24px 61px, color-mix(in srgb, var(--wood) 94%, var(--text)) 61px 62px, transparent 62px 97px),
+  var(--wood); }
+/* メイン：牛肉とトマトの煮込みごはんと半熟卵。いちばん上の層は斜めに差し込む自然光です */
+.img-hero::before { inset: 0; background:
+  linear-gradient(128deg, color-mix(in srgb, var(--brand-ink) 48%, transparent) 0%, transparent 40%, transparent 58%, color-mix(in srgb, var(--text) 26%, transparent) 100%),
+  radial-gradient(ellipse 5.5% 5.5% at 57% 41%, color-mix(in srgb, var(--accent) 75%, var(--sauce)) 0 70%, transparent 100%) 46% 62% / 72% 57.6% no-repeat,
+  radial-gradient(ellipse 13% 11% at 56% 42%, var(--plate) 0 75%, transparent 100%) 46% 62% / 72% 57.6% no-repeat,
+  radial-gradient(ellipse 3% 3% at 40% 36%, var(--herb) 0 60%, transparent 100%) 46% 62% / 72% 57.6% no-repeat,
+  radial-gradient(ellipse 2.5% 2.5% at 63% 62%, var(--herb) 0 60%, transparent 100%) 46% 62% / 72% 57.6% no-repeat,
+  radial-gradient(ellipse 30% 25% at 50% 52%, var(--sauce) 0 60%, transparent 100%) 46% 62% / 72% 57.6% no-repeat,
+  radial-gradient(ellipse 36% 32% at 47% 50%, color-mix(in srgb, var(--plate) 86%, var(--wood)) 0 70%, transparent 100%) 46% 62% / 72% 57.6% no-repeat,
+  radial-gradient(closest-side, color-mix(in srgb, var(--plate) 92%, var(--bg)) 0 60%, color-mix(in srgb, var(--plate) 86%, var(--text)) 62% 63%, var(--plate) 65% 95%, transparent 97%) 46% 62% / 72% 57.6% no-repeat,
+  radial-gradient(closest-side, var(--shadow) 70%, transparent 100%) 52% 68% / 76% 60.8% no-repeat; }
+/* 湯気：唯一のループするアニメーション。視差効果を減らす設定では止まります */
+.img-hero::after { width: 22%; height: 30%; left: 36%; top: 22%; filter: blur(14px); opacity: .5;
   background: radial-gradient(ellipse 30% 50% at 40% 70%, var(--brand-ink), transparent), radial-gradient(ellipse 25% 40% at 65% 40%, var(--brand-ink), transparent);
   animation: steam 5s ease-in-out infinite alternate; }
-@keyframes steam { from { transform: translateY(10px) scaleY(.9); opacity: .35; } to { transform: translateY(-14px) scaleY(1.1); opacity: .65; } }
-/* 写真に差し替える場合：.img-about { background: url(images/about.jpg) center/cover; } */
+@keyframes steam { from { transform: translateY(10px) scaleY(.9); opacity: .3; } to { transform: translateY(-14px) scaleY(1.1); opacity: .6; } }
+/* 写真に差し替える場合：.img-about { background: url(images/about.jpg) center/cover; }（推奨比率 4:5） */
 .img-about { aspect-ratio: 4 / 5; }
-.img-about::before { width: 52%; aspect-ratio: 1; left: 12%; top: 18%; border-radius: 50%; box-shadow: 0 20px 30px var(--shadow-deep);
-  background: radial-gradient(circle, color-mix(in srgb, var(--text) 85%, var(--wood)) 0 52%, color-mix(in srgb, var(--wood) 60%, var(--text)) 53% 55%, var(--plate) 56% 72%, color-mix(in srgb, var(--plate) 80%, var(--text)) 73% 74%, var(--plate) 75%); }
-.img-about::after { width: 46%; aspect-ratio: 1; right: 6%; bottom: 10%; border-radius: 50%; box-shadow: 0 20px 30px var(--shadow-deep);
-  background: radial-gradient(circle at 50% 50%, var(--berry) 0 10%, transparent 11%), radial-gradient(circle, color-mix(in srgb, var(--sauce) 55%, var(--plate)) 0 50%, var(--plate) 51% 70%, color-mix(in srgb, var(--plate) 82%, var(--text)) 71%); }
+.img-about::before { width: 44%; aspect-ratio: 1; left: 12%; top: 16%; border-radius: 50%; box-shadow: 0 18px 30px var(--shadow);
+  background: radial-gradient(circle, color-mix(in srgb, var(--sauce) 45%, var(--text)) 0 50%, color-mix(in srgb, var(--sauce) 30%, var(--text)) 51% 53%, var(--plate) 55% 70%, color-mix(in srgb, var(--plate) 86%, var(--text)) 71% 72%, var(--plate) 73%); }
+.img-about::after { width: 46%; aspect-ratio: 1; right: 8%; bottom: 12%; border-radius: 50%; box-shadow: 0 18px 30px var(--shadow);
+  background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--berry) 80%, var(--plate)) 0 24%, color-mix(in srgb, var(--wood) 70%, var(--sauce)) 25% 48%, var(--plate) 50% 72%, color-mix(in srgb, var(--plate) 86%, var(--text)) 73%); }
 /* 写真に差し替える場合：.img-g1〜.img-g5 { background: url(images/gallery-1.jpg) center/cover; } */
-.img-g1 { background: linear-gradient(180deg, color-mix(in srgb, var(--sauce) 45%, var(--plate)) 0 55%, var(--wood) 55%); }
-.img-g1::before { inset: 10% 14% 45%; border-radius: 50% 50% 0 0; background: radial-gradient(ellipse at 50% 100%, color-mix(in srgb, var(--brand-ink) 90%, transparent), transparent 70%); opacity: .7; }
-.img-g1::after { left: 0; right: 0; bottom: 18%; height: 14%; background: repeating-linear-gradient(90deg, var(--text) 0 8px, transparent 8px 22%), transparent; opacity: .55; }
-.img-g2 { background: radial-gradient(circle at 70% 30%, color-mix(in srgb, var(--plate) 70%, transparent), transparent 40%), var(--herb); }
-.img-g2::before { inset: 20% 25%; border-radius: 30% 30% 45% 45%; background: linear-gradient(180deg, transparent 0 18%, color-mix(in srgb, var(--wood) 55%, var(--text)) 18% 30%, var(--plate) 30%); box-shadow: 0 18px 24px var(--shadow-deep); }
-.img-g2::after { width: 30%; height: 30%; right: 8%; top: 8%; background: radial-gradient(circle, var(--brand-ink), transparent 65%); filter: blur(10px); animation: steam 4s ease-in-out infinite alternate; }
-.img-g3 { background: repeating-linear-gradient(45deg, var(--plate) 0 14px, color-mix(in srgb, var(--brand) 22%, var(--plate)) 14px 28px); }
-.img-g3::before { inset: 18%; border-radius: 50%; background: radial-gradient(circle, var(--berry) 0 12%, color-mix(in srgb, var(--sauce) 50%, var(--plate)) 13% 50%, var(--plate) 51% 70%, color-mix(in srgb, var(--plate) 82%, var(--text)) 71%); box-shadow: 0 16px 26px var(--shadow-deep); }
-.img-g4 { background: linear-gradient(135deg, color-mix(in srgb, var(--text) 85%, var(--wood)), var(--text)); }
-.img-g4::before { width: 26%; aspect-ratio: 1; left: 18%; top: 30%; border-radius: 50%; background: radial-gradient(circle, var(--sauce), transparent 70%); filter: blur(6px); box-shadow: 140px 30px 50px color-mix(in srgb, var(--sauce) 50%, transparent); opacity: .85; }
-.img-g4::after { inset: auto 0 0; height: 30%; background: var(--wood); opacity: .7; }
-.img-g5 { background: var(--plate); }
-.img-g5::before { inset: 0; background: radial-gradient(circle at 30% 40%, var(--sauce) 0 9%, transparent 9.5%), radial-gradient(circle at 55% 55%, var(--berry) 0 7%, transparent 7.5%), radial-gradient(circle at 75% 35%, var(--herb) 0 8%, transparent 8.5%), radial-gradient(circle at 45% 75%, color-mix(in srgb, var(--wood) 70%, var(--plate)) 0 10%, transparent 10.5%); }
-.img-g5::after { inset: 0; background: linear-gradient(180deg, transparent 60%, color-mix(in srgb, var(--text) 18%, transparent)); }
+/* g1：大きな窓から午後の日差しが差し込む店内 */
+.img-g1 { background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 82%, var(--herb)) 0 64%, var(--wood) 64%); }
+.img-g1::before { inset: 10% 16% 40%; background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--brand-ink) 92%, var(--accent)) 0 31%, color-mix(in srgb, var(--wood) 60%, var(--text)) 31% 33.5%); border-radius: 2px; }
+.img-g1::after { left: 12%; right: 8%; bottom: 0; height: 34%; background: linear-gradient(180deg, color-mix(in srgb, var(--brand-ink) 55%, transparent), transparent); transform: skewX(-24deg); opacity: .7; }
+/* g2：抹茶色の壁を背にした温かいラテ */
+.img-g2 { background: radial-gradient(circle at 72% 24%, color-mix(in srgb, var(--brand-ink) 40%, transparent), transparent 45%), color-mix(in srgb, var(--herb) 62%, var(--bg)); }
+.img-g2::before { inset: 26% 30% 22%; border-radius: 10% 10% 40% 40%; background: linear-gradient(180deg, transparent 0 14%, color-mix(in srgb, var(--sauce) 40%, var(--plate)) 14% 26%, var(--plate) 26%); box-shadow: 0 16px 24px var(--shadow); }
+.img-g2::after { left: 20%; right: 20%; bottom: 16%; height: 8%; border-radius: 50%; background: color-mix(in srgb, var(--plate) 90%, var(--text)); z-index: -1; }
+/* g3：麻のクロスに置いたベリータルト */
+.img-g3 { background: repeating-linear-gradient(0deg, transparent 0 3px, color-mix(in srgb, var(--line) 60%, transparent) 3px 4px), repeating-linear-gradient(90deg, transparent 0 3px, color-mix(in srgb, var(--line) 60%, transparent) 3px 4px), var(--surface); }
+.img-g3::before { inset: 18%; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--berry) 85%, var(--plate)) 0 30%, color-mix(in srgb, var(--wood) 70%, var(--sauce)) 31% 46%, var(--plate) 48% 70%, color-mix(in srgb, var(--plate) 86%, var(--text)) 71%); box-shadow: 0 16px 26px var(--shadow); }
+/* g4：夜のカウンターを照らす温かい灯り */
+.img-g4 { background: linear-gradient(180deg, color-mix(in srgb, var(--text) 88%, var(--brand)) 0 70%, color-mix(in srgb, var(--wood) 55%, var(--text)) 70%); }
+.img-g4::before { inset: 0; background: radial-gradient(ellipse 18% 22% at 30% 30%, color-mix(in srgb, var(--accent) 55%, transparent), transparent), radial-gradient(ellipse 18% 22% at 70% 30%, color-mix(in srgb, var(--accent) 45%, transparent), transparent); }
+.img-g4::after { inset: 0 0 76%; background: linear-gradient(90deg, transparent 29.8%, color-mix(in srgb, var(--brand-ink) 30%, transparent) 29.8% 30.2%, transparent 30.2% 69.8%, color-mix(in srgb, var(--brand-ink) 30%, transparent) 69.8% 70.2%, transparent 70.2%); }
+/* g5：真上から見た季節の小鉢 3 品 */
+.img-g5 { background:
+  radial-gradient(closest-side, color-mix(in srgb, var(--herb) 70%, var(--plate)) 0 50%, var(--plate) 54% 86%, transparent 90%) 18% 30% / 34% 44% no-repeat,
+  radial-gradient(closest-side, color-mix(in srgb, var(--sauce) 55%, var(--plate)) 0 50%, var(--plate) 54% 86%, transparent 90%) 56% 70% / 34% 44% no-repeat,
+  radial-gradient(closest-side, color-mix(in srgb, var(--berry) 45%, var(--plate)) 0 50%, var(--plate) 54% 86%, transparent 90%) 88% 26% / 30% 38% no-repeat,
+  var(--wood); }
+.img-g5::after { inset: 0; background: linear-gradient(128deg, color-mix(in srgb, var(--brand-ink) 30%, transparent), transparent 50%, color-mix(in srgb, var(--text) 16%, transparent)); }
 
 /* ==================== ファーストビュー ==================== */
-.hero { padding-top: calc(72px + clamp(2rem, 6vw, 4rem)); padding-bottom: clamp(3.5rem, 8vw, 6rem); background: radial-gradient(ellipse 60% 50% at 85% 20%, color-mix(in srgb, var(--sauce) 20%, transparent), transparent 70%); }
-.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
-.status { display: inline-block; padding: .4rem .95rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-size: .9rem; font-weight: 500; margin-bottom: 1.4rem; }
-.status.is-open b { color: var(--open); }
-.hero h1 { font-size: clamp(2.1rem, 5.2vw, 3.6rem); line-height: 1.15; margin-bottom: 1.3rem; }
-.hero p.lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--muted); max-width: 30rem; margin-bottom: 2rem; }
-.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; }
-.hero-meta { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2.2rem; font-size: .92rem; color: var(--muted); }
-.hero-meta b { display: block; font: 600 1.35rem/1.2 var(--font-heading); color: var(--text); }
+.hero { padding-top: calc(72px + clamp(2rem, 6vw, 4rem)); padding-bottom: var(--section); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(2.5rem, 7vw, 6rem); align-items: center; }
+.status { display: inline-block; padding: .35rem .9rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-size: .9rem; margin-bottom: 1.5rem; }
+.status.is-open b { color: var(--open); box-shadow: inset 0 -.4em color-mix(in srgb, var(--accent) 28%, transparent); }
+.hero h1 { font-size: clamp(2.1rem, 5vw, 3.6rem); line-height: 1.2; margin-bottom: 1.5rem; }
+.hero p.lead { font-size: clamp(1.05rem, 1.5vw, 1.15rem); color: var(--muted); max-width: 28em; margin-bottom: 2.5rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .75rem; }
 .hero-art { position: relative; }
-.hero-art .tag { position: absolute; left: -4%; bottom: 10%; background: var(--surface); padding: .8rem 1.1rem; border-radius: 14px; box-shadow: 0 14px 30px var(--shadow-soft); font-size: .9rem; max-width: 13rem; }
-.hero-art .tag b { display: block; font-family: var(--font-heading); color: var(--brand); }
-@media (max-width: 860px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } .hero-art { max-width: 420px; width: 100%; margin-inline: auto; } .hero-art .tag { left: 0; } }
+.hero-art .tag { position: absolute; left: -1.5rem; bottom: 2rem; background: var(--surface); padding: .75rem 1rem; border: 1px solid var(--line); border-inline-start: 3px solid var(--accent); border-radius: var(--radius-sm); font-size: .9rem; max-width: 14rem; }
+.hero-art .tag b { display: block; font-size: .8rem; color: var(--muted); font-weight: 400; }
+@media (max-width: 860px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } .hero-art { max-width: 420px; width: 100%; } .hero-art .tag { left: .75rem; bottom: .75rem; } }
 
-/* ==================== 私たちについて ==================== */
-.about-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
-.about-text p { color: var(--muted); margin-bottom: 1rem; }
-.about-text p.lead { font: 500 1.2rem/1.8 var(--font-heading); color: var(--text); }
-.highlights { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; list-style: none; }
-.highlights li { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem; }
-.highlights .ico { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: color-mix(in srgb, var(--brand) 12%, transparent); color: var(--brand); margin-bottom: .7rem; }
-.highlights h3 { font-size: 1.08rem; margin-bottom: .25rem; }
-.highlights p { font-size: .9rem; color: var(--muted); margin: 0; line-height: 1.6; }
-@media (max-width: 860px) { .about-grid { grid-template-columns: minmax(0, 1fr); } .img-about { aspect-ratio: 16 / 11; } }
-@media (max-width: 560px) { .highlights { grid-template-columns: minmax(0, 1fr); } }
+/* ==================== お店のこと ==================== */
+.about-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2.5rem, 7vw, 6rem); align-items: center; }
+.about-text p { color: var(--muted); margin-bottom: 1rem; max-width: 36em; }
+.about-text p.lead { font: 500 1.15rem/1.85 var(--font-heading); color: var(--text); }
+.points { list-style: none; margin-top: 2.5rem; border-top: 1px solid var(--line); }
+.points li { display: grid; grid-template-columns: minmax(0, 10em) minmax(0, 1fr); gap: .25rem 1.5rem; padding-block: 1rem; border-bottom: 1px solid var(--line); }
+.points h3 { font: 500 1rem/1.8 var(--font-body); }
+.points p { margin: 0; color: var(--muted); }
+@media (max-width: 860px) { .about-grid { grid-template-columns: minmax(0, 1fr); } .img-about { aspect-ratio: 16 / 10; } }
+@media (max-width: 560px) { .points li { grid-template-columns: minmax(0, 1fr); } }
 
 /* ==================== メニュー ==================== */
 .menu { background: var(--surface); }
-.tabs { display: flex; justify-content: center; gap: .5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
-.tab { font: 700 1rem/1 var(--font-body); padding: .8rem 1.5rem; border-radius: 999px; border: 2px solid var(--line); background: transparent; color: var(--text); cursor: pointer; transition: background .2s, border-color .2s, color .2s; }
-.tab:hover { border-color: var(--brand); }
-.tab[aria-selected="true"] { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
-.menu-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(2rem, 5vw, 4rem); list-style: none; }
-.menu-list li { padding-block: 1.25rem; border-bottom: 1px dashed var(--line); }
-.mi-head { display: flex; align-items: baseline; gap: .6rem; }
-.mi-head h3 { font-size: 1.15rem; }
-.mi-head .dots { flex: 1; border-bottom: 2px dotted color-mix(in srgb, var(--muted) 45%, transparent); transform: translateY(-.3rem); min-width: 1rem; }
-.price { font: 600 1.1rem/1 var(--font-heading); color: var(--brand); white-space: nowrap; }
-.menu-list p { color: var(--muted); font-size: .93rem; margin-top: .3rem; }
-.badge { display: inline-block; font-size: .72rem; font-weight: 700; padding: .12rem .55rem; border-radius: 999px; margin-left: .3rem; vertical-align: .15rem; font-family: var(--font-body); }
-.b-sig { background: color-mix(in srgb, var(--brand) 14%, transparent); color: var(--brand); }
-.b-veg { background: color-mix(in srgb, var(--accent) 16%, transparent); color: var(--open); }
-.menu-note { text-align: center; color: var(--muted); font-size: .88rem; margin-top: 2rem; }
+.tabs { display: flex; justify-content: center; gap: 2rem; width: fit-content; max-width: 100%; margin: 0 auto 2.5rem; border-bottom: 1px solid var(--line); }
+.tab { font: 500 1rem/1 var(--font-body); min-height: 48px; padding: .75rem .25rem; margin-bottom: -1px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); cursor: pointer; transition: color .2s, border-color .2s; }
+.tab:hover { color: var(--text); border-bottom-color: var(--line); }
+.tab:active { opacity: .7; }
+.tab[aria-selected="true"] { color: var(--text); border-bottom-color: var(--brand); }
+.menu-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(2rem, 5vw, 4.5rem); list-style: none; }
+.menu-list li { padding-block: 1.25rem; border-bottom: 1px solid var(--line); }
+.mi-head { display: flex; align-items: baseline; gap: .75rem; }
+.mi-head h3 { font-size: 1.1rem; }
+.mi-head .dots { flex: 1; border-bottom: 1px dotted color-mix(in srgb, var(--muted) 50%, transparent); transform: translateY(-.3rem); min-width: 1rem; }
+.price { font: 500 1.05rem/1 var(--font-heading); color: var(--text); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.menu-list p { color: var(--muted); font-size: .94rem; margin-top: .25rem; }
+.badge { display: inline-block; font: 500 .75rem/1.5 var(--font-body); padding: 0 .5rem; border-radius: 4px; margin-left: .5rem; vertical-align: .15rem; }
+.b-sig { background: color-mix(in srgb, var(--accent) 22%, var(--surface)); color: var(--text); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 60%, transparent); }
+.b-veg { color: var(--open); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--open) 45%, transparent); }
+.menu-note { text-align: center; color: var(--muted); font-size: .88rem; margin-top: 2.5rem; }
 @media (max-width: 760px) { .menu-list { grid-template-columns: minmax(0, 1fr); } }
 
 /* ==================== 店内 ==================== */
-.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: clamp(140px, 17vw, 230px); gap: clamp(.6rem, 1.5vw, 1rem); }
-.gallery .img:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-.gallery .img:nth-child(4) { grid-row: span 2; }
-.gallery .img:nth-child(5) { grid-column: span 2; }
+/* ギャラリーは grid-template-areas で配置：PC は 4 列 2 行、スマホは 2 列 3 行。5 枚の画像で隙間なく埋まります */
+.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(2, clamp(160px, 17vw, 240px)); grid-template-areas: "a a b c" "a a d e"; gap: clamp(.5rem, 1.2vw, 1rem); }
+.img-g1 { grid-area: a; } .img-g2 { grid-area: b; } .img-g3 { grid-area: c; } .img-g4 { grid-area: d; } .img-g5 { grid-area: e; }
 @media (max-width: 760px) {
-  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 150px; }
-  .gallery .img:nth-child(4) { grid-row: span 1; }
-  .gallery .img:nth-child(1), .gallery .img:nth-child(5) { grid-column: span 2; }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: clamp(200px, 56vw, 300px) repeat(2, clamp(130px, 36vw, 200px)); grid-template-areas: "a a" "b c" "d e"; }
 }
 
 /* ==================== お客様の声 ==================== */
-.reviews { background: color-mix(in srgb, var(--sauce) 10%, var(--bg)); }
-.review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
-.review { background: var(--surface); border-radius: var(--radius); padding: 1.75rem; border: 1px solid var(--line); display: flex; flex-direction: column; gap: 1rem; }
-.stars { color: var(--brand); font-size: 1.1rem; }
-.review blockquote { font: 400 1.05rem/1.8 var(--font-heading); flex: 1; }
-.review figcaption { font-size: .9rem; color: var(--muted); }
-.review figcaption b { color: var(--text); }
-@media (max-width: 860px) { .review-grid { grid-template-columns: minmax(0, 1fr); } }
+.reviews-grid { display: grid; grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+.reviews .sec-title { margin-bottom: 0; }
+.quote { display: grid; gap: .75rem; }
+.quote blockquote { font-size: 1rem; line-height: 1.85; }
+.quote-main blockquote { font: 500 clamp(1.3rem, 2.4vw, 1.55rem)/1.7 var(--font-heading); max-width: 30em; text-wrap: pretty; }
+.quote-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem clamp(1.5rem, 4vw, 3rem); margin-top: clamp(2.5rem, 5vw, 3.5rem); padding-top: 2rem; border-top: 1px solid var(--line); }
+.stars { font-size: .8rem; color: var(--muted); }
+.quote figcaption { font-size: .9rem; color: var(--muted); }
+.quote figcaption b { color: var(--text); }
+@media (max-width: 860px) { .reviews-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .quote-row { grid-template-columns: minmax(0, 1fr); } }
 
 /* ==================== 営業時間とアクセス ==================== */
 .visit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.25rem, 4vw, 2.5rem); }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2.2rem); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.5rem, 3vw, 2.25rem); }
 .card h3 { font-size: 1.3rem; margin-bottom: 1rem; }
 .table-scroll { overflow-x: auto; }
 .hours { width: 100%; border-collapse: collapse; min-width: 260px; }
-.hours th, .hours td { text-align: left; padding: .7rem .5rem; border-bottom: 1px solid var(--line); }
-.hours th { font-weight: 500; }
+.hours th, .hours td { text-align: left; padding: .75rem .5rem; border-bottom: 1px solid var(--line); }
+.hours th { font-weight: 400; }
 .hours td { text-align: right; font-variant-numeric: tabular-nums; }
-.hours tr.today { background: color-mix(in srgb, var(--brand) 10%, transparent); }
-.hours tr.today th::after { content: "本日"; font-size: .72rem; font-weight: 700; margin-left: .5rem; padding: .1rem .5rem; border-radius: 999px; background: var(--brand); color: var(--brand-ink); }
+.hours tr.today { background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.hours tr.today th { font-weight: 500; }
+.hours tr.today th::after { content: "本日"; font-size: .75rem; font-weight: 500; margin-left: .5rem; padding: .1rem .5rem; border-radius: 4px; background: var(--brand); color: var(--brand-ink); }
 .hours .closed { color: var(--muted); }
-.addr { font: 600 1.15rem/1.6 var(--font-heading); margin-bottom: .3rem; }
-.visit-list { list-style: none; margin: 1.2rem 0 1.5rem; display: grid; gap: .7rem; }
-.visit-list li { display: flex; gap: .7rem; color: var(--muted); font-size: .95rem; }
-.visit-list b { color: var(--text); white-space: nowrap; }
+.addr { font: 500 1.2rem/1.6 var(--font-heading); margin-bottom: .25rem; }
+.visit-list { list-style: none; margin: 1.25rem 0 1.75rem; border-top: 1px solid var(--line); display: grid; grid-template-columns: max-content minmax(0, 1fr); }
+.visit-list li { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; column-gap: 1rem; padding-block: .75rem; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .95rem; }
+.visit-list b { color: var(--text); }
+@media (max-width: 400px) { .visit-list li { grid-template-columns: minmax(0, 1fr); } }
 .small-note { font-size: .88rem; color: var(--muted); margin-top: 1rem; }
 @media (max-width: 760px) { .visit-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .card { padding: 1.25rem; } .hours th, .hours td { padding-block: .5rem; } .visit-list li { padding-block: .5rem; } }
 
 /* ==================== ご予約 ==================== */
-.reserve { background: var(--text); color: var(--bg); }
-.reserve .sec-lead { color: color-mix(in srgb, var(--bg) 80%, transparent); }
-.reserve-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
-.quick { display: grid; gap: .8rem; margin-top: 2rem; }
-.quick .btn { justify-content: flex-start; }
-.btn-light { background: transparent; color: var(--bg); border-color: color-mix(in srgb, var(--bg) 40%, transparent); }
-.btn-light:hover { background: color-mix(in srgb, var(--bg) 10%, transparent); }
-.form { background: var(--surface); color: var(--text); border-radius: var(--radius); padding: clamp(1.4rem, 3.5vw, 2.4rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.1rem; }
+.reserve { background: var(--brand); color: var(--brand-ink); }
+.reserve .sec-lead { color: color-mix(in srgb, var(--brand-ink) 82%, transparent); }
+.reserve :focus-visible { outline-color: var(--brand-ink); }
+.reserve .form :focus-visible { outline-color: var(--brand); }
+.reserve-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+.quick { display: grid; gap: .75rem; margin-top: 2rem; justify-items: start; }
+.btn-light { background: transparent; color: var(--brand-ink); border-color: color-mix(in srgb, var(--brand-ink) 45%, transparent); }
+.btn-light:hover { background: color-mix(in srgb, var(--brand-ink) 10%, transparent); }
+.form { background: var(--surface); color: var(--text); border-radius: var(--radius); padding: clamp(1.5rem, 3.5vw, 2.5rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.25rem; }
 .field { display: grid; gap: .35rem; min-width: 0; }
 .field.full { grid-column: 1 / -1; }
 .field label { font-weight: 500; font-size: .92rem; }
-.field label span { color: var(--brand); }
-.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1.5px solid var(--line); border-radius: 12px; padding: .7rem .85rem; min-height: 48px; }
-.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 22%, transparent); }
+.field label span { color: var(--muted); }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .7rem .85rem; min-height: 48px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 20%, transparent); }
 .field textarea { min-height: 96px; resize: vertical; }
 .form .btn { grid-column: 1 / -1; width: 100%; }
 .form small { grid-column: 1 / -1; color: var(--muted); font-size: .85rem; text-align: center; }
@@ -294,10 +319,11 @@ a:not(.btn):active { opacity: .7; }
 @media (max-width: 480px) { .form { grid-template-columns: minmax(0, 1fr); } }
 
 /* ==================== フッター ==================== */
-.site-footer { background: color-mix(in srgb, var(--text) 92%, var(--brand)); color: color-mix(in srgb, var(--bg) 82%, transparent); padding-block: 3.5rem 2rem; font-size: .93rem; }
+.site-footer { background: color-mix(in srgb, var(--text) 94%, var(--brand)); color: color-mix(in srgb, var(--bg) 82%, transparent); padding-block: 4rem 2rem; font-size: .93rem; }
 .foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: 2rem; }
-.site-footer h2 { color: var(--bg); font-size: 1.1rem; margin-bottom: .8rem; }
+.site-footer h2 { color: var(--bg); font-size: 1.1rem; margin-bottom: .75rem; }
 .site-footer a { text-decoration: none; } .site-footer a:hover { text-decoration: underline; }
+.site-footer :focus-visible { outline-color: var(--bg); }
 .social { display: flex; gap: 1rem; margin-top: 1rem; }
 .copy { border-top: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); margin-top: 2.5rem; padding-top: 1.5rem; font-size: .85rem; }
 @media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
@@ -306,7 +332,7 @@ a:not(.btn):active { opacity: .7; }
 .sticky-cta { display: none; }
 @media (max-width: 760px) {
   body { padding-bottom: 76px; }
-  .sticky-cta { display: flex; gap: .6rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -1px 0 var(--line); }
+  .sticky-cta { display: flex; gap: .5rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .75rem var(--pad) calc(.75rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 96%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -1px 0 var(--line); }
   .sticky-cta .btn-primary { flex: 1; }
   .sticky-cta .btn-ghost { padding-inline: 1.1rem; }
 }
@@ -314,11 +340,11 @@ a:not(.btn):active { opacity: .7; }
 /* ==================== 言語切り替え（lang-switch） ==================== */
 .nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
 .lang-switch { display: flex; align-items: center; gap: .1rem; flex: none; margin-inline-start: 1.5rem; padding-inline-start: .6rem; border-inline-start: 1px solid var(--line); font: 400 .8rem/1 var(--font-body); letter-spacing: normal; }
-.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; border-radius: 10px; color: var(--muted); font-weight: 500; text-decoration: none; text-underline-offset: 5px; text-decoration-thickness: 1.5px; transition: color .2s, background-color .2s; }
-.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--brand) 10%, transparent); }
-.lang-switch a:active { background: color-mix(in srgb, var(--brand) 18%, transparent); }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; border-radius: var(--radius-sm); color: var(--muted); font-weight: 500; text-decoration: none; text-underline-offset: 5px; text-decoration-thickness: 1px; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
 .lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
-.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 700; text-decoration-line: underline; text-decoration-color: var(--brand); }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 500; text-decoration-line: underline; text-decoration-color: var(--brand); }
 @media (max-width: 760px) {
   /* スマホ：メニューボタンの左に常に表示します。JS がオフのときはロゴと同じ行に残ります */
   .nav > .lang-switch { order: 1; margin-inline: 0 .35rem; padding-inline-start: 0; border: 0; }
@@ -341,21 +367,22 @@ a:not(.btn):active { opacity: .7; }
   /* 幅 400px 未満のスマホ：ロゴが 1 行に収まるよう余白を詰めます */
   .nav > .lang-switch { margin-inline-end: 0; }
   .logo { gap: .45rem; }
-  .logo-mark { width: 32px; height: 32px; }
+  .logo-mark { width: 30px; height: 30px; }
   .js .nav-toggle { margin-inline-end: -8px; }
 }
 /* フッターの言語リンク */
 .foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; font-size: .85rem; }
-.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: 10px; }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius-sm); }
 .foot-lang a:hover { text-decoration: underline; }
 .foot-lang a:active { opacity: .7; }
-.foot-lang a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
-.foot-lang a[aria-current="page"] { font-weight: 700; text-decoration: underline; text-decoration-color: var(--brand); }
+.foot-lang a:focus-visible { outline: 2px solid var(--bg); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { font-weight: 500; text-decoration: underline; text-decoration-color: var(--accent); }
 
 /* ==================== 日本語の組版 ====================
    禁則処理を厳しめにし、見出しは字間を詰めず、文節の区切りで改行します */
 html { line-break: strict; }
 body { line-break: strict; word-break: normal; }
+p, li, blockquote { word-break: auto-phrase; }
 h1, h2, h3, h4 { letter-spacing: normal; word-break: auto-phrase; }
 /* 日本語のナビは単語の途中で折り返さないようにします */
 header nav a { white-space: nowrap; }
@@ -366,25 +393,27 @@ h1 { font-feature-settings: "palt"; }
    The header shows the current language; click it to choose another.
    Uses <details>, so it works with JS off. Colours come from the theme tokens. */
 .lang-switch { position: relative; }
-.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: var(--radius-sm); color: inherit; font-weight: 500; list-style: none; cursor: pointer; transition: background-color .2s; }
 .lang-menu > summary::-webkit-details-marker { display: none; }
-.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
 .lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
-.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.lang-menu > summary:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
 .lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
-.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 12px 32px var(--shadow); }
 .lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">本文へスキップ</a>
 
 <!-- ==================== Section: ヘッダーとナビゲーション ==================== -->
 <header class="site-header" id="top">
   <nav class="nav wrap" aria-label="メインメニュー">
     <a href="#hero" class="logo" aria-label="ひより食堂、ページの先頭へ">
       <span class="logo-mark" aria-hidden="true"></span>
-      <span><b>ひより食堂</b><small>街の小さな食堂</small></span>
+      <span><b translate="no">ひより食堂</b><small>街の小さな食堂</small></span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="menu-links" aria-label="メニューを開く"><span></span></button>
     <ul class="nav-menu" id="menu-links">
@@ -411,11 +440,11 @@ h1 { font-feature-settings: "palt"; }
   </nav>
 </header>
 
-<main>
+<main id="main">
 <!-- ==================== Section: ファーストビュー ==================== -->
 <section class="hero" id="hero">
   <div class="wrap hero-grid">
-    <div>
+    <div class="reveal">
       <p class="status" id="status" aria-live="polite"><span>火曜日から日曜日まで営業しています</span></p>
       <h1>晴れた日は、<wbr>ゆっくりごはんを。</h1>
       <p class="lead">近くの農家さんから届く旬の野菜を、時間をかけてていねいに。淹れたてのコーヒーと一緒に、ゆっくり召し上がってください。</p>
@@ -423,15 +452,9 @@ h1 { font-feature-settings: "palt"; }
         <a href="#reserve" class="btn btn-primary">席を予約する</a>
         <a href="#menu" class="btn btn-ghost">メニューを見る</a>
       </div>
-      <!-- サンプル内容：公開前に実際の口コミや数字に差し替えてください -->
-      <div class="hero-meta">
-        <div><b>2016年</b>創業</div>
-        <div><b>4.8 ★</b>口コミ1,000件以上</div>
-        <div><b>¥1,800</b>おひとりの平均予算</div>
-      </div>
     </div>
-    <div class="hero-art">
-      <div class="img img-hero wood" role="img" aria-label="木のテーブルに置かれた、湯気の立つオムライスとハーブ"></div>
+    <div class="hero-art reveal">
+      <div class="img img-hero" role="img" aria-label="白木のテーブルを真上から見た、湯気の立つ牛肉とトマトの煮込みごはん、お箸、香の物の小皿"></div>
       <p class="tag"><b>今週のおすすめ</b>牛肉とトマトの煮込み</p>
     </div>
   </div>
@@ -440,24 +463,15 @@ h1 { font-feature-settings: "palt"; }
 <!-- ==================== Section: お店のこと ==================== -->
 <section id="about">
   <div class="wrap about-grid">
-    <div class="img img-about wood reveal" role="img" aria-label="テーブルの上のハンドドリップコーヒーとベリーのタルト"></div>
-    <div class="about-text reveal">
+    <div class="img img-about wood" role="img" aria-label="木のテーブルを真上から見た、ハンドドリップコーヒーとベリーのタルト"></div>
+    <div class="about-text">
       <h2 class="sec-title">ただいま、と<wbr>言いたくなるごはん</h2>
       <p class="lead">「ひより」は、穏やかに晴れた日のこと。お店に来てくださる方に、そんな一日を過ごしてほしいと思っています。</p>
       <p>2016年、店主の和真と妻の春が、古いアパートの1階を12席の小さな食堂に改装しました。献立は季節に合わせて変わり、ソースはすべて自家製。デザートは毎朝焼き上げ、コーヒー豆は10年来お付き合いのある近所の焙煎所から仕入れています。</p>
-      <ul class="highlights">
-        <li>
-          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22V12M12 12C12 7 8 4 3 4c0 5 4 8 9 8Zm0 0c0-4 3-7 8-7 0 4-3 7-8 7Z"/></svg></span>
-          <h3>地元の旬の野菜</h3><p>近郊の十数軒の農家さんから仕入れ、季節ごとに献立を変えています。</p>
-        </li>
-        <li>
-          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10h13v4a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6v-4Zm13 1h1.5a2.5 2.5 0 0 1 0 5H17M8 3v3m4-3v3"/></svg></span>
-          <h3>シングルオリジンの<wbr>ハンドドリップ</h3><p>近所で焙煎した浅煎りから深煎りまで、日替わりでご用意しています。</p>
-        </li>
-        <li>
-          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/></svg></span>
-          <h3>お子さま連れ、<wbr>わんちゃんも歓迎</h3><p>店内にはベビーチェアがあり、テラス席はわんちゃんとご一緒にどうぞ。</p>
-        </li>
+      <ul class="points">
+        <li><h3>地元の旬の野菜</h3><p>近郊の十数軒の農家さんから仕入れ、季節ごとに献立を変えています。</p></li>
+        <li><h3>シングルオリジンの<wbr>ハンドドリップ</h3><p>近所で焙煎した浅煎りから深煎りまで、日替わりでご用意しています。</p></li>
+        <li><h3>お子さま連れ、<wbr>わんちゃんも歓迎</h3><p>店内にはベビーチェアがあり、テラス席はわんちゃんとご一緒にどうぞ。</p></li>
       </ul>
     </div>
   </div>
@@ -466,7 +480,7 @@ h1 { font-feature-settings: "palt"; }
 <!-- ==================== Section: メニュー ==================== -->
 <section class="menu" id="menu">
   <div class="wrap">
-    <div class="sec-head center reveal">
+    <div class="sec-head center">
       <h2 class="sec-title">今日は何を<wbr>食べましょうか</h2>
       <p class="sec-lead">ランチ・ディナー共通のメニューです。メイン料理は＋¥400で、スープ・小鉢・ドリンク付きのセットにできます。</p>
     </div>
@@ -510,43 +524,43 @@ h1 { font-feature-settings: "palt"; }
 <!-- ==================== Section: 店内 ==================== -->
 <section id="space">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <h2 class="sec-title">午後の光が差し込む、<wbr>古い木のテーブル</h2>
       <p class="sec-lead">店内36席、テラス8席。大きな窓と古材の家具に囲まれて、おひとりでのんびりランチにも、気の合う仲間との夕食にもどうぞ。</p>
     </div>
-    <div class="gallery reveal">
+    <div class="gallery">
       <div class="img img-g1" role="img" aria-label="大きな窓から午後の日差しが差し込む店内"></div>
-      <div class="img img-g2" role="img" aria-label="ハーブグリーンの壁を背にした温かいラテ"></div>
-      <div class="img img-g3" role="img" aria-label="チェックのテーブルクロスに置かれたベリータルト"></div>
-      <div class="img img-g4" role="img" aria-label="夜のカウンターを照らす琥珀色の灯り"></div>
-      <div class="img img-g5" role="img" aria-label="色とりどりの季節の小鉢を上から見たところ"></div>
+      <div class="img img-g2" role="img" aria-label="抹茶色の壁を背にした温かいラテ"></div>
+      <div class="img img-g3" role="img" aria-label="麻のテーブルクロスに置かれたベリータルト"></div>
+      <div class="img img-g4" role="img" aria-label="夜のカウンターを照らす温かい灯り"></div>
+      <div class="img img-g5" role="img" aria-label="木のトレーに並んだ季節の小鉢3品を真上から見たところ"></div>
     </div>
   </div>
 </section>
 
 <!-- ==================== Section: お客様の声 ==================== -->
 <section class="reviews" id="reviews">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <h2 class="sec-title">お客様の声</h2>
-    </div>
+  <div class="wrap reviews-grid">
+    <h2 class="sec-title">お客様の声</h2>
     <!-- サンプル内容：公開前に実際の口コミに差し替えてください -->
-    <div class="review-grid">
-      <figure class="review reveal">
-        <div class="stars" aria-label="5段階中5の評価">★★★★★</div>
+    <div>
+      <figure class="quote quote-main">
+        <p class="stars" aria-label="5段階中5の評価">★★★★★</p>
         <blockquote>牛肉の煮込みごはんが一週間ずっと頭から離れません。お肉はお箸でほろっとほどけるほどやわらかく、スタッフさんも友だちの家に来たような温かさです。</blockquote>
-        <figcaption><b>佐藤さん</b><br>近くの会社にお勤め</figcaption>
+        <figcaption><b>佐藤さん</b>　近くの会社にお勤め</figcaption>
       </figure>
-      <figure class="review reveal">
-        <div class="stars" aria-label="5段階中5の評価">★★★★★</div>
-        <blockquote>週末のブランチは子どもと一緒に。ベビーチェアもあって席もゆったりしています。帰りにプリンを2つ買って帰るのがお決まりです。</blockquote>
-        <figcaption><b>田中さん</b><br>2児のパパ</figcaption>
-      </figure>
-      <figure class="review reveal">
-        <div class="stars" aria-label="5段階中5の評価">★★★★★</div>
-        <blockquote>ハンドドリップが本当においしく、好みに合わせて豆を選んでくれます。野菜カレーは奥深い味で、ベジタリアンの友人がいつも指名で頼むほどです。</blockquote>
-        <figcaption><b>山本さん</b><br>コーヒー好き</figcaption>
-      </figure>
+      <div class="quote-row">
+        <figure class="quote">
+          <p class="stars" aria-label="5段階中5の評価">★★★★★</p>
+          <blockquote>週末のブランチは子どもと一緒に。ベビーチェアもあって席もゆったりしています。帰りにプリンを2つ買って帰るのがお決まりです。</blockquote>
+          <figcaption><b>田中さん</b>　2児のパパ</figcaption>
+        </figure>
+        <figure class="quote">
+          <p class="stars" aria-label="5段階中5の評価">★★★★★</p>
+          <blockquote>ハンドドリップが本当においしく、好みに合わせて豆を選んでくれます。ベジタリアンの友人は、野菜カレーをいつも指名で頼みます。</blockquote>
+          <figcaption><b>山本さん</b>　コーヒー好き</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
@@ -554,11 +568,11 @@ h1 { font-feature-settings: "palt"; }
 <!-- ==================== Section: 営業時間とアクセス ==================== -->
 <section id="visit">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <h2 class="sec-title">営業時間とアクセス</h2>
     </div>
     <div class="visit-grid">
-      <div class="card reveal">
+      <div class="card">
         <h3>営業時間</h3>
         <!-- 営業時間を変更したら、ページ下部のスクリプトの HOURS と、<head> 内の JSON-LD も合わせて更新してください -->
         <div class="table-scroll">
@@ -576,7 +590,7 @@ h1 { font-feature-settings: "palt"; }
         </div>
         <p class="small-note">ラストオーダーは閉店の45分前です。祝日も通常どおり営業しています。</p>
       </div>
-      <div class="card reveal">
+      <div class="card">
         <h3>アクセス</h3>
         <p class="addr">〒152-0004 東京都目黒区鷹番2-14-8 1階</p>
         <p class="small-note" style="margin-top:0">電話 <a href="tel:+81312345678">03-1234-5678</a></p>
@@ -585,7 +599,7 @@ h1 { font-feature-settings: "palt"; }
           <li><b>バス</b>「鷹番二丁目」バス停から徒歩2分</li>
           <li><b>駐車場</b>専用駐車場はありません。近くのコインパーキングをご利用ください。店頭に駐輪スペースがあります</li>
         </ul>
-        <a class="btn btn-primary" href="https://maps.google.com/?q=東京都目黒区鷹番2-14-8" target="_blank" rel="noopener">Google マップで見る</a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?q=東京都目黒区鷹番2-14-8" target="_blank" rel="noopener">Google マップで見る</a>
       </div>
     </div>
   </div>
@@ -608,7 +622,7 @@ h1 { font-feature-settings: "palt"; }
          1. https://formspree.io に登録し、新しいフォームを作成します
          2. エンドポイント URL からフォーム ID（例：xyzabcd）をコピーします
          3. 下の action にある your-form-id をその ID に置き換えると、予約がメールで届くようになります -->
-    <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+    <form class="form" action="https://formspree.io/f/your-form-id" method="POST">
       <div class="field"><label for="f-name">お名前 <span>*</span></label><input id="f-name" name="name" autocomplete="name" required></div>
       <div class="field"><label for="f-tel">電話番号 <span>*</span></label><input id="f-tel" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="090-1234-5678" required></div>
       <div class="field"><label for="f-date">日にち <span>*</span></label><input id="f-date" name="date" type="date" required></div>
@@ -679,7 +693,7 @@ const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribu
 toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
 menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 
-// スクロールでフェードイン
+// ファーストビューの登場アニメーション（.reveal はファーストビューだけに使います）
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
