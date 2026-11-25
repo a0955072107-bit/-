@@ -1340,7 +1340,7 @@ Incluye versión en español: textos, precios, WhatsApp y datos de ejemplo adapt
 
 ---
 
-## 12. 網站維護月費「Website Care」（第 2 個月上架，約 12/21）
+## 12. 網站維護月費「Website Care」（11/24 改成 11/30 上架、12/1 開始賣）
 
 給已經做好網站的客人（客製案、三語代製），也賣給自己架好模板、但不想自己改的買家。這是**每月固定收入**的來源。
 
