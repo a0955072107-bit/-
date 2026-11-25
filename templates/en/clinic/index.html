@@ -348,6 +348,9 @@ html:not(.js) .site-header { background: var(--surface); border-bottom-color: va
 @media (max-width: 760px) {
   .mobile-bar { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: .6rem; position: fixed; inset: auto 0 0; z-index: 60; padding: .65rem 1rem calc(.65rem + env(safe-area-inset-bottom)); background: var(--surface); border-top: 1px solid var(--line); }
   .mobile-bar .btn { padding: .6rem 1rem; }
+  /* Keep the bottom bar hidden while the hero buttons are on screen (one solid button per screen); always shown without JS */
+  .js .mobile-bar { transform: translateY(110%); transition: transform .3s ease; }
+  .js .mobile-bar.show { transform: none; }
   body { padding-bottom: 76px; }
 }
 
@@ -760,7 +763,10 @@ const reveals = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }));
   reveals.forEach(el => io.observe(el));
-} else reveals.forEach(el => el.classList.add('in'));
+  // Bottom bar: show once the hero buttons scroll out of view
+  const bar = document.querySelector('.mobile-bar'), cta = document.querySelector('.hero-cta');
+  new IntersectionObserver(([e]) => bar.classList.toggle('show', !e.isIntersecting)).observe(cta);
+} else { reveals.forEach(el => el.classList.add('in')); document.querySelector('.mobile-bar').classList.add('show'); }
 </script>
 <script>
 /* Language menu: close when clicking outside it or pressing Escape */
