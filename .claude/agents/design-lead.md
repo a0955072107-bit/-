@@ -15,6 +15,7 @@ tools: Read, Grep, Glob, Bash, Write, WebSearch, WebFetch
 ## 你的產出
 依 DESIGN.md 第 1 節格式寫設計計畫，存成 `templates/PROPOSAL-<slug>.md`（或交給你的指示指定的路徑）：
 - 對象與任務、4～6 個有名字的 hex 色票（附 WCAG 對比檢查結果）、字體（英／中／日，各自 Google Fonts 名稱與字重）、一句話版面概念＋ASCII 線框、唯一記憶點、風險。
+- 「高級感檢查」：逐項對照 DESIGN.md 第 2.9 節（使用者指定每款都要有高級感），說明這個方向的高級感從哪裡來。
 - 「預設值自我檢查」：寫出你原本想到的、哪些是 AI 預設、改成什麼、為什麼。
 - 繁中醫療類要遵守《醫療法》（不放見證、前後對比、優惠）。
 

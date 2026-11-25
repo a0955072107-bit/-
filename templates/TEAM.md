@@ -27,6 +27,6 @@
 
 ## 規則
 - 審查部只拿到檔案路徑，不拿設計部的結論，避免「被說服」。
-- 審查標準是 `templates/SPEC.md`（硬性）＋ `templates/DESIGN.md`（品質）。
+- 審查標準是 `templates/SPEC.md`（硬性）＋ `templates/DESIGN.md`（品質，含 2.9 高級感：使用者指定每款都要有）。
 - 截圖與暫存檔一律放 scratchpad，不進 repo。
 - 不放金鑰或個人資料；不自行合併到 main。

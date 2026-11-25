@@ -9,7 +9,7 @@ tools: Read, Grep, Glob, Bash, Edit, Write
 ## 開工前必讀
 1. 使用者已選定的設計計畫（`templates/PROPOSAL-<slug>.md`）。沒有選定的計畫就停下來回報，不要自己決定方向。
 2. `templates/SPEC.md`：硬性規格全部遵守（主題變數區、區塊註解、藝術佔位圖、語言切換、SEO、JSON-LD、表單、手機底部固定按鈕、Hallmark 12 條）。
-3. `templates/DESIGN.md`：第 2 節檢查清單、第 3 節 AI 味。
+3. `templates/DESIGN.md`：第 2 節檢查清單（**特別是 2.9 高級感，使用者指定每款都要有**）、第 3 節 AI 味。
 4. 參考同類模板的程式結構（例如 `templates/clinic/index.html`），但**視覺不能沿用**。
 
 ## 工作方式
