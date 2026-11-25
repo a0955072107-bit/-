@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=Figtree:wght@400;600&family=Noto+Serif+TC:wght@500&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#24433A;--sage:#E3EAE2;--stone:#F4F5F1;--ink:#17241F;--apricot:#E9A77F;--muted:#4C5C55;--sky:#EEF3EC;--leaf:#4F6E5A}
+*{box-sizing:border-box;margin:0;padding:0}
+p{text-wrap:pretty}
+body{background:var(--stone);color:var(--ink);font:400 17px/1.8 Figtree,"Noto Sans TC",sans-serif;overflow-x:clip}
+h1,h2{font-family:Newsreader,"Noto Serif TC",serif;font-weight:500;line-height:1.3;letter-spacing:.01em;text-wrap:balance}
+header{position:absolute;inset:0 0 auto;z-index:5;display:flex;align-items:center;gap:2rem;padding:1.3rem clamp(1.25rem,4vw,3.5rem);color:var(--stone)}
+.logo{font:500 1.25rem/1 "Noto Serif TC",serif;margin-right:auto}
+nav{display:flex;gap:1.6rem;font-size:.95rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.85rem 1.6rem;border-radius:4px;font-weight:500;letter-spacing:.02em;text-decoration:none}
+.btn-p{background:var(--pine);color:var(--stone)}.btn-g{border:1px solid color-mix(in srgb,var(--pine) 55%,transparent);color:var(--pine)}
+header .btn-p{background:var(--stone);color:var(--pine)}
+.hero{position:relative;height:min(100vh,900px);min-height:640px;overflow:hidden;
+ background:linear-gradient(180deg,color-mix(in srgb,var(--pine) 55%,var(--sage)) 0 82%,color-mix(in srgb,var(--pine) 82%,var(--sage)) 82%)}
+/* 窗 */
+.win{position:absolute;right:9%;top:13%;width:38%;height:60%;border-radius:200px 200px 6px 6px;
+ background:radial-gradient(circle at 70% 25%,#fdfbf2 0 10%,transparent 40%),linear-gradient(180deg,#f3f1e4,#cfdcc8 70%,#9fb79c);
+ box-shadow:inset 0 0 0 14px color-mix(in srgb,var(--stone) 92%,var(--pine)),0 40px 80px -30px color-mix(in srgb,var(--ink) 50%,transparent)}
+.win::before{content:"";position:absolute;inset:14px;border-radius:186px 186px 0 0;
+ background:linear-gradient(90deg,transparent calc(50% - 5px),color-mix(in srgb,var(--stone) 92%,var(--pine)) calc(50% - 5px) calc(50% + 5px),transparent 0),linear-gradient(180deg,transparent 52%,color-mix(in srgb,var(--stone) 92%,var(--pine)) 52% calc(52% + 10px),transparent 0)}
+/* 窗外樹影 */
+.win::after{content:"";position:absolute;left:14px;right:14px;bottom:14px;height:38%;border-radius:50% 50% 0 0/40% 40% 0 0;background:radial-gradient(ellipse 30% 60% at 20% 100%,#7d9a79,transparent 70%),radial-gradient(ellipse 40% 70% at 75% 100%,#89a684,transparent 70%);opacity:.8}
+/* 光斑 */
+.beam{position:absolute;right:2%;bottom:0;width:60%;height:38%;background:linear-gradient(100deg,transparent 20%,color-mix(in srgb,#fdfbf2 22%,transparent) 40% 62%,transparent 80%);transform:skewX(-30deg);filter:blur(6px)}
+/* 植物 */
+.plant{position:absolute;left:52%;bottom:12%;width:13%;aspect-ratio:1/1.5}
+.pot{position:absolute;bottom:0;left:22%;width:56%;height:32%;border-radius:4px 4px 30% 30%;background:color-mix(in srgb,var(--apricot) 65%,var(--pine))}
+.lf{position:absolute;bottom:28%;left:46%;width:28%;height:62%;border-radius:100% 0;background:var(--leaf);transform-origin:bottom left}
+.l1{transform:rotate(-40deg)}.l2{transform:rotate(-5deg);background:color-mix(in srgb,var(--leaf) 80%,var(--sage))}.l3{transform:rotate(30deg);height:50%}.l4{transform:rotate(-70deg);height:45%;background:color-mix(in srgb,var(--leaf) 75%,var(--ink))}
+.panel{position:absolute;left:clamp(1.25rem,4vw,3.5rem);bottom:clamp(2rem,7vh,4.5rem);width:min(34rem,calc(100% - 2.5rem));padding:2.8rem 3rem;border-radius:6px;background:color-mix(in srgb,var(--stone) 96%,transparent);backdrop-filter:blur(8px)}
+.panel h1{font-size:clamp(2.1rem,3.4vw,3.1rem);margin-bottom:1.1rem;padding-bottom:1.1rem;border-bottom:1px solid color-mix(in srgb,var(--apricot) 70%,transparent)}
+.panel p{color:var(--muted);margin-bottom:1.6rem}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;padding:7rem clamp(1.25rem,4vw,3.5rem);max-width:1240px;margin:auto}
+.steps h2{grid-column:1/-1;font-size:2rem}
+.step{border-top:1px solid color-mix(in srgb,var(--pine) 40%,transparent);padding-top:1rem}
+.step b{font:400 1.9rem/1 Newsreader,serif;color:var(--pine);display:block;margin-bottom:.5rem}
+.step h3{font-size:1.1rem;font-weight:500}.step p{color:var(--muted);font-size:.95rem}
+.mbar{display:none}
+.burger{display:none;width:26px;height:16px;border-top:2px solid;border-bottom:2px solid;position:relative}
+.burger::after{content:"";position:absolute;left:0;right:0;top:5px;border-top:2px solid}
+@media(max-width:760px){nav,header .btn{display:none}.burger{display:block}
+ .hero{height:auto;min-height:0;padding-bottom:0;display:flex;flex-direction:column}
+ .scene{position:relative;height:330px;margin-top:0}
+ .win{right:8%;top:70px;width:52%;height:215px}.plant{left:12%;bottom:20px;width:24%}
+ .panel{position:relative;left:auto;bottom:auto;width:auto;margin:-1rem 1rem 1.5rem;padding:1.6rem}
+ .steps{grid-template-columns:1fr;gap:1.2rem;padding-top:2.5rem}
+ .mbar{display:grid;grid-template-columns:1fr 1.4fr;gap:.6rem;position:fixed;inset:auto 0 0;padding:.7rem 1rem;background:var(--stone);box-shadow:0 -1px 0 var(--sage);z-index:9}}
+
+</style></head><body>
+<header><span class="logo">青窗牙醫 <small style="font:400 .8rem Newsreader;opacity:.75;margin-left:.3rem">Aoi Window Dental</small></span><nav><span>診療項目</span><span>第一次來</span><span>醫師</span><span>門診時間</span><span>交通</span></nav><span>繁 ▾</span><a class="btn btn-p">預約看診</a><span class="burger"></span></header>
+<section class="hero"><div class="scene"><div class="win"></div><div class="beam"></div><div class="plant"><div class="lf l4"></div><div class="lf l1"></div><div class="lf l2"></div><div class="lf l3"></div><div class="pot"></div></div></div>
+<div class="panel"><h1>在有光的診間，慢慢說清楚再開始</h1><p>青窗牙醫位於台中西區。每次治療前，醫師先用影像說明狀況、選項與費用。</p><div class="cta"><a class="btn btn-p">LINE 預約看診</a><a class="btn btn-g">撥打 04-1234-5678</a></div></div></section>
+<section class="steps"><h2>第一次來看診</h2><div class="step"><b>1</b><h3>預約時段</h3><p>LINE 或電話預約，告訴我們哪裡不舒服。</p></div><div class="step"><b>2</b><h3>檢查與說明</h3><p>拍攝影像後，醫師說明狀況與可選的治療方式。</p></div><div class="step"><b>3</b><h3>確認後再治療</h3><p>了解費用與時程，你決定好了再開始。</p></div></section>
+<div class="mbar"><a class="btn btn-g">撥打電話</a><a class="btn btn-p">LINE 預約</a></div>
+</body></html>

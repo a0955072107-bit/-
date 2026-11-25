@@ -4,10 +4,10 @@
 # 用法：bash scripts/lint-all.sh [hallmark 目錄]
 set -uo pipefail
 cd "$(dirname "$0")/.."
-HM="${1:-${HALLMARK_DIR:-../nutlope/hallmark}}"
+HM="${1:-${HALLMARK_DIR:-tools/hallmark}}"
 [ -d "$HM" ] || HM=/home/user/nutlope/hallmark
 LINT="$(cd "$HM" 2>/dev/null && pwd)/skills/hallmark/scripts/sloplint.mjs"
-[ -f "$LINT" ] || { echo "找不到 Hallmark：git clone --depth 1 https://github.com/Nutlope/hallmark 後，用參數指定路徑"; exit 1; }
+[ -f "$LINT" ] || { echo "找不到 Hallmark（預設 tools/hallmark）；或 git clone --depth 1 https://github.com/Nutlope/hallmark 後用參數指定路徑"; exit 1; }
 TMP=$(mktemp -d); trap 'rm -rf "$TMP"' EXIT
 total=0; bad=0
 while IFS= read -r f; do

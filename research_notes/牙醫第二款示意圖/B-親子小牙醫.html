@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito+Sans:wght@400;600&family=Noto+Serif+TC:wght@500&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F7F4;--navy:#1E2B45;--sun:#E9C46A;--coral:#D98E7A;--mint:#DCE8E1;--muted:#4D5768;--white:#FBFBF9}
+*{box-sizing:border-box;margin:0;padding:0}
+p{text-wrap:pretty}
+body{background:var(--bg);color:var(--navy);font:400 17px/1.8 "Nunito Sans","Noto Sans TC",sans-serif;overflow-x:clip}
+h1,h2{font-family:"Young Serif","Noto Serif TC",serif;font-weight:500;line-height:1.3;text-wrap:balance}
+header{display:flex;align-items:center;gap:2rem;padding:1.2rem clamp(1.25rem,4vw,3.5rem)}
+.logo{display:flex;align-items:center;gap:.6rem;font:500 1.2rem/1 "Noto Serif TC";margin-right:auto}
+.logo i{width:30px;height:30px;border-radius:50%;background:var(--sun);display:grid;place-items:center}
+.logo i::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--navy)}
+nav{display:flex;gap:1.5rem;font-weight:500;font-size:.95rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.85rem 1.6rem;border-radius:999px;font-weight:600;text-decoration:none}
+.btn-p{background:var(--navy);color:var(--white)}.btn-s{background:var(--navy);color:var(--white)}.btn-g{border:1px solid color-mix(in srgb,var(--navy) 45%,transparent)}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:5rem;align-items:center;padding:4rem clamp(1.25rem,4vw,3.5rem) 4rem;max-width:1300px;margin:auto}
+.hero h1{font-size:clamp(2.2rem,3.8vw,3.4rem);margin-bottom:1.2rem}
+.hero p{color:var(--muted);font-size:1.08rem;margin-bottom:1.8rem;max-width:30rem}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem}
+.facts{display:flex;gap:.6rem;margin-top:1.6rem;flex-wrap:wrap}
+.facts span{font-size:.9rem;color:var(--muted);padding-right:1rem;border-right:1px solid color-mix(in srgb,var(--navy) 20%,transparent)}.facts span:last-child{border:0}
+.art{position:relative;aspect-ratio:4/4.6;max-width:500px;justify-self:end;width:100%}
+.photo{position:absolute;inset:0 0 0 8%;border-radius:999px 999px 8px 8px;overflow:hidden;
+ background:radial-gradient(ellipse 60% 45% at 70% 18%,color-mix(in srgb,var(--white) 80%,transparent),transparent 70%),
+ radial-gradient(circle at 40% 44%,#efd9c8 0 7%,transparent 7.3%),radial-gradient(ellipse 17% 21% at 40% 66%,var(--coral) 0 98%,transparent),
+ radial-gradient(circle at 63% 39%,#e6cbb6 0 9.5%,transparent 9.8%),radial-gradient(ellipse 23% 30% at 63% 70%,color-mix(in srgb,var(--navy) 75%,var(--mint)) 0 98%,transparent),
+ linear-gradient(180deg,var(--mint),color-mix(in srgb,var(--mint) 55%,var(--sun)) 100%)}
+.ring{position:absolute;left:0;bottom:12%;width:30%;aspect-ratio:1;border-radius:50%;border:1px solid color-mix(in srgb,var(--navy) 35%,transparent)}
+.dot{position:absolute;left:4%;bottom:6%;width:12%;aspect-ratio:1;border-radius:50%;background:var(--sun)}
+.wave{height:0}
+.svc{background:var(--white);padding:6rem clamp(1.25rem,4vw,3.5rem) 5rem}
+.svc h2{text-align:center;font-size:2rem;margin-bottom:1.3rem}
+.tabs{display:flex;justify-content:center;gap:.5rem;margin-bottom:2rem}
+.tabs span{padding:.6rem 1.5rem;border-radius:999px;border:1px solid color-mix(in srgb,var(--navy) 22%,transparent);font-weight:600}
+.tabs .on{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.items{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;max-width:1200px;margin:auto}
+.it{border-top:1px solid color-mix(in srgb,var(--navy) 18%,transparent);padding:1.2rem 0}.it h3{font-size:1.08rem}.it p{color:var(--muted);font-size:.92rem;line-height:1.65}
+.mbar{display:none}.burger{display:none;width:26px;height:16px;border-top:2px solid;border-bottom:2px solid;position:relative}.burger::after{content:"";position:absolute;left:0;right:0;top:5px;border-top:2px solid}
+@media(max-width:760px){nav,header .btn{display:none}.burger{display:block}
+ .hero{grid-template-columns:1fr;gap:1.2rem;padding-top:.5rem}.art{order:-1;max-width:none;justify-self:stretch;aspect-ratio:1/1.05}.photo{inset:0;border-radius:180px 180px 8px 8px}.ring,.dot{display:none}
+ .items{grid-template-columns:repeat(2,minmax(0,1fr))}.tabs span{padding:.6rem 1.1rem}
+ .mbar{display:grid;grid-template-columns:1fr 1.4fr;gap:.6rem;position:fixed;inset:auto 0 0;padding:.7rem 1rem;background:var(--white);z-index:9;box-shadow:0 -1px 0 var(--mint)}}
+</style></head><body>
+<header><span class="logo"><i></i>晴晴親子牙醫</span><nav><span>孩子看牙</span><span>大人</span><span>長輩</span><span>門診時間</span><span>交通</span></nav><span>繁 ▾</span><a class="btn btn-s">LINE 預約</a><span class="burger"></span></header>
+<section class="hero"><div><h1>第一次看牙，<br>從認識診間開始</h1><p>晴晴牙醫在新竹東區。先讓孩子摸摸器材、躺躺看椅子，準備好了再檢查。</p><div class="cta"><a class="btn btn-p">LINE 預約</a><a class="btn btn-g">撥打 03-123-4567</a></div><div class="facts"><span>兒童塗氟</span><span>窩溝封填</span><span>週六全天看診</span></div></div>
+<div class="art" role="img" aria-label="孩子與家長在診間的照片位置"><div class="photo"></div><div class="ring"></div><div class="dot"></div></div></section>
+<div class="wave"></div>
+<section class="svc"><h2>誰要來看牙？</h2><div class="tabs"><span class="on">孩子</span><span>大人</span><span>長輩</span></div>
+<div class="items"><div class="it"><h3>乳牙檢查</h3><p>長出第一顆牙就可以開始。</p></div><div class="it"><h3>兒童塗氟</h3><p>未滿 6 歲每半年一次。</p></div><div class="it"><h3>窩溝封填</h3><p>恆牙長出後保護咬合面。</p></div><div class="it"><h3>蛀牙治療</h3><p>先溝通、再分次進行。</p></div></div></section>
+<div class="mbar"><a class="btn btn-g">撥打電話</a><a class="btn btn-s">LINE 預約</a></div>
+</body></html>

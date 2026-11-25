@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F1F1EE;--ink:#14213D;--cobalt:#273C9E;--signal:#C2410C;--ice:#E6E8EF;--muted:#4A5468;--line:#D6D7D2;--white:#FBFBF9}
+*{box-sizing:border-box;margin:0;padding:0}
+p{text-wrap:pretty}
+body{background:var(--paper);color:var(--ink);font:400 18px/1.75 "Schibsted Grotesk","Noto Sans TC",sans-serif;overflow-x:clip;font-variant-numeric:tabular-nums}
+header{display:flex;align-items:center;gap:2rem;padding:1.2rem clamp(1.25rem,4vw,3.5rem);border-bottom:1px solid var(--line)}
+.logo{font:700 1.15rem/1 "Noto Sans TC";margin-right:auto;display:flex;gap:.6rem;align-items:center}
+.logo i{width:28px;height:28px;border-radius:4px;background:var(--cobalt);position:relative}
+.logo i::after{content:"";position:absolute;inset:7px 13px;background:var(--white)}.logo i::before{content:"";position:absolute;inset:13px 7px;background:var(--white)}
+nav{display:flex;gap:1.6rem;font-size:.95rem;font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.85rem 1.6rem;border-radius:4px;font-weight:500;letter-spacing:.02em;text-decoration:none}
+.btn-p{background:var(--cobalt);color:var(--white)}.btn-g{border:1px solid color-mix(in srgb,var(--ink) 45%,transparent)}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:3.5rem;align-items:center;padding:5.5rem clamp(1.25rem,4vw,3.5rem) 6rem;max-width:1320px;margin:auto}
+h1{font:500 clamp(2.2rem,3.8vw,3.4rem)/1.25 "Schibsted Grotesk","Noto Sans TC";letter-spacing:-.01em;margin-bottom:1rem;text-wrap:balance}
+.hero p{color:var(--muted);margin-bottom:1.8rem;max-width:30rem}
+.cta{display:flex;gap:.7rem;flex-wrap:wrap}
+.board{background:var(--ink);color:var(--white);border-radius:6px;padding:2rem 2.2rem}
+.bh{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid color-mix(in srgb,var(--white) 20%,transparent);padding-bottom:.9rem;margin-bottom:.4rem}
+.bh b{font-size:1.3rem}.bh span{font-size:1rem;opacity:.8}
+.row{display:grid;grid-template-columns:4.5rem 1fr auto;gap:1rem;align-items:center;padding:1rem 0;border-bottom:1px solid color-mix(in srgb,var(--white) 12%,transparent)}
+.row:last-child{border:0}
+.row .t{font-weight:600;font-size:1.15rem}.row .tm{display:block;font-size:.95rem;opacity:.75}
+.row .d{font-size:1.4rem;font-weight:500}
+.st{font-size:.95rem;font-weight:500;padding:.25rem .75rem;border-radius:3px;border:1px solid color-mix(in srgb,var(--white) 28%,transparent)}
+.now .st{background:var(--signal);border-color:var(--signal);color:var(--white)}.off{opacity:.55}
+.board .note{margin-top:1rem;font-size:.92rem;color:color-mix(in srgb,var(--white) 78%,var(--ink))}
+.idx{max-width:1320px;margin:auto;padding:1rem clamp(1.25rem,4vw,3.5rem) 4rem}
+.idx h2{font:500 2rem/1.3 "Schibsted Grotesk","Noto Sans TC";margin-bottom:1rem}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:1rem 1.2rem;border-bottom:1px solid var(--line)}th{font-weight:500;font-size:.9rem;color:var(--muted);border-bottom:1px solid var(--ink)}
+td.k{font-weight:500}td.m{color:var(--muted)}
+.mbar{display:none}.burger{display:none;width:26px;height:16px;border-top:2px solid;border-bottom:2px solid;position:relative}.burger::after{content:"";position:absolute;left:0;right:0;top:5px;border-top:2px solid}
+@media(max-width:760px){nav,header .btn{display:none}.burger{display:block}
+ .hero{grid-template-columns:1fr;gap:1.5rem;padding-top:1.8rem}.board{padding:1.2rem 1.2rem}.row{grid-template-columns:3.6rem 1fr auto;gap:.7rem}.row .d{font-size:1.2rem}
+ td.m{display:none}
+ .mbar{display:grid;grid-template-columns:1fr 1.4fr;gap:.6rem;position:fixed;inset:auto 0 0;padding:.7rem 1rem;background:var(--paper);z-index:9;box-shadow:0 -1px 0 var(--line)}}
+</style></head><body>
+<header><span class="logo"><i></i>站前牙醫診所</span><nav><span>今日門診</span><span>診療項目</span><span>醫師</span><span>門診表</span><span>交通</span></nav><span>繁 ▾</span><a class="btn btn-p">線上掛號</a><span class="burger"></span></header>
+<section class="hero"><div><h1>今天誰看診，<br>打開就知道</h1><p>站前牙醫在桃園火車站前，三位醫師輪診，早午晚都有門診，可現場掛號或線上預約。</p><div class="cta"><a class="btn btn-p">線上掛號</a><a class="btn btn-g">撥打 03-123-4567</a></div></div>
+<div class="board" aria-label="今日門診"><div class="bh"><b>今日門診</b><span>11/29（日）10:24</span></div>
+<div class="row now"><div class="t">早診<span class="tm">09–12</span></div><div class="d">林醫師</div><span class="st">看診中</span></div>
+<div class="row"><div class="t">午診<span class="tm">14–17</span></div><div class="d">陳醫師</div><span class="st">14:00 開始</span></div>
+<div class="row off"><div class="t">晚診<span class="tm">18–21</span></div><div class="d">—</div><span class="st">休診</span></div>
+<p class="note">掛號至各時段結束前 30 分鐘</p></div></section>
+<section class="idx"><h2>診療項目</h2><table><thead><tr><th>項目</th><th>說明</th><th>健保／自費</th></tr></thead><tbody>
+<tr><td class="k">洗牙</td><td class="m">每半年一次，含牙結石清除</td><td>健保</td></tr><tr><td class="k">蛀牙填補</td><td class="m">樹脂填補，依材質不同</td><td>健保／自費</td></tr><tr><td class="k">植牙</td><td class="m">術前影像評估，說明流程後安排</td><td>自費</td></tr></tbody></table></section>
+<div class="mbar"><a class="btn btn-g">撥打電話</a><a class="btn btn-p">線上掛號</a></div>
+</body></html>
