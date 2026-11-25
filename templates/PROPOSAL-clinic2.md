@@ -1,4 +1,6 @@
-# 牙醫診所第二款：設計提案（2026-11-29 製作，待使用者選擇）
+# 牙醫診所第二款：設計提案（2026-11-29 製作）
+
+> **使用者 2026-11-25 選定：方向 A 森林診間。** 定稿的設計計畫見文末「定稿：方向 A」。
 
 > 內部用，打包時不會放進商品。
 > **示意圖**（首屏桌機＋手機）：`research_notes/牙醫第二款示意圖/示意圖-A.png`、`-B.png`、`-C.png`，原始 HTML 在同一個資料夾。示意圖已依「高級感」標準（DESIGN.md 2.9）升級過，只用來選方向，不是成品。依 `DESIGN.md` 第 1 節的「設計計畫」格式。
@@ -104,3 +106,54 @@
 
 **A（森林診間）**：跟現有款差異最大（滿版圖首屏、襯線、清單式），也最符合 2026 參考範例的方向（暖、像精品、有真實感）；而且英文版賣給美國華人診所時質感最好。
 如果想把「功能」當賣點、跟市集模板拉開距離，**C** 是第二選擇；B 適合之後做「兒童牙科」專款。
+
+
+---
+
+## 定稿：方向 A 森林診間（2026-11-25）
+
+### 基本
+- **slug**：`dental`（繁中 `templates/dental/`，其他語言照 SPEC 放 en／zh-CN／ja）。
+- **店家（虛構）**：青窗牙醫診所（台中西區）；英文版 Aoi Window Dental（虛構美國地址）。
+- **對象與任務**：怕看牙、在意「先說清楚再治療」的成人與家長；主要動作是 LINE／電話預約。
+- **記憶點（只有一個）**：首屏的「有光的診間」大圖。其他區塊安靜。
+
+### 配色（相對提案的調整）
+| 名稱 | hex | 用途 |
+|---|---|---|
+| 松綠 | `#24433A` | 品牌色、按鈕、深色區塊（跟重做版 clinic 的藍綠 #0F5E58 明顯不同：偏綠、偏暗） |
+| 霧鼠尾草 | `#E3EAE2` | 區塊底色 |
+| 石白 | `#F4F5F1` | 頁面底（偏冷，不是奶油色） |
+| 墨綠黑 | `#17241F` | 文字 |
+| 淡黃銅 | `#C9B27C` | **唯一點綴**（取代杏桃，避開暖陶色預設）：標題下細線、目前語言底線；面積 ≤ 5%，不當文字色 |
+
+### 字體
+- 標題：Newsreader 500（英）＋ Noto Serif TC 500（中）；日文 Shippori Mincho 500。
+- 內文：Figtree 400（英）＋ Noto Sans TC 400（中）；日文 Zen Kaku Gothic New。
+- 跟 clinic（全無襯線、資訊感）做出區隔。
+
+### 版面
+1. 首屏：滿版診間圖，標題＋一句說明＋2 個按鈕疊在左下淺色面板（手機：圖在上、面板在下）。
+2. 第一次來看診：三步驟（真的是流程，可以編號）。
+3. 診療項目：一欄清單＋細分隔線（不用卡片）。
+4. 醫師：拱形相框 ×3（拱形是這款的語彙；clinic 已改直角）＋看診時段。
+5. 診所環境：2 張橫幅照片並排（候診區、諮詢室）。
+6. 門診時間（今日門診由同一張表 JS 產生）＋交通與地圖。
+7. 頁尾。
+
+### 照片清單（預覽用，Canva 生成；人物皆為虛構）
+| class | 比例 | 內容 | 英文提示詞重點 |
+|---|---|---|---|
+| `.img-hero` | 16:9（手機裁成 4:3） | 有大窗與柔光的診間，一張松綠色診療椅、一盆大型觀葉植物，左側留白給文字面板 | calm dental treatment room, large window, soft daylight, deep pine-green dental chair, large potted plant, sage walls, negative space on the left, no people |
+| `.img-doc1` | 4:5 | 院長，50 多歲男性，白袍 | waist-up East Asian male dentist in his fifties, white coat, sage-green blurred background, soft window light, fictional person |
+| `.img-doc2` | 4:5 | 30 多歲女性醫師 | same style, female dentist in her thirties |
+| `.img-doc3` | 4:5 | 40 多歲男性醫師 | same style, male dentist in his forties |
+| `.img-space1` | 3:2 | 候診區：木長椅、植物、窗光 | dental clinic waiting area, oak bench, plants, window light, sage and stone white, no people |
+| `.img-space2` | 3:2 | 諮詢室：桌上有平板顯示牙齒影像、兩張椅子 | consultation room in a dental clinic, table with a tablet showing a dental x-ray, two chairs, soft light, no people |
+
+共 6 張。比例與 class 要在模板工程師實作時保留。
+
+### 預設值自我檢查
+- 原本想到「奶油底＋襯線＋杏桃」：杏桃屬暖陶色系預設 → 改淡黃銅，底色維持偏冷石白。
+- 「滿版圖＋疊卡」本身常見 → 疊卡只放必要內容（標題、說明、2 按鈕），不放評分或數據。
+- 拱形相框是記憶點的延伸，不再用在其他地方，避免變成裝飾。
