@@ -307,7 +307,7 @@ html:not(.js) .site-header { background: var(--surface); border-bottom-color: va
 /* ---------- アクセス（住所を大きく見せる） ---------- */
 .access { background: var(--surface); border-top: 1px solid var(--line); }
 .access-head { margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
-.access-addr { font: 500 clamp(1.75rem, 4vw, 2.25rem)/1.35 var(--font-heading); max-width: 24em; text-wrap: balance; }
+.access-addr { font: 500 clamp(1.75rem, 4vw, 2.25rem)/1.35 var(--font-heading); max-width: 24em; text-wrap: balance; word-break: keep-all; }
 .access-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
 .access-info > div { display: grid; grid-template-columns: 5em minmax(0, 1fr); gap: 1rem; padding-block: 1.1rem; border-top: 1px solid var(--line); }
 .access-info > div:last-child { border-bottom: 1px solid var(--line); }
@@ -656,7 +656,7 @@ h1 { font-feature-settings: "palt"; }
   <div class="wrap">
     <div class="access-head">
       <h2 class="sr-only">アクセス</h2>
-      <p class="access-addr">〒140-0001 東京都品川区北品川2-8-15 1階</p>
+      <p class="access-addr">〒140-0001 東京都品川区<wbr>北品川2-8-15 1階</p>
     </div>
     <div class="access-grid">
       <div class="access-info">

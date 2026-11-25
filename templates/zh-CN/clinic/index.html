@@ -307,7 +307,7 @@ html:not(.js) .site-header { background: var(--surface); border-bottom-color: va
 /* ---------- 交通信息（大字地址开场） ---------- */
 .access { background: var(--surface); border-top: 1px solid var(--line); }
 .access-head { margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
-.access-addr { font: 500 clamp(1.75rem, 4vw, 2.25rem)/1.35 var(--font-heading); max-width: 24em; text-wrap: balance; }
+.access-addr { font: 500 clamp(1.75rem, 4vw, 2.25rem)/1.35 var(--font-heading); max-width: 24em; text-wrap: balance; word-break: keep-all; }
 .access-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
 .access-info > div { display: grid; grid-template-columns: 5em minmax(0, 1fr); gap: 1rem; padding-block: 1.1rem; border-top: 1px solid var(--line); }
 .access-info > div:last-child { border-bottom: 1px solid var(--line); }
@@ -643,7 +643,7 @@ html:not(.js) .site-header { background: var(--surface); border-bottom-color: va
   <div class="wrap">
     <div class="access-head">
       <h2 class="sr-only">交通信息</h2>
-      <p class="access-addr">高雄市苓雅区安和路 123 号 1 楼</p>
+      <p class="access-addr">高雄市苓雅区<wbr>安和路 123 号 1 楼</p>
     </div>
     <div class="access-grid">
       <div class="access-info">
