@@ -80,7 +80,7 @@
 - 檢查英文版裡沒有殘留任何中文字。
 
 ## 驗收補充
-- lint：把檔案複製到 scratchpad，執行 `node /home/user/nutlope/hallmark/skills/hallmark/scripts/sloplint.mjs <副本>`。第 20 條（戳記）可以忽略，第 19 條如果是時間範圍也可以忽略，其他 FAIL 都要修掉。
+- lint：把檔案複製到 scratchpad，執行 `node tools/hallmark/skills/hallmark/scripts/sloplint.mjs <副本>`（或直接 `bash scripts/lint-all.sh`）。第 20 條（戳記）可以忽略，第 19 條如果是時間範圍也可以忽略，其他 FAIL 都要修掉。
 - 截圖和所有暫存檔都只能放在 scratchpad 裡，不要寫進 repo。
 
 ## Motion 動態系列（高價款）額外規格

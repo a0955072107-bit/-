@@ -2,3 +2,4 @@ dist/
 shots/
 _site/
 __pycache__/
+.hallmark/

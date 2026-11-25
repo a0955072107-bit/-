@@ -12,7 +12,7 @@ tools: Read, Grep, Glob, Bash
 - `.claude/skills/web-design-guidelines/references/command.md`（React／hydration 相關規則可略過，本專案是純 HTML）
 
 ## 流程
-1. Hallmark：`bash scripts/lint-all.sh <hallmark 目錄>`。若本機沒有 Hallmark，先 `git clone --depth 1 https://github.com/Nutlope/hallmark` 到 scratchpad 或 `mktemp -d` 目錄再指定路徑。結果必須 0 頁 FAIL（#20、#19 時間範圍可忽略）。
+1. Hallmark：`bash scripts/lint-all.sh`（預設使用 repo 內的 `tools/hallmark`，不需要另外下載；不支援 `--render`）。結果必須 0 頁 FAIL（#20、#19 時間範圍可忽略）。
 2. 逐條對照 SPEC：主題變數區外沒有寫死顏色、每個 section 有 id 與區塊註解、`tel:`／LINE（英文版 WhatsApp）／地圖連結、表單 Formspree 註解、SEO／OG／JSON-LD、語言切換標記與 hreflang、頁尾年份。
 3. 無障礙：標題不跳級、skip link、focus-visible、表單 label／autocomplete／inputmode、`aria-live`、`prefers-reduced-motion`、對比（實際計算主要文字與按鈕的對比值）。
 4. 多語：`lang` 屬性、各語言字型鏈正確、日文 `line-break: strict`、英文版無殘留中文（`grep -P '[\x{4e00}-\x{9fff}]'`）、各語言版本結構一致。
