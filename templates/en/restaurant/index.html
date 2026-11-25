@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hiyori Kitchen | A Cozy Neighborhood Bistro in Portland</title>
 <meta name="description" content="Hiyori Kitchen is a small Japanese-inspired bistro on a quiet Portland side street, serving seasonal home cooking, pour-over coffee and desserts baked fresh every day. Book a table online.">
-<meta name="theme-color" content="#2F4A3A">
+<meta name="theme-color" content="#2D3B57">
 <meta property="og:title" content="Hiyori Kitchen | A Cozy Neighborhood Bistro in Portland">
 <meta property="og:description" content="Seasonal produce, slow-cooked comfort food, pour-over coffee and fresh-baked desserts. Come in and sit down for a proper meal.">
 <meta property="og:type" content="restaurant">
@@ -49,13 +49,14 @@
    THEME SETTINGS: change these to restyle the whole site
    ============================================================ */
 :root {
-  --brand: #2F4A3A;          /* Brand color (deep matcha): buttons, key accents */
-  --brand-ink: #F7F8F4;      /* Text color on top of the brand color */
-  --bg: #ECEEE8;             /* Page background (cool celadon off-white) */
-  --surface: #F7F8F4;        /* Surfaces: menu section, form, info panels */
-  --text: #1F2420;           /* Main text (ink) */
-  --muted: #59605A;          /* Secondary text, captions */
-  --line: #D5D9D0;           /* 1px hairlines and borders */
+  --brand: #2D3B57;          /* Brand color (indigo, like a noren curtain): buttons, key accents */
+  --brand-deep: #1F2940;     /* Deep indigo: reservation section background */
+  --brand-ink: #F6F6F2;      /* Text color on top of the brand color */
+  --bg: #EDEDE8;             /* Page background (neutral washi grey) */
+  --surface: #F8F8F4;        /* Surfaces: menu section, form, info panels */
+  --text: #1E2128;           /* Main text (ink) */
+  --muted: #585C66;          /* Secondary text, captions */
+  --line: #D6D6D0;           /* 1px hairlines and borders */
   --accent: #C99A1E;         /* Accent (yuzu yellow): fills and borders only, never text (too little contrast); keep it under 5% of the page */
   --open: #2E6B3F;           /* Text color for "Open now" and vegetarian tags */
   --wood: #D9C8AA;           /* Art placeholder: white oak tabletop */
@@ -64,10 +65,31 @@
   --herb: #6F7C57;           /* Art placeholder: herbs and greens */
   --berry: #844848;          /* Art placeholder: berries */
   --shadow: color-mix(in srgb, var(--text) 14%, transparent); /* The only shadow color: dropdowns and plates in the placeholders */
+  --grain: repeating-linear-gradient(90deg, transparent 0 23px, color-mix(in srgb, var(--wood) 90%, var(--text)) 23px 24px, transparent 24px 61px, color-mix(in srgb, var(--wood) 94%, var(--text)) 61px 62px, transparent 62px 97px); /* Art placeholder: white oak grain */
+  --frame: color-mix(in srgb, var(--wood) 55%, var(--text)); /* Art placeholder: dark wood for window frames and chopsticks */
+  --tint: color-mix(in srgb, var(--brand) 8%, transparent); /* Light indigo tint: hover states and today’s row */
   --radius: 8px;             /* Corner radius for images and panels */
   --radius-sm: 6px;          /* Corner radius for buttons, inputs and small tags */
   --font-heading: "Spectral", Georgia, "Times New Roman", serif;   /* Heading font */
   --font-body: "Figtree", "Segoe UI", sans-serif; /* Body font */
+  --fs-sm: .875rem;          /* Type size 1: small print, tags, captions */
+  --fs-base: 1rem;           /* Type size 2: body text */
+  --fs-md: 1.125rem;         /* Type size 3: dish names, small headings, hero intro */
+  --fs-lg: clamp(1.25rem, 2.2vw, 1.5rem); /* Type size 4: large quote, address, panel headings */
+  --fs-xl: clamp(1.75rem, 3.6vw, 2.5rem); /* Type size 5: section headings */
+  --fs-display: clamp(2.5rem, 5vw, 4rem); /* Type size 6: hero headline */
+  --space-1: .25rem;         /* Spacing scale: 4px */
+  --space-2: .5rem;          /* 8px */
+  --space-3: .75rem;         /* 12px */
+  --space-4: 1rem;           /* 16px */
+  --space-5: 1.5rem;         /* 24px */
+  --space-6: 2rem;           /* 32px */
+  --space-7: 3rem;           /* 48px */
+  --space-8: 4rem;           /* 64px */
+  --gap-col: clamp(2rem, 6vw, 5rem); /* Column gap for two-column layouts (scales with the screen) */
+  --gap-grid: clamp(.5rem, 1.2vw, 1rem); /* Gallery gap */
+  --pad-card: clamp(1.5rem, 3vw, 2.25rem); /* Padding inside panels and the form */
+  --header: 72px;            /* Header height */
   --max: 1180px;             /* Maximum content width */
   --pad: clamp(1rem, 5vw, 3rem); /* Side padding */
   --section: clamp(5rem, 11vw, 8.5rem); /* Vertical padding for each section */
@@ -75,28 +97,29 @@
 
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 80px; -webkit-text-size-adjust: 100%; }
-body { background: var(--bg); color: var(--text); font: 400 1.0625rem/1.65 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; touch-action: manipulation; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: calc(var(--header) + var(--space-2)); -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 var(--fs-base)/1.65 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; touch-action: manipulation; }
 a { color: inherit; }
 b, strong { font-weight: 500; }
 p, li, blockquote, figcaption { text-wrap: pretty; }
 h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; line-height: 1.25; letter-spacing: 0; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
 :focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
+main:focus { outline: none; }
 ::selection { background: var(--brand); color: var(--brand-ink); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
 section { padding-block: var(--section); }
-.sec-title { font-size: clamp(1.75rem, 3.6vw, 2.5rem); margin-bottom: 1rem; }
+.sec-title { font-size: var(--fs-xl); margin-bottom: var(--space-4); }
 .sec-lead { color: var(--muted); max-width: 36em; }
-.sec-head { margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
-.sec-head.center { text-align: center; } .sec-head.center .sec-lead { margin-inline: auto; }
-.skip { position: absolute; left: var(--pad); top: -100px; z-index: 100; padding: .75rem 1rem; background: var(--brand); color: var(--brand-ink); border-radius: var(--radius-sm); text-decoration: none; }
-.skip:focus-visible { top: .75rem; }
+.sec-head { margin-bottom: var(--space-7); }
+.skip { position: absolute; left: var(--pad); top: -100px; z-index: 100; padding: var(--space-3) var(--space-4); background: var(--brand); color: var(--brand-ink); border-radius: var(--radius-sm); text-decoration: none; }
+.skip:focus-visible { top: var(--space-3); }
 
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .75rem 1.5rem; border-radius: var(--radius-sm); font: 500 1rem/1.2 var(--font-body); text-decoration: none; border: 1px solid var(--brand); cursor: pointer; transition: transform .2s, background-color .2s, color .2s, border-color .2s; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-height: 48px; padding: var(--space-3) var(--space-5); border-radius: var(--radius-sm); font: 500 var(--fs-base)/1.2 var(--font-body); text-decoration: none; border: 1px solid var(--brand); cursor: pointer; transition: transform .2s, background-color .2s, color .2s, border-color .2s; }
 .btn-primary { background: var(--brand); color: var(--brand-ink); }
 .btn-primary:hover { background: color-mix(in srgb, var(--brand) 85%, var(--text)); border-color: color-mix(in srgb, var(--brand) 85%, var(--text)); }
 .btn-ghost { background: transparent; color: var(--brand); }
-.btn-ghost:hover { background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.btn-ghost:hover { background: var(--tint); }
 .btn:active { transform: translateY(1px); }
 a:not(.btn):active { opacity: .7; }
 
@@ -111,16 +134,17 @@ a:not(.btn):active { opacity: .7; }
 
 /* ==================== Header ==================== */
 .site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .3s, box-shadow .3s; }
-.site-header.scrolled { background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
-.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-.logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+.site-header.scrolled, html:not(.js) .site-header { background: color-mix(in srgb, var(--bg) 96%, transparent); box-shadow: 0 1px 0 var(--line); }
+.site-header.scrolled { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: var(--header); }
+.logo { display: flex; align-items: center; gap: var(--space-2); text-decoration: none; }
 .logo-mark { width: 34px; height: 34px; border-radius: 50%; background: radial-gradient(circle at 50% 50%, var(--brand-ink) 0 28%, var(--brand) 29%); }
-.logo b { font: 500 1.15rem/1.15 var(--font-heading); display: block; }
-.logo small { font: 400 .78rem/1 var(--font-body); color: var(--muted); }
-.nav-menu { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
-.nav-menu a:not(.btn) { text-decoration: none; padding-block: .3rem; background: linear-gradient(var(--brand), var(--brand)) left bottom / 0 1px no-repeat; transition: background-size .3s; }
+.logo b { font: 500 var(--fs-md)/1.15 var(--font-heading); display: block; }
+.logo small { font: 400 var(--fs-sm)/1 var(--font-body); color: var(--muted); }
+.nav-menu { display: flex; align-items: center; gap: var(--space-6); list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; padding-block: var(--space-1); background: linear-gradient(var(--brand), var(--brand)) left bottom / 0 1px no-repeat; transition: background-size .3s; }
 .nav-menu a:not(.btn):hover { background-size: 100% 1px; }
-.nav-menu .btn { min-height: 40px; padding: .5rem 1.1rem; }
+.nav-menu .btn { min-height: 40px; padding: var(--space-2) var(--space-4); }
 .nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: var(--radius-sm); }
 .nav-toggle:active { opacity: .7; }
 .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 1.5px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; }
@@ -133,12 +157,14 @@ a:not(.btn):active { opacity: .7; }
   /* Without JavaScript the menu simply wraps onto its own line; with JS it folds into the hamburger */
   html:not(.js) *:has(> .nav-menu) { flex-wrap: wrap; }
   html:not(.js) header:has(.nav-menu) { position: sticky; }
-  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; justify-content: flex-start; gap: .4rem 1rem; }
+  html:not(.js) .nav { height: auto; padding-block: var(--space-3); row-gap: var(--space-2); }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; justify-content: flex-start; gap: var(--space-2) var(--space-4); }
+  html:not(.js) .hero { padding-top: var(--space-6); }
   .js .nav-toggle { display: block; }
-  .js .nav-menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 16px 24px var(--shadow); display: none; }
+  .js .nav-menu { position: absolute; top: var(--header); left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: var(--space-2) var(--pad) var(--space-5); background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 16px 24px var(--shadow); display: none; }
   .js .nav-menu.open { display: flex; }
-  .js .nav-menu li a:not(.btn) { display: block; padding: .85rem 0; border-bottom: 1px solid var(--line); }
-  .js .nav-menu .btn { margin-top: 1rem; width: 100%; min-height: 48px; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: var(--space-3) 0; border-bottom: 1px solid var(--line); }
+  .js .nav-menu .btn { margin-top: var(--space-4); width: 100%; min-height: 48px; }
   .js .site-header:has(.nav-menu.open) { background: var(--bg); }
 }
 
@@ -152,33 +178,39 @@ a:not(.btn):active { opacity: .7; }
 /* White oak tabletop (pale grain and raking light) */
 .wood { background:
   linear-gradient(128deg, color-mix(in srgb, var(--brand-ink) 40%, transparent) 0%, transparent 45%, transparent 60%, color-mix(in srgb, var(--text) 16%, transparent) 100%),
-  repeating-linear-gradient(90deg, transparent 0 23px, color-mix(in srgb, var(--wood) 90%, var(--text)) 23px 24px, transparent 24px 61px, color-mix(in srgb, var(--wood) 94%, var(--text)) 61px 62px, transparent 62px 97px),
+  var(--grain),
   var(--wood); }
 /* Replace with a photo: .img-hero { background: url(images/hero.jpg) center/cover; } (4:5 works best) */
-.img-hero { aspect-ratio: 4 / 5; background:
-  /* A pair of chopsticks (two thin rectangles) */
-  linear-gradient(90deg, transparent 0 22%, color-mix(in srgb, var(--wood) 50%, var(--text)) 22% 36%, transparent 36% 62%, color-mix(in srgb, var(--wood) 50%, var(--text)) 62% 76%, transparent 76%) 91% 42% / 6% 58% no-repeat,
-  /* A small side dish (pickles) */
-  radial-gradient(closest-side, color-mix(in srgb, var(--herb) 55%, var(--plate)) 0 38%, var(--plate) 42% 80%, color-mix(in srgb, var(--plate) 84%, var(--text)) 84% 88%, transparent 91%) 6% 5% / 26% 20.8% no-repeat,
-  radial-gradient(closest-side, var(--shadow) 60%, transparent 100%) 9% 8% / 28% 22.4% no-repeat,
-  repeating-linear-gradient(90deg, transparent 0 23px, color-mix(in srgb, var(--wood) 90%, var(--text)) 23px 24px, transparent 24px 61px, color-mix(in srgb, var(--wood) 94%, var(--text)) 61px 62px, transparent 62px 97px),
+/* Hero image sizes use cqmin (1% of the shorter side of .hero-art), so the wide desktop crop and the tall phone crop keep the same composition */
+.hero-art { container-type: size; }
+.img-hero { width: 100%; height: 100%; border-radius: 0; background:
+  linear-gradient(128deg, color-mix(in srgb, var(--brand-ink) 42%, transparent) 0%, transparent 42%, transparent 58%, color-mix(in srgb, var(--text) 22%, transparent) 100%),
+  /* A pair of chopsticks, laid diagonally on a chopstick rest */
+  linear-gradient(to top right, transparent 44.7%, var(--frame) 45.2% 48.3%, transparent 48.8% 51.2%, var(--frame) 51.7% 54.8%, transparent 55.3%) calc(50% + 36cqmin) calc(50% + 1cqmin) / 16cqmin 70cqmin no-repeat,
+  radial-gradient(closest-side, color-mix(in srgb, var(--brand) 80%, var(--brand-ink)) 0 70%, transparent 100%) calc(50% + 41cqmin) calc(50% + 22cqmin) / 15cqmin 5cqmin no-repeat,
+  /* A small dish of yuzu-yellow pickled radish */
+  radial-gradient(closest-side, var(--accent) 0 38%, var(--plate) 42% 80%, color-mix(in srgb, var(--plate) 84%, var(--text)) 84% 88%, transparent 91%) calc(50% - 32cqmin) calc(50% - 36cqmin) / 24cqmin 24cqmin no-repeat,
+  radial-gradient(closest-side, var(--shadow) 60%, transparent 100%) calc(50% - 30cqmin) calc(50% - 33cqmin) / 27cqmin 27cqmin no-repeat,
+  var(--grain),
   var(--wood); }
-/* Main dish: tomato beef over rice with a soft egg; the top layer is the raking daylight */
-.img-hero::before { inset: 0; background:
-  linear-gradient(128deg, color-mix(in srgb, var(--brand-ink) 48%, transparent) 0%, transparent 40%, transparent 58%, color-mix(in srgb, var(--text) 26%, transparent) 100%),
-  radial-gradient(ellipse 5.5% 5.5% at 57% 41%, color-mix(in srgb, var(--accent) 75%, var(--sauce)) 0 70%, transparent 100%) 46% 62% / 72% 57.6% no-repeat,
-  radial-gradient(ellipse 13% 11% at 56% 42%, var(--plate) 0 75%, transparent 100%) 46% 62% / 72% 57.6% no-repeat,
-  radial-gradient(ellipse 3% 3% at 40% 36%, var(--herb) 0 60%, transparent 100%) 46% 62% / 72% 57.6% no-repeat,
-  radial-gradient(ellipse 2.5% 2.5% at 63% 62%, var(--herb) 0 60%, transparent 100%) 46% 62% / 72% 57.6% no-repeat,
-  radial-gradient(ellipse 30% 25% at 50% 52%, var(--sauce) 0 60%, transparent 100%) 46% 62% / 72% 57.6% no-repeat,
-  radial-gradient(ellipse 36% 32% at 47% 50%, color-mix(in srgb, var(--plate) 86%, var(--wood)) 0 70%, transparent 100%) 46% 62% / 72% 57.6% no-repeat,
-  radial-gradient(closest-side, color-mix(in srgb, var(--plate) 92%, var(--bg)) 0 60%, color-mix(in srgb, var(--plate) 86%, var(--text)) 62% 63%, var(--plate) 65% 95%, transparent 97%) 46% 62% / 72% 57.6% no-repeat,
-  radial-gradient(closest-side, var(--shadow) 70%, transparent 100%) 52% 68% / 76% 60.8% no-repeat; }
+/* Main dish: tomato beef over rice (dotted rice texture) with a yuzu-yellow soft egg */
+.img-hero::before { width: 68cqmin; aspect-ratio: 1; left: calc(50% - 38cqmin); top: calc(50% - 28cqmin); border-radius: 50%; box-shadow: 1.5cqmin 3cqmin 5cqmin var(--shadow);
+  background:
+    linear-gradient(128deg, color-mix(in srgb, var(--brand-ink) 35%, transparent), transparent 45%),
+    radial-gradient(ellipse 6% 6% at 58% 40%, var(--accent) 0 70%, transparent 78%),
+    radial-gradient(ellipse 13% 11% at 57% 41%, var(--plate) 0 80%, transparent 92%),
+    radial-gradient(ellipse 2.5% 2.5% at 40% 56%, var(--herb) 0 60%, transparent 100%),
+    radial-gradient(ellipse 2% 2% at 66% 60%, var(--herb) 0 60%, transparent 100%),
+    radial-gradient(ellipse 24% 21% at 55% 52%, var(--sauce) 0 62%, transparent 100%),
+    radial-gradient(closest-side, transparent 0 60%, color-mix(in srgb, var(--plate) 84%, var(--text)) 61% 62%, var(--plate) 63.5% 100%),
+    radial-gradient(circle, color-mix(in srgb, var(--plate) 72%, var(--wood)) 0 .3cqmin, transparent .45cqmin) 0 0 / 1.3cqmin 1.3cqmin,
+    radial-gradient(circle, color-mix(in srgb, var(--plate) 80%, var(--wood)) 0 .3cqmin, transparent .45cqmin) .65cqmin .65cqmin / 1.3cqmin 1.3cqmin;
+  background-color: color-mix(in srgb, var(--plate) 94%, var(--wood)); }
 /* Steam: the only looping motion; it stops when reduced motion is on */
-.img-hero::after { width: 22%; height: 30%; left: 36%; top: 22%; filter: blur(14px); opacity: .5;
-  background: radial-gradient(ellipse 30% 50% at 40% 70%, var(--brand-ink), transparent), radial-gradient(ellipse 25% 40% at 65% 40%, var(--brand-ink), transparent);
-  animation: steam 5s ease-in-out infinite alternate; }
-@keyframes steam { from { transform: translateY(10px) scaleY(.9); opacity: .3; } to { transform: translateY(-14px) scaleY(1.1); opacity: .6; } }
+.img-hero::after { width: 22cqmin; height: 32cqmin; left: calc(50% - 15cqmin); top: calc(50% - 52cqmin); filter: blur(.7cqmin);
+  background: radial-gradient(ellipse 20% 46% at 36% 62%, color-mix(in srgb, var(--text) 26%, transparent), transparent 72%), radial-gradient(ellipse 16% 40% at 64% 36%, color-mix(in srgb, var(--text) 22%, transparent), transparent 72%);
+  animation: steam 4.5s ease-in-out infinite alternate; }
+@keyframes steam { from { transform: translateY(2cqmin) scaleY(.92); opacity: .55; } to { transform: translateY(-3cqmin) scaleY(1.08); opacity: 1; } }
 /* Replace with a photo: .img-about { background: url(images/about.jpg) center/cover; } (4:5 works best) */
 .img-about { aspect-ratio: 4 / 5; }
 .img-about::before { width: 44%; aspect-ratio: 1; left: 12%; top: 16%; border-radius: 50%; box-shadow: 0 18px 30px var(--shadow);
@@ -187,18 +219,25 @@ a:not(.btn):active { opacity: .7; }
   background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--berry) 80%, var(--plate)) 0 24%, color-mix(in srgb, var(--wood) 70%, var(--sauce)) 25% 48%, var(--plate) 50% 72%, color-mix(in srgb, var(--plate) 86%, var(--text)) 73%); }
 /* Replace with a photo: .img-g1 to .img-g5 { background: url(images/gallery-1.jpg) center/cover; } */
 /* g1: afternoon sun through tall windows */
-.img-g1 { background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 82%, var(--herb)) 0 64%, var(--wood) 64%); }
-.img-g1::before { inset: 10% 16% 40%; background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--brand-ink) 92%, var(--accent)) 0 31%, color-mix(in srgb, var(--wood) 60%, var(--text)) 31% 33.5%); border-radius: 2px; }
+.img-g1 { background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 88%, var(--brand)) 0 64%, var(--wood) 64%); }
+.img-g1::before { inset: 10% 16% 40%; border-radius: 2px; box-shadow: inset 0 0 0 6px var(--frame);
+  background:
+    linear-gradient(90deg, transparent calc(50% - 3px), var(--frame) calc(50% - 3px) calc(50% + 3px), transparent calc(50% + 3px)),
+    linear-gradient(0deg, transparent calc(58% - 3px), var(--frame) calc(58% - 3px) calc(58% + 3px), transparent calc(58% + 3px)),
+    radial-gradient(ellipse 26% 46% at 16% 100%, color-mix(in srgb, var(--herb) 80%, var(--text)) 0 62%, transparent 64%),
+    radial-gradient(ellipse 18% 62% at 80% 100%, var(--herb) 0 62%, transparent 64%),
+    radial-gradient(ellipse 14% 30% at 46% 100%, color-mix(in srgb, var(--herb) 70%, var(--bg)) 0 62%, transparent 64%),
+    linear-gradient(180deg, var(--brand-ink), color-mix(in srgb, var(--brand-ink) 85%, var(--accent))); }
 .img-g1::after { left: 12%; right: 8%; bottom: 0; height: 34%; background: linear-gradient(180deg, color-mix(in srgb, var(--brand-ink) 55%, transparent), transparent); transform: skewX(-24deg); opacity: .7; }
-/* g2: a hot latte against a matcha-green wall */
-.img-g2 { background: radial-gradient(circle at 72% 24%, color-mix(in srgb, var(--brand-ink) 40%, transparent), transparent 45%), color-mix(in srgb, var(--herb) 62%, var(--bg)); }
+/* g2: a hot latte in front of an indigo curtain */
+.img-g2 { background: radial-gradient(circle at 72% 24%, color-mix(in srgb, var(--brand-ink) 30%, transparent), transparent 45%), color-mix(in srgb, var(--brand) 70%, var(--bg)); }
 .img-g2::before { inset: 26% 30% 22%; border-radius: 10% 10% 40% 40%; background: linear-gradient(180deg, transparent 0 14%, color-mix(in srgb, var(--sauce) 40%, var(--plate)) 14% 26%, var(--plate) 26%); box-shadow: 0 16px 24px var(--shadow); }
 .img-g2::after { left: 20%; right: 20%; bottom: 16%; height: 8%; border-radius: 50%; background: color-mix(in srgb, var(--plate) 90%, var(--text)); z-index: -1; }
-/* g3: a berry tart on a linen cloth */
-.img-g3 { background: repeating-linear-gradient(0deg, transparent 0 3px, color-mix(in srgb, var(--line) 60%, transparent) 3px 4px), repeating-linear-gradient(90deg, transparent 0 3px, color-mix(in srgb, var(--line) 60%, transparent) 3px 4px), var(--surface); }
-.img-g3::before { inset: 18%; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--berry) 85%, var(--plate)) 0 30%, color-mix(in srgb, var(--wood) 70%, var(--sauce)) 31% 46%, var(--plate) 48% 70%, color-mix(in srgb, var(--plate) 86%, var(--text)) 71%); box-shadow: 0 16px 26px var(--shadow); }
+/* g3: a berry tart on a plain twill cloth */
+.img-g3 { background: repeating-linear-gradient(45deg, var(--surface) 0 6px, color-mix(in srgb, var(--line) 45%, var(--surface)) 6px 7px); }
+.img-g3::before { inset: auto; height: 70%; aspect-ratio: 1; left: 50%; top: 50%; translate: -50% -50%; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--berry) 85%, var(--plate)) 0 30%, color-mix(in srgb, var(--wood) 70%, var(--sauce)) 31% 46%, var(--plate) 48% 70%, color-mix(in srgb, var(--plate) 86%, var(--text)) 71%); box-shadow: 0 16px 26px var(--shadow); }
 /* g4: warm lights over the bar at night */
-.img-g4 { background: linear-gradient(180deg, color-mix(in srgb, var(--text) 88%, var(--brand)) 0 70%, color-mix(in srgb, var(--wood) 55%, var(--text)) 70%); }
+.img-g4 { background: linear-gradient(180deg, color-mix(in srgb, var(--text) 88%, var(--brand)) 0 70%, var(--frame) 70%); }
 .img-g4::before { inset: 0; background: radial-gradient(ellipse 18% 22% at 30% 30%, color-mix(in srgb, var(--accent) 55%, transparent), transparent), radial-gradient(ellipse 18% 22% at 70% 30%, color-mix(in srgb, var(--accent) 45%, transparent), transparent); }
 .img-g4::after { inset: 0 0 76%; background: linear-gradient(90deg, transparent 29.8%, color-mix(in srgb, var(--brand-ink) 30%, transparent) 29.8% 30.2%, transparent 30.2% 69.8%, color-mix(in srgb, var(--brand-ink) 30%, transparent) 69.8% 70.2%, transparent 70.2%); }
 /* g5: three small seasonal dishes from above */
@@ -210,169 +249,193 @@ a:not(.btn):active { opacity: .7; }
 .img-g5::after { inset: 0; background: linear-gradient(128deg, color-mix(in srgb, var(--brand-ink) 30%, transparent), transparent 50%, color-mix(in srgb, var(--text) 16%, transparent)); }
 
 /* ==================== Hero ==================== */
-.hero { padding-top: calc(72px + clamp(2rem, 6vw, 4rem)); padding-bottom: var(--section); }
-.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(2.5rem, 7vw, 6rem); align-items: center; }
-.status { display: inline-block; padding: .35rem .9rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-size: .9rem; margin-bottom: 1.5rem; }
+/* Desktop: text on the left, a large image bleeding to the right edge of the window (about 55%), as tall as the first screen */
+.hero-copy .status { display: inline-block; padding: var(--space-1) var(--space-4); border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-size: var(--fs-sm); margin-bottom: var(--space-5); }
 .status.is-open b { color: var(--open); box-shadow: inset 0 -.4em color-mix(in srgb, var(--accent) 28%, transparent); }
-.hero h1 { font-size: clamp(2.4rem, 5.6vw, 4.25rem); line-height: 1.12; letter-spacing: -0.015em; margin-bottom: 1.5rem; }
-.hero p.lead { font-size: clamp(1.05rem, 1.5vw, 1.15rem); color: var(--muted); max-width: 28em; margin-bottom: 2.5rem; }
-.hero-cta { display: flex; flex-wrap: wrap; gap: .75rem; }
+.hero h1 { font-size: var(--fs-display); line-height: 1.1; letter-spacing: -0.015em; margin-bottom: var(--space-5); }
+.hero p.lead { font-size: var(--fs-md); color: var(--muted); max-width: 28em; margin-bottom: var(--space-7); }
+.hero-cta { display: flex; flex-wrap: wrap; gap: var(--space-3); }
 .hero-art { position: relative; }
-.hero-art .tag { position: absolute; left: -1.5rem; bottom: 2rem; background: var(--surface); padding: .75rem 1rem; border: 1px solid var(--line); border-inline-start: 3px solid var(--accent); border-radius: var(--radius-sm); font-size: .9rem; max-width: 14rem; }
-.hero-art .tag b { display: block; font-size: .8rem; color: var(--muted); font-weight: 400; }
-@media (max-width: 860px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } .hero-art { max-width: 420px; width: 100%; } .hero-art .tag { left: .75rem; bottom: .75rem; } }
+.hero-art .tag { position: absolute; left: var(--space-5); bottom: var(--space-5); background: var(--surface); padding: var(--space-3) var(--space-4); border: 1px solid var(--line); border-inline-start: 3px solid var(--accent); border-radius: var(--radius-sm); font-size: var(--fs-sm); max-width: 16rem; }
+.hero-art .tag b { display: block; color: var(--muted); font-weight: 400; }
+@media (min-width: 961px) {
+  .hero { position: relative; min-height: clamp(640px, 100svh, 960px); display: flex; align-items: center; padding-block: calc(var(--header) + var(--space-7)) var(--space-7); }
+  .hero > .wrap { width: 100%; }
+  .hero-copy { max-width: calc(45vw - max(0px, (100vw - var(--max)) / 2) - var(--pad) - var(--space-6)); }
+  .hero-art { position: absolute; top: var(--header); right: 0; bottom: 0; width: 55vw; }
+  .img-hero { border-radius: var(--radius) 0 0 var(--radius); }
+}
+@media (max-width: 960px) {
+  /* Phones and tablets: the image sits below the text and bleeds to both edges */
+  .hero { padding-top: calc(var(--header) + var(--space-6)); padding-bottom: 0; }
+  .hero-art { margin-top: var(--space-7); width: 100%; aspect-ratio: 4 / 5; max-height: 680px; }
+  .hero-art .tag { left: var(--pad); bottom: var(--space-4); }
+}
 
 /* ==================== About ==================== */
-.about-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2.5rem, 7vw, 6rem); align-items: center; }
-.about-text p { color: var(--muted); margin-bottom: 1rem; max-width: 36em; }
-.about-text p.lead { font: 500 1.15rem/1.85 var(--font-heading); color: var(--text); }
-.points { list-style: none; margin-top: 2.5rem; border-top: 1px solid var(--line); }
-.points li { display: grid; grid-template-columns: minmax(0, 10em) minmax(0, 1fr); gap: .25rem 1.5rem; padding-block: 1rem; border-bottom: 1px solid var(--line); }
-.points h3 { font: 500 1rem/1.8 var(--font-body); }
+.about-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: var(--gap-col); align-items: center; }
+.about-text p { color: var(--muted); margin-bottom: var(--space-4); max-width: 36em; }
+.about-text p.lead { font: 500 var(--fs-md)/1.85 var(--font-heading); color: var(--text); }
+.points { list-style: none; margin-top: var(--space-7); border-top: 1px solid var(--line); }
+.points li { display: grid; grid-template-columns: minmax(0, 10em) minmax(0, 1fr); gap: var(--space-1) var(--space-5); padding-block: var(--space-4); border-bottom: 1px solid var(--line); }
+.points h3 { font: 500 var(--fs-base)/1.8 var(--font-body); }
 .points p { margin: 0; color: var(--muted); }
-@media (max-width: 860px) { .about-grid { grid-template-columns: minmax(0, 1fr); } .img-about { aspect-ratio: 16 / 10; } }
+@media (max-width: 860px) { .about-grid { grid-template-columns: minmax(0, 1fr); } .img-about { display: none; } }
 @media (max-width: 560px) { .points li { grid-template-columns: minmax(0, 1fr); } }
 
 /* ==================== Menu ==================== */
 .menu { background: var(--surface); }
-.tabs { display: flex; justify-content: center; gap: 2rem; width: fit-content; max-width: 100%; margin: 0 auto 2.5rem; border-bottom: 1px solid var(--line); }
-.tab { font: 500 1rem/1 var(--font-body); min-height: 48px; padding: .75rem .25rem; margin-bottom: -1px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); cursor: pointer; transition: color .2s, border-color .2s; }
+.tabs { display: flex; gap: var(--space-6); width: fit-content; max-width: 100%; margin-bottom: var(--space-7); border-bottom: 1px solid var(--line); }
+html:not(.js) .tabs { display: none; }
+.tab { font: 500 var(--fs-base)/1 var(--font-body); min-height: 48px; padding: var(--space-3) var(--space-1); margin-bottom: -1px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); cursor: pointer; transition: color .2s, border-color .2s; }
 .tab:hover { color: var(--text); border-bottom-color: var(--line); }
 .tab:active { opacity: .7; }
 .tab[aria-selected="true"] { color: var(--text); border-bottom-color: var(--brand); }
-.menu-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(2rem, 5vw, 4.5rem); list-style: none; }
-.menu-list li { padding-block: 1.25rem; border-bottom: 1px solid var(--line); }
-.mi-head { display: flex; align-items: baseline; gap: .75rem; }
-.mi-head h3 { font-size: 1.1rem; }
-.mi-head .dots { flex: 1; border-bottom: 1px dotted color-mix(in srgb, var(--muted) 50%, transparent); transform: translateY(-.3rem); min-width: 1rem; }
-.price { font: 500 1.05rem/1 var(--font-heading); color: var(--text); white-space: nowrap; font-variant-numeric: tabular-nums; }
-.menu-list p { color: var(--muted); font-size: .94rem; margin-top: .25rem; }
-.badge { display: inline-block; font: 500 .75rem/1.5 var(--font-body); padding: 0 .5rem; border-radius: 4px; margin-left: .5rem; vertical-align: .15rem; }
-.b-sig { background: color-mix(in srgb, var(--accent) 22%, var(--surface)); color: var(--text); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 60%, transparent); }
+html:not(.js) [role="tabpanel"] + [role="tabpanel"] { margin-top: var(--space-6); }
+.menu-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--gap-col); list-style: none; }
+.menu-list li { padding-block: var(--space-5); border-bottom: 1px solid var(--line); }
+.mi-head { display: flex; align-items: baseline; gap: var(--space-3); }
+.mi-head h3 { font-size: var(--fs-md); display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-1) var(--space-2); }
+.mi-head .dots { flex: 1; border-bottom: 1px dotted color-mix(in srgb, var(--muted) 50%, transparent); transform: translateY(-.3rem); min-width: var(--space-4); }
+.price { font: 500 var(--fs-md)/1 var(--font-heading); color: var(--text); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.menu-list p { color: var(--muted); font-size: var(--fs-sm); margin-top: var(--space-1); }
+.badge { display: inline-block; font: 500 var(--fs-sm)/1.5 var(--font-body); padding: 0 var(--space-2); border-radius: 4px; }
+.b-sig { background: var(--accent); color: var(--text); }
 .b-veg { color: var(--open); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--open) 45%, transparent); }
-.menu-note { text-align: center; color: var(--muted); font-size: .88rem; margin-top: 2.5rem; }
+.menu-note { color: var(--muted); font-size: var(--fs-sm); margin-top: var(--space-7); }
 @media (max-width: 760px) { .menu-list { grid-template-columns: minmax(0, 1fr); } }
 
 /* ==================== The space ==================== */
 /* The gallery uses grid-template-areas: 4 columns x 2 rows on desktop, 2 columns x 3 rows on phones, so the five images always fill the grid with no gaps */
-.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(2, clamp(160px, 17vw, 240px)); grid-template-areas: "a a b c" "a a d e"; gap: clamp(.5rem, 1.2vw, 1rem); }
+.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(2, clamp(160px, 17vw, 240px)); grid-template-areas: "a a b c" "a a d e"; gap: var(--gap-grid); }
 .img-g1 { grid-area: a; } .img-g2 { grid-area: b; } .img-g3 { grid-area: c; } .img-g4 { grid-area: d; } .img-g5 { grid-area: e; }
 @media (max-width: 760px) {
   .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: clamp(200px, 56vw, 300px) repeat(2, clamp(130px, 36vw, 200px)); grid-template-areas: "a a" "b c" "d e"; }
 }
 
 /* ==================== Reviews ==================== */
-.reviews-grid { display: grid; grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+.reviews-grid { display: grid; grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr); gap: var(--gap-col); align-items: start; }
 .reviews .sec-title { margin-bottom: 0; }
-.quote { display: grid; gap: .75rem; }
-.quote blockquote { font-size: 1rem; line-height: 1.85; }
-.quote-main blockquote { font: 500 clamp(1.3rem, 2.4vw, 1.55rem)/1.7 var(--font-heading); max-width: 30em; text-wrap: pretty; }
-.quote-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem clamp(1.5rem, 4vw, 3rem); margin-top: clamp(2.5rem, 5vw, 3.5rem); padding-top: 2rem; border-top: 1px solid var(--line); }
-.stars { font-size: .8rem; color: var(--muted); }
-.quote figcaption { font-size: .9rem; color: var(--muted); }
+.quote { display: grid; gap: var(--space-3); align-content: start; }
+.quote blockquote { font-size: var(--fs-base); line-height: 1.85; }
+.quote-main blockquote { font: 500 var(--fs-lg)/1.7 var(--font-heading); max-width: 30em; }
+.quote-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6) var(--space-7); margin-top: var(--space-7); padding-top: var(--space-6); border-top: 1px solid var(--line); }
+.stars { font-size: var(--fs-sm); color: var(--muted); }
+.quote figcaption { font-size: var(--fs-sm); color: var(--muted); }
 .quote figcaption b { color: var(--text); }
 @media (max-width: 860px) { .reviews-grid { grid-template-columns: minmax(0, 1fr); } }
-@media (max-width: 560px) { .quote-row { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .quote-row { grid-template-columns: minmax(0, 1fr); } .quote-main blockquote { font-size: var(--fs-md); } }
 
 /* ==================== Hours & location ==================== */
-.visit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.25rem, 4vw, 2.5rem); }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.5rem, 3vw, 2.25rem); }
-.card h3 { font-size: 1.3rem; margin-bottom: 1rem; }
-.table-scroll { overflow-x: auto; }
-.hours { width: 100%; border-collapse: collapse; min-width: 260px; }
-.hours th, .hours td { text-align: left; padding: .75rem .5rem; border-bottom: 1px solid var(--line); }
+.visit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--pad-card); }
+.card h3 { font-size: var(--fs-lg); margin-bottom: var(--space-4); }
+.table-scroll { overflow-x: auto; margin-inline: calc(-1 * var(--space-3)); padding-inline: var(--space-3); }
+.hours { width: 100%; border-collapse: collapse; min-width: 240px; line-height: 1.5; }
+.hours th, .hours td { text-align: left; padding: var(--space-3) 0; border-bottom: 1px solid var(--line); }
 .hours th { font-weight: 400; }
 .hours td { text-align: right; font-variant-numeric: tabular-nums; }
-.hours tr.today { background: color-mix(in srgb, var(--brand) 8%, transparent); }
-.hours tr.today th { font-weight: 500; }
-.hours tr.today th::after { content: "Today"; font-size: .75rem; font-weight: 500; margin-left: .5rem; padding: .1rem .5rem; border-radius: 4px; background: var(--brand); color: var(--brand-ink); }
+.hours tr.today { background: var(--tint); }
+.hours tr.today th { font-weight: 500; box-shadow: calc(-1 * var(--space-3)) 0 0 color-mix(in srgb, var(--brand) 8%, var(--surface)); }
+.hours tr.today td { box-shadow: var(--space-3) 0 0 color-mix(in srgb, var(--brand) 8%, var(--surface)); }
+.hours tr.today th::after { content: "Today"; font-size: var(--fs-sm); font-weight: 500; margin-left: var(--space-2); padding: 0 var(--space-2); border-radius: 4px; background: var(--brand); color: var(--brand-ink); }
 .hours .closed { color: var(--muted); }
-.addr { font: 500 1.2rem/1.6 var(--font-heading); margin-bottom: .25rem; }
-.visit-list { list-style: none; margin: 1.25rem 0 1.75rem; border-top: 1px solid var(--line); display: grid; grid-template-columns: max-content minmax(0, 1fr); }
-.visit-list li { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; column-gap: 1rem; padding-block: .75rem; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .95rem; }
+.addr { font: 500 var(--fs-lg)/1.6 var(--font-heading); margin-bottom: var(--space-1); }
+.visit-list { list-style: none; margin: var(--space-5) 0 var(--space-6); border-top: 1px solid var(--line); display: grid; grid-template-columns: max-content minmax(0, 1fr); }
+.visit-list li { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; column-gap: var(--space-4); padding-block: var(--space-3); border-bottom: 1px solid var(--line); color: var(--muted); }
 .visit-list b { color: var(--text); }
-@media (max-width: 400px) { .visit-list li { grid-template-columns: minmax(0, 1fr); } }
-.small-note { font-size: .88rem; color: var(--muted); margin-top: 1rem; }
+@media (max-width: 359px) { .visit-list li { grid-template-columns: minmax(0, 1fr); } }
+.small-note { font-size: var(--fs-sm); color: var(--muted); margin-top: var(--space-4); }
 @media (max-width: 760px) { .visit-grid { grid-template-columns: minmax(0, 1fr); } }
-@media (max-width: 560px) { .card { padding: 1.25rem; } .hours th, .hours td { padding-block: .5rem; } .visit-list li { padding-block: .5rem; } }
+@media (max-width: 560px) { .addr { font-size: var(--fs-md); } .card h3 { margin-bottom: var(--space-3); } .card { padding: var(--space-5); } .hours th, .hours td { padding-block: var(--space-2); } .visit-list li { padding-block: var(--space-2); } }
 
 /* ==================== Reservations ==================== */
-.reserve { background: var(--brand); color: var(--brand-ink); }
+.reserve { background: var(--brand-deep); color: var(--brand-ink); }
 .reserve .sec-lead { color: color-mix(in srgb, var(--brand-ink) 82%, transparent); }
 .reserve :focus-visible { outline-color: var(--brand-ink); }
 .reserve .form :focus-visible { outline-color: var(--brand); }
-.reserve-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
-.quick { display: grid; gap: .75rem; margin-top: 2rem; justify-items: start; }
+.reserve-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: var(--gap-col); align-items: start; }
+.quick { display: grid; gap: var(--space-3); margin-top: var(--space-6); justify-items: start; }
 .btn-light { background: transparent; color: var(--brand-ink); border-color: color-mix(in srgb, var(--brand-ink) 45%, transparent); }
 .btn-light:hover { background: color-mix(in srgb, var(--brand-ink) 10%, transparent); }
-.form { background: var(--surface); color: var(--text); border-radius: var(--radius); padding: clamp(1.5rem, 3.5vw, 2.5rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.25rem; }
-.field { display: grid; gap: .35rem; min-width: 0; }
+.form { background: var(--surface); color: var(--text); border-radius: var(--radius); padding: var(--pad-card); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4) var(--space-5); }
+.field { display: grid; gap: var(--space-1); min-width: 0; }
 .field.full { grid-column: 1 / -1; }
-.field label { font-weight: 500; font-size: .92rem; }
+.field label { font-weight: 500; font-size: var(--fs-sm); }
 .field label span { color: var(--muted); }
-.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .7rem .85rem; min-height: 48px; }
+.field input, .field select, .field textarea { width: 100%; min-width: 0; font: inherit; color: var(--text); background: var(--surface); border: 1px solid color-mix(in srgb, var(--muted) 72%, var(--line)); border-radius: var(--radius-sm); padding: var(--space-3); min-height: 48px; }
+.field ::placeholder { color: var(--muted); opacity: 1; }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 20%, transparent); }
 .field textarea { min-height: 96px; resize: vertical; }
 .form .btn { grid-column: 1 / -1; width: 100%; }
-.form small { grid-column: 1 / -1; color: var(--muted); font-size: .85rem; text-align: center; }
+.form small { grid-column: 1 / -1; color: var(--muted); font-size: var(--fs-sm); text-align: center; }
 @media (max-width: 860px) { .reserve-grid { grid-template-columns: minmax(0, 1fr); } }
-@media (max-width: 480px) { .form { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .form .field { grid-column: 1 / -1; } .form .field.pair { grid-column: auto; } .form { column-gap: var(--space-3); } }
+@media (max-width: 359px) { .form .field.pair { grid-column: 1 / -1; } }
+
+/* Phones: tighten spacing inside sections one step (section padding stays the same) so the page is not too long */
+@media (max-width: 560px) {
+  .sec-head, .tabs { margin-bottom: var(--space-6); }
+  .menu-list li { padding-block: var(--space-4); }
+  .menu-note, .points, .quote-row { margin-top: var(--space-6); }
+  .hero-art { margin-top: var(--space-6); aspect-ratio: 1; }
+  .visit-grid { gap: var(--space-5); }
+  .points li { padding-block: var(--space-3); }
+  .quote-row { row-gap: var(--space-5); }
+}
 
 /* ==================== Footer ==================== */
-.site-footer { background: color-mix(in srgb, var(--text) 94%, var(--brand)); color: color-mix(in srgb, var(--bg) 82%, transparent); padding-block: 4rem 2rem; font-size: .93rem; }
-.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: 2rem; }
-.site-footer h2 { color: var(--bg); font-size: 1.1rem; margin-bottom: .75rem; }
+.site-footer { background: color-mix(in srgb, var(--text) 94%, var(--brand)); color: color-mix(in srgb, var(--bg) 82%, transparent); padding-block: var(--space-8) var(--space-6); font-size: var(--fs-sm); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: var(--space-6); }
+.site-footer h2 { color: var(--bg); font-size: var(--fs-md); margin-bottom: var(--space-3); }
 .site-footer a { text-decoration: none; } .site-footer a:hover { text-decoration: underline; }
 .site-footer :focus-visible { outline-color: var(--bg); }
-.social { display: flex; gap: 1rem; margin-top: 1rem; }
-.copy { border-top: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); margin-top: 2.5rem; padding-top: 1.5rem; font-size: .85rem; }
-@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+.social { display: flex; gap: var(--space-4); margin-top: var(--space-4); }
+.copy { border-top: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); margin-top: var(--space-7); padding-top: var(--space-5); }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .foot-grid > :first-child { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .site-footer { padding-top: var(--space-7); } .copy { margin-top: var(--space-6); } }
 
 /* ==================== Mobile sticky buttons ==================== */
+/* With JS, the bar slides in only after the hero booking button scrolls out of view; without JS it is always shown */
 .sticky-cta { display: none; }
 @media (max-width: 760px) {
   body { padding-bottom: 76px; }
-  .sticky-cta { display: flex; gap: .5rem; position: fixed; inset: auto 0 0; z-index: 40; padding: .75rem var(--pad) calc(.75rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 96%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -1px 0 var(--line); }
+  .sticky-cta { display: flex; gap: var(--space-2); position: fixed; inset: auto 0 0; z-index: 40; padding: var(--space-3) var(--pad) calc(var(--space-3) + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 96%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -1px 0 var(--line); transition: transform .3s ease-out, visibility .3s; }
+  .js .sticky-cta:not(.show) { transform: translateY(100%); visibility: hidden; }
   .sticky-cta .btn-primary { flex: 1; }
-  .sticky-cta .btn-ghost { padding-inline: 1.1rem; }
+  .sticky-cta .btn-ghost { padding-inline: var(--space-4); }
 }
 
 /* ==================== Language switcher (lang-switch) ==================== */
 .nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
-.lang-switch { display: flex; align-items: center; gap: .1rem; flex: none; margin-inline-start: 1.5rem; padding-inline-start: .6rem; border-inline-start: 1px solid var(--line); font: 400 .8rem/1 var(--font-body); letter-spacing: normal; }
-.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; border-radius: var(--radius-sm); color: var(--muted); font-weight: 500; text-decoration: none; text-underline-offset: 5px; text-decoration-thickness: 1px; transition: color .2s, background-color .2s; }
-.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--brand) 8%, transparent); }
-.lang-switch a:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
+.lang-switch { display: flex; align-items: center; flex: none; margin-inline-start: var(--space-5); padding-inline-start: var(--space-2); border-inline-start: 1px solid var(--line); font: 400 var(--fs-sm)/1 var(--font-body); letter-spacing: normal; }
 .lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
-.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 500; text-decoration-line: underline; text-decoration-color: var(--brand); }
 @media (max-width: 760px) {
   /* Mobile: sits left of the menu button and stays visible; with JS off it stays on the logo row */
-  .nav > .lang-switch { order: 1; margin-inline: 0 .35rem; padding-inline-start: 0; border: 0; }
+  .nav > .lang-switch { order: 1; margin-inline: 0 var(--space-1); padding-inline-start: 0; border: 0; }
   .nav > .nav-toggle { order: 2; }
   .nav > .nav-menu { order: 3; }
 }
 @media (min-width: 761px) and (max-width: 1100px) {
   /* Tablet widths: tighten the menu so the switcher and logo fit without wrapping the header */
-  .nav > .nav-menu { gap: .9rem; font-size: .85rem; }
-  .nav > .nav-menu .btn { padding-inline: .9rem; }
-  .nav > .lang-switch { margin-inline-start: 0; padding-inline-start: .3rem; }
-  .lang-switch a { padding-inline: .15rem; }
+  .nav > .nav-menu { gap: var(--space-4); font-size: var(--fs-sm); }
+  .nav > .nav-menu .btn { padding-inline: var(--space-4); }
+  .nav > .lang-switch { margin-inline-start: 0; padding-inline-start: var(--space-1); }
 }
 @media (min-width: 761px) and (max-width: 960px) {
   /* Narrow tablets: tighten one more step */
-  .nav > .nav-menu { gap: .6rem; font-size: .8rem; }
-  .nav > .nav-menu .btn { padding-inline: .7rem; }
+  .nav > .nav-menu { gap: var(--space-3); }
+  .nav > .nav-menu .btn { padding-inline: var(--space-3); }
 }
 @media (max-width: 400px) {
   /* Phones narrower than 400px: tighten spacing so the logo stays on one line */
   .nav > .lang-switch { margin-inline-end: 0; }
-  .logo { gap: .45rem; }
   .logo-mark { width: 30px; height: 30px; }
   .js .nav-toggle { margin-inline-end: -8px; }
 }
 /* Footer language links */
-.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; font-size: .85rem; }
-.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius-sm); }
+.foot-lang { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: var(--space-3); }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: var(--space-1); color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius-sm); }
 .foot-lang a:hover { text-decoration: underline; }
 .foot-lang a:active { opacity: .7; }
 .foot-lang a:focus-visible { outline: 2px solid var(--bg); outline-offset: 1px; }
@@ -382,15 +445,18 @@ a:not(.btn):active { opacity: .7; }
    The header shows the current language; click it to choose another.
    Uses <details>, so it works with JS off. Colours come from the theme tokens. */
 .lang-switch { position: relative; }
-.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: var(--radius-sm); color: inherit; font-weight: 500; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 36px; padding-inline: var(--space-2); border-radius: var(--radius-sm); color: inherit; font-weight: 500; list-style: none; cursor: pointer; transition: background-color .2s; }
 .lang-menu > summary::-webkit-details-marker { display: none; }
 .lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
 .lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
-.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.lang-menu > summary:hover { background: var(--tint); }
 .lang-menu > summary:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
 .lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
-.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 12px 32px var(--shadow); }
-.lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+.lang-list { position: absolute; top: calc(100% + var(--space-2)); inset-inline-end: 0; z-index: 80; display: grid; gap: 2px; min-width: 9.5rem; padding: var(--space-1); background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 12px 32px var(--shadow); }
+.lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm); color: var(--text); text-decoration: none; white-space: nowrap; }
+.lang-switch .lang-list a:hover { background: var(--tint); }
+.lang-switch .lang-list a:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
+.lang-switch .lang-list a[aria-current="page"] { font-weight: 500; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 5px; }
 @media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
 </style>
 </head>
@@ -411,7 +477,7 @@ a:not(.btn):active { opacity: .7; }
       <li><a href="#space">The space</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#visit">Visit</a></li>
-      <li><a href="#reserve" class="btn btn-primary">Book a table</a></li>
+      <li><a href="#reserve" class="btn btn-ghost">Book a table</a></li>
     </ul>
     <!-- lang-switch: language switcher. To add a language, add a link here and create a matching folder -->
     <nav class="lang-switch" aria-label="Language 語言">
@@ -429,11 +495,11 @@ a:not(.btn):active { opacity: .7; }
   </nav>
 </header>
 
-<main id="main">
+<main id="main" tabindex="-1">
 <!-- ==================== Section: Hero ==================== -->
 <section class="hero" id="hero">
-  <div class="wrap hero-grid">
-    <div class="reveal">
+  <div class="wrap">
+    <div class="hero-copy reveal">
       <p class="status" id="status" aria-live="polite"><span>Open Tuesday to Sunday</span></p>
       <h1>Slow food for<br>sunny days</h1>
       <p class="lead">Seasonal produce from local farms, cooked low and slow, with a fresh pour-over on the side. Pull up a chair and have a proper meal.</p>
@@ -442,10 +508,10 @@ a:not(.btn):active { opacity: .7; }
         <a href="#menu" class="btn btn-ghost">See the menu</a>
       </div>
     </div>
-    <div class="hero-art reveal">
-      <div class="img img-hero" role="img" aria-label="Overhead shot of tomato beef over rice on a white oak table, with chopsticks, a small side dish and steam rising from the plate"></div>
-      <p class="tag"><b>Chef’s pick this week</b>Slow-braised tomato beef over rice</p>
-    </div>
+  </div>
+  <div class="hero-art reveal">
+    <div class="img img-hero" role="img" aria-label="Overhead shot of steaming tomato beef over rice on a white oak table, with chopsticks on a rest and a small dish of pickled radish"></div>
+    <p class="tag"><b>Chef’s pick this week</b>Slow-braised tomato beef over rice</p>
   </div>
 </section>
 
@@ -456,6 +522,7 @@ a:not(.btn):active { opacity: .7; }
     <div class="about-text">
       <h2 class="sec-title">A meal that feels like coming home</h2>
       <p class="lead">Hiyori is Japanese for a clear, gentle day. We hope everyone who walks through our door gets to have one here.</p>
+      <!-- Sample content: replace with real details before going live (opening year, number of farms) -->
       <p>In 2016, Chef Kaz and his wife Haru turned the ground floor of an old apartment building into a twelve-table bistro. The menu follows the seasons, the sauces are made in house, desserts come out of the oven every morning, and our beans come from a local roaster we’ve worked with for ten years.</p>
       <ul class="points">
         <li><h3>Local, seasonal produce</h3><p>We buy from a dozen nearby farms and change the menu every season.</p></li>
@@ -469,7 +536,7 @@ a:not(.btn):active { opacity: .7; }
 <!-- ==================== Section: Menu ==================== -->
 <section class="menu" id="menu">
   <div class="wrap">
-    <div class="sec-head center">
+    <div class="sec-head">
       <h2 class="sec-title">What are you hungry for?</h2>
       <p class="sec-lead">Served at lunch and dinner. Make any main a set for $6 more and get soup, a small side and a drink.</p>
     </div>
@@ -488,7 +555,7 @@ a:not(.btn):active { opacity: .7; }
         <li><div class="mi-head"><h3>Brunch plate<span class="badge b-sig">Signature</span></h3><span class="dots"></span><span class="price">$19</span></div><p>Eggs Benedict, roasted mushrooms, sourdough and a side salad (weekends only).</p></li>
       </ul>
     </div>
-    <div role="tabpanel" id="panel-drink" aria-labelledby="tab-drink" tabindex="0" hidden>
+    <div role="tabpanel" id="panel-drink" aria-labelledby="tab-drink" tabindex="0">
       <ul class="menu-list">
         <li><div class="mi-head"><h3>Today’s pour-over<span class="badge b-sig">Signature</span></h3><span class="dots"></span><span class="price">$6.50</span></div><p>A different origin every day. Ask the barista what’s brewing.</p></li>
         <li><div class="mi-head"><h3>Hiyori latte</h3><span class="dots"></span><span class="price">$5.50</span></div><p>Our medium-dark house blend with whole milk. Oat milk is 75¢ extra.</p></li>
@@ -497,7 +564,7 @@ a:not(.btn):active { opacity: .7; }
         <li><div class="mi-head"><h3>Seasonal fruit tea</h3><span class="dots"></span><span class="price">$5</span></div><p>Fresh-cut seasonal fruit with cold-brewed oolong.</p></li>
       </ul>
     </div>
-    <div role="tabpanel" id="panel-dessert" aria-labelledby="tab-dessert" tabindex="0" hidden>
+    <div role="tabpanel" id="panel-dessert" aria-labelledby="tab-dessert" tabindex="0">
       <ul class="menu-list">
         <li><div class="mi-head"><h3>Caramel custard pudding<span class="badge b-sig">Signature</span></h3><span class="dots"></span><span class="price">$7</span></div><p>The old-school firm kind, with caramel that’s just a little bitter.</p></li>
         <li><div class="mi-head"><h3>Seasonal berry tart</h3><span class="dots"></span><span class="price">$8</span></div><p>Almond cream, vanilla custard and a heap of fresh berries.</p></li>
@@ -515,12 +582,13 @@ a:not(.btn):active { opacity: .7; }
   <div class="wrap">
     <div class="sec-head">
       <h2 class="sec-title">Afternoon light on old wooden tables</h2>
+      <!-- Sample content: replace with real details before going live (seat count) -->
       <p class="sec-lead">36 seats inside and 8 on the patio, with tall windows and vintage wood furniture. Perfect for a slow lunch on your own or dinner with a few friends.</p>
     </div>
     <div class="gallery">
       <div class="img img-g1" role="img" aria-label="Afternoon sun pouring through tall windows into the dining room"></div>
-      <div class="img img-g2" role="img" aria-label="A hot latte against a matcha-green wall"></div>
-      <div class="img img-g3" role="img" aria-label="A berry tart on a linen tablecloth"></div>
+      <div class="img img-g2" role="img" aria-label="A hot latte in front of an indigo curtain"></div>
+      <div class="img img-g3" role="img" aria-label="A berry tart on a plain twill tablecloth"></div>
       <div class="img img-g4" role="img" aria-label="Warm lights over the bar at night"></div>
       <div class="img img-g5" role="img" aria-label="Three small seasonal dishes on a wooden tray, seen from above"></div>
     </div>
@@ -534,18 +602,18 @@ a:not(.btn):active { opacity: .7; }
     <!-- Sample content: replace with real reviews before going live -->
     <div>
       <figure class="quote quote-main">
-        <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+        <p class="stars"><span aria-hidden="true">★★★★★</span><span class="sr-only">5 out of 5 stars</span></p>
         <blockquote>I think about the tomato beef rice all week. The beef falls apart at the touch of a fork, and the staff make you feel like you’re eating at a friend’s place.</blockquote>
         <figcaption><b>Sarah L.</b>, works around the corner</figcaption>
       </figure>
       <div class="quote-row">
         <figure class="quote">
-          <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+          <p class="stars"><span aria-hidden="true">★★★★★</span><span class="sr-only">5 out of 5 stars</span></p>
           <blockquote>We bring the kids for weekend brunch. There are high chairs and plenty of room. I always take two caramel puddings home.</blockquote>
           <figcaption><b>Mike C.</b>, dad of two</figcaption>
         </figure>
         <figure class="quote">
-          <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+          <p class="stars"><span aria-hidden="true">★★★★★</span><span class="sr-only">5 out of 5 stars</span></p>
           <blockquote>Seriously good pour-over, and the barista picks beans to suit your taste. My vegetarian friends ask for the vegetable curry by name.</blockquote>
           <figcaption><b>Amy W.</b>, coffee lover</figcaption>
         </figure>
@@ -615,8 +683,8 @@ a:not(.btn):active { opacity: .7; }
     <form class="form" action="https://formspree.io/f/your-form-id" method="POST">
       <div class="field"><label for="f-name">Name <span>*</span></label><input id="f-name" name="name" autocomplete="name" required></div>
       <div class="field"><label for="f-tel">Phone <span>*</span></label><input id="f-tel" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(555) 123-4567" required></div>
-      <div class="field"><label for="f-date">Date <span>*</span></label><input id="f-date" name="date" type="date" required></div>
-      <div class="field"><label for="f-time">Time <span>*</span></label>
+      <div class="field pair"><label for="f-date">Date <span>*</span></label><input id="f-date" name="date" type="date" required></div>
+      <div class="field pair"><label for="f-time">Time <span>*</span></label>
         <select id="f-time" name="time" required>
           <option value="">Choose a time</option>
           <option>10:00 AM (weekends only)</option><option>11:30 AM</option><option>12:30 PM</option><option>1:30 PM</option>
@@ -686,12 +754,15 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMen
 // Hero entrance (only the hero uses .reveal)
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+// Phone sticky bar: only shows once the hero booking button scrolls out of view
+const sticky = document.querySelector('.sticky-cta');
+new IntersectionObserver(([e]) => sticky.classList.toggle('show', !e.isIntersecting)).observe(document.querySelector('.hero-cta'));
 
 // Menu tabs (arrow keys supported)
 const tabs = [...document.querySelectorAll('[role="tab"]')];
-const select = t => {
+const select = (t, focus = true) => {
   tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
-  t.focus();
+  if (focus) t.focus();
 };
 tabs.forEach((t, i) => {
   t.addEventListener('click', () => select(t));
@@ -702,6 +773,7 @@ tabs.forEach((t, i) => {
     if (e.key === 'End') { e.preventDefault(); select(tabs[tabs.length - 1]); }
   });
 });
+select(tabs[0], false); // Without JS all three panels show; with JS they become tabs
 
 // Open / closed badge, using the restaurant's local time zone (change TZ to yours).
 // HOURS format: weekday (0 = Sunday): [opens, closes] in 24-hour time, null = closed
