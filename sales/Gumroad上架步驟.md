@@ -1162,6 +1162,8 @@ Perfect for freelancers who build sites for local businesses: one licence per te
 
 [貼上「共用文字」]
 ```
+- **Summary**（11/26 改成組合包寫法，已上線）：`All 30 one-page HTML website templates for small businesses, each in English, 繁體中文, 简体中文 and 日本語 (6 also in Español). Buy once, no monthly fees.`
+- **Additional details**（5 行）：`Templates: 30 (one-page each)`、`Format: HTML / CSS / JS`、`Languages: English, Traditional Chinese, Simplified Chinese, Japanese (6 with Spanish), switchable`、`Builder needed: None`、`Includes: step-by-step setup guide in each template`
 
 ---
 
@@ -1197,6 +1199,15 @@ Motion 動態版：只用瀏覽器內建技術做的高級動畫網站，不依�
 每款說明：共用開頭 → Demo 網址（`…/templates/motion/<款式>/en/`、`…/templates/motion/<款式>/zh-TW/`）→ 上表的動畫清單（用條列）→ What you get → 共用文字。
 
 **Motion 全套組合包**：Name `All 5 Motion Edition Templates Bundle`，URL `motion-bundle`，Price `199`，Content 上傳 `dist/motion-bundle.zip`。
+
+- **說明**（11/26 上架時的組法）：日文段落 → Motion 共用開頭 → 下面這段 → 第 9 節 Studio 段落 → 第 2 節共用文字。
+```
+Includes all 5 Motion Edition templates: SaaS Launch Page, Creative Portfolio, Fine Dining Restaurant, Wedding Website with RSVP, Luxury Residences.
+包含全部 5 款 Motion 動態版模板：SaaS 發表頁、創意作品集、高級餐廳、婚禮網站（含 RSVP）、豪宅建案。
+```
+- **Summary**：`All 5 animated one-page HTML templates (Motion Edition), each in English, 繁體中文, 简体中文 and 日本語. Scroll animations without any library. Buy once, no monthly fees.`
+- **Additional details**（5 行）：`Templates: 5 animated one-page templates`、`Format: HTML / CSS / JS (no libraries)`、`Languages: English, Traditional Chinese, Simplified Chinese, Japanese, switchable`、`Builder needed: None`、`Includes: step-by-step setup guide in each template`
+- 價格目前用原價（Standard $199／Studio $349），沒用上市優惠價。
 
 ---
 
