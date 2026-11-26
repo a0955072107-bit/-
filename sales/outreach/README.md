@@ -61,3 +61,13 @@
 - **地址不寫進這個 repo**（repo 是公開的）。做法：在 polyglotpages.studio@gmail.com 的 Gmail「設定 → 簽名」只放一行英文地址，並設為新郵件預設簽名；排程寄出的開發信會自動帶上。
 - outbox 檔裡的信件內文維持原樣（不含地址）；擴充功能排程前確認簽名有出現在信件最下面。
 - 只有 Email 需要；表單、IG、FB 私訊不用。
+
+
+## Instagram 私訊規則（11/26 更新）
+- 11/26 新帳號連續送出帶連結的私訊後，第 4 則「Failed to send」→ 判斷是 IG 對新帳號的限制。IG 暫停 48 小時，11/28 起照新規則。
+- **第一則不放連結**，對方回覆才傳預覽連結：
+  > Hi! I'm Yang from Polyglot Pages. Your reviews are lovely, so I made a free preview of a website for your salon in English, 繁體 and 简体. Would you like me to send you the link? No cost, no obligation.
+  > 您好！我們幫貴店做了一個免費的三語網站預覽，需要的話我把連結傳給您看～
+  （診所把 salon 換成 clinic、貴店換成貴診所）
+- 前 2 週**每天最多 3 則**，每則**至少間隔 30 分鐘**；盡量用手機傳。
+- 出現「動作已被封鎖」或傳送失敗就停 48 小時，不按重試。
