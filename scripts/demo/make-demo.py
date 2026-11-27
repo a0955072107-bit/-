@@ -36,16 +36,25 @@ CATEGORY = {
     'tcm': ('clinic', 'tcm'), 'acupuncture': ('clinic', 'tcm'), 'chinese medicine': ('clinic', 'tcm'),
     'tutoring': ('education', None), 'education': ('education', None), 'school': ('education', None),
     'salon': ('beauty', None), 'hair': ('beauty', None), 'hair salon': ('beauty', None), 'beauty': ('beauty', None),
+    'realestate': ('realestate', None), 'real estate': ('realestate', None), 'realtor': ('realestate', None),
+    'accounting': ('consulting', 'accounting'), 'cpa': ('consulting', 'accounting'), 'tax': ('consulting', 'accounting'),
+    'law': ('consulting', 'law'), 'lawyer': ('consulting', 'law'), 'immigration': ('consulting', 'law'), 'attorney': ('consulting', 'law'),
+    'insurance': ('consulting', 'insurance'),
 }
+VARIANTS = sorted({v for _, v in CATEGORY.values() if v})   # <!--IF:variant--> blocks in the base pages
 KIND = {  # for JSON-LD description when the lead has no notes
     ('restaurant', None): ('Chinese restaurant', '中餐館'),
     ('clinic', 'dental'): ('Dental office', '牙醫診所'),
     ('clinic', 'tcm'): ('Acupuncture and Chinese medicine clinic', '中醫針灸診所'),
     ('education', None): ('Tutoring and learning center', '補習班'),
     ('beauty', None): ('Hair salon', '美髮店'),
+    ('realestate', None): ('Real estate agent', '房地產經紀'),
+    ('consulting', 'accounting'): ('Accounting and tax office', '會計稅務事務所'),
+    ('consulting', 'law'): ('Law office', '律師事務所'),
+    ('consulting', 'insurance'): ('Insurance agency', '保險代理'),
 }
-CLOSED_WORD = {'clinic': '休診'}
-SCROLL_PAD = {'restaurant': '72px', 'clinic': '80px', 'education': '80px', 'beauty': '5rem'}
+CLOSED_WORD = {'clinic': '休診', 'realestate': '休息', 'consulting': '休息'}
+SCROLL_PAD = {'restaurant': '72px', 'clinic': '80px', 'education': '80px', 'beauty': '5rem', 'realestate': '5rem', 'consulting': '5rem'}
 EXTRA_CSS = {  # per-template fixes for the banner offset
     'beauty': """.sec-head .demo-note { margin-inline: auto; }
 @media (max-width: 760px) {
@@ -53,6 +62,9 @@ EXTRA_CSS = {  # per-template fixes for the banner offset
   .js .site-header.scrolled .menu { padding-top: 5.5rem; }
 }
 """,
+    # (the mobile dropdown menus of realestate and consulting need no fix: the open menu adds .scrolled to the
+    #  header, whose backdrop-filter makes the header the menu's containing block, so it moves with the banner)
+    'consulting': '@media (min-width: 900px) { .faq-grid .sec-head { top: calc(7rem + var(--demo-h)); } }\n',
 }
 
 # ---------------------------------------------------------------- places
@@ -70,7 +82,7 @@ CITY_ZH = {
     'milpitas': '苗必達', 'sunnyvale': '桑尼維爾', 'santa clara': '聖塔克拉拉', 'mountain view': '山景城', 'palo alto': '帕羅奧圖',
     'daly city': '戴利城', 'san mateo': '聖馬刁', 'millbrae': '密爾布瑞', 'dublin': '都柏林', 'pleasanton': '普萊森頓',
     'seattle': '西雅圖', 'bellevue': '貝爾維尤', 'redmond': '雷德蒙德', 'houston': '休士頓', 'sugar land': '糖城', 'katy': '凱蒂',
-    'boston': '波士頓', 'chicago': '芝加哥', 'philadelphia': '費城',
+    'boston': '波士頓', 'quincy': '昆西', 'chicago': '芝加哥', 'philadelphia': '費城', 'las vegas': '拉斯維加斯',
 }
 DAYS_EN = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 DAYS_EN3 = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
@@ -364,7 +376,7 @@ def fill(page, lang, slug, variant, lead):
     desc = notes or (f'{kind_en} in {lead["city"]}, {lead["state"]}.' if not zh else conv(f'{city_zh}的{kind_zh}。'))
 
     # 1. category blocks
-    for v in ('dental', 'tcm'):
+    for v in VARIANTS:
         keep = v == variant
         page = re.sub(r'<!--IF:%s-->(.*?)<!--/IF:%s-->' % (v, v), (lambda m: m.group(1)) if keep else '', page, flags=re.S)
     # 2. simple tokens
@@ -408,7 +420,7 @@ def slugify(s):
 def prepare(row, notes_zh_arg=None):
     cat = (row.get('category') or '').strip().lower()
     if cat not in CATEGORY:
-        raise SystemExit(f'lead {row.get("id")}: 不認得的 category「{cat}」（要用 restaurant／dental／tcm／tutoring／salon）')
+        raise SystemExit(f'lead {row.get("id")}: 不認得的 category「{cat}」（可以用：{"／".join(CATEGORY)}）')
     slug, variant = CATEGORY[cat]
     name_en, name_zh = split_name(row.get('business', ''))
     if not name_en:
