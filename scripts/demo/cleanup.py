@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Delete preview sites that should no longer be online.
 
-Usage: python3 scripts/demo/cleanup.py [--dry-run] [--csv sales/outreach/leads.csv] [--days 30]
+Usage: python3 scripts/demo/cleanup.py [--dry-run] [--csv sales/outreach/leads.csv] [--days 60]
 
 A folder demos/<slug>/ is deleted when its lead
   - has status optout or lost, or
-  - was made more than --days days ago (default 30) and the status is not won or replied.
+  - is older than --days days (default 60), counted from the lead's sent_date (or the demo's
+    creation date if it was never sent), and the status is not won or replied.
+    Leads with status later or followup are kept until 14 days after their followup_date.
 Folders whose lead is no longer in the CSV are treated the same way (age only).
 The demo's creation date and lead id come from the stamp make-demo.py writes into
 demos/<slug>/index.html; older folders fall back to the folder's modification time.
@@ -18,6 +20,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 DEMOS = ROOT / 'demos'
 REMOVE = {'optout', 'lost'}
 KEEP = {'won', 'replied'}
+WAIT = {'later', 'followup'}   # kept until followup_date + GRACE days
+GRACE = 14
 
 
 def stamp(folder):
@@ -33,7 +37,7 @@ def main():
     ap = argparse.ArgumentParser(description='Delete preview sites for opted-out, lost or stale leads.')
     ap.add_argument('--dry-run', action='store_true', help='only list what would be deleted')
     ap.add_argument('--csv', default=str(ROOT / 'sales/outreach/leads.csv'))
-    ap.add_argument('--days', type=int, default=30)
+    ap.add_argument('--days', type=int, default=60)
     ap.add_argument('--demos', default=str(DEMOS), help='demo folder (default: demos/)')
     a = ap.parse_args()
 
@@ -54,12 +58,23 @@ def main():
         row = by_id.get(lead_id) if lead_id else None
         row = row or by_url.get(folder.name)
         status = (row.get('status') or '').strip().lower() if row else ''
-        age = (today - created).days
+        def day(v):
+            try:
+                return datetime.date.fromisoformat((v or '').strip())
+            except ValueError:
+                return None
+        sent = day(row.get('sent_date')) if row else None
+        fup = day(row.get('followup_date')) if row else None
+        age = (today - (sent or created)).days
         reason = None
         if status in REMOVE:
             reason = f'status {status}'
-        elif age > a.days and status not in KEEP:
-            reason = f'{age} 天前做的，status {status or "（名單裡找不到）"}'
+        elif status in KEEP:
+            pass
+        elif status in WAIT and fup and today <= fup + datetime.timedelta(days=GRACE):
+            pass
+        elif age > a.days:
+            reason = f'{"寄出" if sent else "做好"} {age} 天，status {status or "（名單裡找不到）"}'
         if not reason:
             kept += 1
             continue

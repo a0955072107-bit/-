@@ -1360,35 +1360,30 @@ Incluye versión en español: textos, precios, WhatsApp y datos de ejemplo adapt
 | 商品類型 | **Membership**（每月自動扣款，可隨時取消） |
 | Name | `Website Care — Monthly Updates & Hosting Help 網站維護月費` |
 | URL | `website-care` |
-| Price | Tiers：`Care $19/month`、`Care Plus $29/month` |
+| Price | `49`／月（11/26 決定：單一方案 $49，取代原本 $19／$29 兩個 tier） |
 
-**方案**
-| 方案 | 每月 | 包含 |
-|---|---|---|
-| Care | $19 | 每月最多 3 次小修改（營業時間、菜單、價格、文字、換照片）、網站上線狀態檢查、網域續約提醒 |
-| Care Plus | $29 | Care 全部，加上每月 1 個新區塊或活動頁、季節性更新（節日營業時間、新菜單）、Google 商家檔案同步更新 |
+**包含（$49/月）**
+- 每月最多 3 次小修改（營業時間、菜單、價格、文字、換照片），其中 1 次可以是季節性更新（節日營業時間、新菜單）
+- Google 商家檔案代管：營業時間、照片、公告跟網站同步
+- 每月檢查網站上線、表單、電話和地圖連結
+- 網域續約提醒
 
 **Description**
 ```
-Your website, kept up to date, without you touching any code.
+Your website and Google profile, kept up to date, without you touching any code.
 
-Send us an email when something changes: new hours, a new dish, a price update, a holiday closure. We update your site, usually within 2 business days.
+Send us an email when something changes: new hours, a new dish, a price update, a holiday closure. We update your website and your Google Business Profile, usually within 2 business days.
 
-Care ($19/month)
-- Up to 3 small updates a month (text, hours, menu, prices, photos)
-- Monthly check that your site is online and working
+Website Care, $49/month
+- Up to 3 small updates a month (text, hours, menu, prices, photos), including seasonal updates
+- Your Google Business Profile kept in sync with your site (hours, photos, posts)
+- Monthly check that your site, forms, phone and map links work
 - Domain renewal reminders
 
-Care Plus ($29/month)
-- Everything in Care
-- 1 new section or event page a month
-- Seasonal updates (holiday hours, new menus)
-- Keep your Google Business Profile in sync with your site
-
-Cancel any time. Your site and files always stay yours.
+Cancel any time. Your site, domain and files always stay yours.
 
 ──────────
-網站維護月費：有任何變動寄信給我們（營業時間、新菜色、價格、公休），通常 2 個工作天內更新。隨時可以取消，網站和檔案永遠是你的。
+網站維護月費 $49：有任何變動寄信給我們（營業時間、新菜色、價格、公休），通常 2 個工作天內更新網站和 Google 商家檔案。隨時可以取消，網站、網域和檔案永遠是你的。
 ```
 
 **規則**
