@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOU 发艺｜台北信义区 发型沙龙</title>
+<meta name="description" content="SOU 发艺是台北信义区的三人发型工作室。剪发、染发、烫发、护发价目公开，预约时直接选设计师，开始前先讨论做法与费用。">
+<meta property="og:title" content="SOU 发艺｜台北信义区 发型沙龙">
+<meta property="og:description" content="先聊清楚，再动剪刀。查看价目、设计师班表与作品，用 LINE 预约。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ECEAE6">
+<!-- 多语版本（SEO）：上线后把 href 换成完整网址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+<!-- 范例内容：上线前请换成真实数据（店名、电话、地址、营业时间、价格皆为虚构） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "SOU 发艺",
+  "telephone": "02-1234-5678",
+  "url": "https://example.com/",
+  "priceRange": "NT$500–4000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "松山路 168 号 2 楼",
+    "addressLocality": "信义区",
+    "addressRegion": "台北市",
+    "postalCode": "110",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "11:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "18:00" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   主题设置：改这里就能换整站配色与字体
+   ============================================================ */
+:root {
+  --brand: #191817;          /* 品牌主色：近黑（主要按钮、页脚背景） */
+  --brand-ink: #F6F5F2;      /* 在品牌色上的文本颜色 */
+  --brand-soft: #383532;     /* 主要按钮 hover 的底色 */
+  --bg: #ECEAE6;             /* 页面背景：浅水泥灰 */
+  --surface: #F6F5F2;        /* 表面颜色：页眉、菜单、预约区块（带灰调的白） */
+  --text: #191817;           /* 主要文本 */
+  --muted: #57534E;          /* 次要文本（在背景与表面色上都达 AA） */
+  --line: #D3D0CA;           /* 1px 细线与边框 */
+  --accent: #6F5F7A;         /* 雾紫灰：唯一点缀，只用在目前语言、「今天」的底线与图库滚动条 */
+  --studio: #CBC8C2;         /* 占位图用：摄影棚背景的浅灰 */
+  --studio-deep: #A5A19A;    /* 占位图用：背景暗部、水泥墙 */
+  --tone: #DDD8D1;           /* 占位图用：肤色与浅色衣服（黑白照片里的亮部） */
+  --shadow: 0 16px 40px -24px color-mix(in srgb, var(--text) 35%, transparent); /* 全站唯一的淡阴影（下拉列表用） */
+  --radius: 6px;             /* 大组件圆角（图片、菜单） */
+  --radius-sm: 4px;          /* 小组件圆角（按钮、菜单项目） */
+  --font-heading: "Archivo", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; /* 标题字体（和内文同一字族，靠字级做层级） */
+  --font-body: "Archivo", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;    /* 内文字体 */
+  --fs-sm: .875rem;          /* 字级：小字（时间、注解） */
+  --fs-body: 1rem;           /* 字级：内文 */
+  --fs-lg: 1.25rem;          /* 字级：项目名称、小标题 */
+  --fs-h3: clamp(1.5rem, 2.4vw, 2rem);     /* 字级：h3 */
+  --fs-h2: clamp(2rem, 4.4vw, 3.5rem);     /* 字级：h2 与价目表的大数字 */
+  --fs-h1: clamp(2.75rem, 7.2vw, 6rem);    /* 字级：首屏大标 */
+  --header-h: 72px;          /* 页眉高度 */
+  --gutter: 1.25rem;         /* 页面左右留白（手机） */
+  --section-y: clamp(4rem, 11vw, 9rem);    /* 区块上下留白 */
+  --max: 1200px;             /* 内容最大宽度 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-padding-top: calc(var(--header-h) + 16px); overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 var(--fs-body)/1.8 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; touch-action: manipulation; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; line-height: 1.25; letter-spacing: 0; overflow-wrap: break-word; min-width: 0; text-wrap: balance; font-synthesis: none; }
+p, li, dd, figcaption { text-wrap: pretty; }
+:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; border-radius: var(--radius-sm); }
+.wrap { width: min(100% - var(--gutter) * 2, var(--max)); margin-inline: auto; }
+section { padding-block: var(--section-y); }
+h2 { font-size: var(--fs-h2); }
+.lead { color: var(--muted); max-width: 32em; }
+.num { font-variant-numeric: tabular-nums; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* 跳到主要内容（键盘用户按 Tab 时出现） */
+.skip { position: fixed; left: 1rem; top: .75rem; z-index: 100; padding: .6rem 1rem; border-radius: var(--radius-sm); background: var(--brand); color: var(--brand-ink); transform: translateY(-200%); }
+.skip:focus { transform: none; }
+.skip:hover { background: var(--brand-soft); }
+.skip:active { opacity: .85; }
+main:focus { outline: none; }
+
+/* ---------- 按钮：实心只用在主要动作，次要用细框或有底线的文本链接 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .75rem 1.5rem; border-radius: var(--radius-sm); font: 500 var(--fs-body)/1.3 var(--font-body); border: 1px solid transparent; transition: background-color .2s, color .2s, border-color .2s, transform .2s; cursor: pointer; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: var(--brand-soft); }
+.btn:active { transform: translateY(1px); }
+a:not(.btn):active { opacity: .7; }
+.btn-ghost { border-color: color-mix(in srgb, var(--text) 60%, transparent); color: var(--text); background: transparent; }
+.btn-ghost:hover { border-color: var(--text); background: color-mix(in srgb, var(--text) 6%, transparent); }
+.text-link { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+.text-link:hover { text-decoration-thickness: 2px; }
+
+/* ---------- 页眉 ---------- */
+html:not(.js) .site-header { background: var(--surface); border-bottom-color: var(--line); }
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; border-bottom: 1px solid transparent; transition: background-color .3s, border-color .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 96%, transparent); border-bottom-color: var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: 1rem; }
+.logo { display: inline-flex; align-items: center; min-height: 44px; font: 500 1.375rem/1 var(--font-heading); }
+.logo span { margin-inline-end: .25em; }
+.nav-links { display: flex; align-items: center; gap: 1.75rem; font-size: .9375rem; }
+.nav-links a:not(.btn) { color: var(--muted); transition: color .2s; }
+.nav-links a:not(.btn):hover { color: var(--text); text-decoration: underline; text-underline-offset: 6px; }
+.nav-links .btn { min-height: 40px; padding: .5rem 1.1rem; font-size: .9375rem; }
+.menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); color: var(--text); cursor: pointer; transition: border-color .2s; }
+.menu-btn:hover { border-color: var(--text); }
+.menu-btn:active { transform: translateY(1px); }
+.menu-btn span { display: block; width: 18px; height: 1.5px; margin: 4px auto; background: currentColor; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+@media (max-width: 760px) {
+  :root { --header-h: 64px; }
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: var(--header-h); left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: .75rem 1rem; border-radius: var(--radius-sm); color: var(--text); }
+  .js .nav-links .btn { margin-top: .5rem; min-height: 48px; }
+  /* 没有 JS 时：菜单直接展开成可换行的链接列 */
+  html:not(.js) .site-header { position: sticky; top: 0; }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: .75rem; }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: .25rem 1rem; }
+  html:not(.js) .nav-links a:not(.btn) { padding-block: .5rem; }
+  html:not(.js) .hero { padding-top: 0; }
+}
+
+/* ---------- 艺术占位图 ----------
+   每个图片位置有自己的 class，换照片只要改那一个 class，并删掉它的 ::before／::after。
+   改用 img 标签时加上 width／height；首屏图加 fetchpriority="high"，其他加 loading="lazy"。
+   占位图是黑白摄影棚风格：灰色背景、发型背影（不露脸）、设计师半身的柔焦剪影。 */
+.img { position: relative; overflow: hidden; background-color: var(--studio); }
+
+/* 换成照片：.img-hero { background: url(images/hero.jpg) center/cover; }
+   建议比例 4:5 直幅：发型的背影或侧后方、灰色背景、不露脸
+   换成照片：.img-l1 { background: url(images/look-1.jpg) center/cover; }（.img-l2～.img-l6 同理）
+   建议比例 3:4 直幅：一张一种发型，背影或侧后方 */
+:is(.img-hero, .img-l1, .img-l2, .img-l3, .img-l4, .img-l5, .img-l6) {
+  --hair: color-mix(in srgb, var(--text) 86%, var(--studio));   /* 发色 */
+  --cloth: color-mix(in srgb, var(--surface) 80%, var(--studio)); /* 上衣 */
+  background:
+    /* 肩膀与上衣 */
+    radial-gradient(80% 40% at 50% 104%, var(--cloth) 97%, transparent 100%),
+    /* 后颈 */
+    linear-gradient(90deg, color-mix(in srgb, var(--tone) 78%, var(--studio-deep)), var(--tone) 45%, color-mix(in srgb, var(--tone) 84%, var(--studio-deep))) 50% 70% / 17% 34% no-repeat,
+    /* 左上方的柔光与灰色背景 */
+    radial-gradient(85% 60% at 18% 12%, color-mix(in srgb, var(--surface) 75%, transparent), transparent 100%),
+    linear-gradient(180deg, var(--studio), var(--studio-deep));
+}
+/* 落在背景上的影子 */
+:is(.img-hero, .img-l1, .img-l2, .img-l3, .img-l4, .img-l5, .img-l6)::before { content: ""; position: absolute; left: 40%; top: 10%; width: 52%; height: 54%; filter: blur(10px);
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--text) 17%, transparent), transparent); }
+/* 头发：位置、形状由各张图的 --hl／--ht／--hw／--hh／--hr 决定，--hd 是该发型的细节 */
+:is(.img-hero, .img-l1, .img-l2, .img-l3, .img-l4, .img-l5, .img-l6)::after { content: ""; position: absolute; left: var(--hl, 27%); top: var(--ht, 13%); width: var(--hw, 46%); height: var(--hh, 44%); border-radius: var(--hr, 48% 48% 9% 9% / 56% 56% 5% 5%); filter: blur(1px);
+  background:
+    var(--hd, linear-gradient(transparent, transparent)),
+    /* 头顶的一圈光泽 */
+    radial-gradient(60% 36% at 46% 4%, transparent 58%, color-mix(in srgb, var(--tone) 30%, transparent) 76%, transparent 96%),
+    /* 发丝与发尾内侧的阴影 */
+    repeating-linear-gradient(90deg, transparent 0 3.1%, color-mix(in srgb, var(--surface) 6%, transparent) 3.1% 3.9%),
+    repeating-linear-gradient(90deg, transparent 0 7.3%, color-mix(in srgb, var(--text) 24%, transparent) 7.3% 8.1%),
+    linear-gradient(180deg, transparent 72%, color-mix(in srgb, var(--text) 36%, transparent)),
+    linear-gradient(90deg, color-mix(in srgb, var(--hair) 78%, var(--text)), var(--hair) 32% 60%, color-mix(in srgb, var(--hair) 62%, var(--text))); }
+/* 首屏：耳下鲍伯头，发尾一刀平 */
+.img-hero { --hl: 25%; --hw: 49%; --ht: 13%; --hh: 46%; }
+/* 1 长卷发：浅发色、一圈一圈的波浪 */
+.img-l1 { --hair: color-mix(in srgb, var(--text) 52%, var(--studio)); --hl: 23%; --hw: 54%; --ht: 10%; --hh: 72%; --hr: 50% 50% 44% 44% / 30% 30% 14% 14%;
+  --hd: repeating-linear-gradient(168deg, transparent 0 5%, color-mix(in srgb, var(--tone) 26%, transparent) 9%, transparent 13%) 0 100% / 100% 70% no-repeat, repeating-linear-gradient(194deg, transparent 0 6%, color-mix(in srgb, var(--text) 20%, transparent) 10%, transparent 14%) 0 100% / 100% 70% no-repeat; }
+/* 2 耳下短发：露出后颈 */
+.img-l2 { --hl: 29%; --hw: 42%; --ht: 14%; --hh: 36%; --hr: 50% 50% 30% 30% / 56% 56% 34% 34%; }
+/* 3 男士渐层：上深下浅，推到后颈；黑色上衣 */
+.img-l3 { --cloth: color-mix(in srgb, var(--text) 84%, var(--studio)); --hl: 30%; --hw: 40%; --ht: 14%; --hh: 40%; --hr: 50% 50% 40% 40% / 46% 46% 54% 54%;
+  --hd: linear-gradient(180deg, transparent 32%, color-mix(in srgb, var(--tone) 55%, transparent) 58%, var(--tone) 84%); }
+/* 4 线条挑染：深发色上的浅色发束 */
+.img-l4 { --hl: 25%; --hw: 50%; --ht: 11%; --hh: 62%; --hr: 50% 50% 18% 18% / 40% 40% 7% 7%;
+  --hd: repeating-linear-gradient(90deg, transparent 0 9%, color-mix(in srgb, var(--tone) 50%, transparent) 11% 12.5%, transparent 14.5% 21%) 0 100% / 100% 80% no-repeat; }
+/* 5 及胸直发：发尾齐平、一道横向光泽 */
+.img-l5 { --hair: color-mix(in srgb, var(--text) 94%, var(--studio)); --hl: 27%; --hw: 46%; --ht: 10%; --hh: 74%; --hr: 50% 50% 5% 5% / 32% 32% 2% 2%;
+  --hd: linear-gradient(180deg, transparent 34%, color-mix(in srgb, var(--tone) 26%, transparent) 42%, transparent 52%); }
+/* 6 低编发：后脑一条辫子垂到背上 */
+.img-l6 { --hair: color-mix(in srgb, var(--text) 66%, var(--studio)); --hl: 28%; --hw: 44%; --ht: 13%; --hh: 40%; --hr: 50% 50% 44% 44% / 50% 50% 50% 50%; }
+.img-l6::before { left: 44%; top: 46%; width: 12%; height: 38%; border-radius: 40% 40% 50% 50% / 8% 8% 12% 12%; filter: blur(.6px);
+  background:
+    repeating-linear-gradient(38deg, transparent 0 7%, color-mix(in srgb, var(--text) 45%, transparent) 7% 9.5%) 0 0 / 50% 100% no-repeat,
+    repeating-linear-gradient(-38deg, transparent 0 7%, color-mix(in srgb, var(--text) 45%, transparent) 7% 9.5%) 100% 0 / 50% 100% no-repeat,
+    var(--hair); }
+
+/* 换成照片：.img-s1 { background: url(images/stylist-1.jpg) center/cover; }（.img-s2、.img-s3 同理）
+   建议比例 4:5 半身照：灰色背景、黑色上衣、人物置中、头顶留一点空间 */
+:is(.img-s1, .img-s2, .img-s3) { aspect-ratio: 4 / 5; border-radius: var(--radius); --hair: color-mix(in srgb, var(--text) 84%, var(--studio)); --hx: 50%;
+  background: radial-gradient(80% 56% at var(--lx, 20%) 12%, color-mix(in srgb, var(--surface) 78%, transparent), transparent 100%), linear-gradient(180deg, var(--studio), var(--studio-deep)); }
+/* 头与颈：柔焦的椭圆（不画五官）。--back 是脑后的头发，--fringe 是头顶与浏海 */
+:is(.img-s1, .img-s2, .img-s3)::before { content: ""; position: absolute; left: calc(var(--hx) - 22%); top: 13%; width: 44%; height: 56%; filter: blur(3px);
+  background:
+    var(--fringe, radial-gradient(47% 21% at 50% 22%, var(--hair) 76%, transparent 100%)),
+    radial-gradient(36% 29% at 50% 41%, var(--tone) 82%, transparent 100%),
+    linear-gradient(color-mix(in srgb, var(--tone) 78%, var(--studio-deep)), color-mix(in srgb, var(--tone) 78%, var(--studio-deep))) 50% 96% / 27% 40% no-repeat,
+    var(--back, linear-gradient(transparent, transparent)); }
+/* 黑色上衣：梯形肩线＋圆领 */
+:is(.img-s1, .img-s2, .img-s3)::after { content: ""; position: absolute; left: var(--sx, 7%); right: var(--sx, 7%); top: 63%; bottom: 0; filter: blur(1px);
+  clip-path: polygon(30% 0, 70% 0, 94% 17%, 100% 100%, 0 100%, 6% 17%);
+  background:
+    radial-gradient(15% 17% at 50% 0, color-mix(in srgb, var(--tone) 78%, var(--studio-deep)) 94%, transparent 100%),
+    linear-gradient(90deg, color-mix(in srgb, var(--text) 78%, var(--studio)), var(--text) 30% 70%, color-mix(in srgb, var(--text) 84%, var(--studio))); }
+/* 1 及肩长发 */
+.img-s1 { --back: radial-gradient(50% 48% at 50% 46%, var(--hair) 88%, transparent 100%); }
+/* 2 短发、肩膀较宽，光从右边来 */
+.img-s2 { --hx: 49%; --lx: 82%; --sx: 3%; --fringe: radial-gradient(33% 9% at 53% 15%, var(--hair) 70%, transparent 100%); --back: radial-gradient(40% 23% at 50% 27%, var(--hair) 88%, transparent 100%); }
+/* 3 耳下鲍伯头，发色较浅 */
+.img-s3 { --hx: 51%; --lx: 50%; --hair: color-mix(in srgb, var(--text) 58%, var(--studio)); --back: radial-gradient(50% 34% at 50% 37%, var(--hair) 90%, transparent 100%); }
+
+/* 换成照片：.img-shop { background: url(images/shop.jpg) center/cover; }
+   建议比例 3:2 横幅：店内的镜台与座椅，无人 */
+.img-shop { aspect-ratio: 3 / 2; border-radius: var(--radius);
+  background:
+    /* 三面镜子：镜面、黑色细框 */
+    linear-gradient(155deg, var(--surface), color-mix(in srgb, var(--studio) 60%, var(--surface)) 60%, var(--studio)) 20.45% 18.3% / 12% 40% no-repeat,
+    linear-gradient(155deg, var(--surface), color-mix(in srgb, var(--studio) 60%, var(--surface)) 60%, var(--studio)) 50% 18.3% / 12% 40% no-repeat,
+    linear-gradient(155deg, var(--surface), color-mix(in srgb, var(--studio) 60%, var(--surface)) 60%, var(--studio)) 79.55% 18.3% / 12% 40% no-repeat,
+    linear-gradient(var(--text), var(--text)) 20.11% 17.2% / 13% 42% no-repeat,
+    linear-gradient(var(--text), var(--text)) 50% 17.2% / 13% 42% no-repeat,
+    linear-gradient(var(--text), var(--text)) 79.89% 17.2% / 13% 42% no-repeat,
+    /* 镜台层板 */
+    linear-gradient(color-mix(in srgb, var(--text) 62%, var(--studio)), color-mix(in srgb, var(--text) 62%, var(--studio))) 50% 56.7% / 84% 1.2% no-repeat,
+    /* 从左边窗户落到地上的光 */
+    linear-gradient(108deg, transparent 8%, color-mix(in srgb, var(--surface) 40%, transparent) 20% 34%, transparent 48%) 0 100% / 100% 23% no-repeat,
+    /* 水泥墙的深浅与地板 */
+    radial-gradient(50% 60% at 12% 30%, color-mix(in srgb, var(--surface) 45%, transparent), transparent 100%),
+    radial-gradient(40% 50% at 86% 20%, color-mix(in srgb, var(--text) 10%, transparent), transparent 100%),
+    linear-gradient(180deg, var(--studio) 0 78%, color-mix(in srgb, var(--studio-deep) 82%, var(--text)) 78%); }
+/* 三张黑色座椅：椅背、椅面、椅柱、底盘 */
+.img-shop::before { content: ""; position: absolute; left: 11%; width: 78%; top: 0; bottom: 0;
+  background:
+    linear-gradient(90deg, transparent 38%, var(--text) 38% 62%, transparent 62%) 0 67% / 33.334% 12% repeat-x,
+    linear-gradient(90deg, transparent 32%, var(--text) 32% 68%, transparent 68%) 0 74.6% / 33.334% 3.5% repeat-x,
+    linear-gradient(90deg, transparent 48.5%, color-mix(in srgb, var(--text) 78%, var(--studio)) 48.5% 51.5%, transparent 51.5%) 0 83.9% / 33.334% 10% repeat-x,
+    linear-gradient(90deg, transparent 37%, color-mix(in srgb, var(--text) 78%, var(--studio)) 37% 63%, transparent 63%) 0 86.7% / 33.334% 1.4% repeat-x; }
+/* 镜子之间的两盏吊灯 */
+.img-shop::after { content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(closest-side, var(--surface) 0 92%, transparent 100%) 36.6% 16.2% / 3% 4.5% no-repeat,
+    radial-gradient(closest-side, var(--surface) 0 92%, transparent 100%) 63.4% 16.2% / 3% 4.5% no-repeat,
+    linear-gradient(var(--text), var(--text)) 37.1% 0 / .25% 16% no-repeat,
+    linear-gradient(var(--text), var(--text)) 63.1% 0 / .25% 16% no-repeat; }
+
+/* ---------- 主视觉 Hero：左边大字，右边直幅照片出血到右缘 ---------- */
+.hero { padding: var(--header-h) 0 0; }
+.hero-grid { display: grid; grid-template-columns: minmax(var(--gutter), 1fr) minmax(0, calc(var(--max) * .56)) minmax(0, calc(var(--max) * .44)) minmax(var(--gutter), 1fr); }
+.hero-text { grid-column: 2; align-self: center; padding-block: 3rem; padding-inline-end: clamp(1.5rem, 4vw, 4rem); }
+.hero h1 { font-size: var(--fs-h1); line-height: 1.12; }
+.hero-sub { color: var(--muted); margin-top: clamp(1.5rem, 3vw, 2rem); max-width: 26em; font-size: clamp(1rem, 1.3vw, 1.125rem); }
+.hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; margin-top: clamp(2rem, 4vw, 3rem); }
+.hero-cta .text-link { display: inline-flex; align-items: center; min-height: 44px; }
+.img-hero { grid-column: 3 / -1; height: clamp(520px, calc(100svh - var(--header-h)), 820px); }
+@media (max-width: 760px) {
+  .hero-grid { display: block; }
+  .hero-text { padding: 2rem var(--gutter) 2.5rem; }
+  .img-hero { height: auto; aspect-ratio: 4 / 5; margin-inline-start: var(--gutter); }
+}
+
+/* ---------- 价目表：大字清单（这一页的主角） ---------- */
+.price-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3.2fr); column-gap: clamp(2rem, 6vw, 6rem); align-items: end; margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
+.price-group { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3.2fr); column-gap: clamp(2rem, 6vw, 6rem); padding-top: 1.5rem; padding-bottom: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--text); }
+.price-group h3 { font-size: var(--fs-h3); }
+.price-group li { display: grid; grid-template-columns: minmax(0, 1fr) 6rem clamp(11rem, 22vw, 16rem); column-gap: 1.5rem; align-items: baseline; padding-block: 1rem; border-bottom: 1px solid var(--line); }
+.price-group li:first-child { padding-top: 0; }
+.price-group li:last-child { border-bottom: 0; }
+.p-name { font-size: var(--fs-lg); line-height: 1.4; }
+.p-time { color: var(--muted); font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
+.p-amt { font: 500 var(--fs-h2)/1.1 var(--font-heading); font-variant-numeric: tabular-nums; text-align: end; white-space: nowrap; }
+.p-amt small { font: 400 var(--fs-sm)/1 var(--font-body); color: var(--muted); }
+.p-amt small:first-child { margin-inline-end: .4em; }
+.p-amt small:last-child { margin-inline-start: .4em; }
+.price-extra { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3.2fr); column-gap: clamp(2rem, 6vw, 6rem); padding-top: 1.5rem; border-top: 1px solid var(--text); font-size: .9375rem; }
+.price-extra h3 { font: 500 var(--fs-body)/1.8 var(--font-body); }
+.price-extra dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem 1.5rem; }
+.price-extra dt { color: var(--muted); }
+.price-extra dd { font-weight: 500; font-variant-numeric: tabular-nums; }
+@media (max-width: 860px) {
+  .price-head, .price-group, .price-extra { grid-template-columns: minmax(0, 1fr); }
+  .price-head { row-gap: .75rem; }
+  .price-group { padding-top: 1rem; padding-bottom: 1.5rem; }
+  .price-group h3 { margin-bottom: 1rem; }
+  .price-group li { grid-template-columns: minmax(0, 1fr) auto; column-gap: 1rem; padding-block: .75rem; }
+  .p-name { grid-column: 1; grid-row: 1; font-size: 1.0625rem; }
+  .p-time { grid-column: 1; grid-row: 2; }
+  .p-amt { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+  .price-extra h3 { margin-bottom: .5rem; }
+}
+@media (max-width: 480px) { .price-extra dl { grid-template-columns: minmax(0, 1fr); gap: 0; } .price-extra dl > div { display: flex; justify-content: space-between; gap: 1rem; padding-block: .25rem; } }
+
+/* ---------- 设计师：直幅照片＋各自的预约按钮 ---------- */
+.sty-head { max-width: 36em; margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
+.sty-head p { margin-top: 1rem; }
+.sty-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 4rem); }
+.sty { display: grid; grid-template-rows: auto 1fr auto; row-gap: 1.5rem; }
+.sty h3 { font-size: var(--fs-h3); }
+.sty-role { color: var(--muted); font-size: var(--fs-sm); }
+.sty dl { margin-top: 1rem; font-size: .9375rem; }
+.sty dl > div { display: grid; grid-template-columns: 3.5em minmax(0, 1fr); gap: 1rem; padding-block: .6rem; border-top: 1px solid var(--line); }
+.sty dt { color: var(--muted); }
+.sty .btn { justify-self: start; }
+@media (max-width: 860px) {
+  .sty-grid { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .sty { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); grid-template-rows: auto auto; column-gap: 1.25rem; row-gap: 1rem; align-items: start; }
+  .sty .btn { grid-column: 1 / -1; justify-self: stretch; }
+  .sty dl > div { display: block; padding-block: .5rem; }
+  .sty dt, .sty dd { display: inline; }
+  .sty dt { margin-inline-end: .75em; }
+}
+
+/* ---------- Lookbook：横向卷动图库（CSS scroll-snap，不需要 JS）----------
+   用触摸、触摸板、Shift＋滚轮或键盘左右键都能卷；有 JS 时桌机多两颗前后按钮。 */
+.look { padding-bottom: calc(var(--section-y) - 1rem); }
+.look-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem 2rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.look-hint { color: var(--muted); font-size: var(--fs-sm); }
+.look-tools { display: flex; align-items: center; gap: 1.5rem; }
+.look-nav { display: flex; gap: .5rem; }
+html:not(.js) .look-nav { display: none; }
+.look-nav button { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid color-mix(in srgb, var(--text) 60%, transparent); border-radius: var(--radius-sm); background: transparent; color: var(--text); cursor: pointer; transition: background-color .2s, border-color .2s, opacity .2s; }
+.look-nav button:hover { border-color: var(--text); background: color-mix(in srgb, var(--text) 6%, transparent); }
+.look-nav button:active { transform: translateY(1px); }
+.look-nav button:disabled { opacity: .35; cursor: default; }
+.look-nav svg { width: 18px; height: 18px; }
+.look-scroll { overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; padding-bottom: 1rem;
+  scroll-padding-inline: max(var(--gutter), calc((100% - var(--max)) / 2)); scrollbar-width: thin; scrollbar-color: var(--accent) var(--line); }
+.look-list { display: flex; gap: clamp(1rem, 2vw, 1.5rem); width: max-content; padding-inline: max(var(--gutter), calc((100% - var(--max)) / 2)); }
+.look-scroll:focus-visible { outline-offset: -2px; }
+.look-scroll li { flex: 0 0 clamp(14rem, 23vw, 19rem); scroll-snap-align: start; }
+.look-scroll .img { aspect-ratio: 3 / 4; border-radius: var(--radius); }
+.look-scroll figcaption { margin-top: .75rem; font-size: var(--fs-sm); color: var(--muted); line-height: 1.6; }
+.look-scroll figcaption b { display: block; font-size: var(--fs-body); font-weight: 500; color: var(--text); }
+@media (prefers-reduced-motion: no-preference) { .look-scroll { scroll-behavior: smooth; } }
+@media (max-width: 760px) { .look-nav { display: none; } .look-scroll li { flex-basis: 62vw; } }
+
+/* ---------- 第一次来＋常见问题 ---------- */
+.first-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(3rem, 8vw, 8rem); align-items: start; }
+.first-grid h2 { margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+.steps li { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); column-gap: 1rem; padding-block: 1.25rem; border-top: 1px solid var(--line); }
+.steps li:last-child { border-bottom: 1px solid var(--line); }
+.step-no { grid-row: span 2; font: 500 var(--fs-h3)/1.2 var(--font-heading); font-variant-numeric: tabular-nums; }
+.steps h3 { font: 500 var(--fs-lg)/1.4 var(--font-heading); }
+.steps p { color: var(--muted); margin-top: .25rem; }
+.faq details { border-top: 1px solid var(--line); }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 64px; padding-block: 1rem; cursor: pointer; list-style: none; font-size: var(--fs-lg); font-weight: 500; line-height: 1.4; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; flex: none; width: .5em; height: .5em; margin-inline: .25rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.faq details[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+.faq summary:hover { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+.faq summary:active { opacity: .7; }
+.faq details p { color: var(--muted); padding-bottom: 1.5rem; max-width: 34em; }
+@media (max-width: 860px) { .first-grid { grid-template-columns: minmax(0, 1fr); gap: 3rem; } }
+
+/* ---------- 营业时间与位置 ---------- */
+.visit-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.visit h2 { margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+.hours > div { display: flex; justify-content: space-between; gap: 1rem; padding-block: .75rem; border-top: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.hours > div:last-child { border-bottom: 1px solid var(--line); }
+.hours dt em { font-style: normal; font-size: var(--fs-sm); margin-inline-start: .75rem; border-bottom: 2px solid var(--accent); }
+.hours .today { font-weight: 500; }
+.hours .off dd { color: var(--muted); }
+.visit-note { margin-top: 1rem; font-size: var(--fs-sm); color: var(--muted); }
+.visit-addr { margin-top: 1.5rem; max-width: 30em; }
+.visit-addr b { display: block; font-size: var(--fs-lg); font-weight: 500; line-height: 1.5; }
+.visit-addr span { color: var(--muted); }
+.visit-links { display: flex; flex-wrap: wrap; gap: .75rem 2rem; margin-top: 1.5rem; }
+.visit-links a { display: inline-flex; align-items: center; min-height: 44px; }
+@media (max-width: 860px) { .visit-grid { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; } .visit-info { order: -1; } }
+
+/* ---------- 预约 CTA ---------- */
+.cta { background: var(--surface); border-top: 1px solid var(--line); }
+.cta h2 { font-size: var(--fs-h1); line-height: 1.12; }
+.cta p { color: var(--muted); margin-top: clamp(1.5rem, 3vw, 2rem); max-width: 30em; }
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: clamp(2rem, 4vw, 3rem); }
+.cta-row .text-link { margin-inline-start: 1rem; min-height: 44px; display: inline-flex; align-items: center; font-variant-numeric: tabular-nums; }
+@media (max-width: 760px) {
+  /* 手机：底部固定列已有同一颗预约按钮，这里只留 LINE */
+  .cta .btn-primary { display: none; }
+  .cta-row { display: grid; grid-template-columns: minmax(0, 1fr); }
+  /* 电话已经在底部固定列，这里不重复 */
+  .cta-row .text-link { display: none; }
+}
+
+/* ---------- 页脚 ---------- */
+.site-footer { background: var(--brand); color: color-mix(in srgb, var(--brand-ink) 80%, var(--brand)); padding-block: 4.5rem 2rem; font-size: .9375rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; }
+.site-footer .logo { color: var(--brand-ink); margin-bottom: .5rem; }
+.site-footer h2 { color: var(--brand-ink); font: 500 var(--fs-body)/1.8 var(--font-body); margin-bottom: .5rem; }
+.site-footer a:hover { color: var(--brand-ink); text-decoration: underline; text-underline-offset: 4px; }
+.site-footer :focus-visible { outline-color: var(--brand-ink); }
+.social { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+.social a { display: inline-flex; align-items: center; min-height: 32px; text-decoration: underline; text-underline-offset: 4px; }
+.foot-bottom { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid color-mix(in srgb, var(--brand-ink) 18%, transparent); font-size: var(--fs-sm); }
+.foot-hours-short { display: none; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; } .foot-hours { display: none; } .foot-hours-short { display: block; } .site-footer { padding-top: 3rem; } .foot-bottom { margin-top: 2rem; } }
+
+/* ---------- 手机底部固定按钮 ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 760px) {
+  .mobile-bar { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: .5rem; position: fixed; inset: auto 0 0; z-index: 60; padding: .75rem 1rem calc(.75rem + env(safe-area-inset-bottom)); background: var(--surface); border-top: 1px solid var(--line); }
+  .mobile-bar .btn { padding: .5rem 1rem; }
+  /* 首屏按钮还在画面上时先收起底部固定列；没有 JS 时照常显示 */
+  .js .mobile-bar { transform: translateY(110%); transition: transform .3s ease; }
+  .js .mobile-bar.show { transform: none; }
+  body { padding-bottom: 72px; }
+}
+
+/* ---------- 首屏进场（全页只有这一个动画） ---------- */
+.js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== 语言切换（lang-switch） ==================== */
+.nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
+.lang-switch { display: flex; align-items: center; gap: .1rem; flex: none; margin-inline-start: .5rem; padding-inline-start: .6rem; border-inline-start: 1px solid var(--line); font: 400 .8125rem/1 var(--font-body); letter-spacing: normal; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; border-radius: var(--radius-sm); color: var(--muted); text-decoration: none; text-underline-offset: 5px; text-decoration-thickness: 2px; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 8%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid var(--text); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 500; text-decoration-line: underline; text-decoration-color: var(--accent); }
+@media (max-width: 760px) {
+  .nav > .lang-switch { order: 1; margin-inline: 0; padding-inline-start: 0; border: 0; }
+  .nav > .menu-btn { order: 2; }
+  .nav > .nav-links { order: 3; }
+}
+@media (min-width: 761px) and (max-width: 1000px) {
+  .nav > .nav-links { gap: 1rem; font-size: .875rem; }
+  .nav > .nav-links .btn { padding-inline: .9rem; }
+  .nav > .lang-switch { margin-inline-start: 0; padding-inline-start: .3rem; }
+}
+@media (max-width: 400px) { .nav { gap: .5rem; } }
+/* 页脚语言链接 */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; font-size: var(--fs-sm); }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius-sm); }
+.foot-lang a:hover { text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand-ink); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { font-weight: 500; color: var(--brand-ink); text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: color-mix(in srgb, var(--accent) 50%, var(--brand-ink)); }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: var(--radius-sm); color: inherit; font-weight: 500; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--text) 8%, transparent); }
+.lang-menu > summary:active { background: color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<!-- ==================== 区块：页眉导览 ==================== -->
+<!-- 范例内容：上线前请换成真实数据（店名为虚构） -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="SOU 发艺 回到顶端"><span lang="en" translate="no">SOU</span> 发艺</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="打开菜单"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="主菜单">
+      <a href="#prices">价目</a>
+      <a href="#stylists">设计师</a>
+      <a href="#lookbook">作品</a>
+      <a href="#first">第一次来</a>
+      <a href="#visit">营业时间</a>
+      <a href="#stylists" class="btn btn-ghost">预约</a>
+    </nav>
+    <!-- lang-switch：语言切换。要添加语言时，在这里加一个链接，并添加对应的文件夹 -->
+    <nav class="lang-switch" aria-label="Language 语言">
+      <details class="lang-menu">
+        <summary lang="zh-Hans">简</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<!-- ==================== 区块：主视觉 Hero ==================== -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div class="hero-text reveal">
+      <h1>先聊清楚，<br>再动剪刀</h1>
+      <p class="hero-sub">SOU 是信义区的三人发型工作室。每次预约先留十分钟讨论，费用在开始前说明。</p>
+      <div class="hero-cta">
+        <a href="#stylists" class="btn btn-primary">选设计师预约</a>
+        <a href="#prices" class="text-link">先看价目</a>
+      </div>
+    </div>
+    <div class="img img-hero" role="img" aria-label="照片位置：耳下鲍伯头的背影，灰色背景，不露脸"></div>
+  </div>
+</section>
+
+<!-- ==================== 区块：价目表 ==================== -->
+<!-- 范例内容：上线前请换成真实数据（项目、价格、时间皆为虚构）。每一列是一个 <li>，拷贝或删除即可增减项目 -->
+<section id="prices">
+  <div class="wrap">
+    <div class="price-head">
+      <h2>价目</h2>
+      <p class="lead">以下是短发的起价。当天的费用与时间，设计师会在开始前和你确认。</p>
+    </div>
+    <div class="price-group">
+      <h3>剪发</h3>
+      <ul>
+        <li><span class="p-name">洗剪吹</span><span class="p-time">60 分钟</span><span class="p-amt"><small>NT$</small>800<small>起</small></span></li>
+        <li><span class="p-name">男士渐层剪</span><span class="p-time">45 分钟</span><span class="p-amt"><small>NT$</small>700<small>起</small></span></li>
+        <li><span class="p-name">儿童剪发（12 岁以下）</span><span class="p-time">30 分钟</span><span class="p-amt"><small>NT$</small>500<small>起</small></span></li>
+      </ul>
+    </div>
+    <div class="price-group">
+      <h3>染发</h3>
+      <ul>
+        <li><span class="p-name">全染</span><span class="p-time">2 小时</span><span class="p-amt"><small>NT$</small>2,500<small>起</small></span></li>
+        <li><span class="p-name">补染发根</span><span class="p-time">1.5 小时</span><span class="p-amt"><small>NT$</small>1,800<small>起</small></span></li>
+        <li><span class="p-name">漂发（一次）</span><span class="p-time">2.5 小时</span><span class="p-amt"><small>NT$</small>3,000<small>起</small></span></li>
+      </ul>
+    </div>
+    <div class="price-group">
+      <h3>烫发</h3>
+      <ul>
+        <li><span class="p-name">温塑烫</span><span class="p-time">3 小时</span><span class="p-amt"><small>NT$</small>3,500<small>起</small></span></li>
+        <li><span class="p-name">冷烫</span><span class="p-time">2.5 小时</span><span class="p-amt"><small>NT$</small>2,800<small>起</small></span></li>
+        <li><span class="p-name">缩毛矫正</span><span class="p-time">3.5 小时</span><span class="p-amt"><small>NT$</small>4,000<small>起</small></span></li>
+      </ul>
+    </div>
+    <div class="price-group">
+      <h3>护发</h3>
+      <ul>
+        <li><span class="p-name">结构护发</span><span class="p-time">40 分钟</span><span class="p-amt"><small>NT$</small>1,200<small>起</small></span></li>
+        <li><span class="p-name">头皮养护</span><span class="p-time">30 分钟</span><span class="p-amt"><small>NT$</small>1,000<small>起</small></span></li>
+      </ul>
+    </div>
+    <div class="price-extra">
+      <h3>加价（每个项目）</h3>
+      <dl>
+        <div><dt>中长发（过肩）</dt><dd>加 300</dd></div>
+        <div><dt>长发（过胸）</dt><dd>加 600</dd></div>
+        <div><dt>指定总监 Mika</dt><dd>加 200</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：设计师 ==================== -->
+<!-- 范例内容：上线前请换成真实数据（设计师姓名、资历、班表、照片皆为虚构）。
+     每位设计师的预约按钮可以换成各自的 LINE 链接 -->
+<section id="stylists">
+  <div class="wrap">
+    <div class="sty-head">
+      <h2>设计师</h2>
+      <p class="lead">三位设计师各有班表。预约时直接选人，之后每次都由同一位负责。</p>
+    </div>
+    <div class="sty-grid">
+      <article class="sty">
+        <div class="img img-s1" role="img" aria-label="照片位置：设计师 Mika 的半身照，黑色上衣，灰色背景"></div>
+        <div>
+          <h3><span lang="en">Mika</span> <span>林可晴</span></h3>
+          <p class="sty-role">总监，入行 14 年</p>
+          <dl>
+            <div><dt>擅长</dt><dd>短发与鲍伯头、线条俐落的剪裁</dd></div>
+            <div><dt>班表</dt><dd>周二至周六</dd></div>
+          </dl>
+        </div>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE 预约 Mika</a>
+      </article>
+      <article class="sty">
+        <div class="img img-s2" role="img" aria-label="照片位置：设计师 Bo 的半身照，黑色上衣，灰色背景"></div>
+        <div>
+          <h3><span lang="en">Bo</span> <span>周柏宇</span></h3>
+          <p class="sty-role">设计师，入行 9 年</p>
+          <dl>
+            <div><dt>擅长</dt><dd>男士渐层与短发、温塑烫</dd></div>
+            <div><dt>班表</dt><dd>周三至周日</dd></div>
+          </dl>
+        </div>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE 预约 Bo</a>
+      </article>
+      <article class="sty">
+        <div class="img img-s3" role="img" aria-label="照片位置：设计师 Yuu 的半身照，黑色上衣，灰色背景"></div>
+        <div>
+          <h3><span lang="en">Yuu</span> <span>许宥安</span></h3>
+          <p class="sty-role">设计师，入行 5 年</p>
+          <dl>
+            <div><dt>擅长</dt><dd>漂染与挑染、长发层次</dd></div>
+            <div><dt>班表</dt><dd>周二、周四至周日</dd></div>
+          </dl>
+        </div>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE 预约 Yuu</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：Lookbook 作品 ==================== -->
+<!-- 范例内容：上线前请换成真实数据（作品与设计师皆为虚构）。每张作品是一个 <li>，可自由增减 -->
+<section class="look" id="lookbook">
+  <div class="wrap look-head">
+    <h2 id="look-h">作品</h2>
+    <div class="look-tools">
+      <p class="look-hint">左右卷动，共 6 款</p>
+      <div class="look-nav">
+        <button type="button" aria-label="上一张" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" aria-label="下一张"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="look-scroll" tabindex="0" role="region" aria-labelledby="look-h">
+  <ul class="look-list">
+    <li><figure><div class="img img-l1" role="img" aria-label="照片位置：长卷发的背影"></div><figcaption><b>长卷发</b>温塑烫，设计师 Bo</figcaption></figure></li>
+    <li><figure><div class="img img-l2" role="img" aria-label="照片位置：耳下短发的背影"></div><figcaption><b>耳下短发</b>剪发，设计师 Mika</figcaption></figure></li>
+    <li><figure><div class="img img-l3" role="img" aria-label="照片位置：男士渐层短发的背影"></div><figcaption><b>男士渐层</b>剪发，设计师 Bo</figcaption></figure></li>
+    <li><figure><div class="img img-l4" role="img" aria-label="照片位置：线条挑染的背影"></div><figcaption><b>线条挑染</b>漂发与染发，设计师 Yuu</figcaption></figure></li>
+    <li><figure><div class="img img-l5" role="img" aria-label="照片位置：及胸直发的背影"></div><figcaption><b>及胸直发</b>缩毛矫正，设计师 Mika</figcaption></figure></li>
+    <li><figure><div class="img img-l6" role="img" aria-label="照片位置：低编发的背影"></div><figcaption><b>低编发</b>造型，设计师 Yuu</figcaption></figure></li>
+  </ul>
+  </div>
+</section>
+
+<!-- ==================== 区块：第一次来＋常见问题 ==================== -->
+<section id="first">
+  <div class="wrap first-grid">
+    <div>
+      <h2>第一次来</h2>
+      <ol class="steps">
+        <li><span class="step-no" aria-hidden="true">1</span><h3>选设计师与时段</h3><p>用 LINE 告诉我们想做的项目，可以附上参考照片。</p></li>
+        <li><span class="step-no" aria-hidden="true">2</span><h3>到店先讨论</h3><p>坐下来先聊十分钟，确认做法、需要的时间与费用。</p></li>
+        <li><span class="step-no" aria-hidden="true">3</span><h3>完成后教你整理</h3><p>结束前示范在家吹整的方式，让你隔天自己也做得到。</p></li>
+      </ol>
+    </div>
+    <div class="faq">
+      <h2>常见问题</h2>
+      <details>
+        <summary>染发或烫发大概要多久？</summary>
+        <p>染发约 2 至 3 小时，烫发约 3 至 4 小时，漂发会再久一点。预约时我们会先告诉你大概的结束时间。</p>
+      </details>
+      <details>
+        <summary>要改期或取消怎么办？</summary>
+        <p>请在预约时间的前一天用 LINE 告诉我们。当天临时取消两次以上，之后预约会请你先付订金。</p>
+      </details>
+      <details>
+        <summary>小孩可以剪吗？</summary>
+        <p>可以。12 岁以下适用儿童剪发价格。建议选平日下午，店里比较安静。</p>
+      </details>
+      <details>
+        <summary>可以先咨询，当天不做吗？</summary>
+        <p>可以。讨论后想再考虑的话，当天不收费。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：营业时间与位置 ==================== -->
+<!-- 范例内容：上线前请换成真实数据（地址、电话、营业时间皆为虚构）。
+     data-days 是星期几（0 = 周日、1 = 周一 … 6 = 周六），用来标示「今天」 -->
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div>
+      <div class="img img-shop" role="img" aria-label="照片位置：店内的水泥墙、三面镜台与黑色座椅，无人"></div>
+      <p class="visit-addr"><b>台北市信义区松山路 168 号 2 楼</b><span>捷运永春站 4 号出口步行 5 分钟。门口没有停车位，巷口有收费停车场。</span></p>
+    </div>
+    <div class="visit-info">
+      <h2>营业时间与位置</h2>
+      <dl class="hours" id="hours">
+        <div data-days="2,3,4,5"><dt>周二至周五</dt><dd>11:00–20:00</dd></div>
+        <div data-days="6"><dt>周六</dt><dd>10:00–19:00</dd></div>
+        <div data-days="0"><dt>周日</dt><dd>10:00–18:00</dd></div>
+        <div class="off" data-days="1"><dt>周一</dt><dd>公休</dd></div>
+      </dl>
+      <p class="visit-note">最后受理时间：剪发为打烊前 1 小时，染发与烫发为打烊前 3 小时。</p>
+      <div class="visit-links">
+        <a href="https://maps.google.com/?q=台北市信义区松山路168号" class="text-link" target="_blank" rel="noopener">打开 Google 地图</a>
+        <a href="tel:02-1234-5678" class="text-link num">拨打 02-1234-5678</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：预约 CTA ==================== -->
+<section class="cta" id="book">
+  <div class="wrap">
+    <h2>想剪了，<br>就传消息来</h2>
+    <p>还没决定找哪一位也没关系。告诉我们想做的项目和方便的时间，我们帮你安排。</p>
+    <div class="cta-row">
+      <a href="#stylists" class="btn btn-primary">选设计师预约</a>
+      <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE 不指定预约</a>
+      <a href="tel:02-1234-5678" class="text-link">02-1234-5678</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 区块：页脚 ==================== -->
+<!-- 范例内容：上线前请换成真实数据（店名、地址、电话皆为虚构） -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo"><span lang="en" translate="no">SOU</span> 发艺</div>
+        <p>台北市信义区松山路 168 号 2 楼<br>电话：<a href="tel:02-1234-5678">02-1234-5678</a></p>
+      </div>
+      <div>
+        <h2>营业时间</h2>
+        <p class="foot-hours-short">周二至周日营业，周一公休</p>
+        <p class="foot-hours">周二至周五 11:00–20:00<br>周六 10:00–19:00<br>周日 10:00–18:00<br>周一公休</p>
+      </div>
+      <div>
+        <h2>社群</h2>
+        <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE</a></div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y">2026</span> SOU 发艺</span>
+    </div>
+    <!-- 页脚语言链接：和页眉的 lang-switch 同一组 -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja">日本語</a></p>
+  </div>
+</footer>
+
+<!-- ==================== 区块：手机底部固定按钮 ==================== -->
+<div class="mobile-bar">
+  <a href="tel:02-1234-5678" class="btn btn-ghost">拨打电话</a>
+  <a href="#stylists" class="btn btn-primary">选设计师预约</a>
+</div>
+
+<script>
+// 界面文字（换语言时只改这里）
+const T = { today: '今天', openMenu: '打开菜单', closeMenu: '关闭菜单' };
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// 页眉卷动背景
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+// 汉堡菜单（点链接或按 Esc 会关闭）
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  links.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? T.closeMenu : T.openMenu);
+};
+menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && links.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
+
+// 营业时间：标示今天。请把 TZ 改成店家所在地的时区（例如 'Asia/Taipei'、'America/Los_Angeles'）
+const TZ = 'Asia/Taipei';
+const wd = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(new Intl.DateTimeFormat('en-US', { timeZone: TZ, weekday: 'short' }).format(new Date()));
+document.querySelectorAll('#hours [data-days]').forEach(row => {
+  if (!row.dataset.days.split(',').includes(String(wd))) return;
+  row.classList.add('today');
+  row.querySelector('dt').insertAdjacentHTML('beforeend', `<em>${T.today}</em>`);
+});
+
+// Lookbook：前后按钮（图库本身用 CSS 卷动，没有 JS 也能用）
+const scroller = document.querySelector('.look-scroll');
+const [prevBtn, nextBtn] = document.querySelectorAll('.look-nav button');
+const lookState = () => {
+  prevBtn.disabled = scroller.scrollLeft < 8;
+  nextBtn.disabled = scroller.scrollLeft > scroller.scrollWidth - scroller.clientWidth - 8;
+};
+prevBtn.addEventListener('click', () => scroller.scrollBy({ left: -scroller.clientWidth * .8 }));
+nextBtn.addEventListener('click', () => scroller.scrollBy({ left: scroller.clientWidth * .8 }));
+scroller.addEventListener('scroll', lookState, { passive: true }); lookState();
+
+// 首屏进场（只有这一处）＋底部固定列在首屏按钮离开画面后才出现
+const reveals = document.querySelectorAll('.reveal');
+const bar = document.querySelector('.mobile-bar');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }));
+  reveals.forEach(el => io.observe(el));
+  new IntersectionObserver(([e]) => bar.classList.toggle('show', !e.isIntersecting)).observe(document.querySelector('.hero-cta'));
+} else { reveals.forEach(el => el.classList.add('in')); bar.classList.add('show'); }
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>
