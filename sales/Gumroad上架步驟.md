@@ -104,9 +104,9 @@ Questions or custom work? / 有問題或想客製： polyglotpages.studio@gmail.
 ## 3. 網站客製服務（先上這個）
 
 > **11/23 更新：Commission 類型要帳號滿 30 天才能用。** 在那之前改用「訂金＋尾款」兩個 Digital product：
-> - 三語店家網站代製（訂金）：URL `trilingual-website-service`，Standard deposit $150／Pro deposit $275
+> - 三語店家網站代製（訂金）：URL `trilingual-website-service`，Standard deposit $150／Pro deposit $250（11/27 從 $275 改，合計 $499）
 > - 網站客製服務（訂金）：URL `website-customization`，Basic deposit $125／Plus deposit $225
-> - 網站尾款（Unlisted 不公開）：URL `final-payment`，Trilingual Standard $149／Pro $274／Customization Basic $124／Plus $224。網站做好、客人確認後才寄這個連結。
+> - 網站尾款（Unlisted 不公開）：URL `final-payment`，Trilingual Standard $149／Pro $249（11/27 從 $274 改）／Customization Basic $124／Plus $224。網站做好、客人確認後才寄這個連結。
 > 帳號滿 30 天（約 12/23）後，改回 Commission 一個商品。
 > **Content 頁（買家付款後看到的頁面）不能空白。** 訂金商品貼：
 > 「Thank you! Your deposit is confirmed. What happens next: 1. Within 1 business day we'll email you a short form… 2. Your site is ready for review within 7 days… 3. You only pay the remaining 50% after you've approved your finished site.」（中英對照全文見 `sales/交付流程.md` 第六節）
