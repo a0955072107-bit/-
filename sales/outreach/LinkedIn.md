@@ -17,10 +17,9 @@ Email: polyglotpages.studio@gmail.com
 ```
 - **Experience**：Founder, Polyglot Pages（2026/11 起，自僱）
 - **頭像**：本人照片（真人照片接受率高很多）；橫幅可用 `sales/brand/` 的圖
-- 官網上線後，把網址換成官網。
 
 ## 2. 每天的量（避免被 LinkedIn 限制）
-- 每週邀請 **≤100**（約每天 15～20），平日送，不要一次送完。
+- 邀請**每天 ≤15、每週 ≤100**，平日送，不要一次送完。
 - 免費帳號每月只能附**少量**邀請留言，所以**邀請不附留言**，對方接受後再傳訊息。
 - 只邀請跟名單行業相符、在美國華人區的人；不要大量邀請不相關的人（被按「我不認識」會被限制）。
 - 出現「邀請上限」或驗證提示就停一週。
@@ -34,7 +33,7 @@ Thanks for connecting, <名字>! I build websites in English, 繁體 and 简体 
 - 只追一次（7 天後）：`Just checking in. If a free preview would help, I'm happy to make one. If not, no worries at all.`
 
 ## 4. 紀錄
-- **LinkedIn 邀請記在 `sales/outreach/linkedin.csv`**（11/27 起）：invited → accepted → messaged → replied／partner；A=夥伴、B=新名單。
+- **LinkedIn 邀請記在私人 repo polyglot-leads 的 `linkedin.csv`（個人姓名和網址不放公開 repo）**（11/27 起）：invited → accepted → messaged → replied／partner；A=夥伴、B=新名單。
 - 大公司（New York Life、State Farm 等）的業務員不是店主，接受後用夥伴說法，不推銷網站。
 - 出現要輸入對方 Email 的驗證就跳過那個人。
 - 在 `leads.csv` 用 `channel=linkedin`，`contact_url` 放對方 LinkedIn 網址；`notes` 寫是老闆還是夥伴。

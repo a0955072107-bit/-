@@ -1,9 +1,10 @@
-# 追問信總表（12/1～12/9）
+# 追問信總表（12/1～12/10）
 
 > 規則：第一封寄出 4 天後沒回才追，**只追一次**。在原信件串按「回覆」，不要開新信。
 > **排之前一定先看 Gmail 收件匣**：對方已經回信（包括說不用了）、退信、或自動回覆說換信箱的，都不要追。
 > 不要一次全部預排：要在「排」那天早上先看回信，再排那一批（避免對方回信後還收到追問）。
 > 24 小時內封數已算好，不超過暖身上限（12/1～12/7 每天 20、12/8 起 30）。
+> 12/7 22:30～12/9 02:15 沒有空間補寄，要重寄的信排到 12/9 03:50 之後。
 
 ## 追問內文（每封只換店名和網址）
 
@@ -72,7 +73,7 @@ Polyglot Pages · polyglotpages.studio@gmail.com
 | L0077 | D Dental Care / 楊安娜牙醫診所 | ddental3901@gmail.com | https://a0955072107-bit.github.io/-/demo/d-dental-care-flushing/ |
 | L0078 | Empress Dental Services | info@empressdental.com | https://a0955072107-bit.github.io/-/demo/empress-dental-services-flushing/ |
 
-## 台灣 12/8（二）01:30 起（加州週一早上；12/8 起上限 30）（28 封）
+## 台灣 12/8（二）01:30 起每 5 分鐘（03:45 前寄完）（加州週一早上；12/8 起上限 30）（28 封）
 > 12/7（一）早上排
 
 | 編號 | 店名 | 收件人 | 網址 |
@@ -106,7 +107,7 @@ Polyglot Pages · polyglotpages.studio@gmail.com
 | L0039 | Evergreen Dental Care | evergreendental937@gmail.com | https://a0955072107-bit.github.io/-/demo/evergreen-dental-care-alhambra/ |
 | L0056 | QH Dental | qhdental@mandentalgroup.com | https://a0955072107-bit.github.io/-/demo/qh-dental-irvine/ |
 
-## 台灣 12/9（三）01:30 起（加州週二早上）（10 封）
+## 台灣 12/9（三）01:30 起每 5 分鐘（加州週二早上）（10 封）
 > 12/8（二）早上排
 
 | 編號 | 店名 | 收件人 | 網址 |
@@ -171,4 +172,4 @@ Polyglot Pages · polyglotpages.studio@gmail.com
 | L0058 | Brian Y. Kuo DDS | bkuo.dds@gmail.com | https://a0955072107-bit.github.io/-/demo/brian-y-kuo-dds-arcadia/ |
 | L0062 | Irvine Integrative Medicine | info@irvineintegrativemedicine.com | https://a0955072107-bit.github.io/-/demo/irvine-integrative-medicine-irvine/ |
 
-合計 75 封（55＋補排 20）。各組 24 小時內合計（含首封）都在上限內：12/3 那段 4＋12＋2＋2＝20。
+合計 75 封（54＋補排 21）。各組 24 小時內合計（含首封）都在上限內：12/3 那段 4＋12＋2＋2＝20。
