@@ -34,5 +34,8 @@ Thanks for connecting, <名字>! I build websites in English, 繁體 and 简体 
 - 只追一次（7 天後）：`Just checking in. If a free preview would help, I'm happy to make one. If not, no worries at all.`
 
 ## 4. 紀錄
+- **LinkedIn 邀請記在 `sales/outreach/linkedin.csv`**（11/27 起）：invited → accepted → messaged → replied／partner；A=夥伴、B=新名單。
+- 大公司（New York Life、State Farm 等）的業務員不是店主，接受後用夥伴說法，不推銷網站。
+- 出現要輸入對方 Email 的驗證就跳過那個人。
 - 在 `leads.csv` 用 `channel=linkedin`，`contact_url` 放對方 LinkedIn 網址；`notes` 寫是老闆還是夥伴。
 - 已經寄過 Email 的同一家，不要再在 LinkedIn 推銷同一件事（可以只連結不私訊）。
