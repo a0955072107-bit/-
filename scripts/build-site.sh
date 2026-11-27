@@ -80,6 +80,8 @@ if [ -d sales/covers/en ]; then
 fi
 # 營運後台（PWA）：admin/ → _site/admin/（noindex，robots.txt 也擋掉；使用者資料只存在瀏覽器）
 if [ -d admin ]; then
+  # 排程每次部署都重新產生（只用 Python 標準函式庫；讀 sales/ 的計畫文件）
+  python3 scripts/admin/build-schedule.py
   mkdir -p _site/admin && cp -R admin/. _site/admin/
   echo "✓ 後台 → _site/admin/"
 fi
