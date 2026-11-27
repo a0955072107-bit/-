@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>瑞记粤菜 Sui Kee｜中山区的明炉烧腊与粤式小炒</title>
+<meta name="description" content="瑞记粤菜是台北中山区的粤菜馆，叉烧、烧鸭、油鸡每天现烧，另有小炒、煲仔与点心。可在线点外带、订位，也接宴席与外烩。">
+<meta name="theme-color" content="#1F3F8F">
+<meta property="og:title" content="瑞记粤菜 Sui Kee｜明炉烧腊，每日现烧">
+<meta property="og:description" content="叉烧、烧鸭、油鸡每天早上进炉。在线点外带，约二十分钟后到店取餐。">
+<meta property="og:type" content="restaurant">
+<!-- 多语版本（SEO）：上线后把 href 换成完整网址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&family=Noto+Serif+SC:wght@500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<!-- 范例内容：上线前请换成真实数据（店名、电话、地址、营业时间、价位皆为虚构） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "瑞记粤菜 Sui Kee",
+  "telephone": "02-1234-5678",
+  "url": "https://example.com/",
+  "servesCuisine": ["粤菜", "烧腊", "港式点心"],
+  "priceRange": "NT$150–450",
+  "acceptsReservations": "True",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "松瑞路 28 号 1 楼",
+    "addressLocality": "中山区",
+    "addressRegion": "台北市",
+    "postalCode": "104",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday"], "opens": "11:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "10:30", "closes": "21:30" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   主题设置：改这里就能换整站配色与字体
+   ============================================================ */
+:root {
+  --brand: #1F3F8F;          /* 品牌主色（青花蓝）：按钮、链接、选中的分页 */
+  --brand-deep: #182A5E;     /* 深青花蓝：午间特餐横幅底色 */
+  --brand-ink: #F7F8FA;      /* 在 brand 色上的文本颜色 */
+  --bg: #F7F8FA;             /* 网页底色（白瓷） */
+  --surface: #FCFDFE;        /* 表面：菜牌、表单、位置区 */
+  --text: #16203A;           /* 主要文本（墨蓝黑） */
+  --muted: #4B5670;          /* 次要文本、说明文本 */
+  --line: #D9DEE8;           /* 1px 细线、边框 */
+  --seal: #C0321F;           /* 印章朱红：只用在「招牌」标记与「营业中」，旁边一定有文本，面积 ≤ 5% */
+  --seal-ink: #FCFDFE;       /* 在朱红色上的文本颜色 */
+  --table: #E9ECF1;          /* 艺术占位图：白色桌面 */
+  --plate: #FBFCFD;          /* 艺术占位图：白瓷盘 */
+  --roast: #A4452C;          /* 艺术占位图：叉烧 */
+  --duck: #B8762E;           /* 艺术占位图：烧鸭、木桌 */
+  --chicken: #E6CF98;        /* 艺术占位图：油鸡、面、汤 */
+  --leaf: #6F8C50;           /* 艺术占位图：菜心、葱花 */
+  --bamboo: #C9A872;         /* 艺术占位图：竹蒸笼、筷子 */
+  --soy: #3B261B;            /* 艺术占位图：酱油、牛肉 */
+  --shadow: color-mix(in srgb, var(--text) 14%, transparent); /* 唯一的阴影色：下拉列表、占位图里的盘子 */
+  --tint: color-mix(in srgb, var(--brand) 7%, transparent);   /* 淡青花底：hover、选中的分页、今天那一列 */
+  --radius: 6px;             /* 图片、菜牌、表单圆角 */
+  --radius-sm: 4px;          /* 按钮、输入框、小标记圆角 */
+  --font-heading: "DM Serif Display", "Noto Serif SC", "Songti SC", serif; /* 标题字体（拉丁 DM Serif Display＋中文 Noto Serif SC） */
+  --font-body: "DM Sans", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; /* 内文字体 */
+  --font-dish-alt: var(--font-body); /* 菜名对照（英文菜名）用的字体 */
+  --fw-heading: 500;         /* 标题字重 */
+  --lh-body: 1.8;           /* 内文行高 */
+  --fs-sm: .875rem;          /* 字级 1：小字、标记、说明 */
+  --fs-base: 1rem;           /* 字级 2：内文 */
+  --fs-md: 1.125rem;         /* 字级 3：菜名、首屏说明 */
+  --fs-lg: clamp(1.25rem, 2.2vw, 1.5rem);  /* 字级 4：菜牌菜名、地址、小标题 */
+  --fs-xl: clamp(1.75rem, 3.6vw, 2.5rem);  /* 字级 5：区块标题 */
+  --fs-display: clamp(2.5rem, 4.6vw, 3.75rem); /* 字级 6：首屏大标题 */
+  --space-1: .25rem;         /* 间距阶梯：4px */
+  --space-2: .5rem;          /* 8px */
+  --space-3: .75rem;         /* 12px */
+  --space-4: 1rem;           /* 16px */
+  --space-5: 1.5rem;         /* 24px */
+  --space-6: 2rem;           /* 32px */
+  --space-7: 3rem;           /* 48px */
+  --space-8: 4rem;           /* 64px */
+  --gap-col: clamp(2rem, 6vw, 5rem);       /* 两栏版面的栏距 */
+  --pad-card: clamp(1.5rem, 3vw, 2.25rem); /* 表单内距 */
+  --header: 72px;            /* 页眉高度 */
+  --max: 1240px;             /* 内容最大宽度 */
+  --pad: clamp(1rem, 5vw, 3rem);           /* 左右留白 */
+  --section: clamp(4rem, 11vw, 8.5rem);    /* 区块上下留白 */
+  --band: clamp(3rem, 6vw, 5rem);          /* 午间特餐横幅的上下留白 */
+}
+
+/* ---------- 基础 ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: calc(var(--header) + var(--space-2)); -webkit-text-size-adjust: 100%; line-break: strict; }
+body { background: var(--bg); color: var(--text); font: 400 var(--fs-base)/var(--lh-body) var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; touch-action: manipulation; }
+a { color: inherit; }
+b, strong { font-weight: 500; }
+p, li, dd, figcaption { text-wrap: pretty; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: var(--fw-heading); line-height: 1.25; letter-spacing: 0; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: var(--radius-sm); }
+main:focus { outline: none; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: var(--section); }
+.sec-title { font-size: var(--fs-xl); }
+.sec-lead { color: var(--muted); max-width: 36em; }
+.num { font-variant-numeric: tabular-nums; }
+.nw { white-space: nowrap; }
+.skip { position: absolute; left: var(--pad); top: -100px; z-index: 100; padding: var(--space-3) var(--space-4); background: var(--brand); color: var(--brand-ink); border-radius: var(--radius-sm); text-decoration: none; }
+.skip:focus-visible { top: var(--space-3); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-height: 48px; padding: var(--space-3) var(--space-5); border-radius: var(--radius-sm); font: 500 var(--fs-base)/1.2 var(--font-body); text-align: center; text-decoration: none; border: 1px solid var(--brand); cursor: pointer; transition: transform .2s, background-color .2s, color .2s, border-color .2s; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: var(--brand-deep); border-color: var(--brand-deep); }
+.btn-ghost { background: transparent; color: var(--brand); }
+.btn-ghost:hover { background: var(--tint); }
+.btn:active { transform: translateY(1px); }
+a:not(.btn):active { opacity: .7; }
+.link { color: var(--brand); font-weight: 500; text-underline-offset: 4px; }
+.link:hover { text-decoration-thickness: 2px; }
+
+/* 「招牌」印章与辣、素标记：都是文本，不只靠颜色 */
+.seal, .mark { display: inline-block; flex: none; font: 500 var(--fs-sm)/1.5 var(--font-body); padding: 0 var(--space-2); border-radius: var(--radius-sm); white-space: nowrap; }
+.seal { color: var(--seal); box-shadow: inset 0 0 0 1px var(--seal); }
+.seal-solid { background: var(--seal); color: var(--seal-ink); box-shadow: none; }
+.mark { color: var(--muted); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--muted) 55%, transparent); }
+
+/* 进场动画：只用在首屏一次。只有 JS 激活时才先隐藏 */
+.js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease-out, transform .6s ease-out; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ==================== 页眉 ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled, html:not(.js) .site-header { background: color-mix(in srgb, var(--bg) 96%, transparent); box-shadow: 0 1px 0 var(--line); }
+.site-header.scrolled { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: var(--header); }
+.logo { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; }
+/* 商标：一只青花瓷盘（两圈蓝线） */
+.logo-mark { width: 34px; height: 34px; border-radius: 50%; background: radial-gradient(circle, var(--brand) 0 16%, var(--surface) 18% 50%, var(--brand) 52% 58%, var(--surface) 60% 84%, var(--brand) 86%); }
+.logo b { font: var(--fw-heading) var(--fs-md)/1.15 var(--font-heading); display: block; }
+.logo small { font: 400 var(--fs-sm)/1.2 var(--font-body); color: var(--muted); display: block; }
+.nav-menu { display: flex; align-items: center; gap: var(--space-6); list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; padding-block: var(--space-1); background: linear-gradient(var(--brand), var(--brand)) left bottom / 0 1px no-repeat; transition: background-size .3s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 1px; }
+.nav-menu .btn { min-height: 40px; padding: var(--space-2) var(--space-4); }
+.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: var(--radius-sm); }
+.nav-toggle:hover { background: var(--tint); }
+.nav-toggle:active { opacity: .7; }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 1.5px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* 没有 JavaScript 时，菜单直接换行显示；有 JS 才收进汉堡菜单 */
+  html:not(.js) *:has(> .nav-menu) { flex-wrap: wrap; }
+  html:not(.js) header:has(.nav-menu) { position: sticky; }
+  html:not(.js) .nav { height: auto; padding-block: var(--space-3); row-gap: var(--space-2); }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; justify-content: flex-start; gap: var(--space-2) var(--space-4); }
+  html:not(.js) .hero { padding-top: var(--space-6); }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: var(--header); left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: var(--space-2) var(--pad) var(--space-5); background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 16px 24px var(--shadow); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: var(--space-3) 0; border-bottom: 1px solid var(--line); }
+  .js .nav-menu .btn { margin-top: var(--space-4); width: 100%; min-height: 48px; }
+  .js .site-header:has(.nav-menu.open) { background: var(--bg); }
+}
+
+/* ==================== 艺术占位图 ====================
+   每一个 .img-xx 都是用 CSS 渐层画的「料理摄影」构图示意（俯拍、白色桌面、自然光）。
+   换成照片：.img-xx { background: url(images/xxx.jpg) center/cover; }
+   （换照片后请把该 class 的 ::before / ::after 一起删掉；改用 img 标签时记得加 width／height，
+   首屏图加 fetchpriority="high"，其他图加 loading="lazy"） */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; background-color: var(--table); --rim: color-mix(in srgb, var(--plate) 84%, var(--text)); --glow: color-mix(in srgb, var(--plate) 55%, transparent); --shade: color-mix(in srgb, var(--text) 9%, transparent); }
+.img::before, .img::after { content: ""; position: absolute; pointer-events: none; }
+
+/* 换成照片：.img-hero { background: url(images/hero.jpg) center/cover; }（建议比例 4:5，俯拍烧腊拼盘） */
+.img-hero { aspect-ratio: 4 / 5; background:
+  linear-gradient(125deg, var(--glow) 0%, transparent 42%, transparent 62%, var(--shade) 100%),
+  /* 一双竹筷 */
+  linear-gradient(to top right, transparent 45.6%, var(--bamboo) 46.2% 48.2%, transparent 48.8% 51.2%, var(--bamboo) 51.8% 53.8%, transparent 54.4%) 97% 97% / 13% 40% no-repeat,
+  /* 青花小碟里的酱油 */
+  radial-gradient(closest-side, var(--soy) 0 40%, var(--plate) 43% 58%, var(--brand) 60% 67%, var(--plate) 69% 84%, var(--brand) 86% 90%, transparent 92%) 90% 5% / 27.5% 22% no-repeat,
+  radial-gradient(closest-side, var(--shadow) 62%, transparent 100%) 93% 7% / 30% 24% no-repeat,
+  var(--table); }
+/* 白瓷大盘与几株菜心 */
+.img-hero::before { width: 84%; aspect-ratio: 1; left: 5%; top: 24%; border-radius: 50%; box-shadow: 4px 10px 22px var(--shadow);
+  background:
+    linear-gradient(125deg, var(--glow), transparent 46%),
+    radial-gradient(ellipse 17% 5% at 31% 24%, var(--leaf) 0 72%, transparent 78%),
+    radial-gradient(ellipse 15% 4.5% at 37% 19%, color-mix(in srgb, var(--leaf) 78%, var(--plate)) 0 72%, transparent 78%),
+    radial-gradient(closest-side, var(--plate) 0 66%, var(--rim) 67% 68%, var(--plate) 69% 90%, color-mix(in srgb, var(--brand) 55%, var(--plate)) 91% 93%, var(--plate) 94%); }
+/* 三排切片：叉烧、烧鸭、油鸡 */
+.img-hero::after { width: 45%; aspect-ratio: 1 / 1.02; left: 25.5%; top: 41%; border-radius: 10% / 9%; transform: rotate(-9deg);
+  background:
+    repeating-linear-gradient(96deg, var(--roast) 0 9%, color-mix(in srgb, var(--roast) 62%, var(--soy)) 9% 11.5%) 0 0 / 100% 30% no-repeat,
+    repeating-linear-gradient(96deg, var(--duck) 0 10.5%, color-mix(in srgb, var(--duck) 60%, var(--soy)) 10.5% 13%) 0 50% / 100% 30% no-repeat,
+    repeating-linear-gradient(96deg, var(--chicken) 0 12%, color-mix(in srgb, var(--chicken) 72%, var(--duck)) 12% 14.5%) 0 100% / 100% 30% no-repeat; }
+
+/* 换成照片：.img-d1 { background: url(images/dish-1.jpg) center/cover; }（建议比例 1:1，一笼虾饺） */
+.img-d1, .img-d2, .img-d3 { aspect-ratio: 1; }
+.img-d1 { --dumpling: radial-gradient(closest-side, color-mix(in srgb, var(--roast) 22%, var(--plate)) 0 30%, var(--plate) 62% 84%, transparent 90%); background:
+  linear-gradient(125deg, var(--glow) 0%, transparent 45%, transparent 65%, var(--shade) 100%),
+  var(--dumpling) 33% 34% / 27% 24% no-repeat, var(--dumpling) 67% 34% / 27% 24% no-repeat,
+  var(--dumpling) 33% 66% / 27% 24% no-repeat, var(--dumpling) 67% 66% / 27% 24% no-repeat,
+  radial-gradient(closest-side, color-mix(in srgb, var(--chicken) 45%, var(--plate)) 0 71%, color-mix(in srgb, var(--bamboo) 70%, var(--soy)) 72% 74%, var(--bamboo) 75% 91%, color-mix(in srgb, var(--bamboo) 70%, var(--soy)) 92% 94%, transparent 95%) center / 86% 86% no-repeat,
+  radial-gradient(closest-side, var(--shadow) 80%, transparent 100%) 56% 60% / 92% 92% no-repeat,
+  var(--table); }
+/* 换成照片：.img-d2 { background: url(images/dish-2.jpg) center/cover; }（建议比例 1:1，干炒牛河） */
+.img-d2 { background:
+  linear-gradient(125deg, var(--glow) 0%, transparent 45%, transparent 65%, var(--shade) 100%),
+  radial-gradient(closest-side, var(--plate) 0 70%, var(--rim) 71% 72%, var(--plate) 73% 91%, color-mix(in srgb, var(--brand) 55%, var(--plate)) 92% 94%, var(--plate) 95% 98%, transparent 99%) center / 88% 88% no-repeat,
+  radial-gradient(closest-side, var(--shadow) 80%, transparent 100%) 56% 60% / 94% 94% no-repeat,
+  var(--table); }
+/* 一盘河粉：宽面条、牛肉片、葱段 */
+.img-d2::before { width: 52%; aspect-ratio: 1; left: 24%; top: 24%; border-radius: 48% 52% 46% 54% / 52% 46% 54% 48%;
+  background:
+    radial-gradient(ellipse 13% 7% at 34% 38%, var(--soy) 0 70%, transparent 78%),
+    radial-gradient(ellipse 12% 7% at 64% 56%, var(--soy) 0 70%, transparent 78%),
+    radial-gradient(ellipse 11% 6% at 44% 72%, color-mix(in srgb, var(--soy) 85%, var(--roast)) 0 70%, transparent 78%),
+    radial-gradient(ellipse 9% 3% at 62% 30%, var(--leaf) 0 70%, transparent 80%),
+    radial-gradient(ellipse 9% 3% at 30% 60%, var(--leaf) 0 70%, transparent 80%),
+    repeating-linear-gradient(38deg, transparent 0 9%, color-mix(in srgb, var(--soy) 30%, transparent) 9% 11%),
+    repeating-linear-gradient(-52deg, transparent 0 13%, color-mix(in srgb, var(--plate) 40%, transparent) 13% 16%),
+    color-mix(in srgb, var(--duck) 62%, var(--chicken)); }
+/* 换成照片：.img-d3 { background: url(images/dish-3.jpg) center/cover; }（建议比例 1:1，云吞面） */
+.img-d3 { --wonton: radial-gradient(closest-side, color-mix(in srgb, var(--roast) 20%, var(--plate)) 0 34%, color-mix(in srgb, var(--plate) 90%, var(--chicken)) 60% 84%, transparent 92%); background:
+  linear-gradient(125deg, var(--glow) 0%, transparent 45%, transparent 65%, var(--shade) 100%),
+  var(--wonton) 66% 34% / 22% 19% no-repeat, var(--wonton) 74% 56% / 21% 19% no-repeat, var(--wonton) 54% 26% / 19% 17% no-repeat,
+  radial-gradient(ellipse 9% 3% at 46% 68%, var(--leaf) 0 70%, transparent 80%),
+  radial-gradient(ellipse 8% 3% at 62% 72%, var(--leaf) 0 70%, transparent 80%),
+  radial-gradient(closest-side, color-mix(in srgb, var(--chicken) 70%, var(--duck)) 0 68%, var(--plate) 70% 78%, var(--brand) 79% 83%, var(--plate) 84% 95%, transparent 97%) center / 84% 84% no-repeat,
+  radial-gradient(closest-side, var(--shadow) 80%, transparent 100%) 56% 60% / 90% 90% no-repeat,
+  var(--table); }
+/* 一团竹升面 */
+.img-d3::before { width: 34%; aspect-ratio: 1; left: 24%; top: 34%; border-radius: 50%;
+  background: repeating-radial-gradient(circle at 42% 44%, var(--chicken) 0 4%, color-mix(in srgb, var(--chicken) 70%, var(--duck)) 4% 6%); }
+
+/* 换成照片：.img-banquet { background: url(images/banquet.jpg) center/cover; }（建议比例 16:9，圆桌合菜） */
+.img-banquet { aspect-ratio: 16 / 9; --chair: radial-gradient(closest-side, color-mix(in srgb, var(--duck) 70%, var(--soy)) 0 82%, transparent 88%); background:
+  linear-gradient(125deg, var(--glow) 0%, transparent 40%, transparent 70%, var(--shade) 100%),
+  /* 圆桌四周的木椅 */
+  var(--chair) 14% 50% / 9% 26% no-repeat, var(--chair) 86% 50% / 9% 26% no-repeat,
+  var(--chair) 26% -8% / 13% 18% no-repeat, var(--chair) 74% -8% / 13% 18% no-repeat,
+  var(--chair) 26% 108% / 13% 18% no-repeat, var(--chair) 74% 108% / 13% 18% no-repeat,
+  color-mix(in srgb, var(--bamboo) 28%, var(--table)); }
+/* 白桌巾圆桌、中间的玻璃转盘与六道菜 */
+.img-banquet::before { height: 124%; aspect-ratio: 1; left: 50%; top: 50%; translate: -50% -50%; border-radius: 50%; box-shadow: 0 12px 30px var(--shadow);
+  --dish-a: radial-gradient(closest-side, var(--roast) 0 52%, var(--plate) 56% 90%, transparent 94%);
+  --dish-b: radial-gradient(closest-side, var(--duck) 0 52%, var(--plate) 56% 90%, transparent 94%);
+  --dish-c: radial-gradient(closest-side, var(--leaf) 0 52%, var(--plate) 56% 90%, transparent 94%);
+  --dish-d: radial-gradient(closest-side, var(--chicken) 0 52%, var(--plate) 56% 74%, var(--brand) 76% 82%, var(--plate) 84% 90%, transparent 94%);
+  --bowl: radial-gradient(closest-side, var(--plate) 0 56%, var(--brand) 60% 72%, var(--plate) 76% 90%, transparent 94%);
+  background:
+    var(--dish-a) 50% 31% / 15% 15% no-repeat, var(--dish-b) 66% 41% / 14% 14% no-repeat, var(--dish-c) 66% 60% / 14% 14% no-repeat,
+    var(--dish-d) 50% 69% / 15% 15% no-repeat, var(--dish-a) 34% 60% / 14% 14% no-repeat, var(--dish-c) 34% 41% / 14% 14% no-repeat,
+    radial-gradient(closest-side, var(--soy) 0 40%, var(--plate) 44% 90%, transparent 94%) 50% 50% / 8% 8% no-repeat,
+    /* 每个座位前的青花小碗 */
+    var(--bowl) 14% 50% / 7% 7% no-repeat, var(--bowl) 86% 50% / 7% 7% no-repeat,
+    var(--bowl) 31% 17% / 7% 7% no-repeat, var(--bowl) 69% 17% / 7% 7% no-repeat,
+    var(--bowl) 31% 83% / 7% 7% no-repeat, var(--bowl) 69% 83% / 7% 7% no-repeat,
+    radial-gradient(closest-side, color-mix(in srgb, var(--brand) 6%, var(--plate)) 0 52%, var(--rim) 52.5% 53.5%, var(--plate) 54%); }
+
+/* 换成照片：.img-room { background: url(images/room.jpg) center/cover; }（建议比例 3:2，明亮的店内） */
+.img-room { aspect-ratio: 3 / 2; --tile: color-mix(in srgb, var(--line) 70%, var(--plate)); background:
+  linear-gradient(118deg, var(--glow) 0%, transparent 38%, transparent 70%, var(--shade) 100%),
+  /* 两盏吊灯 */
+  radial-gradient(ellipse 50% 100% at 50% 100%, var(--brand) 0 96%, transparent 100%) 24% 17% / 11% 8% no-repeat,
+  radial-gradient(ellipse 50% 100% at 50% 100%, var(--brand) 0 96%, transparent 100%) 46% 13% / 11% 8% no-repeat,
+  linear-gradient(var(--muted), var(--muted)) 26.9% 0 / 1px 16% no-repeat,
+  linear-gradient(var(--muted), var(--muted)) 46.4% 0 / 1px 12% no-repeat,
+  /* 地板与腰线 */
+  linear-gradient(180deg, transparent 0 66%, var(--brand) 66% 67.2%, color-mix(in srgb, var(--bamboo) 45%, var(--table)) 67.2%),
+  /* 白瓷砖墙 */
+  repeating-linear-gradient(90deg, transparent 0 calc(7.14% - 1px), var(--tile) calc(7.14% - 1px) 7.14%),
+  repeating-linear-gradient(180deg, transparent 0 calc(11% - 1px), var(--tile) calc(11% - 1px) 11%),
+  var(--plate); }
+/* 层板上的青花瓷瓶与碗 */
+.img-room::before { left: 58%; top: 24%; width: 32%; height: 22%; border-bottom: 5px solid color-mix(in srgb, var(--duck) 75%, var(--soy));
+  background:
+    radial-gradient(ellipse closest-side, var(--plate) 0 30%, var(--brand) 34% 48%, var(--plate) 52% 70%, var(--brand) 74% 86%, transparent 90%) 12% 100% / 22% 96% no-repeat,
+    radial-gradient(ellipse closest-side, var(--brand) 0 28%, var(--plate) 32% 62%, var(--brand) 66% 86%, transparent 90%) 52% 100% / 26% 62% no-repeat,
+    radial-gradient(ellipse closest-side, var(--plate) 0 40%, var(--brand) 44% 56%, var(--plate) 60% 86%, transparent 90%) 90% 100% / 18% 82% no-repeat; }
+/* 前景的木桌，桌上有茶壶与两只碗 */
+.img-room::after { left: 7%; right: 7%; bottom: 0; height: 25%; border-radius: var(--radius) var(--radius) 0 0; box-shadow: 0 -6px 18px var(--shadow);
+  background:
+    radial-gradient(ellipse closest-side, var(--plate) 0 36%, var(--brand) 40% 54%, var(--plate) 58% 86%, transparent 90%) 22% 34% / 13% 52% no-repeat,
+    radial-gradient(ellipse closest-side, var(--plate) 0 60%, var(--brand) 64% 78%, var(--plate) 82% 90%, transparent 94%) 46% 40% / 9% 34% no-repeat,
+    radial-gradient(ellipse closest-side, var(--plate) 0 60%, var(--brand) 64% 78%, var(--plate) 82% 90%, transparent 94%) 72% 40% / 9% 34% no-repeat,
+    linear-gradient(180deg, color-mix(in srgb, var(--duck) 55%, var(--chicken)) 0 78%, color-mix(in srgb, var(--duck) 75%, var(--soy)) 78%); }
+
+/* ==================== 主视觉：菜单即首屏 ==================== */
+.hero { padding-block: calc(var(--header) + var(--space-7)) var(--section); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .94fr) minmax(0, .9fr); gap: var(--space-5); align-items: stretch; }
+.hero-copy { align-self: center; padding-inline-end: var(--space-5); }
+.hero h1 { font-size: var(--fs-display); line-height: 1.18; letter-spacing: 0; margin-bottom: var(--space-5); }
+.hero p.lead { font-size: var(--fs-md); color: var(--muted); max-width: 26em; margin-bottom: var(--space-6); }
+.hero-cta { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.status { margin-top: var(--space-5); font-size: var(--fs-sm); color: var(--muted); font-variant-numeric: tabular-nums; }
+.status b { color: var(--text); }
+.status.is-open b { color: var(--seal); }
+/* 今日招牌菜牌：像餐馆墙上的直式菜牌。双线框取自青花瓷盘的边线 */
+.board { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--brand); border-radius: var(--radius); box-shadow: inset 0 0 0 4px var(--surface), inset 0 0 0 5px color-mix(in srgb, var(--brand) 32%, transparent); padding: var(--space-5) var(--space-4) var(--space-4); }
+.board-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: 0 var(--space-2) var(--space-3); border-bottom: 1px solid var(--line); }
+.board h2 { font-size: var(--fs-md); }
+.plaques { flex: 1; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.plaque { display: flex; flex-direction: column; align-items: center; text-align: center; padding: var(--space-4) var(--space-2) var(--space-3); }
+.plaque + .plaque { border-inline-start: 1px solid var(--line); }
+.plaque h3 { flex: 1; display: flex; flex-direction: column; align-items: center; gap: var(--space-3); font: inherit; }
+.p-v { flex: 1; writing-mode: vertical-rl; text-orientation: mixed; white-space: nowrap; line-height: 1.2; letter-spacing: .04em; }
+.p-h { line-height: 1.35; overflow-wrap: break-word; max-width: 100%; }
+.p-main { font-family: var(--font-heading); font-weight: var(--fw-heading); color: var(--text); }
+.p-v.p-main { font-size: var(--fs-lg); }
+.p-h.p-main { font-size: var(--fs-base); }
+.p-alt { color: var(--muted); font-weight: 400; }
+.p-v.p-alt { font-family: var(--font-dish-alt); font-size: var(--fs-md); }
+.p-h.p-alt { font-family: var(--font-dish-alt); font-size: var(--fs-sm); }
+.plaque .price { width: 100%; margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--line); }
+.board-foot { padding: var(--space-3) var(--space-2) 0; border-top: 1px solid var(--line); font-size: var(--fs-sm); }
+.price { font: 500 var(--fs-base)/1.4 var(--font-body); color: var(--text); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.hero-art { aspect-ratio: 4 / 5; justify-self: stretch; align-self: stretch; min-width: 0; }
+.hero-art .img-hero { width: 100%; height: 100%; aspect-ratio: auto; }
+@media (max-width: 1040px) {
+  .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: var(--space-6) var(--space-5); }
+  .hero-copy { grid-column: 1 / -1; padding-inline-end: 0; }
+  .hero h1 br { display: none; }
+}
+@media (max-width: 640px) {
+  .hero { padding-top: calc(var(--header) + var(--space-5)); }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-5); }
+  .hero h1 { margin-bottom: var(--space-4); }
+  .hero h1 br { display: inline; }
+  .hero p.lead { margin-bottom: var(--space-5); }
+  .status { margin-top: var(--space-4); }
+  .hero-art { aspect-ratio: 1; }
+}
+
+/* ==================== 菜单 ==================== */
+.menu { background: var(--surface); border-block: 1px solid var(--line); }
+.menu-head { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: var(--space-4) var(--gap-col); align-items: end; margin-bottom: var(--space-6); }
+.tabs { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-5); }
+html:not(.js) .tabs { display: none; }
+.tab { font: 500 var(--fs-base)/1.2 var(--font-body); min-height: 44px; padding: var(--space-2) var(--space-4); border: 1px solid var(--line); border-radius: var(--radius-sm); background: transparent; color: var(--muted); cursor: pointer; transition: color .2s, border-color .2s, background-color .2s; }
+.tab:hover { color: var(--text); border-color: var(--muted); }
+.tab:active { opacity: .7; }
+.tab[aria-selected="true"] { color: var(--brand); border-color: var(--brand); background: var(--tint); box-shadow: inset 0 -2px 0 var(--brand); }
+html:not(.js) [role="tabpanel"] + [role="tabpanel"] { margin-top: var(--space-7); }
+.panel-title { display: none; }
+html:not(.js) .panel-title { display: block; font-size: var(--fs-lg); padding-bottom: var(--space-3); }
+.menu-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--gap-col); list-style: none; border-top: 1px solid var(--text); }
+.menu-list li { padding-block: var(--space-4); border-bottom: 1px solid var(--line); }
+.mi-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-4); }
+.mi-head h3 { font-size: var(--fs-md); line-height: 1.4; display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1) var(--space-2); }
+.d-alt { font: 400 var(--fs-sm)/1.5 var(--font-dish-alt); color: var(--muted); }
+.d-desc { font-size: var(--fs-sm); line-height: 1.6; color: var(--muted); margin-top: var(--space-1); max-width: 34em; }
+.menu-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4) var(--space-6); margin-top: var(--space-6); }
+.menu-note { color: var(--muted); font-size: var(--fs-sm); max-width: 40em; }
+/* 三张料理照片：桌机三栏；手机改成可左右滑动的一列（有键盘焦点、不需要 JS） */
+.dishes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); margin-top: var(--space-8); }
+@media (max-width: 760px) {
+  .menu-head { grid-template-columns: minmax(0, 1fr); }
+  .menu-list { grid-template-columns: minmax(0, 1fr); }
+  .menu-foot .btn { display: none; }
+  .dishes { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 52%; gap: var(--space-3); margin-top: var(--space-7); margin-inline: calc(-1 * var(--pad)); padding-inline: var(--pad); scroll-padding-inline: var(--pad); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .dishes > * { scroll-snap-align: start; }
+}
+@media (max-width: 560px) {
+  .tab { padding-inline: var(--space-3); }
+  .menu-list li { padding-block: var(--space-3); }
+}
+
+/* ==================== 午间特餐 ==================== */
+.lunch { background: var(--brand-deep); color: var(--brand-ink); padding-block: var(--band); --soft: color-mix(in srgb, var(--brand-ink) 82%, transparent); --rule: color-mix(in srgb, var(--brand-ink) 26%, transparent); }
+.lunch :focus-visible { outline-color: var(--brand-ink); }
+.lunch-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: var(--space-6) var(--gap-col); align-items: center; }
+.lunch-time { font: var(--fw-heading) var(--fs-lg)/1.4 var(--font-heading); margin-top: var(--space-3); font-variant-numeric: tabular-nums; }
+.lunch-note { color: var(--soft); font-size: var(--fs-sm); margin-top: var(--space-2); max-width: 30em; }
+.lunch-table { width: 100%; border-collapse: collapse; border-top: 1px solid var(--brand-ink); }
+.lunch-table th, .lunch-table td { padding: var(--space-4) 0; border-bottom: 1px solid var(--rule); vertical-align: baseline; }
+.lunch-table th { text-align: start; font: var(--fw-heading) var(--fs-md)/1.4 var(--font-heading); padding-inline-end: var(--space-4); }
+.lunch-table th small { display: block; font: 400 var(--fs-sm)/1.6 var(--font-body); color: var(--soft); }
+.lunch-table td { text-align: end; }
+.lunch-table .price { color: var(--brand-ink); }
+@media (max-width: 860px) { .lunch-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .lunch-table th, .lunch-table td { padding-block: var(--space-3); } }
+
+/* ==================== 宴席与外烩 ==================== */
+.banquet-head { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: var(--space-4) var(--gap-col); align-items: end; margin-bottom: var(--space-7); }
+.banquet-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6) var(--space-7); margin-top: var(--space-7); }
+.banquet-cols > div { border-top: 1px solid var(--text); padding-top: var(--space-4); }
+.banquet-cols h3 { font-size: var(--fs-lg); margin-bottom: var(--space-2); }
+.banquet-cols p { color: var(--muted); }
+.plist { margin-top: var(--space-4); }
+.plist div { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-4); padding-block: var(--space-2); border-top: 1px solid var(--line); }
+.plist dd { font-weight: 500; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.banquet-cta { margin-top: var(--space-6); }
+@media (max-width: 860px) {
+  .banquet-head { grid-template-columns: minmax(0, 1fr); margin-bottom: var(--space-6); }
+  .banquet-cols { grid-template-columns: minmax(0, 1fr); gap: var(--space-5); margin-top: var(--space-6); }
+}
+
+/* ==================== 营业时间与位置 ==================== */
+.visit { background: var(--surface); border-block: 1px solid var(--line); }
+.visit .sec-title { margin-bottom: var(--space-7); }
+.visit-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: var(--space-7) var(--gap-col); align-items: start; }
+.visit h3 { font-size: var(--fs-lg); margin-bottom: var(--space-3); }
+.hours { width: 100%; border-collapse: collapse; line-height: 1.5; border-top: 1px solid var(--text); }
+.hours th, .hours td { text-align: start; padding: var(--space-3) var(--space-2); border-bottom: 1px solid var(--line); }
+.hours th { font-weight: 400; }
+.hours td { text-align: end; font-variant-numeric: tabular-nums; }
+.hours tr.today { background: var(--tint); }
+.hours tr.today th { font-weight: 500; }
+.hours tr.today th::after { content: "今天"; font-size: var(--fs-sm); font-weight: 500; margin-inline-start: var(--space-2); padding: 0 var(--space-2); border-radius: var(--radius-sm); background: var(--brand); color: var(--brand-ink); }
+.hours .closed { color: var(--muted); }
+.small-note { font-size: var(--fs-sm); color: var(--muted); margin-top: var(--space-3); }
+/* 外带取餐三步骤（真的是顺序，所以编号） */
+.pickup { margin-top: var(--space-7); }
+.steps { list-style: none; counter-reset: step; border-top: 1px solid var(--text); }
+.steps li { counter-increment: step; display: grid; grid-template-columns: var(--space-6) minmax(0, 1fr); padding-block: var(--space-3); border-bottom: 1px solid var(--line); }
+.steps li::before { content: counter(step); font: var(--fw-heading) var(--fs-md)/1.6 var(--font-heading); color: var(--brand); }
+.addr { font: var(--fw-heading) var(--fs-lg)/1.5 var(--font-heading); margin-top: var(--space-5); }
+.visit-list { list-style: none; margin: var(--space-4) 0 var(--space-5); border-top: 1px solid var(--line); display: grid; grid-template-columns: max-content minmax(0, 1fr); }
+.visit-list li { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; column-gap: var(--space-4); padding-block: var(--space-3); border-bottom: 1px solid var(--line); color: var(--muted); }
+.visit-list b { color: var(--text); }
+@media (max-width: 860px) { .visit-grid { grid-template-columns: minmax(0, 1fr); } .visit .sec-title { margin-bottom: var(--space-5); } }
+@media (max-width: 560px) { .hours th, .hours td, .visit-list li { padding-block: var(--space-2); } .pickup { margin-top: var(--space-6); } }
+
+/* ==================== 外带与订位表单 ==================== */
+.order-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: var(--space-6) var(--gap-col); align-items: start; }
+.order .sec-title { margin-bottom: var(--space-4); }
+.quick { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+.form { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--pad-card); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4) var(--space-5); }
+.field { display: grid; gap: var(--space-1); min-width: 0; border: 0; align-content: start; }
+.field.full { grid-column: 1 / -1; }
+.field label, .field legend { font-weight: 500; font-size: var(--fs-sm); }
+.field label span, .field legend span { color: var(--muted); font-weight: 400; }
+.field input:not([type="radio"]), .field select, .field textarea { width: 100%; min-width: 0; font: inherit; color: var(--text); background: var(--surface); border: 1px solid color-mix(in srgb, var(--muted) 72%, var(--line)); border-radius: var(--radius-sm); padding: var(--space-3); min-height: 48px; }
+.field ::placeholder { color: var(--muted); opacity: 1; }
+.field input:not([type="radio"]):hover, .field select:hover, .field textarea:hover { border-color: var(--muted); }
+.field input:not([type="radio"]):focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 20%, transparent); }
+.field input:not([type="radio"]), .field select { height: 48px; }
+.field input[type="date"] { padding-inline: var(--space-2); }
+.field input[type="date"]::-webkit-datetime-edit { padding: 0; }
+.field input[type="date"]::-webkit-calendar-picker-indicator { margin-inline-start: var(--space-1); padding: 0; width: 1em; }
+.field textarea { min-height: 96px; resize: vertical; }
+.choice { display: flex; flex-wrap: wrap; gap: 0 var(--space-4); }
+.choice label { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 44px; font-size: var(--fs-base); font-weight: 400; cursor: pointer; }
+.choice input { width: 20px; height: 20px; accent-color: var(--brand); }
+.form .btn { grid-column: 1 / -1; width: 100%; }
+.form small { grid-column: 1 / -1; color: var(--muted); font-size: var(--fs-sm); text-align: center; }
+@media (max-width: 860px) { .order-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .form .field { grid-column: 1 / -1; } .form .field.pair { grid-column: auto; } .form { column-gap: var(--space-3); } }
+@media (max-width: 560px) { .field textarea { min-height: 72px; } }
+@media (max-width: 400px) { .form { padding-inline: var(--space-4); } .quick .btn { padding-inline: var(--space-4); } }
+@media (max-width: 359px) { .form .field.pair { grid-column: 1 / -1; } }
+
+/* ==================== 页脚 ==================== */
+.site-footer { background: var(--text); color: color-mix(in srgb, var(--bg) 82%, transparent); padding-block: var(--space-8) var(--space-6); font-size: var(--fs-sm); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: var(--space-6); }
+.site-footer h2 { color: var(--bg); font-size: var(--fs-md); margin-bottom: var(--space-3); }
+.site-footer a { text-decoration: none; } .site-footer a:hover { text-decoration: underline; }
+.site-footer :focus-visible { outline-color: var(--bg); }
+.social { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); margin-top: var(--space-4); }
+.foot-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2) var(--space-5); border-top: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); margin-top: var(--space-7); padding-top: var(--space-4); }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .foot-grid > :first-child { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .site-footer { padding-top: var(--space-7); } .foot-bottom { margin-top: var(--space-6); } }
+
+/* ==================== 手机底部固定按钮 ==================== */
+/* 有 JS 时，首屏的按钮离开画面后才滑出来，到了表单区再收起；没有 JS 时一直显示 */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  .site-footer { padding-bottom: calc(var(--space-6) + 76px); }
+  .sticky-cta { display: flex; gap: var(--space-2); position: fixed; inset: auto 0 0; z-index: 40; padding: var(--space-3) var(--pad) calc(var(--space-3) + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 96%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -1px 0 var(--line); transition: transform .3s ease-out, visibility .3s; }
+  .js .sticky-cta:not(.show) { transform: translateY(100%); visibility: hidden; }
+  .sticky-cta .btn-primary { flex: 1; }
+  .sticky-cta .btn-ghost { padding-inline: var(--space-4); }
+}
+
+/* ==================== 语言切换（lang-switch） ====================
+   页眉显示目前语言，点一下可以选其他语言。用 details 做的，没有 JS 也能用 */
+.nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
+.lang-switch { position: relative; display: flex; align-items: center; flex: none; margin-inline-start: var(--space-5); padding-inline-start: var(--space-2); border-inline-start: 1px solid var(--line); font: 400 var(--fs-sm)/1 var(--font-body); letter-spacing: normal; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 36px; padding-inline: var(--space-2); border-radius: var(--radius-sm); color: inherit; font-weight: 500; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: var(--tint); }
+.lang-menu > summary:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + var(--space-2)); inset-inline-end: 0; z-index: 80; display: grid; gap: 2px; min-width: 9.5rem; padding: var(--space-1); background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 12px 32px var(--shadow); }
+.lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm); color: var(--text); text-decoration: none; white-space: nowrap; }
+.lang-switch .lang-list a:hover { background: var(--tint); }
+.lang-switch .lang-list a:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
+.lang-switch .lang-list a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch .lang-list a[aria-current="page"] { font-weight: 500; text-decoration: underline; text-decoration-color: var(--brand); text-underline-offset: 5px; }
+@media (max-width: 760px) {
+  /* 手机版：放在汉堡按钮左边，一直看得到；没有 JS 时也留在 logo 同一列 */
+  :root { --header: 64px; }
+  .nav > .lang-switch { order: 1; margin-inline: 0 var(--space-1); padding-inline-start: 0; border: 0; }
+  .nav > .nav-toggle { order: 2; }
+  .nav > .nav-menu { order: 3; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  /* 平板宽度：菜单间距收紧，页眉不换行 */
+  .nav > .nav-menu { gap: var(--space-4); font-size: var(--fs-sm); }
+  .nav > .nav-menu .btn { padding-inline: var(--space-3); font-size: var(--fs-sm); }
+  .nav > .lang-switch { margin-inline-start: var(--space-2); padding-inline-start: var(--space-1); }
+  .logo small { display: none; }
+}
+@media (max-width: 400px) {
+  /* 400px 以下的窄手机：收紧间距，logo 才不会换行 */
+  .nav > .lang-switch { margin-inline-end: 0; }
+  .logo { gap: var(--space-2); }
+  .logo-mark { width: 30px; height: 30px; }
+  .js .nav-toggle { margin-inline-end: -8px; }
+}
+/* 页脚语言链接 */
+.foot-lang { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: var(--space-1); color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius-sm); }
+.foot-lang a:hover { text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--bg); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { font-weight: 500; text-decoration: underline; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<!-- ==================== 区块：页眉导览 ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav wrap" aria-label="主菜单">
+    <!-- 范例内容：上线前请换成真实数据（店名为虚构） -->
+    <a href="#hero" class="logo" aria-label="瑞记粤菜 回到顶端">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span translate="no"><b>瑞记粤菜</b><small>Sui Kee</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-links" aria-label="打开菜单"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#menu">菜单</a></li>
+      <li><a href="#lunch">午间特餐</a></li>
+      <li><a href="#banquet">宴席与外烩</a></li>
+      <li><a href="#visit">营业时间与位置</a></li>
+      <li><a href="#order" class="btn btn-ghost">在线点外带</a></li>
+    </ul>
+    <!-- lang-switch：语言切换。要添加语言时，在这里加一个链接，并添加对应的文件夹 -->
+    <nav class="lang-switch" aria-label="Language 语言">
+      <details class="lang-menu">
+        <summary lang="zh-Hans">简</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+<!-- ==================== 区块：主视觉（今日菜牌） ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <h1>明炉烧腊，<br>每日现烧</h1>
+      <p class="lead">叉烧、烧鸭、油鸡每天早上进炉，中午前出炉。在线点餐，约二十分钟后到店取。</p>
+      <div class="hero-cta">
+        <a href="#order" class="btn btn-primary">在线点外带</a>
+        <a href="#order" class="btn btn-ghost">订位</a>
+      </div>
+      <!-- 营业状态由最下方 JS 的 HOURS 自动产生；没有 JS 时显示这一行 -->
+      <p class="status" id="status" aria-live="polite"><span>营业时间：周三至周一，周二公休</span></p>
+    </div>
+    <!-- 今日菜牌：三道招牌菜。菜名与价格请和下方菜单一致 -->
+    <!-- 范例内容：上线前请换成真实数据（菜色与价格为虚构） -->
+    <div class="board reveal">
+      <div class="board-head">
+        <h2>今日菜牌</h2>
+        <span class="seal seal-solid">招牌</span>
+      </div>
+      <ul class="plaques">
+        <li class="plaque"><h3><span class="p-v p-main">蜜汁叉烧</span><span class="p-h p-alt" lang="en">Honey-Glazed Char Siu</span></h3><span class="price">NT$280</span></li>
+        <li class="plaque"><h3><span class="p-v p-main">明炉烧鸭</span><span class="p-h p-alt" lang="en">Roast Duck</span></h3><span class="price">NT$320</span></li>
+        <li class="plaque"><h3><span class="p-v p-main">玫瑰豉油鸡</span><span class="p-h p-alt" lang="en">Soy Sauce Chicken</span></h3><span class="price">NT$360</span></li>
+      </ul>
+      <p class="board-foot"><a class="link" href="#menu">看完整菜单</a></p>
+    </div>
+    <div class="hero-art reveal">
+      <div class="img img-hero" role="img" aria-label="俯拍白色桌面上的烧腊拼盘：白瓷盘里排着叉烧、烧鸭与油鸡，旁边是青花小碟酱油与一双竹筷"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：菜单 ==================== -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="menu-head">
+      <h2 class="sec-title">想吃什么，慢慢挑</h2>
+      <p class="sec-lead">内用、外带同价。一份约三到四人分享，一个人可以点饭面或午间特餐。</p>
+    </div>
+    <!-- 范例内容：上线前请换成真实数据（菜色与价格皆为虚构）。每道菜：菜名、英文菜名、一句说明、价格 -->
+    <div class="tabs" role="tablist" aria-label="菜单分类">
+      <button class="tab" role="tab" id="tab-roast" aria-controls="panel-roast" aria-selected="true">烧腊</button>
+      <button class="tab" role="tab" id="tab-wok" aria-controls="panel-wok" aria-selected="false" tabindex="-1">小炒</button>
+      <button class="tab" role="tab" id="tab-rice" aria-controls="panel-rice" aria-selected="false" tabindex="-1">饭面</button>
+      <button class="tab" role="tab" id="tab-pot" aria-controls="panel-pot" aria-selected="false" tabindex="-1">汤煲</button>
+      <button class="tab" role="tab" id="tab-dim" aria-controls="panel-dim" aria-selected="false" tabindex="-1">点心</button>
+    </div>
+    <div role="tabpanel" id="panel-roast" aria-labelledby="tab-roast" tabindex="0">
+      <h3 class="panel-title">烧腊</h3>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>蜜汁叉烧<span class="seal">招牌</span></h3><span class="price">NT$280</span></div><p class="d-alt" lang="en">Honey-Glazed Char Siu</p><p class="d-desc">梅头肉腌一夜，麦芽糖上色，边缘微焦。</p></li>
+        <li><div class="mi-head"><h3>明炉烧鸭<span class="seal">招牌</span></h3><span class="price">NT$320</span></div><p class="d-alt" lang="en">Roast Duck</p><p class="d-desc">每日限量，这是例牌价，另有半只与全只。</p></li>
+        <li><div class="mi-head"><h3>玫瑰豉油鸡<span class="seal">招牌</span></h3><span class="price">NT$360</span></div><p class="d-alt" lang="en">Soy Sauce Chicken</p><p class="d-desc">玫瑰露酒与头抽慢浸，附姜葱蓉。</p></li>
+        <li><div class="mi-head"><h3>脆皮烧肉</h3><span class="price">NT$300</span></div><p class="d-alt" lang="en">Crispy Roast Pork Belly</p><p class="d-desc">皮脆肉嫩，配黄芥末。</p></li>
+        <li><div class="mi-head"><h3>烧腊双拼</h3><span class="price">NT$380</span></div><p class="d-alt" lang="en">Two-Roast Combo</p><p class="d-desc">叉烧、烧鸭、油鸡、烧肉任选两款。</p></li>
+        <li><div class="mi-head"><h3>白灼菜心<span class="mark">素</span></h3><span class="price">NT$140</span></div><p class="d-alt" lang="en">Blanched Choy Sum</p><p class="d-desc">清烫后淋香菇素蚝油。</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-wok" aria-labelledby="tab-wok" tabindex="0">
+      <h3 class="panel-title">小炒</h3>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>姜葱炒牛肉</h3><span class="price">NT$320</span></div><p class="d-alt" lang="en">Ginger-Scallion Beef</p><p class="d-desc">大火快炒，上桌还有镬气。</p></li>
+        <li><div class="mi-head"><h3>椒盐鲜鱿<span class="mark">辣</span></h3><span class="price">NT$340</span></div><p class="d-alt" lang="en">Salt & Pepper Squid</p><p class="d-desc">现炸鲜鱿，拌蒜酥与辣椒。</p></li>
+        <li><div class="mi-head"><h3>咕咾肉</h3><span class="price">NT$300</span></div><p class="d-alt" lang="en">Sweet & Sour Pork</p><p class="d-desc">山楂与凤梨调的酸甜汁，外脆内嫩。</p></li>
+        <li><div class="mi-head"><h3>金沙虾球<span class="seal">招牌</span></h3><span class="price">NT$440</span></div><p class="d-alt" lang="en">Salted Egg Yolk Prawns</p><p class="d-desc">咸蛋黄炒到起沙，裹住每一颗虾球。</p></li>
+        <li><div class="mi-head"><h3>西兰花炒带子</h3><span class="price">NT$420</span></div><p class="d-alt" lang="en">Scallops with Broccoli</p><p class="d-desc">生炒带子，薄芡不抢味。</p></li>
+        <li><div class="mi-head"><h3>蒜蓉炒豆苗<span class="mark">素</span></h3><span class="price">NT$220</span></div><p class="d-alt" lang="en">Garlic Pea Shoots</p><p class="d-desc">当天进的豆苗，只用蒜与盐。</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-rice" aria-labelledby="tab-rice" tabindex="0">
+      <h3 class="panel-title">饭面</h3>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>干炒牛河<span class="seal">招牌</span></h3><span class="price">NT$240</span></div><p class="d-alt" lang="en">Beef Chow Fun</p><p class="d-desc">河粉干身不油，豆芽脆口。</p></li>
+        <li><div class="mi-head"><h3>鲜虾云吞面</h3><span class="price">NT$180</span></div><p class="d-alt" lang="en">Shrimp Wonton Noodle Soup</p><p class="d-desc">竹升面配大地鱼汤头，云吞每天现包。</p></li>
+        <li><div class="mi-head"><h3>叉烧饭</h3><span class="price">NT$160</span></div><p class="d-alt" lang="en">Char Siu over Rice</p><p class="d-desc">附油菜与一颗太阳蛋。</p></li>
+        <li><div class="mi-head"><h3>扬州炒饭</h3><span class="price">NT$220</span></div><p class="d-alt" lang="en">Yangzhou Fried Rice</p><p class="d-desc">叉烧、虾仁与蛋，粒粒分明。</p></li>
+        <li><div class="mi-head"><h3>星洲炒米粉<span class="mark">辣</span></h3><span class="price">NT$230</span></div><p class="d-alt" lang="en">Singapore Rice Noodles</p><p class="d-desc">咖喱粉炒香，微辣。</p></li>
+        <li><div class="mi-head"><h3>罗汉斋炒面<span class="mark">素</span></h3><span class="price">NT$220</span></div><p class="d-alt" lang="en">Buddha’s Delight Chow Mein</p><p class="d-desc">两面黄煎面，淋上菇类与时蔬。</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-pot" aria-labelledby="tab-pot" tabindex="0">
+      <h3 class="panel-title">汤与煲</h3>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>老火例汤</h3><span class="price">NT$120</span></div><p class="d-alt" lang="en">Slow-Simmered Soup of the Day</p><p class="d-desc">每天一款，煲足四小时，今日汤款请问店员。</p></li>
+        <li><div class="mi-head"><h3>啫啫鸡煲<span class="seal">招牌</span></h3><span class="price">NT$380</span></div><p class="d-alt" lang="en">Sizzling Chicken Clay Pot</p><p class="d-desc">姜葱蒜爆香，上桌还在滋滋作响。</p></li>
+        <li><div class="mi-head"><h3>咸鱼鸡粒豆腐煲</h3><span class="price">NT$340</span></div><p class="d-alt" lang="en">Salted Fish, Chicken & Tofu Clay Pot</p><p class="d-desc">咸香下饭，建议配白饭。</p></li>
+        <li><div class="mi-head"><h3>鱼香茄子煲<span class="mark">辣</span></h3><span class="price">NT$300</span></div><p class="d-alt" lang="en">Braised Eggplant Clay Pot</p><p class="d-desc">茄子过油后焖煮，微辣。</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-dim" aria-labelledby="tab-dim" tabindex="0">
+      <h3 class="panel-title">点心与甜品</h3>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>鲜虾饺<span class="seal">招牌</span></h3><span class="price">NT$150</span></div><p class="d-alt" lang="en">Har Gow Shrimp Dumplings</p><p class="d-desc">一笼四颗，皮薄透光。</p></li>
+        <li><div class="mi-head"><h3>烧卖</h3><span class="price">NT$140</span></div><p class="d-alt" lang="en">Pork & Shrimp Siu Mai</p><p class="d-desc">猪肉与虾仁手打，顶上一点蟹籽。</p></li>
+        <li><div class="mi-head"><h3>豉汁蒸排骨</h3><span class="price">NT$150</span></div><p class="d-alt" lang="en">Black Bean Spare Ribs</p><p class="d-desc">小排切丁，豆豉与蒜蒸到入味。</p></li>
+        <li><div class="mi-head"><h3>萝卜糕</h3><span class="price">NT$120</span></div><p class="d-alt" lang="en">Pan-Fried Turnip Cake</p><p class="d-desc">萝卜丝多、粉少，煎到两面金黄。</p></li>
+        <li><div class="mi-head"><h3>杨枝甘露<span class="mark">素</span></h3><span class="price">NT$130</span></div><p class="d-alt" lang="en">Mango Pomelo Sago</p><p class="d-desc">芒果、柚子与西米，冰凉上桌。</p></li>
+        <li><div class="mi-head"><h3>蛋塔</h3><span class="price">NT$90</span></div><p class="d-alt" lang="en">Egg Tarts, Two Pieces</p><p class="d-desc">酥皮，每天下午三点出炉。</p></li>
+      </ul>
+    </div>
+    <div class="menu-foot">
+      <p class="menu-note">价格含税，内用另收一成服务费。食物过敏请先告知。</p>
+      <a href="#order" class="btn btn-ghost">在线点外带</a>
+    </div>
+    <div class="dishes" role="group" tabindex="0" aria-label="料理照片">
+      <div class="img img-d1" role="img" aria-label="俯拍竹蒸笼里的四颗虾饺"></div>
+      <div class="img img-d2" role="img" aria-label="俯拍白瓷盘上的干炒牛河"></div>
+      <div class="img img-d3" role="img" aria-label="俯拍青花碗里的鲜虾云吞面"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：午间特餐 ==================== -->
+<section class="lunch" id="lunch">
+  <div class="wrap lunch-grid">
+    <div>
+      <h2 class="sec-title">平日午间特餐</h2>
+      <!-- 范例内容：上线前请换成真实数据（时段与价格为虚构） -->
+      <p class="lunch-time">周一、三、四、五　11:00–14:00</p>
+      <p class="lunch-note">每份都附例汤与油菜，内用、外带同价。</p>
+    </div>
+    <table class="lunch-table">
+      <caption class="sr-only">午间特餐的品项与价格</caption>
+      <tbody>
+        <tr><th scope="row">单拼烧腊饭<small>叉烧、烧鸭、油鸡、烧肉任选一款</small></th><td><span class="price">NT$150</span></td></tr>
+        <tr><th scope="row">双拼烧腊饭<small>四款烧腊任选两款</small></th><td><span class="price">NT$190</span></td></tr>
+        <tr><th scope="row">小炒配饭<small>当日三款小炒任选一款</small></th><td><span class="price">NT$210</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ==================== 区块：宴席与外烩 ==================== -->
+<section class="banquet" id="banquet">
+  <div class="wrap">
+    <div class="banquet-head">
+      <h2 class="sec-title">宴席与外烩</h2>
+      <p class="sec-lead">家庭聚餐、尾牙、在家请客都可以。包厢与合菜请三天前预约，外烩请在前一天中午前订。</p>
+    </div>
+    <div class="img img-banquet" role="img" aria-label="俯拍铺著白桌巾的圆桌：玻璃转盘上摆着六道合菜，每个座位前有一只青花小碗"></div>
+    <!-- 范例内容：上线前请换成真实数据（包厢人数与价格为虚构） -->
+    <div class="banquet-cols">
+      <div>
+        <h3>包厢</h3>
+        <p>两间可以打通使用，不收包厢费。</p>
+        <dl class="plist">
+          <div><dt>单间</dt><dd>10 至 12 位</dd></div>
+          <div><dt>两间打通</dt><dd>24 位</dd></div>
+        </dl>
+      </div>
+      <div>
+        <h3>合菜套餐</h3>
+        <p>菜色跟着季节调整，可以换菜或加点烧腊。</p>
+        <dl class="plist">
+          <div><dt>四人合菜，五菜一汤</dt><dd>NT$2,280</dd></div>
+          <div><dt>十人合菜，八菜一汤一甜品</dt><dd>NT$6,800</dd></div>
+        </dl>
+      </div>
+      <div>
+        <h3>外烩托盘</h3>
+        <p>烧腊、炒饭、炒面与点心，可自取或市区外送。</p>
+        <dl class="plist">
+          <div><dt>半盘，约 8 人份</dt><dd>NT$900 起</dd></div>
+          <div><dt>全盘，约 16 人份</dt><dd>NT$1,600 起</dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="banquet-cta"><a class="link" href="#order">询问宴席与外烩</a></p>
+  </div>
+</section>
+
+<!-- ==================== 区块：营业时间与位置 ==================== -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <h2 class="sec-title">营业时间与位置</h2>
+    <div class="visit-grid">
+      <div>
+        <h3>营业时间</h3>
+        <!-- 修改营业时间时，也要同步修改最下方 JS 的 HOURS 与 head 的 JSON-LD -->
+        <!-- 范例内容：上线前请换成真实数据 -->
+        <table class="hours" aria-label="每周营业时间">
+          <tbody>
+            <tr data-day="1"><th scope="row">星期一</th><td>11:00 – 21:00</td></tr>
+            <tr data-day="2"><th scope="row">星期二</th><td class="closed">公休</td></tr>
+            <tr data-day="3"><th scope="row">星期三</th><td>11:00 – 21:00</td></tr>
+            <tr data-day="4"><th scope="row">星期四</th><td>11:00 – 21:00</td></tr>
+            <tr data-day="5"><th scope="row">星期五</th><td>11:00 – 21:00</td></tr>
+            <tr data-day="6"><th scope="row">星期六</th><td>10:30 – 21:30</td></tr>
+            <tr data-day="0"><th scope="row">星期日</th><td>10:30 – 21:30</td></tr>
+          </tbody>
+        </table>
+        <p class="small-note">最后点餐为打烊前 30 分钟。除夕到初三休息。</p>
+        <div class="pickup">
+          <h3>外带怎么取</h3>
+          <ol class="steps">
+            <li>在线填单，或打电话点餐。</li>
+            <li>我们回电确认金额与时间，约 20 分钟。</li>
+            <li>到店报姓名取餐，现场付款。</li>
+          </ol>
+        </div>
+      </div>
+      <div>
+        <div class="img img-room" role="img" aria-label="明亮的店内：白瓷砖墙、青花吊灯、层板上的青花瓷瓶，前景是一张木桌"></div>
+        <!-- 范例内容：上线前请换成真实数据（地址、电话、交通方式为虚构） -->
+        <p class="addr">台北市中山区松瑞路 28 号 1 楼</p>
+        <p class="small-note" style="margin-top:0">电话 <a class="num" href="tel:0212345678">02-1234-5678</a></p>
+        <ul class="visit-list">
+          <li><b>捷运</b>松江南京站 8 号出口，步行约 5 分钟</li>
+          <li><b>公车</b>「松瑞路口」站下车，步行 2 分钟</li>
+          <li><b>停车</b>巷口有付费停车场，取餐可在门口临停</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://maps.google.com/?q=台北市中山区松瑞路28号" target="_blank" rel="noopener">在 Google 地图打开</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：外带与订位表单 ==================== -->
+<section class="order" id="order">
+  <div class="wrap order-grid">
+    <div>
+      <h2 class="sec-title">点外带，或订一张桌子</h2>
+      <p class="sec-lead">送出后，我们会在营业时间内回电确认。赶时间的话，直接打电话比较快。</p>
+      <div class="quick">
+        <a class="btn btn-ghost num" href="tel:0212345678">来电 02-1234-5678</a>
+        <!-- LINE 按钮：把 @yourlineid 换成你的 LINE 官方帐号 ID -->
+        <a class="btn btn-ghost" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE 点餐</a>
+      </div>
+    </div>
+    <!-- 表单使用 Formspree（免费方案每月 50 则）：
+         1. 到 https://formspree.io 注册并创建新表单
+         2. 拷贝表单网址中的 ID（例如 xyzabcd）
+         3. 把下面 action 里的 your-form-id 换成你的 ID 即可收到 Email 通知 -->
+    <form class="form" action="https://formspree.io/f/your-form-id" method="POST">
+      <fieldset class="field full">
+        <legend>这次是 <span>*</span></legend>
+        <div class="choice">
+          <label><input type="radio" name="类型" value="外带自取" checked required>外带自取</label>
+          <label><input type="radio" name="类型" value="内用订位">内用订位</label>
+          <label><input type="radio" name="类型" value="宴席外烩">宴席外烩</label>
+        </div>
+      </fieldset>
+      <div class="field"><label for="f-name">姓名 <span>*</span></label><input id="f-name" name="姓名" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">电话 <span>*</span></label><input id="f-tel" name="电话" type="tel" autocomplete="tel" inputmode="tel" placeholder="0912-345-678" required></div>
+      <div class="field pair"><label for="f-date">日期 <span>*</span></label><input id="f-date" name="日期" type="date" required></div>
+      <div class="field pair"><label for="f-time">取餐或用餐时间 <span>*</span></label>
+        <select id="f-time" name="时间" required>
+          <option value="">请选择</option>
+          <option>11:00</option><option>11:30</option><option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option>
+          <option>17:30</option><option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option>
+        </select></div>
+      <div class="field full"><label for="f-people">人数 <span>（内用才需要填）</span></label>
+        <select id="f-people" name="人数">
+          <option value="">请选择</option>
+          <option>1 位</option><option>2 位</option><option>3 位</option><option>4 位</option><option>5 位</option><option>6 位</option><option>7 位以上</option>
+        </select></div>
+      <div class="field full"><label for="f-note">想点的菜或备注</label><textarea id="f-note" name="内容" placeholder="例如：烧鸭半只、干炒牛河一份；或需要儿童椅…"></textarea></div>
+      <button class="btn btn-primary" type="submit">送出，等我们回电</button>
+      <small>送出时不会收款，回电确认后才算成立。</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 区块：页脚 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <!-- 范例内容：上线前请换成真实数据 -->
+    <div class="foot-grid">
+      <div>
+        <h2 translate="no">瑞记粤菜 Sui Kee</h2>
+        <p>台北市中山区松瑞路 28 号 1 楼<br>电话 <a class="num" href="tel:0212345678">02-1234-5678</a></p>
+        <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="https://line.me/R/ti/p/@yourlineid">LINE</a></div>
+      </div>
+      <div>
+        <h2>营业时间</h2>
+        <p>周一、三、四、五 <span class="nw">11:00 – 21:00</span><br>周六、周日 <span class="nw">10:30 – 21:30</span><br>周二公休</p>
+      </div>
+      <div>
+        <h2>快速链接</h2>
+        <p><a href="#menu">菜单</a><br><a href="#order">在线点外带</a><br><a href="#banquet">宴席与外烩</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+    <p class="copy">© <span id="y"></span> <span translate="no">瑞记粤菜 Sui Kee</span></p>
+    <!-- 页脚语言链接：和页眉的 lang-switch 同一组 -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja">日本語</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== 区块：手机底部固定按钮 ==================== -->
+<div class="sticky-cta">
+  <a href="#order" class="btn btn-primary">在线点外带</a>
+  <a href="tel:0212345678" class="btn btn-ghost" aria-label="拨打电话 02-1234-5678">来电</a>
+</div>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// 页眉卷动背景
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// 汉堡菜单
+const toggle = document.querySelector('.nav-toggle'), menu = document.getElementById('menu-links');
+const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单'); };
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// 首屏进场（只有首屏使用 .reveal）
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+// 手机底部固定按钮：首屏的按钮离开画面后才出现；卷到表单区时收起，避免和送出按钮同时出现
+const sticky = document.querySelector('.sticky-cta'), seen = new Map();
+const so = new IntersectionObserver(es => { es.forEach(e => seen.set(e.target, e.isIntersecting)); sticky.classList.toggle('show', ![...seen.values()].some(Boolean)); });
+['.hero-cta', '#order'].forEach(q => so.observe(document.querySelector(q)));
+
+// 菜单分页（支持方向键、Home、End）
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+const select = (t, focus = true) => {
+  tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+  if (focus) t.focus();
+};
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => select(t));
+  t.addEventListener('keydown', e => {
+    const k = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+    if (k) { e.preventDefault(); select(tabs[(i + k + tabs.length) % tabs.length]); }
+    if (e.key === 'Home') { e.preventDefault(); select(tabs[0]); }
+    if (e.key === 'End') { e.preventDefault(); select(tabs[tabs.length - 1]); }
+  });
+});
+select(tabs[0], false); // 没有 JS 时五个分类全部展开；有 JS 才收成分页
+
+// 营业中／休息中（以店家所在时区计算）。格式：星期（0=日）: [开门, 打烊]，null 为公休
+const TZ = 'Asia/Taipei';
+const HOURS = { 0: ['10:30', '21:30'], 1: ['11:00', '21:00'], 2: null, 3: ['11:00', '21:00'], 4: ['11:00', '21:00'], 5: ['11:00', '21:00'], 6: ['10:30', '21:30'] };
+const DAYS = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+const toMin = s => { const [h, m] = s.split(':'); return h * 60 + +m; };
+const fmt = s => s;
+const now = new Date(new Date().toLocaleString('en-US', { timeZone: TZ }));
+const day = now.getDay(), mins = now.getHours() * 60 + now.getMinutes(), today = HOURS[day];
+const status = document.getElementById('status');
+let text;
+if (today && mins >= toMin(today[0]) && mins < toMin(today[1])) {
+  status.classList.add('is-open');
+  text = `<b>营业中</b>，今天 ${fmt(today[1])} 打烊`;
+} else {
+  let d = 0;
+  if (today && mins < toMin(today[0])) d = 0;
+  else do { d++; } while (!HOURS[(day + d) % 7]);
+  const nd = (day + d) % 7, when = d === 0 ? '今天' : d === 1 ? '明天' : DAYS[nd];
+  text = `<b>休息中</b>，${when} ${fmt(HOURS[nd][0])} 开门`;
+}
+status.querySelector('span').innerHTML = text;
+const row = document.querySelector(`.hours tr[data-day="${day}"]`); if (row) row.classList.add('today');
+
+// 日期不能选过去
+const pad = n => String(n).padStart(2, '0');
+document.getElementById('f-date').min = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+
+// 语言菜单：点击单外面或按 Esc 会关闭
+document.addEventListener('click', e => document.querySelectorAll('.lang-menu[open]').forEach(d => { if (!d.contains(e.target)) d.removeAttribute('open'); }));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.lang-menu[open]').forEach(d => { d.removeAttribute('open'); d.querySelector('summary').focus(); }); });
+</script>
+</body>
+</html>
