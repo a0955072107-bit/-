@@ -529,6 +529,8 @@ html:not(.js) .site-header { background: var(--bg); border-bottom-color: var(--l
 .lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
 .lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+/* 桌機：語言選單在導覽列左側，下拉往右展開，不蓋住首屏標題 */
+@media (min-width: 861px) { .site-header .lang-list { inset-inline-start: 0; inset-inline-end: auto; } }
 </style>
 <script>document.documentElement.classList.add('js');</script>
 </head>

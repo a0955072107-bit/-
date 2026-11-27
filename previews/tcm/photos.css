@@ -6,3 +6,5 @@
 .img-herbs { background: url(photos/herbs.webp) center / cover no-repeat !important; }
 .img-room { background: url(photos/room.webp) center / cover no-repeat !important; }
 .img-hero::before, .img-hero::after, .img-doc1::before, .img-doc1::after, .img-doc2::before, .img-doc2::after, .img-herbs::before, .img-herbs::after, .img-room::before, .img-room::after { content: none !important; display: none !important; }
+/* 手機首屏是 5:4 橫幅：靠下裁切，保留前景的秤與藥材 */
+@media (max-width: 860px) { .img-hero { background-position: center bottom !important; } }
