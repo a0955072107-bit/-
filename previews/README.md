@@ -33,3 +33,4 @@
 | tcm/hero、doctor-1～2、herbs、room | 百子櫃與銅秤；虛構中醫師 2 位；俯拍藥材；針灸診療室 |
 | canton/hero、banquet、dish-1～3、room | 燒臘拼盤；圓桌合菜；蝦餃、乾炒牛河、雲吞麵；白瓷磚餐館內景 |
 | tutor/hero、teacher-1～3、desk | 小班教室；虛構老師 3 位；俯拍書桌 |
+| hair/hero、stylist-1～3、look-1～6 | 鮑伯頭背影；虛構設計師 3 位；六款髮型背影（店內照片待補，暫用 CSS 圖） |
