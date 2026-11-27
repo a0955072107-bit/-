@@ -40,6 +40,7 @@ SLUGS=(
   "conference:conference-event-template"
   "tattoo:tattoo-studio-template"
   "coworking:coworking-space-template"
+  "dental:dental-clinic-forest-template"
   "motion/saas:motion-saas-launch-template"
   "motion/portfolio:motion-creative-portfolio-template"
   "motion/restaurant:motion-fine-dining-template"
