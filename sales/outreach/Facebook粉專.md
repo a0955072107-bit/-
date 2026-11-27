@@ -1,5 +1,7 @@
 # Polyglot Pages Facebook 粉專（用品牌身分私訊店家）
 
+> **11/27 作廢：只保留開粉專當門面，不主動私訊。** 粉專不能主動私訊，個人帳號不能用來開發；只有 FB 的店不聯絡。下面「為什麼」和「私訊規則」只留作紀錄，不要照做。
+
 ## 為什麼
 大部分華人店家沒有公開 Email，只能用 Facebook 粉專私訊。用品牌粉專私訊：
 - 對方看到的是「Polyglot Pages」和頭像，比較像正式的公司，不像陌生個人
@@ -16,7 +18,7 @@
    幫小店家做多語言網站，一次付費、沒有月費。
    ```
 5. 大頭貼：`sales/brand/avatar.png`；封面相片：`sales/brand/youtube-banner.jpg`
-6. 網站：`https://polyglotpages.gumroad.com`；Email：`polyglotpages.studio@gmail.com`
+6. 網站：`https://a0955072107-bit.github.io/-/`；Email：`polyglotpages.studio@gmail.com`
 7. 先發 3 篇貼文再開始私訊（空的粉專看起來不可信）：
    - 第 1 篇：介紹（貼上面的簡介＋一張 Pinterest 圖，例如 restaurant-b.jpg）
    - 第 2 篇：短影片 01-five-languages.mp4

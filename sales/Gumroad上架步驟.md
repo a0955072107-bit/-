@@ -108,7 +108,7 @@ Questions or custom work? / 有問題或想客製： polyglotpages.studio@gmail.
 > - 三語店家網站代製（訂金）：URL `trilingual-website-service`，Standard deposit $150／Pro deposit $250（11/27 從 $275 改，合計 $499）
 > - 網站客製服務（訂金）：URL `website-customization`，Basic deposit $125／Plus deposit $225
 > - 網站尾款（Unlisted 不公開）：URL `final-payment`，Trilingual Standard $149／Pro $249（11/27 從 $274 改）／Customization Basic $124／Plus $224。網站做好、客人確認後才寄這個連結。
-> 帳號滿 30 天（約 12/23）後，改回 Commission 一個商品。
+> 目前用「訂金＋尾款」兩個 Digital product（見第 3 節開頭）；手上有進行中的案子時不要換成 Commission。
 > **Content 頁（買家付款後看到的頁面）不能空白。** 訂金商品貼：
 > 「Thank you! Your deposit is confirmed. What happens next: 1. Within 1 business day we'll email you a short form… 2. Your site is ready for review within 7 days… 3. You only pay the remaining 50% after you've approved your finished site.」（中英對照全文見 `sales/交付流程.md` 第六節）
 > **尾款商品先不發布**，第一個客人確認網站時才發布並寄連結。
@@ -120,7 +120,7 @@ Questions or custom work? / 有問題或想客製： polyglotpages.studio@gmail.
 | 商品類型 | **Commission**（委託）：買家下單時先付 **50% 訂金**，網站做好、買家確認後，Gumroad 再向買家收剩下 50%。後台沒有 Commission 類型時才用一般 Digital product |
 | Name | `Website Customization Service — We Build Your Business Site 網站客製服務` |
 | URL | `website-customization` |
-| Price | `249`（Basic），另外用 **Versions** 加 `Plus $449` |
+| Price | `249`（Basic），另外用 **Versions** 加 `Plus $449`（模板代改，和三語代製是不同商品） |
 | Cover | 可以先沿用任一張模板封面，之後再用 Canva 另做一張 |
 | Summary（You'll get） | `A ready-to-launch website for your business, built from one of our templates.` |
 
@@ -1280,18 +1280,18 @@ Includes all 5 Motion Edition templates: SaaS Launch Page, Creative Portfolio, F
 
 ---
 
-## 8. 三語店家網站代製（海外華人、新馬，12/3 上架）
+## 8. 三語店家網站代製（海外華人、新馬；訂金商品已上架）
 
 研究結果：海外華人店家（美加澳的餐廳、診所、補習班，以及新加坡、馬來西亞的小店）天生需要「繁體＋簡體＋英文」網站，而市面上很少有人專做這件事。我們的模板本來就是三語，所以成本最低、最有優勢。
 
 | 欄位 | 填入 |
 |---|---|
-| 商品類型 | **Commission**（委託），先收 **50% 訂金**，完成後收尾款 |
+| 商品類型 | 目前用「訂金＋尾款」兩個 Digital product（見第 3 節開頭）；手上有進行中的案子時不要換成 Commission |
 | Name | `Trilingual Business Website (English + 繁體 + 简体) — Done For You 三語店家網站代製` |
 | URL | `trilingual-website-service` |
 | Price | `299`，另外用 **Versions** 加 `Pro $499`（11/27 從 $549 改，跟開發信一致） |
 | Cover | 用 `sales/covers/en/restaurant-cover.png`，之後再做專屬封面 |
-| Summary | `A ready-to-launch website in English, Traditional and Simplified Chinese, with a language switcher. Delivered in 7 days.` |
+| Summary | `A ready-to-launch website in English, Traditional and Simplified Chinese, with a language switcher. Ready for your review within 7 days after we receive your content.` |
 
 **Versions（方案）**
 
@@ -1309,8 +1309,8 @@ Made for restaurants, clinics, tutoring centres, salons, travel agencies and sho
 How it works
 1. Buy the service and pick any of our templates.
 2. We email you a short form. Send us your text in any one language.
-3. We translate and adapt it into all three languages, build the site and publish it within 7 days.
-4. You review it and request changes.
+3. We translate and adapt it into all three languages, build the site and send it for your review within 7 days after we receive your content.
+4. You review it and request changes (1 round on Standard, 2 on Pro).
 
 What's included
 - English, 繁體中文 and 简体中文 versions with a language switcher
@@ -1329,7 +1329,7 @@ Not included: domain purchase fees, photography, legal review of medical or fina
 
 適合：美國、加拿大、澳洲、英國、新加坡、馬來西亞的華人餐廳、診所、補習班、美容院、旅行社、商店。
 
-流程：購買後選一款模板 → 填寫表單，只要給我們一種語言的文字 → 我們翻成三語，7 天內完成上線 → 你確認並提出修改。
+流程：購買後選一款模板 → 填寫表單，只要給我們一種語言的文字 → 我們翻成三語，收到資料後 7 天內給你預覽 → 你確認並提出修改。
 
 包含：三語版本與切換按鈕；你的文字、照片、品牌色、營業時間；電話、WhatsApp、微信、LINE、地圖、預約按鈕；表單寄到你的 Email；接上你自己的網域（用你的名字購買），主機免費，檔案全部歸你。Pro 方案另含：依品牌調整設計、代寫三語文字、照片修圖、整理 Google 商家檔案、搜尋基本設定。
 不包含：網域費用、拍攝照片、醫療或金融宣傳用語的法律審查。
@@ -1339,8 +1339,8 @@ Not included: domain purchase fees, photography, legal review of medical or fina
 
 **Receipt**
 ```
-Thanks! Within 1 business day we'll email you a short form. Your site goes live within 7 days after we receive your content.
-感謝購買！我們會在 1 個工作天內寄表單給你，收到資料後 7 天內上線。
+Thanks! Within 1 business day we'll email you a short form. Your site is ready for your review within 7 days after we receive your content.
+感謝購買！我們會在 1 個工作天內寄表單給你，收到資料後 7 天內給你預覽。
 ```
 
 > **翻譯品質**：簡體版用 OpenCC 轉換後，要人工檢查用詞（例如「影片→视频」「網路→网络」「軟體→软件」）。新馬客人常用簡體，美加澳的老一輩客人常用繁體，所以兩種都要給。
