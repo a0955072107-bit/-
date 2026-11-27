@@ -1212,6 +1212,8 @@ Prefer a more information-first layout? See our Clinic template: https://polyglo
 
 ## 5. 全套組合包（最後上）
 
+> **11/27 決定**：線上組合包維持「All 30」與 Drive 裡的 30 款 zip，不跟著每款新模板更新。`package.sh` 重新打包時會包含新款（目前 31 款），**累積 2～3 款新模板後**再一次重新上傳 zip、改名稱和說明裡的款數。
+
 Gumroad 可以建立 **Bundle**，把已上架的商品組合起來賣。如果後台沒有 Bundle，就另外上一個商品，上傳 `all-templates-bundle.zip`。
 
 - **Name**：`All 30 Business Website Templates Bundle (English + 繁體 + 简体)`
