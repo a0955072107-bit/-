@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  ご購入者さまへ：医療広告のルールについて
+  歯科医院のウェブサイトは、医療法と厚生労働省の「医療広告ガイドライン」の対象です。
+  文章を編集するときは「最高」「No.1」「絶対」「痛くない」「必ず治る」「100%」などの表現を避け、
+  ビフォーアフター写真、患者さまの体験談、費用の割引をうたう表現は、ガイドラインで認められる範囲を確認してから使ってください。
+  内容は客観的な事実にとどめ、公開前に医療広告に詳しい方や所属の歯科医師会などに確認してもらうことをおすすめします。
+-->
+<title>青窓歯科クリニック｜目黒区青葉台の歯医者</title>
+<meta name="description" content="青窓歯科クリニックは東京都目黒区青葉台の歯科医院です。治療の前に、画像を見ながら状態と選択肢、費用をご説明します。検診とクリーニング、虫歯と根管治療、歯周病、小児歯科、インプラント、矯正歯科。ご予約は LINE またはお電話で。">
+<meta property="og:title" content="青窓歯科クリニック｜目黒区青葉台の歯医者">
+<meta property="og:description" content="光の入る診療室で、まず説明から。診療時間、歯科医師、アクセスをご案内します。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#24433A">
+<!-- 多言語版（SEO）：公開後は href を完全な URL に置き換えてください。例：https://www.yourbusiness.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=Shippori+Mincho:wght@500&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<!-- サンプル内容：公開前に実際の情報に差し替えてください（医院名、電話、住所、診療時間） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "青窓歯科クリニック",
+  "telephone": "03-1234-5678",
+  "url": "https://example.com/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "青葉台 2-14-8 1F",
+    "addressLocality": "目黒区",
+    "addressRegion": "東京都",
+    "postalCode": "153-0042",
+    "addressCountry": "JP"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "14:30", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "18:30", "closes": "21:30" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   テーマ設定：ここを変えるとサイト全体の配色とフォントが変わります
+   ============================================================ */
+:root {
+  --brand: #24433A;          /* ブランドカラー：松葉色（ボタン、濃色のブロック、強調文字） */
+  --brand-ink: #F4F5F1;      /* ブランドカラーの上に載せる文字色（ストーンホワイト） */
+  --brand-deep: #1A322B;     /* ブランドの濃色（ボタンのホバー、フッター背景） */
+  --sage: #E3EAE2;           /* ミストセージ：交互に入るセクションの背景 */
+  --bg: #F4F5F1;             /* ページ背景：ストーンホワイト（クリーム色ではなく、やや寒色） */
+  --surface: #FAFBF8;        /* 面の色：ファーストビューのパネル、表、メニュー（わずかに緑みの白） */
+  --text: #17241F;           /* 本文の文字色：深い緑の黒 */
+  --muted: #4A5852;          /* 補足の文字色（ストーンホワイトとセージの上で AA 達成） */
+  --line: #CDD6CD;           /* 1px の罫線と枠線 */
+  --accent: #C9B27C;         /* 淡い真鍮色：唯一のアクセント。細い線と現在の言語の下線だけに使い、文字色には使いません */
+  --closed: #8A4426;         /* 「休診」の文字色（明るい背景で AA 達成） */
+  --leaf: #4F6E5A;           /* プレースホルダー用：植物の葉 */
+  --wood: #B59A74;           /* プレースホルダー用：木の家具、植木鉢 */
+  --glass: #EEF1E2;          /* プレースホルダー用：窓の光 */
+  --metal: #BFC4BF;          /* プレースホルダー用：ライトのアーム、土台などの金属 */
+  --shadow: 0 16px 40px -24px color-mix(in srgb, var(--text) 30%, transparent); /* サイトで唯一の淡い影（ドロップダウン用） */
+  --radius: 8px;             /* 大きな要素の角丸（画像、表の枠、濃色ブロック） */
+  --radius-sm: 4px;          /* 小さな要素の角丸（ボタン、タグ、メニュー項目） */
+  --font-heading: "Newsreader", "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif; /* 見出しフォント（欧文は Newsreader、和文は しっぽり明朝） */
+  --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif; /* 本文フォント */
+  --fs-sm: .875rem;          /* 文字サイズ：小（タグ、注記） */
+  --fs-body: 1rem;           /* 文字サイズ：本文 */
+  --fs-lg: 1.25rem;          /* 文字サイズ：小見出し */
+  --fs-h3: clamp(1.25rem, 1.8vw, 1.5rem);  /* 文字サイズ：h3 */
+  --fs-h2: clamp(1.75rem, 3.2vw, 2.5rem);  /* 文字サイズ：h2 */
+  --fs-h1: clamp(2rem, 3.6vw, 3.125rem);   /* 文字サイズ：メイン見出し */
+  --header-h: 72px;          /* ヘッダーの高さ */
+  --section-y: clamp(4.5rem, 11vw, 8.5rem); /* セクション上下の余白 */
+  --max: 1200px;             /* コンテンツの最大幅 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-padding-top: calc(var(--header-h) + 16px); overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 var(--fs-body)/1.8 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; touch-action: manipulation; line-break: strict; word-break: auto-phrase; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; line-height: 1.3; letter-spacing: 0; overflow-wrap: break-word; min-width: 0; text-wrap: balance; font-synthesis: none; }
+p, li, dd, figcaption { text-wrap: pretty; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: var(--radius-sm); }
+.wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+section { padding-block: var(--section-y); }
+.tint { background: var(--sage); }
+h2 { font-size: var(--fs-h2); }
+.lead { color: var(--muted); max-width: 34em; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* 本文へスキップ（キーボードで Tab を押すと表示） */
+.skip { position: fixed; left: 1rem; top: .75rem; z-index: 100; padding: .6rem 1rem; border-radius: var(--radius-sm); background: var(--brand); color: var(--brand-ink); transform: translateY(-200%); }
+.skip:focus { transform: none; }
+.skip:hover { background: var(--brand-deep); }
+.skip:active { opacity: .85; }
+main:focus { outline: none; }
+
+/* ---------- ボタン：塗りはメインの操作だけ、ほかは細い枠線 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .75rem 1.5rem; border-radius: var(--radius-sm); font-weight: 500; line-height: 1.3; border: 1px solid transparent; transition: background-color .2s, color .2s, border-color .2s, transform .2s; cursor: pointer; font-variant-numeric: tabular-nums; }
+.btn svg { width: 1.1rem; height: 1.1rem; flex: none; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: var(--brand-deep); }
+.btn:active { transform: translateY(1px); }
+a:not(.btn):active { opacity: .7; }
+.btn-ghost { border-color: color-mix(in srgb, var(--brand) 50%, transparent); color: var(--brand); background: transparent; }
+.btn-ghost:hover { border-color: var(--brand); background: color-mix(in srgb, var(--brand) 6%, transparent); }
+.text-link { color: var(--brand); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.text-link:hover { text-decoration-thickness: 2px; }
+
+/* ---------- ヘッダー ---------- */
+html:not(.js) .site-header { background: var(--surface); border-bottom-color: var(--line); }
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; border-bottom: 1px solid transparent; transition: background-color .3s, border-color .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 96%, transparent); border-bottom-color: var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: 1rem; }
+.logo { display: flex; align-items: baseline; gap: .6rem; font: 500 1.3125rem/1 var(--font-heading); }
+.logo small { font: 500 .875rem/1 "Newsreader", serif; color: var(--muted); }
+.nav-links { display: flex; align-items: center; gap: 1.6rem; font-size: .9375rem; }
+.nav-links a:not(.btn) { color: var(--muted); transition: color .2s; }
+.nav-links a:not(.btn):hover { color: var(--brand); }
+.nav-links .btn { min-height: 40px; padding: .5rem 1.1rem; }
+.menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); color: var(--text); cursor: pointer; transition: border-color .2s; }
+.menu-btn:hover { border-color: var(--brand); }
+.menu-btn:active { transform: translateY(1px); }
+.menu-btn span { display: block; width: 18px; height: 1.5px; margin: 4px auto; background: currentColor; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+@media (max-width: 760px) {
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: var(--header-h); left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: .75rem 1rem; border-radius: var(--radius-sm); }
+  .js .nav-links .btn { margin-top: .5rem; min-height: 48px; }
+  /* JS がないとき：メニューは折り返すリンクの列として表示 */
+  html:not(.js) .site-header { position: sticky; top: 0; }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: .75rem; }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: .25rem 1rem; }
+  html:not(.js) .nav-links a:not(.btn) { padding-block: .5rem; }
+  html:not(.js) .hero { padding-top: 0; }
+}
+@media (max-width: 420px) { .logo small { display: none; } }
+
+/* ---------- プレースホルダー画像 ----------
+   画像の枠ごとに専用の class があります。写真に替えるときはその class だけを書き換え、::before／::after を削除してください。
+   img タグに替える場合は width／height を付け、メイン画像には fetchpriority="high"、ほかには loading="lazy" を付けてください。 */
+.img { position: relative; overflow: hidden; background-color: var(--sage); }
+
+/* 写真に替える：.img-hero { background: url(images/room.jpg) center/cover; }
+   推奨比率 16:9（スマホでは 4:3 に切り抜き）：チェアは中央やや右、左側は文字パネル用に余白を */
+.img-hero {
+  background:
+    /* 床までの縦長窓：縦の格子と窓枠 */
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 81.79% 0% / 0.6% 67% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 87.93% 0% / 0.6% 67% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 76.11% 0% / 1.2% 68.5% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 93.93% 0% / 1.2% 68.5% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 92.61% 68.02% / 18.8% 1.5% no-repeat,
+    /* 窓の外の木々と光 */
+    radial-gradient(6% 22% at 80% 50%, color-mix(in srgb, var(--leaf) 50%, var(--sage)) 40%, transparent 100%),
+    radial-gradient(6% 26% at 90% 44%, color-mix(in srgb, var(--leaf) 40%, var(--sage)) 40%, transparent 100%),
+    linear-gradient(180deg, var(--glass), color-mix(in srgb, var(--leaf) 30%, var(--sage)) 75%, color-mix(in srgb, var(--leaf) 45%, var(--sage))) 91.39% 0% / 16.4% 67% no-repeat,
+    /* 壁ぎわの低いキャビネット */
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 59.87% 46.97% / 38.2% 1% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--metal) 60%, var(--surface)), color-mix(in srgb, var(--metal) 60%, var(--surface))) 59.87% 56.17% / 38.2% 0.3% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 78%, var(--sage)), color-mix(in srgb, var(--surface) 78%, var(--sage))) 59.87% 59.01% / 38.2% 19.5% no-repeat,
+    /* 窓から床に落ちる光 */
+    linear-gradient(112deg, transparent 52%, color-mix(in srgb, var(--glass) 55%, transparent) 62% 74%, transparent 86%) 0 100% / 100% 33% no-repeat,
+    /* 壁と床 */
+    linear-gradient(180deg, color-mix(in srgb, var(--leaf) 52%, var(--sage)) 0 67%, color-mix(in srgb, var(--metal) 45%, var(--bg)) 67%);
+}
+/* 診療チェア、無影灯、器具台（窓の手前に描画） */
+.img-hero::before { content: ""; position: absolute; left: 46%; top: 12%; width: 44%; height: 74%;
+  background:
+    /* 無影灯：L 字のアームとライト */
+    radial-gradient(4.09% 3.24% at 46.82% 14.32%, color-mix(in srgb, var(--surface) 90%, var(--metal)) 96%, transparent 100%),
+    radial-gradient(5.91% 4.59% at 46.82% 13.51%, color-mix(in srgb, var(--metal) 80%, var(--text)) 96%, transparent 100%),
+    linear-gradient(var(--metal), var(--metal)) 32.56% 6.87% / 21.82% 1.62% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 46.3% 7.04% / 1.82% 4.05% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 25.93% 31.25% / 1.82% 78.38% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--metal) 80%, var(--text)), color-mix(in srgb, var(--metal) 80%, var(--text))) 22.67% 86.21% / 14.77% 2.03% no-repeat,
+    /* 器具台とホース */
+    linear-gradient(color-mix(in srgb, var(--metal) 80%, var(--text)), color-mix(in srgb, var(--metal) 80%, var(--text))) 13.23% 49.24% / 14.09% 2.57% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 12.81% 58.99% / 0.68% 14.32% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 16.48% 60.91% / 0.68% 17.03% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 20.14% 58.99% / 0.68% 14.32% no-repeat,
+    /* 診療チェア：ヘッドレスト、背もたれ、ひじ掛け、座面、足置き */
+    radial-gradient(4.32% 5.68% at 35% 25.68%, var(--brand) 96%, transparent 100%),
+    linear-gradient(to bottom left, transparent 38%, var(--brand) 38% 62%, transparent 62%) 39.01% 49.43% / 17.27% 41.22% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 54.05% 59.67% / 15.91% 1.49% no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 63.33% 69.34% / 31.82% 7.43% no-repeat,
+    linear-gradient(to bottom left, transparent 36%, color-mix(in srgb, var(--brand) 86%, var(--sage)) 36% 64%, transparent 64%) 86.3% 72.73% / 17.05% 10.81% no-repeat,
+    /* 土台と床の影 */
+    linear-gradient(var(--metal), var(--metal)) 56.79% 89.08% / 7.95% 19.59% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--metal) 80%, var(--text)), color-mix(in srgb, var(--metal) 80%, var(--text))) 66.67% 93.75% / 45.45% 2.7% no-repeat,
+    radial-gradient(31.82% 2.97% at 56.82% 95.27%, color-mix(in srgb, var(--text) 16%, transparent) 0%, transparent 100%);
+}
+/* 画面右端の大きな観葉植物：葉と白い鉢 */
+.img-hero::after { content: ""; position: absolute; left: 88%; top: 22%; width: 12%; height: 64%;
+  background:
+    linear-gradient(color-mix(in srgb, var(--surface) 80%, var(--metal)), color-mix(in srgb, var(--surface) 80%, var(--metal))) 74.07% 100% / 55% 23.44% no-repeat,
+    radial-gradient(25% 7.81% at 37.5% 56.25%, color-mix(in srgb, var(--leaf) 80%, var(--text)) 96%, transparent 100%),
+    radial-gradient(26.67% 8.59% at 70.83% 46.88%, var(--leaf) 96%, transparent 100%),
+    radial-gradient(25% 7.81% at 45.83% 28.12%, color-mix(in srgb, var(--leaf) 85%, var(--sage)) 96%, transparent 100%),
+    radial-gradient(23.33% 7.81% at 83.33% 18.75%, color-mix(in srgb, var(--leaf) 75%, var(--text)) 96%, transparent 100%),
+    radial-gradient(21.67% 7.03% at 25% 12.5%, var(--leaf) 96%, transparent 100%),
+    radial-gradient(21.67% 6.25% at 75% 68.75%, color-mix(in srgb, var(--leaf) 85%, var(--sage)) 96%, transparent 100%),
+    linear-gradient(color-mix(in srgb, var(--leaf) 70%, var(--text)), color-mix(in srgb, var(--leaf) 70%, var(--text))) 58.62% 36.36% / 3.33% 65.62% no-repeat;
+}
+
+/* 写真に替える：.img-doc1 { background: url(images/doctor-1.jpg) center/cover; }（.img-doc2、.img-doc3 も同様）
+   推奨比率 4:5 の上半身写真。人物を中央に、頭の上に少し余白を（上部はアーチ形に切り抜かれます） */
+.img-doc { aspect-ratio: 4 / 5; border-radius: 50% 50% var(--radius) var(--radius) / 40% 40% var(--radius) var(--radius); --hx: 50%; --hy: 37%; --hair: color-mix(in srgb, var(--text) 55%, var(--sage)); }
+/* 頭と首：背景より一段濃いぼかしの楕円（顔は描きません）。位置は --hx、--hy で調整 */
+.img-doc::before { content: ""; position: absolute; left: calc(var(--hx) - 17%); top: calc(var(--hy) - 16%); width: 34%; height: 40%; filter: blur(3px);
+  background:
+    radial-gradient(50% 19% at 50% 18%, var(--hair) 72%, transparent 100%),
+    radial-gradient(44% 29% at 50% 33%, color-mix(in srgb, var(--wood) 45%, var(--sage)) 80%, transparent 100%),
+    linear-gradient(color-mix(in srgb, var(--wood) 50%, var(--sage)), color-mix(in srgb, var(--wood) 50%, var(--sage))) 50% 100% / 32% 42% no-repeat; }
+/* 白衣：なで肩のシルエットと V ネック。襟元に松葉色のスクラブ */
+.img-doc::after { content: ""; position: absolute; left: 4%; right: 4%; top: 60%; bottom: 0; filter: blur(1px);
+  clip-path: polygon(26% 0, 74% 0, 95% 20%, 100% 100%, 0 100%, 5% 20%);
+  background:
+    conic-gradient(from -22deg at 50% 100%, color-mix(in srgb, var(--brand) 82%, var(--sage)) 0 44deg, transparent 44deg) 0 0 / 100% 36% no-repeat,
+    conic-gradient(from -30deg at 50% 100%, color-mix(in srgb, var(--metal) 75%, var(--surface)) 0 60deg, transparent 60deg) 0 0 / 100% 62% no-repeat,
+    linear-gradient(90deg, color-mix(in srgb, var(--surface) 82%, var(--sage)), var(--surface) 28% 72%, color-mix(in srgb, var(--surface) 82%, var(--sage))); }
+.img-doc1 { background: radial-gradient(70% 50% at 24% 18%, color-mix(in srgb, var(--glass) 90%, transparent), transparent 100%), linear-gradient(180deg, var(--sage), color-mix(in srgb, var(--leaf) 34%, var(--sage))); }
+.img-doc2 { --hx: 47%; --hy: 39%; --hair: color-mix(in srgb, var(--wood) 45%, var(--text)); background: radial-gradient(70% 50% at 80% 16%, color-mix(in srgb, var(--glass) 90%, transparent), transparent 100%), linear-gradient(180deg, color-mix(in srgb, var(--sage) 70%, var(--surface)), color-mix(in srgb, var(--leaf) 26%, var(--sage))); }
+.img-doc3 { --hx: 53%; --hy: 36%; --hair: color-mix(in srgb, var(--text) 70%, var(--sage)); background: radial-gradient(80% 44% at 50% 8%, color-mix(in srgb, var(--glass) 85%, transparent), transparent 100%), linear-gradient(180deg, color-mix(in srgb, var(--leaf) 18%, var(--sage)), color-mix(in srgb, var(--leaf) 46%, var(--sage))); }
+
+/* 写真に替える：.img-space1 { background: url(images/waiting.jpg) center/cover; }（.img-space2 も同様）
+   推奨比率 3:2 の横長写真 */
+.img-space { aspect-ratio: 3 / 2; border-radius: var(--radius); }
+/* 待合室：縦長の窓、木のベンチ、鉢植え、床の光 */
+.img-space1 { background:
+    linear-gradient(var(--wood), var(--wood)) 62% 66% / 52% 6% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 70%, var(--text)), color-mix(in srgb, var(--wood) 70%, var(--text))) 41% 79% / 1.6% 13% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 70%, var(--text)), color-mix(in srgb, var(--wood) 70%, var(--text))) 83% 79% / 1.6% 13% no-repeat,
+    linear-gradient(100deg, transparent 20%, color-mix(in srgb, var(--glass) 30%, transparent) 30% 50%, transparent 62%) 0 100% / 100% 26% no-repeat,
+    linear-gradient(180deg, color-mix(in srgb, var(--brand) 22%, var(--sage)) 0 74%, color-mix(in srgb, var(--wood) 46%, var(--sage)) 74%); }
+.img-space1::before { content: ""; position: absolute; left: 8%; top: 10%; width: 22%; height: 58%; border: clamp(4px, .6vw, 8px) solid color-mix(in srgb, var(--surface) 88%, var(--brand)); border-radius: var(--radius-sm);
+  background: linear-gradient(180deg, transparent 50%, color-mix(in srgb, var(--surface) 88%, var(--brand)) 0 calc(50% + 5px), transparent 0), radial-gradient(60% 40% at 50% 100%, color-mix(in srgb, var(--leaf) 50%, var(--sage)), transparent 100%), linear-gradient(180deg, var(--glass), color-mix(in srgb, var(--leaf) 20%, var(--sage))); }
+.img-space1::after { content: ""; position: absolute; right: 5%; bottom: 14%; width: 9%; height: 44%;
+  background: linear-gradient(var(--wood), var(--wood)) 50% 100% / 60% 22% no-repeat, radial-gradient(30% 44% at 40% 46%, var(--leaf) 96%, transparent 100%), radial-gradient(30% 36% at 66% 56%, color-mix(in srgb, var(--leaf) 80%, var(--text)) 96%, transparent 100%); }
+/* カウンセリングルーム：テーブル、歯の画像を映したタブレット、椅子 2 脚 */
+.img-space2 { background:
+    linear-gradient(var(--wood), var(--wood)) 50% 62% / 56% 4% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 70%, var(--text)), color-mix(in srgb, var(--wood) 70%, var(--text))) 50% 84% / 1.6% 22% no-repeat,
+    radial-gradient(34% 30% at 50% 30%, color-mix(in srgb, var(--glass) 60%, transparent), transparent 100%),
+    linear-gradient(180deg, color-mix(in srgb, var(--brand) 18%, var(--sage)) 0 76%, color-mix(in srgb, var(--brand) 40%, var(--sage)) 76%); }
+/* タブレット：暗い画面に淡い色の歯が 2 列 */
+.img-space2::before { content: ""; position: absolute; left: 41%; top: 44%; width: 18%; height: 14%; border-radius: var(--radius-sm); border: 3px solid color-mix(in srgb, var(--text) 80%, var(--brand));
+  background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--glass) 70%, transparent) 0 28%, transparent 34%) 0 30% / 16% 40% repeat-x, radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--glass) 50%, transparent) 0 28%, transparent 34%) 0 78% / 16% 40% repeat-x, var(--brand-deep); transform: perspective(300px) rotateX(28deg); }
+/* 椅子 2 脚（左右に 1 脚ずつ：背、座面、脚） */
+.img-space2::after { content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(var(--brand), var(--brand)) 14% 59% / 4% 30% no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 15.4% 70% / 13% 5% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--brand) 80%, var(--text)), color-mix(in srgb, var(--brand) 80%, var(--text))) 19.5% 85% / 1.2% 16% no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 86% 59% / 4% 30% no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 84.6% 70% / 13% 5% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--brand) 80%, var(--text)), color-mix(in srgb, var(--brand) 80%, var(--text))) 80.5% 85% / 1.2% 16% no-repeat; }
+
+/* ---------- ファーストビュー：全幅の診療室画像と左下のパネル ---------- */
+.hero { position: relative; padding: var(--header-h) 0 0; }
+.img-hero { width: 100%; aspect-ratio: 16 / 9; max-height: calc(100vh - var(--header-h)); min-height: 540px; }
+.hero-inner { position: absolute; inset: auto 0 clamp(2rem, 6vh, 4rem); }
+.hero-panel { width: min(100%, 35rem); padding: clamp(2rem, 3.4vw, 3rem); background: var(--surface); border-radius: var(--radius); }
+.hero h1 { font-size: var(--fs-h1); line-height: 1.25; padding-bottom: 1.25rem; border-bottom: 1px solid var(--accent); }
+.hero-sub { color: var(--muted); margin-top: 1.25rem; max-width: 30em; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+@media (max-width: 760px) {
+  .img-hero { aspect-ratio: 4 / 3; min-height: 0; max-height: 46vh; }
+  .hero-inner { position: static; margin-top: -2.5rem; padding-bottom: .5rem; }
+  .wrap.hero-inner { width: min(100% - 2rem, var(--max)); }
+  .hero-panel { position: relative; padding: 1.75rem 1.5rem; }
+  .hero-cta { display: grid; grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ---------- はじめての方へ：3 つのステップ ---------- */
+.first-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.6fr); gap: clamp(2.5rem, 6vw, 6rem); align-items: start; }
+.first-grid h2 + p { margin-top: 1rem; }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 3rem); counter-reset: step; }
+.step { border-top: 1px solid var(--line); padding-top: 1.5rem; }
+.step-no { display: block; font: 500 2.5rem/1 var(--font-heading); color: var(--brand); font-variant-numeric: tabular-nums; margin-bottom: 1.25rem; }
+.step h3 { font-size: var(--fs-lg); }
+.step p { color: var(--muted); margin-top: .5rem; font-size: .9375rem; }
+@media (max-width: 960px) { .first-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 640px) {
+  .steps { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .step { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); column-gap: 1rem; padding-block: 1.25rem; }
+  .step-no { grid-row: span 2; font-size: 2rem; margin: 0; }
+  .step p { margin-top: .25rem; }
+}
+
+/* ---------- 診療内容：細い罫線で区切った 1 列のリスト ---------- */
+.split-head, .svc { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) 8.5rem; column-gap: clamp(2rem, 6vw, 6rem); }
+.split-head { row-gap: 1rem; align-items: end; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.split-head .lead { grid-column: 2 / -1; }
+.svc-list { border-top: 1px solid color-mix(in srgb, var(--brand) 30%, transparent); }
+.svc { row-gap: .25rem; align-items: baseline; padding-block: 1.6rem; border-bottom: 1px solid color-mix(in srgb, var(--brand) 18%, transparent); }
+.svc h3 { font-size: var(--fs-h3); }
+.svc p { color: var(--muted); max-width: 34em; }
+.svc-pay { font-size: var(--fs-sm); color: var(--brand); text-align: right; }
+.svc-note { margin-top: 1.5rem; font-size: var(--fs-sm); color: var(--muted); }
+@media (max-width: 760px) {
+  .split-head { grid-template-columns: minmax(0, 1fr); }
+  .split-head .lead { grid-column: auto; }
+  .svc { grid-template-columns: minmax(0, 1fr) auto; padding-block: 1.1rem; }
+  .svc p { grid-column: 1 / -1; grid-row: 2; font-size: .9375rem; }
+  .svc-pay { grid-column: 2; grid-row: 1; }
+}
+
+/* ---------- 歯科医師：アーチ形の写真枠 ---------- */
+.doc-head { max-width: 36em; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.doc-head p { margin-top: 1rem; }
+.doc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 4rem); }
+.doc-body { padding-top: 1.5rem; }
+.doc h3 { font-size: var(--fs-h3); }
+.doc-role { font-size: var(--fs-sm); color: var(--muted); }
+.doc dl { margin-top: 1rem; font-size: .9375rem; }
+.doc dl > div { display: grid; grid-template-columns: 4.5em minmax(0, 1fr); gap: 1rem; padding-block: .6rem; border-top: 1px solid var(--line); }
+.doc dt { color: var(--muted); }
+.doc dd span { display: block; }
+@media (max-width: 860px) {
+  .doc-grid { grid-template-columns: minmax(0, 1fr); gap: 2.25rem; }
+  .doc { display: grid; grid-template-columns: minmax(0, 7.5rem) minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+  .doc-body { padding-top: 0; }
+  .doc dl > div { grid-template-columns: minmax(0, 1fr); gap: 0; padding-block: .45rem; }
+}
+
+/* ---------- 院内の様子：横長写真 2 枚 ---------- */
+.space-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.25rem, 3vw, 2.5rem); margin-top: clamp(2.5rem, 5vw, 4rem); }
+.space-grid figcaption { margin-top: 1rem; color: var(--muted); font-size: .9375rem; max-width: 30em; }
+.space-grid figcaption b { color: var(--text); font-weight: 500; margin-inline-end: .5em; }
+@media (max-width: 760px) { .space-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 診療時間：週間の表と本日の診療ボード ---------- */
+.sched-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .5rem 2rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.today-is { font: 500 var(--fs-lg)/1.4 var(--font-heading); color: var(--brand); }
+.sched-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: clamp(1.5rem, 3vw, 2.5rem); align-items: start; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.schedule { width: 100%; min-width: 640px; border-collapse: separate; border-spacing: 0; text-align: center; font-variant-numeric: tabular-nums; }
+.schedule th, .schedule td { padding: 1.1rem .5rem; border-bottom: 1px solid var(--line); }
+.schedule thead th { font: 500 .9375rem var(--font-body); color: var(--muted); }
+.schedule tbody th { text-align: left; padding-left: 1.25rem; white-space: nowrap; font-weight: 500; }
+.schedule tbody th small { display: block; font-size: var(--fs-sm); font-weight: 400; color: var(--muted); }
+.schedule tr > :first-child { position: sticky; left: 0; background: var(--surface); }
+.schedule tbody tr:last-child > * { border-bottom: 0; }
+.schedule .off { color: var(--closed); font-size: .9375rem; }
+.schedule .today { background: color-mix(in srgb, var(--brand) 7%, var(--surface)); font-weight: 500; }
+.schedule thead .today { background: var(--brand); color: var(--brand-ink); }
+.schedule thead .today::after { content: "本日"; display: block; font-size: .8125rem; font-weight: 400; }
+.table-note { margin-top: 1.25rem; font-size: var(--fs-sm); color: var(--muted); }
+.scroll-hint { display: none; font-size: var(--fs-sm); color: var(--muted); margin-bottom: .5rem; }
+/* 本日の診療ボード（受付の案内板のような濃色） */
+.today-card { background: var(--brand); color: var(--brand-ink); border-radius: var(--radius); padding: 1.5rem 1.5rem 1rem; }
+.today-card h3 { font-size: var(--fs-lg); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .25rem 1rem; padding-bottom: .9rem; border-bottom: 1px solid color-mix(in srgb, var(--brand-ink) 22%, transparent); }
+.today-card h3 small { font: 400 var(--fs-sm) var(--font-body); color: color-mix(in srgb, var(--brand-ink) 82%, var(--brand)); }
+.today-card li { display: grid; grid-template-columns: 3.5em minmax(0, 1fr) auto; gap: .75rem; align-items: center; padding-block: .85rem; font-size: .9375rem; font-variant-numeric: tabular-nums; }
+.today-card li + li { border-top: 1px solid color-mix(in srgb, var(--brand-ink) 14%, transparent); }
+.today-card li b { font-weight: 500; }
+.today-card li span { color: color-mix(in srgb, var(--brand-ink) 82%, var(--brand)); line-height: 1.5; font-size: var(--fs-sm); }
+.today-card .tag { font-style: normal; white-space: nowrap; font-size: .8125rem; padding: .15rem .55rem; border-radius: var(--radius-sm); border: 1px solid color-mix(in srgb, var(--brand-ink) 40%, transparent); }
+.today-card li.now .tag { background: var(--brand-ink); color: var(--brand); border-color: var(--brand-ink); }
+.today-card li.off b { color: color-mix(in srgb, var(--brand-ink) 82%, var(--brand)); font-weight: 400; }
+/* スマホ：曜日ごとのリスト（JS が同じ表から作成。JS がないときは表のまま） */
+.sched-list { display: none; border-top: 1px solid var(--line); }
+.sched-list details { border-bottom: 1px solid var(--line); }
+.sched-list summary { display: flex; align-items: center; gap: .75rem; min-height: 52px; padding: .5rem .25rem; cursor: pointer; list-style: none; font-weight: 500; }
+.sched-list summary::-webkit-details-marker { display: none; }
+.sched-list summary::after { content: ""; flex: none; width: .45em; height: .45em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.sched-list details[open] summary::after { transform: translateY(1px) rotate(-135deg); }
+.sched-list summary:hover { color: var(--brand); }
+.sched-list summary em { font-style: normal; font-size: .8125rem; font-weight: 400; padding: .1rem .5rem; border-radius: var(--radius-sm); background: var(--brand); color: var(--brand-ink); }
+.sched-list summary small { margin-inline-start: auto; color: var(--muted); font-size: var(--fs-sm); font-weight: 400; text-align: end; }
+.sched-list ul { padding: 0 .25rem 1rem; }
+.sched-list li { display: grid; grid-template-columns: 3.5em minmax(0, 1fr) auto; gap: .75rem; padding-block: .35rem; font-size: .9375rem; font-variant-numeric: tabular-nums; }
+.sched-list li span { color: var(--muted); }
+.sched-list li.off, .sched-list li.off span { color: var(--closed); }
+@media (max-width: 960px) { .sched-grid { grid-template-columns: minmax(0, 1fr); } .today-card { order: -1; } }
+@media (max-width: 760px) {
+  html:not(.js) .scroll-hint { display: block; }
+  .js .table-scroll { display: none; }
+  .js .sched-list { display: block; }
+}
+
+/* ---------- アクセスとご予約（住所を大きく見せる） ---------- */
+.access-addr { font: 500 var(--fs-h2)/1.35 var(--font-heading); max-width: 22em; text-wrap: balance; word-break: keep-all; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.access-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.access-info > div { display: grid; grid-template-columns: 5em minmax(0, 1fr); gap: 1rem; padding-block: 1.1rem; border-top: 1px solid color-mix(in srgb, var(--brand) 18%, transparent); }
+.access-info > div:last-child { border-bottom: 1px solid color-mix(in srgb, var(--brand) 18%, transparent); }
+.access-info h3 { font: 500 var(--fs-body)/1.8 var(--font-body); color: var(--brand); }
+.access-info p { color: var(--muted); }
+.access-cta { display: grid; gap: 1rem; }
+.access-cta h3 { font-size: var(--fs-h3); }
+.access-cta p { color: var(--muted); }
+.access-cta .row { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: .25rem; }
+@media (max-width: 860px) { .access-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 400px) { .access-info > div { grid-template-columns: minmax(0, 1fr); gap: .1rem; } }
+/* スマホ：下部の固定バーに塗りの予約ボタンがあるため、ここは枠線に */
+@media (max-width: 760px) { .access-cta .btn-primary { background: transparent; color: var(--brand); border-color: color-mix(in srgb, var(--brand) 50%, transparent); } .access-cta .btn-primary:hover { background: color-mix(in srgb, var(--brand) 6%, transparent); } }
+
+/* ---------- フッター ---------- */
+.site-footer { background: var(--brand-deep); color: color-mix(in srgb, var(--brand-ink) 84%, var(--brand-deep)); padding-block: 4rem 2rem; font-size: .9375rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; }
+.site-footer .logo { color: var(--brand-ink); margin-bottom: 1rem; }
+.site-footer .logo small { color: inherit; }
+.site-footer h2 { color: var(--brand-ink); font-size: var(--fs-body); margin-bottom: .6rem; }
+.site-footer a:hover { color: var(--brand-ink); text-decoration: underline; text-underline-offset: 3px; }
+.site-footer :focus-visible { outline-color: var(--brand-ink); }
+.social { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: .8rem; }
+.social a { text-decoration: underline; text-underline-offset: 3px; }
+.foot-bottom { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid color-mix(in srgb, var(--brand-ink) 16%, transparent); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: var(--fs-sm); }
+.foot-hours-short { display: none; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; } .foot-links, .foot-hours { display: none; } .foot-hours-short { display: block; } }
+
+/* ---------- スマホ下部の固定ボタン ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 760px) {
+  .mobile-bar { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: .6rem; position: fixed; inset: auto 0 0; z-index: 60; padding: .65rem 1rem calc(.65rem + env(safe-area-inset-bottom)); background: var(--surface); border-top: 1px solid var(--line); }
+  .mobile-bar .btn { padding: .6rem 1rem; }
+  /* メインのボタンが見えている間は隠す。JS がないときは常に表示 */
+  .js .mobile-bar { transform: translateY(110%); transition: transform .3s ease; }
+  .js .mobile-bar.show { transform: none; }
+  body { padding-bottom: 76px; }
+}
+
+/* ---------- ファーストビューの登場（ページで唯一のアニメーション） ---------- */
+.js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== 言語切り替え（lang-switch） ==================== */
+.nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
+.lang-switch { display: flex; align-items: center; gap: .1rem; flex: none; margin-inline-start: .5rem; padding-inline-start: .6rem; border-inline-start: 1px solid var(--line); font: 400 .8125rem/1 var(--font-body); letter-spacing: normal; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; border-radius: var(--radius-sm); color: var(--muted); text-decoration: none; text-underline-offset: 5px; text-decoration-thickness: 1.5px; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 500; text-decoration-line: underline; text-decoration-color: var(--accent); }
+@media (max-width: 760px) {
+  .nav > .lang-switch { order: 1; margin-inline: 0; padding-inline-start: 0; border: 0; }
+  .nav > .menu-btn { order: 2; }
+  .nav > .nav-links { order: 3; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .nav > .nav-links { gap: .9rem; font-size: .875rem; }
+  .nav > .nav-links .btn { padding-inline: .9rem; }
+  .nav > .lang-switch { margin-inline-start: 0; padding-inline-start: .3rem; }
+  .logo small { display: none; }
+}
+@media (min-width: 761px) and (max-width: 900px) { .nav > .nav-links { gap: .6rem; font-size: .8125rem; } }
+@media (max-width: 400px) { .nav { gap: .5rem; } }
+/* フッターの言語リンク */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; font-size: var(--fs-sm); }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius-sm); }
+.foot-lang a:hover { text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand-ink); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { font-weight: 500; text-decoration: underline; text-decoration-color: var(--accent); }
+
+/* 日本語：見出しは字間を詰めず、折り返しをそろえる */
+.hero h1 { line-height: 1.35; }
+@media (max-width: 420px) { .hero h1 { font-size: 1.75rem; } }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: var(--radius-sm); color: inherit; font-weight: 500; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<!-- ==================== セクション：ヘッダー ==================== -->
+<!-- サンプル内容：公開前に実際の情報に差し替えてください（医院名は架空です） -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="青窓歯科クリニック ページの先頭へ">青窓歯科 <small lang="en" translate="no">Aoi Window Dental</small></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="メインメニュー">
+      <a href="#first">はじめての方</a>
+      <a href="#services">診療内容</a>
+      <a href="#doctors">歯科医師</a>
+      <a href="#space">院内</a>
+      <a href="#hours">診療時間</a>
+      <a href="#access">アクセス</a>
+      <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">ご予約</a>
+    </nav>
+    <!-- lang-switch：言語切り替え。言語を追加するときは、ここにリンクを足し、対応するフォルダを作成します -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="ja">JA</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<!-- ==================== セクション：ファーストビュー ==================== -->
+<section class="hero" id="home">
+  <div class="img img-hero" role="img" aria-label="診療室のイメージ：大きな窓、やわらかな自然光、松葉色の診療チェアと観葉植物"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-panel reveal">
+      <h1>光の入る診療室で、<br>まず説明から。</h1>
+      <p class="hero-sub">目黒区青葉台の歯科医院です。治療の前に、画像を見ながら状態と選択肢、費用をご説明します。</p>
+      <div class="hero-cta">
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-primary" target="_blank" rel="noopener">LINE で予約する</a>
+        <a href="tel:03-1234-5678" class="btn btn-ghost">電話 03-1234-5678</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：はじめての方へ ==================== -->
+<section id="first">
+  <div class="wrap first-grid">
+    <div>
+      <h2>はじめての方へ</h2>
+      <p class="lead">受診は 3 つのステップです。どの段階でも、気になることはお気軽にご質問ください。</p>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <span class="step-no" aria-hidden="true">1</span>
+        <h3>ご予約</h3>
+        <p>LINE またはお電話で、気になる症状と希望の時間帯をお知らせください。初診の方は保険証（マイナ保険証）をお持ちください。</p>
+      </li>
+      <li class="step">
+        <span class="step-no" aria-hidden="true">2</span>
+        <h3>検査とご説明</h3>
+        <p>必要なレントゲンを撮影し、画像を見ながら今の状態と治療の選択肢をご説明します。</p>
+      </li>
+      <li class="step">
+        <span class="step-no" aria-hidden="true">3</span>
+        <h3>納得してから治療</h3>
+        <p>費用と通院回数の目安をお伝えします。検査だけで帰られても大丈夫です。</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== セクション：診療内容 ==================== -->
+<section class="tint" id="services">
+  <div class="wrap">
+    <div class="split-head">
+      <h2>診療内容</h2>
+      <p class="lead">多くの治療は保険診療です。自費になる場合は、理由と費用を先にご説明し、ご判断いただきます。</p>
+    </div>
+    <ul class="svc-list">
+      <li class="svc"><h3>検診とクリーニング</h3><p>定期検診と歯石の除去。気をつけたいところがあれば一緒に確認します。</p><span class="svc-pay">保険診療</span></li>
+      <li class="svc"><h3>虫歯と根管治療</h3><p>虫歯の治療と、神経に炎症があるときの根管治療。できるだけご自身の歯を残します。</p><span class="svc-pay">保険（一部自費）</span></li>
+      <li class="svc"><h3>歯周病の治療</h3><p>歯ぐきからの出血や歯のぐらつきがあれば、歯周病の検査と治療、定期的な経過観察を行います。</p><span class="svc-pay">保険診療</span></li>
+      <li class="svc"><h3>小児歯科</h3><p>乳歯の検診、フッ素塗布、シーラント。まずは診療室に慣れてもらうところから始めます。</p><span class="svc-pay">保険診療</span></li>
+      <li class="svc"><h3>インプラントと入れ歯</h3><p>画像で骨の状態と全身の健康状態を確認し、流れと期間、その後のお手入れをご説明します。</p><span class="svc-pay">自費診療</span></li>
+      <li class="svc"><h3>矯正歯科</h3><p>ワイヤー矯正とマウスピース矯正のご相談。歯並びに合わせて方法と期間を検討します。</p><span class="svc-pay">自費診療</span></li>
+    </ul>
+    <p class="svc-note">※ 保険の適用範囲は症状や制度によって異なります。受診時にご説明します。</p>
+  </div>
+</section>
+
+<!-- ==================== セクション：歯科医師 ==================== -->
+<!-- サンプル内容：公開前に実際の情報に差し替えてください（医師の名前、経歴、写真は架空です）。「担当」は下の診療時間表と合わせてください -->
+<section id="doctors">
+  <div class="wrap">
+    <div class="doc-head">
+      <h2>歯科医師</h2>
+      <p class="lead">3 人の歯科医師が交代で診療しています。同じ医師をご希望の方は、下の診療時間表をご覧ください。</p>
+    </div>
+    <div class="doc-grid">
+      <article class="doc">
+        <div class="img img-doc img-doc1" role="img" aria-label="青木 遼一 院長の写真の枠"></div>
+        <div class="doc-body">
+          <h3>青木 遼一</h3>
+          <p class="doc-role">院長</p>
+          <dl>
+            <div><dt>専門</dt><dd>インプラント、補綴、根管治療</dd></div>
+            <div><dt>担当</dt><dd><span>月・水・金 午前</span><span>火・木 午後</span></dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="doc">
+        <div class="img img-doc img-doc2" role="img" aria-label="森川 結衣 歯科医師の写真の枠"></div>
+        <div class="doc-body">
+          <h3>森川 結衣</h3>
+          <p class="doc-role">歯科医師</p>
+          <dl>
+            <div><dt>専門</dt><dd>小児歯科、矯正歯科、予防歯科</dd></div>
+            <div><dt>担当</dt><dd><span>火・土 午前</span><span>水 午後</span><span>月・木 夜間</span></dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="doc">
+        <div class="img img-doc img-doc3" role="img" aria-label="黒田 慎也 歯科医師の写真の枠"></div>
+        <div class="doc-body">
+          <h3>黒田 慎也</h3>
+          <p class="doc-role">歯科医師</p>
+          <dl>
+            <div><dt>専門</dt><dd>歯周病治療、一般歯科</dd></div>
+            <div><dt>担当</dt><dd><span>木 午前</span><span>月・金 午後</span><span>火・水 夜間</span></dd></div>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：院内の様子 ==================== -->
+<section class="tint" id="space">
+  <div class="wrap">
+    <h2>院内の様子</h2>
+    <p class="lead">待合室とカウンセリングルームは窓側にあります。治療前のご説明は、診療チェアとは別の部屋で行います。</p>
+    <div class="space-grid">
+      <figure>
+        <div class="img img-space img-space1" role="img" aria-label="待合室のイメージ：窓辺の木のベンチと鉢植え"></div>
+        <figcaption><b>待合室</b>窓辺の木のベンチから、外の木々が見えます。</figcaption>
+      </figure>
+      <figure>
+        <div class="img img-space img-space2" role="img" aria-label="カウンセリングルームのイメージ：歯のレントゲンを映したタブレットと椅子 2 脚"></div>
+        <figcaption><b>カウンセリングルーム</b>座って画像を見ながら費用までご相談いただけます。</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：診療時間 ==================== -->
+<!-- 編集方法：表の中の医師名や「休診」を書き換えると、本日の診療ボードとスマホ用の曜日リストも自動で変わります。
+     各行の data-time="開始-終了"（24 時間表記）で「診療中」を判定し、終了 30 分前からは「受付終了」と表示します。<small> の中は画面に表示される時間です。両方を合わせて変更してください。 -->
+<!-- サンプル内容：公開前に実際の情報に差し替えてください -->
+<section id="hours">
+  <div class="wrap">
+    <div class="sched-head">
+      <h2>診療時間</h2>
+      <p class="today-is" id="today-is">月曜〜土曜診療、日曜休診</p>
+    </div>
+    <div class="sched-grid">
+      <div>
+        <p class="scroll-hint">左右にスクロールすると表全体を見られます</p>
+        <div class="table-scroll">
+          <table class="schedule" id="schedule-table">
+            <thead>
+              <tr><th scope="col">時間帯</th><th scope="col">月</th><th scope="col">火</th><th scope="col">水</th><th scope="col">木</th><th scope="col">金</th><th scope="col">土</th><th scope="col">日</th></tr>
+            </thead>
+            <tbody>
+              <tr data-name="午前" data-time="09:00-12:00"><th scope="row">午前<small>9:00〜12:00</small></th><td>青木</td><td>森川</td><td>青木</td><td>黒田</td><td>青木</td><td>森川</td><td class="off">休診</td></tr>
+              <tr data-name="午後" data-time="14:30-18:00"><th scope="row">午後<small>14:30〜18:00</small></th><td>黒田</td><td>青木</td><td>森川</td><td>青木</td><td>黒田</td><td class="off">休診</td><td class="off">休診</td></tr>
+              <tr data-name="夜間" data-time="18:30-21:30"><th scope="row">夜間<small>18:30〜21:30</small></th><td>森川</td><td>黒田</td><td>黒田</td><td>森川</td><td class="off">休診</td><td class="off">休診</td><td class="off">休診</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">※ 受付は各時間帯の終了 30 分前までです。祝日の診療や担当医の変更は院内でお知らせします。</p>
+      </div>
+      <!-- 本日の診療ボード：左の表から JS が自動で作成します。変更は表だけで OK です -->
+      <aside class="today-card">
+        <h3>本日の診療 <small id="today-label">診療時間表をご覧ください</small></h3>
+        <ul id="today-list"><li><b>診療</b><span>診療時間表をご覧ください</span></li></ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：アクセスとご予約 ==================== -->
+<!-- サンプル内容：公開前に実際の情報に差し替えてください（住所は架空です） -->
+<section class="tint" id="access">
+  <div class="wrap">
+    <h2 class="sr-only">アクセスとご予約</h2>
+    <p class="access-addr">東京都目黒区<wbr>青葉台 2-14-8 1F</p>
+    <div class="access-grid">
+      <div class="access-info">
+        <div><h3>電車</h3><p>東急東横線「中目黒駅」から徒歩 8 分。</p></div>
+        <div><h3>お車</h3><p>専用駐車場はありません。近くのコインパーキングをご利用ください。</p></div>
+        <div><h3>車いす</h3><p>1 階で段差がなく、車いすやベビーカーのままお入りいただけます。</p></div>
+      </div>
+      <div class="access-cta">
+        <h3>ご予約とお問い合わせ</h3>
+        <p>お電話は診療時間内に受け付けています（03-1234-5678）。LINE からはいつでもご予約いただけます。</p>
+        <div class="row">
+          <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-primary" target="_blank" rel="noopener">LINE で予約する</a>
+          <a href="https://maps.google.com/?q=東京都目黒区青葉台2-14-8" class="btn btn-ghost" target="_blank" rel="noopener">Google マップで開く</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== セクション：フッター ==================== -->
+<!-- サンプル内容：公開前に実際の情報に差し替えてください（医院名、住所、電話は架空です） -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">青窓歯科クリニック</div>
+        <p>東京都目黒区青葉台 2-14-8 1F<br>電話：<a href="tel:03-1234-5678">03-1234-5678</a></p>
+        <div class="social"><a href="#">Instagram</a><a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE</a></div>
+      </div>
+      <div>
+        <h2>診療時間</h2>
+        <p class="foot-hours-short">月曜〜土曜診療、日曜休診</p>
+        <p class="foot-hours">月〜土 午前 9:00〜12:00<br>月〜金 午後 14:30〜18:00<br>月〜木 夜間 18:30〜21:30<br>日曜休診</p>
+      </div>
+      <div class="foot-links">
+        <h2>メニュー</h2>
+        <p><a href="#first">はじめての方へ</a><br><a href="#services">診療内容</a><br><a href="#hours">診療時間</a><br><a href="#access">アクセスとご予約</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y">2026</span> 青窓歯科クリニック</span>
+      <span>掲載内容は一般的な情報です。実際の診療は歯科医師の判断によります。</span>
+    </div>
+    <!-- フッターの言語リンク：ヘッダーの lang-switch と同じ組み合わせ -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a></p>
+  </div>
+</footer>
+
+<!-- ==================== セクション：スマホ下部の固定ボタン ==================== -->
+<div class="mobile-bar">
+  <a href="tel:03-1234-5678" class="btn btn-ghost">電話する</a>
+  <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-primary" target="_blank" rel="noopener">LINE で予約する</a>
+</div>
+
+<script>
+// 画面の文言（翻訳するときはここだけ変更）
+const T = { today: '本日', closed: '休診', noSession: 'この時間は休診', dayOff: '終日休診', later: 'これから', open: '診療中', cutoff: '受付終了', ended: '終了', sep: '、',
+  who: n => `${n} 先生`, todayIs: d => `本日は${d}曜日です` };
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// スクロールでヘッダーに背景
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+// スマホ用メニュー（リンクを押すか Esc で閉じる）
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  links.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+};
+menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && links.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
+
+// 医院の所在地のタイムゾーン：「本日」と「診療中」はこの時刻で判定します。ご自身の医院のタイムゾーンに変更してください（例：'Asia/Tokyo'）
+const TZ = 'Asia/Tokyo';
+// 診療時間表：今日の列を強調し、本日の診療ボードとスマホ用の曜日リストを作成（1 分ごとに再計算）
+const toMin = t => { const [h, m] = t.split(':'); return h * 60 + +m; };
+const table = document.getElementById('schedule-table');
+const rows = [...table.tBodies[0].rows];
+const day = d => table.tHead.rows[0].cells[d].textContent.trim();
+const time = tr => tr.cells[0].querySelector('small').textContent;
+const isOff = (tr, d) => tr.cells[d].classList.contains('off');
+const list = document.createElement('div');
+list.className = 'sched-list';
+table.parentElement.after(list);
+let shown = 0;
+const render = () => {
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: TZ, weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map(x => [x.type, x.value]));
+  const col = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].indexOf(p.weekday) + 1, nowMin = p.hour * 60 + +p.minute; // 月曜 = 1 … 日曜 = 7
+  document.getElementById('today-list').innerHTML = rows.map(tr => {
+    const off = isOff(tr, col), [s, e] = tr.dataset.time.split('-').map(toMin);
+    const tag = off ? T.closed : nowMin < s ? T.later : nowMin < e - 30 ? T.open : nowMin < e ? T.cutoff : T.ended;
+    const who = off ? T.noSession : T.who(tr.cells[col].textContent.trim());
+    return `<li class="${off ? 'off' : tag === T.open ? 'now' : ''}"><b>${tr.dataset.name}</b><span>${time(tr)}<br>${who}</span><em class="tag">${tag}</em></li>`;
+  }).join('');
+  if (col === shown) return; // 日付が変わったときだけ表の強調と曜日リストを描き直す
+  shown = col;
+  table.querySelectorAll('.today').forEach(c => c.classList.remove('today'));
+  table.querySelectorAll('tr').forEach(tr => tr.children[col] && tr.children[col].classList.add('today'));
+  document.getElementById('today-label').textContent = new Intl.DateTimeFormat(document.documentElement.lang, { timeZone: TZ, month: 'numeric', day: 'numeric', weekday: 'short' }).format(new Date());
+  document.getElementById('today-is').textContent = T.todayIs(day(col));
+  list.innerHTML = [1, 2, 3, 4, 5, 6, 7].map(d => {
+    const on = rows.filter(tr => !isOff(tr, d)).map(tr => tr.dataset.name);
+    const li = rows.map(tr => `<li${isOff(tr, d) ? ' class="off"' : ''}><b>${tr.dataset.name}</b><span>${time(tr)}</span><span>${isOff(tr, d) ? T.closed : T.who(tr.cells[d].textContent.trim())}</span></li>`);
+    return `<details${d === col ? ' open' : ''}><summary>${day(d)}${d === col ? `<em>${T.today}</em>` : ''}<small>${on.length ? on.join(T.sep) : T.dayOff}</small></summary><ul>${li.join('')}</ul></details>`;
+  }).join('');
+};
+render(); setInterval(render, 60000);
+
+// ファーストビューの登場（ここだけ）＋メインのボタンが画面から出たら下部バーを表示
+const reveals = document.querySelectorAll('.reveal');
+const bar = document.querySelector('.mobile-bar');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }));
+  reveals.forEach(el => io.observe(el));
+  new IntersectionObserver(([e]) => bar.classList.toggle('show', !e.isIntersecting)).observe(document.querySelector('.hero-cta'));
+} else { reveals.forEach(el => el.classList.add('in')); bar.classList.add('show'); }
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

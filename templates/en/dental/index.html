@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  Note for buyers: healthcare advertising rules
+  Dental marketing is regulated by your state dental board and the FTC. Avoid claims you can't back up
+  ("best dentist", "painless", "guaranteed results"), and only publish patient reviews or before/after photos
+  with written consent and in line with your board's rules. When in doubt, ask your board or a compliance advisor.
+-->
+<title>Aoi Window Dental | Family &amp; General Dentist in Portland, OR</title>
+<meta name="description" content="Aoi Window Dental is a calm, light-filled dental practice in Portland, Oregon. We explain your X-rays, options and costs before any treatment. Checkups, cleanings, fillings, gum care, kids’ dentistry, implants and aligners.">
+<meta property="og:title" content="Aoi Window Dental | Family &amp; General Dentist in Portland, OR">
+<meta property="og:description" content="Light-filled rooms. Clear answers first. See our hours, dentists and directions, or book on WhatsApp.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#24433A">
+<!-- Language versions (SEO): after you publish, replace each href with the full URL, e.g. https://www.yourpractice.com/zh-TW/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=Figtree:wght@400;500&display=swap" rel="stylesheet">
+<!-- Sample content — replace before going live (name, phone, address, hours) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Aoi Window Dental",
+  "telephone": "+1-555-012-3456",
+  "url": "https://example.com/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2140 Alder Street, Suite 100",
+    "addressLocality": "Portland",
+    "addressRegion": "OR",
+    "postalCode": "97205",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "14:30", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "18:30", "closes": "21:30" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   THEME SETTINGS: change colours and fonts for the whole site here
+   ============================================================ */
+:root {
+  --brand: #24433A;          /* Brand colour: pine green (buttons, dark panels, key text) */
+  --brand-ink: #F4F5F1;      /* Text colour on the brand colour (stone white) */
+  --brand-deep: #1A322B;     /* Deeper brand shade (button hover, footer background) */
+  --sage: #E3EAE2;           /* Mist sage: background of alternating sections */
+  --bg: #F4F5F1;             /* Page background: stone white (cool, not cream) */
+  --surface: #FAFBF8;        /* Surface: hero panel, table, menus (a white tinted green) */
+  --text: #17241F;           /* Main text: green-black ink */
+  --muted: #4A5852;          /* Secondary text (passes AA on stone white and sage) */
+  --line: #CDD6CD;           /* 1px rules and borders */
+  --accent: #C9B27C;         /* Pale brass: the only accent, for thin rules and the current-language underline only; never a text colour */
+  --closed: #8A4426;         /* "Closed" text colour (passes AA on light backgrounds) */
+  --leaf: #4F6E5A;           /* Placeholder art: leaves */
+  --wood: #B59A74;           /* Placeholder art: wood furniture, plant pots */
+  --glass: #EEF1E2;          /* Placeholder art: window light */
+  --metal: #BFC4BF;          /* Placeholder art: lamp arm, chair base and other metal */
+  --shadow: 0 16px 40px -24px color-mix(in srgb, var(--text) 30%, transparent); /* The only shadow on the site (dropdown menus) */
+  --radius: 8px;             /* Large radius (images, table frame, dark panels) */
+  --radius-sm: 4px;          /* Small radius (buttons, tags, menu items) */
+  --font-heading: "Newsreader", Georgia, "Times New Roman", serif; /* Heading font (Newsreader: a calm book serif) */
+  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif; /* Body font */
+  --fs-sm: .875rem;          /* Type size: small (tags, notes) */
+  --fs-body: 1.0625rem;         /* Type size: body */
+  --fs-lg: 1.25rem;          /* Type size: small heading */
+  --fs-h3: clamp(1.25rem, 1.8vw, 1.5rem);  /* Type size: h3 */
+  --fs-h2: clamp(1.75rem, 3.2vw, 2.5rem);  /* Type size: h2 */
+  --fs-h1: clamp(2rem, 3.6vw, 3.125rem);   /* Type size: hero heading */
+  --header-h: 72px;          /* Header height */
+  --section-y: clamp(4.5rem, 11vw, 8.5rem); /* Vertical padding of each section */
+  --max: 1200px;             /* Maximum content width */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-padding-top: calc(var(--header-h) + 16px); overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 var(--fs-body)/1.6 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; touch-action: manipulation; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; line-height: 1.2; letter-spacing: -.01em; overflow-wrap: break-word; min-width: 0; text-wrap: balance; font-synthesis: none; }
+p, li, dd, figcaption { text-wrap: pretty; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: var(--radius-sm); }
+.wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+section { padding-block: var(--section-y); }
+.tint { background: var(--sage); }
+h2 { font-size: var(--fs-h2); }
+.lead { color: var(--muted); max-width: 34em; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* Skip link (appears when keyboard users press Tab) */
+.skip { position: fixed; left: 1rem; top: .75rem; z-index: 100; padding: .6rem 1rem; border-radius: var(--radius-sm); background: var(--brand); color: var(--brand-ink); transform: translateY(-200%); }
+.skip:focus { transform: none; }
+.skip:hover { background: var(--brand-deep); }
+.skip:active { opacity: .85; }
+main:focus { outline: none; }
+
+/* ---------- Buttons: solid only for the main action, outline for the rest ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .75rem 1.5rem; border-radius: var(--radius-sm); font-weight: 500; line-height: 1.3; border: 1px solid transparent; transition: background-color .2s, color .2s, border-color .2s, transform .2s; cursor: pointer; font-variant-numeric: tabular-nums; }
+.btn svg { width: 1.1rem; height: 1.1rem; flex: none; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: var(--brand-deep); }
+.btn:active { transform: translateY(1px); }
+a:not(.btn):active { opacity: .7; }
+.btn-ghost { border-color: color-mix(in srgb, var(--brand) 50%, transparent); color: var(--brand); background: transparent; }
+.btn-ghost:hover { border-color: var(--brand); background: color-mix(in srgb, var(--brand) 6%, transparent); }
+.text-link { color: var(--brand); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.text-link:hover { text-decoration-thickness: 2px; }
+
+/* ---------- Header ---------- */
+html:not(.js) .site-header { background: var(--surface); border-bottom-color: var(--line); }
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; border-bottom: 1px solid transparent; transition: background-color .3s, border-color .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 96%, transparent); border-bottom-color: var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: 1rem; }
+.logo { display: flex; align-items: baseline; gap: .6rem; font: 500 1.3125rem/1 var(--font-heading); }
+.logo small { font: 500 .875rem/1 "Newsreader", serif; color: var(--muted); }
+.nav-links { display: flex; align-items: center; gap: 1.6rem; font-size: .9375rem; }
+.nav-links a:not(.btn) { color: var(--muted); transition: color .2s; }
+.nav-links a:not(.btn):hover { color: var(--brand); }
+.nav-links .btn { min-height: 40px; padding: .5rem 1.1rem; }
+.menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); color: var(--text); cursor: pointer; transition: border-color .2s; }
+.menu-btn:hover { border-color: var(--brand); }
+.menu-btn:active { transform: translateY(1px); }
+.menu-btn span { display: block; width: 18px; height: 1.5px; margin: 4px auto; background: currentColor; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+@media (max-width: 760px) {
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: var(--header-h); left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: .75rem 1rem; border-radius: var(--radius-sm); }
+  .js .nav-links .btn { margin-top: .5rem; min-height: 48px; }
+  /* Without JS: the menu shows as a wrapping row of links */
+  html:not(.js) .site-header { position: sticky; top: 0; }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: .75rem; }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: .25rem 1rem; }
+  html:not(.js) .nav-links a:not(.btn) { padding-block: .5rem; }
+  html:not(.js) .hero { padding-top: 0; }
+}
+@media (max-width: 420px) { .logo small { display: none; } }
+
+/* ---------- Placeholder art ----------
+   Every image slot has its own class: to use a photo, change that one class and delete its ::before / ::after.
+   If you switch to img tags, add width / height; give the hero fetchpriority="high" and the rest loading="lazy". */
+.img { position: relative; overflow: hidden; background-color: var(--sage); }
+
+/* Replace with a photo: .img-hero { background: url(images/room.jpg) center/cover; }
+   Suggested ratio 16:9 (cropped to 4:3 on phones): chair centre-right, leave the left side calm for the text panel */
+.img-hero {
+  background:
+    /* Floor-to-ceiling window: vertical mullions and frame */
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 81.79% 0% / 0.6% 67% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 87.93% 0% / 0.6% 67% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 76.11% 0% / 1.2% 68.5% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 93.93% 0% / 1.2% 68.5% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 92.61% 68.02% / 18.8% 1.5% no-repeat,
+    /* Trees and daylight outside */
+    radial-gradient(6% 22% at 80% 50%, color-mix(in srgb, var(--leaf) 50%, var(--sage)) 40%, transparent 100%),
+    radial-gradient(6% 26% at 90% 44%, color-mix(in srgb, var(--leaf) 40%, var(--sage)) 40%, transparent 100%),
+    linear-gradient(180deg, var(--glass), color-mix(in srgb, var(--leaf) 30%, var(--sage)) 75%, color-mix(in srgb, var(--leaf) 45%, var(--sage))) 91.39% 0% / 16.4% 67% no-repeat,
+    /* Low cabinet along the wall */
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 59.87% 46.97% / 38.2% 1% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--metal) 60%, var(--surface)), color-mix(in srgb, var(--metal) 60%, var(--surface))) 59.87% 56.17% / 38.2% 0.3% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 78%, var(--sage)), color-mix(in srgb, var(--surface) 78%, var(--sage))) 59.87% 59.01% / 38.2% 19.5% no-repeat,
+    /* Light falling from the window onto the floor */
+    linear-gradient(112deg, transparent 52%, color-mix(in srgb, var(--glass) 55%, transparent) 62% 74%, transparent 86%) 0 100% / 100% 33% no-repeat,
+    /* Wall and floor */
+    linear-gradient(180deg, color-mix(in srgb, var(--leaf) 52%, var(--sage)) 0 67%, color-mix(in srgb, var(--metal) 45%, var(--bg)) 67%);
+}
+/* Dental chair, overhead light and instrument tray (drawn in front of the window) */
+.img-hero::before { content: ""; position: absolute; left: 46%; top: 12%; width: 44%; height: 74%;
+  background:
+    /* Overhead light: L-shaped arm and lamp head */
+    radial-gradient(4.09% 3.24% at 46.82% 14.32%, color-mix(in srgb, var(--surface) 90%, var(--metal)) 96%, transparent 100%),
+    radial-gradient(5.91% 4.59% at 46.82% 13.51%, color-mix(in srgb, var(--metal) 80%, var(--text)) 96%, transparent 100%),
+    linear-gradient(var(--metal), var(--metal)) 32.56% 6.87% / 21.82% 1.62% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 46.3% 7.04% / 1.82% 4.05% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 25.93% 31.25% / 1.82% 78.38% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--metal) 80%, var(--text)), color-mix(in srgb, var(--metal) 80%, var(--text))) 22.67% 86.21% / 14.77% 2.03% no-repeat,
+    /* Instrument tray and hoses */
+    linear-gradient(color-mix(in srgb, var(--metal) 80%, var(--text)), color-mix(in srgb, var(--metal) 80%, var(--text))) 13.23% 49.24% / 14.09% 2.57% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 12.81% 58.99% / 0.68% 14.32% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 16.48% 60.91% / 0.68% 17.03% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 20.14% 58.99% / 0.68% 14.32% no-repeat,
+    /* Dental chair: headrest, backrest, armrest, seat, leg rest */
+    radial-gradient(4.32% 5.68% at 35% 25.68%, var(--brand) 96%, transparent 100%),
+    linear-gradient(to bottom left, transparent 38%, var(--brand) 38% 62%, transparent 62%) 39.01% 49.43% / 17.27% 41.22% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 54.05% 59.67% / 15.91% 1.49% no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 63.33% 69.34% / 31.82% 7.43% no-repeat,
+    linear-gradient(to bottom left, transparent 36%, color-mix(in srgb, var(--brand) 86%, var(--sage)) 36% 64%, transparent 64%) 86.3% 72.73% / 17.05% 10.81% no-repeat,
+    /* Base and shadow on the floor */
+    linear-gradient(var(--metal), var(--metal)) 56.79% 89.08% / 7.95% 19.59% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--metal) 80%, var(--text)), color-mix(in srgb, var(--metal) 80%, var(--text))) 66.67% 93.75% / 45.45% 2.7% no-repeat,
+    radial-gradient(31.82% 2.97% at 56.82% 95.27%, color-mix(in srgb, var(--text) 16%, transparent) 0%, transparent 100%);
+}
+/* Large houseplant at the far right: leaves and a white pot */
+.img-hero::after { content: ""; position: absolute; left: 88%; top: 22%; width: 12%; height: 64%;
+  background:
+    linear-gradient(color-mix(in srgb, var(--surface) 80%, var(--metal)), color-mix(in srgb, var(--surface) 80%, var(--metal))) 74.07% 100% / 55% 23.44% no-repeat,
+    radial-gradient(25% 7.81% at 37.5% 56.25%, color-mix(in srgb, var(--leaf) 80%, var(--text)) 96%, transparent 100%),
+    radial-gradient(26.67% 8.59% at 70.83% 46.88%, var(--leaf) 96%, transparent 100%),
+    radial-gradient(25% 7.81% at 45.83% 28.12%, color-mix(in srgb, var(--leaf) 85%, var(--sage)) 96%, transparent 100%),
+    radial-gradient(23.33% 7.81% at 83.33% 18.75%, color-mix(in srgb, var(--leaf) 75%, var(--text)) 96%, transparent 100%),
+    radial-gradient(21.67% 7.03% at 25% 12.5%, var(--leaf) 96%, transparent 100%),
+    radial-gradient(21.67% 6.25% at 75% 68.75%, color-mix(in srgb, var(--leaf) 85%, var(--sage)) 96%, transparent 100%),
+    linear-gradient(color-mix(in srgb, var(--leaf) 70%, var(--text)), color-mix(in srgb, var(--leaf) 70%, var(--text))) 58.62% 36.36% / 3.33% 65.62% no-repeat;
+}
+
+/* Replace with a photo: .img-doc1 { background: url(images/doctor-1.jpg) center/cover; } (same for .img-doc2 and .img-doc3)
+   Suggested ratio 4:5 waist-up portrait, centred, with some room above the head (the top is cut into an arch) */
+.img-doc { aspect-ratio: 4 / 5; border-radius: 50% 50% var(--radius) var(--radius) / 40% 40% var(--radius) var(--radius); --hx: 50%; --hy: 37%; --hair: color-mix(in srgb, var(--text) 55%, var(--sage)); }
+/* Head and neck: soft ovals one step darker than the background (no facial features); position set by --hx and --hy */
+.img-doc::before { content: ""; position: absolute; left: calc(var(--hx) - 17%); top: calc(var(--hy) - 16%); width: 34%; height: 40%; filter: blur(3px);
+  background:
+    radial-gradient(50% 19% at 50% 18%, var(--hair) 72%, transparent 100%),
+    radial-gradient(44% 29% at 50% 33%, color-mix(in srgb, var(--wood) 45%, var(--sage)) 80%, transparent 100%),
+    linear-gradient(color-mix(in srgb, var(--wood) 50%, var(--sage)), color-mix(in srgb, var(--wood) 50%, var(--sage))) 50% 100% / 32% 42% no-repeat; }
+/* White coat: sloped shoulders and a V-neck showing pine-green scrubs */
+.img-doc::after { content: ""; position: absolute; left: 4%; right: 4%; top: 60%; bottom: 0; filter: blur(1px);
+  clip-path: polygon(26% 0, 74% 0, 95% 20%, 100% 100%, 0 100%, 5% 20%);
+  background:
+    conic-gradient(from -22deg at 50% 100%, color-mix(in srgb, var(--brand) 82%, var(--sage)) 0 44deg, transparent 44deg) 0 0 / 100% 36% no-repeat,
+    conic-gradient(from -30deg at 50% 100%, color-mix(in srgb, var(--metal) 75%, var(--surface)) 0 60deg, transparent 60deg) 0 0 / 100% 62% no-repeat,
+    linear-gradient(90deg, color-mix(in srgb, var(--surface) 82%, var(--sage)), var(--surface) 28% 72%, color-mix(in srgb, var(--surface) 82%, var(--sage))); }
+.img-doc1 { background: radial-gradient(70% 50% at 24% 18%, color-mix(in srgb, var(--glass) 90%, transparent), transparent 100%), linear-gradient(180deg, var(--sage), color-mix(in srgb, var(--leaf) 34%, var(--sage))); }
+.img-doc2 { --hx: 47%; --hy: 39%; --hair: color-mix(in srgb, var(--wood) 45%, var(--text)); background: radial-gradient(70% 50% at 80% 16%, color-mix(in srgb, var(--glass) 90%, transparent), transparent 100%), linear-gradient(180deg, color-mix(in srgb, var(--sage) 70%, var(--surface)), color-mix(in srgb, var(--leaf) 26%, var(--sage))); }
+.img-doc3 { --hx: 53%; --hy: 36%; --hair: color-mix(in srgb, var(--text) 70%, var(--sage)); background: radial-gradient(80% 44% at 50% 8%, color-mix(in srgb, var(--glass) 85%, transparent), transparent 100%), linear-gradient(180deg, color-mix(in srgb, var(--leaf) 18%, var(--sage)), color-mix(in srgb, var(--leaf) 46%, var(--sage))); }
+
+/* Replace with a photo: .img-space1 { background: url(images/waiting.jpg) center/cover; } (same for .img-space2)
+   Suggested ratio 3:2 landscape photo */
+.img-space { aspect-ratio: 3 / 2; border-radius: var(--radius); }
+/* Waiting area: tall window, oak bench, plant, light on the floor */
+.img-space1 { background:
+    linear-gradient(var(--wood), var(--wood)) 62% 66% / 52% 6% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 70%, var(--text)), color-mix(in srgb, var(--wood) 70%, var(--text))) 41% 79% / 1.6% 13% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 70%, var(--text)), color-mix(in srgb, var(--wood) 70%, var(--text))) 83% 79% / 1.6% 13% no-repeat,
+    linear-gradient(100deg, transparent 20%, color-mix(in srgb, var(--glass) 30%, transparent) 30% 50%, transparent 62%) 0 100% / 100% 26% no-repeat,
+    linear-gradient(180deg, color-mix(in srgb, var(--brand) 22%, var(--sage)) 0 74%, color-mix(in srgb, var(--wood) 46%, var(--sage)) 74%); }
+.img-space1::before { content: ""; position: absolute; left: 8%; top: 10%; width: 22%; height: 58%; border: clamp(4px, .6vw, 8px) solid color-mix(in srgb, var(--surface) 88%, var(--brand)); border-radius: var(--radius-sm);
+  background: linear-gradient(180deg, transparent 50%, color-mix(in srgb, var(--surface) 88%, var(--brand)) 0 calc(50% + 5px), transparent 0), radial-gradient(60% 40% at 50% 100%, color-mix(in srgb, var(--leaf) 50%, var(--sage)), transparent 100%), linear-gradient(180deg, var(--glass), color-mix(in srgb, var(--leaf) 20%, var(--sage))); }
+.img-space1::after { content: ""; position: absolute; right: 5%; bottom: 14%; width: 9%; height: 44%;
+  background: linear-gradient(var(--wood), var(--wood)) 50% 100% / 60% 22% no-repeat, radial-gradient(30% 44% at 40% 46%, var(--leaf) 96%, transparent 100%), radial-gradient(30% 36% at 66% 56%, color-mix(in srgb, var(--leaf) 80%, var(--text)) 96%, transparent 100%); }
+/* Consultation room: table, tablet with a dental image, two chairs */
+.img-space2 { background:
+    linear-gradient(var(--wood), var(--wood)) 50% 62% / 56% 4% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 70%, var(--text)), color-mix(in srgb, var(--wood) 70%, var(--text))) 50% 84% / 1.6% 22% no-repeat,
+    radial-gradient(34% 30% at 50% 30%, color-mix(in srgb, var(--glass) 60%, transparent), transparent 100%),
+    linear-gradient(180deg, color-mix(in srgb, var(--brand) 18%, var(--sage)) 0 76%, color-mix(in srgb, var(--brand) 40%, var(--sage)) 76%); }
+/* Tablet: two rows of pale teeth on a dark screen */
+.img-space2::before { content: ""; position: absolute; left: 41%; top: 44%; width: 18%; height: 14%; border-radius: var(--radius-sm); border: 3px solid color-mix(in srgb, var(--text) 80%, var(--brand));
+  background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--glass) 70%, transparent) 0 28%, transparent 34%) 0 30% / 16% 40% repeat-x, radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--glass) 50%, transparent) 0 28%, transparent 34%) 0 78% / 16% 40% repeat-x, var(--brand-deep); transform: perspective(300px) rotateX(28deg); }
+/* Two chairs (one each side: back, seat, leg) */
+.img-space2::after { content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(var(--brand), var(--brand)) 14% 59% / 4% 30% no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 15.4% 70% / 13% 5% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--brand) 80%, var(--text)), color-mix(in srgb, var(--brand) 80%, var(--text))) 19.5% 85% / 1.2% 16% no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 86% 59% / 4% 30% no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 84.6% 70% / 13% 5% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--brand) 80%, var(--text)), color-mix(in srgb, var(--brand) 80%, var(--text))) 80.5% 85% / 1.2% 16% no-repeat; }
+
+/* ---------- Hero: full-width treatment room image with a panel at the lower left ---------- */
+.hero { position: relative; padding: var(--header-h) 0 0; }
+.img-hero { width: 100%; aspect-ratio: 16 / 9; max-height: calc(100vh - var(--header-h)); min-height: 540px; }
+.hero-inner { position: absolute; inset: auto 0 clamp(2rem, 6vh, 4rem); }
+.hero-panel { width: min(100%, 35rem); padding: clamp(2rem, 3.4vw, 3rem); background: var(--surface); border-radius: var(--radius); }
+.hero h1 { font-size: var(--fs-h1); line-height: 1.25; padding-bottom: 1.25rem; border-bottom: 1px solid var(--accent); }
+.hero-sub { color: var(--muted); margin-top: 1.25rem; max-width: 30em; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+@media (max-width: 760px) {
+  .img-hero { aspect-ratio: 4 / 3; min-height: 0; max-height: 46vh; }
+  .hero-inner { position: static; margin-top: -2.5rem; padding-bottom: .5rem; }
+  .wrap.hero-inner { width: min(100% - 2rem, var(--max)); }
+  .hero-panel { position: relative; padding: 1.75rem 1.5rem; }
+  .hero-cta { display: grid; grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ---------- First visit: three steps ---------- */
+.first-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.6fr); gap: clamp(2.5rem, 6vw, 6rem); align-items: start; }
+.first-grid h2 + p { margin-top: 1rem; }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 3rem); counter-reset: step; }
+.step { border-top: 1px solid var(--line); padding-top: 1.5rem; }
+.step-no { display: block; font: 500 2.5rem/1 var(--font-heading); color: var(--brand); font-variant-numeric: tabular-nums; margin-bottom: 1.25rem; }
+.step h3 { font-size: var(--fs-lg); }
+.step p { color: var(--muted); margin-top: .5rem; font-size: .9375rem; }
+@media (max-width: 960px) { .first-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 640px) {
+  .steps { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .step { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); column-gap: 1rem; padding-block: 1.25rem; }
+  .step-no { grid-row: span 2; font-size: 2rem; margin: 0; }
+  .step p { margin-top: .25rem; }
+}
+
+/* ---------- Treatments: one-column list with thin rules ---------- */
+.split-head, .svc { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) 8.5rem; column-gap: clamp(2rem, 6vw, 6rem); }
+.split-head { row-gap: 1rem; align-items: end; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.split-head .lead { grid-column: 2 / -1; }
+.svc-list { border-top: 1px solid color-mix(in srgb, var(--brand) 30%, transparent); }
+.svc { row-gap: .25rem; align-items: baseline; padding-block: 1.6rem; border-bottom: 1px solid color-mix(in srgb, var(--brand) 18%, transparent); }
+.svc h3 { font-size: var(--fs-h3); }
+.svc p { color: var(--muted); max-width: 34em; }
+.svc-pay { font-size: var(--fs-sm); color: var(--brand); text-align: right; }
+.svc-note { margin-top: 1.5rem; font-size: var(--fs-sm); color: var(--muted); }
+@media (max-width: 760px) {
+  .split-head { grid-template-columns: minmax(0, 1fr); }
+  .split-head .lead { grid-column: auto; }
+  .svc { grid-template-columns: minmax(0, 1fr) auto; padding-block: 1.1rem; }
+  .svc p { grid-column: 1 / -1; grid-row: 2; font-size: .9375rem; }
+  .svc-pay { grid-column: 2; grid-row: 1; }
+}
+
+/* ---------- Dentists: arched portrait frames ---------- */
+.doc-head { max-width: 36em; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.doc-head p { margin-top: 1rem; }
+.doc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 4rem); }
+.doc-body { padding-top: 1.5rem; }
+.doc h3 { font-size: var(--fs-h3); }
+.doc-role { font-size: var(--fs-sm); color: var(--muted); }
+.doc dl { margin-top: 1rem; font-size: .9375rem; }
+.doc dl > div { display: grid; grid-template-columns: 4.5em minmax(0, 1fr); gap: 1rem; padding-block: .6rem; border-top: 1px solid var(--line); }
+.doc dt { color: var(--muted); }
+.doc dd span { display: block; }
+@media (max-width: 860px) {
+  .doc-grid { grid-template-columns: minmax(0, 1fr); gap: 2.25rem; }
+  .doc { display: grid; grid-template-columns: minmax(0, 7.5rem) minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+  .doc-body { padding-top: 0; }
+  .doc dl > div { grid-template-columns: minmax(0, 1fr); gap: 0; padding-block: .45rem; }
+}
+
+/* ---------- The clinic: two landscape photos ---------- */
+.space-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.25rem, 3vw, 2.5rem); margin-top: clamp(2.5rem, 5vw, 4rem); }
+.space-grid figcaption { margin-top: 1rem; color: var(--muted); font-size: .9375rem; max-width: 30em; }
+.space-grid figcaption b { color: var(--text); font-weight: 500; margin-inline-end: .5em; }
+@media (max-width: 760px) { .space-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Hours: weekly table and today's board ---------- */
+.sched-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .5rem 2rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.today-is { font: 500 var(--fs-lg)/1.4 var(--font-heading); color: var(--brand); }
+.sched-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: clamp(1.5rem, 3vw, 2.5rem); align-items: start; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.schedule { width: 100%; min-width: 640px; border-collapse: separate; border-spacing: 0; text-align: center; font-variant-numeric: tabular-nums; }
+.schedule th, .schedule td { padding: 1.1rem .5rem; border-bottom: 1px solid var(--line); }
+.schedule thead th { font: 500 .9375rem var(--font-body); color: var(--muted); }
+.schedule tbody th { text-align: left; padding-left: 1.25rem; white-space: nowrap; font-weight: 500; }
+.schedule tbody th small { display: block; font-size: var(--fs-sm); font-weight: 400; color: var(--muted); }
+.schedule tr > :first-child { position: sticky; left: 0; background: var(--surface); }
+.schedule tbody tr:last-child > * { border-bottom: 0; }
+.schedule .off { color: var(--closed); font-size: .9375rem; }
+.schedule .today { background: color-mix(in srgb, var(--brand) 7%, var(--surface)); font-weight: 500; }
+.schedule thead .today { background: var(--brand); color: var(--brand-ink); }
+.schedule thead .today::after { content: "Today"; display: block; font-size: .8125rem; font-weight: 400; }
+.table-note { margin-top: 1.25rem; font-size: var(--fs-sm); color: var(--muted); }
+.scroll-hint { display: none; font-size: var(--fs-sm); color: var(--muted); margin-bottom: .5rem; }
+/* Today's board (dark, like the board at a clinic front desk) */
+.today-card { background: var(--brand); color: var(--brand-ink); border-radius: var(--radius); padding: 1.5rem 1.5rem 1rem; }
+.today-card h3 { font-size: var(--fs-lg); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .25rem 1rem; padding-bottom: .9rem; border-bottom: 1px solid color-mix(in srgb, var(--brand-ink) 22%, transparent); }
+.today-card h3 small { font: 400 var(--fs-sm) var(--font-body); color: color-mix(in srgb, var(--brand-ink) 82%, var(--brand)); }
+.today-card li { display: grid; grid-template-columns: 3.5em minmax(0, 1fr) auto; gap: .75rem; align-items: center; padding-block: .85rem; font-size: .9375rem; font-variant-numeric: tabular-nums; }
+.today-card li + li { border-top: 1px solid color-mix(in srgb, var(--brand-ink) 14%, transparent); }
+.today-card li b { font-weight: 500; }
+.today-card li span { color: color-mix(in srgb, var(--brand-ink) 82%, var(--brand)); line-height: 1.5; font-size: var(--fs-sm); }
+.today-card .tag { font-style: normal; white-space: nowrap; font-size: .8125rem; padding: .15rem .55rem; border-radius: var(--radius-sm); border: 1px solid color-mix(in srgb, var(--brand-ink) 40%, transparent); }
+.today-card li.now .tag { background: var(--brand-ink); color: var(--brand); border-color: var(--brand-ink); }
+.today-card li.off b { color: color-mix(in srgb, var(--brand-ink) 82%, var(--brand)); font-weight: 400; }
+/* Phones: a list grouped by day (built by JS from the same table; without JS the table stays) */
+.sched-list { display: none; border-top: 1px solid var(--line); }
+.sched-list details { border-bottom: 1px solid var(--line); }
+.sched-list summary { display: flex; align-items: center; gap: .75rem; min-height: 52px; padding: .5rem .25rem; cursor: pointer; list-style: none; font-weight: 500; }
+.sched-list summary::-webkit-details-marker { display: none; }
+.sched-list summary::after { content: ""; flex: none; width: .45em; height: .45em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.sched-list details[open] summary::after { transform: translateY(1px) rotate(-135deg); }
+.sched-list summary:hover { color: var(--brand); }
+.sched-list summary em { font-style: normal; font-size: .8125rem; font-weight: 400; padding: .1rem .5rem; border-radius: var(--radius-sm); background: var(--brand); color: var(--brand-ink); }
+.sched-list summary small { margin-inline-start: auto; color: var(--muted); font-size: var(--fs-sm); font-weight: 400; text-align: end; }
+.sched-list ul { padding: 0 .25rem 1rem; }
+.sched-list li { display: grid; grid-template-columns: 3.5em minmax(0, 1fr) auto; gap: .75rem; padding-block: .35rem; font-size: .9375rem; font-variant-numeric: tabular-nums; }
+.sched-list li span { color: var(--muted); }
+.sched-list li.off, .sched-list li.off span { color: var(--closed); }
+@media (max-width: 960px) { .sched-grid { grid-template-columns: minmax(0, 1fr); } .today-card { order: -1; } }
+@media (max-width: 760px) {
+  html:not(.js) .scroll-hint { display: block; }
+  .js .table-scroll { display: none; }
+  .js .sched-list { display: block; }
+}
+
+/* ---------- Getting here and booking (opens with the address in large type) ---------- */
+.access-addr { font: 500 var(--fs-h2)/1.35 var(--font-heading); max-width: 22em; text-wrap: balance; word-break: keep-all; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.access-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.access-info > div { display: grid; grid-template-columns: 5em minmax(0, 1fr); gap: 1rem; padding-block: 1.1rem; border-top: 1px solid color-mix(in srgb, var(--brand) 18%, transparent); }
+.access-info > div:last-child { border-bottom: 1px solid color-mix(in srgb, var(--brand) 18%, transparent); }
+.access-info h3 { font: 500 var(--fs-body)/1.8 var(--font-body); color: var(--brand); }
+.access-info p { color: var(--muted); }
+.access-cta { display: grid; gap: 1rem; }
+.access-cta h3 { font-size: var(--fs-h3); }
+.access-cta p { color: var(--muted); }
+.access-cta .row { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: .25rem; }
+@media (max-width: 860px) { .access-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 400px) { .access-info > div { grid-template-columns: minmax(0, 1fr); gap: .1rem; } }
+/* Phones: the sticky bar already has the solid booking button, so this one becomes an outline */
+@media (max-width: 760px) { .access-cta .btn-primary { background: transparent; color: var(--brand); border-color: color-mix(in srgb, var(--brand) 50%, transparent); } .access-cta .btn-primary:hover { background: color-mix(in srgb, var(--brand) 6%, transparent); } }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--brand-deep); color: color-mix(in srgb, var(--brand-ink) 84%, var(--brand-deep)); padding-block: 4rem 2rem; font-size: .9375rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; }
+.site-footer .logo { color: var(--brand-ink); margin-bottom: 1rem; }
+.site-footer .logo small { color: inherit; }
+.site-footer h2 { color: var(--brand-ink); font-size: var(--fs-body); margin-bottom: .6rem; }
+.site-footer a:hover { color: var(--brand-ink); text-decoration: underline; text-underline-offset: 3px; }
+.site-footer :focus-visible { outline-color: var(--brand-ink); }
+.social { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: .8rem; }
+.social a { text-decoration: underline; text-underline-offset: 3px; }
+.foot-bottom { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid color-mix(in srgb, var(--brand-ink) 16%, transparent); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: var(--fs-sm); }
+.foot-hours-short { display: none; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; } .foot-links, .foot-hours { display: none; } .foot-hours-short { display: block; } }
+
+/* ---------- Sticky mobile buttons ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 760px) {
+  .mobile-bar { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: .6rem; position: fixed; inset: auto 0 0; z-index: 60; padding: .65rem 1rem calc(.65rem + env(safe-area-inset-bottom)); background: var(--surface); border-top: 1px solid var(--line); }
+  .mobile-bar .btn { padding: .6rem 1rem; }
+  /* Hidden while the hero buttons are on screen; always shown without JS */
+  .js .mobile-bar { transform: translateY(110%); transition: transform .3s ease; }
+  .js .mobile-bar.show { transform: none; }
+  body { padding-bottom: 76px; }
+}
+
+/* ---------- Hero entrance (the only animation on the page) ---------- */
+.js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== Language switcher (lang-switch) ==================== */
+.nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
+.lang-switch { display: flex; align-items: center; gap: .1rem; flex: none; margin-inline-start: .5rem; padding-inline-start: .6rem; border-inline-start: 1px solid var(--line); font: 400 .8125rem/1 var(--font-body); letter-spacing: normal; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; border-radius: var(--radius-sm); color: var(--muted); text-decoration: none; text-underline-offset: 5px; text-decoration-thickness: 1.5px; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 500; text-decoration-line: underline; text-decoration-color: var(--accent); }
+@media (max-width: 760px) {
+  .nav > .lang-switch { order: 1; margin-inline: 0; padding-inline-start: 0; border: 0; }
+  .nav > .menu-btn { order: 2; }
+  .nav > .nav-links { order: 3; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .nav > .nav-links { gap: .9rem; font-size: .875rem; }
+  .nav > .nav-links .btn { padding-inline: .9rem; }
+  .nav > .lang-switch { margin-inline-start: 0; padding-inline-start: .3rem; }
+  .logo small { display: none; }
+}
+@media (min-width: 761px) and (max-width: 900px) { .nav > .nav-links { gap: .6rem; font-size: .8125rem; } }
+@media (max-width: 400px) { .nav { gap: .5rem; } }
+/* Footer language links */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; font-size: var(--fs-sm); }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius-sm); }
+.foot-lang a:hover { text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand-ink); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { font-weight: 500; text-decoration: underline; text-decoration-color: var(--accent); }
+
+/* English: longer session names and coverage labels need wider columns */
+.today-card li, .sched-list li { grid-template-columns: 5.5em minmax(0, 1fr) auto; }
+.split-head, .svc { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) 9.5rem; }
+.hero h1 { line-height: 1.15; }
+@media (max-width: 760px) { .split-head { grid-template-columns: minmax(0, 1fr); } .svc { grid-template-columns: minmax(0, 1fr) auto; } }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: var(--radius-sm); color: inherit; font-weight: 500; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- ==================== Section: Header ==================== -->
+<!-- Sample content — replace before going live (the practice name is fictional) -->
+<!-- Booking buttons use WhatsApp (https://wa.me/15550123456). You can swap in LINE (https://line.me/R/ti/p/@yourlineid), Messenger (https://m.me/yourpage), Instagram (https://ig.me/m/yourhandle) or your online booking page. -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Aoi Window Dental, back to top" translate="no">Aoi Window Dental</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="Main menu">
+      <a href="#first">First visit</a>
+      <a href="#services">Treatments</a>
+      <a href="#doctors">Dentists</a>
+      <a href="#space">The clinic</a>
+      <a href="#hours">Hours</a>
+      <a href="#access">Directions</a>
+      <a href="https://wa.me/15550123456" class="btn btn-ghost" target="_blank" rel="noopener">Book a visit</a>
+    </nav>
+    <!-- lang-switch: language switcher. To add a language, add a link here and a matching folder -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="en">EN</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en" aria-current="page">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero" id="home">
+  <div class="img img-hero" role="img" aria-label="Illustration of a treatment room: a large window, soft daylight, a pine-green dental chair and a houseplant"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-panel reveal">
+      <h1>Light-filled rooms. Clear answers first.</h1>
+      <p class="hero-sub">A neighborhood practice in Portland. Before any treatment, your dentist walks you through your X-rays, your options and the cost, and you decide.</p>
+      <div class="hero-cta">
+        <a href="https://wa.me/15550123456" class="btn btn-primary" target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a href="tel:+15550123456" class="btn btn-ghost">Call (555) 012-3456</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: First visit ==================== -->
+<section id="first">
+  <div class="wrap first-grid">
+    <div>
+      <h2>Your first visit</h2>
+      <p class="lead">Three steps, and you can pause to ask questions at any of them.</p>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <span class="step-no" aria-hidden="true">1</span>
+        <h3>Pick a time</h3>
+        <p>Book on WhatsApp or by phone and tell us what’s bothering you. Bring your insurance card and a photo ID.</p>
+      </li>
+      <li class="step">
+        <span class="step-no" aria-hidden="true">2</span>
+        <h3>Exam and explanation</h3>
+        <p>We take only the X-rays we need, then your dentist goes through them with you, along with the options you have.</p>
+      </li>
+      <li class="step">
+        <span class="step-no" aria-hidden="true">3</span>
+        <h3>Treatment when you’re ready</h3>
+        <p>You get the cost and number of visits up front. Start when you’re ready; an exam-only visit is fine too.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== Section: Treatments ==================== -->
+<section class="tint" id="services">
+  <div class="wrap">
+    <div class="split-head">
+      <h2>Treatments</h2>
+      <p class="lead">We check your coverage before we start. If something isn’t covered, we explain why and what it costs, and you decide.</p>
+    </div>
+    <ul class="svc-list">
+      <li class="svc"><h3>Checkups and cleanings</h3><p>Regular exams and cleanings, with a quick look at anything worth keeping an eye on.</p><span class="svc-pay">Usually covered</span></li>
+      <li class="svc"><h3>Fillings and root canals</h3><p>Fillings for cavities, and root canal treatment when the nerve is inflamed, to keep your own tooth.</p><span class="svc-pay">Partly covered</span></li>
+      <li class="svc"><h3>Gum care</h3><p>Bleeding gums or loose teeth? A periodontal exam and treatment, with regular follow-ups.</p><span class="svc-pay">Usually covered</span></li>
+      <li class="svc"><h3>Kids’ dentistry</h3><p>Checkups, fluoride and sealants. Kids get to know the room before any treatment begins.</p><span class="svc-pay">Usually covered</span></li>
+      <li class="svc"><h3>Implants and dentures</h3><p>Imaging to check bone and overall health, then a clear plan for steps, timing and aftercare.</p><span class="svc-pay">Self-pay</span></li>
+      <li class="svc"><h3>Braces and aligners</h3><p>Consultations for traditional braces and clear aligners, based on how your teeth line up.</p><span class="svc-pay">Self-pay</span></li>
+    </ul>
+    <p class="svc-note">Coverage depends on your plan. We’ll confirm it with you at your visit.</p>
+  </div>
+</section>
+
+<!-- ==================== Section: Dentists ==================== -->
+<!-- Sample content — replace before going live (names, credentials and photos are fictional). Keep "Hours" in line with the schedule below -->
+<section id="doctors">
+  <div class="wrap">
+    <div class="doc-head">
+      <h2>Our dentists</h2>
+      <p class="lead">Three dentists share the schedule. Want the same dentist every time? Check their hours below when you book.</p>
+    </div>
+    <div class="doc-grid">
+      <article class="doc">
+        <div class="img img-doc img-doc1" role="img" aria-label="Photo slot for Dr. Daniel Hsu"></div>
+        <div class="doc-body">
+          <h3>Dr. Daniel Hsu, DDS</h3>
+          <p class="doc-role">Founder</p>
+          <dl>
+            <div><dt>Focus</dt><dd>Implants, restorations, root canals</dd></div>
+            <div><dt>Hours</dt><dd><span>Mon, Wed, Fri mornings</span><span>Tue, Thu afternoons</span></dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="doc">
+        <div class="img img-doc img-doc2" role="img" aria-label="Photo slot for Dr. Ellen Chen"></div>
+        <div class="doc-body">
+          <h3>Dr. Ellen Chen, DMD</h3>
+          <p class="doc-role">Associate dentist</p>
+          <dl>
+            <div><dt>Focus</dt><dd>Kids’ dentistry, aligners, prevention</dd></div>
+            <div><dt>Hours</dt><dd><span>Tue, Sat mornings</span><span>Wed afternoons</span><span>Mon, Thu evenings</span></dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="doc">
+        <div class="img img-doc img-doc3" role="img" aria-label="Photo slot for Dr. Marcus Huang"></div>
+        <div class="doc-body">
+          <h3>Dr. Marcus Huang, DDS</h3>
+          <p class="doc-role">Associate dentist</p>
+          <dl>
+            <div><dt>Focus</dt><dd>Gum treatment, general dentistry</dd></div>
+            <div><dt>Hours</dt><dd><span>Thu mornings</span><span>Mon, Fri afternoons</span><span>Tue, Wed evenings</span></dd></div>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: The clinic ==================== -->
+<section class="tint" id="space">
+  <div class="wrap">
+    <h2>Inside the clinic</h2>
+    <p class="lead">Waiting and consultations happen on the window side. We talk things through in a separate room, away from the dental chair.</p>
+    <div class="space-grid">
+      <figure>
+        <div class="img img-space img-space1" role="img" aria-label="Illustration of the waiting area: an oak bench by the window and a plant"></div>
+        <figcaption><b>Waiting area</b>An oak bench by the window, with a view of the trees outside.</figcaption>
+      </figure>
+      <figure>
+        <div class="img img-space img-space2" role="img" aria-label="Illustration of the consultation room: a tablet showing a dental X-ray on a table, with two chairs"></div>
+        <figcaption><b>Consultation room</b>Sit down, look at your X-rays, talk about cost, and decide once your questions are answered.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Hours ==================== -->
+<!-- How to edit: change a dentist's name or "Closed" in the table; today's board and the phone list update automatically.
+     data-time="start-end" (24-hour) on each row decides "Open now" (the last 30 minutes show "Check-in closed"); the <small> text is what visitors see. Change both together. -->
+<!-- Sample content — replace before going live -->
+<section id="hours">
+  <div class="wrap">
+    <div class="sched-head">
+      <h2>Office hours</h2>
+      <p class="today-is" id="today-is">Open Monday to Saturday, closed Sunday</p>
+    </div>
+    <div class="sched-grid">
+      <div>
+        <p class="scroll-hint">Swipe sideways to see the full week</p>
+        <div class="table-scroll">
+          <table class="schedule" id="schedule-table">
+            <thead>
+              <tr><th scope="col">Session</th><th scope="col">Mon</th><th scope="col">Tue</th><th scope="col">Wed</th><th scope="col">Thu</th><th scope="col">Fri</th><th scope="col">Sat</th><th scope="col">Sun</th></tr>
+            </thead>
+            <tbody>
+              <tr data-name="Morning" data-time="09:00-12:00"><th scope="row">Morning<small>9 am–12 pm</small></th><td>Hsu</td><td>Chen</td><td>Hsu</td><td>Huang</td><td>Hsu</td><td>Chen</td><td class="off">Closed</td></tr>
+              <tr data-name="Afternoon" data-time="14:30-18:00"><th scope="row">Afternoon<small>2:30–6 pm</small></th><td>Huang</td><td>Hsu</td><td>Chen</td><td>Hsu</td><td>Huang</td><td class="off">Closed</td><td class="off">Closed</td></tr>
+              <tr data-name="Evening" data-time="18:30-21:30"><th scope="row">Evening<small>6:30–9:30 pm</small></th><td>Chen</td><td>Huang</td><td>Huang</td><td>Chen</td><td class="off">Closed</td><td class="off">Closed</td><td class="off">Closed</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Last check-in is 30 minutes before each session ends. Holiday hours and dentist changes are posted at the front desk.</p>
+      </div>
+      <!-- Today's board: built by JS from the table on the left. Edit the table, not this -->
+      <aside class="today-card">
+        <h3>Today <small id="today-label">See the weekly schedule</small></h3>
+        <ul id="today-list"><li><b>Hours</b><span>See the weekly schedule</span></li></ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Directions and booking ==================== -->
+<!-- Sample content — replace before going live (the address is fictional) -->
+<section class="tint" id="access">
+  <div class="wrap">
+    <h2 class="sr-only">Directions and booking</h2>
+    <p class="access-addr">2140 Alder Street, Suite 100<br>Portland, OR 97205</p>
+    <div class="access-grid">
+      <div class="access-info">
+        <div><h3>Transit</h3><p>Buses 15 and 20 stop at Alder &amp; 21st, a two-minute walk away.</p></div>
+        <div><h3>Parking</h3><p>Free patient parking behind the building, plus street parking on Alder Street.</p></div>
+        <div><h3>Access</h3><p>Step-free entrance on the ground floor. Wheelchairs and strollers come straight in.</p></div>
+      </div>
+      <div class="access-cta">
+        <h3>Book or ask a question</h3>
+        <p>Call (555) 012-3456 during office hours, or send us a WhatsApp message any time.</p>
+        <div class="row">
+          <a href="https://wa.me/15550123456" class="btn btn-primary" target="_blank" rel="noopener">Book on WhatsApp</a>
+          <a href="https://maps.google.com/?q=2140+Alder+Street,+Portland,+OR+97205" class="btn btn-ghost" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<!-- Sample content — replace before going live (name, address and phone are fictional) -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" translate="no">Aoi Window Dental</div>
+        <p>2140 Alder Street, Suite 100, Portland, OR 97205<br>Phone: <a href="tel:+15550123456">(555) 012-3456</a></p>
+        <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="https://wa.me/15550123456" target="_blank" rel="noopener">WhatsApp</a></div>
+      </div>
+      <div>
+        <h2>Office hours</h2>
+        <p class="foot-hours-short">Monday to Saturday, closed Sunday</p>
+        <p class="foot-hours">Mon–Sat mornings 9 am–12 pm<br>Mon–Fri afternoons 2:30–6 pm<br>Mon–Thu evenings 6:30–9:30 pm<br>Closed Sunday</p>
+      </div>
+      <div class="foot-links">
+        <h2>Quick links</h2>
+        <p><a href="#first">Your first visit</a><br><a href="#services">Treatments</a><br><a href="#hours">Office hours</a><br><a href="#access">Directions and booking</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y">2026</span> <span translate="no">Aoi Window Dental</span></span>
+      <span>Information on this site is general. Your dentist will advise on your own care.</span>
+    </div>
+    <!-- Footer language links: same set as the header lang-switch -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja">日本語</a></p>
+  </div>
+</footer>
+
+<!-- ==================== Section: Sticky mobile buttons ==================== -->
+<div class="mobile-bar">
+  <a href="tel:+15550123456" class="btn btn-ghost">Call</a>
+  <a href="https://wa.me/15550123456" class="btn btn-primary" target="_blank" rel="noopener">Book on WhatsApp</a>
+</div>
+
+<script>
+// Interface text (when translating, change only this)
+const T = { today: 'Today', closed: 'Closed', noSession: 'No session today', dayOff: 'Closed all day', later: 'Later today', open: 'Open now', cutoff: 'Check-in closed', ended: 'Ended', sep: ', ',
+  who: n => `Dr. ${n}`, todayIs: () => `Today is ${new Intl.DateTimeFormat('en-US', { weekday: 'long', timeZone: TZ }).format(new Date())}` };
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// Header background on scroll
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+// Mobile menu (closes on link click or Esc)
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  links.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+};
+menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && links.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
+
+// Your practice's time zone: "today" and "Open now" follow it. Change it to your own (e.g. 'America/New_York', 'America/Chicago')
+const TZ = 'America/Los_Angeles';
+// Schedule: highlight today's column, build today's board and the phone list by day (recalculated every minute)
+const toMin = t => { const [h, m] = t.split(':'); return h * 60 + +m; };
+const table = document.getElementById('schedule-table');
+const rows = [...table.tBodies[0].rows];
+const day = d => table.tHead.rows[0].cells[d].textContent.trim();
+const time = tr => tr.cells[0].querySelector('small').textContent;
+const isOff = (tr, d) => tr.cells[d].classList.contains('off');
+const list = document.createElement('div');
+list.className = 'sched-list';
+table.parentElement.after(list);
+let shown = 0;
+const render = () => {
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: TZ, weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map(x => [x.type, x.value]));
+  const col = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].indexOf(p.weekday) + 1, nowMin = p.hour * 60 + +p.minute; // Monday = 1 … Sunday = 7
+  document.getElementById('today-list').innerHTML = rows.map(tr => {
+    const off = isOff(tr, col), [s, e] = tr.dataset.time.split('-').map(toMin);
+    const tag = off ? T.closed : nowMin < s ? T.later : nowMin < e - 30 ? T.open : nowMin < e ? T.cutoff : T.ended;
+    const who = off ? T.noSession : T.who(tr.cells[col].textContent.trim());
+    return `<li class="${off ? 'off' : tag === T.open ? 'now' : ''}"><b>${tr.dataset.name}</b><span>${time(tr)}<br>${who}</span><em class="tag">${tag}</em></li>`;
+  }).join('');
+  if (col === shown) return; // Redraw the table highlight and day list only when the day changes
+  shown = col;
+  table.querySelectorAll('.today').forEach(c => c.classList.remove('today'));
+  table.querySelectorAll('tr').forEach(tr => tr.children[col] && tr.children[col].classList.add('today'));
+  document.getElementById('today-label').textContent = new Intl.DateTimeFormat(document.documentElement.lang, { timeZone: TZ, month: 'numeric', day: 'numeric', weekday: 'short' }).format(new Date());
+  document.getElementById('today-is').textContent = T.todayIs(day(col));
+  list.innerHTML = [1, 2, 3, 4, 5, 6, 7].map(d => {
+    const on = rows.filter(tr => !isOff(tr, d)).map(tr => tr.dataset.name);
+    const li = rows.map(tr => `<li${isOff(tr, d) ? ' class="off"' : ''}><b>${tr.dataset.name}</b><span>${time(tr)}</span><span>${isOff(tr, d) ? T.closed : T.who(tr.cells[d].textContent.trim())}</span></li>`);
+    return `<details${d === col ? ' open' : ''}><summary>${day(d)}${d === col ? `<em>${T.today}</em>` : ''}<small>${on.length ? on.join(T.sep) : T.dayOff}</small></summary><ul>${li.join('')}</ul></details>`;
+  }).join('');
+};
+render(); setInterval(render, 60000);
+
+// Hero entrance (the only one) + sticky bar appears once the hero buttons scroll away
+const reveals = document.querySelectorAll('.reveal');
+const bar = document.querySelector('.mobile-bar');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }));
+  reveals.forEach(el => io.observe(el));
+  new IntersectionObserver(([e]) => bar.classList.toggle('show', !e.isIntersecting)).observe(document.querySelector('.hero-cta'));
+} else { reveals.forEach(el => el.classList.add('in')); bar.classList.add('show'); }
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>
