@@ -510,6 +510,23 @@
   "zh": "共享空間"
  },
  {
+  "slug": "dental",
+  "title": "Dental Clinic\nForest Edition",
+  "bg": "#f4f5f1",
+  "ink": "#17241f",
+  "acc": "#24433a",
+  "pills": [
+   "Today's board",
+   "First-visit steps",
+   "Call & book"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/dental-clinic-forest-template",
+  "ja": "歯科医院",
+  "es": false,
+  "cat": "Dental Clinic",
+  "zh": "牙醫診所"
+ },
+ {
   "slug": "motion/saas",
   "title": "SaaS Launch Page\nMotion Edition",
   "sub": "Motion edition · No libraries · EN · 中文 · 日本語",

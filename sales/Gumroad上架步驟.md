@@ -46,6 +46,7 @@
 | 研討會 | `…/templates/conference/en/` | `…/templates/conference/zh-TW/` |
 | 刺青 | `…/templates/tattoo/en/` | `…/templates/tattoo/zh-TW/` |
 | 共享辦公 | `…/templates/coworking/en/` | `…/templates/coworking/zh-TW/` |
+| 牙醫・森林診間（11/27 新增） | `…/templates/dental/en/` | `…/templates/dental/zh-TW/`（日文 `…/templates/dental/ja/`） |
 
 上架前每個連結都打開確認一次。
 
@@ -1140,6 +1141,72 @@ What you get
 
 [貼上「共用文字」]
 ```
+
+### 4-31. 牙醫第二款「森林診間」（11/27 新增）
+
+> 跟 4-4 的 clinic（安和牙醫，資訊感、無襯線、圓角卡片）是**不同風格的第二款**：滿版診間首屏、襯線標題、清單式、拱形醫師相框。說明裡要寫清楚「second style」，讓買家知道兩款可以比較著選，不要讓兩個商品頁讀起來一樣。
+> 名稱直接用 11 節的新格式 `(EN + 中文 + 日本語)`；zip 也含簡體版。
+
+| 欄位 | 填入 |
+|---|---|
+| Name | `Dental Clinic Website — Forest Edition (EN + 中文 + 日本語)` |
+| URL | `dental-clinic-forest-template`（和 clinic 的 `clinic-website-template` 不同） |
+| Price | `39` |
+| Versions | `Standard license — 1 website`（$39）、`Extended license — up to 10 websites`（$119） |
+| Content | `dist/dental-clinic-forest-template.zip` |
+| Cover | `sales/covers/en/dental-cover.png` |
+| Thumbnail | `sales/covers/en/dental-thumb.png` |
+| Summary | `A calm, light-filled one-page website for dental practices in English, 繁體中文, 简体中文 and 日本語, with a step-by-step setup guide and a commercial licence. Buy once, no monthly fees.` |
+| Additional details | `Format: HTML/CSS/JS` · `Languages: English, 繁體中文, 简体中文, 日本語 (switchable)` · `Pages: 1 (one-page)` · `Builder needed: None` · `Style: second dental style (see also our Clinic template)` |
+| Receipt | 共用 Receipt |
+| Tags（10 個，每個 ≤ 20 字元） | `dental website`, `dentist website`, `dental clinic`, `clinic website`, `medical website`, `html template`, `website template`, `one page website`, `ホームページ テンプレート`, `歯科 ホームページ` |
+
+Demo：英文 `https://a0955072107-bit.github.io/-/templates/dental/en/`、繁中 `https://a0955072107-bit.github.io/-/templates/dental/zh-TW/`、簡中 `…/templates/dental/zh-CN/`、日文 `…/templates/dental/ja/`。（線上 Demo 有示意照片；商品 zip 不含照片，用 CSS 畫的構圖佔位圖，買家換成自己的照片。）
+
+**Description**：
+```
+日本語版つき：テキスト・住所・LINE ボタンまで日本向けに作り直した日本語版が入っています。ガイドとライセンスも日本語で同梱。月額費用なし、買い切りです。
+
+A quiet, light-filled one-page website for dental practices. This is our second dental style: where our Clinic template is crisp and information-first, the Forest Edition leads with a full-width treatment-room image, serif headings and plenty of white space. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): https://a0955072107-bit.github.io/-/templates/dental/en/
+🔗 Live demo (中文): https://a0955072107-bit.github.io/-/templates/dental/zh-TW/
+🔗 Live demo (日本語): https://a0955072107-bit.github.io/-/templates/dental/ja/
+(Demo photos are for preview only and are not included. The template ships with drawn placeholders showing what photo goes where.)
+
+Features
+- Full-width treatment-room hero with a calm text panel and two buttons
+- "Your first visit" in three numbered steps
+- Treatments as a clean list with thin rules
+- Dentist profiles in arched frames, each with focus areas and hours
+- Two wide photo slots for the waiting area and consultation room
+- Edit one weekly table and the "Today" board updates itself (open now, later today, check-in closed, closed), using your clinic's time zone
+- Directions with transit, parking and step-free access, plus a Google Maps link (no embedded map)
+- Call and Book buttons fixed to the bottom on mobile (WhatsApp in English, LINE in Chinese and Japanese, easy to swap)
+- SEO-ready with schema.org Dentist data
+- Modest, factual sample copy with no reviews, before/after photos or "best/painless" claims. Please follow your local healthcare advertising rules.
+
+What you get
+- English, Traditional Chinese, Simplified Chinese and Japanese versions with a built-in language switcher
+- Step-by-step guide and commercial licence
+
+Prefer a more information-first layout? See our Clinic template: https://polyglotpages.gumroad.com/l/clinic-website-template
+
+──────────
+牙醫診所網站模板・第二款「森林診間」。和我們的「診所模板」不同風格：首屏是滿版診間大圖，襯線標題、大量留白，走安靜、有自然光的精品診所路線。
+功能：第一次看診三步驟、診療項目清單、拱形醫師相框（專長與看診時段）、診所環境兩張橫幅照片、只要改一張門診表，「今日門診」看板就自動更新（依診所時區）、交通／停車／無障礙說明與 Google 地圖連結、手機版底部「撥打電話／LINE 預約」。
+範例文案遵守醫療廣告規範：不放見證、前後對比、優惠或療效保證。附英文、繁體、簡體、日文四種語言（網站內建語言切換）、中文教學、商業授權。
+線上 Demo 的照片僅供示意，商品不含照片。
+
+[貼上「共用文字」]
+```
+
+> **建議（待使用者決定）：牙醫 2 款組合包**
+> 現在 clinic 和 dental 是同一行業的兩種風格，可以另開一個 Bundle「Dental Website Templates — 2 Styles」$59（單買 $78，省 $19）。
+> - 每家多收：原本會買 1 款的牙醫或接案者，估計 1～2 成會升級成 $59（每筆多 $20）；接案者可以給客戶選風格，比較有吸引力。
+> - 成本／時間：Gumroad Bundle 選兩個既有商品就好，約 15 分鐘，不用新檔案（封面可用兩張縮圖拼一張）。
+> - 風險：兩款單價看起來被打折、單款銷量可能被分走一點；Pinterest／說明裡的連結會多一個要維護。
+> - 建議時機：dental 上架後 2～4 週，看兩款各自有沒有被點擊再決定。**現在先不要上架。**
 
 ---
 

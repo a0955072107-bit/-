@@ -360,6 +360,18 @@
   ]
  },
  {
+  "slug": "dental",
+  "title": "Dental Clinic\nForest Edition",
+  "bg": "#f4f5f1",
+  "ink": "#17241f",
+  "acc": "#24433a",
+  "pills": [
+   "Today's board",
+   "First-visit steps",
+   "Call & book"
+  ]
+ },
+ {
   "slug": "motion/saas",
   "title": "SaaS Launch Page\nMotion Edition",
   "sub": "Motion edition · No libraries · EN · 中文 · 日本語",
