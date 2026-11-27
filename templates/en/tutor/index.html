@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  A note for buyers: marketing copy for a tutoring center
+  Please leave out results you cannot verify ("98% acceptance rate", "guaranteed score gains"), and get consent from students and parents before publishing scores or admissions lists.
+  The center name, teachers, tuition, calendar and weekly update on this page are fictional samples. Replace all of them before going live.
+-->
+<title>Stride Learning Center | Small-group tutoring for K–12 in Irvine</title>
+<meta name="description" content="Stride Learning Center in Irvine, CA teaches small classes for grades K–12. Every student starts with a free 40-minute assessment, then a written plan and a progress note every week.">
+<meta property="og:title" content="Stride Learning Center | Small-group tutoring for K–12 in Irvine">
+<meta property="og:description" content="Find the gap first, then close it. Browse classes, schedules and tuition by grade, and book a free assessment online.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#253046">
+<!-- Language versions (SEO): after launch, replace each href with the full URL, e.g. https://www.yoursite.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<!-- Sample content — replace before going live (name, phone, address and hours are fictional) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Stride Learning Center",
+  "telephone": "+1-555-012-3456",
+  "url": "https://example.com/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "128 Maple Street, Suite 200",
+    "addressLocality": "Irvine",
+    "addressRegion": "CA",
+    "postalCode": "92602",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "13:30", "closes": "21:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "17:30" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   THEME SETTINGS: change these to restyle the whole site
+   ============================================================ */
+:root {
+  --brand: #253046;          /* Brand color: ink blue (primary button, step numbers, footer) */
+  --brand-ink: #F6F6F3;      /* Text color on top of the brand color (paper white) */
+  --brand-deep: #1A2233;     /* Deeper brand color (button hover, footer background) */
+  --bg: #F6F6F3;             /* Page background: paper white */
+  --surface: #FCFCFA;        /* Surface color: alternating sections, form fields, menus (a slightly warm white) */
+  --text: #22262B;           /* Main text: graphite */
+  --muted: #555B66;          /* Secondary text (passes AA on both the page and surface colors) */
+  --line: #D8D9D4;           /* 1px rules and dividers */
+  --accent: #E3B23C;         /* Pencil yellow: the only accent, used as a marker (selected grade, highlight underline). Only graphite text goes on top of it */
+  --field-line: color-mix(in srgb, var(--muted) 72%, var(--line)); /* Borders of form fields and clickable outlines (contrast 3:1 or better) */
+  --wood: #CDBB98;           /* Placeholder art: desks, floor, pencil wood */
+  --glass: #E6ECEF;          /* Placeholder art: window light, walls */
+  --slate: #9AA1AB;          /* Placeholder art: metal desk legs, whiteboard frame, shadows */
+  --skin: #D9BDA5;           /* Placeholder art: skin tone */
+  --shadow: 0 16px 40px -24px color-mix(in srgb, var(--text) 30%, transparent); /* The only shadow on the site, kept faint (dropdown menus) */
+  --radius: 6px;             /* Radius for large elements (images, form frame, grade picker) */
+  --radius-sm: 3px;          /* Radius for small elements (buttons, fields, menu items) */
+  --font-heading: "Zilla Slab", Georgia, "Times New Roman", serif; /* Heading font (Zilla Slab: a sturdy slab serif, like a well-kept notebook) */
+  --font-body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif; /* Body font */
+  --lh-body: 1.6;             /* Body line height */
+  --fs-sm: .875rem;          /* Type size: small (labels, notes) */
+  --fs-body: 1rem;           /* Type size: body */
+  --fs-lg: 1.25rem;          /* Type size: small headings (h3, grade buttons) */
+  --fs-h2: clamp(1.75rem, 3.2vw, 2.5rem);   /* Type size: h2 */
+  --fs-h1: clamp(2rem, 4.4vw, 3.5rem);      /* Type size: hero headline */
+  --s1: .25rem;              /* Spacing scale: 4px */
+  --s2: .5rem;               /* Spacing scale: 8px */
+  --s3: .75rem;              /* Spacing scale: 12px */
+  --s4: 1rem;                /* Spacing scale: 16px */
+  --s5: 1.5rem;              /* Spacing scale: 24px */
+  --s6: 2rem;                /* Spacing scale: 32px */
+  --s7: 3rem;                /* Spacing scale: 48px */
+  --gap-col: clamp(2rem, 6vw, 6rem);        /* Gap between two columns */
+  --head-gap: clamp(2rem, 4.5vw, 3.5rem);   /* Gap between a section heading and its content */
+  --header-h: 72px;          /* Header height */
+  --section-y: clamp(4rem, 11vw, 9rem);     /* Vertical padding of each section */
+  --max: 1200px;             /* Maximum content width */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-padding-top: calc(var(--header-h) + 16px); overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 var(--fs-body)/var(--lh-body) var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; touch-action: manipulation; font-synthesis: none; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; line-height: 1.3; letter-spacing: 0; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-lg); }
+p, li, dd, figcaption { text-wrap: pretty; }
+b, strong { font-weight: 600; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: var(--radius-sm); }
+.wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+section { padding-block: var(--section-y); }
+.band { background: var(--surface); border-block: 1px solid var(--line); }
+.lead { color: var(--muted); max-width: 34em; }
+.num { font-variant-numeric: tabular-nums; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* Pencil-yellow highlighter underline: used once on the site, on the grade picker label */
+.mark { background: linear-gradient(transparent 58%, color-mix(in srgb, var(--accent) 75%, transparent) 58% 94%, transparent 94%); padding-inline: .15em; margin-inline: -.15em; }
+/* Skip to main content (appears when keyboard users press Tab) */
+.skip { position: fixed; left: 1rem; top: .75rem; z-index: 100; padding: .6rem 1rem; border-radius: var(--radius-sm); background: var(--brand); color: var(--brand-ink); transform: translateY(-200%); }
+.skip:focus { transform: none; }
+.skip:hover { background: var(--brand-deep); }
+.skip:active { opacity: .85; }
+main:focus { outline: none; }
+
+/* ---------- Buttons: solid for the primary action only; secondary actions use an outline or an underlined text link ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--s2); min-height: 48px; padding: var(--s3) var(--s5); border-radius: var(--radius-sm); font: 600 var(--fs-body)/1.3 var(--font-body); border: 1px solid transparent; transition: background-color .2s, color .2s, border-color .2s, transform .2s; cursor: pointer; font-variant-numeric: tabular-nums; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: var(--brand-deep); }
+.btn:active { transform: translateY(1px); }
+a:not(.btn):active { opacity: .7; }
+.btn-ghost { border-color: var(--field-line); color: var(--text); background: transparent; }
+.btn-ghost:hover { border-color: var(--text); background: color-mix(in srgb, var(--brand) 5%, transparent); }
+.text-link { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; text-decoration-color: var(--field-line); font-variant-numeric: tabular-nums; transition: text-decoration-color .2s; }
+.text-link:hover { text-decoration-color: var(--text); }
+
+/* ---------- Header ---------- */
+html:not(.js) .site-header { background: var(--surface); border-bottom-color: var(--line); }
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; border-bottom: 1px solid transparent; transition: background-color .3s, border-color .3s; }
+.site-header.scrolled { background: var(--surface); border-bottom-color: var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: var(--s4); }
+.logo { display: flex; align-items: baseline; gap: .6rem; font: 500 1.25rem/1 var(--font-heading); }
+.logo small { font: 400 var(--fs-sm)/1 var(--font-body); color: var(--muted); }
+.nav-links { display: flex; align-items: center; gap: 1.5rem; font-size: var(--fs-sm); }
+.nav-links a:not(.btn) { color: var(--muted); transition: color .2s; }
+.nav-links a:not(.btn):hover { color: var(--text); text-decoration: underline; text-underline-offset: 6px; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+.nav-links .btn { min-height: 40px; padding: var(--s2) var(--s4); font-size: var(--fs-sm); }
+.menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--field-line); border-radius: var(--radius-sm); background: var(--surface); color: var(--text); cursor: pointer; transition: border-color .2s; }
+.menu-btn:hover { border-color: var(--text); }
+.menu-btn:active { transform: translateY(1px); }
+.menu-btn span { display: block; width: 18px; height: 1.5px; margin: 4px auto; background: currentColor; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+@media (max-width: 860px) {
+  :root { --header-h: 64px; }
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: var(--header-h); left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: var(--s2); font-size: var(--fs-body); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: var(--s3) var(--s4); border-radius: var(--radius-sm); color: var(--text); }
+  .js .nav-links .btn { margin-top: var(--s2); min-height: 48px; font-size: var(--fs-body); }
+  /* Without JS: the menu shows as a wrapping row of links and the header becomes sticky */
+  html:not(.js) .site-header { position: sticky; top: 0; }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: var(--s3); }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: var(--s1) var(--s4); }
+  html:not(.js) .nav-links a:not(.btn) { padding-block: var(--s2); }
+  html:not(.js) .hero { padding-top: var(--s6); }
+}
+@media (max-width: 420px) { .logo small { display: none; } }
+
+/* ---------- Placeholder art ----------
+   Each image slot has its own class. To use a photo, change that one class and delete its ::before / ::after.
+   If you switch to an img tag, add width / height; give the hero image fetchpriority="high" and the others loading="lazy". */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); background-color: var(--glass); }
+
+/* Replace with a photo: .img-hero { background: url(images/classroom.jpg) center/cover; }
+   Suggested ratio 3:2 landscape: a bright small classroom with a few desks, a whiteboard and window light, no people */
+.img-hero { aspect-ratio: 3 / 2;
+  background:
+    linear-gradient(color-mix(in srgb, var(--brand) 45%, var(--surface)), color-mix(in srgb, var(--brand) 45%, var(--surface))) 54.12% 21.17% / 15% 0.8% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--brand) 45%, var(--surface)), color-mix(in srgb, var(--brand) 45%, var(--surface))) 59.74% 26.21% / 23% 0.8% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--brand) 45%, var(--surface)), color-mix(in srgb, var(--brand) 45%, var(--surface))) 51.11% 31.25% / 10% 0.8% no-repeat,
+    linear-gradient(var(--accent), var(--accent)) 81.61% 20.44% / 3.2% 4.6% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 94%, var(--glass)), color-mix(in srgb, var(--surface) 94%, var(--glass))) 76.36% 21.68% / 45% 28.5% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--slate) 60%, var(--surface)), color-mix(in srgb, var(--slate) 60%, var(--surface))) 77.36% 20.44% / 47% 31.5% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--slate) 85%, var(--text)), color-mix(in srgb, var(--slate) 85%, var(--text))) 72.31% 46.1% / 35% 1.3% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 88%, var(--slate)), color-mix(in srgb, var(--surface) 88%, var(--slate))) 16.73% 20.18% / 0.8% 43% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 88%, var(--slate)), color-mix(in srgb, var(--surface) 88%, var(--slate))) 8.96% 32.32% / 19.6% 1% no-repeat,
+    linear-gradient(165deg, var(--surface), var(--glass) 55%, color-mix(in srgb, var(--slate) 28%, var(--glass))) 8.96% 20.18% / 19.6% 43% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 88%, var(--slate)), color-mix(in srgb, var(--surface) 88%, var(--slate))) 7.69% 18.52% / 22% 46% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 78%, var(--slate)), color-mix(in srgb, var(--surface) 78%, var(--slate))) 6.58% 56.85% / 24% 1.5% no-repeat,
+    linear-gradient(104deg, transparent 6%, color-mix(in srgb, var(--surface) 50%, transparent) 15% 33%, transparent 45%) 0 100% / 100% 34% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 72%, var(--slate)), color-mix(in srgb, var(--surface) 72%, var(--slate))) 0% 66.13% / 100% 1.1% no-repeat,
+    radial-gradient(46% 62% at 17% 30%, color-mix(in srgb, var(--surface) 85%, transparent), transparent 100%),
+    linear-gradient(180deg, color-mix(in srgb, var(--glass) 62%, var(--surface)) 0 66%, color-mix(in srgb, var(--wood) 58%, var(--surface)) 66% 100%); }
+/* Back row of desks and chairs (in front of the whiteboard) */
+.img-hero::before { content: ""; position: absolute; left: 27%; width: 60%; top: 51.5%; height: 17%;
+  background:
+    linear-gradient(90deg, transparent 37%, color-mix(in srgb, var(--brand) 55%, var(--glass)) 37% 63%, transparent 63%) 0 8.0% / 33.333% 50% repeat-x,
+    linear-gradient(90deg, transparent 38.5%, color-mix(in srgb, var(--brand) 55%, var(--glass)) 38.5% 40.5%, transparent 40.5% 59.5%, color-mix(in srgb, var(--brand) 55%, var(--glass)) 59.5% 61.5%, transparent 61.5%) 0 100.0% / 33.333% 46% repeat-x,
+    linear-gradient(90deg, transparent 9%, color-mix(in srgb, var(--wood) 80%, var(--surface)) 9% 91%, transparent 91%) 0 32.97% / 33.333% 9% repeat-x,
+    linear-gradient(90deg, transparent 9%, color-mix(in srgb, var(--wood) 70%, var(--slate)) 9% 91%, transparent 91%) 0 40.0% / 33.333% 2.5% repeat-x,
+    linear-gradient(90deg, transparent 12.5%, color-mix(in srgb, var(--slate) 80%, var(--surface)) 12.5% 14.5%, transparent 14.5% 85.5%, color-mix(in srgb, var(--slate) 80%, var(--surface)) 85.5% 87.5%, transparent 87.5%) 0 100.0% / 33.333% 58.5% repeat-x; }
+/* Front row of desks and chairs (cropped by the bottom edge, like the foreground of a photo) */
+.img-hero::after { content: ""; position: absolute; left: 3%; width: 94%; top: 61%; height: 39%;
+  background:
+    linear-gradient(90deg, transparent 37%, var(--brand) 37% 63%, transparent 63%) 0 7.14% / 33.333% 44% repeat-x,
+    linear-gradient(90deg, transparent 38.5%, var(--brand) 38.5% 40.5%, transparent 40.5% 59.5%, var(--brand) 59.5% 61.5%, transparent 61.5%) 0 100.0% / 33.333% 52% repeat-x,
+    linear-gradient(90deg, transparent 9%, var(--wood) 9% 91%, transparent 91%) 0 26.09% / 33.333% 8% repeat-x,
+    linear-gradient(90deg, transparent 9%, color-mix(in srgb, var(--wood) 72%, var(--text)) 9% 91%, transparent 91%) 0 32.82% / 33.333% 2.5% repeat-x,
+    linear-gradient(90deg, transparent 12.5%, color-mix(in srgb, var(--slate) 78%, var(--text)) 12.5% 14.5%, transparent 14.5% 85.5%, color-mix(in srgb, var(--slate) 78%, var(--text)) 85.5% 87.5%, transparent 87.5%) 0 100.0% / 33.333% 65.5% repeat-x; }
+
+/* Replace with a photo: .img-t1 { background: url(images/teacher-1.jpg) center/cover; } (same for .img-t2 and .img-t3)
+   Suggested ratio 4:5 head-and-shoulders portrait: person centered with a little headroom, softly blurred classroom behind */
+.img-t { aspect-ratio: 4 / 5; --hx: 50%; --hy: 36%; --hair: color-mix(in srgb, var(--text) 78%, var(--wood)); --back: 1%; --shirt: color-mix(in srgb, var(--surface) 86%, var(--slate));
+  background:
+    radial-gradient(55% 42% at 16% 20%, color-mix(in srgb, var(--surface) 96%, transparent), transparent 100%),
+    radial-gradient(44% 20% at 78% 30%, color-mix(in srgb, var(--surface) 78%, transparent) 50%, transparent 100%),
+    linear-gradient(180deg, color-mix(in srgb, var(--glass) 82%, var(--slate)), color-mix(in srgb, var(--glass) 58%, var(--slate)) 64%, color-mix(in srgb, var(--wood) 42%, var(--glass))); }
+/* Head and neck: soft-edged ovals (no facial features), positioned by --hx and --hy; --back is the height of long hair behind */
+.img-t::before { content: ""; position: absolute; left: calc(var(--hx) - 19%); top: calc(var(--hy) - 19%); width: 38%; height: 44%; filter: blur(3px);
+  background:
+    radial-gradient(50% 18% at 50% 19%, var(--hair) 70%, transparent 100%),
+    radial-gradient(42% 31% at 50% 42%, var(--skin) 84%, transparent 100%),
+    linear-gradient(color-mix(in srgb, var(--skin) 88%, var(--text)), color-mix(in srgb, var(--skin) 88%, var(--text))) 50% 100% / 30% 36% no-repeat,
+    radial-gradient(50% var(--back) at 50% 42%, var(--hair) 80%, transparent 100%); }
+/* Shoulders and a plain shirt: trapezoid shoulder line with a V collar */
+.img-t::after { content: ""; position: absolute; left: 5%; right: 5%; top: 58%; bottom: 0; filter: blur(1px);
+  clip-path: polygon(29% 0, 71% 0, 94% 17%, 100% 100%, 0 100%, 6% 17%);
+  background:
+    conic-gradient(from 160deg at 50% 0, var(--skin) 0 40deg, transparent 40deg) 0 0 / 100% 26% no-repeat,
+    conic-gradient(from 150deg at 50% 0, color-mix(in srgb, var(--shirt) 86%, var(--text)) 0 60deg, transparent 60deg) 0 0 / 100% 38% no-repeat,
+    linear-gradient(90deg, color-mix(in srgb, var(--shirt) 88%, var(--text)), var(--shirt) 30% 70%, color-mix(in srgb, var(--shirt) 88%, var(--text))); }
+.img-t1 { --back: 44%; --shirt: color-mix(in srgb, var(--glass) 70%, var(--brand)); }
+.img-t2 { --hx: 48%; --hy: 35%; --hair: color-mix(in srgb, var(--text) 88%, var(--slate)); }
+.img-t3 { --hx: 52%; --hy: 37%; --back: 36%; --hair: color-mix(in srgb, var(--text) 66%, var(--wood)); --shirt: color-mix(in srgb, var(--wood) 46%, var(--surface)); }
+
+/* Replace with a photo: .img-desk { background: url(images/desk.jpg) center/cover; }
+   Suggested ratio 3:2 landscape: an overhead study desk with a notebook, yellow pencils and a worksheet */
+.img-desk { aspect-ratio: 3 / 2;
+  background:
+    linear-gradient(color-mix(in srgb, var(--text) 50%, var(--surface)), color-mix(in srgb, var(--text) 50%, var(--surface))) 22.99% 31.08% / 13% 0.9% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--text) 50%, var(--surface)), color-mix(in srgb, var(--text) 50%, var(--surface))) 23.81% 39.76% / 16% 0.9% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--text) 50%, var(--surface)), color-mix(in srgb, var(--text) 50%, var(--surface))) 21.98% 48.44% / 9% 0.9% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--text) 50%, var(--surface)), color-mix(in srgb, var(--text) 50%, var(--surface))) 23.26% 57.11% / 14% 0.9% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--text) 50%, var(--surface)), color-mix(in srgb, var(--text) 50%, var(--surface))) 53.53% 31.08% / 15% 0.9% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--text) 50%, var(--surface)), color-mix(in srgb, var(--text) 50%, var(--surface))) 51.7% 39.76% / 12% 0.9% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--text) 50%, var(--surface)), color-mix(in srgb, var(--text) 50%, var(--surface))) 54.82% 48.44% / 17% 0.9% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--accent) 62%, transparent), color-mix(in srgb, var(--accent) 62%, transparent)) 52.02% 38.88% / 13.5% 3.8% no-repeat,
+    repeating-linear-gradient(180deg, transparent 0 15.5%, color-mix(in srgb, var(--slate) 42%, var(--surface)) 15.5% 16.6%) 21.66% 50.0% / 21.5% 52% no-repeat,
+    repeating-linear-gradient(180deg, transparent 0 15.5%, color-mix(in srgb, var(--slate) 42%, var(--surface)) 15.5% 16.6%) 56.69% 50.0% / 21.5% 52% no-repeat,
+    linear-gradient(90deg, transparent, color-mix(in srgb, var(--text) 16%, transparent) 50%, transparent) 40.66% 47.06% / 3.6% 66% no-repeat,
+    linear-gradient(var(--surface), var(--surface)) 19.05% 47.06% / 26.5% 66% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 95%, var(--glass)), color-mix(in srgb, var(--surface) 95%, var(--glass))) 56.46% 47.06% / 26.5% 66% no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 29.73% 46.84% / 55.6% 68.4% no-repeat,
+    radial-gradient(34% 42% at 42% 56%, color-mix(in srgb, var(--text) 20%, transparent) 70%, transparent 100%),
+    linear-gradient(color-mix(in srgb, var(--surface) 92%, var(--slate)), color-mix(in srgb, var(--surface) 92%, var(--slate))) 84.49% 77.01% / 6.5% 6.5% no-repeat,
+    radial-gradient(62% 72% at 8% 0%, color-mix(in srgb, var(--surface) 55%, transparent), transparent 100%),
+    linear-gradient(100deg, color-mix(in srgb, var(--wood) 60%, var(--surface)), color-mix(in srgb, var(--wood) 84%, var(--surface))); }
+/* Worksheet (top right, turned at a slight angle) */
+.img-desk::before { content: ""; position: absolute; left: 73%; top: 9%; width: 22%; height: 56%; transform: rotate(6deg); border-radius: 2px;
+  background:
+    linear-gradient(color-mix(in srgb, var(--text) 55%, var(--surface)), color-mix(in srgb, var(--text) 55%, var(--surface))) 25.0% 9.24% / 44% 2.6% no-repeat,
+    repeating-linear-gradient(180deg, transparent 0 22%, color-mix(in srgb, var(--slate) 60%, var(--surface)) 22% 25%) 50.0% 28.57% / 72% 30% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--glass) 55%, var(--surface)), color-mix(in srgb, var(--glass) 55%, var(--surface))) 50.0% 82.86% / 72% 30% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 97%, var(--slate)), color-mix(in srgb, var(--surface) 97%, var(--slate))); }
+/* Two yellow pencils (bottom) */
+.img-desk::after { content: ""; position: absolute; left: 50%; top: 84%; width: 40%; height: 7%; transform: rotate(-5deg);
+  clip-path: polygon(0 0, 88% 0, 100% 17%, 88% 34%, 0 34%, 0 66%, 80% 66%, 92% 83%, 80% 100%, 0 100%);
+  background:
+    linear-gradient(90deg, var(--skin) 0 4%, color-mix(in srgb, var(--slate) 70%, var(--text)) 4% 8%, var(--accent) 8% 88%, var(--wood) 88% 96.5%, var(--text) 96.5%) 0 0 / 100% 34% no-repeat,
+    linear-gradient(90deg, var(--skin) 0 4.5%, color-mix(in srgb, var(--slate) 70%, var(--text)) 4.5% 9%, color-mix(in srgb, var(--accent) 88%, var(--text)) 9% 87%, var(--wood) 87% 96.5%, var(--text) 96.5%) 0 100% / 92% 34% no-repeat; }
+
+/* ---------- Hero: headline, primary button, classroom photo, with the grade picker underneath ---------- */
+.hero { padding: calc(var(--header-h) + clamp(1.5rem, 4vw, 3.5rem)) 0 clamp(3rem, 7vw, 5rem); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); grid-template-areas: "text img" "cta img" "pick pick"; column-gap: clamp(2rem, 5vw, 5rem); }
+.hero-text { grid-area: text; align-self: end; }
+.hero h1 { font-size: var(--fs-h1); line-height: 1.2; }
+.hero-sub { color: var(--muted); margin-top: var(--s5); max-width: 30em; }
+.hero-cta { grid-area: cta; align-self: start; display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s5); margin-top: var(--s6); }
+.hero-fig { grid-area: img; align-self: center; }
+/* Grade picker (the signature feature): with JS these are buttons that filter the classes and jump to the class list; without JS they are links to the class list */
+.picker { grid-area: pick; margin-top: clamp(2rem, 4vw, 3rem); }
+.pick-label { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s1) var(--s4); margin-bottom: var(--s4); }
+.pick-label b { font: 500 var(--fs-lg)/1.4 var(--font-heading); }
+.pick-label > span { color: var(--muted); font-size: var(--fs-sm); }
+.grades { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.grade { position: relative; display: grid; align-content: center; gap: 2px; min-height: 80px; padding: var(--s4) var(--s5); text-align: start; font: inherit; color: var(--text); background: var(--surface); border: 0; cursor: pointer; transition: background-color .2s; }
+.grade b { font: 500 var(--fs-lg)/1.3 var(--font-heading); }
+.grade small { font-size: var(--fs-sm); line-height: 1.4; color: var(--muted); font-variant-numeric: tabular-nums; }
+.grade::after { content: ""; position: absolute; inset: auto 0 0; height: 3px; background: var(--accent); transform: scaleX(0); transform-origin: 0 50%; transition: transform .25s; }
+.grade:hover { background: color-mix(in srgb, var(--accent) 12%, var(--surface)); }
+.grade:hover::after { transform: none; }
+.grade:active { background: color-mix(in srgb, var(--accent) 30%, var(--surface)); }
+.grade:focus-visible { outline-offset: -4px; }
+/* Selected grade: pencil-yellow fill, graphite text and a graphite line along the bottom (not color alone) */
+.grade[aria-pressed="true"] { background: var(--accent); }
+.grade[aria-pressed="true"] small { color: var(--text); }
+.grade[aria-pressed="true"]::after { background: var(--text); transform: none; }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "text" "cta" "pick" "img"; }
+  .hero-sub { margin-top: var(--s4); }
+  .hero-cta { margin-top: var(--s5); }
+  .hero-fig { margin-top: var(--s6); }
+  .hero { padding-bottom: var(--s6); }
+  .grades { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grade { min-height: 68px; padding: var(--s3) var(--s4); }
+}
+
+/* ---------- Classes: a ruled list, filtered by grade ---------- */
+.course-top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--s5) var(--s6); margin-bottom: var(--head-gap); }
+.course-top .lead { margin-top: var(--s3); }
+.filter { display: flex; flex-wrap: wrap; gap: var(--s2); }
+html:not(.js) .filter { display: none; }
+.chip { min-height: 44px; padding: var(--s2) var(--s4); border: 1px solid var(--field-line); border-radius: var(--radius-sm); background: transparent; font: inherit; color: var(--text); cursor: pointer; transition: background-color .2s, border-color .2s, transform .2s; }
+.chip:hover { border-color: var(--text); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.chip:active { transform: translateY(1px); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--text); font-weight: 600; }
+.course-status { margin-bottom: var(--s3); color: var(--muted); font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
+.course-head, .course { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3.2fr); column-gap: clamp(1.5rem, 4vw, 4rem); }
+.course-head > div, .course dl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, .8fr) minmax(0, 1.2fr); column-gap: var(--s5); }
+.course-head { padding-block: var(--s3); border-top: 1px solid var(--text); font-size: var(--fs-sm); color: var(--muted); }
+.course-head span:last-child, .c-fee { text-align: end; }
+.course { align-items: baseline; padding-block: var(--s5); border-top: 1px solid var(--line); }
+.course[hidden] { display: none; }
+.course-list { border-bottom: 1px solid var(--line); }
+.course p { color: var(--muted); margin-top: var(--s1); max-width: 26em; }
+.course dl { font-variant-numeric: tabular-nums; }
+.c-fee dd { font-weight: 600; }
+.course-note { margin-top: var(--s5); font-size: var(--fs-sm); color: var(--muted); max-width: 44em; }
+@media (min-width: 901px) { .course dt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } }
+@media (max-width: 900px) {
+  /* Mobile: each class collapses to its name and tuition plus one line of grades, schedule and class size, with no sideways scrolling */
+  .course-head { display: none; }
+  .course-list { border-top: 1px solid var(--text); }
+  .course { position: relative; display: block; padding-block: var(--s3); }
+  .course p { display: none; }
+  .course:first-child { border-top: 0; }
+  .course h3 { padding-inline-end: 9.5rem; }
+  .course dl { display: block; margin-top: var(--s1); font-size: var(--fs-sm); color: var(--muted); line-height: 1.6; }
+  .course dl > div, .course dd { display: inline; }
+  .course dt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .course dl > div + div:not(.c-fee)::before { content: "\2002/\2002"; }
+  .course .c-fee { position: absolute; inset: var(--s3) 0 auto auto; font-size: var(--fs-body); color: var(--text); line-height: 1.3; padding-top: .2em; }
+  .chip { padding-inline: var(--s3); }
+  .course-top .lead { display: none; }
+}
+
+/* ---------- How it works: a large image and three steps (a real sequence, so they are numbered) ---------- */
+.method-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--gap-col); align-items: center; }
+.method-grid .lead { margin-top: var(--s4); }
+.steps { margin-top: var(--s6); border-bottom: 1px solid var(--line); }
+.step { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); column-gap: var(--s4); padding-block: var(--s5); border-top: 1px solid var(--line); }
+.step-no { grid-row: span 2; font: 500 var(--fs-h2)/1 var(--font-heading); color: var(--brand); font-variant-numeric: tabular-nums; }
+.step p { color: var(--muted); margin-top: var(--s1); }
+@media (max-width: 860px) { .method-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s6); } .steps { margin-top: var(--s5); } .step { padding-block: var(--s4); } }
+
+/* ---------- Teachers: three, with 4:5 portraits ---------- */
+.split-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); column-gap: var(--gap-col); row-gap: var(--s4); align-items: end; margin-bottom: var(--head-gap); }
+.t-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 4rem); }
+.t-body { padding-top: var(--s5); }
+.t-role { font-size: var(--fs-sm); color: var(--muted); }
+.teacher dl { margin-top: var(--s4); }
+.teacher dl > div { display: grid; grid-template-columns: 5em minmax(0, 1fr); gap: var(--s4); padding-block: var(--s3); border-top: 1px solid var(--line); }
+.teacher dt { color: var(--muted); }
+.teacher dd { font-variant-numeric: tabular-nums; }
+@media (max-width: 860px) {
+  .split-head { grid-template-columns: minmax(0, 1fr); }
+  .t-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s5); }
+  .teacher { display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); gap: var(--s5); align-items: start; }
+  .t-body { padding-top: 0; }
+  .teacher dl { margin-top: var(--s2); padding-top: var(--s2); border-top: 1px solid var(--line); font-size: var(--fs-sm); }
+  .teacher dl > div { grid-template-columns: 4.5em minmax(0, 1fr); gap: var(--s3); padding-block: 0; border: 0; }
+}
+
+/* ---------- Calendar: a ruled list of dates, events and notes ---------- */
+.cal-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: var(--gap-col); align-items: start; }
+.cal-grid .lead { margin-top: var(--s4); }
+.cal { border-top: 1px solid var(--text); }
+.cal li { display: grid; grid-template-columns: 9.5em minmax(0, 1fr) minmax(0, 1.5fr); column-gap: var(--s5); align-items: baseline; padding-block: var(--s4); border-bottom: 1px solid var(--line); }
+.cal-date { font-variant-numeric: tabular-nums; color: var(--muted); }
+.cal h3 { font: 600 var(--fs-body)/var(--lh-body) var(--font-body); }
+.cal p { color: var(--muted); }
+@media (max-width: 860px) {
+  .cal-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s5); }
+  .cal li { grid-template-columns: 7em minmax(0, 1fr); column-gap: var(--s4); padding-block: var(--s3); }
+  .cal-date { grid-row: span 2; font-size: var(--fs-sm); line-height: 1.9; }
+  .cal p { font-size: var(--fs-sm); }
+}
+
+/* ---------- Progress and common questions ---------- */
+.faq-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: var(--gap-col); align-items: start; }
+.faq-grid h2 + p { margin-top: var(--s4); }
+/* Sample weekly update: like a notebook page (thin rules, no shadow) */
+.report { margin-top: var(--s6); padding: var(--s5); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.report h3 { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: var(--s1) var(--s4); padding-bottom: var(--s3); font: 600 var(--fs-body)/1.5 var(--font-body); }
+.report h3 small { font-weight: 400; font-size: var(--fs-sm); color: var(--muted); font-variant-numeric: tabular-nums; }
+.report dl > div { display: grid; grid-template-columns: 5.5em minmax(0, 1fr); gap: var(--s4); padding-block: var(--s3); border-top: 1px solid var(--line); }
+.report dl > div:last-child { padding-bottom: 0; }
+.report dt { color: var(--muted); }
+.report dd { font-variant-numeric: tabular-nums; }
+.faq-list { margin-top: var(--s6); border-top: 1px solid var(--text); }
+.faq-list details { border-bottom: 1px solid var(--line); }
+.faq-list summary { display: flex; align-items: center; justify-content: space-between; gap: var(--s4); min-height: 60px; padding-block: var(--s3); cursor: pointer; list-style: none; font-weight: 600; transition: color .2s; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: ""; flex: none; width: .5em; height: .5em; margin-inline: var(--s2); border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.faq-list details[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+.faq-list summary:hover { color: var(--brand); text-decoration: underline; text-underline-offset: 6px; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+.faq-list summary:active { opacity: .7; }
+.faq-list details p { color: var(--muted); padding-bottom: var(--s5); max-width: 36em; }
+@media (max-width: 860px) { .faq-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s6); } .report, .faq-list { margin-top: var(--s5); } .report { padding: var(--s4); } .report dl > div { grid-template-columns: 4.5em minmax(0, 1fr); gap: var(--s3); } }
+
+/* ---------- Book an assessment: details, form and location ---------- */
+.visit-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap-col); align-items: start; }
+.visit-grid .lead { margin-top: var(--s4); }
+.facts { margin-top: var(--s6); border-bottom: 1px solid var(--line); }
+.facts > div { display: grid; grid-template-columns: 5em minmax(0, 1fr); gap: var(--s4); padding-block: var(--s3); border-top: 1px solid var(--line); }
+.facts dt { color: var(--muted); }
+.facts dd { font-variant-numeric: tabular-nums; }
+.visit-links { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s5); margin-top: var(--s5); }
+.form { display: grid; gap: var(--s5); padding: clamp(1.5rem, 3vw, 2.5rem); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); }
+.field { display: grid; gap: var(--s2); min-width: 0; border: 0; }
+.field label, .field legend { font-weight: 600; }
+.field legend { margin-bottom: var(--s2); }
+.req { margin-inline-start: var(--s2); font-size: var(--fs-sm); font-weight: 400; color: var(--muted); }
+.field input:not([type="checkbox"]), .field select { width: 100%; min-width: 0; height: 48px; padding: 0 var(--s3); font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--field-line); border-radius: var(--radius-sm); transition: border-color .2s; }
+.field input:hover, .field select:hover { border-color: var(--text); }
+.field input:not([type="checkbox"]):focus-visible, .field select:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; border-color: var(--brand); }
+.checks { display: flex; flex-wrap: wrap; gap: var(--s1) var(--s5); }
+.checks label { display: inline-flex; align-items: center; gap: var(--s2); min-height: 44px; font-weight: 400; cursor: pointer; }
+.checks input { width: 20px; height: 20px; accent-color: var(--brand); }
+.form .btn { width: 100%; }
+.form-note { font-size: var(--fs-sm); color: var(--muted); }
+@media (max-width: 860px) { .visit-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s6); } .facts { margin-top: var(--s5); } .visit-links a[href^="tel"] { display: none; } }
+@media (max-width: 400px) { .form { padding: var(--s4); } }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--brand-deep); color: color-mix(in srgb, var(--brand-ink) 84%, var(--brand-deep)); padding-block: var(--s7) var(--s6); font-size: var(--fs-sm); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; }
+.site-footer .logo { color: var(--brand-ink); margin-bottom: var(--s4); }
+.site-footer h2 { color: var(--brand-ink); font: 600 var(--fs-body)/1.5 var(--font-body); margin-bottom: var(--s2); }
+.site-footer p { font-variant-numeric: tabular-nums; }
+.site-footer a { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: color-mix(in srgb, var(--brand-ink) 40%, transparent); }
+.site-footer a:hover { color: var(--brand-ink); text-decoration-color: var(--accent); }
+.site-footer :focus-visible { outline-color: var(--brand-ink); }
+.social { display: flex; flex-wrap: wrap; gap: var(--s4); margin-top: var(--s3); }
+.foot-bottom { margin-top: var(--s6); padding-top: var(--s5); border-top: 1px solid color-mix(in srgb, var(--brand-ink) 16%, transparent); display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s2) var(--s5); }
+@media (max-width: 860px) { .foot-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s5); } .foot-links { display: none; } }
+
+/* ---------- Fixed bottom bar on mobile ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 860px) {
+  .mobile-bar { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: var(--s2); position: fixed; inset: auto 0 0; z-index: 60; padding: var(--s3) 1rem calc(var(--s3) + env(safe-area-inset-bottom)); background: var(--surface); border-top: 1px solid var(--line); }
+  .mobile-bar .btn { padding: var(--s2) var(--s3); }
+  /* The bottom bar hides while the hero button is on screen or the booking form is in view; without JS it always shows */
+  .js .mobile-bar { transform: translateY(110%); visibility: hidden; transition: transform .3s ease, visibility .3s; }
+  .js .mobile-bar.show { transform: none; visibility: visible; }
+  body { padding-bottom: 73px; }
+}
+
+/* ---------- Hero entrance (the only animation on the page) ---------- */
+.js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== Language switcher (lang-switch) ==================== */
+.nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
+.lang-switch { display: flex; align-items: center; gap: .1rem; flex: none; margin-inline-start: .5rem; padding-inline-start: .6rem; border-inline-start: 1px solid var(--line); font: 400 var(--fs-sm)/1 var(--font-body); letter-spacing: normal; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; border-radius: var(--radius-sm); color: var(--muted); text-decoration: none; text-underline-offset: 5px; text-decoration-thickness: 2px; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 600; text-decoration-line: underline; text-decoration-color: var(--accent); }
+@media (max-width: 860px) {
+  .nav > .lang-switch { order: 1; margin-inline: 0; padding-inline-start: 0; border: 0; }
+  .nav > .menu-btn { order: 2; }
+  .nav > .nav-links { order: 3; }
+}
+@media (min-width: 861px) and (max-width: 1100px) {
+  .nav > .nav-links { gap: .9rem; }
+  .nav > .nav-links .btn { padding-inline: .9rem; }
+  .nav > .lang-switch { margin-inline-start: 0; padding-inline-start: .3rem; }
+  .logo small { display: none; }
+}
+@media (max-width: 400px) { .nav { gap: .5rem; } }
+/* Footer language links */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: var(--s3); }
+.site-footer .foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius-sm); }
+.site-footer .foot-lang a:hover { text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand-ink); outline-offset: 1px; }
+.site-footer .foot-lang a[aria-current="page"] { font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: var(--radius-sm); color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- ==================== Section: Header navigation ==================== -->
+<!-- Sample content — replace before going live (the center name is fictional) -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Stride Learning Center, back to top" translate="no">Stride <small>Learning Center</small></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="Main menu">
+      <a href="#courses">Classes</a>
+      <a href="#method">How it works</a>
+      <a href="#teachers">Teachers</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#faq">Common questions</a>
+      <a href="#visit" class="btn btn-ghost">Book an assessment</a>
+    </nav>
+    <!-- lang-switch: language switcher. To add a language, add a link here and create the matching folder -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="en">EN</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en" aria-current="page">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<!-- ==================== Section: Hero (with the grade picker) ==================== -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="hero-text reveal">
+      <h1>Find the gap first.<br>Then close it.</h1>
+      <p class="hero-sub">Stride teaches small classes for grades K–12 in Irvine. Every student starts with a 40-minute assessment, then a plan we write together with you.</p>
+    </div>
+    <div class="hero-cta">
+      <a href="#visit" class="btn btn-primary">Book a free assessment</a>
+      <a href="tel:+15550123456" class="text-link">or call (555) 012-3456</a>
+    </div>
+    <!-- Grade picker: data-grade matches the data-grade on each class below (elem = elementary, jr = middle school, sr = high school, exam = test prep).
+         Without JS these four are links to the class list, and every class is shown -->
+    <div class="picker" role="group" aria-labelledby="pick-label">
+      <p class="pick-label"><b id="pick-label"><span class="mark">What grade is your child in?</span></b> <span>Pick one to see only the classes that fit.</span></p>
+      <div class="grades">
+        <a class="grade" href="#courses" data-grade="elem"><b>Elementary</b><small>Grades K–5</small></a>
+        <a class="grade" href="#courses" data-grade="jr"><b>Middle school</b><small>Grades 6–8</small></a>
+        <a class="grade" href="#courses" data-grade="sr"><b>High school</b><small>Grades 9–12</small></a>
+        <a class="grade" href="#courses" data-grade="exam"><b>Test prep</b><small>SAT and ACT</small></a>
+      </div>
+    </div>
+    <div class="hero-fig">
+      <div class="img img-hero" role="img" aria-label="Classroom illustration: a bright small classroom with a few desks, a whiteboard and light from the window"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Classes and tuition ==================== -->
+<!-- How to edit: each class is one <li class="course">; data-grade lists the grade codes it suits (several are fine, separated by spaces). Adding or removing classes needs no JS changes -->
+<!-- Sample content — replace before going live (classes, schedules, class sizes and tuition are fictional) -->
+<section class="band" id="courses">
+  <div class="wrap">
+    <div class="course-top">
+      <div>
+        <h2>Classes and tuition</h2>
+        <p class="lead">Class sizes, schedules and tuition, all in one list.</p>
+      </div>
+      <div class="filter" role="group" aria-label="Filter classes by grade">
+        <button type="button" class="chip" data-grade="" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-grade="elem" aria-pressed="false">Elementary</button>
+        <button type="button" class="chip" data-grade="jr" aria-pressed="false">Middle school</button>
+        <button type="button" class="chip" data-grade="sr" aria-pressed="false">High school</button>
+        <button type="button" class="chip" data-grade="exam" aria-pressed="false">Test prep</button>
+      </div>
+    </div>
+    <p class="course-status" id="course-status" aria-live="polite">All 10 classes</p>
+    <div class="course-head" aria-hidden="true"><span>Class</span><div><span>Grades</span><span>Schedule</span><span>Class size</span><span>Tuition</span></div></div>
+    <ul class="course-list">
+      <li class="course" data-grade="elem">
+        <div><h3>Elementary Math Foundations</h3><p>Word problems first: reading them closely and writing the thinking down.</p></div>
+        <dl><div><dt>Grades</dt><dd>Grades 3–5</dd></div><div><dt>Schedule</dt><dd>Tue and Thu, 4:00–5:30 pm</dd></div><div><dt>Class size</dt><dd>8 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $240 a month</dd></div></dl>
+      </li>
+      <li class="course" data-grade="elem">
+        <div><h3>Reading and Writing Workshop</h3><p>One short text a week and one paragraph of their own in response.</p></div>
+        <dl><div><dt>Grades</dt><dd>Grades 3–5</dd></div><div><dt>Schedule</dt><dd>Wed, 3:30–5:00 pm</dd></div><div><dt>Class size</dt><dd>8 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $180 a month</dd></div></dl>
+      </li>
+      <li class="course" data-grade="elem">
+        <div><h3>After-School Homework Club</h3><p>Homework finished the same day, checked and corrected by a teacher.</p></div>
+        <dl><div><dt>Grades</dt><dd>Grades K–5</dd></div><div><dt>Schedule</dt><dd>Mon to Fri, 3:00–6:00 pm</dd></div><div><dt>Class size</dt><dd>10 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $420 a month</dd></div></dl>
+      </li>
+      <li class="course" data-grade="jr">
+        <div><h3>Middle School Math</h3><p>Follows the school pacing guide, with 20 minutes of practice in every class.</p></div>
+        <dl><div><dt>Grades</dt><dd>Grades 6–8</dd></div><div><dt>Schedule</dt><dd>Mon and Thu, 6:00–7:30 pm</dd></div><div><dt>Class size</dt><dd>10 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $280 a month</dd></div></dl>
+      </li>
+      <li class="course" data-grade="jr">
+        <div><h3>Middle School English</h3><p>Grammar, close reading and essays in rotation, with a weekly vocabulary quiz.</p></div>
+        <dl><div><dt>Grades</dt><dd>Grades 6–8</dd></div><div><dt>Schedule</dt><dd>Tue and Fri, 6:00–7:30 pm</dd></div><div><dt>Class size</dt><dd>10 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $280 a month</dd></div></dl>
+      </li>
+      <li class="course" data-grade="jr">
+        <div><h3>Middle School Science</h3><p>Watch the experiment first, then work back to the formulas.</p></div>
+        <dl><div><dt>Grades</dt><dd>Grades 7–8</dd></div><div><dt>Schedule</dt><dd>Wed, 6:00–7:30 pm</dd></div><div><dt>Class size</dt><dd>10 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $220 a month</dd></div></dl>
+      </li>
+      <li class="course" data-grade="sr">
+        <div><h3>High School Math</h3><p>Grouped by course, from Algebra I to Calculus. Concept first, then past exam problems.</p></div>
+        <dl><div><dt>Grades</dt><dd>Grades 9–12</dd></div><div><dt>Schedule</dt><dd>Sat, 9:00 am–12:00 pm</dd></div><div><dt>Class size</dt><dd>12 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $340 a month</dd></div></dl>
+      </li>
+      <li class="course" data-grade="sr">
+        <div><h3>High School English</h3><p>Long-form reading and analytical writing, with one graded essay every two weeks.</p></div>
+        <dl><div><dt>Grades</dt><dd>Grades 9–12</dd></div><div><dt>Schedule</dt><dd>Sat, 1:30–4:30 pm</dd></div><div><dt>Class size</dt><dd>12 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $340 a month</dd></div></dl>
+      </li>
+      <li class="course" data-grade="jr exam">
+        <div><h3>PSAT 8/9 Head Start</h3><p>A first look at the test format, with one practice test a month and an individual review.</p></div>
+        <dl><div><dt>Grades</dt><dd>Grade 8</dd></div><div><dt>Schedule</dt><dd>Sun, 9:00 am–12:00 pm</dd></div><div><dt>Class size</dt><dd>12 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $690 a term</dd></div></dl>
+      </li>
+      <li class="course" data-grade="sr exam">
+        <div><h3>SAT and ACT Prep</h3><p>Grouped by practice-test results, so each student works on their weakest sections.</p></div>
+        <dl><div><dt>Grades</dt><dd>Grades 10–12</dd></div><div><dt>Schedule</dt><dd>Sun, 1:00–5:00 pm</dd></div><div><dt>Class size</dt><dd>12 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $960 a term</dd></div></dl>
+      </li>
+    </ul>
+    <p class="course-note">* Tuition includes materials. A term is 12 weeks. The exact amount depends on sessions per week, and you get a written quote after the assessment.</p>
+  </div>
+</section>
+
+<!-- ==================== Section: How it works ==================== -->
+<section id="method">
+  <div class="wrap method-grid">
+    <div class="img img-desk" role="img" aria-label="Desk illustration: an open notebook seen from above, two yellow pencils and a worksheet"></div>
+    <div>
+      <h2>How it works</h2>
+      <p class="lead">Three steps, each with a record you can read.</p>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-no" aria-hidden="true">1</span>
+          <h3>Assessment</h3>
+          <p>A 40-minute short test and a conversation to find the units where your child is stuck.</p>
+        </li>
+        <li class="step">
+          <span class="step-no" aria-hidden="true">2</span>
+          <h3>Learning plan</h3>
+          <p>The teacher writes down what to cover this semester and in what order. We place your child after you agree.</p>
+        </li>
+        <li class="step">
+          <span class="step-no" aria-hidden="true">3</span>
+          <h3>Weekly update</h3>
+          <p>One message a week: what was covered, quiz results and what comes next.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Teachers ==================== -->
+<!-- Sample content — replace before going live (teacher names, degrees, experience and photos are fictional) -->
+<section class="band" id="teachers">
+  <div class="wrap">
+    <div class="split-head">
+      <h2>Teachers</h2>
+      <p class="lead">Three full-time teachers, each with their own classes. The teacher who runs the class also does the assessment and writes the weekly update.</p>
+    </div>
+    <div class="t-grid">
+      <article class="teacher">
+        <div class="img img-t img-t1" role="img" aria-label="Photo slot for Ms. Grace Lin"></div>
+        <div class="t-body">
+          <h3>Ms. Grace Lin</h3>
+          <p class="t-role">Math lead</p>
+          <dl>
+            <div><dt>Degree</dt><dd>B.S. in Mathematics</dd></div>
+            <div><dt>Years</dt><dd>11 years teaching</dd></div>
+            <div><dt>Teaches</dt><dd>Middle and high school math</dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="teacher">
+        <div class="img img-t img-t2" role="img" aria-label="Photo slot for Mr. Daniel Chang"></div>
+        <div class="t-body">
+          <h3>Mr. Daniel Chang</h3>
+          <p class="t-role">English and test prep</p>
+          <dl>
+            <div><dt>Degree</dt><dd>M.A. in English Education</dd></div>
+            <div><dt>Years</dt><dd>15 years teaching</dd></div>
+            <div><dt>Teaches</dt><dd>English, SAT and ACT</dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="teacher">
+        <div class="img img-t img-t3" role="img" aria-label="Photo slot for Ms. Emily Chen"></div>
+        <div class="t-body">
+          <h3>Ms. Emily Chen</h3>
+          <p class="t-role">Elementary</p>
+          <dl>
+            <div><dt>Degree</dt><dd>B.A. in Education</dd></div>
+            <div><dt>Years</dt><dd>6 years teaching</dd></div>
+            <div><dt>Teaches</dt><dd>Elementary math and reading</dd></div>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Calendar ==================== -->
+<!-- Sample content — replace before going live (dates and events are fictional) -->
+<section id="calendar">
+  <div class="wrap cal-grid">
+    <div>
+      <h2>This year’s calendar</h2>
+      <p class="lead">Start dates, finals review and the summer session. Updated every semester.</p>
+    </div>
+    <ol class="cal">
+      <li><span class="cal-date">January 11</span><h3>Spring classes begin</h3><p>New students book an assessment first.</p></li>
+      <li><span class="cal-date">March 8</span><h3>SAT prep term begins</h3><p>Twelve Sundays with three full practice tests.</p></li>
+      <li><span class="cal-date">From May 17</span><h3>Finals review weeks</h3><p>Extra evening help sessions at no charge.</p></li>
+      <li><span class="cal-date">June 14</span><h3>Summer session begins</h3><p>Preview and review tracks, six weeks.</p></li>
+      <li><span class="cal-date">August 23</span><h3>Fall classes begin</h3><p>Schedules follow the Irvine school calendar.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== Section: Progress and common questions ==================== -->
+<section class="band" id="faq">
+  <div class="wrap faq-grid">
+    <div id="results">
+      <h2>We track progress on paper</h2>
+      <p class="lead">Grades go up and down, so we publish no rankings and promise no scores. After each exam the teacher sums up the missed questions on one page and goes through it with you.</p>
+      <!-- Sample content — replace before going live (the weekly update is a fictional example) -->
+      <div class="report">
+        <h3>Weekly update (sample) <small>Algebra I, Grade 8, week 6</small></h3>
+        <dl>
+          <div><dt>Covered</dt><dd>Quadratics: completing the square</dd></div>
+          <div><dt>Quiz</dt><dd>6 of 8 correct, both misses on signs</dd></div>
+          <div><dt>Up next</dt><dd>The quadratic formula</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div>
+      <h2>Common questions</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Can we try a class first?</summary>
+          <p>Yes. Each class offers one free trial session. We do the assessment first, so the trial is in a class that fits.</p>
+        </details>
+        <details>
+          <summary>What if my child misses a class?</summary>
+          <p>Tell us a day ahead and we will schedule a make-up session the same week, or the teacher will go over that week’s key points separately. Up to two a month.</p>
+        </details>
+        <details>
+          <summary>How do refunds work?</summary>
+          <p>You can withdraw at any time and we refund the unused weeks of the month or term. The full terms are printed on your enrollment form.</p>
+        </details>
+        <details>
+          <summary>Can we sign up for one subject?</summary>
+          <p>Yes. Each subject is its own enrollment. You can add a subject or switch classes mid-semester, and tuition is prorated by the weeks left.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Book an assessment (form and location) ==================== -->
+<!-- Sample content — replace before going live (address, phone and hours are fictional) -->
+<section id="visit">
+  <div class="wrap visit-grid">
+    <div>
+      <h2>Book a free assessment</h2>
+      <p class="lead">Leave your details and we will call within one business day to set a time. There is no need to enroll on the spot.</p>
+      <dl class="facts">
+        <div><dt>Length</dt><dd>About 40 minutes. Parents are welcome to wait</dd></div>
+        <div><dt>Address</dt><dd>128 Maple Street, Suite 200, Irvine, CA 92602</dd></div>
+        <div><dt>Hours</dt><dd>Monday to Friday, 1:30–9:30 pm<br>Saturday and Sunday, 9:00 am–5:30 pm</dd></div>
+      </dl>
+      <div class="visit-links">
+        <!-- WhatsApp button: replace 15550123456 with your number (country code first, no plus sign). You can swap this for LINE, Messenger or Instagram -->
+        <a href="https://wa.me/15550123456" class="btn btn-ghost" target="_blank" rel="noopener">Message us on WhatsApp</a>
+        <a href="tel:+15550123456" class="text-link">(555) 012-3456</a>
+        <a href="https://maps.google.com/?q=128+Maple+Street,+Irvine,+CA+92602" class="text-link" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+    </div>
+    <!-- The form uses Formspree (the free plan covers 50 submissions a month):
+         1. Sign up at https://formspree.io and create a new form
+         2. Copy the ID from the form URL (for example xyzabcd)
+         3. Replace your-form-id in the action below with your ID to get email notifications -->
+    <form class="form" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="field"><label for="f-name">Parent name<span class="req">required</span></label><input id="f-name" name="Parent name" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">Phone<span class="req">required</span></label><input id="f-tel" name="Phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(555) 012-3456" required></div>
+      <div class="field"><label for="f-grade">Child’s grade level<span class="req">required</span></label>
+        <select id="f-grade" name="Child’s grade level" required>
+          <option value="">Choose one</option>
+          <option data-grade="elem">Elementary</option>
+          <option data-grade="jr">Middle school</option>
+          <option data-grade="sr">High school</option>
+        </select></div>
+      <fieldset class="field">
+        <legend>Subjects to work on<span class="req">choose any</span></legend>
+        <div class="checks">
+          <label><input type="checkbox" name="Subjects" value="Math">Math</label>
+          <label><input type="checkbox" name="Subjects" value="English">English</label>
+          <label><input type="checkbox" name="Subjects" value="Reading and writing">Reading and writing</label>
+          <label><input type="checkbox" name="Subjects" value="Science">Science</label>
+        </div>
+      </fieldset>
+      <button class="btn btn-primary" type="submit">Request an assessment</button>
+      <p class="form-note">We only use these details to schedule your assessment.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<!-- Sample content — replace before going live (center name, address and phone are fictional) -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" translate="no">Stride Learning Center</div>
+        <p>128 Maple Street, Suite 200<br>Irvine, CA 92602<br>Phone: <a href="tel:+15550123456">(555) 012-3456</a></p>
+        <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="https://wa.me/15550123456" target="_blank" rel="noopener">WhatsApp</a></div>
+      </div>
+      <div>
+        <h2>Hours</h2>
+        <p>Monday to Friday, 1:30–9:30 pm<br>Saturday and Sunday, 9:00 am–5:30 pm<br>Closed on federal holidays</p>
+      </div>
+      <div class="foot-links">
+        <h2>Quick links</h2>
+        <p><a href="#courses">Classes and tuition</a><br><a href="#teachers">Teachers</a><br><a href="#calendar">Calendar</a><br><a href="#visit">Book a free assessment</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y">2026</span> <span translate="no">Stride Learning Center</span></span>
+      <!-- Sample content — replace before going live (edit or remove this line) -->
+      <span>Independent tutoring center, not affiliated with any school district</span>
+    </div>
+    <!-- Footer language links: the same set as the lang-switch in the header -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+      <a href="../ja/" hreflang="ja" lang="ja">日本語</a></p>
+  </div>
+</footer>
+
+<!-- ==================== Section: Fixed bottom bar on mobile ==================== -->
+<div class="mobile-bar">
+  <a href="tel:+15550123456" class="btn btn-ghost">Call us</a>
+  <a href="#visit" class="btn btn-primary">Book free assessment</a>
+</div>
+
+<script>
+// Interface text (edit here when translating)
+const T = { open: 'Open menu', close: 'Close menu', all: n => `All ${n} classes`, some: (g, n) => `${g}: ${n} classes` };
+const $ = (q, el = document) => el.querySelector(q), $$ = (q, el = document) => [...el.querySelectorAll(q)];
+$('#y').textContent = new Date().getFullYear();
+
+// Header background on scroll
+const header = $('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+// Hamburger menu (closes on link click or Esc)
+const menuBtn = $('.menu-btn'), links = $('#nav-links');
+const setMenu = open => {
+  links.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? T.close : T.open);
+};
+menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+$$('a', links).forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && links.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
+
+// Grade picker: swap the four hero links for buttons (aria-pressed); a click filters the classes, announces the result and jumps to the class list
+$$('a.grade').forEach(a => {
+  const b = document.createElement('button');
+  b.type = 'button'; b.className = a.className; b.dataset.grade = a.dataset.grade; b.innerHTML = a.innerHTML;
+  b.setAttribute('aria-pressed', 'false');
+  a.replaceWith(b);
+});
+const courses = $$('.course'), gradeBtns = $$('button[data-grade]'), gradeSelect = $('#f-grade');
+gradeSelect.addEventListener('change', () => { gradeSelect.dataset.touched = 1; });
+const setGrade = (g, jump) => {
+  let n = 0;
+  courses.forEach(c => { const on = !g || c.dataset.grade.split(' ').includes(g); c.hidden = !on; n += on; });
+  gradeBtns.forEach(b => b.setAttribute('aria-pressed', b.dataset.grade === g));
+  const chip = $(`.chip[data-grade="${g}"]`);
+  $('#course-status').textContent = g ? T.some(chip.textContent, n) : T.all(n);
+  // Also preselect the grade level in the booking form (left alone once the visitor has changed it)
+  const opt = $(`option[data-grade="${g}"]`, gradeSelect);
+  if (opt && !gradeSelect.dataset.touched) gradeSelect.value = opt.value;
+  if (jump) { $('#courses').scrollIntoView(); chip.focus({ preventScroll: true }); }
+};
+gradeBtns.forEach(b => b.addEventListener('click', () => setGrade(b.dataset.grade, b.classList.contains('grade'))));
+
+// Hero entrance (the only one) and the mobile bottom bar: it appears once the hero button leaves the screen and hides when the booking form is in view
+const reveals = $$('.reveal'), bar = $('.mobile-bar');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }));
+  reveals.forEach(el => io.observe(el));
+  const seen = new Map();
+  const so = new IntersectionObserver(es => { es.forEach(en => seen.set(en.target, en.isIntersecting)); bar.classList.toggle('show', ![...seen.values()].some(Boolean)); });
+  [$('.hero-cta'), $('.form')].forEach(el => so.observe(el));
+} else { reveals.forEach(el => el.classList.add('in')); bar.classList.add('show'); }
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  ご購入者さまへ：学習塾の募集文について
+  確認できない合格実績（「合格率 98%」「成績アップ保証」など）は載せないでください。合格者名や成績を掲載するときは、本人と保護者の同意が必要です。
+  このページの教室名、講師、料金、年間予定、週次レポートはすべて架空のサンプルです。公開前に実際の内容へ差し替えてください。
+-->
+<title>学行教室｜世田谷 小学生から高校生までの少人数制学習塾</title>
+<meta name="description" content="学行教室は東京都世田谷区の少人数制学習塾です。はじめに 40 分の無料学力診断を行い、保護者の方と学習計画を立て、毎週の進み具合をお知らせします。">
+<meta property="og:title" content="学行教室｜世田谷 小学生から高校生までの少人数制学習塾">
+<meta property="og:description" content="つまずきを見つけて、そこから学び直す。学年ごとのコース、時間割、料金を確認して、無料学力診断をオンラインで予約できます。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#253046">
+<!-- 多言語版（SEO）：公開後は href を完全な URL に書き換えてください（例 https://www.example.com/en/） -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&family=Source+Sans+3:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<!-- サンプル内容：公開前に実際の情報へ差し替えてください（名称、電話、住所、受付時間は架空です） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "学行教室",
+  "telephone": "03-1234-5678",
+  "url": "https://example.com/",
+  "priceRange": "¥9,900〜",
+  "currenciesAccepted": "JPY",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "桜丘 2-8-12 学行ビル 3階",
+    "addressLocality": "世田谷区",
+    "addressRegion": "東京都",
+    "postalCode": "156-0054",
+    "addressCountry": "JP"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "13:30", "closes": "21:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "17:30" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   テーマ設定：ここを変えるとサイト全体の配色とフォントが変わります
+   ============================================================ */
+:root {
+  --brand: #253046;          /* ブランドカラー：墨のような紺（メインボタン、ステップ番号、フッター） */
+  --brand-ink: #F6F6F3;      /* ブランドカラーの上にのせる文字色（紙の白） */
+  --brand-deep: #1A2233;     /* ブランドカラーの濃色（ボタンの hover、フッター背景） */
+  --bg: #F6F6F3;             /* ページ背景：紙の白 */
+  --surface: #FCFCFA;        /* サーフェス色：交互に入るセクション、フォームの入力欄、メニュー（わずかに温かみのある白） */
+  --text: #22262B;           /* 本文の文字色：グラファイト */
+  --muted: #555B66;          /* 補助テキスト（ページ背景とサーフェス色のどちらでも AA を満たします） */
+  --line: #D8D9D4;           /* 1px の罫線と区切り線 */
+  --accent: #E3B23C;         /* 鉛筆の黄色：唯一のアクセント。マーカーとしてだけ使います（選択中の学年、強調の下線）。上にのせる文字はグラファイトのみ */
+  --field-line: color-mix(in srgb, var(--muted) 72%, var(--line)); /* 入力欄とクリックできる枠線（コントラスト 3:1 以上） */
+  --wood: #CDBB98;           /* プレースホルダー画像用：机、床、鉛筆の木部 */
+  --glass: #E6ECEF;          /* プレースホルダー画像用：窓の光、壁 */
+  --slate: #9AA1AB;          /* プレースホルダー画像用：机の金属脚、ホワイトボードの枠、影 */
+  --skin: #D9BDA5;           /* プレースホルダー画像用：人物の肌色 */
+  --shadow: 0 16px 40px -24px color-mix(in srgb, var(--text) 30%, transparent); /* サイトで唯一の淡い影（ドロップダウンメニュー用） */
+  --radius: 6px;             /* 大きな要素の角丸（画像、フォームの枠、学年セレクター） */
+  --radius-sm: 3px;          /* 小さな要素の角丸（ボタン、入力欄、メニュー項目） */
+  --font-heading: "Zilla Slab", "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif; /* 見出しフォント（欧文と数字は Zilla Slab、和文は Zen Kaku Gothic New） */
+  --font-body: "Source Sans 3", "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif; /* 本文フォント */
+  --lh-body: 1.8;             /* 本文の行間 */
+  --fs-sm: .875rem;          /* 文字サイズ：小（ラベル、注記） */
+  --fs-body: 1rem;           /* 文字サイズ：本文 */
+  --fs-lg: 1.25rem;          /* 文字サイズ：小見出し（h3、学年ボタン） */
+  --fs-h2: clamp(1.75rem, 3.2vw, 2.5rem);   /* 文字サイズ：h2 */
+  --fs-h1: clamp(2rem, 4.4vw, 3.5rem);      /* 文字サイズ：ファーストビューの大見出し */
+  --s1: .25rem;              /* 余白の段階：4px */
+  --s2: .5rem;               /* 余白の段階：8px */
+  --s3: .75rem;              /* 余白の段階：12px */
+  --s4: 1rem;                /* 余白の段階：16px */
+  --s5: 1.5rem;              /* 余白の段階：24px */
+  --s6: 2rem;                /* 余白の段階：32px */
+  --s7: 3rem;                /* 余白の段階：48px */
+  --gap-col: clamp(2rem, 6vw, 6rem);        /* 2 カラムの間隔 */
+  --head-gap: clamp(2rem, 4.5vw, 3.5rem);   /* セクション見出しから内容までの間隔 */
+  --header-h: 72px;          /* ヘッダーの高さ */
+  --section-y: clamp(4rem, 11vw, 9rem);     /* セクションの上下余白 */
+  --max: 1200px;             /* コンテンツの最大幅 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-padding-top: calc(var(--header-h) + 16px); overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 var(--fs-body)/var(--lh-body) var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; touch-action: manipulation; font-synthesis: none; line-break: strict; word-break: auto-phrase; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; line-height: 1.3; letter-spacing: 0; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-lg); }
+p, li, dd, figcaption { text-wrap: pretty; }
+b, strong { font-weight: 600; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: var(--radius-sm); }
+.wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+section { padding-block: var(--section-y); }
+.band { background: var(--surface); border-block: 1px solid var(--line); }
+.lead { color: var(--muted); max-width: 34em; }
+.num { font-variant-numeric: tabular-nums; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* 鉛筆の黄色のマーカー下線：サイト内で学年セレクターの見出しにだけ使います */
+.mark { background: linear-gradient(transparent 58%, color-mix(in srgb, var(--accent) 75%, transparent) 58% 94%, transparent 94%); padding-inline: .15em; margin-inline: -.15em; }
+/* 本文へスキップ（キーボードで Tab を押すと表示されます） */
+.skip { position: fixed; left: 1rem; top: .75rem; z-index: 100; padding: .6rem 1rem; border-radius: var(--radius-sm); background: var(--brand); color: var(--brand-ink); transform: translateY(-200%); }
+.skip:focus { transform: none; }
+.skip:hover { background: var(--brand-deep); }
+.skip:active { opacity: .85; }
+main:focus { outline: none; }
+
+/* ---------- ボタン：塗りつぶしはメインの操作だけ。それ以外は細い枠線か下線付きのテキストリンク ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--s2); min-height: 48px; padding: var(--s3) var(--s5); border-radius: var(--radius-sm); font: 600 var(--fs-body)/1.3 var(--font-body); border: 1px solid transparent; transition: background-color .2s, color .2s, border-color .2s, transform .2s; cursor: pointer; font-variant-numeric: tabular-nums; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: var(--brand-deep); }
+.btn:active { transform: translateY(1px); }
+a:not(.btn):active { opacity: .7; }
+.btn-ghost { border-color: var(--field-line); color: var(--text); background: transparent; }
+.btn-ghost:hover { border-color: var(--text); background: color-mix(in srgb, var(--brand) 5%, transparent); }
+.text-link { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; text-decoration-color: var(--field-line); font-variant-numeric: tabular-nums; transition: text-decoration-color .2s; }
+.text-link:hover { text-decoration-color: var(--text); }
+
+/* ---------- ヘッダー ---------- */
+html:not(.js) .site-header { background: var(--surface); border-bottom-color: var(--line); }
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; border-bottom: 1px solid transparent; transition: background-color .3s, border-color .3s; }
+.site-header.scrolled { background: var(--surface); border-bottom-color: var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: var(--s4); }
+.logo { display: flex; align-items: baseline; gap: .6rem; font: 500 1.25rem/1 var(--font-heading); }
+.logo small { font: 400 var(--fs-sm)/1 var(--font-body); color: var(--muted); }
+.nav-links { display: flex; align-items: center; gap: 1.5rem; font-size: var(--fs-sm); }
+.nav-links a:not(.btn) { color: var(--muted); transition: color .2s; }
+.nav-links a:not(.btn):hover { color: var(--text); text-decoration: underline; text-underline-offset: 6px; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+.nav-links .btn { min-height: 40px; padding: var(--s2) var(--s4); font-size: var(--fs-sm); }
+.menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--field-line); border-radius: var(--radius-sm); background: var(--surface); color: var(--text); cursor: pointer; transition: border-color .2s; }
+.menu-btn:hover { border-color: var(--text); }
+.menu-btn:active { transform: translateY(1px); }
+.menu-btn span { display: block; width: 18px; height: 1.5px; margin: 4px auto; background: currentColor; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+@media (max-width: 860px) {
+  :root { --header-h: 64px; }
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: var(--header-h); left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: var(--s2); font-size: var(--fs-body); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: var(--s3) var(--s4); border-radius: var(--radius-sm); color: var(--text); }
+  .js .nav-links .btn { margin-top: var(--s2); min-height: 48px; font-size: var(--fs-body); }
+  /* JS が無効のとき：メニューは折り返すリンクの列として表示し、ヘッダーは sticky にします */
+  html:not(.js) .site-header { position: sticky; top: 0; }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: var(--s3); }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: var(--s1) var(--s4); }
+  html:not(.js) .nav-links a:not(.btn) { padding-block: var(--s2); }
+  html:not(.js) .hero { padding-top: var(--s6); }
+}
+@media (max-width: 420px) { .logo small { display: none; } }
+
+/* ---------- プレースホルダー画像 ----------
+   画像の枠ごとに専用の class があります。写真に替えるときはその class だけを書き換え、::before／::after を削除してください。
+   img タグに替える場合は width／height を付け、ファーストビューの画像には fetchpriority="high"、それ以外には loading="lazy" を付けます。 */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); background-color: var(--glass); }
+
+/* 写真に替える：.img-hero { background: url(images/classroom.jpg) center/cover; }
+   推奨比率 3:2 の横長：明るい少人数の教室。机が数台、ホワイトボード、窓の光。人物なし */
+.img-hero { aspect-ratio: 3 / 2;
+  background:
+    linear-gradient(color-mix(in srgb, var(--brand) 45%, var(--surface)), color-mix(in srgb, var(--brand) 45%, var(--surface))) 54.12% 21.17% / 15% 0.8% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--brand) 45%, var(--surface)), color-mix(in srgb, var(--brand) 45%, var(--surface))) 59.74% 26.21% / 23% 0.8% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--brand) 45%, var(--surface)), color-mix(in srgb, var(--brand) 45%, var(--surface))) 51.11% 31.25% / 10% 0.8% no-repeat,
+    linear-gradient(var(--accent), var(--accent)) 81.61% 20.44% / 3.2% 4.6% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 94%, var(--glass)), color-mix(in srgb, var(--surface) 94%, var(--glass))) 76.36% 21.68% / 45% 28.5% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--slate) 60%, var(--surface)), color-mix(in srgb, var(--slate) 60%, var(--surface))) 77.36% 20.44% / 47% 31.5% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--slate) 85%, var(--text)), color-mix(in srgb, var(--slate) 85%, var(--text))) 72.31% 46.1% / 35% 1.3% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 88%, var(--slate)), color-mix(in srgb, var(--surface) 88%, var(--slate))) 16.73% 20.18% / 0.8% 43% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 88%, var(--slate)), color-mix(in srgb, var(--surface) 88%, var(--slate))) 8.96% 32.32% / 19.6% 1% no-repeat,
+    linear-gradient(165deg, var(--surface), var(--glass) 55%, color-mix(in srgb, var(--slate) 28%, var(--glass))) 8.96% 20.18% / 19.6% 43% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 88%, var(--slate)), color-mix(in srgb, var(--surface) 88%, var(--slate))) 7.69% 18.52% / 22% 46% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 78%, var(--slate)), color-mix(in srgb, var(--surface) 78%, var(--slate))) 6.58% 56.85% / 24% 1.5% no-repeat,
+    linear-gradient(104deg, transparent 6%, color-mix(in srgb, var(--surface) 50%, transparent) 15% 33%, transparent 45%) 0 100% / 100% 34% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 72%, var(--slate)), color-mix(in srgb, var(--surface) 72%, var(--slate))) 0% 66.13% / 100% 1.1% no-repeat,
+    radial-gradient(46% 62% at 17% 30%, color-mix(in srgb, var(--surface) 85%, transparent), transparent 100%),
+    linear-gradient(180deg, color-mix(in srgb, var(--glass) 62%, var(--surface)) 0 66%, color-mix(in srgb, var(--wood) 58%, var(--surface)) 66% 100%); }
+/* 後列の机と椅子（ホワイトボードの前） */
+.img-hero::before { content: ""; position: absolute; left: 27%; width: 60%; top: 51.5%; height: 17%;
+  background:
+    linear-gradient(90deg, transparent 37%, color-mix(in srgb, var(--brand) 55%, var(--glass)) 37% 63%, transparent 63%) 0 8.0% / 33.333% 50% repeat-x,
+    linear-gradient(90deg, transparent 38.5%, color-mix(in srgb, var(--brand) 55%, var(--glass)) 38.5% 40.5%, transparent 40.5% 59.5%, color-mix(in srgb, var(--brand) 55%, var(--glass)) 59.5% 61.5%, transparent 61.5%) 0 100.0% / 33.333% 46% repeat-x,
+    linear-gradient(90deg, transparent 9%, color-mix(in srgb, var(--wood) 80%, var(--surface)) 9% 91%, transparent 91%) 0 32.97% / 33.333% 9% repeat-x,
+    linear-gradient(90deg, transparent 9%, color-mix(in srgb, var(--wood) 70%, var(--slate)) 9% 91%, transparent 91%) 0 40.0% / 33.333% 2.5% repeat-x,
+    linear-gradient(90deg, transparent 12.5%, color-mix(in srgb, var(--slate) 80%, var(--surface)) 12.5% 14.5%, transparent 14.5% 85.5%, color-mix(in srgb, var(--slate) 80%, var(--surface)) 85.5% 87.5%, transparent 87.5%) 0 100.0% / 33.333% 58.5% repeat-x; }
+/* 前列の机と椅子（下端で切れる、写真の前景のような構図） */
+.img-hero::after { content: ""; position: absolute; left: 3%; width: 94%; top: 61%; height: 39%;
+  background:
+    linear-gradient(90deg, transparent 37%, var(--brand) 37% 63%, transparent 63%) 0 7.14% / 33.333% 44% repeat-x,
+    linear-gradient(90deg, transparent 38.5%, var(--brand) 38.5% 40.5%, transparent 40.5% 59.5%, var(--brand) 59.5% 61.5%, transparent 61.5%) 0 100.0% / 33.333% 52% repeat-x,
+    linear-gradient(90deg, transparent 9%, var(--wood) 9% 91%, transparent 91%) 0 26.09% / 33.333% 8% repeat-x,
+    linear-gradient(90deg, transparent 9%, color-mix(in srgb, var(--wood) 72%, var(--text)) 9% 91%, transparent 91%) 0 32.82% / 33.333% 2.5% repeat-x,
+    linear-gradient(90deg, transparent 12.5%, color-mix(in srgb, var(--slate) 78%, var(--text)) 12.5% 14.5%, transparent 14.5% 85.5%, color-mix(in srgb, var(--slate) 78%, var(--text)) 85.5% 87.5%, transparent 87.5%) 0 100.0% / 33.333% 65.5% repeat-x; }
+
+/* 写真に替える：.img-t1 { background: url(images/teacher-1.jpg) center/cover; }（.img-t2、.img-t3 も同様）
+   推奨比率 4:5 のバストアップ：人物は中央、頭上に少し余白、背景はぼかした教室 */
+.img-t { aspect-ratio: 4 / 5; --hx: 50%; --hy: 36%; --hair: color-mix(in srgb, var(--text) 78%, var(--wood)); --back: 1%; --shirt: color-mix(in srgb, var(--surface) 86%, var(--slate));
+  background:
+    radial-gradient(55% 42% at 16% 20%, color-mix(in srgb, var(--surface) 96%, transparent), transparent 100%),
+    radial-gradient(44% 20% at 78% 30%, color-mix(in srgb, var(--surface) 78%, transparent) 50%, transparent 100%),
+    linear-gradient(180deg, color-mix(in srgb, var(--glass) 82%, var(--slate)), color-mix(in srgb, var(--glass) 58%, var(--slate)) 64%, color-mix(in srgb, var(--wood) 42%, var(--glass))); }
+/* 頭と首：輪郭をぼかした楕円（顔のパーツは描きません）。位置は --hx、--hy で決まり、--back は後ろ髪の長さです */
+.img-t::before { content: ""; position: absolute; left: calc(var(--hx) - 19%); top: calc(var(--hy) - 19%); width: 38%; height: 44%; filter: blur(3px);
+  background:
+    radial-gradient(50% 18% at 50% 19%, var(--hair) 70%, transparent 100%),
+    radial-gradient(42% 31% at 50% 42%, var(--skin) 84%, transparent 100%),
+    linear-gradient(color-mix(in srgb, var(--skin) 88%, var(--text)), color-mix(in srgb, var(--skin) 88%, var(--text))) 50% 100% / 30% 36% no-repeat,
+    radial-gradient(50% var(--back) at 50% 42%, var(--hair) 80%, transparent 100%); }
+/* 肩と無地のシャツ：台形の肩のラインと V 字の襟 */
+.img-t::after { content: ""; position: absolute; left: 5%; right: 5%; top: 58%; bottom: 0; filter: blur(1px);
+  clip-path: polygon(29% 0, 71% 0, 94% 17%, 100% 100%, 0 100%, 6% 17%);
+  background:
+    conic-gradient(from 160deg at 50% 0, var(--skin) 0 40deg, transparent 40deg) 0 0 / 100% 26% no-repeat,
+    conic-gradient(from 150deg at 50% 0, color-mix(in srgb, var(--shirt) 86%, var(--text)) 0 60deg, transparent 60deg) 0 0 / 100% 38% no-repeat,
+    linear-gradient(90deg, color-mix(in srgb, var(--shirt) 88%, var(--text)), var(--shirt) 30% 70%, color-mix(in srgb, var(--shirt) 88%, var(--text))); }
+.img-t1 { --back: 44%; --shirt: color-mix(in srgb, var(--glass) 70%, var(--brand)); }
+.img-t2 { --hx: 48%; --hy: 35%; --hair: color-mix(in srgb, var(--text) 88%, var(--slate)); }
+.img-t3 { --hx: 52%; --hy: 37%; --back: 36%; --hair: color-mix(in srgb, var(--text) 66%, var(--wood)); --shirt: color-mix(in srgb, var(--wood) 46%, var(--surface)); }
+
+/* 写真に替える：.img-desk { background: url(images/desk.jpg) center/cover; }
+   推奨比率 3:2 の横長：真上から撮った机。ノート、黄色い鉛筆、計算用紙 */
+.img-desk { aspect-ratio: 3 / 2;
+  background:
+    linear-gradient(color-mix(in srgb, var(--text) 50%, var(--surface)), color-mix(in srgb, var(--text) 50%, var(--surface))) 22.99% 31.08% / 13% 0.9% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--text) 50%, var(--surface)), color-mix(in srgb, var(--text) 50%, var(--surface))) 23.81% 39.76% / 16% 0.9% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--text) 50%, var(--surface)), color-mix(in srgb, var(--text) 50%, var(--surface))) 21.98% 48.44% / 9% 0.9% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--text) 50%, var(--surface)), color-mix(in srgb, var(--text) 50%, var(--surface))) 23.26% 57.11% / 14% 0.9% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--text) 50%, var(--surface)), color-mix(in srgb, var(--text) 50%, var(--surface))) 53.53% 31.08% / 15% 0.9% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--text) 50%, var(--surface)), color-mix(in srgb, var(--text) 50%, var(--surface))) 51.7% 39.76% / 12% 0.9% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--text) 50%, var(--surface)), color-mix(in srgb, var(--text) 50%, var(--surface))) 54.82% 48.44% / 17% 0.9% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--accent) 62%, transparent), color-mix(in srgb, var(--accent) 62%, transparent)) 52.02% 38.88% / 13.5% 3.8% no-repeat,
+    repeating-linear-gradient(180deg, transparent 0 15.5%, color-mix(in srgb, var(--slate) 42%, var(--surface)) 15.5% 16.6%) 21.66% 50.0% / 21.5% 52% no-repeat,
+    repeating-linear-gradient(180deg, transparent 0 15.5%, color-mix(in srgb, var(--slate) 42%, var(--surface)) 15.5% 16.6%) 56.69% 50.0% / 21.5% 52% no-repeat,
+    linear-gradient(90deg, transparent, color-mix(in srgb, var(--text) 16%, transparent) 50%, transparent) 40.66% 47.06% / 3.6% 66% no-repeat,
+    linear-gradient(var(--surface), var(--surface)) 19.05% 47.06% / 26.5% 66% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 95%, var(--glass)), color-mix(in srgb, var(--surface) 95%, var(--glass))) 56.46% 47.06% / 26.5% 66% no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 29.73% 46.84% / 55.6% 68.4% no-repeat,
+    radial-gradient(34% 42% at 42% 56%, color-mix(in srgb, var(--text) 20%, transparent) 70%, transparent 100%),
+    linear-gradient(color-mix(in srgb, var(--surface) 92%, var(--slate)), color-mix(in srgb, var(--surface) 92%, var(--slate))) 84.49% 77.01% / 6.5% 6.5% no-repeat,
+    radial-gradient(62% 72% at 8% 0%, color-mix(in srgb, var(--surface) 55%, transparent), transparent 100%),
+    linear-gradient(100deg, color-mix(in srgb, var(--wood) 60%, var(--surface)), color-mix(in srgb, var(--wood) 84%, var(--surface))); }
+/* 計算用紙（右上、少し傾けています） */
+.img-desk::before { content: ""; position: absolute; left: 73%; top: 9%; width: 22%; height: 56%; transform: rotate(6deg); border-radius: 2px;
+  background:
+    linear-gradient(color-mix(in srgb, var(--text) 55%, var(--surface)), color-mix(in srgb, var(--text) 55%, var(--surface))) 25.0% 9.24% / 44% 2.6% no-repeat,
+    repeating-linear-gradient(180deg, transparent 0 22%, color-mix(in srgb, var(--slate) 60%, var(--surface)) 22% 25%) 50.0% 28.57% / 72% 30% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--glass) 55%, var(--surface)), color-mix(in srgb, var(--glass) 55%, var(--surface))) 50.0% 82.86% / 72% 30% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 97%, var(--slate)), color-mix(in srgb, var(--surface) 97%, var(--slate))); }
+/* 黄色い鉛筆 2 本（下側） */
+.img-desk::after { content: ""; position: absolute; left: 50%; top: 84%; width: 40%; height: 7%; transform: rotate(-5deg);
+  clip-path: polygon(0 0, 88% 0, 100% 17%, 88% 34%, 0 34%, 0 66%, 80% 66%, 92% 83%, 80% 100%, 0 100%);
+  background:
+    linear-gradient(90deg, var(--skin) 0 4%, color-mix(in srgb, var(--slate) 70%, var(--text)) 4% 8%, var(--accent) 8% 88%, var(--wood) 88% 96.5%, var(--text) 96.5%) 0 0 / 100% 34% no-repeat,
+    linear-gradient(90deg, var(--skin) 0 4.5%, color-mix(in srgb, var(--slate) 70%, var(--text)) 4.5% 9%, color-mix(in srgb, var(--accent) 88%, var(--text)) 9% 87%, var(--wood) 87% 96.5%, var(--text) 96.5%) 0 100% / 92% 34% no-repeat; }
+
+/* ---------- ヒーロー：見出し、メインボタン、教室の写真。その下に学年セレクター ---------- */
+.hero { padding: calc(var(--header-h) + clamp(1.5rem, 4vw, 3.5rem)) 0 clamp(3rem, 7vw, 5rem); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); grid-template-areas: "text img" "cta img" "pick pick"; column-gap: clamp(2rem, 5vw, 5rem); }
+.hero-text { grid-area: text; align-self: end; }
+.hero h1 { font-size: var(--fs-h1); line-height: 1.2; }
+.hero-sub { color: var(--muted); margin-top: var(--s5); max-width: 30em; }
+.hero-cta { grid-area: cta; align-self: start; display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s5); margin-top: var(--s6); }
+.hero-fig { grid-area: img; align-self: center; }
+/* 学年セレクター（このテンプレートの特徴）：JS が有効ならボタンになり、押すとコースを絞り込んでコース一覧へ移動します。JS が無効ならコース一覧へのリンクです */
+.picker { grid-area: pick; margin-top: clamp(2rem, 4vw, 3rem); }
+.pick-label { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s1) var(--s4); margin-bottom: var(--s4); }
+.pick-label b { font: 500 var(--fs-lg)/1.4 var(--font-heading); }
+.pick-label > span { color: var(--muted); font-size: var(--fs-sm); }
+.grades { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.grade { position: relative; display: grid; align-content: center; gap: 2px; min-height: 80px; padding: var(--s4) var(--s5); text-align: start; font: inherit; color: var(--text); background: var(--surface); border: 0; cursor: pointer; transition: background-color .2s; }
+.grade b { font: 500 var(--fs-lg)/1.3 var(--font-heading); }
+.grade small { font-size: var(--fs-sm); line-height: 1.4; color: var(--muted); font-variant-numeric: tabular-nums; }
+.grade::after { content: ""; position: absolute; inset: auto 0 0; height: 3px; background: var(--accent); transform: scaleX(0); transform-origin: 0 50%; transition: transform .25s; }
+.grade:hover { background: color-mix(in srgb, var(--accent) 12%, var(--surface)); }
+.grade:hover::after { transform: none; }
+.grade:active { background: color-mix(in srgb, var(--accent) 30%, var(--surface)); }
+.grade:focus-visible { outline-offset: -4px; }
+/* 選択中の学年：鉛筆の黄色の背景、グラファイトの文字、下端にグラファイトの線（色だけに頼りません） */
+.grade[aria-pressed="true"] { background: var(--accent); }
+.grade[aria-pressed="true"] small { color: var(--text); }
+.grade[aria-pressed="true"]::after { background: var(--text); transform: none; }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "text" "cta" "pick" "img"; }
+  .hero-sub { margin-top: var(--s4); }
+  .hero-cta { margin-top: var(--s5); }
+  .hero-fig { margin-top: var(--s6); }
+  .hero { padding-bottom: var(--s6); }
+  .grades { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grade { min-height: 68px; padding: var(--s3) var(--s4); }
+}
+
+/* ---------- コース：罫線のリスト。学年で絞り込めます ---------- */
+.course-top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--s5) var(--s6); margin-bottom: var(--head-gap); }
+.course-top .lead { margin-top: var(--s3); }
+.filter { display: flex; flex-wrap: wrap; gap: var(--s2); }
+html:not(.js) .filter { display: none; }
+.chip { min-height: 44px; padding: var(--s2) var(--s4); border: 1px solid var(--field-line); border-radius: var(--radius-sm); background: transparent; font: inherit; color: var(--text); cursor: pointer; transition: background-color .2s, border-color .2s, transform .2s; }
+.chip:hover { border-color: var(--text); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.chip:active { transform: translateY(1px); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--text); font-weight: 600; }
+.course-status { margin-bottom: var(--s3); color: var(--muted); font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
+.course-head, .course { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3.2fr); column-gap: clamp(1.5rem, 4vw, 4rem); }
+.course-head > div, .course dl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, .8fr) minmax(0, 1.2fr); column-gap: var(--s5); }
+.course-head { padding-block: var(--s3); border-top: 1px solid var(--text); font-size: var(--fs-sm); color: var(--muted); }
+.course-head span:last-child, .c-fee { text-align: end; }
+.course { align-items: baseline; padding-block: var(--s5); border-top: 1px solid var(--line); }
+.course[hidden] { display: none; }
+.course-list { border-bottom: 1px solid var(--line); }
+.course p { color: var(--muted); margin-top: var(--s1); max-width: 26em; }
+.course dl { font-variant-numeric: tabular-nums; }
+.c-fee dd { font-weight: 600; }
+.course-note { margin-top: var(--s5); font-size: var(--fs-sm); color: var(--muted); max-width: 44em; }
+@media (min-width: 901px) { .course dt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } }
+@media (max-width: 900px) {
+  /* スマートフォン：各コースを「名称と料金」「学年、時間、定員」の 2 行にまとめ、横スクロールなしで読めます */
+  .course-head { display: none; }
+  .course-list { border-top: 1px solid var(--text); }
+  .course { position: relative; display: block; padding-block: var(--s3); }
+  .course p { display: none; }
+  .course:first-child { border-top: 0; }
+  .course h3 { padding-inline-end: 9.5rem; }
+  .course dl { display: block; margin-top: var(--s1); font-size: var(--fs-sm); color: var(--muted); line-height: 1.6; }
+  .course dl > div, .course dd { display: inline; }
+  .course dt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .course dl > div + div:not(.c-fee)::before { content: "／"; }
+  .course .c-fee { position: absolute; inset: var(--s3) 0 auto auto; font-size: var(--fs-body); color: var(--text); line-height: 1.3; padding-top: .2em; }
+  .chip { padding-inline: var(--s3); }
+  .course-top .lead { display: none; }
+}
+
+/* ---------- 学習の進め方：大きな画像と 3 つのステップ（実際の順番なので番号を付けています） ---------- */
+.method-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--gap-col); align-items: center; }
+.method-grid .lead { margin-top: var(--s4); }
+.steps { margin-top: var(--s6); border-bottom: 1px solid var(--line); }
+.step { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); column-gap: var(--s4); padding-block: var(--s5); border-top: 1px solid var(--line); }
+.step-no { grid-row: span 2; font: 500 var(--fs-h2)/1 var(--font-heading); color: var(--brand); font-variant-numeric: tabular-nums; }
+.step p { color: var(--muted); margin-top: var(--s1); }
+@media (max-width: 860px) { .method-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s6); } .steps { margin-top: var(--s5); } .step { padding-block: var(--s4); } }
+
+/* ---------- 講師：3 名、4:5 のバストアップ写真 ---------- */
+.split-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); column-gap: var(--gap-col); row-gap: var(--s4); align-items: end; margin-bottom: var(--head-gap); }
+.t-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 4rem); }
+.t-body { padding-top: var(--s5); }
+.t-role { font-size: var(--fs-sm); color: var(--muted); }
+.teacher dl { margin-top: var(--s4); }
+.teacher dl > div { display: grid; grid-template-columns: 5em minmax(0, 1fr); gap: var(--s4); padding-block: var(--s3); border-top: 1px solid var(--line); }
+.teacher dt { color: var(--muted); }
+.teacher dd { font-variant-numeric: tabular-nums; }
+@media (max-width: 860px) {
+  .split-head { grid-template-columns: minmax(0, 1fr); }
+  .t-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s5); }
+  .teacher { display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); gap: var(--s5); align-items: start; }
+  .t-body { padding-top: 0; }
+  .teacher dl { margin-top: var(--s2); padding-top: var(--s2); border-top: 1px solid var(--line); font-size: var(--fs-sm); }
+  .teacher dl > div { grid-template-columns: 4.5em minmax(0, 1fr); gap: var(--s3); padding-block: 0; border: 0; }
+}
+
+/* ---------- 年間予定：日付、内容、補足を並べた罫線のリスト ---------- */
+.cal-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: var(--gap-col); align-items: start; }
+.cal-grid .lead { margin-top: var(--s4); }
+.cal { border-top: 1px solid var(--text); }
+.cal li { display: grid; grid-template-columns: 9.5em minmax(0, 1fr) minmax(0, 1.5fr); column-gap: var(--s5); align-items: baseline; padding-block: var(--s4); border-bottom: 1px solid var(--line); }
+.cal-date { font-variant-numeric: tabular-nums; color: var(--muted); }
+.cal h3 { font: 600 var(--fs-body)/var(--lh-body) var(--font-body); }
+.cal p { color: var(--muted); }
+@media (max-width: 860px) {
+  .cal-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s5); }
+  .cal li { grid-template-columns: 7em minmax(0, 1fr); column-gap: var(--s4); padding-block: var(--s3); }
+  .cal-date { grid-row: span 2; font-size: var(--fs-sm); line-height: 1.9; }
+  .cal p { font-size: var(--fs-sm); }
+}
+
+/* ---------- 学習の記録とよくある質問 ---------- */
+.faq-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: var(--gap-col); align-items: start; }
+.faq-grid h2 + p { margin-top: var(--s4); }
+/* 週次レポートのサンプル：ノートの 1 ページのように（細い罫線、影なし） */
+.report { margin-top: var(--s6); padding: var(--s5); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.report h3 { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: var(--s1) var(--s4); padding-bottom: var(--s3); font: 600 var(--fs-body)/1.5 var(--font-body); }
+.report h3 small { font-weight: 400; font-size: var(--fs-sm); color: var(--muted); font-variant-numeric: tabular-nums; }
+.report dl > div { display: grid; grid-template-columns: 5.5em minmax(0, 1fr); gap: var(--s4); padding-block: var(--s3); border-top: 1px solid var(--line); }
+.report dl > div:last-child { padding-bottom: 0; }
+.report dt { color: var(--muted); }
+.report dd { font-variant-numeric: tabular-nums; }
+.faq-list { margin-top: var(--s6); border-top: 1px solid var(--text); }
+.faq-list details { border-bottom: 1px solid var(--line); }
+.faq-list summary { display: flex; align-items: center; justify-content: space-between; gap: var(--s4); min-height: 60px; padding-block: var(--s3); cursor: pointer; list-style: none; font-weight: 600; transition: color .2s; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: ""; flex: none; width: .5em; height: .5em; margin-inline: var(--s2); border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.faq-list details[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+.faq-list summary:hover { color: var(--brand); text-decoration: underline; text-underline-offset: 6px; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+.faq-list summary:active { opacity: .7; }
+.faq-list details p { color: var(--muted); padding-bottom: var(--s5); max-width: 36em; }
+@media (max-width: 860px) { .faq-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s6); } .report, .faq-list { margin-top: var(--s5); } .report { padding: var(--s4); } .report dl > div { grid-template-columns: 4.5em minmax(0, 1fr); gap: var(--s3); } }
+
+/* ---------- 学力診断の予約：説明、フォーム、アクセス ---------- */
+.visit-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap-col); align-items: start; }
+.visit-grid .lead { margin-top: var(--s4); }
+.facts { margin-top: var(--s6); border-bottom: 1px solid var(--line); }
+.facts > div { display: grid; grid-template-columns: 5em minmax(0, 1fr); gap: var(--s4); padding-block: var(--s3); border-top: 1px solid var(--line); }
+.facts dt { color: var(--muted); }
+.facts dd { font-variant-numeric: tabular-nums; }
+.visit-links { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s5); margin-top: var(--s5); }
+.form { display: grid; gap: var(--s5); padding: clamp(1.5rem, 3vw, 2.5rem); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); }
+.field { display: grid; gap: var(--s2); min-width: 0; border: 0; }
+.field label, .field legend { font-weight: 600; }
+.field legend { margin-bottom: var(--s2); }
+.req { margin-inline-start: var(--s2); font-size: var(--fs-sm); font-weight: 400; color: var(--muted); }
+.field input:not([type="checkbox"]), .field select { width: 100%; min-width: 0; height: 48px; padding: 0 var(--s3); font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--field-line); border-radius: var(--radius-sm); transition: border-color .2s; }
+.field input:hover, .field select:hover { border-color: var(--text); }
+.field input:not([type="checkbox"]):focus-visible, .field select:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; border-color: var(--brand); }
+.checks { display: flex; flex-wrap: wrap; gap: var(--s1) var(--s5); }
+.checks label { display: inline-flex; align-items: center; gap: var(--s2); min-height: 44px; font-weight: 400; cursor: pointer; }
+.checks input { width: 20px; height: 20px; accent-color: var(--brand); }
+.form .btn { width: 100%; }
+.form-note { font-size: var(--fs-sm); color: var(--muted); }
+@media (max-width: 860px) { .visit-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s6); } .facts { margin-top: var(--s5); } .visit-links a[href^="tel"] { display: none; } }
+@media (max-width: 400px) { .form { padding: var(--s4); } }
+
+/* ---------- フッター ---------- */
+.site-footer { background: var(--brand-deep); color: color-mix(in srgb, var(--brand-ink) 84%, var(--brand-deep)); padding-block: var(--s7) var(--s6); font-size: var(--fs-sm); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; }
+.site-footer .logo { color: var(--brand-ink); margin-bottom: var(--s4); }
+.site-footer h2 { color: var(--brand-ink); font: 600 var(--fs-body)/1.5 var(--font-body); margin-bottom: var(--s2); }
+.site-footer p { font-variant-numeric: tabular-nums; }
+.site-footer a { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: color-mix(in srgb, var(--brand-ink) 40%, transparent); }
+.site-footer a:hover { color: var(--brand-ink); text-decoration-color: var(--accent); }
+.site-footer :focus-visible { outline-color: var(--brand-ink); }
+.social { display: flex; flex-wrap: wrap; gap: var(--s4); margin-top: var(--s3); }
+.foot-bottom { margin-top: var(--s6); padding-top: var(--s5); border-top: 1px solid color-mix(in srgb, var(--brand-ink) 16%, transparent); display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s2) var(--s5); }
+@media (max-width: 860px) { .foot-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s5); } .foot-links { display: none; } }
+
+/* ---------- スマートフォンの下部固定ボタン ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 860px) {
+  .mobile-bar { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: var(--s2); position: fixed; inset: auto 0 0; z-index: 60; padding: var(--s3) 1rem calc(var(--s3) + env(safe-area-inset-bottom)); background: var(--surface); border-top: 1px solid var(--line); }
+  .mobile-bar .btn { padding: var(--s2) var(--s3); }
+  /* ファーストビューのボタンが見えている間と、予約フォームが表示されている間は下部固定バーを隠します。JS が無効なら常に表示します */
+  .js .mobile-bar { transform: translateY(110%); visibility: hidden; transition: transform .3s ease, visibility .3s; }
+  .js .mobile-bar.show { transform: none; visibility: visible; }
+  body { padding-bottom: 73px; }
+}
+
+/* ---------- ファーストビューの登場アニメーション（ページ内のアニメーションはこれだけ） ---------- */
+.js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== 言語切り替え（lang-switch） ==================== */
+.nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
+.lang-switch { display: flex; align-items: center; gap: .1rem; flex: none; margin-inline-start: .5rem; padding-inline-start: .6rem; border-inline-start: 1px solid var(--line); font: 400 var(--fs-sm)/1 var(--font-body); letter-spacing: normal; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; border-radius: var(--radius-sm); color: var(--muted); text-decoration: none; text-underline-offset: 5px; text-decoration-thickness: 2px; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--brand) 8%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 600; text-decoration-line: underline; text-decoration-color: var(--accent); }
+@media (max-width: 860px) {
+  .nav > .lang-switch { order: 1; margin-inline: 0; padding-inline-start: 0; border: 0; }
+  .nav > .menu-btn { order: 2; }
+  .nav > .nav-links { order: 3; }
+}
+@media (min-width: 861px) and (max-width: 1100px) {
+  .nav > .nav-links { gap: .9rem; }
+  .nav > .nav-links .btn { padding-inline: .9rem; }
+  .nav > .lang-switch { margin-inline-start: 0; padding-inline-start: .3rem; }
+  .logo small { display: none; }
+}
+@media (max-width: 400px) { .nav { gap: .5rem; } }
+/* フッターの言語リンク */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: var(--s3); }
+.site-footer .foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius-sm); }
+.site-footer .foot-lang a:hover { text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand-ink); outline-offset: 1px; }
+.site-footer .foot-lang a[aria-current="page"] { font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: var(--radius-sm); color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<!-- ==================== セクション：ヘッダーナビゲーション ==================== -->
+<!-- サンプル内容：公開前に実際の情報へ差し替えてください（教室名は架空です） -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="学行教室 ページの先頭へ" translate="no">学行教室 <small lang="en">Stride Learning</small></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="メインメニュー">
+      <a href="#courses">コース</a>
+      <a href="#method">学習の進め方</a>
+      <a href="#teachers">講師</a>
+      <a href="#calendar">年間予定</a>
+      <a href="#faq">よくある質問</a>
+      <a href="#visit" class="btn btn-ghost">診断を予約</a>
+    </nav>
+    <!-- lang-switch：言語切り替え。言語を追加するときは、ここにリンクを足し、対応するフォルダを作成します -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="ja">JA</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<!-- ==================== セクション：ヒーロー（学年セレクターを含む） ==================== -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="hero-text reveal">
+      <h1>つまずきから、<br>学び直す</h1>
+      <p class="hero-sub">学行教室は世田谷の少人数制の塾です。はじめに 40 分の学力診断を行い、保護者の方と一緒に学習計画を立てます。</p>
+    </div>
+    <div class="hero-cta">
+      <a href="#visit" class="btn btn-primary">無料学力診断を予約する</a>
+      <a href="tel:03-1234-5678" class="text-link">お電話 03-1234-5678</a>
+    </div>
+    <!-- 学年セレクター：data-grade は下の各コースの data-grade に対応します（elem 小学生、jr 中学生、sr 高校生、exam 受験対策）。
+         JS が無効のときは 4 つともコース一覧へのリンクになり、コースはすべて表示されます -->
+    <div class="picker" role="group" aria-labelledby="pick-label">
+      <p class="pick-label"><b id="pick-label"><span class="mark">お子さまは今、何年生ですか</span></b> <span>学年を選ぶと、合うコースだけを表示します。</span></p>
+      <div class="grades">
+        <a class="grade" href="#courses" data-grade="elem"><b>小学生</b><small>小1〜小6</small></a>
+        <a class="grade" href="#courses" data-grade="jr"><b>中学生</b><small>中1〜中3</small></a>
+        <a class="grade" href="#courses" data-grade="sr"><b>高校生</b><small>高1〜高3</small></a>
+        <a class="grade" href="#courses" data-grade="exam"><b>受験対策</b><small>高校受験と大学受験</small></a>
+      </div>
+    </div>
+    <div class="hero-fig">
+      <div class="img img-hero" role="img" aria-label="教室のイメージ：明るい少人数の教室。机が数台、ホワイトボード、窓からの光"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：コースと料金 ==================== -->
+<!-- 編集方法：コース 1 件が <li class="course"> 1 つです。data-grade に対象学年のコードを書きます（複数のときは半角スペースで区切ります）。コースを増減しても JS の変更は不要です -->
+<!-- サンプル内容：公開前に実際の情報へ差し替えてください（コース、時間、定員、料金は架空です） -->
+<section class="band" id="courses">
+  <div class="wrap">
+    <div class="course-top">
+      <div>
+        <h2>コースと料金</h2>
+        <p class="lead">定員、時間割、授業料をすべて載せています。</p>
+      </div>
+      <div class="filter" role="group" aria-label="学年でコースを絞り込む">
+        <button type="button" class="chip" data-grade="" aria-pressed="true">すべて</button>
+        <button type="button" class="chip" data-grade="elem" aria-pressed="false">小学生</button>
+        <button type="button" class="chip" data-grade="jr" aria-pressed="false">中学生</button>
+        <button type="button" class="chip" data-grade="sr" aria-pressed="false">高校生</button>
+        <button type="button" class="chip" data-grade="exam" aria-pressed="false">受験対策</button>
+      </div>
+    </div>
+    <p class="course-status" id="course-status" aria-live="polite">全 10 コース</p>
+    <div class="course-head" aria-hidden="true"><span>コース</span><div><span>対象学年</span><span>時間割</span><span>定員</span><span>授業料</span></div></div>
+    <ul class="course-list">
+      <li class="course" data-grade="elem">
+        <div><h3>小学算数 考える力</h3><p>文章題を読むところから始め、考えを式にする練習をします。</p></div>
+        <dl><div><dt>対象学年</dt><dd>小3〜小6</dd></div><div><dt>時間割</dt><dd>火曜と木曜 16:30〜18:00</dd></div><div><dt>定員</dt><dd>定員 8 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥13,200〜</dd></div></dl>
+      </li>
+      <li class="course" data-grade="elem">
+        <div><h3>小学国語 読解と作文</h3><p>毎週短い文章を 1 つ読み、自分の考えを書きます。</p></div>
+        <dl><div><dt>対象学年</dt><dd>小3〜小6</dd></div><div><dt>時間割</dt><dd>水曜 16:30〜18:00</dd></div><div><dt>定員</dt><dd>定員 8 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥9,900〜</dd></div></dl>
+      </li>
+      <li class="course" data-grade="elem">
+        <div><h3>放課後の宿題サポート</h3><p>その日の宿題を終わらせ、講師が 1 冊ずつ確認します。</p></div>
+        <dl><div><dt>対象学年</dt><dd>小1〜小6</dd></div><div><dt>時間割</dt><dd>月曜〜金曜 15:30〜18:30</dd></div><div><dt>定員</dt><dd>定員 10 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥19,800〜</dd></div></dl>
+      </li>
+      <li class="course" data-grade="jr">
+        <div><h3>中学数学</h3><p>学校の進度に合わせ、毎回 20 分はその場で演習します。</p></div>
+        <dl><div><dt>対象学年</dt><dd>中1〜中3</dd></div><div><dt>時間割</dt><dd>月曜と木曜 19:00〜21:00</dd></div><div><dt>定員</dt><dd>定員 10 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥15,400〜</dd></div></dl>
+      </li>
+      <li class="course" data-grade="jr">
+        <div><h3>中学英語</h3><p>文法、読解、リスニングを順に練習し、毎週単語テストを行います。</p></div>
+        <dl><div><dt>対象学年</dt><dd>中1〜中3</dd></div><div><dt>時間割</dt><dd>火曜と金曜 19:00〜21:00</dd></div><div><dt>定員</dt><dd>定員 10 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥15,400〜</dd></div></dl>
+      </li>
+      <li class="course" data-grade="jr">
+        <div><h3>中学理科</h3><p>実験の映像で現象を見てから、公式と計算に戻ります。</p></div>
+        <dl><div><dt>対象学年</dt><dd>中2、中3</dd></div><div><dt>時間割</dt><dd>水曜 19:00〜21:00</dd></div><div><dt>定員</dt><dd>定員 10 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥11,000〜</dd></div></dl>
+      </li>
+      <li class="course" data-grade="sr">
+        <div><h3>高校数学</h3><p>学年別クラス。解説のあと、すぐに過去問の形式で演習します。</p></div>
+        <dl><div><dt>対象学年</dt><dd>高1〜高3</dd></div><div><dt>時間割</dt><dd>土曜 9:00〜12:00</dd></div><div><dt>定員</dt><dd>定員 12 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥17,600〜</dd></div></dl>
+      </li>
+      <li class="course" data-grade="sr">
+        <div><h3>高校英語</h3><p>長文読解と英作文。2 週間に 1 本、作文を添削します。</p></div>
+        <dl><div><dt>対象学年</dt><dd>高1〜高3</dd></div><div><dt>時間割</dt><dd>土曜 13:30〜16:30</dd></div><div><dt>定員</dt><dd>定員 12 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥17,600〜</dd></div></dl>
+      </li>
+      <li class="course" data-grade="jr exam">
+        <div><h3>高校受験 総復習</h3><p>5 教科の要点を復習し、毎月の模試のあとに個別に振り返ります。</p></div>
+        <dl><div><dt>対象学年</dt><dd>中3</dd></div><div><dt>時間割</dt><dd>日曜 9:00〜16:00</dd></div><div><dt>定員</dt><dd>定員 12 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>1 期 ¥58,000〜</dd></div></dl>
+      </li>
+      <li class="course" data-grade="sr exam">
+        <div><h3>共通テスト 数学と英語</h3><p>模試の結果でグループを分け、それぞれ苦手な単元を補います。</p></div>
+        <dl><div><dt>対象学年</dt><dd>高3</dd></div><div><dt>時間割</dt><dd>日曜 13:00〜17:00</dd></div><div><dt>定員</dt><dd>定員 12 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>1 期 ¥49,500〜</dd></div></dl>
+      </li>
+    </ul>
+    <p class="course-note">＊ 料金は税込、教材費込みです。「1 期」は 12 週間。金額は週の回数で変わるため、診断後に書面でお見積もりします。</p>
+  </div>
+</section>
+
+<!-- ==================== セクション：学習の進め方 ==================== -->
+<section id="method">
+  <div class="wrap method-grid">
+    <div class="img img-desk" role="img" aria-label="机のイメージ：真上から見たノート、黄色い鉛筆 2 本、計算用紙 1 枚"></div>
+    <div>
+      <h2>学習の進め方</h2>
+      <p class="lead">3 つのステップ。どの段階も記録を保護者の方にお渡しします。</p>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-no" aria-hidden="true">1</span>
+          <h3>学力診断</h3>
+          <p>40 分の小テストと面談で、つまずいている単元を見つけます。</p>
+        </li>
+        <li class="step">
+          <span class="step-no" aria-hidden="true">2</span>
+          <h3>学習計画</h3>
+          <p>今学期に補う単元と順番を講師が書き出し、保護者の方に確認してからクラスを決めます。</p>
+        </li>
+        <li class="step">
+          <span class="step-no" aria-hidden="true">3</span>
+          <h3>週次レポート</h3>
+          <p>毎週 LINE で記録を 1 通お送りします。進度、小テストの結果、来週の要点です。</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：講師 ==================== -->
+<!-- サンプル内容：公開前に実際の情報へ差し替えてください（講師の氏名、学歴、指導歴、写真は架空です） -->
+<section class="band" id="teachers">
+  <div class="wrap">
+    <div class="split-head">
+      <h2>講師</h2>
+      <p class="lead">専任講師 3 名が決まったクラスを受け持ち、学力診断と週次レポートも自分で行います。</p>
+    </div>
+    <div class="t-grid">
+      <article class="teacher">
+        <div class="img img-t img-t1" role="img" aria-label="林 沙織 先生の写真の位置"></div>
+        <div class="t-body">
+          <h3>林 沙織 先生</h3>
+          <p class="t-role">数学科主任</p>
+          <dl>
+            <div><dt>学歴</dt><dd>理学部数学科 卒業</dd></div>
+            <div><dt>指導歴</dt><dd>11 年</dd></div>
+            <div><dt>担当</dt><dd>中学数学、高校数学</dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="teacher">
+        <div class="img img-t img-t2" role="img" aria-label="松田 健太 先生の写真の位置"></div>
+        <div class="t-body">
+          <h3>松田 健太 先生</h3>
+          <p class="t-role">英語科</p>
+          <dl>
+            <div><dt>学歴</dt><dd>英語教育学 修士</dd></div>
+            <div><dt>指導歴</dt><dd>15 年</dd></div>
+            <div><dt>担当</dt><dd>中学英語、高校英語</dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="teacher">
+        <div class="img img-t img-t3" role="img" aria-label="小川 優奈 先生の写真の位置"></div>
+        <div class="t-body">
+          <h3>小川 優奈 先生</h3>
+          <p class="t-role">小学部</p>
+          <dl>
+            <div><dt>学歴</dt><dd>教育学部 卒業</dd></div>
+            <div><dt>指導歴</dt><dd>6 年</dd></div>
+            <div><dt>担当</dt><dd>小学算数、読解と作文</dd></div>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：年間予定 ==================== -->
+<!-- サンプル内容：公開前に実際の情報へ差し替えてください（日付と行事は架空です） -->
+<section id="calendar">
+  <div class="wrap cal-grid">
+    <div>
+      <h2>年間予定</h2>
+      <p class="lead">開講日、定期テスト前の対策期間、季節講習の日程です。学期ごとに更新します。</p>
+    </div>
+    <ol class="cal">
+      <li><span class="cal-date">3月25日</span><h3>春期講習スタート</h3><p>前学年の総復習を 2 週間で行います。</p></li>
+      <li><span class="cal-date">4月6日</span><h3>新年度の授業開始</h3><p>新入塾の方は、先に学力診断をご予約ください。</p></li>
+      <li><span class="cal-date">5月18日〜</span><h3>中間テスト対策週間</h3><p>夜の質問対応の時間を追加します。追加料金はありません。</p></li>
+      <li><span class="cal-date">7月21日</span><h3>夏期講習スタート</h3><p>先取りと復習の 2 コース、6 週間です。</p></li>
+      <li><span class="cal-date">12月24日</span><h3>冬期講習スタート</h3><p>受験生は共通テストと入試の直前対策を行います。</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== セクション：学習の記録とよくある質問 ==================== -->
+<section class="band" id="faq">
+  <div class="wrap faq-grid">
+    <div id="results">
+      <h2>成果は、記録で確かめます</h2>
+      <p class="lead">成績には波があるため、合格者一覧の掲示も点数の保証もしません。定期テストのたびに、間違えた問題を 1 枚にまとめて保護者の方と確認します。</p>
+      <!-- サンプル内容：公開前に実際の情報へ差し替えてください（週次レポートの内容は架空の例です） -->
+      <div class="report">
+        <h3>週次レポート（サンプル） <small>中学数学 中2、第 6 週</small></h3>
+        <dl>
+          <div><dt>今週</dt><dd>連立方程式：加減法</dd></div>
+          <div><dt>小テスト</dt><dd>8 問中 6 問正解。符号のミス</dd></div>
+          <div><dt>来週</dt><dd>代入法。加減法を先に復習</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div>
+      <h2>よくある質問</h2>
+      <div class="faq-list">
+        <details>
+          <summary>体験授業は受けられますか</summary>
+          <p>はい。各コース 1 回まで無料で体験できます。先に学力診断を行い、合うクラスを確認してからご案内します。</p>
+        </details>
+        <details>
+          <summary>欠席したときの振替はできますか</summary>
+          <p>前日までにご連絡いただければ、同じ週の別の時間に振り替えるか、講師がその週の要点を個別に説明します。月 2 回までを目安としています。</p>
+        </details>
+        <details>
+          <summary>途中でやめる場合の返金はどうなりますか</summary>
+          <p>月の途中で退塾される場合は、残りの回数分の授業料を返金します。詳しい条件は入塾時の契約書面に記載しています。</p>
+        </details>
+        <details>
+          <summary>1 教科だけでも受講できますか</summary>
+          <p>はい。教科ごとにお申し込みいただけます。学期の途中で教科の追加やクラスの変更もでき、料金は残りの週数で計算します。</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：学力診断の予約（フォームとアクセス） ==================== -->
+<!-- サンプル内容：公開前に実際の情報へ差し替えてください（住所、電話、受付時間は架空です） -->
+<section id="visit">
+  <div class="wrap visit-grid">
+    <div>
+      <h2>無料学力診断を予約する</h2>
+      <p class="lead">1 営業日以内にお電話で日時をご相談します。当日に入塾を決める必要はありません。</p>
+      <dl class="facts">
+        <div><dt>所要時間</dt><dd>約 40 分。保護者の方は教室でお待ちいただけます</dd></div>
+        <div><dt>住所</dt><dd>東京都世田谷区桜丘 2-8-12 学行ビル 3階</dd></div>
+        <div><dt>受付時間</dt><dd>月曜〜金曜 13:30〜21:30<br>土曜と日曜 9:00〜17:30</dd></div>
+      </dl>
+      <div class="visit-links">
+        <!-- LINE ボタン：@yourlineid を LINE 公式アカウントの ID に書き換えてください -->
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE で問い合わせる</a>
+        <a href="tel:03-1234-5678" class="text-link">03-1234-5678</a>
+        <a href="https://maps.google.com/?q=東京都世田谷区桜丘2-8-12" class="text-link" target="_blank" rel="noopener">Google マップで開く</a>
+      </div>
+    </div>
+    <!-- フォームは Formspree を使います（無料プランは月 50 件まで）：
+         1. https://formspree.io で登録し、新しいフォームを作成します
+         2. フォームの URL にある ID（例 xyzabcd）をコピーします
+         3. 下の action にある your-form-id を自分の ID に書き換えると、メールで通知が届きます -->
+    <form class="form" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="field"><label for="f-name">保護者のお名前<span class="req">必須</span></label><input id="f-name" name="保護者のお名前" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">電話番号<span class="req">必須</span></label><input id="f-tel" name="電話番号" type="tel" inputmode="tel" autocomplete="tel" placeholder="090-1234-5678" required></div>
+      <div class="field"><label for="f-grade">お子さまの学年<span class="req">必須</span></label>
+        <select id="f-grade" name="お子さまの学年" required>
+          <option value="">選択してください</option>
+          <option data-grade="elem">小学生</option>
+          <option data-grade="jr">中学生</option>
+          <option data-grade="sr">高校生</option>
+        </select></div>
+      <fieldset class="field">
+        <legend>力を入れたい教科<span class="req">複数選択可</span></legend>
+        <div class="checks">
+          <label><input type="checkbox" name="教科" value="算数と数学">算数と数学</label>
+          <label><input type="checkbox" name="教科" value="英語">英語</label>
+          <label><input type="checkbox" name="教科" value="国語と作文">国語と作文</label>
+          <label><input type="checkbox" name="教科" value="理科">理科</label>
+        </div>
+      </fieldset>
+      <button class="btn btn-primary" type="submit">学力診断を申し込む</button>
+      <p class="form-note">ご入力の内容は、診断日時のご連絡にだけ使います。</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== セクション：フッター ==================== -->
+<!-- サンプル内容：公開前に実際の情報へ差し替えてください（教室名、住所、電話は架空です） -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" translate="no">学行教室</div>
+        <p>〒156-0054 東京都世田谷区桜丘 2-8-12 学行ビル 3階<br>電話：<a href="tel:03-1234-5678">03-1234-5678</a></p>
+        <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE</a></div>
+      </div>
+      <div>
+        <h2>受付時間</h2>
+        <p>月曜〜金曜 13:30〜21:30<br>土曜と日曜 9:00〜17:30<br>祝日は教室からのお知らせをご確認ください</p>
+      </div>
+      <div class="foot-links">
+        <h2>ページ内リンク</h2>
+        <p><a href="#courses">コースと料金</a><br><a href="#teachers">講師</a><br><a href="#calendar">年間予定</a><br><a href="#visit">無料学力診断を予約する</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y">2026</span> <span translate="no">学行教室</span></span>
+      <!-- サンプル内容：公開前に実際の表記へ差し替えてください -->
+      <span>表示の料金はすべて税込です</span>
+    </div>
+    <!-- フッターの言語リンク：ヘッダーの lang-switch と同じ組み合わせ -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+      <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a></p>
+  </div>
+</footer>
+
+<!-- ==================== セクション：スマートフォンの下部固定ボタン ==================== -->
+<div class="mobile-bar">
+  <a href="tel:03-1234-5678" class="btn btn-ghost">電話する</a>
+  <a href="#visit" class="btn btn-primary">無料診断を予約</a>
+</div>
+
+<script>
+// 画面の文言（翻訳するときはここだけ変更します）
+const T = { open: 'メニューを開く', close: 'メニューを閉じる', all: n => `全 ${n} コース`, some: (g, n) => `${g}：${n} コース` };
+const $ = (q, el = document) => el.querySelector(q), $$ = (q, el = document) => [...el.querySelectorAll(q)];
+$('#y').textContent = new Date().getFullYear();
+
+// スクロール時のヘッダー背景
+const header = $('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+// ハンバーガーメニュー（リンクを押すか Esc で閉じます）
+const menuBtn = $('.menu-btn'), links = $('#nav-links');
+const setMenu = open => {
+  links.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? T.close : T.open);
+};
+menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+$$('a', links).forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && links.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
+
+// 学年セレクター：ファーストビューの 4 つのリンクをボタン（aria-pressed）に置き換えます。押すとコースを絞り込み、結果を読み上げ、コース一覧へ移動します
+$$('a.grade').forEach(a => {
+  const b = document.createElement('button');
+  b.type = 'button'; b.className = a.className; b.dataset.grade = a.dataset.grade; b.innerHTML = a.innerHTML;
+  b.setAttribute('aria-pressed', 'false');
+  a.replaceWith(b);
+});
+const courses = $$('.course'), gradeBtns = $$('button[data-grade]'), gradeSelect = $('#f-grade');
+gradeSelect.addEventListener('change', () => { gradeSelect.dataset.touched = 1; });
+const setGrade = (g, jump) => {
+  let n = 0;
+  courses.forEach(c => { const on = !g || c.dataset.grade.split(' ').includes(g); c.hidden = !on; n += on; });
+  gradeBtns.forEach(b => b.setAttribute('aria-pressed', b.dataset.grade === g));
+  const chip = $(`.chip[data-grade="${g}"]`);
+  $('#course-status').textContent = g ? T.some(chip.textContent, n) : T.all(n);
+  // あわせて予約フォームの「お子さまの学年」を選択済みにします（利用者が変更したあとは触りません）
+  const opt = $(`option[data-grade="${g}"]`, gradeSelect);
+  if (opt && !gradeSelect.dataset.touched) gradeSelect.value = opt.value;
+  if (jump) { $('#courses').scrollIntoView(); chip.focus({ preventScroll: true }); }
+};
+gradeBtns.forEach(b => b.addEventListener('click', () => setGrade(b.dataset.grade, b.classList.contains('grade'))));
+
+// ファーストビューの登場（ここだけ）と下部固定バー：ヒーローのボタンが画面から出ると表示し、予約フォームが見えている間は隠します
+const reveals = $$('.reveal'), bar = $('.mobile-bar');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }));
+  reveals.forEach(el => io.observe(el));
+  const seen = new Map();
+  const so = new IntersectionObserver(es => { es.forEach(en => seen.set(en.target, en.isIntersecting)); bar.classList.toggle('show', ![...seen.values()].some(Boolean)); });
+  [$('.hero-cta'), $('.form')].forEach(el => so.observe(el));
+} else { reveals.forEach(el => el.classList.add('in')); bar.classList.add('show'); }
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>
