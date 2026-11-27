@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23 09:00",
+ "generated": "2026-11-27 19:02",
  "tz": "Asia/Taipei",
  "range": [
   "2026-11-23",
@@ -663,14 +663,71 @@
    "time": "08:00",
    "file": "t-motion-realestate.mp4",
    "what": "Luxury Residences Motion Edition 模板展示"
+  },
+  {
+   "date": "2027-01-02",
+   "time": "08:00",
+   "file": "t-dental.mp4",
+   "what": "Dental Clinic Forest Edition 模板展示（牙醫第二款「森林診間」）"
   }
  ],
+ "plan": {
+  "goalTwd": 800000,
+  "goalDate": "2027-07-31",
+  "grossUsd": [
+   28000,
+   29000
+  ],
+  "basic": 299,
+  "pro": 499,
+  "care": 49,
+  "emailCap": [
+   [
+    "2026-11-22",
+    "15"
+   ],
+   [
+    "2026-12-01",
+    "20"
+   ],
+   [
+    "2026-12-08",
+    "30"
+   ],
+   [
+    "2026-12-15",
+    "40～50"
+   ]
+  ],
+  "replyRate": "3～5%"
+ },
  "outreachSeed": {
-  "sent": 7,
+  "sent": 42,
   "replied": 0,
   "demo": 0,
   "won": 0,
   "lost": 0
+ },
+ "leads": {
+  "total": 127,
+  "sent": 42,
+  "scheduled": 47,
+  "replied": 0,
+  "won": 0,
+  "lost": 0,
+  "hold": 10,
+  "todo": 28,
+  "channel": {
+   "email": 29,
+   "form": 7,
+   "instagram": 6,
+   "linkedin": 14
+  },
+  "linkedin": {
+   "invited": 14,
+   "accepted": 0
+  },
+  "asOf": "2026-11-27"
  },
  "milestones": [
   [
@@ -690,60 +747,102 @@
    "Gumroad 39 款全部上架；Pinterest 預排開始每天自動發"
   ],
   [
+   "2026-11-27",
+   "Substack 改成一週兩篇（週二、週五 22:00）"
+  ],
+  [
+   "2026-11-28",
+   "IG 私訊照新規則重新開始（一天最多 3 則、第一則不放連結）"
+  ],
+  [
    "2026-11-30",
-   "第 1 週：開 Fiverr／Upwork，開發信每天 20 家"
+   "Website Care 維護月費上架（$49／月），12/1 開始賣"
+  ],
+  [
+   "2026-11-30",
+   "感恩節後第一批開發信自動寄出（到 12/5 共 47 封）"
   ],
   [
    "2026-12-01",
-   "Substack 第 2 篇（之後每週二 1 篇）"
+   "Email 暖身上限 20 封／天（含追問）"
   ],
   [
    "2026-12-03",
    "日文版短影片（19:00 發）"
   ],
   [
-   "2026-12-20",
-   "Substack Notes 28 則發完（之後請 Claude 寫下一批）"
+   "2026-12-07",
+   "小紅書每天 1 篇、Substack Notes 已排到今天（之後每週五排下一週）"
+  ],
+  [
+   "2026-12-08",
+   "Email 暖身上限 30 封／天；排第 10 批（新行業 12 封）"
+  ],
+  [
+   "2026-12-09",
+   "數據檢討（A/B 只檢查資料，不用來定價）"
+  ],
+  [
+   "2026-12-12",
+   "提早警訊：回覆率 <1% 就先改開發信開頭"
+  ],
+  [
+   "2026-12-15",
+   "Email 暖身上限 40～50 封／天（沒有 Gmail 警告、退信率 <2% 才加）"
   ],
   [
    "2026-12-21",
-   "Website Care 維護月費上架"
+   "Substack Notes 28 則發完（之後請 Claude 寫下一批）"
+  ],
+  [
+   "2026-12-22",
+   "Substack 一週兩篇試滿 4 週：看訂閱和取消數，決定要不要改回一篇"
   ],
   [
    "2026-12-23",
-   "Gumroad 滿 30 天：改用 Commission；第 1 次成長檢查"
+   "關卡：至少 1 家付訂金（0 家就改開發信或價格）；決定西語市場"
   ],
   [
-   "2026-12-28",
-   "評估要不要開 LinkedIn"
+   "2026-12-23",
+   "Gumroad 滿 30 天：可以改用 Commission"
   ],
   [
-   "2027-01-01",
-   "最後 1 支已做好的短影片"
+   "2027-01-02",
+   "最後 1 支已做好的短影片（t-dental.mp4）"
   ],
   [
    "2027-01-22",
-   "第 2 次成長檢查"
+   "1 月成長檢查（階段 2：每月收入 ≥ $2,500）"
   ],
   [
    "2027-02-21",
-   "第 3 次成長檢查"
+   "2 月成長檢查"
+  ],
+  [
+   "2027-04-01",
+   "關卡：累計收入 ≥ $10,000"
+  ],
+  [
+   "2027-07-01",
+   "關卡：累計收入 ≥ $20,000"
+  ],
+  [
+   "2027-07-31",
+   "目標：淨收入 NT$800,000"
   ]
  ],
  "items": [
   {
-   "id": "2026-11-24-daily",
+   "id": "2026-11-24-video",
    "date": "2026-11-24",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 1 週第 2 天）",
+   "title": "影片置頂留言：五種語言切換",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（01-five-languages.mp4，五種語言切換），留言貼上下面這段，然後把這則留言置頂：\nTemplates & live demos: polyglotpages.gumroad.com\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 1 週第 2 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nThe four questions every local business site has to answer: Are you open? Where are you? What do you sell? How do I contact you? Everything else is optional.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（01-five-languages.mp4，五種語言切換），留言貼上下面這段，然後把這則留言置頂：\nTemplates & live demos: polyglotpages.gumroad.com",
    "files": [
-    "sales/videos/01-five-languages.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "五種語言切換"
+    "sales/videos/01-five-languages.txt"
+   ]
   },
   {
    "id": "2026-11-24-ig",
@@ -788,18 +887,6 @@
    ]
   },
   {
-   "id": "2026-11-24-outreach",
-   "date": "2026-11-24",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 10 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2026-11-24.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-11-24.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
    "id": "2026-11-24-pins",
    "date": "2026-11-24",
    "time": "15:07",
@@ -814,18 +901,16 @@
    "pins": 19
   },
   {
-   "id": "2026-11-25-daily",
+   "id": "2026-11-25-video",
    "date": "2026-11-25",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 1 週第 3 天）",
+   "title": "影片置頂留言：SaaS & App Landing Page 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-saas.mp4，SaaS & App Landing Page 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/app-saas-landing-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 1 週第 3 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nSmall detail that matters most on restaurant sites: an \"Open now / Closed now\" badge that reads your real hours. It's the first thing people look for.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-saas.mp4，SaaS & App Landing Page 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/app-saas-landing-template",
    "files": [
-    "sales/videos/t-saas.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "SaaS & App Landing Page 模板展示"
+    "sales/videos/t-saas.txt"
+   ]
   },
   {
    "id": "2026-11-25-gumroad",
@@ -856,18 +941,6 @@
    ]
   },
   {
-   "id": "2026-11-25-outreach",
-   "date": "2026-11-25",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 10 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2026-11-25.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-11-25.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
    "id": "2026-11-25-pins",
    "date": "2026-11-25",
    "time": "15:07",
@@ -882,18 +955,16 @@
    "pins": 19
   },
   {
-   "id": "2026-11-26-daily",
+   "id": "2026-11-26-video",
    "date": "2026-11-26",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 1 週第 4 天）",
+   "title": "影片置頂留言：Freelancer Portfolio & Résumé 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-freelancer.mp4，Freelancer Portfolio & Résumé 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/freelancer-portfolio-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 1 週第 4 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nFree hosting for a one-page business site: Netlify Drop. Drag the folder onto the page, done, HTTPS included. Your only recurring cost is the domain.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-freelancer.mp4，Freelancer Portfolio & Résumé 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/freelancer-portfolio-template",
    "files": [
-    "sales/videos/t-freelancer.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Freelancer Portfolio & Résumé 模板展示"
+    "sales/videos/t-freelancer.txt"
+   ]
   },
   {
    "id": "2026-11-26-gumroad",
@@ -924,18 +995,6 @@
    ]
   },
   {
-   "id": "2026-11-26-outreach",
-   "date": "2026-11-26",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 10 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2026-11-26.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-11-26.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
    "id": "2026-11-26-pinfix",
    "date": "2026-11-26",
    "time": "15:13",
@@ -948,32 +1007,31 @@
    ]
   },
   {
-   "id": "2026-11-27-daily",
+   "id": "2026-11-27-video",
    "date": "2026-11-27",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 1 週第 5 天）",
+   "title": "影片置頂留言：10 款模板輪播",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（02-ten-templates.mp4，10 款模板輪播），留言貼上下面這段，然後把這則留言置頂：\nTemplates & live demos: polyglotpages.gumroad.com\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 1 週第 5 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nGoogle Business Profile matters more than the website for most local shops. Fill it in first, then link your site from it.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（02-ten-templates.mp4，10 款模板輪播），留言貼上下面這段，然後把這則留言置頂：\nTemplates & live demos: polyglotpages.gumroad.com",
    "files": [
-    "sales/videos/02-ten-templates.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "10 款模板輪播"
+    "sales/videos/02-ten-templates.txt"
+   ]
   },
   {
-   "id": "2026-11-27-followup",
+   "id": "2026-11-27-friday",
    "date": "2026-11-27",
-   "time": "10:21",
-   "title": "追問 11/23 寄出、還沒回覆的店家",
+   "time": "10:27",
+   "title": "排下週的內容（TikTok、小紅書、Substack）",
    "who": "你",
-   "cat": "開發",
-   "prompt": "照 sales/outreach/README.md「4 天沒回覆追問一次」：把 leads.csv 裡 11/23 寄出、status 還是 sent 的店家，依 sales/outreach/訊息範本.md 寫好追問訊息，放進今天的 outbox，寄完我再把 status 改成 followup。",
+   "cat": "檢查",
    "files": [
-    "sales/outreach/README.md",
-    "sales/outreach/訊息範本.md"
+    "sales/videos/發片時程.md",
+    "sales/xiaohongshu/README.md",
+    "sales/substack/README.md",
+    "sales/行銷計畫.md"
    ],
-   "note": "把提示貼給 Claude 準備追問訊息，你再複製寄出；追問只做一次"
+   "note": "這週要排：TikTok 7 支；Substack 文章 2 篇；小紅書、Substack Notes 已排到 12/7，這週不用排。另外每週 1 篇「代做網站」內容（虛構範例店），TikTok／小紅書／Pinterest 各一"
   },
   {
    "id": "2026-11-27-tiktok",
@@ -994,82 +1052,79 @@
    ]
   },
   {
-   "id": "2026-11-27-outreach",
+   "id": "2026-11-27-substack",
    "date": "2026-11-27",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 10 家）",
-   "who": "你",
-   "cat": "開發",
+   "time": "10:47",
+   "title": "Substack 預排下週（文章 2 篇）",
+   "who": "擴充功能",
+   "cat": "Substack",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md，在 Substack 排下週的內容。內容一字不改；每排好一項回報一行，第 1 項排好先停下來給我看時間對不對。遇到驗證就停下來問。\n\n1. 文章 sales/substack/posts/05-chinese-speaking-customers.md：貼成新文章，用 Schedule 排在台灣 12/1（二） 22:00。不要直接發布。\n\n2. 文章 sales/substack/posts/03-motion-without-libraries.md：貼成新文章，用 Schedule 排在台灣 12/4（五） 22:00。不要直接發布。",
    "files": [
-    "sales/outreach/outbox/2026-11-27.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-11-27.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+    "sales/substack/posts/05-chinese-speaking-customers.md",
+    "sales/substack/posts/03-motion-without-libraries.md"
+   ]
   },
   {
-   "id": "2026-11-28-daily",
+   "id": "2026-11-27-post",
+   "date": "2026-11-27",
+   "time": "22:00",
+   "title": "Substack 文章發出：One website, five languages: how we built a language switcher for small shops",
+   "who": "自動",
+   "cat": "Substack",
+   "files": [
+    "sales/substack/posts/02-one-site-five-languages.md"
+   ],
+   "note": "已用 Schedule 排在台灣 22:00（美東早上 9 點）的話不用做事；發出後看一眼有沒有上線"
+  },
+  {
+   "id": "2026-11-28-video",
    "date": "2026-11-28",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 1 週第 6 天）",
+   "title": "影片置頂留言：Restaurant & Café 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-restaurant.mp4，Restaurant & Café 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/restaurant-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 1 週第 6 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nA sticky \"Call\" and \"Book\" bar at the bottom of the phone screen does more for a small business site than any hero animation.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-restaurant.mp4，Restaurant & Café 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/restaurant-website-template",
    "files": [
-    "sales/videos/t-restaurant.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Restaurant & Café 模板展示"
+    "sales/videos/t-restaurant.txt"
+   ]
   },
   {
-   "id": "2026-11-28-outreach",
+   "id": "2026-11-28-ig",
    "date": "2026-11-28",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 10 家）",
+   "time": "10:13",
+   "title": "IG 私訊：最多 3 則（第一則不放連結）",
    "who": "你",
    "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2026-11-28.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-11-28.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2026-11-29-daily",
-   "date": "2026-11-29",
-   "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 1 週第 7 天）",
-   "who": "擴充功能",
-   "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-wedding.mp4，Wedding Website with RSVP 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/wedding-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 1 週第 7 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nThings a one-page site doesn't need: a blog nobody updates, a slider, a newsletter popup on first visit. Things it does: hours, a map link, a phone number you can tap.",
-   "files": [
-    "sales/videos/t-wedding.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Wedding Website with RSVP 模板展示"
-  },
-  {
-   "id": "2026-11-29-followup",
-   "date": "2026-11-29",
-   "time": "10:21",
-   "title": "追問 11/24、11/25 寄出、還沒回覆的店家",
-   "who": "你",
-   "cat": "開發",
-   "prompt": "照 sales/outreach/README.md「4 天沒回覆追問一次」：把 leads.csv 裡 11/24、11/25 寄出、status 還是 sent 的店家，依 sales/outreach/訊息範本.md 寫好追問訊息，放進今天的 outbox，寄完我再把 status 改成 followup。",
    "files": [
     "sales/outreach/README.md",
     "sales/outreach/訊息範本.md"
    ],
-   "note": "把提示貼給 Claude 準備追問訊息，你再複製寄出；追問只做一次"
+   "note": "對象：有預覽、沒有 Email、有 IG 的店。每則至少隔 30 分鐘，盡量用手機傳；對方回覆才傳預覽連結。出現傳送失敗或「動作已被封鎖」就停 48 小時，不按重試"
   },
   {
-   "id": "2026-11-29-outreach",
+   "id": "2026-11-29-video",
    "date": "2026-11-29",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 10 家）",
+   "time": "08:31",
+   "title": "影片置頂留言：Wedding Website with RSVP 模板展示",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-wedding.mp4，Wedding Website with RSVP 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/wedding-website-template",
+   "files": [
+    "sales/videos/t-wedding.txt"
+   ]
+  },
+  {
+   "id": "2026-11-29-ig",
+   "date": "2026-11-29",
+   "time": "10:13",
+   "title": "IG 私訊：最多 3 則（第一則不放連結）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-11-29.md"
+    "sales/outreach/README.md",
+    "sales/outreach/訊息範本.md"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-11-29.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "對象：有預覽、沒有 Email、有 IG 的店。每則至少隔 30 分鐘，盡量用手機傳；對方回覆才傳預覽連結。出現傳送失敗或「動作已被封鎖」就停 48 小時，不按重試"
   },
   {
    "id": "2026-11-29-template",
@@ -1086,18 +1141,16 @@
    "note": "PR 合併後，週一照上架文案上架這 1 款"
   },
   {
-   "id": "2026-11-30-daily",
+   "id": "2026-11-30-video",
    "date": "2026-11-30",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 2 週第 1 天）",
+   "title": "影片置頂留言：Motion 動畫版",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（03-motion-edition.mp4，Motion 動畫版），留言貼上下面這段，然後把這則留言置頂：\nTemplates & live demos: polyglotpages.gumroad.com\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 2 週第 1 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nWalk down Main Street in Flushing and the menus are in English, 繁體 and 简体. The shops speak three languages. Their websites usually speak one.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（03-motion-edition.mp4，Motion 動畫版），留言貼上下面這段，然後把這則留言置頂：\nTemplates & live demos: polyglotpages.gumroad.com",
    "files": [
-    "sales/videos/03-motion-edition.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Motion 動畫版"
+    "sales/videos/03-motion-edition.txt"
+   ]
   },
   {
    "id": "2026-11-30-weekly",
@@ -1109,118 +1162,247 @@
    "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
   },
   {
-   "id": "2026-11-30-fiverr",
+   "id": "2026-11-30-review",
    "date": "2026-11-30",
-   "time": "10:43",
-   "title": "開 Fiverr 服務與 Upwork 個人檔案",
+   "time": "09:17",
+   "title": "每週一檢討（聯絡、回覆、成交、收入、Care，跟目標的差距）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 的每週一檢討，照 sales/80萬計畫.md「每週一檢討」：看聯絡數、回覆數、成交數、收入、Care 訂閱數，跟計畫目標差多少；再照 7 件事（價格、留存、每家多收、產能、管道、提早、時間效率）至少提 1 個附估計的建議，標成「建議（待使用者決定）」。也看「80 萬之後」的觸發條件有沒有到。\n\n{{summary}}",
+   "files": [
+    "sales/80萬計畫.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2026-11-30-followup",
+   "date": "2026-11-30",
+   "time": "09:33",
+   "title": "排追問信 1 封（台灣 12/1 02:25 寄）",
+   "who": "擴充功能",
+   "cat": "開發",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/outreach/outbox/2026-12-followups.md 排追問信：「台灣 12/1（二）02:25」那組 1 封。先看 Gmail 收件匣，對方已經回信（包括說不用了）、退信、或自動回覆說換信箱的，跳過並告訴我。在原本那封信的信件串按「回覆」（不要開新信），貼上總表的追問內文，只換店名和網址，用「排定傳送時間」排在那組寫的台灣時間，每 5 分鐘一封。用元素定位、按之前先截圖；第 1 封排好先停下來給我看；畫面出現「已寄出」立刻停下來告訴我。",
+   "files": [
+    "sales/outreach/outbox/2026-12-followups.md"
+   ],
+   "note": "排之前你先看收件匣：已經回信、退信、自動回覆換信箱的不要追。追問只做一次",
+   "emails": 1
+  },
+  {
+   "id": "2026-11-30-forms",
+   "date": "2026-11-30",
+   "time": "10:13",
+   "title": "填聯絡表單（第 8 批 1 家；其他有預覽、沒 Email 的店一天 10～15 家以內）",
    "who": "你",
    "cat": "開發",
-   "prompt": "照 sales/營運流程.md 第 1 週：幫我準備 Fiverr 服務「I will build a modern business website」的標題、說明、3 個方案價格和作品集（6 款 Demo 網址），以及 Upwork 個人檔案文字。",
    "files": [
-    "sales/營運流程.md",
-    "sales/行銷計畫.md"
+    "sales/outreach/outbox/2026-12-02-batch8.md",
+    "sales/outreach/README.md"
+   ],
+   "note": "Name、Email 照 outbox 寫的填；必填欄位要填假資料（病人姓名、生日）的表單不要送，告訴 Claude。表單不算在 Email 暖身上限裡"
+  },
+  {
+   "id": "2026-11-30-linkedin",
+   "date": "2026-11-30",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
+  },
+  {
+   "id": "2026-11-30-care",
+   "date": "2026-11-30",
+   "time": "11:15",
+   "title": "上架 Website Care 維護月費（$49／月）",
+   "who": "擴充功能",
+   "cat": "上架",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/擴充功能上架.md 的規則，把 sales/Gumroad上架步驟.md 第 12 節「Website Care」建成 Membership 商品草稿：Name、URL website-care、單一方案 $49/month、Description 一字不改。不要按 Publish。",
+   "files": [
+    "sales/Gumroad上架步驟.md",
+    "sales/交付流程.md"
+   ],
+   "note": "你看過再按 Publish。12/1 起每個代製客人交件時都推（第 1 個月免費）"
+  },
+  {
+   "id": "2026-11-30-send",
+   "date": "2026-11-30",
+   "time": "22:30",
+   "title": "Gmail 自動寄出：第 7 批紐約＋補寄 8 封",
+   "who": "自動",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-11-30-batch7.md",
+    "sales/outreach/outbox/2026-11-30-extra3.md",
+    "sales/outreach/回信範本.md"
+   ],
+   "note": "已在 Gmail 排好，不用做事。起床後看收件匣：有回信照 sales/outreach/回信範本.md 當天回；有退信告訴 Claude",
+   "emails": 8
+  },
+  {
+   "id": "2026-12-01-send",
+   "date": "2026-12-01",
+   "time": "01:30",
+   "title": "Gmail 自動寄出：第 7 批加州＋補寄 11 封",
+   "who": "自動",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-11-30-batch7.md",
+    "sales/outreach/outbox/2026-11-30-extra3.md",
+    "sales/outreach/回信範本.md"
+   ],
+   "note": "已在 Gmail 排好，不用做事。起床後看收件匣：有回信照 sales/outreach/回信範本.md 當天回；有退信告訴 Claude",
+   "emails": 11
+  },
+  {
+   "id": "2026-12-01-video",
+   "date": "2026-12-01",
+   "time": "08:31",
+   "title": "影片置頂留言：Real Estate Agent 模板展示",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-realestate.mp4，Real Estate Agent 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/real-estate-website-template",
+   "files": [
+    "sales/videos/t-realestate.txt"
    ]
   },
   {
-   "id": "2026-11-30-outreach",
-   "date": "2026-11-30",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 20 家）",
+   "id": "2026-12-01-followup",
+   "date": "2026-12-01",
+   "time": "09:33",
+   "title": "排追問信 5 封（台灣 12/2 02:40 寄）",
+   "who": "擴充功能",
+   "cat": "開發",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/outreach/outbox/2026-12-followups.md 排追問信：「台灣 12/2（三）02:40」那組 5 封。先看 Gmail 收件匣，對方已經回信（包括說不用了）、退信、或自動回覆說換信箱的，跳過並告訴我。在原本那封信的信件串按「回覆」（不要開新信），貼上總表的追問內文，只換店名和網址，用「排定傳送時間」排在那組寫的台灣時間，每 5 分鐘一封。用元素定位、按之前先截圖；第 1 封排好先停下來給我看；畫面出現「已寄出」立刻停下來告訴我。",
+   "files": [
+    "sales/outreach/outbox/2026-12-followups.md"
+   ],
+   "note": "排之前你先看收件匣：已經回信、退信、自動回覆換信箱的不要追。追問只做一次",
+   "emails": 5
+  },
+  {
+   "id": "2026-12-01-linkedin",
+   "date": "2026-12-01",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-11-30.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-11-30.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2026-12-01-daily",
-   "date": "2026-12-01",
-   "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 2 週第 2 天）",
-   "who": "擴充功能",
-   "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-realestate.mp4，Real Estate Agent 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/real-estate-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 2 週第 2 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nWe replaced a row of language links (EN · 繁 · 简 · JA · ES) with one button that opens a list. Five links didn't fit next to the logo on phones. Built with <details>, so it works without JavaScript.",
-   "files": [
-    "sales/videos/t-realestate.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Real Estate Agent 模板展示"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2026-12-01-post",
    "date": "2026-12-01",
-   "time": "09:43",
-   "title": "Substack 第 2 篇：One website, five languages: how we built a language switcher for small shops",
-   "who": "擴充功能",
+   "time": "22:00",
+   "title": "Substack 文章發出：Your customers read Chinese. Does your website?",
+   "who": "自動",
    "cat": "Substack",
-   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 把第 2 篇存成 Substack 草稿。",
    "files": [
-    "sales/substack/posts/02-one-site-five-languages.md"
+    "sales/substack/posts/05-chinese-speaking-customers.md"
    ],
-   "note": "擴充功能存好草稿後，你看過再按發布"
+   "note": "已用 Schedule 排在台灣 22:00（美東早上 9 點）的話不用做事；發出後看一眼有沒有上線"
   },
   {
-   "id": "2026-12-01-outreach",
-   "date": "2026-12-01",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 20 家）",
-   "who": "你",
+   "id": "2026-12-02-send",
+   "date": "2026-12-02",
+   "time": "01:30",
+   "title": "Gmail 自動寄出：第 8 批加州 14 封",
+   "who": "自動",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-01.md"
+    "sales/outreach/outbox/2026-12-02-batch8.md",
+    "sales/outreach/回信範本.md"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-01.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "已在 Gmail 排好，不用做事。起床後看收件匣：有回信照 sales/outreach/回信範本.md 當天回；有退信告訴 Claude",
+   "emails": 14
   },
   {
-   "id": "2026-12-02-daily",
+   "id": "2026-12-02-video",
    "date": "2026-12-02",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 2 週第 3 天）",
+   "title": "影片置頂留言：Gym & Personal Training 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-fitness.mp4，Gym & Personal Training 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/gym-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 2 週第 3 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nTranslation vs localisation: the Japanese version of our restaurant template isn't just translated. Prices are in yen with tax included, the contact button is LINE, and hours use 〜.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-fitness.mp4，Gym & Personal Training 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/gym-website-template",
    "files": [
-    "sales/videos/t-fitness.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Gym & Personal Training 模板展示"
-  },
-  {
-   "id": "2026-12-02-outreach",
-   "date": "2026-12-02",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 20 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2026-12-02.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-02.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2026-12-03-note",
-   "date": "2026-12-03",
-   "time": "08:31",
-   "title": "Substack Note 第 2 週第 4 天",
-   "who": "擴充功能",
-   "cat": "Substack",
-   "prompt": "1. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 2 週第 4 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nEach language is its own page, not a translation layer in JavaScript. Google indexes each one, and the owner can edit the Chinese menu without touching the English one.",
-   "files": [
-    "sales/substack/notes.md"
+    "sales/videos/t-fitness.txt"
    ]
   },
   {
-   "id": "2026-12-03-outreach",
-   "date": "2026-12-03",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 20 家）",
+   "id": "2026-12-02-followup",
+   "date": "2026-12-02",
+   "time": "09:33",
+   "title": "排追問信 12 封（台灣 12/3 03:30 寄）",
+   "who": "擴充功能",
+   "cat": "開發",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/outreach/outbox/2026-12-followups.md 排追問信：「台灣 12/3（四）03:30」那組 12 封。先看 Gmail 收件匣，對方已經回信（包括說不用了）、退信、或自動回覆說換信箱的，跳過並告訴我。在原本那封信的信件串按「回覆」（不要開新信），貼上總表的追問內文，只換店名和網址，用「排定傳送時間」排在那組寫的台灣時間，每 5 分鐘一封。用元素定位、按之前先截圖；第 1 封排好先停下來給我看；畫面出現「已寄出」立刻停下來告訴我。",
+   "files": [
+    "sales/outreach/outbox/2026-12-followups.md"
+   ],
+   "note": "排之前你先看收件匣：已經回信、退信、自動回覆換信箱的不要追。追問只做一次。注意：總表寫「12/3 早上排」，但這組台灣 12/3（四） 03:30 就要寄，所以放在今天；請跟 Claude 確認",
+   "emails": 12
+  },
+  {
+   "id": "2026-12-02-linkedin",
+   "date": "2026-12-02",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-03.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-03.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
+  },
+  {
+   "id": "2026-12-03-send",
+   "date": "2026-12-03",
+   "time": "03:10",
+   "title": "Gmail 自動寄出：補寄（改寄 Email 的 4 家） 4 封",
+   "who": "自動",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-03-fb4.md",
+    "sales/outreach/回信範本.md"
+   ],
+   "note": "已在 Gmail 排好，不用做事。起床後看收件匣：有回信照 sales/outreach/回信範本.md 當天回；有退信告訴 Claude",
+   "emails": 4
+  },
+  {
+   "id": "2026-12-03-followup",
+   "date": "2026-12-03",
+   "time": "09:33",
+   "title": "排追問信 4 封（台灣 12/3 22:30、12/3 22:40 寄）",
+   "who": "擴充功能",
+   "cat": "開發",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/outreach/outbox/2026-12-followups.md 排追問信：「台灣 12/3（四）22:30」那組 2 封、「台灣 12/3（四）22:40」那組 2 封。先看 Gmail 收件匣，對方已經回信（包括說不用了）、退信、或自動回覆說換信箱的，跳過並告訴我。在原本那封信的信件串按「回覆」（不要開新信），貼上總表的追問內文，只換店名和網址，用「排定傳送時間」排在那組寫的台灣時間，每 5 分鐘一封。用元素定位、按之前先截圖；第 1 封排好先停下來給我看；畫面出現「已寄出」立刻停下來告訴我。",
+   "files": [
+    "sales/outreach/outbox/2026-12-followups.md"
+   ],
+   "note": "排之前你先看收件匣：已經回信、退信、自動回覆換信箱的不要追。追問只做一次",
+   "emails": 4
+  },
+  {
+   "id": "2026-12-03-linkedin",
+   "date": "2026-12-03",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2026-12-03-video",
@@ -1229,24 +1411,51 @@
    "title": "影片置頂留言：日文版（日本市場）",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 19:00 發出的影片（04-japanese.mp4，日文版（日本市場）），留言貼上下面這段，然後把這則留言置頂：\nテンプレートとデモはこちら：polyglotpages.gumroad.com",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 19:00 發出的影片（04-japanese.mp4，日文版（日本市場）），留言貼上下面這段，然後把這則留言置頂：\nテンプレートとデモはこちら：polyglotpages.gumroad.com",
    "files": [
     "sales/videos/04-japanese.txt"
    ]
   },
   {
-   "id": "2026-12-04-daily",
+   "id": "2026-12-04-video",
    "date": "2026-12-04",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 2 週第 5 天）",
+   "title": "影片置頂留言：Hair & Nail Salon 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-beauty.mp4，Hair & Nail Salon 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/salon-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 2 週第 5 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nOpenCC converts Traditional to Simplified Chinese with regional vocabulary (影片 → 视频, 軟體 → 软件). We still fix a few things by hand: the link to the Traditional page keeps saying 繁體中文.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-beauty.mp4，Hair & Nail Salon 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/salon-website-template",
    "files": [
-    "sales/videos/t-beauty.txt",
-    "sales/substack/notes.md"
+    "sales/videos/t-beauty.txt"
+   ]
+  },
+  {
+   "id": "2026-12-04-followup",
+   "date": "2026-12-04",
+   "time": "09:33",
+   "title": "排追問信 8 封（台灣 12/4 22:30 寄）",
+   "who": "擴充功能",
+   "cat": "開發",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/outreach/outbox/2026-12-followups.md 排追問信：「台灣 12/4（五）22:30」那組 8 封。先看 Gmail 收件匣，對方已經回信（包括說不用了）、退信、或自動回覆說換信箱的，跳過並告訴我。在原本那封信的信件串按「回覆」（不要開新信），貼上總表的追問內文，只換店名和網址，用「排定傳送時間」排在那組寫的台灣時間，每 5 分鐘一封。用元素定位、按之前先截圖；第 1 封排好先停下來給我看；畫面出現「已寄出」立刻停下來告訴我。",
+   "files": [
+    "sales/outreach/outbox/2026-12-followups.md"
    ],
-   "sub": "Hair & Nail Salon 模板展示"
+   "note": "排之前你先看收件匣：已經回信、退信、自動回覆換信箱的不要追。追問只做一次",
+   "emails": 8
+  },
+  {
+   "id": "2026-12-04-friday",
+   "date": "2026-12-04",
+   "time": "10:27",
+   "title": "排下週的內容（TikTok、小紅書、Substack）",
+   "who": "你",
+   "cat": "檢查",
+   "files": [
+    "sales/videos/發片時程.md",
+    "sales/xiaohongshu/README.md",
+    "sales/substack/README.md",
+    "sales/行銷計畫.md"
+   ],
+   "note": "這週要排：TikTok 7 支；Substack 文章 2 篇、Notes 7 則；小紅書 7 篇（README 的稿只排到 12/7，之後的要先請 Claude 寫）。另外每週 1 篇「代做網站」內容（虛構範例店），TikTok／小紅書／Pinterest 各一"
   },
   {
    "id": "2026-12-04-tiktok",
@@ -1267,68 +1476,81 @@
    ]
   },
   {
-   "id": "2026-12-04-outreach",
+   "id": "2026-12-04-substack",
    "date": "2026-12-04",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 20 家）",
+   "time": "10:47",
+   "title": "Substack 預排下週（文章 2 篇、Notes 7 則）",
+   "who": "擴充功能",
+   "cat": "Substack",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md，在 Substack 排下週的內容。內容一字不改；每排好一項回報一行，第 1 項排好先停下來給我看時間對不對。遇到驗證就停下來問。\n\n1. 文章 sales/substack/posts/06-free-hosting-netlify.md：貼成新文章，用 Schedule 排在台灣 12/8（二） 22:00。不要直接發布。\n\n2. 文章 sales/substack/posts/04-template-drop-restaurant.md：貼成新文章，用 Schedule 排在台灣 12/11（五） 22:00。不要直接發布。\n\n3. Notes：下面 7 則，各自定時在那一天的台灣 21:00（一天一則）：\n12/8（二）：We built five animated templates without GSAP or any library. CSS scroll-driven animations + the Web Animations API cover almost everything now.\n12/9（三）：Rule for every animated template: if a visitor turns on \"reduce motion\", every animation switches off and the content is simply there.\n12/10（四）：`animation-timeline: view()` is the most useful CSS property I've learned this year. Scroll reveals with zero JavaScript.\n12/11（五）：Nothing should be hidden behind an animation. With JavaScript off, every section of our templates is still visible and every button works.\n12/12（六）：A shader background can be a few dozen lines of plain WebGL. No library, nothing to update, nothing to license.\n12/13（日）：Animate transform and opacity only. Anything else causes layout shift, and on a cheap phone you can feel it.\n12/14（一）：If a browser doesn't support scroll-driven animations, elements just appear without the effect. For a business website that's the right way to fail.",
+   "files": [
+    "sales/substack/posts/06-free-hosting-netlify.md",
+    "sales/substack/posts/04-template-drop-restaurant.md",
+    "sales/substack/notes.md"
+   ]
+  },
+  {
+   "id": "2026-12-04-linkedin",
+   "date": "2026-12-04",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-04.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-04.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
-   "id": "2026-12-05-daily",
+   "id": "2026-12-04-post",
+   "date": "2026-12-04",
+   "time": "22:00",
+   "title": "Substack 文章發出：Animated websites with zero libraries",
+   "who": "自動",
+   "cat": "Substack",
+   "files": [
+    "sales/substack/posts/03-motion-without-libraries.md"
+   ],
+   "note": "已用 Schedule 排在台灣 22:00（美東早上 9 點）的話不用做事；發出後看一眼有沒有上線"
+  },
+  {
+   "id": "2026-12-05-send",
+   "date": "2026-12-05",
+   "time": "01:30",
+   "title": "Gmail 自動寄出：第 9 批加州 10 封",
+   "who": "自動",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-05-batch9.md",
+    "sales/outreach/回信範本.md"
+   ],
+   "note": "已在 Gmail 排好，不用做事。起床後看收件匣：有回信照 sales/outreach/回信範本.md 當天回；有退信告訴 Claude",
+   "emails": 10
+  },
+  {
+   "id": "2026-12-05-video",
    "date": "2026-12-05",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 2 週第 6 天）",
+   "title": "影片置頂留言：Dental & Medical Clinic 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-clinic.mp4，Dental & Medical Clinic 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/clinic-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 2 週第 6 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nJapanese headings need different line-break rules, or a single character ends up alone on the last line. `word-break: auto-phrase` fixes most of it.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-clinic.mp4，Dental & Medical Clinic 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/clinic-website-template",
    "files": [
-    "sales/videos/t-clinic.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Dental & Medical Clinic 模板展示"
+    "sales/videos/t-clinic.txt"
+   ]
   },
   {
-   "id": "2026-12-05-outreach",
-   "date": "2026-12-05",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 20 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2026-12-05.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-05.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2026-12-06-daily",
+   "id": "2026-12-06-video",
    "date": "2026-12-06",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 2 週第 7 天）",
+   "title": "影片置頂留言：Law, Accounting & Consulting 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-consulting.mp4，Law, Accounting & Consulting 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/consulting-firm-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 2 週第 7 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nThe root index.html of each template checks the browser language and sends visitors to the right folder. Taiwan → 繁體, Singapore → 简体, everyone else → English.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-consulting.mp4，Law, Accounting & Consulting 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/consulting-firm-website-template",
    "files": [
-    "sales/videos/t-consulting.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Law, Accounting & Consulting 模板展示"
-  },
-  {
-   "id": "2026-12-06-outreach",
-   "date": "2026-12-06",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 20 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2026-12-06.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-06.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+    "sales/videos/t-consulting.txt"
+   ]
   },
   {
    "id": "2026-12-06-template",
@@ -1345,18 +1567,16 @@
    "note": "PR 合併後，週一照上架文案上架這 1 款"
   },
   {
-   "id": "2026-12-07-daily",
+   "id": "2026-12-07-video",
    "date": "2026-12-07",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 3 週第 1 天）",
+   "title": "影片置頂留言：Design Studio & Portfolio 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-studio.mp4，Design Studio & Portfolio 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/studio-portfolio-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 3 週第 1 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nWe built five animated templates without GSAP or any library. CSS scroll-driven animations + the Web Animations API cover almost everything now.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-studio.mp4，Design Studio & Portfolio 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/studio-portfolio-template",
    "files": [
-    "sales/videos/t-studio.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Design Studio & Portfolio 模板展示"
+    "sales/videos/t-studio.txt"
+   ]
   },
   {
    "id": "2026-12-07-weekly",
@@ -1366,6 +1586,34 @@
    "who": "你",
    "cat": "檢查",
    "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
+  },
+  {
+   "id": "2026-12-07-review",
+   "date": "2026-12-07",
+   "time": "09:17",
+   "title": "每週一檢討（聯絡、回覆、成交、收入、Care，跟目標的差距）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 的每週一檢討，照 sales/80萬計畫.md「每週一檢討」：看聯絡數、回覆數、成交數、收入、Care 訂閱數，跟計畫目標差多少；再照 7 件事（價格、留存、每家多收、產能、管道、提早、時間效率）至少提 1 個附估計的建議，標成「建議（待使用者決定）」。也看「80 萬之後」的觸發條件有沒有到。\n\n{{summary}}",
+   "files": [
+    "sales/80萬計畫.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2026-12-07-followup",
+   "date": "2026-12-07",
+   "time": "09:33",
+   "title": "排追問信 29 封（台灣 12/7 22:30、12/8 01:30 寄）",
+   "who": "擴充功能",
+   "cat": "開發",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/outreach/outbox/2026-12-followups.md 排追問信：「台灣 12/7（一）22:30」那組 1 封、「台灣 12/8（二）01:30」那組 28 封。先看 Gmail 收件匣，對方已經回信（包括說不用了）、退信、或自動回覆說換信箱的，跳過並告訴我。在原本那封信的信件串按「回覆」（不要開新信），貼上總表的追問內文，只換店名和網址，用「排定傳送時間」排在那組寫的台灣時間，每 5 分鐘一封。用元素定位、按之前先截圖；第 1 封排好先停下來給我看；畫面出現「已寄出」立刻停下來告訴我。",
+   "files": [
+    "sales/outreach/outbox/2026-12-followups.md"
+   ],
+   "note": "排之前你先看收件匣：已經回信、退信、自動回覆換信箱的不要追。追問只做一次",
+   "emails": 29
   },
   {
    "id": "2026-12-07-buyers",
@@ -1380,121 +1628,215 @@
    "note": "Gumroad → Emails，介紹 Motion 系列；營運流程第 2～3 週"
   },
   {
-   "id": "2026-12-07-outreach",
+   "id": "2026-12-07-linkedin",
    "date": "2026-12-07",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-07.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-07.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
-   "id": "2026-12-08-daily",
+   "id": "2026-12-08-video",
    "date": "2026-12-08",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 3 週第 2 天）",
+   "title": "影片置頂留言：B&B & Guesthouse 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-bnb.mp4，B&B & Guesthouse 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/bnb-guesthouse-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 3 週第 2 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nRule for every animated template: if a visitor turns on \"reduce motion\", every animation switches off and the content is simply there.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-bnb.mp4，B&B & Guesthouse 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/bnb-guesthouse-template",
    "files": [
-    "sales/videos/t-bnb.txt",
-    "sales/substack/notes.md"
+    "sales/videos/t-bnb.txt"
+   ]
+  },
+  {
+   "id": "2026-12-08-followup",
+   "date": "2026-12-08",
+   "time": "09:33",
+   "title": "排追問信 10 封（台灣 12/9 01:30 寄）",
+   "who": "擴充功能",
+   "cat": "開發",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/outreach/outbox/2026-12-followups.md 排追問信：「台灣 12/9（三）01:30」那組 10 封。先看 Gmail 收件匣，對方已經回信（包括說不用了）、退信、或自動回覆說換信箱的，跳過並告訴我。在原本那封信的信件串按「回覆」（不要開新信），貼上總表的追問內文，只換店名和網址，用「排定傳送時間」排在那組寫的台灣時間，每 5 分鐘一封。用元素定位、按之前先截圖；第 1 封排好先停下來給我看；畫面出現「已寄出」立刻停下來告訴我。",
+   "files": [
+    "sales/outreach/outbox/2026-12-followups.md"
    ],
-   "sub": "B&B & Guesthouse 模板展示"
+   "note": "排之前你先看收件匣：已經回信、退信、自動回覆換信箱的不要追。追問只做一次",
+   "emails": 10
+  },
+  {
+   "id": "2026-12-08-batch10",
+   "date": "2026-12-08",
+   "time": "09:43",
+   "title": "排第 10 批開發信 12 封（紐約 6、加州＋華盛頓州 6）",
+   "who": "擴充功能",
+   "cat": "開發",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/outreach/outbox/2026-12-09-batch10.md，在品牌 Gmail 用「排定傳送時間」排這批 12 封：紐約 6 封從台灣 12/9（三）22:30 起、加州＋華盛頓州 6 封從台灣 12/10（四）02:00 起，每 5 分鐘一封。標題和內文一字不改，確認信件最下面有簽名的地址。用元素定位、按之前先截圖；第 1 封排好先停下來給我看；畫面出現「已寄出」立刻停下來告訴我。",
+   "files": [
+    "sales/outreach/outbox/2026-12-09-batch10.md"
+   ],
+   "note": "12/8 起上限 30 封；跟追問信合計不要超過"
+  },
+  {
+   "id": "2026-12-08-linkedin",
+   "date": "2026-12-08",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2026-12-08-post",
    "date": "2026-12-08",
-   "time": "09:43",
-   "title": "Substack 第 3 篇：Animated websites with zero libraries",
-   "who": "擴充功能",
+   "time": "22:00",
+   "title": "Substack 文章發出：Put your business website online for free in 10 minutes",
+   "who": "自動",
    "cat": "Substack",
-   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 把第 3 篇存成 Substack 草稿。",
    "files": [
-    "sales/substack/posts/03-motion-without-libraries.md"
+    "sales/substack/posts/06-free-hosting-netlify.md"
    ],
-   "note": "擴充功能存好草稿後，你看過再按發布"
+   "note": "已用 Schedule 排在台灣 22:00（美東早上 9 點）的話不用做事；發出後看一眼有沒有上線"
   },
   {
-   "id": "2026-12-08-outreach",
-   "date": "2026-12-08",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2026-12-08.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-08.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2026-12-09-daily",
+   "id": "2026-12-09-video",
    "date": "2026-12-09",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 3 週第 3 天）",
+   "title": "影片置頂留言：Photographer Portfolio 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-photographer.mp4，Photographer Portfolio 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/photographer-portfolio-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 3 週第 3 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\n`animation-timeline: view()` is the most useful CSS property I've learned this year. Scroll reveals with zero JavaScript.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-photographer.mp4，Photographer Portfolio 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/photographer-portfolio-template",
    "files": [
-    "sales/videos/t-photographer.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Photographer Portfolio 模板展示"
+    "sales/videos/t-photographer.txt"
+   ]
   },
   {
-   "id": "2026-12-09-outreach",
+   "id": "2026-12-09-followup",
    "date": "2026-12-09",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "time": "09:33",
+   "title": "排追問信 6 封（台灣 12/10 01:30 寄）",
+   "who": "擴充功能",
+   "cat": "開發",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/outreach/outbox/2026-12-followups.md 排追問信：「台灣 12/10（四）01:30」那組 6 封。先看 Gmail 收件匣，對方已經回信（包括說不用了）、退信、或自動回覆說換信箱的，跳過並告訴我。在原本那封信的信件串按「回覆」（不要開新信），貼上總表的追問內文，只換店名和網址，用「排定傳送時間」排在那組寫的台灣時間，每 5 分鐘一封。用元素定位、按之前先截圖；第 1 封排好先停下來給我看；畫面出現「已寄出」立刻停下來告訴我。",
+   "files": [
+    "sales/outreach/outbox/2026-12-followups.md"
+   ],
+   "note": "排之前你先看收件匣：已經回信、退信、自動回覆換信箱的不要追。追問只做一次",
+   "emails": 6
+  },
+  {
+   "id": "2026-12-09-linkedin",
+   "date": "2026-12-09",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-09.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-09.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
-   "id": "2026-12-10-daily",
+   "id": "2026-12-09-data",
+   "date": "2026-12-09",
+   "time": "14:13",
+   "title": "12/9 數據檢討（A/B 只檢查資料有沒有記錯，不用來定價）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 12/9 的數據檢討，照 sales/80萬計畫.md「11/27 檢討與決定」和 sales/行銷計畫.md 最後一節：1. sales/outreach/ab-test.csv 的 $299／$499 只檢查資料有沒有記錯，不用來定價（樣本太少）；定價看回信內容和實際成交。2. 各平台（TikTok、YouTube、小紅書、Substack、Pinterest）哪個有效：有效的之後加量，沒效的降頻；小紅書看每篇收藏、私訊數，決定要不要改成 8:2。3. 列出要我決定的事，標成「建議（待使用者決定）」。\n\n{{summary}}",
+   "files": [
+    "sales/80萬計畫.md",
+    "sales/行銷計畫.md",
+    "sales/outreach/ab-test.csv"
+   ],
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2026-12-09-send",
+   "date": "2026-12-09",
+   "time": "22:30",
+   "title": "Gmail 自動寄出：第 10 批紐約 6 封",
+   "who": "自動",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-09-batch10.md",
+    "sales/outreach/回信範本.md"
+   ],
+   "note": "12/8 排好的話不用做事。起床後看收件匣：有回信照 sales/outreach/回信範本.md 當天回；有退信告訴 Claude",
+   "emails": 6
+  },
+  {
+   "id": "2026-12-10-send",
+   "date": "2026-12-10",
+   "time": "02:00",
+   "title": "Gmail 自動寄出：第 10 批加州＋華盛頓州 6 封",
+   "who": "自動",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/outbox/2026-12-09-batch10.md",
+    "sales/outreach/回信範本.md"
+   ],
+   "note": "12/8 排好的話不用做事。起床後看收件匣：有回信照 sales/outreach/回信範本.md 當天回；有退信告訴 Claude",
+   "emails": 6
+  },
+  {
+   "id": "2026-12-10-video",
    "date": "2026-12-10",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 3 週第 4 天）",
+   "title": "影片置頂留言：Pet Grooming & Daycare 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-pet.mp4，Pet Grooming & Daycare 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/pet-grooming-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 3 週第 4 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nNothing should be hidden behind an animation. With JavaScript off, every section of our templates is still visible and every button works.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-pet.mp4，Pet Grooming & Daycare 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/pet-grooming-template",
    "files": [
-    "sales/videos/t-pet.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Pet Grooming & Daycare 模板展示"
+    "sales/videos/t-pet.txt"
+   ]
   },
   {
-   "id": "2026-12-10-outreach",
+   "id": "2026-12-10-linkedin",
    "date": "2026-12-10",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-10.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-10.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
-   "id": "2026-12-11-daily",
+   "id": "2026-12-11-video",
    "date": "2026-12-11",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 3 週第 5 天）",
+   "title": "影片置頂留言：Tutoring Center 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-education.mp4，Tutoring Center 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/tutoring-school-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 3 週第 5 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nA shader background can be a few dozen lines of plain WebGL. No library, nothing to update, nothing to license.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-education.mp4，Tutoring Center 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/tutoring-school-template",
    "files": [
-    "sales/videos/t-education.txt",
-    "sales/substack/notes.md"
+    "sales/videos/t-education.txt"
+   ]
+  },
+  {
+   "id": "2026-12-11-friday",
+   "date": "2026-12-11",
+   "time": "10:27",
+   "title": "排下週的內容（TikTok、小紅書、Substack）",
+   "who": "你",
+   "cat": "檢查",
+   "files": [
+    "sales/videos/發片時程.md",
+    "sales/xiaohongshu/README.md",
+    "sales/substack/README.md",
+    "sales/行銷計畫.md"
    ],
-   "sub": "Tutoring Center 模板展示"
+   "note": "這週要排：TikTok 7 支；Substack 文章 2 篇、Notes 7 則；小紅書 7 篇（README 的稿只排到 12/7，之後的要先請 Claude 寫）。另外每週 1 篇「代做網站」內容（虛構範例店），TikTok／小紅書／Pinterest 各一"
   },
   {
    "id": "2026-12-11-tiktok",
@@ -1515,68 +1857,94 @@
    ]
   },
   {
+   "id": "2026-12-11-substack",
+   "date": "2026-12-11",
+   "time": "10:47",
+   "title": "Substack 預排下週（文章 2 篇、Notes 7 則）",
+   "who": "擴充功能",
+   "cat": "Substack",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md，在 Substack 排下週的內容。內容一字不改；每排好一項回報一行，第 1 項排好先停下來給我看時間對不對。遇到驗證就停下來問。\n\n1. 文章 sales/substack/posts/07-google-profile-and-website.md：貼成新文章，用 Schedule 排在台灣 12/15（二） 22:00。不要直接發布。\n\n2. 文章 sales/substack/posts/08-make-a-template-yours.md：貼成新文章，用 Schedule 排在台灣 12/18（五） 22:00。不要直接發布。\n\n3. Notes：下面 7 則，各自定時在那一天的台灣 21:00（一天一則）：\n12/15（二）：New template: a restaurant site that knows when you're open. Live badge, menu tabs, reservation form, five languages.\n12/16（三）：Why one HTML file? You can open it, edit it in any text editor, and move it to any host. No account to lose, no platform to shut down.\n12/17（四）：Change your brand colour in one place at the top of the file and the whole site follows. That's what CSS custom properties are for.\n12/18（五）：Before buying a website builder subscription, ask: will I update this site more than once a month? If not, you're paying for an editor you won't use.\n12/19（六）：A contact form doesn't need a backend. Formspree's free plan sends submissions straight to your inbox.\n12/20（日）：Your domain is the one thing to keep in your own name. Hosts can change; the domain is how customers find you.\n12/21（一）：Small shops don't need more features. They need the four basics done well, on a phone, in the languages their customers read.",
+   "files": [
+    "sales/substack/posts/07-google-profile-and-website.md",
+    "sales/substack/posts/08-make-a-template-yours.md",
+    "sales/substack/notes.md"
+   ]
+  },
+  {
+   "id": "2026-12-11-linkedin",
+   "date": "2026-12-11",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
+  },
+  {
    "id": "2026-12-11-outreach",
    "date": "2026-12-11",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 ≤30 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-11.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-11.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
-   "id": "2026-12-12-daily",
+   "id": "2026-12-11-post",
+   "date": "2026-12-11",
+   "time": "22:00",
+   "title": "Substack 文章發出：New template: a restaurant site that knows when you're open",
+   "who": "自動",
+   "cat": "Substack",
+   "files": [
+    "sales/substack/posts/04-template-drop-restaurant.md"
+   ],
+   "note": "已用 Schedule 排在台灣 22:00（美東早上 9 點）的話不用做事；發出後看一眼有沒有上線"
+  },
+  {
+   "id": "2026-12-12-video",
    "date": "2026-12-12",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 3 週第 6 天）",
+   "title": "影片置頂留言：Interior Design Studio 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-interior.mp4，Interior Design Studio 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/interior-design-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 3 週第 6 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nAnimate transform and opacity only. Anything else causes layout shift, and on a cheap phone you can feel it.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-interior.mp4，Interior Design Studio 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/interior-design-template",
    "files": [
-    "sales/videos/t-interior.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Interior Design Studio 模板展示"
+    "sales/videos/t-interior.txt"
+   ]
   },
   {
-   "id": "2026-12-12-outreach",
+   "id": "2026-12-12-warning",
    "date": "2026-12-12",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
+   "time": "14:13",
+   "title": "提早警訊：11/23～12/5 寄出那批的回覆率有沒有到 1%",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "照 sales/80萬計畫.md「提早警訊」：算 sales/outreach/leads.csv 裡 11/23～12/5 寄出那批的回覆率（有 reply_date 的 ÷ 寄出數）。低於 1% 就不用等 12/23，先提出開發信開頭的新寫法給我看（先講要改什麼，我同意再改）。\n\n{{summary}}",
    "files": [
-    "sales/outreach/outbox/2026-12-12.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-12.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+    "sales/80萬計畫.md",
+    "sales/outreach/leads.csv",
+    "sales/outreach/訊息範本.md"
+   ]
   },
   {
-   "id": "2026-12-13-daily",
+   "id": "2026-12-13-video",
    "date": "2026-12-13",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 3 週第 7 天）",
+   "title": "影片置頂留言：Bakery & Dessert Shop 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-bakery.mp4，Bakery & Dessert Shop 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/bakery-website-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 3 週第 7 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nIf a browser doesn't support scroll-driven animations, elements just appear without the effect. For a business website that's the right way to fail.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-bakery.mp4，Bakery & Dessert Shop 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/bakery-website-template",
    "files": [
-    "sales/videos/t-bakery.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Bakery & Dessert Shop 模板展示"
-  },
-  {
-   "id": "2026-12-13-outreach",
-   "date": "2026-12-13",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2026-12-13.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-13.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+    "sales/videos/t-bakery.txt"
+   ]
   },
   {
    "id": "2026-12-13-template",
@@ -1593,18 +1961,16 @@
    "note": "PR 合併後，週一照上架文案上架這 1 款"
   },
   {
-   "id": "2026-12-14-daily",
+   "id": "2026-12-14-video",
    "date": "2026-12-14",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 4 週第 1 天）",
+   "title": "影片置頂留言：Bubble Tea Shop 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-tea.mp4，Bubble Tea Shop 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/bubble-tea-shop-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 4 週第 1 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nNew template: a restaurant site that knows when you're open. Live badge, menu tabs, reservation form, five languages.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-tea.mp4，Bubble Tea Shop 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/bubble-tea-shop-template",
    "files": [
-    "sales/videos/t-tea.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Bubble Tea Shop 模板展示"
+    "sales/videos/t-tea.txt"
+   ]
   },
   {
    "id": "2026-12-14-weekly",
@@ -1616,121 +1982,197 @@
    "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
   },
   {
-   "id": "2026-12-14-outreach",
+   "id": "2026-12-14-review",
    "date": "2026-12-14",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "time": "09:17",
+   "title": "每週一檢討（聯絡、回覆、成交、收入、Care，跟目標的差距）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 的每週一檢討，照 sales/80萬計畫.md「每週一檢討」：看聯絡數、回覆數、成交數、收入、Care 訂閱數，跟計畫目標差多少；再照 7 件事（價格、留存、每家多收、產能、管道、提早、時間效率）至少提 1 個附估計的建議，標成「建議（待使用者決定）」。也看「80 萬之後」的觸發條件有沒有到。\n\n{{summary}}",
+   "files": [
+    "sales/80萬計畫.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2026-12-14-linkedin",
+   "date": "2026-12-14",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-14.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-14.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
-   "id": "2026-12-15-daily",
+   "id": "2026-12-14-outreach",
+   "date": "2026-12-14",
+   "time": "13:07",
+   "title": "排今天的開發信＋追問信（24 小時內合計 ≤30 封）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2026-12-15-video",
    "date": "2026-12-15",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 4 週第 2 天）",
+   "title": "影片置頂留言：Car Care & Garage 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-auto.mp4，Car Care & Garage 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/auto-care-garage-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 4 週第 2 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nWhy one HTML file? You can open it, edit it in any text editor, and move it to any host. No account to lose, no platform to shut down.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-auto.mp4，Car Care & Garage 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/auto-care-garage-template",
    "files": [
-    "sales/videos/t-auto.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Car Care & Garage 模板展示"
+    "sales/videos/t-auto.txt"
+   ]
   },
   {
-   "id": "2026-12-15-post",
+   "id": "2026-12-15-linkedin",
    "date": "2026-12-15",
-   "time": "09:43",
-   "title": "Substack 第 4 篇：New template: a restaurant site that knows when you're open",
-   "who": "擴充功能",
-   "cat": "Substack",
-   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 把第 4 篇存成 Substack 草稿。",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
    "files": [
-    "sales/substack/posts/04-template-drop-restaurant.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "擴充功能存好草稿後，你看過再按發布"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2026-12-15-outreach",
    "date": "2026-12-15",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-15.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-15.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
-   "id": "2026-12-16-daily",
+   "id": "2026-12-15-post",
+   "date": "2026-12-15",
+   "time": "22:00",
+   "title": "Substack 文章發出：Your Google Business Profile matters more than your website",
+   "who": "自動",
+   "cat": "Substack",
+   "files": [
+    "sales/substack/posts/07-google-profile-and-website.md"
+   ],
+   "note": "已用 Schedule 排在台灣 22:00（美東早上 9 點）的話不用做事；發出後看一眼有沒有上線"
+  },
+  {
+   "id": "2026-12-16-video",
    "date": "2026-12-16",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 4 週第 3 天）",
+   "title": "影片置頂留言：Home Cleaning Service 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-cleaning.mp4，Home Cleaning Service 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/home-cleaning-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 4 週第 3 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nChange your brand colour in one place at the top of the file and the whole site follows. That's what CSS custom properties are for.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-cleaning.mp4，Home Cleaning Service 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/home-cleaning-template",
    "files": [
-    "sales/videos/t-cleaning.txt",
-    "sales/substack/notes.md"
+    "sales/videos/t-cleaning.txt"
+   ]
+  },
+  {
+   "id": "2026-12-16-linkedin",
+   "date": "2026-12-16",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "sub": "Home Cleaning Service 模板展示"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2026-12-16-outreach",
    "date": "2026-12-16",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-16.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-16.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
-   "id": "2026-12-17-daily",
+   "id": "2026-12-17-video",
    "date": "2026-12-17",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 4 週第 4 天）",
+   "title": "影片置頂留言：Florist & Flower Shop 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-florist.mp4，Florist & Flower Shop 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/florist-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 4 週第 4 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nBefore buying a website builder subscription, ask: will I update this site more than once a month? If not, you're paying for an editor you won't use.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-florist.mp4，Florist & Flower Shop 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/florist-template",
    "files": [
-    "sales/videos/t-florist.txt",
-    "sales/substack/notes.md"
+    "sales/videos/t-florist.txt"
+   ]
+  },
+  {
+   "id": "2026-12-17-linkedin",
+   "date": "2026-12-17",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "sub": "Florist & Flower Shop 模板展示"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2026-12-17-outreach",
    "date": "2026-12-17",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-17.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-17.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
-   "id": "2026-12-18-daily",
+   "id": "2026-12-18-video",
    "date": "2026-12-18",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 4 週第 5 天）",
+   "title": "影片置頂留言：Yoga & Pilates Studio 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-yoga.mp4，Yoga & Pilates Studio 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/yoga-pilates-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 4 週第 5 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nA contact form doesn't need a backend. Formspree's free plan sends submissions straight to your inbox.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-yoga.mp4，Yoga & Pilates Studio 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/yoga-pilates-template",
    "files": [
-    "sales/videos/t-yoga.txt",
-    "sales/substack/notes.md"
+    "sales/videos/t-yoga.txt"
+   ]
+  },
+  {
+   "id": "2026-12-18-friday",
+   "date": "2026-12-18",
+   "time": "10:27",
+   "title": "排下週的內容（TikTok、小紅書、Substack）",
+   "who": "你",
+   "cat": "檢查",
+   "files": [
+    "sales/videos/發片時程.md",
+    "sales/xiaohongshu/README.md",
+    "sales/substack/README.md",
+    "sales/行銷計畫.md"
    ],
-   "sub": "Yoga & Pilates Studio 模板展示"
+   "note": "這週要排：TikTok 7 支；小紅書 7 篇（README 的稿只排到 12/7，之後的要先請 Claude 寫）；Substack Notes（28 則 12/21 發完，之後的要先請 Claude 寫）；下週二的 Substack 文章要新寫（Claude 起草）。另外每週 1 篇「代做網站」內容（虛構範例店），TikTok／小紅書／Pinterest 各一"
   },
   {
    "id": "2026-12-18-tiktok",
@@ -1751,68 +2193,66 @@
    ]
   },
   {
+   "id": "2026-12-18-linkedin",
+   "date": "2026-12-18",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
+  },
+  {
    "id": "2026-12-18-outreach",
    "date": "2026-12-18",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-18.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-18.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
-   "id": "2026-12-19-daily",
+   "id": "2026-12-18-post",
+   "date": "2026-12-18",
+   "time": "22:00",
+   "title": "Substack 文章發出：Make a website template look like your own shop in one afternoon",
+   "who": "自動",
+   "cat": "Substack",
+   "files": [
+    "sales/substack/posts/08-make-a-template-yours.md"
+   ],
+   "note": "已用 Schedule 排在台灣 22:00（美東早上 9 點）的話不用做事；發出後看一眼有沒有上線"
+  },
+  {
+   "id": "2026-12-19-video",
    "date": "2026-12-19",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 4 週第 6 天）",
+   "title": "影片置頂留言：Campsite & Glamping 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-camping.mp4，Campsite & Glamping 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/campsite-glamping-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 4 週第 6 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nYour domain is the one thing to keep in your own name. Hosts can change; the domain is how customers find you.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-camping.mp4，Campsite & Glamping 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/campsite-glamping-template",
    "files": [
-    "sales/videos/t-camping.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Campsite & Glamping 模板展示"
+    "sales/videos/t-camping.txt"
+   ]
   },
   {
-   "id": "2026-12-19-outreach",
-   "date": "2026-12-19",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2026-12-19.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-19.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2026-12-20-daily",
+   "id": "2026-12-20-video",
    "date": "2026-12-20",
    "time": "08:31",
-   "title": "影片置頂留言＋Substack Note（第 4 週第 7 天）",
+   "title": "影片置頂留言：Therapist & Coach 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "今天兩件事，做完各回報一行：\n\n1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-coach.mp4，Therapist & Coach 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/therapist-coach-template\n\n2. 照 https://github.com/a0955072107-bit/-/blob/main/sales/substack/擴充功能發文.md 發第 4 週第 7 天的 Note：打開 Substack Notes，貼上下面這則，不要按發布，我自己按。\nSmall shops don't need more features. They need the four basics done well, on a phone, in the languages their customers read.",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-coach.mp4，Therapist & Coach 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/therapist-coach-template",
    "files": [
-    "sales/videos/t-coach.txt",
-    "sales/substack/notes.md"
-   ],
-   "sub": "Therapist & Coach 模板展示"
-  },
-  {
-   "id": "2026-12-20-outreach",
-   "date": "2026-12-20",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2026-12-20.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-20.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+    "sales/videos/t-coach.txt"
+   ]
   },
   {
    "id": "2026-12-20-template",
@@ -1829,17 +2269,16 @@
    "note": "PR 合併後，週一照上架文案上架這 1 款"
   },
   {
-   "id": "2026-12-21-daily",
+   "id": "2026-12-21-video",
    "date": "2026-12-21",
    "time": "08:31",
-   "title": "影片置頂留言",
+   "title": "影片置頂留言：Contractor & Handyman 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-contractor.mp4，Contractor & Handyman 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/contractor-handyman-template",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-contractor.mp4，Contractor & Handyman 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/contractor-handyman-template",
    "files": [
     "sales/videos/t-contractor.txt"
-   ],
-   "sub": "Contractor & Handyman 模板展示"
+   ]
   },
   {
    "id": "2026-12-21-weekly",
@@ -1851,66 +2290,119 @@
    "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
   },
   {
-   "id": "2026-12-21-care",
+   "id": "2026-12-21-review",
    "date": "2026-12-21",
-   "time": "11:15",
-   "title": "上架 Website Care 維護月費（$19／$29）",
-   "who": "擴充功能",
-   "cat": "上架",
-   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/擴充功能上架.md 的規則，把 sales/Gumroad上架步驟.md 第 12 節「Website Care」建成 Membership 商品草稿：Name、URL website-care、兩個方案 Care $19/month、Care Plus $29/month、Description 一字不改。不要按 Publish。",
+   "time": "09:17",
+   "title": "每週一檢討（聯絡、回覆、成交、收入、Care，跟目標的差距）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 的每週一檢討，照 sales/80萬計畫.md「每週一檢討」：看聯絡數、回覆數、成交數、收入、Care 訂閱數，跟計畫目標差多少；再照 7 件事（價格、留存、每家多收、產能、管道、提早、時間效率）至少提 1 個附估計的建議，標成「建議（待使用者決定）」。也看「80 萬之後」的觸發條件有沒有到。\n\n{{summary}}",
    "files": [
-    "sales/Gumroad上架步驟.md"
-   ]
+    "sales/80萬計畫.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2026-12-21-linkedin",
+   "date": "2026-12-21",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2026-12-21-outreach",
    "date": "2026-12-21",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-21.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-21.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
-   "id": "2026-12-22-daily",
+   "id": "2026-12-22-video",
    "date": "2026-12-22",
    "time": "08:31",
-   "title": "影片置頂留言",
+   "title": "影片置頂留言：Nonprofit & Church 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-nonprofit.mp4，Nonprofit & Church 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/nonprofit-charity-template",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-nonprofit.mp4，Nonprofit & Church 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/nonprofit-charity-template",
    "files": [
     "sales/videos/t-nonprofit.txt"
+   ]
+  },
+  {
+   "id": "2026-12-22-linkedin",
+   "date": "2026-12-22",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "sub": "Nonprofit & Church 模板展示"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2026-12-22-outreach",
    "date": "2026-12-22",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-22.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-22.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
-   "id": "2026-12-23-daily",
+   "id": "2026-12-22-post",
+   "date": "2026-12-22",
+   "time": "22:00",
+   "title": "Substack 文章：這篇要新寫（Claude 12/15 前起草）",
+   "who": "你",
+   "cat": "Substack",
+   "files": [
+    "sales/substack/README.md"
+   ],
+   "note": "一週兩篇先試 4 週，今天看訂閱數和取消訂閱數；取消變多就改回一週一篇"
+  },
+  {
+   "id": "2026-12-23-video",
    "date": "2026-12-23",
    "time": "08:31",
-   "title": "影片置頂留言",
+   "title": "影片置頂留言：Link-in-Bio Page 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-linkinbio.mp4，Link-in-Bio Page 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/link-in-bio-template",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-linkinbio.mp4，Link-in-Bio Page 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/link-in-bio-template",
    "files": [
     "sales/videos/t-linkinbio.txt"
+   ]
+  },
+  {
+   "id": "2026-12-23-linkedin",
+   "date": "2026-12-23",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "sub": "Link-in-Bio Page 模板展示"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2026-12-23-commission",
@@ -1924,149 +2416,167 @@
     "sales/Gumroad上架步驟.md",
     "sales/交付流程.md"
    ],
-   "note": "新的發布後，把舊的訂金商品設成不公開，交付流程的連結也要換"
+   "note": "手上有進行中的案子時先不要換（outreach/README.md）。新的發布後，把舊的訂金商品設成不公開，交付流程的連結也要換"
   },
   {
    "id": "2026-12-23-outreach",
    "date": "2026-12-23",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-23.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-23.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
-   "id": "2026-12-23-growth",
+   "id": "2026-12-23-gate",
    "date": "2026-12-23",
    "time": "14:43",
-   "title": "成長檢查（第 1 個月）",
+   "title": "12/23 關卡：有沒有至少 1 家付訂金",
    "who": "Claude",
    "cat": "檢查",
-   "prompt": "這是 Polyglot Pages 第 1 個月的成長檢查。下面是我後台的數字，請照 sales/營運流程.md「要追蹤的數字」看：哪個管道帶來最多瀏覽和銷售、哪幾款瀏覽多但賣不好（要不要調價或換封面）、開發信回覆率要怎麼改，給我下個月最該做的 3 件事。\n\n{{summary}}",
+   "prompt": "這是 Polyglot Pages 的 12/23 關卡（sales/80萬計畫.md 階段 1）。目標：累積聯絡 300 家、成交 3 家；關卡：至少 1 家付訂金，0 家就要改開發信寫法或價格。請看：聯絡數、回覆數、成交數、收入跟目標的差距；西語市場要不要做（最快 2 月）；起號 30 天各平台的數字（哪個管道帶來最多瀏覽和銷售）。給我下個月最該做的 3 件事，標成「建議（待使用者決定）」。\n\n{{summary}}",
    "files": [
-    "sales/營運流程.md",
-    "sales/行銷計畫.md"
+    "sales/80萬計畫.md",
+    "sales/行銷計畫.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "按「複製」會自動帶入你在後台記的數字"
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
   },
   {
-   "id": "2026-12-24-daily",
+   "id": "2026-12-24-video",
    "date": "2026-12-24",
    "time": "08:31",
-   "title": "影片置頂留言",
+   "title": "影片置頂留言：Barbershop 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-barber.mp4，Barbershop 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/barbershop-template",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-barber.mp4，Barbershop 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/barbershop-template",
    "files": [
     "sales/videos/t-barber.txt"
+   ]
+  },
+  {
+   "id": "2026-12-24-linkedin",
+   "date": "2026-12-24",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "sub": "Barbershop 模板展示"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2026-12-24-outreach",
    "date": "2026-12-24",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-24.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-24.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
-   "id": "2026-12-25-daily",
+   "id": "2026-12-25-video",
    "date": "2026-12-25",
    "time": "08:31",
-   "title": "影片置頂留言",
+   "title": "影片置頂留言：Conference & Event Landing Page 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-conference.mp4，Conference & Event Landing Page 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/conference-event-template",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-conference.mp4，Conference & Event Landing Page 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/conference-event-template",
    "files": [
     "sales/videos/t-conference.txt"
+   ]
+  },
+  {
+   "id": "2026-12-25-friday",
+   "date": "2026-12-25",
+   "time": "10:27",
+   "title": "排下週的內容（TikTok、小紅書、Substack）",
+   "who": "你",
+   "cat": "檢查",
+   "files": [
+    "sales/videos/發片時程.md",
+    "sales/xiaohongshu/README.md",
+    "sales/substack/README.md",
+    "sales/行銷計畫.md"
    ],
-   "sub": "Conference & Event Landing Page 模板展示"
+   "note": "這週要排：TikTok 6 支；小紅書 7 篇（README 的稿只排到 12/7，之後的要先請 Claude 寫）；Substack Notes（28 則 12/21 發完，之後的要先請 Claude 寫）。另外每週 1 篇「代做網站」內容（虛構範例店），TikTok／小紅書／Pinterest 各一"
   },
   {
    "id": "2026-12-25-tiktok",
    "date": "2026-12-25",
    "time": "10:37",
-   "title": "TikTok 預排下週 5 支（12/28（一）～1/1（五））",
+   "title": "TikTok 預排下週 6 支（12/28（一）～1/2（六））",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/videos/發片時程.md，在電腦版 TikTok Studio 預排下面 5 支影片（台灣時間）。影片檔要我拖進上傳框，每支開始前告訴我檔名，等我說好再填。說明文字一字不改貼上，加一首平台內建音樂並把音量調低。不要改帳號設定，遇到驗證就停下來問。每排好一支回報一行。\n\n1. 12/28（一） 08:00　t-motion-saas.mp4（SaaS Launch Page Motion Edition 模板展示）\n說明文字：\nAnimated SaaS launch page template with WebGL hero, scroll story and pricing animation built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. Pure HTML/CSS/JS, no libraries. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #saas #landingpage #webanimation #webgl #multilingualwebsite\n\n2. 12/29（二） 08:00　t-motion-portfolio.mp4（Creative Portfolio Motion Edition 模板展示）\n說明文字：\nAnimated creative portfolio template with letter assembly, cursor previews and flow-field canvas built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. Pure HTML/CSS/JS, no libraries. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #portfoliowebsite #creativeportfolio #webanimation #motiondesign #multilingualwebsite\n\n3. 12/30（三） 08:00　t-motion-restaurant.mp4（Fine Dining Motion Edition 模板展示）\n說明文字：\nAnimated fine-dining website template with ember particles, course scrollytelling and iris reveals built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. Pure HTML/CSS/JS, no libraries. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #finedining #restaurantwebsite #webanimation #chefsofinstagram #multilingualwebsite\n\n4. 12/31（四） 08:00　t-motion-wedding.mp4（Wedding Website Motion Edition 模板展示）\n說明文字：\nAnimated wedding website template with envelope intro, drawn story path and flip countdown built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. Pure HTML/CSS/JS, no libraries. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #weddingwebsite #weddingrsvp #webanimation #weddinginvitation #multilingualwebsite\n\n5. 1/1（五） 08:00　t-motion-realestate.mp4（Luxury Residences Motion Edition 模板展示）\n說明文字：\nAnimated luxury-residences website template with self-drawing facade, pinned floor plan and map pin drops built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. Pure HTML/CSS/JS, no libraries. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #luxuryrealestate #realestatewebsite #webanimation #propertymarketing #multilingualwebsite",
+   "prompt": "照 https://github.com/a0955072107-bit/-/blob/main/sales/videos/發片時程.md，在電腦版 TikTok Studio 預排下面 6 支影片（台灣時間）。影片檔要我拖進上傳框，每支開始前告訴我檔名，等我說好再填。說明文字一字不改貼上，加一首平台內建音樂並把音量調低。不要改帳號設定，遇到驗證就停下來問。每排好一支回報一行。\n\n1. 12/28（一） 08:00　t-motion-saas.mp4（SaaS Launch Page Motion Edition 模板展示）\n說明文字：\nAnimated SaaS launch page template with WebGL hero, scroll story and pricing animation built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. Pure HTML/CSS/JS, no libraries. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #saas #landingpage #webanimation #webgl #multilingualwebsite\n\n2. 12/29（二） 08:00　t-motion-portfolio.mp4（Creative Portfolio Motion Edition 模板展示）\n說明文字：\nAnimated creative portfolio template with letter assembly, cursor previews and flow-field canvas built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. Pure HTML/CSS/JS, no libraries. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #portfoliowebsite #creativeportfolio #webanimation #motiondesign #multilingualwebsite\n\n3. 12/30（三） 08:00　t-motion-restaurant.mp4（Fine Dining Motion Edition 模板展示）\n說明文字：\nAnimated fine-dining website template with ember particles, course scrollytelling and iris reveals built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. Pure HTML/CSS/JS, no libraries. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #finedining #restaurantwebsite #webanimation #chefsofinstagram #multilingualwebsite\n\n4. 12/31（四） 08:00　t-motion-wedding.mp4（Wedding Website Motion Edition 模板展示）\n說明文字：\nAnimated wedding website template with envelope intro, drawn story path and flip countdown built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. Pure HTML/CSS/JS, no libraries. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #weddingwebsite #weddingrsvp #webanimation #weddinginvitation #multilingualwebsite\n\n5. 1/1（五） 08:00　t-motion-realestate.mp4（Luxury Residences Motion Edition 模板展示）\n說明文字：\nAnimated luxury-residences website template with self-drawing facade, pinned floor plan and map pin drops built in.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. Pure HTML/CSS/JS, no libraries. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #luxuryrealestate #realestatewebsite #webanimation #propertymarketing #multilingualwebsite\n\n6. 1/2（六） 08:00　t-dental.mp4（Dental Clinic Forest Edition 模板展示（牙醫第二款「森林診間」））\n說明文字：\nDental Clinic website template, Forest Edition: our second dental style, with first-visit steps, dentist profiles and a \"Today\" hours board that updates itself.\nShips in English, Chinese (Traditional & Simplified) and Japanese, switchable in one tap. No monthly fees, you own the files.\n\n#websitetemplate #smallbusiness #dentalwebsite #dentistwebsite #dentalclinic #clinicwebsite #multilingualwebsite",
    "files": [
     "sales/videos/t-motion-saas.mp4",
     "sales/videos/t-motion-portfolio.mp4",
     "sales/videos/t-motion-restaurant.mp4",
     "sales/videos/t-motion-wedding.mp4",
-    "sales/videos/t-motion-realestate.mp4"
+    "sales/videos/t-motion-realestate.mp4",
+    "sales/videos/t-dental.mp4"
    ]
+  },
+  {
+   "id": "2026-12-25-linkedin",
+   "date": "2026-12-25",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2026-12-25-outreach",
    "date": "2026-12-25",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-25.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-25.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
-   "id": "2026-12-26-daily",
+   "id": "2026-12-26-video",
    "date": "2026-12-26",
    "time": "08:31",
-   "title": "影片置頂留言",
+   "title": "影片置頂留言：Tattoo Studio 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-tattoo.mp4，Tattoo Studio 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/tattoo-studio-template",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-tattoo.mp4，Tattoo Studio 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/tattoo-studio-template",
    "files": [
     "sales/videos/t-tattoo.txt"
-   ],
-   "sub": "Tattoo Studio 模板展示"
+   ]
   },
   {
-   "id": "2026-12-26-outreach",
-   "date": "2026-12-26",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2026-12-26.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-26.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2026-12-27-daily",
+   "id": "2026-12-27-video",
    "date": "2026-12-27",
    "time": "08:31",
-   "title": "影片置頂留言",
+   "title": "影片置頂留言：Coworking Space 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-coworking.mp4，Coworking Space 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/coworking-space-template",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-coworking.mp4，Coworking Space 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/coworking-space-template",
    "files": [
     "sales/videos/t-coworking.txt"
-   ],
-   "sub": "Coworking Space 模板展示"
-  },
-  {
-   "id": "2026-12-27-outreach",
-   "date": "2026-12-27",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2026-12-27.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-27.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   ]
   },
   {
    "id": "2026-12-27-template",
@@ -2083,17 +2593,16 @@
    "note": "PR 合併後，週一照上架文案上架這 1 款"
   },
   {
-   "id": "2026-12-28-daily",
+   "id": "2026-12-28-video",
    "date": "2026-12-28",
    "time": "08:31",
-   "title": "影片置頂留言",
+   "title": "影片置頂留言：SaaS Launch Page Motion Edition 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-motion-saas.mp4，SaaS Launch Page Motion Edition 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/motion-saas-launch-template",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-motion-saas.mp4，SaaS Launch Page Motion Edition 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/motion-saas-launch-template",
    "files": [
     "sales/videos/t-motion-saas.txt"
-   ],
-   "sub": "SaaS Launch Page Motion Edition 模板展示"
+   ]
   },
   {
    "id": "2026-12-28-weekly",
@@ -2105,152 +2614,223 @@
    "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
   },
   {
-   "id": "2026-12-28-outreach",
+   "id": "2026-12-28-review",
    "date": "2026-12-28",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
+   "time": "09:17",
+   "title": "每週一檢討（聯絡、回覆、成交、收入、Care，跟目標的差距）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 的每週一檢討，照 sales/80萬計畫.md「每週一檢討」：看聯絡數、回覆數、成交數、收入、Care 訂閱數，跟計畫目標差多少；再照 7 件事（價格、留存、每家多收、產能、管道、提早、時間效率）至少提 1 個附估計的建議，標成「建議（待使用者決定）」。也看「80 萬之後」的觸發條件有沒有到。\n\n{{summary}}",
    "files": [
-    "sales/outreach/outbox/2026-12-28.md"
+    "sales/80萬計畫.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-28.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
   },
   {
    "id": "2026-12-28-linkedin",
    "date": "2026-12-28",
-   "time": "14:13",
-   "title": "評估要不要開 LinkedIn",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
-   "cat": "檢查",
-   "prompt": "照 sales/行銷計畫.md 第 9 節評估 LinkedIn：工作室授權有沒有開始賣、客製案有沒有 5 個以上、有沒有想接美國中小企業案。任一個成立就幫我準備個人檔案文字和前 2 篇貼文。\n\n{{summary}}",
+   "cat": "開發",
    "files": [
-    "sales/行銷計畫.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
+  },
+  {
+   "id": "2026-12-28-outreach",
+   "date": "2026-12-28",
+   "time": "13:07",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2026-12-29-video",
+   "date": "2026-12-29",
+   "time": "08:31",
+   "title": "影片置頂留言：Creative Portfolio Motion Edition 模板展示",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-motion-portfolio.mp4，Creative Portfolio Motion Edition 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/motion-creative-portfolio-template",
+   "files": [
+    "sales/videos/t-motion-portfolio.txt"
    ]
   },
   {
-   "id": "2026-12-29-daily",
+   "id": "2026-12-29-linkedin",
    "date": "2026-12-29",
-   "time": "08:31",
-   "title": "影片置頂留言",
-   "who": "擴充功能",
-   "cat": "影片",
-   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-motion-portfolio.mp4，Creative Portfolio Motion Edition 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/motion-creative-portfolio-template",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
    "files": [
-    "sales/videos/t-motion-portfolio.txt"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "sub": "Creative Portfolio Motion Edition 模板展示"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2026-12-29-outreach",
    "date": "2026-12-29",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-29.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-29.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
-   "id": "2026-12-30-daily",
+   "id": "2026-12-30-video",
    "date": "2026-12-30",
    "time": "08:31",
-   "title": "影片置頂留言",
+   "title": "影片置頂留言：Fine Dining Motion Edition 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-motion-restaurant.mp4，Fine Dining Motion Edition 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/motion-fine-dining-template",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-motion-restaurant.mp4，Fine Dining Motion Edition 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/motion-fine-dining-template",
    "files": [
     "sales/videos/t-motion-restaurant.txt"
+   ]
+  },
+  {
+   "id": "2026-12-30-linkedin",
+   "date": "2026-12-30",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "sub": "Fine Dining Motion Edition 模板展示"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2026-12-30-outreach",
    "date": "2026-12-30",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-30.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-30.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
-   "id": "2026-12-31-daily",
+   "id": "2026-12-31-video",
    "date": "2026-12-31",
    "time": "08:31",
-   "title": "影片置頂留言",
+   "title": "影片置頂留言：Wedding Website Motion Edition 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-motion-wedding.mp4，Wedding Website Motion Edition 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/motion-wedding-template",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-motion-wedding.mp4，Wedding Website Motion Edition 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/motion-wedding-template",
    "files": [
     "sales/videos/t-motion-wedding.txt"
+   ]
+  },
+  {
+   "id": "2026-12-31-linkedin",
+   "date": "2026-12-31",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "sub": "Wedding Website Motion Edition 模板展示"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2026-12-31-outreach",
    "date": "2026-12-31",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2026-12-31.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2026-12-31.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
-   "id": "2027-01-01-daily",
+   "id": "2027-01-01-video",
    "date": "2027-01-01",
    "time": "08:31",
-   "title": "影片置頂留言",
+   "title": "影片置頂留言：Luxury Residences Motion Edition 模板展示",
    "who": "擴充功能",
    "cat": "影片",
-   "prompt": "1. 到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-motion-realestate.mp4，Luxury Residences Motion Edition 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/motion-luxury-residences-template",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-motion-realestate.mp4，Luxury Residences Motion Edition 模板展示），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/motion-luxury-residences-template",
    "files": [
     "sales/videos/t-motion-realestate.txt"
+   ]
+  },
+  {
+   "id": "2027-01-01-friday",
+   "date": "2027-01-01",
+   "time": "10:27",
+   "title": "排下週的內容（TikTok、小紅書、Substack）",
+   "who": "你",
+   "cat": "檢查",
+   "files": [
+    "sales/videos/發片時程.md",
+    "sales/xiaohongshu/README.md",
+    "sales/substack/README.md",
+    "sales/行銷計畫.md"
    ],
-   "sub": "Luxury Residences Motion Edition 模板展示"
+   "note": "這週要排：小紅書 7 篇（README 的稿只排到 12/7，之後的要先請 Claude 寫）；Substack Notes（28 則 12/21 發完，之後的要先請 Claude 寫）；短影片（已做好的 1/2 發完，之後的要先做）。另外每週 1 篇「代做網站」內容（虛構範例店），TikTok／小紅書／Pinterest 各一"
+  },
+  {
+   "id": "2027-01-01-linkedin",
+   "date": "2027-01-01",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-01-outreach",
    "date": "2027-01-01",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-01.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-01.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
-   "id": "2027-01-02-outreach",
+   "id": "2027-01-02-video",
    "date": "2027-01-02",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
+   "time": "08:31",
+   "title": "影片置頂留言：Dental Clinic Forest Edition 模板展示（牙醫第二款「森林診間」）",
+   "who": "擴充功能",
+   "cat": "影片",
+   "prompt": "到 TikTok 和 YouTube Shorts，找今天 08:00 發出的影片（t-dental.mp4，Dental Clinic Forest Edition 模板展示（牙醫第二款「森林診間」）），留言貼上下面這段，然後把這則留言置頂：\nTemplate & live demo: https://polyglotpages.gumroad.com/l/dental-clinic-forest-template",
    "files": [
-    "sales/outreach/outbox/2027-01-02.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-02.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-01-03-outreach",
-   "date": "2027-01-03",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-01-03.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-03.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+    "sales/videos/t-dental.txt"
+   ]
   },
   {
    "id": "2027-01-03-template",
@@ -2276,88 +2856,163 @@
    "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
   },
   {
-   "id": "2027-01-04-outreach",
+   "id": "2027-01-04-review",
    "date": "2027-01-04",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "time": "09:17",
+   "title": "每週一檢討（聯絡、回覆、成交、收入、Care，跟目標的差距）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 的每週一檢討，照 sales/80萬計畫.md「每週一檢討」：看聯絡數、回覆數、成交數、收入、Care 訂閱數，跟計畫目標差多少；再照 7 件事（價格、留存、每家多收、產能、管道、提早、時間效率）至少提 1 個附估計的建議，標成「建議（待使用者決定）」。也看「80 萬之後」的觸發條件有沒有到。\n\n{{summary}}",
+   "files": [
+    "sales/80萬計畫.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2027-01-04-linkedin",
+   "date": "2027-01-04",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-04.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-04.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
+  },
+  {
+   "id": "2027-01-04-outreach",
+   "date": "2027-01-04",
+   "time": "13:07",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-05-linkedin",
+   "date": "2027-01-05",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-05-outreach",
    "date": "2027-01-05",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-05.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-05.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-06-linkedin",
+   "date": "2027-01-06",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-06-outreach",
    "date": "2027-01-06",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-06.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-06.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-07-linkedin",
+   "date": "2027-01-07",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-07-outreach",
    "date": "2027-01-07",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-07.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-07.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-08-friday",
+   "date": "2027-01-08",
+   "time": "10:27",
+   "title": "排下週的內容（TikTok、小紅書、Substack）",
+   "who": "你",
+   "cat": "檢查",
+   "files": [
+    "sales/videos/發片時程.md",
+    "sales/xiaohongshu/README.md",
+    "sales/substack/README.md",
+    "sales/行銷計畫.md"
+   ],
+   "note": "這週要排：小紅書 7 篇（README 的稿只排到 12/7，之後的要先請 Claude 寫）；Substack Notes（28 則 12/21 發完，之後的要先請 Claude 寫）；短影片（已做好的 1/2 發完，之後的要先做）。另外每週 1 篇「代做網站」內容（虛構範例店），TikTok／小紅書／Pinterest 各一"
+  },
+  {
+   "id": "2027-01-08-linkedin",
+   "date": "2027-01-08",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-08-outreach",
    "date": "2027-01-08",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-08.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-08.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-01-09-outreach",
-   "date": "2027-01-09",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-01-09.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-09.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-01-10-outreach",
-   "date": "2027-01-10",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-01-10.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-10.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
    "id": "2027-01-10-template",
@@ -2383,88 +3038,163 @@
    "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
   },
   {
-   "id": "2027-01-11-outreach",
+   "id": "2027-01-11-review",
    "date": "2027-01-11",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "time": "09:17",
+   "title": "每週一檢討（聯絡、回覆、成交、收入、Care，跟目標的差距）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 的每週一檢討，照 sales/80萬計畫.md「每週一檢討」：看聯絡數、回覆數、成交數、收入、Care 訂閱數，跟計畫目標差多少；再照 7 件事（價格、留存、每家多收、產能、管道、提早、時間效率）至少提 1 個附估計的建議，標成「建議（待使用者決定）」。也看「80 萬之後」的觸發條件有沒有到。\n\n{{summary}}",
+   "files": [
+    "sales/80萬計畫.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2027-01-11-linkedin",
+   "date": "2027-01-11",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-11.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-11.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
+  },
+  {
+   "id": "2027-01-11-outreach",
+   "date": "2027-01-11",
+   "time": "13:07",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-12-linkedin",
+   "date": "2027-01-12",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-12-outreach",
    "date": "2027-01-12",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-12.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-12.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-13-linkedin",
+   "date": "2027-01-13",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-13-outreach",
    "date": "2027-01-13",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-13.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-13.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-14-linkedin",
+   "date": "2027-01-14",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-14-outreach",
    "date": "2027-01-14",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-14.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-14.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-15-friday",
+   "date": "2027-01-15",
+   "time": "10:27",
+   "title": "排下週的內容（TikTok、小紅書、Substack）",
+   "who": "你",
+   "cat": "檢查",
+   "files": [
+    "sales/videos/發片時程.md",
+    "sales/xiaohongshu/README.md",
+    "sales/substack/README.md",
+    "sales/行銷計畫.md"
+   ],
+   "note": "這週要排：小紅書 7 篇（README 的稿只排到 12/7，之後的要先請 Claude 寫）；Substack Notes（28 則 12/21 發完，之後的要先請 Claude 寫）；短影片（已做好的 1/2 發完，之後的要先做）。另外每週 1 篇「代做網站」內容（虛構範例店），TikTok／小紅書／Pinterest 各一"
+  },
+  {
+   "id": "2027-01-15-linkedin",
+   "date": "2027-01-15",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-15-outreach",
    "date": "2027-01-15",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-15.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-15.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-01-16-outreach",
-   "date": "2027-01-16",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-01-16.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-16.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-01-17-outreach",
-   "date": "2027-01-17",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-01-17.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-17.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
    "id": "2027-01-17-template",
@@ -2490,102 +3220,177 @@
    "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
   },
   {
-   "id": "2027-01-18-outreach",
+   "id": "2027-01-18-review",
    "date": "2027-01-18",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "time": "09:17",
+   "title": "每週一檢討（聯絡、回覆、成交、收入、Care，跟目標的差距）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 的每週一檢討，照 sales/80萬計畫.md「每週一檢討」：看聯絡數、回覆數、成交數、收入、Care 訂閱數，跟計畫目標差多少；再照 7 件事（價格、留存、每家多收、產能、管道、提早、時間效率）至少提 1 個附估計的建議，標成「建議（待使用者決定）」。也看「80 萬之後」的觸發條件有沒有到。\n\n{{summary}}",
+   "files": [
+    "sales/80萬計畫.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2027-01-18-linkedin",
+   "date": "2027-01-18",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-18.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-18.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
+  },
+  {
+   "id": "2027-01-18-outreach",
+   "date": "2027-01-18",
+   "time": "13:07",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-19-linkedin",
+   "date": "2027-01-19",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-19-outreach",
    "date": "2027-01-19",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-19.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-19.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-20-linkedin",
+   "date": "2027-01-20",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-20-outreach",
    "date": "2027-01-20",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-20.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-20.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-21-linkedin",
+   "date": "2027-01-21",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-21-outreach",
    "date": "2027-01-21",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-21.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-21.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-22-friday",
+   "date": "2027-01-22",
+   "time": "10:27",
+   "title": "排下週的內容（TikTok、小紅書、Substack）",
+   "who": "你",
+   "cat": "檢查",
+   "files": [
+    "sales/videos/發片時程.md",
+    "sales/xiaohongshu/README.md",
+    "sales/substack/README.md",
+    "sales/行銷計畫.md"
+   ],
+   "note": "這週要排：小紅書 7 篇（README 的稿只排到 12/7，之後的要先請 Claude 寫）；Substack Notes（28 則 12/21 發完，之後的要先請 Claude 寫）；短影片（已做好的 1/2 發完，之後的要先做）。另外每週 1 篇「代做網站」內容（虛構範例店），TikTok／小紅書／Pinterest 各一"
+  },
+  {
+   "id": "2027-01-22-linkedin",
+   "date": "2027-01-22",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-22-outreach",
    "date": "2027-01-22",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-22.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-22.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
    "id": "2027-01-22-growth",
    "date": "2027-01-22",
    "time": "14:43",
-   "title": "成長檢查（第 2 個月）",
+   "title": "成長檢查（1 月；階段 2 關卡：每月收入 ≥ $2,500）",
    "who": "Claude",
    "cat": "檢查",
-   "prompt": "這是 Polyglot Pages 第 2 個月的成長檢查。下面是我後台的數字，請照 sales/營運流程.md「要追蹤的數字」看：哪個管道帶來最多瀏覽和銷售、哪幾款瀏覽多但賣不好（要不要調價或換封面）、開發信回覆率要怎麼改，給我下個月最該做的 3 件事。\n\n{{summary}}",
+   "prompt": "這是 Polyglot Pages 1 月的成長檢查。照 sales/80萬計畫.md 階段 2（每月成交 5～7 家、Care 開始累積；關卡：每月收入 ≥ $2,500）看：哪個管道帶來最多回覆和成交、開發信回覆率要怎麼改、哪幾款模板瀏覽多但賣不好，給我下個月最該做的 3 件事。\n\n{{summary}}",
    "files": [
-    "sales/營運流程.md",
-    "sales/行銷計畫.md"
+    "sales/80萬計畫.md",
+    "sales/營運流程.md"
    ],
-   "note": "按「複製」會自動帶入你在後台記的數字"
-  },
-  {
-   "id": "2027-01-23-outreach",
-   "date": "2027-01-23",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-01-23.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-23.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-01-24-outreach",
-   "date": "2027-01-24",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-01-24.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-24.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
   },
   {
    "id": "2027-01-24-template",
@@ -2611,88 +3416,163 @@
    "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
   },
   {
-   "id": "2027-01-25-outreach",
+   "id": "2027-01-25-review",
    "date": "2027-01-25",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "time": "09:17",
+   "title": "每週一檢討（聯絡、回覆、成交、收入、Care，跟目標的差距）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 的每週一檢討，照 sales/80萬計畫.md「每週一檢討」：看聯絡數、回覆數、成交數、收入、Care 訂閱數，跟計畫目標差多少；再照 7 件事（價格、留存、每家多收、產能、管道、提早、時間效率）至少提 1 個附估計的建議，標成「建議（待使用者決定）」。也看「80 萬之後」的觸發條件有沒有到。\n\n{{summary}}",
+   "files": [
+    "sales/80萬計畫.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2027-01-25-linkedin",
+   "date": "2027-01-25",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-25.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-25.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
+  },
+  {
+   "id": "2027-01-25-outreach",
+   "date": "2027-01-25",
+   "time": "13:07",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-26-linkedin",
+   "date": "2027-01-26",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-26-outreach",
    "date": "2027-01-26",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-26.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-26.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-27-linkedin",
+   "date": "2027-01-27",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-27-outreach",
    "date": "2027-01-27",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-27.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-27.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-28-linkedin",
+   "date": "2027-01-28",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-28-outreach",
    "date": "2027-01-28",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-28.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-28.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-01-29-friday",
+   "date": "2027-01-29",
+   "time": "10:27",
+   "title": "排下週的內容（TikTok、小紅書、Substack）",
+   "who": "你",
+   "cat": "檢查",
+   "files": [
+    "sales/videos/發片時程.md",
+    "sales/xiaohongshu/README.md",
+    "sales/substack/README.md",
+    "sales/行銷計畫.md"
+   ],
+   "note": "這週要排：小紅書 7 篇（README 的稿只排到 12/7，之後的要先請 Claude 寫）；Substack Notes（28 則 12/21 發完，之後的要先請 Claude 寫）；短影片（已做好的 1/2 發完，之後的要先做）。另外每週 1 篇「代做網站」內容（虛構範例店），TikTok／小紅書／Pinterest 各一"
+  },
+  {
+   "id": "2027-01-29-linkedin",
+   "date": "2027-01-29",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-01-29-outreach",
    "date": "2027-01-29",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-01-29.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-29.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-01-30-outreach",
-   "date": "2027-01-30",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-01-30.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-30.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-01-31-outreach",
-   "date": "2027-01-31",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-01-31.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-01-31.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
    "id": "2027-01-31-template",
@@ -2718,88 +3598,163 @@
    "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
   },
   {
-   "id": "2027-02-01-outreach",
+   "id": "2027-02-01-review",
    "date": "2027-02-01",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "time": "09:17",
+   "title": "每週一檢討（聯絡、回覆、成交、收入、Care，跟目標的差距）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 的每週一檢討，照 sales/80萬計畫.md「每週一檢討」：看聯絡數、回覆數、成交數、收入、Care 訂閱數，跟計畫目標差多少；再照 7 件事（價格、留存、每家多收、產能、管道、提早、時間效率）至少提 1 個附估計的建議，標成「建議（待使用者決定）」。也看「80 萬之後」的觸發條件有沒有到。\n\n{{summary}}",
+   "files": [
+    "sales/80萬計畫.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2027-02-01-linkedin",
+   "date": "2027-02-01",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-01.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-01.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
+  },
+  {
+   "id": "2027-02-01-outreach",
+   "date": "2027-02-01",
+   "time": "13:07",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-02-linkedin",
+   "date": "2027-02-02",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-02-outreach",
    "date": "2027-02-02",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-02.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-02.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-03-linkedin",
+   "date": "2027-02-03",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-03-outreach",
    "date": "2027-02-03",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-03.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-03.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-04-linkedin",
+   "date": "2027-02-04",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-04-outreach",
    "date": "2027-02-04",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-04.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-04.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-05-friday",
+   "date": "2027-02-05",
+   "time": "10:27",
+   "title": "排下週的內容（TikTok、小紅書、Substack）",
+   "who": "你",
+   "cat": "檢查",
+   "files": [
+    "sales/videos/發片時程.md",
+    "sales/xiaohongshu/README.md",
+    "sales/substack/README.md",
+    "sales/行銷計畫.md"
+   ],
+   "note": "這週要排：小紅書 7 篇（README 的稿只排到 12/7，之後的要先請 Claude 寫）；Substack Notes（28 則 12/21 發完，之後的要先請 Claude 寫）；短影片（已做好的 1/2 發完，之後的要先做）。另外每週 1 篇「代做網站」內容（虛構範例店），TikTok／小紅書／Pinterest 各一"
+  },
+  {
+   "id": "2027-02-05-linkedin",
+   "date": "2027-02-05",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-05-outreach",
    "date": "2027-02-05",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-05.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-05.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-02-06-outreach",
-   "date": "2027-02-06",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-02-06.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-06.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-02-07-outreach",
-   "date": "2027-02-07",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-02-07.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-07.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
    "id": "2027-02-07-template",
@@ -2825,88 +3780,163 @@
    "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
   },
   {
-   "id": "2027-02-08-outreach",
+   "id": "2027-02-08-review",
    "date": "2027-02-08",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "time": "09:17",
+   "title": "每週一檢討（聯絡、回覆、成交、收入、Care，跟目標的差距）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 的每週一檢討，照 sales/80萬計畫.md「每週一檢討」：看聯絡數、回覆數、成交數、收入、Care 訂閱數，跟計畫目標差多少；再照 7 件事（價格、留存、每家多收、產能、管道、提早、時間效率）至少提 1 個附估計的建議，標成「建議（待使用者決定）」。也看「80 萬之後」的觸發條件有沒有到。\n\n{{summary}}",
+   "files": [
+    "sales/80萬計畫.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2027-02-08-linkedin",
+   "date": "2027-02-08",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-08.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-08.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
+  },
+  {
+   "id": "2027-02-08-outreach",
+   "date": "2027-02-08",
+   "time": "13:07",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-09-linkedin",
+   "date": "2027-02-09",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-09-outreach",
    "date": "2027-02-09",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-09.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-09.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-10-linkedin",
+   "date": "2027-02-10",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-10-outreach",
    "date": "2027-02-10",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-10.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-10.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-11-linkedin",
+   "date": "2027-02-11",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-11-outreach",
    "date": "2027-02-11",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-11.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-11.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-12-friday",
+   "date": "2027-02-12",
+   "time": "10:27",
+   "title": "排下週的內容（TikTok、小紅書、Substack）",
+   "who": "你",
+   "cat": "檢查",
+   "files": [
+    "sales/videos/發片時程.md",
+    "sales/xiaohongshu/README.md",
+    "sales/substack/README.md",
+    "sales/行銷計畫.md"
+   ],
+   "note": "這週要排：小紅書 7 篇（README 的稿只排到 12/7，之後的要先請 Claude 寫）；Substack Notes（28 則 12/21 發完，之後的要先請 Claude 寫）；短影片（已做好的 1/2 發完，之後的要先做）。另外每週 1 篇「代做網站」內容（虛構範例店），TikTok／小紅書／Pinterest 各一"
+  },
+  {
+   "id": "2027-02-12-linkedin",
+   "date": "2027-02-12",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-12-outreach",
    "date": "2027-02-12",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-12.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-12.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-02-13-outreach",
-   "date": "2027-02-13",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-02-13.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-13.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-02-14-outreach",
-   "date": "2027-02-14",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-02-14.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-14.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
    "id": "2027-02-14-template",
@@ -2932,88 +3962,163 @@
    "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
   },
   {
-   "id": "2027-02-15-outreach",
+   "id": "2027-02-15-review",
    "date": "2027-02-15",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "time": "09:17",
+   "title": "每週一檢討（聯絡、回覆、成交、收入、Care，跟目標的差距）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 的每週一檢討，照 sales/80萬計畫.md「每週一檢討」：看聯絡數、回覆數、成交數、收入、Care 訂閱數，跟計畫目標差多少；再照 7 件事（價格、留存、每家多收、產能、管道、提早、時間效率）至少提 1 個附估計的建議，標成「建議（待使用者決定）」。也看「80 萬之後」的觸發條件有沒有到。\n\n{{summary}}",
+   "files": [
+    "sales/80萬計畫.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2027-02-15-linkedin",
+   "date": "2027-02-15",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-15.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-15.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
+  },
+  {
+   "id": "2027-02-15-outreach",
+   "date": "2027-02-15",
+   "time": "13:07",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-16-linkedin",
+   "date": "2027-02-16",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-16-outreach",
    "date": "2027-02-16",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-16.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-16.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-17-linkedin",
+   "date": "2027-02-17",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-17-outreach",
    "date": "2027-02-17",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-17.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-17.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-18-linkedin",
+   "date": "2027-02-18",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-18-outreach",
    "date": "2027-02-18",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-18.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-18.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-19-friday",
+   "date": "2027-02-19",
+   "time": "10:27",
+   "title": "排下週的內容（TikTok、小紅書、Substack）",
+   "who": "你",
+   "cat": "檢查",
+   "files": [
+    "sales/videos/發片時程.md",
+    "sales/xiaohongshu/README.md",
+    "sales/substack/README.md",
+    "sales/行銷計畫.md"
+   ],
+   "note": "這週要排：小紅書 7 篇（README 的稿只排到 12/7，之後的要先請 Claude 寫）；Substack Notes（28 則 12/21 發完，之後的要先請 Claude 寫）；短影片（已做好的 1/2 發完，之後的要先做）。另外每週 1 篇「代做網站」內容（虛構範例店），TikTok／小紅書／Pinterest 各一"
+  },
+  {
+   "id": "2027-02-19-linkedin",
+   "date": "2027-02-19",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-19-outreach",
    "date": "2027-02-19",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-19.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-19.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-02-20-outreach",
-   "date": "2027-02-20",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-02-20.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-20.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-02-21-outreach",
-   "date": "2027-02-21",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-02-21.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-21.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
    "id": "2027-02-21-template",
@@ -3033,15 +4138,15 @@
    "id": "2027-02-21-growth",
    "date": "2027-02-21",
    "time": "14:43",
-   "title": "成長檢查（第 3 個月）",
+   "title": "成長檢查（2 月；階段 2 關卡：每月收入 ≥ $2,500）",
    "who": "Claude",
    "cat": "檢查",
-   "prompt": "這是 Polyglot Pages 第 3 個月的成長檢查。下面是我後台的數字，請照 sales/營運流程.md「要追蹤的數字」看：哪個管道帶來最多瀏覽和銷售、哪幾款瀏覽多但賣不好（要不要調價或換封面）、開發信回覆率要怎麼改，給我下個月最該做的 3 件事。\n\n{{summary}}",
+   "prompt": "這是 Polyglot Pages 2 月的成長檢查。照 sales/80萬計畫.md 階段 2（每月成交 5～7 家、Care 開始累積；關卡：每月收入 ≥ $2,500）看：哪個管道帶來最多回覆和成交、開發信回覆率要怎麼改、哪幾款模板瀏覽多但賣不好，給我下個月最該做的 3 件事。\n\n{{summary}}",
    "files": [
-    "sales/營運流程.md",
-    "sales/行銷計畫.md"
+    "sales/80萬計畫.md",
+    "sales/營運流程.md"
    ],
-   "note": "按「複製」會自動帶入你在後台記的數字"
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
   },
   {
    "id": "2027-02-22-weekly",
@@ -3053,88 +4158,163 @@
    "note": "到各平台後台看數字，填進後台「紀錄」→ 每週數字"
   },
   {
-   "id": "2027-02-22-outreach",
+   "id": "2027-02-22-review",
    "date": "2027-02-22",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "time": "09:17",
+   "title": "每週一檢討（聯絡、回覆、成交、收入、Care，跟目標的差距）",
+   "who": "Claude",
+   "cat": "檢查",
+   "prompt": "這是 Polyglot Pages 的每週一檢討，照 sales/80萬計畫.md「每週一檢討」：看聯絡數、回覆數、成交數、收入、Care 訂閱數，跟計畫目標差多少；再照 7 件事（價格、留存、每家多收、產能、管道、提早、時間效率）至少提 1 個附估計的建議，標成「建議（待使用者決定）」。也看「80 萬之後」的觸發條件有沒有到。\n\n{{summary}}",
+   "files": [
+    "sales/80萬計畫.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "按「複製提示」會自動帶入你在後台記的數字"
+  },
+  {
+   "id": "2027-02-22-linkedin",
+   "date": "2027-02-22",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-22.md"
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-22.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
+  },
+  {
+   "id": "2027-02-22-outreach",
+   "date": "2027-02-22",
+   "time": "13:07",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
+   ],
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-23-linkedin",
+   "date": "2027-02-23",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-23-outreach",
    "date": "2027-02-23",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-23.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-23.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-24-linkedin",
+   "date": "2027-02-24",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-24-outreach",
    "date": "2027-02-24",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-24.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-24.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-25-linkedin",
+   "date": "2027-02-25",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-25-outreach",
    "date": "2027-02-25",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-25.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-25.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
+  },
+  {
+   "id": "2027-02-26-friday",
+   "date": "2027-02-26",
+   "time": "10:27",
+   "title": "排下週的內容（TikTok、小紅書、Substack）",
+   "who": "你",
+   "cat": "檢查",
+   "files": [
+    "sales/videos/發片時程.md",
+    "sales/xiaohongshu/README.md",
+    "sales/substack/README.md",
+    "sales/行銷計畫.md"
+   ],
+   "note": "這週要排：小紅書 7 篇（README 的稿只排到 12/7，之後的要先請 Claude 寫）；Substack Notes（28 則 12/21 發完，之後的要先請 Claude 寫）；短影片（已做好的 1/2 發完，之後的要先做）。另外每週 1 篇「代做網站」內容（虛構範例店），TikTok／小紅書／Pinterest 各一"
+  },
+  {
+   "id": "2027-02-26-linkedin",
+   "date": "2027-02-26",
+   "time": "11:07",
+   "title": "LinkedIn：送邀請（最多 15 個，不附留言）、看誰接受了",
+   "who": "你",
+   "cat": "開發",
+   "files": [
+    "sales/outreach/LinkedIn.md",
+    "sales/outreach/linkedin.csv"
+   ],
+   "note": "接受的人傳第一則訊息（不放連結），7 天後只追一次；大公司的業務員用「介紹夥伴」說法。記在 linkedin.csv。每週合計 ≤100；出現邀請上限或驗證就停一週"
   },
   {
    "id": "2027-02-26-outreach",
    "date": "2027-02-26",
    "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
+   "title": "排今天的開發信＋追問信（24 小時內合計 40～50 封）",
    "who": "你",
    "cat": "開發",
    "files": [
-    "sales/outreach/outbox/2027-02-26.md"
+    "sales/outreach/README.md",
+    "sales/outreach/leads.csv"
    ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-26.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-02-27-outreach",
-   "date": "2027-02-27",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-02-27.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-27.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
-  },
-  {
-   "id": "2027-02-28-outreach",
-   "date": "2027-02-28",
-   "time": "13:07",
-   "title": "寄今天的開發信／私訊（約 30 家）",
-   "who": "你",
-   "cat": "開發",
-   "files": [
-    "sales/outreach/outbox/2027-02-28.md"
-   ],
-   "note": "Claude 放在 sales/outreach/outbox/2027-02-28.md；寄完把數字加到「開發」頁。Instagram／FB 私訊新帳號一天最多 5～10 則"
+   "note": "追問信約佔一半，新開發信大約是上限的一半；前提是沒有 Gmail 警告、退信率 <2%。表單（一天 10～15）、IG（一天 ≤3）另計。排追問前先看收件匣；寄完把數字加到「開發」頁"
   },
   {
    "id": "2027-02-28-template",

@@ -78,7 +78,7 @@ let rz; addEventListener('resize', () => { movePill(false); clearTimeout(rz); rz
 const items = () => state.sched?.items || [];
 const byDate = (d) => items().filter((x) => x.date === d);
 const isDone = (id) => !!S.done[id];
-const DAILY = /-(daily|note|video|outreach)$/;
+const DAILY = /-(daily|note|video|outreach|linkedin)$/;
 
 function summaryText() {
   const t = tpeToday(), k = kpiValues();
@@ -325,6 +325,10 @@ function monthly() {
   for (const r of S.income) { const m = r.date.slice(0, 7); const o = (by[m] ||= { month: m, total: 0, n: 0, by: {} }); o.total += Number(r.amount) || 0; o.n++; o.by[r.type] = (o.by[r.type] || 0) + (Number(r.amount) || 0); }
   return Object.values(by).sort((a, b) => (a.month < b.month ? -1 : 1));
 }
+function goalLine(total) {
+  const p = state.sched?.plan; if (!p?.grossUsd) return '';
+  return `目標 ${p.goalDate.replaceAll('-', '/')} 前淨收 NT$${fmt(p.goalTwd)}（約要賣 ${usd(p.grossUsd[0])}，已 ${Math.min(100, Math.round(total / p.grossUsd[0] * 100))}%）`;
+}
 function renderIncome() {
   const t = tpeToday(), ym = t.slice(0, 7), months = monthly();
   const prevYm = (() => { const d = new Date(ym + '-01T00:00:00Z'); d.setUTCMonth(d.getUTCMonth() - 1); return d.toISOString().slice(0, 7); })();
@@ -332,7 +336,7 @@ function renderIncome() {
   const total = S.income.reduce((s, r) => s + (Number(r.amount) || 0), 0);
   const care = S.income.filter((r) => r.type === 'Website Care' && r.date.slice(0, 7) === ym).reduce((s, r) => s + (Number(r.amount) || 0), 0);
   $('#kpisIncome').innerHTML = kpi(`本月（${Number(ym.slice(5))} 月）`, usd(cur.total), `${cur.n} 筆`) + kpi(`上月（${Number(prevYm.slice(5))} 月）`, usd(prv.total), `${prv.n} 筆`) +
-    kpi('累計', usd(total), `${S.income.length} 筆`) + kpi('本月 Website Care', usd(care), '固定月費收入');
+    kpi('累計', usd(total), goalLine(total) || `${S.income.length} 筆`) + kpi('本月 Website Care', usd(care), '固定月費收入');
   // 每月堆疊
   const el = $('#chMonthly'); setW(el);
   const used = Object.keys(TYPES).filter((k) => months.some((m) => m.by[k]));
@@ -366,13 +370,25 @@ function renderLeads() {
   const L = leadCounts(), seed = state.sched?.outreachSeed;
   $('#seedNote').hidden = !!S.leads;
   $('#seedNote').innerHTML = `起始數字來自 repo 的 leads.csv（只算數量）。寄出、回覆時按 ＋，之後就以這台裝置記的為準。`;
-  const wk = tpeToday() >= '2026-12-07' ? 30 : tpeToday() >= '2026-11-30' ? 20 : 10;
+  const caps = state.sched?.plan?.emailCap || [], cap = caps.filter(([d]) => d <= tpeToday()).pop()?.[1];
   const sentWeek = S.leadLog.filter((x) => x.key === 'sent' && x.date >= mondayOf(tpeToday())).reduce((s, x) => s + (x.to - x.from), 0);
   $('#stages').innerHTML = STAGES.map(([k, l, d]) => `<div class="stage"><div class="l">${l}</div>
     <div class="ctl"><button type="button" data-lead="${k}" data-step="-1" aria-label="${l} 減 1">−</button><input type="number" min="0" inputmode="numeric" value="${L[k]}" data-leadin="${k}" aria-label="${l}"><button type="button" data-lead="${k}" data-step="1" aria-label="${l} 加 1">＋</button></div>
-    <div class="d">${k === 'sent' ? `本週 +${sentWeek}；目標每天 ${wk} 家` : d}</div></div>`).join('');
+    <div class="d">${k === 'sent' ? `本週 +${sentWeek}${cap ? `；Email 上限每天 ${cap} 封（含追問）` : ''}` : d}</div></div>`).join('');
   const base = L.sent || 0;
   $('#funnel').innerHTML = STAGES.map(([k, l]) => { const v = L[k] || 0, p = base ? v / base * 100 : 0; return `<div class="fr"><span>${l}</span><span class="fb"><i style="width:${Math.min(100, p)}%;${k === 'lost' ? 'background:var(--k-check)' : k === 'won' ? 'background:var(--good)' : ''}"></i></span><span class="fv">${fmt(v)}${k === 'sent' ? '' : `（${base ? p.toFixed(p < 10 && p > 0 ? 1 : 0) : 0}%）`}</span></div>`; }).join('');
+  // 名單現況：repo 的 leads.csv／linkedin.csv 在產生排程時的數量（只有數量）
+  const snap = state.sched?.leads;
+  $('#snapCard').hidden = !snap;
+  if (snap) {
+    const row = (l, v, tot, color = '') => `<div class="fr"><span>${l}</span><span class="fb"><i style="width:${tot ? Math.min(100, v / tot * 100) : 0}%;${color}"></i></span><span class="fv">${fmt(v)}</span></div>`;
+    const c = snap.channel || {}, chTot = Math.max(1, c.email || 0, c.form || 0, c.instagram || 0, c.linkedin || 0);
+    $('#snapSub').textContent = `共 ${fmt(snap.total)} 家，美國日期 ${mmdd(snap.asOf)} 的狀態；每次部署會重新算`;
+    $('#snapStatus').innerHTML = row('已聯絡', snap.sent, snap.total) + row('已排程', snap.scheduled, snap.total, 'background:var(--accent3)') + row('有回覆', snap.replied, snap.total) +
+      row('成交', snap.won, snap.total, 'background:var(--good)') + row('不需要', snap.lost, snap.total, 'background:var(--k-check)') +
+      row('擱置', snap.hold, snap.total, 'background:var(--k-check)') + row('未聯絡', snap.todo, snap.total, 'background:var(--k-check)');
+    $('#snapChannel').innerHTML = row('Email', c.email || 0, chTot) + row('表單', c.form || 0, chTot) + row('Instagram', c.instagram || 0, chTot) + row('LinkedIn', c.linkedin || 0, chTot);
+  }
   const names = Object.fromEntries(STAGES.map(([k, l]) => [k, l]));
   const log = [...S.leadLog].reverse().slice(0, 12);
   $('#leadLog').innerHTML = log.length ? log.map((x) => { const d = x.to - x.from; return `<li><span class="d">${mmdd(x.date)}</span><span class="t">${names[x.key]} ${d > 0 ? '+' : ''}${d}（${x.from} → ${x.to}）</span></li>`; }).join('') : `<li class="empty">還沒有變動</li>`;

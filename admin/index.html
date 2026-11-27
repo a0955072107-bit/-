@@ -61,10 +61,10 @@
       <ul class="tasks" id="todayList"></ul>
       <div id="lateWrap" hidden><div class="subhead">前幾天還沒打勾的</div><ul class="tasks" id="lateList"></ul></div>
     </div>
-    <div class="card"><h2>重要日期</h2><div class="sub">上架、檔期與檢查日</div><ul class="list" id="dates"></ul></div>
+    <div class="card"><h2>重要日期</h2><div class="sub">上架、關卡與檢查日</div><ul class="list" id="dates"></ul></div>
   </div>
   <div class="grid">
-    <div class="card wide"><h2>接下來 7 天<a href="#calendar" data-go="calendar">看日曆 ↗</a></h2><div class="sub">每天固定的（影片留言、Note、開發信）沒有列出，到日曆點那一天看全部</div><ul class="list" id="upcoming"></ul></div>
+    <div class="card wide"><h2>接下來 7 天<a href="#calendar" data-go="calendar">看日曆 ↗</a></h2><div class="sub">每天固定的（影片留言、LinkedIn、平日開發信）沒有列出，到日曆點那一天看全部</div><ul class="list" id="upcoming"></ul></div>
   </div>
 </section>
 
@@ -121,8 +121,13 @@
   <div class="setup" id="seedNote" hidden></div>
   <section class="stages" id="stages"></section>
   <div class="grid">
-    <div class="card"><h2>轉換</h2><div class="sub">以「寄出」為 100%；預期回覆率 5～10%</div><div class="funnel" id="funnel"></div></div>
+    <div class="card"><h2>轉換</h2><div class="sub">以「寄出」為 100%；預期回覆率 3～5%，約每 100 家成交 1 家</div><div class="funnel" id="funnel"></div></div>
     <div class="card"><h2>最近的變動</h2><div class="sub">按 ＋／－ 或直接改數字都會記一筆</div><ul class="list" id="leadLog"></ul></div>
+    <div class="card wide" id="snapCard" hidden><h2>名單現況</h2><div class="sub" id="snapSub"></div>
+      <div class="snap"><div><div class="snaph">依狀態</div><div class="funnel" id="snapStatus"></div></div>
+      <div><div class="snaph">依管道（已聯絡；LinkedIn 是送出的邀請）</div><div class="funnel" id="snapChannel"></div></div></div>
+      <p class="hint" style="font-size:12.5px;color:var(--ink2);margin:10px 0 0">已排程＝Gmail 排好還沒寄出；擱置＝查核後先不寄（hold、skip）；未聯絡＝有預覽但還沒送出。代製 Basic $299／Pro $499，Website Care $49／月。</p>
+    </div>
   </div>
 </section>
 
@@ -159,7 +164,7 @@
         <input type="hidden" name="id">
         <label>日期<input name="date" type="date" required></label>
         <label>類型<select name="type"><option>模板</option><option>客製服務</option><option>Website Care</option><option>其他</option></select></label>
-        <label class="full">品項<input name="item" type="text" placeholder="例：Restaurant 模板、三語代製訂金"></label>
+        <label class="full">品項<input name="item" type="text" placeholder="例：Restaurant 模板、三語代製 Basic 訂金 $150"></label>
         <label>金額 US$<input name="amount" type="number" min="0" step="0.01" inputmode="decimal" required></label>
         <label>管道<select name="channel"><option value="">（不填）</option><option>Gumroad</option><option>Fiverr</option><option>Upwork</option><option>轉帳</option><option>其他</option></select></label>
         <label class="full">備註<input name="note" type="text" placeholder="不要填客人的 Email 或電話"></label>
