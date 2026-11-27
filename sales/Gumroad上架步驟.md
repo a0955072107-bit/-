@@ -1220,7 +1220,7 @@ Includes all 5 Motion Edition templates: SaaS Launch Page, Creative Portfolio, F
 | 商品類型 | **Commission**（委託），先收 **50% 訂金**，完成後收尾款 |
 | Name | `Trilingual Business Website (English + 繁體 + 简体) — Done For You 三語店家網站代製` |
 | URL | `trilingual-website-service` |
-| Price | `299`，另外用 **Versions** 加 `Pro $549` |
+| Price | `299`，另外用 **Versions** 加 `Pro $499`（11/27 從 $549 改，跟開發信一致） |
 | Cover | 用 `sales/covers/en/restaurant-cover.png`，之後再做專屬封面 |
 | Summary | `A ready-to-launch website in English, Traditional and Simplified Chinese, with a language switcher. Delivered in 7 days.` |
 
@@ -1228,8 +1228,8 @@ Includes all 5 Motion Edition templates: SaaS Launch Page, Creative Portfolio, F
 
 | 名稱 | 價格 | 說明 |
 |---|---|---|
-| Standard | $299 | One-page site in 3 languages with switcher, your content and photos, booking/WhatsApp/WeChat/LINE buttons, contact form, published on a free host. 1 revision round. |
-| Pro | $549 | Everything in Standard, plus custom domain, Google Business Profile setup, up to 2 extra sections, Motion animation option and 2 revision rounds. |
+| Standard | $299 | One-page site in 3 languages with switcher, your content and photos, call/map/booking/WhatsApp/WeChat buttons, contact form, connected to your own domain (bought in your name). 1 revision round. |
+| Pro | $499 | Everything in Standard, plus a design tailored to your brand, trilingual text written for you, your photos edited for the web, your Google Business Profile tidied up, search basics set up, and 2 revision rounds. |
 
 **Description**
 ```
@@ -1248,8 +1248,8 @@ What's included
 - Your text, photos, brand colours and opening hours
 - Call, WhatsApp, WeChat, LINE, map and booking buttons
 - Contact form sent to your email
-- Published on a free host; you own all the files
-- Pro: custom domain, Google Business Profile, Motion animation option
+- Connected to your own domain (bought in your name); free hosting, you own all the files
+- Pro: design tailored to your brand, text written for you, photo editing, Google Business Profile, search basics
 
 Payment: 50% to start, 50% after you approve the finished site. If we can't deliver, the deposit is refunded in full.
 
