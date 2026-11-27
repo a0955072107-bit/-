@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOU 髮藝｜台北信義區 髮型沙龍</title>
+<meta name="description" content="SOU 髮藝是台北信義區的三人髮型工作室。剪髮、染髮、燙髮、護髮價目公開，預約時直接選設計師，開始前先討論做法與費用。">
+<meta property="og:title" content="SOU 髮藝｜台北信義區 髮型沙龍">
+<meta property="og:description" content="先聊清楚，再動剪刀。查看價目、設計師班表與作品，用 LINE 預約。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ECEAE6">
+<!-- 多語版本（SEO）：上線後把 href 換成完整網址，例如 https://www.你的店.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+<!-- 範例內容：上線前請換成真實資料（店名、電話、地址、營業時間、價格皆為虛構） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "SOU 髮藝",
+  "telephone": "02-1234-5678",
+  "url": "https://example.com/",
+  "priceRange": "NT$500–4000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "松山路 168 號 2 樓",
+    "addressLocality": "信義區",
+    "addressRegion": "台北市",
+    "postalCode": "110",
+    "addressCountry": "TW"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "11:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "18:00" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   主題設定：改這裡就能換整站配色與字型
+   ============================================================ */
+:root {
+  --brand: #191817;          /* 品牌主色：近黑（主要按鈕、頁尾背景） */
+  --brand-ink: #F6F5F2;      /* 在品牌色上的文字顏色 */
+  --brand-soft: #383532;     /* 主要按鈕 hover 的底色 */
+  --bg: #ECEAE6;             /* 頁面背景：淺水泥灰 */
+  --surface: #F6F5F2;        /* 表面顏色：頁首、選單、預約區塊（帶灰調的白） */
+  --text: #191817;           /* 主要文字 */
+  --muted: #57534E;          /* 次要文字（在背景與表面色上都達 AA） */
+  --line: #D3D0CA;           /* 1px 細線與邊框 */
+  --accent: #6F5F7A;         /* 霧紫灰：唯一點綴，只用在目前語言、「今天」的底線與相簿捲軸 */
+  --studio: #CBC8C2;         /* 佔位圖用：攝影棚背景的淺灰 */
+  --studio-deep: #A5A19A;    /* 佔位圖用：背景暗部、水泥牆 */
+  --tone: #DDD8D1;           /* 佔位圖用：膚色與淺色衣服（黑白照片裡的亮部） */
+  --shadow: 0 16px 40px -24px color-mix(in srgb, var(--text) 35%, transparent); /* 全站唯一的淡陰影（下拉選單用） */
+  --radius: 6px;             /* 大元件圓角（圖片、選單） */
+  --radius-sm: 4px;          /* 小元件圓角（按鈕、選單項目） */
+  --font-heading: "Archivo", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif; /* 標題字型（和內文同一字族，靠字級做層級） */
+  --font-body: "Archivo", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;    /* 內文字型 */
+  --fs-sm: .875rem;          /* 字級：小字（時間、註解） */
+  --fs-body: 1rem;           /* 字級：內文 */
+  --fs-lg: 1.25rem;          /* 字級：項目名稱、小標題 */
+  --fs-h3: clamp(1.5rem, 2.4vw, 2rem);     /* 字級：h3 */
+  --fs-h2: clamp(2rem, 4.4vw, 3.5rem);     /* 字級：h2 與價目表的大數字 */
+  --fs-h1: clamp(2.75rem, 7.2vw, 6rem);    /* 字級：首屏大標 */
+  --header-h: 72px;          /* 頁首高度 */
+  --gutter: 1.25rem;         /* 頁面左右留白（手機） */
+  --section-y: clamp(4rem, 11vw, 9rem);    /* 區塊上下留白 */
+  --max: 1200px;             /* 內容最大寬度 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-padding-top: calc(var(--header-h) + 16px); overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 var(--fs-body)/1.8 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; touch-action: manipulation; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; line-height: 1.25; letter-spacing: 0; overflow-wrap: break-word; min-width: 0; text-wrap: balance; font-synthesis: none; }
+p, li, dd, figcaption { text-wrap: pretty; }
+:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; border-radius: var(--radius-sm); }
+.wrap { width: min(100% - var(--gutter) * 2, var(--max)); margin-inline: auto; }
+section { padding-block: var(--section-y); }
+h2 { font-size: var(--fs-h2); }
+.lead { color: var(--muted); max-width: 32em; }
+.num { font-variant-numeric: tabular-nums; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* 跳到主要內容（鍵盤使用者按 Tab 時出現） */
+.skip { position: fixed; left: 1rem; top: .75rem; z-index: 100; padding: .6rem 1rem; border-radius: var(--radius-sm); background: var(--brand); color: var(--brand-ink); transform: translateY(-200%); }
+.skip:focus { transform: none; }
+.skip:hover { background: var(--brand-soft); }
+.skip:active { opacity: .85; }
+main:focus { outline: none; }
+
+/* ---------- 按鈕：實心只用在主要動作，次要用細框或有底線的文字連結 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .75rem 1.5rem; border-radius: var(--radius-sm); font: 500 var(--fs-body)/1.3 var(--font-body); border: 1px solid transparent; transition: background-color .2s, color .2s, border-color .2s, transform .2s; cursor: pointer; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: var(--brand-soft); }
+.btn:active { transform: translateY(1px); }
+a:not(.btn):active { opacity: .7; }
+.btn-ghost { border-color: color-mix(in srgb, var(--text) 60%, transparent); color: var(--text); background: transparent; }
+.btn-ghost:hover { border-color: var(--text); background: color-mix(in srgb, var(--text) 6%, transparent); }
+.text-link { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+.text-link:hover { text-decoration-thickness: 2px; }
+
+/* ---------- 頁首 ---------- */
+html:not(.js) .site-header { background: var(--surface); border-bottom-color: var(--line); }
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; border-bottom: 1px solid transparent; transition: background-color .3s, border-color .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 96%, transparent); border-bottom-color: var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: 1rem; }
+.logo { display: inline-flex; align-items: center; min-height: 44px; font: 500 1.375rem/1 var(--font-heading); }
+.logo span { margin-inline-end: .25em; }
+.nav-links { display: flex; align-items: center; gap: 1.75rem; font-size: .9375rem; }
+.nav-links a:not(.btn) { color: var(--muted); transition: color .2s; }
+.nav-links a:not(.btn):hover { color: var(--text); text-decoration: underline; text-underline-offset: 6px; }
+.nav-links .btn { min-height: 40px; padding: .5rem 1.1rem; font-size: .9375rem; }
+.menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); color: var(--text); cursor: pointer; transition: border-color .2s; }
+.menu-btn:hover { border-color: var(--text); }
+.menu-btn:active { transform: translateY(1px); }
+.menu-btn span { display: block; width: 18px; height: 1.5px; margin: 4px auto; background: currentColor; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+@media (max-width: 760px) {
+  :root { --header-h: 64px; }
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: var(--header-h); left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: .75rem 1rem; border-radius: var(--radius-sm); color: var(--text); }
+  .js .nav-links .btn { margin-top: .5rem; min-height: 48px; }
+  /* 沒有 JS 時：選單直接展開成可換行的連結列 */
+  html:not(.js) .site-header { position: sticky; top: 0; }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: .75rem; }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: .25rem 1rem; }
+  html:not(.js) .nav-links a:not(.btn) { padding-block: .5rem; }
+  html:not(.js) .hero { padding-top: 0; }
+}
+
+/* ---------- 藝術佔位圖 ----------
+   每個圖片位置有自己的 class，換照片只要改那一個 class，並刪掉它的 ::before／::after。
+   改用 img 標籤時加上 width／height；首屏圖加 fetchpriority="high"，其他加 loading="lazy"。
+   佔位圖是黑白攝影棚風格：灰色背景、髮型背影（不露臉）、設計師半身的柔焦剪影。 */
+.img { position: relative; overflow: hidden; background-color: var(--studio); }
+
+/* 換成照片：.img-hero { background: url(images/hero.jpg) center/cover; }
+   建議比例 4:5 直幅：髮型的背影或側後方、灰色背景、不露臉
+   換成照片：.img-l1 { background: url(images/look-1.jpg) center/cover; }（.img-l2～.img-l6 同理）
+   建議比例 3:4 直幅：一張一種髮型，背影或側後方 */
+:is(.img-hero, .img-l1, .img-l2, .img-l3, .img-l4, .img-l5, .img-l6) {
+  --hair: color-mix(in srgb, var(--text) 86%, var(--studio));   /* 髮色 */
+  --cloth: color-mix(in srgb, var(--surface) 80%, var(--studio)); /* 上衣 */
+  background:
+    /* 肩膀與上衣 */
+    radial-gradient(80% 40% at 50% 104%, var(--cloth) 97%, transparent 100%),
+    /* 後頸 */
+    linear-gradient(90deg, color-mix(in srgb, var(--tone) 78%, var(--studio-deep)), var(--tone) 45%, color-mix(in srgb, var(--tone) 84%, var(--studio-deep))) 50% 70% / 17% 34% no-repeat,
+    /* 左上方的柔光與灰色背景 */
+    radial-gradient(85% 60% at 18% 12%, color-mix(in srgb, var(--surface) 75%, transparent), transparent 100%),
+    linear-gradient(180deg, var(--studio), var(--studio-deep));
+}
+/* 落在背景上的影子 */
+:is(.img-hero, .img-l1, .img-l2, .img-l3, .img-l4, .img-l5, .img-l6)::before { content: ""; position: absolute; left: 40%; top: 10%; width: 52%; height: 54%; filter: blur(10px);
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--text) 17%, transparent), transparent); }
+/* 頭髮：位置、形狀由各張圖的 --hl／--ht／--hw／--hh／--hr 決定，--hd 是該髮型的細節 */
+:is(.img-hero, .img-l1, .img-l2, .img-l3, .img-l4, .img-l5, .img-l6)::after { content: ""; position: absolute; left: var(--hl, 27%); top: var(--ht, 13%); width: var(--hw, 46%); height: var(--hh, 44%); border-radius: var(--hr, 48% 48% 9% 9% / 56% 56% 5% 5%); filter: blur(1px);
+  background:
+    var(--hd, linear-gradient(transparent, transparent)),
+    /* 頭頂的一圈光澤 */
+    radial-gradient(60% 36% at 46% 4%, transparent 58%, color-mix(in srgb, var(--tone) 30%, transparent) 76%, transparent 96%),
+    /* 髮絲與髮尾內側的陰影 */
+    repeating-linear-gradient(90deg, transparent 0 3.1%, color-mix(in srgb, var(--surface) 6%, transparent) 3.1% 3.9%),
+    repeating-linear-gradient(90deg, transparent 0 7.3%, color-mix(in srgb, var(--text) 24%, transparent) 7.3% 8.1%),
+    linear-gradient(180deg, transparent 72%, color-mix(in srgb, var(--text) 36%, transparent)),
+    linear-gradient(90deg, color-mix(in srgb, var(--hair) 78%, var(--text)), var(--hair) 32% 60%, color-mix(in srgb, var(--hair) 62%, var(--text))); }
+/* 首屏：耳下鮑伯頭，髮尾一刀平 */
+.img-hero { --hl: 25%; --hw: 49%; --ht: 13%; --hh: 46%; }
+/* 1 長捲髮：淺髮色、一圈一圈的波浪 */
+.img-l1 { --hair: color-mix(in srgb, var(--text) 52%, var(--studio)); --hl: 23%; --hw: 54%; --ht: 10%; --hh: 72%; --hr: 50% 50% 44% 44% / 30% 30% 14% 14%;
+  --hd: repeating-linear-gradient(168deg, transparent 0 5%, color-mix(in srgb, var(--tone) 26%, transparent) 9%, transparent 13%) 0 100% / 100% 70% no-repeat, repeating-linear-gradient(194deg, transparent 0 6%, color-mix(in srgb, var(--text) 20%, transparent) 10%, transparent 14%) 0 100% / 100% 70% no-repeat; }
+/* 2 耳下短髮：露出後頸 */
+.img-l2 { --hl: 29%; --hw: 42%; --ht: 14%; --hh: 36%; --hr: 50% 50% 30% 30% / 56% 56% 34% 34%; }
+/* 3 男士漸層：上深下淺，推到後頸；黑色上衣 */
+.img-l3 { --cloth: color-mix(in srgb, var(--text) 84%, var(--studio)); --hl: 30%; --hw: 40%; --ht: 14%; --hh: 40%; --hr: 50% 50% 40% 40% / 46% 46% 54% 54%;
+  --hd: linear-gradient(180deg, transparent 32%, color-mix(in srgb, var(--tone) 55%, transparent) 58%, var(--tone) 84%); }
+/* 4 線條挑染：深髮色上的淺色髮束 */
+.img-l4 { --hl: 25%; --hw: 50%; --ht: 11%; --hh: 62%; --hr: 50% 50% 18% 18% / 40% 40% 7% 7%;
+  --hd: repeating-linear-gradient(90deg, transparent 0 9%, color-mix(in srgb, var(--tone) 50%, transparent) 11% 12.5%, transparent 14.5% 21%) 0 100% / 100% 80% no-repeat; }
+/* 5 及胸直髮：髮尾齊平、一道橫向光澤 */
+.img-l5 { --hair: color-mix(in srgb, var(--text) 94%, var(--studio)); --hl: 27%; --hw: 46%; --ht: 10%; --hh: 74%; --hr: 50% 50% 5% 5% / 32% 32% 2% 2%;
+  --hd: linear-gradient(180deg, transparent 34%, color-mix(in srgb, var(--tone) 26%, transparent) 42%, transparent 52%); }
+/* 6 低編髮：後腦一條辮子垂到背上 */
+.img-l6 { --hair: color-mix(in srgb, var(--text) 66%, var(--studio)); --hl: 28%; --hw: 44%; --ht: 13%; --hh: 40%; --hr: 50% 50% 44% 44% / 50% 50% 50% 50%; }
+.img-l6::before { left: 44%; top: 46%; width: 12%; height: 38%; border-radius: 40% 40% 50% 50% / 8% 8% 12% 12%; filter: blur(.6px);
+  background:
+    repeating-linear-gradient(38deg, transparent 0 7%, color-mix(in srgb, var(--text) 45%, transparent) 7% 9.5%) 0 0 / 50% 100% no-repeat,
+    repeating-linear-gradient(-38deg, transparent 0 7%, color-mix(in srgb, var(--text) 45%, transparent) 7% 9.5%) 100% 0 / 50% 100% no-repeat,
+    var(--hair); }
+
+/* 換成照片：.img-s1 { background: url(images/stylist-1.jpg) center/cover; }（.img-s2、.img-s3 同理）
+   建議比例 4:5 半身照：灰色背景、黑色上衣、人物置中、頭頂留一點空間 */
+:is(.img-s1, .img-s2, .img-s3) { aspect-ratio: 4 / 5; border-radius: var(--radius); --hair: color-mix(in srgb, var(--text) 84%, var(--studio)); --hx: 50%;
+  background: radial-gradient(80% 56% at var(--lx, 20%) 12%, color-mix(in srgb, var(--surface) 78%, transparent), transparent 100%), linear-gradient(180deg, var(--studio), var(--studio-deep)); }
+/* 頭與頸：柔焦的橢圓（不畫五官）。--back 是腦後的頭髮，--fringe 是頭頂與瀏海 */
+:is(.img-s1, .img-s2, .img-s3)::before { content: ""; position: absolute; left: calc(var(--hx) - 22%); top: 13%; width: 44%; height: 56%; filter: blur(3px);
+  background:
+    var(--fringe, radial-gradient(47% 21% at 50% 22%, var(--hair) 76%, transparent 100%)),
+    radial-gradient(36% 29% at 50% 41%, var(--tone) 82%, transparent 100%),
+    linear-gradient(color-mix(in srgb, var(--tone) 78%, var(--studio-deep)), color-mix(in srgb, var(--tone) 78%, var(--studio-deep))) 50% 96% / 27% 40% no-repeat,
+    var(--back, linear-gradient(transparent, transparent)); }
+/* 黑色上衣：梯形肩線＋圓領 */
+:is(.img-s1, .img-s2, .img-s3)::after { content: ""; position: absolute; left: var(--sx, 7%); right: var(--sx, 7%); top: 63%; bottom: 0; filter: blur(1px);
+  clip-path: polygon(30% 0, 70% 0, 94% 17%, 100% 100%, 0 100%, 6% 17%);
+  background:
+    radial-gradient(15% 17% at 50% 0, color-mix(in srgb, var(--tone) 78%, var(--studio-deep)) 94%, transparent 100%),
+    linear-gradient(90deg, color-mix(in srgb, var(--text) 78%, var(--studio)), var(--text) 30% 70%, color-mix(in srgb, var(--text) 84%, var(--studio))); }
+/* 1 及肩長髮 */
+.img-s1 { --back: radial-gradient(50% 48% at 50% 46%, var(--hair) 88%, transparent 100%); }
+/* 2 短髮、肩膀較寬，光從右邊來 */
+.img-s2 { --hx: 49%; --lx: 82%; --sx: 3%; --fringe: radial-gradient(33% 9% at 53% 15%, var(--hair) 70%, transparent 100%); --back: radial-gradient(40% 23% at 50% 27%, var(--hair) 88%, transparent 100%); }
+/* 3 耳下鮑伯頭，髮色較淺 */
+.img-s3 { --hx: 51%; --lx: 50%; --hair: color-mix(in srgb, var(--text) 58%, var(--studio)); --back: radial-gradient(50% 34% at 50% 37%, var(--hair) 90%, transparent 100%); }
+
+/* 換成照片：.img-shop { background: url(images/shop.jpg) center/cover; }
+   建議比例 3:2 橫幅：店內的鏡台與座椅，無人 */
+.img-shop { aspect-ratio: 3 / 2; border-radius: var(--radius);
+  background:
+    /* 三面鏡子：鏡面、黑色細框 */
+    linear-gradient(155deg, var(--surface), color-mix(in srgb, var(--studio) 60%, var(--surface)) 60%, var(--studio)) 20.45% 18.3% / 12% 40% no-repeat,
+    linear-gradient(155deg, var(--surface), color-mix(in srgb, var(--studio) 60%, var(--surface)) 60%, var(--studio)) 50% 18.3% / 12% 40% no-repeat,
+    linear-gradient(155deg, var(--surface), color-mix(in srgb, var(--studio) 60%, var(--surface)) 60%, var(--studio)) 79.55% 18.3% / 12% 40% no-repeat,
+    linear-gradient(var(--text), var(--text)) 20.11% 17.2% / 13% 42% no-repeat,
+    linear-gradient(var(--text), var(--text)) 50% 17.2% / 13% 42% no-repeat,
+    linear-gradient(var(--text), var(--text)) 79.89% 17.2% / 13% 42% no-repeat,
+    /* 鏡台層板 */
+    linear-gradient(color-mix(in srgb, var(--text) 62%, var(--studio)), color-mix(in srgb, var(--text) 62%, var(--studio))) 50% 56.7% / 84% 1.2% no-repeat,
+    /* 從左邊窗戶落到地上的光 */
+    linear-gradient(108deg, transparent 8%, color-mix(in srgb, var(--surface) 40%, transparent) 20% 34%, transparent 48%) 0 100% / 100% 23% no-repeat,
+    /* 水泥牆的深淺與地板 */
+    radial-gradient(50% 60% at 12% 30%, color-mix(in srgb, var(--surface) 45%, transparent), transparent 100%),
+    radial-gradient(40% 50% at 86% 20%, color-mix(in srgb, var(--text) 10%, transparent), transparent 100%),
+    linear-gradient(180deg, var(--studio) 0 78%, color-mix(in srgb, var(--studio-deep) 82%, var(--text)) 78%); }
+/* 三張黑色座椅：椅背、椅面、椅柱、底盤 */
+.img-shop::before { content: ""; position: absolute; left: 11%; width: 78%; top: 0; bottom: 0;
+  background:
+    linear-gradient(90deg, transparent 38%, var(--text) 38% 62%, transparent 62%) 0 67% / 33.334% 12% repeat-x,
+    linear-gradient(90deg, transparent 32%, var(--text) 32% 68%, transparent 68%) 0 74.6% / 33.334% 3.5% repeat-x,
+    linear-gradient(90deg, transparent 48.5%, color-mix(in srgb, var(--text) 78%, var(--studio)) 48.5% 51.5%, transparent 51.5%) 0 83.9% / 33.334% 10% repeat-x,
+    linear-gradient(90deg, transparent 37%, color-mix(in srgb, var(--text) 78%, var(--studio)) 37% 63%, transparent 63%) 0 86.7% / 33.334% 1.4% repeat-x; }
+/* 鏡子之間的兩盞吊燈 */
+.img-shop::after { content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(closest-side, var(--surface) 0 92%, transparent 100%) 36.6% 16.2% / 3% 4.5% no-repeat,
+    radial-gradient(closest-side, var(--surface) 0 92%, transparent 100%) 63.4% 16.2% / 3% 4.5% no-repeat,
+    linear-gradient(var(--text), var(--text)) 37.1% 0 / .25% 16% no-repeat,
+    linear-gradient(var(--text), var(--text)) 63.1% 0 / .25% 16% no-repeat; }
+
+/* ---------- 主視覺 Hero：左邊大字，右邊直幅照片出血到右緣 ---------- */
+.hero { padding: var(--header-h) 0 0; }
+.hero-grid { display: grid; grid-template-columns: minmax(var(--gutter), 1fr) minmax(0, calc(var(--max) * .56)) minmax(0, calc(var(--max) * .44)) minmax(var(--gutter), 1fr); }
+.hero-text { grid-column: 2; align-self: center; padding-block: 3rem; padding-inline-end: clamp(1.5rem, 4vw, 4rem); }
+.hero h1 { font-size: var(--fs-h1); line-height: 1.12; }
+.hero-sub { color: var(--muted); margin-top: clamp(1.5rem, 3vw, 2rem); max-width: 26em; font-size: clamp(1rem, 1.3vw, 1.125rem); }
+.hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; margin-top: clamp(2rem, 4vw, 3rem); }
+.hero-cta .text-link { display: inline-flex; align-items: center; min-height: 44px; }
+.img-hero { grid-column: 3 / -1; height: clamp(520px, calc(100svh - var(--header-h)), 820px); }
+@media (max-width: 760px) {
+  .hero-grid { display: block; }
+  .hero-text { padding: 2rem var(--gutter) 2.5rem; }
+  .img-hero { height: auto; aspect-ratio: 4 / 5; margin-inline-start: var(--gutter); }
+}
+
+/* ---------- 價目表：大字清單（這一頁的主角） ---------- */
+.price-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3.2fr); column-gap: clamp(2rem, 6vw, 6rem); align-items: end; margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
+.price-group { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3.2fr); column-gap: clamp(2rem, 6vw, 6rem); padding-top: 1.5rem; padding-bottom: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--text); }
+.price-group h3 { font-size: var(--fs-h3); }
+.price-group li { display: grid; grid-template-columns: minmax(0, 1fr) 6rem clamp(11rem, 22vw, 16rem); column-gap: 1.5rem; align-items: baseline; padding-block: 1rem; border-bottom: 1px solid var(--line); }
+.price-group li:first-child { padding-top: 0; }
+.price-group li:last-child { border-bottom: 0; }
+.p-name { font-size: var(--fs-lg); line-height: 1.4; }
+.p-time { color: var(--muted); font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
+.p-amt { font: 500 var(--fs-h2)/1.1 var(--font-heading); font-variant-numeric: tabular-nums; text-align: end; white-space: nowrap; }
+.p-amt small { font: 400 var(--fs-sm)/1 var(--font-body); color: var(--muted); }
+.p-amt small:first-child { margin-inline-end: .4em; }
+.p-amt small:last-child { margin-inline-start: .4em; }
+.price-extra { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3.2fr); column-gap: clamp(2rem, 6vw, 6rem); padding-top: 1.5rem; border-top: 1px solid var(--text); font-size: .9375rem; }
+.price-extra h3 { font: 500 var(--fs-body)/1.8 var(--font-body); }
+.price-extra dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem 1.5rem; }
+.price-extra dt { color: var(--muted); }
+.price-extra dd { font-weight: 500; font-variant-numeric: tabular-nums; }
+@media (max-width: 860px) {
+  .price-head, .price-group, .price-extra { grid-template-columns: minmax(0, 1fr); }
+  .price-head { row-gap: .75rem; }
+  .price-group { padding-top: 1rem; padding-bottom: 1.5rem; }
+  .price-group h3 { margin-bottom: 1rem; }
+  .price-group li { grid-template-columns: minmax(0, 1fr) auto; column-gap: 1rem; padding-block: .75rem; }
+  .p-name { grid-column: 1; grid-row: 1; font-size: 1.0625rem; }
+  .p-time { grid-column: 1; grid-row: 2; }
+  .p-amt { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+  .price-extra h3 { margin-bottom: .5rem; }
+}
+@media (max-width: 480px) { .price-extra dl { grid-template-columns: minmax(0, 1fr); gap: 0; } .price-extra dl > div { display: flex; justify-content: space-between; gap: 1rem; padding-block: .25rem; } }
+
+/* ---------- 設計師：直幅照片＋各自的預約按鈕 ---------- */
+.sty-head { max-width: 36em; margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
+.sty-head p { margin-top: 1rem; }
+.sty-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 4rem); }
+.sty { display: grid; grid-template-rows: auto 1fr auto; row-gap: 1.5rem; }
+.sty h3 { font-size: var(--fs-h3); }
+.sty-role { color: var(--muted); font-size: var(--fs-sm); }
+.sty dl { margin-top: 1rem; font-size: .9375rem; }
+.sty dl > div { display: grid; grid-template-columns: 3.5em minmax(0, 1fr); gap: 1rem; padding-block: .6rem; border-top: 1px solid var(--line); }
+.sty dt { color: var(--muted); }
+.sty .btn { justify-self: start; }
+@media (max-width: 860px) {
+  .sty-grid { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .sty { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); grid-template-rows: auto auto; column-gap: 1.25rem; row-gap: 1rem; align-items: start; }
+  .sty .btn { grid-column: 1 / -1; justify-self: stretch; }
+  .sty dl > div { display: block; padding-block: .5rem; }
+  .sty dt, .sty dd { display: inline; }
+  .sty dt { margin-inline-end: .75em; }
+}
+
+/* ---------- Lookbook：橫向捲動相簿（CSS scroll-snap，不需要 JS）----------
+   用觸控、觸控板、Shift＋滾輪或鍵盤左右鍵都能捲；有 JS 時桌機多兩顆前後按鈕。 */
+.look { padding-bottom: calc(var(--section-y) - 1rem); }
+.look-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem 2rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.look-hint { color: var(--muted); font-size: var(--fs-sm); }
+.look-tools { display: flex; align-items: center; gap: 1.5rem; }
+.look-nav { display: flex; gap: .5rem; }
+html:not(.js) .look-nav { display: none; }
+.look-nav button { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid color-mix(in srgb, var(--text) 60%, transparent); border-radius: var(--radius-sm); background: transparent; color: var(--text); cursor: pointer; transition: background-color .2s, border-color .2s, opacity .2s; }
+.look-nav button:hover { border-color: var(--text); background: color-mix(in srgb, var(--text) 6%, transparent); }
+.look-nav button:active { transform: translateY(1px); }
+.look-nav button:disabled { opacity: .35; cursor: default; }
+.look-nav svg { width: 18px; height: 18px; }
+.look-scroll { overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; padding-bottom: 1rem;
+  scroll-padding-inline: max(var(--gutter), calc((100% - var(--max)) / 2)); scrollbar-width: thin; scrollbar-color: var(--accent) var(--line); }
+.look-list { display: flex; gap: clamp(1rem, 2vw, 1.5rem); width: max-content; padding-inline: max(var(--gutter), calc((100% - var(--max)) / 2)); }
+.look-scroll:focus-visible { outline-offset: -2px; }
+.look-scroll li { flex: 0 0 clamp(14rem, 23vw, 19rem); scroll-snap-align: start; }
+.look-scroll .img { aspect-ratio: 3 / 4; border-radius: var(--radius); }
+.look-scroll figcaption { margin-top: .75rem; font-size: var(--fs-sm); color: var(--muted); line-height: 1.6; }
+.look-scroll figcaption b { display: block; font-size: var(--fs-body); font-weight: 500; color: var(--text); }
+@media (prefers-reduced-motion: no-preference) { .look-scroll { scroll-behavior: smooth; } }
+@media (max-width: 760px) { .look-nav { display: none; } .look-scroll li { flex-basis: 62vw; } }
+
+/* ---------- 第一次來＋常見問題 ---------- */
+.first-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(3rem, 8vw, 8rem); align-items: start; }
+.first-grid h2 { margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+.steps li { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); column-gap: 1rem; padding-block: 1.25rem; border-top: 1px solid var(--line); }
+.steps li:last-child { border-bottom: 1px solid var(--line); }
+.step-no { grid-row: span 2; font: 500 var(--fs-h3)/1.2 var(--font-heading); font-variant-numeric: tabular-nums; }
+.steps h3 { font: 500 var(--fs-lg)/1.4 var(--font-heading); }
+.steps p { color: var(--muted); margin-top: .25rem; }
+.faq details { border-top: 1px solid var(--line); }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 64px; padding-block: 1rem; cursor: pointer; list-style: none; font-size: var(--fs-lg); font-weight: 500; line-height: 1.4; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; flex: none; width: .5em; height: .5em; margin-inline: .25rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.faq details[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+.faq summary:hover { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+.faq summary:active { opacity: .7; }
+.faq details p { color: var(--muted); padding-bottom: 1.5rem; max-width: 34em; }
+@media (max-width: 860px) { .first-grid { grid-template-columns: minmax(0, 1fr); gap: 3rem; } }
+
+/* ---------- 營業時間與位置 ---------- */
+.visit-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.visit h2 { margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+.hours > div { display: flex; justify-content: space-between; gap: 1rem; padding-block: .75rem; border-top: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.hours > div:last-child { border-bottom: 1px solid var(--line); }
+.hours dt em { font-style: normal; font-size: var(--fs-sm); margin-inline-start: .75rem; border-bottom: 2px solid var(--accent); }
+.hours .today { font-weight: 500; }
+.hours .off dd { color: var(--muted); }
+.visit-note { margin-top: 1rem; font-size: var(--fs-sm); color: var(--muted); }
+.visit-addr { margin-top: 1.5rem; max-width: 30em; }
+.visit-addr b { display: block; font-size: var(--fs-lg); font-weight: 500; line-height: 1.5; }
+.visit-addr span { color: var(--muted); }
+.visit-links { display: flex; flex-wrap: wrap; gap: .75rem 2rem; margin-top: 1.5rem; }
+.visit-links a { display: inline-flex; align-items: center; min-height: 44px; }
+@media (max-width: 860px) { .visit-grid { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; } .visit-info { order: -1; } }
+
+/* ---------- 預約 CTA ---------- */
+.cta { background: var(--surface); border-top: 1px solid var(--line); }
+.cta h2 { font-size: var(--fs-h1); line-height: 1.12; }
+.cta p { color: var(--muted); margin-top: clamp(1.5rem, 3vw, 2rem); max-width: 30em; }
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: clamp(2rem, 4vw, 3rem); }
+.cta-row .text-link { margin-inline-start: 1rem; min-height: 44px; display: inline-flex; align-items: center; font-variant-numeric: tabular-nums; }
+@media (max-width: 760px) {
+  /* 手機：底部固定列已有同一顆預約按鈕，這裡只留 LINE */
+  .cta .btn-primary { display: none; }
+  .cta-row { display: grid; grid-template-columns: minmax(0, 1fr); }
+  /* 電話已經在底部固定列，這裡不重複 */
+  .cta-row .text-link { display: none; }
+}
+
+/* ---------- 頁尾 ---------- */
+.site-footer { background: var(--brand); color: color-mix(in srgb, var(--brand-ink) 80%, var(--brand)); padding-block: 4.5rem 2rem; font-size: .9375rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; }
+.site-footer .logo { color: var(--brand-ink); margin-bottom: .5rem; }
+.site-footer h2 { color: var(--brand-ink); font: 500 var(--fs-body)/1.8 var(--font-body); margin-bottom: .5rem; }
+.site-footer a:hover { color: var(--brand-ink); text-decoration: underline; text-underline-offset: 4px; }
+.site-footer :focus-visible { outline-color: var(--brand-ink); }
+.social { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+.social a { display: inline-flex; align-items: center; min-height: 32px; text-decoration: underline; text-underline-offset: 4px; }
+.foot-bottom { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid color-mix(in srgb, var(--brand-ink) 18%, transparent); font-size: var(--fs-sm); }
+.foot-hours-short { display: none; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; } .foot-hours { display: none; } .foot-hours-short { display: block; } .site-footer { padding-top: 3rem; } .foot-bottom { margin-top: 2rem; } }
+
+/* ---------- 手機底部固定按鈕 ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 760px) {
+  .mobile-bar { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: .5rem; position: fixed; inset: auto 0 0; z-index: 60; padding: .75rem 1rem calc(.75rem + env(safe-area-inset-bottom)); background: var(--surface); border-top: 1px solid var(--line); }
+  .mobile-bar .btn { padding: .5rem 1rem; }
+  /* 首屏按鈕還在畫面上時先收起底部固定列；沒有 JS 時照常顯示 */
+  .js .mobile-bar { transform: translateY(110%); transition: transform .3s ease; }
+  .js .mobile-bar.show { transform: none; }
+  body { padding-bottom: 72px; }
+}
+
+/* ---------- 首屏進場（全頁只有這一個動畫） ---------- */
+.js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== 語言切換（lang-switch） ==================== */
+.nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
+.lang-switch { display: flex; align-items: center; gap: .1rem; flex: none; margin-inline-start: .5rem; padding-inline-start: .6rem; border-inline-start: 1px solid var(--line); font: 400 .8125rem/1 var(--font-body); letter-spacing: normal; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; border-radius: var(--radius-sm); color: var(--muted); text-decoration: none; text-underline-offset: 5px; text-decoration-thickness: 2px; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 8%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid var(--text); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 500; text-decoration-line: underline; text-decoration-color: var(--accent); }
+@media (max-width: 760px) {
+  .nav > .lang-switch { order: 1; margin-inline: 0; padding-inline-start: 0; border: 0; }
+  .nav > .menu-btn { order: 2; }
+  .nav > .nav-links { order: 3; }
+}
+@media (min-width: 761px) and (max-width: 1000px) {
+  .nav > .nav-links { gap: 1rem; font-size: .875rem; }
+  .nav > .nav-links .btn { padding-inline: .9rem; }
+  .nav > .lang-switch { margin-inline-start: 0; padding-inline-start: .3rem; }
+}
+@media (max-width: 400px) { .nav { gap: .5rem; } }
+/* 頁尾語言連結 */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; font-size: var(--fs-sm); }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius-sm); }
+.foot-lang a:hover { text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand-ink); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { font-weight: 500; color: var(--brand-ink); text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: color-mix(in srgb, var(--accent) 50%, var(--brand-ink)); }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: var(--radius-sm); color: inherit; font-weight: 500; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--text) 8%, transparent); }
+.lang-menu > summary:active { background: color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<!-- ==================== 區塊：頁首導覽 ==================== -->
+<!-- 範例內容：上線前請換成真實資料（店名為虛構） -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="SOU 髮藝 回到頂端"><span lang="en" translate="no">SOU</span> 髮藝</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="開啟選單"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="主選單">
+      <a href="#prices">價目</a>
+      <a href="#stylists">設計師</a>
+      <a href="#lookbook">作品</a>
+      <a href="#first">第一次來</a>
+      <a href="#visit">營業時間</a>
+      <a href="#stylists" class="btn btn-ghost">預約</a>
+    </nav>
+    <!-- lang-switch：語言切換。要新增語言時，在這裡加一個連結，並新增對應的資料夾 -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="zh-Hant">繁</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<!-- ==================== 區塊：主視覺 Hero ==================== -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div class="hero-text reveal">
+      <h1>先聊清楚，<br>再動剪刀</h1>
+      <p class="hero-sub">SOU 是信義區的三人髮型工作室。每次預約先留十分鐘討論，費用在開始前說明。</p>
+      <div class="hero-cta">
+        <a href="#stylists" class="btn btn-primary">選設計師預約</a>
+        <a href="#prices" class="text-link">先看價目</a>
+      </div>
+    </div>
+    <div class="img img-hero" role="img" aria-label="照片位置：耳下鮑伯頭的背影，灰色背景，不露臉"></div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：價目表 ==================== -->
+<!-- 範例內容：上線前請換成真實資料（項目、價格、時間皆為虛構）。每一列是一個 <li>，複製或刪除即可增減項目 -->
+<section id="prices">
+  <div class="wrap">
+    <div class="price-head">
+      <h2>價目</h2>
+      <p class="lead">以下是短髮的起價。當天的費用與時間，設計師會在開始前和你確認。</p>
+    </div>
+    <div class="price-group">
+      <h3>剪髮</h3>
+      <ul>
+        <li><span class="p-name">洗剪吹</span><span class="p-time">60 分鐘</span><span class="p-amt"><small>NT$</small>800<small>起</small></span></li>
+        <li><span class="p-name">男士漸層剪</span><span class="p-time">45 分鐘</span><span class="p-amt"><small>NT$</small>700<small>起</small></span></li>
+        <li><span class="p-name">兒童剪髮（12 歲以下）</span><span class="p-time">30 分鐘</span><span class="p-amt"><small>NT$</small>500<small>起</small></span></li>
+      </ul>
+    </div>
+    <div class="price-group">
+      <h3>染髮</h3>
+      <ul>
+        <li><span class="p-name">全染</span><span class="p-time">2 小時</span><span class="p-amt"><small>NT$</small>2,500<small>起</small></span></li>
+        <li><span class="p-name">補染髮根</span><span class="p-time">1.5 小時</span><span class="p-amt"><small>NT$</small>1,800<small>起</small></span></li>
+        <li><span class="p-name">漂髮（一次）</span><span class="p-time">2.5 小時</span><span class="p-amt"><small>NT$</small>3,000<small>起</small></span></li>
+      </ul>
+    </div>
+    <div class="price-group">
+      <h3>燙髮</h3>
+      <ul>
+        <li><span class="p-name">溫塑燙</span><span class="p-time">3 小時</span><span class="p-amt"><small>NT$</small>3,500<small>起</small></span></li>
+        <li><span class="p-name">冷燙</span><span class="p-time">2.5 小時</span><span class="p-amt"><small>NT$</small>2,800<small>起</small></span></li>
+        <li><span class="p-name">縮毛矯正</span><span class="p-time">3.5 小時</span><span class="p-amt"><small>NT$</small>4,000<small>起</small></span></li>
+      </ul>
+    </div>
+    <div class="price-group">
+      <h3>護髮</h3>
+      <ul>
+        <li><span class="p-name">結構護髮</span><span class="p-time">40 分鐘</span><span class="p-amt"><small>NT$</small>1,200<small>起</small></span></li>
+        <li><span class="p-name">頭皮養護</span><span class="p-time">30 分鐘</span><span class="p-amt"><small>NT$</small>1,000<small>起</small></span></li>
+      </ul>
+    </div>
+    <div class="price-extra">
+      <h3>加價（每個項目）</h3>
+      <dl>
+        <div><dt>中長髮（過肩）</dt><dd>加 300</dd></div>
+        <div><dt>長髮（過胸）</dt><dd>加 600</dd></div>
+        <div><dt>指定總監 Mika</dt><dd>加 200</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：設計師 ==================== -->
+<!-- 範例內容：上線前請換成真實資料（設計師姓名、資歷、班表、照片皆為虛構）。
+     每位設計師的預約按鈕可以換成各自的 LINE 連結 -->
+<section id="stylists">
+  <div class="wrap">
+    <div class="sty-head">
+      <h2>設計師</h2>
+      <p class="lead">三位設計師各有班表。預約時直接選人，之後每次都由同一位負責。</p>
+    </div>
+    <div class="sty-grid">
+      <article class="sty">
+        <div class="img img-s1" role="img" aria-label="照片位置：設計師 Mika 的半身照，黑色上衣，灰色背景"></div>
+        <div>
+          <h3><span lang="en">Mika</span> <span>林可晴</span></h3>
+          <p class="sty-role">總監，入行 14 年</p>
+          <dl>
+            <div><dt>擅長</dt><dd>短髮與鮑伯頭、線條俐落的剪裁</dd></div>
+            <div><dt>班表</dt><dd>週二至週六</dd></div>
+          </dl>
+        </div>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE 預約 Mika</a>
+      </article>
+      <article class="sty">
+        <div class="img img-s2" role="img" aria-label="照片位置：設計師 Bo 的半身照，黑色上衣，灰色背景"></div>
+        <div>
+          <h3><span lang="en">Bo</span> <span>周柏宇</span></h3>
+          <p class="sty-role">設計師，入行 9 年</p>
+          <dl>
+            <div><dt>擅長</dt><dd>男士漸層與短髮、溫塑燙</dd></div>
+            <div><dt>班表</dt><dd>週三至週日</dd></div>
+          </dl>
+        </div>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE 預約 Bo</a>
+      </article>
+      <article class="sty">
+        <div class="img img-s3" role="img" aria-label="照片位置：設計師 Yuu 的半身照，黑色上衣，灰色背景"></div>
+        <div>
+          <h3><span lang="en">Yuu</span> <span>許宥安</span></h3>
+          <p class="sty-role">設計師，入行 5 年</p>
+          <dl>
+            <div><dt>擅長</dt><dd>漂染與挑染、長髮層次</dd></div>
+            <div><dt>班表</dt><dd>週二、週四至週日</dd></div>
+          </dl>
+        </div>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE 預約 Yuu</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：Lookbook 作品 ==================== -->
+<!-- 範例內容：上線前請換成真實資料（作品與設計師皆為虛構）。每張作品是一個 <li>，可自由增減 -->
+<section class="look" id="lookbook">
+  <div class="wrap look-head">
+    <h2 id="look-h">作品</h2>
+    <div class="look-tools">
+      <p class="look-hint">左右捲動，共 6 款</p>
+      <div class="look-nav">
+        <button type="button" aria-label="上一張" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" aria-label="下一張"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="look-scroll" tabindex="0" role="region" aria-labelledby="look-h">
+  <ul class="look-list">
+    <li><figure><div class="img img-l1" role="img" aria-label="照片位置：長捲髮的背影"></div><figcaption><b>長捲髮</b>溫塑燙，設計師 Bo</figcaption></figure></li>
+    <li><figure><div class="img img-l2" role="img" aria-label="照片位置：耳下短髮的背影"></div><figcaption><b>耳下短髮</b>剪髮，設計師 Mika</figcaption></figure></li>
+    <li><figure><div class="img img-l3" role="img" aria-label="照片位置：男士漸層短髮的背影"></div><figcaption><b>男士漸層</b>剪髮，設計師 Bo</figcaption></figure></li>
+    <li><figure><div class="img img-l4" role="img" aria-label="照片位置：線條挑染的背影"></div><figcaption><b>線條挑染</b>漂髮與染髮，設計師 Yuu</figcaption></figure></li>
+    <li><figure><div class="img img-l5" role="img" aria-label="照片位置：及胸直髮的背影"></div><figcaption><b>及胸直髮</b>縮毛矯正，設計師 Mika</figcaption></figure></li>
+    <li><figure><div class="img img-l6" role="img" aria-label="照片位置：低編髮的背影"></div><figcaption><b>低編髮</b>造型，設計師 Yuu</figcaption></figure></li>
+  </ul>
+  </div>
+</section>
+
+<!-- ==================== 區塊：第一次來＋常見問題 ==================== -->
+<section id="first">
+  <div class="wrap first-grid">
+    <div>
+      <h2>第一次來</h2>
+      <ol class="steps">
+        <li><span class="step-no" aria-hidden="true">1</span><h3>選設計師與時段</h3><p>用 LINE 告訴我們想做的項目，可以附上參考照片。</p></li>
+        <li><span class="step-no" aria-hidden="true">2</span><h3>到店先討論</h3><p>坐下來先聊十分鐘，確認做法、需要的時間與費用。</p></li>
+        <li><span class="step-no" aria-hidden="true">3</span><h3>完成後教你整理</h3><p>結束前示範在家吹整的方式，讓你隔天自己也做得到。</p></li>
+      </ol>
+    </div>
+    <div class="faq">
+      <h2>常見問題</h2>
+      <details>
+        <summary>染髮或燙髮大概要多久？</summary>
+        <p>染髮約 2 至 3 小時，燙髮約 3 至 4 小時，漂髮會再久一點。預約時我們會先告訴你大概的結束時間。</p>
+      </details>
+      <details>
+        <summary>要改期或取消怎麼辦？</summary>
+        <p>請在預約時間的前一天用 LINE 告訴我們。當天臨時取消兩次以上，之後預約會請你先付訂金。</p>
+      </details>
+      <details>
+        <summary>小孩可以剪嗎？</summary>
+        <p>可以。12 歲以下適用兒童剪髮價格。建議選平日下午，店裡比較安靜。</p>
+      </details>
+      <details>
+        <summary>可以先諮詢，當天不做嗎？</summary>
+        <p>可以。討論後想再考慮的話，當天不收費。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：營業時間與位置 ==================== -->
+<!-- 範例內容：上線前請換成真實資料（地址、電話、營業時間皆為虛構）。
+     data-days 是星期幾（0 = 週日、1 = 週一 … 6 = 週六），用來標示「今天」 -->
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div>
+      <div class="img img-shop" role="img" aria-label="照片位置：店內的水泥牆、三面鏡台與黑色座椅，無人"></div>
+      <p class="visit-addr"><b>台北市信義區松山路 168 號 2 樓</b><span>捷運永春站 4 號出口步行 5 分鐘。門口沒有停車位，巷口有收費停車場。</span></p>
+    </div>
+    <div class="visit-info">
+      <h2>營業時間與位置</h2>
+      <dl class="hours" id="hours">
+        <div data-days="2,3,4,5"><dt>週二至週五</dt><dd>11:00–20:00</dd></div>
+        <div data-days="6"><dt>週六</dt><dd>10:00–19:00</dd></div>
+        <div data-days="0"><dt>週日</dt><dd>10:00–18:00</dd></div>
+        <div class="off" data-days="1"><dt>週一</dt><dd>公休</dd></div>
+      </dl>
+      <p class="visit-note">最後受理時間：剪髮為打烊前 1 小時，染髮與燙髮為打烊前 3 小時。</p>
+      <div class="visit-links">
+        <a href="https://maps.google.com/?q=台北市信義區松山路168號" class="text-link" target="_blank" rel="noopener">開啟 Google 地圖</a>
+        <a href="tel:02-1234-5678" class="text-link num">撥打 02-1234-5678</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 區塊：預約 CTA ==================== -->
+<section class="cta" id="book">
+  <div class="wrap">
+    <h2>想剪了，<br>就傳訊息來</h2>
+    <p>還沒決定找哪一位也沒關係。告訴我們想做的項目和方便的時間，我們幫你安排。</p>
+    <div class="cta-row">
+      <a href="#stylists" class="btn btn-primary">選設計師預約</a>
+      <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE 不指定預約</a>
+      <a href="tel:02-1234-5678" class="text-link">02-1234-5678</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 區塊：頁尾 ==================== -->
+<!-- 範例內容：上線前請換成真實資料（店名、地址、電話皆為虛構） -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo"><span lang="en" translate="no">SOU</span> 髮藝</div>
+        <p>台北市信義區松山路 168 號 2 樓<br>電話：<a href="tel:02-1234-5678">02-1234-5678</a></p>
+      </div>
+      <div>
+        <h2>營業時間</h2>
+        <p class="foot-hours-short">週二至週日營業，週一公休</p>
+        <p class="foot-hours">週二至週五 11:00–20:00<br>週六 10:00–19:00<br>週日 10:00–18:00<br>週一公休</p>
+      </div>
+      <div>
+        <h2>社群</h2>
+        <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE</a></div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y">2026</span> SOU 髮藝</span>
+    </div>
+    <!-- 頁尾語言連結：和頁首的 lang-switch 同一組 -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja">日本語</a></p>
+  </div>
+</footer>
+
+<!-- ==================== 區塊：手機底部固定按鈕 ==================== -->
+<div class="mobile-bar">
+  <a href="tel:02-1234-5678" class="btn btn-ghost">撥打電話</a>
+  <a href="#stylists" class="btn btn-primary">選設計師預約</a>
+</div>
+
+<script>
+// 介面文字（換語言時只改這裡）
+const T = { today: '今天', openMenu: '開啟選單', closeMenu: '關閉選單' };
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// 頁首捲動背景
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+// 漢堡選單（點連結或按 Esc 會關閉）
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  links.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? T.closeMenu : T.openMenu);
+};
+menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && links.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
+
+// 營業時間：標示今天。請把 TZ 改成店家所在地的時區（例如 'Asia/Taipei'、'America/Los_Angeles'）
+const TZ = 'Asia/Taipei';
+const wd = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(new Intl.DateTimeFormat('en-US', { timeZone: TZ, weekday: 'short' }).format(new Date()));
+document.querySelectorAll('#hours [data-days]').forEach(row => {
+  if (!row.dataset.days.split(',').includes(String(wd))) return;
+  row.classList.add('today');
+  row.querySelector('dt').insertAdjacentHTML('beforeend', `<em>${T.today}</em>`);
+});
+
+// Lookbook：前後按鈕（相簿本身用 CSS 捲動，沒有 JS 也能用）
+const scroller = document.querySelector('.look-scroll');
+const [prevBtn, nextBtn] = document.querySelectorAll('.look-nav button');
+const lookState = () => {
+  prevBtn.disabled = scroller.scrollLeft < 8;
+  nextBtn.disabled = scroller.scrollLeft > scroller.scrollWidth - scroller.clientWidth - 8;
+};
+prevBtn.addEventListener('click', () => scroller.scrollBy({ left: -scroller.clientWidth * .8 }));
+nextBtn.addEventListener('click', () => scroller.scrollBy({ left: scroller.clientWidth * .8 }));
+scroller.addEventListener('scroll', lookState, { passive: true }); lookState();
+
+// 首屏進場（只有這一處）＋底部固定列在首屏按鈕離開畫面後才出現
+const reveals = document.querySelectorAll('.reveal');
+const bar = document.querySelector('.mobile-bar');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }));
+  reveals.forEach(el => io.observe(el));
+  new IntersectionObserver(([e]) => bar.classList.toggle('show', !e.isIntersecting)).observe(document.querySelector('.hero-cta'));
+} else { reveals.forEach(el => el.classList.add('in')); bar.classList.add('show'); }
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOU ヘアスタジオ｜三軒茶屋のヘアサロン</title>
+<meta name="description" content="SOU ヘアスタジオは三軒茶屋にある、スタイリスト3名のヘアサロンです。カット、カラー、パーマ、トリートメントの料金を公開しています。ご予約時にスタイリストを指名でき、施術の前に内容と料金をご説明します。">
+<meta property="og:title" content="SOU ヘアスタジオ｜三軒茶屋のヘアサロン">
+<meta property="og:description" content="まず話してから、切りはじめます。料金、スタイリスト、スタイル写真を見て、LINE でご予約ください。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ECEAE6">
+<!-- 多言語版（SEO）：公開後は href を完全な URL に置き換えてください。例：https://www.yourbusiness.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<!-- サンプル内容：公開前に実際の情報に差し替えてください（店名、電話、住所、営業時間、料金はすべて架空です） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "SOU ヘアスタジオ",
+  "telephone": "03-1234-5678",
+  "url": "https://example.com/",
+  "priceRange": "¥3,300〜16,500",
+  "currenciesAccepted": "JPY",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "三軒茶屋 1-2-3 2F",
+    "addressLocality": "世田谷区",
+    "addressRegion": "東京都",
+    "postalCode": "154-0024",
+    "addressCountry": "JP"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "11:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "18:00" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   テーマ設定：ここを変えるとサイト全体の配色とフォントが変わります
+   ============================================================ */
+:root {
+  --brand: #191817;          /* ブランドカラー：黒に近い色（メインボタン、フッター背景） */
+  --brand-ink: #F6F5F2;      /* ブランドカラーの上に載せる文字色 */
+  --brand-soft: #383532;     /* メインボタンのホバー時の背景色 */
+  --bg: #ECEAE6;             /* ページ背景：淡いコンクリートグレー */
+  --surface: #F6F5F2;        /* 面の色：ヘッダー、メニュー、予約ブロック（グレーがかった白） */
+  --text: #191817;           /* 本文の文字色 */
+  --muted: #57534E;          /* 補足の文字色（背景色と面の色の上で AA 達成） */
+  --line: #D3D0CA;           /* 1px の罫線と枠線 */
+  --accent: #6F5F7A;         /* くすんだ紫グレー：唯一のアクセント。現在の言語と「本日」の下線、Lookbook のスクロールバーだけに使います */
+  --studio: #CBC8C2;         /* プレースホルダー用：スタジオ背景の明るいグレー */
+  --studio-deep: #A5A19A;    /* プレースホルダー用：背景の暗部、コンクリートの壁 */
+  --tone: #DDD8D1;           /* プレースホルダー用：肌と明るい服（モノクロ写真の明部） */
+  --shadow: 0 16px 40px -24px color-mix(in srgb, var(--text) 35%, transparent); /* サイトで唯一の淡い影（ドロップダウン用） */
+  --radius: 6px;             /* 大きな要素の角丸（画像、メニュー） */
+  --radius-sm: 4px;          /* 小さな要素の角丸（ボタン、メニュー項目） */
+  --font-heading: "Archivo", "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif; /* 見出しフォント（本文と同じ書体。文字サイズで階層をつけます） */
+  --font-body: "Archivo", "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;    /* 本文フォント */
+  --fs-sm: .875rem;          /* 文字サイズ：小（所要時間、注記） */
+  --fs-body: 1rem;           /* 文字サイズ：本文 */
+  --fs-lg: 1.25rem;          /* 文字サイズ：メニュー名、小見出し */
+  --fs-h3: clamp(1.5rem, 2.4vw, 2rem);     /* 文字サイズ：h3 */
+  --fs-h2: clamp(2rem, 4.4vw, 3.5rem);     /* 文字サイズ：h2 と料金表の大きな数字 */
+  --fs-h1: clamp(2.5rem, 6vw, 5rem);       /* 文字サイズ：メイン見出し */
+  --header-h: 72px;          /* ヘッダーの高さ */
+  --gutter: 1.25rem;         /* ページ左右の余白（スマホ） */
+  --section-y: clamp(4rem, 11vw, 9rem);    /* セクション上下の余白 */
+  --max: 1200px;             /* コンテンツの最大幅 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-padding-top: calc(var(--header-h) + 16px); overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 var(--fs-body)/1.8 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; touch-action: manipulation; line-break: strict; word-break: auto-phrase; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; line-height: 1.25; letter-spacing: 0; overflow-wrap: break-word; min-width: 0; text-wrap: balance; font-synthesis: none; }
+p, li, dd, figcaption { text-wrap: pretty; }
+:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; border-radius: var(--radius-sm); }
+.wrap { width: min(100% - var(--gutter) * 2, var(--max)); margin-inline: auto; }
+section { padding-block: var(--section-y); }
+h2 { font-size: var(--fs-h2); }
+.lead { color: var(--muted); max-width: 32em; }
+.num { font-variant-numeric: tabular-nums; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* メインコンテンツへ移動（キーボードで Tab を押すと表示） */
+.skip { position: fixed; left: 1rem; top: .75rem; z-index: 100; padding: .6rem 1rem; border-radius: var(--radius-sm); background: var(--brand); color: var(--brand-ink); transform: translateY(-200%); }
+.skip:focus { transform: none; }
+.skip:hover { background: var(--brand-soft); }
+.skip:active { opacity: .85; }
+main:focus { outline: none; }
+
+/* ---------- ボタン：塗りはメインの操作だけ。それ以外は細い枠か、下線つきのテキストリンク ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .75rem 1.5rem; border-radius: var(--radius-sm); font: 500 var(--fs-body)/1.3 var(--font-body); border: 1px solid transparent; transition: background-color .2s, color .2s, border-color .2s, transform .2s; cursor: pointer; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: var(--brand-soft); }
+.btn:active { transform: translateY(1px); }
+a:not(.btn):active { opacity: .7; }
+.btn-ghost { border-color: color-mix(in srgb, var(--text) 60%, transparent); color: var(--text); background: transparent; }
+.btn-ghost:hover { border-color: var(--text); background: color-mix(in srgb, var(--text) 6%, transparent); }
+.text-link { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+.text-link:hover { text-decoration-thickness: 2px; }
+
+/* ---------- ヘッダー ---------- */
+html:not(.js) .site-header { background: var(--surface); border-bottom-color: var(--line); }
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; border-bottom: 1px solid transparent; transition: background-color .3s, border-color .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--surface) 96%, transparent); border-bottom-color: var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: 1rem; }
+.logo { display: inline-flex; align-items: center; min-height: 44px; font: 500 1.375rem/1 var(--font-heading); }
+.logo span { margin-inline-end: .25em; }
+.nav-links { display: flex; align-items: center; gap: 1.75rem; font-size: .9375rem; }
+.nav-links a:not(.btn) { color: var(--muted); transition: color .2s; }
+.nav-links a:not(.btn):hover { color: var(--text); text-decoration: underline; text-underline-offset: 6px; }
+.nav-links .btn { min-height: 40px; padding: .5rem 1.1rem; font-size: .9375rem; }
+.menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); color: var(--text); cursor: pointer; transition: border-color .2s; }
+.menu-btn:hover { border-color: var(--text); }
+.menu-btn:active { transform: translateY(1px); }
+.menu-btn span { display: block; width: 18px; height: 1.5px; margin: 4px auto; background: currentColor; transition: transform .3s, opacity .3s; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+@media (max-width: 760px) {
+  :root { --header-h: 64px; }
+  .js .menu-btn { display: block; }
+  .js .nav-links { position: absolute; top: var(--header-h); left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s, visibility .25s; }
+  .js .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .js .nav-links a:not(.btn) { padding: .75rem 1rem; border-radius: var(--radius-sm); color: var(--text); }
+  .js .nav-links .btn { margin-top: .5rem; min-height: 48px; }
+  /* JS がない場合：メニューは折り返せるリンクの列として表示 */
+  html:not(.js) .site-header { position: sticky; top: 0; }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-block: .75rem; }
+  html:not(.js) .nav-links { flex-wrap: wrap; gap: .25rem 1rem; }
+  html:not(.js) .nav-links a:not(.btn) { padding-block: .5rem; }
+  html:not(.js) .hero { padding-top: 0; }
+}
+
+/* ---------- プレースホルダー画像 ----------
+   画像の位置ごとに専用の class があります。写真に替えるときは、その class だけを変更し、::before／::after を削除します。
+   img タグを使う場合は width／height を付け、ファーストビューの画像には fetchpriority="high"、ほかには loading="lazy" を付けます。
+   プレースホルダーはモノクロのスタジオ写真風です：グレーの背景、髪型の後ろ姿（顔は写さない）、スタイリストのソフトフォーカスの半身。 */
+.img { position: relative; overflow: hidden; background-color: var(--studio); }
+
+/* 写真に替える：.img-hero { background: url(images/hero.jpg) center/cover; }
+   推奨比率 4:5 の縦長：髪型の後ろ姿または斜め後ろ、グレーの背景、顔は写さない
+   写真に替える：.img-l1 { background: url(images/look-1.jpg) center/cover; }（.img-l2〜.img-l6 も同様）
+   推奨比率 3:4 の縦長：1枚に1つの髪型、後ろ姿または斜め後ろ */
+:is(.img-hero, .img-l1, .img-l2, .img-l3, .img-l4, .img-l5, .img-l6) {
+  --hair: color-mix(in srgb, var(--text) 86%, var(--studio));   /* 髪色 */
+  --cloth: color-mix(in srgb, var(--surface) 80%, var(--studio)); /* トップス */
+  background:
+    /* 肩とトップス */
+    radial-gradient(80% 40% at 50% 104%, var(--cloth) 97%, transparent 100%),
+    /* うなじ */
+    linear-gradient(90deg, color-mix(in srgb, var(--tone) 78%, var(--studio-deep)), var(--tone) 45%, color-mix(in srgb, var(--tone) 84%, var(--studio-deep))) 50% 70% / 17% 34% no-repeat,
+    /* 左上からのやわらかい光とグレーの背景 */
+    radial-gradient(85% 60% at 18% 12%, color-mix(in srgb, var(--surface) 75%, transparent), transparent 100%),
+    linear-gradient(180deg, var(--studio), var(--studio-deep));
+}
+/* 背景に落ちる影 */
+:is(.img-hero, .img-l1, .img-l2, .img-l3, .img-l4, .img-l5, .img-l6)::before { content: ""; position: absolute; left: 40%; top: 10%; width: 52%; height: 54%; filter: blur(10px);
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--text) 17%, transparent), transparent); }
+/* 髪：位置と形は各画像の --hl／--ht／--hw／--hh／--hr で決まります。--hd はその髪型のディテール */
+:is(.img-hero, .img-l1, .img-l2, .img-l3, .img-l4, .img-l5, .img-l6)::after { content: ""; position: absolute; left: var(--hl, 27%); top: var(--ht, 13%); width: var(--hw, 46%); height: var(--hh, 44%); border-radius: var(--hr, 48% 48% 9% 9% / 56% 56% 5% 5%); filter: blur(1px);
+  background:
+    var(--hd, linear-gradient(transparent, transparent)),
+    /* 頭頂部のつやの輪 */
+    radial-gradient(60% 36% at 46% 4%, transparent 58%, color-mix(in srgb, var(--tone) 30%, transparent) 76%, transparent 96%),
+    /* 毛流れと、毛先の内側の影 */
+    repeating-linear-gradient(90deg, transparent 0 3.1%, color-mix(in srgb, var(--surface) 6%, transparent) 3.1% 3.9%),
+    repeating-linear-gradient(90deg, transparent 0 7.3%, color-mix(in srgb, var(--text) 24%, transparent) 7.3% 8.1%),
+    linear-gradient(180deg, transparent 72%, color-mix(in srgb, var(--text) 36%, transparent)),
+    linear-gradient(90deg, color-mix(in srgb, var(--hair) 78%, var(--text)), var(--hair) 32% 60%, color-mix(in srgb, var(--hair) 62%, var(--text))); }
+/* ファーストビュー：あご下のボブ、毛先はまっすぐ */
+.img-hero { --hl: 25%; --hw: 49%; --ht: 13%; --hh: 46%; }
+/* 1 ロングウェーブ：明るい髪色、連なるウェーブ */
+.img-l1 { --hair: color-mix(in srgb, var(--text) 52%, var(--studio)); --hl: 23%; --hw: 54%; --ht: 10%; --hh: 72%; --hr: 50% 50% 44% 44% / 30% 30% 14% 14%;
+  --hd: repeating-linear-gradient(168deg, transparent 0 5%, color-mix(in srgb, var(--tone) 26%, transparent) 9%, transparent 13%) 0 100% / 100% 70% no-repeat, repeating-linear-gradient(194deg, transparent 0 6%, color-mix(in srgb, var(--text) 20%, transparent) 10%, transparent 14%) 0 100% / 100% 70% no-repeat; }
+/* 2 あご下のショートボブ：うなじが見える */
+.img-l2 { --hl: 29%; --hw: 42%; --ht: 14%; --hh: 36%; --hr: 50% 50% 30% 30% / 56% 56% 34% 34%; }
+/* 3 メンズフェード：上は濃く、うなじに向かって薄く。黒いトップス */
+.img-l3 { --cloth: color-mix(in srgb, var(--text) 84%, var(--studio)); --hl: 30%; --hw: 40%; --ht: 14%; --hh: 40%; --hr: 50% 50% 40% 40% / 46% 46% 54% 54%;
+  --hd: linear-gradient(180deg, transparent 32%, color-mix(in srgb, var(--tone) 55%, transparent) 58%, var(--tone) 84%); }
+/* 4 細めのハイライト：暗い髪色に明るい毛束 */
+.img-l4 { --hl: 25%; --hw: 50%; --ht: 11%; --hh: 62%; --hr: 50% 50% 18% 18% / 40% 40% 7% 7%;
+  --hd: repeating-linear-gradient(90deg, transparent 0 9%, color-mix(in srgb, var(--tone) 50%, transparent) 11% 12.5%, transparent 14.5% 21%) 0 100% / 100% 80% no-repeat; }
+/* 5 胸下のストレート：そろえた毛先、横に走るつや */
+.img-l5 { --hair: color-mix(in srgb, var(--text) 94%, var(--studio)); --hl: 27%; --hw: 46%; --ht: 10%; --hh: 74%; --hr: 50% 50% 5% 5% / 32% 32% 2% 2%;
+  --hd: linear-gradient(180deg, transparent 34%, color-mix(in srgb, var(--tone) 26%, transparent) 42%, transparent 52%); }
+/* 6 低めの編みおろし：背中に垂れる1本の三つ編み */
+.img-l6 { --hair: color-mix(in srgb, var(--text) 66%, var(--studio)); --hl: 28%; --hw: 44%; --ht: 13%; --hh: 40%; --hr: 50% 50% 44% 44% / 50% 50% 50% 50%; }
+.img-l6::before { left: 44%; top: 46%; width: 12%; height: 38%; border-radius: 40% 40% 50% 50% / 8% 8% 12% 12%; filter: blur(.6px);
+  background:
+    repeating-linear-gradient(38deg, transparent 0 7%, color-mix(in srgb, var(--text) 45%, transparent) 7% 9.5%) 0 0 / 50% 100% no-repeat,
+    repeating-linear-gradient(-38deg, transparent 0 7%, color-mix(in srgb, var(--text) 45%, transparent) 7% 9.5%) 100% 0 / 50% 100% no-repeat,
+    var(--hair); }
+
+/* 写真に替える：.img-s1 { background: url(images/stylist-1.jpg) center/cover; }（.img-s2、.img-s3 も同様）
+   推奨比率 4:5 の半身写真：グレーの背景、黒いトップス、人物は中央、頭の上に少し余白 */
+:is(.img-s1, .img-s2, .img-s3) { aspect-ratio: 4 / 5; border-radius: var(--radius); --hair: color-mix(in srgb, var(--text) 84%, var(--studio)); --hx: 50%;
+  background: radial-gradient(80% 56% at var(--lx, 20%) 12%, color-mix(in srgb, var(--surface) 78%, transparent), transparent 100%), linear-gradient(180deg, var(--studio), var(--studio-deep)); }
+/* 頭と首：ソフトフォーカスの楕円（顔のパーツは描かない）。--back は後ろの髪、--fringe は頭頂部と前髪 */
+:is(.img-s1, .img-s2, .img-s3)::before { content: ""; position: absolute; left: calc(var(--hx) - 22%); top: 13%; width: 44%; height: 56%; filter: blur(3px);
+  background:
+    var(--fringe, radial-gradient(47% 21% at 50% 22%, var(--hair) 76%, transparent 100%)),
+    radial-gradient(36% 29% at 50% 41%, var(--tone) 82%, transparent 100%),
+    linear-gradient(color-mix(in srgb, var(--tone) 78%, var(--studio-deep)), color-mix(in srgb, var(--tone) 78%, var(--studio-deep))) 50% 96% / 27% 40% no-repeat,
+    var(--back, linear-gradient(transparent, transparent)); }
+/* 黒いトップス：台形の肩のラインと丸首 */
+:is(.img-s1, .img-s2, .img-s3)::after { content: ""; position: absolute; left: var(--sx, 7%); right: var(--sx, 7%); top: 63%; bottom: 0; filter: blur(1px);
+  clip-path: polygon(30% 0, 70% 0, 94% 17%, 100% 100%, 0 100%, 6% 17%);
+  background:
+    radial-gradient(15% 17% at 50% 0, color-mix(in srgb, var(--tone) 78%, var(--studio-deep)) 94%, transparent 100%),
+    linear-gradient(90deg, color-mix(in srgb, var(--text) 78%, var(--studio)), var(--text) 30% 70%, color-mix(in srgb, var(--text) 84%, var(--studio))); }
+/* 1 肩までのロング */
+.img-s1 { --back: radial-gradient(50% 48% at 50% 46%, var(--hair) 88%, transparent 100%); }
+/* 2 ショート、肩幅は広め、光は右から */
+.img-s2 { --hx: 49%; --lx: 82%; --sx: 3%; --fringe: radial-gradient(33% 9% at 53% 15%, var(--hair) 70%, transparent 100%); --back: radial-gradient(40% 23% at 50% 27%, var(--hair) 88%, transparent 100%); }
+/* 3 あご下のボブ、明るめの髪色 */
+.img-s3 { --hx: 51%; --lx: 50%; --hair: color-mix(in srgb, var(--text) 58%, var(--studio)); --back: radial-gradient(50% 34% at 50% 37%, var(--hair) 90%, transparent 100%); }
+
+/* 写真に替える：.img-shop { background: url(images/shop.jpg) center/cover; }
+   推奨比率 3:2 の横長：店内の鏡とチェア、人物なし */
+.img-shop { aspect-ratio: 3 / 2; border-radius: var(--radius);
+  background:
+    /* 3枚の鏡：鏡面と細い黒のフレーム */
+    linear-gradient(155deg, var(--surface), color-mix(in srgb, var(--studio) 60%, var(--surface)) 60%, var(--studio)) 20.45% 18.3% / 12% 40% no-repeat,
+    linear-gradient(155deg, var(--surface), color-mix(in srgb, var(--studio) 60%, var(--surface)) 60%, var(--studio)) 50% 18.3% / 12% 40% no-repeat,
+    linear-gradient(155deg, var(--surface), color-mix(in srgb, var(--studio) 60%, var(--surface)) 60%, var(--studio)) 79.55% 18.3% / 12% 40% no-repeat,
+    linear-gradient(var(--text), var(--text)) 20.11% 17.2% / 13% 42% no-repeat,
+    linear-gradient(var(--text), var(--text)) 50% 17.2% / 13% 42% no-repeat,
+    linear-gradient(var(--text), var(--text)) 79.89% 17.2% / 13% 42% no-repeat,
+    /* 鏡の下のカウンター */
+    linear-gradient(color-mix(in srgb, var(--text) 62%, var(--studio)), color-mix(in srgb, var(--text) 62%, var(--studio))) 50% 56.7% / 84% 1.2% no-repeat,
+    /* 左の窓から床に落ちる光 */
+    linear-gradient(108deg, transparent 8%, color-mix(in srgb, var(--surface) 40%, transparent) 20% 34%, transparent 48%) 0 100% / 100% 23% no-repeat,
+    /* コンクリート壁の濃淡と床 */
+    radial-gradient(50% 60% at 12% 30%, color-mix(in srgb, var(--surface) 45%, transparent), transparent 100%),
+    radial-gradient(40% 50% at 86% 20%, color-mix(in srgb, var(--text) 10%, transparent), transparent 100%),
+    linear-gradient(180deg, var(--studio) 0 78%, color-mix(in srgb, var(--studio-deep) 82%, var(--text)) 78%); }
+/* 3脚の黒いチェア：背もたれ、座面、支柱、ベース */
+.img-shop::before { content: ""; position: absolute; left: 11%; width: 78%; top: 0; bottom: 0;
+  background:
+    linear-gradient(90deg, transparent 38%, var(--text) 38% 62%, transparent 62%) 0 67% / 33.334% 12% repeat-x,
+    linear-gradient(90deg, transparent 32%, var(--text) 32% 68%, transparent 68%) 0 74.6% / 33.334% 3.5% repeat-x,
+    linear-gradient(90deg, transparent 48.5%, color-mix(in srgb, var(--text) 78%, var(--studio)) 48.5% 51.5%, transparent 51.5%) 0 83.9% / 33.334% 10% repeat-x,
+    linear-gradient(90deg, transparent 37%, color-mix(in srgb, var(--text) 78%, var(--studio)) 37% 63%, transparent 63%) 0 86.7% / 33.334% 1.4% repeat-x; }
+/* 鏡の間の2つのペンダントライト */
+.img-shop::after { content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(closest-side, var(--surface) 0 92%, transparent 100%) 36.6% 16.2% / 3% 4.5% no-repeat,
+    radial-gradient(closest-side, var(--surface) 0 92%, transparent 100%) 63.4% 16.2% / 3% 4.5% no-repeat,
+    linear-gradient(var(--text), var(--text)) 37.1% 0 / .25% 16% no-repeat,
+    linear-gradient(var(--text), var(--text)) 63.1% 0 / .25% 16% no-repeat; }
+
+/* ---------- ファーストビュー：左に大きな文字、右に縦長の写真（右端まで裁ち落とし） ---------- */
+.hero { padding: var(--header-h) 0 0; }
+.hero-grid { display: grid; grid-template-columns: minmax(var(--gutter), 1fr) minmax(0, calc(var(--max) * .56)) minmax(0, calc(var(--max) * .44)) minmax(var(--gutter), 1fr); }
+.hero-text { grid-column: 2; align-self: center; padding-block: 3rem; padding-inline-end: clamp(1.5rem, 4vw, 4rem); }
+.hero h1 { font-size: var(--fs-h1); line-height: 1.2; }
+.hero-sub { color: var(--muted); margin-top: clamp(1.5rem, 3vw, 2rem); max-width: 26em; font-size: clamp(1rem, 1.3vw, 1.125rem); }
+.hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; margin-top: clamp(2rem, 4vw, 3rem); }
+.hero-cta .text-link { display: inline-flex; align-items: center; min-height: 44px; }
+.img-hero { grid-column: 3 / -1; height: clamp(520px, calc(100svh - var(--header-h)), 820px); }
+@media (max-width: 760px) {
+  .hero-grid { display: block; }
+  .hero-text { padding: 2rem var(--gutter) 2.5rem; }
+  .img-hero { height: auto; aspect-ratio: 4 / 5; margin-inline-start: var(--gutter); }
+}
+
+/* ---------- 料金表：大きな文字のリスト（このページの主役） ---------- */
+.price-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3.2fr); column-gap: clamp(2rem, 6vw, 6rem); align-items: end; margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
+.price-group { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3.2fr); column-gap: clamp(2rem, 6vw, 6rem); padding-top: 1.5rem; padding-bottom: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--text); }
+.price-group h3 { font-size: var(--fs-h3); }
+.price-group li { display: grid; grid-template-columns: minmax(0, 1fr) 6rem clamp(11rem, 22vw, 16rem); column-gap: 1.5rem; align-items: baseline; padding-block: 1rem; border-bottom: 1px solid var(--line); }
+.price-group li:first-child { padding-top: 0; }
+.price-group li:last-child { border-bottom: 0; }
+.p-name { font-size: var(--fs-lg); line-height: 1.4; }
+.p-time { color: var(--muted); font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
+.p-amt { font: 500 var(--fs-h2)/1.1 var(--font-heading); font-variant-numeric: tabular-nums; text-align: end; white-space: nowrap; }
+.p-amt small { font: 400 var(--fs-sm)/1 var(--font-body); color: var(--muted); }
+.p-amt small:first-child { margin-inline-end: .4em; }
+.p-amt small:last-child { margin-inline-start: .4em; }
+.price-extra { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3.2fr); column-gap: clamp(2rem, 6vw, 6rem); padding-top: 1.5rem; border-top: 1px solid var(--text); font-size: .9375rem; }
+.price-extra h3 { font: 500 var(--fs-body)/1.8 var(--font-body); }
+.price-extra dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem 1.5rem; }
+.price-extra dt { color: var(--muted); }
+.price-extra dd { font-weight: 500; font-variant-numeric: tabular-nums; }
+@media (max-width: 860px) {
+  .price-head, .price-group, .price-extra { grid-template-columns: minmax(0, 1fr); }
+  .price-head { row-gap: .75rem; }
+  .price-group { padding-top: 1rem; padding-bottom: 1.5rem; }
+  .price-group h3 { margin-bottom: 1rem; }
+  .price-group li { grid-template-columns: minmax(0, 1fr) auto; column-gap: 1rem; padding-block: .75rem; }
+  .p-name { grid-column: 1; grid-row: 1; font-size: 1.0625rem; }
+  .p-time { grid-column: 1; grid-row: 2; }
+  .p-amt { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+  .price-extra h3 { margin-bottom: .5rem; }
+}
+@media (max-width: 480px) { .price-extra dl { grid-template-columns: minmax(0, 1fr); gap: 0; } .price-extra dl > div { display: flex; justify-content: space-between; gap: 1rem; padding-block: .25rem; } }
+
+/* ---------- スタイリスト：縦長の写真と、それぞれの予約ボタン ---------- */
+.sty-head { max-width: 36em; margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
+.sty-head p { margin-top: 1rem; }
+.sty-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 4rem); }
+.sty { display: grid; grid-template-rows: auto 1fr auto; row-gap: 1.5rem; }
+.sty h3 { font-size: var(--fs-h3); }
+.sty-role { color: var(--muted); font-size: var(--fs-sm); }
+.sty dl { margin-top: 1rem; font-size: .9375rem; }
+.sty dl > div { display: grid; grid-template-columns: 3.5em minmax(0, 1fr); gap: 1rem; padding-block: .6rem; border-top: 1px solid var(--line); }
+.sty dt { color: var(--muted); }
+.sty .btn { justify-self: start; }
+@media (max-width: 860px) {
+  .sty-grid { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .sty { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); grid-template-rows: auto auto; column-gap: 1.25rem; row-gap: 1rem; align-items: start; }
+  .sty .btn { grid-column: 1 / -1; justify-self: stretch; }
+  .sty dl > div { display: block; padding-block: .5rem; }
+  .sty dt, .sty dd { display: inline; }
+  .sty dt { margin-inline-end: .75em; }
+}
+
+/* ---------- Lookbook：横にスクロールするギャラリー（CSS scroll-snap、JS は不要）----------
+   タッチ、トラックパッド、Shift＋ホイール、キーボードの左右キーでスクロールできます。JS があるとき、PC では前後のボタンも表示します。 */
+.look { padding-bottom: calc(var(--section-y) - 1rem); }
+.look-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem 2rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.look-hint { color: var(--muted); font-size: var(--fs-sm); }
+.look-tools { display: flex; align-items: center; gap: 1.5rem; }
+.look-nav { display: flex; gap: .5rem; }
+html:not(.js) .look-nav { display: none; }
+.look-nav button { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid color-mix(in srgb, var(--text) 60%, transparent); border-radius: var(--radius-sm); background: transparent; color: var(--text); cursor: pointer; transition: background-color .2s, border-color .2s, opacity .2s; }
+.look-nav button:hover { border-color: var(--text); background: color-mix(in srgb, var(--text) 6%, transparent); }
+.look-nav button:active { transform: translateY(1px); }
+.look-nav button:disabled { opacity: .35; cursor: default; }
+.look-nav svg { width: 18px; height: 18px; }
+.look-scroll { overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; padding-bottom: 1rem;
+  scroll-padding-inline: max(var(--gutter), calc((100% - var(--max)) / 2)); scrollbar-width: thin; scrollbar-color: var(--accent) var(--line); }
+.look-list { display: flex; gap: clamp(1rem, 2vw, 1.5rem); width: max-content; padding-inline: max(var(--gutter), calc((100% - var(--max)) / 2)); }
+.look-scroll:focus-visible { outline-offset: -2px; }
+.look-scroll li { flex: 0 0 clamp(14rem, 23vw, 19rem); scroll-snap-align: start; }
+.look-scroll .img { aspect-ratio: 3 / 4; border-radius: var(--radius); }
+.look-scroll figcaption { margin-top: .75rem; font-size: var(--fs-sm); color: var(--muted); line-height: 1.6; }
+.look-scroll figcaption b { display: block; font-size: var(--fs-body); font-weight: 500; color: var(--text); }
+@media (prefers-reduced-motion: no-preference) { .look-scroll { scroll-behavior: smooth; } }
+@media (max-width: 760px) { .look-nav { display: none; } .look-scroll li { flex-basis: 62vw; } }
+
+/* ---------- はじめての方へ＋よくあるご質問 ---------- */
+.first-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(3rem, 8vw, 8rem); align-items: start; }
+.first-grid h2 { margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+.steps li { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); column-gap: 1rem; padding-block: 1.25rem; border-top: 1px solid var(--line); }
+.steps li:last-child { border-bottom: 1px solid var(--line); }
+.step-no { grid-row: span 2; font: 500 var(--fs-h3)/1.2 var(--font-heading); font-variant-numeric: tabular-nums; }
+.steps h3 { font: 500 var(--fs-lg)/1.4 var(--font-heading); }
+.steps p { color: var(--muted); margin-top: .25rem; }
+.faq details { border-top: 1px solid var(--line); }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 64px; padding-block: 1rem; cursor: pointer; list-style: none; font-size: var(--fs-lg); font-weight: 500; line-height: 1.4; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; flex: none; width: .5em; height: .5em; margin-inline: .25rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.faq details[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+.faq summary:hover { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+.faq summary:active { opacity: .7; }
+.faq details p { color: var(--muted); padding-bottom: 1.5rem; max-width: 34em; }
+@media (max-width: 860px) { .first-grid { grid-template-columns: minmax(0, 1fr); gap: 3rem; } }
+
+/* ---------- 営業時間とアクセス ---------- */
+.visit-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.visit h2 { margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+.hours > div { display: flex; justify-content: space-between; gap: 1rem; padding-block: .75rem; border-top: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.hours > div:last-child { border-bottom: 1px solid var(--line); }
+.hours dt em { font-style: normal; font-size: var(--fs-sm); margin-inline-start: .75rem; border-bottom: 2px solid var(--accent); }
+.hours .today { font-weight: 500; }
+.hours .off dd { color: var(--muted); }
+.visit-note { margin-top: 1rem; font-size: var(--fs-sm); color: var(--muted); }
+.visit-addr { margin-top: 1.5rem; max-width: 30em; }
+.visit-addr b { display: block; font-size: var(--fs-lg); font-weight: 500; line-height: 1.5; }
+.visit-addr span { color: var(--muted); }
+.visit-links { display: flex; flex-wrap: wrap; gap: .75rem 2rem; margin-top: 1.5rem; }
+.visit-links a { display: inline-flex; align-items: center; min-height: 44px; }
+@media (max-width: 860px) { .visit-grid { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; } .visit-info { order: -1; } }
+
+/* ---------- ご予約 ---------- */
+.cta { background: var(--surface); border-top: 1px solid var(--line); }
+.cta h2 { font-size: var(--fs-h1); line-height: 1.2; }
+.cta p { color: var(--muted); margin-top: clamp(1.5rem, 3vw, 2rem); max-width: 30em; }
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: clamp(2rem, 4vw, 3rem); }
+.cta-row .text-link { margin-inline-start: 1rem; min-height: 44px; display: inline-flex; align-items: center; font-variant-numeric: tabular-nums; }
+@media (max-width: 760px) {
+  /* スマホ：下部固定バーに同じ予約ボタンがあるため、ここは LINE だけ残します */
+  .cta .btn-primary { display: none; }
+  .cta-row { display: grid; grid-template-columns: minmax(0, 1fr); }
+  /* 電話は下部固定バーにあるため、ここでは繰り返しません */
+  .cta-row .text-link { display: none; }
+}
+
+/* ---------- フッター ---------- */
+.site-footer { background: var(--brand); color: color-mix(in srgb, var(--brand-ink) 80%, var(--brand)); padding-block: 4.5rem 2rem; font-size: .9375rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; }
+.site-footer .logo { color: var(--brand-ink); margin-bottom: .5rem; }
+.site-footer h2 { color: var(--brand-ink); font: 500 var(--fs-body)/1.8 var(--font-body); margin-bottom: .5rem; }
+.site-footer a:hover { color: var(--brand-ink); text-decoration: underline; text-underline-offset: 4px; }
+.site-footer :focus-visible { outline-color: var(--brand-ink); }
+.social { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+.social a { display: inline-flex; align-items: center; min-height: 32px; text-decoration: underline; text-underline-offset: 4px; }
+.foot-bottom { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid color-mix(in srgb, var(--brand-ink) 18%, transparent); font-size: var(--fs-sm); }
+.foot-hours-short { display: none; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; } .foot-hours { display: none; } .foot-hours-short { display: block; } .site-footer { padding-top: 3rem; } .foot-bottom { margin-top: 2rem; } }
+
+/* ---------- スマホの下部固定ボタン ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 760px) {
+  .mobile-bar { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: .5rem; position: fixed; inset: auto 0 0; z-index: 60; padding: .75rem 1rem calc(.75rem + env(safe-area-inset-bottom)); background: var(--surface); border-top: 1px solid var(--line); }
+  .mobile-bar .btn { padding: .5rem 1rem; }
+  /* ファーストビューのボタンが画面内にある間は下部固定バーを隠します。JS がない場合は常に表示 */
+  .js .mobile-bar { transform: translateY(110%); transition: transform .3s ease; }
+  .js .mobile-bar.show { transform: none; }
+  body { padding-bottom: 72px; }
+}
+
+/* ---------- ファーストビューの登場（ページで唯一のアニメーション） ---------- */
+.js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ==================== 言語切り替え（lang-switch） ==================== */
+.nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
+.lang-switch { display: flex; align-items: center; gap: .1rem; flex: none; margin-inline-start: .5rem; padding-inline-start: .6rem; border-inline-start: 1px solid var(--line); font: 400 .8125rem/1 var(--font-body); letter-spacing: normal; }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; border-radius: var(--radius-sm); color: var(--muted); text-decoration: none; text-underline-offset: 5px; text-decoration-thickness: 2px; transition: color .2s, background-color .2s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 8%, transparent); }
+.lang-switch a:active { background: color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch a:focus-visible { outline: 2px solid var(--text); outline-offset: 1px; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 500; text-decoration-line: underline; text-decoration-color: var(--accent); }
+@media (max-width: 760px) {
+  .nav > .lang-switch { order: 1; margin-inline: 0; padding-inline-start: 0; border: 0; }
+  .nav > .menu-btn { order: 2; }
+  .nav > .nav-links { order: 3; }
+}
+@media (min-width: 761px) and (max-width: 1000px) {
+  .nav > .nav-links { gap: 1rem; font-size: .875rem; }
+  .nav > .nav-links .btn { padding-inline: .9rem; }
+  .nav > .lang-switch { margin-inline-start: 0; padding-inline-start: .3rem; }
+}
+@media (max-width: 400px) { .nav { gap: .5rem; } .logo { font-size: 1.125rem; } }
+/* フッターの言語リンク */
+.foot-lang { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .75rem; font-size: var(--fs-sm); }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius-sm); }
+.foot-lang a:hover { text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--brand-ink); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { font-weight: 500; color: var(--brand-ink); text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: color-mix(in srgb, var(--accent) 50%, var(--brand-ink)); }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: var(--radius-sm); color: inherit; font-weight: 500; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--text) 8%, transparent); }
+.lang-menu > summary:active { background: color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">メインコンテンツへ移動</a>
+
+<!-- ==================== セクション：ヘッダー ==================== -->
+<!-- サンプル内容：公開前に実際の情報に差し替えてください（店名は架空です） -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="SOU ヘアスタジオ ページの先頭へ"><span lang="en" translate="no">SOU</span> ヘアスタジオ</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="メインメニュー">
+      <a href="#prices">料金</a>
+      <a href="#stylists">スタイリスト</a>
+      <a href="#lookbook">スタイル</a>
+      <a href="#first">はじめての方へ</a>
+      <a href="#visit">営業時間</a>
+      <a href="#stylists" class="btn btn-ghost">ご予約</a>
+    </nav>
+    <!-- lang-switch：言語切り替え。言語を追加するときは、ここにリンクを足し、対応するフォルダを作成します -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="ja">JA</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<!-- ==================== セクション：ファーストビュー ==================== -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div class="hero-text reveal">
+      <h1>話してから、<br>切りはじめます</h1>
+      <p class="hero-sub">SOU は三軒茶屋にある、スタイリスト3名の小さなヘアサロンです。毎回はじめに10分ほどお話しし、料金は施術の前にお伝えします。</p>
+      <div class="hero-cta">
+        <a href="#stylists" class="btn btn-primary">指名して予約</a>
+        <a href="#prices" class="text-link">料金を見る</a>
+      </div>
+    </div>
+    <div class="img img-hero" role="img" aria-label="写真の位置：あご下のボブの後ろ姿、グレーの背景、顔は写さない"></div>
+  </div>
+</section>
+
+<!-- ==================== セクション：料金表 ==================== -->
+<!-- サンプル内容：公開前に実際の情報に差し替えてください（メニュー、料金、所要時間はすべて架空です）。1行が1つの <li> です。コピーまたは削除でメニューを増減できます -->
+<section id="prices">
+  <div class="wrap">
+    <div class="price-head">
+      <h2>料金</h2>
+      <p class="lead">ショートヘアの基本料金です（すべて税込）。当日の料金と所要時間は、施術の前にスタイリストがお伝えします。</p>
+    </div>
+    <div class="price-group">
+      <h3>カット</h3>
+      <ul>
+        <li><span class="p-name">カット（シャンプーとブロー込み）</span><span class="p-time">60分</span><span class="p-amt"><small>¥</small>6,600<small>〜</small></span></li>
+        <li><span class="p-name">メンズフェードカット</span><span class="p-time">45分</span><span class="p-amt"><small>¥</small>5,500<small>〜</small></span></li>
+        <li><span class="p-name">キッズカット（小学生以下）</span><span class="p-time">30分</span><span class="p-amt"><small>¥</small>3,300<small>〜</small></span></li>
+      </ul>
+    </div>
+    <div class="price-group">
+      <h3>カラー</h3>
+      <ul>
+        <li><span class="p-name">フルカラー</span><span class="p-time">2時間</span><span class="p-amt"><small>¥</small>8,800<small>〜</small></span></li>
+        <li><span class="p-name">リタッチカラー</span><span class="p-time">1.5時間</span><span class="p-amt"><small>¥</small>6,600<small>〜</small></span></li>
+        <li><span class="p-name">ブリーチ（1回）</span><span class="p-time">2.5時間</span><span class="p-amt"><small>¥</small>9,900<small>〜</small></span></li>
+      </ul>
+    </div>
+    <div class="price-group">
+      <h3>パーマ</h3>
+      <ul>
+        <li><span class="p-name">デジタルパーマ</span><span class="p-time">3時間</span><span class="p-amt"><small>¥</small>13,200<small>〜</small></span></li>
+        <li><span class="p-name">コールドパーマ</span><span class="p-time">2.5時間</span><span class="p-amt"><small>¥</small>9,900<small>〜</small></span></li>
+        <li><span class="p-name">縮毛矯正</span><span class="p-time">3.5時間</span><span class="p-amt"><small>¥</small>16,500<small>〜</small></span></li>
+      </ul>
+    </div>
+    <div class="price-group">
+      <h3>ケア</h3>
+      <ul>
+        <li><span class="p-name">髪質改善トリートメント</span><span class="p-time">40分</span><span class="p-amt"><small>¥</small>5,500<small>〜</small></span></li>
+        <li><span class="p-name">ヘッドスパ</span><span class="p-time">30分</span><span class="p-amt"><small>¥</small>4,400<small>〜</small></span></li>
+      </ul>
+    </div>
+    <div class="price-extra">
+      <h3>追加料金（1メニューごと）</h3>
+      <dl>
+        <div><dt>ミディアム（肩下）</dt><dd>+1,100円</dd></div>
+        <div><dt>ロング（胸下）</dt><dd>+2,200円</dd></div>
+        <div><dt>ディレクター Mika 指名</dt><dd>+1,100円</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：スタイリスト ==================== -->
+<!-- サンプル内容：公開前に実際の情報に差し替えてください（スタイリストの名前、経歴、出勤日、写真はすべて架空です）。
+     各スタイリストの予約ボタンは、それぞれの LINE リンクに変更できます -->
+<section id="stylists">
+  <div class="wrap">
+    <div class="sty-head">
+      <h2>スタイリスト</h2>
+      <p class="lead">3名のスタイリストは、出勤日がそれぞれ違います。ご予約のときに指名していただくと、次回からも同じスタイリストが担当します。</p>
+    </div>
+    <div class="sty-grid">
+      <article class="sty">
+        <div class="img img-s1" role="img" aria-label="写真の位置：スタイリスト Mika の半身写真、黒いトップス、グレーの背景"></div>
+        <div>
+          <h3><span lang="en">Mika</span> <span>森 美佳</span></h3>
+          <p class="sty-role">ディレクター（歴14年）</p>
+          <dl>
+            <div><dt>得意</dt><dd>ショートとボブ、ラインのきれいなカット</dd></div>
+            <div><dt>出勤</dt><dd>火曜〜土曜</dd></div>
+          </dl>
+        </div>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE で Mika を予約</a>
+      </article>
+      <article class="sty">
+        <div class="img img-s2" role="img" aria-label="写真の位置：スタイリスト Sho の半身写真、黒いトップス、グレーの背景"></div>
+        <div>
+          <h3><span lang="en">Sho</span> <span>坂本 翔</span></h3>
+          <p class="sty-role">スタイリスト（歴9年）</p>
+          <dl>
+            <div><dt>得意</dt><dd>メンズフェードとショート、デジタルパーマ</dd></div>
+            <div><dt>出勤</dt><dd>水曜〜日曜</dd></div>
+          </dl>
+        </div>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE で Sho を予約</a>
+      </article>
+      <article class="sty">
+        <div class="img img-s3" role="img" aria-label="写真の位置：スタイリスト Yuu の半身写真、黒いトップス、グレーの背景"></div>
+        <div>
+          <h3><span lang="en">Yuu</span> <span>結城 優</span></h3>
+          <p class="sty-role">スタイリスト（歴5年）</p>
+          <dl>
+            <div><dt>得意</dt><dd>ブリーチとハイライト、ロングのレイヤー</dd></div>
+            <div><dt>出勤</dt><dd>火曜、木曜〜日曜</dd></div>
+          </dl>
+        </div>
+        <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE で Yuu を予約</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：スタイル写真（Lookbook） ==================== -->
+<!-- サンプル内容：公開前に実際の情報に差し替えてください（スタイルとスタイリストは架空です）。1点が1つの <li> です。自由に増減できます -->
+<section class="look" id="lookbook">
+  <div class="wrap look-head">
+    <h2 id="look-h">スタイル</h2>
+    <div class="look-tools">
+      <p class="look-hint">横にスクロールできます（全6点）</p>
+      <div class="look-nav">
+        <button type="button" aria-label="前へ" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" aria-label="次へ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="look-scroll" tabindex="0" role="region" aria-labelledby="look-h">
+  <ul class="look-list">
+    <li><figure><div class="img img-l1" role="img" aria-label="写真の位置：ロングウェーブの後ろ姿"></div><figcaption><b>ロングウェーブ</b>デジタルパーマ、担当 Sho</figcaption></figure></li>
+    <li><figure><div class="img img-l2" role="img" aria-label="写真の位置：あご下のショートボブの後ろ姿"></div><figcaption><b>あご下のボブ</b>カット、担当 Mika</figcaption></figure></li>
+    <li><figure><div class="img img-l3" role="img" aria-label="写真の位置：メンズフェードの後ろ姿"></div><figcaption><b>メンズフェード</b>カット、担当 Sho</figcaption></figure></li>
+    <li><figure><div class="img img-l4" role="img" aria-label="写真の位置：細めのハイライトの後ろ姿"></div><figcaption><b>細めのハイライト</b>ブリーチとカラー、担当 Yuu</figcaption></figure></li>
+    <li><figure><div class="img img-l5" role="img" aria-label="写真の位置：胸下のストレートの後ろ姿"></div><figcaption><b>胸下のストレート</b>縮毛矯正、担当 Mika</figcaption></figure></li>
+    <li><figure><div class="img img-l6" role="img" aria-label="写真の位置：低めの編みおろしの後ろ姿"></div><figcaption><b>低めの編みおろし</b>ヘアアレンジ、担当 Yuu</figcaption></figure></li>
+  </ul>
+  </div>
+</section>
+
+<!-- ==================== セクション：はじめての方へ＋よくあるご質問 ==================== -->
+<section id="first">
+  <div class="wrap first-grid">
+    <div>
+      <h2>はじめての方へ</h2>
+      <ol class="steps">
+        <li><span class="step-no" aria-hidden="true">1</span><h3>スタイリストと日時を選ぶ</h3><p>LINE でご希望のメニューをお知らせください。参考写真も送っていただけます。</p></li>
+        <li><span class="step-no" aria-hidden="true">2</span><h3>来店したら、まずご相談</h3><p>はじめに10分ほどお話しして、仕上がり、所要時間、料金を確認します。</p></li>
+        <li><span class="step-no" aria-hidden="true">3</span><h3>お手入れの方法もお伝えします</h3><p>仕上げのときに、ご自宅でのブローとスタイリングの方法をお見せします。</p></li>
+      </ol>
+    </div>
+    <div class="faq">
+      <h2>よくあるご質問</h2>
+      <details>
+        <summary>カラーやパーマはどのくらいかかりますか？</summary>
+        <p>カラーは2〜3時間、パーマは3〜4時間が目安です。ブリーチをする場合はさらにかかります。ご予約のときに、終了予定の時間をお伝えします。</p>
+      </details>
+      <details>
+        <summary>予約の変更やキャンセルはできますか？</summary>
+        <p>ご予約の前日までに LINE でお知らせください。当日のキャンセルが2回以上になった場合は、次回から事前に予約金をお願いしています。</p>
+      </details>
+      <details>
+        <summary>子どものカットはできますか？</summary>
+        <p>はい。小学生以下はキッズカットの料金です。平日の午後は店内が落ち着いているのでおすすめです。</p>
+      </details>
+      <details>
+        <summary>相談だけでも大丈夫ですか？</summary>
+        <p>大丈夫です。お話のあとで検討したい場合、当日の料金はいただきません。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：営業時間とアクセス ==================== -->
+<!-- サンプル内容：公開前に実際の情報に差し替えてください（住所、電話、営業時間はすべて架空です）。
+     data-days は曜日です（0 = 日曜、1 = 月曜 … 6 = 土曜）。「本日」の表示に使います -->
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div>
+      <div class="img img-shop" role="img" aria-label="写真の位置：店内のコンクリートの壁、3枚の鏡と黒いチェア、人物なし"></div>
+      <p class="visit-addr"><b>東京都世田谷区三軒茶屋 1-2-3 2F</b><span>三軒茶屋駅 北口から徒歩4分。駐車場はありません。近くのコインパーキングをご利用ください。</span></p>
+    </div>
+    <div class="visit-info">
+      <h2>営業時間とアクセス</h2>
+      <dl class="hours" id="hours">
+        <div data-days="2,3,4,5"><dt>火曜〜金曜</dt><dd>11:00〜20:00</dd></div>
+        <div data-days="6"><dt>土曜</dt><dd>10:00〜19:00</dd></div>
+        <div data-days="0"><dt>日曜</dt><dd>10:00〜18:00</dd></div>
+        <div class="off" data-days="1"><dt>月曜</dt><dd>定休日</dd></div>
+      </dl>
+      <p class="visit-note">最終受付：カットは閉店の1時間前、カラーとパーマは閉店の3時間前までです。</p>
+      <div class="visit-links">
+        <a href="https://maps.google.com/?q=東京都世田谷区三軒茶屋1-2-3" class="text-link" target="_blank" rel="noopener">Google マップで開く</a>
+        <a href="tel:03-1234-5678" class="text-link num">電話 03-1234-5678</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：ご予約 ==================== -->
+<section class="cta" id="book">
+  <div class="wrap">
+    <h2>ご予約は<br>LINE でどうぞ</h2>
+    <p>どのスタイリストにするか迷っている方も、ご希望のメニューと日時をお知らせください。こちらでご案内します。</p>
+    <div class="cta-row">
+      <a href="#stylists" class="btn btn-primary">指名して予約</a>
+      <a href="https://line.me/R/ti/p/@yourlineid" class="btn btn-ghost" target="_blank" rel="noopener">LINE で指名なし予約</a>
+      <a href="tel:03-1234-5678" class="text-link">03-1234-5678</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== セクション：フッター ==================== -->
+<!-- サンプル内容：公開前に実際の情報に差し替えてください（店名、住所、電話はすべて架空です） -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo"><span lang="en" translate="no">SOU</span> ヘアスタジオ</div>
+        <p>東京都世田谷区三軒茶屋 1-2-3 2F<br>電話：<a href="tel:03-1234-5678">03-1234-5678</a></p>
+      </div>
+      <div>
+        <h2>営業時間</h2>
+        <p class="foot-hours-short">火曜〜日曜営業、月曜定休</p>
+        <p class="foot-hours">火曜〜金曜 11:00〜20:00<br>土曜 10:00〜19:00<br>日曜 10:00〜18:00<br>月曜定休</p>
+      </div>
+      <div>
+        <h2>SNS</h2>
+        <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE</a></div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y">2026</span> SOU ヘアスタジオ</span>
+    </div>
+    <!-- フッターの言語リンク：ヘッダーの lang-switch と同じ組み合わせ -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a></p>
+  </div>
+</footer>
+
+<!-- ==================== セクション：スマホの下部固定ボタン ==================== -->
+<div class="mobile-bar">
+  <a href="tel:03-1234-5678" class="btn btn-ghost">電話する</a>
+  <a href="#stylists" class="btn btn-primary">指名して予約</a>
+</div>
+
+<script>
+// UI の文言（言語を変えるときはここだけ変更）
+const T = { today: '本日', openMenu: 'メニューを開く', closeMenu: 'メニューを閉じる' };
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// スクロール時のヘッダー背景
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+// ハンバーガーメニュー（リンクのクリックまたは Esc で閉じます）
+const menuBtn = document.querySelector('.menu-btn');
+const links = document.getElementById('nav-links');
+const setMenu = open => {
+  links.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.setAttribute('aria-label', open ? T.closeMenu : T.openMenu);
+};
+menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && links.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
+
+// 営業時間：本日を表示。TZ はお店のタイムゾーンに変更してください（例：'Asia/Tokyo'）
+const TZ = 'Asia/Tokyo';
+const wd = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(new Intl.DateTimeFormat('en-US', { timeZone: TZ, weekday: 'short' }).format(new Date()));
+document.querySelectorAll('#hours [data-days]').forEach(row => {
+  if (!row.dataset.days.split(',').includes(String(wd))) return;
+  row.classList.add('today');
+  row.querySelector('dt').insertAdjacentHTML('beforeend', `<em>${T.today}</em>`);
+});
+
+// Lookbook：前後のボタン（ギャラリー自体は CSS でスクロールし、JS がなくても使えます）
+const scroller = document.querySelector('.look-scroll');
+const [prevBtn, nextBtn] = document.querySelectorAll('.look-nav button');
+const lookState = () => {
+  prevBtn.disabled = scroller.scrollLeft < 8;
+  nextBtn.disabled = scroller.scrollLeft > scroller.scrollWidth - scroller.clientWidth - 8;
+};
+prevBtn.addEventListener('click', () => scroller.scrollBy({ left: -scroller.clientWidth * .8 }));
+nextBtn.addEventListener('click', () => scroller.scrollBy({ left: scroller.clientWidth * .8 }));
+scroller.addEventListener('scroll', lookState, { passive: true }); lookState();
+
+// ファーストビューの登場（ここだけ）＋下部固定バーは、ファーストビューのボタンが画面外に出てから表示
+const reveals = document.querySelectorAll('.reveal');
+const bar = document.querySelector('.mobile-bar');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }));
+  reveals.forEach(el => io.observe(el));
+  new IntersectionObserver(([e]) => bar.classList.toggle('show', !e.isIntersecting)).observe(document.querySelector('.hero-cta'));
+} else { reveals.forEach(el => el.classList.add('in')); bar.classList.add('show'); }
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+/* Open towards whichever side has room (e.g. when the switcher sits inside the mobile menu) */
+document.querySelectorAll('.lang-menu').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var list = d.querySelector('.lang-list');
+    list.style.insetInlineStart = ''; list.style.insetInlineEnd = '';
+    if (!d.open) return;
+    var r = list.getBoundingClientRect();
+    if (r.left < 8 || r.right > document.documentElement.clientWidth - 8) {
+      var s = d.getBoundingClientRect();
+      var roomRight = document.documentElement.clientWidth - s.left;
+      if (roomRight >= r.width + 8) { list.style.insetInlineStart = '0'; list.style.insetInlineEnd = 'auto'; }
+    }
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>
