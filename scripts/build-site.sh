@@ -22,11 +22,11 @@ for s in slugs:
     subprocess.run(['python3', 'scripts/lang-index.py', str(S / s)], check=True)
 # 線上預覽專用照片：previews/<款式>/ → _site/templates/<款式>/_preview/，各語言頁加上樣式與說明（商品 zip 不含）
 P = pathlib.Path('previews')
-NOTE = {'zh-TW': '圖片為示意照片，可換成店家自己的照片（模板檔案不含照片）。',
-        'zh-CN': '图片为示意照片，可换成店家自己的照片（模板文件不含照片）。',
-        'en': 'Photos are for illustration only. Swap in your own business photos (photos are not included in the template files).',
-        'ja': '写真はイメージです。お店の写真に差し替えてご利用ください（テンプレートには写真は含まれません）。',
-        'es': 'Las fotos son solo ilustrativas. Reemplázalas por las fotos de tu negocio (la plantilla no incluye fotos).'}
+NOTE = {'zh-TW': '本頁為模板示意：店名、人物、評價、數據與照片皆為虛構，可換成店家自己的資料與照片（模板檔案不含照片）。',
+        'zh-CN': '本页为模板示意：店名、人物、评价、数据与照片均为虚构，可换成店家自己的资料与照片（模板文件不含照片）。',
+        'en': 'Template preview: all business names, people, reviews, figures and photos are fictional. Replace them with your own details and photos (photos are not included in the template files).',
+        'ja': 'テンプレートのサンプルです。店名・人物・口コミ・数値・写真はすべて架空のものです。お店の情報と写真に差し替えてご利用ください（テンプレートには写真は含まれません）。',
+        'es': 'Vista previa de plantilla: los nombres, personas, reseñas, cifras y fotos son ficticios. Reemplázalos por los datos y fotos de tu negocio (la plantilla no incluye fotos).'}
 for s in slugs:
     if not (P / s / 'photos.css').exists():
         continue

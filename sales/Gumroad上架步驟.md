@@ -104,9 +104,9 @@ Questions or custom work? / 有問題或想客製： polyglotpages.studio@gmail.
 ## 3. 網站客製服務（先上這個）
 
 > **11/23 更新：Commission 類型要帳號滿 30 天才能用。** 在那之前改用「訂金＋尾款」兩個 Digital product：
-> - 三語店家網站代製（訂金）：URL `trilingual-website-service`，Standard deposit $150／Pro deposit $275
+> - 三語店家網站代製（訂金）：URL `trilingual-website-service`，Standard deposit $150／Pro deposit $250（11/27 從 $275 改，合計 $499）
 > - 網站客製服務（訂金）：URL `website-customization`，Basic deposit $125／Plus deposit $225
-> - 網站尾款（Unlisted 不公開）：URL `final-payment`，Trilingual Standard $149／Pro $274／Customization Basic $124／Plus $224。網站做好、客人確認後才寄這個連結。
+> - 網站尾款（Unlisted 不公開）：URL `final-payment`，Trilingual Standard $149／Pro $249（11/27 從 $274 改）／Customization Basic $124／Plus $224。網站做好、客人確認後才寄這個連結。
 > 帳號滿 30 天（約 12/23）後，改回 Commission 一個商品。
 > **Content 頁（買家付款後看到的頁面）不能空白。** 訂金商品貼：
 > 「Thank you! Your deposit is confirmed. What happens next: 1. Within 1 business day we'll email you a short form… 2. Your site is ready for review within 7 days… 3. You only pay the remaining 50% after you've approved your finished site.」（中英對照全文見 `sales/交付流程.md` 第六節）
@@ -1162,6 +1162,8 @@ Perfect for freelancers who build sites for local businesses: one licence per te
 
 [貼上「共用文字」]
 ```
+- **Summary**（11/26 改成組合包寫法，已上線）：`All 30 one-page HTML website templates for small businesses, each in English, 繁體中文, 简体中文 and 日本語 (6 also in Español). Buy once, no monthly fees.`
+- **Additional details**（5 行）：`Templates: 30 (one-page each)`、`Format: HTML / CSS / JS`、`Languages: English, Traditional Chinese, Simplified Chinese, Japanese (6 with Spanish), switchable`、`Builder needed: None`、`Includes: step-by-step setup guide in each template`
 
 ---
 
@@ -1198,6 +1200,15 @@ Motion 動態版：只用瀏覽器內建技術做的高級動畫網站，不依�
 
 **Motion 全套組合包**：Name `All 5 Motion Edition Templates Bundle`，URL `motion-bundle`，Price `199`，Content 上傳 `dist/motion-bundle.zip`。
 
+- **說明**（11/26 上架時的組法）：日文段落 → Motion 共用開頭 → 下面這段 → 第 9 節 Studio 段落 → 第 2 節共用文字。
+```
+Includes all 5 Motion Edition templates: SaaS Launch Page, Creative Portfolio, Fine Dining Restaurant, Wedding Website with RSVP, Luxury Residences.
+包含全部 5 款 Motion 動態版模板：SaaS 發表頁、創意作品集、高級餐廳、婚禮網站（含 RSVP）、豪宅建案。
+```
+- **Summary**：`All 5 animated one-page HTML templates (Motion Edition), each in English, 繁體中文, 简体中文 and 日本語. Scroll animations without any library. Buy once, no monthly fees.`
+- **Additional details**（5 行）：`Templates: 5 animated one-page templates`、`Format: HTML / CSS / JS (no libraries)`、`Languages: English, Traditional Chinese, Simplified Chinese, Japanese, switchable`、`Builder needed: None`、`Includes: step-by-step setup guide in each template`
+- 價格目前用原價（Standard $199／Studio $349），沒用上市優惠價。
+
 ---
 
 ## 8. 三語店家網站代製（海外華人、新馬，12/3 上架）
@@ -1209,7 +1220,7 @@ Motion 動態版：只用瀏覽器內建技術做的高級動畫網站，不依�
 | 商品類型 | **Commission**（委託），先收 **50% 訂金**，完成後收尾款 |
 | Name | `Trilingual Business Website (English + 繁體 + 简体) — Done For You 三語店家網站代製` |
 | URL | `trilingual-website-service` |
-| Price | `299`，另外用 **Versions** 加 `Pro $549` |
+| Price | `299`，另外用 **Versions** 加 `Pro $499`（11/27 從 $549 改，跟開發信一致） |
 | Cover | 用 `sales/covers/en/restaurant-cover.png`，之後再做專屬封面 |
 | Summary | `A ready-to-launch website in English, Traditional and Simplified Chinese, with a language switcher. Delivered in 7 days.` |
 
@@ -1217,8 +1228,8 @@ Motion 動態版：只用瀏覽器內建技術做的高級動畫網站，不依�
 
 | 名稱 | 價格 | 說明 |
 |---|---|---|
-| Standard | $299 | One-page site in 3 languages with switcher, your content and photos, booking/WhatsApp/WeChat/LINE buttons, contact form, published on a free host. 1 revision round. |
-| Pro | $549 | Everything in Standard, plus custom domain, Google Business Profile setup, up to 2 extra sections, Motion animation option and 2 revision rounds. |
+| Standard | $299 | One-page site in 3 languages with switcher, your content and photos, call/map/booking/WhatsApp/WeChat buttons, contact form, connected to your own domain (bought in your name). 1 revision round. |
+| Pro | $499 | Everything in Standard, plus a design tailored to your brand, trilingual text written for you, your photos edited for the web, your Google Business Profile tidied up, search basics set up, and 2 revision rounds. |
 
 **Description**
 ```
@@ -1237,8 +1248,8 @@ What's included
 - Your text, photos, brand colours and opening hours
 - Call, WhatsApp, WeChat, LINE, map and booking buttons
 - Contact form sent to your email
-- Published on a free host; you own all the files
-- Pro: custom domain, Google Business Profile, Motion animation option
+- Connected to your own domain (bought in your name); free hosting, you own all the files
+- Pro: design tailored to your brand, text written for you, photo editing, Google Business Profile, search basics
 
 Payment: 50% to start, 50% after you approve the finished site. If we can't deliver, the deposit is refunded in full.
 
@@ -1251,7 +1262,7 @@ Not included: domain purchase fees, photography, legal review of medical or fina
 
 流程：購買後選一款模板 → 填寫表單，只要給我們一種語言的文字 → 我們翻成三語，7 天內完成上線 → 你確認並提出修改。
 
-包含：三語版本與切換按鈕；你的文字、照片、品牌色、營業時間；電話、WhatsApp、微信、LINE、地圖、預約按鈕；表單寄到你的 Email；部署到免費主機。Pro 方案另含自訂網域、Google 商家檔案設定、動態效果。
+包含：三語版本與切換按鈕；你的文字、照片、品牌色、營業時間；電話、WhatsApp、微信、LINE、地圖、預約按鈕；表單寄到你的 Email；接上你自己的網域（用你的名字購買），主機免費，檔案全部歸你。Pro 方案另含：依品牌調整設計、代寫三語文字、照片修圖、整理 Google 商家檔案、搜尋基本設定。
 不包含：網域費用、拍攝照片、醫療或金融宣傳用語的法律審查。
 
 [貼上「共用文字」]
