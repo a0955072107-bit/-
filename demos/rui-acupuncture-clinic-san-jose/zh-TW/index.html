@@ -30,8 +30,7 @@
   "description": "聖荷西的中醫針灸診所。",
   "telephone": "+14083202379",
   "hasMap": "https://maps.google.com/?cid=12246274098074073707",
-  "address": {"@type": "PostalAddress", "streetAddress": "2415 Forest Ave", "addressLocality": "San Jose", "addressRegion": "CA", "postalCode": "95128", "addressCountry": "US"},
-  "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "09:00", "closes": "17:00"}]
+  "address": {"@type": "PostalAddress", "streetAddress": "2415 Forest Ave", "addressLocality": "San Jose", "addressRegion": "CA", "postalCode": "95128", "addressCountry": "US"}
 }
 </script>
 <style>
@@ -403,7 +402,7 @@ body { padding-top: var(--demo-h); }
       </div>
       <ul class="hero-facts">
         <li>聖荷西，CA</li>
-        <li>每天看診</li>
+        <li>營業時間請來電詢問</li>
         <li>電話預約</li>
       </ul>
     </div>
@@ -473,13 +472,7 @@ body { padding-top: var(--demo-h); }
     <div class="table-scroll card reveal hours-card">
       <table class="hours" aria-label="每週看診時間">
         <tbody>
-              <tr data-day="1"><th scope="row">星期一</th><td>09:00–17:00</td></tr>
-              <tr data-day="2"><th scope="row">星期二</th><td>09:00–17:00</td></tr>
-              <tr data-day="3"><th scope="row">星期三</th><td>09:00–17:00</td></tr>
-              <tr data-day="4"><th scope="row">星期四</th><td>09:00–17:00</td></tr>
-              <tr data-day="5"><th scope="row">星期五</th><td>09:00–17:00</td></tr>
-              <tr data-day="6"><th scope="row">星期六</th><td>09:00–17:00</td></tr>
-              <tr data-day="0"><th scope="row">星期日</th><td>09:00–17:00</td></tr>
+              <tr><th scope="row">時間</th><td>營業時間請來電或查看 Google 地圖</td></tr>
         </tbody>
       </table>
     </div>
@@ -571,7 +564,7 @@ body { padding-top: var(--demo-h); }
       </div>
       <div>
         <h2>看診時間</h2>
-        <p>每天 09:00–17:00</p>
+        <p>營業時間請來電或查看 Google 地圖</p>
       </div>
       <div>
         <h2>快速連結</h2>
@@ -619,7 +612,7 @@ links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMe
 // 看診時間：標出今天，並產生「今日看診」卡
 // HOURS：星期（0 = 週日）對應 [開始, 結束] 的清單，24 小時制；null = 休診；整個是 null = 時間不明
 const TZ = "America/Los_Angeles";
-const HOURS = {"1": [["09:00", "17:00"]], "2": [["09:00", "17:00"]], "3": [["09:00", "17:00"]], "4": [["09:00", "17:00"]], "5": [["09:00", "17:00"]], "6": [["09:00", "17:00"]], "0": [["09:00", "17:00"]]};
+const HOURS = null;
 const now = new Date(new Date().toLocaleString('en-US', { timeZone: TZ }));
 const day = now.getDay(), nowMin = now.getHours() * 60 + now.getMinutes();
 const toMin = t => { const [h, m] = t.split(':'); return h * 60 + +m; };
