@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Hallmark 檢查：對所有模板頁面（所有語言、Motion、Luxe）跑 sloplint，彙整 FAIL。
+# Hallmark 檢查：對所有模板頁面（所有語言、Motion、Luxe）與官網 site/ 跑 sloplint，彙整 FAIL。
 # 規格允許忽略：#20（Hallmark 戳記）、#19 的時間或數字範圍。
 # 用法：bash scripts/lint-all.sh [hallmark 目錄]
 set -uo pipefail
@@ -17,5 +17,5 @@ while IFS= read -r f; do
   out=$(echo "$raw" | grep -E '^\s+FAIL' | grep -vE 'FAIL 20 ' | grep -vE 'FAIL 19 .*"–"')
   total=$((total+1))
   if [ -n "$out" ]; then bad=$((bad+1)); echo "✗ $rel"; echo "$out" | sed 's/^/    /'; fi
-done < <(find templates -name index.html -not -path 'templates/_docs/*' -not -path 'templates/index.html' -not -path 'templates/en/index.html' | sort)
+done < <({ find templates -name index.html -not -path 'templates/_docs/*' -not -path 'templates/index.html' -not -path 'templates/en/index.html'; find site -name index.html; } | sort)
 echo "Hallmark：檢查 $total 頁，$bad 頁有需要處理的 FAIL"
