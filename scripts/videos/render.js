@@ -1,6 +1,9 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
-const D = __dirname, SITE = 'file:///home/user/-/.claude/worktrees/agent-a39045d27d15c2910/_site/templates/dental';
+// Usage: bash scripts/build-site.sh && node scripts/videos/render.js <template-slug>  (then encode frames/ with ffmpeg as in the t-dental commit)
+const path = require('path');
+const SLUG = process.argv[2] || 'dental';
+const D = __dirname, SITE = 'file://' + path.resolve(D, '../../_site/templates', SLUG);
 const FPS = 30, DUR = 18.5, N = Math.round(FPS * DUR);
 const OUT = D + '/frames';
 const ease = x => x < 0 ? 0 : x > 1 ? 1 : (x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
