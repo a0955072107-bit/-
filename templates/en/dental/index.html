@@ -66,6 +66,7 @@
   --leaf: #4F6E5A;           /* Placeholder art: leaves */
   --wood: #B59A74;           /* Placeholder art: wood furniture, plant pots */
   --glass: #EEF1E2;          /* Placeholder art: window light */
+  --metal: #BFC4BF;          /* Placeholder art: lamp arm, chair base and other metal */
   --shadow: 0 16px 40px -24px color-mix(in srgb, var(--text) 30%, transparent); /* The only shadow on the site (dropdown menus) */
   --radius: 8px;             /* Large radius (images, table frame, dark panels) */
   --radius-sm: 4px;          /* Small radius (buttons, tags, menu items) */
@@ -155,54 +156,86 @@ html:not(.js) .site-header { background: var(--surface); border-bottom-color: va
 .img { position: relative; overflow: hidden; background-color: var(--sage); }
 
 /* Replace with a photo: .img-hero { background: url(images/room.jpg) center/cover; }
-   Suggested ratio 16:9 (cropped to 4:3 on phones; keep the subject in the right half), leave the left side calm for the text panel */
+   Suggested ratio 16:9 (cropped to 4:3 on phones): chair centre-right, leave the left side calm for the text panel */
 .img-hero {
   background:
-    /* Dental chair: headrest, backrest, seat, leg rest, base */
-    radial-gradient(1.5% 2.6% at 90.6% 42.6%, var(--brand) 96%, transparent 100%),
-    linear-gradient(to bottom right, transparent 43%, var(--brand) 43% 57%, transparent 57%) 89.1% 59.5% / 8% 26% no-repeat,
-    linear-gradient(var(--brand), var(--brand)) 80% 71.2% / 20% 4.5% no-repeat,
-    linear-gradient(to bottom right, transparent 42%, color-mix(in srgb, var(--brand) 88%, var(--sage)) 42% 58%, transparent 58%) 61.5% 77.3% / 9% 12% no-repeat,
-    linear-gradient(color-mix(in srgb, var(--brand) 80%, var(--text)), color-mix(in srgb, var(--brand) 80%, var(--text))) 74.2% 80.6% / 3% 10% no-repeat,
-    linear-gradient(color-mix(in srgb, var(--brand) 80%, var(--text)), color-mix(in srgb, var(--brand) 80%, var(--text))) 77% 83.3% / 13% 1.6% no-repeat,
-    radial-gradient(15% 3% at 73% 84%, color-mix(in srgb, var(--text) 18%, transparent), transparent 100%),
-    /* Window light on the floor */
-    linear-gradient(104deg, transparent 40%, color-mix(in srgb, var(--glass) 26%, transparent) 52% 70%, transparent 84%) 0 100% / 100% 24% no-repeat,
-    /* Glow on the wall around the window */
-    radial-gradient(34% 46% at 71% 36%, color-mix(in srgb, var(--glass) 45%, transparent), transparent 100%),
+    /* Floor-to-ceiling window: vertical mullions and frame */
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 81.79% 0% / 0.6% 67% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 87.93% 0% / 0.6% 67% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 76.11% 0% / 1.2% 68.5% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 93.93% 0% / 1.2% 68.5% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 92.61% 68.02% / 18.8% 1.5% no-repeat,
+    /* Trees and daylight outside */
+    radial-gradient(6% 22% at 80% 50%, color-mix(in srgb, var(--leaf) 50%, var(--sage)) 40%, transparent 100%),
+    radial-gradient(6% 26% at 90% 44%, color-mix(in srgb, var(--leaf) 40%, var(--sage)) 40%, transparent 100%),
+    linear-gradient(180deg, var(--glass), color-mix(in srgb, var(--leaf) 30%, var(--sage)) 75%, color-mix(in srgb, var(--leaf) 45%, var(--sage))) 91.39% 0% / 16.4% 67% no-repeat,
+    /* Low cabinet along the wall */
+    linear-gradient(color-mix(in srgb, var(--wood) 55%, var(--surface)), color-mix(in srgb, var(--wood) 55%, var(--surface))) 59.87% 46.97% / 38.2% 1% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--metal) 60%, var(--surface)), color-mix(in srgb, var(--metal) 60%, var(--surface))) 59.87% 56.17% / 38.2% 0.3% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--surface) 78%, var(--sage)), color-mix(in srgb, var(--surface) 78%, var(--sage))) 59.87% 59.01% / 38.2% 19.5% no-repeat,
+    /* Light falling from the window onto the floor */
+    linear-gradient(112deg, transparent 52%, color-mix(in srgb, var(--glass) 55%, transparent) 62% 74%, transparent 86%) 0 100% / 100% 33% no-repeat,
     /* Wall and floor */
-    linear-gradient(180deg, color-mix(in srgb, var(--brand) 34%, var(--sage)) 0 76%, color-mix(in srgb, var(--brand) 62%, var(--sage)) 76%);
+    linear-gradient(180deg, color-mix(in srgb, var(--leaf) 52%, var(--sage)) 0 67%, color-mix(in srgb, var(--metal) 45%, var(--bg)) 67%);
 }
-/* Large window: frame, mullions, daylight and trees outside */
-.img-hero::before { content: ""; position: absolute; left: 56%; top: 8%; width: 30%; height: 56%; border: clamp(5px, .7vw, 10px) solid color-mix(in srgb, var(--surface) 88%, var(--brand)); border-radius: var(--radius-sm);
+/* Dental chair, overhead light and instrument tray (drawn in front of the window) */
+.img-hero::before { content: ""; position: absolute; left: 46%; top: 12%; width: 44%; height: 74%;
   background:
-    linear-gradient(90deg, transparent calc(50% - 3px), color-mix(in srgb, var(--surface) 88%, var(--brand)) 0 calc(50% + 3px), transparent 0),
-    linear-gradient(180deg, transparent 56%, color-mix(in srgb, var(--surface) 88%, var(--brand)) 0 calc(56% + 6px), transparent 0),
-    radial-gradient(30% 34% at 22% 100%, color-mix(in srgb, var(--leaf) 60%, var(--sage)) 0 60%, transparent 100%),
-    radial-gradient(40% 42% at 76% 104%, color-mix(in srgb, var(--leaf) 45%, var(--sage)) 0 60%, transparent 100%),
-    radial-gradient(50% 40% at 72% 22%, var(--surface), transparent 100%),
-    linear-gradient(180deg, var(--glass), color-mix(in srgb, var(--leaf) 22%, var(--sage)) 92%);
-  box-shadow: 0 30px 60px -30px color-mix(in srgb, var(--text) 40%, transparent); }
-/* Large houseplant: leaves and pot */
-.img-hero::after { content: ""; position: absolute; left: 45%; bottom: 15%; width: 11%; height: 42%;
+    /* Overhead light: L-shaped arm and lamp head */
+    radial-gradient(4.09% 3.24% at 46.82% 14.32%, color-mix(in srgb, var(--surface) 90%, var(--metal)) 96%, transparent 100%),
+    radial-gradient(5.91% 4.59% at 46.82% 13.51%, color-mix(in srgb, var(--metal) 80%, var(--text)) 96%, transparent 100%),
+    linear-gradient(var(--metal), var(--metal)) 32.56% 6.87% / 21.82% 1.62% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 46.3% 7.04% / 1.82% 4.05% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 25.93% 31.25% / 1.82% 78.38% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--metal) 80%, var(--text)), color-mix(in srgb, var(--metal) 80%, var(--text))) 22.67% 86.21% / 14.77% 2.03% no-repeat,
+    /* Instrument tray and hoses */
+    linear-gradient(color-mix(in srgb, var(--metal) 80%, var(--text)), color-mix(in srgb, var(--metal) 80%, var(--text))) 13.23% 49.24% / 14.09% 2.57% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 12.81% 58.99% / 0.68% 14.32% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 16.48% 60.91% / 0.68% 17.03% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 20.14% 58.99% / 0.68% 14.32% no-repeat,
+    /* Dental chair: headrest, backrest, armrest, seat, leg rest */
+    radial-gradient(4.32% 5.68% at 35% 25.68%, var(--brand) 96%, transparent 100%),
+    linear-gradient(to bottom left, transparent 38%, var(--brand) 38% 62%, transparent 62%) 39.01% 49.43% / 17.27% 41.22% no-repeat,
+    linear-gradient(var(--metal), var(--metal)) 54.05% 59.67% / 15.91% 1.49% no-repeat,
+    linear-gradient(var(--brand), var(--brand)) 63.33% 69.34% / 31.82% 7.43% no-repeat,
+    linear-gradient(to bottom left, transparent 36%, color-mix(in srgb, var(--brand) 86%, var(--sage)) 36% 64%, transparent 64%) 86.3% 72.73% / 17.05% 10.81% no-repeat,
+    /* Base and shadow on the floor */
+    linear-gradient(var(--metal), var(--metal)) 56.79% 89.08% / 7.95% 19.59% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--metal) 80%, var(--text)), color-mix(in srgb, var(--metal) 80%, var(--text))) 66.67% 93.75% / 45.45% 2.7% no-repeat,
+    radial-gradient(31.82% 2.97% at 56.82% 95.27%, color-mix(in srgb, var(--text) 16%, transparent) 0%, transparent 100%);
+}
+/* Large houseplant at the far right: leaves and a white pot */
+.img-hero::after { content: ""; position: absolute; left: 88%; top: 22%; width: 12%; height: 64%;
   background:
-    linear-gradient(var(--wood), var(--wood)) 50% 100% / 52% 24% no-repeat,
-    radial-gradient(14% 40% at 34% 44%, var(--leaf) 96%, transparent 100%),
-    radial-gradient(13% 46% at 56% 36%, color-mix(in srgb, var(--leaf) 80%, var(--sage)) 96%, transparent 100%),
-    radial-gradient(16% 32% at 76% 54%, color-mix(in srgb, var(--leaf) 80%, var(--text)) 96%, transparent 100%),
-    radial-gradient(18% 26% at 18% 62%, color-mix(in srgb, var(--leaf) 75%, var(--text)) 96%, transparent 100%),
-    radial-gradient(12% 30% at 64% 62%, var(--leaf) 96%, transparent 100%); }
+    linear-gradient(color-mix(in srgb, var(--surface) 80%, var(--metal)), color-mix(in srgb, var(--surface) 80%, var(--metal))) 74.07% 100% / 55% 23.44% no-repeat,
+    radial-gradient(25% 7.81% at 37.5% 56.25%, color-mix(in srgb, var(--leaf) 80%, var(--text)) 96%, transparent 100%),
+    radial-gradient(26.67% 8.59% at 70.83% 46.88%, var(--leaf) 96%, transparent 100%),
+    radial-gradient(25% 7.81% at 45.83% 28.12%, color-mix(in srgb, var(--leaf) 85%, var(--sage)) 96%, transparent 100%),
+    radial-gradient(23.33% 7.81% at 83.33% 18.75%, color-mix(in srgb, var(--leaf) 75%, var(--text)) 96%, transparent 100%),
+    radial-gradient(21.67% 7.03% at 25% 12.5%, var(--leaf) 96%, transparent 100%),
+    radial-gradient(21.67% 6.25% at 75% 68.75%, color-mix(in srgb, var(--leaf) 85%, var(--sage)) 96%, transparent 100%),
+    linear-gradient(color-mix(in srgb, var(--leaf) 70%, var(--text)), color-mix(in srgb, var(--leaf) 70%, var(--text))) 58.62% 36.36% / 3.33% 65.62% no-repeat;
+}
 
 /* Replace with a photo: .img-doc1 { background: url(images/doctor-1.jpg) center/cover; } (same for .img-doc2 and .img-doc3)
    Suggested ratio 4:5 waist-up portrait, centred, with some room above the head (the top is cut into an arch) */
-.img-doc { aspect-ratio: 4 / 5; border-radius: 50% 50% var(--radius) var(--radius) / 40% 40% var(--radius) var(--radius); }
-/* Soft-focus white coat and head shape that mark where the portrait goes */
-.img-doc::after { content: ""; position: absolute; inset: 0; background:
-    radial-gradient(16% 14% at 50% 46%, color-mix(in srgb, var(--wood) 38%, transparent), transparent 100%),
-    radial-gradient(46% 26% at 50% 100%, color-mix(in srgb, var(--surface) 92%, transparent) 0 70%, transparent 100%); }
+.img-doc { aspect-ratio: 4 / 5; border-radius: 50% 50% var(--radius) var(--radius) / 40% 40% var(--radius) var(--radius); --hx: 50%; --hy: 37%; --hair: color-mix(in srgb, var(--text) 55%, var(--sage)); }
+/* Head and neck: soft ovals one step darker than the background (no facial features); position set by --hx and --hy */
+.img-doc::before { content: ""; position: absolute; left: calc(var(--hx) - 17%); top: calc(var(--hy) - 16%); width: 34%; height: 40%; filter: blur(3px);
+  background:
+    radial-gradient(50% 19% at 50% 18%, var(--hair) 72%, transparent 100%),
+    radial-gradient(44% 29% at 50% 33%, color-mix(in srgb, var(--wood) 45%, var(--sage)) 80%, transparent 100%),
+    linear-gradient(color-mix(in srgb, var(--wood) 50%, var(--sage)), color-mix(in srgb, var(--wood) 50%, var(--sage))) 50% 100% / 32% 42% no-repeat; }
+/* White coat: sloped shoulders and a V-neck showing pine-green scrubs */
+.img-doc::after { content: ""; position: absolute; left: 4%; right: 4%; top: 60%; bottom: 0; filter: blur(1px);
+  clip-path: polygon(26% 0, 74% 0, 95% 20%, 100% 100%, 0 100%, 5% 20%);
+  background:
+    conic-gradient(from -22deg at 50% 100%, color-mix(in srgb, var(--brand) 82%, var(--sage)) 0 44deg, transparent 44deg) 0 0 / 100% 36% no-repeat,
+    conic-gradient(from -30deg at 50% 100%, color-mix(in srgb, var(--metal) 75%, var(--surface)) 0 60deg, transparent 60deg) 0 0 / 100% 62% no-repeat,
+    linear-gradient(90deg, color-mix(in srgb, var(--surface) 82%, var(--sage)), var(--surface) 28% 72%, color-mix(in srgb, var(--surface) 82%, var(--sage))); }
 .img-doc1 { background: radial-gradient(70% 50% at 24% 18%, color-mix(in srgb, var(--glass) 90%, transparent), transparent 100%), linear-gradient(180deg, var(--sage), color-mix(in srgb, var(--leaf) 34%, var(--sage))); }
-.img-doc2 { background: radial-gradient(70% 50% at 78% 16%, color-mix(in srgb, var(--glass) 90%, transparent), transparent 100%), linear-gradient(180deg, color-mix(in srgb, var(--sage) 70%, var(--surface)), color-mix(in srgb, var(--leaf) 26%, var(--sage))); }
-.img-doc3 { background: radial-gradient(80% 44% at 50% 10%, color-mix(in srgb, var(--glass) 85%, transparent), transparent 100%), linear-gradient(180deg, var(--sage), color-mix(in srgb, var(--leaf) 42%, var(--sage))); }
+.img-doc2 { --hx: 47%; --hy: 39%; --hair: color-mix(in srgb, var(--wood) 45%, var(--text)); background: radial-gradient(70% 50% at 80% 16%, color-mix(in srgb, var(--glass) 90%, transparent), transparent 100%), linear-gradient(180deg, color-mix(in srgb, var(--sage) 70%, var(--surface)), color-mix(in srgb, var(--leaf) 26%, var(--sage))); }
+.img-doc3 { --hx: 53%; --hy: 36%; --hair: color-mix(in srgb, var(--text) 70%, var(--sage)); background: radial-gradient(80% 44% at 50% 8%, color-mix(in srgb, var(--glass) 85%, transparent), transparent 100%), linear-gradient(180deg, color-mix(in srgb, var(--leaf) 18%, var(--sage)), color-mix(in srgb, var(--leaf) 46%, var(--sage))); }
 
 /* Replace with a photo: .img-space1 { background: url(images/waiting.jpg) center/cover; } (same for .img-space2)
    Suggested ratio 3:2 landscape photo */
@@ -270,15 +303,18 @@ html:not(.js) .site-header { background: var(--surface); border-bottom-color: va
 }
 
 /* ---------- Treatments: one-column list with thin rules ---------- */
-.split-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 1rem clamp(2rem, 6vw, 6rem); align-items: end; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.split-head, .svc { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) 8.5rem; column-gap: clamp(2rem, 6vw, 6rem); }
+.split-head { row-gap: 1rem; align-items: end; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.split-head .lead { grid-column: 2 / -1; }
 .svc-list { border-top: 1px solid color-mix(in srgb, var(--brand) 30%, transparent); }
-.svc { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) 8.5rem; gap: .25rem clamp(2rem, 6vw, 6rem); align-items: baseline; padding-block: 1.6rem; border-bottom: 1px solid color-mix(in srgb, var(--brand) 18%, transparent); }
+.svc { row-gap: .25rem; align-items: baseline; padding-block: 1.6rem; border-bottom: 1px solid color-mix(in srgb, var(--brand) 18%, transparent); }
 .svc h3 { font-size: var(--fs-h3); }
 .svc p { color: var(--muted); max-width: 34em; }
 .svc-pay { font-size: var(--fs-sm); color: var(--brand); text-align: right; }
 .svc-note { margin-top: 1.5rem; font-size: var(--fs-sm); color: var(--muted); }
 @media (max-width: 760px) {
   .split-head { grid-template-columns: minmax(0, 1fr); }
+  .split-head .lead { grid-column: auto; }
   .svc { grid-template-columns: minmax(0, 1fr) auto; padding-block: 1.1rem; }
   .svc p { grid-column: 1 / -1; grid-row: 2; font-size: .9375rem; }
   .svc-pay { grid-column: 2; grid-row: 1; }
@@ -438,9 +474,9 @@ html:not(.js) .site-header { background: var(--surface); border-bottom-color: va
 
 /* English: longer session names and coverage labels need wider columns */
 .today-card li, .sched-list li { grid-template-columns: 5.5em minmax(0, 1fr) auto; }
-.svc { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) 9.5rem; }
+.split-head, .svc { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) 9.5rem; }
 .hero h1 { line-height: 1.15; }
-@media (max-width: 760px) { .svc { grid-template-columns: minmax(0, 1fr) auto; } }
+@media (max-width: 760px) { .split-head { grid-template-columns: minmax(0, 1fr); } .svc { grid-template-columns: minmax(0, 1fr) auto; } }
 
 /* ==================== Language menu (header dropdown) ====================
    The header shows the current language; click it to choose another.
@@ -620,7 +656,7 @@ html:not(.js) .site-header { background: var(--surface); border-bottom-color: va
 
 <!-- ==================== Section: Hours ==================== -->
 <!-- How to edit: change a dentist's name or "Closed" in the table; today's board and the phone list update automatically.
-     data-time="start-end" (24-hour) on each row decides "Open now"; the <small> text is what visitors see. Change both together. -->
+     data-time="start-end" (24-hour) on each row decides "Open now" (the last 30 minutes show "Check-in closed"); the <small> text is what visitors see. Change both together. -->
 <!-- Sample content — replace before going live -->
 <section id="hours">
   <div class="wrap">
@@ -646,7 +682,7 @@ html:not(.js) .site-header { background: var(--surface); border-bottom-color: va
         <p class="table-note">Last check-in is 30 minutes before each session ends. Holiday hours and dentist changes are posted at the front desk.</p>
       </div>
       <!-- Today's board: built by JS from the table on the left. Edit the table, not this -->
-      <aside class="today-card" aria-live="polite">
+      <aside class="today-card">
         <h3>Today <small id="today-label">See the weekly schedule</small></h3>
         <ul id="today-list"><li><b>Hours</b><span>See the weekly schedule</span></li></ul>
       </aside>
@@ -680,6 +716,7 @@ html:not(.js) .site-header { background: var(--surface); border-bottom-color: va
 </main>
 
 <!-- ==================== Section: Footer ==================== -->
+<!-- Sample content — replace before going live (name, address and phone are fictional) -->
 <footer class="site-footer">
   <div class="wrap">
     <div class="foot-grid">
@@ -719,8 +756,8 @@ html:not(.js) .site-header { background: var(--surface); border-bottom-color: va
 
 <script>
 // Interface text (when translating, change only this)
-const T = { today: 'Today', closed: 'Closed', noSession: 'No session today', dayOff: 'Closed all day', later: 'Later today', open: 'Open now', ended: 'Ended', sep: ', ',
-  who: n => `Dr. ${n}`, todayIs: () => `Today is ${new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(new Date())}` };
+const T = { today: 'Today', closed: 'Closed', noSession: 'No session today', dayOff: 'Closed all day', later: 'Later today', open: 'Open now', cutoff: 'Check-in closed', ended: 'Ended', sep: ', ',
+  who: n => `Dr. ${n}`, todayIs: () => `Today is ${new Intl.DateTimeFormat('en-US', { weekday: 'long', timeZone: TZ }).format(new Date())}` };
 document.getElementById('y').textContent = new Date().getFullYear();
 
 // Header background on scroll
@@ -740,33 +777,41 @@ menuBtn.addEventListener('click', () => setMenu(!links.classList.contains('open'
 links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && links.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
 
-// Schedule: highlight today's column, build today's board and the phone list by day
-const now = new Date();
-const col = (now.getDay() + 6) % 7 + 1; // Monday = 1 … Sunday = 7
+// Your practice's time zone: "today" and "Open now" follow it. Change it to your own (e.g. 'America/New_York', 'America/Chicago')
+const TZ = 'America/Los_Angeles';
+// Schedule: highlight today's column, build today's board and the phone list by day (recalculated every minute)
 const toMin = t => { const [h, m] = t.split(':'); return h * 60 + +m; };
-const nowMin = now.getHours() * 60 + now.getMinutes();
 const table = document.getElementById('schedule-table');
 const rows = [...table.tBodies[0].rows];
 const day = d => table.tHead.rows[0].cells[d].textContent.trim();
 const time = tr => tr.cells[0].querySelector('small').textContent;
 const isOff = (tr, d) => tr.cells[d].classList.contains('off');
-table.querySelectorAll('tr').forEach(tr => tr.children[col] && tr.children[col].classList.add('today'));
-document.getElementById('today-list').innerHTML = rows.map(tr => {
-  const off = isOff(tr, col), [s, e] = tr.dataset.time.split('-');
-  const tag = off ? T.closed : nowMin < toMin(s) ? T.later : nowMin < toMin(e) ? T.open : T.ended;
-  const who = off ? T.noSession : T.who(tr.cells[col].textContent.trim());
-  return `<li class="${off ? 'off' : tag === T.open ? 'now' : ''}"><b>${tr.dataset.name}</b><span>${time(tr)}<br>${who}</span><em class="tag">${tag}</em></li>`;
-}).join('');
-document.getElementById('today-label').textContent = new Intl.DateTimeFormat(document.documentElement.lang, { month: 'numeric', day: 'numeric', weekday: 'short' }).format(now);
-document.getElementById('today-is').textContent = T.todayIs(day(col));
 const list = document.createElement('div');
 list.className = 'sched-list';
-list.innerHTML = [1, 2, 3, 4, 5, 6, 7].map(d => {
-  const on = rows.filter(tr => !isOff(tr, d)).map(tr => tr.dataset.name);
-  const li = rows.map(tr => `<li${isOff(tr, d) ? ' class="off"' : ''}><b>${tr.dataset.name}</b><span>${time(tr)}</span><span>${isOff(tr, d) ? T.closed : T.who(tr.cells[d].textContent.trim())}</span></li>`);
-  return `<details${d === col ? ' open' : ''}><summary>${day(d)}${d === col ? `<em>${T.today}</em>` : ''}<small>${on.length ? on.join(T.sep) : T.dayOff}</small></summary><ul>${li.join('')}</ul></details>`;
-}).join('');
 table.parentElement.after(list);
+let shown = 0;
+const render = () => {
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: TZ, weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map(x => [x.type, x.value]));
+  const col = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].indexOf(p.weekday) + 1, nowMin = p.hour * 60 + +p.minute; // Monday = 1 … Sunday = 7
+  document.getElementById('today-list').innerHTML = rows.map(tr => {
+    const off = isOff(tr, col), [s, e] = tr.dataset.time.split('-').map(toMin);
+    const tag = off ? T.closed : nowMin < s ? T.later : nowMin < e - 30 ? T.open : nowMin < e ? T.cutoff : T.ended;
+    const who = off ? T.noSession : T.who(tr.cells[col].textContent.trim());
+    return `<li class="${off ? 'off' : tag === T.open ? 'now' : ''}"><b>${tr.dataset.name}</b><span>${time(tr)}<br>${who}</span><em class="tag">${tag}</em></li>`;
+  }).join('');
+  if (col === shown) return; // Redraw the table highlight and day list only when the day changes
+  shown = col;
+  table.querySelectorAll('.today').forEach(c => c.classList.remove('today'));
+  table.querySelectorAll('tr').forEach(tr => tr.children[col] && tr.children[col].classList.add('today'));
+  document.getElementById('today-label').textContent = new Intl.DateTimeFormat(document.documentElement.lang, { timeZone: TZ, month: 'numeric', day: 'numeric', weekday: 'short' }).format(new Date());
+  document.getElementById('today-is').textContent = T.todayIs(day(col));
+  list.innerHTML = [1, 2, 3, 4, 5, 6, 7].map(d => {
+    const on = rows.filter(tr => !isOff(tr, d)).map(tr => tr.dataset.name);
+    const li = rows.map(tr => `<li${isOff(tr, d) ? ' class="off"' : ''}><b>${tr.dataset.name}</b><span>${time(tr)}</span><span>${isOff(tr, d) ? T.closed : T.who(tr.cells[d].textContent.trim())}</span></li>`);
+    return `<details${d === col ? ' open' : ''}><summary>${day(d)}${d === col ? `<em>${T.today}</em>` : ''}<small>${on.length ? on.join(T.sep) : T.dayOff}</small></summary><ul>${li.join('')}</ul></details>`;
+  }).join('');
+};
+render(); setInterval(render, 60000);
 
 // Hero entrance (the only one) + sticky bar appears once the hero buttons scroll away
 const reveals = document.querySelectorAll('.reveal');
