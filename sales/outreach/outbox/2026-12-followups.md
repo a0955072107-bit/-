@@ -11,14 +11,14 @@
 Hi <店名> team, just following up in case my note got buried. The free preview is still here:
 <網址>
 
-Happy to answer any questions, or to change anything you'd like to see first. If it's not a fit, no reply needed, and I won't follow up again.
+Happy to answer any questions, or to change anything you'd like to see first. If it's not a fit, just reply "no thanks" and I won't follow up again.
 
 Best,
 Yang Shunfu
 Polyglot Pages · polyglotpages.studio@gmail.com
 
 ---
-您好，再跟您確認一下：免費的三語網站預覽還在上面的連結。有任何問題都歡迎回信；不需要的話不用回覆，我們不會再打擾。
+您好，再跟您確認一下：免費的三語網站預覽還在上面的連結。有任何問題都歡迎回信；不需要的話回覆「不用了」，我們不會再打擾。
 ```
 
 中文為主的店（L0007 貂蝉）用這段：
@@ -26,7 +26,7 @@ Polyglot Pages · polyglotpages.studio@gmail.com
 您好，再跟您確認一下：我們幫貂蟬時尚做的免費三語網站預覽還在這裡：
 <網址>
 
-有任何想改的地方或問題都歡迎回信；不需要的話不用回覆，我們不會再打擾。
+有任何想改的地方或問題都歡迎回信；不需要的話回覆「不用了」，我們不會再打擾。
 
 Yang Shunfu
 Polyglot Pages · polyglotpages.studio@gmail.com
