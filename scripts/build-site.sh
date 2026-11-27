@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 # 建置 GitHub Pages 線上 Demo 到 _site/，結構和買家拿到的 zip 一樣：
 #   _site/templates/<款式>/{en,zh-TW,zh-CN}/index.html，加上語言入口與三語展示頁
+#   網站根目錄是 Polyglot Pages 官網：site/ → _site/（index.html 英文、zh-TW/、zh-CN/、img/）
 #   用法：bash scripts/build-site.sh
 set -euo pipefail
 cd "$(dirname "$0")/.."
 rm -rf _site && mkdir -p _site/templates
-cp index.html _site/
+# 官網（根目錄）：site/ 整個複製過去；簡體版由 scripts/make-home-zh-cn.py 產生後 commit
+cp -R site/. _site/
 python3 - <<'PY'
 import pathlib, re, shutil, subprocess
 T = pathlib.Path('templates'); S = pathlib.Path('_site/templates')

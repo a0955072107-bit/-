@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polyglot Pages｜英文、繁體、簡體三語網站，給美國華人小店</title>
+<meta name="description" content="幫美國的華人小店做英文、繁體、簡體三語網站。一次付清，網站本身沒有月費，所有檔案都歸你。由台灣的網頁設計師楊舜富製作。">
+<meta name="theme-color" content="#FFF8F1">
+<link rel="canonical" href="https://a0955072107-bit.github.io/-/zh-TW/">
+<meta property="og:title" content="Polyglot Pages｜英文、繁體、簡體三語網站">
+<meta property="og:description" content="幫美國的華人小店做三語網站。一次付清，檔案都歸你。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://a0955072107-bit.github.io/-/zh-TW/">
+<meta property="og:image" content="https://a0955072107-bit.github.io/-/img/dental-zh-TW.webp">
+<!-- Language versions (SEO) -->
+<link rel="alternate" hreflang="en" href="https://a0955072107-bit.github.io/-/">
+<link rel="alternate" hreflang="zh-Hant" href="https://a0955072107-bit.github.io/-/zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="https://a0955072107-bit.github.io/-/zh-CN/">
+<link rel="alternate" hreflang="x-default" href="https://a0955072107-bit.github.io/-/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23B4532A'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='32' fill='%23F7F0E6'%3EPp.%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
+<!-- The phone demo shows Simplified Chinese too: only those characters are downloaded -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&display=swap&text=%E5%A0%82%E5%A5%BD%E5%AD%90%E5%B7%B7%E6%97%A5%E7%9A%84%E9%87%8C%E9%A3%9F" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ============================================================
+   THEME SETTINGS (same family as our ShopVoice site)
+   ============================================================ */
+:root {
+  --bg: #FFF8F1;            /* page background: warm cream */
+  --surface: #FFFDFA;       /* cards, tinted white */
+  --text: #2B211C;          /* main text */
+  --muted: #6A5A50;         /* secondary text */
+  --line: #ECDCCD;          /* hairlines and borders */
+  --accent: #B4532A;        /* Polyglot Pages terracotta (logo colour) */
+  --accent-deep: #8F3B1B;   /* darker end of the button gradient */
+  --accent-text: #FFFBF6;   /* text on the accent colour */
+  --accent-soft: #FBE6DA;   /* pale accent wash */
+  --gold: #B8873B;          /* small second accent */
+  --sheen: rgba(255, 250, 244, .35);
+  --shadow-sm: 0 1px 2px rgba(43, 33, 28, .05), 0 4px 14px -6px rgba(43, 33, 28, .10);
+  --shadow-lg: 0 2px 4px rgba(43, 33, 28, .04), 0 18px 40px -16px rgba(120, 60, 30, .28);
+  /* the mini phone shows our fictional restaurant template in its own colours */
+  --mock-bg: #EDEDE8;
+  --mock-ink: #1F2533;
+  --mock-brand: #2D3B57;
+  --mock-brand-ink: #F4F5F8;
+  --phone: #2B211C;
+  --radius: 14px;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --font-display: "Fraunces", "Noto Serif TC", "Noto Serif SC", Georgia, serif;
+  --font-serif-tc: "Noto Serif TC", "Songti TC", serif;   /* Chinese headings, Traditional */
+  --font-serif-sc: "Noto Serif SC", "Songti SC", serif;   /* Chinese headings, Simplified */
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; overflow-x: clip; scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { margin: 0; overflow-x: clip; background: var(--bg); color: var(--text); font: 400 1.0625rem/1.7 var(--font-body); -webkit-font-smoothing: antialiased; touch-action: manipulation; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.25; letter-spacing: -0.015em; margin: 0; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+h1 { font-size: clamp(2.2rem, 4.8vw, 3.4rem); letter-spacing: -0.025em; line-height: 1.15; }
+h2 { font-size: clamp(1.6rem, 3.2vw, 2.1rem); }
+h3 { font-size: 1.2rem; }
+h1, h2, h3 { letter-spacing: 0; }
+.marquee span { font-style: normal; }
+body { line-height: 1.8; }
+h1, h2, h3 { font-family: var(--font-serif-tc); }
+h1 { font-size: clamp(1.9rem, 4.8vw, 3.4rem); }
+h1 :lang(zh-Hant), .ph :lang(zh-Hant) .ph-title { font-family: var(--font-serif-tc); letter-spacing: 0; }
+h1 :lang(zh-Hans), .ph :lang(zh-Hans) .ph-title { font-family: var(--font-serif-sc); letter-spacing: 0; }
+p { margin: 0; text-wrap: pretty; }
+a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--accent-deep); }
+a:active { opacity: .8; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+img { display: block; max-width: 100%; height: auto; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.lead { font-size: 1.1rem; color: var(--muted); max-width: 36em; }
+.muted { color: var(--muted); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: 1rem; top: -4rem; z-index: 100; padding: .75rem 1rem; background: var(--surface); border-radius: 10px; box-shadow: var(--shadow-sm); }
+.skip:focus { top: 1rem; }
+section { padding: clamp(56px, 9vw, 96px) 0; }
+
+/* Section titles get a short gold line that draws in */
+section h2 { position: relative; padding-bottom: .45em; margin-bottom: .6em; }
+section h2::after { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 48px; border-radius: 2px; background: linear-gradient(90deg, var(--gold), var(--accent)); transform-origin: left; transition: transform .9s var(--ease) .15s; }
+.contact h2::after { left: calc(50% - 24px); transform-origin: center; }
+
+/* ==================== Buttons ==================== */
+.btn { position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .75em 1.4em; border-radius: 999px; border: 2px solid transparent; background: linear-gradient(135deg, var(--accent), var(--accent-deep)); color: var(--accent-text); font-weight: 600; text-decoration: none; transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease; }
+.btn::after { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, var(--sheen) 50%, transparent 70%); transform: translateX(-120%); transition: transform .8s var(--ease); pointer-events: none; }
+.btn:hover { color: var(--accent-text); transform: translateY(-1px); box-shadow: 0 6px 16px -8px var(--accent); }
+.btn:hover::after { transform: translateX(120%); }
+.btn:active { transform: translateY(0) scale(.98); box-shadow: none; }
+.btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.btn.ghost { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
+.btn.ghost::after { display: none; }
+.btn.ghost:hover { background: var(--accent-soft); color: var(--accent-deep); }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.75em; }
+
+/* ==================== Header ==================== */
+.site-header { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 80%, transparent); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+.bar { display: flex; align-items: center; gap: 14px; min-height: 64px; }
+.logo { font-family: var(--font-display); font-weight: 600; font-size: 1.35rem; letter-spacing: -0.02em; color: var(--text); text-decoration: none; white-space: nowrap; }
+.logo span { color: var(--accent); }
+.logo:hover { color: var(--text); }
+.nav { display: flex; gap: 20px; margin-inline-start: auto; }
+.nav a { position: relative; color: var(--text); text-decoration: none; font-size: .95rem; padding-block: .4rem; }
+.nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 2px; height: 1.5px; background: var(--accent); transform: scaleX(0); transform-origin: right; transition: transform .35s var(--ease); }
+.nav a:hover { color: var(--accent); }
+.nav a:hover::after { transform: scaleX(1); transform-origin: left; }
+.header-mail { min-height: 40px; padding: .45em 1.1em; font-size: .95rem; }
+@media (max-width: 860px) { .nav { display: none; } .lang-switch { margin-inline-start: auto; } }
+
+/* ==================== Language menu (header dropdown, works without JS) ==================== */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 40px; padding-inline: .65rem; border-radius: 10px; color: var(--accent); font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: var(--accent-soft); }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow-lg); }
+.lang-list a { display: flex; align-items: center; min-height: 40px; padding: .5rem .75rem; border-radius: 8px; color: var(--text); text-decoration: none; white-space: nowrap; }
+.lang-list a:hover { background: var(--accent-soft); }
+.lang-list a[aria-current="page"] { font-weight: 600; text-decoration: underline; }
+
+/* ==================== Hero ==================== */
+.hero { padding: clamp(48px, 8vw, 88px) 0 clamp(48px, 7vw, 72px); }
+.hero-grid { display: grid; gap: 48px; align-items: center; }
+@media (min-width: 880px) { .hero-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 56px; } }
+.hero .lead { margin-top: 1.1em; }
+.mail-note { margin-top: 1rem; font-size: .95rem; color: var(--muted); }
+/* Soft drifting glow behind the hero */
+.aurora { position: relative; isolation: isolate; overflow: hidden; }
+.aurora::before, .aurora::after { content: ""; position: absolute; z-index: -1; border-radius: 50%; filter: blur(70px); opacity: .55; pointer-events: none; }
+.aurora::before { width: 520px; height: 520px; top: -180px; right: -140px; background: radial-gradient(circle, color-mix(in srgb, var(--accent) 40%, transparent), transparent 70%); animation: drift1 18s ease-in-out infinite alternate; }
+.aurora::after { width: 440px; height: 440px; bottom: -220px; left: -160px; background: radial-gradient(circle, color-mix(in srgb, var(--gold) 45%, transparent), transparent 70%); animation: drift2 22s ease-in-out infinite alternate; }
+@keyframes drift1 { to { transform: translate(-80px, 60px) scale(1.12); } }
+@keyframes drift2 { to { transform: translate(90px, -50px) scale(1.08); } }
+/* Hero text rises in once */
+.rise > * { animation: rise .9s var(--ease) both; }
+.rise > *:nth-child(2) { animation-delay: .12s; }
+.rise > *:nth-child(3) { animation-delay: .24s; }
+.rise > *:nth-child(4) { animation-delay: .36s; }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+/* ==================== Mini phone: language switch demo ==================== */
+/* Radio buttons + labels, so switching works with JS off; JS only adds the slow auto-play. */
+.demo { margin: 0; display: grid; justify-items: center; gap: 12px; }
+.ph { position: relative; width: min(100%, 300px); padding: 10px; border-radius: 40px; background: var(--phone); box-shadow: var(--shadow-lg); animation: rise 1s var(--ease) .3s both; }
+.ph-in { border-radius: 31px; overflow: hidden; background: var(--mock-bg); color: var(--mock-ink); }
+.ph input { position: absolute; opacity: 0; pointer-events: none; }
+.ph-bar { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 14px 14px 10px; }
+.ph-dot { width: 54px; height: 6px; border-radius: 6px; background: color-mix(in srgb, var(--mock-ink) 22%, transparent); }
+.ph-tabs { display: flex; gap: 2px; padding: 3px; border-radius: 999px; background: color-mix(in srgb, var(--mock-ink) 8%, transparent); }
+.ph-tabs label { display: grid; place-items: center; min-width: 40px; min-height: 32px; padding: 0 8px; border-radius: 999px; font-size: .85rem; font-weight: 600; cursor: pointer; color: color-mix(in srgb, var(--mock-ink) 70%, transparent); transition: background-color .3s, color .3s; }
+.ph-tabs label:hover { color: var(--mock-ink); }
+#pl-en:checked ~ .ph-in label[for="pl-en"], #pl-tw:checked ~ .ph-in label[for="pl-tw"], #pl-cn:checked ~ .ph-in label[for="pl-cn"] { background: var(--mock-brand); color: var(--mock-brand-ink); }
+#pl-en:focus-visible ~ .ph-in label[for="pl-en"], #pl-tw:focus-visible ~ .ph-in label[for="pl-tw"], #pl-cn:focus-visible ~ .ph-in label[for="pl-cn"] { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ph-photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.ph-screens { display: grid; padding: 16px 18px 22px; }
+.ph-screen { grid-area: 1 / 1; transition: opacity .45s ease .1s, transform .45s var(--ease) .1s, visibility 0s; }
+/* only the screens of the languages that are NOT selected are hidden */
+#pl-en:checked ~ .ph-in .ph-screen:not([data-l="en"]), #pl-tw:checked ~ .ph-in .ph-screen:not([data-l="tw"]), #pl-cn:checked ~ .ph-in .ph-screen:not([data-l="cn"]) { opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .45s ease, transform .45s var(--ease), visibility 0s linear .45s; }
+.ph-name { font-size: .8rem; font-weight: 600; color: color-mix(in srgb, var(--mock-ink) 70%, transparent); }
+.ph-title { margin-top: 4px; font-family: var(--font-display); font-size: 1.45rem; line-height: 1.2; font-weight: 600; }
+.ph-hours { margin-top: 8px; font-size: .85rem; font-variant-numeric: tabular-nums; }
+.ph-btns { display: flex; gap: 8px; margin-top: 14px; }
+.ph-btns span { flex: 1; display: grid; place-items: center; min-height: 38px; border-radius: 8px; font-size: .85rem; font-weight: 600; border: 1.5px solid var(--mock-brand); }
+.ph-btns span:first-child { background: var(--mock-brand); color: var(--mock-brand-ink); }
+.demo figcaption { font-size: .85rem; color: var(--muted); text-align: center; max-width: 22em; }
+
+/* ==================== Marquee: who it's for ==================== */
+.marquee { border-block: 1px solid var(--line); padding: 14px 0; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, var(--text) 10%, var(--text) 90%, transparent); mask-image: linear-gradient(90deg, transparent, var(--text) 10%, var(--text) 90%, transparent); }
+.marquee-track { display: flex; width: max-content; animation: marquee 40s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee span { font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--muted); white-space: nowrap; padding: 0 28px; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* ==================== Cards ==================== */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-sm); }
+.grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); }
+
+/* ==================== Did I email you ==================== */
+.letter { display: grid; gap: 32px; align-items: start; }
+@media (min-width: 820px) { .letter { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 56px; } }
+.letter .card { padding: clamp(24px, 4vw, 36px); border-left: 3px solid var(--accent); }
+.letter .card p + p { margin-top: 1rem; }
+.sign { font-family: var(--font-display); font-size: 1.25rem; }
+
+/* ==================== About ==================== */
+.about { display: grid; gap: 32px; }
+@media (min-width: 820px) { .about { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 56px; } }
+.about-text p + p { margin-top: 1rem; }
+.facts { margin: 0; padding: 4px 24px; }
+.facts div { padding: 14px 0; }
+.facts div + div { border-top: 1px solid var(--line); }
+.facts dt { font-size: .85rem; color: var(--muted); }
+.facts dd { margin: 2px 0 0; }
+
+/* ==================== Example sites ==================== */
+.work-intro { max-width: 40em; }
+.work { list-style: none; margin: 28px 0 0; padding: 0; }
+.work li { padding: 14px 14px 18px; overflow: hidden; }
+.shot { display: block; overflow: hidden; border-radius: 10px; }
+.shot img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; transition: transform .6s var(--ease); }
+.shot:hover img { transform: scale(1.03); }
+.work h3 { margin-top: 14px; padding-inline: 4px; }
+.work .kind { padding-inline: 4px; font-size: .95rem; color: var(--muted); }
+.work .langs { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 8px; padding-inline: 4px; font-size: .95rem; }
+.work .langs a { padding-block: .3rem; font-weight: 600; }
+@media (max-width: 560px) {
+  .work { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .work li { padding: 8px 8px 12px; }
+  .work h3 { font-size: 1rem; }
+  .work .kind, .work .langs { font-size: .85rem; }
+  .work .langs { gap: 0 10px; }
+}
+
+/* ==================== Pricing ==================== */
+.plans { margin-top: 28px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.plan { display: flex; flex-direction: column; padding: clamp(24px, 3vw, 32px); }
+.plan-pro { border: 1.5px solid var(--accent); box-shadow: var(--shadow-lg); }
+.price { margin-top: 6px; font-family: var(--font-display); font-size: 2.6rem; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.price small { font-family: var(--font-body); font-size: 1rem; font-weight: 400; color: var(--muted); }
+.plan > .muted { margin-top: 6px; }
+.plan ul { list-style: none; margin: 18px 0 24px; padding: 0; flex: 1; }
+.plan li { position: relative; padding: 8px 0 8px 28px; border-top: 1px solid var(--line); }
+.plan li::before { content: ""; position: absolute; left: 4px; top: 16px; width: 11px; height: 6px; border-left: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(-45deg); }
+.plan .btn { align-self: flex-start; }
+.terms { margin-top: 20px; }
+.terms h3 { font-family: var(--font-body); font-size: 1rem; }
+.terms p { margin-top: 6px; color: var(--muted); }
+.care { margin-top: 20px; background: var(--accent-soft); border-color: transparent; box-shadow: none; }
+.care strong { font-variant-numeric: tabular-nums; }
+
+/* ==================== How it works ==================== */
+.steps { list-style: none; margin: 28px 0 0; padding: 0; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.num { display: grid; place-items: center; width: 40px; height: 40px; margin-bottom: 14px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-soft), color-mix(in srgb, var(--gold) 25%, var(--accent-soft))); color: var(--accent); font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; }
+.steps p { margin-top: 6px; color: var(--muted); }
+@media (max-width: 560px) {
+  section { padding: 48px 0; }
+  .card { padding: 18px; }
+  .steps { gap: 12px; }
+  .steps li { display: grid; grid-template-columns: 40px minmax(0, 1fr); column-gap: 14px; }
+  .steps .num { grid-row: span 2; margin: 0; }
+  .terms { gap: 12px; }
+  .plans { gap: 16px; }
+  .letter .card { padding: 20px; }
+}
+
+/* ==================== FAQ ==================== */
+.faq-list { margin-top: 28px; display: grid; gap: 12px; max-width: 760px; }
+.faq-list details { padding: 0 22px; }
+.faq-list summary { display: flex; justify-content: space-between; gap: 16px; padding: 18px 0; font-weight: 600; cursor: pointer; list-style: none; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: ""; flex: none; width: 9px; height: 9px; margin-top: 7px; border-right: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(45deg); transition: transform .3s var(--ease); }
+.faq-list details[open] summary::after { transform: rotate(-135deg); }
+.faq-list summary:hover { color: var(--accent); }
+.faq-list details > div { padding-bottom: 20px; color: var(--muted); }
+.faq-list details > div p + p { margin-top: .75rem; }
+
+/* ==================== Contact ==================== */
+.contact { text-align: center; }
+.contact .lead { margin: 0 auto; }
+.big-mail { display: inline-block; margin-top: 20px; font-family: var(--font-display); font-weight: 600; font-size: clamp(1.25rem, 4.6vw, 2.1rem); overflow-wrap: anywhere; }
+
+/* ==================== Footer ==================== */
+.site-footer { border-top: 1px solid var(--line); padding: 40px 0 32px; font-size: .92rem; color: var(--muted); }
+.foot { display: grid; gap: 28px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.foot > div:first-child { grid-column: 1 / -1; }
+@media (min-width: 760px) { .foot { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr); } .foot > div:first-child { grid-column: auto; } }
+.foot h2 { font-family: var(--font-body); font-size: 1rem; color: var(--text); margin-bottom: 6px; padding: 0; }
+.foot h2::after { display: none; }
+.foot ul { list-style: none; margin: 0; padding: 0; }
+.foot li a { display: inline-block; padding-block: 4px; }
+.foot p + p { margin-top: 6px; }
+.copy { margin-top: 28px; }
+
+/* ==================== Scroll reveal ==================== */
+/* Content is only hidden when JS is running (html.js), so it is always visible without JS. */
+.js [data-reveal] { opacity: 0; transform: translateY(40px) scale(.97); filter: blur(6px); transition: opacity 1s var(--ease), transform 1s var(--ease), filter 1s var(--ease); transition-delay: calc(var(--i, 0) * 110ms); }
+.js [data-reveal].in { opacity: 1; transform: none; filter: none; }
+.js section h2[data-reveal] { transform: translateX(-32px); }
+.js section h2[data-reveal].in { transform: none; }
+.js section h2[data-reveal]::after { transform: scaleX(0); }
+.js section h2[data-reveal].in::after { transform: scaleX(1); }
+.js .contact h2[data-reveal] { transform: translateY(24px); }
+.js .contact h2[data-reveal].in { transform: none; }
+.js [data-reveal] .shot { clip-path: inset(100% 0 0 0 round 10px); transition: clip-path 1.2s var(--ease) calc(var(--i, 0) * 110ms + .2s); }
+.js [data-reveal].in .shot { clip-path: inset(0 0 0 0 round 10px); }
+
+/* ==================== Reduced motion: everything still, everything visible ==================== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js [data-reveal], .js section h2[data-reveal] { opacity: 1; transform: none; filter: none; }
+  .js [data-reveal] .shot { clip-path: none; }
+  .js section h2[data-reveal]::after { transform: none; }
+  .btn:hover, .btn:active, .shot:hover img { transform: none; }
+  .btn::after { display: none; }
+  .marquee { -webkit-mask-image: none; mask-image: none; }
+  .marquee-track { width: auto; flex-wrap: wrap; justify-content: center; row-gap: 6px; }
+  .marquee .dup { display: none; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Polyglot Pages",
+  "url": "https://a0955072107-bit.github.io/-/",
+  "email": "polyglotpages.studio@gmail.com",
+  "description": "Trilingual websites in English, Traditional Chinese and Simplified Chinese for Chinese-owned small businesses in the US.",
+  "founder": { "@type": "Person", "name": "Yang Shunfu" },
+  "areaServed": "US",
+  "sameAs": [
+    "https://polyglotpages.gumroad.com",
+    "https://www.tiktok.com/@polyglotpages",
+    "https://www.youtube.com/@polyglotpagesstudio",
+    "https://www.instagram.com/polyglotpages.studio/"
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<!-- ==================== Section: Header ==================== -->
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="./" translate="no" lang="en">Polyglot Pages<span>.</span></a>
+    <nav class="nav" aria-label="主選單">
+      <a href="#work">範例</a>
+      <a href="#pricing">價格</a>
+      <a href="#how">合作流程</a>
+      <a href="#faq">常見問題</a>
+    </nav>
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="zh-Hant">繁</summary>
+        <div class="lang-list">
+          <a href="../" hreflang="en" lang="en">English</a>
+          <a href="./" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+        </div>
+      </details>
+    </nav>
+    <a class="btn ghost header-mail" href="mailto:polyglotpages.studio@gmail.com">寫信給我</a>
+  </div>
+</header>
+
+<main id="main">
+<!-- ==================== Section: Hero ==================== -->
+<section class="hero aurora" id="top">
+  <div class="wrap hero-grid">
+    <div class="rise">
+      <h1>一個網站，<br>英文、繁體、簡體都有</h1>
+      <p class="lead">我幫美國的華人小店做三語網站。一次付清，網站本身沒有月費，所有檔案都歸你。</p>
+      <div class="btns">
+        <a class="btn" href="mailto:polyglotpages.studio@gmail.com?subject=%E7%B6%B2%E7%AB%99%E5%95%8F%E9%A1%8C">寫信問我</a>
+        <a class="btn ghost" href="../templates/">看模板展示</a>
+      </div>
+      <p class="mail-note">polyglotpages.studio@gmail.com，中文或英文都可以。</p>
+    </div>
+
+    <!-- Mini phone: the same restaurant page in three languages (fictional example business) -->
+    <figure class="demo" data-lang-demo>
+      <div class="ph">
+        <input type="radio" name="phone-lang" id="pl-en" value="en" aria-label="English">
+        <input type="radio" name="phone-lang" id="pl-tw" value="tw" checked aria-label="繁體中文">
+        <input type="radio" name="phone-lang" id="pl-cn" value="cn" aria-label="简体中文">
+        <div class="ph-in">
+          <div class="ph-bar">
+            <span class="ph-dot" aria-hidden="true"></span>
+            <div class="ph-tabs">
+              <label for="pl-en" lang="en">EN</label>
+              <label for="pl-tw" lang="zh-Hant">繁</label>
+              <label for="pl-cn" lang="zh-Hans">简</label>
+            </div>
+          </div>
+          <img class="ph-photo" src="../img/phone-restaurant.webp" width="560" height="420" alt="一碗燉牛肉蓋飯，上面有半熟蛋" fetchpriority="high">
+          <div class="ph-screens">
+            <div class="ph-screen" data-l="en" lang="en">
+              <p class="ph-name" translate="no">Hiyori Kitchen</p>
+              <p class="ph-title">Slow food for sunny days</p>
+              <p class="ph-hours">Open today 11:00–21:00</p>
+              <p class="ph-btns" aria-hidden="true"><span>Book a table</span><span>Call</span></p>
+            </div>
+            <div class="ph-screen" data-l="tw" lang="zh-Hant">
+              <p class="ph-name">日和食堂</p>
+              <p class="ph-title">巷子裡的好日子食堂</p>
+              <p class="ph-hours">今天營業 11:00–21:00</p>
+              <p class="ph-btns" aria-hidden="true"><span>線上訂位</span><span>打電話</span></p>
+            </div>
+            <div class="ph-screen" data-l="cn" lang="zh-Hans">
+              <p class="ph-name">日和食堂</p>
+              <p class="ph-title">巷子里的好日子食堂</p>
+              <p class="ph-hours">今天营业 11:00–21:00</p>
+              <p class="ph-btns" aria-hidden="true"><span>在线订位</span><span>打电话</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption>虛構的範例餐廳。點 EN、繁、简 切換語言，你的客人看到的就是這樣。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ==================== Section: Who it's for (scrolling strip) ==================== -->
+<p class="sr-only">適合餐廳、牙醫診所、中醫針灸、補習班、美髮美甲、會計師、保險經紀、移民律師、房地產經紀。</p>
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>餐廳</span><span>牙醫診所</span><span>中醫針灸</span><span>補習班</span><span>美髮美甲</span><span>會計師</span><span>保險經紀</span><span>移民律師</span><span>房地產經紀</span>
+    <span class="dup">餐廳</span><span class="dup">牙醫診所</span><span class="dup">中醫針灸</span><span class="dup">補習班</span><span class="dup">美髮美甲</span><span class="dup">會計師</span><span class="dup">保險經紀</span><span class="dup">移民律師</span><span class="dup">房地產經紀</span>
+  </div>
+</div>
+
+<!-- ==================== Section: Did I email you ==================== -->
+<section id="email">
+  <div class="wrap letter">
+    <div>
+      <h2>收到我寄的網站預覽嗎？</h2>
+      <p class="muted">說明一下它是什麼、不是什麼。</p>
+    </div>
+    <div class="card">
+      <p>我會在 Google 地圖上找還沒有網站、或網站在手機上不好讀的華人小店。我只用你的 Google 商家資料上本來就公開的內容（店名、地址、營業時間、電話）做一個免費預覽，讓你在決定任何事之前，先看看大概的樣子。</p>
+      <p>預覽完全免費，也不會用你的名義公開。我不會跟你要密碼、銀行資料，也不會先收錢。如果你想做正式的網站，我們會先用 email 談好細節。</p>
+      <p>如果不需要，回一句「不用了，謝謝」，我就不會再寄信給你。</p>
+      <p class="sign">楊舜富 Yang Shunfu</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: About ==================== -->
+<section id="about">
+  <div class="wrap about">
+    <div class="about-text">
+      <h2>我是誰</h2>
+      <p>Polyglot Pages 就是我，楊舜富（Yang Shunfu），住在台灣的網頁設計師。我遠端和美國的小店合作，主要用 email 聯絡；每一頁的英文、繁體、簡體都由我撰寫和檢查。</p>
+      <p>沒有業務團隊，也沒有客服中心。回你信的人，就是幫你做網站的人。我剛開始接美國的案子，所以下面的範例是我自己做的模板，不是客戶作品。與其承諾做不到的事，我寧可先幫你的店做一個免費預覽給你看。</p>
+    </div>
+    <dl class="card facts">
+      <div><dt>所在地</dt><dd>台灣，遠端合作</dd></div>
+      <div><dt>時差</dt><dd>台灣比美國各時區快 12 到 16 小時。我會在 1 個工作天內回信。</dd></div>
+      <div><dt>語言</dt><dd><span lang="en">English</span>、繁體中文、<span lang="zh-Hans">简体中文</span></dd></div>
+      <div><dt>付款</dt><dd>透過 Gumroad 刷卡，收據會寄到你的信箱</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ==================== Section: Example sites ==================== -->
+<section id="work">
+  <div class="wrap">
+    <h2>範例網站</h2>
+    <p class="muted work-intro">這些是我自己做的模板，裡面的店名、人物和評價都是虛構的，可以放心點進去看。每一款都有三種語言。</p>
+    <ul class="grid work">
+      <li class="card">
+        <a class="shot" href="../templates/restaurant/zh-TW/"><img src="../img/restaurant-zh-TW.webp" width="640" height="400" loading="lazy" alt="範例餐廳「日和食堂」網站首頁"></a>
+        <h3>日和食堂</h3>
+        <p class="kind">範例：餐廳</p>
+        <p class="langs"><a href="../templates/restaurant/zh-TW/" lang="zh-Hant">繁體</a><a href="../templates/restaurant/en/" lang="en">English</a><a href="../templates/restaurant/zh-CN/" lang="zh-Hans">简体</a></p>
+      </li>
+      <li class="card">
+        <a class="shot" href="../templates/dental/zh-TW/"><img src="../img/dental-zh-TW.webp" width="640" height="400" loading="lazy" alt="範例牙醫「青窗牙醫診所」網站首頁"></a>
+        <h3>青窗牙醫診所</h3>
+        <p class="kind">範例：牙醫診所</p>
+        <p class="langs"><a href="../templates/dental/zh-TW/" lang="zh-Hant">繁體</a><a href="../templates/dental/en/" lang="en">English</a><a href="../templates/dental/zh-CN/" lang="zh-Hans">简体</a></p>
+      </li>
+      <li class="card">
+        <a class="shot" href="../templates/education/zh-TW/"><img src="../img/education-zh-TW.webp" width="640" height="400" loading="lazy" alt="範例補習班「青禾學苑」網站首頁"></a>
+        <h3>青禾學苑</h3>
+        <p class="kind">範例：補習班</p>
+        <p class="langs"><a href="../templates/education/zh-TW/" lang="zh-Hant">繁體</a><a href="../templates/education/en/" lang="en">English</a><a href="../templates/education/zh-CN/" lang="zh-Hans">简体</a></p>
+      </li>
+      <li class="card">
+        <a class="shot" href="../templates/beauty/zh-TW/"><img src="../img/beauty-zh-TW.webp" width="640" height="400" loading="lazy" alt="範例美髮美甲「霧光」網站首頁"></a>
+        <h3>霧光 Mist Hair &amp; Nail</h3>
+        <p class="kind">範例：美髮美甲</p>
+        <p class="langs"><a href="../templates/beauty/zh-TW/" lang="zh-Hant">繁體</a><a href="../templates/beauty/en/" lang="en">English</a><a href="../templates/beauty/zh-CN/" lang="zh-Hans">简体</a></p>
+      </li>
+      <li class="card">
+        <a class="shot" href="../templates/consulting/zh-TW/"><img src="../img/consulting-zh-TW.webp" width="640" height="400" loading="lazy" alt="範例事務所「恆信聯合事務所」網站首頁"></a>
+        <h3>恆信聯合事務所</h3>
+        <p class="kind">範例：會計事務所</p>
+        <p class="langs"><a href="../templates/consulting/zh-TW/" lang="zh-Hant">繁體</a><a href="../templates/consulting/en/" lang="en">English</a><a href="../templates/consulting/zh-CN/" lang="zh-Hans">简体</a></p>
+      </li>
+      <li class="card">
+        <a class="shot" href="../templates/realestate/zh-TW/"><img src="../img/realestate-zh-TW.webp" width="640" height="400" loading="lazy" alt="範例房仲「安居不動產」網站首頁"></a>
+        <h3>安居不動產</h3>
+        <p class="kind">範例：房地產經紀</p>
+        <p class="langs"><a href="../templates/realestate/zh-TW/" lang="zh-Hant">繁體</a><a href="../templates/realestate/en/" lang="en">English</a><a href="../templates/realestate/zh-CN/" lang="zh-Hans">简体</a></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== Section: Pricing ==================== -->
+<section id="pricing">
+  <div class="wrap">
+    <h2>兩種方案，一次付清</h2>
+    <p class="lead">價格以美元計。收到你的照片和文字後 7 天內，網站就會做好給你確認。</p>
+    <div class="grid plans">
+      <div class="card plan">
+        <h3>Basic</h3>
+        <p class="price">$299 <small>一次付清</small></p>
+        <p class="muted">用現成、好用的設計，放上你的內容。</p>
+        <ul>
+          <li>英文、繁體、簡體三個版本，附語言切換</li>
+          <li>放上你的文字和照片，文字只要給一種語言</li>
+          <li>電話、地圖、預約、WhatsApp、微信按鈕</li>
+          <li>聯絡表單，寄到你的 email</li>
+          <li>接上你自己的網域</li>
+          <li>修改 1 次</li>
+        </ul>
+        <a class="btn ghost" href="mailto:polyglotpages.studio@gmail.com?subject=Basic%20website%20(%24299)">詢問 Basic 方案</a>
+      </div>
+      <div class="card plan plan-pro">
+        <h3>Pro</h3>
+        <p class="price">$499 <small>一次付清</small></p>
+        <p class="muted">Basic 的全部內容，再加上：</p>
+        <ul>
+          <li>依你的品牌調整設計</li>
+          <li>三語文字幫你寫好</li>
+          <li>照片修圖，調整成適合網頁的尺寸</li>
+          <li>整理你的 Google 商家檔案</li>
+          <li>搜尋引擎基本設定</li>
+          <li>修改 2 次</li>
+        </ul>
+        <a class="btn" href="mailto:polyglotpages.studio@gmail.com?subject=Pro%20website%20(%24499)">詢問 Pro 方案</a>
+      </div>
+    </div>
+    <div class="grid terms">
+      <div class="card"><h3>付款方式</h3><p>先付 50% 開工，網站完成、你確認滿意後再付另外 50%。如果我無法交件，訂金全額退還。</p></div>
+      <div class="card"><h3>網站歸你</h3><p>網域用你的名字購買，網站放在你自己的主機帳號，所有檔案都交給你。</p></div>
+      <div class="card"><h3>不包含</h3><p>網域註冊費、拍攝照片，以及醫療、法律、金融用語的法律審查。</p></div>
+    </div>
+    <div class="card care">
+      <p><strong>網站維護 Website Care，每月 $49，自由選擇。</strong>營業時間、菜單、價格、照片有變動，寫信告訴我，我幫你更新網站，並讓 Google 商家檔案保持一致。每個網站第一個月免費，隨時可以取消，網站永遠是你的。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: How it works ==================== -->
+<section id="how">
+  <div class="wrap">
+    <h2>合作流程</h2>
+    <ol class="grid steps">
+      <li class="card"><span class="num" aria-hidden="true">1</span><h3>免費預覽</h3><p>我用你公開的 Google 商家資料做一個預覽，你看看就好，沒有任何條件。</p></li>
+      <li class="card"><span class="num" aria-hidden="true">2</span><h3>付訂金</h3><p>想做的話，透過 Gumroad 刷卡付 50%，收據會寄到你的信箱。</p></li>
+      <li class="card"><span class="num" aria-hidden="true">3</span><h3>提供照片和文字</h3><p>我寄一份簡短的表單給你，你用中文或英文提供照片和文字。</p></li>
+      <li class="card"><span class="num" aria-hidden="true">4</span><h3>確認並上線</h3><p>你檢查網站、提出修改。確認滿意並付清尾款後，網站就在你自己的網域上線。</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== Section: FAQ ==================== -->
+<section id="faq">
+  <div class="wrap">
+    <h2>常見問題</h2>
+    <div class="faq-list">
+      <details class="card">
+        <summary>這是詐騙嗎？為什麼寄信給我？</summary>
+        <div><p>不是。我在 Google 地圖上找到你的店，用公開的商家資料做了一個免費預覽，讓你先看到實際的樣子，而不是讀一封推銷信。除非你決定要做，否則不用付任何錢；每一筆付款都透過 Gumroad，並附收據。</p><p>如果不想再收到我的信，回一句「不用了，謝謝」，我就不會再寄。</p></div>
+      </details>
+      <details class="card">
+        <summary>網域是誰的？</summary>
+        <div><p>是你的。網域（例如 yourbusiness.com）用你的名字、你自己的帳號註冊，我只協助設定。就算以後不再找我，網域和網站都還是你的。</p></div>
+      </details>
+      <details class="card">
+        <summary>主機呢？每個月要付錢嗎？</summary>
+        <div><p>你的網站是一組單純的檔案，可以放在 Netlify 或 GitHub Pages 這類免費主機，用你自己的帳號。小店網站用免費方案就夠了。唯一每年要付的，是向你買網域的公司續約網域。</p></div>
+      </details>
+      <details class="card">
+        <summary>有哪些語言？誰來寫？</summary>
+        <div><p>英文、繁體中文、簡體中文，每一頁都有語言切換。文字只要給其中一種語言就好。簡體版會由人工逐字檢查，不只是機器轉換，讀起來才自然。</p></div>
+      </details>
+      <details class="card">
+        <summary>如果我不喜歡怎麼辦？</summary>
+        <div><p>預覽是免費的，不喜歡直接說不用就好。付訂金之後，Basic 可以修改 1 次、Pro 可以修改 2 次；網站完成、你確認滿意後才付另外一半。如果我無法交件，訂金全額退還。</p></div>
+      </details>
+      <details class="card">
+        <summary>可以刷卡嗎？</summary>
+        <div><p>可以。付款透過美國的付款平台 Gumroad，每一筆都會寄收據到你的信箱。</p></div>
+      </details>
+      <details class="card">
+        <summary>我開診所、律師事務所或保險公司，有什麼不一樣嗎？</summary>
+        <div><p>網站會列出你的服務項目、營業時間、會說的語言和預約方式。我不寫任何關於療效或結果的保證，上線前每個字都由你確認。你所在行業的用語規定，需要由你自己把關。</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Contact ==================== -->
+<section id="contact" class="contact aurora">
+  <div class="wrap">
+    <h2>有問題想先問問看嗎？</h2>
+    <p class="lead">用英文、繁體或簡體寫信給我都可以，我會在 1 個工作天內回信。</p>
+    <a class="big-mail" href="mailto:polyglotpages.studio@gmail.com">polyglotpages.studio@gmail.com</a>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h2 translate="no">Polyglot Pages</h2>
+        <p>幫美國的華人小店做三語網站。由台灣的楊舜富製作。</p>
+        <p><a href="mailto:polyglotpages.studio@gmail.com">polyglotpages.studio@gmail.com</a></p>
+      </div>
+      <div>
+        <h2>其他管道</h2>
+        <ul>
+          <li><a href="https://polyglotpages.gumroad.com">Gumroad 商店</a></li>
+          <li><a href="https://www.tiktok.com/@polyglotpages">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@polyglotpagesstudio">YouTube</a></li>
+          <li><a href="https://www.instagram.com/polyglotpages.studio/">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>語言</h2>
+        <ul>
+          <li><a href="../" hreflang="en" lang="en">English</a></li>
+          <li><a href="./" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a></li>
+          <li><a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© <span id="y">2026</span> Polyglot Pages。本網站沒有任何追蹤或分析程式。</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  document.getElementById('y').textContent = new Date().getFullYear();
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Language menu: close on outside click or Escape */
+  document.addEventListener('click', function (e) {
+    document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+  });
+
+  /* Scroll reveal: mark section titles and cards, stagger siblings, show them as they come into view */
+  var els = [].slice.call(document.querySelectorAll('main section:not(.hero) h2, main section:not(.hero) .card'));
+  var seen = new Map();
+  els.forEach(function (el) {
+    var i = seen.get(el.parentElement) || 0; seen.set(el.parentElement, i + 1);
+    el.style.setProperty('--i', String(Math.min(i, 5)));
+    el.setAttribute('data-reveal', '');
+  });
+  var show = function (el) { el.classList.add('in'); };
+  if (reduce || !('IntersectionObserver' in window)) { els.forEach(show); }
+  else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+    els.forEach(function (el) { io.observe(el); });
+    /* Safety net: if the observer never fires (old browser, screenshot tool), show everything */
+    var fired = false;
+    var probe = new IntersectionObserver(function () { fired = true; probe.disconnect(); });
+    probe.observe(document.body);
+    setTimeout(function () { if (!fired) els.forEach(show); }, 2500);
+  }
+
+  /* Mini phone: cycle EN, 繁, 简 slowly until the visitor taps a language; pause when off screen */
+  var demo = document.querySelector('[data-lang-demo]');
+  if (demo && !reduce) {
+    var radios = [].slice.call(demo.querySelectorAll('input[type=radio]'));
+    var user = false, visible = true;
+    demo.addEventListener('pointerdown', function () { user = true; });
+    demo.addEventListener('keydown', function () { user = true; });
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }).observe(demo);
+    setInterval(function () {
+      if (user || !visible || document.hidden) return;
+      var i = radios.findIndex(function (r) { return r.checked; });
+      radios[(i + 1) % radios.length].checked = true;
+    }, 3200);
+  }
+})();
+</script>
+</body>
+</html>
