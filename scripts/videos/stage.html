@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;800&display=block" rel="stylesheet"><style>
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden}
+body{background:#f3ebe2;font-family:"Inter Display","Inter",sans-serif;position:relative}
+.bg{position:absolute;inset:0;background:radial-gradient(900px 700px at 85% 0%,#fadcc4 0%,rgba(250,220,196,0) 70%),linear-gradient(180deg,#f5eae0,#f2ebe4)}
+.cap{position:absolute;left:52px;top:40px;right:40px}
+.brand{display:flex;align-items:center;gap:16px;color:#b8532a;font:700 30px/1 "Inter";letter-spacing:.14em;height:40px}
+.brand i{width:26px;height:26px;border-radius:50%;background:#b8532a;display:block}
+.layer{position:absolute;left:0;top:56px;right:0}
+.title{font:800 68px/76px "Inter Display";letter-spacing:-.02em;color:#221812;margin:0}
+.pill{position:absolute;left:0;top:198px;display:inline-block;background:#b5532b;color:#fff;font:800 46px/88px "Inter Display","Noto Sans JP";padding:0 36px;border-radius:44px;box-shadow:0 14px 30px rgba(181,83,43,.28);white-space:nowrap}
+.phone{position:absolute;left:22px;top:447px;width:1036px;height:1450px;box-sizing:border-box;border:10px solid #2a1d17;border-radius:72px;overflow:hidden;background:#fff;box-shadow:0 30px 60px rgba(60,30,10,.18)}
+.phone iframe{position:absolute;left:0;top:0;width:390px;height:551px;border:0;transform:scale(2.6);transform-origin:0 0;background:#fff}
+.tap{position:absolute;width:104px;height:104px;margin:-52px 0 0 -52px;border-radius:50%;background:rgba(214,150,128,.85);border:5px solid #fff;box-shadow:0 0 0 4px #b8532a,0 8px 18px rgba(0,0,0,.18);opacity:0;pointer-events:none;z-index:5}
+.end{position:absolute;inset:0;opacity:0;background:radial-gradient(520px 520px at 50% 22%,#fbe1cc 0%,rgba(251,225,204,0) 70%),linear-gradient(180deg,#f5eae0,#f2ebe4)}
+.end .dot{position:absolute;left:476px;top:647px;width:128px;height:128px;border-radius:50%;background:#e58b5f}
+.end .dot::after{content:"";position:absolute;left:28px;top:28px;width:72px;height:72px;border-radius:50%;background:#b5532b}
+.end h1{position:absolute;left:0;right:0;top:820px;margin:0;text-align:center;font:800 96px/1.1 "Inter Display";letter-spacing:-.02em;color:#1e1510}
+.end p{position:absolute;left:0;right:0;top:990px;margin:0;text-align:center;font:700 44px/1.2 "Inter","Noto Sans JP",sans-serif;color:#6e5c51}
+.end .url{position:absolute;left:128px;width:824px;top:1100px;height:118px;border-radius:59px;background:#b5532b;color:#fff;text-align:center;font:800 48px/118px "Inter";box-shadow:0 16px 34px rgba(181,83,43,.3)}
+</style></head><body>
+<div class="bg"></div>
+<div class="cap" id="cap"><div class="brand"><i></i>POLYGLOT PAGES</div>
+<div class="layer" id="L"><h1 class="title" id="T"></h1><div class="pill" id="P"></div></div></div>
+<div class="phone" id="phone"><iframe id="ja" src="SITE/ja/index.html"></iframe><iframe id="en" src="SITE/en/index.html"></iframe><div class="tap" id="tap"></div></div>
+<div class="end" id="end"><div class="dot"></div><h1>Polyglot Pages</h1><p>English · 中文 · 日本語</p><div class="url">polyglotpages.gumroad.com</div></div>
+</body></html>
