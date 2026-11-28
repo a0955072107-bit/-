@@ -33,6 +33,27 @@ Yang Shunfu
 Polyglot Pages · polyglotpages.studio@gmail.com
 ```
 
+## 追問內文 B：加一句「只加中文版 $199」（11/28 使用者同意；12/8 起、只給網站「只有英文」的店）
+> 下面各組表格「版本」欄標 **B** 的店用這段；標 A 的用上面原本的追問內文。記在 `ab-test.csv` 的 `followup_variant` 欄。
+> $199 的範圍：主要頁面最多 5 頁的繁體＋簡體版，翻譯現有內容、不新增療效或保證說法；頁面放在對方網站或我們的網址，對方自己（或他的網頁公司）加一個「中文」連結。對方回「好」時照 `回信範本.md` 第 0-B 節回。
+> **排追問前確認 Gmail「回覆／轉寄時使用」的簽名也選了有地址的那個**（追問是在原信件串回覆，用的是這個設定）。
+
+```
+Hi <店名> team, just following up in case my note got buried. The free preview is still here:
+<網址>
+
+If a full new site is more than you need, I can instead make Chinese versions (繁體中文 and 简体中文) of your main pages, up to 5 pages, for a one-time $199: half to start, half after you approve them. They open from a small "中文" link on your current site; adding that link takes a minute, and I'll walk you or your web person through it.
+
+Happy to answer any questions. If it's not a fit, just reply "no thanks" and I won't follow up again.
+
+Best,
+Yang Shunfu
+Polyglot Pages · polyglotpages.studio@gmail.com
+
+---
+您好，再跟您確認一下：免費的三語網站預覽還在上面的連結。如果不想整個重做，也可以只幫您現在的網站做繁體和簡體中文頁（主要頁面最多 5 頁，一次美金 $199，先付一半、確認後付另一半），再從您的網站加一個「中文」連結過去就好，我們會一步步協助。不需要的話回覆「不用了」，我們不會再打擾。
+```
+
 ## 台灣 12/1（二）02:25（加州週一早上，排在第 7 批加州之後）（1 封）
 > 11/30（一）白天排
 
@@ -76,52 +97,52 @@ Polyglot Pages · polyglotpages.studio@gmail.com
 ## 台灣 12/8（二）01:30 起每 5 分鐘（03:45 前寄完）（加州週一早上；12/8 起上限 30）（28 封）
 > 12/7（一）早上排
 
-| 編號 | 店名 | 收件人 | 網址 |
-|---|---|---|---|
-| L0004 | Jing Xu DDS Family Dentistry / 许静牙医 | xujingdds@gmail.com | https://polyglotpages.github.io/demo/jing-xu-dds-family-dentistry-san-gabriel/ |
-| L0007 | DIAO CHAN Hair & Beauty Salon / 貂蝉时尚 | diaochanstudio@icloud.com | https://polyglotpages.github.io/demo/diao-chan-hair-beauty-salon-rowland-heights/ |
-| L0064 | Chang Le Acupuncture & Herbs / 常乐中医针灸诊所 | andychang815@gmail.com | https://polyglotpages.github.io/demo/chang-le-acupuncture-herbs-san-gabriel/ |
-| L0065 | Quality Dental Group | qualitydentalgroup@hotmail.com | https://polyglotpages.github.io/demo/quality-dental-group-san-gabriel/ |
-| L0069 | Hongyun Art | inbox@hongyunart.com | https://polyglotpages.github.io/demo/hongyun-art-cupertino/ |
-| L0072 | Can Art Studio / 灿画室 | canartstudious@gmail.com | https://polyglotpages.github.io/demo/can-art-studio-fremont/ |
-| L0073 | SW Art Studio | info@sw-artstudio.com | https://polyglotpages.github.io/demo/sw-art-studio-fremont/ |
-| L0074 | Ran's Art Studio | ranmu8014@gmail.com | https://polyglotpages.github.io/demo/ran-s-art-studio-fremont/ |
-| L0075 | Lisa Performing Arts | lisadance04@yahoo.com | https://polyglotpages.github.io/demo/lisa-performing-arts-fremont/ |
-| L0076 | Lumine Academy | contact@lumineacademy.com | https://polyglotpages.github.io/demo/lumine-academy-cupertino/ |
-| L0079 | Valley Smiles Orthodontics | hello@valleysmilesorthodontics.com | https://polyglotpages.github.io/demo/valley-smiles-orthodontics-san-gabriel/ |
-| L0080 | Chu & Yang Dental | info@chuyangdental.com | https://polyglotpages.github.io/demo/chu-yang-dental-irvine/ |
-| L0081 | Irvine Smiles Dental | info@irvinesmilesdental.com | https://polyglotpages.github.io/demo/irvine-smiles-dental-irvine/ |
-| L0082 | Evergreen Health & Herbs | evergreenhealthherbs786@gmail.com | https://polyglotpages.github.io/demo/evergreen-health-herbs-irvine/ |
-| L0083 | iLearn Education | info@ilearneducation.com | https://polyglotpages.github.io/demo/ilearn-education-irvine/ |
-| L0084 | Tai-Ming Acupuncture Clinic / 泰铭中医堂 | TMTCM888@gmail.com | https://polyglotpages.github.io/demo/tai-ming-acupuncture-clinic-arcadia/ |
-| L0085 | Prestige Integrative Health Center | prestige5553@hotmail.com | https://polyglotpages.github.io/demo/prestige-integrative-health-center-temple-city/ |
-| L0086 | Alan H. Cheung, DDS | info@cheungdentalmilpitas.com | https://polyglotpages.github.io/demo/alan-h-cheung-dds-milpitas/ |
-| L0088 | Yidi Chen Stylist Hair Salon | yidichen2012@gmail.com | https://polyglotpages.github.io/demo/yidi-chen-stylist-hair-salon-arcadia/ |
-| L0089 | SoCal Family Acupuncture | hello@socalfamilyacu.com | https://polyglotpages.github.io/demo/socal-family-acupuncture-irvine/ |
-| L0090 | Revive Qi Health and Fertility Center | info@reviveqi.com | https://polyglotpages.github.io/demo/revive-qi-health-and-fertility-center-irvine/ |
-| L0091 | Uni Dental | contact@unidental.us | https://polyglotpages.github.io/demo/uni-dental-temple-city/ |
-| L0092 | Arcadia Advanced Dentistry | info@arcadiaadvanceddentistry.com | https://polyglotpages.github.io/demo/arcadia-advanced-dentistry-arcadia/ |
-| L0093 | California Dentistry & Implants | drsun898@gmail.com | https://polyglotpages.github.io/demo/california-dentistry-implants-arcadia/ |
-| L0094 | Michael Lum, DDS | office@lumdds.com | https://polyglotpages.github.io/demo/michael-lum-dds-milpitas/ |
-| L0028 | Formosa Dental Arts | info@formosadentalarts.com | https://polyglotpages.github.io/demo/formosa-dental-arts-irvine/ |
-| L0039 | Evergreen Dental Care | evergreendental937@gmail.com | https://polyglotpages.github.io/demo/evergreen-dental-care-alhambra/ |
-| L0056 | QH Dental | qhdental@mandentalgroup.com | https://polyglotpages.github.io/demo/qh-dental-irvine/ |
+| 編號 | 店名 | 收件人 | 網址 | 版本 |
+|---|---|---|---|---|
+| L0004 | Jing Xu DDS Family Dentistry / 许静牙医 | xujingdds@gmail.com | https://polyglotpages.github.io/demo/jing-xu-dds-family-dentistry-san-gabriel/ | A |
+| L0007 | DIAO CHAN Hair & Beauty Salon / 貂蝉时尚 | diaochanstudio@icloud.com | https://polyglotpages.github.io/demo/diao-chan-hair-beauty-salon-rowland-heights/ | A |
+| L0064 | Chang Le Acupuncture & Herbs / 常乐中医针灸诊所 | andychang815@gmail.com | https://polyglotpages.github.io/demo/chang-le-acupuncture-herbs-san-gabriel/ | A |
+| L0065 | Quality Dental Group | qualitydentalgroup@hotmail.com | https://polyglotpages.github.io/demo/quality-dental-group-san-gabriel/ | B |
+| L0069 | Hongyun Art | inbox@hongyunart.com | https://polyglotpages.github.io/demo/hongyun-art-cupertino/ | A |
+| L0072 | Can Art Studio / 灿画室 | canartstudious@gmail.com | https://polyglotpages.github.io/demo/can-art-studio-fremont/ | A |
+| L0073 | SW Art Studio | info@sw-artstudio.com | https://polyglotpages.github.io/demo/sw-art-studio-fremont/ | B |
+| L0074 | Ran's Art Studio | ranmu8014@gmail.com | https://polyglotpages.github.io/demo/ran-s-art-studio-fremont/ | B |
+| L0075 | Lisa Performing Arts | lisadance04@yahoo.com | https://polyglotpages.github.io/demo/lisa-performing-arts-fremont/ | A |
+| L0076 | Lumine Academy | contact@lumineacademy.com | https://polyglotpages.github.io/demo/lumine-academy-cupertino/ | B |
+| L0079 | Valley Smiles Orthodontics | hello@valleysmilesorthodontics.com | https://polyglotpages.github.io/demo/valley-smiles-orthodontics-san-gabriel/ | B |
+| L0080 | Chu & Yang Dental | info@chuyangdental.com | https://polyglotpages.github.io/demo/chu-yang-dental-irvine/ | B |
+| L0081 | Irvine Smiles Dental | info@irvinesmilesdental.com | https://polyglotpages.github.io/demo/irvine-smiles-dental-irvine/ | A |
+| L0082 | Evergreen Health & Herbs | evergreenhealthherbs786@gmail.com | https://polyglotpages.github.io/demo/evergreen-health-herbs-irvine/ | B |
+| L0083 | iLearn Education | info@ilearneducation.com | https://polyglotpages.github.io/demo/ilearn-education-irvine/ | B |
+| L0084 | Tai-Ming Acupuncture Clinic / 泰铭中医堂 | TMTCM888@gmail.com | https://polyglotpages.github.io/demo/tai-ming-acupuncture-clinic-arcadia/ | A |
+| L0085 | Prestige Integrative Health Center | prestige5553@hotmail.com | https://polyglotpages.github.io/demo/prestige-integrative-health-center-temple-city/ | B |
+| L0086 | Alan H. Cheung, DDS | info@cheungdentalmilpitas.com | https://polyglotpages.github.io/demo/alan-h-cheung-dds-milpitas/ | B |
+| L0088 | Yidi Chen Stylist Hair Salon | yidichen2012@gmail.com | https://polyglotpages.github.io/demo/yidi-chen-stylist-hair-salon-arcadia/ | B |
+| L0089 | SoCal Family Acupuncture | hello@socalfamilyacu.com | https://polyglotpages.github.io/demo/socal-family-acupuncture-irvine/ | B |
+| L0090 | Revive Qi Health and Fertility Center | info@reviveqi.com | https://polyglotpages.github.io/demo/revive-qi-health-and-fertility-center-irvine/ | B |
+| L0091 | Uni Dental | contact@unidental.us | https://polyglotpages.github.io/demo/uni-dental-temple-city/ | A |
+| L0092 | Arcadia Advanced Dentistry | info@arcadiaadvanceddentistry.com | https://polyglotpages.github.io/demo/arcadia-advanced-dentistry-arcadia/ | B |
+| L0093 | California Dentistry & Implants | drsun898@gmail.com | https://polyglotpages.github.io/demo/california-dentistry-implants-arcadia/ | B |
+| L0094 | Michael Lum, DDS | office@lumdds.com | https://polyglotpages.github.io/demo/michael-lum-dds-milpitas/ | B |
+| L0028 | Formosa Dental Arts | info@formosadentalarts.com | https://polyglotpages.github.io/demo/formosa-dental-arts-irvine/ | A |
+| L0039 | Evergreen Dental Care | evergreendental937@gmail.com | https://polyglotpages.github.io/demo/evergreen-dental-care-alhambra/ | B |
+| L0056 | QH Dental | qhdental@mandentalgroup.com | https://polyglotpages.github.io/demo/qh-dental-irvine/ | B |
 
 ## 台灣 12/9（三）01:30 起每 5 分鐘（加州週二早上）（10 封）
 > 12/8（二）早上排
 
-| 編號 | 店名 | 收件人 | 網址 |
-|---|---|---|---|
-| L0095 | SWC Academy | myou@swc-academy.com | https://polyglotpages.github.io/demo/swc-academy-rowland-heights/ |
-| L0097 | Chosen Acupuncture Clinic | clinic@chosenacu.com | https://polyglotpages.github.io/demo/chosen-acupuncture-clinic-rosemead/ |
-| L0099 | Herb4Us & Acupuncture | amanda.y.ge@gmail.com | https://polyglotpages.github.io/demo/herb4us-acupuncture-sunnyvale/ |
-| L0100 | Hao's Acupuncture & Wellness Center | haoliuclinic@gmail.com | https://polyglotpages.github.io/demo/hao-s-acupuncture-wellness-center-sunnyvale/ |
-| L0101 | Jin Niu Healthcare & Acupuncture | jin25.eric@gmail.com | https://polyglotpages.github.io/demo/jin-niu-healthcare-acupuncture-sunnyvale/ |
-| L0102 | Acupuncture China San Jose | jennyliusi@yahoo.com | https://polyglotpages.github.io/demo/acupuncture-china-san-jose/ |
-| L0104 | Encounters Natural Healing / 恩癒中醫診所 | cchou.encounters@gmail.com | https://polyglotpages.github.io/demo/encounters-natural-healing-san-jose/ |
-| L0105 | Harmony Acupuncture Chinese Medicine | info@HarmonyAcCM.com | https://polyglotpages.github.io/demo/harmony-acupuncture-chinese-medicine-san-jose/ |
-| L0106 | Acupuncture Avenue | acuavenue@gmail.com | https://polyglotpages.github.io/demo/acupuncture-avenue-san-jose/ |
-| L0107 | Rui Acupuncture Clinic | info@ruiacupunctureclinic.com | https://polyglotpages.github.io/demo/rui-acupuncture-clinic-san-jose/ |
+| 編號 | 店名 | 收件人 | 網址 | 版本 |
+|---|---|---|---|---|
+| L0095 | SWC Academy | myou@swc-academy.com | https://polyglotpages.github.io/demo/swc-academy-rowland-heights/ | B |
+| L0097 | Chosen Acupuncture Clinic | clinic@chosenacu.com | https://polyglotpages.github.io/demo/chosen-acupuncture-clinic-rosemead/ | B |
+| L0099 | Herb4Us & Acupuncture | amanda.y.ge@gmail.com | https://polyglotpages.github.io/demo/herb4us-acupuncture-sunnyvale/ | B |
+| L0100 | Hao's Acupuncture & Wellness Center | haoliuclinic@gmail.com | https://polyglotpages.github.io/demo/hao-s-acupuncture-wellness-center-sunnyvale/ | B |
+| L0101 | Jin Niu Healthcare & Acupuncture | jin25.eric@gmail.com | https://polyglotpages.github.io/demo/jin-niu-healthcare-acupuncture-sunnyvale/ | A |
+| L0102 | Acupuncture China San Jose | jennyliusi@yahoo.com | https://polyglotpages.github.io/demo/acupuncture-china-san-jose/ | A |
+| L0104 | Encounters Natural Healing / 恩癒中醫診所 | cchou.encounters@gmail.com | https://polyglotpages.github.io/demo/encounters-natural-healing-san-jose/ | A |
+| L0105 | Harmony Acupuncture Chinese Medicine | info@HarmonyAcCM.com | https://polyglotpages.github.io/demo/harmony-acupuncture-chinese-medicine-san-jose/ | B |
+| L0106 | Acupuncture Avenue | acuavenue@gmail.com | https://polyglotpages.github.io/demo/acupuncture-avenue-san-jose/ | B |
+| L0107 | Rui Acupuncture Clinic | info@ruiacupunctureclinic.com | https://polyglotpages.github.io/demo/rui-acupuncture-clinic-san-jose/ | B |
 
 ## 補：11/24～26 寄出、之前漏排的 20 家（11/27 審查部發現）
 
@@ -163,13 +184,13 @@ Polyglot Pages · polyglotpages.studio@gmail.com
 ### 台灣 12/10（四）01:30 起（加州週三早上）（6 封）
 > 12/9 早上排
 
-| 編號 | 店名 | 收件人 | 網址 |
-|---|---|---|---|
-| L0035 | Wayne W. Lee DDS & Associates | drlee@wayneleedds.com | https://polyglotpages.github.io/demo/wayne-w-lee-dds-associates-san-francisco/ |
-| L0036 | Nathan K. Yang, DDS | sfnathanyangdds@gmail.com | https://polyglotpages.github.io/demo/nathan-k-yang-dds-san-francisco/ |
-| L0055 | Culver Family Dentistry | info@culverfamilydental.com | https://polyglotpages.github.io/demo/culver-family-dentistry-irvine/ |
-| L0057 | Desmond B. Ng, DDS | drdesdds@gmail.com | https://polyglotpages.github.io/demo/desmond-b-ng-dds-san-francisco/ |
-| L0058 | Brian Y. Kuo DDS | bkuo.dds@gmail.com | https://polyglotpages.github.io/demo/brian-y-kuo-dds-arcadia/ |
-| L0062 | Irvine Integrative Medicine | info@irvineintegrativemedicine.com | https://polyglotpages.github.io/demo/irvine-integrative-medicine-irvine/ |
+| 編號 | 店名 | 收件人 | 網址 | 版本 |
+|---|---|---|---|---|
+| L0035 | Wayne W. Lee DDS & Associates | drlee@wayneleedds.com | https://polyglotpages.github.io/demo/wayne-w-lee-dds-associates-san-francisco/ | B |
+| L0036 | Nathan K. Yang, DDS | sfnathanyangdds@gmail.com | https://polyglotpages.github.io/demo/nathan-k-yang-dds-san-francisco/ | B |
+| L0055 | Culver Family Dentistry | info@culverfamilydental.com | https://polyglotpages.github.io/demo/culver-family-dentistry-irvine/ | B |
+| L0057 | Desmond B. Ng, DDS | drdesdds@gmail.com | https://polyglotpages.github.io/demo/desmond-b-ng-dds-san-francisco/ | B |
+| L0058 | Brian Y. Kuo DDS | bkuo.dds@gmail.com | https://polyglotpages.github.io/demo/brian-y-kuo-dds-arcadia/ | B |
+| L0062 | Irvine Integrative Medicine | info@irvineintegrativemedicine.com | https://polyglotpages.github.io/demo/irvine-integrative-medicine-irvine/ | B |
 
 合計 75 封（54＋補排 21）。各組 24 小時內合計（含首封）都在上限內：12/3 那段 4＋12＋2＋2＝20。
