@@ -29,7 +29,7 @@ Email: polyglotpages.studio@gmail.com
 Thanks for connecting, <名字>! I build websites in English, 繁體 and 简体 for Chinese-owned practices in the US. I noticed <事務所> serves a lot of Chinese-speaking clients. Would a free trilingual preview of your site be useful? Happy to make one, no obligation.
 ```
 - 對方說好 → 做預覽（make-demo），回傳連結和價格（照 `回信範本.md` 第 0 節）。
-- 對方不是老闆但認識很多店家 → 用「介紹夥伴」說法（`訊息範本.md` 最後一節），介紹成交給 $50。
+- 對方不是老闆但認識很多店家 → 用「介紹夥伴」說法（`訊息範本.md` 最後一節），介紹成交給 $50。**11/28 起：夥伴訊息等第一張訂單、有真實案例後才傳**；在那之前接受邀請的夥伴對象先不傳訊息（linkedin.csv 維持 accepted）。
 - 只追一次（7 天後）：`Just checking in. If a free preview would help, I'm happy to make one. If not, no worries at all.`
 
 ## 4. 紀錄
