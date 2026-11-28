@@ -8,7 +8,7 @@
      scripts/demo/make-demo.py 會用 sales/outreach/leads.csv 的資料填入每個雙大括號的欄位。
      房地產廣告：物件都標示為範例，不放編造的成交數字、客戶評價或執照號碼。 -->
 <title>CPRE Elite Realty｜法拉盛房地產 Real Estate</title>
-<meta name="description" content="CPRE Elite Realty是位於法拉盛（NY）的房地產經紀。買房、賣房、租房都歡迎來電詢問。營業時間、地址與交通資訊。">
+<meta name="description" content="CPRE Elite Realty 是位於法拉盛（NY）的房地產經紀。買房、賣房、租房都歡迎來電詢問。營業時間、地址與交通資訊。">
 <meta property="og:title" content="CPRE Elite Realty｜法拉盛房地產">
 <meta property="og:description" content="買房、賣房、租房都歡迎來電詢問。查看營業時間、地址與路線。">
 <meta property="og:type" content="website">
@@ -556,7 +556,7 @@ body { padding-top: var(--demo-h); }
         <a href="tel:+19175322039" class="btn btn-brand">來電 (917) 532-2039</a>
         <a href="https://maps.google.com/?cid=12987443693142037464" class="btn btn-line" target="_blank" rel="noopener">地圖導航</a>
       </div>
-      <!-- 物件搜尋：依 data-type、data-price 篩選下方的範例物件 -->
+      <!-- 物件搜尋：依 data-type、data-kind 篩選下方的範例物件 -->
       <form class="search" id="search" action="#listings" role="search" aria-label="搜尋範例物件">
         <div class="sf">
           <label for="s-type">買房或租房</label>
@@ -567,17 +567,11 @@ body { padding-top: var(--demo-h); }
           </select>
         </div>
         <div class="sf">
-          <label for="s-budget">預算</label>
-          <select id="s-budget" name="budget">
-            <option value="">不限預算</option>
-            <optgroup label="購屋總價">
-              <option value="buy:0:800000">80 萬美元以下</option>
-              <option value="buy:800000:99999999">80 萬美元以上</option>
-            </optgroup>
-            <optgroup label="每月租金">
-              <option value="rent:0:2500">2,500 美元以下</option>
-              <option value="rent:2500:99999">2,500 美元以上</option>
-            </optgroup>
+          <label for="s-kind">房屋類型</label>
+          <select id="s-kind" name="kind">
+            <option value="">不限類型</option>
+            <option value="unit">公寓</option>
+            <option value="house">獨立屋</option>
           </select>
         </div>
         <button type="submit" class="btn btn-brand">搜尋物件</button>
@@ -597,37 +591,37 @@ body { padding-top: var(--demo-h); }
     <div class="sec-head split reveal">
       <div>
         <h2>精選物件</h2>
-        <p class="demo-note">範例物件：下面的房子和價格只是示意排版，正式網站會換成您實際的物件。</p>
+        <p class="demo-note">範例物件：下面的房子只是示意排版，正式網站會換成您實際的物件和價格。</p>
       </div>
       <p class="result-count" aria-live="polite">共 <b id="count">3</b> 筆物件</p>
     </div>
     <div class="listings">
-      <article class="listing" data-type="buy" data-price="689000">
+      <article class="listing" data-type="buy" data-kind="unit">
         <div class="img img-facade" role="img" aria-label="中層公寓大樓的插圖"><div class="tags"><span class="tag">範例</span></div></div>
         <div class="body">
           <h3>近商圈與交通的兩房公寓</h3>
           <p class="loc">範例物件，法拉盛</p>
-          <p class="price">$689,000</p>
+          <p class="price">價格請洽詢</p>
           <dl class="specs"><div><dt>面積</dt><dd>1,120 平方英尺</dd></div><div><dt>房間與衛浴</dt><dd>2 房 2 衛</dd></div><div><dt>建造年份</dt><dd>2015 年</dd></div></dl>
           <div class="foot"><span class="id">範例 1</span><a href="tel:+19175322039" class="btn btn-line">詢問這間</a></div>
         </div>
       </article>
-      <article class="listing" data-type="buy" data-price="1150000">
+      <article class="listing" data-type="buy" data-kind="house">
         <div class="img img-plan" role="img" aria-label="四房平面圖的插圖"><div class="tags"><span class="tag">範例</span></div></div>
         <div class="body">
           <h3>附後院的四房獨立屋</h3>
           <p class="loc">範例物件，法拉盛</p>
-          <p class="price">$1,150,000</p>
+          <p class="price">價格請洽詢</p>
           <dl class="specs"><div><dt>面積</dt><dd>2,480 平方英尺</dd></div><div><dt>房間與衛浴</dt><dd>4 房 3 衛</dd></div><div><dt>建造年份</dt><dd>1998 年</dd></div></dl>
           <div class="foot"><span class="id">範例 2</span><a href="tel:+19175322039" class="btn btn-line">詢問這間</a></div>
         </div>
       </article>
-      <article class="listing" data-type="rent" data-price="2300">
+      <article class="listing" data-type="rent" data-kind="unit">
         <div class="img img-win" role="img" aria-label="客廳大窗的插圖"><div class="tags"><span class="tag">範例</span><span class="tag rent">出租</span></div></div>
         <div class="body">
           <h3>室內有洗衣機的一房公寓</h3>
           <p class="loc">範例物件，法拉盛</p>
-          <p class="price">$2,300<small>／月</small></p>
+          <p class="price">租金請洽詢</p>
           <dl class="specs"><div><dt>面積</dt><dd>720 平方英尺</dd></div><div><dt>房間與衛浴</dt><dd>1 房 1 衛</dd></div><div><dt>建造年份</dt><dd>2019 年</dd></div></dl>
           <div class="foot"><span class="id">範例 3</span><a href="tel:+19175322039" class="btn btn-line">詢問這間</a></div>
         </div>
@@ -678,7 +672,7 @@ body { padding-top: var(--demo-h); }
       <div class="img img-agent" role="img" aria-label="經紀人照片的插圖佔位"></div>
     </div>
     <div class="agent reveal">
-      <h2>關於CPRE Elite Realty</h2>
+      <h2>關於 CPRE Elite Realty</h2>
       <p class="demo-note">範例：這裡放您的照片、執照號碼、會說的語言、從業年資和熟悉的區域。</p>
       <p>想在法拉盛和附近地區買房、賣房或租房，歡迎來電。</p>
       <dl class="creds">
@@ -717,7 +711,7 @@ body { padding-top: var(--demo-h); }
   <div class="wrap">
     <div class="sec-head reveal">
       <h2>客戶評價</h2>
-      <p>看看客戶對CPRE Elite Realty的評價。</p>
+      <p>看看客戶對 CPRE Elite Realty 的評價。</p>
     </div>
     <div class="reviews links reveal">
       <article class="review">
@@ -835,10 +829,10 @@ document.documentElement.classList.add('js');
   var cards = document.querySelectorAll('.listing');
   var empty = document.getElementById('no-results');
   function filter() {
-    var f = form.elements, type = f.type.value, b = f.budget.value.split(':'), n = 0;
+    var f = form.elements, type = f.type.value, kind = f.kind.value, n = 0;
     cards.forEach(function (c) {
-      var d = c.dataset, p = +d.price;
-      var ok = (!type || d.type === type) && (!b[0] || (d.type === b[0] && p >= +b[1] && p <= +b[2]));
+      var d = c.dataset;
+      var ok = (!type || d.type === type) && (!kind || d.kind === kind);
       c.hidden = !ok; if (ok) n++;
     });
     empty.hidden = n > 0;

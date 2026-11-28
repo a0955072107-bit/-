@@ -556,7 +556,7 @@ body { padding-top: var(--demo-h); }
         <a href="tel:+19292609118" class="btn btn-brand">Call (929) 260-9118</a>
         <a href="https://maps.google.com/?cid=13441907850179493360" class="btn btn-line" target="_blank" rel="noopener">Get directions</a>
       </div>
-      <!-- Property search: filters the sample listing cards below by data-type and data-price -->
+      <!-- Property search: filters the sample listing cards below by data-type and data-kind -->
       <form class="search" id="search" action="#listings" role="search" aria-label="Search the sample listings">
         <div class="sf">
           <label for="s-type">Buy or rent</label>
@@ -567,17 +567,11 @@ body { padding-top: var(--demo-h); }
           </select>
         </div>
         <div class="sf">
-          <label for="s-budget">Budget</label>
-          <select id="s-budget" name="budget">
-            <option value="">Any budget</option>
-            <optgroup label="Purchase price">
-              <option value="buy:0:800000">Under $800K</option>
-              <option value="buy:800000:99999999">$800K and up</option>
-            </optgroup>
-            <optgroup label="Monthly rent">
-              <option value="rent:0:2500">Under $2,500</option>
-              <option value="rent:2500:99999">$2,500 and up</option>
-            </optgroup>
+          <label for="s-kind">Home type</label>
+          <select id="s-kind" name="kind">
+            <option value="">Any home type</option>
+            <option value="unit">Condo or apartment</option>
+            <option value="house">House</option>
           </select>
         </div>
         <button type="submit" class="btn btn-brand">Search homes</button>
@@ -597,37 +591,37 @@ body { padding-top: var(--demo-h); }
     <div class="sec-head split reveal">
       <div>
         <h2>Featured listings</h2>
-        <p class="demo-note">Sample listings: these homes and prices only show the layout. Your real listings go here.</p>
+        <p class="demo-note">Sample listings: these homes only show the layout. Your real listings and prices go here.</p>
       </div>
       <p class="result-count" aria-live="polite">Showing <b id="count">3</b> homes</p>
     </div>
     <div class="listings">
-      <article class="listing" data-type="buy" data-price="689000">
+      <article class="listing" data-type="buy" data-kind="unit">
         <div class="img img-facade" role="img" aria-label="Illustration of a mid-rise condo building"><div class="tags"><span class="tag">Sample</span></div></div>
         <div class="body">
           <h3>Two-bedroom condo near shops and transit</h3>
           <p class="loc">Sample listing, Flushing</p>
-          <p class="price">$689,000</p>
+          <p class="price">Price on request</p>
           <dl class="specs"><div><dt>Size</dt><dd>1,120 sq ft</dd></div><div><dt>Beds and baths</dt><dd>2 bd, 2 ba</dd></div><div><dt>Built</dt><dd>2015</dd></div></dl>
           <div class="foot"><span class="id">Sample 1</span><a href="tel:+19292609118" class="btn btn-line">Ask about this home</a></div>
         </div>
       </article>
-      <article class="listing" data-type="buy" data-price="1150000">
+      <article class="listing" data-type="buy" data-kind="house">
         <div class="img img-plan" role="img" aria-label="Illustration of a four-bedroom floor plan"><div class="tags"><span class="tag">Sample</span></div></div>
         <div class="body">
           <h3>Four-bedroom family home with a backyard</h3>
           <p class="loc">Sample listing, Flushing</p>
-          <p class="price">$1,150,000</p>
+          <p class="price">Price on request</p>
           <dl class="specs"><div><dt>Size</dt><dd>2,480 sq ft</dd></div><div><dt>Beds and baths</dt><dd>4 bd, 3 ba</dd></div><div><dt>Built</dt><dd>1998</dd></div></dl>
           <div class="foot"><span class="id">Sample 2</span><a href="tel:+19292609118" class="btn btn-line">Ask about this home</a></div>
         </div>
       </article>
-      <article class="listing" data-type="rent" data-price="2300">
+      <article class="listing" data-type="rent" data-kind="unit">
         <div class="img img-win" role="img" aria-label="Illustration of a large living room window"><div class="tags"><span class="tag">Sample</span><span class="tag rent">For rent</span></div></div>
         <div class="body">
           <h3>One-bedroom apartment with in-unit laundry</h3>
           <p class="loc">Sample listing, Flushing</p>
-          <p class="price">$2,300<small>/ month</small></p>
+          <p class="price">Rent on request</p>
           <dl class="specs"><div><dt>Size</dt><dd>720 sq ft</dd></div><div><dt>Beds and baths</dt><dd>1 bd, 1 ba</dd></div><div><dt>Built</dt><dd>2019</dd></div></dl>
           <div class="foot"><span class="id">Sample 3</span><a href="tel:+19292609118" class="btn btn-line">Ask about this home</a></div>
         </div>
@@ -835,10 +829,10 @@ document.documentElement.classList.add('js');
   var cards = document.querySelectorAll('.listing');
   var empty = document.getElementById('no-results');
   function filter() {
-    var f = form.elements, type = f.type.value, b = f.budget.value.split(':'), n = 0;
+    var f = form.elements, type = f.type.value, kind = f.kind.value, n = 0;
     cards.forEach(function (c) {
-      var d = c.dataset, p = +d.price;
-      var ok = (!type || d.type === type) && (!b[0] || (d.type === b[0] && p >= +b[1] && p <= +b[2]));
+      var d = c.dataset;
+      var ok = (!type || d.type === type) && (!kind || d.kind === kind);
       c.hidden = !ok; if (ok) n++;
     });
     empty.hidden = n > 0;
