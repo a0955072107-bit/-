@@ -1,11 +1,20 @@
+// 模板展示短片（1080×1920、18.5 秒）：標題 → 3 個功能區塊 → 一鍵切換日文 → 片尾
+// 用法：bash scripts/build-site.sh && node scripts/videos/render.js <slug> [slug ...]
+//   每款的標題、3 個區塊（section id、字幕、往下捲多少）寫在 scripts/videos/data.json
+//   輸出 sales/videos/t-<slug>.mp4（需要 ffmpeg；加 --frames-only 只輸出畫格、不轉檔）
+//   畫面用 _site/ 的線上預覽頁（含示意照片），所以要先跑 build-site.sh
 const { chromium } = require('playwright');
-const fs = require('fs');
-// Usage: bash scripts/build-site.sh && node scripts/videos/render.js <template-slug>  (then encode frames/ with ffmpeg as in the t-dental commit)
-const path = require('path');
-const SLUG = process.argv[2] || 'dental';
-const D = __dirname, SITE = 'file://' + path.resolve(D, '../../_site/templates', SLUG);
+const { spawnSync } = require('child_process');
+const fs = require('fs'), os = require('os'), path = require('path');
+const D = __dirname, ROOT = path.resolve(D, '../..');
+const DATA = JSON.parse(fs.readFileSync(path.join(D, 'data.json'), 'utf8'));
+const args = process.argv.slice(2), FRAMES_ONLY = args.includes('--frames-only');
+const SLUGS = args.filter(a => !a.startsWith('--'));
+if (!SLUGS.length) SLUGS.push('dental');
 const FPS = 30, DUR = 18.5, N = Math.round(FPS * DUR);
-const OUT = D + '/frames';
+// 每個區塊的時間點（秒）：字幕出現、捲到區塊、停住、往下捲完、再停住。三個區塊固定用這組（和 t-dental 相同）
+const SEG_AT = [2.5, 5.2, 7.9], LANG_AT = 10.6;
+const KEY_AT = [[2.9, 4.2, 5.0, 5.1], [6.0, 6.6, 7.5, 7.7], [8.6, 9.2, 9.9, 10.1]];
 const ease = x => x < 0 ? 0 : x > 1 ? 1 : (x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
 const clamp = x => Math.max(0, Math.min(1, x));
 function keyed(t, keys) { // keys: [[t0,v0],[t1,v1],...] eased between
@@ -16,35 +25,45 @@ function keyed(t, keys) { // keys: [[t0,v0],[t1,v1],...] eased between
   }
   return keys[keys.length - 1][1];
 }
-const SEG = [
-  [0, 'Dental Clinic website<br>template, Forest Edition', 'No monthly fees · you own it'],
-  [2.5, 'Your first visit, step by step', 'Feature 1 of 3'],
-  [5.2, 'Dentist profiles', 'Feature 2 of 3'],
-  [7.9, 'Today’s hours update itself', 'Feature 3 of 3'],
-  [10.6, 'Switch languages in one tap', 'English'],
-];
-(async () => {
-  fs.rmSync(OUT, { recursive: true, force: true }); fs.mkdirSync(OUT);
-  const html = fs.readFileSync(D + '/stage.html', 'utf8').replaceAll('SITE', SITE);
-  fs.writeFileSync(D + '/stage.built.html', html);
-  const b = await chromium.launch();
+function hasFfmpeg() { return spawnSync('ffmpeg', ['-version']).status === 0; }
+
+async function render(b, slug) {
+  const cfg = DATA[slug];
+  if (!cfg) throw new Error(`scripts/videos/data.json 沒有「${slug}」的設定`);
+  if (cfg.sections.length !== 3) throw new Error(`${slug}：sections 要剛好 3 個`);
+  const site = path.join(ROOT, '_site/templates', slug);
+  for (const l of ['en', 'ja']) if (!fs.existsSync(path.join(site, l, 'index.html'))) throw new Error(`找不到 ${site}/${l}/index.html，請先跑 bash scripts/build-site.sh`);
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), `video-${slug}-`));
+  const OUT = FRAMES_ONLY ? path.join(D, 'frames', slug) : path.join(tmp, 'frames');
+  fs.rmSync(OUT, { recursive: true, force: true }); fs.mkdirSync(OUT, { recursive: true });
+  const SEG = [[0, cfg.title, 'No monthly fees · you own it'],
+    ...cfg.sections.map((s, i) => [SEG_AT[i], s.caption, `Feature ${i + 1} of 3`]),
+    [LANG_AT, 'Switch languages in one tap', 'English']];
+  const stage = path.join(tmp, 'stage.html');
+  fs.writeFileSync(stage, fs.readFileSync(path.join(D, 'stage.html'), 'utf8').replaceAll('SITE', 'file://' + site));
   const p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
-  await p.goto('file://' + D + '/stage.built.html', { waitUntil: 'load' });
+  await p.goto('file://' + stage, { waitUntil: 'load' });
   await p.waitForTimeout(2500);
   const en = p.frame({ url: /\/en\// }), ja = p.frame({ url: /\/ja\// });
-  for (const f of [en, ja]) await f.addStyleTag({ content: '*,*::before,*::after{transition:none!important;animation:none!important}.reveal{opacity:1!important;transform:none!important}' });
+  for (const f of [en, ja]) await f.addStyleTag({ content: '*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}' });
   const top = await en.evaluate(() => { const o = {}; document.querySelectorAll('section[id]').forEach(s => o[s.id] = Math.round(s.getBoundingClientRect().top + scrollY)); return o; });
-  const S = { first: top.first - 60, doctors: top.doctors - 60, hours: top.hours - 60 };
-  const enKeys = [[1.6, 0], [2.9, S.first], [4.2, S.first], [5.0, S.first + 300], [5.1, S.first + 300], [6.0, S.doctors], [6.6, S.doctors], [7.5, S.doctors + 330], [7.7, S.doctors + 330], [8.6, S.hours], [9.2, S.hours], [9.9, S.hours + 200], [10.1, S.hours + 200], [10.7, S.hours]];
-  const jaKeys = [[13.6, 0], [15.0, 330]];
+  const off = cfg.offset == null ? 60 : cfg.offset;
+  const enKeys = [[1.6, 0]];
+  cfg.sections.forEach((s, i) => {
+    if (top[s.id] == null) throw new Error(`${slug}：英文版找不到 <section id="${s.id}">（有：${Object.keys(top).join(', ')}）`);
+    const y = top[s.id] - off, [a, h1, d, h2] = KEY_AT[i];
+    enKeys.push([a, y], [h1, y], [d, y + s.drift], [h2, y + s.drift]);
+  });
+  enKeys.push([LANG_AT + .1, top[cfg.sections[2].id] - off]);
+  const jaKeys = [[13.6, 0], [15.0, cfg.jaDrift == null ? 330 : cfg.jaDrift]];
   const sumRect = await en.evaluate(() => { const r = document.querySelector('.lang-menu summary').getBoundingClientRect(); return [r.x + r.width / 2, r.y + r.height / 2]; });
   await en.evaluate(() => document.querySelector('.lang-menu').setAttribute('open', ''));
   const jaRect = await en.evaluate(() => { const r = document.querySelector('.lang-list a[hreflang="ja"]').getBoundingClientRect(); return [r.x + r.width * 0.45, r.y + r.height / 2]; });
   await en.evaluate(() => document.querySelector('.lang-menu').removeAttribute('open'));
   const toStage = ([x, y]) => [10 + 2.6 * x, 10 + 2.6 * y]; // inside .phone (border 10)
   const A = toStage(sumRect), B = toStage(jaRect);
-  console.log({ top, A, B });
-  let lastSeg = -1, menuOpen = false, lang = 'en', pillText = null;
+  console.log(slug, { top, A, B });
+  let menuOpen = false;
   for (let i = 0; i < N; i++) {
     const t = i / FPS;
     // caption
@@ -85,5 +104,19 @@ const SEG = [
     }, { si, title: SEG[si][1], pill, pillScale, capOp, endOp, lang: wantLang, tap });
     await p.screenshot({ path: `${OUT}/f${String(i).padStart(4, '0')}.png` });
   }
-  await b.close();
-})();
+  await p.close();
+  if (FRAMES_ONLY) { console.log('✓ 畫格', OUT); fs.rmSync(tmp, { recursive: true, force: true }); return; }
+  const mp4 = path.join(ROOT, 'sales/videos', `t-${slug}.mp4`);
+  const r = spawnSync('ffmpeg', ['-y', '-loglevel', 'error', '-framerate', String(FPS), '-i', path.join(OUT, 'f%04d.png'),
+    '-c:v', 'libx264', '-profile:v', 'high', '-pix_fmt', 'yuv420p', '-crf', '20', '-preset', 'slow', '-movflags', '+faststart', mp4], { stdio: 'inherit' });
+  fs.rmSync(tmp, { recursive: true, force: true });
+  if (r.status !== 0) throw new Error(`${slug}：ffmpeg 轉檔失敗`);
+  console.log('✓', path.relative(ROOT, mp4));
+}
+
+(async () => {
+  if (!FRAMES_ONLY && !hasFfmpeg()) { console.error('找不到 ffmpeg：先安裝（apt-get install -y ffmpeg），或加 --frames-only 只輸出畫格'); process.exit(1); }
+  const b = await chromium.launch();
+  try { for (const s of SLUGS) await render(b, s); }
+  finally { await b.close(); }
+})().catch(e => { console.error(e.message); process.exit(1); });
