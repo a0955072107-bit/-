@@ -1,96 +1,64 @@
-id,business,price_quoted,batch,variant
-L0066,ZS Dental Care / 致尚牙科,299,batch7,link
-L0067,Lemon Tree Dental / 柠檬树牙科,499,batch7,link
-L0068,Accelerate Academy,299,batch7,link
-L0070,Yen Dentistry and Implantology,499,batch7,link
-L0071,Dr. Lin Hu Orthodontics / 胡林牙齿矫正专科,299,batch7,link
-L0077,D Dental Care / 楊安娜牙醫診所,499,batch7,link
-L0078,Empress Dental Services,299,batch7,link
-L0064,Chang Le Acupuncture & Herbs / 常乐中医针灸诊所,299,batch7,link
-L0065,Quality Dental Group,499,batch7,link
-L0069,Hongyun Art,299,batch7,link
-L0072,Can Art Studio / 灿画室,499,batch7,link
-L0073,SW Art Studio,299,batch7,link
-L0074,Ran's Art Studio,499,batch7,link
-L0075,Lisa Performing Arts,299,batch7,link
-L0076,Lumine Academy,499,batch7,link
-L0079,Valley Smiles Orthodontics,299,batch7,link
-L0080,Chu & Yang Dental,299,batch8,link
-L0081,Irvine Smiles Dental,499,batch8,link
-L0082,Evergreen Health & Herbs,299,batch8,link
-L0083,iLearn Education,499,batch8,link
-L0084,Tai-Ming Acupuncture Clinic / 泰铭中医堂,299,batch8,link
-L0085,Prestige Integrative Health Center,499,batch8,link
-L0086,"Alan H. Cheung, DDS",299,batch8,link
-L0088,Yidi Chen Stylist Hair Salon,499,batch8,link
-L0089,SoCal Family Acupuncture,299,batch8,link
-L0090,Revive Qi Health and Fertility Center,499,batch8,link
-L0091,Uni Dental,299,batch8,link
-L0092,Arcadia Advanced Dentistry,499,batch8,link
-L0093,California Dentistry & Implants,299,batch8,link
-L0094,"Michael Lum, DDS",499,batch8,link
-L0015,Xinyu Hair Salon / 心雨沙龙,299,batch-fb4,link
-L0028,Formosa Dental Arts,499,batch-fb4,link
-L0039,Evergreen Dental Care,299,batch-fb4,link
-L0056,QH Dental,499,batch-fb4,link
-L0095,SWC Academy,299,batch9,link
-L0097,Chosen Acupuncture Clinic,299,batch9,link
-L0098,Walnut Natural Health Center,499,batch9,link
-L0099,Herb4Us & Acupuncture,299,batch9,link
-L0100,Hao's Acupuncture & Wellness Center,499,batch9,link
-L0101,Jin Niu Healthcare & Acupuncture,299,batch9,link
-L0102,Acupuncture China San Jose,499,batch9,link
-L0104,Encounters Natural Healing / 恩癒中醫診所,499,batch9,link
-L0105,Harmony Acupuncture Chinese Medicine,299,batch9,link
-L0106,Acupuncture Avenue,499,batch9,link
-L0107,Rui Acupuncture Clinic,299,batch9,link
-L0108,Citi Tax and Accounting / 新城会计师事务所,299,batch10,link
-L0109,"TanTanCheng Accounting, Tax & Advisory",499,batch10,link
-L0111,APG Insurance,499,batch10,link
-L0123,JuneNYC Team (June Chang),299,batch10,link
-L0124,ZY Accounting / 致远注册会计事务所,499,batch10,link
-L0126,Century Max Insurance Agency / 麒麟保险,499,batch10,link
-L0112,Law Office of Tsung Hsi Liu,299,batch10,link
-L0113,"Bobby Chung, US Immigration Lawyer",499,batch10,link
-L0115,Wang Brothers Real Estate (Edward Wang),499,batch10,link
-L0116,JH Group CPA (Jeff Huang),299,batch10,link
-L0120,Mei Yang Real Estate,299,batch10,link
-L0127,The Chou Team (Mike Chou),499,batch10,link
-L0065,"Quality Dental Group",199,followups-dec,followup-zh-addon
-L0069,"Hongyun Art",199,followups-dec,followup-zh-addon
-L0072,"Can Art Studio / 灿画室",199,followups-dec,followup-zh-addon
-L0073,"SW Art Studio",199,followups-dec,followup-zh-addon
-L0074,"Ran's Art Studio",199,followups-dec,followup-zh-addon
-L0075,"Lisa Performing Arts",199,followups-dec,followup-zh-addon
-L0076,"Lumine Academy",199,followups-dec,followup-zh-addon
-L0079,"Valley Smiles Orthodontics",199,followups-dec,followup-zh-addon
-L0080,"Chu & Yang Dental",199,followups-dec,followup-zh-addon
-L0081,"Irvine Smiles Dental",199,followups-dec,followup-zh-addon
-L0082,"Evergreen Health & Herbs",199,followups-dec,followup-zh-addon
-L0083,"iLearn Education",199,followups-dec,followup-zh-addon
-L0085,"Prestige Integrative Health Center",199,followups-dec,followup-zh-addon
-L0086,"Alan H. Cheung, DDS",199,followups-dec,followup-zh-addon
-L0088,"Yidi Chen Stylist Hair Salon",199,followups-dec,followup-zh-addon
-L0089,"SoCal Family Acupuncture",199,followups-dec,followup-zh-addon
-L0090,"Revive Qi Health and Fertility Center",199,followups-dec,followup-zh-addon
-L0092,"Arcadia Advanced Dentistry",199,followups-dec,followup-zh-addon
-L0093,"California Dentistry & Implants",199,followups-dec,followup-zh-addon
-L0094,"Michael Lum, DDS",199,followups-dec,followup-zh-addon
-L0028,"Formosa Dental Arts",199,followups-dec,followup-zh-addon
-L0039,"Evergreen Dental Care",199,followups-dec,followup-zh-addon
-L0056,"QH Dental",199,followups-dec,followup-zh-addon
-L0095,"SWC Academy",199,followups-dec,followup-zh-addon
-L0097,"Chosen Acupuncture Clinic",199,followups-dec,followup-zh-addon
-L0099,"Herb4Us & Acupuncture",199,followups-dec,followup-zh-addon
-L0100,"Hao's Acupuncture & Wellness Center",199,followups-dec,followup-zh-addon
-L0102,"Acupuncture China San Jose",199,followups-dec,followup-zh-addon
-L0104,"Encounters Natural Healing / 恩癒中醫診所",199,followups-dec,followup-zh-addon
-L0105,"Harmony Acupuncture Chinese Medicine",199,followups-dec,followup-zh-addon
-L0106,"Acupuncture Avenue",199,followups-dec,followup-zh-addon
-L0107,"Rui Acupuncture Clinic",199,followups-dec,followup-zh-addon
-L0035,"Wayne W. Lee DDS & Associates",199,followups-dec,followup-zh-addon
-L0036,"Nathan K. Yang, DDS",199,followups-dec,followup-zh-addon
-L0055,"Culver Family Dentistry",199,followups-dec,followup-zh-addon
-L0057,"Desmond B. Ng, DDS",199,followups-dec,followup-zh-addon
-L0058,"Brian Y. Kuo DDS",199,followups-dec,followup-zh-addon
-L0062,"Irvine Integrative Medicine",199,followups-dec,followup-zh-addon
+id,business,price_quoted,batch,variant,followup_variant
+L0066,ZS Dental Care / 致尚牙科,299,batch7,link,
+L0067,Lemon Tree Dental / 柠檬树牙科,499,batch7,link,
+L0068,Accelerate Academy,299,batch7,link,
+L0070,Yen Dentistry and Implantology,499,batch7,link,
+L0071,Dr. Lin Hu Orthodontics / 胡林牙齿矫正专科,299,batch7,link,
+L0077,D Dental Care / 楊安娜牙醫診所,499,batch7,link,
+L0078,Empress Dental Services,299,batch7,link,
+L0064,Chang Le Acupuncture & Herbs / 常乐中医针灸诊所,299,batch7,link,
+L0065,Quality Dental Group,499,batch7,link,B
+L0069,Hongyun Art,299,batch7,link,
+L0072,Can Art Studio / 灿画室,499,batch7,link,
+L0073,SW Art Studio,299,batch7,link,B
+L0074,Ran's Art Studio,499,batch7,link,B
+L0075,Lisa Performing Arts,299,batch7,link,
+L0076,Lumine Academy,499,batch7,link,B
+L0079,Valley Smiles Orthodontics,299,batch7,link,B
+L0080,Chu & Yang Dental,299,batch8,link,B
+L0081,Irvine Smiles Dental,499,batch8,link,
+L0082,Evergreen Health & Herbs,299,batch8,link,B
+L0083,iLearn Education,499,batch8,link,B
+L0084,Tai-Ming Acupuncture Clinic / 泰铭中医堂,299,batch8,link,
+L0085,Prestige Integrative Health Center,499,batch8,link,B
+L0086,"Alan H. Cheung, DDS",299,batch8,link,B
+L0088,Yidi Chen Stylist Hair Salon,499,batch8,link,B
+L0089,SoCal Family Acupuncture,299,batch8,link,B
+L0090,Revive Qi Health and Fertility Center,499,batch8,link,B
+L0091,Uni Dental,299,batch8,link,
+L0092,Arcadia Advanced Dentistry,499,batch8,link,B
+L0093,California Dentistry & Implants,299,batch8,link,B
+L0094,"Michael Lum, DDS",499,batch8,link,B
+L0015,Xinyu Hair Salon / 心雨沙龙,299,batch-fb4,link,
+L0028,Formosa Dental Arts,499,batch-fb4,link,
+L0039,Evergreen Dental Care,299,batch-fb4,link,B
+L0056,QH Dental,499,batch-fb4,link,B
+L0095,SWC Academy,299,batch9,link,B
+L0097,Chosen Acupuncture Clinic,299,batch9,link,B
+L0098,Walnut Natural Health Center,499,batch9,link,
+L0099,Herb4Us & Acupuncture,299,batch9,link,B
+L0100,Hao's Acupuncture & Wellness Center,499,batch9,link,B
+L0101,Jin Niu Healthcare & Acupuncture,299,batch9,link,
+L0102,Acupuncture China San Jose,499,batch9,link,
+L0104,Encounters Natural Healing / 恩癒中醫診所,499,batch9,link,
+L0105,Harmony Acupuncture Chinese Medicine,299,batch9,link,B
+L0106,Acupuncture Avenue,499,batch9,link,B
+L0107,Rui Acupuncture Clinic,299,batch9,link,B
+L0108,Citi Tax and Accounting / 新城会计师事务所,299,batch10,link,
+L0109,"TanTanCheng Accounting, Tax & Advisory",499,batch10,link,
+L0111,APG Insurance,499,batch10,link,
+L0123,JuneNYC Team (June Chang),299,batch10,link,
+L0124,ZY Accounting / 致远注册会计事务所,499,batch10,link,
+L0126,Century Max Insurance Agency / 麒麟保险,499,batch10,link,
+L0112,Law Office of Tsung Hsi Liu,299,batch10,link,
+L0113,"Bobby Chung, US Immigration Lawyer",499,batch10,link,
+L0115,Wang Brothers Real Estate (Edward Wang),499,batch10,link,
+L0116,JH Group CPA (Jeff Huang),299,batch10,link,
+L0120,Mei Yang Real Estate,299,batch10,link,
+L0127,The Chou Team (Mike Chou),499,batch10,link,
+L0035,Wayne W. Lee DDS & Associates,299,,link,B
+L0036,"Nathan K. Yang, DDS",299,,link,B
+L0055,Culver Family Dentistry,299,,link,B
+L0057,"Desmond B. Ng, DDS",299,,link,B
+L0058,Brian Y. Kuo DDS,299,,link,B
+L0062,Irvine Integrative Medicine,299,,link,B
