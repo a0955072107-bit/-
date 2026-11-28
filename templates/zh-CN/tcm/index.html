@@ -190,8 +190,6 @@ html:not(.js) .site-header { background: var(--bg); border-bottom-color: var(--l
     radial-gradient(6.6% 7% at 88.5% 80%, color-mix(in srgb, var(--moss) 80%, var(--text)) 94%, transparent),
     radial-gradient(9.2% 10.5% at 88.5% 82%, var(--p-dish) 94%, transparent),
     radial-gradient(11% 10% at 89.5% 86%, var(--p-sh) 30%, transparent),
-    radial-gradient(2.4% 3.2% at 50% 83%, var(--p-straw) 94%, transparent),
-    radial-gradient(0.9% 1.7% at 57.5% 75%, var(--p-goji) 94%, transparent),
     /* 台面 */
     linear-gradient(color-mix(in srgb, var(--text) 26%, transparent), transparent) 0 47% / 100% 9% no-repeat,
     linear-gradient(transparent 42%, color-mix(in srgb, var(--wood) 34%, var(--surface)) 0);
@@ -208,14 +206,14 @@ html:not(.js) .site-header { background: var(--bg); border-bottom-color: var(--l
 /* 头部：发型、脸颊与颈部的色块剪影（微侧身，不画五官） */
 .img-doc::before { content: ""; position: absolute; left: 31%; top: 19%; width: 38%; height: 42%;
   background:
-    radial-gradient(47% 33% at 45% 35%, var(--hair) 98%, transparent),
+    radial-gradient(44% 33% at 46% 35%, var(--hair) 98%, transparent),
     var(--bob),
     radial-gradient(29% 30% at 62% 46%, var(--p-skin) 98%, transparent),
     linear-gradient(color-mix(in srgb, var(--wood) 62%, var(--surface)) 0 0) 58% 100% / 27% 40% no-repeat; }
 /* 白袍：肩线与衣领 */
 .img-doc::after { content: ""; position: absolute; inset: 57% 0 0; clip-path: polygon(31% 0, 66% 0, 93% 13%, 100% 100%, 0 100%, 7% 17%);
   background: linear-gradient(var(--line) 0 0) 46% 0 / 34% 9% no-repeat, linear-gradient(100deg, var(--surface) 55%, var(--p-dish)); }
-.img-doc1 { --hair: color-mix(in srgb, var(--text) 62%, var(--wood)); --bob: radial-gradient(40% 31% at 40% 55%, var(--hair) 98%, transparent);
+.img-doc1 { --hair: color-mix(in srgb, var(--text) 62%, var(--wood)); --bob: radial-gradient(14% 13% at 23% 61%, var(--hair) 98%, transparent);
   background: linear-gradient(color-mix(in srgb, var(--wood) 14%, var(--bg)), color-mix(in srgb, var(--wood) 34%, var(--bg))); }
 .img-doc2 { background: linear-gradient(color-mix(in srgb, var(--moss) 16%, var(--bg)), color-mix(in srgb, var(--wood) 30%, var(--bg))); }
 
@@ -223,9 +221,6 @@ html:not(.js) .site-header { background: var(--bg); border-bottom-color: var(--l
    建议比例 3:2 横式：俯拍几碟药材，放在浅色纸面上 */
 .img-herbs { aspect-ratio: 3 / 2;
   background:
-    /* 散落的几粒药材 */
-    radial-gradient(1.2% 1.8% at 45.5% 80%, var(--p-goji) 94%, transparent),
-    radial-gradient(2.2% 2% at 90% 70%, var(--p-straw) 94%, transparent),
     /* 第一碟：枸杞 */
     radial-gradient(14.4% 21.6% at 27% 44%, var(--p-goji) 97%, transparent),
     radial-gradient(18% 27% at 27% 44%, var(--p-dish) 97%, transparent),
@@ -454,9 +449,10 @@ html:not(.js) .site-header { background: var(--bg); border-bottom-color: var(--l
 .site-footer .logo { color: var(--text); margin-bottom: 1rem; }
 .site-footer h2 { color: var(--text); font: 500 var(--fs-body)/1.8 var(--font-body); margin-bottom: .6rem; }
 .site-footer a:hover { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
-.social { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: .8rem; }
+.social { display: flex; flex-wrap: wrap; gap: 0 1rem; margin-top: .2rem; }
 .social a { text-decoration: underline; text-underline-offset: 3px; }
 .social a, .site-footer p a { display: inline-flex; align-items: center; min-height: 32px; }
+.social a { min-height: 44px; }
 .foot-bottom { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: var(--fs-sm); }
 .foot-hours-short { display: none; }
 @media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; } .foot-links, .foot-hours { display: none; } .foot-hours-short { display: block; } .site-footer { padding-block: 2.5rem 1.5rem; } .foot-bottom { margin-top: 1.5rem; } }
