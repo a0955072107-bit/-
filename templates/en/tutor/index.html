@@ -207,19 +207,49 @@ html:not(.js) .site-header { background: var(--surface); border-bottom-color: va
 
 /* Replace with a photo: .img-t1 { background: url(images/teacher-1.jpg) center/cover; } (same for .img-t2 and .img-t3)
    Suggested ratio 4:5 head-and-shoulders portrait: person centered with a little headroom, softly blurred classroom behind. The placeholder shows the blurred classroom and window light */
-.img-t { aspect-ratio: 4 / 5; --hx: 50%; --lx: 16%; --sil: color-mix(in srgb, var(--slate) 40%, var(--glass));
+.img-t { aspect-ratio: 4 / 5; container-type: inline-size; background-color: color-mix(in srgb, var(--glass) 70%, var(--slate)); }
+/* A softly blurred corner of the classroom (no person): the whole layer is blurred, like the out-of-focus background of a portrait. Each of the three has its own composition */
+.img-t::before { content: ""; position: absolute; inset: -8%; filter: blur(3.2cqw); }
+/* First: window light on the left, a corner of the whiteboard top right, a desktop below */
+.img-t1::before {
+  --c1: color-mix(in srgb, var(--glass) 72%, var(--slate)); --c2: color-mix(in srgb, var(--surface) 92%, var(--glass)); --c3: color-mix(in srgb, var(--slate) 70%, var(--surface)); --c4: color-mix(in srgb, var(--wood) 70%, var(--text)); --c5: color-mix(in srgb, var(--wood) 80%, var(--surface));
   background:
-    radial-gradient(55% 42% at var(--lx) 20%, color-mix(in srgb, var(--surface) 96%, transparent), transparent 100%),
-    radial-gradient(44% 20% at calc(96% - var(--lx)) 30%, color-mix(in srgb, var(--surface) 78%, transparent) 50%, transparent 100%),
-    linear-gradient(180deg, color-mix(in srgb, var(--glass) 82%, var(--slate)), color-mix(in srgb, var(--glass) 58%, var(--slate)) 64%, color-mix(in srgb, var(--wood) 42%, var(--glass))); }
-/* Composition hint for the portrait frame: a pale single-tone head-and-shoulders silhouette (no face, hair or clothing), positioned by --hx; --lx sets where the window light comes from */
-.img-t::before { content: ""; position: absolute; left: calc(var(--hx) - 13.5%); top: 20%; width: 27%; height: 28%; border-radius: 50%; background: var(--sil); }
-.img-t::after { content: ""; position: absolute; left: calc(var(--hx) - 37%); width: 74%; top: 44%; bottom: 0;
+    linear-gradient(var(--c1), var(--c1)) 4.12% 18.52% / 3% 46% no-repeat,
+    linear-gradient(var(--c1), var(--c1)) -2.86% 31.79% / 30% 2.5% no-repeat,
+    linear-gradient(var(--surface), var(--surface)) -5.71% 16.0% / 30% 50% no-repeat,
+    linear-gradient(var(--c2), var(--c2)) 116.0% 8.57% / 50% 30% no-repeat,
+    linear-gradient(var(--c3), var(--c3)) 125.0% 6.15% / 56% 35% no-repeat,
+    linear-gradient(var(--c4), var(--c4)) 0% 78.35% / 100% 3% no-repeat,
+    linear-gradient(var(--c5), var(--c5)) 0% 112.86% / 100% 30% no-repeat,
+    linear-gradient(180deg, color-mix(in srgb, var(--glass) 84%, var(--slate)), var(--c1) 70%, color-mix(in srgb, var(--wood) 46%, var(--glass))); }
+/* Second: the whiteboard straight on, window light on the right, a chair back in the foreground */
+.img-t2::before {
+  --c1: color-mix(in srgb, var(--brand) 55%, var(--glass)); --c2: color-mix(in srgb, var(--brand) 40%, var(--surface)); --c3: color-mix(in srgb, var(--surface) 92%, var(--glass)); --c4: color-mix(in srgb, var(--slate) 70%, var(--surface)); --c5: color-mix(in srgb, var(--slate) 80%, var(--text)); --c6: color-mix(in srgb, var(--wood) 70%, var(--text)); --c7: color-mix(in srgb, var(--wood) 80%, var(--surface));
   background:
-    linear-gradient(var(--sil), var(--sil)) 50% 0 / 19% 30% no-repeat,
-    radial-gradient(50% 80% at 50% 100%, var(--sil) 99.4%, transparent 100%); }
-.img-t2 { --hx: 48%; --lx: 78%; }
-.img-t3 { --hx: 52%; --lx: 34%; }
+    linear-gradient(var(--c1), var(--c1)) 48.57% 114.81% / 30% 46% no-repeat,
+    linear-gradient(var(--surface), var(--surface)) 107.69% 13.64% / 22% 56% no-repeat,
+    linear-gradient(var(--c2), var(--c2)) 20.0% 30.49% / 30% 1.6% no-repeat,
+    linear-gradient(var(--c2), var(--c2)) 17.5% 37.6% / 20% 1.6% no-repeat,
+    linear-gradient(var(--c3), var(--c3)) 21.05% 26.47% / 62% 32% no-repeat,
+    linear-gradient(var(--c4), var(--c4)) 15.62% 24.19% / 68% 38% no-repeat,
+    linear-gradient(var(--c5), var(--c5)) 28.0% 55.33% / 50% 2.4% no-repeat,
+    linear-gradient(var(--c6), var(--c6)) 0% 86.15% / 100% 2.5% no-repeat,
+    linear-gradient(var(--c7), var(--c7)) 0% 108.12% / 100% 20% no-repeat,
+    linear-gradient(180deg, color-mix(in srgb, var(--glass) 72%, var(--slate)), color-mix(in srgb, var(--glass) 80%, var(--slate)) 60%, color-mix(in srgb, var(--wood) 46%, var(--glass))); }
+/* Third: a window in the middle, a bookshelf on the left, a desktop below */
+.img-t3::before {
+  --c1: color-mix(in srgb, var(--glass) 72%, var(--slate)); --c2: color-mix(in srgb, var(--brand) 60%, var(--wood)); --c3: color-mix(in srgb, var(--slate) 70%, var(--text)); --c4: color-mix(in srgb, var(--wood) 62%, var(--slate)); --c5: color-mix(in srgb, var(--wood) 70%, var(--text)); --c6: color-mix(in srgb, var(--wood) 80%, var(--surface));
+  background:
+    linear-gradient(var(--c1), var(--c1)) 50.26% 10.71% / 2.5% 44% no-repeat,
+    linear-gradient(var(--c1), var(--c1)) 50.0% 27.69% / 40% 2.5% no-repeat,
+    linear-gradient(var(--surface), var(--surface)) 50.0% 10.71% / 40% 44% no-repeat,
+    linear-gradient(var(--c2), var(--c2)) -2.5% 30.93% / 20% 3% no-repeat,
+    linear-gradient(var(--accent), var(--accent)) -2.5% 45.36% / 20% 3% no-repeat,
+    linear-gradient(var(--c3), var(--c3)) -2.5% 59.79% / 20% 3% no-repeat,
+    linear-gradient(var(--c4), var(--c4)) -5.26% 40.91% / 24% 56% no-repeat,
+    linear-gradient(var(--c5), var(--c5)) 0% 74.23% / 100% 3% no-repeat,
+    linear-gradient(var(--c6), var(--c6)) 0% 113.64% / 100% 34% no-repeat,
+    linear-gradient(180deg, color-mix(in srgb, var(--glass) 78%, var(--slate)), var(--c1) 66%, color-mix(in srgb, var(--wood) 46%, var(--glass))); }
 
 /* Replace with a photo: .img-desk { background: url(images/desk.jpg) center/cover; }
    Suggested ratio 3:2 landscape: an overhead study desk with a notebook, yellow pencils and a worksheet */
@@ -304,7 +334,7 @@ html:not(.js) .filter { display: none; }
 .chip:active { transform: translateY(1px); }
 .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--text); font-weight: 600; }
 .course-status { margin-bottom: var(--s3); color: var(--muted); font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
-.course-head, .course { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3.2fr); column-gap: clamp(1.5rem, 4vw, 4rem); }
+.course-head, .course { display: grid; grid-template-columns: minmax(0, 2.4fr) minmax(0, 3.2fr); column-gap: clamp(1.5rem, 3vw, 3rem); }
 .course-head > div, .course dl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, .8fr) minmax(0, 1.2fr); column-gap: var(--s5); }
 .course-head { padding-block: var(--s3); border-top: 1px solid var(--text); font-size: var(--fs-sm); color: var(--muted); }
 .course-head span:last-child, .c-fee { text-align: end; }
@@ -329,7 +359,7 @@ html:not(.js) .filter { display: none; }
   .course dl > div { display: inline-block; }
   .course dd { display: inline; }
   .course dt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  .course dl > div + div:not(.c-fee)::before { content: "\2002/\2002"; }
+  .course dl > div:nth-child(-n+2)::after { content: "\2002/\2002"; }
   .course .c-fee { position: absolute; inset: var(--s3) 0 auto auto; font-size: var(--fs-body); color: var(--text); line-height: 1.3; padding-top: .2em; }
   .chip { padding-inline: var(--s3); }
   .course-top .lead { display: none; }
@@ -359,10 +389,12 @@ html:not(.js) .filter { display: none; }
 @media (max-width: 860px) {
   .split-head { grid-template-columns: minmax(0, 1fr); }
   .t-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s5); }
-  .teacher { display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); gap: var(--s5); align-items: start; }
+  .teacher { display: grid; grid-template-columns: minmax(0, 6rem) minmax(0, 1fr); gap: var(--s4); align-items: start; }
   .t-body { padding-top: 0; }
   .teacher dl { margin-top: var(--s2); padding-top: var(--s2); border-top: 1px solid var(--line); font-size: var(--fs-md); }
-  .teacher dl > div { grid-template-columns: 4.5em minmax(0, 1fr); gap: var(--s3); padding-block: 0; border: 0; }
+  .teacher dl > div { display: block; padding-block: 0; border: 0; text-wrap: balance; }
+  .teacher dt, .teacher dd { display: inline; }
+  .teacher dt { margin-inline-end: .6em; }
 }
 
 /* ---------- Calendar: a ruled list of dates, events and notes ---------- */
@@ -589,23 +621,23 @@ html:not(.js) .filter { display: none; }
     <div class="course-head" aria-hidden="true"><span>Class</span><div><span>Grades</span><span>Schedule</span><span>Class size</span><span>Tuition</span></div></div>
     <ul class="course-list">
       <li class="course" data-grade="elem">
-        <div><h3>Elementary Math</h3><p>Word problems first: reading them closely and writing the thinking down.</p></div>
+        <div><h3>Elementary Math</h3><p>Word problems first: read closely, write the thinking down.</p></div>
         <dl><div><dt>Grades</dt><dd>Grades 3–5</dd></div><div><dt>Schedule</dt><dd>Tue and Thu, 4:00–5:30 pm</dd></div><div><dt>Class size</dt><dd>8 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $240 a month</dd></div></dl>
       </li>
       <li class="course" data-grade="elem">
-        <div><h3>Reading and Writing</h3><p>One short text a week and one paragraph of their own in response.</p></div>
+        <div><h3>Reading and Writing</h3><p>One short text a week, one paragraph in response.</p></div>
         <dl><div><dt>Grades</dt><dd>Grades 3–5</dd></div><div><dt>Schedule</dt><dd>Wed, 3:30–5:00 pm</dd></div><div><dt>Class size</dt><dd>8 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $180 a month</dd></div></dl>
       </li>
       <li class="course" data-grade="elem">
-        <div><h3>Homework Club</h3><p>Homework finished the same day, checked and corrected by a teacher.</p></div>
+        <div><h3>Homework Club</h3><p>Homework done the same day and checked by a teacher.</p></div>
         <dl><div><dt>Grades</dt><dd>Grades K–5</dd></div><div><dt>Schedule</dt><dd>Mon to Fri, 3:00–6:00 pm</dd></div><div><dt>Class size</dt><dd>10 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $420 a month</dd></div></dl>
       </li>
       <li class="course" data-grade="jr">
-        <div><h3>Middle School Math</h3><p>Follows the school pacing guide, with 20 minutes of practice in every class.</p></div>
+        <div><h3>Middle School Math</h3><p>Follows school pacing, with 20 minutes of practice each class.</p></div>
         <dl><div><dt>Grades</dt><dd>Grades 6–8</dd></div><div><dt>Schedule</dt><dd>Mon and Thu, 6:00–7:30 pm</dd></div><div><dt>Class size</dt><dd>10 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $280 a month</dd></div></dl>
       </li>
       <li class="course" data-grade="jr">
-        <div><h3>Middle School English</h3><p>Grammar, close reading and essays in rotation, with a weekly vocabulary quiz.</p></div>
+        <div><h3>Middle School English</h3><p>Grammar, close reading and essays, plus a weekly vocab quiz.</p></div>
         <dl><div><dt>Grades</dt><dd>Grades 6–8</dd></div><div><dt>Schedule</dt><dd>Tue and Fri, 6:00–7:30 pm</dd></div><div><dt>Class size</dt><dd>10 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $280 a month</dd></div></dl>
       </li>
       <li class="course" data-grade="jr">
@@ -613,19 +645,19 @@ html:not(.js) .filter { display: none; }
         <dl><div><dt>Grades</dt><dd>Grades 7–8</dd></div><div><dt>Schedule</dt><dd>Wed, 6:00–7:30 pm</dd></div><div><dt>Class size</dt><dd>10 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $220 a month</dd></div></dl>
       </li>
       <li class="course" data-grade="sr">
-        <div><h3>High School Math</h3><p>Grouped by course, from Algebra I to Calculus. Concept first, then past exam problems.</p></div>
+        <div><h3>High School Math</h3><p>Grouped by course. Concept first, then past exam problems.</p></div>
         <dl><div><dt>Grades</dt><dd>Grades 9–12</dd></div><div><dt>Schedule</dt><dd>Sat, 9:00 am–12:00 pm</dd></div><div><dt>Class size</dt><dd>12 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $340 a month</dd></div></dl>
       </li>
       <li class="course" data-grade="sr">
-        <div><h3>High School English</h3><p>Long-form reading and analytical writing, with one graded essay every two weeks.</p></div>
+        <div><h3>High School English</h3><p>Long-form reading, with a graded essay every two weeks.</p></div>
         <dl><div><dt>Grades</dt><dd>Grades 9–12</dd></div><div><dt>Schedule</dt><dd>Sat, 1:30–4:30 pm</dd></div><div><dt>Class size</dt><dd>12 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $340 a month</dd></div></dl>
       </li>
       <li class="course" data-grade="jr exam">
-        <div><h3>PSAT 8/9 Head Start</h3><p>A first look at the test format, with one practice test a month and an individual review.</p></div>
+        <div><h3>PSAT 8/9 Head Start</h3><p>A first look at the format, with a practice test every month.</p></div>
         <dl><div><dt>Grades</dt><dd>Grade 8</dd></div><div><dt>Schedule</dt><dd>Sun, 9:00 am–12:00 pm</dd></div><div><dt>Class size</dt><dd>12 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $690 a term</dd></div></dl>
       </li>
       <li class="course" data-grade="sr exam">
-        <div><h3>SAT and ACT Prep</h3><p>Grouped by practice-test results, so each student works on their weakest sections.</p></div>
+        <div><h3>SAT and ACT Prep</h3><p>Grouped by practice-test results to target weak sections.</p></div>
         <dl><div><dt>Grades</dt><dd>Grades 10–12</dd></div><div><dt>Schedule</dt><dd>Sun, 1:00–5:00 pm</dd></div><div><dt>Class size</dt><dd>12 students</dd></div><div class="c-fee"><dt>Tuition</dt><dd>From $960 a term</dd></div></dl>
       </li>
     </ul>
@@ -645,7 +677,7 @@ html:not(.js) .filter { display: none; }
         <li class="step">
           <span class="step-no" aria-hidden="true">1</span>
           <h3>Assessment</h3>
-          <p>A 40-minute short test and a conversation to see which units need work.</p>
+          <p>A 40-minute test and a talk to see which units need work.</p>
         </li>
         <li class="step">
           <span class="step-no" aria-hidden="true">2</span>
@@ -679,7 +711,7 @@ html:not(.js) .filter { display: none; }
           <dl>
             <div><dt>Degree</dt><dd>B.S. in Mathematics</dd></div>
             <div><dt>Years</dt><dd>11 years teaching</dd></div>
-            <div><dt>Teaches</dt><dd>Middle and high school math</dd></div>
+            <div><dt>Teaches</dt><dd>Math, grades 6–12</dd></div>
           </dl>
         </div>
       </article>
@@ -689,7 +721,7 @@ html:not(.js) .filter { display: none; }
           <h3>Mr. Daniel Chang</h3>
           <p class="t-role">English and test prep</p>
           <dl>
-            <div><dt>Degree</dt><dd>M.A. in English Education</dd></div>
+            <div><dt>Degree</dt><dd>M.A. in TESOL</dd></div>
             <div><dt>Years</dt><dd>15 years teaching</dd></div>
             <div><dt>Teaches</dt><dd>English, SAT and ACT</dd></div>
           </dl>
@@ -703,7 +735,7 @@ html:not(.js) .filter { display: none; }
           <dl>
             <div><dt>Degree</dt><dd>B.A. in Education</dd></div>
             <div><dt>Years</dt><dd>6 years teaching</dd></div>
-            <div><dt>Teaches</dt><dd>Elementary math and reading</dd></div>
+            <div><dt>Teaches</dt><dd>Math and reading</dd></div>
           </dl>
         </div>
       </article>

@@ -207,19 +207,49 @@ html:not(.js) .site-header { background: var(--surface); border-bottom-color: va
 
 /* 换成照片：.img-t1 { background: url(images/teacher-1.jpg) center/cover; }（.img-t2、.img-t3 同理）
    建议比例 4:5 半身照：人物置中、头顶留一点空间，背景是柔焦的教室。占位图画的是柔焦教室与窗光 */
-.img-t { aspect-ratio: 4 / 5; --hx: 50%; --lx: 16%; --sil: color-mix(in srgb, var(--slate) 40%, var(--glass));
+.img-t { aspect-ratio: 4 / 5; container-type: inline-size; background-color: color-mix(in srgb, var(--glass) 70%, var(--slate)); }
+/* 柔焦的教室一角（不画人）：整层模糊，像半身照后面失焦的背景。三张各用不同构图 */
+.img-t::before { content: ""; position: absolute; inset: -8%; filter: blur(3.2cqw); }
+/* 第一张：左边窗光、右上白板一角、下方桌面 */
+.img-t1::before {
+  --c1: color-mix(in srgb, var(--glass) 72%, var(--slate)); --c2: color-mix(in srgb, var(--surface) 92%, var(--glass)); --c3: color-mix(in srgb, var(--slate) 70%, var(--surface)); --c4: color-mix(in srgb, var(--wood) 70%, var(--text)); --c5: color-mix(in srgb, var(--wood) 80%, var(--surface));
   background:
-    radial-gradient(55% 42% at var(--lx) 20%, color-mix(in srgb, var(--surface) 96%, transparent), transparent 100%),
-    radial-gradient(44% 20% at calc(96% - var(--lx)) 30%, color-mix(in srgb, var(--surface) 78%, transparent) 50%, transparent 100%),
-    linear-gradient(180deg, color-mix(in srgb, var(--glass) 82%, var(--slate)), color-mix(in srgb, var(--glass) 58%, var(--slate)) 64%, color-mix(in srgb, var(--wood) 42%, var(--glass))); }
-/* 肖像框的构图提示：单色、淡淡的头肩剪影（不画五官、头发与衣着），位置由 --hx 决定，窗光方向由 --lx 决定 */
-.img-t::before { content: ""; position: absolute; left: calc(var(--hx) - 13.5%); top: 20%; width: 27%; height: 28%; border-radius: 50%; background: var(--sil); }
-.img-t::after { content: ""; position: absolute; left: calc(var(--hx) - 37%); width: 74%; top: 44%; bottom: 0;
+    linear-gradient(var(--c1), var(--c1)) 4.12% 18.52% / 3% 46% no-repeat,
+    linear-gradient(var(--c1), var(--c1)) -2.86% 31.79% / 30% 2.5% no-repeat,
+    linear-gradient(var(--surface), var(--surface)) -5.71% 16.0% / 30% 50% no-repeat,
+    linear-gradient(var(--c2), var(--c2)) 116.0% 8.57% / 50% 30% no-repeat,
+    linear-gradient(var(--c3), var(--c3)) 125.0% 6.15% / 56% 35% no-repeat,
+    linear-gradient(var(--c4), var(--c4)) 0% 78.35% / 100% 3% no-repeat,
+    linear-gradient(var(--c5), var(--c5)) 0% 112.86% / 100% 30% no-repeat,
+    linear-gradient(180deg, color-mix(in srgb, var(--glass) 84%, var(--slate)), var(--c1) 70%, color-mix(in srgb, var(--wood) 46%, var(--glass))); }
+/* 第二张：正面的白板、右侧窗光、前景一张椅背 */
+.img-t2::before {
+  --c1: color-mix(in srgb, var(--brand) 55%, var(--glass)); --c2: color-mix(in srgb, var(--brand) 40%, var(--surface)); --c3: color-mix(in srgb, var(--surface) 92%, var(--glass)); --c4: color-mix(in srgb, var(--slate) 70%, var(--surface)); --c5: color-mix(in srgb, var(--slate) 80%, var(--text)); --c6: color-mix(in srgb, var(--wood) 70%, var(--text)); --c7: color-mix(in srgb, var(--wood) 80%, var(--surface));
   background:
-    linear-gradient(var(--sil), var(--sil)) 50% 0 / 19% 30% no-repeat,
-    radial-gradient(50% 80% at 50% 100%, var(--sil) 99.4%, transparent 100%); }
-.img-t2 { --hx: 48%; --lx: 78%; }
-.img-t3 { --hx: 52%; --lx: 34%; }
+    linear-gradient(var(--c1), var(--c1)) 48.57% 114.81% / 30% 46% no-repeat,
+    linear-gradient(var(--surface), var(--surface)) 107.69% 13.64% / 22% 56% no-repeat,
+    linear-gradient(var(--c2), var(--c2)) 20.0% 30.49% / 30% 1.6% no-repeat,
+    linear-gradient(var(--c2), var(--c2)) 17.5% 37.6% / 20% 1.6% no-repeat,
+    linear-gradient(var(--c3), var(--c3)) 21.05% 26.47% / 62% 32% no-repeat,
+    linear-gradient(var(--c4), var(--c4)) 15.62% 24.19% / 68% 38% no-repeat,
+    linear-gradient(var(--c5), var(--c5)) 28.0% 55.33% / 50% 2.4% no-repeat,
+    linear-gradient(var(--c6), var(--c6)) 0% 86.15% / 100% 2.5% no-repeat,
+    linear-gradient(var(--c7), var(--c7)) 0% 108.12% / 100% 20% no-repeat,
+    linear-gradient(180deg, color-mix(in srgb, var(--glass) 72%, var(--slate)), color-mix(in srgb, var(--glass) 80%, var(--slate)) 60%, color-mix(in srgb, var(--wood) 46%, var(--glass))); }
+/* 第三张：中间一扇窗、左侧书柜、下方桌面 */
+.img-t3::before {
+  --c1: color-mix(in srgb, var(--glass) 72%, var(--slate)); --c2: color-mix(in srgb, var(--brand) 60%, var(--wood)); --c3: color-mix(in srgb, var(--slate) 70%, var(--text)); --c4: color-mix(in srgb, var(--wood) 62%, var(--slate)); --c5: color-mix(in srgb, var(--wood) 70%, var(--text)); --c6: color-mix(in srgb, var(--wood) 80%, var(--surface));
+  background:
+    linear-gradient(var(--c1), var(--c1)) 50.26% 10.71% / 2.5% 44% no-repeat,
+    linear-gradient(var(--c1), var(--c1)) 50.0% 27.69% / 40% 2.5% no-repeat,
+    linear-gradient(var(--surface), var(--surface)) 50.0% 10.71% / 40% 44% no-repeat,
+    linear-gradient(var(--c2), var(--c2)) -2.5% 30.93% / 20% 3% no-repeat,
+    linear-gradient(var(--accent), var(--accent)) -2.5% 45.36% / 20% 3% no-repeat,
+    linear-gradient(var(--c3), var(--c3)) -2.5% 59.79% / 20% 3% no-repeat,
+    linear-gradient(var(--c4), var(--c4)) -5.26% 40.91% / 24% 56% no-repeat,
+    linear-gradient(var(--c5), var(--c5)) 0% 74.23% / 100% 3% no-repeat,
+    linear-gradient(var(--c6), var(--c6)) 0% 113.64% / 100% 34% no-repeat,
+    linear-gradient(180deg, color-mix(in srgb, var(--glass) 78%, var(--slate)), var(--c1) 66%, color-mix(in srgb, var(--wood) 46%, var(--glass))); }
 
 /* 换成照片：.img-desk { background: url(images/desk.jpg) center/cover; }
    建议比例 3:2 横式：俯拍书桌，笔记本、黄色铅笔与计算纸 */
@@ -304,7 +334,7 @@ html:not(.js) .filter { display: none; }
 .chip:active { transform: translateY(1px); }
 .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--text); font-weight: 600; }
 .course-status { margin-bottom: var(--s3); color: var(--muted); font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
-.course-head, .course { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3.2fr); column-gap: clamp(1.5rem, 4vw, 4rem); }
+.course-head, .course { display: grid; grid-template-columns: minmax(0, 2.4fr) minmax(0, 3.2fr); column-gap: clamp(1.5rem, 3vw, 3rem); }
 .course-head > div, .course dl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, .8fr) minmax(0, 1.2fr); column-gap: var(--s5); }
 .course-head { padding-block: var(--s3); border-top: 1px solid var(--text); font-size: var(--fs-sm); color: var(--muted); }
 .course-head span:last-child, .c-fee { text-align: end; }
@@ -329,7 +359,7 @@ html:not(.js) .filter { display: none; }
   .course dl > div { display: inline-block; }
   .course dd { display: inline; }
   .course dt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  .course dl > div + div:not(.c-fee)::before { content: "／"; }
+  .course dl > div:nth-child(-n+2)::after { content: "／"; }
   .course .c-fee { position: absolute; inset: var(--s3) 0 auto auto; font-size: var(--fs-body); color: var(--text); line-height: 1.3; padding-top: .2em; }
   .chip { padding-inline: var(--s3); }
   .course-top .lead { display: none; }
@@ -359,10 +389,12 @@ html:not(.js) .filter { display: none; }
 @media (max-width: 860px) {
   .split-head { grid-template-columns: minmax(0, 1fr); }
   .t-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s5); }
-  .teacher { display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); gap: var(--s5); align-items: start; }
+  .teacher { display: grid; grid-template-columns: minmax(0, 6rem) minmax(0, 1fr); gap: var(--s4); align-items: start; }
   .t-body { padding-top: 0; }
   .teacher dl { margin-top: var(--s2); padding-top: var(--s2); border-top: 1px solid var(--line); font-size: var(--fs-md); }
-  .teacher dl > div { grid-template-columns: 4.5em minmax(0, 1fr); gap: var(--s3); padding-block: 0; border: 0; }
+  .teacher dl > div { display: block; padding-block: 0; border: 0; text-wrap: balance; }
+  .teacher dt, .teacher dd { display: inline; }
+  .teacher dt { margin-inline-end: .6em; }
 }
 
 /* ---------- 学期行事历：日期、事项、说明的细线清单 ---------- */

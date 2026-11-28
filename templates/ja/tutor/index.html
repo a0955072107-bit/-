@@ -209,19 +209,49 @@ html:not(.js) .site-header { background: var(--surface); border-bottom-color: va
 
 /* 写真に替える：.img-t1 { background: url(images/teacher-1.jpg) center/cover; }（.img-t2、.img-t3 も同様）
    推奨比率 4:5 のバストアップ：人物は中央、頭上に少し余白、背景はぼかした教室。プレースホルダーはぼかした教室と窓の光を描いています */
-.img-t { aspect-ratio: 4 / 5; --hx: 50%; --lx: 16%; --sil: color-mix(in srgb, var(--slate) 40%, var(--glass));
+.img-t { aspect-ratio: 4 / 5; container-type: inline-size; background-color: color-mix(in srgb, var(--glass) 70%, var(--slate)); }
+/* ぼかした教室の一角（人物は描きません）：全体をぼかし、バストアップ写真の背景のように見せます。3 枚とも構図を変えています */
+.img-t::before { content: ""; position: absolute; inset: -8%; filter: blur(3.2cqw); }
+/* 1 枚目：左に窓の光、右上にホワイトボードの角、下に机の天板 */
+.img-t1::before {
+  --c1: color-mix(in srgb, var(--glass) 72%, var(--slate)); --c2: color-mix(in srgb, var(--surface) 92%, var(--glass)); --c3: color-mix(in srgb, var(--slate) 70%, var(--surface)); --c4: color-mix(in srgb, var(--wood) 70%, var(--text)); --c5: color-mix(in srgb, var(--wood) 80%, var(--surface));
   background:
-    radial-gradient(55% 42% at var(--lx) 20%, color-mix(in srgb, var(--surface) 96%, transparent), transparent 100%),
-    radial-gradient(44% 20% at calc(96% - var(--lx)) 30%, color-mix(in srgb, var(--surface) 78%, transparent) 50%, transparent 100%),
-    linear-gradient(180deg, color-mix(in srgb, var(--glass) 82%, var(--slate)), color-mix(in srgb, var(--glass) 58%, var(--slate)) 64%, color-mix(in srgb, var(--wood) 42%, var(--glass))); }
-/* 肖像枠の構図の目安：単色の淡い頭と肩のシルエット（顔、髪、服は描きません）。位置は --hx、窓の光の向きは --lx で決まります */
-.img-t::before { content: ""; position: absolute; left: calc(var(--hx) - 13.5%); top: 20%; width: 27%; height: 28%; border-radius: 50%; background: var(--sil); }
-.img-t::after { content: ""; position: absolute; left: calc(var(--hx) - 37%); width: 74%; top: 44%; bottom: 0;
+    linear-gradient(var(--c1), var(--c1)) 4.12% 18.52% / 3% 46% no-repeat,
+    linear-gradient(var(--c1), var(--c1)) -2.86% 31.79% / 30% 2.5% no-repeat,
+    linear-gradient(var(--surface), var(--surface)) -5.71% 16.0% / 30% 50% no-repeat,
+    linear-gradient(var(--c2), var(--c2)) 116.0% 8.57% / 50% 30% no-repeat,
+    linear-gradient(var(--c3), var(--c3)) 125.0% 6.15% / 56% 35% no-repeat,
+    linear-gradient(var(--c4), var(--c4)) 0% 78.35% / 100% 3% no-repeat,
+    linear-gradient(var(--c5), var(--c5)) 0% 112.86% / 100% 30% no-repeat,
+    linear-gradient(180deg, color-mix(in srgb, var(--glass) 84%, var(--slate)), var(--c1) 70%, color-mix(in srgb, var(--wood) 46%, var(--glass))); }
+/* 2 枚目：正面にホワイトボード、右に窓の光、手前に椅子の背 */
+.img-t2::before {
+  --c1: color-mix(in srgb, var(--brand) 55%, var(--glass)); --c2: color-mix(in srgb, var(--brand) 40%, var(--surface)); --c3: color-mix(in srgb, var(--surface) 92%, var(--glass)); --c4: color-mix(in srgb, var(--slate) 70%, var(--surface)); --c5: color-mix(in srgb, var(--slate) 80%, var(--text)); --c6: color-mix(in srgb, var(--wood) 70%, var(--text)); --c7: color-mix(in srgb, var(--wood) 80%, var(--surface));
   background:
-    linear-gradient(var(--sil), var(--sil)) 50% 0 / 19% 30% no-repeat,
-    radial-gradient(50% 80% at 50% 100%, var(--sil) 99.4%, transparent 100%); }
-.img-t2 { --hx: 48%; --lx: 78%; }
-.img-t3 { --hx: 52%; --lx: 34%; }
+    linear-gradient(var(--c1), var(--c1)) 48.57% 114.81% / 30% 46% no-repeat,
+    linear-gradient(var(--surface), var(--surface)) 107.69% 13.64% / 22% 56% no-repeat,
+    linear-gradient(var(--c2), var(--c2)) 20.0% 30.49% / 30% 1.6% no-repeat,
+    linear-gradient(var(--c2), var(--c2)) 17.5% 37.6% / 20% 1.6% no-repeat,
+    linear-gradient(var(--c3), var(--c3)) 21.05% 26.47% / 62% 32% no-repeat,
+    linear-gradient(var(--c4), var(--c4)) 15.62% 24.19% / 68% 38% no-repeat,
+    linear-gradient(var(--c5), var(--c5)) 28.0% 55.33% / 50% 2.4% no-repeat,
+    linear-gradient(var(--c6), var(--c6)) 0% 86.15% / 100% 2.5% no-repeat,
+    linear-gradient(var(--c7), var(--c7)) 0% 108.12% / 100% 20% no-repeat,
+    linear-gradient(180deg, color-mix(in srgb, var(--glass) 72%, var(--slate)), color-mix(in srgb, var(--glass) 80%, var(--slate)) 60%, color-mix(in srgb, var(--wood) 46%, var(--glass))); }
+/* 3 枚目：中央に窓、左に本棚、下に机の天板 */
+.img-t3::before {
+  --c1: color-mix(in srgb, var(--glass) 72%, var(--slate)); --c2: color-mix(in srgb, var(--brand) 60%, var(--wood)); --c3: color-mix(in srgb, var(--slate) 70%, var(--text)); --c4: color-mix(in srgb, var(--wood) 62%, var(--slate)); --c5: color-mix(in srgb, var(--wood) 70%, var(--text)); --c6: color-mix(in srgb, var(--wood) 80%, var(--surface));
+  background:
+    linear-gradient(var(--c1), var(--c1)) 50.26% 10.71% / 2.5% 44% no-repeat,
+    linear-gradient(var(--c1), var(--c1)) 50.0% 27.69% / 40% 2.5% no-repeat,
+    linear-gradient(var(--surface), var(--surface)) 50.0% 10.71% / 40% 44% no-repeat,
+    linear-gradient(var(--c2), var(--c2)) -2.5% 30.93% / 20% 3% no-repeat,
+    linear-gradient(var(--accent), var(--accent)) -2.5% 45.36% / 20% 3% no-repeat,
+    linear-gradient(var(--c3), var(--c3)) -2.5% 59.79% / 20% 3% no-repeat,
+    linear-gradient(var(--c4), var(--c4)) -5.26% 40.91% / 24% 56% no-repeat,
+    linear-gradient(var(--c5), var(--c5)) 0% 74.23% / 100% 3% no-repeat,
+    linear-gradient(var(--c6), var(--c6)) 0% 113.64% / 100% 34% no-repeat,
+    linear-gradient(180deg, color-mix(in srgb, var(--glass) 78%, var(--slate)), var(--c1) 66%, color-mix(in srgb, var(--wood) 46%, var(--glass))); }
 
 /* 写真に替える：.img-desk { background: url(images/desk.jpg) center/cover; }
    推奨比率 3:2 の横長：真上から撮った机。ノート、黄色い鉛筆、計算用紙 */
@@ -306,7 +336,7 @@ html:not(.js) .filter { display: none; }
 .chip:active { transform: translateY(1px); }
 .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--text); font-weight: 600; }
 .course-status { margin-bottom: var(--s3); color: var(--muted); font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
-.course-head, .course { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3.2fr); column-gap: clamp(1.5rem, 4vw, 4rem); }
+.course-head, .course { display: grid; grid-template-columns: minmax(0, 2.4fr) minmax(0, 3.2fr); column-gap: clamp(1.5rem, 3vw, 3rem); }
 .course-head > div, .course dl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, .8fr) minmax(0, 1.2fr); column-gap: var(--s5); }
 .course-head { padding-block: var(--s3); border-top: 1px solid var(--text); font-size: var(--fs-sm); color: var(--muted); }
 .course-head span:last-child, .c-fee { text-align: end; }
@@ -331,7 +361,7 @@ html:not(.js) .filter { display: none; }
   .course dl > div { display: inline-block; }
   .course dd { display: inline; }
   .course dt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  .course dl > div + div:not(.c-fee)::before { content: "／"; }
+  .course dl > div:nth-child(-n+2)::after { content: "／"; }
   .course .c-fee { position: absolute; inset: var(--s3) 0 auto auto; font-size: var(--fs-body); color: var(--text); line-height: 1.3; padding-top: .2em; }
   .chip { padding-inline: var(--s3); }
   .course-top .lead { display: none; }
@@ -361,10 +391,12 @@ html:not(.js) .filter { display: none; }
 @media (max-width: 860px) {
   .split-head { grid-template-columns: minmax(0, 1fr); }
   .t-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s5); }
-  .teacher { display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); gap: var(--s5); align-items: start; }
+  .teacher { display: grid; grid-template-columns: minmax(0, 6rem) minmax(0, 1fr); gap: var(--s4); align-items: start; }
   .t-body { padding-top: 0; }
   .teacher dl { margin-top: var(--s2); padding-top: var(--s2); border-top: 1px solid var(--line); font-size: var(--fs-md); }
-  .teacher dl > div { grid-template-columns: 4.5em minmax(0, 1fr); gap: var(--s3); padding-block: 0; border: 0; }
+  .teacher dl > div { display: block; padding-block: 0; border: 0; text-wrap: balance; }
+  .teacher dt, .teacher dd { display: inline; }
+  .teacher dt { margin-inline-end: .6em; }
 }
 
 /* ---------- 年間予定：日付、内容、補足を並べた罫線のリスト ---------- */
@@ -591,43 +623,43 @@ html:not(.js) .filter { display: none; }
     <div class="course-head" aria-hidden="true"><span>コース</span><div><span>対象学年</span><span>時間割</span><span>定員</span><span>授業料</span></div></div>
     <ul class="course-list">
       <li class="course" data-grade="elem">
-        <div><h3>小学算数 考える力</h3><p>文章題を読むところから始め、考えを式にする練習をします。</p></div>
+        <div><h3>小学算数 考える力</h3><p>文章題を読み、考えを式にする練習をします。</p></div>
         <dl><div><dt>対象学年</dt><dd>小3〜小6</dd></div><div><dt>時間割</dt><dd>火曜と木曜 16:30〜18:00</dd></div><div><dt>定員</dt><dd>定員 8 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥13,200〜</dd></div></dl>
       </li>
       <li class="course" data-grade="elem">
-        <div><h3>小学国語 読解と作文</h3><p>毎週短い文章を 1 つ読み、自分の考えを書きます。</p></div>
+        <div><h3>小学国語 読解と作文</h3><p>毎週短い文章を読み、自分の考えを書きます。</p></div>
         <dl><div><dt>対象学年</dt><dd>小3〜小6</dd></div><div><dt>時間割</dt><dd>水曜 16:30〜18:00</dd></div><div><dt>定員</dt><dd>定員 8 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥9,900〜</dd></div></dl>
       </li>
       <li class="course" data-grade="elem">
-        <div><h3>放課後の宿題サポート</h3><p>その日の宿題を終わらせ、講師が 1 冊ずつ確認します。</p></div>
+        <div><h3>放課後の宿題サポート</h3><p>その日の宿題を終え、講師が確認します。</p></div>
         <dl><div><dt>対象学年</dt><dd>小1〜小6</dd></div><div><dt>時間割</dt><dd>月曜〜金曜 15:30〜18:30</dd></div><div><dt>定員</dt><dd>定員 10 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥19,800〜</dd></div></dl>
       </li>
       <li class="course" data-grade="jr">
-        <div><h3>中学数学</h3><p>学校の進度に合わせ、毎回 20 分はその場で演習します。</p></div>
+        <div><h3>中学数学</h3><p>学校の進度に合わせ、毎回 20 分演習します。</p></div>
         <dl><div><dt>対象学年</dt><dd>中1〜中3</dd></div><div><dt>時間割</dt><dd>月曜と木曜 19:00〜21:00</dd></div><div><dt>定員</dt><dd>定員 10 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥15,400〜</dd></div></dl>
       </li>
       <li class="course" data-grade="jr">
-        <div><h3>中学英語</h3><p>文法、読解、リスニングを順に練習し、毎週単語テストを行います。</p></div>
+        <div><h3>中学英語</h3><p>文法、読解、リスニングと毎週の単語テスト。</p></div>
         <dl><div><dt>対象学年</dt><dd>中1〜中3</dd></div><div><dt>時間割</dt><dd>火曜と金曜 19:00〜21:00</dd></div><div><dt>定員</dt><dd>定員 10 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥15,400〜</dd></div></dl>
       </li>
       <li class="course" data-grade="jr">
-        <div><h3>中学理科</h3><p>実験の映像で現象を見てから、公式と計算に戻ります。</p></div>
+        <div><h3>中学理科</h3><p>実験の映像を見てから、公式と計算に戻ります。</p></div>
         <dl><div><dt>対象学年</dt><dd>中2、中3</dd></div><div><dt>時間割</dt><dd>水曜 19:00〜21:00</dd></div><div><dt>定員</dt><dd>定員 10 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥11,000〜</dd></div></dl>
       </li>
       <li class="course" data-grade="sr">
-        <div><h3>高校数学</h3><p>学年別クラス。解説のあと、すぐに過去問の形式で演習します。</p></div>
+        <div><h3>高校数学</h3><p>学年別クラス。解説のあと過去問で演習します。</p></div>
         <dl><div><dt>対象学年</dt><dd>高1〜高3</dd></div><div><dt>時間割</dt><dd>土曜 9:00〜12:00</dd></div><div><dt>定員</dt><dd>定員 12 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥17,600〜</dd></div></dl>
       </li>
       <li class="course" data-grade="sr">
-        <div><h3>高校英語</h3><p>長文読解と英作文。<span class="nb">2 週間</span>に 1 本、作文を添削します。</p></div>
+        <div><h3>高校英語</h3><p>長文読解と英作文。隔週で作文を添削します。</p></div>
         <dl><div><dt>対象学年</dt><dd>高1〜高3</dd></div><div><dt>時間割</dt><dd>土曜 13:30〜16:30</dd></div><div><dt>定員</dt><dd>定員 12 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>月額 ¥17,600〜</dd></div></dl>
       </li>
       <li class="course" data-grade="jr exam">
-        <div><h3>高校受験 総復習</h3><p>5 教科の要点を復習し、毎月の模試のあとに個別に振り返ります。</p></div>
+        <div><h3>高校受験 総復習</h3><p>5 教科の要点復習と、毎月の模試の振り返り。</p></div>
         <dl><div><dt>対象学年</dt><dd>中3</dd></div><div><dt>時間割</dt><dd>日曜 9:00〜16:00</dd></div><div><dt>定員</dt><dd>定員 12 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>1 期 ¥58,000〜</dd></div></dl>
       </li>
       <li class="course" data-grade="sr exam">
-        <div><h3>共通テスト 数学と英語</h3><p>模試の結果でグループを分け、それぞれ苦手な単元を補います。</p></div>
+        <div><h3>共通テスト 数学と英語</h3><p>模試の結果で分け、苦手な単元を補います。</p></div>
         <dl><div><dt>対象学年</dt><dd>高3</dd></div><div><dt>時間割</dt><dd>日曜 13:00〜17:00</dd></div><div><dt>定員</dt><dd>定員 12 名</dd></div><div class="c-fee"><dt>授業料</dt><dd>1 期 ¥49,500〜</dd></div></dl>
       </li>
     </ul>
@@ -647,7 +679,7 @@ html:not(.js) .filter { display: none; }
         <li class="step">
           <span class="step-no" aria-hidden="true">1</span>
           <h3>学力診断</h3>
-          <p>40 分の小テストと面談で、補強が必要な単元を見つけます。</p>
+          <p>40 分の小テストと面談で、補強する単元を見つけます。</p>
         </li>
         <li class="step">
           <span class="step-no" aria-hidden="true">2</span>
