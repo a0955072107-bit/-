@@ -1,0 +1,42 @@
+{
+ "dental": {
+  "title": "Dental Clinic website<br>template, Forest Edition",
+  "sections": [
+   { "id": "first", "caption": "Your first visit, step by step", "drift": 300 },
+   { "id": "doctors", "caption": "Dentist profiles", "drift": 330 },
+   { "id": "hours", "caption": "Today’s hours update itself", "drift": 200 }
+  ]
+ },
+ "tcm": {
+  "title": "Acupuncture &amp; TCM clinic<br>website template",
+  "sections": [
+   { "id": "flow", "caption": "Your first visit in four steps", "drift": 330 },
+   { "id": "doctors", "caption": "Practitioner profiles", "drift": 330 },
+   { "id": "hours", "caption": "Weekly schedule, Today board", "drift": 330 }
+  ]
+ },
+ "canton": {
+  "title": "Cantonese restaurant<br>website template",
+  "sections": [
+   { "id": "menu", "caption": "Full menu, Chinese + English", "drift": 330 },
+   { "id": "banquet", "caption": "Banquets and catering", "drift": 330 },
+   { "id": "order", "caption": "Pickup order form", "drift": 330 }
+  ]
+ },
+ "hair": {
+  "title": "Hair studio<br>website template",
+  "sections": [
+   { "id": "prices", "caption": "Price list in large type", "drift": 330 },
+   { "id": "stylists", "caption": "Book your own stylist", "drift": 330 },
+   { "id": "lookbook", "caption": "Lookbook you can swipe", "drift": 200 }
+  ]
+ },
+ "tutor": {
+  "title": "Learning center<br>website template",
+  "sections": [
+   { "id": "courses", "caption": "Classes and tuition by grade", "drift": 330 },
+   { "id": "method", "caption": "Assessment, plan, weekly update", "drift": 300 },
+   { "id": "calendar", "caption": "This year’s calendar", "drift": 300 }
+  ]
+ }
+}

@@ -47,6 +47,10 @@
 | 刺青 | `…/templates/tattoo/en/` | `…/templates/tattoo/zh-TW/` |
 | 共享辦公 | `…/templates/coworking/en/` | `…/templates/coworking/zh-TW/` |
 | 牙醫・森林診間（11/27 新增） | `…/templates/dental/en/` | `…/templates/dental/zh-TW/`（日文 `…/templates/dental/ja/`） |
+| 中醫／針灸（11/28 新增） | `…/templates/tcm/en/` | `…/templates/tcm/zh-TW/`（日文 `…/templates/tcm/ja/`） |
+| 粵菜館（11/28 新增） | `…/templates/canton/en/` | `…/templates/canton/zh-TW/`（日文 `…/templates/canton/ja/`） |
+| 髮型沙龍（11/28 新增） | `…/templates/hair/en/` | `…/templates/hair/zh-TW/`（日文 `…/templates/hair/ja/`） |
+| 補習班・年級選擇器（11/28 新增） | `…/templates/tutor/en/` | `…/templates/tutor/zh-TW/`（日文 `…/templates/tutor/ja/`） |
 
 上架前每個連結都打開確認一次。
 
@@ -64,7 +68,7 @@
 ```bash
 bash scripts/package.sh
 ```
-`dist/` 會產生 30 個單款 zip 和 1 個全套 zip，每包都附英文版和繁體中文版。
+`dist/` 會產生 35 個標準款單款 zip（原本 30 款＋dental＋11/28 的 tcm、canton、hair、tutor）、5 個 Motion 單款 zip、1 個全套 zip（`all-templates-bundle.zip`，35 款）和 1 個 Motion 全套 zip；每包都附英文、繁體、簡體、日文版。
 
 ---
 
@@ -1208,31 +1212,283 @@ Prefer a more information-first layout? See our Clinic template: https://polyglo
 > - 風險：兩款單價看起來被打折、單款銷量可能被分走一點；Pinterest／說明裡的連結會多一個要維護。
 > - 建議時機：dental 上架後 2～4 週，看兩款各自有沒有被點擊再決定。**現在先不要上架。**
 
+### 4-32. 中醫／針灸診所「本草堂」（11/28 新增）
+
+> 新行業（中醫、針灸、漢方）。和 4-4 clinic、4-31 dental 同屬診所類，但內容是針灸、中藥、推拿，另有「常見求診原因」索引。**商品頁和宣傳文字都不寫療效**：不寫 treat／cure／heal／relief／effective，也不列病名當賣點；只描述網站有哪些區塊。範例店名「Bencao Acupuncture & Herbs／本草堂」是虛構的示範內容。
+> 名稱用 11 節的格式 `(EN + 中文 + 日本語)`；zip 也含簡體版。
+
+| 欄位 | 填入 |
+|---|---|
+| Name | `Acupuncture & TCM Clinic Website Template (EN + 中文 + 日本語)` |
+| URL | `tcm-acupuncture-clinic-template`（和 clinic 的 `clinic-website-template`、dental 的 `dental-clinic-forest-template` 不同） |
+| Price | `39` |
+| Versions | `Standard license — 1 website`（$39）、`Extended license — up to 10 websites`（$119） |
+| Content | `dist/tcm-acupuncture-clinic-template.zip` |
+| Cover | `sales/covers/en/tcm-cover.png` |
+| Thumbnail | `sales/covers/en/tcm-thumb.png` |
+| Summary | `A calm one-page website for acupuncture and Chinese medicine clinics in English, 繁體中文, 简体中文 and 日本語, with a step-by-step setup guide and a commercial licence. Buy once, no monthly fees.` |
+| Additional details | `Format: HTML/CSS/JS` · `Languages: English, 繁體中文, 简体中文, 日本語 (switchable)` · `Pages: 1 (one-page)` · `Builder needed: None` · `Style: herb-cabinet hero, serif headings (see also our Clinic template)` |
+| Receipt | 共用 Receipt |
+| Tags（10 個，每個 ≤ 20 字元） | `acupuncture website`, `tcm website`, `acupuncturist`, `clinic website`, `wellness website`, `html template`, `website template`, `one page website`, `ホームページ テンプレート`, `鍼灸院 ホームページ` |
+
+Demo：英文 `https://a0955072107-bit.github.io/-/templates/tcm/en/`、繁中 `https://a0955072107-bit.github.io/-/templates/tcm/zh-TW/`、簡中 `…/templates/tcm/zh-CN/`、日文 `…/templates/tcm/ja/`。（線上 Demo 有示意照片；商品 zip 不含照片，用 CSS 畫的構圖佔位圖，買家換成自己的照片。）
+
+**Description**：
+```
+日本語版つき：テキスト・住所・LINE ボタンまで日本向けに作り直した日本語版（鍼灸・漢方相談の院向け）が入っています。ガイドとライセンスも日本語で同梱。月額費用なし、買い切りです。
+
+A calm one-page website for acupuncture and Traditional Chinese Medicine clinics. It opens with a herb-cabinet image and a plain promise to explain the plan and the cost first, then walks a new patient through the first visit. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): https://a0955072107-bit.github.io/-/templates/tcm/en/
+🔗 Live demo (中文): https://a0955072107-bit.github.io/-/templates/tcm/zh-TW/
+🔗 Live demo (日本語): https://a0955072107-bit.github.io/-/templates/tcm/ja/
+(Demo photos are for preview only and are not included. The template ships with drawn placeholders showing what photo goes where. "Bencao Acupuncture & Herbs" and the practitioners are fictional examples.)
+
+Features
+- Hero with a herb-cabinet image, a short statement and two buttons
+- "Your first visit" in four numbered steps
+- Services list (acupuncture, herbs, tui na, cupping and moxibustion) with insurance or self-pay labels
+- "People often visit us for…" index, worded as common reasons for visiting, with a note that these are not claims about results
+- Two practitioner profiles with focus, training and schedule
+- Edit one weekly table and the "Today" board updates itself, using your clinic's time zone
+- "Before you come" notes and a four-question FAQ
+- Location with parking, transit and step-free access, plus a Google Maps link (no embedded map)
+- Call and Book buttons fixed to the bottom on mobile (WhatsApp in English, LINE in Chinese and Japanese, easy to swap)
+- SEO-ready with schema.org MedicalBusiness data
+- Sample copy is modest and factual, with no testimonials, before/after photos or outcome promises. Please follow your local healthcare advertising rules.
+
+What you get
+- English, Traditional Chinese, Simplified Chinese and Japanese versions with a built-in language switcher
+- Step-by-step guide and commercial licence
+
+Looking for a general or dental clinic layout? See our Clinic template, another style in the same field: https://polyglotpages.gumroad.com/l/clinic-website-template
+
+──────────
+中醫／針灸診所網站模板。首屏是藥櫃圖與一句「先聽、再說明計畫與費用」，接著帶新病人看完第一次看診的流程。
+功能：初診四步驟、診療項目（針灸、中藥、推拿、拔罐艾灸，標示健保或自費）、「常見求診原因」索引（附註不代表療效）、兩位醫師簡介與看診時段、只要改一張門診表，「今日門診」看板就自動更新（依診所時區）、看診前須知與常見問題、交通／停車／無障礙說明與 Google 地圖連結、手機版底部「撥打電話／LINE 預約」。
+範例文案遵守醫療廣告規範：不放見證、前後對比、優惠或療效保證。附英文、繁體、簡體、日文四種語言（網站內建語言切換）、中文教學、商業授權。
+線上 Demo 的照片僅供示意，商品不含照片；「本草堂」與醫師皆為虛構範例。
+想要一般診所或牙醫的版型，可以看另一款風格的「診所模板」。
+
+[貼上「共用文字」]
+```
+
+### 4-33. 粵菜館「瑞記」（11/28 新增，餐廳第二款）
+
+> 跟 4-1 的 restaurant（咖啡廳／小餐館，暖色、照片為主）是**不同風格的第二款**：以菜單為主角，首屏就是「今日招牌」板，青花瓷藍配色，菜名中英對照，外帶表單優先。說明裡寫清楚「another style」。範例店名「Sui Kee Cantonese Kitchen／瑞記粵菜」是虛構的示範內容。
+
+| 欄位 | 填入 |
+|---|---|
+| Name | `Cantonese & Chinese Restaurant Website Template (EN + 中文 + 日本語)` |
+| URL | `cantonese-restaurant-template`（和 restaurant 的 `restaurant-website-template` 不同） |
+| Price | `39` |
+| Versions | `Standard license — 1 website`（$39）、`Extended license — up to 10 websites`（$119） |
+| Content | `dist/cantonese-restaurant-template.zip` |
+| Cover | `sales/covers/en/canton-cover.png` |
+| Thumbnail | `sales/covers/en/canton-thumb.png` |
+| Summary | `A menu-first one-page website for Cantonese and Chinese restaurants in English, 繁體中文, 简体中文 and 日本語, with a step-by-step setup guide and a commercial licence. Buy once, no monthly fees.` |
+| Additional details | `Format: HTML/CSS/JS` · `Languages: English, 繁體中文, 简体中文, 日本語 (switchable)` · `Pages: 1 (one-page)` · `Builder needed: None` · `Style: menu-first, porcelain blue (see also our Restaurant & Café template)` |
+| Receipt | 共用 Receipt |
+| Tags（10 個，每個 ≤ 20 字元） | `restaurant website`, `chinese restaurant`, `cantonese restaurant`, `menu website`, `takeout website`, `html template`, `website template`, `one page website`, `ホームページ テンプレート`, `飲食店 ホームページ` |
+
+Demo：英文 `https://a0955072107-bit.github.io/-/templates/canton/en/`、繁中 `https://a0955072107-bit.github.io/-/templates/canton/zh-TW/`、簡中 `…/templates/canton/zh-CN/`、日文 `…/templates/canton/ja/`。（線上 Demo 有示意照片；商品 zip 不含照片，用 CSS 畫的構圖佔位圖，買家換成自己的照片。）
+
+**Description**：
+```
+日本語版つき：テキスト・住所・価格（税込表示）・LINE ボタンまで日本向けに作り直した日本語版が入っています。ガイドとライセンスも日本語で同梱。月額費用なし、買い切りです。
+
+A menu-first one-page website for Cantonese and Chinese restaurants. This is our second restaurant style: where our Restaurant & Café template is warm and photo-led, this one puts the menu up front with a signatures board, Chinese and English dish names side by side and a porcelain-blue palette. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): https://a0955072107-bit.github.io/-/templates/canton/en/
+🔗 Live demo (中文): https://a0955072107-bit.github.io/-/templates/canton/zh-TW/
+🔗 Live demo (日本語): https://a0955072107-bit.github.io/-/templates/canton/ja/
+(Demo photos are for preview only and are not included. The template ships with drawn placeholders showing what photo goes where. "Sui Kee Cantonese Kitchen" and its menu are fictional examples.)
+
+Features
+- Hero with an "On today's board" panel for three signature dishes
+- Open or closed status worked out from your hours and time zone
+- Full menu in five tabs (roast meats, wok dishes, rice and noodles, clay pots, dim sum), each dish with its Chinese name, a one-line note and Signature, Spicy or Vegetarian labels
+- Weekday lunch special band with its own prices
+- Banquets and catering: private rooms, set dinners and tray sizes
+- Hours, "How pickup works" in three steps, directions and a Google Maps link (no embedded map)
+- Order form for pickup, a table or a banquet enquiry (works with Formspree, no backend needed)
+- Order and Call buttons fixed to the bottom on mobile
+- SEO-ready with schema.org Restaurant data
+
+What you get
+- English, Traditional Chinese, Simplified Chinese and Japanese versions with a built-in language switcher
+- Step-by-step guide and commercial licence
+
+Running a café or bistro? See our Restaurant & Café template, another style for the same trade: https://polyglotpages.gumroad.com/l/restaurant-website-template
+
+──────────
+粵菜館／中餐廳網站模板・餐廳第二款。和我們的「餐廳／咖啡廳模板」不同風格：菜單當主角，首屏就是「今日招牌」板，菜名中英對照，青花瓷藍配色。
+功能：依營業時間與時區顯示營業中或休息、五個分頁的完整菜單（燒臘、小炒、粉麵飯、煲仔、點心，可標招牌／辣／素）、平日商業午餐、包廂／合菜／外燴、營業時間與外帶三步驟、交通說明與 Google 地圖連結、外帶／訂位／宴席表單（接 Formspree，不用後端）、手機版底部「線上點外帶／來電」。
+附英文、繁體、簡體、日文四種語言（網站內建語言切換）、中文教學、商業授權。
+線上 Demo 的照片僅供示意，商品不含照片；「瑞記粵菜」與菜單皆為虛構範例。
+開咖啡廳或小餐館，可以看另一款風格的「餐廳／咖啡廳模板」。
+
+[貼上「共用文字」]
+```
+
+### 4-34. 髮型沙龍「SOU 髮藝」（11/28 新增，美髮第二款）
+
+> 跟 4-2 的 beauty（美髮美甲，粉色系、作品集篩選）是**不同風格的第二款**：黑白雜誌感、大字價目表、每位設計師有自己的預約按鈕、橫向滑動 Lookbook。說明裡寫清楚「another style」。範例店名「SOU Hair Studio／SOU 髮藝」與設計師是虛構的示範內容。
+
+| 欄位 | 填入 |
+|---|---|
+| Name | `Hair Studio Website Template — Editorial Edition (EN + 中文 + 日本語)` |
+| URL | `hair-studio-template`（和 beauty 的 `salon-website-template` 不同） |
+| Price | `39` |
+| Versions | `Standard license — 1 website`（$39）、`Extended license — up to 10 websites`（$119） |
+| Content | `dist/hair-studio-template.zip` |
+| Cover | `sales/covers/en/hair-cover.png` |
+| Thumbnail | `sales/covers/en/hair-thumb.png` |
+| Summary | `A black-and-white editorial one-page website for hair salons in English, 繁體中文, 简体中文 and 日本語, with a step-by-step setup guide and a commercial licence. Buy once, no monthly fees.` |
+| Additional details | `Format: HTML/CSS/JS` · `Languages: English, 繁體中文, 简体中文, 日本語 (switchable)` · `Pages: 1 (one-page)` · `Builder needed: None` · `Style: black-and-white editorial (see also our Hair & Nail Salon template)` |
+| Receipt | 共用 Receipt |
+| Tags（10 個，每個 ≤ 20 字元） | `hair salon website`, `salon website`, `hairstylist website`, `hairdresser website`, `beauty website`, `html template`, `website template`, `one page website`, `ホームページ テンプレート`, `美容室 ホームページ` |
+
+Demo：英文 `https://a0955072107-bit.github.io/-/templates/hair/en/`、繁中 `https://a0955072107-bit.github.io/-/templates/hair/zh-TW/`、簡中 `…/templates/hair/zh-CN/`、日文 `…/templates/hair/ja/`。（線上 Demo 有示意照片；商品 zip 不含照片，用 CSS 畫的構圖佔位圖，買家換成自己的照片。）
+
+**Description**：
+```
+日本語版つき：テキスト・住所・価格（税込表示）・LINE ボタンまで日本向けに作り直した日本語版が入っています。ガイドとライセンスも日本語で同梱。月額費用なし、買い切りです。
+
+A black-and-white, editorial one-page website for hair salons and independent stylists. This is our second salon style: where our Hair & Nail Salon template is soft and portfolio-led, the Editorial Edition is built around a large-type price list and stylists you can book directly. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): https://a0955072107-bit.github.io/-/templates/hair/en/
+🔗 Live demo (中文): https://a0955072107-bit.github.io/-/templates/hair/zh-TW/
+🔗 Live demo (日本語): https://a0955072107-bit.github.io/-/templates/hair/ja/
+(Demo photos are for preview only and are not included. The template ships with drawn placeholders showing what photo goes where. "SOU Hair Studio" and its stylists are fictional examples.)
+
+Features
+- Hero with a big two-line headline, one portrait image and two buttons
+- Price list in large type, grouped by cut, colour, perm and care, with time needed and add-ons for longer hair
+- Three stylist profiles, each with what they are known for, working days and their own booking button
+- Lookbook that scrolls sideways (CSS scroll-snap, no script), six looks with captions
+- "Your first visit" in three steps and a four-question FAQ
+- Hours with last-appointment times, address, parking note and a Google Maps link (no embedded map)
+- Call and Book buttons fixed to the bottom on mobile (WhatsApp in English, LINE in Chinese and Japanese, easy to swap)
+- SEO-ready with schema.org HairSalon data
+
+What you get
+- English, Traditional Chinese, Simplified Chinese and Japanese versions with a built-in language switcher
+- Step-by-step guide and commercial licence
+
+Also offer nails or want a softer look? See our Hair & Nail Salon template, another style for the same trade: https://polyglotpages.gumroad.com/l/salon-website-template
+
+──────────
+髮型沙龍網站模板・美髮第二款「雜誌感」。和我們的「美髮美甲模板」不同風格：黑白配色、大字價目表，每位設計師都有自己的預約按鈕。
+功能：大字價目表（剪、染、燙、護，標示所需時間與長髮加價）、三位設計師簡介（擅長風格、上班日、各自的預約按鈕）、橫向滑動的 Lookbook（六款髮型）、第一次來店三步驟與常見問題、營業時間與最後預約時間、地址／停車與 Google 地圖連結、手機版底部「撥打電話／選設計師預約」。
+附英文、繁體、簡體、日文四種語言（網站內建語言切換）、中文教學、商業授權。
+線上 Demo 的照片僅供示意，商品不含照片；「SOU 髮藝」與設計師皆為虛構範例。
+有做美甲或想要柔和一點的版型，可以看另一款風格的「美髮美甲模板」。
+
+[貼上「共用文字」]
+```
+
+### 4-35. 補習班／課後輔導「學行教室」（11/28 新增，補習班第二款）
+
+> 跟 4-12 的 education（補習班／才藝教室，藍色、課表為主）是**不同風格的第二款**：石墨色配紙白、首屏就是「孩子幾年級」選擇器，點了只顯示適合的班別；班別、人數、學費放在同一張清單。說明裡寫清楚「another style」。兩款的 URL 很像（`tutoring-school-template` 是舊款、`tutoring-center-template` 是這款），填的時候看清楚。範例店名「Stride Learning Center／學行教室」與老師是虛構的示範內容。
+> 範例文案不放榜單、不保證分數；商品頁也不要寫「提分」「保證進步」。
+
+| 欄位 | 填入 |
+|---|---|
+| Name | `Tutoring & Learning Center Website — Grade Picker Edition (EN + 中文 + 日本語)` |
+| URL | `tutoring-center-template`（和 education 的 `tutoring-school-template` 不同） |
+| Price | `39` |
+| Versions | `Standard license — 1 website`（$39）、`Extended license — up to 10 websites`（$119） |
+| Content | `dist/tutoring-center-template.zip` |
+| Cover | `sales/covers/en/tutor-cover.png` |
+| Thumbnail | `sales/covers/en/tutor-thumb.png` |
+| Summary | `A clear one-page website for tutoring and learning centers in English, 繁體中文, 简体中文 and 日本語, with a grade picker, a step-by-step setup guide and a commercial licence. Buy once, no monthly fees.` |
+| Additional details | `Format: HTML/CSS/JS` · `Languages: English, 繁體中文, 简体中文, 日本語 (switchable)` · `Pages: 1 (one-page)` · `Builder needed: None` · `Style: grade picker, graphite and paper white (see also our Tutoring School template)` |
+| Receipt | 共用 Receipt |
+| Tags（10 個，每個 ≤ 20 字元） | `tutoring website`, `learning center`, `tutor website`, `after school`, `education website`, `html template`, `website template`, `one page website`, `ホームページ テンプレート`, `学習塾 ホームページ` |
+
+Demo：英文 `https://a0955072107-bit.github.io/-/templates/tutor/en/`、繁中 `https://a0955072107-bit.github.io/-/templates/tutor/zh-TW/`、簡中 `…/templates/tutor/zh-CN/`、日文 `…/templates/tutor/ja/`。（線上 Demo 有示意照片；商品 zip 不含照片，用 CSS 畫的構圖佔位圖，買家換成自己的照片。）
+
+**Description**：
+```
+日本語版つき：テキスト・住所・料金（税込表示）・LINE ボタンまで日本向けに作り直した日本語版（学習塾向け）が入っています。ガイドとライセンスも日本語で同梱。月額費用なし、買い切りです。
+
+A clear one-page website for tutoring and learning centers. This is our second education style: where our Tutoring School template leads with courses and a timetable, the Grade Picker Edition asks "What grade is your child in?" first and shows only the classes that fit. Pure HTML, so there's no WordPress, no monthly fees and no coding required.
+
+🔗 Live demo (English): https://a0955072107-bit.github.io/-/templates/tutor/en/
+🔗 Live demo (中文): https://a0955072107-bit.github.io/-/templates/tutor/zh-TW/
+🔗 Live demo (日本語): https://a0955072107-bit.github.io/-/templates/tutor/ja/
+(Demo photos are for preview only and are not included. The template ships with drawn placeholders showing what photo goes where. "Stride Learning Center" and its teachers are fictional examples.)
+
+Features
+- Hero with a grade picker (elementary, middle school, high school, test prep) that filters the class list
+- Classes and tuition in one list: grades, schedule, class size and price for each class. Add or remove a class without touching any script
+- "How it works" in three steps: assessment, learning plan, weekly update
+- Three teacher profiles with degree, years teaching and subjects
+- This year's calendar: start dates, review weeks and the summer session
+- A sample weekly update card and an FAQ (trial class, make-ups, refunds)
+- Free assessment booking form (works with Formspree, no backend needed), plus hours, address and a Google Maps link
+- Call and Book buttons fixed to the bottom on mobile
+- SEO-ready with schema.org EducationalOrganization data
+- Sample copy publishes no rankings and promises no scores
+
+What you get
+- English, Traditional Chinese, Simplified Chinese and Japanese versions with a built-in language switcher
+- Step-by-step guide and commercial licence
+
+Prefer a timetable-led layout for a cram school or enrichment classes? See our Tutoring School template, another style for the same trade: https://polyglotpages.gumroad.com/l/tutoring-school-template
+
+──────────
+補習班／課後輔導網站模板・補習班第二款「年級選擇器」。和我們的「補習班／才藝教室模板」不同風格：首屏先問「孩子現在幾年級」，點了只顯示適合的班別。
+功能：年級選擇器（國小、國中、高中、升學考試）篩選班別、班別與學費清單（年級、上課時間、人數、費用，增減班別不用改程式）、「評估、學習計畫、每週回報」三步驟、三位老師簡介、年度行事曆、每週回報範例與常見問題（試聽、補課、退費）、免費評估預約表單（接 Formspree，不用後端）、營業時間／地址與 Google 地圖連結、手機版底部「撥打電話／預約免費評估」。
+範例文案不放榜單、不保證分數。附英文、繁體、簡體、日文四種語言（網站內建語言切換）、中文教學、商業授權。
+線上 Demo 的照片僅供示意，商品不含照片；「學行教室」與老師皆為虛構範例。
+想要以課表為主的版型，可以看另一款風格的「補習班／才藝教室模板」。
+
+[貼上「共用文字」]
+```
+
 ---
 
 ## 5. 全套組合包（最後上）
 
-> **11/27 決定**：線上組合包維持「All 30」與 Drive 裡的 30 款 zip，不跟著每款新模板更新。`package.sh` 重新打包時會包含新款（目前 31 款），**累積 2～3 款新模板後**再一次重新上傳 zip、改名稱和說明裡的款數。
+> **11/28 更新（取代 11/27「維持 All 30」的註記）**：組合包現在是 **35 款**（原本 30 款＋dental＋tcm、canton、hair、tutor）。`bash scripts/package.sh` 產生的 `dist/all-templates-bundle.zip` 已經是 35 款。**價格不變**（$249）。要做兩件事：
+> 1. 把新的 `all-templates-bundle.zip` **重新上傳到 Google Drive**（取代舊的 30 款檔；如果 Drive 連結會變，Gumroad 商品 Content 裡的連結也要換）。
+> 2. 到 Gumroad 組合包商品頁，照下面「要改的 4 個地方」改文字。URL、價格、封面、標籤都不用動。
+> 建議順序：先上架 dental 和這 4 款單品 → 換 Drive 的 zip → 最後改組合包文字，避免頁面寫 35 款、買家卻下載到 30 款。
 
 Gumroad 可以建立 **Bundle**，把已上架的商品組合起來賣。如果後台沒有 Bundle，就另外上一個商品，上傳 `all-templates-bundle.zip`。
 
-- **Name**：`All 30 Business Website Templates Bundle (English + 繁體 + 简体)`
-- **URL**：`website-templates-bundle`
-- **Price**：`249`（單買合計 $1,170，約打 2 折；上市優惠 $199）
-- **Cover**：用 Canva 把多張封面拼成一張
+**要改的 4 個地方（30 → 35）**
+
+| 欄位 | 現在（30 款） | 改成（35 款） |
+|---|---|---|
+| Name | `All 30 Business Website Templates Bundle (…)` | `All 35 Business Website Templates Bundle (…)`：只把 `30` 改成 `35`，括號裡的語言標示照線上現有的不動 |
+| Summary | `All 30 one-page HTML website templates …` | `All 35 one-page HTML website templates for small businesses, each in English, 繁體中文, 简体中文 and 日本語 (6 also in Español). Buy once, no monthly fees.` |
+| Description | 第 1 段 `All 30 templates … Save over 75% …`、中文段 `三十款…省超過七成五` | 整段換成下面的新 Description（`All 35`、`Save over 80%`、`三十五款…省超過八成`，並補上新行業） |
+| Additional details | `Templates: 30 (one-page each)` | `Templates: 35 (one-page each)`（其他 4 行不變） |
+
+折扣怎麼算：35 × $39 = **$1,365**，組合包 $249，省 $1,116，約 **81.8%**（約 1.8 折）。原本 30 款是 $1,170、省 78.7%，所以寫「over 75%」。現在寫「over 80%」成立；想保守一點，沿用「over 75%」也仍然正確。
+
+- **Name**：`All 35 Business Website Templates Bundle (English + 繁體 + 简体)`（線上如果已照 11 節改成 `(EN + 中文 + 日本語)`，就維持那個括號，只改數字）
+- **URL**：`website-templates-bundle`（不變）
+- **Price**：`249`（不變；單買合計 $1,365，約 1.8 折；上市優惠 $199）
+- **Cover**：用 Canva 把多張封面拼成一張（不用換）
 - **Description**：
 ```
-All 30 templates in one bundle, from restaurants, salons and clinics to campsites, florists and SaaS products. Save over 75% versus buying separately.
+All 35 templates in one bundle, from restaurants, salons and clinics to acupuncture clinics, tutoring centers, campsites, florists and SaaS products. Save over 80% versus buying separately.
 
 Perfect for freelancers who build sites for local businesses: one licence per template per website (see LICENSE.md).
 
 ──────────
-三十款模板一次帶走，從餐廳、美業、診所到露營、花店、軟體產品都有，比單買省超過七成五。適合幫在地店家接案的人。
+三十五款模板一次帶走，從餐廳、美業、診所到中醫診所、補習班、露營、花店、軟體產品都有，比單買省超過八成。適合幫在地店家接案的人。
 
 [貼上「共用文字」]
 ```
-- **Summary**（11/26 改成組合包寫法，已上線）：`All 30 one-page HTML website templates for small businesses, each in English, 繁體中文, 简体中文 and 日本語 (6 also in Español). Buy once, no monthly fees.`
-- **Additional details**（5 行）：`Templates: 30 (one-page each)`、`Format: HTML / CSS / JS`、`Languages: English, Traditional Chinese, Simplified Chinese, Japanese (6 with Spanish), switchable`、`Builder needed: None`、`Includes: step-by-step setup guide in each template`
+- **Summary**：`All 35 one-page HTML website templates for small businesses, each in English, 繁體中文, 简体中文 and 日本語 (6 also in Español). Buy once, no monthly fees.`
+- **Additional details**（5 行）：`Templates: 35 (one-page each)`、`Format: HTML / CSS / JS`、`Languages: English, Traditional Chinese, Simplified Chinese, Japanese (6 with Spanish), switchable`、`Builder needed: None`、`Includes: step-by-step setup guide in each template`
+
+> 其他地方如果也寫了「30 templates」（商店 Bio、官網、Pinterest 看板說明、`sales/行銷計畫.md` 的「全套 30 款」），組合包改完後再一起改；這次沒有動。
 
 ---
 

@@ -527,6 +527,74 @@
   "zh": "牙醫診所"
  },
  {
+  "slug": "tcm",
+  "title": "Acupuncture & TCM\nClinic Template",
+  "bg": "#f2f1ed",
+  "ink": "#1f1d1b",
+  "acc": "#7a2e24",
+  "pills": [
+   "First-visit steps",
+   "Practitioner schedule",
+   "Today's board"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/tcm-acupuncture-clinic-template",
+  "ja": "鍼灸院・漢方",
+  "es": false,
+  "cat": "Acupuncture Clinic",
+  "zh": "中醫診所"
+ },
+ {
+  "slug": "canton",
+  "title": "Cantonese Restaurant\nWebsite Template",
+  "bg": "#f7f8fa",
+  "ink": "#16203a",
+  "acc": "#1f3f8f",
+  "pills": [
+   "Bilingual tabbed menu",
+   "Pickup order form",
+   "Banquets & catering"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/cantonese-restaurant-template",
+  "ja": "中華料理店",
+  "es": false,
+  "cat": "Cantonese Restaurant",
+  "zh": "粵菜館"
+ },
+ {
+  "slug": "hair",
+  "title": "Hair Studio\nWebsite Template",
+  "bg": "#eceae6",
+  "ink": "#191817",
+  "acc": "#191817",
+  "pills": [
+   "Large-type price list",
+   "Book your stylist",
+   "Swipe lookbook"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/hair-studio-template",
+  "ja": "ヘアサロン",
+  "es": false,
+  "cat": "Hair Studio",
+  "zh": "髮型沙龍"
+ },
+ {
+  "slug": "tutor",
+  "title": "Learning Center\nWebsite Template",
+  "bg": "#f6f6f3",
+  "ink": "#22262b",
+  "acc": "#253046",
+  "pills": [
+   "Grade picker",
+   "Classes & tuition",
+   "Free assessment form"
+  ],
+  "url": "https://polyglotpages.gumroad.com/l/tutoring-center-template",
+  "ja": "学習塾",
+  "es": false,
+  "cat": "Learning Center",
+  "zh": "補習班"
+ },
+ {
   "slug": "motion/saas",
   "title": "SaaS Launch Page\nMotion Edition",
   "sub": "Motion edition · No libraries · EN · 中文 · 日本語",

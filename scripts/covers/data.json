@@ -372,6 +372,54 @@
   ]
  },
  {
+  "slug": "tcm",
+  "title": "Acupuncture & TCM\nClinic Template",
+  "bg": "#f2f1ed",
+  "ink": "#1f1d1b",
+  "acc": "#7a2e24",
+  "pills": [
+   "First-visit steps",
+   "Practitioner schedule",
+   "Today's board"
+  ]
+ },
+ {
+  "slug": "canton",
+  "title": "Cantonese Restaurant\nWebsite Template",
+  "bg": "#f7f8fa",
+  "ink": "#16203a",
+  "acc": "#1f3f8f",
+  "pills": [
+   "Bilingual tabbed menu",
+   "Pickup order form",
+   "Banquets & catering"
+  ]
+ },
+ {
+  "slug": "hair",
+  "title": "Hair Studio\nWebsite Template",
+  "bg": "#eceae6",
+  "ink": "#191817",
+  "acc": "#191817",
+  "pills": [
+   "Large-type price list",
+   "Book your stylist",
+   "Swipe lookbook"
+  ]
+ },
+ {
+  "slug": "tutor",
+  "title": "Learning Center\nWebsite Template",
+  "bg": "#f6f6f3",
+  "ink": "#22262b",
+  "acc": "#253046",
+  "pills": [
+   "Grade picker",
+   "Classes & tuition",
+   "Free assessment form"
+  ]
+ },
+ {
   "slug": "motion/saas",
   "title": "SaaS Launch Page\nMotion Edition",
   "sub": "Motion edition · No libraries · EN · 中文 · 日本語",
