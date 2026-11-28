@@ -1545,7 +1545,7 @@ Includes all 5 Motion Edition templates: SaaS Launch Page, Creative Portfolio, F
 | 商品類型 | 目前用「訂金＋尾款」兩個 Digital product（見第 3 節開頭）；手上有進行中的案子時不要換成 Commission |
 | Name | `Trilingual Business Website (English + 繁體 + 简体) — Done For You 三語店家網站代製` |
 | URL | `trilingual-website-service` |
-| Price | `299`，另外用 **Versions** 加 `Pro $499`（11/27 從 $549 改，跟開發信一致） |
+| Price | 訂金商品：Standard deposit `150`／Pro deposit `250`；尾款商品：Standard `149`／Pro `249`（合計 $299／$499，跟第 3 節開頭一致；11/28 更正，原本誤寫成全額 299／499） |
 | Cover | 用 `sales/covers/en/restaurant-cover.png`，之後再做專屬封面 |
 | Summary | `A ready-to-launch website in English, Traditional and Simplified Chinese, with a language switcher. Ready for your review within 7 days after we receive your content.` |
 
