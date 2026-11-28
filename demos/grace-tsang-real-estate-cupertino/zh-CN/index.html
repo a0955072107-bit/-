@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<!-- 示范用底稿（Polyglot Pages 主动开发用），不是贩售的模板。
+     scripts/demo/make-demo.py 会用 sales/outreach/leads.csv 的数据填入每个双大括号的字段。
+     房地产广告：房源都标示为示例，不放编造的成交数字、客户评价或执照号码。 -->
+<title>Grace Tsang Real Estate｜库比蒂诺房地产 Real Estate</title>
+<meta name="description" content="Grace Tsang Real Estate 是位于库比蒂诺（CA）的房地产经纪。买房、卖房、租房都欢迎来电询问。营业时间、地址与交通信息。">
+<meta property="og:title" content="Grace Tsang Real Estate｜库比蒂诺房地产">
+<meta property="og:description" content="买房、卖房、租房都欢迎来电询问。查看营业时间、地址与路线。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1f3d99">
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Grace Tsang Real Estate",
+  "description": "库比蒂诺的房地产经纪。",
+  "telephone": "+14084809312",
+  "hasMap": "https://maps.google.com/?cid=8351714165179815882",
+  "address": {"@type": "PostalAddress", "streetAddress": "10080 N Wolfe Rd 100 Suite SW3", "addressLocality": "Cupertino", "addressRegion": "CA", "postalCode": "95014", "addressCountry": "US"},
+  "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "08:00", "closes": "20:00"}]
+}
+</script>
+<style>
+/* ============================================================
+   主题设置：改这里就能换整站配色与字体
+   ============================================================ */
+:root {
+  --brand: #1f3d99;          /* 品牌主色（深钴蓝）：按钮、价格、重点线条 */
+  --brand-ink: #f6f5f1;      /* 在 brand 色上的文本颜色（米白，对比 AA） */
+  --brand-deep: #172e73;     /* 深钴蓝：按钮滑过时的颜色 */
+  --brand-soft: #a9bbf2;     /* 浅钴蓝：深色区块上的强调文本（对比 AA） */
+  --ink: #1d1f23;            /* 炭黑：深色区块背景、图片暗部 */
+  --ink-2: #2a2d33;          /* 次炭黑：深色区块里的卡片 */
+  --on-ink: #f1efe9;         /* 深色区块上的主要文本 */
+  --on-ink-muted: #b4b7bd;   /* 深色区块上的次要文本 */
+  --bg: #f6f5f1;             /* 网页底色：米白 */
+  --surface: #fbfbf8;        /* 卡片、表单底色（带一点暖色，不用纯白） */
+  --text: #1d1f23;           /* 主要文本颜色：炭黑 */
+  --muted: #565b63;          /* 次要文本颜色 */
+  --line: #d6d4cc;           /* 细线、边框颜色 */
+  --radius: 0px;             /* 圆角大小（利落直角风格；想柔和一点可改 6px） */
+  --font-heading: "Manrope", "Noto Sans SC", system-ui, sans-serif;  /* 标题字体（几何无衬线） */
+  --font-num: "Manrope", system-ui, sans-serif;                     /* 数字字体：价格、统计 */
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; /* 内文本型 */
+  --maxw: 1240px;            /* 内容最大宽度 */
+  --pad: clamp(1rem, 5vw, 3rem); /* 左右留白 */
+  --head-h: 4.25rem;         /* 页眉高度 */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 1rem/1.75 var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 800; line-height: 1.3; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+.wrap { width: min(100% - 2 * var(--pad), var(--maxw)); margin-inline: auto; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: var(--brand-ink); padding: .5rem 1rem; z-index: 100; }
+.skip:focus { left: 1rem; }
+
+/* ---------- 按钮 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .7rem 1.4rem; border-radius: var(--radius); font: 700 .95rem/1.2 var(--font-body); border: 1.5px solid transparent; transition: background .2s, color .2s, border-color .2s, transform .2s; cursor: pointer; }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+a:active { opacity: .85; }
+.btn-brand { background: var(--brand); color: var(--brand-ink); }
+.btn-brand:hover { background: var(--brand-deep); }
+.btn-ink { background: var(--ink); color: var(--on-ink); }
+.btn-ink:hover { background: var(--brand); color: var(--brand-ink); }
+.btn-line { border-color: var(--text); color: var(--text); }
+.btn-line:hover { background: var(--text); color: var(--bg); }
+.btn-ghost { border-color: color-mix(in srgb, var(--on-ink) 45%, transparent); color: var(--on-ink); }
+.btn-ghost:hover { border-color: var(--on-ink); background: color-mix(in srgb, var(--on-ink) 10%, transparent); }
+.link { font-weight: 700; color: var(--brand); border-bottom: 1.5px solid currentColor; padding-bottom: .1rem; transition: color .2s; }
+.link:hover { color: var(--brand-deep); }
+
+/* ---------- 通用区块 ---------- */
+section { padding-block: clamp(4rem, 9vw, 7rem); }
+.sec-head { display: grid; gap: 1rem; margin-bottom: clamp(2rem, 5vw, 3.25rem); max-width: 44rem; }
+.sec-head h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); letter-spacing: -.01em; }
+.sec-head p { color: var(--muted); }
+.sec-head.split { max-width: none; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1rem 2rem; }
+.sec-head.split > div { display: grid; gap: 1rem; max-width: 40rem; }
+.dark { background: var(--ink); color: var(--on-ink); }
+.dark .sec-head p { color: var(--on-ink-muted); }
+
+/* ==================== 艺术占位图 ==================== */
+/* 所有 .img 都是 CSS 绘制的建筑意象。换成照片：在对应 class 改成
+   .img-xx { background: url(images/xxx.jpg) center/cover; } 并删掉该 class 的 ::before / ::after 即可 */
+.img { position: relative; overflow: hidden; isolation: isolate; background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 8%, var(--bg)), color-mix(in srgb, var(--brand) 22%, var(--bg))); }
+.img::before, .img::after { content: ""; position: absolute; z-index: -1; }
+/* 立面：大楼窗格。换成照片：.img-facade { background: url(images/building.jpg) center/cover; } */
+.img-facade::before { /* 主栋：钴蓝框架＋浅色玻璃 */
+  inset: var(--top, 14%) var(--r, 30%) 0 var(--l, 14%);
+  background:
+    repeating-linear-gradient(90deg, var(--brand) 0 var(--mw, 7px), transparent var(--mw, 7px) var(--cw, 26px)),
+    repeating-linear-gradient(0deg, var(--brand) 0 9px, transparent 9px var(--rh, 30px)),
+    linear-gradient(160deg, color-mix(in srgb, var(--surface) 80%, var(--brand)), color-mix(in srgb, var(--brand) 45%, var(--surface)));
+}
+.img-facade::after { /* 侧栋：炭黑量体＋横向开窗 */
+  inset: var(--top2, 42%) 6% 0 auto; width: var(--w2, 30%);
+  background:
+    repeating-linear-gradient(0deg, var(--ink) 0 16px, color-mix(in srgb, var(--on-ink) 30%, var(--ink)) 16px 24px),
+    var(--ink);
+  box-shadow: -10px 0 0 0 color-mix(in srgb, var(--ink) 18%, transparent);
+}
+/* 窗户特写。换成照片：.img-win { background: url(images/window.jpg) center/cover; } */
+.img-win { background: color-mix(in srgb, var(--ink) 90%, var(--brand)); }
+.img-win::before { /* 窗框分格 */
+  inset: 12% 14%;
+  border: 8px solid var(--bg);
+  background:
+    linear-gradient(var(--bg), var(--bg)) 50% 0 / 5px 100% no-repeat,
+    linear-gradient(var(--bg), var(--bg)) 0 38% / 100% 5px no-repeat,
+    repeating-linear-gradient(90deg, transparent 0 calc(25% - 2px), color-mix(in srgb, var(--bg) 70%, transparent) calc(25% - 2px) 25%),
+    linear-gradient(200deg, color-mix(in srgb, var(--brand) 55%, var(--bg)), color-mix(in srgb, var(--brand) 85%, var(--ink)));
+}
+.img-win::after { /* 玻璃反光 */
+  inset: 12% 14%;
+  background: linear-gradient(118deg, transparent 0 38%, color-mix(in srgb, var(--surface) 30%, transparent) 38% 46%, transparent 46% 52%, color-mix(in srgb, var(--surface) 16%, transparent) 52% 55%, transparent 55%);
+  z-index: 0;
+}
+/* 平面图线稿。换成照片：.img-plan { background: url(images/floorplan.jpg) center/cover; } */
+.img-plan {
+  background:
+    repeating-linear-gradient(0deg, transparent 0 19px, color-mix(in srgb, var(--brand) 12%, transparent) 19px 20px),
+    repeating-linear-gradient(90deg, transparent 0 19px, color-mix(in srgb, var(--brand) 12%, transparent) 19px 20px),
+    var(--surface);
+}
+.img-plan::before { /* 外墙与隔间 */
+  inset: 14% 12%;
+  border: 4px solid var(--text);
+  background:
+    linear-gradient(var(--text), var(--text)) var(--x1, 42%) 0 / 2px 58% no-repeat,
+    linear-gradient(var(--text), var(--text)) 0 58% / var(--x1, 42%) 2px no-repeat,
+    linear-gradient(var(--text), var(--text)) 100% var(--y2, 46%) / 36% 2px no-repeat,
+    linear-gradient(var(--text), var(--text)) 64% 100% / 2px 30% no-repeat,
+    linear-gradient(color-mix(in srgb, var(--brand) 14%, transparent), color-mix(in srgb, var(--brand) 14%, transparent)) 100% 100% / 36% 54% no-repeat;
+}
+.img-plan::after { /* 门片与开门弧线 */
+  left: calc(12% + var(--x1, 42%) * .76); top: 34%; width: 13%; aspect-ratio: 1;
+  border-top: 1.5px solid var(--brand); border-right: 1.5px solid var(--brand); border-left: 2px solid var(--text);
+  border-top-right-radius: 100%;
+  z-index: 0;
+}
+/* 透天街屋。换成照片：.img-row { background: url(images/townhouse.jpg) center/cover; } */
+.img-row::before { /* 连栋立面 */
+  inset: 26% 0 0;
+  background:
+    repeating-linear-gradient(90deg, var(--ink) 0 3px, transparent 3px 25%),
+    repeating-linear-gradient(0deg, transparent 0 18%, var(--ink) 18% 20%),
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--brand) 60%, var(--surface)) 0 25%, color-mix(in srgb, var(--brand) 35%, var(--surface)) 25% 50%);
+}
+.img-row::after { /* 各户窗洞 */
+  inset: 32% 0 6%;
+  background: repeating-linear-gradient(90deg, transparent 0 6%, color-mix(in srgb, var(--surface) 75%, transparent) 6% 19%, transparent 19% 25%);
+  -webkit-mask: repeating-linear-gradient(0deg, transparent 0 8%, var(--ink) 8% 15%, transparent 15% 20%);
+          mask: repeating-linear-gradient(0deg, transparent 0 8%, var(--ink) 8% 15%, transparent 15% 20%);
+  z-index: 0;
+}
+/* 房源卡片的变化款 */
+.v2 { --top: 8%; --l: 30%; --r: 12%; --cw: 34px; --rh: 22px; --top2: 30%; --w2: 22%; }
+.v2::after { inset: var(--top2) auto 0 6%; }
+.v3 { --x1: 56%; --y2: 34%; }
+.v4 { --top: 22%; --l: 8%; --r: 8%; --cw: 20px; --rh: 26px; --top2: 100%; }
+/* 经纪人肖像。换成照片：.img-agent { background: url(images/agent.jpg) center/cover; } */
+.img-agent { background: linear-gradient(170deg, color-mix(in srgb, var(--brand) 70%, var(--ink)), var(--ink)); }
+.img-agent::before { /* 抽象人像 */
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 36%, color-mix(in srgb, var(--on-ink) 34%, transparent) 0 14%, transparent calc(14% + 1px)),
+    radial-gradient(ellipse 40% 32% at 50% 100%, color-mix(in srgb, var(--on-ink) 26%, transparent) 0 99%, transparent 100%);
+}
+.img-agent::after { /* 背景窗格 */
+  inset: 0;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 calc(33.33% - 1px), color-mix(in srgb, var(--on-ink) 14%, transparent) calc(33.33% - 1px) 33.33%),
+    repeating-linear-gradient(0deg, transparent 0 calc(25% - 1px), color-mix(in srgb, var(--on-ink) 14%, transparent) calc(25% - 1px) 25%);
+  z-index: -2;
+}
+
+/* ==================== 页眉 ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, box-shadow .3s; }
+.site-header.scrolled { background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: var(--head-h); }
+.logo { display: flex; align-items: center; gap: .65rem; line-height: 1.15; }
+.logo-mark { width: 2.25rem; height: 2.25rem; display: grid; place-items: center; background: var(--brand); color: var(--brand-ink); font: 900 1.05rem/1 var(--font-body); }
+.logo b { font: 800 1.08rem/1.2 var(--font-heading); display: block; }
+.logo small { font: .78rem/1.2 var(--font-body); color: var(--muted); }
+.menu { display: flex; align-items: center; gap: clamp(.9rem, 2.2vw, 1.9rem); font-size: .93rem; font-weight: 500; }
+.menu a:not(.btn) { position: relative; padding-block: .3rem; }
+.menu a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--brand); transform: scaleX(0); transform-origin: left; transition: transform .25s; }
+.menu a:not(.btn):hover::after { transform: scaleX(1); }
+.menu .btn { min-height: 42px; padding: .5rem 1.1rem; }
+.burger { display: none; width: 44px; height: 44px; background: none; border: 1.5px solid var(--text); color: var(--text); cursor: pointer; }
+.burger:hover { background: color-mix(in srgb, var(--text) 8%, transparent); }
+.burger span, .burger span::before, .burger span::after { display: block; width: 18px; height: 2px; background: currentColor; margin: auto; position: relative; transition: transform .3s, background .3s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* 没有 JavaScript 时，菜单直接换行显示；有 JS 才收进汉堡菜单 */
+  html:not(.js) *:has(> .menu) { flex-wrap: wrap; }
+  html:not(.js) header:has(.menu) { position: sticky; background: var(--bg); box-shadow: 0 1px 0 var(--line); }
+  html:not(.js) .menu { flex: 1 1 100%; flex-wrap: wrap; gap: .4rem 1rem; padding-bottom: .75rem; }
+  html:not(.js) .hero { padding-top: 2.5rem; }
+  .js .burger { display: block; }
+  .js .menu { position: fixed; inset: var(--head-h) 0 auto; flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); padding: .25rem var(--pad) 1.5rem; border-bottom: 1px solid var(--line); transform: translateY(-120%); visibility: hidden; transition: transform .3s, visibility .3s; }
+  .js .menu.open { transform: none; visibility: visible; }
+  .js .menu a:not(.btn) { padding: .9rem 0; border-bottom: 1px solid var(--line); }
+  .js .menu .btn { margin-top: 1rem; min-height: 48px; }
+}
+
+/* ==================== Hero 与搜索 ==================== */
+.hero { padding-top: calc(var(--head-h) + clamp(1.5rem, 4vw, 3rem)); padding-bottom: clamp(3rem, 6vw, 4.5rem); border-bottom: 1px solid var(--line); }
+.hero-grid { display: grid; gap: clamp(2rem, 4vw, 3.5rem); align-items: end; }
+.hero h1 { font-size: clamp(2rem, 4.6vw, 3.7rem); line-height: 1.18; letter-spacing: -.02em; }
+.hero-lead { color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.12rem); max-width: 34rem; margin-top: 1.1rem; }
+.search { margin-top: clamp(1.5rem, 3vw, 2.25rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1.5px solid var(--text); background: var(--surface); }
+.search .sf { display: grid; gap: .1rem; padding: .55rem .9rem .5rem; border-bottom: 1px solid var(--line); min-width: 0; }
+.search .sf:nth-child(odd) { border-right: 1px solid var(--line); }
+.search .sf:nth-child(3) { grid-column: 1 / -1; border-right: 0; }
+.search label { font-size: .8rem; color: var(--muted); font-weight: 500; }
+.search select { font: 500 1rem/1.4 var(--font-body); color: var(--text); background: transparent; border: 0; padding: .2rem 0; min-height: 34px; width: 100%; cursor: pointer; }
+.search select:focus-visible { outline-offset: 2px; }
+.search .btn { grid-column: 1 / -1; min-height: 54px; font-size: 1rem; }
+.hero-sub { margin-top: 1.1rem; font-size: .93rem; color: var(--muted); }
+.hero-art { position: relative; margin: 0; }
+.hero-art .img { aspect-ratio: 4 / 3; border: 1.5px solid var(--text); }
+.hero-art figcaption { position: absolute; left: 0; bottom: 0; background: var(--ink); color: var(--on-ink); padding: .9rem 1.2rem; font-size: .85rem; line-height: 1.5; max-width: 15rem; }
+.hero-art figcaption b { display: block; font: 800 1.6rem/1.15 var(--font-num); color: var(--brand-soft); }
+@media (min-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); }
+  .search { grid-template-columns: repeat(3, minmax(0, 1fr)) auto; }
+  .search .sf { border-bottom: 0; border-right: 1px solid var(--line); }
+  .search .sf:nth-child(3) { grid-column: auto; border-right: 1px solid var(--line); }
+  .search .btn { grid-column: auto; padding-inline: 1.8rem; }
+  .hero-art .img { aspect-ratio: 4 / 5; }
+}
+
+/* ==================== 精选房源 ==================== */
+.result-count { font-variant-numeric: tabular-nums; font-size: .93rem; color: var(--muted); }
+.result-count b { font-family: var(--font-num); color: var(--text); }
+.listings { display: grid; gap: clamp(1rem, 2.5vw, 1.75rem); }
+.listing { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); transition: border-color .2s, transform .25s, box-shadow .25s; }
+.listing[hidden] { display: none; }
+.listing:hover { border-color: var(--text); transform: translateY(-3px); box-shadow: 6px 6px 0 color-mix(in srgb, var(--brand) 22%, transparent); }
+.listing .img { aspect-ratio: 4 / 3; border-bottom: 1px solid var(--line); }
+.tags { position: absolute; top: .75rem; left: .75rem; display: flex; gap: .4rem; z-index: 1; }
+.tag { font-size: .78rem; font-weight: 700; padding: .2rem .55rem; background: var(--brand); color: var(--brand-ink); }
+.tag.cut { background: var(--ink); color: var(--on-ink); }
+.tag.rent { background: var(--surface); color: var(--text); border: 1px solid var(--text); }
+.listing .body { padding: 1.2rem 1.25rem 1.3rem; display: flex; flex-direction: column; gap: .35rem; flex: 1; }
+.listing h3 { font-size: 1.12rem; line-height: 1.45; font-weight: 700; }
+.listing .loc { font-size: .87rem; color: var(--muted); }
+.price { font: 800 1.55rem/1.2 var(--font-num); color: var(--brand); margin-top: .35rem; font-variant-numeric: tabular-nums; }
+.price small { font: 500 .85rem/1 var(--font-body); color: var(--muted); margin-left: .25rem; }
+.price s { font: 500 .85rem/1 var(--font-num); color: var(--muted); margin-left: .4rem; }
+.specs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--line); margin-block: .7rem .9rem; }
+.specs div { padding: .55rem .5rem; text-align: center; }
+.specs div + div { border-left: 1px solid var(--line); }
+.specs dt { font-size: .75rem; color: var(--muted); }
+.specs dd { font-weight: 700; font-size: .93rem; }
+.listing .foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+.listing .id { font: 500 .8rem/1 var(--font-num); color: var(--muted); }
+.listing .btn { min-height: 42px; padding: .45rem 1rem; font-size: .88rem; }
+.no-results { border: 1.5px dashed var(--line); padding: 2.5rem 1.5rem; text-align: center; display: grid; gap: 1rem; justify-items: center; }
+.no-results[hidden] { display: none; }
+.no-results p { color: var(--muted); }
+@media (min-width: 640px) { .listings { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1020px) { .listings { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== 服务项目 ==================== */
+.services-sec { background: color-mix(in srgb, var(--brand) 5%, var(--bg)); border-block: 1px solid var(--line); }
+.services { display: grid; border-top: 1.5px solid var(--text); }
+.service { padding: 1.75rem 0; border-bottom: 1px solid var(--line); display: grid; align-content: start; grid-template-columns: 3.25rem minmax(0, 1fr); gap: 0 1rem; }
+.service .no { font: 800 1.05rem/1.6 var(--font-num); color: var(--brand); }
+.service h3 { font-size: 1.25rem; margin-bottom: .4rem; }
+.service p { color: var(--muted); font-size: .95rem; }
+.service ul { margin-top: .7rem; display: flex; flex-wrap: wrap; gap: .4rem; }
+.service li { font-size: .8rem; border: 1px solid var(--line); padding: .1rem .55rem; background: var(--surface); }
+@media (min-width: 760px) {
+  .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service { padding: 2rem 2rem 2rem 0; }
+  .service:nth-child(even) { padding-left: 2rem; border-left: 1px solid var(--line); }
+}
+@media (min-width: 1100px) {
+  .services { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .service { grid-template-columns: minmax(0, 1fr); padding: 2rem 1.5rem; border-left: 1px solid var(--line); }
+  .service:nth-child(even) { padding-left: 1.5rem; }
+  .service:first-child { border-left: 0; padding-left: 0; }
+  .service .no { margin-bottom: 1.5rem; }
+}
+
+/* ==================== 成交实绩 ==================== */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid color-mix(in srgb, var(--on-ink) 20%, transparent); }
+.stat { padding: 1.75rem 1rem 1.75rem 0; border-bottom: 1px solid color-mix(in srgb, var(--on-ink) 20%, transparent); }
+.stat:nth-child(even) { padding-left: 1.25rem; border-left: 1px solid color-mix(in srgb, var(--on-ink) 20%, transparent); }
+.stat strong { display: block; font: 800 clamp(2.3rem, 6vw, 3.6rem)/1 var(--font-num); color: var(--on-ink); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat strong small { font-size: .45em; color: var(--brand-soft); margin-left: .15rem; }
+.stat > span { display: block; margin-top: .6rem; font-size: .9rem; color: var(--on-ink-muted); }
+.deals { margin-top: clamp(2rem, 4vw, 3rem); display: grid; gap: .75rem; }
+.deal { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .25rem 1rem; padding: 1rem 1.2rem; background: var(--ink-2); font-size: .92rem; }
+.deal b { font-weight: 500; }
+.deal span { color: var(--on-ink-muted); }
+.deal em { font: 800 1rem/1.6 var(--font-num); font-style: normal; color: var(--brand-soft); grid-row: span 2; align-self: center; }
+@media (min-width: 900px) {
+  .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .stat { padding-left: 1.5rem; border-left: 1px solid color-mix(in srgb, var(--on-ink) 20%, transparent); }
+  .stat:first-child { padding-left: 0; border-left: 0; }
+  .deals { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* ==================== 经纪人介绍 ==================== */
+.agent-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.agent-photo { position: relative; max-width: 26rem; }
+.agent-photo .img { aspect-ratio: 4 / 5; }
+.agent-photo::after { content: ""; position: absolute; inset: 1rem -1rem -1rem 1rem; border: 1.5px solid var(--brand); z-index: -1; }
+.agent-photo { isolation: isolate; }
+.agent h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); }
+.agent .role { color: var(--brand); font-weight: 700; margin-top: .4rem; }
+.agent > p { color: var(--muted); margin-top: 1rem; max-width: 36rem; }
+.creds { margin-top: 1.75rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid var(--line); background: var(--surface); }
+.creds div { padding: 1rem 1.1rem; }
+.creds div:nth-child(even) { border-left: 1px solid var(--line); }
+.creds div:nth-child(n+3) { border-top: 1px solid var(--line); }
+.creds dt { font-size: .8rem; color: var(--muted); }
+.creds dd { font-weight: 700; overflow-wrap: anywhere; }
+.agent .btns { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+@media (min-width: 900px) { .agent-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); } }
+
+/* ==================== 买房流程 ==================== */
+.process-sec { border-top: 1px solid var(--line); }
+.steps { display: grid; counter-reset: s; border-top: 1.5px solid var(--text); }
+.step { position: relative; padding: 1.4rem 0 1.4rem 3.75rem; border-bottom: 1px solid var(--line); }
+.step::before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: 1.4rem; width: 2.5rem; height: 2.5rem; display: grid; place-items: center; background: var(--brand); color: var(--brand-ink); font: 800 1.05rem/1 var(--font-num); }
+.step h3 { font-size: 1.12rem; margin-bottom: .25rem; }
+.step p { color: var(--muted); font-size: .92rem; }
+@media (min-width: 900px) {
+  .steps { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .step { padding: 4.5rem 1.25rem 0 0; border-bottom: 0; }
+  .step + .step { padding-left: 1.25rem; border-left: 1px solid var(--line); }
+  .step::before { top: 1.25rem; }
+  .step + .step::before { left: 1.25rem; }
+}
+
+/* ==================== 客户评价 ==================== */
+.reviews-sec { background: color-mix(in srgb, var(--brand) 5%, var(--bg)); border-block: 1px solid var(--line); }
+.reviews { display: grid; gap: clamp(1rem, 2.5vw, 1.75rem); }
+.review { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--brand); padding: 1.6rem 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+.review blockquote { font-size: 1.02rem; line-height: 1.85; }
+.review figcaption { margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .87rem; color: var(--muted); }
+.review figcaption b { display: block; color: var(--text); }
+@media (min-width: 900px) { .reviews { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==================== 预约看屋表单 ==================== */
+.contact-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); }
+.info { display: grid; gap: 1.5rem; align-content: start; }
+.info dl { display: grid; gap: 1rem; border-top: 1px solid color-mix(in srgb, var(--on-ink) 20%, transparent); padding-top: 1.5rem; }
+.info dt { font-size: .85rem; color: var(--brand-soft); }
+.info dd a { border-bottom: 1px solid color-mix(in srgb, var(--on-ink) 50%, transparent); }
+.info dd a:hover { color: var(--brand-soft); }
+.info .btns { display: flex; flex-wrap: wrap; gap: .75rem; }
+.info .btn { min-height: 44px; padding: .5rem 1.1rem; font-size: .9rem; }
+.form { background: var(--surface); color: var(--text); padding: clamp(1.25rem, 4vw, 2.5rem); display: grid; gap: 1.1rem; border-top: 4px solid var(--brand); }
+.form .row { display: grid; gap: 1.1rem; }
+.field { display: grid; gap: .35rem; }
+.field label { font-size: .88rem; font-weight: 500; }
+.field label i { color: var(--brand); font-style: normal; }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .7rem .85rem; min-height: 48px; }
+.field textarea { min-height: 7rem; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent); }
+.agree { display: flex; gap: .6rem; align-items: flex-start; font-size: .86rem; color: var(--muted); }
+.agree input { width: 1.15rem; height: 1.15rem; margin-top: .3rem; accent-color: var(--brand); flex: none; }
+.agree a { text-decoration: underline; color: var(--brand); }
+.form .btn { width: 100%; }
+.form-note { font-size: .8rem; color: var(--muted); text-align: center; }
+@media (min-width: 640px) { .form .row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+@media (min-width: 960px) { .contact-grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); } }
+
+/* ==================== 页脚 ==================== */
+.site-footer { background: var(--ink); color: var(--on-ink-muted); padding: 3.5rem 0 6.5rem; font-size: .9rem; border-top: 1px solid color-mix(in srgb, var(--on-ink) 14%, transparent); }
+.foot-grid { display: grid; gap: 2rem; padding-bottom: 2.25rem; border-bottom: 1px solid color-mix(in srgb, var(--on-ink) 14%, transparent); }
+.site-footer .logo { color: var(--on-ink); }
+.site-footer .logo small { color: var(--on-ink-muted); }
+.site-footer h2 { color: var(--on-ink); font: 700 1rem/1.4 var(--font-body); margin-bottom: .7rem; }
+.site-footer a:hover { color: var(--brand-soft); }
+.license { display: grid; gap: .2rem; }
+.social { display: flex; gap: .6rem; margin-top: 1rem; }
+.social a { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid color-mix(in srgb, var(--on-ink) 28%, transparent); font-size: .78rem; transition: border-color .2s, color .2s; }
+.social a:hover { border-color: var(--brand-soft); }
+.copy { padding-top: 1.5rem; font-size: .8rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; }
+@media (min-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr); } .site-footer { padding-bottom: 3rem; } }
+
+/* ---------- 手机底部固定按钮 ---------- */
+.sticky-cta { position: fixed; inset: auto 0 0; z-index: 40; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .6rem; padding: .65rem var(--pad) calc(.65rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 96%, transparent); border-top: 1px solid var(--line); }
+.sticky-cta .btn { min-height: 46px; }
+@media (min-width: 761px) { .sticky-cta { display: none; } }
+
+/* ---------- 卷动渐入 ---------- */
+.js .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+/* ==================== 语言切换 ==================== */
+/* 页眉的语言切换：字小、低调；目前的语言用粗体加底线标示（不只靠颜色） */
+.menu { margin-left: auto; }
+.lang-switch { display: flex; align-items: center; flex: none; gap: .1rem; padding-left: .6rem; border-left: 1px solid var(--line); font: 400 .8rem/1 var(--font-body); }
+.lang-switch a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: .3rem; color: var(--muted); border-radius: var(--radius); text-decoration: none; text-underline-offset: .4em; text-decoration-thickness: 1px; transition: color .25s, background-color .25s; }
+.lang-switch a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 7%, transparent); }
+.lang-switch a:active { opacity: .7; }
+.lang-switch a:focus-visible { outline: 2px solid var(--brand); outline-offset: 0; }
+.lang-switch a[aria-current="page"] { color: var(--text); font-weight: 600; text-decoration-line: underline; }
+@media (max-width: 760px) {
+  /* 手机：语言切换放在汉堡按钮左边，一直看得到 */
+  .lang-switch { order: 1; margin-left: auto; padding-left: 0; border-left: 0; }
+  .burger { order: 2; }
+  .menu { order: 3; }
+  /* 没有 JS 时 logo 可以缩窄换行，让语言切换留在同一列 */
+  html:not(.js) .logo { flex: 1 1 0; min-width: 0; }
+}
+/* 页脚的语言文本链接 */
+.foot-lang { display: flex; flex-wrap: wrap; align-items: center; gap: 0 .5rem; margin-top: 1.25rem; font-size: .85rem; }
+.foot-lang a { display: inline-flex; align-items: center; min-height: 32px; padding-inline: .2rem; text-underline-offset: .35em; }
+.foot-lang a:hover { text-decoration-line: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a[aria-current="page"] { font-weight: 600; text-decoration-line: underline; }
+
+/* ==================== Language menu (header dropdown) ====================
+   The header shows the current language; click it to choose another.
+   Uses <details>, so it works with JS off. Colours come from the theme tokens. */
+.lang-switch { position: relative; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding-inline: .55rem; border-radius: 10px; color: inherit; font-weight: 600; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + .4rem); inset-inline-end: 0; z-index: 80; display: grid; gap: .1rem; min-width: 9.5rem; padding: .35rem; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 16%, transparent); }
+.lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: .5rem .75rem; color: var(--text); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+
+
+/* ---------- 示范用追加 ---------- */
+
+.nav > .logo { min-width: 0; flex-shrink: 1; }
+.logo > span:last-child { min-width: 0; }
+.logo b { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow-wrap: anywhere; }
+.logo-mark svg { width: 1.2rem; height: 1.2rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.6rem; }
+.hero h1 { overflow-wrap: anywhere; }
+.search { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.search .sf:nth-child(2) { border-right: 0; }
+@media (min-width: 900px) {
+  .search { grid-template-columns: repeat(2, minmax(0, 1fr)) auto; }
+  .search .sf:nth-child(2) { border-right: 1px solid var(--line); }
+}
+.dark .demo-note { color: var(--on-ink-muted); border-color: currentColor; }
+.agent .demo-note { margin-top: 1rem; }
+.reviews.links .review h3 { font-size: 1.2rem; }
+.reviews.links .review p { color: var(--muted); }
+.reviews.links .btn { align-self: flex-start; margin-top: auto; }
+@media (min-width: 900px) { .reviews.links { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.hours-box h3 { font-size: 1.2rem; }
+.hours { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.hours th, .hours td { padding: .75rem .9rem; border-bottom: 1px solid var(--line); text-align: left; }
+.hours th { font-weight: 500; }
+.hours td { text-align: right; font-variant-numeric: tabular-nums; }
+.hours tr:last-child > * { border-bottom: 0; }
+.hours .closed { color: var(--muted); }
+.hours tr.today { background: color-mix(in srgb, var(--brand) 9%, var(--surface)); }
+.hours tr.today th::after { content: "今天"; margin-left: .5rem; padding: .1rem .5rem; font-size: .72rem; font-weight: 700; background: var(--brand); color: var(--brand-ink); }
+.hours-note { font-size: .85rem; color: var(--muted); }
+.license .demo-note { margin-top: .2rem; }
+
+/* ==================== Demo banner (added by scripts/demo/make-demo.py) ==================== */
+:root { --demo-h: 2.6rem; }
+@media (max-width: 1100px) { :root { --demo-h: 3.8rem; } }
+@media (max-width: 760px) { :root { --demo-h: 5.2rem; } }
+html { scroll-padding-top: calc(5rem + var(--demo-h)); }
+body { padding-top: var(--demo-h); }
+.site-header { top: var(--demo-h); }
+.demo-bar { position: fixed; inset: 0 0 auto; z-index: 100; display: flex; align-items: center; justify-content: center; height: var(--demo-h); overflow: hidden; padding: .4rem 1rem; background: var(--text); color: var(--bg); font: 400 .8rem/1.45 var(--font-body); letter-spacing: normal; text-align: center; }
+.js .demo-bar { height: auto; }
+.demo-bar p { max-width: 62rem; margin: 0; }
+.demo-bar b { font-weight: 700; }
+.demo-bar a { color: inherit; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+.demo-bar a:hover { text-decoration-thickness: 2px; }
+.demo-bar a:active { opacity: .75; }
+.demo-bar a:focus-visible { outline: 2px solid var(--bg); outline-offset: 2px; border-radius: 3px; }
+.demo-note { display: block; width: fit-content; max-width: 42rem; padding: .45rem .8rem; border: 1px dashed color-mix(in srgb, var(--muted) 55%, transparent); border-radius: 10px; color: var(--muted); font-size: .88rem; line-height: 1.6; }
+.center .demo-note, .sec-head.center .demo-note { margin-inline: auto; }
+.site-footer .demo-note, .reserve .demo-note, .trial .demo-note { color: inherit; border-color: currentColor; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+<!-- Demo banner: this page is a free preview, not the business's own website -->
+<div class="demo-bar" id="demo-bar" role="note"><p>这是 <b>Polyglot Pages</b> 免费制作的网站预览，不是 Grace Tsang Real Estate 的官方网站。联系：<a href="mailto:polyglotpages.studio@gmail.com">polyglotpages.studio@gmail.com</a></p></div>
+<script>(function(){var b=document.getElementById('demo-bar'),r=document.documentElement;function s(){r.style.setProperty('--demo-h',b.offsetHeight+'px');}s();addEventListener('resize',s);addEventListener('load',s);if(window.ResizeObserver)new ResizeObserver(s).observe(b);})();</script>
+
+<!-- ==================== 区块：页眉导览 ==================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Grace Tsang Real Estate 回到顶端">
+      <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span>
+      <span><b>Grace Tsang Real Estate</b><small>库比蒂诺房地产</small></span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="打开菜单"><span></span></button>
+    <nav class="menu" id="menu" aria-label="主菜单">
+      <a href="#listings">房源</a>
+      <a href="#services">服务项目</a>
+      <a href="#process">买房流程</a>
+      <a href="#contact">联系我们</a>
+      <a href="tel:+14084809312" class="btn btn-brand">来电咨询</a>
+    </nav>
+    <!-- lang-switch：语言切换 -->
+    <nav class="lang-switch" aria-label="Language 语言">
+      <details class="lang-menu">
+        <summary lang="zh-Hans">简</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ==================== 区块：主视觉与房源搜索 ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Grace Tsang Real Estate</h1>
+      <p class="hero-lead">想在库比蒂诺买房、卖房或租房？欢迎来电，我们一起聊聊。</p>
+      <div class="hero-cta">
+        <a href="tel:+14084809312" class="btn btn-brand">来电 (408) 480-9312</a>
+        <a href="https://maps.google.com/?cid=8351714165179815882" class="btn btn-line" target="_blank" rel="noopener">地图导航</a>
+      </div>
+      <!-- 房源搜索：依 data-type、data-kind 筛选下方的示例房源 -->
+      <form class="search" id="search" action="#listings" role="search" aria-label="搜索示例房源">
+        <div class="sf">
+          <label for="s-type">买房或租房</label>
+          <select id="s-type" name="type">
+            <option value="">买房或租房</option>
+            <option value="buy">买房</option>
+            <option value="rent">租房</option>
+          </select>
+        </div>
+        <div class="sf">
+          <label for="s-kind">房屋类型</label>
+          <select id="s-kind" name="kind">
+            <option value="">不限类型</option>
+            <option value="unit">公寓</option>
+            <option value="house">独立屋</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-brand">搜索房源</button>
+      </form>
+      <p class="hero-sub">考虑卖房吗？<a href="tel:+14084809312" class="link">来电聊聊您的房子</a></p>
+    </div>
+    <figure class="hero-art">
+      <div class="img img-facade" role="img" aria-label="住宅大楼窗格的插图"></div>
+      <figcaption><b>库比蒂诺</b>每天营业</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ==================== 区块：精选房源（示例） ==================== -->
+<section id="listings">
+  <div class="wrap">
+    <div class="sec-head split reveal">
+      <div>
+        <h2>精选房源</h2>
+        <p class="demo-note">示例房源：下面的房子只是示意排版，正式网站会换成您实际的房源和价格。</p>
+      </div>
+      <p class="result-count" aria-live="polite">共 <b id="count">3</b> 套房源</p>
+    </div>
+    <div class="listings">
+      <article class="listing" data-type="buy" data-kind="unit">
+        <div class="img img-facade" role="img" aria-label="中层公寓大楼的插图"><div class="tags"><span class="tag">示例</span></div></div>
+        <div class="body">
+          <h3>近商圈与交通的两房公寓</h3>
+          <p class="loc">示例房源，库比蒂诺</p>
+          <p class="price">价格请洽询</p>
+          <dl class="specs"><div><dt>面积</dt><dd>1,120 平方英尺</dd></div><div><dt>房间与卫浴</dt><dd>2 房 2 卫</dd></div><div><dt>建造年份</dt><dd>2015 年</dd></div></dl>
+          <div class="foot"><span class="id">示例 1</span><a href="tel:+14084809312" class="btn btn-line">询问这间</a></div>
+        </div>
+      </article>
+      <article class="listing" data-type="buy" data-kind="house">
+        <div class="img img-plan" role="img" aria-label="四房平面图的插图"><div class="tags"><span class="tag">示例</span></div></div>
+        <div class="body">
+          <h3>附后院的四房独立屋</h3>
+          <p class="loc">示例房源，库比蒂诺</p>
+          <p class="price">价格请洽询</p>
+          <dl class="specs"><div><dt>面积</dt><dd>2,480 平方英尺</dd></div><div><dt>房间与卫浴</dt><dd>4 房 3 卫</dd></div><div><dt>建造年份</dt><dd>1998 年</dd></div></dl>
+          <div class="foot"><span class="id">示例 2</span><a href="tel:+14084809312" class="btn btn-line">询问这间</a></div>
+        </div>
+      </article>
+      <article class="listing" data-type="rent" data-kind="unit">
+        <div class="img img-win" role="img" aria-label="客厅大窗的插图"><div class="tags"><span class="tag">示例</span><span class="tag rent">出租</span></div></div>
+        <div class="body">
+          <h3>室内有洗衣机的一房公寓</h3>
+          <p class="loc">示例房源，库比蒂诺</p>
+          <p class="price">租金请洽询</p>
+          <dl class="specs"><div><dt>面积</dt><dd>720 平方英尺</dd></div><div><dt>房间与卫浴</dt><dd>1 房 1 卫</dd></div><div><dt>建造年份</dt><dd>2019 年</dd></div></dl>
+          <div class="foot"><span class="id">示例 3</span><a href="tel:+14084809312" class="btn btn-line">询问这间</a></div>
+        </div>
+      </article>
+    </div>
+    <div class="no-results" id="no-results" hidden>
+      <p>没有符合条件的示例房源。欢迎来电告诉我们您想找什么样的房子。</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center">
+        <button type="button" class="btn btn-line" id="reset">清除条件</button>
+        <a href="tel:+14084809312" class="btn btn-brand">来电 (408) 480-9312</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：服务项目（示例文字） ==================== -->
+<section class="services-sec" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>我们能帮您什么</h2>
+      <p class="demo-note">示例文字：正式网站会依您实际提供的服务调整。</p>
+    </div>
+    <div class="services reveal">
+      <article class="service">
+        <span class="no">01</span>
+        <div><h3>买房</h3><p>依预算、通勤和生活需求帮您筛选房源，陪您看房，出价前先看附近的成交记录。</p><ul><li>陪同看房</li><li>出价策略</li><li>介绍贷款专员</li></ul></div>
+      </article>
+      <article class="service">
+        <span class="no">02</span>
+        <div><h3>卖房</h3><p>依附近成交价定价，拍照、上 MLS，并回报带看情况和买方意见。</p><ul><li>定价建议</li><li>MLS 刊登</li><li>带看回报</li></ul></div>
+      </article>
+      <article class="service">
+        <span class="no">03</span>
+        <div><h3>租房</h3><p>帮您找租屋，或替您的房子找房客、审核房客。</p><ul><li>租屋搜索</li><li>房客审核</li><li>租约文件</li></ul></div>
+      </article>
+      <article class="service">
+        <span class="no">04</span>
+        <div><h3>房屋估价</h3><p>想知道房子值多少？可以依附近类似房屋的成交记录，请我们做市场分析。</p><ul><li>近期成交</li><li>类似房源</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：关于我们 ==================== -->
+<section id="agent">
+  <div class="wrap agent-grid">
+    <div class="agent-photo reveal">
+      <div class="img img-agent" role="img" aria-label="经纪人照片的插图占位"></div>
+    </div>
+    <div class="agent reveal">
+      <h2>关于 Grace Tsang Real Estate</h2>
+      <p class="demo-note">示例：这里放您的照片、执照号码、会说的语言、从业年资和熟悉的区域。</p>
+      <p>想在库比蒂诺和附近地区买房、卖房或租房，欢迎来电。</p>
+      <dl class="creds">
+        <div><dt>办公室</dt><dd>库比蒂诺（CA）</dd></div>
+        <div><dt>电话</dt><dd>(408) 480-9312</dd></div>
+        <div><dt>营业</dt><dd>每天</dd></div>
+        <div><dt>执照</dt><dd>示例：您的执照号码</dd></div>
+      </dl>
+      <div class="btns">
+        <a href="tel:+14084809312" class="btn btn-brand">来电 (408) 480-9312</a>
+        <a href="https://maps.google.com/?cid=8351714165179815882" class="btn btn-line" target="_blank" rel="noopener">地图导航</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：买房流程 ==================== -->
+<section class="process-sec" id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>买房流程</h2>
+      <p>从第一通电话到拿到钥匙，一共五个步骤。</p>
+    </div>
+    <ol class="steps reveal">
+      <li class="step"><h3>先聊需求</h3><p>谈谈预算、时间和喜欢的区域。</p></li>
+      <li class="step"><h3>贷款预先核准</h3><p>由贷款专员看过您的财务状况，先知道能买的价位。</p></li>
+      <li class="step"><h3>看房</h3><p>安排带看，一起看屋况、地点和 HOA 管理费。</p></li>
+      <li class="step"><h3>出价</h3><p>参考附近成交记录，替您写出价单并协商。</p></li>
+      <li class="step"><h3>过户交屋</h3><p>安排验屋、估价和产权，签完文件就拿到钥匙。</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== 区块：评价（只放链接，不放编造的评语） ==================== -->
+<section class="reviews-sec" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>客户评价</h2>
+      <p>看看客户对 Grace Tsang Real Estate 的评价。</p>
+    </div>
+    <div class="reviews links reveal">
+      <article class="review">
+        <h3>Google 地图</h3>
+        <p>评价、照片和到办公室的路线。</p>
+        <a class="btn btn-line" href="https://maps.google.com/?cid=8351714165179815882" target="_blank" rel="noopener">看 Google 评价</a>
+      </article>
+      <article class="review">
+        <h3>Yelp</h3>
+        <p>看看库比蒂诺的客户怎么说。</p>
+        <a class="btn btn-line" href="https://www.yelp.com/search?find_desc=Grace+Tsang+Real+Estate&amp;find_loc=Cupertino%2C+CA" target="_blank" rel="noopener">到 Yelp 查看</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 区块：联系与营业时间 ==================== -->
+<section class="dark" id="contact">
+  <div class="wrap contact-grid">
+    <div class="info reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <h2>联系我们</h2>
+        <p>欢迎来电约时间聊聊，或预约看房。</p>
+      </div>
+      <dl>
+        <div><dt>电话</dt><dd><a href="tel:+14084809312">(408) 480-9312</a></dd></div>
+        <div><dt>办公室</dt><dd><a href="https://maps.google.com/?cid=8351714165179815882" target="_blank" rel="noopener">10080 N Wolfe Rd 100 Suite SW3<br>Cupertino, CA 95014</a></dd></div>
+        <div><dt>微信</dt><dd class="demo-note">示例：这里可以放微信号或 QR code。</dd></div>
+      </dl>
+      <div class="btns">
+        <a href="tel:+14084809312" class="btn btn-brand">来电咨询</a>
+        <a href="https://maps.google.com/?cid=8351714165179815882" class="btn btn-ghost" target="_blank" rel="noopener">Google 地图</a>
+      </div>
+    </div>
+    <div class="form hours-box reveal" id="schedule">
+      <h3>营业时间</h3>
+      <table class="hours" aria-label="每周营业时间">
+        <tbody>
+              <tr data-day="1"><th scope="row">星期一</th><td>08:00–20:00</td></tr>
+              <tr data-day="2"><th scope="row">星期二</th><td>08:00–20:00</td></tr>
+              <tr data-day="3"><th scope="row">星期三</th><td>08:00–20:00</td></tr>
+              <tr data-day="4"><th scope="row">星期四</th><td>08:00–20:00</td></tr>
+              <tr data-day="5"><th scope="row">星期五</th><td>08:00–20:00</td></tr>
+              <tr data-day="6"><th scope="row">星期六</th><td>08:00–20:00</td></tr>
+              <tr data-day="0"><th scope="row">星期日</th><td>08:00–20:00</td></tr>
+        </tbody>
+      </table>
+      <p class="hours-note">国定假日时间可能调整，请先来电确认。</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== 区块：页脚 ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span><span><b>Grace Tsang Real Estate</b><small>库比蒂诺房地产</small></span></a>
+        <p style="margin-top:1rem;max-width:22rem">库比蒂诺（CA）的买房、卖房与租房服务。</p>
+      </div>
+      <div>
+        <h2>联系信息</h2>
+        <p>10080 N Wolfe Rd 100 Suite SW3<br>Cupertino, CA 95014<br>电话 <a href="tel:+14084809312">(408) 480-9312</a><br><a href="https://maps.google.com/?cid=8351714165179815882" target="_blank" rel="noopener">Google 地图</a><br><a href="https://www.yelp.com/search?find_desc=Grace+Tsang+Real+Estate&amp;find_loc=Cupertino%2C+CA" target="_blank" rel="noopener">Yelp</a></p>
+      </div>
+      <div>
+        <h2>营业时间</h2>
+        <p>每天 08:00–20:00</p>
+      </div>
+      <div class="license">
+        <h2>执照信息</h2>
+        <p class="demo-note">示例：这里放经纪公司名称、执照号码和公平住房（Equal Housing Opportunity）标示，美国多数州都有规定。</p>
+      </div>
+    </div>
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简</a>
+    </p>
+    <div class="copy"><span>© <span id="y"></span> Grace Tsang Real Estate</span><span>本预览页的房源都是示例，不是真实房屋。</span></div>
+  </div>
+</footer>
+
+<!-- 手机底部固定按钮 -->
+<div class="sticky-cta">
+  <a href="https://maps.google.com/?cid=8351714165179815882" class="btn btn-line" target="_blank" rel="noopener">导航</a>
+  <a href="tel:+14084809312" class="btn btn-brand">来电咨询</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function () {
+  var header = document.querySelector('.site-header');
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('menu');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Header background on scroll
+  function onScroll() { header.classList.toggle('scrolled', menu.classList.contains('open') || scrollY > 20); }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // Burger menu
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
+    onScroll();
+  }
+  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // Sample listing filter
+  var form = document.getElementById('search');
+  var cards = document.querySelectorAll('.listing');
+  var empty = document.getElementById('no-results');
+  function filter() {
+    var f = form.elements, type = f.type.value, kind = f.kind.value, n = 0;
+    cards.forEach(function (c) {
+      var d = c.dataset;
+      var ok = (!type || d.type === type) && (!kind || d.kind === kind);
+      c.hidden = !ok; if (ok) n++;
+    });
+    empty.hidden = n > 0;
+    document.getElementById('count').textContent = n;
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); filter();
+    document.getElementById('listings').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+  });
+  document.getElementById('reset').addEventListener('click', function () { form.reset(); filter(); });
+
+  // Office hours: highlight today's row. HOURS: weekday (0 = Sunday) -> [[opens, closes]] or null; null overall = unknown.
+  var TZ = "America/Los_Angeles";
+  var HOURS = {"1": [["08:00", "20:00"]], "2": [["08:00", "20:00"]], "3": [["08:00", "20:00"]], "4": [["08:00", "20:00"]], "5": [["08:00", "20:00"]], "6": [["08:00", "20:00"]], "0": [["08:00", "20:00"]]};
+  if (HOURS) {
+    var now = new Date(new Date().toLocaleString('en-US', { timeZone: TZ }));
+    var row = document.querySelector('.hours tr[data-day="' + now.getDay() + '"]');
+    if (row) row.classList.add('today');
+  }
+
+  // Scroll reveal
+  var targets = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.15 });
+    targets.forEach(function (el) { io.observe(el); });
+  } else {
+    targets.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  document.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+<script>
+/* Language menu: close when clicking outside it or pressing Escape */
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.lang-menu[open]').forEach(function (d) { d.removeAttribute('open'); d.querySelector('summary').focus(); });
+});
+</script>
+</body>
+</html>

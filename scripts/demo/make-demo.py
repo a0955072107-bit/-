@@ -345,6 +345,8 @@ def banner_html(lang, name):
         text = TW2SP.convert(text)
     mail = f'<a href="mailto:{CONTACT}">{CONTACT}</a>'
     shown = name if (lang == 'en' or CJK.search(name)) else f' {name} '
+    if name.endswith('.'):
+        text = text.replace('{name}.', '{name}')
     text = html.escape(text).replace('Polyglot Pages', '<b>Polyglot Pages</b>').replace('{name}', html.escape(shown)).replace('{mail}', mail)
     return f'<!-- Demo banner: this page is a free preview, not the business\'s own website -->\n<div class="demo-bar" id="demo-bar" role="note"><p>{text}</p></div>\n{BANNER_JS}\n'
 
@@ -396,6 +398,15 @@ def fill(page, lang, slug, variant, lead):
         **{k: v for k, v in hours.items() if k.startswith('J_') or k == 'HOURS_JS'},
         **{k: v for k, v in hours.items() if not (k.startswith('J_') or k == 'HOURS_JS')},
     }
+    # {{NAME}} first: a name ending in "." (Exact Tax Inc.) swallows the sentence's own period, and on the Chinese
+    # pages a Latin name gets a half-width space where it touches Chinese text (關於 Ivy Liang Group、對 X 的評價)
+    def name_tok(m):
+        s, i, j = m.string, m.start(), m.end() - len(m.group(1))
+        out = esc(name)
+        if zh and not CJK.search(name):
+            out = (' ' if i and CJK.search(s[i - 1]) else '') + out + (' ' if CJK.search(s[j:j + 1] or 'x') else '')
+        return out + ('' if name.endswith('.') else m.group(1))
+    page = re.sub(r'\{\{NAME\}\}(\.?)', name_tok, page)
     page = re.sub(r'\{\{([A-Z0-9_]+)\}\}', lambda m: values[m.group(1)] if m.group(1) in values else m.group(0), page)
     # 3. tokens with a fallback: {{NOTES|...}}, {{NOTES_ZH|...}}, {{ALT_NAME|...}}
     fb = {'NOTES': esc(notes) if not zh else None, 'NOTES_ZH': esc(notes) if zh else None, 'ALT_NAME': alt or None}
