@@ -183,7 +183,7 @@ Thanks! We'll email you within 1 business day with a short form to collect your 
 
 ---
 
-## 4. 單一模板（30 款）
+## 4. 單一模板（35 款：原本 30 款＋4-31～4-35）
 
 每款的共用設定：
 
@@ -1488,7 +1488,7 @@ Perfect for freelancers who build sites for local businesses: one licence per te
 - **Summary**：`All 35 one-page HTML website templates for small businesses, each in English, 繁體中文, 简体中文 and 日本語 (6 also in Español). Buy once, no monthly fees.`
 - **Additional details**（5 行）：`Templates: 35 (one-page each)`、`Format: HTML / CSS / JS`、`Languages: English, Traditional Chinese, Simplified Chinese, Japanese (6 with Spanish), switchable`、`Builder needed: None`、`Includes: step-by-step setup guide in each template`
 
-> 其他地方如果也寫了「30 templates」（商店 Bio、官網、Pinterest 看板說明、`sales/行銷計畫.md` 的「全套 30 款」），組合包改完後再一起改；這次沒有動。
+> **11/28 已完成**：組合包已改成 35 款並確認下載的是新 zip；商店共 44 款。商店 Bio、Pinterest 看板說明裡的「30」由擴充功能另外改。
 
 ---
 
