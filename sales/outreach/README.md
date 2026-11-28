@@ -96,3 +96,8 @@
 - 第 11 批（約 12/10 起寄）整批 20～30 家用「只加中文版 $199」的信（`訊息範本.md` 最後一節），`ab-test.csv` 記 `variant=zh-addon`、`price_quoted=199`。
 - 「第一封有沒有連結」的 A/B 順延到第 12 批開始，兩個測試不混在同一批。
 - 看的是正面回覆數和訂金；一批看不出結論，至少累積 2～3 批再判斷。12/23 關卡若「有回覆但都說已有網站」，就把它改成主力。
+
+## 網址（11/28 起）
+- 官網、模板展示、**新的預覽連結**都用 `https://polyglotpages.github.io/`（預覽是 `https://polyglotpages.github.io/demo/<店>/`）。由 `polyglotpages/polyglotpages.github.io` repo 每 30 分鐘從這個 repo 自動同步（新預覽合併後最慢約 30～40 分鐘才會出現在新網址；寄信前先打開確認）。
+- 舊網址 `https://a0955072107-bit.github.io/-/` 繼續保留：已寄出的信、Gumroad 封面、Pinterest 圖、後台（/admin/）都還用它，不要關。
+- 第 10 批（含）以後的開發信、追問信都用新網址；第 9 批以前已排程的信不改。

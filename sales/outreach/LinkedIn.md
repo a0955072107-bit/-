@@ -12,7 +12,7 @@ I build websites in English, Traditional Chinese and Simplified Chinese for Chin
 
 One-time fee from $299, no monthly fees for the site itself, and the owner keeps everything: domain, hosting account and files. Half to start, half only after you approve the finished site.
 
-Based in Taiwan, working remotely. Templates and examples: https://a0955072107-bit.github.io/-/
+Based in Taiwan, working remotely. Templates and examples: https://polyglotpages.github.io/
 Email: polyglotpages.studio@gmail.com
 ```
 - **Experience**：Founder, Polyglot Pages（2026/11 起，自僱）

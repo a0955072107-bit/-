@@ -8,7 +8,7 @@ import pathlib, re, urllib.parse
 import opencc
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent / 'site'
-BASE = 'https://a0955072107-bit.github.io/-/'
+BASE = 'https://polyglotpages.github.io/'
 conv = opencc.OpenCC('tw2sp')
 
 src = (ROOT / 'zh-TW' / 'index.html').read_text(encoding='utf-8')
