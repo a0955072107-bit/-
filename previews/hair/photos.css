@@ -10,4 +10,6 @@
 .img-l4 { background: url(photos/look-4.webp) center / cover no-repeat !important; }
 .img-l5 { background: url(photos/look-5.webp) center / cover no-repeat !important; }
 .img-l6 { background: url(photos/look-6.webp) center / cover no-repeat !important; }
+.img-shop { background: url(photos/shop.webp) center / cover no-repeat !important; }
+.img-shop::before, .img-shop::after,
 .img-hero::before, .img-hero::after, .img-s1::before, .img-s1::after, .img-s2::before, .img-s2::after, .img-s3::before, .img-s3::after, .img-l1::before, .img-l1::after, .img-l2::before, .img-l2::after, .img-l3::before, .img-l3::after, .img-l4::before, .img-l4::after, .img-l5::before, .img-l5::after, .img-l6::before, .img-l6::after { content: none !important; display: none !important; }
