@@ -10,8 +10,9 @@ slugs = sys.argv[1:] or sorted([p.name for p in root.iterdir() if p.is_dir() and
 FONT = [('Noto+Sans+TC', 'Noto+Sans+SC'), ('Noto+Serif+TC', 'Noto+Serif+SC'), ('Noto Sans TC', 'Noto Sans SC'),
         ('Noto Serif TC', 'Noto Serif SC'), ('PingFang TC', 'PingFang SC'), ('Microsoft JhengHei', 'Microsoft YaHei'),
         ('内文本型', '内文字体'),
-        ('Songti TC', 'Songti SC'), ('构图标意', '构图示意'),
-        ('接口文本', '界面文字'), ('标示今天字段', '标示今天栏位'), ('窗櫺', '窗棂'),  # opencc 會把「內文字型」斷成「内文本型」
+        ('Songti TC', 'Songti SC'), ('构图标意', '构图示意'), ('地图标意', '地图示意'),
+        ('接口文本', '界面文字'), ('标示今天字段', '标示今天栏位'), ('窗櫺', '窗棂'),
+        ('方程序', '方程式'), ('仿真考', '模拟考'), ('萤光笔', '荧光笔'), ('左右卷动', '左右滑动'), ('工作天', '工作日'), ('可复选', '可多选'), ('数据只用来', '资料只用来'),  # opencc 會把「內文字型」斷成「内文本型」
         ('zh_TW', 'zh_CN'), ('"inLanguage": "zh-TW"', '"inLanguage": "zh-CN"'), ('"inLanguage":"zh-TW"', '"inLanguage":"zh-CN"'),
         ('"inLanguage": "zh-Hant"', '"inLanguage": "zh-Hans"'), ('"inLanguage":"zh-Hant"', '"inLanguage":"zh-Hans"')]
 

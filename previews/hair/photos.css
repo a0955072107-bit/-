@@ -1,0 +1,15 @@
+/* 線上預覽專用：把 CSS 藝術佔位圖換成示意照片（Canva AI 生成，設計師為虛構人物）。
+   只在 scripts/build-site.sh 建置預覽網站時加入，商品 zip 不含此檔與照片。 */
+.img-hero { background: url(photos/hero.webp) center / cover no-repeat !important; }
+.img-s1 { background: url(photos/stylist-1.webp) center top / cover no-repeat !important; }
+.img-s2 { background: url(photos/stylist-2.webp) center top / cover no-repeat !important; }
+.img-s3 { background: url(photos/stylist-3.webp) center top / cover no-repeat !important; }
+.img-l1 { background: url(photos/look-1.webp) center / cover no-repeat !important; }
+.img-l2 { background: url(photos/look-2.webp) center / cover no-repeat !important; }
+.img-l3 { background: url(photos/look-3.webp) center / cover no-repeat !important; }
+.img-l4 { background: url(photos/look-4.webp) center / cover no-repeat !important; }
+.img-l5 { background: url(photos/look-5.webp) center / cover no-repeat !important; }
+.img-l6 { background: url(photos/look-6.webp) center / cover no-repeat !important; }
+.img-shop { background: url(photos/shop.webp) center / cover no-repeat !important; }
+.img-shop::before, .img-shop::after,
+.img-hero::before, .img-hero::after, .img-s1::before, .img-s1::after, .img-s2::before, .img-s2::after, .img-s3::before, .img-s3::after, .img-l1::before, .img-l1::after, .img-l2::before, .img-l2::after, .img-l3::before, .img-l3::after, .img-l4::before, .img-l4::after, .img-l5::before, .img-l5::after, .img-l6::before, .img-l6::after { content: none !important; display: none !important; }

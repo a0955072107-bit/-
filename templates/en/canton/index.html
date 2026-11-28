@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sui Kee Cantonese Kitchen | Roast Meats and Wok Dishes in Flushing</title>
+<meta name="description" content="Sui Kee Cantonese Kitchen in Flushing roasts char siu, duck and soy chicken every morning, with wok dishes, clay pots and dim sum. Order pickup online, book a table, or ask about banquets and catering trays.">
+<meta name="theme-color" content="#1F3F8F">
+<meta property="og:title" content="Sui Kee Cantonese Kitchen | Roast meats, fired fresh daily">
+<meta property="og:description" content="Char siu, roast duck and soy chicken go into the oven every morning. Order online and pick up in about twenty minutes.">
+<meta property="og:type" content="website">
+<!-- Language versions (SEO): after launch, replace each href with a full URL, e.g. https://www.yourshop.com/en/ -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<!-- Sample content — replace before going live (the name, phone, address, hours and price range are all fictional) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Sui Kee Cantonese Kitchen",
+  "telephone": "+1-555-012-3456",
+  "url": "https://example.com/",
+  "servesCuisine": ["Cantonese", "Roast meats", "Dim sum"],
+  "priceRange": "$12–$25",
+  "acceptsReservations": "True",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "128 Example Street",
+    "addressLocality": "Flushing",
+    "addressRegion": "NY",
+    "postalCode": "11355",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday"], "opens": "11:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "10:30", "closes": "21:30" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   THEME SETTINGS: change these to restyle the whole site
+   ============================================================ */
+:root {
+  --brand: #1F3F8F;          /* Brand colour (porcelain blue): buttons, links, the selected tab */
+  --brand-deep: #182A5E;     /* Deep porcelain blue: lunch special band */
+  --brand-ink: #F7F8FA;      /* Text colour on top of the brand colour */
+  --bg: #F7F8FA;             /* Page background (white porcelain) */
+  --surface: #FCFDFE;        /* Surfaces: menu board, form, visit section */
+  --text: #16203A;           /* Main text (ink blue-black) */
+  --muted: #4B5670;          /* Secondary text and notes */
+  --line: #D9DEE8;           /* Hairlines and borders */
+  --seal: #C0321F;           /* Seal red: only for the “Signature” mark and “Open now”, always next to text, under 5% of the page */
+  --seal-ink: #FCFDFE;       /* Text colour on top of seal red */
+  --table: #E9ECF1;          /* Placeholder art: white tabletop */
+  --plate: #FBFCFD;          /* Placeholder art: white porcelain plate */
+  --roast: #A4452C;          /* Placeholder art: char siu */
+  --duck: #B8762E;           /* Placeholder art: roast duck, wooden tables */
+  --chicken: #E6CF98;        /* Placeholder art: soy chicken, noodles, broth */
+  --leaf: #6F8C50;           /* Placeholder art: choy sum, scallions */
+  --bamboo: #C9A872;         /* Placeholder art: bamboo steamer, chopsticks */
+  --soy: #3B261B;            /* Placeholder art: soy sauce, beef */
+  --shadow: color-mix(in srgb, var(--text) 14%, transparent); /* The only shadow colour: dropdown, plates in the placeholder art */
+  --tint: color-mix(in srgb, var(--brand) 7%, transparent);   /* Pale blue tint: hover, selected tab, today’s row */
+  --radius: 6px;             /* Corner radius for images, the board and the form */
+  --radius-sm: 4px;          /* Corner radius for buttons, inputs and small marks */
+  --font-heading: "DM Serif Display", Georgia, "Times New Roman", serif; /* Heading font */
+  --font-body: "DM Sans", "Segoe UI", sans-serif; /* Body font */
+  --font-dish-alt: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; /* Font for the Chinese dish names shown with each English name (Noto Sans TC; only the characters on the page are downloaded) */
+  --font-sub: var(--font-body); /* Font for subheadings and dish names (the display serif is kept for the big headings) */
+  --field-line: color-mix(in srgb, var(--muted) 72%, var(--line)); /* Border of inputs and unselected tabs (contrast 3:1 or more) */
+  --cols: minmax(0, .8fr) minmax(0, 1.2fr); /* Column ratio for two-column sections (shared site-wide) */
+  --fw-heading: 400;         /* Heading weight */
+  --lh-body: 1.6;           /* Body line height */
+  --fs-sm: .875rem;          /* Size 1: small print, marks, notes */
+  --fs-base: 1rem;           /* Size 2: body */
+  --fs-md: 1.125rem;         /* Size 3: dish names, hero lead */
+  --fs-lg: clamp(1.25rem, 2.2vw, 1.5rem);  /* Size 4: board dish names, address, subheadings */
+  --fs-xl: clamp(1.75rem, 3.6vw, 2.5rem);  /* Size 5: section titles */
+  --fs-display: clamp(2.5rem, 4.6vw, 3.75rem); /* Size 6: hero headline */
+  --space-1: .25rem;         /* Spacing scale: 4px */
+  --space-2: .5rem;          /* 8px */
+  --space-3: .75rem;         /* 12px */
+  --space-4: 1rem;           /* 16px */
+  --space-5: 1.5rem;         /* 24px */
+  --space-6: 2rem;           /* 32px */
+  --space-7: 3rem;           /* 48px */
+  --space-8: 4rem;           /* 64px */
+  --gap-col: clamp(2rem, 6vw, 5rem);       /* Gap between columns */
+  --pad-card: clamp(1.5rem, 3vw, 2.25rem); /* Form padding */
+  --header: 72px;            /* Header height */
+  --max: 1240px;             /* Maximum content width */
+  --pad: clamp(1rem, 5vw, 3rem);           /* Side padding */
+  --section: clamp(4rem, 11vw, 8.5rem);    /* Vertical padding of sections */
+  --band: clamp(3rem, 6vw, 5rem);          /* Vertical padding of the lunch band */
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: calc(var(--header) + var(--space-2)); -webkit-text-size-adjust: 100%; line-break: strict; }
+body { background: var(--bg); color: var(--text); font: 400 var(--fs-base)/var(--lh-body) var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; touch-action: manipulation; }
+a { color: inherit; }
+b, strong { font-weight: 500; }
+p, li, dd, figcaption { text-wrap: pretty; }
+h3 { font-family: var(--font-sub); font-weight: 500; }
+h1, h2 { font-family: var(--font-heading); font-weight: var(--fw-heading); }
+h1, h2, h3 { line-height: 1.25; letter-spacing: 0; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: var(--radius-sm); }
+main:focus { outline: none; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: var(--section); }
+.sec-title { font-size: var(--fs-xl); }
+.sec-lead { color: var(--muted); max-width: 36em; }
+.num { font-variant-numeric: tabular-nums; }
+.nw { white-space: nowrap; }
+.skip { position: absolute; left: var(--pad); top: -100px; z-index: 100; padding: var(--space-3) var(--space-4); background: var(--brand); color: var(--brand-ink); border-radius: var(--radius-sm); text-decoration: none; }
+.skip:focus-visible { top: var(--space-3); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-height: 48px; padding: var(--space-3) var(--space-5); border-radius: var(--radius-sm); font: 500 var(--fs-base)/1.2 var(--font-body); text-align: center; text-decoration: none; border: 1px solid var(--brand); cursor: pointer; transition: transform .2s, background-color .2s, color .2s, border-color .2s; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: var(--brand-deep); border-color: var(--brand-deep); }
+.btn-ghost { background: transparent; color: var(--brand); }
+.btn-ghost:hover { background: var(--tint); }
+.btn:active { transform: translateY(1px); }
+a:not(.btn):active { opacity: .7; }
+/* Text links get vertical padding so the tap target is at least 44px tall on phones */
+.link { display: inline-block; padding-block: var(--space-3); color: var(--brand); font-weight: 500; text-underline-offset: 4px; }
+.small-note a { display: inline-block; padding-block: var(--space-3); }
+.link:hover { text-decoration-thickness: 2px; }
+
+/* “Signature” seal and the Spicy / Vegetarian marks: always words, never colour alone */
+.seal, .mark { display: inline-block; flex: none; font: 500 var(--fs-sm)/1.5 var(--font-body); padding: 0 var(--space-2); border-radius: var(--radius-sm); white-space: nowrap; }
+.seal { color: var(--seal); box-shadow: inset 0 0 0 1px var(--seal); }
+.seal-solid { background: var(--seal); color: var(--seal-ink); box-shadow: none; }
+.mark { color: var(--muted); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--muted) 55%, transparent); }
+
+/* Entrance animation: used once, in the hero. Content is only hidden first when JS is on */
+.js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease-out, transform .6s ease-out; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ==================== Header ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled, html:not(.js) .site-header { background: color-mix(in srgb, var(--bg) 96%, transparent); box-shadow: 0 1px 0 var(--line); }
+.site-header.scrolled { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: var(--header); }
+.logo { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; }
+/* Logo mark: a blue-and-white plate (two blue rings) */
+.logo-mark { width: 34px; height: 34px; border-radius: 50%; background: radial-gradient(circle, var(--brand) 0 16%, var(--surface) 18% 50%, var(--brand) 52% 58%, var(--surface) 60% 84%, var(--brand) 86%); }
+.logo b { font: var(--fw-heading) var(--fs-md)/1.15 var(--font-heading); display: block; }
+.logo small { font: 400 var(--fs-sm)/1.2 var(--font-body); color: var(--muted); display: block; }
+.nav-menu { display: flex; align-items: center; gap: var(--space-6); list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; padding-block: var(--space-1); background: linear-gradient(var(--brand), var(--brand)) left bottom / 0 1px no-repeat; transition: background-size .3s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 1px; }
+.nav-menu .btn { min-height: 40px; padding: var(--space-2) var(--space-4); }
+.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: var(--radius-sm); }
+.nav-toggle:hover { background: var(--tint); }
+.nav-toggle:active { opacity: .7; }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 1.5px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* Without JavaScript the menu wraps under the logo; with JS it folds into the hamburger */
+  html:not(.js) *:has(> .nav-menu) { flex-wrap: wrap; }
+  html:not(.js) header:has(.nav-menu) { position: sticky; }
+  html:not(.js) .nav { height: auto; padding-block: var(--space-3); row-gap: var(--space-2); }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; justify-content: flex-start; gap: var(--space-2) var(--space-4); }
+  html:not(.js) .hero { padding-top: var(--space-6); }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: var(--header); left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: var(--space-2) var(--pad) var(--space-5); background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 16px 24px var(--shadow); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: var(--space-3) 0; border-bottom: 1px solid var(--line); }
+  .js .nav-menu .btn { margin-top: var(--space-4); width: 100%; min-height: 48px; }
+  .js .site-header:has(.nav-menu.open) { background: var(--bg); }
+}
+
+/* ==================== Placeholder art ====================
+   Each .img-xx is a food-photo composition drawn with CSS gradients (overhead, white table, daylight).
+   Replace with a photo: .img-xx { background: url(images/xxx.jpg) center/cover; }
+   (Then delete that class’s ::before / ::after rules. If you switch to an img tag, add width and height,
+   fetchpriority="high" on the hero image and loading="lazy" on the rest.) */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; background-color: var(--table); --rim: color-mix(in srgb, var(--plate) 84%, var(--text)); --glow: color-mix(in srgb, var(--plate) 55%, transparent); --shade: color-mix(in srgb, var(--text) 9%, transparent); }
+.img::before, .img::after { content: ""; position: absolute; pointer-events: none; }
+
+/* Replace with a photo: .img-hero { background: url(images/hero.jpg) center/cover; } (suggested ratio 4:5, overhead roast meat platter) */
+.img-hero { aspect-ratio: 4 / 5; background:
+  linear-gradient(125deg, var(--glow) 0%, transparent 42%, transparent 62%, var(--shade) 100%),
+  /* a pair of bamboo chopsticks */
+  linear-gradient(to top right, transparent 45.6%, var(--bamboo) 46.2% 48.2%, transparent 48.8% 51.2%, var(--bamboo) 51.8% 53.8%, transparent 54.4%) 97% 97% / 13% 40% no-repeat,
+  /* soy sauce in a blue-and-white dish */
+  radial-gradient(closest-side, var(--soy) 0 40%, var(--plate) 43% 58%, var(--brand) 60% 67%, var(--plate) 69% 84%, var(--brand) 86% 90%, transparent 92%) 90% 5% / 27.5% 22% no-repeat,
+  radial-gradient(closest-side, var(--shadow) 62%, transparent 100%) 93% 7% / 30% 24% no-repeat,
+  var(--table); }
+/* large white plate with a few stalks of choy sum */
+.img-hero::before { width: 84%; aspect-ratio: 1; left: 5%; top: 24%; border-radius: 50%; box-shadow: 4px 10px 22px var(--shadow);
+  background:
+    linear-gradient(125deg, var(--glow), transparent 46%),
+    radial-gradient(ellipse 17% 5% at 31% 24%, var(--leaf) 0 72%, transparent 78%),
+    radial-gradient(ellipse 15% 4.5% at 37% 19%, color-mix(in srgb, var(--leaf) 78%, var(--plate)) 0 72%, transparent 78%),
+    radial-gradient(closest-side, var(--plate) 0 66%, var(--rim) 67% 68%, var(--plate) 69% 90%, color-mix(in srgb, var(--brand) 55%, var(--plate)) 91% 93%, var(--plate) 94%); }
+/* three rows of slices: char siu, roast duck, soy chicken */
+.img-hero::after { width: 45%; aspect-ratio: 1 / 1.02; left: 25.5%; top: 41%; border-radius: 10% / 9%; transform: rotate(-9deg);
+  background:
+    repeating-linear-gradient(96deg, var(--roast) 0 9%, color-mix(in srgb, var(--roast) 62%, var(--soy)) 9% 11.5%) 0 0 / 100% 30% no-repeat,
+    repeating-linear-gradient(96deg, var(--duck) 0 10.5%, color-mix(in srgb, var(--duck) 60%, var(--soy)) 10.5% 13%) 0 50% / 100% 30% no-repeat,
+    repeating-linear-gradient(96deg, var(--chicken) 0 12%, color-mix(in srgb, var(--chicken) 72%, var(--duck)) 12% 14.5%) 0 100% / 100% 30% no-repeat; }
+
+/* Replace with a photo: .img-d1 { background: url(images/dish-1.jpg) center/cover; } (suggested ratio 1:1, a basket of har gow) */
+.img-d1, .img-d2, .img-d3 { aspect-ratio: 1; }
+.img-d1 { --dumpling: radial-gradient(closest-side, color-mix(in srgb, var(--roast) 22%, var(--plate)) 0 30%, var(--plate) 62% 84%, transparent 90%); background:
+  linear-gradient(125deg, var(--glow) 0%, transparent 45%, transparent 65%, var(--shade) 100%),
+  var(--dumpling) 33% 34% / 27% 24% no-repeat, var(--dumpling) 67% 34% / 27% 24% no-repeat,
+  var(--dumpling) 33% 66% / 27% 24% no-repeat, var(--dumpling) 67% 66% / 27% 24% no-repeat,
+  radial-gradient(closest-side, color-mix(in srgb, var(--chicken) 45%, var(--plate)) 0 71%, color-mix(in srgb, var(--bamboo) 70%, var(--soy)) 72% 74%, var(--bamboo) 75% 91%, color-mix(in srgb, var(--bamboo) 70%, var(--soy)) 92% 94%, transparent 95%) center / 86% 86% no-repeat,
+  radial-gradient(closest-side, var(--shadow) 80%, transparent 100%) 56% 60% / 92% 92% no-repeat,
+  var(--table); }
+/* Replace with a photo: .img-d2 { background: url(images/dish-2.jpg) center/cover; } (suggested ratio 1:1, beef chow fun) */
+.img-d2 { background:
+  linear-gradient(125deg, var(--glow) 0%, transparent 45%, transparent 65%, var(--shade) 100%),
+  radial-gradient(closest-side, var(--plate) 0 70%, var(--rim) 71% 72%, var(--plate) 73% 91%, color-mix(in srgb, var(--brand) 55%, var(--plate)) 92% 94%, var(--plate) 95% 98%, transparent 99%) center / 88% 88% no-repeat,
+  radial-gradient(closest-side, var(--shadow) 80%, transparent 100%) 56% 60% / 94% 94% no-repeat,
+  var(--table); }
+/* the noodles: wide rice noodles, beef slices, scallions */
+.img-d2::before { width: 52%; aspect-ratio: 1; left: 24%; top: 24%; border-radius: 48% 52% 46% 54% / 52% 46% 54% 48%;
+  background:
+    radial-gradient(ellipse 13% 7% at 34% 38%, var(--soy) 0 70%, transparent 78%),
+    radial-gradient(ellipse 12% 7% at 64% 56%, var(--soy) 0 70%, transparent 78%),
+    radial-gradient(ellipse 11% 6% at 44% 72%, color-mix(in srgb, var(--soy) 85%, var(--roast)) 0 70%, transparent 78%),
+    radial-gradient(ellipse 9% 3% at 62% 30%, var(--leaf) 0 70%, transparent 80%),
+    radial-gradient(ellipse 9% 3% at 30% 60%, var(--leaf) 0 70%, transparent 80%),
+    repeating-linear-gradient(38deg, transparent 0 9%, color-mix(in srgb, var(--soy) 30%, transparent) 9% 11%),
+    repeating-linear-gradient(-52deg, transparent 0 13%, color-mix(in srgb, var(--plate) 40%, transparent) 13% 16%),
+    color-mix(in srgb, var(--duck) 62%, var(--chicken)); }
+/* Replace with a photo: .img-d3 { background: url(images/dish-3.jpg) center/cover; } (suggested ratio 1:1, wonton noodle soup) */
+.img-d3 { --wonton: radial-gradient(closest-side, color-mix(in srgb, var(--roast) 20%, var(--plate)) 0 34%, color-mix(in srgb, var(--plate) 90%, var(--chicken)) 60% 84%, transparent 92%); background:
+  linear-gradient(125deg, var(--glow) 0%, transparent 45%, transparent 65%, var(--shade) 100%),
+  var(--wonton) 66% 34% / 22% 19% no-repeat, var(--wonton) 74% 56% / 21% 19% no-repeat, var(--wonton) 54% 26% / 19% 17% no-repeat,
+  radial-gradient(ellipse 9% 3% at 46% 68%, var(--leaf) 0 70%, transparent 80%),
+  radial-gradient(ellipse 8% 3% at 62% 72%, var(--leaf) 0 70%, transparent 80%),
+  radial-gradient(closest-side, color-mix(in srgb, var(--chicken) 70%, var(--duck)) 0 68%, var(--plate) 70% 78%, var(--brand) 79% 83%, var(--plate) 84% 95%, transparent 97%) center / 84% 84% no-repeat,
+  radial-gradient(closest-side, var(--shadow) 80%, transparent 100%) 56% 60% / 90% 90% no-repeat,
+  var(--table); }
+/* a nest of egg noodles */
+.img-d3::before { width: 34%; aspect-ratio: 1; left: 24%; top: 34%; border-radius: 50%;
+  background: repeating-radial-gradient(circle at 42% 44%, var(--chicken) 0 4%, color-mix(in srgb, var(--chicken) 70%, var(--duck)) 4% 6%); }
+
+/* Replace with a photo: .img-banquet { background: url(images/banquet.jpg) center/cover; } (suggested ratio 16:9, a round table set for a banquet) */
+.img-banquet { aspect-ratio: 16 / 9; --chair: radial-gradient(closest-side, color-mix(in srgb, var(--duck) 70%, var(--soy)) 0 82%, transparent 88%); background:
+  linear-gradient(125deg, var(--glow) 0%, transparent 40%, transparent 70%, var(--shade) 100%),
+  /* wooden chairs around the table */
+  var(--chair) 17% 62% / 9% 26% no-repeat, var(--chair) 90% 48% / 9% 26% no-repeat,
+  var(--chair) 33% -6% / 13% 18% no-repeat, var(--chair) 80% -8% / 13% 18% no-repeat,
+  var(--chair) 26% 112% / 13% 18% no-repeat,
+  color-mix(in srgb, var(--bamboo) 28%, var(--table)); }
+/* round table with a white cloth, a glass lazy Susan and six dishes */
+.img-banquet::before { height: 128%; aspect-ratio: 1; left: 53%; top: 57%; translate: -50% -50%; rotate: 17deg; border-radius: 50%; box-shadow: 0 20px 48px var(--shadow), 0 2px 6px var(--shadow);
+  --dish-a: radial-gradient(closest-side, var(--roast) 0 52%, var(--plate) 56% 90%, transparent 94%);
+  --dish-b: radial-gradient(closest-side, var(--duck) 0 52%, var(--plate) 56% 90%, transparent 94%);
+  --dish-c: radial-gradient(closest-side, var(--leaf) 0 52%, var(--plate) 56% 90%, transparent 94%);
+  --dish-d: radial-gradient(closest-side, var(--chicken) 0 52%, var(--plate) 56% 74%, var(--brand) 76% 82%, var(--plate) 84% 90%, transparent 94%);
+  --bowl: radial-gradient(closest-side, var(--plate) 0 56%, var(--brand) 60% 72%, var(--plate) 76% 90%, transparent 94%);
+  background:
+    linear-gradient(108deg, var(--glow) 8%, transparent 42%, var(--shade) 96%),
+    var(--dish-a) 50% 28% / 19% 19% no-repeat, var(--dish-b) 68% 40% / 12% 12% no-repeat, var(--dish-c) 65% 62% / 16% 16% no-repeat,
+    var(--dish-d) 48% 71% / 14% 14% no-repeat, var(--dish-a) 32% 60% / 11% 11% no-repeat, var(--dish-c) 34% 38% / 15% 15% no-repeat,
+    radial-gradient(closest-side, var(--soy) 0 40%, var(--plate) 44% 90%, transparent 94%) 50% 50% / 8% 8% no-repeat,
+    /* a blue-and-white bowl at each seat */
+    var(--bowl) 14% 50% / 7% 7% no-repeat, var(--bowl) 86% 50% / 7% 7% no-repeat,
+    var(--bowl) 31% 17% / 7% 7% no-repeat, var(--bowl) 69% 17% / 7% 7% no-repeat,
+    var(--bowl) 31% 83% / 7% 7% no-repeat, var(--bowl) 69% 83% / 7% 7% no-repeat,
+    radial-gradient(closest-side, color-mix(in srgb, var(--brand) 6%, var(--plate)) 0 52%, var(--rim) 52.5% 53.5%, var(--plate) 54%); }
+
+/* Replace with a photo: .img-room { background: url(images/room.jpg) center/cover; } (suggested ratio 3:2, the bright dining room) */
+.img-room { aspect-ratio: 3 / 2; --tile: color-mix(in srgb, var(--line) 70%, var(--plate)); background:
+  linear-gradient(118deg, var(--glow) 0%, transparent 38%, transparent 70%, var(--shade) 100%),
+  /* two pendant lamps */
+  radial-gradient(ellipse 50% 100% at 50% 100%, var(--brand) 0 96%, transparent 100%) 24% 17% / 11% 8% no-repeat,
+  radial-gradient(ellipse 50% 100% at 50% 100%, var(--brand) 0 96%, transparent 100%) 46% 13% / 11% 8% no-repeat,
+  linear-gradient(var(--muted), var(--muted)) 26.9% 0 / 1px 16% no-repeat,
+  linear-gradient(var(--muted), var(--muted)) 46.4% 0 / 1px 12% no-repeat,
+  /* floor and the blue dado line */
+  linear-gradient(180deg, transparent 0 66%, var(--brand) 66% 67.2%, color-mix(in srgb, var(--bamboo) 45%, var(--table)) 67.2%),
+  /* white tile wall */
+  repeating-linear-gradient(90deg, transparent 0 calc(7.14% - 1px), var(--tile) calc(7.14% - 1px) 7.14%),
+  repeating-linear-gradient(180deg, transparent 0 calc(11% - 1px), var(--tile) calc(11% - 1px) 11%),
+  var(--plate); }
+/* blue-and-white vases and a bowl on a shelf */
+.img-room::before { left: 58%; top: 24%; width: 32%; height: 22%; border-bottom: 5px solid color-mix(in srgb, var(--duck) 75%, var(--soy));
+  background:
+    radial-gradient(ellipse closest-side, var(--plate) 0 30%, var(--brand) 34% 48%, var(--plate) 52% 70%, var(--brand) 74% 86%, transparent 90%) 12% 100% / 22% 96% no-repeat,
+    radial-gradient(ellipse closest-side, var(--brand) 0 28%, var(--plate) 32% 62%, var(--brand) 66% 86%, transparent 90%) 52% 100% / 26% 62% no-repeat,
+    radial-gradient(ellipse closest-side, var(--plate) 0 40%, var(--brand) 44% 56%, var(--plate) 60% 86%, transparent 90%) 90% 100% / 18% 82% no-repeat; }
+/* wooden table in the foreground with a teapot and two bowls */
+.img-room::after { left: 7%; right: 7%; bottom: 0; height: 25%; border-radius: var(--radius) var(--radius) 0 0; box-shadow: 0 -6px 18px var(--shadow);
+  background:
+    radial-gradient(ellipse closest-side, var(--plate) 0 36%, var(--brand) 40% 54%, var(--plate) 58% 86%, transparent 90%) 22% 34% / 13% 52% no-repeat,
+    radial-gradient(ellipse closest-side, var(--plate) 0 60%, var(--brand) 64% 78%, var(--plate) 82% 90%, transparent 94%) 46% 40% / 9% 34% no-repeat,
+    radial-gradient(ellipse closest-side, var(--plate) 0 60%, var(--brand) 64% 78%, var(--plate) 82% 90%, transparent 94%) 72% 40% / 9% 34% no-repeat,
+    linear-gradient(180deg, color-mix(in srgb, var(--duck) 55%, var(--chicken)) 0 78%, color-mix(in srgb, var(--duck) 75%, var(--soy)) 78%); }
+
+/* ==================== Hero: the menu is the hero ==================== */
+.hero { padding-block: calc(var(--header) + var(--space-7)) var(--section); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .94fr) minmax(0, .9fr); gap: var(--space-5); align-items: stretch; }
+.hero-copy { align-self: center; padding-inline-end: var(--space-5); }
+.hero h1 { font-size: var(--fs-display); line-height: 1.18; letter-spacing: -.01em; margin-bottom: var(--space-5); }
+.hero p.lead { font-size: var(--fs-md); color: var(--muted); max-width: 26em; margin-bottom: var(--space-6); }
+.hero-cta { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.status { margin-top: var(--space-5); font-size: var(--fs-sm); color: var(--muted); font-variant-numeric: tabular-nums; }
+.status b { color: var(--text); }
+.status.is-open b { color: var(--seal); }
+/* Today’s signatures board: like the upright menu plaques on a Cantonese restaurant wall. The double rule echoes the rim of a porcelain plate */
+.board { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--brand); border-radius: var(--radius); box-shadow: inset 0 0 0 4px var(--surface), inset 0 0 0 5px color-mix(in srgb, var(--brand) 32%, transparent); padding: var(--space-5) var(--space-4) var(--space-1); }
+.board-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: 0 var(--space-2) var(--space-3); border-bottom: 1px solid var(--line); }
+.board h2 { font-size: var(--fs-md); }
+.plaques { flex: 1; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.plaque { display: flex; flex-direction: column; align-items: center; text-align: center; padding: var(--space-4) var(--space-2) var(--space-3); }
+.plaque + .plaque { border-inline-start: 1px solid var(--line); }
+.plaque h3 { flex: 1; display: flex; flex-direction: column; align-items: center; gap: var(--space-3); font: inherit; }
+.p-v { flex: 1; writing-mode: vertical-rl; text-orientation: mixed; text-align: start; white-space: nowrap; line-height: 1.2; letter-spacing: .04em; }
+.p-h { line-height: 1.35; overflow-wrap: break-word; max-width: 100%; }
+.p-main { font-family: var(--font-sub); font-weight: 500; color: var(--text); }
+.p-v.p-main { font-size: var(--fs-lg); }
+.p-h.p-main { font-size: var(--fs-base); }
+.p-alt { color: var(--muted); font-weight: 400; }
+.p-v.p-alt { font-family: var(--font-dish-alt); font-size: var(--fs-lg); color: var(--text); }
+.p-h.p-alt { font-family: var(--font-dish-alt); font-size: var(--fs-sm); }
+.plaque .price { width: 100%; margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--line); }
+.board-foot { padding: 0 var(--space-2); border-top: 1px solid var(--line); font-size: var(--fs-sm); }
+.price { font: 500 var(--fs-base)/1.4 var(--font-body); color: var(--text); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.hero-art { aspect-ratio: 4 / 5; justify-self: stretch; align-self: stretch; min-width: 0; }
+.hero-art .img-hero { width: 100%; height: 100%; aspect-ratio: auto; }
+@media (min-width: 961px) and (max-width: 1100px) {
+  .hero-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(0, .9fr); }
+  .hero-copy { padding-inline-end: var(--space-3); }
+  .hero-cta .btn { padding-inline: var(--space-4); }
+}
+@media (min-width: 641px) and (max-width: 960px) {
+  /* Tablets: board and photo side by side; the upright names grow so the board stays full */
+  .plaque .p-v { font-size: clamp(1.5rem, 3.4vw, 2rem); }
+  .plaque .p-h.p-main { font-size: var(--fs-md); }
+}
+@media (max-width: 960px) {
+  .hero-art { aspect-ratio: 1; }
+  .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: var(--space-6) var(--space-5); }
+  .hero-copy { grid-column: 1 / -1; padding-inline-end: 0; }
+  .hero h1 br { display: none; }
+}
+@media (max-width: 640px) {
+  .hero { padding-top: calc(var(--header) + var(--space-5)); }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-5); }
+  .hero h1 { margin-bottom: var(--space-4); }
+  .hero h1 br { display: inline; }
+  .hero p.lead { margin-bottom: var(--space-5); }
+  .status { margin-top: var(--space-4); }
+  .hero-art { aspect-ratio: 1; }
+}
+
+/* ==================== Menu ==================== */
+.menu { background: var(--surface); border-block: 1px solid var(--line); }
+.menu-head { display: grid; grid-template-columns: var(--cols); gap: var(--space-4) var(--gap-col); align-items: end; margin-bottom: var(--space-6); }
+.tabs { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-5); }
+html:not(.js) .tabs { display: none; }
+.tab { font: 500 var(--fs-base)/1.2 var(--font-body); min-height: 44px; padding: var(--space-2) var(--space-4); border: 1px solid var(--field-line); border-radius: var(--radius-sm); background: transparent; color: var(--muted); cursor: pointer; transition: color .2s, border-color .2s, background-color .2s; }
+.tab:hover { color: var(--text); border-color: var(--muted); }
+.tab:active { opacity: .7; }
+.tab[aria-selected="true"] { color: var(--brand); border-color: var(--brand); background: var(--tint); box-shadow: inset 0 -2px 0 var(--brand); }
+html:not(.js) [role="tabpanel"] + [role="tabpanel"] { margin-top: var(--space-7); }
+.panel-title { display: none; }
+html:not(.js) .panel-title { display: block; font-size: var(--fs-lg); padding-bottom: var(--space-3); }
+.menu-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--gap-col); list-style: none; border-top: 1px solid var(--text); }
+.menu-list li { padding-block: var(--space-4); border-bottom: 1px solid var(--line); }
+.mi-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-4); }
+.mi-head h3 { font-size: var(--fs-md); line-height: 1.4; display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1) var(--space-2); }
+.d-alt { font: 400 var(--fs-sm)/1.5 var(--font-dish-alt); color: var(--muted); }
+.d-desc { font-size: var(--fs-sm); line-height: 1.6; color: var(--muted); margin-top: var(--space-1); max-width: 34em; }
+.menu-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4) var(--space-6); margin-top: var(--space-6); }
+.menu-note { color: var(--muted); font-size: var(--fs-sm); max-width: 40em; }
+/* Three dish photos: three columns on desktop; on phones a row you can swipe sideways (keyboard focusable, no JS needed) */
+.dishes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); margin-top: var(--space-8); }
+@media (max-width: 760px) {
+  .menu-head { grid-template-columns: minmax(0, 1fr); }
+  .menu-list { grid-template-columns: minmax(0, 1fr); }
+  .menu-foot .btn { display: none; }
+  .dishes { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 48%; gap: var(--space-3); margin-top: var(--space-7); margin-inline: calc(-1 * var(--pad)); padding-inline: var(--pad); scroll-padding-inline: var(--pad); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .dishes > * { scroll-snap-align: start; }
+}
+@media (max-width: 560px) {
+  .tab { padding-inline: var(--space-3); }
+  .menu-list li { padding-block: var(--space-3); }
+  .d-desc { font-size: var(--fs-base); }
+  .menu-foot { margin-top: var(--space-5); }
+  .dishes { margin-top: var(--space-6); }
+  .quick { margin-top: var(--space-5); }
+}
+
+/* ==================== Lunch special ==================== */
+.lunch { background: var(--brand-deep); color: var(--brand-ink); padding-block: var(--band); --soft: color-mix(in srgb, var(--brand-ink) 82%, transparent); --rule: color-mix(in srgb, var(--brand-ink) 26%, transparent); }
+.lunch :focus-visible { outline-color: var(--brand-ink); }
+.lunch-grid { display: grid; grid-template-columns: var(--cols); gap: var(--space-6) var(--gap-col); align-items: center; }
+.lunch-time { font: 500 var(--fs-lg)/1.4 var(--font-body); margin-top: var(--space-3); font-variant-numeric: tabular-nums; }
+.lunch-note { color: var(--soft); font-size: var(--fs-sm); margin-top: var(--space-2); max-width: 30em; }
+.lunch-table { width: 100%; border-collapse: collapse; border-top: 1px solid var(--brand-ink); }
+.lunch-table th, .lunch-table td { padding: var(--space-4) 0; border-bottom: 1px solid var(--rule); vertical-align: baseline; }
+.lunch-table th { text-align: start; font: 500 var(--fs-md)/1.4 var(--font-sub); padding-inline-end: var(--space-4); }
+.lunch-table th small { display: block; font: 400 var(--fs-sm)/1.6 var(--font-body); color: var(--soft); }
+.lunch-table td { text-align: end; }
+.lunch-table .price { color: var(--brand-ink); }
+@media (max-width: 860px) { .lunch-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .lunch-table th, .lunch-table td { padding-block: var(--space-3); } }
+
+/* ==================== Banquets and catering ==================== */
+.banquet-head { display: grid; grid-template-columns: var(--cols); gap: var(--space-4) var(--gap-col); align-items: end; margin-bottom: var(--space-7); }
+.banquet-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6) var(--space-7); margin-top: var(--space-7); }
+.banquet-cols > div { border-top: 1px solid var(--text); padding-top: var(--space-4); }
+.banquet-cols h3 { font-size: var(--fs-lg); margin-bottom: var(--space-2); }
+.banquet-cols p { color: var(--muted); }
+.plist { margin-top: var(--space-4); }
+.plist div { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-4); padding-block: var(--space-2); border-top: 1px solid var(--line); }
+.plist dd { font-weight: 500; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.banquet-cta { margin-top: var(--space-4); }
+@media (max-width: 860px) {
+  .banquet-head { grid-template-columns: minmax(0, 1fr); margin-bottom: var(--space-6); }
+  .banquet-cols { grid-template-columns: minmax(0, 1fr); gap: var(--space-5); margin-top: var(--space-6); }
+}
+
+/* ==================== Hours and location ==================== */
+.visit { background: var(--surface); border-block: 1px solid var(--line); }
+.visit .sec-title { margin-bottom: var(--space-7); }
+.visit-grid { display: grid; grid-template-columns: var(--cols); gap: var(--space-7) var(--gap-col); align-items: start; }
+.visit h3 { font-size: var(--fs-lg); margin-bottom: var(--space-3); }
+.hours { width: 100%; border-collapse: collapse; line-height: 1.5; border-top: 1px solid var(--text); }
+.hours th, .hours td { text-align: start; padding: var(--space-3) var(--space-2); border-bottom: 1px solid var(--line); }
+.hours th { font-weight: 400; }
+.hours td { text-align: end; font-variant-numeric: tabular-nums; }
+.hours tr.today { background: var(--tint); }
+.hours tr.today th { font-weight: 500; }
+.hours tr.today th::after { content: "Today"; font-size: var(--fs-sm); font-weight: 500; margin-inline-start: var(--space-2); padding: 0 var(--space-2); border-radius: var(--radius-sm); background: var(--brand); color: var(--brand-ink); }
+.hours .closed { color: var(--muted); }
+.small-note { font-size: var(--fs-sm); color: var(--muted); margin-top: var(--space-3); }
+/* Pickup in three steps (a real sequence, so it is numbered) */
+.pickup { margin-top: var(--space-7); }
+.steps { list-style: none; counter-reset: step; border-top: 1px solid var(--text); }
+.steps li { counter-increment: step; display: grid; grid-template-columns: var(--space-6) minmax(0, 1fr); padding-block: var(--space-3); border-bottom: 1px solid var(--line); }
+.steps li::before { content: counter(step); font: 500 var(--fs-md)/1.6 var(--font-body); font-variant-numeric: tabular-nums; color: var(--brand); }
+.addr { font: 500 var(--fs-lg)/1.5 var(--font-body); font-variant-numeric: tabular-nums; margin-top: var(--space-5); }
+.visit-list { list-style: none; margin: var(--space-4) 0 var(--space-5); border-top: 1px solid var(--line); display: grid; grid-template-columns: max-content minmax(0, 1fr); }
+.visit-list li { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; column-gap: var(--space-4); padding-block: var(--space-3); border-bottom: 1px solid var(--line); color: var(--muted); }
+.visit-list b { color: var(--text); }
+@media (max-width: 860px) { .visit-grid { grid-template-columns: minmax(0, 1fr); } .visit .sec-title { margin-bottom: var(--space-5); } }
+@media (max-width: 560px) { .hours th, .hours td, .visit-list li { padding-block: var(--space-2); } .pickup { margin-top: var(--space-5); } }
+
+/* ==================== Pickup and booking form ==================== */
+.order-grid { display: grid; grid-template-columns: var(--cols); gap: var(--space-6) var(--gap-col); align-items: start; }
+.order .sec-title { margin-bottom: var(--space-4); }
+.quick { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+.form { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--pad-card); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4) var(--space-5); }
+.field { display: grid; gap: var(--space-1); min-width: 0; border: 0; align-content: start; }
+.field.full { grid-column: 1 / -1; }
+.field label, .field legend { font-weight: 500; font-size: var(--fs-sm); }
+.field label span, .field legend span { color: var(--muted); font-weight: 400; }
+.field input:not([type="radio"]), .field select, .field textarea { width: 100%; min-width: 0; font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--field-line); border-radius: var(--radius-sm); padding: var(--space-3); min-height: 48px; }
+.field ::placeholder { color: var(--muted); opacity: 1; }
+.field input:not([type="radio"]):hover, .field select:hover, .field textarea:hover { border-color: var(--muted); }
+.field input:not([type="radio"]):focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 20%, transparent); }
+.field input:not([type="radio"]), .field select { height: 48px; }
+.field input[type="date"] { padding-inline: var(--space-2); }
+.field input[type="date"]::-webkit-datetime-edit { padding: 0; }
+.field input[type="date"]::-webkit-calendar-picker-indicator { margin-inline-start: var(--space-1); padding: 0; width: 1em; }
+.field textarea { min-height: 96px; resize: vertical; }
+.choice { display: flex; flex-wrap: wrap; gap: 0 var(--space-4); }
+.choice label { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 44px; font-size: var(--fs-base); font-weight: 400; cursor: pointer; }
+.choice input { width: 20px; height: 20px; accent-color: var(--brand); }
+.form .btn { grid-column: 1 / -1; width: 100%; }
+.form-note { grid-column: 1 / -1; color: var(--muted); font-size: var(--fs-sm); }
+.form small { grid-column: 1 / -1; color: var(--muted); font-size: var(--fs-sm); text-align: center; }
+@media (max-width: 860px) { .order-grid { grid-template-columns: minmax(0, 1fr); } }
+/* Desktop: the left column follows the form as you scroll, so it never leaves a gap */
+@media (min-width: 861px) { .order-grid > :first-child { position: sticky; top: calc(var(--header) + var(--space-6)); } }
+@media (max-width: 480px) { .form .field { grid-column: 1 / -1; } .form .field.pair { grid-column: auto; } .form { column-gap: var(--space-3); } }
+@media (max-width: 560px) { .field textarea { min-height: 72px; } }
+@media (max-width: 400px) { .form { padding-inline: var(--space-4); } .quick .btn { padding-inline: var(--space-4); } }
+@media (max-width: 359px) { .form .field.pair { grid-column: 1 / -1; } }
+
+/* ==================== Footer ==================== */
+.site-footer { background: var(--text); color: color-mix(in srgb, var(--bg) 82%, transparent); padding-block: var(--space-8) var(--space-6); font-size: var(--fs-sm); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: var(--space-6); }
+.site-footer h2 { color: var(--bg); font-size: var(--fs-md); margin-bottom: var(--space-3); }
+.site-footer a { display: inline-block; padding-block: var(--space-1); text-decoration: none; } .site-footer a:hover { text-decoration: underline; }
+.site-footer :focus-visible { outline-color: var(--bg); }
+.social { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); margin-top: var(--space-4); }
+.foot-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2) var(--space-5); border-top: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); margin-top: var(--space-7); padding-top: var(--space-4); }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .foot-grid > :first-child { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .site-footer { padding-top: var(--space-7); } .foot-bottom { margin-top: var(--space-6); } }
+
+/* ==================== Sticky bar on phones ==================== */
+/* With JS the bar slides in once the hero buttons leave the screen and hides again at the form; without JS it is always shown */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  .site-footer { padding-bottom: calc(var(--space-6) + 76px); }
+  .sticky-cta { display: flex; gap: var(--space-2); position: fixed; inset: auto 0 0; z-index: 40; padding: var(--space-3) var(--pad) calc(var(--space-3) + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 96%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -1px 0 var(--line); transition: transform .3s ease-out, visibility .3s; }
+  .js .sticky-cta:not(.show) { transform: translateY(100%); visibility: hidden; }
+  .sticky-cta .btn-primary { flex: 1; }
+  .sticky-cta .btn-ghost { padding-inline: var(--space-4); }
+}
+
+/* ==================== Language switch (lang-switch) ====================
+   The header shows the current language; click it to choose another. Built on details, so it works with JS off */
+.nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
+.lang-switch { position: relative; display: flex; align-items: center; flex: none; margin-inline-start: var(--space-5); padding-inline-start: var(--space-2); border-inline-start: 1px solid var(--line); font: 400 var(--fs-sm)/1 var(--font-body); letter-spacing: normal; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 36px; padding-inline: var(--space-2); border-radius: var(--radius-sm); color: inherit; font-weight: 500; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: var(--tint); }
+.lang-menu > summary:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + var(--space-2)); inset-inline-end: 0; z-index: 80; display: grid; gap: 2px; min-width: 9.5rem; padding: var(--space-1); background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 12px 32px var(--shadow); }
+.lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm); color: var(--text); text-decoration: none; white-space: nowrap; }
+.lang-switch .lang-list a:hover { background: var(--tint); }
+.lang-switch .lang-list a:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
+.lang-switch .lang-list a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch .lang-list a[aria-current="page"] { font-weight: 500; text-decoration: underline; text-decoration-color: var(--brand); text-underline-offset: 5px; }
+@media (max-width: 760px) {
+  /* Phones: sits left of the hamburger and stays visible; without JS it stays on the logo row */
+  :root { --header: 64px; }
+  .nav > .lang-switch { order: 1; margin-inline: 0 var(--space-1); padding-inline-start: 0; border: 0; }
+  .nav > .nav-toggle { order: 2; }
+  .nav > .nav-menu { order: 3; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  /* Tablets: tighter menu spacing so the header stays on one line */
+  .nav > .nav-menu { gap: var(--space-4); font-size: var(--fs-sm); }
+  .nav > .nav-menu .btn { padding-inline: var(--space-3); font-size: var(--fs-sm); }
+  .nav > .lang-switch { margin-inline-start: var(--space-2); padding-inline-start: var(--space-1); }
+  .logo small { display: none; }
+}
+@media (max-width: 400px) {
+  /* Phones under 400px: tighter spacing so the logo does not wrap */
+  .nav > .lang-switch { margin-inline-end: 0; }
+  .logo { gap: var(--space-2); }
+  .logo-mark { width: 30px; height: 30px; }
+  .js .nav-toggle { margin-inline-end: -8px; }
+}
+/* Footer language links */
+.foot-lang { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: var(--space-1); color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius-sm); }
+.foot-lang a:hover { text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--bg); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { font-weight: 500; text-decoration: underline; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- ==================== Section: Header navigation ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav wrap" aria-label="Main menu">
+    <!-- Sample content — replace before going live (the restaurant name is fictional) -->
+    <a href="#hero" class="logo" aria-label="Sui Kee Cantonese Kitchen, back to top">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span translate="no"><b>Sui Kee</b><small>Cantonese Kitchen</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-links" aria-label="Open menu"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#lunch">Lunch</a></li>
+      <li><a href="#banquet">Banquets</a></li>
+      <li><a href="#visit">Hours and location</a></li>
+      <li><a href="#order" class="btn btn-ghost">Order pickup</a></li>
+    </ul>
+    <!-- lang-switch: language switch. To add a language, add a link here and create the matching folder -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="en">EN</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en" aria-current="page">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+<!-- ==================== Section: Hero (today’s board) ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <h1>Roast meats, <br>fired fresh daily</h1>
+      <p class="lead">Char siu, roast duck and soy chicken go into the oven every morning. Order online and pick up in about twenty minutes.</p>
+      <div class="hero-cta">
+        <a href="#order" class="btn btn-primary">Order pickup</a>
+        <a href="#order" class="btn btn-ghost">Book a table</a>
+      </div>
+      <!-- The open / closed line is generated from HOURS in the script at the bottom; this line shows when JS is off -->
+      <p class="status" id="status" aria-live="polite"><span>Open Wednesday to Monday, closed Tuesday</span></p>
+    </div>
+    <!-- Today’s board: three signature dishes. Keep names and prices in step with the menu below -->
+    <!-- Sample content — replace before going live (dishes and prices are fictional) -->
+    <div class="board reveal">
+      <div class="board-head">
+        <h2>On today’s board</h2>
+        <span class="seal seal-solid">Signature</span>
+      </div>
+      <ul class="plaques">
+        <li class="plaque"><h3><span class="p-v p-alt" lang="zh-Hant">蜜汁叉燒</span><span class="p-h p-main">Honey-Glazed Char Siu</span></h3><span class="price">$16.50</span></li>
+        <li class="plaque"><h3><span class="p-v p-alt" lang="zh-Hant">明爐燒鴨</span><span class="p-h p-main">Roast Duck</span></h3><span class="price">$18.50</span></li>
+        <li class="plaque"><h3><span class="p-v p-alt" lang="zh-Hant">玫瑰豉油雞</span><span class="p-h p-main">Soy Sauce Chicken</span></h3><span class="price">$17.00</span></li>
+      </ul>
+      <p class="board-foot"><a class="link" href="#menu">See the full menu</a></p>
+    </div>
+    <div class="hero-art reveal">
+      <div class="img img-hero" role="img" aria-label="Overhead view of a roast meat platter on a white table: char siu, roast duck and soy chicken on white porcelain, with soy sauce in a blue-and-white dish and a pair of bamboo chopsticks"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Menu ==================== -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="menu-head">
+      <h2 class="sec-title">The full menu</h2>
+      <p class="sec-lead">Same prices for dine-in and pickup. Dishes are sized to share between three or four. Eating alone? Go for rice, noodles or the lunch special.</p>
+    </div>
+    <!-- Sample content — replace before going live (all dishes and prices are fictional). Each dish: name, Chinese name, one line, price -->
+    <div class="tabs" role="tablist" aria-label="Menu sections">
+      <button class="tab" role="tab" id="tab-roast" aria-controls="panel-roast" aria-selected="true">Roast meats</button>
+      <button class="tab" role="tab" id="tab-wok" aria-controls="panel-wok" aria-selected="false" tabindex="-1">Wok dishes</button>
+      <button class="tab" role="tab" id="tab-rice" aria-controls="panel-rice" aria-selected="false" tabindex="-1">Rice & noodles</button>
+      <button class="tab" role="tab" id="tab-pot" aria-controls="panel-pot" aria-selected="false" tabindex="-1">Clay pots</button>
+      <button class="tab" role="tab" id="tab-dim" aria-controls="panel-dim" aria-selected="false" tabindex="-1">Dim sum</button>
+    </div>
+    <div role="tabpanel" id="panel-roast" aria-labelledby="tab-roast" tabindex="0">
+      <h3 class="panel-title">Roast meats</h3>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>Honey-Glazed Char Siu<span class="seal">Signature</span></h3><span class="price">$16.50</span></div><p class="d-alt" lang="zh-Hant">蜜汁叉燒</p><p class="d-desc">Pork shoulder marinated overnight and glazed with maltose until the edges char.</p></li>
+        <li><div class="mi-head"><h3>Roast Duck<span class="seal">Signature</span></h3><span class="price">$18.50</span></div><p class="d-alt" lang="zh-Hant">明爐燒鴨</p><p class="d-desc">Limited each day. Priced per quarter; half and whole birds available.</p></li>
+        <li><div class="mi-head"><h3>Soy Sauce Chicken<span class="seal">Signature</span></h3><span class="price">$17.00</span></div><p class="d-alt" lang="zh-Hant">玫瑰豉油雞</p><p class="d-desc">Poached slowly in first-draw soy and rose liquor, with ginger-scallion relish.</p></li>
+        <li><div class="mi-head"><h3>Crispy Roast Pork Belly</h3><span class="price">$17.50</span></div><p class="d-alt" lang="zh-Hant">脆皮燒肉</p><p class="d-desc">Crackling skin, tender meat, yellow mustard on the side.</p></li>
+        <li><div class="mi-head"><h3>Two-Roast Combo</h3><span class="price">$21.00</span></div><p class="d-alt" lang="zh-Hant">燒臘雙拼</p><p class="d-desc">Pick any two of char siu, duck, soy chicken or pork belly.</p></li>
+        <li><div class="mi-head"><h3>Blanched Choy Sum<span class="mark">Vegetarian</span></h3><span class="price">$9.00</span></div><p class="d-alt" lang="zh-Hant">白灼菜心</p><p class="d-desc">Blanched to order and dressed with mushroom sauce.</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-wok" aria-labelledby="tab-wok" tabindex="0">
+      <h3 class="panel-title">Wok dishes</h3>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>Ginger-Scallion Beef</h3><span class="price">$18.00</span></div><p class="d-alt" lang="zh-Hant">薑蔥炒牛肉</p><p class="d-desc">Tossed fast over high heat, so it reaches the table with wok hei.</p></li>
+        <li><div class="mi-head"><h3>Salt & Pepper Squid<span class="mark">Spicy</span></h3><span class="price">$18.50</span></div><p class="d-alt" lang="zh-Hant">椒鹽鮮魷</p><p class="d-desc">Fried to order and tossed with crisp garlic and chili.</p></li>
+        <li><div class="mi-head"><h3>Sweet & Sour Pork</h3><span class="price">$17.00</span></div><p class="d-alt" lang="zh-Hant">咕咾肉</p><p class="d-desc">Hawthorn and pineapple sauce over pork that stays crisp.</p></li>
+        <li><div class="mi-head"><h3>Salted Egg Yolk Prawns<span class="seal">Signature</span></h3><span class="price">$25.00</span></div><p class="d-alt" lang="zh-Hant">金沙蝦球</p><p class="d-desc">Prawns coated in sandy, buttery salted egg yolk.</p></li>
+        <li><div class="mi-head"><h3>Scallops with Broccoli</h3><span class="price">$24.00</span></div><p class="d-alt" lang="zh-Hant">西蘭花炒帶子</p><p class="d-desc">Seared scallops in a light glaze that stays out of the way.</p></li>
+        <li><div class="mi-head"><h3>Garlic Pea Shoots<span class="mark">Vegetarian</span></h3><span class="price">$14.00</span></div><p class="d-alt" lang="zh-Hant">蒜蓉炒豆苗</p><p class="d-desc">Shoots delivered that morning, cooked with just garlic and salt.</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-rice" aria-labelledby="tab-rice" tabindex="0">
+      <h3 class="panel-title">Rice & noodles</h3>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>Beef Chow Fun<span class="seal">Signature</span></h3><span class="price">$15.50</span></div><p class="d-alt" lang="zh-Hant">乾炒牛河</p><p class="d-desc">Dry-fried rice noodles, never greasy, with crisp bean sprouts.</p></li>
+        <li><div class="mi-head"><h3>Shrimp Wonton Noodle Soup</h3><span class="price">$12.50</span></div><p class="d-alt" lang="zh-Hant">鮮蝦雲吞麵</p><p class="d-desc">Springy egg noodles in dried flounder broth; wontons wrapped daily.</p></li>
+        <li><div class="mi-head"><h3>Char Siu over Rice</h3><span class="price">$12.00</span></div><p class="d-alt" lang="zh-Hant">叉燒飯</p><p class="d-desc">With greens and a fried egg.</p></li>
+        <li><div class="mi-head"><h3>Yangzhou Fried Rice</h3><span class="price">$14.00</span></div><p class="d-alt" lang="zh-Hant">揚州炒飯</p><p class="d-desc">Char siu, shrimp and egg, every grain separate.</p></li>
+        <li><div class="mi-head"><h3>Singapore Rice Noodles<span class="mark">Spicy</span></h3><span class="price">$14.50</span></div><p class="d-alt" lang="zh-Hant">星洲炒米粉</p><p class="d-desc">Curry-spiced and mildly hot.</p></li>
+        <li><div class="mi-head"><h3>Buddha’s Delight Chow Mein<span class="mark">Vegetarian</span></h3><span class="price">$14.00</span></div><p class="d-alt" lang="zh-Hant">羅漢齋炒麵</p><p class="d-desc">Crisp pan-fried noodles under mushrooms and seasonal greens.</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-pot" aria-labelledby="tab-pot" tabindex="0">
+      <h3 class="panel-title">Soups & clay pots</h3>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>Slow-Simmered Soup of the Day</h3><span class="price">$7.50</span></div><p class="d-alt" lang="zh-Hant">老火例湯</p><p class="d-desc">One soup a day, simmered for four hours. Ask what’s on today.</p></li>
+        <li><div class="mi-head"><h3>Sizzling Chicken Clay Pot<span class="seal">Signature</span></h3><span class="price">$21.00</span></div><p class="d-alt" lang="zh-Hant">啫啫雞煲</p><p class="d-desc">Ginger, scallion and garlic, still sizzling when it lands.</p></li>
+        <li><div class="mi-head"><h3>Salted Fish, Chicken & Tofu Clay Pot</h3><span class="price">$19.00</span></div><p class="d-alt" lang="zh-Hant">鹹魚雞粒豆腐煲</p><p class="d-desc">Savory and rich. Order rice with it.</p></li>
+        <li><div class="mi-head"><h3>Braised Eggplant Clay Pot<span class="mark">Spicy</span></h3><span class="price">$17.00</span></div><p class="d-alt" lang="zh-Hant">魚香茄子煲</p><p class="d-desc">Flash-fried, then braised. Mildly hot.</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-dim" aria-labelledby="tab-dim" tabindex="0">
+      <h3 class="panel-title">Dim sum & sweets</h3>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>Har Gow Shrimp Dumplings<span class="seal">Signature</span></h3><span class="price">$8.50</span></div><p class="d-alt" lang="zh-Hant">鮮蝦餃</p><p class="d-desc">Four to a basket, wrappers thin enough to see through.</p></li>
+        <li><div class="mi-head"><h3>Pork & Shrimp Siu Mai</h3><span class="price">$8.00</span></div><p class="d-alt" lang="zh-Hant">燒賣</p><p class="d-desc">Hand-chopped pork and shrimp, topped with roe.</p></li>
+        <li><div class="mi-head"><h3>Black Bean Spare Ribs</h3><span class="price">$8.50</span></div><p class="d-alt" lang="zh-Hant">豉汁蒸排骨</p><p class="d-desc">Bite-size ribs steamed with fermented black beans and garlic.</p></li>
+        <li><div class="mi-head"><h3>Pan-Fried Turnip Cake</h3><span class="price">$7.50</span></div><p class="d-alt" lang="zh-Hant">蘿蔔糕</p><p class="d-desc">More radish than batter, seared golden on both sides.</p></li>
+        <li><div class="mi-head"><h3>Mango Pomelo Sago<span class="mark">Vegetarian</span></h3><span class="price">$7.50</span></div><p class="d-alt" lang="zh-Hant">楊枝甘露</p><p class="d-desc">Mango, pomelo and sago pearls, served cold.</p></li>
+        <li><div class="mi-head"><h3>Egg Tarts, Two Pieces</h3><span class="price">$6.00</span></div><p class="d-alt" lang="zh-Hant">蛋塔</p><p class="d-desc">Flaky crust, out of the oven at 3 pm every day.</p></li>
+      </ul>
+    </div>
+    <div class="menu-foot">
+      <p class="menu-note">Prices do not include tax. Please tell us about any food allergies when you order.</p>
+      <a href="#order" class="btn btn-ghost">Order pickup</a>
+    </div>
+    <div class="dishes" role="group" aria-label="Dish photos">
+      <div class="img img-d1" role="img" aria-label="Overhead view of four har gow in a bamboo steamer"></div>
+      <div class="img img-d2" role="img" aria-label="Overhead view of beef chow fun on a white plate"></div>
+      <div class="img img-d3" role="img" aria-label="Overhead view of shrimp wonton noodle soup in a blue-and-white bowl"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Lunch special ==================== -->
+<section class="lunch" id="lunch">
+  <div class="wrap lunch-grid">
+    <div>
+      <h2 class="sec-title">Weekday lunch special</h2>
+      <!-- Sample content — replace before going live (times and prices are fictional) -->
+      <p class="lunch-time">Mon, Wed, Thu, Fri, <span class="nw">11:00 am–2:00 pm</span></p>
+      <p class="lunch-note">Every plate comes with the soup of the day and greens. Same price for dine-in and pickup.</p>
+    </div>
+    <table class="lunch-table">
+      <caption class="sr-only">Lunch special items and prices</caption>
+      <tbody>
+        <tr><th scope="row">One roast over rice<small>Char siu, duck, soy chicken or pork belly</small></th><td><span class="price">$11.50</span></td></tr>
+        <tr><th scope="row">Two roasts over rice<small>Any two of the four</small></th><td><span class="price">$13.50</span></td></tr>
+        <tr><th scope="row">Wok dish with rice<small>Choose from three wok dishes of the day</small></th><td><span class="price">$14.50</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ==================== Section: Banquets and catering ==================== -->
+<section class="banquet" id="banquet">
+  <div class="wrap">
+    <div class="banquet-head">
+      <h2 class="sec-title">Banquets and catering</h2>
+      <p class="sec-lead">Family dinners, office parties, a crowd at home. Book rooms and set dinners three days ahead, and order catering trays by noon the day before.</p>
+    </div>
+    <div class="img img-banquet" role="img" aria-label="Overhead view of a round table with a white cloth: six dishes on a glass lazy Susan and a blue-and-white bowl at each seat"></div>
+    <!-- Sample content — replace before going live (room sizes and prices are fictional) -->
+    <div class="banquet-cols">
+      <div>
+        <h3>Private rooms</h3>
+        <p>Two rooms that open into one. No room fee.</p>
+        <dl class="plist">
+          <div><dt>Each room</dt><dd>10 to 12 guests</dd></div>
+          <div><dt>Combined</dt><dd>24 guests</dd></div>
+        </dl>
+      </div>
+      <div>
+        <h3>Set dinners</h3>
+        <p>Dishes change with the season. Swap a course or add roast meats.</p>
+        <dl class="plist">
+          <div><dt>Dinner for 4, five dishes and soup</dt><dd>$128</dd></div>
+          <div><dt>Banquet for 10, eight dishes, soup, dessert</dt><dd>$388</dd></div>
+        </dl>
+      </div>
+      <div>
+        <h3>Catering trays</h3>
+        <p>Roast meats, fried rice, chow mein and dim sum in insulated trays, for pickup or local delivery.</p>
+        <dl class="plist">
+          <div><dt>Half tray, serves about 8</dt><dd>from $65</dd></div>
+          <div><dt>Full tray, serves about 16</dt><dd>from $120</dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="banquet-cta"><a class="link" href="#order">Ask about banquets and catering</a></p>
+  </div>
+</section>
+
+<!-- ==================== Section: Hours and location ==================== -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <h2 class="sec-title">Hours and location</h2>
+    <div class="visit-grid">
+      <div>
+        <h3>Hours</h3>
+        <!-- When you change the hours, also update HOURS in the script at the bottom and the JSON-LD in the head -->
+        <!-- Sample content — replace before going live -->
+        <table class="hours" aria-label="Weekly opening hours">
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td>11:00 am – 9:00 pm</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td class="closed">Closed</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>11:00 am – 9:00 pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>11:00 am – 9:00 pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>11:00 am – 9:00 pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>10:30 am – 9:30 pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>10:30 am – 9:30 pm</td></tr>
+          </tbody>
+        </table>
+        <p class="small-note">Last orders 30 minutes before closing. Closed on Thanksgiving Day.</p>
+        <div class="pickup">
+          <h3>How pickup works</h3>
+          <ol class="steps">
+            <li>Order with the form below or call us.</li>
+            <li>We call back with your total and a pickup time, usually 20 minutes.</li>
+            <li>Give your name at the counter and pay in store.</li>
+          </ol>
+        </div>
+      </div>
+      <div>
+        <div class="img img-room" role="img" aria-label="The bright dining room: white tile wall, blue pendant lamps, blue-and-white vases on a shelf and a wooden table in the foreground"></div>
+        <!-- Sample content — replace before going live (address, phone and directions are fictional) -->
+        <p class="addr">128 Example Street, Flushing, NY 11355</p>
+        <p class="small-note" style="margin-top:0">Phone <a class="num" href="tel:+15550123456">(555) 012-3456</a></p>
+        <ul class="visit-list">
+          <li><b>Subway</b>7 train to Flushing–Main St, then a 6-minute walk</li>
+          <li><b>Bus</b>Several lines stop at Main St and Example St, 2 minutes away</li>
+          <li><b>Parking</b>Municipal lot one block east, pickup spots out front</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://maps.google.com/?q=128+Example+Street,+Flushing,+NY+11355" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== Section: Pickup and booking form ==================== -->
+<section class="order" id="order">
+  <div class="wrap order-grid">
+    <div>
+      <h2 class="sec-title">Order pickup or book a table</h2>
+      <p class="sec-lead">We call back during opening hours to confirm. In a hurry? Calling is faster.</p>
+      <div class="quick">
+        <a class="btn btn-ghost num" href="tel:+15550123456">Call (555) 012-3456</a>
+        <!-- Messaging button: WhatsApp links use https://wa.me/ followed by your full number with country code (digits only).
+             You can swap in LINE (https://line.me/R/ti/p/@yourlineid), Messenger (https://m.me/yourpage)
+             or Instagram (https://ig.me/m/yourhandle) instead. -->
+        <a class="btn btn-ghost" href="https://wa.me/15550123456" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <!-- This form uses Formspree (the free plan covers 50 submissions a month):
+         1. Sign up at https://formspree.io and create a new form
+         2. Copy the ID from the form URL (for example xyzabcd)
+         3. Replace your-form-id in the action below with your ID to get email notifications -->
+    <form class="form" action="https://formspree.io/f/your-form-id" method="POST">
+      <p class="form-note">Fields marked * are required.</p>
+      <fieldset class="field full">
+        <legend>This is for <span>*</span></legend>
+        <div class="choice">
+          <label><input type="radio" name="Type" value="Pickup" checked required>Pickup</label>
+          <label><input type="radio" name="Type" value="Table">A table</label>
+          <label><input type="radio" name="Type" value="Banquet or catering">Banquet or catering</label>
+        </div>
+      </fieldset>
+      <div class="field"><label for="f-name">Name <span>*</span></label><input id="f-name" name="Name" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">Phone <span>*</span></label><input id="f-tel" name="Phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(555) 012-3456" required></div>
+      <div class="field pair"><label for="f-date">Date <span>*</span></label><input id="f-date" name="Date" type="date" required></div>
+      <div class="field pair"><label for="f-time">Time <span>*</span></label>
+        <select id="f-time" name="Time" required>
+          <option value="">Choose a time</option>
+          <option>11:00 am</option><option>11:30 am</option><option>12:00 pm</option><option>12:30 pm</option><option>1:00 pm</option><option>1:30 pm</option>
+          <option>5:30 pm</option><option>6:00 pm</option><option>6:30 pm</option><option>7:00 pm</option><option>7:30 pm</option><option>8:00 pm</option>
+        </select></div>
+      <div class="field full"><label for="f-people">Party size <span>(for a table)</span></label>
+        <select id="f-people" name="Party size">
+          <option value="">Choose</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7 or more</option>
+        </select></div>
+      <div class="field full"><label for="f-note">Your order or notes</label><textarea id="f-note" name="Order" placeholder="e.g. half a roast duck and one beef chow fun, or a high chair…"></textarea></div>
+      <button class="btn btn-primary" type="submit">Send request</button>
+      <small>Nothing is charged now. Your order is confirmed when we call back.</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== Section: Footer ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <!-- Sample content — replace before going live -->
+    <div class="foot-grid">
+      <div>
+        <h2 translate="no">Sui Kee Cantonese Kitchen</h2>
+        <p>128 Example Street, Flushing, NY 11355<br>Phone <a class="num" href="tel:+15550123456">(555) 012-3456</a></p>
+        <div class="social"><a href="#">Instagram</a><a href="#">Facebook</a><a href="https://wa.me/15550123456">WhatsApp</a></div>
+      </div>
+      <div>
+        <h2>Hours</h2>
+        <p>Mon, Wed, Thu, Fri <span class="nw">11:00 am – 9:00 pm</span><br>Sat and Sun <span class="nw">10:30 am – 9:30 pm</span><br>Closed Tuesday</p>
+      </div>
+      <div>
+        <h2>Quick links</h2>
+        <p><a href="#menu">Menu</a><br><a href="#order">Order pickup</a><br><a href="#banquet">Banquets and catering</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+    <p class="copy">© <span id="y">2026</span> <span translate="no">Sui Kee Cantonese Kitchen</span></p>
+    <!-- Footer language links: the same set as the lang-switch in the header -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja">日本語</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== Section: Sticky bar on phones ==================== -->
+<div class="sticky-cta">
+  <a href="#order" class="btn btn-primary">Order pickup</a>
+  <a href="tel:+15550123456" class="btn btn-ghost" aria-label="Call (555) 012-3456">Call</a>
+</div>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// Header background on scroll
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// Hamburger menu
+const toggle = document.querySelector('.nav-toggle'), menu = document.getElementById('menu-links');
+const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); };
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// Hero entrance (only the hero uses .reveal)
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+// Sticky bar on phones: appears once the hero buttons leave the screen and hides at the form, so it never sits next to the submit button
+const sticky = document.querySelector('.sticky-cta'), seen = new Map();
+const so = new IntersectionObserver(es => { es.forEach(e => seen.set(e.target, e.isIntersecting)); sticky.classList.toggle('show', ![...seen.values()].some(Boolean)); });
+['.hero-cta', '#order'].forEach(q => so.observe(document.querySelector(q)));
+
+// Menu tabs (arrow keys, Home and End work)
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+const select = (t, focus = true) => {
+  tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+  if (focus) t.focus();
+};
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => select(t));
+  t.addEventListener('keydown', e => {
+    const k = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+    if (k) { e.preventDefault(); select(tabs[(i + k + tabs.length) % tabs.length]); }
+    if (e.key === 'Home') { e.preventDefault(); select(tabs[0]); }
+    if (e.key === 'End') { e.preventDefault(); select(tabs[tabs.length - 1]); }
+  });
+});
+select(tabs[0], false); // Without JS all five sections are shown; with JS they fold into tabs
+
+// Open / closed (worked out in the restaurant’s time zone). Format: day (0 = Sunday): [opens, closes], null = closed all day
+const TZ = 'America/New_York';
+const HOURS = { 0: ['10:30', '21:30'], 1: ['11:00', '21:00'], 2: null, 3: ['11:00', '21:00'], 4: ['11:00', '21:00'], 5: ['11:00', '21:00'], 6: ['10:30', '21:30'] };
+const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const toMin = s => { const [h, m] = s.split(':'); return h * 60 + +m; };
+const fmt = s => { const [h, m] = s.split(':'); return `${h % 12 || 12}:${m} ${h < 12 ? 'am' : 'pm'}`; };
+const t = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: TZ, weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map(p => [p.type, p.value]));
+const day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(t.weekday), mins = t.hour * 60 + +t.minute, today = HOURS[day];
+const status = document.getElementById('status');
+let text;
+if (today && mins >= toMin(today[0]) && mins < toMin(today[1])) {
+  status.classList.add('is-open');
+  text = `<b>Open now</b>, closes ${fmt(today[1])}`;
+} else {
+  let d = 0;
+  if (today && mins < toMin(today[0])) d = 0;
+  else do { d++; } while (!HOURS[(day + d) % 7]);
+  const nd = (day + d) % 7, when = d === 0 ? 'today' : d === 1 ? 'tomorrow' : DAYS[nd];
+  text = `<b>Closed now</b>, opens ${when} at ${fmt(HOURS[nd][0])}`;
+}
+status.querySelector('span').innerHTML = text;
+const row = document.querySelector(`.hours tr[data-day="${day}"]`); if (row) row.classList.add('today');
+
+// The date cannot be in the past
+document.getElementById('f-date').min = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+
+// Dish photos: keyboard focusable only when the row scrolls sideways (phones)
+const dishes = document.querySelector('.dishes'), mq = matchMedia('(max-width: 760px)');
+const setDishes = () => mq.matches ? dishes.setAttribute('tabindex', '0') : dishes.removeAttribute('tabindex');
+mq.addEventListener('change', setDishes); setDishes();
+
+// Language menu: closes when you click outside it or press Escape (Escape also closes the phone menu)
+document.addEventListener('click', e => document.querySelectorAll('.lang-menu[open]').forEach(d => { if (!d.contains(e.target)) d.removeAttribute('open'); }));
+document.addEventListener('keydown', e => { if (e.key !== 'Escape') return; if (menu.classList.contains('open')) { setMenu(false); toggle.focus(); } document.querySelectorAll('.lang-menu[open]').forEach(d => { d.removeAttribute('open'); d.querySelector('summary').focus(); }); });
+</script>
+</body>
+</html>

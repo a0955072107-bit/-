@@ -30,3 +30,8 @@
 | dental/hero | 霧鼠尾草牆、大窗、松綠色診療椅與觀葉植物，左側留白給文字面板（16:9） |
 | dental/doctor-1～3 | 虛構醫師半身照：院長（50 多歲男性）、主治醫師（30 多歲女性、40 多歲男性）（4:5） |
 | dental/space-1、space-2 | 候診區（橡木長椅、植物）、諮詢室（平板顯示牙齒 X 光）（3:2） |
+| tcm/hero、doctor-1～2、herbs、room | 百子櫃與銅秤；虛構中醫師 2 位；俯拍藥材；針灸診療室 |
+| canton/hero、banquet、dish-1～3、room | 燒臘拼盤；圓桌合菜；蝦餃、乾炒牛河、雲吞麵；白瓷磚餐館內景 |
+| tcm/（地圖） | `.img-map` 刻意不放照片：買家上線時換成 Google 地圖 iframe，預覽維持 CSS 地圖 |
+| tutor/hero、teacher-1～3、desk | 小班教室；虛構老師 3 位；俯拍書桌 |
+| hair/hero、stylist-1～3、look-1～6、shop | 鮑伯頭背影；虛構設計師 3 位；六款髮型背影；水泥牆與圓鏡的店內 |

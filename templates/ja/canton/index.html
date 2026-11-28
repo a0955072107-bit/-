@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>瑞記広東料理｜焼き物と広東の家庭料理（東京・人形町）</title>
+<meta name="description" content="瑞記広東料理は東京・人形町の広東料理店です。チャーシュー、ローストダック、鶏の醤油煮を毎日店で焼きあげます。テイクアウトのご注文、ご予約、宴会と仕出しも承ります。">
+<meta name="theme-color" content="#1F3F8F">
+<meta property="og:title" content="瑞記広東料理｜毎日焼きたての広東の焼き物">
+<meta property="og:description" content="チャーシュー、ローストダック、鶏の醤油煮を毎朝焼きあげます。ご注文から約20分でお受け取りいただけます。">
+<meta property="og:type" content="website">
+<!-- 多言語版（SEO）：公開後は href を完全な URL に置き換えてください（例：https://www.example.jp/en/） -->
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-TW/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-CN/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&family=Zen+Kaku+Gothic+New:wght@400;500&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<!-- サンプル内容：公開前に実際の情報へ差し替えてください（店名、電話、住所、営業時間、価格帯はすべて架空です） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "瑞記広東料理",
+  "telephone": "+81-3-1234-5678",
+  "url": "https://example.com/",
+  "servesCuisine": ["広東料理", "焼き物", "点心"],
+  "priceRange": "¥980〜¥2,080",
+  "acceptsReservations": "True",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "日本橋人形町9-2-8 1階",
+    "addressLocality": "中央区",
+    "addressRegion": "東京都",
+    "postalCode": "103-0013",
+    "addressCountry": "JP"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday"], "opens": "11:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "10:30", "closes": "21:30" }
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   テーマ設定：ここを変えるとサイト全体の配色とフォントが変わります
+   ============================================================ */
+:root {
+  --brand: #1F3F8F;          /* ブランドカラー（染付の藍）：ボタン、リンク、選択中のタブ */
+  --brand-deep: #182A5E;     /* 深い藍：ランチの帯の背景 */
+  --brand-ink: #F7F8FA;      /* ブランドカラーの上にのせる文字色 */
+  --bg: #F7F8FA;             /* ページの背景（白磁） */
+  --surface: #FCFDFE;        /* 面：品書き、フォーム、アクセス欄 */
+  --text: #16203A;           /* 本文の文字色（藍墨） */
+  --muted: #4B5670;          /* 補足の文字色 */
+  --line: #D9DEE8;           /* 1px の罫線、枠線 */
+  --seal: #C0321F;           /* 印の朱：「名物」の印と「営業中」だけに使います（必ず文字を添え、面積は 5% 以下） */
+  --seal-ink: #FCFDFE;       /* 朱色の上にのせる文字色 */
+  --table: #E9ECF1;          /* プレースホルダー画像：白いテーブル */
+  --plate: #FBFCFD;          /* プレースホルダー画像：白磁の皿 */
+  --roast: #A4452C;          /* プレースホルダー画像：チャーシュー */
+  --duck: #B8762E;           /* プレースホルダー画像：ローストダック、木のテーブル */
+  --chicken: #E6CF98;        /* プレースホルダー画像：鶏、麺、スープ */
+  --leaf: #6F8C50;           /* プレースホルダー画像：青菜、ねぎ */
+  --bamboo: #C9A872;         /* プレースホルダー画像：竹のせいろ、箸 */
+  --soy: #3B261B;            /* プレースホルダー画像：醤油、牛肉 */
+  --shadow: color-mix(in srgb, var(--text) 14%, transparent); /* 唯一の影色：ドロップダウン、プレースホルダー画像の皿 */
+  --tint: color-mix(in srgb, var(--brand) 7%, transparent);   /* 淡い藍：ホバー、選択中のタブ、今日の行 */
+  --radius: 6px;             /* 画像、品書き、フォームの角丸 */
+  --radius-sm: 4px;          /* ボタン、入力欄、小さな印の角丸 */
+  --font-heading: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif; /* 見出しフォント */
+  --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif; /* 本文フォント */
+  --font-dish-alt: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; /* 料理名に添える中国語名のフォント（Noto Sans TC。ページで使う文字だけを読み込みます） */
+  --font-sub: var(--font-heading); /* 小見出しと料理名のフォント */
+  --field-line: color-mix(in srgb, var(--muted) 72%, var(--line)); /* 入力欄と未選択タブの枠線（コントラスト 3:1 以上） */
+  --cols: minmax(0, .8fr) minmax(0, 1.2fr); /* 2 カラムの幅の比率（サイト共通） */
+  --fw-heading: 500;         /* 見出しの太さ */
+  --lh-body: 1.8;           /* 本文の行間 */
+  --fs-sm: .875rem;          /* 文字サイズ 1：小さな文字、印、補足 */
+  --fs-base: 1rem;           /* 文字サイズ 2：本文 */
+  --fs-md: 1.125rem;         /* 文字サイズ 3：料理名、リード文 */
+  --fs-lg: clamp(1.25rem, 2.2vw, 1.5rem);  /* 文字サイズ 4：品書きの料理名、住所、小見出し */
+  --fs-xl: clamp(1.75rem, 3.6vw, 2.5rem);  /* 文字サイズ 5：セクションの見出し */
+  --fs-display: clamp(2.5rem, 4.6vw, 3.75rem); /* 文字サイズ 6：ファーストビューの見出し */
+  --space-1: .25rem;         /* 余白の段階：4px */
+  --space-2: .5rem;          /* 8px */
+  --space-3: .75rem;         /* 12px */
+  --space-4: 1rem;           /* 16px */
+  --space-5: 1.5rem;         /* 24px */
+  --space-6: 2rem;           /* 32px */
+  --space-7: 3rem;           /* 48px */
+  --space-8: 4rem;           /* 64px */
+  --gap-col: clamp(2rem, 6vw, 5rem);       /* 2 カラムの間隔 */
+  --pad-card: clamp(1.5rem, 3vw, 2.25rem); /* フォームの内側の余白 */
+  --header: 72px;            /* ヘッダーの高さ */
+  --max: 1240px;             /* コンテンツの最大幅 */
+  --pad: clamp(1rem, 5vw, 3rem);           /* 左右の余白 */
+  --section: clamp(4rem, 11vw, 8.5rem);    /* セクションの上下の余白 */
+  --band: clamp(3rem, 6vw, 5rem);          /* ランチの帯の上下の余白 */
+}
+
+/* ---------- ベース ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; scroll-padding-top: calc(var(--header) + var(--space-2)); -webkit-text-size-adjust: 100%; line-break: strict; }
+body { background: var(--bg); color: var(--text); font: 400 var(--fs-base)/var(--lh-body) var(--font-body); overflow-x: clip; -webkit-font-smoothing: antialiased; touch-action: manipulation; }
+a { color: inherit; }
+b, strong { font-weight: 500; }
+p, li, dd, figcaption { text-wrap: pretty; word-break: auto-phrase; }
+h3 { font-family: var(--font-sub); font-weight: 500; }
+h1, h2 { font-family: var(--font-heading); font-weight: var(--fw-heading); }
+h1, h2, h3 { line-height: 1.25; letter-spacing: 0; overflow-wrap: break-word; min-width: 0; text-wrap: balance; word-break: auto-phrase; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: var(--radius-sm); }
+main:focus { outline: none; }
+::selection { background: var(--brand); color: var(--brand-ink); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--pad); }
+section { padding-block: var(--section); }
+.sec-title { font-size: var(--fs-xl); }
+.sec-lead { color: var(--muted); max-width: 36em; }
+.num { font-variant-numeric: tabular-nums; }
+.nw { white-space: nowrap; }
+.skip { position: absolute; left: var(--pad); top: -100px; z-index: 100; padding: var(--space-3) var(--space-4); background: var(--brand); color: var(--brand-ink); border-radius: var(--radius-sm); text-decoration: none; }
+.skip:focus-visible { top: var(--space-3); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-height: 48px; padding: var(--space-3) var(--space-5); border-radius: var(--radius-sm); font: 500 var(--fs-base)/1.2 var(--font-body); text-align: center; text-decoration: none; border: 1px solid var(--brand); cursor: pointer; transition: transform .2s, background-color .2s, color .2s, border-color .2s; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { background: var(--brand-deep); border-color: var(--brand-deep); }
+.btn-ghost { background: transparent; color: var(--brand); }
+.btn-ghost:hover { background: var(--tint); }
+.btn:active { transform: translateY(1px); }
+a:not(.btn):active { opacity: .7; }
+/* テキストリンクは上下に余白を付け、スマホでのタップ領域を 44px 以上にします */
+.link { display: inline-block; padding-block: var(--space-3); color: var(--brand); font-weight: 500; text-underline-offset: 4px; }
+.small-note a { display: inline-block; padding-block: var(--space-3); }
+.link:hover { text-decoration-thickness: 2px; }
+
+/* 「名物」の印と辛口・ベジの印：色だけに頼らず、必ず文字で示します */
+.seal, .mark { display: inline-block; flex: none; font: 500 var(--fs-sm)/1.5 var(--font-body); padding: 0 var(--space-2); border-radius: var(--radius-sm); white-space: nowrap; }
+.seal { color: var(--seal); box-shadow: inset 0 0 0 1px var(--seal); }
+.seal-solid { background: var(--seal); color: var(--seal-ink); box-shadow: none; }
+.mark { color: var(--muted); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--muted) 55%, transparent); }
+
+/* 登場アニメーション：ファーストビューで一度だけ。JS が有効なときだけ最初に隠します */
+.js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease-out, transform .6s ease-out; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ==================== ヘッダー ==================== */
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; transition: background-color .3s, box-shadow .3s; }
+.site-header.scrolled, html:not(.js) .site-header { background: color-mix(in srgb, var(--bg) 96%, transparent); box-shadow: 0 1px 0 var(--line); }
+.site-header.scrolled { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: var(--header); }
+.logo { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; }
+/* ロゴマーク：染付の皿（二重の藍の線） */
+.logo-mark { width: 34px; height: 34px; border-radius: 50%; background: radial-gradient(circle, var(--brand) 0 16%, var(--surface) 18% 50%, var(--brand) 52% 58%, var(--surface) 60% 84%, var(--brand) 86%); }
+.logo b { font: var(--fw-heading) var(--fs-md)/1.15 var(--font-heading); display: block; }
+.logo small { font: 400 var(--fs-sm)/1.2 var(--font-body); color: var(--muted); display: block; }
+.nav-menu { display: flex; align-items: center; gap: var(--space-6); list-style: none; }
+.nav-menu a:not(.btn) { text-decoration: none; padding-block: var(--space-1); background: linear-gradient(var(--brand), var(--brand)) left bottom / 0 1px no-repeat; transition: background-size .3s; }
+.nav-menu a:not(.btn):hover { background-size: 100% 1px; }
+.nav-menu .btn { min-height: 40px; padding: var(--space-2) var(--space-4); }
+.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: var(--radius-sm); }
+.nav-toggle:hover { background: var(--tint); }
+.nav-toggle:active { opacity: .7; }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 1.5px; background: currentColor; margin-inline: auto; position: relative; transition: transform .3s, background-color .3s; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 760px) {
+  /* JavaScript がないときはメニューを折り返して表示し、JS があるときだけハンバーガーに収めます */
+  html:not(.js) *:has(> .nav-menu) { flex-wrap: wrap; }
+  html:not(.js) header:has(.nav-menu) { position: sticky; }
+  html:not(.js) .nav { height: auto; padding-block: var(--space-3); row-gap: var(--space-2); }
+  html:not(.js) .nav-menu { flex: 1 1 100%; flex-wrap: wrap; justify-content: flex-start; gap: var(--space-2) var(--space-4); }
+  html:not(.js) .hero { padding-top: var(--space-6); }
+  .js .nav-toggle { display: block; }
+  .js .nav-menu { position: absolute; top: var(--header); left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: var(--space-2) var(--pad) var(--space-5); background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 16px 24px var(--shadow); display: none; }
+  .js .nav-menu.open { display: flex; }
+  .js .nav-menu li a:not(.btn) { display: block; padding: var(--space-3) 0; border-bottom: 1px solid var(--line); }
+  .js .nav-menu .btn { margin-top: var(--space-4); width: 100%; min-height: 48px; }
+  .js .site-header:has(.nav-menu.open) { background: var(--bg); }
+}
+
+/* ==================== プレースホルダー画像 ====================
+   それぞれの .img-xx は、CSS のグラデーションで描いた「料理写真」の構図見本です（真上から、白いテーブル、自然光）。
+   写真に差し替える：.img-xx { background: url(images/xxx.jpg) center/cover; }
+   （差し替えたら、そのクラスの ::before / ::after も削除してください。img タグを使う場合は width と height を付け、
+   ファーストビューの画像には fetchpriority="high"、ほかの画像には loading="lazy" を付けます） */
+.img { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; background-color: var(--table); --rim: color-mix(in srgb, var(--plate) 84%, var(--text)); --glow: color-mix(in srgb, var(--plate) 55%, transparent); --shade: color-mix(in srgb, var(--text) 9%, transparent); }
+.img::before, .img::after { content: ""; position: absolute; pointer-events: none; }
+
+/* 写真に差し替える：.img-hero { background: url(images/hero.jpg) center/cover; }（推奨比率 4:5、焼き物の盛り合わせを真上から） */
+.img-hero { aspect-ratio: 4 / 5; background:
+  linear-gradient(125deg, var(--glow) 0%, transparent 42%, transparent 62%, var(--shade) 100%),
+  /* 竹の箸 */
+  linear-gradient(to top right, transparent 45.6%, var(--bamboo) 46.2% 48.2%, transparent 48.8% 51.2%, var(--bamboo) 51.8% 53.8%, transparent 54.4%) 97% 97% / 13% 40% no-repeat,
+  /* 染付の小皿に入れた醤油 */
+  radial-gradient(closest-side, var(--soy) 0 40%, var(--plate) 43% 58%, var(--brand) 60% 67%, var(--plate) 69% 84%, var(--brand) 86% 90%, transparent 92%) 90% 5% / 27.5% 22% no-repeat,
+  radial-gradient(closest-side, var(--shadow) 62%, transparent 100%) 93% 7% / 30% 24% no-repeat,
+  var(--table); }
+/* 白磁の大皿と青菜 */
+.img-hero::before { width: 84%; aspect-ratio: 1; left: 5%; top: 24%; border-radius: 50%; box-shadow: 4px 10px 22px var(--shadow);
+  background:
+    linear-gradient(125deg, var(--glow), transparent 46%),
+    radial-gradient(ellipse 17% 5% at 31% 24%, var(--leaf) 0 72%, transparent 78%),
+    radial-gradient(ellipse 15% 4.5% at 37% 19%, color-mix(in srgb, var(--leaf) 78%, var(--plate)) 0 72%, transparent 78%),
+    radial-gradient(closest-side, var(--plate) 0 66%, var(--rim) 67% 68%, var(--plate) 69% 90%, color-mix(in srgb, var(--brand) 55%, var(--plate)) 91% 93%, var(--plate) 94%); }
+/* 三列の切り身：チャーシュー、ローストダック、鶏の醤油煮 */
+.img-hero::after { width: 45%; aspect-ratio: 1 / 1.02; left: 25.5%; top: 41%; border-radius: 10% / 9%; transform: rotate(-9deg);
+  background:
+    repeating-linear-gradient(96deg, var(--roast) 0 9%, color-mix(in srgb, var(--roast) 62%, var(--soy)) 9% 11.5%) 0 0 / 100% 30% no-repeat,
+    repeating-linear-gradient(96deg, var(--duck) 0 10.5%, color-mix(in srgb, var(--duck) 60%, var(--soy)) 10.5% 13%) 0 50% / 100% 30% no-repeat,
+    repeating-linear-gradient(96deg, var(--chicken) 0 12%, color-mix(in srgb, var(--chicken) 72%, var(--duck)) 12% 14.5%) 0 100% / 100% 30% no-repeat; }
+
+/* 写真に差し替える：.img-d1 { background: url(images/dish-1.jpg) center/cover; }（推奨比率 1:1、せいろの海老餃子） */
+.img-d1, .img-d2, .img-d3 { aspect-ratio: 1; }
+.img-d1 { --dumpling: radial-gradient(closest-side, color-mix(in srgb, var(--roast) 22%, var(--plate)) 0 30%, var(--plate) 62% 84%, transparent 90%); background:
+  linear-gradient(125deg, var(--glow) 0%, transparent 45%, transparent 65%, var(--shade) 100%),
+  var(--dumpling) 33% 34% / 27% 24% no-repeat, var(--dumpling) 67% 34% / 27% 24% no-repeat,
+  var(--dumpling) 33% 66% / 27% 24% no-repeat, var(--dumpling) 67% 66% / 27% 24% no-repeat,
+  radial-gradient(closest-side, color-mix(in srgb, var(--chicken) 45%, var(--plate)) 0 71%, color-mix(in srgb, var(--bamboo) 70%, var(--soy)) 72% 74%, var(--bamboo) 75% 91%, color-mix(in srgb, var(--bamboo) 70%, var(--soy)) 92% 94%, transparent 95%) center / 86% 86% no-repeat,
+  radial-gradient(closest-side, var(--shadow) 80%, transparent 100%) 56% 60% / 92% 92% no-repeat,
+  var(--table); }
+/* 写真に差し替える：.img-d2 { background: url(images/dish-2.jpg) center/cover; }（推奨比率 1:1、牛肉の焼きライスヌードル） */
+.img-d2 { background:
+  linear-gradient(125deg, var(--glow) 0%, transparent 45%, transparent 65%, var(--shade) 100%),
+  radial-gradient(closest-side, var(--plate) 0 70%, var(--rim) 71% 72%, var(--plate) 73% 91%, color-mix(in srgb, var(--brand) 55%, var(--plate)) 92% 94%, var(--plate) 95% 98%, transparent 99%) center / 88% 88% no-repeat,
+  radial-gradient(closest-side, var(--shadow) 80%, transparent 100%) 56% 60% / 94% 94% no-repeat,
+  var(--table); }
+/* 米麺：平打ち麺、牛肉、ねぎ */
+.img-d2::before { width: 52%; aspect-ratio: 1; left: 24%; top: 24%; border-radius: 48% 52% 46% 54% / 52% 46% 54% 48%;
+  background:
+    radial-gradient(ellipse 13% 7% at 34% 38%, var(--soy) 0 70%, transparent 78%),
+    radial-gradient(ellipse 12% 7% at 64% 56%, var(--soy) 0 70%, transparent 78%),
+    radial-gradient(ellipse 11% 6% at 44% 72%, color-mix(in srgb, var(--soy) 85%, var(--roast)) 0 70%, transparent 78%),
+    radial-gradient(ellipse 9% 3% at 62% 30%, var(--leaf) 0 70%, transparent 80%),
+    radial-gradient(ellipse 9% 3% at 30% 60%, var(--leaf) 0 70%, transparent 80%),
+    repeating-linear-gradient(38deg, transparent 0 9%, color-mix(in srgb, var(--soy) 30%, transparent) 9% 11%),
+    repeating-linear-gradient(-52deg, transparent 0 13%, color-mix(in srgb, var(--plate) 40%, transparent) 13% 16%),
+    color-mix(in srgb, var(--duck) 62%, var(--chicken)); }
+/* 写真に差し替える：.img-d3 { background: url(images/dish-3.jpg) center/cover; }（推奨比率 1:1、ワンタン麺） */
+.img-d3 { --wonton: radial-gradient(closest-side, color-mix(in srgb, var(--roast) 20%, var(--plate)) 0 34%, color-mix(in srgb, var(--plate) 90%, var(--chicken)) 60% 84%, transparent 92%); background:
+  linear-gradient(125deg, var(--glow) 0%, transparent 45%, transparent 65%, var(--shade) 100%),
+  var(--wonton) 66% 34% / 22% 19% no-repeat, var(--wonton) 74% 56% / 21% 19% no-repeat, var(--wonton) 54% 26% / 19% 17% no-repeat,
+  radial-gradient(ellipse 9% 3% at 46% 68%, var(--leaf) 0 70%, transparent 80%),
+  radial-gradient(ellipse 8% 3% at 62% 72%, var(--leaf) 0 70%, transparent 80%),
+  radial-gradient(closest-side, color-mix(in srgb, var(--chicken) 70%, var(--duck)) 0 68%, var(--plate) 70% 78%, var(--brand) 79% 83%, var(--plate) 84% 95%, transparent 97%) center / 84% 84% no-repeat,
+  radial-gradient(closest-side, var(--shadow) 80%, transparent 100%) 56% 60% / 90% 90% no-repeat,
+  var(--table); }
+/* 卵麺のかたまり */
+.img-d3::before { width: 34%; aspect-ratio: 1; left: 24%; top: 34%; border-radius: 50%;
+  background: repeating-radial-gradient(circle at 42% 44%, var(--chicken) 0 4%, color-mix(in srgb, var(--chicken) 70%, var(--duck)) 4% 6%); }
+
+/* 写真に差し替える：.img-banquet { background: url(images/banquet.jpg) center/cover; }（推奨比率 16:9、円卓のコース料理） */
+.img-banquet { aspect-ratio: 16 / 9; --chair: radial-gradient(closest-side, color-mix(in srgb, var(--duck) 70%, var(--soy)) 0 82%, transparent 88%); background:
+  linear-gradient(125deg, var(--glow) 0%, transparent 40%, transparent 70%, var(--shade) 100%),
+  /* 円卓を囲む木の椅子 */
+  var(--chair) 17% 62% / 9% 26% no-repeat, var(--chair) 90% 48% / 9% 26% no-repeat,
+  var(--chair) 33% -6% / 13% 18% no-repeat, var(--chair) 80% -8% / 13% 18% no-repeat,
+  var(--chair) 26% 112% / 13% 18% no-repeat,
+  color-mix(in srgb, var(--bamboo) 28%, var(--table)); }
+/* 白いクロスの円卓、中央のガラスの回転台と六品の料理 */
+.img-banquet::before { height: 128%; aspect-ratio: 1; left: 53%; top: 57%; translate: -50% -50%; rotate: 17deg; border-radius: 50%; box-shadow: 0 20px 48px var(--shadow), 0 2px 6px var(--shadow);
+  --dish-a: radial-gradient(closest-side, var(--roast) 0 52%, var(--plate) 56% 90%, transparent 94%);
+  --dish-b: radial-gradient(closest-side, var(--duck) 0 52%, var(--plate) 56% 90%, transparent 94%);
+  --dish-c: radial-gradient(closest-side, var(--leaf) 0 52%, var(--plate) 56% 90%, transparent 94%);
+  --dish-d: radial-gradient(closest-side, var(--chicken) 0 52%, var(--plate) 56% 74%, var(--brand) 76% 82%, var(--plate) 84% 90%, transparent 94%);
+  --bowl: radial-gradient(closest-side, var(--plate) 0 56%, var(--brand) 60% 72%, var(--plate) 76% 90%, transparent 94%);
+  background:
+    linear-gradient(108deg, var(--glow) 8%, transparent 42%, var(--shade) 96%),
+    var(--dish-a) 50% 28% / 19% 19% no-repeat, var(--dish-b) 68% 40% / 12% 12% no-repeat, var(--dish-c) 65% 62% / 16% 16% no-repeat,
+    var(--dish-d) 48% 71% / 14% 14% no-repeat, var(--dish-a) 32% 60% / 11% 11% no-repeat, var(--dish-c) 34% 38% / 15% 15% no-repeat,
+    radial-gradient(closest-side, var(--soy) 0 40%, var(--plate) 44% 90%, transparent 94%) 50% 50% / 8% 8% no-repeat,
+    /* 各席の染付の小鉢 */
+    var(--bowl) 14% 50% / 7% 7% no-repeat, var(--bowl) 86% 50% / 7% 7% no-repeat,
+    var(--bowl) 31% 17% / 7% 7% no-repeat, var(--bowl) 69% 17% / 7% 7% no-repeat,
+    var(--bowl) 31% 83% / 7% 7% no-repeat, var(--bowl) 69% 83% / 7% 7% no-repeat,
+    radial-gradient(closest-side, color-mix(in srgb, var(--brand) 6%, var(--plate)) 0 52%, var(--rim) 52.5% 53.5%, var(--plate) 54%); }
+
+/* 写真に差し替える：.img-room { background: url(images/room.jpg) center/cover; }（推奨比率 3:2、明るい店内） */
+.img-room { aspect-ratio: 3 / 2; --tile: color-mix(in srgb, var(--line) 70%, var(--plate)); background:
+  linear-gradient(118deg, var(--glow) 0%, transparent 38%, transparent 70%, var(--shade) 100%),
+  /* 二つのペンダントライト */
+  radial-gradient(ellipse 50% 100% at 50% 100%, var(--brand) 0 96%, transparent 100%) 24% 17% / 11% 8% no-repeat,
+  radial-gradient(ellipse 50% 100% at 50% 100%, var(--brand) 0 96%, transparent 100%) 46% 13% / 11% 8% no-repeat,
+  linear-gradient(var(--muted), var(--muted)) 26.9% 0 / 1px 16% no-repeat,
+  linear-gradient(var(--muted), var(--muted)) 46.4% 0 / 1px 12% no-repeat,
+  /* 床と藍の腰線 */
+  linear-gradient(180deg, transparent 0 66%, var(--brand) 66% 67.2%, color-mix(in srgb, var(--bamboo) 45%, var(--table)) 67.2%),
+  /* 白いタイルの壁 */
+  repeating-linear-gradient(90deg, transparent 0 calc(7.14% - 1px), var(--tile) calc(7.14% - 1px) 7.14%),
+  repeating-linear-gradient(180deg, transparent 0 calc(11% - 1px), var(--tile) calc(11% - 1px) 11%),
+  var(--plate); }
+/* 棚に並ぶ染付の花瓶と鉢 */
+.img-room::before { left: 58%; top: 24%; width: 32%; height: 22%; border-bottom: 5px solid color-mix(in srgb, var(--duck) 75%, var(--soy));
+  background:
+    radial-gradient(ellipse closest-side, var(--plate) 0 30%, var(--brand) 34% 48%, var(--plate) 52% 70%, var(--brand) 74% 86%, transparent 90%) 12% 100% / 22% 96% no-repeat,
+    radial-gradient(ellipse closest-side, var(--brand) 0 28%, var(--plate) 32% 62%, var(--brand) 66% 86%, transparent 90%) 52% 100% / 26% 62% no-repeat,
+    radial-gradient(ellipse closest-side, var(--plate) 0 40%, var(--brand) 44% 56%, var(--plate) 60% 86%, transparent 90%) 90% 100% / 18% 82% no-repeat; }
+/* 手前の木のテーブルに急須と二つの鉢 */
+.img-room::after { left: 7%; right: 7%; bottom: 0; height: 25%; border-radius: var(--radius) var(--radius) 0 0; box-shadow: 0 -6px 18px var(--shadow);
+  background:
+    radial-gradient(ellipse closest-side, var(--plate) 0 36%, var(--brand) 40% 54%, var(--plate) 58% 86%, transparent 90%) 22% 34% / 13% 52% no-repeat,
+    radial-gradient(ellipse closest-side, var(--plate) 0 60%, var(--brand) 64% 78%, var(--plate) 82% 90%, transparent 94%) 46% 40% / 9% 34% no-repeat,
+    radial-gradient(ellipse closest-side, var(--plate) 0 60%, var(--brand) 64% 78%, var(--plate) 82% 90%, transparent 94%) 72% 40% / 9% 34% no-repeat,
+    linear-gradient(180deg, color-mix(in srgb, var(--duck) 55%, var(--chicken)) 0 78%, color-mix(in srgb, var(--duck) 75%, var(--soy)) 78%); }
+
+/* ==================== ファーストビュー：品書きが主役 ==================== */
+.hero { padding-block: calc(var(--header) + var(--space-7)) var(--section); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .94fr) minmax(0, .9fr); gap: var(--space-5); align-items: stretch; }
+.hero-copy { align-self: center; padding-inline-end: var(--space-5); }
+.hero h1 { font-size: var(--fs-display); line-height: 1.18; letter-spacing: 0; margin-bottom: var(--space-5); }
+.hero p.lead { font-size: var(--fs-md); color: var(--muted); max-width: 26em; margin-bottom: var(--space-6); }
+.hero-cta { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.status { margin-top: var(--space-5); font-size: var(--fs-sm); color: var(--muted); font-variant-numeric: tabular-nums; }
+.status b { color: var(--text); }
+.status.is-open b { color: var(--seal); }
+/* 本日の名物の品書き：広東料理店の壁に掛かる縦書きの札をイメージしています。二重の罫は染付の皿の縁取りから */
+.board { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--brand); border-radius: var(--radius); box-shadow: inset 0 0 0 4px var(--surface), inset 0 0 0 5px color-mix(in srgb, var(--brand) 32%, transparent); padding: var(--space-5) var(--space-4) var(--space-1); }
+.board-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: 0 var(--space-2) var(--space-3); border-bottom: 1px solid var(--line); }
+.board h2 { font-size: var(--fs-md); }
+.plaques { flex: 1; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.plaque { display: flex; flex-direction: column; align-items: center; text-align: center; padding: var(--space-4) var(--space-2) var(--space-3); }
+.plaque + .plaque { border-inline-start: 1px solid var(--line); }
+.plaque h3 { flex: 1; display: flex; flex-direction: column; align-items: center; gap: var(--space-3); font: inherit; }
+.p-v { flex: 1; writing-mode: vertical-rl; text-orientation: mixed; text-align: start; white-space: nowrap; line-height: 1.2; letter-spacing: .04em; }
+.p-h { line-height: 1.35; overflow-wrap: break-word; max-width: 100%; }
+.p-main { font-family: var(--font-sub); font-weight: 500; color: var(--text); }
+.p-v.p-main { font-size: var(--fs-lg); }
+.p-h.p-main { font-size: var(--fs-base); }
+.p-alt { color: var(--muted); font-weight: 400; }
+.p-v.p-alt { font-family: var(--font-dish-alt); font-size: var(--fs-lg); color: var(--text); }
+.p-h.p-alt { font-family: var(--font-dish-alt); font-size: var(--fs-sm); }
+.plaque .price { width: 100%; margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--line); }
+.board-foot { padding: 0 var(--space-2); border-top: 1px solid var(--line); font-size: var(--fs-sm); }
+.price { font: 500 var(--fs-base)/1.4 var(--font-body); color: var(--text); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.hero-art { aspect-ratio: 4 / 5; justify-self: stretch; align-self: stretch; min-width: 0; }
+.hero-art .img-hero { width: 100%; height: 100%; aspect-ratio: auto; }
+@media (min-width: 961px) and (max-width: 1100px) {
+  .hero-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(0, .9fr); }
+  .hero-copy { padding-inline-end: var(--space-3); }
+  .hero-cta .btn { padding-inline: var(--space-4); }
+}
+@media (min-width: 641px) and (max-width: 960px) {
+  /* タブレット：品書きと写真を並べ、縦書きの料理名を大きくして余白が出ないようにします */
+  .plaque .p-v { font-size: clamp(1.5rem, 3.4vw, 2rem); }
+  .plaque .p-h.p-main { font-size: var(--fs-md); }
+}
+@media (max-width: 960px) {
+  .hero-art { aspect-ratio: 1; }
+  .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: var(--space-6) var(--space-5); }
+  .hero-copy { grid-column: 1 / -1; padding-inline-end: 0; }
+  .hero h1 br { display: none; }
+}
+@media (max-width: 640px) {
+  .hero { padding-top: calc(var(--header) + var(--space-5)); }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-5); }
+  .hero h1 { margin-bottom: var(--space-4); }
+  .hero h1 br { display: inline; }
+  .hero p.lead { margin-bottom: var(--space-5); }
+  .status { margin-top: var(--space-4); }
+  .hero-art { aspect-ratio: 1; }
+}
+
+/* ==================== メニュー ==================== */
+.menu { background: var(--surface); border-block: 1px solid var(--line); }
+.menu-head { display: grid; grid-template-columns: var(--cols); gap: var(--space-4) var(--gap-col); align-items: end; margin-bottom: var(--space-6); }
+.tabs { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-5); }
+html:not(.js) .tabs { display: none; }
+.tab { font: 500 var(--fs-base)/1.2 var(--font-body); min-height: 44px; padding: var(--space-2) var(--space-4); border: 1px solid var(--field-line); border-radius: var(--radius-sm); background: transparent; color: var(--muted); cursor: pointer; transition: color .2s, border-color .2s, background-color .2s; }
+.tab:hover { color: var(--text); border-color: var(--muted); }
+.tab:active { opacity: .7; }
+.tab[aria-selected="true"] { color: var(--brand); border-color: var(--brand); background: var(--tint); box-shadow: inset 0 -2px 0 var(--brand); }
+html:not(.js) [role="tabpanel"] + [role="tabpanel"] { margin-top: var(--space-7); }
+.panel-title { display: none; }
+html:not(.js) .panel-title { display: block; font-size: var(--fs-lg); padding-bottom: var(--space-3); }
+.menu-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--gap-col); list-style: none; border-top: 1px solid var(--text); }
+.menu-list li { padding-block: var(--space-4); border-bottom: 1px solid var(--line); }
+.mi-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-4); }
+.mi-head h3 { font-size: var(--fs-md); line-height: 1.4; display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1) var(--space-2); }
+.d-alt { font: 400 var(--fs-sm)/1.5 var(--font-dish-alt); color: var(--muted); }
+.d-desc { font-size: var(--fs-sm); line-height: 1.6; color: var(--muted); margin-top: var(--space-1); max-width: 34em; }
+.menu-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4) var(--space-6); margin-top: var(--space-6); }
+.menu-note { color: var(--muted); font-size: var(--fs-sm); max-width: 40em; }
+/* 料理写真 3 枚：パソコンでは 3 列、スマホでは横にスワイプできる 1 列（キーボードでも操作でき、JS は不要） */
+.dishes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); margin-top: var(--space-8); }
+@media (max-width: 760px) {
+  .menu-head { grid-template-columns: minmax(0, 1fr); }
+  .menu-list { grid-template-columns: minmax(0, 1fr); }
+  .menu-foot .btn { display: none; }
+  .dishes { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 48%; gap: var(--space-3); margin-top: var(--space-7); margin-inline: calc(-1 * var(--pad)); padding-inline: var(--pad); scroll-padding-inline: var(--pad); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .dishes > * { scroll-snap-align: start; }
+}
+@media (max-width: 560px) {
+  .tab { padding-inline: var(--space-3); }
+  .menu-list li { padding-block: var(--space-3); }
+  .d-desc { font-size: var(--fs-base); }
+  .menu-foot { margin-top: var(--space-5); }
+  .dishes { margin-top: var(--space-6); }
+  .quick { margin-top: var(--space-5); }
+}
+
+/* ==================== ランチセット ==================== */
+.lunch { background: var(--brand-deep); color: var(--brand-ink); padding-block: var(--band); --soft: color-mix(in srgb, var(--brand-ink) 82%, transparent); --rule: color-mix(in srgb, var(--brand-ink) 26%, transparent); }
+.lunch :focus-visible { outline-color: var(--brand-ink); }
+.lunch-grid { display: grid; grid-template-columns: var(--cols); gap: var(--space-6) var(--gap-col); align-items: center; }
+.lunch-time { font: 500 var(--fs-lg)/1.4 var(--font-body); margin-top: var(--space-3); font-variant-numeric: tabular-nums; }
+.lunch-note { color: var(--soft); font-size: var(--fs-sm); margin-top: var(--space-2); max-width: 30em; }
+.lunch-table { width: 100%; border-collapse: collapse; border-top: 1px solid var(--brand-ink); }
+.lunch-table th, .lunch-table td { padding: var(--space-4) 0; border-bottom: 1px solid var(--rule); vertical-align: baseline; }
+.lunch-table th { text-align: start; font: 500 var(--fs-md)/1.4 var(--font-sub); padding-inline-end: var(--space-4); }
+.lunch-table th small { display: block; font: 400 var(--fs-sm)/1.6 var(--font-body); color: var(--soft); }
+.lunch-table td { text-align: end; }
+.lunch-table .price { color: var(--brand-ink); }
+@media (max-width: 860px) { .lunch-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .lunch-table th, .lunch-table td { padding-block: var(--space-3); } }
+
+/* ==================== 宴会と仕出し ==================== */
+.banquet-head { display: grid; grid-template-columns: var(--cols); gap: var(--space-4) var(--gap-col); align-items: end; margin-bottom: var(--space-7); }
+.banquet-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6) var(--space-7); margin-top: var(--space-7); }
+.banquet-cols > div { border-top: 1px solid var(--text); padding-top: var(--space-4); }
+.banquet-cols h3 { font-size: var(--fs-lg); margin-bottom: var(--space-2); }
+.banquet-cols p { color: var(--muted); }
+.plist { margin-top: var(--space-4); }
+.plist div { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-4); padding-block: var(--space-2); border-top: 1px solid var(--line); }
+.plist dd { font-weight: 500; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.banquet-cta { margin-top: var(--space-4); }
+@media (max-width: 860px) {
+  .banquet-head { grid-template-columns: minmax(0, 1fr); margin-bottom: var(--space-6); }
+  .banquet-cols { grid-template-columns: minmax(0, 1fr); gap: var(--space-5); margin-top: var(--space-6); }
+}
+
+/* ==================== 営業時間とアクセス ==================== */
+.visit { background: var(--surface); border-block: 1px solid var(--line); }
+.visit .sec-title { margin-bottom: var(--space-7); }
+.visit-grid { display: grid; grid-template-columns: var(--cols); gap: var(--space-7) var(--gap-col); align-items: start; }
+.visit h3 { font-size: var(--fs-lg); margin-bottom: var(--space-3); }
+.hours { width: 100%; border-collapse: collapse; line-height: 1.5; border-top: 1px solid var(--text); }
+.hours th, .hours td { text-align: start; padding: var(--space-3) var(--space-2); border-bottom: 1px solid var(--line); }
+.hours th { font-weight: 400; }
+.hours td { text-align: end; font-variant-numeric: tabular-nums; }
+.hours tr.today { background: var(--tint); }
+.hours tr.today th { font-weight: 500; }
+.hours tr.today th::after { content: "本日"; font-size: var(--fs-sm); font-weight: 500; margin-inline-start: var(--space-2); padding: 0 var(--space-2); border-radius: var(--radius-sm); background: var(--brand); color: var(--brand-ink); }
+.hours .closed { color: var(--muted); }
+.small-note { font-size: var(--fs-sm); color: var(--muted); margin-top: var(--space-3); }
+/* テイクアウトの 3 ステップ（実際の順番なので番号を付けています） */
+.pickup { margin-top: var(--space-7); }
+.steps { list-style: none; counter-reset: step; border-top: 1px solid var(--text); }
+.steps li { counter-increment: step; display: grid; grid-template-columns: var(--space-6) minmax(0, 1fr); padding-block: var(--space-3); border-bottom: 1px solid var(--line); }
+.steps li::before { content: counter(step); font: 500 var(--fs-md)/1.6 var(--font-body); font-variant-numeric: tabular-nums; color: var(--brand); }
+.addr { font: 500 var(--fs-lg)/1.5 var(--font-body); font-variant-numeric: tabular-nums; margin-top: var(--space-5); }
+.visit-list { list-style: none; margin: var(--space-4) 0 var(--space-5); border-top: 1px solid var(--line); display: grid; grid-template-columns: max-content minmax(0, 1fr); }
+.visit-list li { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; column-gap: var(--space-4); padding-block: var(--space-3); border-bottom: 1px solid var(--line); color: var(--muted); }
+.visit-list b { color: var(--text); }
+@media (max-width: 860px) { .visit-grid { grid-template-columns: minmax(0, 1fr); } .visit .sec-title { margin-bottom: var(--space-5); } }
+@media (max-width: 560px) { .hours th, .hours td, .visit-list li { padding-block: var(--space-2); } .pickup { margin-top: var(--space-5); } }
+
+/* ==================== テイクアウトとご予約のフォーム ==================== */
+.order-grid { display: grid; grid-template-columns: var(--cols); gap: var(--space-6) var(--gap-col); align-items: start; }
+.order .sec-title { margin-bottom: var(--space-4); }
+.quick { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+.form { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--pad-card); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4) var(--space-5); }
+.field { display: grid; gap: var(--space-1); min-width: 0; border: 0; align-content: start; }
+.field.full { grid-column: 1 / -1; }
+.field label, .field legend { font-weight: 500; font-size: var(--fs-sm); }
+.field label span, .field legend span { color: var(--muted); font-weight: 400; }
+.field input:not([type="radio"]), .field select, .field textarea { width: 100%; min-width: 0; font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--field-line); border-radius: var(--radius-sm); padding: var(--space-3); min-height: 48px; }
+.field ::placeholder { color: var(--muted); opacity: 1; }
+.field input:not([type="radio"]):hover, .field select:hover, .field textarea:hover { border-color: var(--muted); }
+.field input:not([type="radio"]):focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 20%, transparent); }
+.field input:not([type="radio"]), .field select { height: 48px; }
+.field input[type="date"] { padding-inline: var(--space-2); }
+.field input[type="date"]::-webkit-datetime-edit { padding: 0; }
+.field input[type="date"]::-webkit-calendar-picker-indicator { margin-inline-start: var(--space-1); padding: 0; width: 1em; }
+.field textarea { min-height: 96px; resize: vertical; }
+.choice { display: flex; flex-wrap: wrap; gap: 0 var(--space-4); }
+.choice label { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 44px; font-size: var(--fs-base); font-weight: 400; cursor: pointer; }
+.choice input { width: 20px; height: 20px; accent-color: var(--brand); }
+.form .btn { grid-column: 1 / -1; width: 100%; }
+.form-note { grid-column: 1 / -1; color: var(--muted); font-size: var(--fs-sm); }
+.form small { grid-column: 1 / -1; color: var(--muted); font-size: var(--fs-sm); text-align: center; }
+@media (max-width: 860px) { .order-grid { grid-template-columns: minmax(0, 1fr); } }
+/* パソコン：左の列がフォームに合わせて追従し、空白を残しません */
+@media (min-width: 861px) { .order-grid > :first-child { position: sticky; top: calc(var(--header) + var(--space-6)); } }
+@media (max-width: 480px) { .form .field { grid-column: 1 / -1; } .form .field.pair { grid-column: auto; } .form { column-gap: var(--space-3); } }
+@media (max-width: 560px) { .field textarea { min-height: 72px; } }
+@media (max-width: 400px) { .form { padding-inline: var(--space-4); } .quick .btn { padding-inline: var(--space-4); } }
+@media (max-width: 359px) { .form .field.pair { grid-column: 1 / -1; } }
+
+/* ==================== フッター ==================== */
+.site-footer { background: var(--text); color: color-mix(in srgb, var(--bg) 82%, transparent); padding-block: var(--space-8) var(--space-6); font-size: var(--fs-sm); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: var(--space-6); }
+.site-footer h2 { color: var(--bg); font-size: var(--fs-md); margin-bottom: var(--space-3); }
+.site-footer a { display: inline-block; padding-block: var(--space-1); text-decoration: none; } .site-footer a:hover { text-decoration: underline; }
+.site-footer :focus-visible { outline-color: var(--bg); }
+.social { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); margin-top: var(--space-4); }
+.foot-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2) var(--space-5); border-top: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); margin-top: var(--space-7); padding-top: var(--space-4); }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .foot-grid > :first-child { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .site-footer { padding-top: var(--space-7); } .foot-bottom { margin-top: var(--space-6); } }
+
+/* ==================== スマホの下部固定ボタン ==================== */
+/* JS があるときは、ファーストビューのボタンが画面から外れると現れ、フォームまで来ると隠れます。JS がないときは常に表示します */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  .site-footer { padding-bottom: calc(var(--space-6) + 76px); }
+  .sticky-cta { display: flex; gap: var(--space-2); position: fixed; inset: auto 0 0; z-index: 40; padding: var(--space-3) var(--pad) calc(var(--space-3) + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 96%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -1px 0 var(--line); transition: transform .3s ease-out, visibility .3s; }
+  .js .sticky-cta:not(.show) { transform: translateY(100%); visibility: hidden; }
+  .sticky-cta .btn-primary { flex: 1; }
+  .sticky-cta .btn-ghost { padding-inline: var(--space-4); }
+}
+
+/* ==================== 言語切り替え（lang-switch） ====================
+   ヘッダーに現在の言語を表示し、クリックでほかの言語を選べます。details 要素なので JS がなくても動きます */
+.nav > .logo { margin-inline-end: auto; flex-shrink: 0; white-space: nowrap; }
+.lang-switch { position: relative; display: flex; align-items: center; flex: none; margin-inline-start: var(--space-5); padding-inline-start: var(--space-2); border-inline-start: 1px solid var(--line); font: 400 var(--fs-sm)/1 var(--font-body); letter-spacing: normal; }
+.lang-menu > summary { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 36px; padding-inline: var(--space-2); border-radius: var(--radius-sm); color: inherit; font-weight: 500; list-style: none; cursor: pointer; transition: background-color .2s; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: .38em; height: .38em; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.lang-menu[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.lang-menu > summary:hover { background: var(--tint); }
+.lang-menu > summary:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
+.lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-list { position: absolute; top: calc(100% + var(--space-2)); inset-inline-end: 0; z-index: 80; display: grid; gap: 2px; min-width: 9.5rem; padding: var(--space-1); background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 12px 32px var(--shadow); }
+.lang-switch .lang-list a[hreflang][lang] { display: flex; align-items: center; justify-content: flex-start; min-height: 40px; padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm); color: var(--text); text-decoration: none; white-space: nowrap; }
+.lang-switch .lang-list a:hover { background: var(--tint); }
+.lang-switch .lang-list a:active { background: color-mix(in srgb, var(--brand) 16%, transparent); }
+.lang-switch .lang-list a:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lang-switch .lang-list a[aria-current="page"] { font-weight: 500; text-decoration: underline; text-decoration-color: var(--brand); text-underline-offset: 5px; }
+@media (max-width: 760px) {
+  /* スマホ：ハンバーガーの左に置き、常に表示します。JS がないときもロゴと同じ行に残ります */
+  :root { --header: 64px; }
+  .nav > .lang-switch { order: 1; margin-inline: 0 var(--space-1); padding-inline-start: 0; border: 0; }
+  .nav > .nav-toggle { order: 2; }
+  .nav > .nav-menu { order: 3; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  /* タブレット：メニューの間隔を詰めて、ヘッダーが折り返さないようにします */
+  .nav > .nav-menu { gap: var(--space-4); font-size: var(--fs-sm); }
+  .nav > .nav-menu .btn { padding-inline: var(--space-3); font-size: var(--fs-sm); }
+  .nav > .lang-switch { margin-inline-start: var(--space-2); padding-inline-start: var(--space-1); }
+  .logo small { display: none; }
+}
+@media (max-width: 400px) {
+  /* 400px 以下の狭いスマホ：間隔を詰めて、ロゴが折り返さないようにします */
+  .nav > .lang-switch { margin-inline-end: 0; }
+  .logo { gap: var(--space-2); }
+  .logo-mark { width: 30px; height: 30px; }
+  .js .nav-toggle { margin-inline-end: -8px; }
+}
+/* フッターの言語リンク */
+.foot-lang { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.foot-lang a { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding-inline: var(--space-1); color: inherit; text-decoration: none; text-underline-offset: 5px; border-radius: var(--radius-sm); }
+.foot-lang a:hover { text-decoration: underline; }
+.foot-lang a:active { opacity: .7; }
+.foot-lang a:focus-visible { outline: 2px solid var(--bg); outline-offset: 1px; }
+.foot-lang a[aria-current="page"] { font-weight: 500; text-decoration: underline; }
+@media (prefers-reduced-motion: reduce) { .lang-menu > summary::after { transition: none; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+
+<!-- ==================== セクション：ヘッダーナビゲーション ==================== -->
+<header class="site-header" id="top">
+  <nav class="nav wrap" aria-label="メインメニュー">
+    <!-- サンプル内容：公開前に実際の情報へ差し替えてください（店名は架空です） -->
+    <a href="#hero" class="logo" aria-label="瑞記広東料理 ページの先頭へ">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span translate="no"><b>瑞記</b><small>広東料理</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-links" aria-label="メニューを開く"><span></span></button>
+    <ul class="nav-menu" id="menu-links">
+      <li><a href="#menu">メニュー</a></li>
+      <li><a href="#lunch">ランチ</a></li>
+      <li><a href="#banquet">宴会と仕出し</a></li>
+      <li><a href="#visit">アクセス</a></li>
+      <li><a href="#order" class="btn btn-ghost">テイクアウト注文</a></li>
+    </ul>
+    <!-- lang-switch：言語切り替え。言語を追加するときは、ここにリンクを足して対応するフォルダーを作ります -->
+    <nav class="lang-switch" aria-label="Language 語言">
+      <details class="lang-menu">
+        <summary lang="ja">JA</summary>
+        <div class="lang-list">
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a>
+        </div>
+      </details>
+    </nav>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+<!-- ==================== セクション：ファーストビュー（本日の品書き） ==================== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <h1>毎朝焼く、<br>広東の焼き物</h1>
+      <p class="lead">チャーシュー、ローストダック、鶏の醤油煮を毎朝焼きあげます。ご注文から約20分でお渡しします。</p>
+      <div class="hero-cta">
+        <a href="#order" class="btn btn-primary">テイクアウトを注文</a>
+        <a href="#order" class="btn btn-ghost">席を予約</a>
+      </div>
+      <!-- 営業状況はページ下部の JS の HOURS から自動で表示します。JS がないときはこの行を表示します -->
+      <p class="status" id="status" aria-live="polite"><span>営業日：水曜日から月曜日（火曜定休）</span></p>
+    </div>
+    <!-- 本日の品書き：名物三品。料理名と価格は下のメニューとそろえてください -->
+    <!-- サンプル内容：公開前に実際の情報へ差し替えてください（料理と価格は架空です） -->
+    <div class="board reveal">
+      <div class="board-head">
+        <h2>本日の品書き</h2>
+        <span class="seal seal-solid">名物</span>
+      </div>
+      <ul class="plaques">
+        <li class="plaque"><h3><span class="p-v p-main">蜜汁チャーシュー</span><span class="p-h p-alt" lang="zh-Hant">蜜汁叉燒</span></h3><span class="price">¥1,380</span></li>
+        <li class="plaque"><h3><span class="p-v p-main">ローストダック</span><span class="p-h p-alt" lang="zh-Hant">明爐燒鴨</span></h3><span class="price">¥1,580</span></li>
+        <li class="plaque"><h3><span class="p-v p-main">鶏の醤油煮</span><span class="p-h p-alt" lang="zh-Hant">玫瑰豉油雞</span></h3><span class="price">¥1,480</span></li>
+      </ul>
+      <p class="board-foot"><a class="link" href="#menu">メニューをすべて見る</a></p>
+    </div>
+    <div class="hero-art reveal">
+      <div class="img img-hero" role="img" aria-label="白いテーブルに置いた焼き物の盛り合わせを真上から。白磁の皿にチャーシュー、ローストダック、鶏の醤油煮が並び、染付の小皿の醤油と竹の箸が添えてあります"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：メニュー ==================== -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="menu-head">
+      <h2 class="sec-title">お品書き</h2>
+      <p class="sec-lead">店内もテイクアウトも同じ価格です。一皿は3〜4名で取り分ける量です。おひとりの場合は、ご飯と麺、またはランチセットをどうぞ。</p>
+    </div>
+    <!-- サンプル内容：公開前に実際の情報へ差し替えてください（料理と価格はすべて架空です）。各料理：料理名、中国語名、ひとこと、価格 -->
+    <div class="tabs" role="tablist" aria-label="メニューの分類">
+      <button class="tab" role="tab" id="tab-roast" aria-controls="panel-roast" aria-selected="true">焼き物</button>
+      <button class="tab" role="tab" id="tab-wok" aria-controls="panel-wok" aria-selected="false" tabindex="-1">炒め物</button>
+      <button class="tab" role="tab" id="tab-rice" aria-controls="panel-rice" aria-selected="false" tabindex="-1">ご飯と麺</button>
+      <button class="tab" role="tab" id="tab-pot" aria-controls="panel-pot" aria-selected="false" tabindex="-1">スープと土鍋</button>
+      <button class="tab" role="tab" id="tab-dim" aria-controls="panel-dim" aria-selected="false" tabindex="-1">点心</button>
+    </div>
+    <div role="tabpanel" id="panel-roast" aria-labelledby="tab-roast" tabindex="0">
+      <h3 class="panel-title">焼き物</h3>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>蜜汁チャーシュー<span class="seal">名物</span></h3><span class="price">¥1,380</span></div><p class="d-alt" lang="zh-Hant">蜜汁叉燒</p><p class="d-desc">豚肩ロースをひと晩漬け込み、麦芽糖で照りよく焼きあげます。</p></li>
+        <li><div class="mi-head"><h3>ローストダック<span class="seal">名物</span></h3><span class="price">¥1,580</span></div><p class="d-alt" lang="zh-Hant">明爐燒鴨</p><p class="d-desc">数量限定。こちらは一皿の価格で、半羽と一羽もご用意しています。</p></li>
+        <li><div class="mi-head"><h3>鶏の醤油煮<span class="seal">名物</span></h3><span class="price">¥1,480</span></div><p class="d-alt" lang="zh-Hant">玫瑰豉油雞</p><p class="d-desc">玫瑰露酒と一番搾りの醤油でゆっくり煮含め、生姜ねぎだれを添えます。</p></li>
+        <li><div class="mi-head"><h3>皮付き豚バラのロースト</h3><span class="price">¥1,480</span></div><p class="d-alt" lang="zh-Hant">脆皮燒肉</p><p class="d-desc">皮はぱりっと、身はやわらかく。マスタードでどうぞ。</p></li>
+        <li><div class="mi-head"><h3>焼き物二種盛り</h3><span class="price">¥1,880</span></div><p class="d-alt" lang="zh-Hant">燒臘雙拼</p><p class="d-desc">チャーシュー、ダック、鶏、豚バラからお好きな二種を。</p></li>
+        <li><div class="mi-head"><h3>菜心の湯引き<span class="mark">ベジ</span></h3><span class="price">¥680</span></div><p class="d-alt" lang="zh-Hant">白灼菜心</p><p class="d-desc">さっと湯がいて、きのこのソースをかけます。</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-wok" aria-labelledby="tab-wok" tabindex="0">
+      <h3 class="panel-title">炒め物</h3>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>牛肉の生姜ねぎ炒め</h3><span class="price">¥1,480</span></div><p class="d-alt" lang="zh-Hant">薑蔥炒牛肉</p><p class="d-desc">強火で一気に炒め、鍋の香りごとお出しします。</p></li>
+        <li><div class="mi-head"><h3>イカの香り塩揚げ<span class="mark">辛口</span></h3><span class="price">¥1,580</span></div><p class="d-alt" lang="zh-Hant">椒鹽鮮魷</p><p class="d-desc">揚げたてのイカに、にんにくチップと唐辛子をからめます。</p></li>
+        <li><div class="mi-head"><h3>広東式の酢豚</h3><span class="price">¥1,380</span></div><p class="d-alt" lang="zh-Hant">咕咾肉</p><p class="d-desc">サンザシとパイナップルの甘酢で、衣はさくっと仕上げます。</p></li>
+        <li><div class="mi-head"><h3>海老の塩卵黄炒め<span class="seal">名物</span></h3><span class="price">¥2,080</span></div><p class="d-alt" lang="zh-Hant">金沙蝦球</p><p class="d-desc">塩卵の黄身をさらりと炒め、海老にまとわせます。</p></li>
+        <li><div class="mi-head"><h3>帆立とブロッコリーの炒め</h3><span class="price">¥1,980</span></div><p class="d-alt" lang="zh-Hant">西蘭花炒帶子</p><p class="d-desc">帆立を生から炒め、あんは薄めに仕上げます。</p></li>
+        <li><div class="mi-head"><h3>豆苗のにんにく炒め<span class="mark">ベジ</span></h3><span class="price">¥980</span></div><p class="d-alt" lang="zh-Hant">蒜蓉炒豆苗</p><p class="d-desc">その日に届いた豆苗を、にんにくと塩だけで。</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-rice" aria-labelledby="tab-rice" tabindex="0">
+      <h3 class="panel-title">ご飯と麺</h3>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>牛肉の焼きライスヌードル<span class="seal">名物</span></h3><span class="price">¥1,280</span></div><p class="d-alt" lang="zh-Hant">乾炒牛河</p><p class="d-desc">油っぽさのない平打ち米麺に、しゃきっとしたもやし。</p></li>
+        <li><div class="mi-head"><h3>海老ワンタン麺</h3><span class="price">¥1,080</span></div><p class="d-alt" lang="zh-Hant">鮮蝦雲吞麵</p><p class="d-desc">こしのある卵麺に干しひらめのスープ。ワンタンは毎日包みます。</p></li>
+        <li><div class="mi-head"><h3>チャーシューご飯</h3><span class="price">¥980</span></div><p class="d-alt" lang="zh-Hant">叉燒飯</p><p class="d-desc">青菜と目玉焼きを添えて。</p></li>
+        <li><div class="mi-head"><h3>揚州チャーハン</h3><span class="price">¥1,180</span></div><p class="d-alt" lang="zh-Hant">揚州炒飯</p><p class="d-desc">チャーシュー、海老、卵。ぱらりと炒めます。</p></li>
+        <li><div class="mi-head"><h3>シンガポール風焼きビーフン<span class="mark">辛口</span></h3><span class="price">¥1,180</span></div><p class="d-alt" lang="zh-Hant">星洲炒米粉</p><p class="d-desc">カレー粉を香ばしく炒めた、ほんのり辛い一皿。</p></li>
+        <li><div class="mi-head"><h3>野菜あんかけ焼きそば<span class="mark">ベジ</span></h3><span class="price">¥1,080</span></div><p class="d-alt" lang="zh-Hant">羅漢齋炒麵</p><p class="d-desc">両面を焼いた麺に、きのこと季節野菜のあんをかけます。</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-pot" aria-labelledby="tab-pot" tabindex="0">
+      <h3 class="panel-title">スープと土鍋</h3>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>本日の老火スープ</h3><span class="price">¥680</span></div><p class="d-alt" lang="zh-Hant">老火例湯</p><p class="d-desc">日替わりで一種類、四時間煮込みます。本日の内容はスタッフまで。</p></li>
+        <li><div class="mi-head"><h3>鶏肉の土鍋焼き<span class="seal">名物</span></h3><span class="price">¥1,780</span></div><p class="d-alt" lang="zh-Hant">啫啫雞煲</p><p class="d-desc">生姜、ねぎ、にんにくの香り。音を立てたままお持ちします。</p></li>
+        <li><div class="mi-head"><h3>塩漬け魚と鶏肉の豆腐土鍋</h3><span class="price">¥1,580</span></div><p class="d-alt" lang="zh-Hant">鹹魚雞粒豆腐煲</p><p class="d-desc">ご飯が進む塩気です。白ご飯とご一緒に。</p></li>
+        <li><div class="mi-head"><h3>茄子の土鍋煮込み<span class="mark">辛口</span></h3><span class="price">¥1,380</span></div><p class="d-alt" lang="zh-Hant">魚香茄子煲</p><p class="d-desc">茄子を油通ししてから煮込みます。ほんのり辛口。</p></li>
+      </ul>
+    </div>
+    <div role="tabpanel" id="panel-dim" aria-labelledby="tab-dim" tabindex="0">
+      <h3 class="panel-title">点心とデザート</h3>
+      <ul class="menu-list">
+        <li><div class="mi-head"><h3>海老蒸し餃子<span class="seal">名物</span></h3><span class="price">¥780</span></div><p class="d-alt" lang="zh-Hant">鮮蝦餃</p><p class="d-desc">ひと籠に四つ。皮は透けるほど薄く。</p></li>
+        <li><div class="mi-head"><h3>焼売</h3><span class="price">¥720</span></div><p class="d-alt" lang="zh-Hant">燒賣</p><p class="d-desc">豚肉と海老を手切りで。上に魚卵をのせます。</p></li>
+        <li><div class="mi-head"><h3>スペアリブの豆豉蒸し</h3><span class="price">¥780</span></div><p class="d-alt" lang="zh-Hant">豉汁蒸排骨</p><p class="d-desc">小さく切ったスペアリブを、豆豉とにんにくで蒸します。</p></li>
+        <li><div class="mi-head"><h3>大根餅</h3><span class="price">¥680</span></div><p class="d-alt" lang="zh-Hant">蘿蔔糕</p><p class="d-desc">大根たっぷり、粉は控えめ。両面をこんがり焼きます。</p></li>
+        <li><div class="mi-head"><h3>マンゴーとポメロのサゴ<span class="mark">ベジ</span></h3><span class="price">¥680</span></div><p class="d-alt" lang="zh-Hant">楊枝甘露</p><p class="d-desc">マンゴー、ポメロ、タピオカ。冷たくしてお出しします。</p></li>
+        <li><div class="mi-head"><h3>エッグタルト（2個）</h3><span class="price">¥520</span></div><p class="d-alt" lang="zh-Hant">蛋塔</p><p class="d-desc">さくさくのパイ生地。毎日15時に焼きあがります。</p></li>
+      </ul>
+    </div>
+    <div class="menu-foot">
+      <p class="menu-note">価格はすべて税込です。食物アレルギーのある方は、ご注文の際にお知らせください。</p>
+      <a href="#order" class="btn btn-ghost">テイクアウトを注文</a>
+    </div>
+    <div class="dishes" role="group" aria-label="料理の写真">
+      <div class="img img-d1" role="img" aria-label="竹のせいろに入った海老蒸し餃子四つを真上から"></div>
+      <div class="img img-d2" role="img" aria-label="白磁の皿に盛った牛肉の焼きライスヌードルを真上から"></div>
+      <div class="img img-d3" role="img" aria-label="染付の鉢に入った海老ワンタン麺を真上から"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：ランチセット ==================== -->
+<section class="lunch" id="lunch">
+  <div class="wrap lunch-grid">
+    <div>
+      <h2 class="sec-title">平日のランチセット</h2>
+      <!-- サンプル内容：公開前に実際の情報へ差し替えてください（時間帯と価格は架空です） -->
+      <p class="lunch-time">月、水、木、金　11:00〜14:00</p>
+      <p class="lunch-note">すべてに本日のスープと青菜が付きます。店内もテイクアウトも同じ価格です。</p>
+    </div>
+    <table class="lunch-table">
+      <caption class="sr-only">ランチセットの内容と価格</caption>
+      <tbody>
+        <tr><th scope="row">焼き物一種のせご飯<small>チャーシュー、ダック、鶏、豚バラから一種</small></th><td><span class="price">¥980</span></td></tr>
+        <tr><th scope="row">焼き物二種のせご飯<small>四種からお好きな二種</small></th><td><span class="price">¥1,180</span></td></tr>
+        <tr><th scope="row">炒め物とご飯<small>日替わりの炒め物三品から一品</small></th><td><span class="price">¥1,280</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ==================== セクション：宴会と仕出し ==================== -->
+<section class="banquet" id="banquet">
+  <div class="wrap">
+    <div class="banquet-head">
+      <h2 class="sec-title">宴会と仕出し</h2>
+      <p class="sec-lead">ご家族の集まり、会社の宴会、ご自宅でのおもてなしに。個室とコースは3日前まで、仕出しは前日の正午までにご予約ください。</p>
+    </div>
+    <div class="img img-banquet" role="img" aria-label="白いクロスを掛けた円卓を真上から。ガラスの回転台に六品の料理が並び、各席に染付の小鉢が置かれています"></div>
+    <!-- サンプル内容：公開前に実際の情報へ差し替えてください（個室の人数と価格は架空です） -->
+    <div class="banquet-cols">
+      <div>
+        <h3>個室</h3>
+        <p>2部屋をひと続きでもお使いいただけます。個室料はいただきません。</p>
+        <dl class="plist">
+          <div><dt>1部屋</dt><dd>10〜12名様</dd></div>
+          <div><dt>2部屋をつなげた場合</dt><dd>24名様</dd></div>
+        </dl>
+      </div>
+      <div>
+        <h3>コース料理</h3>
+        <p>内容は季節で変わります。料理の入れ替えや、焼き物の追加もできます。</p>
+        <dl class="plist">
+          <div><dt>4名様、料理5品とスープ</dt><dd>¥12,800</dd></div>
+          <div><dt>10名様、料理8品とスープ、デザート</dt><dd>¥38,000</dd></div>
+        </dl>
+      </div>
+      <div>
+        <h3>仕出しの大皿</h3>
+        <p>焼き物、チャーハン、焼きそば、点心を保温容器でご用意します。店頭受け取り、または近隣への配達です。</p>
+        <dl class="plist">
+          <div><dt>ハーフ、約8人前</dt><dd>¥6,800より</dd></div>
+          <div><dt>フル、約16人前</dt><dd>¥12,800より</dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="banquet-cta"><a class="link" href="#order">宴会と仕出しのお問い合わせ</a></p>
+  </div>
+</section>
+
+<!-- ==================== セクション：営業時間とアクセス ==================== -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <h2 class="sec-title">営業時間とアクセス</h2>
+    <div class="visit-grid">
+      <div>
+        <h3>営業時間</h3>
+        <!-- 営業時間を変えるときは、ページ下部の JS の HOURS と head 内の JSON-LD も合わせて変更してください -->
+        <!-- サンプル内容：公開前に実際の情報へ差し替えてください -->
+        <table class="hours" aria-label="曜日ごとの営業時間">
+          <tbody>
+            <tr data-day="1"><th scope="row">月曜日</th><td>11:00〜21:00</td></tr>
+            <tr data-day="2"><th scope="row">火曜日</th><td class="closed">定休日</td></tr>
+            <tr data-day="3"><th scope="row">水曜日</th><td>11:00〜21:00</td></tr>
+            <tr data-day="4"><th scope="row">木曜日</th><td>11:00〜21:00</td></tr>
+            <tr data-day="5"><th scope="row">金曜日</th><td>11:00〜21:00</td></tr>
+            <tr data-day="6"><th scope="row">土曜日</th><td>10:30〜21:30</td></tr>
+            <tr data-day="0"><th scope="row">日曜日</th><td>10:30〜21:30</td></tr>
+          </tbody>
+        </table>
+        <p class="small-note">ラストオーダーは閉店の30分前です。年末年始はお休みをいただきます。</p>
+        <div class="pickup">
+          <h3>テイクアウトの受け取り方</h3>
+          <ol class="steps">
+            <li>下のフォームかお電話でご注文ください。</li>
+            <li>折り返しのお電話で、合計金額とお時間をお伝えします。通常は約20分です。</li>
+            <li>店頭でお名前をお伝えのうえ、お支払いください。</li>
+          </ol>
+        </div>
+      </div>
+      <div>
+        <div class="img img-room" role="img" aria-label="明るい店内。白いタイルの壁、藍色のペンダントライト、棚に並ぶ染付の花瓶、手前に木のテーブル"></div>
+        <!-- サンプル内容：公開前に実際の情報へ差し替えてください（住所、電話、アクセスは架空です） -->
+        <p class="addr">〒103-0013 東京都中央区日本橋人形町9-2-8 1階</p>
+        <p class="small-note" style="margin-top:0">電話 <a class="num" href="tel:+81312345678">03-1234-5678</a></p>
+        <ul class="visit-list">
+          <li><b>電車</b>東京メトロ日比谷線「人形町駅」A2出口より徒歩4分</li>
+          <li><b>バス</b>「人形町九丁目」停留所より徒歩2分</li>
+          <li><b>駐車</b>専用駐車場はありません。近くのコインパーキングをご利用ください</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://maps.google.com/?q=東京都中央区日本橋人形町9-2-8" target="_blank" rel="noopener">Google マップで開く</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== セクション：テイクアウトとご予約のフォーム ==================== -->
+<section class="order" id="order">
+  <div class="wrap order-grid">
+    <div>
+      <h2 class="sec-title">テイクアウトのご注文と、お席のご予約</h2>
+      <p class="sec-lead">営業時間内に折り返しお電話で確認いたします。お急ぎの場合はお電話が確実です。</p>
+      <div class="quick">
+        <a class="btn btn-ghost num" href="tel:+81312345678">電話 03-1234-5678</a>
+        <!-- LINE ボタン：@yourlineid をご自身の LINE 公式アカウントの ID に置き換えてください -->
+        <a class="btn btn-ghost" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">LINE で注文</a>
+      </div>
+    </div>
+    <!-- このフォームは Formspree を使います（無料プランは月 50 件まで）：
+         1. https://formspree.io で登録し、新しいフォームを作成します
+         2. フォームの URL にある ID（例：xyzabcd）をコピーします
+         3. 下の action の your-form-id をその ID に置き換えると、メールで通知が届きます -->
+    <form class="form" action="https://formspree.io/f/your-form-id" method="POST">
+      <p class="form-note">* の付いた項目は必須です。</p>
+      <fieldset class="field full">
+        <legend>ご用件 <span>*</span></legend>
+        <div class="choice">
+          <label><input type="radio" name="ご用件" value="テイクアウト" checked required>テイクアウト</label>
+          <label><input type="radio" name="ご用件" value="お席のご予約">お席のご予約</label>
+          <label><input type="radio" name="ご用件" value="宴会、仕出し">宴会、仕出し</label>
+        </div>
+      </fieldset>
+      <div class="field"><label for="f-name">お名前 <span>*</span></label><input id="f-name" name="お名前" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">お電話番号 <span>*</span></label><input id="f-tel" name="お電話番号" type="tel" autocomplete="tel" inputmode="tel" placeholder="090-1234-5678" required></div>
+      <div class="field pair"><label for="f-date">日付 <span>*</span></label><input id="f-date" name="日付" type="date" required></div>
+      <div class="field pair"><label for="f-time">お時間 <span>*</span></label>
+        <select id="f-time" name="お時間" required>
+          <option value="">選択してください</option>
+          <option>11:00</option><option>11:30</option><option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option>
+          <option>17:30</option><option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option>
+        </select></div>
+      <div class="field full"><label for="f-people">人数 <span>（店内ご利用の場合）</span></label>
+        <select id="f-people" name="人数">
+          <option value="">選択してください</option>
+          <option>1名</option><option>2名</option><option>3名</option><option>4名</option><option>5名</option><option>6名</option><option>7名以上</option>
+        </select></div>
+      <div class="field full"><label for="f-note">ご注文内容、ご要望</label><textarea id="f-note" name="ご注文内容" placeholder="例：ローストダック半羽、海老ワンタン麺を1つ。子ども用の椅子が必要、など"></textarea></div>
+      <button class="btn btn-primary" type="submit">この内容で送信する</button>
+      <small>送信の時点ではお支払いは発生しません。折り返しのお電話で確定となります。</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ==================== セクション：フッター ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <!-- サンプル内容：公開前に実際の情報へ差し替えてください -->
+    <div class="foot-grid">
+      <div>
+        <h2 translate="no">瑞記広東料理</h2>
+        <p>〒103-0013 東京都中央区日本橋人形町9-2-8 1階<br>電話 <a class="num" href="tel:+81312345678">03-1234-5678</a></p>
+        <div class="social"><a href="#">Instagram</a><a href="https://line.me/R/ti/p/@yourlineid">LINE</a><a href="#">X</a></div>
+      </div>
+      <div>
+        <h2>営業時間</h2>
+        <p>月、水、木、金 <span class="nw">11:00〜21:00</span><br>土、日 <span class="nw">10:30〜21:30</span><br>火曜定休</p>
+      </div>
+      <div>
+        <h2>リンク</h2>
+        <p><a href="#menu">メニュー</a><br><a href="#order">テイクアウト注文</a><br><a href="#banquet">宴会と仕出し</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+    <p class="copy">© <span id="y">2026</span> <span translate="no">瑞記広東料理</span></p>
+    <!-- フッターの言語リンク：ヘッダーの lang-switch と同じ組み合わせ -->
+    <p class="foot-lang">
+      <a href="../en/" hreflang="en" lang="en">EN</a>
+      <a href="../zh-TW/" hreflang="zh-Hant" lang="zh-Hant">繁</a>
+      <a href="../zh-CN/" hreflang="zh-Hans" lang="zh-Hans">简</a>
+    <a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== セクション：スマホの下部固定ボタン ==================== -->
+<div class="sticky-cta">
+  <a href="#order" class="btn btn-primary">テイクアウトを注文</a>
+  <a href="tel:+81312345678" class="btn btn-ghost" aria-label="電話をかける 03-1234-5678">電話</a>
+</div>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// スクロールでヘッダーに背景を付ける
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// ハンバーガーメニュー
+const toggle = document.querySelector('.nav-toggle'), menu = document.getElementById('menu-links');
+const setMenu = open => { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く'); };
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// ファーストビューの登場（.reveal を使うのはここだけ）
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+// スマホの下部固定ボタン：ファーストビューのボタンが画面から外れると現れ、フォームでは隠して送信ボタンと重ならないようにします
+const sticky = document.querySelector('.sticky-cta'), seen = new Map();
+const so = new IntersectionObserver(es => { es.forEach(e => seen.set(e.target, e.isIntersecting)); sticky.classList.toggle('show', ![...seen.values()].some(Boolean)); });
+['.hero-cta', '#order'].forEach(q => so.observe(document.querySelector(q)));
+
+// メニューのタブ（矢印キー、Home、End に対応）
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+const select = (t, focus = true) => {
+  tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+  if (focus) t.focus();
+};
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => select(t));
+  t.addEventListener('keydown', e => {
+    const k = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+    if (k) { e.preventDefault(); select(tabs[(i + k + tabs.length) % tabs.length]); }
+    if (e.key === 'Home') { e.preventDefault(); select(tabs[0]); }
+    if (e.key === 'End') { e.preventDefault(); select(tabs[tabs.length - 1]); }
+  });
+});
+select(tabs[0], false); // JS がないときは五つの分類をすべて表示し、JS があるときだけタブにまとめます
+
+// 営業中／準備中（お店のタイムゾーンで計算）。形式：曜日（0=日曜）: [開店, 閉店]、null は定休日
+const TZ = 'Asia/Tokyo';
+const HOURS = { 0: ['10:30', '21:30'], 1: ['11:00', '21:00'], 2: null, 3: ['11:00', '21:00'], 4: ['11:00', '21:00'], 5: ['11:00', '21:00'], 6: ['10:30', '21:30'] };
+const DAYS = ['日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日'];
+const toMin = s => { const [h, m] = s.split(':'); return h * 60 + +m; };
+const fmt = s => s;
+const t = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: TZ, weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map(p => [p.type, p.value]));
+const day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(t.weekday), mins = t.hour * 60 + +t.minute, today = HOURS[day];
+const status = document.getElementById('status');
+let text;
+if (today && mins >= toMin(today[0]) && mins < toMin(today[1])) {
+  status.classList.add('is-open');
+  text = `<b>営業中</b>　本日は${fmt(today[1])}まで`;
+} else {
+  let d = 0;
+  if (today && mins < toMin(today[0])) d = 0;
+  else do { d++; } while (!HOURS[(day + d) % 7]);
+  const nd = (day + d) % 7, when = d === 0 ? '本日' : d === 1 ? '明日' : DAYS[nd];
+  text = `<b>準備中</b>　${when}${fmt(HOURS[nd][0])}から営業します`;
+}
+status.querySelector('span').innerHTML = text;
+const row = document.querySelector(`.hours tr[data-day="${day}"]`); if (row) row.classList.add('today');
+
+// 過去の日付は選べないようにします
+document.getElementById('f-date').min = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+
+// 料理写真：横にスクロールできるとき（スマホ）だけ、キーボードでフォーカスできるようにします
+const dishes = document.querySelector('.dishes'), mq = matchMedia('(max-width: 760px)');
+const setDishes = () => mq.matches ? dishes.setAttribute('tabindex', '0') : dishes.removeAttribute('tabindex');
+mq.addEventListener('change', setDishes); setDishes();
+
+// 言語メニュー：外側をクリックするか Esc キーで閉じます
+document.addEventListener('click', e => document.querySelectorAll('.lang-menu[open]').forEach(d => { if (!d.contains(e.target)) d.removeAttribute('open'); }));
+document.addEventListener('keydown', e => { if (e.key !== 'Escape') return; if (menu.classList.contains('open')) { setMenu(false); toggle.focus(); } document.querySelectorAll('.lang-menu[open]').forEach(d => { d.removeAttribute('open'); d.querySelector('summary').focus(); }); });
+</script>
+</body>
+</html>

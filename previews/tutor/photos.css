@@ -1,0 +1,8 @@
+/* 線上預覽專用：把 CSS 藝術佔位圖換成示意照片（Canva AI 生成，老師為虛構人物）。
+   只在 scripts/build-site.sh 建置預覽網站時加入，商品 zip 不含此檔與照片。 */
+.img-hero { background: url(photos/hero.webp) center / cover no-repeat !important; }
+.img-t1 { background: url(photos/teacher-1.webp) center top / cover no-repeat !important; }
+.img-t2 { background: url(photos/teacher-2.webp) center top / cover no-repeat !important; }
+.img-t3 { background: url(photos/teacher-3.webp) center top / cover no-repeat !important; }
+.img-desk { background: url(photos/desk.webp) center / cover no-repeat !important; }
+.img-hero::before, .img-hero::after, .img-t1::before, .img-t1::after, .img-t2::before, .img-t2::after, .img-t3::before, .img-t3::after, .img-desk::before, .img-desk::after { content: none !important; display: none !important; }
